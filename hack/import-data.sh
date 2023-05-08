@@ -13,6 +13,13 @@ import() {
   local advisories_file_extension=".advisories.yaml"
 
   (
+    echo "About to remove existing advisories files... (Ctrl+C to cancel)"
+    sleep 5
+    cd "${advisories_repo_dir}"
+    rm -fv ./*${advisories_file_extension}
+  )
+
+  (
     cd "${distro_repo_dir}"
 
     for f in *.yaml; do
