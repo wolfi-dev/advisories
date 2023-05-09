@@ -1,0 +1,33 @@
+name: Lint
+
+on:
+  pull_request:
+    branches: ['main']
+  push:
+    branches:
+      - gh-readonly-queue/main/**
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Check YAML formatting
+      id: lint-yaml
+      uses: docker://ghcr.io/wolfi-dev/wolfictl:latest@sha256:067bff7dd012394072c58761219ddbcb1717e4550a937419e60bef63f2ceaffb
+      with:
+        entrypoint: wolfictl
+        args: lint yam
+
+    - name: Check secfixes synchronization
+      id: sync-secfixes
+      uses: docker://ghcr.io/wolfi-dev/wolfictl:latest@sha256:067bff7dd012394072c58761219ddbcb1717e4550a937419e60bef63f2ceaffb
+      with:
+        entrypoint: wolfictl
+        args: "advisory sync-secfixes --warn"
