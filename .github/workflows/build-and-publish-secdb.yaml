@@ -1,0 +1,48 @@
+name: Build and publish secdb
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-publish:
+    name: Build and publish security database
+    runs-on: ubuntu-latest
+    if: github.repository == 'wolfi-dev/advisories'
+
+    permissions:
+      id-token: write
+      packages: write
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - id: auth
+        name: 'Authenticate to Google Cloud'
+        uses: google-github-actions/auth@v0
+        with:
+          workload_identity_provider: "projects/618116202522/locations/global/workloadIdentityPools/prod-shared-e350/providers/prod-shared-gha"
+          service_account: "prod-images-ci@prod-images-c6e5.iam.gserviceaccount.com"
+
+      - uses: google-github-actions/setup-gcloud@v0
+        with:
+          project_id: prod-images-c6e5
+
+      - name: 'Check that GCloud is properly configured'
+        run: |
+          gcloud info
+          gcloud --quiet alpha storage ls
+
+      # TODO: Image digest needs to be updated to include the new `db` command.
+      - name: Build the security database
+        uses: docker://ghcr.io/wolfi-dev/wolfictl:latest@sha256:067bff7dd012394072c58761219ddbcb1717e4550a937419e60bef63f2ceaffb
+        with:
+          entrypoint: wolfictl
+          args: "advisory db -o security.json"
+
+      - name: 'Upload the security database to a bucket'
+        run: |
+          gcloud --quiet alpha storage cp --recursive ${{ github.workspace }}/security.json gs://wolfi-production-registry-destination/os/
