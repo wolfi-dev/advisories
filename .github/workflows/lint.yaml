@@ -20,14 +20,14 @@ jobs:
 
     - name: Check YAML formatting
       id: lint-yaml
-      uses: docker://ghcr.io/wolfi-dev/wolfictl:latest@sha256:067bff7dd012394072c58761219ddbcb1717e4550a937419e60bef63f2ceaffb
+      uses: docker://ghcr.io/wolfi-dev/wolfictl:latest@sha256:1b3ff62685952d3f776ccd526bc1ee8fd0b27cc28d5ccab8443f4ea355067840
       with:
         entrypoint: wolfictl
         args: lint yam
 
     - name: Check secfixes synchronization
       id: sync-secfixes
-      uses: docker://ghcr.io/wolfi-dev/wolfictl:latest@sha256:067bff7dd012394072c58761219ddbcb1717e4550a937419e60bef63f2ceaffb
+      uses: docker://ghcr.io/wolfi-dev/wolfictl:latest@sha256:1b3ff62685952d3f776ccd526bc1ee8fd0b27cc28d5ccab8443f4ea355067840
       with:
         entrypoint: wolfictl
         args: "advisory sync-secfixes --warn"
