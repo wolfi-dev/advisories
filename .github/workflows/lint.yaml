@@ -30,4 +30,4 @@ jobs:
       uses: docker://ghcr.io/wolfi-dev/wolfictl:latest@sha256:1b3ff62685952d3f776ccd526bc1ee8fd0b27cc28d5ccab8443f4ea355067840
       with:
         entrypoint: wolfictl
-        args: "advisory sync-secfixes --warn"
+        args: "advisory sync-secfixes --warn --no-distro-detection --advisories-repo-dir ."
