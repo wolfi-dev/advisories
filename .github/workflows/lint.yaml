@@ -24,10 +24,3 @@ jobs:
       with:
         entrypoint: wolfictl
         args: lint yam
-
-    - name: Check secfixes synchronization
-      id: sync-secfixes
-      uses: docker://ghcr.io/wolfi-dev/wolfictl:latest@sha256:97e40b55339d47d044648dbdd0777a8216adaf0622719fa5a9bd46182ce90bd4
-      with:
-        entrypoint: wolfictl
-        args: "advisory sync-secfixes --warn --no-distro-detection --advisories-repo-dir ."
