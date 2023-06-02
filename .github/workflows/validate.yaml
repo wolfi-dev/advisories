@@ -1,0 +1,26 @@
+name: Validate
+
+on:
+  pull_request:
+    branches: ['main']
+  push:
+    branches:
+      - gh-readonly-queue/main/**
+
+jobs:
+  lint:
+    name: Validate
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Validate advisory data
+      id: validate
+      uses: docker://ghcr.io/wolfi-dev/wolfictl@sha256:6d228e1857362cb1e7818187d297bdeb59ba51515c839baa40d039e5982ce4c2
+      with:
+        entrypoint: wolfictl
+        args: advisory validate --no-distro-detection --advisories-repo-dir .
