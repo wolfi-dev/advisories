@@ -10,6 +10,10 @@ advisories:
     - timestamp: 2023-06-28T08:14:30.533746-04:00
       status: affected
       action: Users should upgrade to version 3.10.12-r0 or later and set the filter parameter to 'data' when calling TarFile.extract and TarFile.extractall methods. For more information, see https://peps.python.org/pep-0706/.
+    - timestamp: 2023-07-11T14:09:29.265761-04:00
+      status: not_affected
+      justification: vulnerable_code_not_present
+      impact: Upon further investigation, we have determined that this is not a security issue in the Python package itself. It's still possible to misuse the Python standard library, such as by supplying untrusted data to the tar extraction functions, in which case a vulnerability should be identified in the caller code.
 
   CVE-2020-10735:
     - timestamp: 2023-02-07T08:34:29.611707Z
