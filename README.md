@@ -1,10 +1,32 @@
 # advisories
 
-Security advisory data for Wolfi
+Security advisory data for the Wolfi distribution.
 
 ## Introduction
 
 This repository is where we store Wolfi's security advisory data. Each Wolfi package is represented with a `<package-name>.advisories.yaml` file, if there are any advisories recorded for the given package.
+
+The purpose of the advisory data is to record all investigated package vulnerabilities and indicate the latest understanding of whether or not the package is affected by the vulnerability.
+
+## Interpreting the data
+
+Each package advisories file in this repository has a list of one or more advisories. Each advisory is named by a vulnerability identifier (e.g. "CVE-2023-12345") and contains a list of timestamped status updates.
+
+### Statuses
+
+Here are the allowed `status` values and what they mean:
+
+`under_investigation`: The maintainers are aware that the package is potentially affected by the vulnerability, but more investigation is needed in order to reach a conclusion.
+
+`affected`: The package is believed to be affected by the vulnerability. Where possible, there will be advice for mitigating the vulnerability in the `action` field attached to this status update.
+
+`not_affected`: The package is not believed to be affected by the vulnerability. Any instance of a match of the package to this vulnerability should be treated as a **false positive**. Where possible, further explanation about why this match is a false positive is included in the `impact` field attached to this status update.
+
+`fixed`: There was one or more versions of the package affected by the vulnerability, but as of the `fixed-version`, the vulnerability has been mitigated.
+
+
+
+## Using the data
 
 The best way to interact with the data in this repo is to use [`wolfictl`](https://github.com/wolfi-dev/wolfictl). Run `wolfictl advisory -h` to see a list of commands designed to interact with this dataset.
 
