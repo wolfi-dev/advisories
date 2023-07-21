@@ -1,0 +1,26 @@
+package:
+  name: conda
+
+advisories:
+  CVE-2007-4559:
+    - timestamp: 2023-07-21T14:10:35.571982-04:00
+      status: not_affected
+      justification: vulnerable_code_not_present
+      impact: We have determined that this is not a security issue in the Python package itself. It's still possible to misuse the Python standard library, such as by supplying untrusted data to the tar extraction functions, in which case a vulnerability should be identified in the caller code.
+
+  CVE-2018-20225:
+    - timestamp: 2023-07-21T14:03:13.27815-04:00
+      status: not_affected
+      justification: vulnerable_code_not_present
+      impact: This vulnerability is disputed, and the consensus in the security community is that this is intended behavior, not a security flaw.
+
+  CVE-2023-27043:
+    - timestamp: 2023-07-21T14:05:18.769495-04:00
+      status: affected
+      action: There doesn't appear to be a backport of the fix available for Python 3.10.x, see https://github.com/python/cpython/issues/102988.
+
+  CVE-2023-36632:
+    - timestamp: 2023-07-21T14:06:11.323845-04:00
+      status: not_affected
+      justification: vulnerable_code_not_present
+      impact: The vendor's perspective is that this is neither a vulnerability nor a bug.
