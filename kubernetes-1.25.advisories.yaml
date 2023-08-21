@@ -2,15 +2,38 @@ package:
   name: kubernetes-1.25
 
 advisories:
+  CVE-2015-7561:
+    - timestamp: 2023-08-18T13:06:36.359478-04:00
+      status: not_affected
+      justification: component_not_present
+      impact: Vulnerability only impacts OpenShift
+
+  CVE-2016-1905:
+    - timestamp: 2023-08-18T13:06:37.107079-04:00
+      status: not_affected
+      justification: vulnerable_code_not_present
+      impact: Fixed in Kubernetes 1.2
+
+  CVE-2016-1906:
+    - timestamp: 2023-08-18T13:06:37.861431-04:00
+      status: not_affected
+      justification: component_not_present
+      impact: Vulnerability only impacts OpenShift
+
+  CVE-2016-7075:
+    - timestamp: 2023-08-18T13:06:39.587546-04:00
+      status: not_affected
+      justification: component_not_present
+      impact: Vulnerability only impacts OpenShift
+
   CVE-2019-11255:
-    - timestamp: 2023-08-11T16:03:41.356036878-07:00
+    - timestamp: 2023-08-18T13:06:38.903818-04:00
       status: not_affected
       justification: vulnerable_code_not_present
-      impact: Exploit requires bundling vulnerable versions of csi-providers with our distribution which we do not do
-    - timestamp: 2023-08-14T20:55:50.350931-04:00
-      status: affected
-      action: See https://github.com/kubernetes/kubernetes/issues/85233 for mitigation instructions. (Note that kubectl is unaffected.)
-    - timestamp: 2023-08-15T15:43:12.616821-04:00
+      impact: Fixed in Kubernetes 1.2
+
+  CVE-2020-8554:
+    - timestamp: 2023-08-18T13:06:40.324611-04:00
       status: not_affected
       justification: vulnerable_code_not_present
-      impact: Exploit requires bundling vulnerable versions of csi-providers with our distribution, which we do not do.
+      impact: Fixed in Kubernetes 1.21
