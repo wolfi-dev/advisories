@@ -1,9 +1,13 @@
+schema-version: "2"
+
 package:
   name: telegraf-1.27
 
 advisories:
-  CVE-2019-3826:
-    - timestamp: 2023-08-25T15:09:52.665698-07:00
-      status: not_affected
-      justification: vulnerable-code-not-included-in-package
-      impact: This vulnerability is an XSS flaw in the Prometheus server and is not affecting this package which uses the library code.
+  - id: CVE-2019-3826
+    events:
+      - timestamp: 2023-08-25T22:09:52Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability is an XSS flaw in the Prometheus server and is not affecting this package which uses the library code.

@@ -1,20 +1,28 @@
+schema-version: "2"
+
 package:
   name: telegraf
 
 advisories:
-  CVE-2019-3826:
-    - timestamp: 2023-08-11T19:48:34.107747-07:00
-      status: not_affected
-      justification: component_not_present
-      impact: This only impacts the prometheus UI JS code and not the Go module. See https://github.com/prometheus/prometheus/issues/12403
+  - id: CVE-2019-3826
+    events:
+      - timestamp: 2023-08-12T02:48:34Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: This only impacts the prometheus UI JS code and not the Go module. See https://github.com/prometheus/prometheus/issues/12403
 
-  CVE-2023-34231:
-    - timestamp: 2023-06-13T07:37:43.741941-04:00
-      status: fixed
-      fixed-version: 1.27.0-r1
+  - id: CVE-2023-34231
+    events:
+      - timestamp: 2023-06-13T11:37:43Z
+        type: fixed
+        data:
+          fixed-version: 1.27.0-r1
 
-  GHSA-2w8w-qhg4-f78j:
-    - timestamp: 2023-08-11T16:14:50.544767-07:00
-      status: not_affected
-      justification: component_not_present
-      impact: This only affects jaegertracing/jaeger-ui (TypeScript), not jaegertracing/jaeger Go library which telegraf depends on
+  - id: GHSA-2w8w-qhg4-f78j
+    events:
+      - timestamp: 2023-08-11T23:14:50Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: This only affects jaegertracing/jaeger-ui (TypeScript), not jaegertracing/jaeger Go library which telegraf depends on

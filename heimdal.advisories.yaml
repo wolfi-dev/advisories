@@ -1,10 +1,16 @@
+schema-version: "2"
+
 package:
   name: heimdal
 
 advisories:
-  CVE-2022-45142:
-    - timestamp: 2023-03-15T11:31:20.584188-04:00
-      status: under_investigation
-    - timestamp: 2023-03-15T12:06:34.898053-04:00
-      status: fixed
-      fixed-version: 7.8.0-r1
+  - id: CVE-2022-45142
+    events:
+      - timestamp: 2023-03-15T15:31:20Z
+        type: detection
+        data:
+          type: manual
+      - timestamp: 2023-03-15T16:06:34Z
+        type: fixed
+        data:
+          fixed-version: 7.8.0-r1

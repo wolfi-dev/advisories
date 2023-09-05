@@ -1,58 +1,82 @@
+schema-version: "2"
+
 package:
   name: redis
 
 advisories:
-  CVE-2022-0543:
-    - timestamp: 2022-12-24T13:35:15-05:00
-      status: fixed
-      fixed-version: 7.0.7-r0
-    - timestamp: 2023-07-12T12:05:46.282906-04:00
-      status: not_affected
-      justification: component-vulnerability-mismatch
-      impact: This is a Debian-specific issue and does not affect Wolfi.
+  - id: CVE-2022-0543
+    events:
+      - timestamp: 2022-12-24T18:35:15Z
+        type: fixed
+        data:
+          fixed-version: 7.0.7-r0
+      - timestamp: 2023-07-12T16:05:46Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: This is a Debian-specific issue and does not affect Wolfi.
 
-  CVE-2022-3647:
-    - timestamp: 2022-12-24T13:35:15-05:00
-      status: fixed
-      fixed-version: 7.0.7-r0
+  - id: CVE-2022-35977
+    events:
+      - timestamp: 2023-02-20T19:37:55Z
+        type: fixed
+        data:
+          fixed-version: 7.0.8-r0
 
-  CVE-2022-3734:
-    - timestamp: 2022-12-24T13:35:15-05:00
-      status: fixed
-      fixed-version: 7.0.7-r0
-    - timestamp: 2023-07-12T12:07:06.829221-04:00
-      status: not_affected
-      justification: vulnerability-record-analysis-contested
-      impact: This is a disputed CVE entry that does not actually affect Redis.
+  - id: CVE-2022-36021
+    events:
+      - timestamp: 2023-03-10T00:16:28Z
+        type: detection
+        data:
+          type: manual
+      - timestamp: 2023-03-10T00:32:02Z
+        type: fixed
+        data:
+          fixed-version: 7.0.9-r0
 
-  CVE-2022-35977:
-    - timestamp: 2023-02-20T14:37:55.058122-05:00
-      status: fixed
-      fixed-version: 7.0.8-r0
+  - id: CVE-2022-3647
+    events:
+      - timestamp: 2022-12-24T18:35:15Z
+        type: fixed
+        data:
+          fixed-version: 7.0.7-r0
 
-  CVE-2022-36021:
-    - timestamp: 2023-03-09T19:16:28.313696-05:00
-      status: under_investigation
-    - timestamp: 2023-03-09T19:32:02.236148-05:00
-      status: fixed
-      fixed-version: 7.0.9-r0
+  - id: CVE-2022-3734
+    events:
+      - timestamp: 2022-12-24T18:35:15Z
+        type: fixed
+        data:
+          fixed-version: 7.0.7-r0
+      - timestamp: 2023-07-12T16:07:06Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: This is a disputed CVE entry that does not actually affect Redis.
 
-  CVE-2023-22458:
-    - timestamp: 2023-02-25T06:54:30.972765-05:00
-      status: fixed
-      fixed-version: 7.0.8-r0
+  - id: CVE-2023-22458
+    events:
+      - timestamp: 2023-02-25T11:54:30Z
+        type: fixed
+        data:
+          fixed-version: 7.0.8-r0
 
-  CVE-2023-25155:
-    - timestamp: 2023-03-19T17:23:43.585248-04:00
-      status: fixed
-      fixed-version: 7.0.9-r0
+  - id: CVE-2023-25155
+    events:
+      - timestamp: 2023-03-19T21:23:43Z
+        type: fixed
+        data:
+          fixed-version: 7.0.9-r0
 
-  CVE-2023-28425:
-    - timestamp: 2023-03-25T07:00:34.041442-04:00
-      status: fixed
-      fixed-version: 7.0.10-r0
+  - id: CVE-2023-28425
+    events:
+      - timestamp: 2023-03-25T11:00:34Z
+        type: fixed
+        data:
+          fixed-version: 7.0.10-r0
 
-  CVE-2023-28856:
-    - timestamp: 2023-04-17T09:33:39.2182-04:00
-      status: fixed
-      fixed-version: 7.0.11-r0
+  - id: CVE-2023-28856
+    events:
+      - timestamp: 2023-04-17T13:33:39Z
+        type: fixed
+        data:
+          fixed-version: 7.0.11-r0

@@ -1,15 +1,21 @@
+schema-version: "2"
+
 package:
   name: thanos-0.31
 
 advisories:
-  CVE-2019-3826:
-    - timestamp: 2023-08-30T14:45:02.177345-07:00
-      status: not_affected
-      justification: component_not_present
-      impact: This only impacts the prometheus UI JS code and not the Go module. See https://github.com/prometheus/prometheus/issues/12403
+  - id: CVE-2019-3826
+    events:
+      - timestamp: 2023-08-30T21:45:02Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: This only impacts the prometheus UI JS code and not the Go module. See https://github.com/prometheus/prometheus/issues/12403
 
-  CVE-2023-40577:
-    - timestamp: 2023-08-30T13:54:21.036445-07:00
-      status: not_affected
-      justification: vulnerable-code-not-in-execution-path
-      impact: This vulnerability is an XSS flaw affecting alertmanager as a server, not when imported as a library.
+  - id: CVE-2023-40577
+    events:
+      - timestamp: 2023-08-30T20:54:21Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: This vulnerability is an XSS flaw affecting alertmanager as a server, not when imported as a library.

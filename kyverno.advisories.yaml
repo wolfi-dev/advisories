@@ -1,15 +1,21 @@
+schema-version: "2"
+
 package:
   name: kyverno
 
 advisories:
-  CVE-2023-30551:
-    - timestamp: 2023-08-08T16:51:19.398968-07:00
-      status: not_affected
-      justification: vulnerable-code-not-included-in-package
-      impact: The vulnerable code in Rekor cannot be imported.
+  - id: CVE-2023-30551
+    events:
+      - timestamp: 2023-08-08T23:51:19Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: The vulnerable code in Rekor cannot be imported.
 
-  CVE-2023-33199:
-    - timestamp: 2023-08-08T16:51:19.398968-07:00
-      status: not_affected
-      justification: vulnerable-code-not-included-in-package
-      impact: The vulnerable code is effectively private. The vulnerable code is unlikely to ever be imported.
+  - id: CVE-2023-33199
+    events:
+      - timestamp: 2023-08-08T23:51:19Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: The vulnerable code is effectively private. The vulnerable code is unlikely to ever be imported.

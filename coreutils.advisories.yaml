@@ -1,18 +1,23 @@
+schema-version: "2"
+
 package:
   name: coreutils
 
 advisories:
-  CVE-2016-2781:
-    - timestamp: 2022-10-11T20:29:31Z
-      status: not_affected
-      justification: vulnerable-code-version-not-used
-      impact: |
-        Fixed upstream prior to Wolfi packaging.
+  - id: CVE-2016-2781
+    events:
+      - timestamp: 2022-10-11T20:29:31Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: |
+            Fixed upstream prior to Wolfi packaging.
 
-        See https://git.savannah.gnu.org/cgit/coreutils.git/commit/?h=v9.1&id=8cb06d4b44a67f89f24b25e2394365533f6e5968
-    - timestamp: 2023-03-27T20:52:17.710834-04:00
-      status: affected
-      action: |
-        Prior fix was reverted upstream, standby for future fix.
+            See https://git.savannah.gnu.org/cgit/coreutils.git/commit/?h=v9.1&id=8cb06d4b44a67f89f24b25e2394365533f6e5968
+      - timestamp: 2023-03-28T00:52:17Z
+        type: true-positive-determination
+        data:
+          note: |
+            Prior fix was reverted upstream, standby for future fix.
 
-        See revert at https://git.savannah.gnu.org/cgit/coreutils.git/commit/?id=v8.27-101-gf5d7c0842
+            See revert at https://git.savannah.gnu.org/cgit/coreutils.git/commit/?id=v8.27-101-gf5d7c0842

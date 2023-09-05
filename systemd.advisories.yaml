@@ -1,23 +1,36 @@
+schema-version: "2"
+
 package:
   name: systemd
 
 advisories:
-  CVE-2023-31437:
-    - timestamp: 2023-06-26T06:31:26.158015-04:00
-      status: under_investigation
+  - id: CVE-2023-31437
+    events:
+      - timestamp: 2023-06-26T10:31:26Z
+        type: detection
+        data:
+          type: manual
 
-  CVE-2023-31438:
-    - timestamp: 2023-06-26T06:31:26.158943-04:00
-      status: under_investigation
-    - timestamp: 2023-06-26T06:40:02.012433-04:00
-      status: not_affected
-      justification: vulnerability-record-analysis-contested
-      impact: This has been disputed by upstream and is not considered a security issue.
+  - id: CVE-2023-31438
+    events:
+      - timestamp: 2023-06-26T10:31:26Z
+        type: detection
+        data:
+          type: manual
+      - timestamp: 2023-06-26T10:40:02Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: This has been disputed by upstream and is not considered a security issue.
 
-  CVE-2023-31439:
-    - timestamp: 2023-06-26T06:31:26.159354-04:00
-      status: under_investigation
-    - timestamp: 2023-06-26T06:41:12.566531-04:00
-      status: not_affected
-      justification: vulnerability-record-analysis-contested
-      impact: This has been disputed by upstream and is not considered a security issue.
+  - id: CVE-2023-31439
+    events:
+      - timestamp: 2023-06-26T10:31:26Z
+        type: detection
+        data:
+          type: manual
+      - timestamp: 2023-06-26T10:41:12Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: This has been disputed by upstream and is not considered a security issue.

@@ -1,9 +1,13 @@
+schema-version: "2"
+
 package:
   name: kubernetes-dns-node-cache
 
 advisories:
-  CVE-2019-11255:
-    - timestamp: 2023-08-21T09:27:12.008255-07:00
-      status: not_affected
-      justification: vulnerable-code-not-included-in-package
-      impact: Vulnerable code is part of external-csi-driver and not included in kubernetes-dns-node-cache
+  - id: CVE-2019-11255
+    events:
+      - timestamp: 2023-08-21T16:27:12Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Vulnerable code is part of external-csi-driver and not included in kubernetes-dns-node-cache

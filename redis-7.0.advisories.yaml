@@ -1,21 +1,29 @@
+schema-version: "2"
+
 package:
   name: redis-7.0
 
 advisories:
-  CVE-2022-0543:
-    - timestamp: 2023-08-31T10:52:09.786739-07:00
-      status: not_affected
-      justification: component-vulnerability-mismatch
-      impact: This is a Debian-specific issue and does not affect Wolfi.
+  - id: CVE-2022-0543
+    events:
+      - timestamp: 2023-08-31T17:52:09Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: This is a Debian-specific issue and does not affect Wolfi.
 
-  CVE-2022-3647:
-    - timestamp: 2023-08-31T10:52:09.786739-07:00
-      status: not_affected
-      justification: vulnerability-record-analysis-contested
-      impact: The vulnerability is disputed upstream, indicating that this is expected behavior.
+  - id: CVE-2022-3647
+    events:
+      - timestamp: 2023-08-31T17:52:09Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: The vulnerability is disputed upstream, indicating that this is expected behavior.
 
-  CVE-2022-3734:
-    - timestamp: 2023-08-31T10:52:09.786739-07:00
-      status: not_affected
-      justification: vulnerability-record-analysis-contested
-      impact: This is a disputed CVE entry that does not actually affect Redis.
+  - id: CVE-2022-3734
+    events:
+      - timestamp: 2023-08-31T17:52:09Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: This is a disputed CVE entry that does not actually affect Redis.

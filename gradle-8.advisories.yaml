@@ -1,40 +1,58 @@
+schema-version: "2"
+
 package:
   name: gradle-8
 
 advisories:
-  CVE-2020-8908:
-    - timestamp: 2023-08-10T18:12:46.040472-04:00
-      status: fixed
-      fixed-version: 8.2.1-r1
+  - id: CVE-2020-8908
+    events:
+      - timestamp: 2023-08-10T22:12:46Z
+        type: fixed
+        data:
+          fixed-version: 8.2.1-r1
 
-  CVE-2022-37866:
-    - timestamp: 2023-08-11T10:59:21.033003-04:00
-      status: not_affected
-      justification: vulnerable_code_not_in_execute_path
-      impact: 'Gradle is not vulnerable because it does not leverage the Apache Ivy dependency cache: https://github.com/gradle/gradle/issues/24795#issuecomment-1623594418'
+  - id: CVE-2022-37866
+    events:
+      - timestamp: 2023-08-11T14:59:21Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: 'Gradle is not vulnerable because it does not leverage the Apache Ivy dependency cache: https://github.com/gradle/gradle/issues/24795#issuecomment-1623594418'
 
-  CVE-2022-45868:
-    - timestamp: 2023-08-11T10:07:24.992685-04:00
-      status: not_affected
-      justification: vulnerable_code_not_in_execute_path
-      impact: 'CVE is disputed. It relates to exposed passwords when using h2 via command-line. h2 is in use by Gradle as a library, and there is no reference of the CVE-related CLI argument being used in the codebase. Project maintainer''s position: https://github.com/gradle/gradle/issues/24708#issuecomment-1508321833'
+  - id: CVE-2022-45868
+    events:
+      - timestamp: 2023-08-11T14:07:24Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: 'CVE is disputed. It relates to exposed passwords when using h2 via command-line. h2 is in use by Gradle as a library, and there is no reference of the CVE-related CLI argument being used in the codebase. Project maintainer''s position: https://github.com/gradle/gradle/issues/24708#issuecomment-1508321833'
 
-  CVE-2022-46751:
-    - timestamp: 2023-08-25T14:31:33.045497-07:00
-      status: under_investigation
-    - timestamp: 2023-08-29T11:10:21.039797-04:00
-      status: affected
-      action: The fix for this vulnerability is in version 2.5.2 of the Apache Ivy dependency. A fix for Gradle was asked via https://github.com/gradle/gradle/issues/24795#issuecomment-1695916608 and is awaiting for a response.
+  - id: CVE-2022-46751
+    events:
+      - timestamp: 2023-08-25T21:31:33Z
+        type: detection
+        data:
+          type: manual
+      - timestamp: 2023-08-29T15:10:21Z
+        type: true-positive-determination
+        data:
+          note: The fix for this vulnerability is in version 2.5.2 of the Apache Ivy dependency. A fix for Gradle was asked via https://github.com/gradle/gradle/issues/24795#issuecomment-1695916608 and is awaiting for a response.
 
-  CVE-2023-2976:
-    - timestamp: 2023-08-08T17:07:36.957515-04:00
-      status: under_investigation
-    - timestamp: 2023-08-10T18:11:57.628638-04:00
-      status: fixed
-      fixed-version: 8.2.1-r1
+  - id: CVE-2023-2976
+    events:
+      - timestamp: 2023-08-08T21:07:36Z
+        type: detection
+        data:
+          type: manual
+      - timestamp: 2023-08-10T22:11:57Z
+        type: fixed
+        data:
+          fixed-version: 8.2.1-r1
 
-  CVE-2023-35116:
-    - timestamp: 2023-08-11T11:36:11.286307-04:00
-      status: not_affected
-      justification: vulnerability-record-analysis-contested
-      impact: CVE is being considered by the community a false positive. See https://github.com/FasterXML/jackson-databind/issues/3972 and https://github.com/anchore/grype/issues/1386
+  - id: CVE-2023-35116
+    events:
+      - timestamp: 2023-08-11T15:36:11Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: CVE is being considered by the community a false positive. See https://github.com/FasterXML/jackson-databind/issues/3972 and https://github.com/anchore/grype/issues/1386

@@ -1,95 +1,129 @@
+schema-version: "2"
+
 package:
   name: node-problem-detector
 
 advisories:
-  CVE-2019-11250:
-    - timestamp: 2023-08-11T12:35:15.52539-07:00
-      status: affected
-      action: Waiting for upstream release, fixed with PR https://github.com/kubernetes/node-problem-detector/pull/760.
-    - timestamp: 2023-08-27T16:22:34.909365-07:00
-      status: fixed
-      fixed-version: 0.8.14-r0
+  - id: CVE-2019-11250
+    events:
+      - timestamp: 2023-08-11T19:35:15Z
+        type: true-positive-determination
+        data:
+          note: Waiting for upstream release, fixed with PR https://github.com/kubernetes/node-problem-detector/pull/760.
+      - timestamp: 2023-08-27T23:22:34Z
+        type: fixed
+        data:
+          fixed-version: 0.8.14-r0
 
-  CVE-2020-8554:
-    - timestamp: 2023-08-11T11:24:18.698345-07:00
-      status: not_affected
-      justification: vulnerable-code-not-included-in-package
-      impact: Vulnerable code is part of an external controller not included k8s.io/kubernetes library
+  - id: CVE-2020-8554
+    events:
+      - timestamp: 2023-08-11T18:24:18Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Vulnerable code is part of an external controller not included k8s.io/kubernetes library
 
-  CVE-2020-8558:
-    - timestamp: 2023-08-11T10:55:42.282825-07:00
-      status: not_affected
-      justification: vulnerable-code-not-included-in-package
-      impact: Vulnerable code is part of an external controller not included k8s.io/kube-proxy library
+  - id: CVE-2020-8558
+    events:
+      - timestamp: 2023-08-11T17:55:42Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Vulnerable code is part of an external controller not included k8s.io/kube-proxy library
 
-  CVE-2020-8561:
-    - timestamp: 2023-08-11T11:22:58.011256-07:00
-      status: not_affected
-      justification: vulnerable-code-not-included-in-package
-      impact: Vulnerable code is part of an external controller not included k8s.io/kubernetes library
+  - id: CVE-2020-8561
+    events:
+      - timestamp: 2023-08-11T18:22:58Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Vulnerable code is part of an external controller not included k8s.io/kubernetes library
 
-  CVE-2020-8562:
-    - timestamp: 2023-08-11T10:57:54.984096-07:00
-      status: not_affected
-      justification: vulnerable-code-not-included-in-package
-      impact: Vulnerable code is part of an external controller not included k8s.io/kubernetes library
+  - id: CVE-2020-8562
+    events:
+      - timestamp: 2023-08-11T17:57:54Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Vulnerable code is part of an external controller not included k8s.io/kubernetes library
 
-  CVE-2020-8564:
-    - timestamp: 2023-08-11T12:46:01.969823-07:00
-      status: affected
-      action: Pending upstream project to pick up one of k8s.io/kubernetes 0.17.13+, 0.18.10+, 0.19.3+.
-    - timestamp: 2023-08-27T16:22:08.390785-07:00
-      status: fixed
-      fixed-version: 0.8.14-r0
+  - id: CVE-2020-8564
+    events:
+      - timestamp: 2023-08-11T19:46:01Z
+        type: true-positive-determination
+        data:
+          note: Pending upstream project to pick up one of k8s.io/kubernetes 0.17.13+, 0.18.10+, 0.19.3+.
+      - timestamp: 2023-08-27T23:22:08Z
+        type: fixed
+        data:
+          fixed-version: 0.8.14-r0
 
-  CVE-2020-8565:
-    - timestamp: 2023-08-11T12:45:22.307105-07:00
-      status: affected
-      action: Pending upstream project to pick up k8s.io/kubernetes 0.19.4+.
-    - timestamp: 2023-08-27T16:51:15.477346-07:00
-      status: fixed
-      fixed-version: 0.8.14-r0
+  - id: CVE-2020-8565
+    events:
+      - timestamp: 2023-08-11T19:45:22Z
+        type: true-positive-determination
+        data:
+          note: Pending upstream project to pick up k8s.io/kubernetes 0.19.4+.
+      - timestamp: 2023-08-27T23:51:15Z
+        type: fixed
+        data:
+          fixed-version: 0.8.14-r0
 
-  CVE-2021-25735:
-    - timestamp: 2023-08-11T11:21:29.54486-07:00
-      status: not_affected
-      justification: vulnerable-code-not-included-in-package
-      impact: Vulnerable code is part of an external controller not included k8s.io/kubernetes library
+  - id: CVE-2021-25735
+    events:
+      - timestamp: 2023-08-11T18:21:29Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Vulnerable code is part of an external controller not included k8s.io/kubernetes library
 
-  CVE-2021-25740:
-    - timestamp: 2023-08-11T11:26:56.323061-07:00
-      status: not_affected
-      justification: vulnerable-code-not-included-in-package
-      impact: Vulnerable code is part of an external controller not included k8s.io/kubernetes library
+  - id: CVE-2021-25740
+    events:
+      - timestamp: 2023-08-11T18:26:56Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Vulnerable code is part of an external controller not included k8s.io/kubernetes library
 
-  CVE-2021-25741:
-    - timestamp: 2023-08-11T11:11:46.059396-07:00
-      status: not_affected
-      justification: vulnerable-code-not-included-in-package
-      impact: Vulnerable code is part of an external controller not included k8s.io/kubernetes library
+  - id: CVE-2021-25741
+    events:
+      - timestamp: 2023-08-11T18:11:46Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Vulnerable code is part of an external controller not included k8s.io/kubernetes library
 
-  CVE-2023-2431:
-    - timestamp: 2023-08-11T11:14:34.193773-07:00
-      status: not_affected
-      justification: vulnerable-code-not-included-in-package
-      impact: Vulnerable code is part of an external controller not included k8s.io/kubernetes library
+  - id: CVE-2023-2431
+    events:
+      - timestamp: 2023-08-11T18:14:34Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Vulnerable code is part of an external controller not included k8s.io/kubernetes library
 
-  CVE-2023-2727:
-    - timestamp: 2023-08-11T10:42:39.976381-07:00
-      status: not_affected
-      justification: vulnerable-code-not-included-in-package
-      impact: Vulnerable code is part of an external controller not included k8s.io/kubernetes library
+  - id: CVE-2023-2727
+    events:
+      - timestamp: 2023-08-11T17:42:39Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Vulnerable code is part of an external controller not included k8s.io/kubernetes library
 
-  CVE-2023-2728:
-    - timestamp: 2023-08-11T10:50:53.380736-07:00
-      status: not_affected
-      justification: vulnerable-code-not-included-in-package
-      impact: Vulnerable code is part of an external controller not included k8s.io/kubernetes library
+  - id: CVE-2023-2728
+    events:
+      - timestamp: 2023-08-11T17:50:53Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Vulnerable code is part of an external controller not included k8s.io/kubernetes library
 
-  GHSA-74fp-r6jw-h4mp:
-    - timestamp: 2023-08-11T12:27:05.856378-07:00
-      status: affected
-      action: Waiting for upstream release, fixed with PR https://github.com/kubernetes/node-problem-detector/pull/760.
-    - timestamp: 2023-08-27T16:21:24.431686-07:00
-      status: fixed
-      fixed-version: 0.8.14-r0
+  - id: GHSA-74fp-r6jw-h4mp
+    events:
+      - timestamp: 2023-08-11T19:27:05Z
+        type: true-positive-determination
+        data:
+          note: Waiting for upstream release, fixed with PR https://github.com/kubernetes/node-problem-detector/pull/760.
+      - timestamp: 2023-08-27T23:21:24Z
+        type: fixed
+        data:
+          fixed-version: 0.8.14-r0
