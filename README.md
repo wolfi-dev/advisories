@@ -10,21 +10,19 @@ The purpose of the advisory data is to record all investigated package vulnerabi
 
 ## Interpreting the data
 
-Each package advisories file in this repository has a list of one or more advisories. Each advisory is named by a vulnerability identifier (e.g. "CVE-2023-12345") and contains a list of timestamped status updates.
+Each package advisories file in this repository has a list of one or more advisories. Each advisory is named by an ID (e.g. "CVE-2023-12345") and contains a list of timestamped events that describe the investigation of a vulnerability's impact on the given package.
 
-### Statuses
+### Event Types
 
-Here are the allowed `status` values and what they mean:
+Here are the types of events found in an advisory and what they mean:
 
-`under_investigation`: The maintainers are aware that the package is potentially affected by the vulnerability, but more investigation is needed in order to reach a conclusion.
+`detection`: The maintainers are aware that the package is potentially affected by the vulnerability, but more investigation is needed in order to reach a conclusion.
 
-`affected`: The package is believed to be affected by the vulnerability. Where possible, there will be advice for mitigating the vulnerability in the `action` field attached to this status update.
+`true-positive-determination`: The package is believed to be affected by the vulnerability.
 
-`not_affected`: The package is not believed to be affected by the vulnerability. Any instance of a match of the package to this vulnerability should be treated as a **false positive**. Where possible, further explanation about why this match is a false positive is included in the `impact` field attached to this status update.
+`false-positive-determination`: The package is not believed to be affected by the vulnerability. Where possible, further explanation about why this match is a false positive is included in the event data's `type` and `note` fields.
 
 `fixed`: There was one or more versions of the package affected by the vulnerability, but as of the `fixed-version`, the vulnerability has been mitigated.
-
-
 
 ## Using the data
 
