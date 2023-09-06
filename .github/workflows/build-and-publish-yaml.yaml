@@ -1,0 +1,51 @@
+name: Build and publish YAML
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-publish:
+    name: Build and publish YAML
+    runs-on: ubuntu-latest
+    if: github.repository == 'wolfi-dev/advisories'
+
+    permissions:
+      id-token: write
+      packages: write
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - id: auth
+        name: 'Authenticate to Google Cloud'
+        uses: google-github-actions/auth@v0
+        with:
+          workload_identity_provider: "projects/618116202522/locations/global/workloadIdentityPools/prod-shared-e350/providers/prod-shared-gha"
+          service_account: "prod-images-ci@prod-images-c6e5.iam.gserviceaccount.com"
+
+      - uses: google-github-actions/setup-gcloud@v0
+        with:
+          project_id: prod-images-c6e5
+
+      - name: 'Check that GCloud is properly configured'
+        run: |
+          gcloud info
+          gcloud --quiet alpha storage ls
+
+      - name: Build the YAML database
+        uses: docker://ghcr.io/wolfi-dev/wolfictl:latest@sha256:4ee6e87bd566dce9d5743de6ce7733ea80856a0e11884fead4cc79bfd18fa7f1
+        with:
+          entrypoint: wolfictl
+          args: "advisory export --advisories-repo-dir . --format yaml -o advisories.yaml"
+
+      - name: 'Upload the YAML database to a bucket'
+        run: |
+          # Don't cache advisories.yaml.
+          gcloud --quiet alpha storage cp \
+              --cache-control=no-store \
+              ${{ github.workspace }}/advisories.yaml \
+              gs://wolfi-production-registry-destination/os/
