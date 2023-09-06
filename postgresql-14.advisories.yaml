@@ -1,9 +1,13 @@
+schema-version: "2"
+
 package:
   name: postgresql-14
 
 advisories:
-  CVE-2017-8806:
-    - timestamp: 2023-05-03T13:58:17.082446-04:00
-      status: not_affected
-      justification: vulnerable_code_not_present
-      impact: This CVE appears to impact only Debian/Ubuntu.
+  - id: CVE-2017-8806
+    events:
+      - timestamp: 2023-05-03T17:58:17Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: This CVE appears to impact only Debian/Ubuntu.

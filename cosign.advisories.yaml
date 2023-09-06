@@ -1,9 +1,13 @@
+schema-version: "2"
+
 package:
   name: cosign
 
 advisories:
-  CVE-2007-2233:
-    - timestamp: 2023-06-05T10:08:31.892129-07:00
-      status: not_affected
-      justification: component_not_present
-      impact: The vulnerability is in an ancient CGI script of the same name
+  - id: CVE-2007-2233
+    events:
+      - timestamp: 2023-06-05T17:08:31Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: The vulnerability is in an ancient CGI script of the same name

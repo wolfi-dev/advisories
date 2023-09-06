@@ -1,41 +1,57 @@
+schema-version: "2"
+
 package:
   name: php
 
 advisories:
-  CVE-2007-2728:
-    - timestamp: 2023-02-16T11:01:48.943749-05:00
-      status: not_affected
-      justification: vulnerable_code_not_present
+  - id: CVE-2007-2728
+    events:
+      - timestamp: 2023-02-16T16:01:48Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
 
-  CVE-2007-3205:
-    - timestamp: 2023-02-16T11:01:59.241092-05:00
-      status: not_affected
-      justification: vulnerable_code_not_present
+  - id: CVE-2007-3205
+    events:
+      - timestamp: 2023-02-16T16:01:59Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
 
-  CVE-2007-4596:
-    - timestamp: 2023-02-16T11:02:05.863326-05:00
-      status: not_affected
-      justification: vulnerable_code_not_present
+  - id: CVE-2007-4596
+    events:
+      - timestamp: 2023-02-16T16:02:05Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
 
-  CVE-2015-3211:
-    - timestamp: 2023-08-11T15:45:28.979618-07:00
-      status: not_affected
-      justification: component_not_present
-      impact: This is a packaging defect specific to the php-fpm package included in RHEL.  The Wolfi php-fpm package does not include this defect.
+  - id: CVE-2015-3211
+    events:
+      - timestamp: 2023-08-11T22:45:28Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: This is a packaging defect specific to the php-fpm package included in RHEL.  The Wolfi php-fpm package does not include this defect.
 
-  CVE-2017-6485:
-    - timestamp: 2023-08-11T15:49:50.193085-07:00
-      status: not_affected
-      justification: component_not_present
-      impact: This CVE targets a PHP-based web application called "PHP Calendar," and is unrelated to the PHP calendar extension.
+  - id: CVE-2017-6485
+    events:
+      - timestamp: 2023-08-11T22:49:50Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: This CVE targets a PHP-based web application called "PHP Calendar," and is unrelated to the PHP calendar extension.
 
-  CVE-2022-4455:
-    - timestamp: 2023-08-11T15:50:45.763846-07:00
-      status: not_affected
-      justification: component_not_present
-      impact: This CVE targets a PHP-based web application called "PHP Calendar," and is unrelated to the PHP calendar extension.
+  - id: CVE-2022-31630
+    events:
+      - timestamp: 2023-02-12T01:12:25Z
+        type: fixed
+        data:
+          fixed-version: 8.1.13-r0
 
-  CVE-2022-31630:
-    - timestamp: 2023-02-11T20:12:25.988296-05:00
-      status: fixed
-      fixed-version: 8.1.13-r0
+  - id: CVE-2022-4455
+    events:
+      - timestamp: 2023-08-11T22:50:45Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: This CVE targets a PHP-based web application called "PHP Calendar," and is unrelated to the PHP calendar extension.

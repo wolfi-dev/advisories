@@ -1,27 +1,37 @@
+schema-version: "2"
+
 package:
   name: aws-efs-csi-driver
 
 advisories:
-  CVE-2019-11255:
-    - timestamp: 2023-08-11T12:43:11.828286343-07:00
-      status: not_affected
-      justification: vulnerable_code_not_present
-      impact: Vulnerable code is part of an external csi driver outside of Kubernetes source repository
+  - id: CVE-2019-11255
+    events:
+      - timestamp: 2023-08-11T19:43:11Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: Vulnerable code is part of an external csi driver outside of Kubernetes source repository
 
-  CVE-2023-2431:
-    - timestamp: 2023-08-11T12:38:34.477968396-07:00
-      status: not_affected
-      justification: vulnerable_code_not_in_execute_path
-      impact: Vulnerable code is part of the Kubernetes kubelet which is not in the execution path of the aws-efs-csi-driver
+  - id: CVE-2023-2431
+    events:
+      - timestamp: 2023-08-11T19:38:34Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: Vulnerable code is part of the Kubernetes kubelet which is not in the execution path of the aws-efs-csi-driver
 
-  CVE-2023-2727:
-    - timestamp: 2023-08-11T12:41:17.238138-07:00
-      status: not_affected
-      justification: vulnerable_code_not_in_execute_path
-      impact: Vulnerable code is part of the Kubernetes API server which is not in the execution path of aws-efs-csi-driver
+  - id: CVE-2023-2727
+    events:
+      - timestamp: 2023-08-11T19:41:17Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: Vulnerable code is part of the Kubernetes API server which is not in the execution path of aws-efs-csi-driver
 
-  CVE-2023-2728:
-    - timestamp: 2023-08-11T12:45:18.103576038-07:00
-      status: not_affected
-      justification: vulnerable_code_not_in_execute_path
-      impact: Vulnerable code is part of the Kubernetes ServiceAccount admission plugin which is not in the execution path of aws-efs-csi-driver
+  - id: CVE-2023-2728
+    events:
+      - timestamp: 2023-08-11T19:45:18Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: Vulnerable code is part of the Kubernetes ServiceAccount admission plugin which is not in the execution path of aws-efs-csi-driver

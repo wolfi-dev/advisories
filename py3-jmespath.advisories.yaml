@@ -1,9 +1,13 @@
+schema-version: "2"
+
 package:
   name: py3-jmespath
 
 advisories:
-  CVE-2022-32511:
-    - timestamp: 2023-06-05T06:37:49.935863-04:00
-      status: not_affected
-      justification: component_not_present
-      impact: The vulnerability is in a ruby library, this refers to a python one with the same name
+  - id: CVE-2022-32511
+    events:
+      - timestamp: 2023-06-05T10:37:49Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: The vulnerability is in a ruby library, this refers to a python one with the same name

@@ -1,26 +1,37 @@
+schema-version: "2"
+
 package:
   name: haproxy
 
 advisories:
-  CVE-2016-2102:
-    - timestamp: 2023-02-20T14:35:07.391236-05:00
-      status: not_affected
-      justification: vulnerable_code_not_present
-    - timestamp: 2023-02-20T15:12:46.092387-05:00
-      status: not_affected
-      justification: vulnerable_code_not_in_execute_path
+  - id: CVE-2016-2102
+    events:
+      - timestamp: 2023-02-20T19:35:07Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+      - timestamp: 2023-02-20T20:12:46Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
 
-  CVE-2023-0056:
-    - timestamp: 2023-05-04T10:59:24.549732-04:00
-      status: fixed
-      fixed-version: 2.6.8-r0
+  - id: CVE-2023-0056
+    events:
+      - timestamp: 2023-05-04T14:59:24Z
+        type: fixed
+        data:
+          fixed-version: 2.6.8-r0
 
-  CVE-2023-25725:
-    - timestamp: 2023-02-15T16:12:20.024784027+07:00
-      status: fixed
-      fixed-version: 2.6.9-r0
+  - id: CVE-2023-25725
+    events:
+      - timestamp: 2023-02-15T09:12:20Z
+        type: fixed
+        data:
+          fixed-version: 2.6.9-r0
 
-  CVE-2023-40225:
-    - timestamp: 2023-08-22T09:38:16.806572-07:00
-      status: fixed
-      fixed-version: 2.8.2-r0
+  - id: CVE-2023-40225
+    events:
+      - timestamp: 2023-08-22T16:38:16Z
+        type: fixed
+        data:
+          fixed-version: 2.8.2-r0

@@ -1,9 +1,13 @@
+schema-version: "2"
+
 package:
   name: libssh
 
 advisories:
-  CVE-2023-3603:
-    - timestamp: 2023-08-11T15:37:30.618212-07:00
-      status: not_affected
-      justification: vulnerable_code_not_present
-      impact: This CVE pertains to a defect in an example program and is unrelated to the library.
+  - id: CVE-2023-3603
+    events:
+      - timestamp: 2023-08-11T22:37:30Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This CVE pertains to a defect in an example program and is unrelated to the library.

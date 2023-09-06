@@ -1,9 +1,13 @@
+schema-version: "2"
+
 package:
   name: pixman
 
 advisories:
-  CVE-2023-37769:
-    - timestamp: 2023-08-11T15:29:36.629482-07:00
-      status: not_affected
-      justification: vulnerable_code_not_in_execute_path
-      impact: This CVE was reported against a test program which is explicitly designed to fail.  Upstream plans to dispute it.  https://gitlab.freedesktop.org/pixman/pixman/-/issues/76#note_2016420
+  - id: CVE-2023-37769
+    events:
+      - timestamp: 2023-08-11T22:29:36Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: This CVE was reported against a test program which is explicitly designed to fail.  Upstream plans to dispute it.  https://gitlab.freedesktop.org/pixman/pixman/-/issues/76#note_2016420

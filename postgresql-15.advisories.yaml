@@ -1,14 +1,20 @@
+schema-version: "2"
+
 package:
   name: postgresql-15
 
 advisories:
-  CVE-2017-8806:
-    - timestamp: 2022-11-03T12:41:55Z
-      status: not_affected
-      justification: vulnerable_code_not_present
-      impact: This CVE appears to impact only Debian/Ubuntu.
+  - id: CVE-2017-8806
+    events:
+      - timestamp: 2022-11-03T12:41:55Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: This CVE appears to impact only Debian/Ubuntu.
 
-  CVE-2022-41862:
-    - timestamp: 2023-03-19T17:21:53.344464-04:00
-      status: fixed
-      fixed-version: 15.2-r0
+  - id: CVE-2022-41862
+    events:
+      - timestamp: 2023-03-19T21:21:53Z
+        type: fixed
+        data:
+          fixed-version: 15.2-r0

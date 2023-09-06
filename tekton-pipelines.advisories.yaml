@@ -1,9 +1,13 @@
+schema-version: "2"
+
 package:
   name: tekton-pipelines
 
 advisories:
-  CVE-2023-1732:
-    - timestamp: 2023-08-11T13:23:33.940995-04:00
-      status: not_affected
-      justification: vulnerable_code_not_in_execute_path
-      impact: Vulnerable packages not in dependency tree.
+  - id: CVE-2023-1732
+    events:
+      - timestamp: 2023-08-11T17:23:33Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: Vulnerable packages not in dependency tree.

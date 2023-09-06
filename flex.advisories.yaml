@@ -1,14 +1,18 @@
+schema-version: "2"
+
 package:
   name: flex
 
 advisories:
-  CVE-2019-6293:
-    - timestamp: 2022-10-11T19:48:04+00:00
-      status: not_affected
-      justification: vulnerable_code_not_present
-      impact: |
-        The VEX spec should include a better justification value for this scenario: the vulnerability itself is contested or invalid.
+  - id: CVE-2019-6293
+    events:
+      - timestamp: 2022-10-11T19:48:04Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: |
+            The VEX spec should include a better justification value for this scenario: the vulnerability itself is contested or invalid.
 
-        See for more context on CVE-2019-6293:
-        - https://github.com/westes/flex/issues/414#issuecomment-452593828
-        - https://github.com/NixOS/nixpkgs/issues/55386#issuecomment-683792976
+            See for more context on CVE-2019-6293:
+            - https://github.com/westes/flex/issues/414#issuecomment-452593828
+            - https://github.com/NixOS/nixpkgs/issues/55386#issuecomment-683792976

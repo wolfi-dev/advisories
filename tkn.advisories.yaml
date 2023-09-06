@@ -1,21 +1,29 @@
+schema-version: "2"
+
 package:
   name: tkn
 
 advisories:
-  GHSA-2h5h-59f5-c5x9:
-    - timestamp: 2023-07-24T14:38:06.711297-07:00
-      status: not_affected
-      justification: vulnerable_code_not_present
-      impact: The libraries this CVE impacts are not used by the Tekton project
+  - id: GHSA-2h5h-59f5-c5x9
+    events:
+      - timestamp: 2023-07-24T21:38:06Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: The libraries this CVE impacts are not used by the Tekton project
 
-  GHSA-frqx-jfcm-6jjr:
-    - timestamp: 2023-07-24T14:43:30.33793-07:00
-      status: not_affected
-      justification: vulnerable_code_cannot_be_controlled_by_adversary
-      impact: Malformed entry requests can cause panics, but Tekton doesn't allow users to generate custom requests
+  - id: GHSA-frqx-jfcm-6jjr
+    events:
+      - timestamp: 2023-07-24T21:43:30Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-cannot-be-controlled-by-adversary
+          note: Malformed entry requests can cause panics, but Tekton doesn't allow users to generate custom requests
 
-  GHSA-w2h3-vvvq-3m53:
-    - timestamp: 2023-08-11T11:23:31.127149-04:00
-      status: not_affected
-      justification: vulnerable_code_not_present
-      impact: Vulnerability only present in Tekton Pipelines controller code. Package only relies on client libraries / test utilities.
+  - id: GHSA-w2h3-vvvq-3m53
+    events:
+      - timestamp: 2023-08-11T15:23:31Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Vulnerability only present in Tekton Pipelines controller code. Package only relies on client libraries / test utilities.

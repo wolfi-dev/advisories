@@ -1,19 +1,27 @@
+schema-version: "2"
+
 package:
   name: kafka
 
 advisories:
-  CVE-2023-26048:
-    - timestamp: 2023-05-02T08:42:50.301866-04:00
-      status: fixed
-      fixed-version: 3.4.0-r2
+  - id: CVE-2023-26048
+    events:
+      - timestamp: 2023-05-02T12:42:50Z
+        type: fixed
+        data:
+          fixed-version: 3.4.0-r2
 
-  CVE-2023-26049:
-    - timestamp: 2023-05-02T08:43:01.711354-04:00
-      status: fixed
-      fixed-version: 3.4.0-r2
+  - id: CVE-2023-26049
+    events:
+      - timestamp: 2023-05-02T12:43:01Z
+        type: fixed
+        data:
+          fixed-version: 3.4.0-r2
 
-  CVE-2023-35116:
-    - timestamp: 2023-08-11T16:30:36.883091-04:00
-      status: not_affected
-      justification: vulnerable_code_not_present
-      impact: CVE disputed by upstream developers, nothing specific to this application.
+  - id: CVE-2023-35116
+    events:
+      - timestamp: 2023-08-11T20:30:36Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: CVE disputed by upstream developers, nothing specific to this application.

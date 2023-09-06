@@ -1,15 +1,21 @@
+schema-version: "2"
+
 package:
   name: prometheus-operator
 
 advisories:
-  CVE-2019-3826:
-    - timestamp: 2023-08-11T14:13:07.826089-07:00
-      status: not_affected
-      justification: vulnerable_code_not_present
-      impact: This CVE only impacts prometheus 2.7 but our prometheus-operator is using v0.46.0 Go library which is in fact prothemeus 2.46
+  - id: CVE-2019-3826
+    events:
+      - timestamp: 2023-08-11T21:13:07Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: This CVE only impacts prometheus 2.7 but our prometheus-operator is using v0.46.0 Go library which is in fact prothemeus 2.46
 
-  CVE-2023-40577:
-    - timestamp: 2023-08-25T13:47:54.188231-07:00
-      status: not_affected
-      justification: vulnerable_code_not_present
-      impact: This vulnerability is an XSS flaw affecting alertmanager as a server, not when imported as a library.
+  - id: CVE-2023-40577
+    events:
+      - timestamp: 2023-08-25T20:47:54Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability is an XSS flaw affecting alertmanager as a server, not when imported as a library.

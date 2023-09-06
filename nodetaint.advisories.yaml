@@ -1,57 +1,77 @@
+schema-version: "2"
+
 package:
   name: nodetaint
 
 advisories:
-  CVE-2019-11255:
-    - timestamp: 2023-08-11T10:53:13.239852-07:00
-      status: not_affected
-      justification: component_not_present
-      impact: Vuln only present in Kubernets CSI sidecars external-provisioner, external-snapshotter, external-resizer
+  - id: CVE-2019-11255
+    events:
+      - timestamp: 2023-08-11T17:53:13Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: Vuln only present in Kubernets CSI sidecars external-provisioner, external-snapshotter, external-resizer
 
-  CVE-2020-8554:
-    - timestamp: 2023-08-11T11:25:13.728152-07:00
-      status: not_affected
-      justification: component_not_present
-      impact: This is a Kubernetes API flaw, but we don't include an API server in this package.
+  - id: CVE-2020-8554
+    events:
+      - timestamp: 2023-08-11T18:25:13Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: This is a Kubernetes API flaw, but we don't include an API server in this package.
 
-  CVE-2020-8561:
-    - timestamp: 2023-08-11T12:02:42.993043-07:00
-      status: not_affected
-      justification: vulnerable_code_not_present
-      impact: This only affects kube-apiserver logs, and code was marked NOT_IMPORTABLE in Golang vulndb
+  - id: CVE-2020-8561
+    events:
+      - timestamp: 2023-08-11T19:02:42Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This only affects kube-apiserver logs, and code was marked NOT_IMPORTABLE in Golang vulndb
 
-  CVE-2020-8564:
-    - timestamp: 2023-08-11T12:22:26.031395-07:00
-      status: not_affected
-      justification: vulnerable_code_not_present
-      impact: This does not affect k8s.io/client-go@v0.20.0-alpha.2
+  - id: CVE-2020-8564
+    events:
+      - timestamp: 2023-08-11T19:22:26Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: This does not affect k8s.io/client-go@v0.20.0-alpha.2
 
-  CVE-2020-8565:
-    - timestamp: 2023-08-11T12:17:00.292793-07:00
-      status: not_affected
-      justification: vulnerable_code_not_present
-      impact: This does not affect k8s.io/client-go@v0.20.0-alpha.2
+  - id: CVE-2020-8565
+    events:
+      - timestamp: 2023-08-11T19:17:00Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: This does not affect k8s.io/client-go@v0.20.0-alpha.2
 
-  CVE-2021-25740:
-    - timestamp: 2023-08-11T11:11:11.384955-07:00
-      status: not_affected
-      justification: component_not_present
-      impact: This only affects Kubernetes itself, and code was marked not importable in Golang vulndb
+  - id: CVE-2021-25740
+    events:
+      - timestamp: 2023-08-11T18:11:11Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: This only affects Kubernetes itself, and code was marked not importable in Golang vulndb
 
-  CVE-2023-2431:
-    - timestamp: 2023-08-11T11:16:32.997948-07:00
-      status: not_affected
-      justification: vulnerable_code_not_in_execute_path
-      impact: This bug affects Kubelet, which isn't in nodetaint -- also Golang vulndb marked as EFFECTIVELY_PRIVATE
+  - id: CVE-2023-2431
+    events:
+      - timestamp: 2023-08-11T18:16:32Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: This bug affects Kubelet, which isn't in nodetaint -- also Golang vulndb marked as EFFECTIVELY_PRIVATE
 
-  CVE-2023-2727:
-    - timestamp: 2023-08-11T11:58:45.324372-07:00
-      status: not_affected
-      justification: component_not_present
-      impact: This is only affecting Kubernetes, and was also mark NOT_IMPORTABLE in Golang vulndb
+  - id: CVE-2023-2727
+    events:
+      - timestamp: 2023-08-11T18:58:45Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: This is only affecting Kubernetes, and was also mark NOT_IMPORTABLE in Golang vulndb
 
-  CVE-2023-2728:
-    - timestamp: 2023-08-11T12:05:59.729557-07:00
-      status: not_affected
-      justification: component_not_present
-      impact: This only impacts Kubernetes itself, and was also marked NOT_IMPORTABLE by Golang vulndb
+  - id: CVE-2023-2728
+    events:
+      - timestamp: 2023-08-11T19:05:59Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: This only impacts Kubernetes itself, and was also marked NOT_IMPORTABLE by Golang vulndb

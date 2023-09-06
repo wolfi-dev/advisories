@@ -1,9 +1,13 @@
+schema-version: "2"
+
 package:
   name: openjdk-8
 
 advisories:
-  CVE-2023-21968:
-    - timestamp: 2023-08-11T16:23:47.720726-04:00
-      status: not_affected
-      justification: vulnerable_code_not_present
-      impact: The vulnerability was patched upstream in 362, prior to Wolfi packaging.
+  - id: CVE-2023-21968
+    events:
+      - timestamp: 2023-08-11T20:23:47Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: The vulnerability was patched upstream in 362, prior to Wolfi packaging.

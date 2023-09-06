@@ -1,11 +1,17 @@
+schema-version: "2"
+
 package:
   name: orc
 
 advisories:
-  CVE-2018-8015:
-    - timestamp: 2023-07-01T06:54:08.255397-04:00
-      status: under_investigation
-    - timestamp: 2023-07-01T06:57:44.168849-04:00
-      status: not_affected
-      justification: component_not_present
-      impact: The vulnerability applies to Apache ORC, not the ORC compiler. These are different projects.
+  - id: CVE-2018-8015
+    events:
+      - timestamp: 2023-07-01T10:54:08Z
+        type: detection
+        data:
+          type: manual
+      - timestamp: 2023-07-01T10:57:44Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: The vulnerability applies to Apache ORC, not the ORC compiler. These are different projects.

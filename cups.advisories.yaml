@@ -1,19 +1,27 @@
+schema-version: "2"
+
 package:
   name: cups
 
 advisories:
-  CVE-2018-6553:
-    - timestamp: 2023-07-03T16:39:32.074918-04:00
-      status: not_affected
-      justification: component_not_present
-      impact: The vulnerability only applies to an ubuntu-specific app armor profile which is not included here.
+  - id: CVE-2018-6553
+    events:
+      - timestamp: 2023-07-03T20:39:32Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: The vulnerability only applies to an ubuntu-specific app armor profile which is not included here.
 
-  CVE-2022-26691:
-    - timestamp: 2022-10-25T13:38:24-04:00
-      status: fixed
-      fixed-version: 2.4.2-r0
+  - id: CVE-2022-26691
+    events:
+      - timestamp: 2022-10-25T17:38:24Z
+        type: fixed
+        data:
+          fixed-version: 2.4.2-r0
 
-  CVE-2023-32324:
-    - timestamp: 2023-06-04T13:14:24.076905-04:00
-      status: fixed
-      fixed-version: 2.4.3-r0
+  - id: CVE-2023-32324
+    events:
+      - timestamp: 2023-06-04T17:14:24Z
+        type: fixed
+        data:
+          fixed-version: 2.4.3-r0

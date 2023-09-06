@@ -1,30 +1,42 @@
+schema-version: "2"
+
 package:
   name: go-1.21
 
 advisories:
-  CVE-2020-29509:
-    - timestamp: 2023-03-04T20:01:01.646638-05:00
-      status: not_affected
-      justification: vulnerable_code_not_present
-    - timestamp: 2023-03-04T20:01:14.615494-05:00
-      status: not_affected
-      justification: vulnerable_code_not_in_execute_path
+  - id: CVE-2020-29509
+    events:
+      - timestamp: 2023-03-05T01:01:01Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+      - timestamp: 2023-03-05T01:01:14Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
 
-  CVE-2020-29511:
-    - timestamp: 2023-03-04T20:01:14.61372-05:00
-      status: not_affected
-      justification: vulnerable_code_not_present
-    - timestamp: 2023-03-04T21:45:58.722232-05:00
-      status: not_affected
-      justification: vulnerable_code_not_in_execute_path
+  - id: CVE-2020-29511
+    events:
+      - timestamp: 2023-03-05T01:01:14Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+      - timestamp: 2023-03-05T02:45:58Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
 
-  CVE-2023-29406:
-    - timestamp: 2023-07-14T09:10:46.556709-04:00
-      status: affected
-      action: The Go team hasn't applied the patch yet since this is currently an rc release stream.
+  - id: CVE-2023-29406
+    events:
+      - timestamp: 2023-07-14T13:10:46Z
+        type: true-positive-determination
+        data:
+          note: The Go team hasn't applied the patch yet since this is currently an rc release stream.
 
-  CVE-2023-29409:
-    - timestamp: 2023-08-14T16:19:14.504643-04:00
-      status: not_affected
-      justification: vulnerable_code_not_present
-      impact: This CVE was fixed in go 1.20.7, before 1.21 was branched.
+  - id: CVE-2023-29409
+    events:
+      - timestamp: 2023-08-14T20:19:14Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: This CVE was fixed in go 1.20.7, before 1.21 was branched.

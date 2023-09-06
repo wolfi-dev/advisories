@@ -1,27 +1,41 @@
+schema-version: "2"
+
 package:
   name: kots
 
 advisories:
-  CVE-2020-27847:
-    - timestamp: 2023-08-10T20:35:13.673631-04:00
-      status: under_investigation
-    - timestamp: 2023-08-10T20:35:31.121444-04:00
-      status: not_affected
-      justification: vulnerable_code_not_present
-      impact: The vulnerability-fixing commit is an ancestor of the included commit of the dex module (2bb4896d120e).
+  - id: CVE-2020-26290
+    events:
+      - timestamp: 2023-08-11T00:35:13Z
+        type: detection
+        data:
+          type: manual
+      - timestamp: 2023-08-11T00:35:31Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: The vulnerability-fixing commit is an ancestor of the included commit of the dex module (2bb4896d120e).
 
-  CVE-2020-26290:
-    - timestamp: 2023-08-10T20:35:13.673631-04:00
-      status: under_investigation
-    - timestamp: 2023-08-10T20:35:31.121444-04:00
-      status: not_affected
-      justification: vulnerable_code_not_present
-      impact: The vulnerability-fixing commit is an ancestor of the included commit of the dex module (2bb4896d120e).
+  - id: CVE-2020-27847
+    events:
+      - timestamp: 2023-08-11T00:35:13Z
+        type: detection
+        data:
+          type: manual
+      - timestamp: 2023-08-11T00:35:31Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: The vulnerability-fixing commit is an ancestor of the included commit of the dex module (2bb4896d120e).
 
-  CVE-2022-39222:
-    - timestamp: 2023-08-10T20:35:13.673631-04:00
-      status: under_investigation
-    - timestamp: 2023-08-10T20:35:31.121444-04:00
-      status: not_affected
-      justification: vulnerable_code_not_present
-      impact: The vulnerability-fixing commit is an ancestor of the included commit of the dex module (2bb4896d120e).
+  - id: CVE-2022-39222
+    events:
+      - timestamp: 2023-08-11T00:35:13Z
+        type: detection
+        data:
+          type: manual
+      - timestamp: 2023-08-11T00:35:31Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: The vulnerability-fixing commit is an ancestor of the included commit of the dex module (2bb4896d120e).
