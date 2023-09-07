@@ -1,0 +1,67 @@
+schema-version: "2"
+
+package:
+  name: spark-operator
+
+advisories:
+  - id: CVE-2023-2431
+    events:
+      - timestamp: 2023-09-07T13:45:11Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: Vulnerable code is part of the Kubernetes kubelet which is not in the execution path of the spark-operator
+
+  - id: CVE-2023-2727
+    events:
+      - timestamp: 2023-09-07T13:47:12Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Vulnerable code is part of the Kubernetes API server and not importable.
+
+  - id: CVE-2020-8554
+    events:
+      - timestamp: 2023-09-07T13:49:44Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: This is a Kubernetes API flaw, and this code is not reachable in our package.
+
+  - id: CVE-2023-2728
+    events:
+      - timestamp: 2023-09-07T13:53:32Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Vulnerable code is part of the Kubernetes ServiceAccount admission plugin which is not importable
+
+  - id: CVE-2020-8564
+    events:
+      - timestamp: 2023-09-07T13:55:27Z
+        type: true-positive-determination
+        data:
+          note: Pending upstream project to pick up k8s.io/kubernetes 1.20.0-alpha.1+.
+
+  - id: CVE-2020-8565
+    events:
+      - timestamp: 2023-09-07T13:59:27Z
+        type: true-positive-determination
+        data:
+          note: Pending upstream project to pick up k8s.io/kubernetes 1.20.0-alpha.2+.
+
+  - id: CVE-2020-8561
+    events:
+      - timestamp: 2023-09-07T14:01:11Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This only affects kube-apiserver logs, and code was marked NOT_IMPORTABLE in Golang vulndb
+
+  - id: CVE-2021-25740
+    events:
+      - timestamp: 2023-09-07T14:04:51Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This only affects Kubernetes itself, and code was marked not importable in Golang vulndb
