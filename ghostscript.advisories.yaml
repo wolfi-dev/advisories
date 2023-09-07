@@ -1,0 +1,20 @@
+schema-version: "2"
+
+package:
+  name: ghostscript
+
+advisories:
+  - id: CVE-2023-36664
+    events:
+      - timestamp: 2023-09-06T15:58:48Z
+        type: detection
+        data:
+          type: nvdapi
+          data:
+            cpeSearched: cpe:2.3:a:*:ghostscript:*:*:*:*:*:*:*:*
+            cpeFound: cpe:2.3:a:artifex:ghostscript:*:*:*:*:*:*:*:*
+      - timestamp: 2023-09-06T18:50:31Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: The CPE configuration looks incorrect, 10.01.2 is included in the vulnerable range, but it should be excluded because the ghostpdl-10.01.2 tag upstream already contains the vulnerability-fixing commits.

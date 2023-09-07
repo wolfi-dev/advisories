@@ -1,0 +1,19 @@
+schema-version: "2"
+
+package:
+  name: rabbitmq-c
+
+advisories:
+  - id: CVE-2023-35789
+    events:
+      - timestamp: 2023-09-06T15:58:49Z
+        type: detection
+        data:
+          type: nvdapi
+          data:
+            cpeSearched: cpe:2.3:a:*:rabbitmq-c:*:*:*:*:*:*:*:*
+            cpeFound: cpe:2.3:a:rabbitmq-c_project:rabbitmq-c:*:*:*:*:*:*:*:*
+      - timestamp: 2023-09-06T21:21:50Z
+        type: true-positive-determination
+        data:
+          note: Waiting for an upstream release that includes the fix from https://github.com/alanxz/rabbitmq-c/pull/781.

@@ -1,0 +1,20 @@
+schema-version: "2"
+
+package:
+  name: gtk-2.0
+
+advisories:
+  - id: CVE-2014-1949
+    events:
+      - timestamp: 2023-09-06T15:58:48Z
+        type: detection
+        data:
+          type: nvdapi
+          data:
+            cpeSearched: cpe:2.3:a:*:gtk:*:*:*:*:*:*:*:*
+            cpeFound: cpe:2.3:a:gnome:gtk:*:*:*:*:*:*:*:*
+      - timestamp: 2023-09-06T21:05:07Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: This vulnerability affects gtk 3.x, not 2.x.
