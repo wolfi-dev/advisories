@@ -1,0 +1,19 @@
+schema-version: "2"
+
+package:
+  name: gcc
+
+advisories:
+  - id: CVE-2023-4039
+    events:
+      - timestamp: 2023-09-19T20:42:57Z
+        type: detection
+        data:
+          type: nvdapi
+          data:
+            cpeSearched: cpe:2.3:a:*:gcc:*:*:*:*:*:*:*:*
+            cpeFound: cpe:2.3:a:gnu:gcc:*:*:*:*:*:*:arm64:*
+      - timestamp: 2023-09-19T20:44:10Z
+        type: fixed
+        data:
+          fixed-version: 13.2.0-r3
