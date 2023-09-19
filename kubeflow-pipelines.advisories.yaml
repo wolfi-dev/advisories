@@ -35,6 +35,14 @@ advisories:
           type: vulnerable-code-not-in-execution-path
           note: This is a Kubernetes API flaw, and this code is not reachable in our package and also code was marked EFFECTIVELY_PRIVATE in Golang vulndb
 
+  - id: CVE-2020-8555
+    events:
+      - timestamp: 2023-09-19T17:12:25Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Go vulndb has marked this code NOT_IMPORTABLE.
+
   - id: CVE-2020-8558
     events:
       - timestamp: 2023-09-09T16:24:48Z
