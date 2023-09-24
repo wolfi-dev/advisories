@@ -56,3 +56,11 @@ advisories:
         data:
           type: vulnerability-record-analysis-contested
           note: CVE is being considered by the community a false positive. See https://github.com/FasterXML/jackson-databind/issues/3972 and https://github.com/anchore/grype/issues/1386
+
+  - id: CVE-2023-4759
+    events:
+      - timestamp: 2023-09-24T13:16:58Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability is only present on case-insensitive filesystems, like Windows or Mac. Our containers only run on Linux.
