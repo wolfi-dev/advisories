@@ -38,3 +38,15 @@ advisories:
         data:
           type: vulnerable-code-not-in-execution-path
           note: GCC doesn't use the vulnerable code path in libiberty.
+
+  - id: CVE-2023-4039
+    events:
+      - timestamp: 2023-09-30T19:00:34Z
+        type: detection
+        data:
+          type: nvdapi
+          data:
+            cpeSearched: cpe:2.3:a:*:gcc:*:*:*:*:*:*:*:*
+            cpeFound: cpe:2.3:a:gnu:gcc:*:*:*:*:*:*:arm64:*
+      - timestamp: 2023-09-30T23:32:34Z
+        type: true-positive-determination
