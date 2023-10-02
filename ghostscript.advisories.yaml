@@ -18,3 +18,17 @@ advisories:
         data:
           type: vulnerable-code-version-not-used
           note: The CPE configuration looks incorrect, 10.01.2 is included in the vulnerable range, but it should be excluded because the ghostpdl-10.01.2 tag upstream already contains the vulnerability-fixing commits.
+
+  - id: CVE-2023-43115
+    events:
+      - timestamp: 2023-09-30T19:00:42Z
+        type: detection
+        data:
+          type: nvdapi
+          data:
+            cpeSearched: cpe:2.3:a:*:ghostscript:*:*:*:*:*:*:*:*
+            cpeFound: cpe:2.3:a:artifex:ghostscript:*:*:*:*:*:*:*:*
+      - timestamp: 2023-10-01T00:07:47Z
+        type: fixed
+        data:
+          fixed-version: 10.02.0-r0

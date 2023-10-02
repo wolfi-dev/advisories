@@ -1,0 +1,20 @@
+schema-version: "2"
+
+package:
+  name: openmp-16
+
+advisories:
+  - id: CVE-2022-26345
+    events:
+      - timestamp: 2023-09-30T19:05:11Z
+        type: detection
+        data:
+          type: nvdapi
+          data:
+            cpeSearched: cpe:2.3:a:*:openmp:*:*:*:*:*:*:*:*
+            cpeFound: cpe:2.3:a:intel:openmp:*:*:*:*:*:*:*:*
+      - timestamp: 2023-10-01T00:09:11Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: Our package is actually the LLVM library for openmp, not openmp itself.

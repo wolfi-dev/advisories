@@ -10,3 +10,18 @@ advisories:
         type: false-positive-determination
         data:
           type: component-vulnerability-mismatch
+
+  - id: CVE-2023-41330
+    events:
+      - timestamp: 2023-09-30T19:11:40Z
+        type: detection
+        data:
+          type: nvdapi
+          data:
+            cpeSearched: cpe:2.3:a:*:snappy:*:*:*:*:*:*:*:*
+            cpeFound: cpe:2.3:a:knplabs:snappy:*:*:*:*:*:*:*:*
+      - timestamp: 2023-09-30T23:43:38Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: Broad CPE matched knplabs package, not Google's package.

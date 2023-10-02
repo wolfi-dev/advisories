@@ -1,0 +1,20 @@
+schema-version: "2"
+
+package:
+  name: openvpn
+
+advisories:
+  - id: CVE-2020-27569
+    events:
+      - timestamp: 2023-09-30T19:05:15Z
+        type: detection
+        data:
+          type: nvdapi
+          data:
+            cpeSearched: cpe:2.3:a:*:openvpn:*:*:*:*:*:*:*:*
+            cpeFound: cpe:2.3:a:aviatrix:openvpn:*:*:*:*:*:*:*:*
+      - timestamp: 2023-10-01T00:10:58Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: CVE refers to Aviatrix VPN Client.
