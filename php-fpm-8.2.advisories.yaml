@@ -1,7 +1,7 @@
 schema-version: "2"
 
 package:
-  name: php-8.2
+  name: php-8.2-fpm
 
 advisories:
   - id: CVE-2007-2728
@@ -25,18 +25,10 @@ advisories:
         data:
           type: vulnerability-record-analysis-contested
 
-  - id: CVE-2017-6485
+  - id: CVE-2015-3211
     events:
       - timestamp: 2023-09-07T22:18:51Z
         type: false-positive-determination
         data:
           type: component-vulnerability-mismatch
-          note: This CVE targets a PHP-based web application called "PHP Calendar," and is unrelated to the PHP calendar extension.
-
-  - id: CVE-2022-4455
-    events:
-      - timestamp: 2023-09-07T22:18:51Z
-        type: false-positive-determination
-        data:
-          type: component-vulnerability-mismatch
-          note: This CVE targets a PHP-based web application called "PHP Calendar," and is unrelated to the PHP calendar extension.
+          note: This is a packaging defect specific to the php-fpm package included in RHEL.  The Wolfi php-fpm package does not include this defect.

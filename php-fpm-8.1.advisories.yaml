@@ -1,7 +1,7 @@
 schema-version: "2"
 
 package:
-  name: php-8.1
+  name: php-8.1-fpm
 
 advisories:
   - id: CVE-2007-2728
@@ -24,3 +24,11 @@ advisories:
         type: false-positive-determination
         data:
           type: vulnerability-record-analysis-contested
+
+  - id: CVE-2015-3211
+    events:
+      - timestamp: 2023-10-05T22:18:51Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: This is a packaging defect specific to the php-fpm package included in RHEL.  The Wolfi php-fpm package does not include this defect.
