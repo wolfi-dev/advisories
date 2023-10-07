@@ -108,6 +108,16 @@ advisories:
           type: component-vulnerability-mismatch
           note: CVE is being considered by the community a false positive. See https://github.com/keycloak/keycloak/issues/20226
 
+  - id: CVE-2022-28220
+    events:
+      - timestamp: 2023-10-05T13:50:00Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |
+            Scanner is incorrectly matching vulnerabilities for apache:james-server against james.apache-mime4 (installed).
+            Both are different applications. See https://github.com/keycloak/keycloak/issues/20225
+
   - id: CVE-2022-37832
     events:
       - timestamp: 2023-10-04T19:00:00Z
@@ -116,13 +126,44 @@ advisories:
           type: component-vulnerability-mismatch
           note: CVE is being considered by the community a false positive. See https://github.com/anchore/grype/issues/1068
 
+  - id: CVE-2022-45935
+    events:
+      - timestamp: 2023-10-05T13:50:00Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |
+            Scanner is incorrectly matching vulnerabilities for apache:james-server against james.apache-mime4 (installed).
+            Both are different applications. See https://github.com/anchore/grype/issues/1138
+
+  - id: CVE-2023-2976
+    events:
+      - timestamp: 2023-10-05T13:50:00Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: |
+            Scanner is correctly detecting guava v32.0.0 is installed, but is incorrectly
+            reporting that it is vulnerable to this CVE. v32.0.0 contains the fix.
+            See https://github.com/google/guava/releases/tag/v32.0.0 and https://github.com/keycloak/keycloak/pull/21544
+
   - id: CVE-2023-0264
     events:
       - timestamp: 2023-04-30T11:15:20Z
         type: false-positive-determination
         data:
           type: vulnerable-code-version-not-used
-          note: The CVE was fixed in a version of keycloak prior to our packaging. See https://github.com/keycloak/keycloak/issues/21079
+          note: |
+            Scanner is reporting that Keycloak v22.0.4  still vulnerable to this CVE.
+            however this was fixed in an earlier version: v21.0.1. See https://github.com/advisories/GHSA-9g98-5mj6-f9mv
+
+  - id: CVE-2023-26269
+    events:
+      - timestamp: 2023-10-05T13:50:00Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: CVE is being considered by the community a false positive. See https://github.com/anchore/grype/issues/1138
 
   - id: CVE-2023-35116
     events:
