@@ -5,6 +5,8 @@ package:
 
 advisories:
   - id: CVE-2020-8552
+    aliases:
+      - GHSA-82hx-w2r5-c2wq
     events:
       - timestamp: 2023-09-19T16:44:26Z
         type: false-positive-determination
@@ -13,6 +15,8 @@ advisories:
           note: Go vulndb has marked this code NOT_IMPORTABLE.
 
   - id: CVE-2022-39383
+    aliases:
+      - GHSA-m5xf-x7q6-3rm7
     events:
       - timestamp: 2023-08-11T22:59:56Z
         type: false-positive-determination
@@ -27,11 +31,3 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability is only present on Windows.
-
-  - id: GHSA-m5xf-x7q6-3rm7
-    events:
-      - timestamp: 2023-08-11T22:58:40Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-version-not-used
-          note: Vulnerable code was fixed in KubeVela 1.5.9/1.6.2.  Earliest Wolfi package is 1.7.0.
