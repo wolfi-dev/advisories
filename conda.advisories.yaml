@@ -5,6 +5,8 @@ package:
 
 advisories:
   - id: CVE-2007-4559
+    aliases:
+      - GHSA-gw9q-c7gh-j9vm
     events:
       - timestamp: 2023-07-21T18:10:35Z
         type: false-positive-determination
@@ -13,6 +15,8 @@ advisories:
           note: We have determined that this is not a security issue in the Python package itself. It's still possible to misuse the Python standard library, such as by supplying untrusted data to the tar extraction functions, in which case a vulnerability should be identified in the caller code.
 
   - id: CVE-2018-20225
+    aliases:
+      - GHSA-7p5p-7qq5-cc86
     events:
       - timestamp: 2023-07-21T18:03:13Z
         type: false-positive-determination
@@ -21,6 +25,8 @@ advisories:
           note: This vulnerability is disputed, and the consensus in the security community is that this is intended behavior, not a security flaw.
 
   - id: CVE-2023-27043
+    aliases:
+      - GHSA-5mwm-wccq-xqcp
     events:
       - timestamp: 2023-07-21T18:05:18Z
         type: true-positive-determination
@@ -28,6 +34,8 @@ advisories:
           note: There doesn't appear to be a backport of the fix available for Python 3.10.x, see https://github.com/python/cpython/issues/102988.
 
   - id: CVE-2023-36632
+    aliases:
+      - GHSA-gv66-v8c8-v69c
     events:
       - timestamp: 2023-07-21T18:06:11Z
         type: false-positive-determination
@@ -35,7 +43,18 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: The vendor's perspective is that this is neither a vulnerability nor a bug.
 
+  - id: CVE-2023-37920
+    aliases:
+      - GHSA-xqr8-7jwr-rhp7
+    events:
+      - timestamp: 2023-08-11T22:01:28Z
+        type: fixed
+        data:
+          fixed-version: 23.7.2-r1
+
   - id: CVE-2023-38325
+    aliases:
+      - GHSA-cf7p-gm2m-833m
     events:
       - timestamp: 2023-08-11T22:03:52Z
         type: fixed
@@ -52,13 +71,6 @@ advisories:
   - id: GHSA-jm77-qphf-c4w8
     events:
       - timestamp: 2023-08-11T22:04:01Z
-        type: fixed
-        data:
-          fixed-version: 23.7.2-r1
-
-  - id: GHSA-xqr8-7jwr-rhp7
-    events:
-      - timestamp: 2023-08-11T22:01:28Z
         type: fixed
         data:
           fixed-version: 23.7.2-r1

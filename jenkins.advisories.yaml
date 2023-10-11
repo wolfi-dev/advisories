@@ -5,6 +5,8 @@ package:
 
 advisories:
   - id: CVE-2016-1000027
+    aliases:
+      - GHSA-4wrc-f8pq-fpqp
     events:
       - timestamp: 2023-07-21T18:56:46Z
         type: detection
@@ -16,7 +18,19 @@ advisories:
           type: vulnerable-code-not-in-execution-path
           note: Data serialization is performed by the Jenkins framework, nothing specific to this application.
 
+  - id: CVE-2022-1471
+    aliases:
+      - GHSA-mjmj-j48q-9wg2
+    events:
+      - timestamp: 2023-07-24T18:14:08Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: The vulnerable code is not present in the Jenkins snakeyaml plugin, see https://github.com/jenkinsci/snakeyaml-api-plugin/pull/75#issuecomment-1482964755.
+
   - id: CVE-2023-24998
+    aliases:
+      - GHSA-hfrx-6qgj-fp6c
     events:
       - timestamp: 2023-03-26T01:19:30Z
         type: fixed
@@ -24,6 +38,8 @@ advisories:
           fixed-version: 2.394-r0
 
   - id: CVE-2023-27898
+    aliases:
+      - GHSA-j664-qhh4-hpf8
     events:
       - timestamp: 2023-03-11T23:35:43Z
         type: fixed
@@ -31,6 +47,8 @@ advisories:
           fixed-version: 2.394-r0
 
   - id: CVE-2023-27899
+    aliases:
+      - GHSA-hf9h-vv4m-2f33
     events:
       - timestamp: 2023-03-26T01:19:10Z
         type: fixed
@@ -38,6 +56,8 @@ advisories:
           fixed-version: 2.394-r0
 
   - id: CVE-2023-27902
+    aliases:
+      - GHSA-cj6r-8pxj-5jv6
     events:
       - timestamp: 2023-03-26T01:19:39Z
         type: fixed
@@ -45,6 +65,8 @@ advisories:
           fixed-version: 2.394-r0
 
   - id: CVE-2023-27903
+    aliases:
+      - GHSA-584m-7r4m-8j6v
     events:
       - timestamp: 2023-03-26T01:19:51Z
         type: fixed
@@ -52,6 +74,8 @@ advisories:
           fixed-version: 2.394-r0
 
   - id: CVE-2023-27904
+    aliases:
+      - GHSA-rrgp-c2w8-6vg6
     events:
       - timestamp: 2023-03-26T01:19:59Z
         type: fixed
@@ -59,6 +83,8 @@ advisories:
           fixed-version: 2.394-r0
 
   - id: CVE-2023-35116
+    aliases:
+      - GHSA-gx6w-fqg7-mc3p
     events:
       - timestamp: 2023-07-24T16:36:57Z
         type: false-positive-determination
@@ -73,11 +99,3 @@ advisories:
         data:
           type: vulnerability-record-analysis-contested
           note: This was deemed to not be a vulnerability in the code itself. Applications can use it incorrectly, but there's no evidence of that here.
-
-  - id: GHSA-mjmj-j48q-9wg2
-    events:
-      - timestamp: 2023-07-24T18:14:08Z
-        type: false-positive-determination
-        data:
-          type: vulnerability-record-analysis-contested
-          note: The vulnerable code is not present in the Jenkins snakeyaml plugin, see https://github.com/jenkinsci/snakeyaml-api-plugin/pull/75#issuecomment-1482964755.
