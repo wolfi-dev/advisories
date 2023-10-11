@@ -176,14 +176,10 @@ advisories:
   - id: CVE-2023-4586
     events:
       - timestamp: 2023-10-09T10:53:00Z
-        type: detection
+        type: true-positive-determination
         data:
-          type: manual
           note: |
-            This CVE exists in the latest release (v4) of netty-handler, which is a transitive dependency
-            of Quarkus, used by Keycloak. The netty-handler team state this will not be present in a newer
-            release (v5.x), but this is not public and has been in developent for quite some time. It remains
-            to be seen whether the latest released version will receive a patch. See also:
-            https://github.com/opensearch-project/security/issues/3477
-            https://github.com/keycloak/keycloak/blob/21a23ace1d0aaada4825f4627b9bc3835d190ff3/.github/snyk/.snyk#L21
-            https://security.snyk.io/vuln/SNYK-JAVA-IONETTY-1042268
+            This CVE exists in the latest release (v4) of netty-handler, which has yet to receive a patch.
+            There is discussion this would be mitigated in an upcoming v5 of netty, but this is yet to be released and there is no ETA.
+            nettty-handler is a dependency of Quarkus, which is used by Keycloak. For more detail:
+            https://github.com/netty/netty/issues/8537
