@@ -26,6 +26,20 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: The vulnerability doesn't appear to be legitimate. The fix (https://github.com/snowflakedb/gosnowflake/pull/757) cannot fix any vulnerability, since it only introduces unused code. If a vulnerability exists as part of the SSO process, it would need to be addressed server side, and not in the Snowflake Golang client. Ultimately, the SSO server is responsible for determining if a redirect URL is allowed, not the client. The Go vulndb has also indicated this CVE is not a vulnerability (https://github.com/golang/vulndb/issues/1846).
 
+  - id: CVE-2023-39325
+    events:
+      - timestamp: 2023-10-14T00:45:47Z
+        type: fixed
+        data:
+          fixed-version: 1.26.3-r4
+
+  - id: CVE-2023-3978
+    events:
+      - timestamp: 2023-10-14T00:46:04Z
+        type: fixed
+        data:
+          fixed-version: 1.26.3-r4
+
   - id: GHSA-2w8w-qhg4-f78j
     events:
       - timestamp: 2023-08-25T22:21:50Z
