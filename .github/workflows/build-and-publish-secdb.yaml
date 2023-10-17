@@ -40,7 +40,7 @@ jobs:
         uses: docker://ghcr.io/wolfi-dev/sdk:latest@sha256:738c4b4c1ed8aa5c0510d9fe6eece1e98a40cec0a8f4c39e44c96b97af204b20
         with:
           entrypoint: wolfictl
-          args: "advisory db --advisories-repo-dir . --arch x86_64 --arch aarch64 -o security.json"
+          args: "advisory secdb --advisories-repo-dir . --arch x86_64 --arch aarch64 -o security.json"
 
       - name: 'Upload the security database to a bucket'
         run: |
