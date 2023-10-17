@@ -11,7 +11,8 @@ advisories:
       - timestamp: 2023-10-17T21:24:51Z
         type: false-positive-determination
         data:
-          type: vulnerability-record-analysis-contested
+          type: vulnerable-code-not-included-in-package
+          note: "vulnerable code was removed 20160705: https://github.com/php/php-src/commit/b21de28bb70117d9bfe73efeb7d6bb5691b043e5#diff-18d10bfd6dddfbf3e844f417fb0c4128bb86808934f4f958d8fecd142eee3dc4L646"
 
   - id: CVE-2007-3205
     aliases:
@@ -21,6 +22,7 @@ advisories:
         type: false-positive-determination
         data:
           type: vulnerability-record-analysis-contested
+          note: "Official statement from Red Hat (20070626): This is not a security vulnerability: it is the expected behaviour of parse_str when used without a second parameter. https://nvd.nist.gov/vuln/detail/CVE-2007-3205"
 
   - id: CVE-2007-4596
     aliases:
@@ -30,6 +32,7 @@ advisories:
         type: false-positive-determination
         data:
           type: vulnerability-record-analysis-contested
+          note: "Official statement from Mandriva (20070921): Due to the nature of safe_mode and open_basedir restrictions, and in alignment with the PHP group’s stance on these features, Mandriva does not consider this a security issue. https://nvd.nist.gov/vuln/detail/CVE-2007-4596"
 
   - id: CVE-2015-3211
     aliases:
@@ -39,4 +42,4 @@ advisories:
         type: false-positive-determination
         data:
           type: component-vulnerability-mismatch
-          note: This is a packaging defect specific to the php-fpm package included in RHEL.  The Wolfi php-fpm package does not include this defect.
+          note: This is a packaging defect specific to the php-fpm package included in RHEL. The Wolfi php-fpm package does not include this defect.
