@@ -82,6 +82,16 @@ advisories:
         data:
           fixed-version: 2.394-r0
 
+  - id: CVE-2023-33201
+    aliases:
+      - GHSA-hr8g-6v94-x4m9
+    events:
+      - timestamp: 2023-10-19T00:33:24Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: This is a dependency of a test dependency only.
+
   - id: CVE-2023-35116
     aliases:
       - GHSA-gx6w-fqg7-mc3p
@@ -91,6 +101,15 @@ advisories:
         data:
           type: vulnerable-code-not-in-execution-path
           note: CVE disputed by upstream developers, nothing specific to this application.
+
+  - id: CVE-2023-5072
+    aliases:
+      - GHSA-rm7j-f5g5-27vv
+    events:
+      - timestamp: 2023-10-19T00:36:12Z
+        type: fix-not-planned
+        data:
+          note: Upstream is using a deprecated dependency (com.fasterxml.jackson.datatype:jackson-datatype-json-org). The CVE is matched to a dependency of this deprecated dependency (org.json:json). Upstream needs to migrate their code off this deprecated dependency.
 
   - id: GHSA-58qw-p7qm-5rvh
     events:
