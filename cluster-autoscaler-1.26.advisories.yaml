@@ -1,42 +1,41 @@
 schema-version: "2"
 
 package:
-  name: cluster-autoscaler-1.28
+  name: cluster-autoscaler-1.26
 
 advisories:
-  - id: CVE-2020-8552
-    aliases:
-      - GHSA-82hx-w2r5-c2wq
-    events:
-      - timestamp: 2023-09-19T16:41:10Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Go vulndb has marked this code NOT_IMPORTABLE.
-
   - id: CVE-2023-39325
     aliases:
       - GHSA-4374-p667-p6c8
     events:
-      - timestamp: 2023-10-13T16:45:20Z
+      - timestamp: 2023-10-25T17:23:00Z
         type: fixed
         data:
-          fixed-version: 1.28.0-r5
+          fixed-version: 1.26.4-r3
 
   - id: CVE-2023-3978
     aliases:
       - GHSA-2wrh-6pvc-2jm9
     events:
-      - timestamp: 2023-10-13T16:46:57Z
+      - timestamp: 2023-10-25T17:22:43Z
         type: fixed
         data:
-          fixed-version: 1.28.0-r5
+          fixed-version: 1.26.4-r3
+
+  - id: CVE-2023-44487
+    aliases:
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2023-10-25T17:23:15Z
+        type: fixed
+        data:
+          fixed-version: 1.26.4-r3
 
   - id: CVE-2023-45142
     aliases:
       - GHSA-rcjv-mgp8-qvmr
     events:
-      - timestamp: 2023-10-25T14:07:36Z
+      - timestamp: 2023-10-25T15:18:52Z
         type: true-positive-determination
         data:
           note: Govulncheck confirms the affect symbol is present. But bumping the affected dependency requires third party modules to update their code not to use packages removed in recent versions of OpenTelemtry's modules, so we'll need to wait for upstream changes to fix this.
