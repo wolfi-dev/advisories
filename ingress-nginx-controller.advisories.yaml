@@ -1,4 +1,4 @@
-schema-version: "2"
+schema-version: 2.0.1
 
 package:
   name: ingress-nginx-controller
@@ -24,9 +24,31 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: CVE relates to NGINX module ngx_http_mp4_module which is not included in the package
 
+  - id: CVE-2022-4886
+    events:
+      - timestamp: 2023-10-30T12:24:29Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: This vulnerability was reported to be fixed in 1.8.0, which was the first version shipped by Wolfi. https://www.openwall.com/lists/oss-security/2023/10/25/5
+
   - id: CVE-2023-44487
     events:
       - timestamp: 2023-10-13T04:13:45Z
         type: fixed
         data:
           fixed-version: 1.9.3-r1
+
+  - id: CVE-2023-5043
+    events:
+      - timestamp: 2023-10-30T12:25:44Z
+        type: fixed
+        data:
+          fixed-version: 1.9.0-r0
+
+  - id: CVE-2023-5044
+    events:
+      - timestamp: 2023-10-30T12:26:17Z
+        type: fixed
+        data:
+          fixed-version: 1.9.0-r0
