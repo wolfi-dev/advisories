@@ -1,4 +1,4 @@
-schema-version: "2"
+schema-version: 2.0.1
 
 package:
   name: go-1.19
@@ -187,6 +187,22 @@ advisories:
       - timestamp: 2023-10-12T23:57:06Z
         type: true-positive-determination
       - timestamp: 2023-10-12T23:57:49Z
+        type: fix-not-planned
+        data:
+          note: Go 1.19 is no longer supported upstream.
+
+  - id: CVE-2023-44487
+    aliases:
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2023-10-30T20:51:35Z
+        type: detection
+        data:
+          type: nvdapi
+          data:
+            cpeSearched: cpe:2.3:a:*:go:*:*:*:*:*:*:*:*
+            cpeFound: cpe:2.3:a:golang:go:*:*:*:*:*:*:*:*
+      - timestamp: 2023-10-31T18:13:49Z
         type: fix-not-planned
         data:
           note: Go 1.19 is no longer supported upstream.
