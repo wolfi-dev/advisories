@@ -1,4 +1,4 @@
-schema-version: "2"
+schema-version: 2.0.1
 
 package:
   name: prometheus
@@ -27,6 +27,14 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability is an XSS flaw affecting alertmanager as a server not the library.
+
+  - id: GHSA-jq35-85cj-fj4p
+    events:
+      - timestamp: 2023-10-31T20:04:00Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability is in the container runtime itself, not clients of the container runtime.
 
   - id: GHSA-rcjv-mgp8-qvmr
     events:
