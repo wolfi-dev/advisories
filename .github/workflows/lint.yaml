@@ -2,7 +2,8 @@ name: Lint
 
 on:
   pull_request:
-    branches: ['main']
+    branches:
+      - 'main'
   push:
     branches:
       - gh-readonly-queue/main/**
@@ -24,3 +25,19 @@ jobs:
       with:
         entrypoint: wolfictl
         args: lint yam
+
+  misspell:
+    name: Misspell
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: reviewdog/action-misspell@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
+          locale: "US"
