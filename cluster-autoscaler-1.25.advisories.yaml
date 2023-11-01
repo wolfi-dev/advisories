@@ -1,9 +1,17 @@
-schema-version: "2"
+schema-version: 2.0.1
 
 package:
   name: cluster-autoscaler-1.25
 
 advisories:
+  - id: CVE-2021-25743
+    events:
+      - timestamp: 2023-11-01T20:41:13Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This is a vulnerability in kubectl.
+
   - id: CVE-2023-39325
     aliases:
       - GHSA-4374-p667-p6c8
