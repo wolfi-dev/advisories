@@ -1,4 +1,4 @@
-schema-version: "2"
+schema-version: 2.0.1
 
 package:
   name: spark-operator
@@ -41,6 +41,14 @@ advisories:
         type: true-positive-determination
         data:
           note: Pending upstream project to pick up k8s.io/kubernetes 1.20.0-alpha.2+.
+
+  - id: CVE-2021-25736
+    events:
+      - timestamp: 2023-11-02T00:16:10Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Vulnerability is specific to Windows and the affected code is not imported.
 
   - id: CVE-2021-25740
     aliases:
