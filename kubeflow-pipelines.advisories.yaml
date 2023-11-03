@@ -1,4 +1,4 @@
-schema-version: "2"
+schema-version: 2.0.1
 
 package:
   name: kubeflow-pipelines
@@ -141,6 +141,16 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Vulnerable code is part of a kubeflow-pipelines and code was marked NOT_IMPORTABLE in Golang vulndb
 
+  - id: CVE-2021-25736
+    aliases:
+      - GHSA-35c7-w35f-xwgh
+    events:
+      - timestamp: 2023-11-01T20:56:04Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: Vulnerable code is part of the Kubernetes kubeproxy which is not in the execution path of the kubeflow-pipelines
+
   - id: CVE-2021-25740
     aliases:
       - GHSA-vw47-mr44-3jf9
@@ -200,3 +210,20 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Vulnerable code is part of the Kubernetes ServiceAccount admission plugin which is not importable and also code was marked NOT_IMPORTABLE in Golang vulndb
+
+  - id: CVE-2023-28155
+    aliases:
+      - GHSA-p8p7-x288-28g6
+    events:
+      - timestamp: 2023-11-01T07:12:35Z
+        type: pending-upstream-fix
+        data:
+          note: cannot fix the CVE because there were no patched versions since the 'request' package is no longer supported by the maintainer.
+
+  - id: GHSA-2jcg-qqmg-46q6
+    events:
+      - timestamp: 2023-11-01T07:13:06Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This is test code that is never used in production. To get more detail about the false-positive determination, please check https://github.com/browserify/resolve/issues/288
