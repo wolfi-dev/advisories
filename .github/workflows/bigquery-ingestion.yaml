@@ -1,0 +1,37 @@
+name: Ingest to BigQuery
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  ingest:
+    name: Ingest to BigQuery
+    runs-on: ubuntu-latest
+    if: github.repository == 'wolfi-dev/advisories'
+
+    permissions:
+      id-token: write
+      packages: write
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - id: auth
+        name: 'Authenticate to Google Cloud'
+        uses: google-github-actions/auth@v0
+        with:
+          workload_identity_provider: "projects/618116202522/locations/global/workloadIdentityPools/prod-shared-e350/providers/prod-shared-gha"
+          service_account: "prod-images-ci@prod-images-c6e5.iam.gserviceaccount.com"
+
+      - uses: google-github-actions/setup-gcloud@v0
+        with:
+          project_id: prod-images-c6e5
+
+      - name: 'Ingest to BigQuery'
+        run: |
+          gcloud info
+          gcloud run jobs execute --region us-central1 cve-advisory-cron
