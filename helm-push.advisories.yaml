@@ -1,0 +1,21 @@
+schema-version: 2.0.1
+
+package:
+  name: helm-push
+
+advisories:
+  - id: GHSA-6xv5-86q9-7xr8
+    events:
+      - timestamp: 2023-09-09T15:18:14Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability is only present on Windows.
+
+  - id: GHSA-jq35-85cj-fj4p
+    events:
+      - timestamp: 2023-10-31T20:03:49Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability is in the container runtime itself, not clients of the container runtime.
