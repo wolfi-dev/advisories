@@ -49,3 +49,19 @@ advisories:
         type: true-positive-determination
         data:
           note: Govulncheck confirms the affect symbol is present. But bumping the affected dependency requires third party modules to update their code not to use packages removed in recent versions of OpenTelemtry's modules, so we'll need to wait for upstream changes to fix this.
+
+  - id: CVE-2023-45283
+    events:
+      - timestamp: 2023-11-07T19:24:32Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CVE-2023-45284
+    events:
+      - timestamp: 2023-11-07T19:24:34Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
