@@ -1,4 +1,4 @@
-schema-version: "2"
+schema-version: 2.0.1
 
 package:
   name: php-8.2
@@ -60,3 +60,13 @@ advisories:
         data:
           type: component-vulnerability-mismatch
           note: This CVE targets a PHP-based web application called "PHP Calendar," and is unrelated to the PHP calendar extension.
+
+  - id: CVE-2022-4900
+    aliases:
+      - GHSA-95cc-jq89-8hvw
+    events:
+      - timestamp: 2023-11-12T05:18:10Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: 'This vulnerability was fixed in PHP 8.0.22 in this commit: https://github.com/php/php-src/commit/789a37f14405e2d1a05a76c9fb4ed2d49d4580d5. Wolfi never had an affected version of PHP (earliest is 8.1.23)'
