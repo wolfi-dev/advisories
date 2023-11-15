@@ -11,16 +11,37 @@ jobs:
   lint:
     name: Validate
     runs-on: ubuntu-latest
+    container:
+      image: docker://ghcr.io/wolfi-dev/sdk:latest@sha256:650b9e43cdf05e2cf139dff833ad33f4cfee744ee6acfb2d69d2e974e947125a
 
     permissions:
       contents: read
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        path: './wolfi-advisories'
+
+    - name: 'Clone Wolfi packages repository'
+      uses: actions/checkout@v4
+      with:
+        repository: 'wolfi-dev/os'
+        fetch-depth: 0
+        path: './wolfi-packages'
+        ref: 'main'
 
     - name: Validate advisory data
       id: validate
-      uses: docker://ghcr.io/wolfi-dev/sdk:latest@sha256:34d80ae999164342404b149b6d24044d488b8aa3d6bd772726b66f43804116ab
-      with:
-        entrypoint: wolfictl
-        args: advisory validate --no-distro-detection --advisories-repo-dir .
+      working-directory: ./wolfi-advisories
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        fork_point=$(git merge-base --fork-point refs/remotes/origin/${{ github.base_ref }} HEAD || git rev-parse HEAD)
+        echo "fork point will be $fork_point"
+
+        wolfictl adv validate \
+          --no-distro-detection \
+          --advisories-repo-dir . \
+          --advisories-repo-url "https://github.com/${{ github.repository }}" \
+          --advisories-repo-base-hash "$fork_point"
