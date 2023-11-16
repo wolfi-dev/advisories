@@ -4,6 +4,15 @@ package:
   name: kyverno
 
 advisories:
+  - id: CVE-2023-25656
+    aliases:
+      - GHSA-87x9-7grx-m28v
+    events:
+      - timestamp: 2023-11-16T14:25:50Z
+        type: fixed
+        data:
+          fixed-version: 1.11.0-r1
+
   - id: CVE-2023-30551
     aliases:
       - GHSA-2h5h-59f5-c5x9
@@ -23,6 +32,15 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: The vulnerable code is effectively private. The vulnerable code is unlikely to ever be imported.
+
+  - id: CVE-2023-33959
+    aliases:
+      - GHSA-xhg5-42rf-296r
+    events:
+      - timestamp: 2023-11-16T14:26:11Z
+        type: fixed
+        data:
+          fixed-version: 1.11.0-r1
 
   - id: CVE-2023-39325
     aliases:
@@ -61,6 +79,8 @@ advisories:
           note: Confirmed that the affected code is present in the binary, but Kyverno needs to migrate its code off of the Go packages keeping it at the affected version of go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp. It looks like the release-1.11 branch has made these adjustments and dependency updates, and once the final 1.11 release is out, this Wolfi package will get updated.
 
   - id: CVE-2023-45283
+    aliases:
+      - GHSA-vvjp-q62m-2vph
     events:
       - timestamp: 2023-11-07T19:32:41Z
         type: false-positive-determination
@@ -69,6 +89,8 @@ advisories:
           note: Only affects Windows
 
   - id: CVE-2023-45284
+    aliases:
+      - GHSA-rq3x-83w4-p28c
     events:
       - timestamp: 2023-11-07T19:32:43Z
         type: false-positive-determination
