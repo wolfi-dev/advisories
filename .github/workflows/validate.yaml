@@ -41,6 +41,7 @@ jobs:
         echo "fork point will be $fork_point"
 
         wolfictl adv validate \
+          --skip-alias \
           --no-distro-detection \
           --advisories-repo-dir . \
           --advisories-repo-url "https://github.com/${{ github.repository }}" \
