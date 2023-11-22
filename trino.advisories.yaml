@@ -43,6 +43,16 @@ advisories:
         data:
           note: 'The upstream project relies on a number of "shaded JARs", making it harder to update dependencies. The upstream project will need to migrate away from a number of shaded JARs, including: "gcs-connector-hadoop3-2.2.17-shaded.jar" and "rubix-presto-shaded-0.3.18.jar" for this vulnerability to be resolved.'
 
+  - id: CVE-2023-31418
+    aliases:
+      - GHSA-2cqf-6xv9-f22w
+    events:
+      - timestamp: 2023-11-22T00:48:48Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: This vulnerability affects audit logging functionality on elasticsearch server. Trino only uses the elasticsearch client library code, not the server.
+
   - id: CVE-2023-44981
     aliases:
       - GHSA-7286-pgfv-vxvh
