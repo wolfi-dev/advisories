@@ -258,6 +258,16 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-5528
+    aliases:
+      - GHSA-hq6q-c2x6-hmch
+    events:
+      - timestamp: 2023-11-23T16:15:41Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability affects the Kubernetes application, not the golang k8s.io/kubernetes library. Kubernetes clusters are only affected if they are using an in-tree storage plugin for Windows nodes.
+
   - id: GHSA-2jcg-qqmg-46q6
     events:
       - timestamp: 2023-11-01T07:13:06Z
