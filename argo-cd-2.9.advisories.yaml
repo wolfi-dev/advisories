@@ -1,0 +1,41 @@
+schema-version: 2.0.1
+
+package:
+  name: argo-cd-2.9
+
+advisories:
+  - id: CVE-2021-25743
+    aliases:
+      - GHSA-f9jg-8p32-2f55
+    events:
+      - timestamp: 2023-11-28T13:21:30Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: The vulnerable code is specific to kubectl.
+
+  - id: CVE-2023-47108
+    aliases:
+      - GHSA-8pgv-569h-w5rw
+    events:
+      - timestamp: 2023-11-28T13:20:25Z
+        type: fixed
+        data:
+          fixed-version: 2.9.2-r1
+
+  - id: CVE-2023-5528
+    aliases:
+      - GHSA-hq6q-c2x6-hmch
+    events:
+      - timestamp: 2023-11-28T13:20:36Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability affects the Kubernetes application, not the golang k8s.io/kubernetes library. Kubernetes clusters are only affected if they are using an in-tree storage plugin for Windows nodes.
+
+  - id: GHSA-2c7c-3mj9-8fqh
+    events:
+      - timestamp: 2023-11-28T13:25:42Z
+        type: fixed
+        data:
+          fixed-version: 2.9.2-r1
