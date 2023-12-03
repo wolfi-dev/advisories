@@ -1,4 +1,4 @@
-schema-version: "2"
+schema-version: 2.0.1
 
 package:
   name: busybox
@@ -21,3 +21,33 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.35.0-r3
+
+  - id: CVE-2023-42363
+    aliases:
+      - GHSA-wm78-9prw-c5h4
+    events:
+      - timestamp: 2023-12-03T21:21:00Z
+        type: false-positive-determination
+        data:
+          type: inline-mitigations-exist
+          note: This vulnerability is a use-after-free that requires a specific Busybox configuration flag "CONFIG_FEATURE_CLEAN_UP" set to trigger. We don't use that configuration flag, so the free logic isn't called.
+
+  - id: CVE-2023-42364
+    aliases:
+      - GHSA-qqqj-6rp2-5pw4
+    events:
+      - timestamp: 2023-12-03T21:23:52Z
+        type: false-positive-determination
+        data:
+          type: inline-mitigations-exist
+          note: This vulnerability is a use-after-free that requires a specific Busybox configuration flag "CONFIG_FEATURE_CLEAN_UP" set to trigger. We don't use that configuration flag, so the free logic isn't called.
+
+  - id: CVE-2023-42366
+    aliases:
+      - GHSA-2vjj-r39q-gvxr
+    events:
+      - timestamp: 2023-12-03T21:22:59Z
+        type: false-positive-determination
+        data:
+          type: inline-mitigations-exist
+          note: This vulnerability is a use-after-free that requires a specific Busybox configuration flag "CONFIG_FEATURE_CLEAN_UP" set to trigger. We don't use that configuration flag, so the free logic isn't called.
