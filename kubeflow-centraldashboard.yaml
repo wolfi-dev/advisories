@@ -1,0 +1,31 @@
+schema-version: 2.0.1
+
+package:
+  name: kubeflow-centraldashboard
+
+advisories:
+  - id: CVE-2023-28155
+    aliases:
+      - GHSA-p8p7-x288-28g6
+    events:
+      - timestamp: 2023-12-02T07:12:35Z
+        type: pending-upstream-fix
+        data:
+          note: cannot fix the CVE because there were no patched versions since the 'request' package is no longer supported by the maintainer.
+
+  - id: CVE-2019-10790
+    aliases:
+      - GHSA-mxhp-79qh-mcx6
+    events:
+      - timestamp: 2023-12-02T07:14:35Z
+        type: pending-upstream-fix
+        data:
+          note: cannot fix the CVE because there were no patched versions since the 'taffydb' package is quite old and no longer maintained.
+
+  - id: GHSA-2jcg-qqmg-46q6
+    events:
+      - timestamp: 2023-12-02T07:16:06Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This is test code that is never used in production. To get more detail about the false-positive determination, please check https://github.com/browserify/resolve/issues/288
