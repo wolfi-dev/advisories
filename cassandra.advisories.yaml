@@ -1,4 +1,4 @@
-schema-version: "2"
+schema-version: 2.0.1
 
 package:
   name: cassandra
@@ -62,3 +62,13 @@ advisories:
         type: fixed
         data:
           fixed-version: 4.1.3-r4
+
+  - id: CVE-2023-6378
+    aliases:
+      - GHSA-vmq6-5m68-f53m
+    events:
+      - timestamp: 2023-12-08T21:13:13Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: 'CVE considered a false positive by the maintainers since Cassandra doesn''t ship logback in a remote configuration: https://issues.apache.org/jira/browse/CASSANDRA-19142'
