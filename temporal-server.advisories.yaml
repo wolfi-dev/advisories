@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: temporal-server
@@ -31,4 +31,9 @@ advisories:
       - timestamp: 2023-11-20T20:46:14Z
         type: pending-upstream-fix
         data:
-          note: Pending upstream fix. We faced issues with otlpmetricgrpc@v0.44.0/internal/transform/metricdata.go":"108":"18":"undefined":"" metricdata.ExponentialHistogram  when upgrading otlpmetricgrpc to v0.46.0. It has some strict dependencies in the source code common/telemetry  using an old version and thus this fix will require some code changes in upstream.
+          note: Pending upstream fix, this fix will require some code changes which are not visible even in the new possible release https://github.com/temporalio/temporal/blob/v1.23.0-rc0/
+      - timestamp: 2023-12-12T17:14:29Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            We faced issues with "otlpmetricgrpc@v0.44.0/internal/transform/metricdata.go:108:18:undefined: metricdata.ExponentialHistogram" when upgrading otlpmetricgrpc to v0.46.0. It has some strict dependencies in the source code common/telemetry using an old version and thus this fix will require some code changes in upstream.
