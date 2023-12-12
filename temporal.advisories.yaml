@@ -40,3 +40,13 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CVE-2023-47108
+    aliases:
+      - GHSA-8pgv-569h-w5rw
+    events:
+      - timestamp: 2023-12-11T20:40:14Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            We faced issues with "otlpmetricgrpc@v0.44.0/internal/transform/metricdata.go:108:18:undefined: metricdata.ExponentialHistogram" when upgrading otlpmetricgrpc to v0.46.0. It has some strict dependencies in the source code common/telemetry using an old version and thus this fix will require some code changes in upstream.
