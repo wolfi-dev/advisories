@@ -23,3 +23,13 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CVE-2019-3826
+    aliases:
+      - GHSA-3m87-5598-2v4f
+    events:
+      - timestamp: 2023-12-14T10:32:41Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: Go modules are not identifiying the version correctly. Example, v1.8.2-0.20211011171444-354d8d2ecfac is not v1.8.2, using the date and commit sha we can see that this is v2.31.0-rc.0~39 which contains the fix.
