@@ -1,9 +1,19 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: certificate-transparency
 
 advisories:
+  - id: CVE-2019-3826
+    aliases:
+      - GHSA-3m87-5598-2v4f
+    events:
+      - timestamp: 2023-12-17T17:35:38Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: This vulnerability has been fixed in version v2.7.1 which corresponds to the Go library version v0.7.1 and this package includes a later version.
+
   - id: CVE-2023-44487
     aliases:
       - GHSA-qppj-fm5r-hxr3
