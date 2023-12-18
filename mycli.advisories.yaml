@@ -1,0 +1,15 @@
+schema-version: 2.0.2
+
+package:
+  name: mycli
+
+advisories:
+  - id: CVE-2023-44690
+    aliases:
+      - GHSA-v9vj-9pxv-mr2w
+    events:
+      - timestamp: 2023-12-18T16:36:55Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: 'This library uses AES ECB for interacting with the MySQL Configuration Utility. The library cannot change this code. This is not a vulnerability of MyCLI and has not been recogninzed as a vulnerability by MySQL. The vulnerability reporter closed the issue: https://github.com/dbcli/mycli/issues/1131'
