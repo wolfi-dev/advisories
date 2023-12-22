@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: temporal
@@ -50,3 +50,12 @@ advisories:
         data:
           note: |
             We faced issues with "otlpmetricgrpc@v0.44.0/internal/transform/metricdata.go:108:18:undefined: metricdata.ExponentialHistogram" when upgrading otlpmetricgrpc to v0.46.0. It has some strict dependencies in the source code common/telemetry using an old version and thus this fix will require some code changes in upstream.
+
+  - id: CVE-2023-48795
+    aliases:
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2023-12-22T15:02:35Z
+        type: fixed
+        data:
+          fixed-version: 0.10.7-r3
