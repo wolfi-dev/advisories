@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: gitness
@@ -23,6 +23,15 @@ advisories:
         data:
           type: component-vulnerability-mismatch
           note: This vulnerability applies to the Docker daemon program, not the docker client libraries.
+
+  - id: CVE-2020-26160
+    aliases:
+      - GHSA-w73w-5m7g-f7qc
+    events:
+      - timestamp: 2023-12-22T10:23:25Z
+        type: pending-upstream-fix
+        data:
+          note: This require a code change because the fix in the library upgrade to v4 and need to change a few things in the gitness code.
 
   - id: CVE-2023-3515
     aliases:
@@ -60,6 +69,10 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.0.0_beta2-r0
+      - timestamp: 2023-12-22T10:04:25Z
+        type: fixed
+        data:
+          fixed-version: 3.0.0_beta2-r2
 
   - id: CVE-2023-45283
     aliases:
@@ -80,3 +93,19 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CVE-2023-48795
+    aliases:
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2023-12-22T10:04:35Z
+        type: fixed
+        data:
+          fixed-version: 3.0.0_beta2-r2
+
+  - id: GHSA-7ww5-4wqc-m92c
+    events:
+      - timestamp: 2023-12-22T10:05:06Z
+        type: fixed
+        data:
+          fixed-version: 3.0.0_beta2-r2
