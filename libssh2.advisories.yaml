@@ -1,4 +1,4 @@
-schema-version: "2"
+schema-version: 2.0.2
 
 package:
   name: libssh2
@@ -13,3 +13,20 @@ advisories:
         data:
           type: component-vulnerability-mismatch
           note: This CVE pertains to a defect in an example program in libssh, not libssh2.
+
+  - id: CVE-2023-48795
+    aliases:
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2023-12-29T18:10:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: libssh2
+            componentID: 17e0be38d5b515cf
+            componentName: libssh2
+            componentVersion: 1.11.0-r2
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
