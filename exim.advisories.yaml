@@ -1,9 +1,26 @@
-schema-version: "2"
+schema-version: 2.0.2
 
 package:
   name: exim
 
 advisories:
+  - id: CVE-2022-3559
+    aliases:
+      - GHSA-86wj-xg3c-r8gx
+    events:
+      - timestamp: 2023-12-29T00:14:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: exim
+            componentID: 6429ff554b27e729
+            componentName: exim
+            componentVersion: 4.97.1-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CVE-2023-42114
     events:
       - timestamp: 2023-10-02T16:17:28Z
