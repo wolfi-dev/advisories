@@ -11,10 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write
-      pull-requests: write
-      id-token: write
-      actions: write
+      contents: read # needed to checkout, but then we rely on the PAT.
 
     steps:
     - uses: actions/checkout@v4
