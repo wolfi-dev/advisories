@@ -33,6 +33,23 @@ advisories:
         data:
           note: This require a code change because the fix in the library upgrade to v4 and need to change a few things in the gitness code.
 
+  - id: CVE-2022-31022
+    aliases:
+      - GHSA-9w9f-6mg8-jp7w
+    events:
+      - timestamp: 2024-01-07T11:32:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitness
+            componentID: 1750af10d6e6fcf8
+            componentName: github.com/blevesearch/bleve/v2
+            componentVersion: v2.3.2
+            componentType: go-module
+            componentLocation: /usr/bin/gitness
+            scanner: grype
+
   - id: CVE-2023-3515
     aliases:
       - GHSA-cf6v-9j57-v6r6
