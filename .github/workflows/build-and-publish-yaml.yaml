@@ -36,7 +36,7 @@ jobs:
           gcloud --quiet alpha storage ls
 
       - name: Build the YAML database
-        uses: docker://ghcr.io/wolfi-dev/sdk:latest@sha256:42c682b9fc6d3bbbacad19f6948a3f186292f9d67b2380280fbdbed14f217af2
+        uses: docker://ghcr.io/wolfi-dev/sdk:latest@sha256:c0dcf24573be3f56d15ba4ee9fa8fa803ed9170d8c28eef4b8134b4f0f6107ae
         with:
           entrypoint: wolfictl
           args: "advisory export --advisories-repo-dir . --format yaml -o advisories.yaml"
