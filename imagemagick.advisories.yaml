@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: imagemagick
@@ -693,3 +693,20 @@ advisories:
         data:
           type: vulnerable-code-version-not-used
           note: Vulnerability was resolved upstream prior to Wolfi packaging.
+
+  - id: CVE-2023-5341
+    aliases:
+      - GHSA-gp6r-24h3-qcjv
+    events:
+      - timestamp: 2024-01-08T10:32:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: imagemagick-static
+            componentID: 026a961077345a53
+            componentName: imagemagick-static
+            componentVersion: 7.1.1.25-r1
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
