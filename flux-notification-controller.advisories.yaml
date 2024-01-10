@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: flux-notification-controller
@@ -68,3 +68,18 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability is only present on Windows.
+
+  - id: GHSA-9763-4f94-gfch
+    events:
+      - timestamp: 2024-01-10T17:22:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-notification-controller
+            componentID: b7e03b07f54c793e
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.3.6
+            componentType: go-module
+            componentLocation: /usr/bin/notification-controller
+            scanner: grype
