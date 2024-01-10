@@ -34,8 +34,6 @@ jobs:
     - name: Validate advisory data
       id: validate
       working-directory: ./wolfi-advisories
-      env:
-        GITHUB_TOKEN: ${{ secrets.WOLFI_BOT_PAT_ADVISORIES }}
       run: |
         fork_point=$(git merge-base --fork-point refs/remotes/origin/${{ github.base_ref }} HEAD || git rev-parse HEAD)
         echo "fork point will be $fork_point"
