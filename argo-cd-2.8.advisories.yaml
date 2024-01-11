@@ -131,3 +131,18 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability is only present on Windows.
+
+  - id: GHSA-9763-4f94-gfch
+    events:
+      - timestamp: 2024-01-11T07:08:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.8-compat
+            componentID: c44db37d9765f6ee
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.3.3
+            componentType: go-module
+            componentLocation: /usr/local/bin/argocd
+            scanner: grype
