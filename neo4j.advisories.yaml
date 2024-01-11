@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: neo4j
+
+advisories:
+  - id: CVE-2023-50570
+    aliases:
+      - GHSA-qphf-w3cq-jpmx
+    events:
+      - timestamp: 2024-01-11T07:04:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: neo4j
+            componentID: 0364be7bd42ab03c
+            componentName: ipaddress
+            componentVersion: 5.4.0
+            componentType: java-archive
+            componentLocation: /usr/share/java/neo4j/lib/ipaddress-5.4.0.jar
+            scanner: grype
