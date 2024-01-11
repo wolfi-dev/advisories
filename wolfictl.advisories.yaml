@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: wolfictl
@@ -23,3 +23,18 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: GHSA-9763-4f94-gfch
+    events:
+      - timestamp: 2024-01-11T07:20:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wolfictl
+            componentID: 1e68f4c9d36f367e
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.3.6
+            componentType: go-module
+            componentLocation: /usr/bin/wolfictl
+            scanner: grype
