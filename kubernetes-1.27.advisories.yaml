@@ -64,6 +64,23 @@ advisories:
           type: vulnerable-code-version-not-used
           note: Fixed in Kubernetes 1.21
 
+  - id: CVE-2023-45142
+    aliases:
+      - GHSA-rcjv-mgp8-qvmr
+    events:
+      - timestamp: 2024-01-11T07:09:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-apiserver-1.27
+            componentID: 649a8394b2e67a25
+            componentName: go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp
+            componentVersion: v0.35.1
+            componentType: go-module
+            componentLocation: /usr/bin/kube-apiserver-1.27
+            scanner: grype
+
   - id: CVE-2023-45283
     aliases:
       - GHSA-vvjp-q62m-2vph
