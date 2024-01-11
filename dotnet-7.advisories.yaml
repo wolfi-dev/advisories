@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: dotnet-7
@@ -21,3 +21,18 @@ advisories:
         type: fixed
         data:
           fixed-version: 7.0.112-r0
+
+  - id: GHSA-59j7-ghrg-fj52
+    events:
+      - timestamp: 2024-01-11T07:08:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dotnet-7-sdk
+            componentID: 70028dcc01ccb672
+            componentName: Microsoft.IdentityModel.JsonWebTokens
+            componentVersion: 0.0.1
+            componentType: dotnet
+            componentLocation: /usr/share/dotnet/sdk/7.0.114/DotnetTools/dotnet-user-jwts/7.0.14-servicing.23523.16/tools/net7.0/any/Microsoft.IdentityModel.JsonWebTokens.dll
+            scanner: grype
