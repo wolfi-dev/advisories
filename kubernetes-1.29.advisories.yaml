@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: kubernetes-1.29
+
+advisories:
+  - id: CVE-2023-48795
+    aliases:
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2024-01-11T07:16:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeadm-1.29
+            componentID: f621e11fedc6113c
+            componentName: golang.org/x/crypto
+            componentVersion: v0.14.0
+            componentType: go-module
+            componentLocation: /usr/bin/kubeadm-1.29
+            scanner: grype
