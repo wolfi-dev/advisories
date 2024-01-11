@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: keda-2.11
@@ -68,3 +68,33 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.11.2-r8
+
+  - id: GHSA-2c7c-3mj9-8fqh
+    events:
+      - timestamp: 2024-01-11T07:18:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.11-adapter
+            componentID: fbc06e0ffd1948be
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.0
+            componentType: go-module
+            componentLocation: /usr/bin/keda-adapter
+            scanner: grype
+
+  - id: GHSA-9763-4f94-gfch
+    events:
+      - timestamp: 2024-01-11T07:18:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.11-adapter
+            componentID: 7327a34abf04650c
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.3.3
+            componentType: go-module
+            componentLocation: /usr/bin/keda-adapter
+            scanner: grype
