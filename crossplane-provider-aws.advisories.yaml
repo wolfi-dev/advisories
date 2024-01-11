@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: crossplane-provider-aws
@@ -50,3 +50,18 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.46.1-r1
+
+  - id: GHSA-9763-4f94-gfch
+    events:
+      - timestamp: 2024-01-11T07:09:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: crossplane-provider-aws
+            componentID: e49c26dbc57f64f8
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.3.3
+            componentType: go-module
+            componentLocation: /usr/bin/provider
+            scanner: grype
