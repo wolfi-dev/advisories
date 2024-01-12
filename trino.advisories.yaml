@@ -1,9 +1,26 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: trino
 
 advisories:
+  - id: CVE-2019-10086
+    aliases:
+      - GHSA-6phf-73q6-gh87
+    events:
+      - timestamp: 2024-01-12T08:18:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino-plugin-accumulo
+            componentID: ce4bea90add512bf
+            componentName: commons-beanutils
+            componentVersion: 1.7.0
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/commons-beanutils-1.7.0.jar
+            scanner: grype
+
   - id: CVE-2020-8908
     aliases:
       - GHSA-5mg8-w23w-74h3
