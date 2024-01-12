@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: cassandra
@@ -62,6 +62,16 @@ advisories:
         type: fixed
         data:
           fixed-version: 4.1.3-r4
+
+  - id: CVE-2023-50570
+    aliases:
+      - GHSA-qphf-w3cq-jpmx
+    events:
+      - timestamp: 2024-01-12T00:03:16Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: "This vulnerability is contested by the maintainer (https://github.com/seancfoley/IPAddress/issues/118). The reported infinite loop is nearly impossible to reproduce and Chainguard agrees with the maintainer's assessment. The GitHub security team also agrees the CVE should not have been assigned: https://github.com/github/advisory-database/pull/3279"
 
   - id: CVE-2023-6378
     aliases:
