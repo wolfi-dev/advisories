@@ -64,6 +64,23 @@ advisories:
           type: vulnerable-code-version-not-used
           note: Fixed in Kubernetes 1.21
 
+  - id: CVE-2021-25740
+    aliases:
+      - GHSA-vw47-mr44-3jf9
+    events:
+      - timestamp: 2024-01-12T07:18:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-1.25
+            componentID: 45abf7268374488e
+            componentName: kubernetes-1.25
+            componentVersion: 1.25.16-r3
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CVE-2021-25743
     aliases:
       - GHSA-f9jg-8p32-2f55
