@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: cosign
@@ -86,6 +86,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.2.1-r1
+
+  - id: GHSA-9763-4f94-gfch
+    events:
+      - timestamp: 2024-01-12T07:28:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cosign
+            componentID: 492e699bde6e5f1b
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.3.5
+            componentType: go-module
+            componentLocation: /usr/bin/cosign
+            scanner: grype
 
   - id: GHSA-jq35-85cj-fj4p
     events:
