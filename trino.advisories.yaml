@@ -215,6 +215,23 @@ advisories:
         data:
           fixed-version: 433-r1
 
+  - id: CVE-2023-3635
+    aliases:
+      - GHSA-w33c-445m-f8w7
+    events:
+      - timestamp: 2024-01-12T09:59:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino-plugin-clickhouse
+            componentID: 967243a3577ae5da
+            componentName: okio
+            componentVersion: 1.17.5
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/clickhouse-jdbc-0.5.0-all.jar
+            scanner: grype
+
   - id: CVE-2023-38647
     aliases:
       - GHSA-jhcr-hph9-g7wm
@@ -230,6 +247,23 @@ advisories:
             componentVersion: 1.0.4
             componentType: java-archive
             componentLocation: /usr/lib/trino/lib/helix-core-1.0.4.jar
+            scanner: grype
+
+  - id: CVE-2023-42503
+    aliases:
+      - GHSA-cgwf-w82q-5jrr
+    events:
+      - timestamp: 2024-01-12T10:00:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino-plugin-clickhouse
+            componentID: 4a9182b013d76861
+            componentName: commons-compress
+            componentVersion: 1.23.0
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/clickhouse-jdbc-0.5.0-all.jar
             scanner: grype
 
   - id: CVE-2023-44981
