@@ -4,6 +4,23 @@ package:
   name: kubernetes-1.29
 
 advisories:
+  - id: CVE-2023-47108
+    aliases:
+      - GHSA-8pgv-569h-w5rw
+    events:
+      - timestamp: 2024-01-12T07:36:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-proxy-1.29
+            componentID: ac2b4db2ee1154f3
+            componentName: go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-proxy-1.29
+            scanner: grype
+
   - id: CVE-2023-48795
     aliases:
       - GHSA-45x7-px36-x8w8
