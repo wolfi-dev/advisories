@@ -30,6 +30,23 @@ advisories:
         data:
           note: The upstream project relies on a number of "shaded JARs", making it harder to update dependencies. The upstream project will need to migrate away from "rubix-presto-shaded-0.3.18.jar" for this vulnerability to be resolved. This will likely involve a migration to a different package, since com.qubole.rubix.rubix-presto-shaded was last updated on 2020-11-24.
 
+  - id: CVE-2022-3509
+    aliases:
+      - GHSA-g5ww-5jh7-63cx
+    events:
+      - timestamp: 2024-01-12T07:21:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino-plugin-kudu
+            componentID: 072b8655cf3ca65f
+            componentName: protobuf-java
+            componentVersion: 3.15.6
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/kudu-client-1.15.0.jar
+            scanner: grype
+
   - id: CVE-2022-3510
     aliases:
       - GHSA-4gg5-vx3j-xwc7
