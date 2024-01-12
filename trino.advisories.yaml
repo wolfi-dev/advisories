@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: trino
@@ -61,6 +61,23 @@ advisories:
         type: fixed
         data:
           fixed-version: 433-r1
+
+  - id: CVE-2023-38647
+    aliases:
+      - GHSA-jhcr-hph9-g7wm
+    events:
+      - timestamp: 2024-01-12T07:29:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino-plugin-pinot
+            componentID: a53281cb6a94e307
+            componentName: helix-core
+            componentVersion: 1.0.4
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/helix-core-1.0.4.jar
+            scanner: grype
 
   - id: CVE-2023-44981
     aliases:
