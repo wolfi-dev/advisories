@@ -64,6 +64,23 @@ advisories:
           type: vulnerable-code-version-not-used
           note: Fixed in Kubernetes 1.21
 
+  - id: CVE-2021-25740
+    aliases:
+      - GHSA-vw47-mr44-3jf9
+    events:
+      - timestamp: 2024-01-12T07:18:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-1.25
+            componentID: 45abf7268374488e
+            componentName: kubernetes-1.25
+            componentVersion: 1.25.16-r3
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CVE-2021-25743
     aliases:
       - GHSA-f9jg-8p32-2f55
@@ -154,6 +171,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.25.16-r3
+
+  - id: GHSA-6xv5-86q9-7xr8
+    events:
+      - timestamp: 2024-01-12T07:18:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-1.25
+            componentID: 2e838d021fc2fc54
+            componentName: github.com/cyphar/filepath-securejoin
+            componentVersion: v0.2.3
+            componentType: go-module
+            componentLocation: /usr/bin/kube-proxy
+            scanner: grype
 
   - id: GHSA-m425-mq94-257g
     events:
