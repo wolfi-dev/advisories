@@ -17,6 +17,23 @@ advisories:
         data:
           note: 'The upstream project relies on a number of "shaded JARs", making it harder to update dependencies. The upstream project will need to migrate away from a number of shaded JARs, including: "gcs-connector-hadoop3-2.2.17-shaded.jar" and "rubix-presto-shaded-0.3.18.jar" for this vulnerability to be resolved.'
 
+  - id: CVE-2021-22569
+    aliases:
+      - GHSA-wrvw-hg22-4m67
+    events:
+      - timestamp: 2024-01-12T08:17:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino-plugin-kudu
+            componentID: 072b8655cf3ca65f
+            componentName: protobuf-java
+            componentVersion: 3.15.6
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/kudu-client-1.15.0.jar
+            scanner: grype
+
   - id: CVE-2022-25647
     aliases:
       - GHSA-4jrv-ppp4-jm57
