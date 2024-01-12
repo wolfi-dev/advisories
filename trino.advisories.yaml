@@ -147,6 +147,23 @@ advisories:
         data:
           fixed-version: 433-r1
 
+  - id: CVE-2023-38647
+    aliases:
+      - GHSA-jhcr-hph9-g7wm
+    events:
+      - timestamp: 2024-01-12T08:18:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino-plugin-pinot
+            componentID: a53281cb6a94e307
+            componentName: helix-core
+            componentVersion: 1.0.4
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/helix-core-1.0.4.jar
+            scanner: grype
+
   - id: CVE-2023-44981
     aliases:
       - GHSA-7286-pgfv-vxvh
@@ -172,6 +189,23 @@ advisories:
         type: pending-upstream-fix
         data:
           note: The upstream project relies on a number of "shaded JARs", making it harder to update dependencies. The upstream project will need to migrate away from "alluxio-shaded-client-2.9.3.jar" for this vulnerability to be resolved.
+
+  - id: CVE-2023-50570
+    aliases:
+      - GHSA-qphf-w3cq-jpmx
+    events:
+      - timestamp: 2024-01-12T08:18:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino-plugin-pinot
+            componentID: a37602139f293807
+            componentName: ipaddress
+            componentVersion: 5.3.4
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/ipaddress-5.3.4.jar
+            scanner: grype
 
   - id: CVE-2023-6378
     aliases:
