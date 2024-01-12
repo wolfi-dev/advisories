@@ -4,6 +4,23 @@ package:
   name: trino
 
 advisories:
+  - id: CVE-2018-11798
+    aliases:
+      - GHSA-vx85-mj8c-4qm6
+    events:
+      - timestamp: 2024-01-12T08:18:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino-plugin-accumulo
+            componentID: 75f808e86c85a80e
+            componentName: libthrift
+            componentVersion: 0.9.3-1
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/libthrift-0.9.3-1.jar
+            scanner: grype
+
   - id: CVE-2019-0205
     aliases:
       - GHSA-rj7p-rfgp-852x
