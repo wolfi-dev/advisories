@@ -64,6 +64,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-46737
+    aliases:
+      - GHSA-vfp6-jrw2-99g9
+    events:
+      - timestamp: 2024-01-13T07:21:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: skaffold
+            componentID: d847741dbb3482ad
+            componentName: github.com/sigstore/cosign/v2
+            componentVersion: v2.0.3-0.20230523133326-0544abd8fc8a
+            componentType: go-module
+            componentLocation: /usr/bin/skaffold
+            scanner: grype
+
   - id: GHSA-7ww5-4wqc-m92c
     events:
       - timestamp: 2024-01-13T07:21:09Z
