@@ -1,4 +1,4 @@
-schema-version: "2"
+schema-version: 2.0.2
 
 package:
   name: redis-6.2
@@ -33,3 +33,11 @@ advisories:
         data:
           type: vulnerability-record-analysis-contested
           note: This is a disputed CVE entry that does not actually affect Redis.
+
+  - id: CVE-2023-41056
+    events:
+      - timestamp: 2024-01-14T15:44:04Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: The problem exists in Redis 7.0.9 or newer.
