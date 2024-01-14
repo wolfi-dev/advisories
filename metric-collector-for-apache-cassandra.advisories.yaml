@@ -8,6 +8,11 @@ advisories:
     aliases:
       - GHSA-mjmj-j48q-9wg2
     events:
+      - timestamp: 2024-01-13T08:38:03Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            To fix the CVE, we have to upgrade 'snakeyaml' to '2.0' or later but this fix will require some code change since the upgrade cause to build fail due to compilation errors like: "/src/main/java/com/datastax/mcac/ConfigurationLoader.java:[106,19] incompatible types: java.lang.Class<capture#1 of ?> cannot be converted to org.yaml.snakeyaml.LoaderOptions"
       - timestamp: 2024-01-14T07:16:37Z
         type: detection
         data:
