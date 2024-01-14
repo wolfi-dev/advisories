@@ -13,3 +13,15 @@ advisories:
         data:
           note: |
             To fix the CVE, we have to upgrade 'snakeyaml' to '2.0' or later but this fix will require some code change since the upgrade cause to build fail due to compilation errors like: "/src/main/java/com/datastax/mcac/ConfigurationLoader.java:[106,19] incompatible types: java.lang.Class<capture#1 of ?> cannot be converted to org.yaml.snakeyaml.LoaderOptions"
+      - timestamp: 2024-01-14T07:16:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: metric-collector-for-apache-cassandra
+            componentID: 7cf4eb3394ac4baf
+            componentName: snakeyaml
+            componentVersion: "1.33"
+            componentType: java-archive
+            componentLocation: /opt/metrics-collector/datastax-mcac-agent-0.3.3.jar
+            scanner: grype

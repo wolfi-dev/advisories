@@ -64,9 +64,68 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-46737
+    aliases:
+      - GHSA-vfp6-jrw2-99g9
+    events:
+      - timestamp: 2024-01-13T07:21:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: skaffold
+            componentID: d847741dbb3482ad
+            componentName: github.com/sigstore/cosign/v2
+            componentVersion: v2.0.3-0.20230523133326-0544abd8fc8a
+            componentType: go-module
+            componentLocation: /usr/bin/skaffold
+            scanner: grype
+      - timestamp: 2024-01-14T11:46:53Z
+        type: fixed
+        data:
+          fixed-version: 2.10.0-r2
+
+  - id: GHSA-7ww5-4wqc-m92c
+    events:
+      - timestamp: 2024-01-13T07:21:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: skaffold
+            componentID: 3644179ba8ac321e
+            componentName: github.com/containerd/containerd
+            componentVersion: v1.7.2
+            componentType: go-module
+            componentLocation: /usr/bin/skaffold
+            scanner: grype
+      - timestamp: 2024-01-14T11:45:35Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability requires changes in the upstream code to support a containerd version with the fixed vulnerability.
+
   - id: GHSA-9763-4f94-gfch
     events:
       - timestamp: 2024-01-10T01:50:57Z
         type: fixed
         data:
           fixed-version: 2.10.0-r1
+
+  - id: GHSA-jq35-85cj-fj4p
+    events:
+      - timestamp: 2024-01-13T07:21:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: skaffold
+            componentID: 0d043b703d8b05df
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.5+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/skaffold
+            scanner: grype
+      - timestamp: 2024-01-14T11:47:16Z
+        type: fixed
+        data:
+          fixed-version: 2.10.0-r2
