@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: metric-collector-for-apache-cassandra
+
+advisories:
+  - id: CVE-2022-1471
+    aliases:
+      - GHSA-mjmj-j48q-9wg2
+    events:
+      - timestamp: 2024-01-14T07:16:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: metric-collector-for-apache-cassandra
+            componentID: 7cf4eb3394ac4baf
+            componentName: snakeyaml
+            componentVersion: "1.33"
+            componentType: java-archive
+            componentLocation: /opt/metrics-collector/datastax-mcac-agent-0.3.3.jar
+            scanner: grype
