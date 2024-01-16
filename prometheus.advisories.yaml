@@ -71,6 +71,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45286
+    aliases:
+      - GHSA-xwh9-gc39-5298
+    events:
+      - timestamp: 2024-01-15T15:49:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus
+            componentID: 3b942edfb590c552
+            componentName: github.com/go-resty/resty/v2
+            componentVersion: v2.10.0
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus
+            scanner: grype
+
   - id: CVE-2023-48795
     aliases:
       - GHSA-45x7-px36-x8w8
