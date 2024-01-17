@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: zot
@@ -40,20 +40,20 @@ advisories:
         data:
           fixed-version: 1.4.3-r9
 
-  - id: CVE-2023-49568
-    aliases:
-      - GHSA-mw99-9chc-xw7r
-    events:
-      - timestamp: 2023-12-29T13:04:24Z
-        type: fixed
-        data:
-          fixed-version: 2.0.0-r1
-
   - id: CVE-2023-48795
     aliases:
       - GHSA-45x7-px36-x8w8
     events:
       - timestamp: 2023-12-29T13:05:39Z
+        type: fixed
+        data:
+          fixed-version: 2.0.0-r1
+
+  - id: CVE-2023-49568
+    aliases:
+      - GHSA-mw99-9chc-xw7r
+    events:
+      - timestamp: 2023-12-29T13:04:24Z
         type: fixed
         data:
           fixed-version: 2.0.0-r1
@@ -72,3 +72,18 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.0.0-r1
+
+  - id: GHSA-9763-4f94-gfch
+    events:
+      - timestamp: 2024-01-17T08:08:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zot
+            componentID: c830660215767585
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.3.5
+            componentType: go-module
+            componentLocation: /usr/bin/zot
+            scanner: grype
