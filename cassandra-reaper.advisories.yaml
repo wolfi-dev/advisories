@@ -46,6 +46,15 @@ advisories:
         data:
           note: Pending upstream fix, this fix will require some code changes since when we upgrade the "com.google.guava:guava" dependency version from 24.1.1 which is the version project is currently using to 32.0.0 which is the version we should bump to to fix the CVEs but we can't because the build was failed due to compilation errors.
 
+  - id: CVE-2022-1471
+    aliases:
+      - GHSA-mjmj-j48q-9wg2
+    events:
+      - timestamp: 2024-01-18T19:09:45Z
+        type: pending-upstream-fix
+        data:
+          note: "To fix the CVE we should bump the 'snakeyaml' dependency to '2.0' or higher but we cannot do that because the project does not work due to this error 'java.lang.NoSuchMethodError: void org.yaml.snakeyaml.parser.ParserImpl.<init>(org.yaml.snakeyaml.reader.StreamReader)'. There is an also an open PR about the CVE in the 'snakeyaml': https://github.com/thelastpickle/cassandra-reaper/pull/1455"
+
   - id: CVE-2023-2976
     aliases:
       - GHSA-7g45-4rm6-3mm3
