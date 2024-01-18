@@ -20,6 +20,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/local/lib/cassandra-reaper.jar
             scanner: grype
+      - timestamp: 2024-01-18T10:02:13Z
+        type: pending-upstream-fix
+        data:
+          note: To be able to fix this CVE, we need to upgrade the "org.apache.cassandra:cassandra-all" dependency version from `2.2.12` which is the version project is currently using to at least `4.0.10` which is the version we should bump to to fix the CVEs but we can't because the build was failed due to compilation errors.
 
   - id: CVE-2020-8908
     aliases:
@@ -37,6 +41,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/local/lib/cassandra-reaper.jar
             scanner: grype
+      - timestamp: 2024-01-18T09:54:49Z
+        type: pending-upstream-fix
+        data:
+          note: Pending upstream fix, this fix will require some code changes since when we upgrade the "com.google.guava:guava" dependency version from 24.1.1 which is the version project is currently using to 32.0.0 which is the version we should bump to to fix the CVEs but we can't because the build was failed due to compilation errors.
 
   - id: CVE-2023-2976
     aliases:
@@ -54,3 +62,7 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/local/lib/cassandra-reaper.jar
             scanner: grype
+      - timestamp: 2024-01-18T09:59:33Z
+        type: pending-upstream-fix
+        data:
+          note: Pending upstream fix, this fix will require some code changes since when we upgrade the "com.google.guava:guava" dependency version from 24.1.1 which is the version project is currently using to 32.0.0 which is the version we should upgrade to fix the CVEs but we can't because the build was failed due to compilation errors.
