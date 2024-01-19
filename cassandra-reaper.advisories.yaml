@@ -25,6 +25,15 @@ advisories:
         data:
           note: To be able to fix this CVE, we need to upgrade the "org.apache.cassandra:cassandra-all" dependency version from `2.2.12` which is the version project is currently using to at least `4.0.10` which is the version we should bump to to fix the CVEs but we can't because the build was failed due to compilation errors.
 
+  - id: CVE-2020-36518
+    aliases:
+      - GHSA-57j2-w4cx-62h2
+    events:
+      - timestamp: 2024-01-19T09:07:56Z
+        type: pending-upstream-fix
+        data:
+          note: "To fix the CVE we should bump the 'jackson-databind' dependency to '2.12.6.1' or higher, to do that, we should bump the 'dropwizard-core' version to 2.1 or higher this is because 'amqp-client' is one of the dependencies of the 'dropwizard-core' but we cannot do that because the project does not work due to this error 'java.lang.NoSuchMethodError: void org.glassfish.jersey.server.ServerExecutorProvidersConfigurator.registerExecutors(org.glassfish.jersey.internal.inject.InjectionManager, org.glassfish.jersey.model.internal.ComponentBag, org.glassfish.jersey.spi.ExecutorServiceProvider, org.glassfish.jersey.spi.ScheduledExecutorServiceProvider)'. There is an issue already created for raising an awareness about this CVE : https://github.com/thelastpickle/cassandra-reaper/issues/1462"
+
   - id: CVE-2020-8908
     aliases:
       - GHSA-5mg8-w23w-74h3
@@ -46,6 +55,24 @@ advisories:
         data:
           note: Pending upstream fix, this fix will require some code changes since when we upgrade the "com.google.guava:guava" dependency version from 24.1.1 which is the version project is currently using to 32.0.0 which is the version we should bump to to fix the CVEs but we can't because the build was failed due to compilation errors.
 
+  - id: CVE-2021-28168
+    aliases:
+      - GHSA-c43q-5hpj-4crv
+    events:
+      - timestamp: 2024-01-19T09:08:17Z
+        type: pending-upstream-fix
+        data:
+          note: "To fix the CVE we should bump the 'jersey-common' dependency to '2.34' or higher, to do that, we should bump the 'dropwizard-core' version to 2.1 or higher this is because 'amqp-client' is one of the dependencies of the 'dropwizard-core' but we cannot do that because the project does not work due to this error 'java.lang.NoSuchMethodError: void org.glassfish.jersey.server.ServerExecutorProvidersConfigurator.registerExecutors(org.glassfish.jersey.internal.inject.InjectionManager, org.glassfish.jersey.model.internal.ComponentBag, org.glassfish.jersey.spi.ExecutorServiceProvider, org.glassfish.jersey.spi.ScheduledExecutorServiceProvider)'. There is an issue already created for raising an awareness about this CVE : https://github.com/thelastpickle/cassandra-reaper/issues/1462"
+
+  - id: CVE-2021-46877
+    aliases:
+      - GHSA-3x8x-79m2-3w2w
+    events:
+      - timestamp: 2024-01-19T09:07:48Z
+        type: pending-upstream-fix
+        data:
+          note: "To fix the CVE we should bump the 'jackson-databind' dependency to '2.12.6' or higher, to do that, we should bump the 'dropwizard-core' version to 2.1 or higher this is because 'amqp-client' is one of the dependencies of the 'dropwizard-core' but we cannot do that because the project does not work due to this error 'java.lang.NoSuchMethodError: void org.glassfish.jersey.server.ServerExecutorProvidersConfigurator.registerExecutors(org.glassfish.jersey.internal.inject.InjectionManager, org.glassfish.jersey.model.internal.ComponentBag, org.glassfish.jersey.spi.ExecutorServiceProvider, org.glassfish.jersey.spi.ScheduledExecutorServiceProvider)'. There is an issue already created for raising an awareness about this CVE : https://github.com/thelastpickle/cassandra-reaper/issues/1462"
+
   - id: CVE-2022-1471
     aliases:
       - GHSA-mjmj-j48q-9wg2
@@ -54,6 +81,42 @@ advisories:
         type: pending-upstream-fix
         data:
           note: "To fix the CVE we should bump the 'snakeyaml' dependency to '2.0' or higher but we cannot do that because the project does not work due to this error 'java.lang.NoSuchMethodError: void org.yaml.snakeyaml.parser.ParserImpl.<init>(org.yaml.snakeyaml.reader.StreamReader)'. There is an also an open PR about the CVE in the 'snakeyaml': https://github.com/thelastpickle/cassandra-reaper/pull/1455"
+
+  - id: CVE-2022-42003
+    aliases:
+      - GHSA-jjjh-jjxp-wpff
+    events:
+      - timestamp: 2024-01-19T09:08:02Z
+        type: pending-upstream-fix
+        data:
+          note: "To fix the CVE we should bump the 'jackson-databind' dependency to '2.12.7.1' or higher, to do that, we should bump the 'dropwizard-core' version to 2.1 or higher this is because 'amqp-client' is one of the dependencies of the 'dropwizard-core' but we cannot do that because the project does not work due to this error 'java.lang.NoSuchMethodError: void org.glassfish.jersey.server.ServerExecutorProvidersConfigurator.registerExecutors(org.glassfish.jersey.internal.inject.InjectionManager, org.glassfish.jersey.model.internal.ComponentBag, org.glassfish.jersey.spi.ExecutorServiceProvider, org.glassfish.jersey.spi.ScheduledExecutorServiceProvider)'. There is an issue already created for raising an awareness about this CVE : https://github.com/thelastpickle/cassandra-reaper/issues/1462"
+
+  - id: CVE-2022-42004
+    aliases:
+      - GHSA-rgv9-q543-rqg4
+    events:
+      - timestamp: 2024-01-19T09:08:09Z
+        type: pending-upstream-fix
+        data:
+          note: "To fix the CVE we should bump the 'jackson-databind' dependency to '2.12.7.1' or higher, to do that, we should bump the 'dropwizard-core' version to 2.1 or higher this is because 'amqp-client' is one of the dependencies of the 'dropwizard-core' but we cannot do that because the project does not work due to this error 'java.lang.NoSuchMethodError: void org.glassfish.jersey.server.ServerExecutorProvidersConfigurator.registerExecutors(org.glassfish.jersey.internal.inject.InjectionManager, org.glassfish.jersey.model.internal.ComponentBag, org.glassfish.jersey.spi.ExecutorServiceProvider, org.glassfish.jersey.spi.ScheduledExecutorServiceProvider)'. There is an issue already created for raising an awareness about this CVE : https://github.com/thelastpickle/cassandra-reaper/issues/1462"
+
+  - id: CVE-2023-26048
+    aliases:
+      - GHSA-qw69-rqj8-6qw8
+    events:
+      - timestamp: 2024-01-19T09:08:39Z
+        type: pending-upstream-fix
+        data:
+          note: "To fix the CVE we should bump the 'jetty-server' dependency to '9.4.51.v20230217' or higher, to do that, we should bump the 'dropwizard-core' version to 2.1 or higher this is because 'amqp-client' is one of the dependencies of the 'dropwizard-core' but we cannot do that because the project does not work due to this error 'java.lang.NoSuchMethodError: void org.glassfish.jersey.server.ServerExecutorProvidersConfigurator.registerExecutors(org.glassfish.jersey.internal.inject.InjectionManager, org.glassfish.jersey.model.internal.ComponentBag, org.glassfish.jersey.spi.ExecutorServiceProvider, org.glassfish.jersey.spi.ScheduledExecutorServiceProvider)'. There is an issue already created for raising an awareness about this CVE : https://github.com/thelastpickle/cassandra-reaper/issues/1462"
+
+  - id: CVE-2023-26049
+    aliases:
+      - GHSA-p26g-97m4-6q7c
+    events:
+      - timestamp: 2024-01-19T09:08:32Z
+        type: pending-upstream-fix
+        data:
+          note: "To fix the CVE we should bump the 'jetty-server' dependency to '9.4.51.v20230217' or higher, to do that, we should bump the 'dropwizard-core' version to 2.1 or higher this is because 'amqp-client' is one of the dependencies of the 'dropwizard-core' but we cannot do that because the project does not work due to this error 'java.lang.NoSuchMethodError: void org.glassfish.jersey.server.ServerExecutorProvidersConfigurator.registerExecutors(org.glassfish.jersey.internal.inject.InjectionManager, org.glassfish.jersey.model.internal.ComponentBag, org.glassfish.jersey.spi.ExecutorServiceProvider, org.glassfish.jersey.spi.ScheduledExecutorServiceProvider)'. There is an issue already created for raising an awareness about this CVE : https://github.com/thelastpickle/cassandra-reaper/issues/1462"
 
   - id: CVE-2023-2976
     aliases:
@@ -75,3 +138,30 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Pending upstream fix, this fix will require some code changes since when we upgrade the "com.google.guava:guava" dependency version from 24.1.1 which is the version project is currently using to 32.0.0 which is the version we should upgrade to fix the CVEs but we can't because the build was failed due to compilation errors.
+
+  - id: CVE-2023-36479
+    aliases:
+      - GHSA-3gh6-v5v9-6v9j
+    events:
+      - timestamp: 2024-01-19T09:08:48Z
+        type: pending-upstream-fix
+        data:
+          note: "To fix the CVE we should bump the 'jetty-servlets' dependency to '9.4.52' or higher, to do that, we should bump the 'dropwizard-core' version to 2.1 or higher this is because 'amqp-client' is one of the dependencies of the 'dropwizard-core' but we cannot do that because the project does not work due to this error 'java.lang.NoSuchMethodError: void org.glassfish.jersey.server.ServerExecutorProvidersConfigurator.registerExecutors(org.glassfish.jersey.internal.inject.InjectionManager, org.glassfish.jersey.model.internal.ComponentBag, org.glassfish.jersey.spi.ExecutorServiceProvider, org.glassfish.jersey.spi.ScheduledExecutorServiceProvider)'. There is an issue already created for raising an awareness about this CVE : https://github.com/thelastpickle/cassandra-reaper/issues/1462"
+
+  - id: CVE-2023-40167
+    aliases:
+      - GHSA-hmr7-m48g-48f6
+    events:
+      - timestamp: 2024-01-19T09:08:24Z
+        type: pending-upstream-fix
+        data:
+          note: "To fix the CVE we should bump the 'jetty-http' dependency to '9.4.52' or higher, to do that, we should bump the 'dropwizard-core' version to 2.1 or higher this is because 'amqp-client' is one of the dependencies of the 'dropwizard-core' but we cannot do that because the project does not work due to this error 'java.lang.NoSuchMethodError: void org.glassfish.jersey.server.ServerExecutorProvidersConfigurator.registerExecutors(org.glassfish.jersey.internal.inject.InjectionManager, org.glassfish.jersey.model.internal.ComponentBag, org.glassfish.jersey.spi.ExecutorServiceProvider, org.glassfish.jersey.spi.ScheduledExecutorServiceProvider)'. There is an issue already created for raising an awareness about this CVE : https://github.com/thelastpickle/cassandra-reaper/issues/1462"
+
+  - id: CVE-2023-46120
+    aliases:
+      - GHSA-mm8h-8587-p46h
+    events:
+      - timestamp: 2024-01-19T09:06:27Z
+        type: pending-upstream-fix
+        data:
+          note: "To fix the CVE we should bump the 'amqp-client' dependency to '5.18.0' or higher, to do that, we should bump the 'dropwizard-core' version to 2.1 or higher this is because 'amqp-client' is one of the dependencies of the 'dropwizard-core' but we cannot do that because the project does not work due to this error 'java.lang.NoSuchMethodError: void org.glassfish.jersey.server.ServerExecutorProvidersConfigurator.registerExecutors(org.glassfish.jersey.internal.inject.InjectionManager, org.glassfish.jersey.model.internal.ComponentBag, org.glassfish.jersey.spi.ExecutorServiceProvider, org.glassfish.jersey.spi.ScheduledExecutorServiceProvider)'. There is an issue already created for raising an awareness about this CVE : https://github.com/thelastpickle/cassandra-reaper/issues/1462"
