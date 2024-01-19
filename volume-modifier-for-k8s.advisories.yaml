@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: volume-modifier-for-k8s
@@ -23,3 +23,20 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CVE-2023-47108
+    aliases:
+      - GHSA-8pgv-569h-w5rw
+    events:
+      - timestamp: 2024-01-19T20:13:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: volume-modifier-for-k8s
+            componentID: 3798e913621f0692
+            componentName: go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc
+            componentVersion: v0.44.0
+            componentType: go-module
+            componentLocation: /usr/bin/volume-modifier-for-k8s
+            scanner: grype
