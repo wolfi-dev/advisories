@@ -4,6 +4,23 @@ package:
   name: kubeflow-pipelines-visualization-server
 
 advisories:
+  - id: CVE-2021-32862
+    aliases:
+      - GHSA-9jmq-rx5f-8jwq
+    events:
+      - timestamp: 2024-01-19T19:23:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-visualization-server
+            componentID: b2459ea87ec9b6c6
+            componentName: nbconvert
+            componentVersion: 5.5.0
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/nbconvert-5.5.0.dist-info/METADATA, /usr/lib/python3.10/site-packages/nbconvert-5.5.0.dist-info/RECORD, /usr/lib/python3.10/site-packages/nbconvert-5.5.0.dist-info/top_level.txt
+            scanner: grype
+
   - id: CVE-2023-24816
     aliases:
       - GHSA-29gw-9793-fvw7
