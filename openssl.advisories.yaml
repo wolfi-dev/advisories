@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: openssl
@@ -217,3 +217,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.1.4-r1
+
+  - id: CVE-2023-6129
+    aliases:
+      - GHSA-rj8q-prqp-jwfg
+    events:
+      - timestamp: 2024-01-24T07:08:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openssl-provider-legacy
+            componentID: c3518ddde02e2671
+            componentName: openssl-provider-legacy
+            componentVersion: 3.2.0-r1
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
