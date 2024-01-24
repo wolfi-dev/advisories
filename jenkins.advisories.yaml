@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: jenkins
@@ -111,6 +111,23 @@ advisories:
         type: fix-not-planned
         data:
           note: Upstream is using a deprecated dependency (com.fasterxml.jackson.datatype:jackson-datatype-json-org). The CVE is matched to a dependency of this deprecated dependency (org.json:json). Upstream needs to migrate their code off this deprecated dependency.
+
+  - id: CVE-2024-22233
+    aliases:
+      - GHSA-r4q3-7g4q-x89m
+    events:
+      - timestamp: 2024-01-24T07:08:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jenkins
+            componentID: 66745db92d5d10f3
+            componentName: spring-core
+            componentVersion: 5.3.31
+            componentType: java-archive
+            componentLocation: /usr/share/java/jenkins/jenkins.war
+            scanner: grype
 
   - id: GHSA-58qw-p7qm-5rvh
     events:
