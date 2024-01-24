@@ -9,13 +9,21 @@ jobs:
   image-update:
     name: Image digest update
     runs-on: ubuntu-latest
+    if: github.repository == 'wolfi-dev/advisories'
 
     permissions:
-      contents: read # needed to checkout, but then we rely on the PAT.
-      id-token: write # needed to request an OIDC token for commit signing.
+      contents: read # To clone the repo
+      id-token: write # To gitsign and federate
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+
+    - uses: chainguard-dev/actions/octo-sts@main
+      id: octo-sts
+      with:
+        scope: ${{ github.repository }}
+        identity: digestabot
+
     - uses: chainguard-dev/actions/digesta-bot@main
       with:
-        token: ${{ secrets.DIGEST_BOT_WOLFI_PAT }}
+        token: ${{ steps.octo-sts.outputs.token }}
