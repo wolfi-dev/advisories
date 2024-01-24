@@ -41,3 +41,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.19.5-r2
+
+  - id: CVE-2023-49290
+    aliases:
+      - GHSA-7f9x-gw85-8grf
+    events:
+      - timestamp: 2024-01-24T07:07:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-install-cni-1.19
+            componentID: 147ea67f790a2424
+            componentName: github.com/lestrrat-go/jwx
+            componentVersion: v1.2.26
+            componentType: go-module
+            componentLocation: /usr/bin/install-cni
+            scanner: grype
