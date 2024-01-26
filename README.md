@@ -14,15 +14,7 @@ Each package advisories file in this repository has a list of one or more adviso
 
 ### Event Types
 
-Here are the types of events found in an advisory and what they mean:
-
-`detection`: The maintainers are aware that the package is potentially affected by the vulnerability, but more investigation is needed in order to reach a conclusion.
-
-`true-positive-determination`: The package is believed to be affected by the vulnerability.
-
-`false-positive-determination`: The package is not believed to be affected by the vulnerability. Where possible, further explanation about why this match is a false positive is included in the event data's `type` and `note` fields.
-
-`fixed`: There was one or more versions of the package affected by the vulnerability, but as of the `fixed-version`, the vulnerability has been mitigated.
+For a detailed look at the current event types, see the [Event Types](./docs/event_types.md) document.
 
 ## Using the data
 
