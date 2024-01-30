@@ -1,9 +1,77 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: buildkitd
 
 advisories:
+  - id: CVE-2023-39325
+    aliases:
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2024-01-30T15:54:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buildkitd
+            componentID: 24fb3ebbebde4ba4
+            componentName: golang.org/x/net
+            componentVersion: v0.8.0
+            componentType: go-module
+            componentLocation: /usr/bin/buildkitd
+            scanner: grype
+
+  - id: CVE-2023-3978
+    aliases:
+      - GHSA-2wrh-6pvc-2jm9
+    events:
+      - timestamp: 2024-01-30T15:54:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buildkitd
+            componentID: 24fb3ebbebde4ba4
+            componentName: golang.org/x/net
+            componentVersion: v0.8.0
+            componentType: go-module
+            componentLocation: /usr/bin/buildkitd
+            scanner: grype
+
+  - id: CVE-2023-44487
+    aliases:
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2024-01-30T15:54:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buildkitd
+            componentID: 24fb3ebbebde4ba4
+            componentName: golang.org/x/net
+            componentVersion: v0.8.0
+            componentType: go-module
+            componentLocation: /usr/bin/buildkitd
+            scanner: grype
+
+  - id: CVE-2023-45142
+    aliases:
+      - GHSA-rcjv-mgp8-qvmr
+    events:
+      - timestamp: 2024-01-30T15:54:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buildkitd
+            componentID: d187dc2cd891df14
+            componentName: go.opentelemetry.io/contrib/instrumentation/net/http/httptrace/otelhttptrace
+            componentVersion: v0.40.0
+            componentType: go-module
+            componentLocation: /usr/bin/buildkitd
+            scanner: grype
+
   - id: CVE-2023-45283
     aliases:
       - GHSA-vvjp-q62m-2vph
@@ -23,3 +91,67 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CVE-2023-47108
+    aliases:
+      - GHSA-8pgv-569h-w5rw
+    events:
+      - timestamp: 2024-01-30T15:54:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buildkitd
+            componentID: 5b504ca37fc67e7e
+            componentName: go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc
+            componentVersion: v0.40.0
+            componentType: go-module
+            componentLocation: /usr/bin/buildkitd
+            scanner: grype
+
+  - id: CVE-2023-48795
+    aliases:
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2024-01-30T15:54:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buildkitd
+            componentID: 2bce5397fdf60b52
+            componentName: golang.org/x/crypto
+            componentVersion: v0.2.0
+            componentType: go-module
+            componentLocation: /usr/bin/buildkitd
+            scanner: grype
+
+  - id: GHSA-7ww5-4wqc-m92c
+    events:
+      - timestamp: 2024-01-30T15:54:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buildkitd
+            componentID: 75c561d61f53d326
+            componentName: github.com/containerd/containerd
+            componentVersion: v1.7.2
+            componentType: go-module
+            componentLocation: /usr/bin/buildkitd
+            scanner: grype
+
+  - id: GHSA-m425-mq94-257g
+    events:
+      - timestamp: 2024-01-30T15:54:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buildkitd
+            componentID: 5479b9a00cbef3b2
+            componentName: google.golang.org/grpc
+            componentVersion: v1.53.0
+            componentType: go-module
+            componentLocation: /usr/bin/buildkitd
+            scanner: grype
