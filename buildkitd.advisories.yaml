@@ -4,6 +4,23 @@ package:
   name: buildkitd
 
 advisories:
+  - id: CVE-2023-39325
+    aliases:
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2024-01-30T15:54:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buildctl
+            componentID: bd798dfee122f47e
+            componentName: golang.org/x/net
+            componentVersion: v0.8.0
+            componentType: go-module
+            componentLocation: /usr/bin/buildctl
+            scanner: grype
+
   - id: CVE-2023-3978
     aliases:
       - GHSA-2wrh-6pvc-2jm9
