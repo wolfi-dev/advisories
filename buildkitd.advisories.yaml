@@ -57,3 +57,20 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CVE-2023-48795
+    aliases:
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2024-01-30T15:54:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buildctl
+            componentID: a01101c57193aadb
+            componentName: golang.org/x/crypto
+            componentVersion: v0.2.0
+            componentType: go-module
+            componentLocation: /usr/bin/buildctl
+            scanner: grype
