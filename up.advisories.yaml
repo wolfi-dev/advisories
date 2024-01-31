@@ -74,3 +74,20 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CVE-2023-48795
+    aliases:
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2024-01-31T03:18:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: up
+            componentID: 3d6707d2394f4e10
+            componentName: golang.org/x/crypto
+            componentVersion: v0.12.0
+            componentType: go-module
+            componentLocation: /usr/bin/up
+            scanner: grype
