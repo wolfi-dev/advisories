@@ -67,6 +67,23 @@ advisories:
         data:
           fixed-version: 1.28.4-r0
 
+  - id: CVE-2024-21626
+    aliases:
+      - GHSA-xr7r-f8xq-vfvv
+    events:
+      - timestamp: 2024-02-01T11:49:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s
+            componentID: 422d4855e819d848
+            componentName: github.com/opencontainers/runc
+            componentVersion: v1.1.10
+            componentType: go-module
+            componentLocation: /bin/_k3s-inner
+            scanner: grype
+
   - id: GHSA-6xv5-86q9-7xr8
     events:
       - timestamp: 2023-09-13T15:32:58Z
