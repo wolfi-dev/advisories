@@ -4,6 +4,23 @@ package:
   name: docker
 
 advisories:
+  - id: CVE-2024-21626
+    aliases:
+      - GHSA-xr7r-f8xq-vfvv
+    events:
+      - timestamp: 2024-02-01T07:06:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker
+            componentID: c24b4a8d073759e2
+            componentName: github.com/opencontainers/runc
+            componentVersion: v1.1.11
+            componentType: go-module
+            componentLocation: /usr/bin/dockerd
+            scanner: grype
+
   - id: CVE-2024-23650
     aliases:
       - GHSA-9p26-698r-w4hx
