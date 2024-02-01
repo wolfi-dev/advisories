@@ -107,6 +107,32 @@ advisories:
         data:
           fixed-version: 1.104.7-r1
 
+  - id: CVE-2023-49568
+    aliases:
+      - GHSA-mw99-9chc-xw7r
+    events:
+      - timestamp: 2024-02-01T13:24:27Z
+        type: fixed
+        data:
+          fixed-version: 1.104.7-r2
+
+  - id: CVE-2024-21626
+    aliases:
+      - GHSA-xr7r-f8xq-vfvv
+    events:
+      - timestamp: 2024-02-01T11:57:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kots
+            componentID: b1b8c3bcac87423e
+            componentName: github.com/opencontainers/runc
+            componentVersion: v1.1.10
+            componentType: go-module
+            componentLocation: /usr/bin/kots
+            scanner: grype
+
   - id: GHSA-2c7c-3mj9-8fqh
     events:
       - timestamp: 2023-11-22T16:40:24Z
@@ -136,10 +162,3 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability is in the container runtime itself, not clients of the container runtime.
-
-  - id: GHSA-mw99-9chc-xw7r
-    events:
-      - timestamp: 2023-12-28T17:55:48Z
-        type: fixed
-        data:
-          fixed-version: 1.104.7-r2
