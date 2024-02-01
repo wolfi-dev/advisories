@@ -4,6 +4,23 @@ package:
   name: datadog-agent
 
 advisories:
+  - id: CVE-2024-21626
+    aliases:
+      - GHSA-xr7r-f8xq-vfvv
+    events:
+      - timestamp: 2024-02-01T07:05:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: datadog-agent
+            componentID: 6a70d75831eaeaff
+            componentName: github.com/opencontainers/runc
+            componentVersion: v1.1.8
+            componentType: go-module
+            componentLocation: /opt/datadog-agent/bin/agent/agent
+            scanner: grype
+
   - id: CVE-2024-23650
     aliases:
       - GHSA-9p26-698r-w4hx
