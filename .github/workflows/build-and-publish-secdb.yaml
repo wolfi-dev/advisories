@@ -36,7 +36,7 @@ jobs:
           gcloud --quiet alpha storage ls
 
       - name: Build the security database
-        uses: docker://ghcr.io/wolfi-dev/sdk:latest@sha256:9060c1b37ed89dfc774757bcb24f057404b4b475930358d9936a882a79cc1e82
+        uses: docker://ghcr.io/wolfi-dev/sdk:latest@sha256:ec529f944d3eb6f4bc16b8fa1a3462b1806bd217ecd9f7632da8e5dca5b41d23
         with:
           entrypoint: wolfictl
           args: "advisory secdb --advisories-repo-dir . --arch x86_64 --arch aarch64 -o security.json"
