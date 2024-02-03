@@ -1,9 +1,26 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: kind
 
 advisories:
+  - id: CVE-2022-29526
+    aliases:
+      - GHSA-p782-xgp4-8hr8
+    events:
+      - timestamp: 2024-02-02T21:40:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kind
+            componentID: 60272b7700aa4b2f
+            componentName: golang.org/x/sys
+            componentVersion: v0.0.0-20210630005230-0f9fa26af87c
+            componentType: go-module
+            componentLocation: /usr/bin/kind
+            scanner: grype
+
   - id: CVE-2023-45283
     aliases:
       - GHSA-vvjp-q62m-2vph
