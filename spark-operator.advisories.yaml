@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: spark-operator
@@ -169,6 +169,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-48795
+    aliases:
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2024-02-02T23:43:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sparkctl
+            componentID: 98e99afb9836ddf2
+            componentName: golang.org/x/crypto
+            componentVersion: v0.14.0
+            componentType: go-module
+            componentLocation: /usr/bin/sparkctl
+            scanner: grype
+
   - id: CVE-2023-5528
     aliases:
       - GHSA-hq6q-c2x6-hmch
@@ -177,3 +194,18 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Pending upstream fix, this fix will require some code changes and other dependencies update.
+
+  - id: GHSA-m425-mq94-257g
+    events:
+      - timestamp: 2024-02-02T23:43:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sparkctl
+            componentID: 584fbc590698e5ee
+            componentName: google.golang.org/grpc
+            componentVersion: v1.47.0
+            componentType: go-module
+            componentLocation: /usr/bin/sparkctl
+            scanner: grype
