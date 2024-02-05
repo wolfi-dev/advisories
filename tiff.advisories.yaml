@@ -14,6 +14,23 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This was fixed upstream sometime around the 4.0.7 release, prior to wolfi packaging. It was also deemed not a security issue, but it was fixed anyway.
 
+  - id: CVE-2023-3164
+    aliases:
+      - GHSA-2x8c-h7r9-r6m6
+    events:
+      - timestamp: 2024-02-05T07:12:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tiff
+            componentID: 7236a49003c6a3b7
+            componentName: tiff
+            componentVersion: 4.6.0-r2
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CVE-2023-6228
     aliases:
       - GHSA-4v5g-xjvw-59g6
