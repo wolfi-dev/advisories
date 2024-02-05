@@ -24,6 +24,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2024-24579
+    aliases:
+      - GHSA-hpxr-w9w7-g4gv
+    events:
+      - timestamp: 2024-02-05T07:12:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zarf
+            componentID: 40ca716927ecc821
+            componentName: github.com/anchore/stereoscope
+            componentVersion: v0.0.0-20240118133533-eb656fc71793
+            componentType: go-module
+            componentLocation: /usr/bin/zarf
+            scanner: grype
+
   - id: GHSA-9763-4f94-gfch
     events:
       - timestamp: 2024-01-11T07:17:32Z
