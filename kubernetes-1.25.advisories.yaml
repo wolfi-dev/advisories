@@ -172,6 +172,23 @@ advisories:
         data:
           fixed-version: 1.25.16-r3
 
+  - id: CVE-2024-21626
+    aliases:
+      - GHSA-xr7r-f8xq-vfvv
+    events:
+      - timestamp: 2024-02-05T07:11:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-1.25
+            componentID: 1e8619e721557bc4
+            componentName: github.com/opencontainers/runc
+            componentVersion: v1.1.6
+            componentType: go-module
+            componentLocation: /usr/bin/kube-proxy
+            scanner: grype
+
   - id: GHSA-6xv5-86q9-7xr8
     events:
       - timestamp: 2024-01-12T07:18:09Z
