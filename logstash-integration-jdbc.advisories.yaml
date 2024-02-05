@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: logstash-integration-jdbc
+
+advisories:
+  - id: CVE-2022-46337
+    aliases:
+      - GHSA-rcjc-c4pj-xxrp
+    events:
+      - timestamp: 2024-02-05T23:16:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-integration-jdbc
+            componentID: 9d66271b0ed14932
+            componentName: derby
+            componentVersion: 10.14.2.0
+            componentType: java-archive
+            componentLocation: /usr/share/java/logstash/vendor/bundle/jruby/3.2.3/gems/logstash-integration-jdbc-5.4.7/vendor/jar-dependencies/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+            scanner: grype
