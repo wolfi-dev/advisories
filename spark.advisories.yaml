@@ -4,6 +4,23 @@ package:
   name: spark
 
 advisories:
+  - id: CVE-2020-13949
+    aliases:
+      - GHSA-g2fg-mr77-6vrm
+    events:
+      - timestamp: 2024-02-05T07:14:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-minimal
+            componentID: 1e933b96aa2449c6
+            componentName: libthrift
+            componentVersion: 0.12.0
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/libthrift-0.12.0.jar
+            scanner: grype
+
   - id: CVE-2020-8908
     aliases:
       - GHSA-5mg8-w23w-74h3
