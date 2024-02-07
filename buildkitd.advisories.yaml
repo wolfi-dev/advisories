@@ -87,6 +87,10 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.12.4-r4
+      - timestamp: 2024-02-07T20:38:51Z
+        type: pending-upstream-fix
+        data:
+          note: otelhttptrace and otelhttp have been both bumped to v0.45.0 in the upstream via https://github.com/moby/buildkit/commit/5ecfec1039959e8b742494eec8f7b5fd8202df5a, but this change is yet to be released. Bumping this dependency downstream causes build-time issues with missing required packages.
 
   - id: CVE-2023-45283
     aliases:
@@ -128,6 +132,10 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.12.4-r4
+      - timestamp: 2024-02-07T20:37:09Z
+        type: pending-upstream-fix
+        data:
+          note: otelgrpc v0.46.0 appears to contain API-incompatible changes with this version of buildkitd. Bumping this dependency causes build-time issues with missing required packages.
 
   - id: CVE-2023-48795
     aliases:
@@ -213,6 +221,10 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.12.4-r4
+      - timestamp: 2024-02-07T20:36:36Z
+        type: pending-upstream-fix
+        data:
+          note: containerd v1.7.11 appears to contain API-incompatible changes with this version of buildkitd. Bumping this dependency downstream causes issues where buildkitd is unable to start due to a conflicting URL schema.
 
   - id: GHSA-m425-mq94-257g
     events:
