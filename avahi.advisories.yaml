@@ -1,4 +1,4 @@
-schema-version: "2"
+schema-version: 2.0.2
 
 package:
   name: avahi
@@ -30,3 +30,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.8-r1
+
+  - id: CVE-2023-38469
+    aliases:
+      - GHSA-cg96-q9gq-2pr7
+    events:
+      - timestamp: 2024-02-08T23:03:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: avahi
+            componentID: 234581d100f3f74d
+            componentName: avahi
+            componentVersion: 0.9_rc1-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
