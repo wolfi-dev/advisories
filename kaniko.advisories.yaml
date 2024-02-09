@@ -24,6 +24,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2024-21626
+    aliases:
+      - GHSA-xr7r-f8xq-vfvv
+    events:
+      - timestamp: 2024-02-09T09:12:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kaniko-warmer
+            componentID: f35299cf1fc293fc
+            componentName: github.com/opencontainers/runc
+            componentVersion: v1.1.5
+            componentType: go-module
+            componentLocation: /usr/bin/warmer
+            scanner: grype
+
   - id: CVE-2024-23650
     aliases:
       - GHSA-9p26-698r-w4hx
