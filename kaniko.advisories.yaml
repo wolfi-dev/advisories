@@ -24,6 +24,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2024-23652
+    aliases:
+      - GHSA-4v98-7qmw-rqr8
+    events:
+      - timestamp: 2024-02-09T09:12:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kaniko-warmer
+            componentID: 10a5630b162399db
+            componentName: github.com/moby/buildkit
+            componentVersion: v0.11.6
+            componentType: go-module
+            componentLocation: /usr/bin/warmer
+            scanner: grype
+
   - id: GHSA-9763-4f94-gfch
     events:
       - timestamp: 2024-01-12T07:12:37Z
