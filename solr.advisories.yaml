@@ -4,6 +4,40 @@ package:
   name: solr
 
 advisories:
+  - id: CVE-2023-50298
+    aliases:
+      - GHSA-xrj7-x7gp-wwqr
+    events:
+      - timestamp: 2024-02-10T07:42:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: solr
+            componentID: c61004acaeb9adea
+            componentName: solr-solrj-streaming
+            componentVersion: 9.4.1-SNAPSHOT
+            componentType: java-archive
+            componentLocation: /usr/share/java/solr/server/solr-webapp/webapp/WEB-INF/lib/solr-solrj-streaming-9.4.1-SNAPSHOT.jar
+            scanner: grype
+
+  - id: CVE-2023-50386
+    aliases:
+      - GHSA-37vr-vmg4-jwpw
+    events:
+      - timestamp: 2024-02-10T07:42:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: solr
+            componentID: 04b976f156a3c068
+            componentName: solr-core
+            componentVersion: 9.4.1-SNAPSHOT
+            componentType: java-archive
+            componentLocation: /usr/share/java/solr/server/solr-webapp/webapp/WEB-INF/lib/solr-core-9.4.1-SNAPSHOT.jar
+            scanner: grype
+
   - id: CVE-2023-51074
     aliases:
       - GHSA-pfh2-hfmq-phg5
