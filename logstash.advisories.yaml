@@ -4,6 +4,15 @@ package:
   name: logstash
 
 advisories:
+  - id: CVE-2022-46337
+    aliases:
+      - GHSA-rcjc-c4pj-xxrp
+    events:
+      - timestamp: 2024-02-12T17:17:34Z
+        type: pending-upstream-fix
+        data:
+          note: 'To fix the CVE we need to update derby to 10.17.1.0 which requires requires logstash to be built with JDK 21: https://github.com/logstash-plugins/logstash-integration-jdbc/issues/147'
+
   - id: CVE-2023-36617
     aliases:
       - GHSA-hww2-5g85-429m
@@ -20,6 +29,10 @@ advisories:
             componentType: gem
             componentLocation: /usr/share/java/logstash/vendor/jruby/lib/ruby/gems/shared/specifications/default/uri-0.12.1.gemspec
             scanner: grype
+      - timestamp: 2024-02-12T19:57:09Z
+        type: pending-upstream-fix
+        data:
+          note: Logstash bundles an upstream version of jruby. Upstream jruby should fix this vulnerability as it updates its default gems on next release.
 
   - id: GHSA-xc9x-jj77-9p9j
     events:
