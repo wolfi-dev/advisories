@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: kubernetes-csi-external-attacher-4.3
@@ -41,3 +41,18 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: GHSA-m425-mq94-257g
+    events:
+      - timestamp: 2024-02-14T13:27:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-attacher-4.3
+            componentID: 46d86d9e6886f53d
+            componentName: google.golang.org/grpc
+            componentVersion: v1.54.0
+            componentType: go-module
+            componentLocation: /usr/bin/csi-attacher
+            scanner: grype
