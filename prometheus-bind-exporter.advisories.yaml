@@ -4,6 +4,23 @@ package:
   name: prometheus-bind-exporter
 
 advisories:
+  - id: CVE-2023-39325
+    aliases:
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2024-02-14T14:31:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-bind-exporter
+            componentID: eafd0a1834df4bcb
+            componentName: golang.org/x/net
+            componentVersion: v0.10.0
+            componentType: go-module
+            componentLocation: /usr/bin/bind_exporter
+            scanner: grype
+
   - id: CVE-2023-3978
     aliases:
       - GHSA-2wrh-6pvc-2jm9
