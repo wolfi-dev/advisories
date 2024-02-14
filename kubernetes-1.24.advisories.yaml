@@ -139,3 +139,20 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/prerelease-lifecycle-gen
             scanner: grype
+
+  - id: CVE-2023-5528
+    aliases:
+      - GHSA-hq6q-c2x6-hmch
+    events:
+      - timestamp: 2024-02-14T13:26:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-1.24
+            componentID: 664f81b822f79702
+            componentName: kubernetes-1.24
+            componentVersion: 1.24.17-r4
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
