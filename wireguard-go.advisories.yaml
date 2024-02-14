@@ -4,6 +4,23 @@ package:
   name: wireguard-go
 
 advisories:
+  - id: CVE-2023-39325
+    aliases:
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2024-02-14T16:26:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wireguard-go
+            componentID: bd2653035f8d7aeb
+            componentName: golang.org/x/net
+            componentVersion: v0.0.0-20220225172249-27dd8689420f
+            componentType: go-module
+            componentLocation: /usr/bin/wireguard-go
+            scanner: grype
+
   - id: CVE-2023-3978
     aliases:
       - GHSA-2wrh-6pvc-2jm9
