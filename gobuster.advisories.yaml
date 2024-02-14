@@ -1,9 +1,60 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: gobuster
 
 advisories:
+  - id: CVE-2023-39325
+    aliases:
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2024-02-14T12:30:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gobuster
+            componentID: f57cbafd2d4f77d8
+            componentName: golang.org/x/net
+            componentVersion: v0.11.0
+            componentType: go-module
+            componentLocation: /usr/bin/gobuster
+            scanner: grype
+
+  - id: CVE-2023-3978
+    aliases:
+      - GHSA-2wrh-6pvc-2jm9
+    events:
+      - timestamp: 2024-02-14T12:30:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gobuster
+            componentID: f57cbafd2d4f77d8
+            componentName: golang.org/x/net
+            componentVersion: v0.11.0
+            componentType: go-module
+            componentLocation: /usr/bin/gobuster
+            scanner: grype
+
+  - id: CVE-2023-44487
+    aliases:
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2024-02-14T12:30:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gobuster
+            componentID: f57cbafd2d4f77d8
+            componentName: golang.org/x/net
+            componentVersion: v0.11.0
+            componentType: go-module
+            componentLocation: /usr/bin/gobuster
+            scanner: grype
+
   - id: CVE-2023-45283
     aliases:
       - GHSA-vvjp-q62m-2vph
@@ -23,3 +74,20 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CVE-2023-48795
+    aliases:
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2024-02-14T12:30:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gobuster
+            componentID: 727718da13b5e537
+            componentName: golang.org/x/crypto
+            componentVersion: v0.12.0
+            componentType: go-module
+            componentLocation: /usr/bin/gobuster
+            scanner: grype
