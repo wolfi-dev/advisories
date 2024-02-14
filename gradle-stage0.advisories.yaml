@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: gradle-stage0
+
+advisories:
+  - id: CVE-2022-46751
+    aliases:
+      - GHSA-2jc4-r94c-rp7h
+    events:
+      - timestamp: 2024-02-14T12:26:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gradle-stage0
+            componentID: 84c0207af6eca23d
+            componentName: ivy
+            componentVersion: 2.3.0
+            componentType: java-archive
+            componentLocation: /usr/share/java/gradle/lib/plugins/ivy-2.3.0.jar
+            scanner: grype
