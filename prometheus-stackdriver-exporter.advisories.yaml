@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: prometheus-stackdriver-exporter
@@ -12,6 +12,57 @@ advisories:
         type: false-positive-determination
         data:
           type: vulnerable-code-version-not-used
+
+  - id: CVE-2023-39325
+    aliases:
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2024-02-14T14:29:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-stackdriver-exporter
+            componentID: 68785c7367cc7b8b
+            componentName: golang.org/x/net
+            componentVersion: v0.10.0
+            componentType: go-module
+            componentLocation: /usr/bin/stackdriver_exporter
+            scanner: grype
+
+  - id: CVE-2023-3978
+    aliases:
+      - GHSA-2wrh-6pvc-2jm9
+    events:
+      - timestamp: 2024-02-14T14:29:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-stackdriver-exporter
+            componentID: 68785c7367cc7b8b
+            componentName: golang.org/x/net
+            componentVersion: v0.10.0
+            componentType: go-module
+            componentLocation: /usr/bin/stackdriver_exporter
+            scanner: grype
+
+  - id: CVE-2023-44487
+    aliases:
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2024-02-14T14:29:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-stackdriver-exporter
+            componentID: 68785c7367cc7b8b
+            componentName: golang.org/x/net
+            componentVersion: v0.10.0
+            componentType: go-module
+            componentLocation: /usr/bin/stackdriver_exporter
+            scanner: grype
 
   - id: CVE-2023-45283
     aliases:
@@ -32,3 +83,35 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CVE-2023-48795
+    aliases:
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2024-02-14T14:29:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-stackdriver-exporter
+            componentID: 3bd243bcbd49b349
+            componentName: golang.org/x/crypto
+            componentVersion: v0.8.0
+            componentType: go-module
+            componentLocation: /usr/bin/stackdriver_exporter
+            scanner: grype
+
+  - id: GHSA-m425-mq94-257g
+    events:
+      - timestamp: 2024-02-14T14:29:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-stackdriver-exporter
+            componentID: dbbbdfaffeed19a1
+            componentName: google.golang.org/grpc
+            componentVersion: v1.55.0
+            componentType: go-module
+            componentLocation: /usr/bin/stackdriver_exporter
+            scanner: grype
