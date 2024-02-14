@@ -4,6 +4,23 @@ package:
   name: goreleaser-1.18
 
 advisories:
+  - id: CVE-2023-2253
+    aliases:
+      - GHSA-hqxw-f8mx-cpmw
+    events:
+      - timestamp: 2024-02-14T12:26:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser-1.18
+            componentID: ad22e6555709828a
+            componentName: github.com/docker/distribution
+            componentVersion: v2.8.1+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+
   - id: CVE-2023-33199
     aliases:
       - GHSA-frqx-jfcm-6jjr
