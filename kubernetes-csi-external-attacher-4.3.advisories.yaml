@@ -22,6 +22,23 @@ advisories:
         data:
           fixed-version: 4.3.0-r9
 
+  - id: CVE-2023-44487
+    aliases:
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2024-02-14T13:27:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-attacher-4.3
+            componentID: 46d86d9e6886f53d
+            componentName: google.golang.org/grpc
+            componentVersion: v1.54.0
+            componentType: go-module
+            componentLocation: /usr/bin/csi-attacher
+            scanner: grype
+
   - id: CVE-2023-45283
     aliases:
       - GHSA-vvjp-q62m-2vph
