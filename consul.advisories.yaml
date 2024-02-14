@@ -37,3 +37,20 @@ advisories:
             componentType: binary
             componentLocation: /bin/consul
             scanner: grype
+
+  - id: CVE-2023-39318
+    aliases:
+      - GHSA-vq7j-gx56-rxjh
+    events:
+      - timestamp: 2024-02-14T11:26:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: consul
+            componentID: 134d2ad10e3846c4
+            componentName: stdlib
+            componentVersion: go1.20.6
+            componentType: go-module
+            componentLocation: /bin/consul
+            scanner: grype
