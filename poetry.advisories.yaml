@@ -4,6 +4,23 @@ package:
   name: poetry
 
 advisories:
+  - id: CVE-2023-45803
+    aliases:
+      - GHSA-g4mx-q9vg-27p4
+    events:
+      - timestamp: 2024-02-14T14:30:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: poetry
+            componentID: e0ea45a7998def01
+            componentName: urllib3
+            componentVersion: 2.0.6
+            componentType: python
+            componentLocation: /usr/lib/python3.12/site-packages/urllib3-2.0.6.dist-info/METADATA, /usr/lib/python3.12/site-packages/urllib3-2.0.6.dist-info/RECORD
+            scanner: grype
+
   - id: CVE-2023-50782
     aliases:
       - GHSA-3ww4-gg4f-jr7f
