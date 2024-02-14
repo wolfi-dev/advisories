@@ -4,6 +4,23 @@ package:
   name: ctop
 
 advisories:
+  - id: CVE-2023-28840
+    aliases:
+      - GHSA-232p-vwff-86mp
+    events:
+      - timestamp: 2024-02-14T11:26:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ctop
+            componentID: 256c6050feff0d64
+            componentName: github.com/docker/docker
+            componentVersion: v20.10.0-beta1.0.20201113105859-b6bfff2a628f+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/ctop
+            scanner: grype
+
   - id: CVE-2023-39326
     aliases:
       - GHSA-9f76-wg39-x86h
