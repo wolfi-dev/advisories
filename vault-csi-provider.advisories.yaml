@@ -4,6 +4,23 @@ package:
   name: vault-csi-provider
 
 advisories:
+  - id: CVE-2023-39325
+    aliases:
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2024-02-14T16:26:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-csi-provider
+            componentID: 01a17e157699c07e
+            componentName: golang.org/x/net
+            componentVersion: v0.8.0
+            componentType: go-module
+            componentLocation: /usr/bin/vault-csi-provider
+            scanner: grype
+
   - id: CVE-2023-3978
     aliases:
       - GHSA-2wrh-6pvc-2jm9
