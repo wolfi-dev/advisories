@@ -1,9 +1,43 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: slsa-verifier
 
 advisories:
+  - id: CVE-2023-39325
+    aliases:
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2024-02-14T15:26:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: slsa-verifier
+            componentID: a2a2b15ba55b23e1
+            componentName: golang.org/x/net
+            componentVersion: v0.14.0
+            componentType: go-module
+            componentLocation: /usr/bin/slsa-verifier
+            scanner: grype
+
+  - id: CVE-2023-44487
+    aliases:
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2024-02-14T15:26:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: slsa-verifier
+            componentID: a2a2b15ba55b23e1
+            componentName: golang.org/x/net
+            componentVersion: v0.14.0
+            componentType: go-module
+            componentLocation: /usr/bin/slsa-verifier
+            scanner: grype
+
   - id: CVE-2023-45283
     aliases:
       - GHSA-vvjp-q62m-2vph
@@ -23,3 +57,97 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CVE-2023-46737
+    aliases:
+      - GHSA-vfp6-jrw2-99g9
+    events:
+      - timestamp: 2024-02-14T15:26:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: slsa-verifier
+            componentID: fc48db59d9cec645
+            componentName: github.com/sigstore/cosign/v2
+            componentVersion: v2.2.0
+            componentType: go-module
+            componentLocation: /usr/bin/slsa-verifier
+            scanner: grype
+
+  - id: CVE-2023-48795
+    aliases:
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2024-02-14T15:26:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: slsa-verifier
+            componentID: 464c828a248e8cee
+            componentName: golang.org/x/crypto
+            componentVersion: v0.12.0
+            componentType: go-module
+            componentLocation: /usr/bin/slsa-verifier
+            scanner: grype
+
+  - id: GHSA-2c7c-3mj9-8fqh
+    events:
+      - timestamp: 2024-02-14T15:26:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: slsa-verifier
+            componentID: 70ad28fade285dd2
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.0
+            componentType: go-module
+            componentLocation: /usr/bin/slsa-verifier
+            scanner: grype
+
+  - id: GHSA-9763-4f94-gfch
+    events:
+      - timestamp: 2024-02-14T15:26:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: slsa-verifier
+            componentID: eb7d1c6a7cdba1c5
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.3.3
+            componentType: go-module
+            componentLocation: /usr/bin/slsa-verifier
+            scanner: grype
+
+  - id: GHSA-jq35-85cj-fj4p
+    events:
+      - timestamp: 2024-02-14T15:26:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: slsa-verifier
+            componentID: 4ae2d129a4b9fd34
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.0+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/slsa-verifier
+            scanner: grype
+
+  - id: GHSA-m425-mq94-257g
+    events:
+      - timestamp: 2024-02-14T15:26:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: slsa-verifier
+            componentID: 271b04fd9e88ddda
+            componentName: google.golang.org/grpc
+            componentVersion: v1.57.0
+            componentType: go-module
+            componentLocation: /usr/bin/slsa-verifier
+            scanner: grype
