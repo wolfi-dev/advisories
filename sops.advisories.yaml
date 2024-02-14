@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: sops
@@ -23,3 +23,50 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CVE-2023-48795
+    aliases:
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2024-02-14T15:26:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sops
+            componentID: 58af781fe16e3ca9
+            componentName: golang.org/x/crypto
+            componentVersion: v0.14.0
+            componentType: go-module
+            componentLocation: /usr/bin/sops
+            scanner: grype
+
+  - id: GHSA-2c7c-3mj9-8fqh
+    events:
+      - timestamp: 2024-02-14T15:26:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sops
+            componentID: 42b4f354501a9432
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.0
+            componentType: go-module
+            componentLocation: /usr/bin/sops
+            scanner: grype
+
+  - id: GHSA-9763-4f94-gfch
+    events:
+      - timestamp: 2024-02-14T15:26:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sops
+            componentID: 2273313a8d760ea8
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.3.3
+            componentType: go-module
+            componentLocation: /usr/bin/sops
+            scanner: grype
