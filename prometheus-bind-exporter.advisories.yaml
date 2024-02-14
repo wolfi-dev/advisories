@@ -4,6 +4,7 @@ package:
   name: prometheus-bind-exporter
 
 advisories:
+
   - id: CVE-2023-39326
     aliases:
       - GHSA-9f76-wg39-x86h
@@ -12,6 +13,57 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.7.0-r5
+
+  - id: CVE-2023-39325
+    aliases:
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2024-02-14T14:31:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-bind-exporter
+            componentID: eafd0a1834df4bcb
+            componentName: golang.org/x/net
+            componentVersion: v0.10.0
+            componentType: go-module
+            componentLocation: /usr/bin/bind_exporter
+            scanner: grype
+
+  - id: CVE-2023-3978
+    aliases:
+      - GHSA-2wrh-6pvc-2jm9
+    events:
+      - timestamp: 2024-02-14T14:31:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-bind-exporter
+            componentID: eafd0a1834df4bcb
+            componentName: golang.org/x/net
+            componentVersion: v0.10.0
+            componentType: go-module
+            componentLocation: /usr/bin/bind_exporter
+            scanner: grype
+
+  - id: CVE-2023-44487
+    aliases:
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2024-02-14T14:31:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-bind-exporter
+            componentID: eafd0a1834df4bcb
+            componentName: golang.org/x/net
+            componentVersion: v0.10.0
+            componentType: go-module
+            componentLocation: /usr/bin/bind_exporter
+            scanner: grype
 
   - id: CVE-2023-45283
     aliases:
@@ -41,3 +93,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.7.0-r5
+
+  - id: CVE-2023-48795
+    aliases:
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2024-02-14T14:31:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-bind-exporter
+            componentID: 1ca9c3929639e2f3
+            componentName: golang.org/x/crypto
+            componentVersion: v0.8.0
+            componentType: go-module
+            componentLocation: /usr/bin/bind_exporter
+            scanner: grype
