@@ -57,3 +57,20 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CVE-2023-48795
+    aliases:
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2024-02-14T14:31:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-blackbox-exporter
+            componentID: 30f17c9e4cba11e6
+            componentName: golang.org/x/crypto
+            componentVersion: v0.8.0
+            componentType: go-module
+            componentLocation: /usr/bin/blackbox_exporter
+            scanner: grype
