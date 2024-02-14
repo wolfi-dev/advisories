@@ -4,6 +4,23 @@ package:
   name: vault-csi-provider
 
 advisories:
+  - id: CVE-2023-2878
+    aliases:
+      - GHSA-g82w-58jf-gcxx
+    events:
+      - timestamp: 2024-02-14T16:26:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-csi-provider
+            componentID: 17a49c9b4d9f2fed
+            componentName: sigs.k8s.io/secrets-store-csi-driver
+            componentVersion: v1.3.2
+            componentType: go-module
+            componentLocation: /usr/bin/vault-csi-provider
+            scanner: grype
+
   - id: CVE-2023-39325
     aliases:
       - GHSA-4374-p667-p6c8
