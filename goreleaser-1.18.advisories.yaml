@@ -1,9 +1,26 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: goreleaser-1.18
 
 advisories:
+  - id: CVE-2023-3978
+    aliases:
+      - GHSA-2wrh-6pvc-2jm9
+    events:
+      - timestamp: 2024-02-14T12:26:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser-1.18
+            componentID: 41ff2efb5a893fd6
+            componentName: golang.org/x/net
+            componentVersion: v0.9.0
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+
   - id: CVE-2023-45283
     aliases:
       - GHSA-vvjp-q62m-2vph
