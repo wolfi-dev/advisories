@@ -4,6 +4,23 @@ package:
   name: prometheus-blackbox-exporter
 
 advisories:
+  - id: CVE-2023-39325
+    aliases:
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2024-02-14T14:31:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-blackbox-exporter
+            componentID: 7d8a34cf8845f228
+            componentName: golang.org/x/net
+            componentVersion: v0.9.0
+            componentType: go-module
+            componentLocation: /usr/bin/blackbox_exporter
+            scanner: grype
+
   - id: CVE-2023-3978
     aliases:
       - GHSA-2wrh-6pvc-2jm9
