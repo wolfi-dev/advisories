@@ -4,6 +4,23 @@ package:
   name: cluster-autoscaler
 
 advisories:
+  - id: CVE-2023-3676
+    aliases:
+      - GHSA-7fxm-f474-hf8w
+    events:
+      - timestamp: 2024-02-14T11:27:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-autoscaler
+            componentID: 69719d1d294b62bb
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-autoscaler
+            scanner: grype
+
   - id: CVE-2023-39323
     aliases:
       - GHSA-679v-hh23-h5jh
