@@ -75,6 +75,55 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-48795
+    aliases:
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2024-02-14T12:26:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3d
+            componentID: 5ecf0d1c15d57770
+            componentName: golang.org/x/crypto
+            componentVersion: v0.9.0
+            componentType: go-module
+            componentLocation: /usr/bin/k3d
+            scanner: grype
+
+  - id: CVE-2024-21626
+    aliases:
+      - GHSA-xr7r-f8xq-vfvv
+    events:
+      - timestamp: 2024-02-14T12:26:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3d
+            componentID: acfca6bbbb7e8d7c
+            componentName: github.com/opencontainers/runc
+            componentVersion: v1.1.7
+            componentType: go-module
+            componentLocation: /usr/bin/k3d
+            scanner: grype
+
+  - id: GHSA-7ww5-4wqc-m92c
+    events:
+      - timestamp: 2024-02-14T12:26:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3d
+            componentID: 57fba9d0fca134c3
+            componentName: github.com/containerd/containerd
+            componentVersion: v1.7.3
+            componentType: go-module
+            componentLocation: /usr/bin/k3d
+            scanner: grype
+
   - id: GHSA-jq35-85cj-fj4p
     events:
       - timestamp: 2024-02-14T12:26:39Z
