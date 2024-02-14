@@ -58,3 +58,20 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CVE-2023-45285
+    aliases:
+      - GHSA-5f94-vhjq-rpg8
+    events:
+      - timestamp: 2024-02-14T13:27:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dashboard-metrics-scraper
+            componentID: a40bf766269eb7ea
+            componentName: stdlib
+            componentVersion: go1.21.3
+            componentType: go-module
+            componentLocation: /usr/bin/metrics-sidecar
+            scanner: grype
