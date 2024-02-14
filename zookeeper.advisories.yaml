@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: zookeeper
+
+advisories:
+  - id: CVE-2023-6378
+    aliases:
+      - GHSA-vmq6-5m68-f53m
+    events:
+      - timestamp: 2024-02-14T16:27:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zookeeper
+            componentID: 0da037367a5f9411
+            componentName: logback-classic
+            componentVersion: 1.2.10
+            componentType: java-archive
+            componentLocation: /usr/share/java/zookeeper/lib/logback-classic-1.2.10.jar
+            scanner: grype
