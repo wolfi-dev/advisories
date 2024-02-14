@@ -4,6 +4,23 @@ package:
   name: aactl
 
 advisories:
+  - id: CVE-2023-1732
+    aliases:
+      - GHSA-2q89-485c-9j2x
+    events:
+      - timestamp: 2024-02-14T10:35:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aactl
+            componentID: b43c925e58d2b811
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.1.0
+            componentType: go-module
+            componentLocation: /usr/bin/aactl
+            scanner: grype
+
   - id: CVE-2023-30551
     aliases:
       - GHSA-2h5h-59f5-c5x9
