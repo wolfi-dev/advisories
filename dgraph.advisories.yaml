@@ -4,6 +4,23 @@ package:
   name: dgraph
 
 advisories:
+  - id: CVE-2020-15106
+    aliases:
+      - GHSA-p4g4-wgrh-qrg2
+    events:
+      - timestamp: 2024-02-14T11:26:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dgraph
+            componentID: a23d042e963d287a
+            componentName: go.etcd.io/etcd
+            componentVersion: v0.5.0-alpha.5.0.20190108173120-83c051b701d3
+            componentType: go-module
+            componentLocation: /usr/bin/dgraph
+            scanner: grype
+
   - id: CVE-2020-15114
     aliases:
       - GHSA-2xhq-gv6c-p224
