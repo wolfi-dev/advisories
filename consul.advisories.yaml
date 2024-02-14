@@ -20,3 +20,20 @@ advisories:
             componentType: go-module
             componentLocation: /bin/consul
             scanner: grype
+
+  - id: CVE-2023-3518
+    aliases:
+      - GHSA-9rhf-q362-77mx
+    events:
+      - timestamp: 2024-02-14T11:26:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: consul
+            componentID: 43a7e9aaff3fe382
+            componentName: consul
+            componentVersion: 1.16.0
+            componentType: binary
+            componentLocation: /bin/consul
+            scanner: grype
