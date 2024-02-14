@@ -74,3 +74,20 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CVE-2023-48795
+    aliases:
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2024-02-14T11:26:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dgraph
+            componentID: 15031ef4fae38ace
+            componentName: golang.org/x/crypto
+            componentVersion: v0.9.0
+            componentType: go-module
+            componentLocation: /usr/bin/dgraph
+            scanner: grype
