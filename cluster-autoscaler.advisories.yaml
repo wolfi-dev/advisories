@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: cluster-autoscaler
+
+advisories:
+  - id: CVE-2023-39323
+    aliases:
+      - GHSA-679v-hh23-h5jh
+    events:
+      - timestamp: 2024-02-14T11:27:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-autoscaler
+            componentID: 84938ae1c236bebd
+            componentName: stdlib
+            componentVersion: go1.21.1
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-autoscaler
+            scanner: grype
