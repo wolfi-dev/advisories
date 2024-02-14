@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: tigera-operator
+
+advisories:
+  - id: CVE-2023-39326
+    aliases:
+      - GHSA-9f76-wg39-x86h
+    events:
+      - timestamp: 2024-02-14T15:35:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tigera-operator
+            componentID: 88a88efdd13e0e0a
+            componentName: stdlib
+            componentVersion: go1.21.3 X:boringcrypto
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
