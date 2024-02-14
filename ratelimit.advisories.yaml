@@ -4,6 +4,23 @@ package:
   name: ratelimit
 
 advisories:
+  - id: CVE-2022-41723
+    aliases:
+      - GHSA-vvpx-j8f3-3w6h
+    events:
+      - timestamp: 2024-02-14T15:28:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ratelimit
+            componentID: 119e9c4b89e4fc0a
+            componentName: golang.org/x/net
+            componentVersion: v0.4.0
+            componentType: go-module
+            componentLocation: /usr/bin/ratelimit
+            scanner: grype
+
   - id: CVE-2023-24534
     aliases:
       - GHSA-8v5j-pwr7-w5f8
