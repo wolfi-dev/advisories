@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: node-problem-detector
+
+advisories:
+  - id: CVE-2023-39318
+    aliases:
+      - GHSA-vq7j-gx56-rxjh
+    events:
+      - timestamp: 2024-02-14T13:31:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: log-counter
+            componentID: db12c8e5a4d21318
+            componentName: stdlib
+            componentVersion: go1.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/log-counter
+            scanner: grype
