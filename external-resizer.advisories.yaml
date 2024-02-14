@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: external-resizer
+
+advisories:
+  - id: CVE-2023-29402
+    aliases:
+      - GHSA-f2cj-5636-4j38
+    events:
+      - timestamp: 2024-02-14T11:33:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: external-resizer
+            componentID: c355f851a05ed763
+            componentName: stdlib
+            componentVersion: go1.20.4
+            componentType: go-module
+            componentLocation: /usr/bin/csi-resizer
+            scanner: grype
