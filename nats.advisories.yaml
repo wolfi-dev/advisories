@@ -41,6 +41,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-46129
+    aliases:
+      - GHSA-mr45-rx8q-wcm9
+    events:
+      - timestamp: 2024-02-14T13:41:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nats
+            componentID: e0a2f68b4dee8f99
+            componentName: github.com/nats-io/nats-server/v2
+            componentVersion: v2.10.0
+            componentType: go-module
+            componentLocation: /usr/bin/nats
+            scanner: grype
+
   - id: CVE-2023-47090
     aliases:
       - GHSA-fr2g-9hjm-wr23
