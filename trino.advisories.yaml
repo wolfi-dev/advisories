@@ -72,6 +72,23 @@ advisories:
             componentLocation: /usr/lib/trino/lib/commons-beanutils-1.7.0.jar
             scanner: grype
 
+  - id: CVE-2019-12086
+    aliases:
+      - GHSA-5ww9-j83m-q7qx
+    events:
+      - timestamp: 2024-02-15T16:28:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino-plugin-phoenix5
+            componentID: 7ca73cc1f7c4f008
+            componentName: jackson-databind
+            componentVersion: 2.4.0
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/trino-phoenix5-patched-438.jar
+            scanner: grype
+
   - id: CVE-2020-13949
     aliases:
       - GHSA-g2fg-mr77-6vrm
