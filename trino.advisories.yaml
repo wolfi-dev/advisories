@@ -351,6 +351,23 @@ advisories:
             componentLocation: /usr/lib/trino/lib/clickhouse-jdbc-0.5.0-all.jar
             scanner: grype
 
+  - id: CVE-2023-43642
+    aliases:
+      - GHSA-55g7-9cwv-5qfv
+    events:
+      - timestamp: 2024-02-15T16:27:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino-plugin-phoenix5
+            componentID: 102064d683b1ac07
+            componentName: snappy-java
+            componentVersion: 1.0.5
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/trino-phoenix5-patched-438.jar
+            scanner: grype
+
   - id: CVE-2023-44981
     aliases:
       - GHSA-7286-pgfv-vxvh
