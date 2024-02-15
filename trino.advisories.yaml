@@ -149,6 +149,23 @@ advisories:
         data:
           note: The upstream project relies on a number of "shaded JARs", making it harder to update dependencies. The upstream project will need to migrate away from "rubix-presto-shaded-0.3.18.jar" for this vulnerability to be resolved. This will likely involve a migration to a different package, since com.qubole.rubix.rubix-presto-shaded was last updated on 2020-11-24.
 
+  - id: CVE-2022-25857
+    aliases:
+      - GHSA-3mc7-4q67-w48m
+    events:
+      - timestamp: 2024-02-15T16:27:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino-plugin-phoenix5
+            componentID: 00f0871381171c4b
+            componentName: snakeyaml
+            componentVersion: "1.11"
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/trino-phoenix5-patched-438.jar
+            scanner: grype
+
   - id: CVE-2022-3171
     aliases:
       - GHSA-h4h5-3hr4-j3g2
