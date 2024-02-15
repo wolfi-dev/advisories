@@ -89,6 +89,23 @@ advisories:
             componentLocation: /usr/lib/trino/lib/commons-beanutils-1.7.0.jar
             scanner: grype
 
+  - id: CVE-2019-10241
+    aliases:
+      - GHSA-7vx9-xjhr-rw6h
+    events:
+      - timestamp: 2024-02-15T16:28:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino-plugin-phoenix5
+            componentID: 053d2e225341384f
+            componentName: jetty-server
+            componentVersion: 9.3.24.v20180605
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/trino-phoenix5-patched-438.jar
+            scanner: grype
+
   - id: CVE-2019-12086
     aliases:
       - GHSA-5ww9-j83m-q7qx
