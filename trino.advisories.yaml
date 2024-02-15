@@ -153,6 +153,23 @@ advisories:
         data:
           note: 'The upstream project relies on a number of "shaded JARs", making it harder to update dependencies. The upstream project will need to migrate away from a number of shaded JARs, including: "gcs-connector-hadoop3-2.2.17-shaded.jar" and "rubix-presto-shaded-0.3.18.jar" for this vulnerability to be resolved.'
 
+  - id: CVE-2021-20190
+    aliases:
+      - GHSA-5949-rw7g-wx7w
+    events:
+      - timestamp: 2024-02-15T16:27:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino-plugin-phoenix5
+            componentID: 7ca73cc1f7c4f008
+            componentName: jackson-databind
+            componentVersion: 2.4.0
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/trino-phoenix5-patched-438.jar
+            scanner: grype
+
   - id: CVE-2021-22569
     aliases:
       - GHSA-wrvw-hg22-4m67
