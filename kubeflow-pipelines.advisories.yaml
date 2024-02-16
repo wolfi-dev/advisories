@@ -14,6 +14,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Vulnerability is only present on Windows.
 
+  - id: CVE-2018-1002102
+    events:
+      - timestamp: 2024-02-16T01:05:39Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability is specific to the k8s server, not the Golang library. This vulnerability is marked as a false positive by the Go team.
+
+  - id: CVE-2018-1002105
+    aliases:
+      - GHSA-579h-mv94-g4gp
+    events:
+      - timestamp: 2024-02-16T01:03:28Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'This vulnerability is specific to the k8s server, not the Golang library. This vulnerability is marked as "NOT_IMPORTABLE" by the Go team: https://github.com/golang/vulndb/blob/master/data/excluded/GO-2022-0792.yaml'
+
   - id: CVE-2019-1002100
     aliases:
       - GHSA-q4rr-64r9-fwgf
