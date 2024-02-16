@@ -73,6 +73,23 @@ advisories:
         data:
           fixed-version: 0.3.24-r1
 
+  - id: CVE-2024-25620
+    aliases:
+      - GHSA-v53g-5gjp-272r
+    events:
+      - timestamp: 2024-02-16T07:42:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k8sgpt
+            componentID: 173eec0793ad6461
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.13.3
+            componentType: go-module
+            componentLocation: /usr/bin/k8sgpt
+            scanner: grype
+
   - id: GHSA-6xv5-86q9-7xr8
     events:
       - timestamp: 2023-09-09T15:18:16Z
