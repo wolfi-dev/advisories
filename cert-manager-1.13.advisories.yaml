@@ -61,6 +61,23 @@ advisories:
         data:
           fixed-version: 1.13.3-r1
 
+  - id: CVE-2024-25620
+    aliases:
+      - GHSA-v53g-5gjp-272r
+    events:
+      - timestamp: 2024-02-16T07:13:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cmctl-1.13
+            componentID: e7ddd3c5ccbddf71
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.12.3
+            componentType: go-module
+            componentLocation: /usr/bin/cmctl
+            scanner: grype
+
   - id: GHSA-2c7c-3mj9-8fqh
     events:
       - timestamp: 2023-11-23T08:31:08Z
