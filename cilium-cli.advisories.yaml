@@ -33,6 +33,23 @@ advisories:
         data:
           fixed-version: 0.15.20-r0
 
+  - id: CVE-2024-25620
+    aliases:
+      - GHSA-v53g-5gjp-272r
+    events:
+      - timestamp: 2024-02-16T07:20:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-cli
+            componentID: 25b1778a1d8043dc
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.0
+            componentType: go-module
+            componentLocation: /usr/bin/cilium
+            scanner: grype
+
   - id: GHSA-7ww5-4wqc-m92c
     events:
       - timestamp: 2024-01-25T07:12:56Z
