@@ -87,6 +87,23 @@ advisories:
         data:
           fixed-version: 0.32.3-r0
 
+  - id: CVE-2024-25620
+    aliases:
+      - GHSA-v53g-5gjp-272r
+    events:
+      - timestamp: 2024-02-16T08:47:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zarf
+            componentID: be5c3d31ef76dae7
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.0
+            componentType: go-module
+            componentLocation: /usr/bin/zarf
+            scanner: grype
+
   - id: GHSA-9763-4f94-gfch
     events:
       - timestamp: 2024-01-11T07:17:32Z
