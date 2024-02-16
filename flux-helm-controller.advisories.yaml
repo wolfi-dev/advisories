@@ -71,6 +71,23 @@ advisories:
         data:
           fixed-version: 0.37.1-r1
 
+  - id: CVE-2024-25620
+    aliases:
+      - GHSA-v53g-5gjp-272r
+    events:
+      - timestamp: 2024-02-16T07:44:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-helm-controller
+            componentID: 7904f8a947517c07
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.13.3
+            componentType: go-module
+            componentLocation: /usr/bin/helm-controller
+            scanner: grype
+
   - id: GHSA-6xv5-86q9-7xr8
     events:
       - timestamp: 2023-09-09T15:18:03Z
