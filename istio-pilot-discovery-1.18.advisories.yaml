@@ -83,3 +83,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.18.7-r2
+
+  - id: CVE-2024-25620
+    aliases:
+      - GHSA-v53g-5gjp-272r
+    events:
+      - timestamp: 2024-02-16T07:47:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-discovery-1.18
+            componentID: 80be16cbb1ef3c62
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.11.2
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-discovery
+            scanner: grype
