@@ -412,6 +412,23 @@ advisories:
             componentLocation: /usr/lib/trino/lib/httpclient-4.4.1.jar
             scanner: grype
 
+  - id: CVE-2020-24616
+    aliases:
+      - GHSA-h3cw-g4mq-c5x2
+    events:
+      - timestamp: 2024-02-16T01:55:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino-plugin-phoenix5
+            componentID: eff1175b4873a734
+            componentName: jackson-databind
+            componentVersion: 2.4.0
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/trino-phoenix5-patched-439.jar
+            scanner: grype
+
   - id: CVE-2020-27216
     aliases:
       - GHSA-g3wg-6mcf-8jj6
