@@ -45,6 +45,23 @@ advisories:
         data:
           fixed-version: 0.167.0-r1
 
+  - id: CVE-2024-25620
+    aliases:
+      - GHSA-v53g-5gjp-272r
+    events:
+      - timestamp: 2024-02-16T07:37:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: eksctl
+            componentID: b0774ba8869b75c5
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.11.2
+            componentType: go-module
+            componentLocation: /usr/bin/eksctl
+            scanner: grype
+
   - id: GHSA-7ww5-4wqc-m92c
     events:
       - timestamp: 2023-12-22T16:56:43Z
