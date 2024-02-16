@@ -116,6 +116,23 @@ advisories:
         data:
           fixed-version: 1.9.9-r1
 
+  - id: CVE-2024-25620
+    aliases:
+      - GHSA-v53g-5gjp-272r
+    events:
+      - timestamp: 2024-02-16T07:20:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubevela
+            componentID: a7a140e3f1bbb3f0
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.11.2
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: GHSA-6xv5-86q9-7xr8
     events:
       - timestamp: 2023-09-09T15:18:17Z
