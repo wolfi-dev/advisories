@@ -200,6 +200,23 @@ advisories:
             componentLocation: /usr/lib/trino/lib/kudu-client-1.15.0.jar
             scanner: grype
 
+  - id: CVE-2022-40152
+    aliases:
+      - GHSA-3f7h-mf4q-vrm4
+    events:
+      - timestamp: 2024-02-16T01:49:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino-plugin-phoenix5
+            componentID: b8b92e37e7b51f78
+            componentName: woodstox-core
+            componentVersion: 5.0.3
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/trino-phoenix5-patched-439.jar
+            scanner: grype
+
   - id: CVE-2023-2976
     aliases:
       - GHSA-7g45-4rm6-3mm3
