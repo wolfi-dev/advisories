@@ -4,6 +4,23 @@ package:
   name: argo-cd
 
 advisories:
+  - id: CVE-2023-3978
+    aliases:
+      - GHSA-2wrh-6pvc-2jm9
+    events:
+      - timestamp: 2024-02-17T07:32:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-compat
+            componentID: a83ff3787ad3bba8
+            componentName: golang.org/x/net
+            componentVersion: v0.11.0
+            componentType: go-module
+            componentLocation: /usr/local/bin/argocd
+            scanner: grype
+
   - id: GHSA-2c7c-3mj9-8fqh
     events:
       - timestamp: 2024-02-17T07:32:08Z
