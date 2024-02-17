@@ -4,6 +4,23 @@ package:
   name: argo-cd
 
 advisories:
+  - id: CVE-2021-25743
+    aliases:
+      - GHSA-f9jg-8p32-2f55
+    events:
+      - timestamp: 2024-02-17T07:28:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-compat
+            componentID: cad8c0efd333abef
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.24.15
+            componentType: go-module
+            componentLocation: /usr/local/bin/argocd
+            scanner: grype
+
   - id: CVE-2023-3676
     aliases:
       - GHSA-7fxm-f474-hf8w
