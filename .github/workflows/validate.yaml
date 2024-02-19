@@ -2,7 +2,8 @@ name: Validate
 
 on:
   pull_request:
-    branches: ['main']
+    branches:
+      - 'main'
   push:
     branches:
       - gh-readonly-queue/main/**
@@ -11,8 +12,6 @@ jobs:
   lint:
     name: Validate
     runs-on: ubuntu-latest
-    container:
-      image: docker://ghcr.io/wolfi-dev/sdk:latest@sha256:75468048eaa142564704993db5a52d82f1660269ea8cb8499b59e16ac6d10b41
 
     permissions:
       contents: read
@@ -31,19 +30,19 @@ jobs:
         path: './wolfi-packages'
         ref: 'main'
 
-    - name: Validate advisory data
-      id: validate
+    - name: get fork point
+      id: fork-point
       working-directory: ./wolfi-advisories
       run: |
         fork_point=$(git merge-base --fork-point refs/remotes/origin/${{ github.base_ref }} HEAD || git rev-parse HEAD)
         echo "fork point will be $fork_point"
+        echo "fork_point=$fork_point" >> $GITHUB_OUTPUT
 
-        wolfictl adv validate \
-          -v \
-          --skip-alias \
-          --no-distro-detection \
-          --advisories-repo-dir . \
-          --advisories-repo-url "https://github.com/${{ github.repository }}" \
-          --advisories-repo-base-hash "$fork_point" \
-          --distro-repo-dir ../wolfi-packages \
-          --package-repo-url "https://packages.wolfi.dev/os"
+    - uses: wolfi-dev/actions/advisories-validate@main
+      with:
+        fork_point: ${{ steps.fork-point.outputs.fork_point }}
+        advisories-directory: './wolfi-advisories'
+        packages-directory: './wolfi-packages'
+        repository: ${{ github.repository }}
+        package-repo-url: 'https://packages.wolfi.dev/os'
+        token: ${{ secrets.GITHUB_TOKEN }}
