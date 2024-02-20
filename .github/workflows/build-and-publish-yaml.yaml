@@ -19,26 +19,25 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: wolfi-dev/actions/build-and-publish-yaml@add-build-and-publish-yaml
+      - uses: wolfi-dev/actions/build-and-publish-yaml@main
         with:
           workload_identity_provider: "projects/618116202522/locations/global/workloadIdentityPools/prod-shared-e350/providers/prod-shared-gha"
           service_account: "prod-images-ci@prod-images-c6e5.iam.gserviceaccount.com"
           gcp_project_id: prod-images-c6e5
           wolfictl_args: "advisory export --advisories-repo-dir . --format yaml -o advisories.yaml"
-          # gcs_apk_bucket_name: wolfi-production-registry-destination
-          gcs_apk_bucket_name: temp-testing-shared-actions
+          gcs_apk_bucket_name: wolfi-production-registry-destination
           gcs_apk_directory_name: os
 
-      # - name: Post failure notice to Slack
-      #   uses: rtCamp/action-slack-notify@b24d75fe0e728a4bf9fc42ee217caa686d141ee8 # ratchet:rtCamp/action-slack-notify@v2.2.1
-      #   if: ${{ failure() }}
-      #   env:
-      #     SLACK_ICON: http://github.com/chainguard-dev.png?size=48
-      #     SLACK_USERNAME: guardian
-      #     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
-      #     SLACK_CHANNEL: 'cve'
-      #     SLACK_COLOR: '#8E1600'
-      #     MSG_MINIMAL: 'true'
-      #     SLACK_TITLE: Build/Publish YAML for ${{ github.repository }} failed!
-      #     SLACK_MESSAGE: |
-      #       For detailed logs: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+      - name: Post failure notice to Slack
+        uses: rtCamp/action-slack-notify@b24d75fe0e728a4bf9fc42ee217caa686d141ee8 # ratchet:rtCamp/action-slack-notify@v2.2.1
+        if: ${{ failure() }}
+        env:
+          SLACK_ICON: http://github.com/chainguard-dev.png?size=48
+          SLACK_USERNAME: guardian
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_CHANNEL: 'cve'
+          SLACK_COLOR: '#8E1600'
+          MSG_MINIMAL: 'true'
+          SLACK_TITLE: Build/Publish YAML for ${{ github.repository }} failed!
+          SLACK_MESSAGE: |
+            For detailed logs: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
