@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: opensearch-2
@@ -31,3 +31,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.10.0-r1
+
+  - id: CVE-2024-26308
+    aliases:
+      - GHSA-4265-ccf5-phj5
+    events:
+      - timestamp: 2024-02-21T07:46:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-2
+            componentID: 8f2bc9688f5f8d17
+            componentName: commons-compress
+            componentVersion: 1.24.0
+            componentType: java-archive
+            componentLocation: /usr/share/opensearch/lib/tools/plugin-cli/commons-compress-1.24.0.jar
+            scanner: grype
