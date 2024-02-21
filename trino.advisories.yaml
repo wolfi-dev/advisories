@@ -371,6 +371,23 @@ advisories:
         data:
           fixed-version: 434-r0
 
+  - id: CVE-2024-26308
+    aliases:
+      - GHSA-4265-ccf5-phj5
+    events:
+      - timestamp: 2024-02-21T07:52:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino-plugin-delta-lake
+            componentID: 0b61de4268a339bd
+            componentName: commons-compress
+            componentVersion: 1.25.0
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/commons-compress-1.25.0.jar
+            scanner: grype
+
   - id: GHSA-xpw8-rcwv-8f8p
     events:
       - timestamp: 2024-02-16T01:44:04Z
