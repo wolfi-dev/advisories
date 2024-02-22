@@ -63,3 +63,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.17.2-r1
+
+  - id: CVE-2024-26130
+    aliases:
+      - GHSA-6vqw-3v5j-54x4
+    events:
+      - timestamp: 2024-02-22T07:17:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3-cassandra-medusa
+            componentID: 6740cfa7990bd0ed
+            componentName: cryptography
+            componentVersion: 42.0.2
+            componentType: python
+            componentLocation: /usr/share/medusa/.venv/lib/python3.11/site-packages/cryptography-42.0.2.dist-info/METADATA, /usr/share/medusa/.venv/lib/python3.11/site-packages/cryptography-42.0.2.dist-info/RECORD, /usr/share/medusa/.venv/lib/python3.11/site-packages/cryptography-42.0.2.dist-info/top_level.txt
+            scanner: grype
