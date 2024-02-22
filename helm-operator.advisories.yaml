@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: helm-operator
+
+advisories:
+  - id: CVE-2024-25620
+    aliases:
+      - GHSA-v53g-5gjp-272r
+    events:
+      - timestamp: 2024-02-22T01:59:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-operator
+            componentID: c686060b4ef9588a
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.12.1
+            componentType: go-module
+            componentLocation: /usr/bin/helm-operator
+            scanner: grype
