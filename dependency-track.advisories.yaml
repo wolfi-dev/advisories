@@ -7,6 +7,7 @@ advisories:
   - id: CVE-2024-1597
     aliases:
       - GHSA-xfg6-62px-cxc2
+      - GHSA-24rp-q3w6-vc56
     events:
       - timestamp: 2024-02-21T07:09:22Z
         type: detection
@@ -36,4 +37,19 @@ advisories:
             componentVersion: 1.25.0
             componentType: java-archive
             componentLocation: /usr/share/java/dependency-track/dependency-track-bundled.jar
+            scanner: grype
+
+  - id: GHSA-24rp-q3w6-vc56
+    events:
+      - timestamp: 2024-02-22T07:51:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dependency-track
+            componentID: 4f2e6127c3ba5df1
+            componentName: postgresql
+            componentVersion: 42.6.0
+            componentType: java-archive
+            componentLocation: /usr/share/java/dependency-track/dependency-track-apiserver.jar
             scanner: grype
