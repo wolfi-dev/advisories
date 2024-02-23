@@ -30,3 +30,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.31.9-r0
+
+  - id: CVE-2024-26147
+    aliases:
+      - GHSA-r53h-jv2g-vpx6
+    events:
+      - timestamp: 2024-02-23T07:15:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k9s
+            componentID: c19c0b82a91afcde
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.1
+            componentType: go-module
+            componentLocation: /usr/bin/k9s
+            scanner: grype
