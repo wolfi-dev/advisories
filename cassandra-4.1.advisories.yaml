@@ -54,3 +54,20 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/java/cassandra/lib/guava-27.0-jre.jar
             scanner: grype
+
+  - id: CVE-2023-6378
+    aliases:
+      - GHSA-vmq6-5m68-f53m
+    events:
+      - timestamp: 2024-02-27T07:15:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cassandra-4.1
+            componentID: 98c4965ba337dd57
+            componentName: logback-classic
+            componentVersion: 1.2.9
+            componentType: java-archive
+            componentLocation: /usr/share/java/cassandra/lib/logback-classic-1.2.9.jar
+            scanner: grype
