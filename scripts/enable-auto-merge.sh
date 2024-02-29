@@ -7,7 +7,7 @@ set -o pipefail
 repo=$1
 
 get_prs() {
-    gh search prs --repo="${repo}" --author="octo-sts[bot]" --review=none --state=open --limit=50 --head=adv --json number --jq '.[].number'
+    gh search prs --repo="${repo}" --author="octo-sts[bot]" --review=none --state=open --limit=50 --head=adv --sort=created --order=asc --json number --jq '.[].number'
 }
 
 readarray -t PRS < <(get_prs)
