@@ -96,6 +96,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability is only present on case-insensitive filesystems, like Windows or Mac. Our containers only run on Linux.
 
+  - id: CVE-2024-25710
+    aliases:
+      - GHSA-4g9r-vxhx-9pgx
+    events:
+      - timestamp: 2024-03-01T07:23:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gradle-8
+            componentID: a6bde751ffd40cf6
+            componentName: commons-compress
+            componentVersion: "1.21"
+            componentType: java-archive
+            componentLocation: /usr/share/java/gradle/lib/commons-compress-1.21.jar
+            scanner: grype
+
   - id: CVE-2024-26308
     aliases:
       - GHSA-4265-ccf5-phj5
