@@ -66,3 +66,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 9.4.1-r1
+
+  - id: CVE-2024-22201
+    aliases:
+      - GHSA-rggv-cv7r-mw98
+    events:
+      - timestamp: 2024-03-01T16:45:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: solr
+            componentID: ff3d5fb9bdddb481
+            componentName: http2-common
+            componentVersion: 10.0.19
+            componentType: java-archive
+            componentLocation: /usr/share/java/solr/server/lib/ext/http2-common-10.0.19.jar
+            scanner: grype
