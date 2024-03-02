@@ -1,0 +1,37 @@
+schema-version: 2.0.2
+
+package:
+  name: prometheus-2.45
+
+advisories:
+  - id: CVE-2023-40577
+    aliases:
+      - GHSA-v86x-5fm3-5p7j
+    events:
+      - timestamp: 2024-03-02T08:06:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.45-bitnami-compat
+            componentID: 4f87f7fa3862464f
+            componentName: github.com/prometheus/alertmanager
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /opt/bitnami/prometheus/bin/prometheus
+            scanner: grype
+
+  - id: GHSA-jq35-85cj-fj4p
+    events:
+      - timestamp: 2024-03-02T08:06:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.45-bitnami-compat
+            componentID: cf0b0f7160c2250e
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.2+incompatible
+            componentType: go-module
+            componentLocation: /opt/bitnami/prometheus/bin/prometheus
+            scanner: grype
