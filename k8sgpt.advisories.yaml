@@ -4,6 +4,23 @@ package:
   name: k8sgpt
 
 advisories:
+  - id: CVE-2019-25210
+    aliases:
+      - GHSA-jw44-4f3j-q396
+    events:
+      - timestamp: 2024-03-06T07:19:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k8sgpt
+            componentID: d7f8880f7e092677
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.2
+            componentType: go-module
+            componentLocation: /usr/bin/k8sgpt
+            scanner: grype
+
   - id: CVE-2020-8552
     aliases:
       - GHSA-82hx-w2r5-c2wq
