@@ -4,6 +4,23 @@ package:
   name: trivy
 
 advisories:
+  - id: CVE-2019-25210
+    aliases:
+      - GHSA-jw44-4f3j-q396
+    events:
+      - timestamp: 2024-03-06T07:23:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trivy
+            componentID: eeafdd625b2ac002
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.2
+            componentType: go-module
+            componentLocation: /usr/bin/trivy
+            scanner: grype
+
   - id: CVE-2023-45283
     aliases:
       - GHSA-vvjp-q62m-2vph
