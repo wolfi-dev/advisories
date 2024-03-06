@@ -4,6 +4,23 @@ package:
   name: cert-manager-1.11
 
 advisories:
+  - id: CVE-2019-25210
+    aliases:
+      - GHSA-jw44-4f3j-q396
+    events:
+      - timestamp: 2024-03-06T07:32:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cmctl-1.11
+            componentID: 981ed19f8d2784d8
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.11.1
+            componentType: go-module
+            componentLocation: /usr/bin/cmctl
+            scanner: grype
+
   - id: CVE-2020-8552
     aliases:
       - GHSA-82hx-w2r5-c2wq
