@@ -4,6 +4,23 @@ package:
   name: kubevela
 
 advisories:
+  - id: CVE-2019-25210
+    aliases:
+      - GHSA-jw44-4f3j-q396
+    events:
+      - timestamp: 2024-03-06T07:11:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubevela
+            componentID: a7a140e3f1bbb3f0
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.11.2
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CVE-2020-8552
     aliases:
       - GHSA-82hx-w2r5-c2wq
