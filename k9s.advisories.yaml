@@ -4,6 +4,23 @@ package:
   name: k9s
 
 advisories:
+  - id: CVE-2019-25210
+    aliases:
+      - GHSA-jw44-4f3j-q396
+    events:
+      - timestamp: 2024-03-06T07:09:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k9s
+            componentID: 9c2003f59734eca7
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.2
+            componentType: go-module
+            componentLocation: /usr/bin/k9s
+            scanner: grype
+
   - id: CVE-2024-21626
     aliases:
       - GHSA-xr7r-f8xq-vfvv
