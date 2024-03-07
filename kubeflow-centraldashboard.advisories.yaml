@@ -1,18 +1,9 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: kubeflow-centraldashboard
 
 advisories:
-  - id: CVE-2023-28155
-    aliases:
-      - GHSA-p8p7-x288-28g6
-    events:
-      - timestamp: 2023-12-02T07:12:35Z
-        type: pending-upstream-fix
-        data:
-          note: cannot fix the CVE because there were no patched versions since the 'request' package is no longer supported by the maintainer.
-
   - id: CVE-2019-10790
     aliases:
       - GHSA-mxhp-79qh-mcx6
@@ -21,6 +12,24 @@ advisories:
         type: pending-upstream-fix
         data:
           note: cannot fix the CVE because there were no patched versions since the 'taffydb' package is quite old and no longer maintained.
+
+  - id: CVE-2023-26159
+    aliases:
+      - GHSA-jchw-25xp-jwwc
+    events:
+      - timestamp: 2024-03-07T15:53:16Z
+        type: fixed
+        data:
+          fixed-version: 1.8.0-r1
+
+  - id: CVE-2023-28155
+    aliases:
+      - GHSA-p8p7-x288-28g6
+    events:
+      - timestamp: 2023-12-02T07:12:35Z
+        type: pending-upstream-fix
+        data:
+          note: cannot fix the CVE because there were no patched versions since the 'request' package is no longer supported by the maintainer.
 
   - id: GHSA-2jcg-qqmg-46q6
     events:
