@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: oauth2-proxy
@@ -80,3 +80,18 @@ advisories:
         type: fixed
         data:
           fixed-version: 7.5.1-r5
+
+  - id: GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:04:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: oauth2-proxy
+            componentID: 8d9a0813da1c692e
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/oauth2-proxy
+            scanner: grype
