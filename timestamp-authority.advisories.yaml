@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: timestamp-authority
@@ -23,3 +23,18 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:20:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: timestamp-authority-server
+            componentID: 47099ba716b7278f
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/timestamp-server
+            scanner: grype
