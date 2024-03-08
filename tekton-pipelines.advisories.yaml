@@ -52,6 +52,23 @@ advisories:
         data:
           fixed-version: 0.55.0-r2
 
+  - id: CVE-2024-28110
+    aliases:
+      - GHSA-5pf6-2qwx-pxm2
+    events:
+      - timestamp: 2024-03-08T07:18:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tekton-pipelines-events
+            componentID: 63138a18ccfd556d
+            componentName: github.com/cloudevents/sdk-go/v2
+            componentVersion: v2.14.0
+            componentType: go-module
+            componentLocation: /usr/bin/tekton-pipelines-events
+            scanner: grype
+
   - id: GHSA-2c7c-3mj9-8fqh
     events:
       - timestamp: 2023-12-14T09:33:26Z
