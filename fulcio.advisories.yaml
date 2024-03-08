@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: fulcio
@@ -39,3 +39,18 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.4.3-r1
+
+  - id: GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T06:49:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: fulcio
+            componentID: f906494d1d71a7c4
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/fulcio
+            scanner: grype
