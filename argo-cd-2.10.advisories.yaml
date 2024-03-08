@@ -1,0 +1,20 @@
+schema-version: 2.0.2
+
+package:
+  name: argo-cd-2.10
+
+advisories:
+  - id: GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:04:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.10
+            componentID: 01bb87cfc9651e9f
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
