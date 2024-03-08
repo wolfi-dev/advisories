@@ -93,7 +93,26 @@ advisories:
         data:
           fixed-version: 0.7.1-r1
 
-  - id: GHSA-c5q2-7r4c-mv6g
+  - id: CVE-2024-28122
+    aliases:
+      - GHSA-hj3v-m684-v259
+    events:
+      - timestamp: 2024-03-08T22:32:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: falcoctl
+            componentID: 0ab145c1c3892fe6
+            componentName: github.com/lestrrat-go/jwx/v2
+            componentVersion: v2.0.19
+            componentType: go-module
+            componentLocation: /usr/bin/falcoctl
+            scanner: grype
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
     events:
       - timestamp: 2024-03-08T06:16:27Z
         type: detection
