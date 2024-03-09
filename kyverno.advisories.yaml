@@ -134,6 +134,44 @@ advisories:
         data:
           fixed-version: 1.11.4-r1
 
+  - id: CVE-2024-28122
+    aliases:
+      - GHSA-hj3v-m684-v259
+    events:
+      - timestamp: 2024-03-09T08:36:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-background-controller
+            componentID: ebce8acfaa76f4cc
+            componentName: github.com/lestrrat-go/jwx/v2
+            componentVersion: v2.0.19
+            componentType: go-module
+            componentLocation: /usr/bin/background-controller
+            scanner: grype
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:06:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-reports-controller
+            componentID: 67c9a1f0142fa0c1
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/reports-controller
+            scanner: grype
+      - timestamp: 2024-03-08T10:56:39Z
+        type: fixed
+        data:
+          fixed-version: 1.11.4-r5
+
   - id: GHSA-2c7c-3mj9-8fqh
     events:
       - timestamp: 2023-11-22T16:40:41Z
@@ -163,25 +201,6 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/kyvernopre
             scanner: grype
-
-  - id: GHSA-c5q2-7r4c-mv6g
-    events:
-      - timestamp: 2024-03-08T07:06:33Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kyverno-reports-controller
-            componentID: 67c9a1f0142fa0c1
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.1
-            componentType: go-module
-            componentLocation: /usr/bin/reports-controller
-            scanner: grype
-      - timestamp: 2024-03-08T10:56:39Z
-        type: fixed
-        data:
-          fixed-version: 1.11.4-r5
 
   - id: GHSA-jq35-85cj-fj4p
     events:
