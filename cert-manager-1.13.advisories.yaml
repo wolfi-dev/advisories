@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: cert-manager-1.13
+
+advisories:
+  - id: CVE-2019-25210
+    aliases:
+      - GHSA-jw44-4f3j-q396
+    events:
+      - timestamp: 2024-03-10T07:06:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cmctl-1.13
+            componentID: a9e36bc1b7d98307
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.2
+            componentType: go-module
+            componentLocation: /usr/bin/cmctl
+            scanner: grype
