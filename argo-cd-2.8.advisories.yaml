@@ -20,3 +20,20 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/argocd
             scanner: grype
+
+  - id: CVE-2023-5528
+    aliases:
+      - GHSA-hq6q-c2x6-hmch
+    events:
+      - timestamp: 2024-03-10T07:11:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.8
+            componentID: 7518f93d4964ef93
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.24.17
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
