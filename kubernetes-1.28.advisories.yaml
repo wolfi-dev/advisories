@@ -4,6 +4,23 @@ package:
   name: kubernetes-1.28
 
 advisories:
+  - id: CVE-2023-45142
+    aliases:
+      - GHSA-rcjv-mgp8-qvmr
+    events:
+      - timestamp: 2024-03-10T07:20:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-apiserver-1.28
+            componentID: e702af3ba30ea647
+            componentName: go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp
+            componentVersion: v0.35.1
+            componentType: go-module
+            componentLocation: /usr/bin/kube-apiserver-1.28
+            scanner: grype
+
   - id: CVE-2023-47108
     aliases:
       - GHSA-8pgv-569h-w5rw
