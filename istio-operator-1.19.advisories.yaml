@@ -4,6 +4,23 @@ package:
   name: istio-operator-1.19
 
 advisories:
+  - id: CVE-2019-25210
+    aliases:
+      - GHSA-jw44-4f3j-q396
+    events:
+      - timestamp: 2024-03-10T07:13:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.19
+            componentID: 7933147e08c94861
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.2
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
   - id: CVE-2024-28122
     aliases:
       - GHSA-hj3v-m684-v259
