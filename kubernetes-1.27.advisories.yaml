@@ -20,3 +20,20 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+
+  - id: CVE-2023-47108
+    aliases:
+      - GHSA-8pgv-569h-w5rw
+    events:
+      - timestamp: 2024-03-10T07:22:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-1.27
+            componentID: 90887cf1ab0b02fd
+            componentName: go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc
+            componentVersion: v0.35.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-proxy
+            scanner: grype
