@@ -123,3 +123,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.32.5-r4
+
+  - id: CVE-2024-24783
+    aliases:
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T08:04:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: thanos-0.32
+            componentID: f60faaf269f531fb
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/bin/thanos
+            scanner: grype
