@@ -60,6 +60,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45289
+    aliases:
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T07:06:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.11-adapter
+            componentID: 364e95a245985cf2
+            componentName: stdlib
+            componentVersion: go1.21.6
+            componentType: go-module
+            componentLocation: /usr/bin/keda-adapter
+            scanner: grype
+
   - id: CVE-2023-47108
     aliases:
       - GHSA-8pgv-569h-w5rw
@@ -68,6 +85,27 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.11.2-r8
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:06:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.11
+            componentID: 298e04a3a221941a
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.0
+            componentType: go-module
+            componentLocation: /usr/bin/keda
+            scanner: grype
+      - timestamp: 2024-03-11T19:11:16Z
+        type: fixed
+        data:
+          fixed-version: 2.11.2-r13
 
   - id: GHSA-2c7c-3mj9-8fqh
     events:
@@ -106,22 +144,3 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.11.2-r12
-
-  - id: GHSA-c5q2-7r4c-mv6g
-    events:
-      - timestamp: 2024-03-08T07:06:35Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: keda-2.11
-            componentID: 298e04a3a221941a
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.0
-            componentType: go-module
-            componentLocation: /usr/bin/keda
-            scanner: grype
-      - timestamp: 2024-03-11T19:11:16Z
-        type: fixed
-        data:
-          fixed-version: 2.11.2-r13
