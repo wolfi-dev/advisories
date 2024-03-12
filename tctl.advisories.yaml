@@ -103,3 +103,20 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Pending upstream fix, this fix will require some code changes due to the usage of one year old Kubernetes dependencies (e.g. k8s.io/apiserver@v0.23.17). These dependencies need to be updated to upgrade the vulnerable otel dependencies. In addition, the latest stable release of the metrics-server project was triggered on June.
+
+  - id: CVE-2024-24783
+    aliases:
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T08:02:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tctl-authorization-plugin
+            componentID: b1d362049fe1f51d
+            componentName: stdlib
+            componentVersion: go1.21.6
+            componentType: go-module
+            componentLocation: /usr/bin/tctl-authorization-plugin
+            scanner: grype
