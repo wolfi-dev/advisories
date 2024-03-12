@@ -93,3 +93,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.5.0-r9
+
+  - id: CVE-2024-24783
+    aliases:
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T07:09:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubewatch
+            componentID: 545953cd8fc2ec41
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/bin/kubewatch
+            scanner: grype
