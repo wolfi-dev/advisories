@@ -52,6 +52,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45289
+    aliases:
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T07:11:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: coredns
+            componentID: 74051bbab0ed87f1
+            componentName: stdlib
+            componentVersion: go1.20.14
+            componentType: go-module
+            componentLocation: /usr/bin/coredns
+            scanner: grype
+
   - id: CVE-2023-48795
     aliases:
       - GHSA-45x7-px36-x8w8
