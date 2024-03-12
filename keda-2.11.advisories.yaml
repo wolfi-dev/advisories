@@ -69,6 +69,36 @@ advisories:
         data:
           fixed-version: 2.11.2-r8
 
+  - id: CVE-2024-24784
+    aliases:
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T07:11:53Z
+        type: fixed
+        data:
+          fixed-version: 2.11.2-r13
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:06:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.11
+            componentID: 298e04a3a221941a
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.0
+            componentType: go-module
+            componentLocation: /usr/bin/keda
+            scanner: grype
+      - timestamp: 2024-03-11T19:11:16Z
+        type: fixed
+        data:
+          fixed-version: 2.11.2-r13
+
   - id: GHSA-2c7c-3mj9-8fqh
     events:
       - timestamp: 2024-01-11T07:18:29Z
@@ -106,22 +136,3 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.11.2-r12
-
-  - id: GHSA-c5q2-7r4c-mv6g
-    events:
-      - timestamp: 2024-03-08T07:06:35Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: keda-2.11
-            componentID: 298e04a3a221941a
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.0
-            componentType: go-module
-            componentLocation: /usr/bin/keda
-            scanner: grype
-      - timestamp: 2024-03-11T19:11:16Z
-        type: fixed
-        data:
-          fixed-version: 2.11.2-r13
