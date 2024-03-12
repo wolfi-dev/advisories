@@ -143,6 +143,23 @@ advisories:
         data:
           fixed-version: 1.18.7-r2
 
+  - id: CVE-2024-24783
+    aliases:
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T08:11:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-agent-1.18
+            componentID: 6db5273ce40722e3
+            componentName: stdlib
+            componentVersion: go1.21.6
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-agent
+            scanner: grype
+
   - id: CVE-2024-25620
     aliases:
       - GHSA-v53g-5gjp-272r
