@@ -4,6 +4,23 @@ package:
   name: vite
 
 advisories:
+  - id: CVE-2023-45289
+    aliases:
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T07:14:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vite
+            componentID: 796a74f4185e06c9
+            componentName: stdlib
+            componentVersion: go1.20.12
+            componentType: go-module
+            componentLocation: /usr/lib/node_modules/vite/node_modules/@esbuild/linux-x64/bin/esbuild
+            scanner: grype
+
   - id: CVE-2024-23331
     aliases:
       - GHSA-c24v-8rfc-w8vw
