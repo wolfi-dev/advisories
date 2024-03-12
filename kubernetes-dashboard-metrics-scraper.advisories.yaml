@@ -83,3 +83,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.0.9-r10
+
+  - id: CVE-2023-45289
+    aliases:
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T08:13:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dashboard-metrics-scraper
+            componentID: 460d0dbffa5ca5a8
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/bin/metrics-sidecar
+            scanner: grype
