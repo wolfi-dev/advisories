@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: tctl
@@ -60,6 +60,23 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CVE-2023-45289
+    aliases:
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T08:13:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tctl
+            componentID: ff139e431e3e9eee
+            componentName: stdlib
+            componentVersion: go1.21.6
+            componentType: go-module
+            componentLocation: /usr/bin/tctl
+            scanner: grype
 
   - id: CVE-2023-47108
     aliases:
