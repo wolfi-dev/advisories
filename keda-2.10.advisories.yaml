@@ -112,3 +112,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.10.1-r6
+
+  - id: CVE-2024-24783
+    aliases:
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T07:12:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.10-admission-webhooks
+            componentID: 1e09157f1d3a026f
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/bin/keda-admission-webhooks
+            scanner: grype
