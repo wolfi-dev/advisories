@@ -46,3 +46,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 5.0.12-r0
+
+  - id: CVE-2024-24783
+    aliases:
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T07:14:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vite
+            componentID: 796a74f4185e06c9
+            componentName: stdlib
+            componentVersion: go1.20.12
+            componentType: go-module
+            componentLocation: /usr/lib/node_modules/vite/node_modules/@esbuild/linux-x64/bin/esbuild
+            scanner: grype
