@@ -1,0 +1,89 @@
+schema-version: 2.0.2
+
+package:
+  name: cluster-autoscaler-1.26
+
+advisories:
+  - id: CVE-2023-39325
+    aliases:
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2023-10-25T17:23:00Z
+        type: fixed
+        data:
+          fixed-version: 1.26.4-r3
+
+  - id: CVE-2023-3955
+    aliases:
+      - GHSA-q78c-gwqw-jcmc
+    events:
+      - timestamp: 2023-11-02T14:44:46Z
+        type: fixed
+        data:
+          fixed-version: 1.26.4-r4
+
+  - id: CVE-2023-3978
+    aliases:
+      - GHSA-2wrh-6pvc-2jm9
+    events:
+      - timestamp: 2023-10-25T17:22:43Z
+        type: fixed
+        data:
+          fixed-version: 1.26.4-r3
+
+  - id: CVE-2023-44487
+    aliases:
+      - GHSA-qppj-fm5r-hxr3
+      - GHSA-m425-mq94-257g
+    events:
+      - timestamp: 2023-10-25T17:23:15Z
+        type: fixed
+        data:
+          fixed-version: 1.26.4-r4
+
+  - id: CVE-2023-45142
+    aliases:
+      - GHSA-rcjv-mgp8-qvmr
+    events:
+      - timestamp: 2023-10-25T15:18:52Z
+        type: true-positive-determination
+        data:
+          note: Govulncheck confirms the affect symbol is present. But bumping the affected dependency requires third party modules to update their code not to use packages removed in recent versions of OpenTelemtry's modules, so we'll need to wait for upstream changes to fix this.
+
+  - id: CVE-2023-45283
+    aliases:
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:24:32Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CVE-2023-45284
+    aliases:
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:24:34Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CVE-2023-48795
+    aliases:
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2024-02-16T07:02:17Z
+        type: fixed
+        data:
+          fixed-version: 1.26.6-r1
+
+  - id: CVE-2023-5528
+    aliases:
+      - GHSA-hq6q-c2x6-hmch
+    events:
+      - timestamp: 2023-11-22T09:21:38Z
+        type: fixed
+        data:
+          fixed-version: 1.26.4-r5

@@ -1,0 +1,166 @@
+schema-version: 2.0.2
+
+package:
+  name: istio-pilot-discovery-1.19
+
+advisories:
+  - id: CVE-2019-3826
+    aliases:
+      - GHSA-3m87-5598-2v4f
+    events:
+      - timestamp: 2023-09-15T13:54:14Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: The installed version of the prometheus library is ahead of the vulnerability fix version, but prometheus violates Go's rules for v2 module versioning.
+
+  - id: CVE-2020-8552
+    aliases:
+      - GHSA-82hx-w2r5-c2wq
+    events:
+      - timestamp: 2023-09-19T16:42:36Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Go vulndb has marked this code NOT_IMPORTABLE.
+
+  - id: CVE-2023-39325
+    aliases:
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2023-10-12T22:20:14Z
+        type: fixed
+        data:
+          fixed-version: 1.19.3-r0
+
+  - id: CVE-2023-45283
+    aliases:
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:29:55Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CVE-2023-45284
+    aliases:
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:29:57Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CVE-2023-48795
+    aliases:
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2023-12-20T13:03:02Z
+        type: fixed
+        data:
+          fixed-version: 1.19.5-r2
+
+  - id: CVE-2023-49290
+    aliases:
+      - GHSA-7f9x-gw85-8grf
+    events:
+      - timestamp: 2024-01-24T07:10:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-discovery-1.19
+            componentID: 348b2a3ebdd0b92f
+            componentName: github.com/lestrrat-go/jwx
+            componentVersion: v1.2.26
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-discovery
+            scanner: grype
+      - timestamp: 2024-01-24T16:39:25Z
+        type: fixed
+        data:
+          fixed-version: 1.19.6-r1
+
+  - id: CVE-2024-21664
+    aliases:
+      - GHSA-pvcr-v8j8-j5q3
+    events:
+      - timestamp: 2024-01-24T07:10:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-discovery-1.19
+            componentID: 348b2a3ebdd0b92f
+            componentName: github.com/lestrrat-go/jwx
+            componentVersion: v1.2.26
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-discovery
+            scanner: grype
+      - timestamp: 2024-01-26T08:34:14Z
+        type: fixed
+        data:
+          fixed-version: 1.19.6-r2
+
+  - id: CVE-2024-28122
+    aliases:
+      - GHSA-hj3v-m684-v259
+    events:
+      - timestamp: 2024-03-09T07:43:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-discovery-1.19
+            componentID: cae4aa46683f2c2e
+            componentName: github.com/lestrrat-go/jwx
+            componentVersion: v1.2.28
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-discovery
+            scanner: grype
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:11:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-discovery-1.19
+            componentID: fbd32274294de736
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-discovery
+            scanner: grype
+      - timestamp: 2024-03-08T12:18:54Z
+        type: fixed
+        data:
+          fixed-version: 1.19.7-r2
+
+  - id: GHSA-2c7c-3mj9-8fqh
+    events:
+      - timestamp: 2023-11-23T10:18:09Z
+        type: fixed
+        data:
+          fixed-version: 1.19.4-r1
+
+  - id: GHSA-6xv5-86q9-7xr8
+    events:
+      - timestamp: 2023-09-09T15:18:15Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability is only present on Windows.
+
+  - id: GHSA-jq35-85cj-fj4p
+    events:
+      - timestamp: 2023-10-31T20:03:52Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability is in the container runtime itself, not clients of the container runtime.

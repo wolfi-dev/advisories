@@ -1,0 +1,170 @@
+schema-version: 2.0.2
+
+package:
+  name: kubernetes-1.28
+
+advisories:
+  - id: CVE-2015-7561
+    aliases:
+      - GHSA-2h9c-34v6-3qmr
+    events:
+      - timestamp: 2023-08-18T17:06:49Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: Vulnerability only impacts OpenShift
+
+  - id: CVE-2016-1905
+    aliases:
+      - GHSA-xx8c-m748-xr4j
+    events:
+      - timestamp: 2023-08-18T17:06:50Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: Fixed in Kubernetes 1.2
+
+  - id: CVE-2016-1906
+    aliases:
+      - GHSA-m3fm-h5jp-q79p
+    events:
+      - timestamp: 2023-08-18T17:06:51Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: Vulnerability only impacts OpenShift
+
+  - id: CVE-2016-7075
+    aliases:
+      - GHSA-7w66-j2r2-vm3p
+    events:
+      - timestamp: 2023-08-18T17:06:52Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: Vulnerability only impacts OpenShift
+
+  - id: CVE-2019-11255
+    aliases:
+      - GHSA-f4w6-3rh6-6q4q
+    events:
+      - timestamp: 2023-08-18T17:06:51Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: Fixed in Kubernetes 1.2
+
+  - id: CVE-2020-8554
+    aliases:
+      - GHSA-j9wf-vvm6-4r9w
+    events:
+      - timestamp: 2023-08-18T17:06:53Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: Fixed in Kubernetes 1.21
+
+  - id: CVE-2021-25740
+    aliases:
+      - GHSA-vw47-mr44-3jf9
+    events:
+      - timestamp: 2024-01-11T07:06:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-1.28
+            componentID: 3cd344a8e6dc3ca3
+            componentName: kubernetes-1.28
+            componentVersion: 1.28.5-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
+  - id: CVE-2023-45142
+    aliases:
+      - GHSA-rcjv-mgp8-qvmr
+    events:
+      - timestamp: 2024-01-11T07:06:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-1.28
+            componentID: f8e8740ff09146d1
+            componentName: go.opentelemetry.io/contrib/instrumentation/github.com/emicklei/go-restful/otelrestful
+            componentVersion: v0.35.0
+            componentType: go-module
+            componentLocation: /usr/bin/kubelet
+            scanner: grype
+
+  - id: CVE-2023-45283
+    aliases:
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:31:41Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CVE-2023-45284
+    aliases:
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:31:43Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CVE-2023-47108
+    aliases:
+      - GHSA-8pgv-569h-w5rw
+    events:
+      - timestamp: 2024-01-11T07:06:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-1.28
+            componentID: bf3ac0bb185db3a2
+            componentName: go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc
+            componentVersion: v0.35.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-scheduler
+            scanner: grype
+
+  - id: CVE-2023-48795
+    aliases:
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2024-01-11T07:11:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeadm-1.28
+            componentID: f3ea6bbb3c2d0530
+            componentName: golang.org/x/crypto
+            componentVersion: v0.14.0
+            componentType: go-module
+            componentLocation: /usr/bin/kubeadm-1.28
+            scanner: grype
+
+  - id: CVE-2024-21626
+    aliases:
+      - GHSA-xr7r-f8xq-vfvv
+    events:
+      - timestamp: 2024-02-05T07:10:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-1.28
+            componentID: a773c7f2778fff84
+            componentName: github.com/opencontainers/runc
+            componentVersion: v1.1.7
+            componentType: go-module
+            componentLocation: /usr/bin/kubelet
+            scanner: grype
