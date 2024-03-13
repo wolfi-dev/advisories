@@ -196,6 +196,44 @@ advisories:
         data:
           fixed-version: 1.107.7-r0
 
+  - id: CVE-2024-27289
+    aliases:
+      - GHSA-m7wr-2xf7-cm9p
+    events:
+      - timestamp: 2024-03-13T07:11:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kots
+            componentID: 3b7930f052012ac0
+            componentName: github.com/jackc/pgx/v4
+            componentVersion: v4.18.1
+            componentType: go-module
+            componentLocation: /usr/bin/kotsadm
+            scanner: grype
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:15:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kots
+            componentID: 1709c823c2128753
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/kots
+            scanner: grype
+      - timestamp: 2024-03-08T21:01:29Z
+        type: fixed
+        data:
+          fixed-version: 1.108.0-r2
+
   - id: GHSA-2c7c-3mj9-8fqh
     events:
       - timestamp: 2023-11-22T16:40:24Z
@@ -217,25 +255,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.104.7-r1
-
-  - id: GHSA-c5q2-7r4c-mv6g
-    events:
-      - timestamp: 2024-03-08T07:15:01Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kots
-            componentID: 1709c823c2128753
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.1
-            componentType: go-module
-            componentLocation: /usr/bin/kots
-            scanner: grype
-      - timestamp: 2024-03-08T21:01:29Z
-        type: fixed
-        data:
-          fixed-version: 1.108.0-r2
 
   - id: GHSA-jq35-85cj-fj4p
     events:
