@@ -63,6 +63,48 @@ advisories:
         data:
           fixed-version: 1.8.7-r2
 
+  - id: CVE-2024-28122
+    aliases:
+      - GHSA-hj3v-m684-v259
+    events:
+      - timestamp: 2024-03-09T08:38:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spire-server
+            componentID: 11d8826f9ec1585f
+            componentName: github.com/lestrrat-go/jwx/v2
+            componentVersion: v2.0.19
+            componentType: go-module
+            componentLocation: /usr/bin/spire-server
+            scanner: grype
+      - timestamp: 2024-03-10T16:02:15Z
+        type: fixed
+        data:
+          fixed-version: 1.9.1-r2
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:17:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spire-oidc-discovery-provider
+            componentID: 38138f462c01d669
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/oidc-discovery-provider
+            scanner: grype
+      - timestamp: 2024-03-08T16:05:34Z
+        type: fixed
+        data:
+          fixed-version: 1.9.1-r1
+
   - id: GHSA-2c7c-3mj9-8fqh
     events:
       - timestamp: 2023-11-22T16:41:27Z
@@ -88,25 +130,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.8.7-r1
-
-  - id: GHSA-c5q2-7r4c-mv6g
-    events:
-      - timestamp: 2024-03-08T07:17:35Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: spire-oidc-discovery-provider
-            componentID: 38138f462c01d669
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.1
-            componentType: go-module
-            componentLocation: /usr/bin/oidc-discovery-provider
-            scanner: grype
-      - timestamp: 2024-03-08T16:05:34Z
-        type: fixed
-        data:
-          fixed-version: 1.9.1-r1
 
   - id: GHSA-jq35-85cj-fj4p
     events:

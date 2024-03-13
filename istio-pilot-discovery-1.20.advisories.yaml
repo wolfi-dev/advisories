@@ -53,14 +53,30 @@ advisories:
         data:
           fixed-version: 1.20.2-r3
 
-  - id: GHSA-2c7c-3mj9-8fqh
+  - id: CVE-2024-28122
+    aliases:
+      - GHSA-hj3v-m684-v259
     events:
-      - timestamp: 2023-12-08T19:38:41Z
+      - timestamp: 2024-03-10T07:11:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-discovery-1.20
+            componentID: 993a2c76009b9dc1
+            componentName: github.com/lestrrat-go/jwx
+            componentVersion: v1.2.28
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-discovery
+            scanner: grype
+      - timestamp: 2024-03-10T16:02:25Z
         type: fixed
         data:
-          fixed-version: 1.20.0-r2
+          fixed-version: 1.20.3-r2
 
-  - id: GHSA-c5q2-7r4c-mv6g
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
     events:
       - timestamp: 2024-03-08T07:17:57Z
         type: detection
@@ -74,3 +90,14 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/pilot-discovery
             scanner: grype
+      - timestamp: 2024-03-10T16:02:26Z
+        type: fixed
+        data:
+          fixed-version: 1.20.3-r2
+
+  - id: GHSA-2c7c-3mj9-8fqh
+    events:
+      - timestamp: 2023-12-08T19:38:41Z
+        type: fixed
+        data:
+          fixed-version: 1.20.0-r2
