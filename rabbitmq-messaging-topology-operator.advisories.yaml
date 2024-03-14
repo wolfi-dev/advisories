@@ -24,7 +24,26 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
-  - id: GHSA-c5q2-7r4c-mv6g
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:18:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rabbitmq-messaging-topology-operator
+            componentID: 7867c13bcb6254be
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
     events:
       - timestamp: 2024-03-08T07:21:07Z
         type: detection
