@@ -96,6 +96,23 @@ advisories:
         data:
           fixed-version: 0.31.2-r1
 
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T09:22:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-image-reflector-controller
+            componentID: d3b53db50b7f5659
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/image-reflector-controller
+            scanner: grype
+
   - id: GHSA-jq35-85cj-fj4p
     events:
       - timestamp: 2023-10-31T20:03:46Z

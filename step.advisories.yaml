@@ -33,7 +33,26 @@ advisories:
         data:
           fixed-version: 0.25.2-r0
 
-  - id: GHSA-c5q2-7r4c-mv6g
+  - id: CVE-2024-27289
+    aliases:
+      - GHSA-m7wr-2xf7-cm9p
+    events:
+      - timestamp: 2024-03-13T08:30:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: step
+            componentID: 5b607a38055daba8
+            componentName: github.com/jackc/pgx/v4
+            componentVersion: v4.18.0
+            componentType: go-module
+            componentLocation: /usr/bin/step
+            scanner: grype
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
     events:
       - timestamp: 2024-03-08T07:19:32Z
         type: detection
