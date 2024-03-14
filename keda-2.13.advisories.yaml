@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: keda-2.13
+
+advisories:
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T09:18:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.13-adapter
+            componentID: 4cbe33eeb47dc957
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/keda-adapter
+            scanner: grype
