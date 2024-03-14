@@ -33,14 +33,26 @@ advisories:
         data:
           fixed-version: 1.3.4-r2
 
-  - id: GHSA-2c7c-3mj9-8fqh
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
     events:
-      - timestamp: 2023-11-22T16:41:15Z
-        type: fixed
+      - timestamp: 2024-03-14T16:22:37Z
+        type: detection
         data:
-          fixed-version: 1.3.3-r1
+          type: scan/v1
+          data:
+            subpackageName: rekor-cli
+            componentID: 326bf8ba4e081a55
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/rekor-cli
+            scanner: grype
 
-  - id: GHSA-c5q2-7r4c-mv6g
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
     events:
       - timestamp: 2024-03-08T07:10:04Z
         type: detection
@@ -58,3 +70,10 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.3.5-r2
+
+  - id: GHSA-2c7c-3mj9-8fqh
+    events:
+      - timestamp: 2023-11-22T16:41:15Z
+        type: fixed
+        data:
+          fixed-version: 1.3.3-r1
