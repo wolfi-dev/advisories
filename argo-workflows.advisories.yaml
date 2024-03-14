@@ -42,6 +42,44 @@ advisories:
         data:
           fixed-version: 3.5.2-r3
 
+  - id: CVE-2024-27289
+    aliases:
+      - GHSA-m7wr-2xf7-cm9p
+    events:
+      - timestamp: 2024-03-13T07:05:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-workflows
+            componentID: e91e6517e2bfae1a
+            componentName: github.com/jackc/pgx/v4
+            componentVersion: v4.18.1
+            componentType: go-module
+            componentLocation: /usr/bin/argo
+            scanner: grype
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:06:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-workflow-executor
+            componentID: d077f1b6fb924194
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/argoexec
+            scanner: grype
+      - timestamp: 2024-03-08T22:56:16Z
+        type: fixed
+        data:
+          fixed-version: 3.5.5-r2
+
   - id: GHSA-2c7c-3mj9-8fqh
     events:
       - timestamp: 2023-11-23T08:30:52Z
@@ -63,25 +101,6 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/argoexec
             scanner: grype
-
-  - id: GHSA-c5q2-7r4c-mv6g
-    events:
-      - timestamp: 2024-03-08T07:06:57Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: argo-workflow-executor
-            componentID: d077f1b6fb924194
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.1
-            componentType: go-module
-            componentLocation: /usr/bin/argoexec
-            scanner: grype
-      - timestamp: 2024-03-08T22:56:16Z
-        type: fixed
-        data:
-          fixed-version: 3.5.5-r2
 
   - id: GHSA-jq35-85cj-fj4p
     events:
