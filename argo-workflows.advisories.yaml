@@ -42,6 +42,44 @@ advisories:
         data:
           fixed-version: 3.5.2-r3
 
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T12:16:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-workflows
+            componentID: d1ca81f3bc4bd8e4
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/argo
+            scanner: grype
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:06:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-workflow-executor
+            componentID: d077f1b6fb924194
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/argoexec
+            scanner: grype
+      - timestamp: 2024-03-08T22:56:16Z
+        type: fixed
+        data:
+          fixed-version: 3.5.5-r2
+
   - id: GHSA-2c7c-3mj9-8fqh
     events:
       - timestamp: 2023-11-23T08:30:52Z
@@ -63,25 +101,6 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/argoexec
             scanner: grype
-
-  - id: GHSA-c5q2-7r4c-mv6g
-    events:
-      - timestamp: 2024-03-08T07:06:57Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: argo-workflow-executor
-            componentID: d077f1b6fb924194
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.1
-            componentType: go-module
-            componentLocation: /usr/bin/argoexec
-            scanner: grype
-      - timestamp: 2024-03-08T22:56:16Z
-        type: fixed
-        data:
-          fixed-version: 3.5.5-r2
 
   - id: GHSA-jq35-85cj-fj4p
     events:
