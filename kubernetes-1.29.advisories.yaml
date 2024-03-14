@@ -218,3 +218,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.29.2-r1
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:19:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-apiserver-1.29
+            componentID: ca50abaaa03fb444
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-apiserver-1.29
+            scanner: grype
