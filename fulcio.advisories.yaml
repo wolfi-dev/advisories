@@ -33,14 +33,26 @@ advisories:
         data:
           fixed-version: 1.4.3-r4
 
-  - id: GHSA-2c7c-3mj9-8fqh
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
     events:
-      - timestamp: 2023-11-23T10:06:51Z
-        type: fixed
+      - timestamp: 2024-03-14T08:18:56Z
+        type: detection
         data:
-          fixed-version: 1.4.3-r1
+          type: scan/v1
+          data:
+            subpackageName: fulcio
+            componentID: bc3078e1cab9984d
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/fulcio
+            scanner: grype
 
-  - id: GHSA-c5q2-7r4c-mv6g
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
     events:
       - timestamp: 2024-03-08T06:49:00Z
         type: detection
@@ -58,3 +70,10 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.4.4-r2
+
+  - id: GHSA-2c7c-3mj9-8fqh
+    events:
+      - timestamp: 2023-11-23T10:06:51Z
+        type: fixed
+        data:
+          fixed-version: 1.4.3-r1
