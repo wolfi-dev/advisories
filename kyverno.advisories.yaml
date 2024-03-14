@@ -134,6 +134,23 @@ advisories:
         data:
           fixed-version: 1.11.4-r1
 
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T14:20:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-background-controller
+            componentID: d66aebf9de95bf13
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/background-controller
+            scanner: grype
+
   - id: CVE-2024-28122
     aliases:
       - GHSA-hj3v-m684-v259
