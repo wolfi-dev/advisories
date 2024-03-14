@@ -73,6 +73,44 @@ advisories:
         data:
           fixed-version: 10.4.0-r0
 
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:17:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana
+            componentID: 8fdc751801b9b618
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:18:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana
+            componentID: c3916d13aa91e911
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+      - timestamp: 2024-03-08T07:50:30Z
+        type: fixed
+        data:
+          fixed-version: 10.4.0-r1
+
   - id: GHSA-9763-4f94-gfch
     events:
       - timestamp: 2024-01-11T07:19:14Z
@@ -91,22 +129,3 @@ advisories:
         type: fixed
         data:
           fixed-version: 10.3.1-r0
-
-  - id: GHSA-c5q2-7r4c-mv6g
-    events:
-      - timestamp: 2024-03-08T07:18:33Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: grafana
-            componentID: c3916d13aa91e911
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.1
-            componentType: go-module
-            componentLocation: /usr/bin/grafana
-            scanner: grype
-      - timestamp: 2024-03-08T07:50:30Z
-        type: fixed
-        data:
-          fixed-version: 10.4.0-r1

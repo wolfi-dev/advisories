@@ -82,6 +82,27 @@ advisories:
         data:
           fixed-version: 1.20.2-r2
 
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:18:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.20
+            componentID: 2390df842be342eb
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+      - timestamp: 2024-03-14T18:49:07Z
+        type: fixed
+        data:
+          fixed-version: 1.20.4-r1
+
   - id: CVE-2024-25620
     aliases:
       - GHSA-v53g-5gjp-272r
