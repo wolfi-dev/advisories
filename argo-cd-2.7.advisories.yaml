@@ -181,6 +181,23 @@ advisories:
         data:
           fixed-version: 2.7.17-r1
 
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T09:23:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.7
+            componentID: 70948ddb718ad7e5
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
   - id: GHSA-6xv5-86q9-7xr8
     events:
       - timestamp: 2023-09-09T15:17:59Z
