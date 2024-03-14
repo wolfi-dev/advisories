@@ -152,3 +152,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.27.2-r2
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:07:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: calico-node
+            componentID: cf5b1f5f15c83b64
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /bin/calico-node
+            scanner: grype
