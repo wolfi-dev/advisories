@@ -86,3 +86,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.7.1-r1
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T09:18:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-load-balancer-controller
+            componentID: 5e564af1735a4e8e
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/controller
+            scanner: grype
