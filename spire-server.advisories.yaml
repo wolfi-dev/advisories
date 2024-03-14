@@ -63,6 +63,27 @@ advisories:
         data:
           fixed-version: 1.8.7-r2
 
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:19:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spire-server
+            componentID: 19d6028eb08424c3
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/spire-server
+            scanner: grype
+      - timestamp: 2024-03-14T15:21:05Z
+        type: fixed
+        data:
+          fixed-version: 1.9.1-r3
+
   - id: CVE-2024-28122
     aliases:
       - GHSA-hj3v-m684-v259
