@@ -53,6 +53,27 @@ advisories:
         data:
           fixed-version: 1.20.2-r3
 
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:07:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-agent-1.20
+            componentID: 5b2c245bcb2957a3
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-agent
+            scanner: grype
+      - timestamp: 2024-03-14T19:12:57Z
+        type: fixed
+        data:
+          fixed-version: 1.20.4-r0
+
   - id: CVE-2024-28122
     aliases:
       - GHSA-hj3v-m684-v259
