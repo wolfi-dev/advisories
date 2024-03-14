@@ -1,0 +1,161 @@
+schema-version: 2.0.2
+
+package:
+  name: cluster-autoscaler-1.28
+
+advisories:
+  - id: CVE-2020-8552
+    aliases:
+      - GHSA-82hx-w2r5-c2wq
+    events:
+      - timestamp: 2023-09-19T16:41:10Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Go vulndb has marked this code NOT_IMPORTABLE.
+
+  - id: CVE-2023-39325
+    aliases:
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2023-10-13T16:45:20Z
+        type: fixed
+        data:
+          fixed-version: 1.28.0-r5
+
+  - id: CVE-2023-3955
+    aliases:
+      - GHSA-q78c-gwqw-jcmc
+    events:
+      - timestamp: 2023-11-02T14:48:16Z
+        type: fixed
+        data:
+          fixed-version: 1.28.0-r6
+
+  - id: CVE-2023-3978
+    aliases:
+      - GHSA-2wrh-6pvc-2jm9
+    events:
+      - timestamp: 2023-10-13T16:46:57Z
+        type: fixed
+        data:
+          fixed-version: 1.28.0-r5
+
+  - id: CVE-2023-44487
+    aliases:
+      - GHSA-m425-mq94-257g
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2023-11-02T14:48:36Z
+        type: fixed
+        data:
+          fixed-version: 1.28.0-r6
+
+  - id: CVE-2023-45142
+    aliases:
+      - GHSA-rcjv-mgp8-qvmr
+    events:
+      - timestamp: 2023-10-25T14:07:36Z
+        type: true-positive-determination
+        data:
+          note: Govulncheck confirms the affect symbol is present. But bumping the affected dependency requires third party modules to update their code not to use packages removed in recent versions of OpenTelemtry's modules, so we'll need to wait for upstream changes to fix this.
+
+  - id: CVE-2023-45283
+    aliases:
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:24:39Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CVE-2023-45284
+    aliases:
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:24:41Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CVE-2023-48795
+    aliases:
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2024-02-15T07:14:54Z
+        type: fixed
+        data:
+          fixed-version: 1.28.2-r1
+
+  - id: CVE-2023-5528
+    aliases:
+      - GHSA-hq6q-c2x6-hmch
+    events:
+      - timestamp: 2023-11-22T11:13:26Z
+        type: fixed
+        data:
+          fixed-version: 1.28.0-r7
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:04:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-autoscaler-1.28
+            componentID: f58c98a68b1a5aa2
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-autoscaler
+            scanner: grype
+
+  - id: CVE-2023-45289
+    aliases:
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-13T07:07:07Z
+        type: fixed
+        data:
+          fixed-version: 1.28.2-r2
+
+  - id: CVE-2023-45290
+    aliases:
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-13T07:07:07Z
+        type: fixed
+        data:
+          fixed-version: 1.28.2-r2
+
+  - id: CVE-2024-24783
+    aliases:
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-13T07:07:08Z
+        type: fixed
+        data:
+          fixed-version: 1.28.2-r2
+
+  - id: CVE-2024-24784
+    aliases:
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-13T07:07:08Z
+        type: fixed
+        data:
+          fixed-version: 1.28.2-r2
+
+  - id: CVE-2024-24785
+    aliases:
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-13T07:07:08Z
+        type: fixed
+        data:
+          fixed-version: 1.28.2-r2
