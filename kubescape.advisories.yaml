@@ -290,6 +290,23 @@ advisories:
         data:
           fixed-version: 3.0.3-r7
 
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T17:50:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubescape
+            componentID: c5aa34e82fccbb24
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/kubescape
+            scanner: grype
+
   - id: CVE-2024-25620
     aliases:
       - GHSA-v53g-5gjp-272r
@@ -331,6 +348,27 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.0.3-r8
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:24:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubescape
+            componentID: c291b217d9f5454f
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/kubescape
+            scanner: grype
+      - timestamp: 2024-03-08T21:11:01Z
+        type: fixed
+        data:
+          fixed-version: 3.0.4-r2
 
   - id: GHSA-2c7c-3mj9-8fqh
     events:
@@ -376,25 +414,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.0.3-r3
-
-  - id: GHSA-c5q2-7r4c-mv6g
-    events:
-      - timestamp: 2024-03-08T07:24:48Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubescape
-            componentID: c291b217d9f5454f
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.1
-            componentType: go-module
-            componentLocation: /usr/bin/kubescape
-            scanner: grype
-      - timestamp: 2024-03-08T21:11:01Z
-        type: fixed
-        data:
-          fixed-version: 3.0.4-r2
 
   - id: GHSA-jq35-85cj-fj4p
     events:
