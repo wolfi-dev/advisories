@@ -105,3 +105,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.16.0-r5
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:16:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: katib-file-metricscollector
+            componentID: 68b686425a221f9b
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/katib-file-metricscollector
+            scanner: grype
