@@ -60,6 +60,27 @@ advisories:
         data:
           fixed-version: 0.4.0-r1
 
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:06:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: guac
+            componentID: c2dd6a2ed5584be4
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/guaccollect
+            scanner: grype
+      - timestamp: 2024-03-14T15:19:07Z
+        type: fixed
+        data:
+          fixed-version: 0.5.1-r3
+
   - id: CVE-2024-28110
     aliases:
       - GHSA-5pf6-2qwx-pxm2
@@ -69,7 +90,9 @@ advisories:
         data:
           fixed-version: 0.5.1-r0
 
-  - id: GHSA-c5q2-7r4c-mv6g
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
     events:
       - timestamp: 2024-03-08T07:07:11Z
         type: detection
