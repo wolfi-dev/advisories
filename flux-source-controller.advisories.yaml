@@ -87,6 +87,15 @@ advisories:
         data:
           fixed-version: 1.2.3-r1
 
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T16:57:21Z
+        type: fixed
+        data:
+          fixed-version: 1.2.4-r5
+
   - id: CVE-2024-25620
     aliases:
       - GHSA-v53g-5gjp-272r
@@ -129,6 +138,27 @@ advisories:
         data:
           fixed-version: 1.2.4-r2
 
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T06:35:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-source-controller
+            componentID: 1ef7fabf8796a0f7
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/source-controller
+            scanner: grype
+      - timestamp: 2024-03-08T22:31:58Z
+        type: fixed
+        data:
+          fixed-version: 1.2.4-r4
+
   - id: GHSA-2c7c-3mj9-8fqh
     events:
       - timestamp: 2023-11-23T08:32:38Z
@@ -157,25 +187,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.2.3-r3
-
-  - id: GHSA-c5q2-7r4c-mv6g
-    events:
-      - timestamp: 2024-03-08T06:35:00Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: flux-source-controller
-            componentID: 1ef7fabf8796a0f7
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.1
-            componentType: go-module
-            componentLocation: /usr/bin/source-controller
-            scanner: grype
-      - timestamp: 2024-03-08T22:31:58Z
-        type: fixed
-        data:
-          fixed-version: 1.2.4-r4
 
   - id: GHSA-jq35-85cj-fj4p
     events:
