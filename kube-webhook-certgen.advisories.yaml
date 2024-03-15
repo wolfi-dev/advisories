@@ -48,3 +48,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.5.2-r1
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T16:20:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-webhook-certgen
+            componentID: c44a86aa67b4d7b4
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-webhook-certgen
+            scanner: grype

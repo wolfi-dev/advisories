@@ -129,6 +129,23 @@ advisories:
         data:
           fixed-version: 1.20.1-r0
 
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T09:16:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kaniko
+            componentID: 76ba2d5e4e29c5a7
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/executor
+            scanner: grype
+
   - id: GHSA-7ww5-4wqc-m92c
     events:
       - timestamp: 2024-03-01T02:01:11Z
