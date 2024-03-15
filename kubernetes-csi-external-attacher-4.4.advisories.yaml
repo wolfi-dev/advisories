@@ -86,3 +86,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 4.4.3-r1
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T16:18:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-attacher-4.4
+            componentID: cae4b77d992b2088
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/csi-attacher
+            scanner: grype
