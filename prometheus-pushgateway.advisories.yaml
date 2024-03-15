@@ -86,3 +86,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.7.0-r2
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:20:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-pushgateway
+            componentID: d432745205250199
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/pushgateway
+            scanner: grype
