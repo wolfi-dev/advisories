@@ -52,6 +52,23 @@ advisories:
         data:
           fixed-version: 1.25_git20231010-r6
 
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T09:17:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-envoy
+            componentID: 50583cb4410e1334
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.30.0
+            componentType: go-module
+            componentLocation: /usr/lib/libcilium.so
+            scanner: grype
+
   - id: GHSA-2c7c-3mj9-8fqh
     events:
       - timestamp: 2023-11-23T08:31:24Z

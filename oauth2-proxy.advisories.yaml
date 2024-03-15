@@ -74,14 +74,26 @@ advisories:
         data:
           fixed-version: 7.5.1-r8
 
-  - id: GHSA-2c7c-3mj9-8fqh
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
     events:
-      - timestamp: 2023-11-22T16:40:58Z
-        type: fixed
+      - timestamp: 2024-03-14T16:16:58Z
+        type: detection
         data:
-          fixed-version: 7.5.1-r5
+          type: scan/v1
+          data:
+            subpackageName: oauth2-proxy
+            componentID: c9ab2e6903d02407
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/oauth2-proxy
+            scanner: grype
 
-  - id: GHSA-c5q2-7r4c-mv6g
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
     events:
       - timestamp: 2024-03-08T07:04:04Z
         type: detection
@@ -99,3 +111,10 @@ advisories:
         type: fixed
         data:
           fixed-version: 7.6.0-r2
+
+  - id: GHSA-2c7c-3mj9-8fqh
+    events:
+      - timestamp: 2023-11-22T16:40:58Z
+        type: fixed
+        data:
+          fixed-version: 7.5.1-r5

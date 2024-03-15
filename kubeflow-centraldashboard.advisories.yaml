@@ -31,6 +31,23 @@ advisories:
         data:
           note: cannot fix the CVE because there were no patched versions since the 'request' package is no longer supported by the maintainer.
 
+  - id: CVE-2024-28849
+    aliases:
+      - GHSA-cxjh-pqwp-8mfp
+    events:
+      - timestamp: 2024-03-15T07:46:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-centraldashboard
+            componentID: 1ffd80573f2f3da8
+            componentName: follow-redirects
+            componentVersion: 1.15.4
+            componentType: npm
+            componentLocation: /app/node_modules/follow-redirects/package.json
+            scanner: grype
+
   - id: GHSA-2jcg-qqmg-46q6
     events:
       - timestamp: 2023-12-02T07:16:06Z
