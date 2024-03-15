@@ -153,3 +153,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 7.51.1-r1
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T10:32:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: datadog-agent
+            componentID: ff2332779d32b29c
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /opt/datadog-agent/bin/agent/agent
+            scanner: grype
