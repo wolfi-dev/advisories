@@ -20,6 +20,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/zot
             scanner: grype
+      - timestamp: 2024-03-15T00:02:18Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
 
   - id: CVE-2023-25656
     aliases:
@@ -180,6 +185,15 @@ advisories:
         data:
           fixed-version: 2.0.1-r2
 
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T10:23:40Z
+        type: fixed
+        data:
+          fixed-version: 2.0.2-r0
+
   - id: CVE-2024-25620
     aliases:
       - GHSA-v53g-5gjp-272r
@@ -222,6 +236,27 @@ advisories:
         data:
           fixed-version: 2.0.1-r5
 
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:28:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zot
+            componentID: e755c368fa7aebeb
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/zot
+            scanner: grype
+      - timestamp: 2024-03-08T21:10:42Z
+        type: fixed
+        data:
+          fixed-version: 2.0.1-r7
+
   - id: GHSA-6xv5-86q9-7xr8
     events:
       - timestamp: 2023-09-09T15:18:22Z
@@ -255,22 +290,3 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.0.0-r2
-
-  - id: GHSA-c5q2-7r4c-mv6g
-    events:
-      - timestamp: 2024-03-08T07:28:02Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: zot
-            componentID: e755c368fa7aebeb
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.1
-            componentType: go-module
-            componentLocation: /usr/bin/zot
-            scanner: grype
-      - timestamp: 2024-03-08T21:10:42Z
-        type: fixed
-        data:
-          fixed-version: 2.0.1-r7

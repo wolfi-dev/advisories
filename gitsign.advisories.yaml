@@ -129,6 +129,44 @@ advisories:
         data:
           fixed-version: 0.8.1-r0
 
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:19:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitsign
+            componentID: bcc25d153e9e512d
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitsign
+            scanner: grype
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:04:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitsign-credential-cache
+            componentID: e1be332f87314b47
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/gitsign-credential-cache
+            scanner: grype
+      - timestamp: 2024-03-08T22:31:57Z
+        type: fixed
+        data:
+          fixed-version: 0.8.1-r3
+
   - id: GHSA-2c7c-3mj9-8fqh
     events:
       - timestamp: 2024-02-08T16:55:06Z
@@ -166,22 +204,3 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.8.1-r0
-
-  - id: GHSA-c5q2-7r4c-mv6g
-    events:
-      - timestamp: 2024-03-08T07:04:02Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: gitsign-credential-cache
-            componentID: e1be332f87314b47
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.1
-            componentType: go-module
-            componentLocation: /usr/bin/gitsign-credential-cache
-            scanner: grype
-      - timestamp: 2024-03-08T22:31:57Z
-        type: fixed
-        data:
-          fixed-version: 0.8.1-r3
