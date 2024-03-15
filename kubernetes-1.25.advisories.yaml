@@ -234,6 +234,23 @@ advisories:
         data:
           fixed-version: 1.25.16-r5
 
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:19:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-proxy-1.25
+            componentID: 528b2bf95ed6af52
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-proxy-1.25
+            scanner: grype
+
   - id: GHSA-6xv5-86q9-7xr8
     events:
       - timestamp: 2024-01-12T07:18:09Z
