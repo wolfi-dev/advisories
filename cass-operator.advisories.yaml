@@ -66,3 +66,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.18.2-r4
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T14:18:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cass-operator
+            componentID: 8fe7c7166196154b
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype

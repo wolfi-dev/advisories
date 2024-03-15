@@ -105,3 +105,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.9.0-r1
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:05:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-sql-proxy
+            componentID: 74e37fb2f42fd26e
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/cloud-sql-proxy
+            scanner: grype
+      - timestamp: 2024-03-14T21:35:31Z
+        type: fixed
+        data:
+          fixed-version: 2.10.0-r0

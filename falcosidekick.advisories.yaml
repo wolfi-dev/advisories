@@ -4,6 +4,23 @@ package:
   name: falcosidekick
 
 advisories:
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:19:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: falcosidekick
+            componentID: 00f7dd081b389781
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/falcosidekick
+            scanner: grype
+
   - id: CVE-2024-28110
     aliases:
       - GHSA-5pf6-2qwx-pxm2
