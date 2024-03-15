@@ -4,6 +4,23 @@ package:
   name: trino
 
 advisories:
+  - id: CVE-2012-5783
+    aliases:
+      - GHSA-3832-9276-x7gf
+    events:
+      - timestamp: 2024-03-15T16:46:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino-plugin-pinot
+            componentID: 433ee6dca1b4700e
+            componentName: commons-httpclient
+            componentVersion: "3.1"
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/commons-httpclient-3.1.jar
+            scanner: grype
+
   - id: CVE-2018-11798
     aliases:
       - GHSA-vx85-mj8c-4qm6
