@@ -153,6 +153,23 @@ advisories:
         data:
           fixed-version: 0.24.0-r5
 
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T14:16:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-blackbox-exporter
+            componentID: c3cba1092ecf49ea
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/blackbox_exporter
+            scanner: grype
+
   - id: GHSA-m425-mq94-257g
     events:
       - timestamp: 2024-02-14T14:31:35Z
