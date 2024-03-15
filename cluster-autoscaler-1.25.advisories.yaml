@@ -193,3 +193,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.25.3-r10
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T16:18:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-autoscaler-1.25
+            componentID: 95a869b9a1a86200
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-autoscaler
+            scanner: grype
+      - timestamp: 2024-03-14T15:18:55Z
+        type: fixed
+        data:
+          fixed-version: 1.25.3-r11

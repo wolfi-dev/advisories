@@ -86,3 +86,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.10.2-r7
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:19:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-flb-kinesis
+            componentID: 41a4c3783e1fde3f
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/kinesis.so
+            scanner: grype

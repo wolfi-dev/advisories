@@ -86,3 +86,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.1.0-r1
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:19:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k8sgpt-operator
+            componentID: 60f71f72ccbbfe0e
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2024-03-14T16:21:06Z
+        type: fixed
+        data:
+          fixed-version: 0.1.0-r2
