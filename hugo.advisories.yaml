@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: hugo
@@ -59,3 +59,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.121.1-r1
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:19:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: hugo
+            componentID: 3c7b7d27ea867f07
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/hugo
+            scanner: grype

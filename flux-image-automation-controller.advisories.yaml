@@ -96,6 +96,27 @@ advisories:
         data:
           fixed-version: 0.37.1-r1
 
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:03:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-image-automation-controller
+            componentID: ba25072e6d009e38
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/image-automation-controller
+            scanner: grype
+      - timestamp: 2024-03-14T15:19:13Z
+        type: fixed
+        data:
+          fixed-version: 0.37.1-r2
+
   - id: GHSA-6xv5-86q9-7xr8
     events:
       - timestamp: 2023-09-09T15:18:06Z

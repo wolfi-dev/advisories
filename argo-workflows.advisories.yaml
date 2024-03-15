@@ -42,29 +42,56 @@ advisories:
         data:
           fixed-version: 3.5.2-r3
 
-  - id: GHSA-2c7c-3mj9-8fqh
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
     events:
-      - timestamp: 2023-11-23T08:30:52Z
-        type: fixed
-        data:
-          fixed-version: 3.5.1-r1
-
-  - id: GHSA-9763-4f94-gfch
-    events:
-      - timestamp: 2024-01-16T10:49:13Z
+      - timestamp: 2024-03-14T08:19:36Z
         type: detection
         data:
           type: scan/v1
           data:
-            subpackageName: argo-workflow-executor
-            componentID: 213e47f269f6a7ab
-            componentName: github.com/cloudflare/circl
-            componentVersion: v1.3.3
+            subpackageName: argo-workflow-controller
+            componentID: f4b18383b61973ec
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
             componentType: go-module
-            componentLocation: /usr/bin/argoexec
+            componentLocation: /usr/bin/workflow-controller
             scanner: grype
 
-  - id: GHSA-c5q2-7r4c-mv6g
+  - id: CVE-2024-27289
+    aliases:
+      - GHSA-m7wr-2xf7-cm9p
+    events:
+      - timestamp: 2024-03-13T07:05:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-workflows
+            componentID: e91e6517e2bfae1a
+            componentName: github.com/jackc/pgx/v4
+            componentVersion: v4.18.1
+            componentType: go-module
+            componentLocation: /usr/bin/argo
+            scanner: grype
+      - timestamp: 2024-03-13T15:43:39Z
+        type: fixed
+        data:
+          fixed-version: 3.5.5-r3
+
+  - id: CVE-2024-27304
+    aliases:
+      - GHSA-mrww-27vc-gghv
+    events:
+      - timestamp: 2024-03-15T09:11:13Z
+        type: fixed
+        data:
+          fixed-version: 3.5.5-r3
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
     events:
       - timestamp: 2024-03-08T07:06:57Z
         type: detection
@@ -82,6 +109,35 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.5.5-r2
+
+  - id: GHSA-2c7c-3mj9-8fqh
+    events:
+      - timestamp: 2023-11-23T08:30:52Z
+        type: fixed
+        data:
+          fixed-version: 3.5.1-r1
+
+  - id: GHSA-7jwh-3vrq-q3m8
+    events:
+      - timestamp: 2024-03-15T09:11:15Z
+        type: fixed
+        data:
+          fixed-version: 3.5.5-r3
+
+  - id: GHSA-9763-4f94-gfch
+    events:
+      - timestamp: 2024-01-16T10:49:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-workflow-executor
+            componentID: 213e47f269f6a7ab
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.3.3
+            componentType: go-module
+            componentLocation: /usr/bin/argoexec
+            scanner: grype
 
   - id: GHSA-jq35-85cj-fj4p
     events:
