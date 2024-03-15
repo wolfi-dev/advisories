@@ -115,6 +115,27 @@ advisories:
         data:
           fixed-version: 2.38.0-r1
 
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:07:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dex
+            componentID: 7d0949fb509eb9ea
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/dex
+            scanner: grype
+      - timestamp: 2024-03-14T15:20:24Z
+        type: fixed
+        data:
+          fixed-version: 2.38.0-r2
+
   - id: CVE-2024-28180
     aliases:
       - GHSA-c5q2-7r4c-mv6g

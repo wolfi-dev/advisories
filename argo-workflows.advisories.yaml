@@ -42,6 +42,23 @@ advisories:
         data:
           fixed-version: 3.5.2-r3
 
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:19:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-workflow-controller
+            componentID: f4b18383b61973ec
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/workflow-controller
+            scanner: grype
+
   - id: CVE-2024-27289
     aliases:
       - GHSA-m7wr-2xf7-cm9p
@@ -59,6 +76,15 @@ advisories:
             componentLocation: /usr/bin/argo
             scanner: grype
       - timestamp: 2024-03-13T15:43:39Z
+        type: fixed
+        data:
+          fixed-version: 3.5.5-r3
+
+  - id: CVE-2024-27304
+    aliases:
+      - GHSA-mrww-27vc-gghv
+    events:
+      - timestamp: 2024-03-15T09:11:13Z
         type: fixed
         data:
           fixed-version: 3.5.5-r3
@@ -90,6 +116,13 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.5.1-r1
+
+  - id: GHSA-7jwh-3vrq-q3m8
+    events:
+      - timestamp: 2024-03-15T09:11:15Z
+        type: fixed
+        data:
+          fixed-version: 3.5.5-r3
 
   - id: GHSA-9763-4f94-gfch
     events:
