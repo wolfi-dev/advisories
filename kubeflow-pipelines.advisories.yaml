@@ -398,6 +398,27 @@ advisories:
         data:
           fixed-version: 2.0.5-r4
 
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:20:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-cache_server
+            componentID: 8b101bd21f8a7200
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/cache_server
+            scanner: grype
+      - timestamp: 2024-03-15T00:35:52Z
+        type: fixed
+        data:
+          fixed-version: 2.0.5-r5
+
   - id: CVE-2024-26130
     aliases:
       - GHSA-6vqw-3v5j-54x4
