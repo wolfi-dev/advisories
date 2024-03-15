@@ -97,6 +97,27 @@ advisories:
         data:
           fixed-version: 2.9.5-r1
 
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:19:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: loki-canary
+            componentID: d721525889ad48fd
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/loki-canary
+            scanner: grype
+      - timestamp: 2024-03-14T15:17:51Z
+        type: fixed
+        data:
+          fixed-version: 2.9.5-r2
+
   - id: GHSA-jq35-85cj-fj4p
     events:
       - timestamp: 2023-12-22T10:47:09Z

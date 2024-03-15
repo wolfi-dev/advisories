@@ -86,3 +86,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.7.3-r9
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:19:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: influx
+            componentID: ab6028cfbdb16157
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/influx
+            scanner: grype
