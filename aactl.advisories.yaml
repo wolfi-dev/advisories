@@ -231,6 +231,44 @@ advisories:
         data:
           fixed-version: 0.4.12-r7
 
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T16:21:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aactl
+            componentID: 795455cc1af9c64b
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/aactl
+            scanner: grype
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:11:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aactl
+            componentID: 96f2c94ff1d3f34a
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.0
+            componentType: go-module
+            componentLocation: /usr/bin/aactl
+            scanner: grype
+      - timestamp: 2024-03-08T22:31:56Z
+        type: fixed
+        data:
+          fixed-version: 0.4.12-r7
+
   - id: GHSA-2c7c-3mj9-8fqh
     events:
       - timestamp: 2024-02-14T10:35:34Z
@@ -261,25 +299,6 @@ advisories:
             componentID: b43c925e58d2b811
             componentName: github.com/cloudflare/circl
             componentVersion: v1.1.0
-            componentType: go-module
-            componentLocation: /usr/bin/aactl
-            scanner: grype
-      - timestamp: 2024-03-08T22:31:56Z
-        type: fixed
-        data:
-          fixed-version: 0.4.12-r7
-
-  - id: GHSA-c5q2-7r4c-mv6g
-    events:
-      - timestamp: 2024-03-08T07:11:04Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: aactl
-            componentID: 96f2c94ff1d3f34a
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.0
             componentType: go-module
             componentLocation: /usr/bin/aactl
             scanner: grype
