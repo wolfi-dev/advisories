@@ -426,6 +426,23 @@ advisories:
         data:
           fixed-version: 439-r2
 
+  - id: CVE-2024-23944
+    aliases:
+      - GHSA-r978-9m6m-6gm6
+    events:
+      - timestamp: 2024-03-16T09:03:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino-plugin-kafka
+            componentID: 465f7aa561aee843
+            componentName: zookeeper
+            componentVersion: 3.9.1
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/zookeeper-3.9.1.jar
+            scanner: grype
+
   - id: CVE-2024-25710
     aliases:
       - GHSA-4g9r-vxhx-9pgx
