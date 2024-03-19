@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: confluent-common-docker
+
+advisories:
+  - id: CVE-2023-51775
+    aliases:
+      - GHSA-6qvw-249j-h44c
+    events:
+      - timestamp: 2024-03-19T16:20:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: confluent-common-docker
+            componentID: bc7e78f5849d3b9b
+            componentName: jose4j
+            componentVersion: 0.9.3
+            componentType: java-archive
+            componentLocation: /usr/share/java/cp-base-new/docker-utils-jar-with-dependencies.jar
+            scanner: grype
