@@ -162,6 +162,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability affects the Kubernetes application, not the golang k8s.io/kubernetes library. Kubernetes clusters are only affected if they are using an in-tree storage plugin for Windows nodes.
 
+  - id: CVE-2024-21652
+    aliases:
+      - GHSA-x32m-mvfj-52xv
+    events:
+      - timestamp: 2024-03-19T07:07:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.7-compat
+            componentID: 68fa0dc01d78a74b
+            componentName: github.com/argoproj/argo-cd/v2
+            componentVersion: v2.7.17
+            componentType: go-module
+            componentLocation: /usr/local/bin/argocd
+            scanner: grype
+
   - id: CVE-2024-22424
     aliases:
       - GHSA-92mw-q256-5vwg
