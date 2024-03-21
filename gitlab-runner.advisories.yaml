@@ -125,3 +125,18 @@ advisories:
         type: fixed
         data:
           fixed-version: 16.8.0-r2
+
+  - id: GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-21T07:07:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-helper
+            componentID: b930cee192b4cfa8
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.7+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-runner-helper
+            scanner: grype
