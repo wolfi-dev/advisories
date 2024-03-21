@@ -42,6 +42,44 @@ advisories:
         data:
           fixed-version: 0.14.13-r0
 
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:35:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wolfictl
+            componentID: 4f29ea779dca2fc0
+            componentName: gopkg.in/go-jose/go-jose.v2
+            componentVersion: v2.6.2
+            componentType: go-module
+            componentLocation: /usr/bin/wolfictl
+            scanner: grype
+      - timestamp: 2024-03-08T10:56:39Z
+        type: fixed
+        data:
+          fixed-version: 0.15.3-r3
+
+  - id: CVE-2024-29018
+    aliases:
+      - GHSA-mq39-4gv4-mvpx
+    events:
+      - timestamp: 2024-03-21T09:31:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wolfictl
+            componentID: bc897b5baae4b79e
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.4+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/wolfictl
+            scanner: grype
+
   - id: GHSA-9763-4f94-gfch
     events:
       - timestamp: 2024-01-11T07:20:11Z
@@ -60,22 +98,3 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.14.1-r0
-
-  - id: GHSA-c5q2-7r4c-mv6g
-    events:
-      - timestamp: 2024-03-08T07:35:09Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: wolfictl
-            componentID: 4f29ea779dca2fc0
-            componentName: gopkg.in/go-jose/go-jose.v2
-            componentVersion: v2.6.2
-            componentType: go-module
-            componentLocation: /usr/bin/wolfictl
-            scanner: grype
-      - timestamp: 2024-03-08T10:56:39Z
-        type: fixed
-        data:
-          fixed-version: 0.15.3-r3
