@@ -79,6 +79,23 @@ advisories:
         data:
           fixed-version: 0.16.0-r2
 
+  - id: CVE-2024-24557
+    aliases:
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-21T09:31:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: katib-controller
+            componentID: 72f9aeb2d9b4291a
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.7+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/katib-controller
+            scanner: grype
+
   - id: CVE-2024-24783
     aliases:
       - GHSA-3q2c-pvp5-3cqp
