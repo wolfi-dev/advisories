@@ -4,6 +4,23 @@ package:
   name: spark-3.5
 
 advisories:
+  - id: CVE-2023-1370
+    aliases:
+      - GHSA-493p-pfq6-5258
+    events:
+      - timestamp: 2024-03-22T15:35:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5
+            componentID: dcd614a72a6218e3
+            componentName: json-smart
+            componentVersion: 1.3.2
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.6.jar
+            scanner: grype
+
   - id: CVE-2024-26308
     aliases:
       - GHSA-4265-ccf5-phj5
