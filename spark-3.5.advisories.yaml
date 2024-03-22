@@ -4,6 +4,23 @@ package:
   name: spark-3.5
 
 advisories:
+  - id: CVE-2022-3510
+    aliases:
+      - GHSA-4gg5-vx3j-xwc7
+    events:
+      - timestamp: 2024-03-22T15:35:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5
+            componentID: 05d65a777f236575
+            componentName: protobuf-java
+            componentVersion: 3.3.0
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/mesos-1.4.3-shaded-protobuf.jar
+            scanner: grype
+
   - id: CVE-2023-1370
     aliases:
       - GHSA-493p-pfq6-5258
