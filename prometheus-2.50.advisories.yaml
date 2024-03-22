@@ -4,6 +4,23 @@ package:
   name: prometheus-2.50
 
 advisories:
+  - id: CVE-2024-24557
+    aliases:
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-22T13:18:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.50-bitnami-compat
+            componentID: c38a4ddb2ec79614
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.0+incompatible
+            componentType: go-module
+            componentLocation: /opt/bitnami/prometheus/bin/prometheus
+            scanner: grype
+
   - id: CVE-2024-24786
     aliases:
       - GHSA-8r3f-844c-mc37
