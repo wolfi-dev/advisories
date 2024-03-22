@@ -4,6 +4,23 @@ package:
   name: spark-3.5
 
 advisories:
+  - id: CVE-2018-1330
+    aliases:
+      - GHSA-95q3-pppp-r683
+    events:
+      - timestamp: 2024-03-22T15:35:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5
+            componentID: cb7372e7b41a1d4d
+            componentName: mesos
+            componentVersion: 1.4.3
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/mesos-1.4.3-shaded-protobuf.jar
+            scanner: grype
+
   - id: CVE-2020-8908
     aliases:
       - GHSA-5mg8-w23w-74h3
