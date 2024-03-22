@@ -4,6 +4,23 @@ package:
   name: spark-3.5
 
 advisories:
+  - id: CVE-2020-8908
+    aliases:
+      - GHSA-5mg8-w23w-74h3
+    events:
+      - timestamp: 2024-03-22T15:35:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5
+            componentID: 62e0331d1b6a85ab
+            componentName: guava
+            componentVersion: 30.1.1-jre
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-shaded-guava-1.1.1.jar
+            scanner: grype
+
   - id: CVE-2022-3510
     aliases:
       - GHSA-4gg5-vx3j-xwc7
