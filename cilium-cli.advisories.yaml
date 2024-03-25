@@ -105,6 +105,23 @@ advisories:
         data:
           fixed-version: 0.15.23-r2
 
+  - id: CVE-2024-29018
+    aliases:
+      - GHSA-mq39-4gv4-mvpx
+    events:
+      - timestamp: 2024-03-25T09:22:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-cli
+            componentID: 8758da7de28199e7
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.3+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/cilium
+            scanner: grype
+
   - id: GHSA-7ww5-4wqc-m92c
     events:
       - timestamp: 2024-01-25T07:12:56Z
