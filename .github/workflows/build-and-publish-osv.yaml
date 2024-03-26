@@ -1,0 +1,43 @@
+name: Build and publish OSV
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-publish:
+    name: Build and publish OSV
+    runs-on: ubuntu-latest
+    if: github.repository == 'wolfi-dev/advisories'
+
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: wolfi-dev/actions/build-and-publish-osv@main
+        with:
+          workload_identity_provider: "projects/618116202522/locations/global/workloadIdentityPools/prod-shared-e350/providers/prod-shared-gha"
+          service_account: "prod-images-ci@prod-images-c6e5.iam.gserviceaccount.com"
+          gcp_project_id: prod-images-c6e5
+          wolfictl_args: "--ecosystem wolfi --advisories-repo-dir ."
+          gcs_apk_bucket_name: wolfi-production-registry-destination
+          gcs_apk_directory_name: os
+
+      - name: Post failure notice to Slack
+        uses: rtCamp/action-slack-notify@4e5fb42d249be6a45a298f3c9543b111b02f7907 # ratchet:rtCamp/action-slack-notify@v2.3.0
+        if: ${{ failure() }}
+        env:
+          SLACK_ICON: http://github.com/chainguard-dev.png?size=48
+          SLACK_USERNAME: guardian
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_CHANNEL: 'eng-squad-lifecycle-alerts'
+          SLACK_COLOR: '#8E1600'
+          MSG_MINIMAL: 'true'
+          SLACK_TITLE: Build/Publish YAML for ${{ github.repository }} failed!
+          SLACK_MESSAGE: |
+            For detailed logs: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
