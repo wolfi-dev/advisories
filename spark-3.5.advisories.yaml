@@ -20,6 +20,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/mesos-1.4.3-shaded-protobuf.jar
             scanner: grype
+      - timestamp: 2024-03-26T01:13:34Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to mesos-1.4.3-shaded-protobuf, which is a shaded jar with no new upstream release.
 
   - id: CVE-2019-0205
     aliases:
@@ -37,6 +41,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/libthrift-0.12.0.jar
             scanner: grype
+      - timestamp: 2024-03-26T01:13:34Z
+        type: pending-upstream-fix
+        data:
+          note: Spark v3.5.0 is incompatible with higher versions of libthrift. https://github.com/apache/spark/pull/34878
 
   - id: CVE-2019-10172
     aliases:
@@ -54,6 +62,11 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/jackson-mapper-asl-1.9.13.jar
             scanner: grype
+      - timestamp: 2024-03-26T01:13:34Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: This relates to jackson-mapper-asl, which is no longer maintained. Upstream have confirmed the libraries this CVE impacts are not used by Apache Spark. https://issues.apache.org/jira/browse/CASSANDRA-16056
 
   - id: CVE-2019-10202
     aliases:
@@ -71,6 +84,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/jackson-mapper-asl-1.9.13.jar
             scanner: grype
+      - timestamp: 2024-03-26T01:13:34Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to jackson-mapper-asl, which is no longer maintained. Apache Spark has taken actions to remove their own dependency on the library, however a transitive dependency (ranger), still requires it. Waiting for upstream https://issues.apache.org/jira/browse/NIFI-11659.
 
   - id: CVE-2020-13949
     aliases:
@@ -88,6 +105,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/libthrift-0.12.0.jar
             scanner: grype
+      - timestamp: 2024-03-26T01:13:34Z
+        type: pending-upstream-fix
+        data:
+          note: Spark v3.5.0 is incompatible with higher versions of libthrift. https://github.com/apache/spark/pull/34878
 
   - id: CVE-2020-8908
     aliases:
@@ -105,6 +126,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/hadoop-shaded-guava-1.1.1.jar
             scanner: grype
+      - timestamp: 2024-03-26T01:13:34Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to guava v30.1.1-jre, which is included by the shaded JARs hadoop-shaded-guava-1.1.1.jar and hadoop-client-runtime-3.3.6.jar.
 
   - id: CVE-2021-22569
     aliases:
@@ -122,6 +147,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/mesos-1.4.3-shaded-protobuf.jar
             scanner: grype
+      - timestamp: 2024-03-26T01:13:34Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to protobuf-java v3.3.0 included by the shaded JARs mesos-1.4.3-shaded-protobuf.jar and hadoop-client-runtime-3.3.6.jar. There are no newer versions of these shaded JARs available to fix the vulnerability.
 
   - id: CVE-2021-22570
     aliases:
@@ -139,6 +168,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/mesos-1.4.3-shaded-protobuf.jar
             scanner: grype
+      - timestamp: 2024-03-26T01:13:34Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to protobuf-java v3.3.0 included by the shaded JARs mesos-1.4.3-shaded-protobuf.jar and hadoop-client-runtime-3.3.6.jar. There are no newer versions of these shaded JARs available to fix the vulnerability.
 
   - id: CVE-2021-31684
     aliases:
@@ -156,6 +189,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.6.jar
             scanner: grype
+      - timestamp: 2024-03-26T01:13:34Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to json-smart v1.3.2 included by the shaded JAR hadoop-client-runtime-3.3.6.jar. There are no newer versions of this shaded JAR available to fix the vulnerability.
 
   - id: CVE-2022-3171
     aliases:
@@ -173,6 +210,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/mesos-1.4.3-shaded-protobuf.jar
             scanner: grype
+      - timestamp: 2024-03-26T01:13:34Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to protobuf-java v3.3.0 included by the shaded JARs mesos-1.4.3-shaded-protobuf.jar and hadoop-client-runtime-3.3.6.jar. There are no newer versions of these shaded JARs available to fix the vulnerability.
 
   - id: CVE-2022-3509
     aliases:
@@ -190,6 +231,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/mesos-1.4.3-shaded-protobuf.jar
             scanner: grype
+      - timestamp: 2024-03-26T01:13:34Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to protobuf-java v3.3.0 included by the shaded JARs mesos-1.4.3-shaded-protobuf.jar and hadoop-client-runtime-3.3.6.jar. There are no newer versions of these shaded JARs available to fix the vulnerability.
 
   - id: CVE-2022-3510
     aliases:
@@ -207,6 +252,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/mesos-1.4.3-shaded-protobuf.jar
             scanner: grype
+      - timestamp: 2024-03-26T01:13:34Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to protobuf-java v3.3.0 included by the shaded JARs mesos-1.4.3-shaded-protobuf.jar and hadoop-client-runtime-3.3.6.jar. There are no newer versions of these shaded JARs available to fix the vulnerability.
 
   - id: CVE-2022-46337
     aliases:
@@ -224,6 +273,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/derby-10.14.2.0.jar
             scanner: grype
+      - timestamp: 2024-03-26T01:13:34Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to 'derby'. Various fixes where commmitted to main branch in Dec 2023 but we are waiting for a release to be created with these changes. https://github.com/apache/spark/pull/44174
 
   - id: CVE-2023-1370
     aliases:
@@ -241,6 +294,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.6.jar
             scanner: grype
+      - timestamp: 2024-03-26T01:13:34Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to json-smart v1.3.2 included by the shaded JAR hadoop-client-runtime-3.3.6.jar. There are no newer versions of this shaded JAR available to fix the vulnerability.
 
   - id: CVE-2023-2976
     aliases:
@@ -258,6 +315,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/hadoop-shaded-guava-1.1.1.jar
             scanner: grype
+      - timestamp: 2024-03-26T01:13:34Z
+        type: fix-not-planned
+        data:
+          note: This relates to guava v30.1.1-jre, which is included by the shaded JARs hadoop-shaded-guava-1.1.1.jar and hadoop-client-runtime-3.3.6.jar.
 
   - id: CVE-2023-39410
     aliases:
@@ -275,6 +336,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.6.jar
             scanner: grype
+      - timestamp: 2024-03-26T01:13:34Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to avro v1.7, which is a transitive dependency of the shaded JAR hadoop-client-runtime, which is used by Spark. There are no newer versions of this shaded JAR available to fix the vulnerability.
 
   - id: CVE-2023-52428
     aliases:
@@ -326,6 +391,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.6.jar
             scanner: grype
+      - timestamp: 2024-03-26T01:13:34Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to commons-compress 1.21 included by the shaded JARs hadoop-client-runtime-3.3.6.jar. There are no newer versions of the shaded JARs available to fix the vulnerability.
 
   - id: CVE-2024-26308
     aliases:
@@ -343,6 +412,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.6.jar
             scanner: grype
+      - timestamp: 2024-03-26T01:13:34Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to commons-compress 1.21 included by the shaded JARs hadoop-client-runtime-3.3.6.jar. There are no newer versions of the shaded JARs available to fix the vulnerability.
 
   - id: CVE-2024-29131
     aliases:
