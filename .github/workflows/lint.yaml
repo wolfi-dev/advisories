@@ -8,6 +8,9 @@ on:
     branches:
       - gh-readonly-queue/main/**
 
+permissions:
+  contents: read
+
 jobs:
   lint:
     name: Lint
@@ -17,9 +20,14 @@ jobs:
       contents: read
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Harden Runner
+      uses: step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142 # v2.7.0
+      with:
+        egress-policy: audit
 
-    - uses: wolfi-dev/actions/wolfictl-lint@main
+    - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+
+    - uses: wolfi-dev/actions/wolfictl-lint@37af598e0f474e41d69746d964354cad65b5cd30 # main
       with:
         run_wolfictl_lint_yam: 'true'
         run_wolfictl_lint: 'false'
@@ -32,9 +40,14 @@ jobs:
       contents: read
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Harden Runner
+        uses: step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142 # v2.7.0
+        with:
+          egress-policy: audit
 
-      - uses: reviewdog/action-misspell@v1
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+
+      - uses: reviewdog/action-misspell@5bd7be2fc7ae56a517184f5c4bbcf2fd7afe3927 # v1.17.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_error: true
