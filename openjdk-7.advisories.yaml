@@ -1,9 +1,26 @@
-schema-version: "2"
+schema-version: 2.0.2
 
 package:
   name: openjdk-7
 
 advisories:
+  - id: CVE-2023-21930
+    aliases:
+      - GHSA-4j35-7cr4-3mc8
+    events:
+      - timestamp: 2024-03-31T13:29:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openjdk-7-jre-base
+            componentID: 35ab89caa406f3a9
+            componentName: openjdk-7-jre-base
+            componentVersion: 7.321.2.6.28-r3
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CVE-2023-21968
     aliases:
       - GHSA-r6j2-4r52-mpg7
