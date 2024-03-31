@@ -349,6 +349,23 @@ advisories:
         data:
           note: This relates to avro v1.7, which is a transitive dependency of the shaded JAR hadoop-client-runtime, which is used by Spark. There are no newer versions of this shaded JAR available to fix the vulnerability.
 
+  - id: CVE-2023-52428
+    aliases:
+      - GHSA-gvpg-vgmx-xg6w
+    events:
+      - timestamp: 2024-03-31T13:38:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-minimal
+            componentID: fb2384c39cde2966
+            componentName: nimbus-jose-jwt
+            componentVersion: 9.8.1
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.6.jar
+            scanner: grype
+
   - id: CVE-2024-25710
     aliases:
       - GHSA-4g9r-vxhx-9pgx
