@@ -38,6 +38,23 @@ advisories:
             componentLocation: /usr/bin/kube-controller-manager-1.25
             scanner: grype
 
+  - id: CVE-2023-45142
+    aliases:
+      - GHSA-rcjv-mgp8-qvmr
+    events:
+      - timestamp: 2024-03-31T13:42:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-controller-manager-1.25
+            componentID: 2a0e0cc52c0558a5
+            componentName: go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp
+            componentVersion: v0.20.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-controller-manager-1.25
+            scanner: grype
+
   - id: CVE-2023-47108
     aliases:
       - GHSA-8pgv-569h-w5rw
