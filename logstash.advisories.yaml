@@ -114,6 +114,23 @@ advisories:
             componentLocation: /usr/share/logstash/vendor/jruby/lib/ruby/gems/shared/specifications/default/rdoc-6.4.0.gemspec
             scanner: grype
 
+  - id: CVE-2024-29025
+    aliases:
+      - GHSA-5jpm-x58v-624v
+    events:
+      - timestamp: 2024-04-01T20:18:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash
+            componentID: 6dd0292ccec13cae
+            componentName: netty-codec-http
+            componentVersion: 4.1.100.Final
+            componentType: java-archive
+            componentLocation: /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/logstash-input-http-3.8.0-java/vendor/jar-dependencies/io/netty/netty-codec-http/4.1.100.Final/netty-codec-http-4.1.100.Final.jar
+            scanner: grype
+
   - id: GHSA-xc9x-jj77-9p9j
     events:
       - timestamp: 2024-02-06T16:08:38Z
