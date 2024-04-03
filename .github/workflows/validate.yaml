@@ -46,7 +46,8 @@ jobs:
         echo "fork point will be $fork_point"
         echo "fork_point=$fork_point" >> $GITHUB_OUTPUT
 
-    - uses: wolfi-dev/actions/advisories-validate@37af598e0f474e41d69746d964354cad65b5cd30 # main
+      # this need to point to main to always get the latest action
+    - uses: wolfi-dev/actions/advisories-validate@main # main
       with:
         fork_point: ${{ steps.fork-point.outputs.fork_point }}
         advisories-directory: './wolfi-advisories'
