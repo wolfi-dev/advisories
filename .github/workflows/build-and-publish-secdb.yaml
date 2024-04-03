@@ -27,7 +27,8 @@ jobs:
 
       - uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
 
-      - uses: wolfi-dev/actions/build-and-publish-secdb@37af598e0f474e41d69746d964354cad65b5cd30 # main
+      # this need to point to main to always get the latest action
+      - uses: wolfi-dev/actions/build-and-publish-secdb@main # main
         with:
           workload_identity_provider: "projects/618116202522/locations/global/workloadIdentityPools/prod-shared-e350/providers/prod-shared-gha"
           service_account: "prod-images-ci@prod-images-c6e5.iam.gserviceaccount.com"
