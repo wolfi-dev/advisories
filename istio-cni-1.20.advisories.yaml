@@ -4,6 +4,23 @@ package:
   name: istio-cni-1.20
 
 advisories:
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-06T09:36:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-install-cni-1.20
+            componentID: e6c5a98e0b16d049
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/install-cni
+            scanner: grype
+
   - id: CVE-2023-49290
     aliases:
       - GHSA-7f9x-gw85-8grf
