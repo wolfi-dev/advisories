@@ -75,6 +75,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-06T07:12:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-manager-1.11-cainjector
+            componentID: 96a1423e66f6251e
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/bin/cainjector
+            scanner: grype
+
   - id: CVE-2023-45289
     aliases:
       - GHSA-32ch-6x54-q4h9
