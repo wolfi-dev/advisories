@@ -24,6 +24,15 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-06T12:02:41Z
+        type: fixed
+        data:
+          fixed-version: 1.15.1-r2
+
   - id: CVE-2023-45289
     aliases:
       - GHSA-32ch-6x54-q4h9
@@ -99,6 +108,27 @@ advisories:
         data:
           fixed-version: 1.15.0-r2
 
+  - id: CVE-2024-29018
+    aliases:
+      - GHSA-mq39-4gv4-mvpx
+    events:
+      - timestamp: 2024-03-21T07:07:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: crossplane
+            componentID: c50fd69f50f2a147
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.2+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/crossplane
+            scanner: grype
+      - timestamp: 2024-03-21T11:42:22Z
+        type: fixed
+        data:
+          fixed-version: 1.15.1-r1
+
   - id: GHSA-9763-4f94-gfch
     events:
       - timestamp: 2024-01-11T07:15:31Z
@@ -117,22 +147,3 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.14.5-r2
-
-  - id: GHSA-mq39-4gv4-mvpx
-    events:
-      - timestamp: 2024-03-21T07:07:48Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: crossplane
-            componentID: c50fd69f50f2a147
-            componentName: github.com/docker/docker
-            componentVersion: v25.0.2+incompatible
-            componentType: go-module
-            componentLocation: /usr/bin/crossplane
-            scanner: grype
-      - timestamp: 2024-03-21T11:42:22Z
-        type: fixed
-        data:
-          fixed-version: 1.15.1-r1
