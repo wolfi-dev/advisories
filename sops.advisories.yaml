@@ -63,6 +63,44 @@ advisories:
         data:
           fixed-version: 3.8.1-r2
 
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-04-09T11:38:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sops
+            componentID: 839439cfc2b63918
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/sops
+            scanner: grype
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:32:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sops
+            componentID: 47d264ccece5b9a4
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/sops
+            scanner: grype
+      - timestamp: 2024-03-08T21:57:25Z
+        type: fixed
+        data:
+          fixed-version: 3.8.1-r4
+
   - id: GHSA-2c7c-3mj9-8fqh
     events:
       - timestamp: 2024-02-14T15:26:21Z
@@ -100,22 +138,3 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.8.1-r2
-
-  - id: GHSA-c5q2-7r4c-mv6g
-    events:
-      - timestamp: 2024-03-08T07:32:56Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: sops
-            componentID: 47d264ccece5b9a4
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.1
-            componentType: go-module
-            componentLocation: /usr/bin/sops
-            scanner: grype
-      - timestamp: 2024-03-08T21:57:25Z
-        type: fixed
-        data:
-          fixed-version: 3.8.1-r4
