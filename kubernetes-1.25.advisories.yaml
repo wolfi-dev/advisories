@@ -1,0 +1,20 @@
+schema-version: 2.0.2
+
+package:
+  name: kubernetes-1.25
+
+advisories:
+  - id: GHSA-6xv5-86q9-7xr8
+    events:
+      - timestamp: 2024-04-09T10:35:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-proxy-1.25
+            componentID: 9c2ee052951790db
+            componentName: github.com/cyphar/filepath-securejoin
+            componentVersion: v0.2.3
+            componentType: go-module
+            componentLocation: /usr/bin/kube-proxy-1.25
+            scanner: grype
