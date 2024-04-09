@@ -65,6 +65,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-09T08:57:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-manager-1.12-acmesolver
+            componentID: d0eea287d673747d
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/acmesolver
+            scanner: grype
+
   - id: CVE-2023-47108
     aliases:
       - GHSA-8pgv-569h-w5rw
