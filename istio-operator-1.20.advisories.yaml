@@ -87,6 +87,23 @@ advisories:
         data:
           fixed-version: 1.20.2-r2
 
+  - id: CVE-2024-24557
+    aliases:
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-04-09T10:35:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.20
+            componentID: 9acdd928780a4477
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.7+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
   - id: CVE-2024-24786
     aliases:
       - GHSA-8r3f-844c-mc37
