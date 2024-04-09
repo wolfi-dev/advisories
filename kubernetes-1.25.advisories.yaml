@@ -4,6 +4,23 @@ package:
   name: kubernetes-1.25
 
 advisories:
+  - id: CVE-2021-25743
+    aliases:
+      - GHSA-f9jg-8p32-2f55
+    events:
+      - timestamp: 2024-04-09T10:46:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-proxy-1.25
+            componentID: a9cdcd135b04a0e1
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.25.16
+            componentType: go-module
+            componentLocation: /usr/bin/kube-proxy-1.25
+            scanner: grype
+
   - id: CVE-2024-24786
     aliases:
       - GHSA-8r3f-844c-mc37
