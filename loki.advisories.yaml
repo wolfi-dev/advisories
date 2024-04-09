@@ -127,6 +127,23 @@ advisories:
         data:
           fixed-version: 2.9.5-r2
 
+  - id: CVE-2024-29018
+    aliases:
+      - GHSA-mq39-4gv4-mvpx
+    events:
+      - timestamp: 2024-04-09T02:27:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: promtail
+            componentID: 3e3c241adc6aed3c
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.3+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/promtail
+            scanner: grype
+
   - id: GHSA-jq35-85cj-fj4p
     events:
       - timestamp: 2023-12-22T10:47:09Z
