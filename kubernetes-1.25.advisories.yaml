@@ -38,6 +38,23 @@ advisories:
             componentLocation: /usr/bin/kubectl-1.25
             scanner: grype
 
+  - id: CVE-2023-47108
+    aliases:
+      - GHSA-8pgv-569h-w5rw
+    events:
+      - timestamp: 2024-04-10T10:35:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-scheduler-1.25
+            componentID: 81479cc4eb6fdc18
+            componentName: go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc
+            componentVersion: v0.20.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-scheduler-1.25
+            scanner: grype
+
   - id: CVE-2024-24786
     aliases:
       - GHSA-8r3f-844c-mc37
