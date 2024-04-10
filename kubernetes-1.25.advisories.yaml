@@ -21,6 +21,40 @@ advisories:
             componentLocation: /usr/bin/kubectl-1.25
             scanner: grype
 
+  - id: CVE-2023-44487
+    aliases:
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2024-04-10T10:50:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-scheduler-1.25
+            componentID: 61982429051b5d04
+            componentName: google.golang.org/grpc
+            componentVersion: v1.47.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-scheduler-1.25
+            scanner: grype
+
+  - id: CVE-2023-45142
+    aliases:
+      - GHSA-rcjv-mgp8-qvmr
+    events:
+      - timestamp: 2024-04-10T11:01:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-scheduler-1.25
+            componentID: 0e4d612180c6dcf3
+            componentName: go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp
+            componentVersion: v0.20.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-scheduler-1.25
+            scanner: grype
+
   - id: CVE-2023-45288
     aliases:
       - GHSA-4v7x-pqxf-cx7m
@@ -38,6 +72,23 @@ advisories:
             componentLocation: /usr/bin/kubectl-1.25
             scanner: grype
 
+  - id: CVE-2023-47108
+    aliases:
+      - GHSA-8pgv-569h-w5rw
+    events:
+      - timestamp: 2024-04-10T10:35:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-scheduler-1.25
+            componentID: 81479cc4eb6fdc18
+            componentName: go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc
+            componentVersion: v0.20.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-scheduler-1.25
+            scanner: grype
+
   - id: CVE-2024-24786
     aliases:
       - GHSA-8r3f-844c-mc37
@@ -53,4 +104,19 @@ advisories:
             componentVersion: v1.28.0
             componentType: go-module
             componentLocation: /usr/bin/kubectl-1.25
+            scanner: grype
+
+  - id: GHSA-m425-mq94-257g
+    events:
+      - timestamp: 2024-04-10T10:45:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-scheduler-1.25
+            componentID: 61982429051b5d04
+            componentName: google.golang.org/grpc
+            componentVersion: v1.47.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-scheduler-1.25
             scanner: grype
