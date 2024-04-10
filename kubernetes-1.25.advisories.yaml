@@ -38,6 +38,23 @@ advisories:
             componentLocation: /usr/bin/kube-scheduler-1.25
             scanner: grype
 
+  - id: CVE-2023-45142
+    aliases:
+      - GHSA-rcjv-mgp8-qvmr
+    events:
+      - timestamp: 2024-04-10T11:01:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-scheduler-1.25
+            componentID: 0e4d612180c6dcf3
+            componentName: go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp
+            componentVersion: v0.20.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-scheduler-1.25
+            scanner: grype
+
   - id: CVE-2023-45288
     aliases:
       - GHSA-4v7x-pqxf-cx7m
