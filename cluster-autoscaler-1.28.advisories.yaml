@@ -80,37 +80,19 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
-  - id: CVE-2023-48795
+  - id: CVE-2023-45288
     aliases:
-      - GHSA-45x7-px36-x8w8
+      - GHSA-4v7x-pqxf-cx7m
     events:
-      - timestamp: 2024-02-15T07:14:54Z
-        type: fixed
-        data:
-          fixed-version: 1.28.2-r1
-
-  - id: CVE-2023-5528
-    aliases:
-      - GHSA-hq6q-c2x6-hmch
-    events:
-      - timestamp: 2023-11-22T11:13:26Z
-        type: fixed
-        data:
-          fixed-version: 1.28.0-r7
-
-  - id: CVE-2024-24786
-    aliases:
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T07:04:15Z
+      - timestamp: 2024-04-10T10:35:05Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: cluster-autoscaler-1.28
-            componentID: f58c98a68b1a5aa2
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.31.0
+            componentID: 10c2b43a99cce710
+            componentName: stdlib
+            componentVersion: go1.22.1
             componentType: go-module
             componentLocation: /usr/bin/cluster-autoscaler
             scanner: grype
@@ -132,6 +114,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.28.2-r2
+
+  - id: CVE-2023-48795
+    aliases:
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2024-02-15T07:14:54Z
+        type: fixed
+        data:
+          fixed-version: 1.28.2-r1
+
+  - id: CVE-2023-5528
+    aliases:
+      - GHSA-hq6q-c2x6-hmch
+    events:
+      - timestamp: 2023-11-22T11:13:26Z
+        type: fixed
+        data:
+          fixed-version: 1.28.0-r7
 
   - id: CVE-2024-24783
     aliases:
@@ -159,3 +159,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.28.2-r2
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:04:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-autoscaler-1.28
+            componentID: f58c98a68b1a5aa2
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-autoscaler
+            scanner: grype
