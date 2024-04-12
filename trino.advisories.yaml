@@ -296,6 +296,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/trino/lib/clickhouse-jdbc-0.5.0-all.jar
             scanner: grype
+      - timestamp: 2024-04-11T00:33:29Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability is included via the Shaded JAR clickhouse-jdbc-0.6.0-patch3-all.jar. This vulnerability will be resolved once ClickHouse makes a new version available (https://github.com/ClickHouse/clickhouse-java/issues/1585). Trino will then need to start using the new JAR.
 
   - id: CVE-2023-38647
     aliases:
@@ -530,6 +534,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/trino/lib/netty-codec-http-4.1.107.Final.jar
             scanner: grype
+      - timestamp: 2024-04-11T00:33:29Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability is included via the Shaded JAR kudu-client-1.17.0.jar. No new JAR is available that includes a resolution for this CVE.
       - timestamp: 2024-04-11T01:52:23Z
         type: fixed
         data:
@@ -591,3 +599,7 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/trino/lib/kudu-client-1.17.0.jar
             scanner: grype
+      - timestamp: 2024-04-11T00:33:29Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability is included via the Shaded JAR kudu-client-1.17.0.jar. No new JAR is available that includes a resolution for this CVE.
