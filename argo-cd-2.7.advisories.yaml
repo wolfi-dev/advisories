@@ -187,6 +187,27 @@ advisories:
         data:
           note: Argo CD 2.7 is longer supported. Security Support ended on 2024-02-05.
 
+  - id: CVE-2024-21662
+    aliases:
+      - GHSA-2vgg-9h6w-m454
+    events:
+      - timestamp: 2024-03-23T07:06:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.7
+            componentID: 017ef98c4182ad84
+            componentName: github.com/argoproj/argo-cd/v2
+            componentVersion: v2.7.17
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+      - timestamp: 2024-03-30T16:47:59Z
+        type: fix-not-planned
+        data:
+          note: Argo CD 2.7 is longer supported. Security Support ended on 2024-02-05.
+
   - id: CVE-2024-22424
     aliases:
       - GHSA-92mw-q256-5vwg
@@ -265,24 +286,22 @@ advisories:
         data:
           note: Argo CD 2.7 is longer supported. Security Support ended on 2024-02-05.
 
-  - id: GHSA-2vgg-9h6w-m454
+  - id: CVE-2024-29893
+    aliases:
+      - GHSA-jhwx-mhww-rgc3
     events:
-      - timestamp: 2024-03-23T07:06:33Z
+      - timestamp: 2024-04-04T07:53:13Z
         type: detection
         data:
           type: scan/v1
           data:
-            subpackageName: argo-cd-2.7
-            componentID: 017ef98c4182ad84
+            subpackageName: argo-cd-2.7-compat
+            componentID: 68fa0dc01d78a74b
             componentName: github.com/argoproj/argo-cd/v2
             componentVersion: v2.7.17
             componentType: go-module
-            componentLocation: /usr/bin/argocd
+            componentLocation: /usr/local/bin/argocd
             scanner: grype
-      - timestamp: 2024-03-30T16:47:59Z
-        type: fix-not-planned
-        data:
-          note: Argo CD 2.7 is longer supported. Security Support ended on 2024-02-05.
 
   - id: GHSA-6xv5-86q9-7xr8
     events:
