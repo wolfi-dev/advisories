@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: tomcat
+
+advisories:
+  - id: CVE-2024-24549
+    aliases:
+      - GHSA-7w75-32cg-r6g2
+    events:
+      - timestamp: 2024-04-12T07:21:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tomcat
+            componentID: 47b0f367831fa496
+            componentName: tomcat-coyote
+            componentVersion: 10.1.13
+            componentType: java-archive
+            componentLocation: /usr/share/tomcat/lib/tomcat-coyote.jar
+            scanner: grype
