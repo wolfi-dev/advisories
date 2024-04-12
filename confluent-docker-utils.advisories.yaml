@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: confluent-docker-utils
+
+advisories:
+  - id: CVE-2024-3651
+    aliases:
+      - GHSA-jjg7-2v4v-x38h
+    events:
+      - timestamp: 2024-04-12T08:10:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: confluent-docker-utils
+            componentID: b4475ae039563c27
+            componentName: idna
+            componentVersion: "3.6"
+            componentType: python
+            componentLocation: /usr/lib/python3.12/site-packages/idna-3.6.dist-info/METADATA, /usr/lib/python3.12/site-packages/idna-3.6.dist-info/RECORD
+            scanner: grype
