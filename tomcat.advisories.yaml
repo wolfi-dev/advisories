@@ -4,6 +4,23 @@ package:
   name: tomcat
 
 advisories:
+  - id: CVE-2024-23672
+    aliases:
+      - GHSA-v682-8vv8-vpwr
+    events:
+      - timestamp: 2024-04-12T07:23:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tomcat
+            componentID: 69d4ada580c5819c
+            componentName: tomcat-websocket
+            componentVersion: 10.1.13
+            componentType: java-archive
+            componentLocation: /usr/share/tomcat/lib/tomcat-websocket.jar
+            scanner: grype
+
   - id: CVE-2024-24549
     aliases:
       - GHSA-7w75-32cg-r6g2
