@@ -57,6 +57,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-10T10:38:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.27
+            componentID: 79b2de744b8768a9
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
+
   - id: CVE-2023-48795
     aliases:
       - GHSA-45x7-px36-x8w8
@@ -108,6 +125,40 @@ advisories:
         data:
           fixed-version: 1.27.4-r10
 
+  - id: CVE-2024-24557
+    aliases:
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-04-10T10:37:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.27
+            componentID: 8cc8ea0bebf5b4b9
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.7+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-04-10T10:34:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.27
+            componentID: 1072173f6a441cb6
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
+
   - id: CVE-2024-27289
     aliases:
       - GHSA-m7wr-2xf7-cm9p
@@ -121,6 +172,23 @@ advisories:
             componentID: d38bb9ff8ef0b888
             componentName: github.com/jackc/pgx/v4
             componentVersion: v4.18.1
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
+
+  - id: CVE-2024-27304
+    aliases:
+      - GHSA-mrww-27vc-gghv
+    events:
+      - timestamp: 2024-04-10T10:35:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.27
+            componentID: 46e1b455915fe73d
+            componentName: github.com/jackc/pgproto3/v2
+            componentVersion: v2.3.2
             componentType: go-module
             componentLocation: /usr/bin/telegraf
             scanner: grype
@@ -145,6 +213,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.27.4-r13
+
+  - id: GHSA-7jwh-3vrq-q3m8
+    events:
+      - timestamp: 2024-04-10T10:32:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.27
+            componentID: 46e1b455915fe73d
+            componentName: github.com/jackc/pgproto3/v2
+            componentVersion: v2.3.2
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
 
   - id: GHSA-7ww5-4wqc-m92c
     events:

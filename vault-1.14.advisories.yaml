@@ -42,6 +42,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-10T10:49:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-1.14
+            componentID: 6723cfdf55097035
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/vault
+            scanner: grype
+
   - id: CVE-2023-4680
     aliases:
       - GHSA-v84f-6r39-cpfc
@@ -59,6 +76,23 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.14.8-r1
+
+  - id: CVE-2024-0406
+    aliases:
+      - GHSA-rhh4-rh7c-7r5v
+    events:
+      - timestamp: 2024-04-10T10:34:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-1.14
+            componentID: 833d8afb9bce4c34
+            componentName: github.com/mholt/archiver/v3
+            componentVersion: v3.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/vault
+            scanner: grype
 
   - id: CVE-2024-24786
     aliases:
