@@ -85,6 +85,23 @@ advisories:
         data:
           note: OpenJDK 14 is no longer supported upstream.
 
+  - id: CVE-2024-20918
+    aliases:
+      - GHSA-45pc-2866-5hxx
+    events:
+      - timestamp: 2024-04-13T09:30:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openjdk-14-jre-base
+            componentID: 22d58af0d7a624a0
+            componentName: java
+            componentVersion: 14.0.2-internal+0-wolfi-r3
+            componentType: binary
+            componentLocation: /usr/lib/jvm/java-14-openjdk/bin/java
+            scanner: grype
+
   - id: CVE-2024-20952
     aliases:
       - GHSA-343v-9ccv-7535
