@@ -266,6 +266,45 @@ advisories:
         data:
           fixed-version: 2.0.1-r7
 
+  - id: CVE-2024-29018
+    aliases:
+      - GHSA-mq39-4gv4-mvpx
+    events:
+      - timestamp: 2024-03-22T09:26:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zot
+            componentID: e0f4f9fab9f873bf
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.3+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/zli
+            scanner: grype
+      - timestamp: 2024-03-26T20:01:05Z
+        type: fixed
+        data:
+          fixed-version: 2.0.3-r0
+
+  - id: CVE-2024-29902
+    aliases:
+      - GHSA-88jx-383q-w4qc
+    events:
+      - timestamp: 2024-04-13T07:13:15Z
+        type: fixed
+        data:
+          fixed-version: 2.0.3-r3
+
+  - id: CVE-2024-29903
+    aliases:
+      - GHSA-95pr-fxf5-86gv
+    events:
+      - timestamp: 2024-04-13T07:13:18Z
+        type: fixed
+        data:
+          fixed-version: 2.0.3-r3
+
   - id: GHSA-6xv5-86q9-7xr8
     events:
       - timestamp: 2023-09-09T15:18:22Z
@@ -299,22 +338,3 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.0.0-r2
-
-  - id: GHSA-mq39-4gv4-mvpx
-    events:
-      - timestamp: 2024-03-22T09:26:00Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: zot
-            componentID: e0f4f9fab9f873bf
-            componentName: github.com/docker/docker
-            componentVersion: v25.0.3+incompatible
-            componentType: go-module
-            componentLocation: /usr/bin/zli
-            scanner: grype
-      - timestamp: 2024-03-26T20:01:05Z
-        type: fixed
-        data:
-          fixed-version: 2.0.3-r0
