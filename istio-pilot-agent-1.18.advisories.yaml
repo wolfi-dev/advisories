@@ -148,6 +148,23 @@ advisories:
         data:
           fixed-version: 1.18.7-r2
 
+  - id: CVE-2024-24557
+    aliases:
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-04-16T07:32:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-agent-1.18
+            componentID: 49f14b769a227627
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.7+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-agent
+            scanner: grype
+
   - id: CVE-2024-24783
     aliases:
       - GHSA-3q2c-pvp5-3cqp
