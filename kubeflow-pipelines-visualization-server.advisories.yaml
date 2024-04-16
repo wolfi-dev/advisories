@@ -130,6 +130,23 @@ advisories:
         data:
           note: 'Bumping the dependency to 2.2.3 is not possible, the application fails with the error: ImportError: cannot import name ''soft_unicode'' from ''markupsafe'''
 
+  - id: CVE-2023-29483
+    aliases:
+      - GHSA-3rq5-2g8h-59hc
+    events:
+      - timestamp: 2024-04-16T07:29:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-visualization-server
+            componentID: 3c8aafcea914b50b
+            componentName: dnspython
+            componentVersion: 2.4.2
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/dnspython-2.4.2.dist-info/METADATA, /usr/lib/python3.10/site-packages/dnspython-2.4.2.dist-info/RECORD
+            scanner: grype
+
   - id: CVE-2023-39968
     aliases:
       - GHSA-r726-vmfq-j9j3
