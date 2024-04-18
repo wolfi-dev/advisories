@@ -28,6 +28,7 @@ advisories:
   - id: CVE-2024-24762
     aliases:
       - GHSA-qf9m-vfgh-m389
+      - GHSA-2jv5-9r88-3w3p
     events:
       - timestamp: 2024-02-10T07:28:49Z
         type: detection
@@ -45,25 +46,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.4.0-r0
-
-  - id: GHSA-2jv5-9r88-3w3p
-    events:
-      - timestamp: 2024-02-13T07:42:11Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: reflex
-            componentID: 5320786c4274ee36
-            componentName: python-multipart
-            componentVersion: 0.0.5
-            componentType: python
-            componentLocation: /usr/lib/python3.12/site-packages/python_multipart-0.0.5.dist-info/METADATA, /usr/lib/python3.12/site-packages/python_multipart-0.0.5.dist-info/RECORD, /usr/lib/python3.12/site-packages/python_multipart-0.0.5.dist-info/top_level.txt
-            scanner: grype
-      - timestamp: 2024-04-07T18:04:00Z
-        type: fixed
-        data:
-          fixed-version: 0.4.6-r0
 
   - id: GHSA-93gm-qmq6-w238
     events:
@@ -83,3 +65,18 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.4.0-r0
+
+  - id: GHSA-w3h3-4rj7-4ph4
+    events:
+      - timestamp: 2024-04-17T08:09:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: reflex
+            componentID: b3823a7be14850cb
+            componentName: gunicorn
+            componentVersion: 21.2.0
+            componentType: python
+            componentLocation: /usr/lib/python3.12/site-packages/gunicorn-21.2.0.dist-info/METADATA, /usr/lib/python3.12/site-packages/gunicorn-21.2.0.dist-info/RECORD, /usr/lib/python3.12/site-packages/gunicorn-21.2.0.dist-info/top_level.txt
+            scanner: grype
