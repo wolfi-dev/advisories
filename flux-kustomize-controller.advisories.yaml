@@ -52,6 +52,15 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:07:53Z
+        type: fixed
+        data:
+          fixed-version: 1.2.2-r4
+
   - id: CVE-2023-48795
     aliases:
       - GHSA-45x7-px36-x8w8
@@ -69,6 +78,44 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.2.1-r2
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:20:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-kustomize-controller
+            componentID: e43ca53f79e53409
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/kustomize-controller
+            scanner: grype
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T06:32:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-kustomize-controller
+            componentID: 374585bc0594e615
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/kustomize-controller
+            scanner: grype
+      - timestamp: 2024-03-08T22:22:17Z
+        type: fixed
+        data:
+          fixed-version: 1.2.2-r2
 
   - id: GHSA-2c7c-3mj9-8fqh
     events:

@@ -1,0 +1,75 @@
+schema-version: 2.0.2
+
+package:
+  name: keda-2.13
+
+advisories:
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:08:03Z
+        type: fixed
+        data:
+          fixed-version: 2.13.1-r3
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:20:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.13
+            componentID: e785b6f56998872b
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/keda
+            scanner: grype
+      - timestamp: 2024-03-14T15:19:54Z
+        type: fixed
+        data:
+          fixed-version: 2.13.1-r1
+
+  - id: CVE-2024-27304
+    aliases:
+      - GHSA-mrww-27vc-gghv
+    events:
+      - timestamp: 2024-03-15T10:47:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.13
+            componentID: d0893074795c06a4
+            componentName: github.com/jackc/pgx/v5
+            componentVersion: v5.5.2
+            componentType: go-module
+            componentLocation: /usr/bin/keda
+            scanner: grype
+      - timestamp: 2024-03-16T11:01:46Z
+        type: fixed
+        data:
+          fixed-version: 2.13.1-r2
+
+  - id: GHSA-7jwh-3vrq-q3m8
+    events:
+      - timestamp: 2024-03-15T10:47:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.13
+            componentID: d0893074795c06a4
+            componentName: github.com/jackc/pgx/v5
+            componentVersion: v5.5.2
+            componentType: go-module
+            componentLocation: /usr/bin/keda
+            scanner: grype
+      - timestamp: 2024-03-16T11:01:45Z
+        type: fixed
+        data:
+          fixed-version: 2.13.1-r2

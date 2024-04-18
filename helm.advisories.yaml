@@ -4,6 +4,16 @@ package:
   name: helm
 
 advisories:
+  - id: CVE-2019-25210
+    aliases:
+      - GHSA-jw44-4f3j-q396
+    events:
+      - timestamp: 2024-03-15T00:00:46Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
+
   - id: CVE-2020-8552
     aliases:
       - GHSA-82hx-w2r5-c2wq
@@ -114,6 +124,33 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-12T08:40:27Z
+        type: fixed
+        data:
+          fixed-version: 3.14.4-r0
+
+  - id: CVE-2023-45289
+    aliases:
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T09:23:04Z
+        type: fixed
+        data:
+          fixed-version: 3.14.2-r1
+
+  - id: CVE-2023-45290
+    aliases:
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T09:23:06Z
+        type: fixed
+        data:
+          fixed-version: 3.14.2-r1
+
   - id: CVE-2023-48795
     aliases:
       - GHSA-45x7-px36-x8w8
@@ -122,6 +159,63 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.13.3-r1
+
+  - id: CVE-2024-24557
+    aliases:
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-22T09:16:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm
+            componentID: 7a48b19dca54b4bd
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.7+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/helm
+            scanner: grype
+      - timestamp: 2024-04-08T20:50:48Z
+        type: fixed
+        data:
+          fixed-version: 3.14.3-r3
+
+  - id: CVE-2024-24783
+    aliases:
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T09:23:08Z
+        type: fixed
+        data:
+          fixed-version: 3.14.2-r1
+
+  - id: CVE-2024-24784
+    aliases:
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T09:23:10Z
+        type: fixed
+        data:
+          fixed-version: 3.14.2-r1
+
+  - id: CVE-2024-24785
+    aliases:
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T09:23:11Z
+        type: fixed
+        data:
+          fixed-version: 3.14.2-r1
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T15:20:55Z
+        type: fixed
+        data:
+          fixed-version: 3.14.3-r1
 
   - id: GHSA-6xv5-86q9-7xr8
     events:

@@ -42,6 +42,27 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-06T15:16:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: bank-vaults-template
+            componentID: d4be5bb5341e5d4b
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/template
+            scanner: grype
+      - timestamp: 2024-04-10T12:13:06Z
+        type: fixed
+        data:
+          fixed-version: 1.20.4-r11
+
   - id: CVE-2023-48795
     aliases:
       - GHSA-45x7-px36-x8w8
@@ -50,3 +71,45 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.20.4-r6
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:07:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: bank-vaults-template
+            componentID: 4e2e078913c8bb2d
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/template
+            scanner: grype
+      - timestamp: 2024-03-14T15:21:21Z
+        type: fixed
+        data:
+          fixed-version: 1.20.4-r10
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:13:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: bank-vaults
+            componentID: a500b87aa0f7bec2
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/bank-vaults
+            scanner: grype
+      - timestamp: 2024-03-11T00:36:47Z
+        type: fixed
+        data:
+          fixed-version: 1.20.4-r8

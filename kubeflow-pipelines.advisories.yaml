@@ -283,6 +283,10 @@ advisories:
         type: pending-upstream-fix
         data:
           note: The project uses an older version of 'k8s.io/kubernetes (v1.11.1)' package. To fix the CVE, we have to upgrade that to '1.24.17' or later. However, the project is not ready to upgrade the package yet since it will require a lot of changes in the codebase.
+      - timestamp: 2024-03-15T16:44:35Z
+        type: fixed
+        data:
+          fixed-version: 2.0.5-r5
 
   - id: CVE-2023-45283
     aliases:
@@ -303,6 +307,33 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:09:36Z
+        type: fixed
+        data:
+          fixed-version: 2.0.5-r7
+
+  - id: CVE-2023-45289
+    aliases:
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T09:17:42Z
+        type: fixed
+        data:
+          fixed-version: 2.0.5-r4
+
+  - id: CVE-2023-45290
+    aliases:
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T09:17:45Z
+        type: fixed
+        data:
+          fixed-version: 2.0.5-r4
 
   - id: CVE-2023-48795
     aliases:
@@ -353,6 +384,54 @@ advisories:
         data:
           fixed-version: 2.0.5-r3
 
+  - id: CVE-2024-24783
+    aliases:
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T09:17:28Z
+        type: fixed
+        data:
+          fixed-version: 2.0.5-r4
+
+  - id: CVE-2024-24784
+    aliases:
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T09:17:32Z
+        type: fixed
+        data:
+          fixed-version: 2.0.5-r4
+
+  - id: CVE-2024-24785
+    aliases:
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T09:17:37Z
+        type: fixed
+        data:
+          fixed-version: 2.0.5-r4
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:20:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-cache_server
+            componentID: 8b101bd21f8a7200
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/cache_server
+            scanner: grype
+      - timestamp: 2024-03-15T00:35:52Z
+        type: fixed
+        data:
+          fixed-version: 2.0.5-r5
+
   - id: CVE-2024-26130
     aliases:
       - GHSA-6vqw-3v5j-54x4
@@ -361,6 +440,49 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.0.5-r3
+
+  - id: CVE-2024-28849
+    aliases:
+      - GHSA-cxjh-pqwp-8mfp
+    events:
+      - timestamp: 2024-03-15T08:53:09Z
+        type: fixed
+        data:
+          fixed-version: 2.0.5-r5
+
+  - id: CVE-2024-29041
+    aliases:
+      - GHSA-rv95-896h-c2vc
+    events:
+      - timestamp: 2024-03-26T07:38:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-frontend
+            componentID: 867d448592ecd82c
+            componentName: express
+            componentVersion: 4.17.3
+            componentType: npm
+            componentLocation: /server/node_modules/express/package.json
+            scanner: grype
+
+  - id: CVE-2024-3651
+    aliases:
+      - GHSA-jjg7-2v4v-x38h
+    events:
+      - timestamp: 2024-04-16T07:28:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-apiserver
+            componentID: 0b737e43496bf066
+            componentName: idna
+            componentVersion: "3.4"
+            componentType: python
+            componentLocation: /usr/lib/python3.12/site-packages/idna-3.4.dist-info/METADATA, /usr/lib/python3.12/site-packages/idna-3.4.dist-info/RECORD
+            scanner: grype
 
   - id: GHSA-2jcg-qqmg-46q6
     events:

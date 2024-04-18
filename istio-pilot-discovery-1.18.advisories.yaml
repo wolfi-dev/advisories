@@ -20,6 +20,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/pilot-discovery
             scanner: grype
+      - timestamp: 2024-03-26T16:35:18Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
 
   - id: CVE-2023-39325
     aliases:
@@ -131,6 +136,21 @@ advisories:
             componentID: 80be16cbb1ef3c62
             componentName: helm.sh/helm/v3
             componentVersion: v3.11.2
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-discovery
+            scanner: grype
+
+  - id: GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:10:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-discovery-1.18
+            componentID: 5f046a0adef3c999
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
             componentType: go-module
             componentLocation: /usr/bin/pilot-discovery
             scanner: grype

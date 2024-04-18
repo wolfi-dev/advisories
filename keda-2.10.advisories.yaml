@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: keda-2.10
@@ -70,6 +70,69 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-07T08:30:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.10
+            componentID: 8d3a0085e9d99107
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/bin/keda
+            scanner: grype
+      - timestamp: 2024-04-12T10:35:46Z
+        type: fix-not-planned
+        data:
+          note: Keda 2.10 is no longer supported upstream since 2023-09-28.
+
+  - id: CVE-2023-45289
+    aliases:
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T07:10:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.10-adapter
+            componentID: 1eb119d86d282d6e
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/bin/keda-adapter
+            scanner: grype
+      - timestamp: 2024-03-30T16:09:26Z
+        type: fix-not-planned
+        data:
+          note: Keda 2.10 is longer supported. Security Support ended on 2023-09-28.
+
+  - id: CVE-2023-45290
+    aliases:
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T07:10:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.10-adapter
+            componentID: 1eb119d86d282d6e
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/bin/keda-adapter
+            scanner: grype
+      - timestamp: 2024-03-30T16:09:26Z
+        type: fix-not-planned
+        data:
+          note: Keda 2.10 is longer supported. Security Support ended on 2023-09-28.
+
   - id: CVE-2023-47108
     aliases:
       - GHSA-8pgv-569h-w5rw
@@ -78,3 +141,75 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.10.1-r6
+
+  - id: CVE-2024-24783
+    aliases:
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T07:10:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.10-adapter
+            componentID: 1eb119d86d282d6e
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/bin/keda-adapter
+            scanner: grype
+      - timestamp: 2024-03-30T16:09:26Z
+        type: fix-not-planned
+        data:
+          note: Keda 2.10 is longer supported. Security Support ended on 2023-09-28.
+
+  - id: CVE-2024-24784
+    aliases:
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T07:10:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.10-adapter
+            componentID: 1eb119d86d282d6e
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/bin/keda-adapter
+            scanner: grype
+      - timestamp: 2024-03-30T16:09:26Z
+        type: fix-not-planned
+        data:
+          note: Keda 2.10 is longer supported. Security Support ended on 2023-09-28.
+
+  - id: CVE-2024-24785
+    aliases:
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T07:10:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.10-adapter
+            componentID: 1eb119d86d282d6e
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/bin/keda-adapter
+            scanner: grype
+      - timestamp: 2024-03-30T16:09:26Z
+        type: fix-not-planned
+        data:
+          note: Keda 2.10 is longer supported. Security Support ended on 2023-09-28.
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-30T23:01:12Z
+        type: fix-not-planned
+        data:
+          note: Keda 2.10 is longer supported. Security Support ended on 2023-09-28.

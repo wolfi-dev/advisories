@@ -65,6 +65,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/opensearch/plugins/opensearch-ml/commons-compress-1.25.0.jar
             scanner: grype
+      - timestamp: 2024-03-15T00:23:46Z
+        type: fixed
+        data:
+          fixed-version: 2.12.0-r1
 
   - id: CVE-2024-26308
     aliases:
@@ -82,3 +86,49 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/opensearch/lib/tools/plugin-cli/commons-compress-1.24.0.jar
             scanner: grype
+      - timestamp: 2024-03-15T00:23:46Z
+        type: fixed
+        data:
+          fixed-version: 2.12.0-r1
+
+  - id: CVE-2024-28752
+    aliases:
+      - GHSA-qmgx-j96g-4428
+    events:
+      - timestamp: 2024-03-19T09:08:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-2-security
+            componentID: 52a961a22760ca4d
+            componentName: cxf-core
+            componentVersion: 4.0.3
+            componentType: java-archive
+            componentLocation: /usr/share/opensearch/plugins/opensearch-security/cxf-core-4.0.3.jar
+            scanner: grype
+      - timestamp: 2024-04-13T07:16:14Z
+        type: fixed
+        data:
+          fixed-version: 2.13.0-r0
+
+  - id: CVE-2024-29025
+    aliases:
+      - GHSA-5jpm-x58v-624v
+    events:
+      - timestamp: 2024-03-31T13:28:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-2-repository-azure
+            componentID: 9293931f36f599bb
+            componentName: netty-codec-http
+            componentVersion: 4.1.106.Final
+            componentType: java-archive
+            componentLocation: /usr/share/opensearch/plugins/opensearch-repository-azure/netty-codec-http-4.1.106.Final.jar
+            scanner: grype
+      - timestamp: 2024-04-13T07:12:30Z
+        type: fixed
+        data:
+          fixed-version: 2.13.0-r0

@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: kubernetes-dns-node-cache
@@ -53,6 +53,33 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:11:44Z
+        type: fixed
+        data:
+          fixed-version: 1.23.0-r3
+
+  - id: CVE-2023-45289
+    aliases:
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-13T10:45:33Z
+        type: fixed
+        data:
+          fixed-version: 1.23.0-r1
+
+  - id: CVE-2023-45290
+    aliases:
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-13T10:45:34Z
+        type: fixed
+        data:
+          fixed-version: 1.23.0-r1
+
   - id: CVE-2023-5528
     aliases:
       - GHSA-hq6q-c2x6-hmch
@@ -61,3 +88,51 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.22.28-r1
+
+  - id: CVE-2024-24783
+    aliases:
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-13T10:45:35Z
+        type: fixed
+        data:
+          fixed-version: 1.23.0-r1
+
+  - id: CVE-2024-24784
+    aliases:
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-13T10:45:31Z
+        type: fixed
+        data:
+          fixed-version: 1.23.0-r1
+
+  - id: CVE-2024-24785
+    aliases:
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-13T10:45:32Z
+        type: fixed
+        data:
+          fixed-version: 1.23.0-r1
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:20:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dns-node-cache
+            componentID: 09e711b67aec385b
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/node-cache
+            scanner: grype
+      - timestamp: 2024-03-14T16:35:59Z
+        type: fixed
+        data:
+          fixed-version: 1.23.0-r2

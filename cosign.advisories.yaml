@@ -62,6 +62,15 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-11T02:24:42Z
+        type: fixed
+        data:
+          fixed-version: 2.2.4-r0
+
   - id: CVE-2023-46737
     aliases:
       - GHSA-vfp6-jrw2-99g9
@@ -79,6 +88,57 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.2.2-r1
+
+  - id: CVE-2024-24557
+    aliases:
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-21T11:16:41Z
+        type: fixed
+        data:
+          fixed-version: 2.2.3-r4
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T15:17:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cosign
+            componentID: dc4a890ae86d825a
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/cosign
+            scanner: grype
+      - timestamp: 2024-03-17T14:17:38Z
+        type: fixed
+        data:
+          fixed-version: 2.2.3-r3
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:06:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cosign
+            componentID: 13692a59d0ac11f0
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/cosign
+            scanner: grype
+      - timestamp: 2024-03-08T22:43:46Z
+        type: fixed
+        data:
+          fixed-version: 2.2.3-r2
 
   - id: GHSA-2c7c-3mj9-8fqh
     events:

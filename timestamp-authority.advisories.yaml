@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: timestamp-authority
@@ -23,3 +23,42 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:16:15Z
+        type: fixed
+        data:
+          fixed-version: 1.2.2-r4
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-17T10:17:57Z
+        type: fixed
+        data:
+          fixed-version: 1.2.2-r3
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:20:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: timestamp-authority-server
+            componentID: 47099ba716b7278f
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/timestamp-server
+            scanner: grype
+      - timestamp: 2024-03-08T21:10:42Z
+        type: fixed
+        data:
+          fixed-version: 1.2.2-r2

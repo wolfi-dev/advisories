@@ -20,6 +20,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/operator
             scanner: grype
+      - timestamp: 2024-03-26T16:35:18Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
 
   - id: CVE-2019-3826
     aliases:
@@ -148,6 +153,21 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: This CVE only affects Windows users
+
+  - id: GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:17:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.19
+            componentID: 0bdfc2b42062fc77
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
 
   - id: GHSA-jq35-85cj-fj4p
     events:

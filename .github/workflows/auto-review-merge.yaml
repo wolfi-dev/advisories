@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: '42 * * * *'
 
+permissions:
+  contents: read
+
 jobs:
   enable-auto-merge:
     runs-on: ubuntu-latest
@@ -14,10 +17,15 @@ jobs:
       id-token: write # needed for Octo STS federation
 
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v4
+      - name: Harden Runner
+        uses: step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142 # v2.7.0
+        with:
+          egress-policy: audit
 
-      - uses: chainguard-dev/octo-sts-action@6177b4481c00308b3839969c3eca88c96a91775f # v1.0.0
+      - name: Check out repository code
+        uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
+
+      - uses: octo-sts/action@6177b4481c00308b3839969c3eca88c96a91775f # v1.0.0
         id: octo-sts
         with:
           scope: wolfi-dev/advisories
@@ -39,8 +47,13 @@ jobs:
       pull-requests: write
 
     steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142 # v2.7.0
+        with:
+          egress-policy: audit
+
       - name: Check out repository code
-        uses: actions/checkout@v4
+        uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
 
       - run: |
           ./scripts/review-prs.sh ${{ github.repository }}

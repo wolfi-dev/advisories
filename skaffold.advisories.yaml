@@ -64,6 +64,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45289
+    aliases:
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T08:01:46Z
+        type: fixed
+        data:
+          fixed-version: 2.10.1-r1
+
+  - id: CVE-2023-45290
+    aliases:
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T08:01:40Z
+        type: fixed
+        data:
+          fixed-version: 2.10.1-r1
+
   - id: CVE-2023-46737
     aliases:
       - GHSA-vfp6-jrw2-99g9
@@ -105,6 +123,10 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Upgrading runc to a non-vulnerable version creates conflicts with other old dependencies required by skaffold such as go.opentelemetry.io/otel which is using v1.15.0.
+      - timestamp: 2024-04-03T16:46:42Z
+        type: fixed
+        data:
+          fixed-version: 2.11.0-r0
 
   - id: CVE-2024-23650
     aliases:
@@ -126,6 +148,10 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Upgrading buildkit to a non-vulnerable version requires to bump github.com/docker/docker to v25.0.3 (currently using v24.0.7) and as a consequence needs multiple code changes to adapt the source code to this new version.
+      - timestamp: 2024-04-03T16:46:42Z
+        type: fixed
+        data:
+          fixed-version: 2.11.0-r0
 
   - id: CVE-2024-23651
     aliases:
@@ -147,6 +173,10 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Upgrading buildkit to a non-vulnerable version requires to bump github.com/docker/docker to v25.0.3 (currently using v24.0.7) and as a consequence needs multiple code changes to adapt the source code to this new version.
+      - timestamp: 2024-04-03T16:46:44Z
+        type: fixed
+        data:
+          fixed-version: 2.11.0-r0
 
   - id: CVE-2024-23652
     aliases:
@@ -168,6 +198,10 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Upgrading buildkit to a non-vulnerable version requires to bump github.com/docker/docker to v25.0.3 (currently using v24.0.7) and as a consequence needs multiple code changes to adapt the source code to this new version.
+      - timestamp: 2024-04-03T16:46:16Z
+        type: fixed
+        data:
+          fixed-version: 2.11.0-r0
 
   - id: CVE-2024-23653
     aliases:
@@ -189,6 +223,94 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Upgrading buildkit to a non-vulnerable version requires to bump github.com/docker/docker to v25.0.3 (currently using v24.0.7) and as a consequence needs multiple code changes to adapt the source code to this new version.
+      - timestamp: 2024-04-03T16:46:43Z
+        type: fixed
+        data:
+          fixed-version: 2.11.0-r0
+
+  - id: CVE-2024-24557
+    aliases:
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-25T14:36:15Z
+        type: fixed
+        data:
+          fixed-version: 2.10.1-r3
+
+  - id: CVE-2024-24783
+    aliases:
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T08:01:38Z
+        type: fixed
+        data:
+          fixed-version: 2.10.1-r1
+
+  - id: CVE-2024-24784
+    aliases:
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T08:01:42Z
+        type: fixed
+        data:
+          fixed-version: 2.10.1-r1
+
+  - id: CVE-2024-24785
+    aliases:
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T08:01:44Z
+        type: fixed
+        data:
+          fixed-version: 2.10.1-r1
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-15T23:37:42Z
+        type: fixed
+        data:
+          fixed-version: 2.10.1-r2
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:26:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: skaffold
+            componentID: de3b754d23e693af
+            componentName: gopkg.in/go-jose/go-jose.v2
+            componentVersion: v2.6.1
+            componentType: go-module
+            componentLocation: /usr/bin/skaffold
+            scanner: grype
+      - timestamp: 2024-03-15T23:37:42Z
+        type: fixed
+        data:
+          fixed-version: 2.10.1-r2
+
+  - id: CVE-2024-29902
+    aliases:
+      - GHSA-88jx-383q-w4qc
+    events:
+      - timestamp: 2024-04-13T07:21:30Z
+        type: fixed
+        data:
+          fixed-version: 2.11.1-r1
+
+  - id: CVE-2024-29903
+    aliases:
+      - GHSA-95pr-fxf5-86gv
+    events:
+      - timestamp: 2024-04-13T07:21:39Z
+        type: fixed
+        data:
+          fixed-version: 2.11.1-r1
 
   - id: GHSA-7ww5-4wqc-m92c
     events:
@@ -208,6 +330,10 @@ advisories:
         type: pending-upstream-fix
         data:
           note: This vulnerability requires changes in the upstream code to support a containerd version with the fixed vulnerability.
+      - timestamp: 2024-04-03T16:46:43Z
+        type: fixed
+        data:
+          fixed-version: 2.11.0-r0
 
   - id: GHSA-9763-4f94-gfch
     events:

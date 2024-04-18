@@ -42,6 +42,27 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-10T10:49:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-1.14
+            componentID: 6723cfdf55097035
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/vault
+            scanner: grype
+      - timestamp: 2024-04-12T15:04:48Z
+        type: fixed
+        data:
+          fixed-version: 1.14.11-r0
+
   - id: CVE-2023-4680
     aliases:
       - GHSA-v84f-6r39-cpfc
@@ -59,6 +80,57 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.14.8-r1
+
+  - id: CVE-2024-0406
+    aliases:
+      - GHSA-rhh4-rh7c-7r5v
+    events:
+      - timestamp: 2024-04-10T10:34:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-1.14
+            componentID: 833d8afb9bce4c34
+            componentName: github.com/mholt/archiver/v3
+            componentVersion: v3.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/vault
+            scanner: grype
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T15:21:22Z
+        type: fixed
+        data:
+          fixed-version: 1.14.10-r4
+
+  - id: CVE-2024-2660
+    aliases:
+      - GHSA-j2rp-gmqv-frhv
+    events:
+      - timestamp: 2024-04-05T07:42:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-1.14
+            componentID: 5139ba9c46b8eb0c
+            componentName: github.com/hashicorp/vault
+            componentVersion: v1.14.10
+            componentType: go-module
+            componentLocation: /usr/bin/vault
+            scanner: grype
+      - timestamp: 2024-04-07T20:18:57Z
+        type: fix-not-planned
+        data:
+          note: The vulnerability is fixed in version 1.16 of Vault. This package is locked to version 1.14.
+      - timestamp: 2024-04-12T15:04:47Z
+        type: fixed
+        data:
+          fixed-version: 1.14.11-r0
 
   - id: CVE-2024-27289
     aliases:
@@ -101,6 +173,27 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.14.10-r2
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:23:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-1.14
+            componentID: 696c316ae5716076
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/vault
+            scanner: grype
+      - timestamp: 2024-03-08T10:44:27Z
+        type: fixed
+        data:
+          fixed-version: 1.14.10-r3
 
   - id: GHSA-2c7c-3mj9-8fqh
     events:

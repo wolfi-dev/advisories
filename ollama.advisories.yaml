@@ -59,3 +59,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.1.18-r0
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T13:17:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ollama
+            componentID: 074dd7d0b53cbec4
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/ollama
+            scanner: grype
+      - timestamp: 2024-03-15T02:21:14Z
+        type: fixed
+        data:
+          fixed-version: 0.1.29-r1

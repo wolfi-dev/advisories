@@ -24,6 +24,15 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:11:24Z
+        type: fixed
+        data:
+          fixed-version: 0.5.2-r1
+
   - id: CVE-2024-23650
     aliases:
       - GHSA-9p26-698r-w4hx
@@ -59,3 +68,63 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.4.0-r1
+
+  - id: CVE-2024-24557
+    aliases:
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-21T11:44:16Z
+        type: fixed
+        data:
+          fixed-version: 0.5.1-r4
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:06:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: guac
+            componentID: c2dd6a2ed5584be4
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/guaccollect
+            scanner: grype
+      - timestamp: 2024-03-14T15:19:07Z
+        type: fixed
+        data:
+          fixed-version: 0.5.1-r3
+
+  - id: CVE-2024-28110
+    aliases:
+      - GHSA-5pf6-2qwx-pxm2
+    events:
+      - timestamp: 2024-03-08T07:10:31Z
+        type: fixed
+        data:
+          fixed-version: 0.5.1-r0
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:07:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: guacone
+            componentID: 4201e030848360d4
+            componentName: gopkg.in/go-jose/go-jose.v2
+            componentVersion: v2.6.1
+            componentType: go-module
+            componentLocation: /usr/bin/guacone
+            scanner: grype
+      - timestamp: 2024-03-08T22:56:12Z
+        type: fixed
+        data:
+          fixed-version: 0.5.1-r1

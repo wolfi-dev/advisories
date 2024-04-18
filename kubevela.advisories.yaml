@@ -20,6 +20,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/manager
             scanner: grype
+      - timestamp: 2024-03-15T00:02:07Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
 
   - id: CVE-2020-8552
     aliases:
@@ -106,6 +111,33 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:15:46Z
+        type: fixed
+        data:
+          fixed-version: 1.9.10-r1
+
+  - id: CVE-2023-45289
+    aliases:
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T07:04:02Z
+        type: fixed
+        data:
+          fixed-version: 1.9.9-r2
+
+  - id: CVE-2023-45290
+    aliases:
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T07:03:57Z
+        type: fixed
+        data:
+          fixed-version: 1.9.9-r2
+
   - id: CVE-2023-47108
     aliases:
       - GHSA-8pgv-569h-w5rw
@@ -132,6 +164,54 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.9.9-r1
+
+  - id: CVE-2024-24783
+    aliases:
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T07:04:00Z
+        type: fixed
+        data:
+          fixed-version: 1.9.9-r2
+
+  - id: CVE-2024-24784
+    aliases:
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T07:04:06Z
+        type: fixed
+        data:
+          fixed-version: 1.9.9-r2
+
+  - id: CVE-2024-24785
+    aliases:
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T07:03:55Z
+        type: fixed
+        data:
+          fixed-version: 1.9.9-r2
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T16:18:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubevela
+            componentID: a67ad399d11feb65
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2024-03-16T11:01:42Z
+        type: fixed
+        data:
+          fixed-version: 1.9.10-r0
 
   - id: CVE-2024-25620
     aliases:

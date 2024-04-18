@@ -1,0 +1,80 @@
+schema-version: 2.0.2
+
+package:
+  name: filebeat
+
+advisories:
+  - id: CVE-2023-45289
+    aliases:
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T07:11:40Z
+        type: fixed
+        data:
+          fixed-version: 8.12.2-r1
+
+  - id: CVE-2023-45290
+    aliases:
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T07:11:40Z
+        type: fixed
+        data:
+          fixed-version: 8.12.2-r1
+
+  - id: CVE-2024-24557
+    aliases:
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-26T15:58:40Z
+        type: fixed
+        data:
+          fixed-version: 8.13.0-r0
+
+  - id: CVE-2024-24783
+    aliases:
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T07:11:40Z
+        type: fixed
+        data:
+          fixed-version: 8.12.2-r1
+
+  - id: CVE-2024-24784
+    aliases:
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T07:11:41Z
+        type: fixed
+        data:
+          fixed-version: 8.12.2-r1
+
+  - id: CVE-2024-24785
+    aliases:
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T07:11:41Z
+        type: fixed
+        data:
+          fixed-version: 8.12.2-r1
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:05:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: filebeat
+            componentID: 2127ab4e318259b2
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/share/filebeat/filebeat
+            scanner: grype
+      - timestamp: 2024-03-14T15:19:09Z
+        type: fixed
+        data:
+          fixed-version: 8.12.2-r2

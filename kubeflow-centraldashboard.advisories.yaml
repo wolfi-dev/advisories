@@ -12,6 +12,10 @@ advisories:
         type: pending-upstream-fix
         data:
           note: cannot fix the CVE because there were no patched versions since the 'taffydb' package is quite old and no longer maintained.
+      - timestamp: 2024-04-15T19:41:45Z
+        type: fixed
+        data:
+          fixed-version: 1.8.0-r4
 
   - id: CVE-2023-26159
     aliases:
@@ -30,6 +34,40 @@ advisories:
         type: pending-upstream-fix
         data:
           note: cannot fix the CVE because there were no patched versions since the 'request' package is no longer supported by the maintainer.
+      - timestamp: 2024-04-15T19:41:44Z
+        type: fixed
+        data:
+          fixed-version: 1.8.0-r4
+
+  - id: CVE-2024-28849
+    aliases:
+      - GHSA-cxjh-pqwp-8mfp
+    events:
+      - timestamp: 2024-03-15T07:46:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-centraldashboard
+            componentID: 1ffd80573f2f3da8
+            componentName: follow-redirects
+            componentVersion: 1.15.4
+            componentType: npm
+            componentLocation: /app/node_modules/follow-redirects/package.json
+            scanner: grype
+      - timestamp: 2024-04-05T17:29:54Z
+        type: fixed
+        data:
+          fixed-version: 1.8.0-r3
+
+  - id: CVE-2024-29041
+    aliases:
+      - GHSA-rv95-896h-c2vc
+    events:
+      - timestamp: 2024-03-31T15:55:23Z
+        type: fixed
+        data:
+          fixed-version: 1.8.0-r3
 
   - id: GHSA-2jcg-qqmg-46q6
     events:

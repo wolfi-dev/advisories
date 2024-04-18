@@ -349,6 +349,40 @@ advisories:
         data:
           note: This relates to avro v1.7, which is a transitive dependency of the shaded JAR hadoop-client-runtime, which is used by Spark. There are no newer versions of this shaded JAR available to fix the vulnerability.
 
+  - id: CVE-2023-52428
+    aliases:
+      - GHSA-gvpg-vgmx-xg6w
+    events:
+      - timestamp: 2024-03-31T13:38:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-minimal
+            componentID: fb2384c39cde2966
+            componentName: nimbus-jose-jwt
+            componentVersion: 9.8.1
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.6.jar
+            scanner: grype
+
+  - id: CVE-2024-23944
+    aliases:
+      - GHSA-r978-9m6m-6gm6
+    events:
+      - timestamp: 2024-03-31T13:47:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-minimal
+            componentID: 240b6de64a06f81b
+            componentName: zookeeper
+            componentVersion: 3.7.2
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/zookeeper-3.7.2.jar
+            scanner: grype
+
   - id: CVE-2024-25710
     aliases:
       - GHSA-4g9r-vxhx-9pgx
@@ -365,6 +399,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.6.jar
             scanner: grype
+      - timestamp: 2024-03-08T21:06:13Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to commons-compress 1.21 included by the shaded JARs hadoop-client-runtime-3.3.6.jar. There are no newer versions of the shaded JARs available to fix the vulnerability.
 
   - id: CVE-2024-26308
     aliases:
@@ -379,6 +417,61 @@ advisories:
             componentID: d82debb44ec2c1d9
             componentName: commons-compress
             componentVersion: "1.21"
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.6.jar
+            scanner: grype
+      - timestamp: 2024-03-08T21:06:13Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to commons-compress 1.21 included by the shaded JARs hadoop-client-runtime-3.3.6.jar. There are no newer versions of the shaded JARs available to fix the vulnerability.
+
+  - id: CVE-2024-29025
+    aliases:
+      - GHSA-5jpm-x58v-624v
+    events:
+      - timestamp: 2024-03-31T13:22:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-minimal
+            componentID: 3e51bf9e472a49c2
+            componentName: netty-codec-http
+            componentVersion: 4.1.107.Final
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/yarn/spark-3.5.1-yarn-shuffle.jar
+            scanner: grype
+
+  - id: CVE-2024-29131
+    aliases:
+      - GHSA-xjp4-hw94-mvp5
+    events:
+      - timestamp: 2024-03-31T13:53:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-minimal
+            componentID: e643bf78231b341f
+            componentName: commons-configuration2
+            componentVersion: 2.8.0
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.6.jar
+            scanner: grype
+
+  - id: CVE-2024-29133
+    aliases:
+      - GHSA-9w38-p64v-xpmv
+    events:
+      - timestamp: 2024-03-31T13:26:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-minimal
+            componentID: e643bf78231b341f
+            componentName: commons-configuration2
+            componentVersion: 2.8.0
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.6.jar
             scanner: grype

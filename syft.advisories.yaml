@@ -54,6 +54,36 @@ advisories:
         data:
           fixed-version: 0.103.1-r0
 
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T16:21:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: syft
+            componentID: d4c76c77fc178d40
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/syft
+            scanner: grype
+      - timestamp: 2024-04-12T23:32:54Z
+        type: fixed
+        data:
+          fixed-version: 1.2.0-r0
+
+  - id: CVE-2024-29018
+    aliases:
+      - GHSA-mq39-4gv4-mvpx
+    events:
+      - timestamp: 2024-03-25T21:45:34Z
+        type: fixed
+        data:
+          fixed-version: 1.1.0-r0
+
   - id: GHSA-9763-4f94-gfch
     events:
       - timestamp: 2024-01-12T07:21:43Z

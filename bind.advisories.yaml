@@ -437,6 +437,8 @@ advisories:
           fixed-version: 9.18.24-r0
 
   - id: CVE-2023-50387
+    aliases:
+      - GHSA-8459-gg55-8qjj
     events:
       - timestamp: 2024-02-13T17:46:23Z
         type: fixed
@@ -444,6 +446,8 @@ advisories:
           fixed-version: 9.18.24-r0
 
   - id: CVE-2023-50868
+    aliases:
+      - GHSA-pv4h-p8jr-6cv2
     events:
       - timestamp: 2024-02-13T17:46:31Z
         type: fixed
@@ -467,6 +471,27 @@ advisories:
         type: fixed
         data:
           fixed-version: 9.18.24-r0
+
+  - id: CVE-2023-5680
+    aliases:
+      - GHSA-m868-f948-vvjc
+    events:
+      - timestamp: 2024-03-12T07:03:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: bind
+            componentID: 9e594faea3d7e978
+            componentName: bind
+            componentVersion: 9.18.24-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2024-03-20T15:41:12Z
+        type: fixed
+        data:
+          fixed-version: 9.18.25-r0
 
   - id: CVE-2023-6516
     aliases:

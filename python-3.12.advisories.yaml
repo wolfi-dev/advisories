@@ -1,4 +1,4 @@
-schema-version: "2"
+schema-version: 2.0.2
 
 package:
   name: python-3.12
@@ -52,3 +52,45 @@ advisories:
         data:
           type: vulnerability-record-analysis-contested
           note: The vendor's perspective is that this is neither a vulnerability nor a bug.
+
+  - id: CVE-2023-6597
+    aliases:
+      - GHSA-797f-63wg-8chv
+    events:
+      - timestamp: 2024-03-26T08:39:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: python-3.12-base
+            componentID: 0a3425e789d2fa2a
+            componentName: python
+            componentVersion: 3.12.2
+            componentType: binary
+            componentLocation: /usr/bin/python3.12, /usr/lib/libpython3.12.so.1.0
+            scanner: grype
+      - timestamp: 2024-03-27T17:44:06Z
+        type: fixed
+        data:
+          fixed-version: 3.12.2-r0
+
+  - id: CVE-2024-0450
+    aliases:
+      - GHSA-jm46-725r-hh9v
+    events:
+      - timestamp: 2024-03-26T08:39:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: python-3.12-base
+            componentID: 0a3425e789d2fa2a
+            componentName: python
+            componentVersion: 3.12.2
+            componentType: binary
+            componentLocation: /usr/bin/python3.12, /usr/lib/libpython3.12.so.1.0
+            scanner: grype
+      - timestamp: 2024-03-27T17:43:49Z
+        type: fixed
+        data:
+          fixed-version: 3.12.2-r0

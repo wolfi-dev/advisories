@@ -51,6 +51,33 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:06:30Z
+        type: fixed
+        data:
+          fixed-version: 16.8.0-r3
+
+  - id: CVE-2023-45289
+    aliases:
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T08:05:11Z
+        type: fixed
+        data:
+          fixed-version: 16.8.0-r1
+
+  - id: CVE-2023-45290
+    aliases:
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T08:05:13Z
+        type: fixed
+        data:
+          fixed-version: 16.8.0-r1
+
   - id: CVE-2023-48795
     aliases:
       - GHSA-45x7-px36-x8w8
@@ -59,3 +86,68 @@ advisories:
         type: fixed
         data:
           fixed-version: 16.7.0-r0
+
+  - id: CVE-2024-24557
+    aliases:
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-21T07:07:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-helper
+            componentID: b930cee192b4cfa8
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.7+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-runner-helper
+            scanner: grype
+
+  - id: CVE-2024-24783
+    aliases:
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T08:05:14Z
+        type: fixed
+        data:
+          fixed-version: 16.8.0-r1
+
+  - id: CVE-2024-24784
+    aliases:
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T08:05:15Z
+        type: fixed
+        data:
+          fixed-version: 16.8.0-r1
+
+  - id: CVE-2024-24785
+    aliases:
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T08:05:16Z
+        type: fixed
+        data:
+          fixed-version: 16.8.0-r1
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:02:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner
+            componentID: 7c5d8beac412ae2c
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-runner
+            scanner: grype
+      - timestamp: 2024-03-14T10:21:20Z
+        type: fixed
+        data:
+          fixed-version: 16.8.0-r2

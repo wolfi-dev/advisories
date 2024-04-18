@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: aws-efs-csi-driver
@@ -111,6 +111,33 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:05:25Z
+        type: fixed
+        data:
+          fixed-version: 1.7.7-r1
+
+  - id: CVE-2023-45289
+    aliases:
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-13T09:11:24Z
+        type: fixed
+        data:
+          fixed-version: 1.7.6-r1
+
+  - id: CVE-2023-45290
+    aliases:
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-13T09:11:26Z
+        type: fixed
+        data:
+          fixed-version: 1.7.6-r1
+
   - id: CVE-2023-5528
     aliases:
       - GHSA-hq6q-c2x6-hmch
@@ -119,3 +146,51 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.7.1-r1
+
+  - id: CVE-2024-24783
+    aliases:
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-13T09:11:27Z
+        type: fixed
+        data:
+          fixed-version: 1.7.6-r1
+
+  - id: CVE-2024-24784
+    aliases:
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-13T09:11:21Z
+        type: fixed
+        data:
+          fixed-version: 1.7.6-r1
+
+  - id: CVE-2024-24785
+    aliases:
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-13T09:11:22Z
+        type: fixed
+        data:
+          fixed-version: 1.7.6-r1
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T16:20:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-efs-csi-driver
+            componentID: ef041f687274f2b8
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/aws-efs-csi-driver
+            scanner: grype
+      - timestamp: 2024-03-15T18:09:19Z
+        type: fixed
+        data:
+          fixed-version: 1.7.6-r2

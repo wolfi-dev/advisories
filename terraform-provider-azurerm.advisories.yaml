@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: terraform-provider-azurerm
@@ -42,3 +42,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.85.0-r1
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T14:17:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-azurerm
+            componentID: 0c50c5d41e769c66
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-azurerm
+            scanner: grype
+      - timestamp: 2024-03-15T03:36:20Z
+        type: fixed
+        data:
+          fixed-version: 3.96.0-r0

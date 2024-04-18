@@ -24,6 +24,15 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-11T20:23:04Z
+        type: fixed
+        data:
+          fixed-version: 1.9.4-r0
+
   - id: CVE-2023-46737
     aliases:
       - GHSA-vfp6-jrw2-99g9
@@ -62,6 +71,96 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.8.7-r2
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:19:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spire-server
+            componentID: 19d6028eb08424c3
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/spire-server
+            scanner: grype
+      - timestamp: 2024-03-14T15:21:05Z
+        type: fixed
+        data:
+          fixed-version: 1.9.1-r3
+
+  - id: CVE-2024-28122
+    aliases:
+      - GHSA-hj3v-m684-v259
+    events:
+      - timestamp: 2024-03-09T08:38:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spire-server
+            componentID: 11d8826f9ec1585f
+            componentName: github.com/lestrrat-go/jwx/v2
+            componentVersion: v2.0.19
+            componentType: go-module
+            componentLocation: /usr/bin/spire-server
+            scanner: grype
+      - timestamp: 2024-03-10T16:02:15Z
+        type: fixed
+        data:
+          fixed-version: 1.9.1-r2
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:17:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spire-oidc-discovery-provider
+            componentID: 38138f462c01d669
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/oidc-discovery-provider
+            scanner: grype
+      - timestamp: 2024-03-08T16:05:34Z
+        type: fixed
+        data:
+          fixed-version: 1.9.1-r1
+
+  - id: CVE-2024-29018
+    aliases:
+      - GHSA-mq39-4gv4-mvpx
+    events:
+      - timestamp: 2024-03-21T11:42:18Z
+        type: fixed
+        data:
+          fixed-version: 1.9.1-r4
+
+  - id: CVE-2024-29902
+    aliases:
+      - GHSA-88jx-383q-w4qc
+    events:
+      - timestamp: 2024-04-12T15:05:13Z
+        type: fixed
+        data:
+          fixed-version: 1.9.4-r1
+
+  - id: CVE-2024-29903
+    aliases:
+      - GHSA-95pr-fxf5-86gv
+    events:
+      - timestamp: 2024-04-12T15:05:12Z
+        type: fixed
+        data:
+          fixed-version: 1.9.4-r1
 
   - id: GHSA-2c7c-3mj9-8fqh
     events:

@@ -4,6 +4,41 @@ package:
   name: datadog-agent
 
 advisories:
+  - id: CVE-2023-45289
+    aliases:
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T07:09:59Z
+        type: fixed
+        data:
+          fixed-version: 7.51.1-r1
+
+  - id: CVE-2023-45290
+    aliases:
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T07:10:01Z
+        type: fixed
+        data:
+          fixed-version: 7.51.1-r1
+
+  - id: CVE-2024-0406
+    aliases:
+      - GHSA-rhh4-rh7c-7r5v
+    events:
+      - timestamp: 2024-04-09T11:38:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: datadog-agent
+            componentID: 209f5a0874b48c17
+            componentName: github.com/mholt/archiver/v3
+            componentVersion: v3.5.1
+            componentType: go-module
+            componentLocation: /opt/datadog-agent/bin/agent/agent
+            scanner: grype
+
   - id: CVE-2024-21626
     aliases:
       - GHSA-xr7r-f8xq-vfvv
@@ -108,3 +143,69 @@ advisories:
         type: fixed
         data:
           fixed-version: 7.50.3-r1
+
+  - id: CVE-2024-24557
+    aliases:
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-21T07:34:46Z
+        type: fixed
+        data:
+          fixed-version: 7.51.1-r3
+
+  - id: CVE-2024-24783
+    aliases:
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T07:10:00Z
+        type: fixed
+        data:
+          fixed-version: 7.51.1-r1
+
+  - id: CVE-2024-24784
+    aliases:
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T07:09:59Z
+        type: fixed
+        data:
+          fixed-version: 7.51.1-r1
+
+  - id: CVE-2024-24785
+    aliases:
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T07:10:02Z
+        type: fixed
+        data:
+          fixed-version: 7.51.1-r1
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T10:32:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: datadog-agent
+            componentID: ff2332779d32b29c
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /opt/datadog-agent/bin/agent/agent
+            scanner: grype
+      - timestamp: 2024-03-16T11:02:27Z
+        type: fixed
+        data:
+          fixed-version: 7.51.1-r2
+
+  - id: CVE-2024-29018
+    aliases:
+      - GHSA-mq39-4gv4-mvpx
+    events:
+      - timestamp: 2024-03-21T14:49:35Z
+        type: fixed
+        data:
+          fixed-version: 7.52.0-r0

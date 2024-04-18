@@ -20,6 +20,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/kubescape
             scanner: grype
+      - timestamp: 2024-03-26T16:35:18Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
 
   - id: CVE-2023-39325
     aliases:
@@ -142,6 +147,23 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.0.3-r4
+
+  - id: CVE-2024-0406
+    aliases:
+      - GHSA-rhh4-rh7c-7r5v
+    events:
+      - timestamp: 2024-04-10T10:34:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubescape
+            componentID: 31e1db27530976b2
+            componentName: github.com/mholt/archiver/v3
+            componentVersion: v3.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/kubescape
+            scanner: grype
 
   - id: CVE-2024-21626
     aliases:
@@ -269,6 +291,15 @@ advisories:
         data:
           fixed-version: 3.0.3-r7
 
+  - id: CVE-2024-24557
+    aliases:
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-21T11:52:49Z
+        type: fixed
+        data:
+          fixed-version: 3.0.7-r1
+
   - id: CVE-2024-24579
     aliases:
       - GHSA-hpxr-w9w7-g4gv
@@ -289,6 +320,27 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.0.3-r7
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T17:50:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubescape
+            componentID: c5aa34e82fccbb24
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/kubescape
+            scanner: grype
+      - timestamp: 2024-03-14T18:49:08Z
+        type: fixed
+        data:
+          fixed-version: 3.0.6-r1
 
   - id: CVE-2024-25620
     aliases:
@@ -331,6 +383,54 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.0.3-r8
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:24:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubescape
+            componentID: c291b217d9f5454f
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/kubescape
+            scanner: grype
+      - timestamp: 2024-03-08T21:11:01Z
+        type: fixed
+        data:
+          fixed-version: 3.0.4-r2
+
+  - id: CVE-2024-29018
+    aliases:
+      - GHSA-mq39-4gv4-mvpx
+    events:
+      - timestamp: 2024-03-21T11:52:52Z
+        type: fixed
+        data:
+          fixed-version: 3.0.7-r1
+
+  - id: CVE-2024-29902
+    aliases:
+      - GHSA-88jx-383q-w4qc
+    events:
+      - timestamp: 2024-04-14T07:27:36Z
+        type: fixed
+        data:
+          fixed-version: 3.0.8-r2
+
+  - id: CVE-2024-29903
+    aliases:
+      - GHSA-95pr-fxf5-86gv
+    events:
+      - timestamp: 2024-04-14T07:27:40Z
+        type: fixed
+        data:
+          fixed-version: 3.0.8-r2
 
   - id: GHSA-2c7c-3mj9-8fqh
     events:

@@ -51,6 +51,15 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-11T21:09:50Z
+        type: fix-not-planned
+        data:
+          note: Vault 1.13 is not longer supported upstream. Security support ended on 2024-03-25.
+
   - id: CVE-2023-4680
     aliases:
       - GHSA-v84f-6r39-cpfc
@@ -68,6 +77,82 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.13.12-r1
+
+  - id: CVE-2024-0406
+    aliases:
+      - GHSA-rhh4-rh7c-7r5v
+    events:
+      - timestamp: 2024-04-13T09:22:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-1.13
+            componentID: 59671433db0227e5
+            componentName: github.com/mholt/archiver/v3
+            componentVersion: v3.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/vault
+            scanner: grype
+
+  - id: CVE-2024-2048
+    aliases:
+      - GHSA-r3w7-mfpm-c2vw
+    events:
+      - timestamp: 2024-03-08T07:35:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-1.13
+            componentID: 9de59d75473ba45c
+            componentName: github.com/hashicorp/vault
+            componentVersion: v1.13.13
+            componentType: go-module
+            componentLocation: /usr/bin/vault
+            scanner: grype
+      - timestamp: 2024-03-15T23:41:05Z
+        type: fix-not-planned
+        data:
+          note: 'HashiCorp Vault is not publishing a fix for this vulnerability for version 1.13. To fix this vulnerability, upgrade to version 1.14+. Learn more: https://discuss.hashicorp.com/t/hcsec-2024-05-vault-cert-auth-method-did-not-correctly-validate-non-ca-certificates/63382'
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T15:19:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-1.13
+            componentID: 652326c7e50733b7
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/vault
+            scanner: grype
+      - timestamp: 2024-03-16T00:42:49Z
+        type: fixed
+        data:
+          fixed-version: 1.13.13-r4
+
+  - id: CVE-2024-2660
+    aliases:
+      - GHSA-j2rp-gmqv-frhv
+    events:
+      - timestamp: 2024-04-13T09:22:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-1.13
+            componentID: 60e0bdb5a7483527
+            componentName: github.com/hashicorp/vault
+            componentVersion: v1.13.13
+            componentType: go-module
+            componentLocation: /usr/bin/vault
+            scanner: grype
 
   - id: CVE-2024-27289
     aliases:
@@ -110,6 +195,27 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.13.13-r2
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:35:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-1.13
+            componentID: 696c316ae5716076
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/vault
+            scanner: grype
+      - timestamp: 2024-03-08T21:38:50Z
+        type: fixed
+        data:
+          fixed-version: 1.13.13-r3
 
   - id: GHSA-2c7c-3mj9-8fqh
     events:

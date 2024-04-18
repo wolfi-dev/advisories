@@ -50,6 +50,10 @@ advisories:
             componentType: gem
             componentLocation: /usr/share/logstash/vendor/bundle/jruby/3.1.0/specifications/rack-2.2.8.gemspec
             scanner: grype
+      - timestamp: 2024-03-12T03:57:19Z
+        type: fixed
+        data:
+          fixed-version: 8.12.2-r2
 
   - id: CVE-2024-26141
     aliases:
@@ -67,6 +71,10 @@ advisories:
             componentType: gem
             componentLocation: /usr/share/logstash/vendor/bundle/jruby/3.1.0/specifications/rack-2.2.8.gemspec
             scanner: grype
+      - timestamp: 2024-03-12T03:57:19Z
+        type: fixed
+        data:
+          fixed-version: 8.12.2-r2
 
   - id: CVE-2024-26146
     aliases:
@@ -84,6 +92,48 @@ advisories:
             componentType: gem
             componentLocation: /usr/share/logstash/vendor/bundle/jruby/3.1.0/specifications/rack-2.2.8.gemspec
             scanner: grype
+      - timestamp: 2024-03-12T03:57:19Z
+        type: fixed
+        data:
+          fixed-version: 8.12.2-r2
+
+  - id: CVE-2024-27281
+    aliases:
+      - GHSA-592j-995h-p23j
+    events:
+      - timestamp: 2024-04-01T19:58:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-with-output-opensearch
+            componentID: 4faf0189fb0ce534
+            componentName: rdoc
+            componentVersion: 6.4.0
+            componentType: gem
+            componentLocation: /usr/share/logstash/vendor/jruby/lib/ruby/gems/shared/specifications/default/rdoc-6.4.0.gemspec
+            scanner: grype
+
+  - id: CVE-2024-29025
+    aliases:
+      - GHSA-5jpm-x58v-624v
+    events:
+      - timestamp: 2024-04-01T20:18:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-with-output-opensearch
+            componentID: 6dd0292ccec13cae
+            componentName: netty-codec-http
+            componentVersion: 4.1.100.Final
+            componentType: java-archive
+            componentLocation: /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/logstash-input-http-3.8.0-java/vendor/jar-dependencies/io/netty/netty-codec-http/4.1.100.Final/netty-codec-http-4.1.100.Final.jar
+            scanner: grype
+      - timestamp: 2024-04-11T19:10:22Z
+        type: pending-upstream-fix
+        data:
+          note: It is a vendor dependency that includes the vulnerable version. awaiting upstream release that includes the fix from https://github.com/logstash-plugins/logstash-input-http/pull/172
 
   - id: GHSA-xc9x-jj77-9p9j
     events:

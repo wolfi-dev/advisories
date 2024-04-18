@@ -52,6 +52,33 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:08:35Z
+        type: fixed
+        data:
+          fixed-version: 0.16.0-r8
+
+  - id: CVE-2023-45289
+    aliases:
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T08:03:19Z
+        type: fixed
+        data:
+          fixed-version: 0.16.0-r5
+
+  - id: CVE-2023-45290
+    aliases:
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T08:03:20Z
+        type: fixed
+        data:
+          fixed-version: 0.16.0-r5
+
   - id: CVE-2023-48795
     aliases:
       - GHSA-45x7-px36-x8w8
@@ -60,3 +87,89 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.16.0-r2
+
+  - id: CVE-2024-24557
+    aliases:
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-21T09:31:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: katib-controller
+            componentID: 72f9aeb2d9b4291a
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.7+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/katib-controller
+            scanner: grype
+      - timestamp: 2024-03-22T16:08:07Z
+        type: fixed
+        data:
+          fixed-version: 0.16.0-r7
+
+  - id: CVE-2024-24783
+    aliases:
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T08:03:20Z
+        type: fixed
+        data:
+          fixed-version: 0.16.0-r5
+
+  - id: CVE-2024-24784
+    aliases:
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T08:03:21Z
+        type: fixed
+        data:
+          fixed-version: 0.16.0-r5
+
+  - id: CVE-2024-24785
+    aliases:
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T08:03:22Z
+        type: fixed
+        data:
+          fixed-version: 0.16.0-r5
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:17:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: katib-controller
+            componentID: 1b3123b482c4e58c
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/katib-controller
+            scanner: grype
+      - timestamp: 2024-03-14T15:19:01Z
+        type: fixed
+        data:
+          fixed-version: 0.16.0-r6
+
+  - id: CVE-2024-3651
+    aliases:
+      - GHSA-jjg7-2v4v-x38h
+    events:
+      - timestamp: 2024-04-14T07:38:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: katib-earlystopping
+            componentID: 883ec1775cdb8320
+            componentName: idna
+            componentVersion: "3.6"
+            componentType: python
+            componentLocation: /opt/katib/cmd/earlystopping/medianstop/v1beta1/lib/python3.10/site-packages/idna-3.6.dist-info/METADATA, /opt/katib/cmd/earlystopping/medianstop/v1beta1/lib/python3.10/site-packages/idna-3.6.dist-info/RECORD
+            scanner: grype

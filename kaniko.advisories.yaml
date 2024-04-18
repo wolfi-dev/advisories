@@ -24,6 +24,15 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:10:48Z
+        type: fixed
+        data:
+          fixed-version: 1.22.0-r1
+
   - id: CVE-2024-21626
     aliases:
       - GHSA-xr7r-f8xq-vfvv
@@ -128,6 +137,36 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.20.1-r0
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T09:16:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kaniko
+            componentID: 76ba2d5e4e29c5a7
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/executor
+            scanner: grype
+      - timestamp: 2024-03-21T11:16:31Z
+        type: fixed
+        data:
+          fixed-version: 1.21.1-r1
+
+  - id: CVE-2024-29018
+    aliases:
+      - GHSA-mq39-4gv4-mvpx
+    events:
+      - timestamp: 2024-03-21T11:16:35Z
+        type: fixed
+        data:
+          fixed-version: 1.21.1-r1
 
   - id: GHSA-7ww5-4wqc-m92c
     events:

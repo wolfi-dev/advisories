@@ -4,6 +4,23 @@ package:
   name: trino
 
 advisories:
+  - id: CVE-2012-5783
+    aliases:
+      - GHSA-3832-9276-x7gf
+    events:
+      - timestamp: 2024-03-15T16:46:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino-plugin-pinot
+            componentID: 433ee6dca1b4700e
+            componentName: commons-httpclient
+            componentVersion: "3.1"
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/commons-httpclient-3.1.jar
+            scanner: grype
+
   - id: CVE-2018-11798
     aliases:
       - GHSA-vx85-mj8c-4qm6
@@ -20,6 +37,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/trino/lib/libthrift-0.9.3-1.jar
             scanner: grype
+      - timestamp: 2024-03-12T14:45:38Z
+        type: fixed
+        data:
+          fixed-version: 440-r0
 
   - id: CVE-2019-0205
     aliases:
@@ -37,6 +58,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/trino/lib/libthrift-0.9.3-1.jar
             scanner: grype
+      - timestamp: 2024-03-12T14:45:38Z
+        type: fixed
+        data:
+          fixed-version: 440-r0
 
   - id: CVE-2019-10086
     aliases:
@@ -75,6 +100,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/trino/lib/libthrift-0.9.3-1.jar
             scanner: grype
+      - timestamp: 2024-03-12T14:45:38Z
+        type: fixed
+        data:
+          fixed-version: 440-r0
 
   - id: CVE-2020-13956
     aliases:
@@ -92,6 +121,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/trino/lib/httpclient-4.4.1.jar
             scanner: grype
+      - timestamp: 2024-03-12T14:45:38Z
+        type: fixed
+        data:
+          fixed-version: 440-r0
 
   - id: CVE-2020-8908
     aliases:
@@ -263,6 +296,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/trino/lib/clickhouse-jdbc-0.5.0-all.jar
             scanner: grype
+      - timestamp: 2024-04-11T00:33:29Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability is included via the Shaded JAR clickhouse-jdbc-0.6.0-patch3-all.jar. This vulnerability will be resolved once ClickHouse makes a new version available (https://github.com/ClickHouse/clickhouse-java/issues/1585). Trino will then need to start using the new JAR.
 
   - id: CVE-2023-38647
     aliases:
@@ -297,6 +334,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/trino/lib/clickhouse-jdbc-0.5.0-all.jar
             scanner: grype
+      - timestamp: 2024-04-11T01:53:25Z
+        type: fixed
+        data:
+          fixed-version: 444-r0
 
   - id: CVE-2023-44981
     aliases:
@@ -388,6 +429,52 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/trino/lib/postgresql-42.7.1.jar
             scanner: grype
+      - timestamp: 2024-03-08T23:13:21Z
+        type: fixed
+        data:
+          fixed-version: 439-r2
+
+  - id: CVE-2024-23450
+    aliases:
+      - GHSA-w5gg-2q56-6h4f
+    events:
+      - timestamp: 2024-04-10T07:18:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino-plugin-elasticsearch
+            componentID: 48e4089375d19eda
+            componentName: elasticsearch
+            componentVersion: 7.17.18
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/elasticsearch-7.17.18.jar
+            scanner: grype
+      - timestamp: 2024-04-11T01:52:14Z
+        type: fixed
+        data:
+          fixed-version: 444-r0
+
+  - id: CVE-2024-23944
+    aliases:
+      - GHSA-r978-9m6m-6gm6
+    events:
+      - timestamp: 2024-03-16T09:03:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino-plugin-kafka
+            componentID: 465f7aa561aee843
+            componentName: zookeeper
+            componentVersion: 3.9.1
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/zookeeper-3.9.1.jar
+            scanner: grype
+      - timestamp: 2024-03-22T05:52:12Z
+        type: fixed
+        data:
+          fixed-version: 443-r0
 
   - id: CVE-2024-25710
     aliases:
@@ -405,6 +492,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/trino/lib/commons-compress-1.25.0.jar
             scanner: grype
+      - timestamp: 2024-03-08T23:13:24Z
+        type: fixed
+        data:
+          fixed-version: 439-r2
 
   - id: CVE-2024-26308
     aliases:
@@ -422,6 +513,77 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/trino/lib/commons-compress-1.25.0.jar
             scanner: grype
+      - timestamp: 2024-03-08T23:13:24Z
+        type: fixed
+        data:
+          fixed-version: 439-r2
+
+  - id: CVE-2024-29025
+    aliases:
+      - GHSA-5jpm-x58v-624v
+    events:
+      - timestamp: 2024-03-31T13:23:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino-plugin-thrift
+            componentID: c22c940d5ace6339
+            componentName: netty-codec-http
+            componentVersion: 4.1.107.Final
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/netty-codec-http-4.1.107.Final.jar
+            scanner: grype
+      - timestamp: 2024-04-11T00:33:29Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability is included via the Shaded JAR kudu-client-1.17.0.jar. No new JAR is available that includes a resolution for this CVE.
+      - timestamp: 2024-04-11T01:52:23Z
+        type: fixed
+        data:
+          fixed-version: 444-r0
+
+  - id: CVE-2024-29131
+    aliases:
+      - GHSA-xjp4-hw94-mvp5
+    events:
+      - timestamp: 2024-03-22T05:51:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino-plugin-accumulo
+            componentID: 42bba93ce57c3963
+            componentName: commons-configuration2
+            componentVersion: 2.9.0
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/commons-configuration2-2.9.0.jar
+            scanner: grype
+      - timestamp: 2024-04-11T19:27:50Z
+        type: fixed
+        data:
+          fixed-version: 444-r1
+
+  - id: CVE-2024-29133
+    aliases:
+      - GHSA-9w38-p64v-xpmv
+    events:
+      - timestamp: 2024-03-22T05:51:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino-plugin-accumulo
+            componentID: 42bba93ce57c3963
+            componentName: commons-configuration2
+            componentVersion: 2.9.0
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/commons-configuration2-2.9.0.jar
+            scanner: grype
+      - timestamp: 2024-04-11T19:27:25Z
+        type: fixed
+        data:
+          fixed-version: 444-r1
 
   - id: GHSA-xpw8-rcwv-8f8p
     events:
@@ -437,3 +599,7 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/trino/lib/kudu-client-1.17.0.jar
             scanner: grype
+      - timestamp: 2024-04-11T00:33:29Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability is included via the Shaded JAR kudu-client-1.17.0.jar. No new JAR is available that includes a resolution for this CVE.

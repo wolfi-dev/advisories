@@ -1,0 +1,52 @@
+schema-version: 2.0.2
+
+package:
+  name: falcosidekick
+
+advisories:
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:25:33Z
+        type: fixed
+        data:
+          fixed-version: 2.28.0-r4
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:19:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: falcosidekick
+            componentID: 00f7dd081b389781
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/falcosidekick
+            scanner: grype
+
+  - id: CVE-2024-28110
+    aliases:
+      - GHSA-5pf6-2qwx-pxm2
+    events:
+      - timestamp: 2024-03-08T06:16:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: falcosidekick
+            componentID: e9cda0548caa616d
+            componentName: github.com/cloudevents/sdk-go/v2
+            componentVersion: v2.14.0
+            componentType: go-module
+            componentLocation: /usr/bin/falcosidekick
+            scanner: grype
+      - timestamp: 2024-03-08T22:22:17Z
+        type: fixed
+        data:
+          fixed-version: 2.28.0-r2

@@ -23,6 +23,44 @@ advisories:
         data:
           fixed-version: 1.29.1-r1
 
+  - id: CVE-2024-27289
+    aliases:
+      - GHSA-m7wr-2xf7-cm9p
+    events:
+      - timestamp: 2024-03-13T10:13:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.29
+            componentID: d38bb9ff8ef0b888
+            componentName: github.com/jackc/pgx/v4
+            componentVersion: v4.18.1
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
+
+  - id: CVE-2024-28110
+    aliases:
+      - GHSA-5pf6-2qwx-pxm2
+    events:
+      - timestamp: 2024-03-08T07:32:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.29
+            componentID: b809c99a3a11c8fb
+            componentName: github.com/cloudevents/sdk-go/v2
+            componentVersion: v2.15.0
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
+      - timestamp: 2024-03-08T21:20:27Z
+        type: fixed
+        data:
+          fixed-version: 1.29.5-r2
+
   - id: GHSA-7ww5-4wqc-m92c
     events:
       - timestamp: 2023-12-21T17:16:05Z

@@ -4,6 +4,15 @@ package:
   name: kubernetes-csi-driver-hostpath
 
 advisories:
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:05:44Z
+        type: fixed
+        data:
+          fixed-version: 1.13.0-r2
+
   - id: CVE-2023-5528
     aliases:
       - GHSA-hq6q-c2x6-hmch
@@ -13,3 +22,24 @@ advisories:
         data:
           type: vulnerable-code-not-in-execution-path
           note: Only affects Windows
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:06:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-driver-hostpath
+            componentID: 941c0c3e9a01aef8
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/hostpathplugin
+            scanner: grype
+      - timestamp: 2024-03-15T10:44:50Z
+        type: fixed
+        data:
+          fixed-version: 1.13.0-r1

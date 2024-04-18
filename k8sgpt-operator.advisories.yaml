@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: k8sgpt-operator
@@ -41,3 +41,69 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CVE-2023-45289
+    aliases:
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T09:23:12Z
+        type: fixed
+        data:
+          fixed-version: 0.1.0-r1
+
+  - id: CVE-2023-45290
+    aliases:
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T09:23:13Z
+        type: fixed
+        data:
+          fixed-version: 0.1.0-r1
+
+  - id: CVE-2024-24783
+    aliases:
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T09:23:14Z
+        type: fixed
+        data:
+          fixed-version: 0.1.0-r1
+
+  - id: CVE-2024-24784
+    aliases:
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T09:23:14Z
+        type: fixed
+        data:
+          fixed-version: 0.1.0-r1
+
+  - id: CVE-2024-24785
+    aliases:
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T09:23:15Z
+        type: fixed
+        data:
+          fixed-version: 0.1.0-r1
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:19:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k8sgpt-operator
+            componentID: 60f71f72ccbbfe0e
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2024-03-14T16:21:06Z
+        type: fixed
+        data:
+          fixed-version: 0.1.0-r2

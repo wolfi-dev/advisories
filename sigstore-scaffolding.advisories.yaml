@@ -51,6 +51,15 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-10T09:31:00Z
+        type: fixed
+        data:
+          fixed-version: 0.6.17-r2
+
   - id: CVE-2023-48795
     aliases:
       - GHSA-45x7-px36-x8w8
@@ -59,3 +68,45 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.6.13-r1
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:16:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sigstore-scaffolding-tuf-createsecret
+            componentID: 81fcb3e5c58bb633
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/tuf-createsecret
+            scanner: grype
+      - timestamp: 2024-03-14T15:17:53Z
+        type: fixed
+        data:
+          fixed-version: 0.6.17-r1
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:10:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sigstore-scaffolding-tsa-createcertchain
+            componentID: 44e349635b4bbbf4
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/tsa-createcertchain
+            scanner: grype
+      - timestamp: 2024-03-08T21:38:50Z
+        type: fixed
+        data:
+          fixed-version: 0.6.16-r2

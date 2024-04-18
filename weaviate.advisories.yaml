@@ -60,3 +60,33 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.23.0-r1
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T09:18:55Z
+        type: fixed
+        data:
+          fixed-version: 1.24.2-r0
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:35:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: weaviate
+            componentID: b20a06372b824a2e
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.2
+            componentType: go-module
+            componentLocation: /bin/weaviate
+            scanner: grype
+      - timestamp: 2024-03-08T10:56:40Z
+        type: fixed
+        data:
+          fixed-version: 1.24.1-r2

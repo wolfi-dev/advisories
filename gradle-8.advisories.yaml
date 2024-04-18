@@ -75,6 +75,10 @@ advisories:
         type: true-positive-determination
         data:
           note: The affected class is included in the package. The upstream project will need to move to a newer BouncyCastle provider (bcprov-lts8on) for this vulnerability to be fixed.
+      - timestamp: 2024-03-31T01:38:49Z
+        type: fixed
+        data:
+          fixed-version: 8.7.0-r1
 
   - id: CVE-2023-35116
     aliases:
@@ -116,6 +120,10 @@ advisories:
         type: pending-upstream-fix
         data:
           note: 'The upstream project is planning a fix (https://github.com/gradle/gradle/pull/27666/files#diff-46a9cba02b57c005bb1da344ce6c71d7611894853c2a72272e4681c3158c202e). Chainguard won''t provide a fix ahead of upstream due to the following notice: "This change may affect the checksums of the produced jars, zips, and other archive types because the metadata of the produced artifacts may differ."'
+      - timestamp: 2024-03-31T01:38:59Z
+        type: fixed
+        data:
+          fixed-version: 8.7.0-r1
 
   - id: CVE-2024-26308
     aliases:
@@ -137,3 +145,26 @@ advisories:
         type: pending-upstream-fix
         data:
           note: 'The upstream project is planning a fix (https://github.com/gradle/gradle/pull/27666/files#diff-46a9cba02b57c005bb1da344ce6c71d7611894853c2a72272e4681c3158c202e). Chainguard won''t provide a fix ahead of upstream due to the following notice: "This change may affect the checksums of the produced jars, zips, and other archive types because the metadata of the produced artifacts may differ."'
+      - timestamp: 2024-03-31T01:38:56Z
+        type: fixed
+        data:
+          fixed-version: 8.7.0-r1
+
+  - id: GHSA-wjxj-5m7g-mg7q
+    events:
+      - timestamp: 2024-03-15T11:48:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gradle-8
+            componentID: 26b0dd49432bc719
+            componentName: bcprov-jdk15on
+            componentVersion: "1.68"
+            componentType: java-archive
+            componentLocation: /usr/share/java/gradle/lib/plugins/bcprov-jdk15on-1.68.jar
+            scanner: grype
+      - timestamp: 2024-03-31T01:38:54Z
+        type: fixed
+        data:
+          fixed-version: 8.7.0-r1

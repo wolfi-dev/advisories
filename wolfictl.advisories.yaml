@@ -24,6 +24,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2024-0406
+    aliases:
+      - GHSA-rhh4-rh7c-7r5v
+    events:
+      - timestamp: 2024-04-13T07:08:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wolfictl
+            componentID: 035b8f7d25c7c4ae
+            componentName: github.com/mholt/archiver/v3
+            componentVersion: v3.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/wolfictl
+            scanner: grype
+
   - id: CVE-2024-21626
     aliases:
       - GHSA-xr7r-f8xq-vfvv
@@ -41,6 +58,66 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.14.13-r0
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:35:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wolfictl
+            componentID: 4f29ea779dca2fc0
+            componentName: gopkg.in/go-jose/go-jose.v2
+            componentVersion: v2.6.2
+            componentType: go-module
+            componentLocation: /usr/bin/wolfictl
+            scanner: grype
+      - timestamp: 2024-03-08T10:56:39Z
+        type: fixed
+        data:
+          fixed-version: 0.15.3-r3
+
+  - id: CVE-2024-29018
+    aliases:
+      - GHSA-mq39-4gv4-mvpx
+    events:
+      - timestamp: 2024-03-21T09:31:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wolfictl
+            componentID: bc897b5baae4b79e
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.4+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/wolfictl
+            scanner: grype
+      - timestamp: 2024-03-22T13:57:56Z
+        type: fixed
+        data:
+          fixed-version: 0.15.7-r1
+
+  - id: CVE-2024-29902
+    aliases:
+      - GHSA-88jx-383q-w4qc
+    events:
+      - timestamp: 2024-04-13T07:07:49Z
+        type: fixed
+        data:
+          fixed-version: 0.15.18-r1
+
+  - id: CVE-2024-29903
+    aliases:
+      - GHSA-95pr-fxf5-86gv
+    events:
+      - timestamp: 2024-04-13T07:07:47Z
+        type: fixed
+        data:
+          fixed-version: 0.15.18-r1
 
   - id: GHSA-9763-4f94-gfch
     events:

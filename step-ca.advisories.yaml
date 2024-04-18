@@ -24,6 +24,15 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:34:09Z
+        type: fixed
+        data:
+          fixed-version: 0.26.0-r1
+
   - id: CVE-2023-48795
     aliases:
       - GHSA-45x7-px36-x8w8
@@ -44,3 +53,106 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.25.2-r2
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-15T14:47:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: step-ca
+            componentID: 9541df7b17123323
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/step-ca
+            scanner: grype
+      - timestamp: 2024-03-17T14:17:02Z
+        type: fixed
+        data:
+          fixed-version: 0.25.2-r5
+
+  - id: CVE-2024-27289
+    aliases:
+      - GHSA-m7wr-2xf7-cm9p
+    events:
+      - timestamp: 2024-03-13T10:13:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: step-ca
+            componentID: d84a5dc546f08bd0
+            componentName: github.com/jackc/pgx/v4
+            componentVersion: v4.18.0
+            componentType: go-module
+            componentLocation: /usr/bin/step-ca
+            scanner: grype
+      - timestamp: 2024-03-17T14:17:03Z
+        type: fixed
+        data:
+          fixed-version: 0.25.2-r5
+
+  - id: CVE-2024-27304
+    aliases:
+      - GHSA-mrww-27vc-gghv
+    events:
+      - timestamp: 2024-03-15T14:47:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: step-ca
+            componentID: 0d2e753779cbcc36
+            componentName: github.com/jackc/pgproto3/v2
+            componentVersion: v2.3.2
+            componentType: go-module
+            componentLocation: /usr/bin/step-ca
+            scanner: grype
+      - timestamp: 2024-03-17T14:17:01Z
+        type: fixed
+        data:
+          fixed-version: 0.25.2-r5
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:24:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: step-ca
+            componentID: e8f7f7f1ec17a103
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/step-ca
+            scanner: grype
+      - timestamp: 2024-03-08T21:20:19Z
+        type: fixed
+        data:
+          fixed-version: 0.25.2-r4
+
+  - id: GHSA-7jwh-3vrq-q3m8
+    events:
+      - timestamp: 2024-03-15T14:47:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: step-ca
+            componentID: 0d2e753779cbcc36
+            componentName: github.com/jackc/pgproto3/v2
+            componentVersion: v2.3.2
+            componentType: go-module
+            componentLocation: /usr/bin/step-ca
+            scanner: grype
+      - timestamp: 2024-03-17T14:17:02Z
+        type: fixed
+        data:
+          fixed-version: 0.25.2-r5

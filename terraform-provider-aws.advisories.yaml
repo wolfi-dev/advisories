@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: terraform-provider-aws
@@ -42,3 +42,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 5.31.0-r1
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T13:18:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-aws
+            componentID: 7599b357685319f8
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-aws
+            scanner: grype
+      - timestamp: 2024-03-15T00:53:25Z
+        type: fixed
+        data:
+          fixed-version: 5.41.0-r1

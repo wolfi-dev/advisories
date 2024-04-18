@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: kubernetes-csi-external-snapshotter
@@ -41,3 +41,78 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-12T23:33:16Z
+        type: fixed
+        data:
+          fixed-version: 7.0.2-r0
+
+  - id: CVE-2023-45289
+    aliases:
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T08:09:41Z
+        type: fixed
+        data:
+          fixed-version: 7.0.1-r1
+
+  - id: CVE-2023-45290
+    aliases:
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T08:09:41Z
+        type: fixed
+        data:
+          fixed-version: 7.0.1-r1
+
+  - id: CVE-2024-24783
+    aliases:
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T08:09:42Z
+        type: fixed
+        data:
+          fixed-version: 7.0.1-r1
+
+  - id: CVE-2024-24784
+    aliases:
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T08:09:43Z
+        type: fixed
+        data:
+          fixed-version: 7.0.1-r1
+
+  - id: CVE-2024-24785
+    aliases:
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T08:09:43Z
+        type: fixed
+        data:
+          fixed-version: 7.0.1-r1
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:19:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-snapshot-validation-webhook
+            componentID: 0273afbd5a45aaf9
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/snapshot-validation-webhook
+            scanner: grype
+      - timestamp: 2024-03-14T22:33:26Z
+        type: fixed
+        data:
+          fixed-version: 7.0.1-r2

@@ -45,6 +45,57 @@ advisories:
         data:
           fixed-version: 2024.1.0-r1
 
+  - id: CVE-2024-22189
+    aliases:
+      - GHSA-c33x-xqrf-c478
+    events:
+      - timestamp: 2024-04-10T09:12:36Z
+        type: fixed
+        data:
+          fixed-version: 2024.1.0-r7
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:03:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloudflared
+            componentID: d37cf71c04f7f40b
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/cloudflared
+            scanner: grype
+      - timestamp: 2024-03-14T15:21:22Z
+        type: fixed
+        data:
+          fixed-version: 2024.1.0-r5
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:12:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloudflared
+            componentID: 692eb4bd8dd7e8b0
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/cloudflared
+            scanner: grype
+      - timestamp: 2024-03-10T16:09:55Z
+        type: fixed
+        data:
+          fixed-version: 2024.1.0-r4
+
   - id: GHSA-2c7c-3mj9-8fqh
     events:
       - timestamp: 2024-01-08T11:54:34Z

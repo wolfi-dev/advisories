@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: grpc-health-probe
@@ -24,6 +24,15 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:06:30Z
+        type: fixed
+        data:
+          fixed-version: 0.4.25-r1
+
   - id: CVE-2023-48795
     aliases:
       - GHSA-45x7-px36-x8w8
@@ -32,3 +41,33 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.4.24-r1
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:20:36Z
+        type: fixed
+        data:
+          fixed-version: 0.4.25-r0
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:16:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grpc-health-probe
+            componentID: ce00960ea44cd3c1
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/grpc-health-probe
+            scanner: grype
+      - timestamp: 2024-03-08T22:07:54Z
+        type: fixed
+        data:
+          fixed-version: 0.4.24-r3

@@ -4,6 +4,15 @@ package:
   name: docker-compose
 
 advisories:
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:06:25Z
+        type: fixed
+        data:
+          fixed-version: 2.26.1-r1
+
   - id: CVE-2023-47108
     aliases:
       - GHSA-8pgv-569h-w5rw
@@ -24,3 +33,45 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.24.6-r0
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-15T20:40:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-compose
+            componentID: 72194fe99eefb8b6
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/docker-compose
+            scanner: grype
+      - timestamp: 2024-03-19T12:28:56Z
+        type: fixed
+        data:
+          fixed-version: 2.25.0-r1
+
+  - id: CVE-2024-29018
+    aliases:
+      - GHSA-mq39-4gv4-mvpx
+    events:
+      - timestamp: 2024-03-21T07:07:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-compose
+            componentID: 0b3ad6c647777761
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.4-0.20240301160236-51e876cd964c+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/docker-compose
+            scanner: grype
+      - timestamp: 2024-03-21T11:44:19Z
+        type: fixed
+        data:
+          fixed-version: 2.25.0-r2

@@ -1,4 +1,4 @@
-schema-version: "2"
+schema-version: 2.0.2
 
 package:
   name: ruby-3.2
@@ -79,3 +79,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.2.2-r2
+
+  - id: CVE-2024-27281
+    aliases:
+      - GHSA-592j-995h-p23j
+    events:
+      - timestamp: 2024-04-05T07:42:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ruby-3.2
+            componentID: 2bb8ededfbe90321
+            componentName: rdoc
+            componentVersion: 6.5.0
+            componentType: gem
+            componentLocation: /usr/lib/ruby/gems/3.2.0/specifications/default/rdoc-6.5.0.gemspec
+            scanner: grype
+      - timestamp: 2024-04-11T02:52:24Z
+        type: fixed
+        data:
+          fixed-version: 3.2.3-r3

@@ -34,6 +34,15 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-10T09:17:11Z
+        type: fixed
+        data:
+          fixed-version: 0.58.0-r2
+
   - id: CVE-2023-48795
     aliases:
       - GHSA-45x7-px36-x8w8
@@ -51,6 +60,78 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.55.0-r2
+
+  - id: CVE-2024-24557
+    aliases:
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-21T11:42:19Z
+        type: fixed
+        data:
+          fixed-version: 0.58.0-r1
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:20:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tekton-pipelines-webhook
+            componentID: 0ab968ec0130e453
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/tekton-pipelines-webhook
+            scanner: grype
+      - timestamp: 2024-03-14T15:19:43Z
+        type: fixed
+        data:
+          fixed-version: 0.57.0-r1
+
+  - id: CVE-2024-28110
+    aliases:
+      - GHSA-5pf6-2qwx-pxm2
+    events:
+      - timestamp: 2024-03-08T07:18:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tekton-pipelines-events
+            componentID: 63138a18ccfd556d
+            componentName: github.com/cloudevents/sdk-go/v2
+            componentVersion: v2.14.0
+            componentType: go-module
+            componentLocation: /usr/bin/tekton-pipelines-events
+            scanner: grype
+      - timestamp: 2024-03-08T21:20:21Z
+        type: fixed
+        data:
+          fixed-version: 0.57.0-r0
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:31:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tekton-pipelines-sidecarlogresults
+            componentID: 78f3a1125a7ed93a
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/tekton-pipelines-sidecarlogresults
+            scanner: grype
+      - timestamp: 2024-03-08T21:20:21Z
+        type: fixed
+        data:
+          fixed-version: 0.57.0-r0
 
   - id: GHSA-2c7c-3mj9-8fqh
     events:

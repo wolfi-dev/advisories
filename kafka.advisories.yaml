@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: kafka
@@ -76,3 +76,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.6.0-r4
+
+  - id: CVE-2024-23944
+    aliases:
+      - GHSA-r978-9m6m-6gm6
+    events:
+      - timestamp: 2024-03-16T09:53:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kafka
+            componentID: 3dc11d1f79f1f865
+            componentName: zookeeper
+            componentVersion: 3.8.3
+            componentType: java-archive
+            componentLocation: /usr/lib/kafka/libs/zookeeper-3.8.3.jar
+            scanner: grype
+      - timestamp: 2024-04-06T02:48:03Z
+        type: fixed
+        data:
+          fixed-version: 3.7.0-r2

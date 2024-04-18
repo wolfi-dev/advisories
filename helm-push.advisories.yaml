@@ -20,6 +20,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/libexec/helm-plugins/helm-push/bin/helm-cm-push
             scanner: grype
+      - timestamp: 2024-03-26T16:35:18Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
 
   - id: CVE-2023-39326
     aliases:
@@ -59,6 +64,33 @@ advisories:
         data:
           fixed-version: 0.10.4-r1
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-09T12:46:23Z
+        type: fixed
+        data:
+          fixed-version: 0.10.4-r7
+
+  - id: CVE-2023-45289
+    aliases:
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T07:14:31Z
+        type: fixed
+        data:
+          fixed-version: 0.10.4-r4
+
+  - id: CVE-2023-45290
+    aliases:
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T07:14:32Z
+        type: fixed
+        data:
+          fixed-version: 0.10.4-r4
+
   - id: CVE-2023-48795
     aliases:
       - GHSA-45x7-px36-x8w8
@@ -79,6 +111,50 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.10.4-r2
+
+  - id: CVE-2024-24783
+    aliases:
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T07:14:34Z
+        type: fixed
+        data:
+          fixed-version: 0.10.4-r4
+
+  - id: CVE-2024-24784
+    aliases:
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T07:14:35Z
+        type: fixed
+        data:
+          fixed-version: 0.10.4-r4
+
+  - id: CVE-2024-24785
+    aliases:
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T07:14:37Z
+        type: fixed
+        data:
+          fixed-version: 0.10.4-r4
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T11:16:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-push
+            componentID: b02cbc376478767f
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/libexec/helm-plugins/helm-push/bin/helm-cm-push
+            scanner: grype
 
   - id: CVE-2024-25620
     aliases:

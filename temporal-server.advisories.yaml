@@ -24,6 +24,33 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:21:48Z
+        type: fixed
+        data:
+          fixed-version: 1.23.0-r2
+
+  - id: CVE-2023-45289
+    aliases:
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T09:19:50Z
+        type: fixed
+        data:
+          fixed-version: 1.22.6-r1
+
+  - id: CVE-2023-45290
+    aliases:
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T09:19:50Z
+        type: fixed
+        data:
+          fixed-version: 1.22.6-r1
+
   - id: CVE-2023-47108
     aliases:
       - GHSA-8pgv-569h-w5rw
@@ -37,6 +64,10 @@ advisories:
         data:
           note: |
             We faced issues with "otlpmetricgrpc@v0.44.0/internal/transform/metricdata.go:108:18:undefined: metricdata.ExponentialHistogram" when upgrading otlpmetricgrpc to v0.46.0. It has some strict dependencies in the source code common/telemetry using an old version and thus this fix will require some code changes in upstream.
+      - timestamp: 2024-03-22T18:37:56Z
+        type: fixed
+        data:
+          fixed-version: 1.23.0-r0
 
   - id: CVE-2023-48795
     aliases:
@@ -46,3 +77,91 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.22.3-r3
+
+  - id: CVE-2024-24783
+    aliases:
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T09:19:51Z
+        type: fixed
+        data:
+          fixed-version: 1.22.6-r1
+
+  - id: CVE-2024-24784
+    aliases:
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T09:19:52Z
+        type: fixed
+        data:
+          fixed-version: 1.22.6-r1
+
+  - id: CVE-2024-24785
+    aliases:
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T09:19:49Z
+        type: fixed
+        data:
+          fixed-version: 1.22.6-r1
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:16:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: temporal-cassandra-tool
+            componentID: dce584cb3dcc71ba
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/temporal-cassandra-tool
+            scanner: grype
+      - timestamp: 2024-03-18T11:57:09Z
+        type: fixed
+        data:
+          fixed-version: 1.22.6-r2
+
+  - id: CVE-2024-27304
+    aliases:
+      - GHSA-mrww-27vc-gghv
+    events:
+      - timestamp: 2024-03-22T18:37:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: temporal-server
+            componentID: b4b041513ae9fdd7
+            componentName: github.com/jackc/pgx/v5
+            componentVersion: v5.4.3
+            componentType: go-module
+            componentLocation: /usr/bin/temporal-server
+            scanner: grype
+      - timestamp: 2024-03-26T07:41:41Z
+        type: fixed
+        data:
+          fixed-version: 1.23.0-r1
+
+  - id: GHSA-7jwh-3vrq-q3m8
+    events:
+      - timestamp: 2024-03-22T18:37:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: temporal-server
+            componentID: b4b041513ae9fdd7
+            componentName: github.com/jackc/pgx/v5
+            componentVersion: v5.4.3
+            componentType: go-module
+            componentLocation: /usr/bin/temporal-server
+            scanner: grype
+      - timestamp: 2024-03-26T07:41:40Z
+        type: fixed
+        data:
+          fixed-version: 1.23.0-r1

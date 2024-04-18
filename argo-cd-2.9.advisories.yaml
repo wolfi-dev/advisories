@@ -85,3 +85,22 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.9.4-r0
+
+  - id: GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:08:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9-compat
+            componentID: 3400637b92540817
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/local/bin/argocd
+            scanner: grype
+      - timestamp: 2024-03-08T10:56:42Z
+        type: fixed
+        data:
+          fixed-version: 2.9.7-r2

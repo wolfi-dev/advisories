@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: terragrunt
@@ -32,3 +32,83 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.54.8-r0
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T16:21:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terragrunt
+            componentID: db3e6b665b431586
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/terragrunt
+            scanner: grype
+      - timestamp: 2024-03-14T19:27:05Z
+        type: fixed
+        data:
+          fixed-version: 0.55.15-r1
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-12T19:56:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terragrunt
+            componentID: ec99f394ed4900a5
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.0
+            componentType: go-module
+            componentLocation: /usr/bin/terragrunt
+            scanner: grype
+      - timestamp: 2024-03-13T12:11:19Z
+        type: fixed
+        data:
+          fixed-version: 0.55.14-r1
+
+  - id: GHSA-2c7c-3mj9-8fqh
+    events:
+      - timestamp: 2024-03-12T19:56:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terragrunt
+            componentID: ec99f394ed4900a5
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.0
+            componentType: go-module
+            componentLocation: /usr/bin/terragrunt
+            scanner: grype
+      - timestamp: 2024-03-13T12:11:19Z
+        type: fixed
+        data:
+          fixed-version: 0.55.14-r1
+
+  - id: GHSA-9763-4f94-gfch
+    events:
+      - timestamp: 2024-03-12T19:56:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terragrunt
+            componentID: 6f416b27566ef3c9
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.3.3
+            componentType: go-module
+            componentLocation: /usr/bin/terragrunt
+            scanner: grype
+      - timestamp: 2024-03-13T12:11:19Z
+        type: fixed
+        data:
+          fixed-version: 0.55.14-r1

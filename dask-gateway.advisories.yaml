@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: dask-gateway
@@ -32,3 +32,74 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:10:44Z
+        type: fixed
+        data:
+          fixed-version: 2024.1.0-r3
+
+  - id: CVE-2023-45289
+    aliases:
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-13T09:12:28Z
+        type: fixed
+        data:
+          fixed-version: 2024.1.0-r2
+
+  - id: CVE-2023-45290
+    aliases:
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-13T09:12:29Z
+        type: fixed
+        data:
+          fixed-version: 2024.1.0-r2
+
+  - id: CVE-2024-24783
+    aliases:
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-13T09:12:30Z
+        type: fixed
+        data:
+          fixed-version: 2024.1.0-r2
+
+  - id: CVE-2024-24784
+    aliases:
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-13T09:12:30Z
+        type: fixed
+        data:
+          fixed-version: 2024.1.0-r2
+
+  - id: CVE-2024-24785
+    aliases:
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-13T09:12:31Z
+        type: fixed
+        data:
+          fixed-version: 2024.1.0-r2
+
+  - id: CVE-2024-3651
+    aliases:
+      - GHSA-jjg7-2v4v-x38h
+    events:
+      - timestamp: 2024-04-14T07:25:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dask-gateway-server
+            componentID: 834224ddfdf02ecd
+            componentName: idna
+            componentVersion: "3.6"
+            componentType: python
+            componentLocation: /usr/share/dask-gateway-server/.venv/lib/python3.12/site-packages/idna-3.6.dist-info/METADATA, /usr/share/dask-gateway-server/.venv/lib/python3.12/site-packages/idna-3.6.dist-info/RECORD
+            scanner: grype

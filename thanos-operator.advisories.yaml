@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: thanos-operator
@@ -50,3 +50,138 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-09T11:39:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: thanos-operator
+            componentID: d3c3cd12c05511f8
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2024-04-10T08:46:19Z
+        type: fixed
+        data:
+          fixed-version: 0.3.7-r13
+
+  - id: CVE-2023-45289
+    aliases:
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T08:02:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: thanos-operator
+            componentID: 6485a559e6ed1f9a
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2024-03-14T14:20:23Z
+        type: fixed
+        data:
+          fixed-version: 0.3.7-r12
+
+  - id: CVE-2023-45290
+    aliases:
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T08:02:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: thanos-operator
+            componentID: 6485a559e6ed1f9a
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2024-03-14T14:20:21Z
+        type: fixed
+        data:
+          fixed-version: 0.3.7-r12
+
+  - id: CVE-2024-24783
+    aliases:
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T08:02:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: thanos-operator
+            componentID: 6485a559e6ed1f9a
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2024-03-14T14:20:21Z
+        type: fixed
+        data:
+          fixed-version: 0.3.7-r12
+
+  - id: CVE-2024-24784
+    aliases:
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T08:02:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: thanos-operator
+            componentID: 6485a559e6ed1f9a
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2024-03-14T14:20:21Z
+        type: fixed
+        data:
+          fixed-version: 0.3.7-r12
+
+  - id: CVE-2024-24785
+    aliases:
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T08:02:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: thanos-operator
+            componentID: 6485a559e6ed1f9a
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2024-03-14T14:20:21Z
+        type: fixed
+        data:
+          fixed-version: 0.3.7-r12
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T14:20:21Z
+        type: fixed
+        data:
+          fixed-version: 0.3.7-r12

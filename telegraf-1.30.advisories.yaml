@@ -1,0 +1,90 @@
+schema-version: 2.0.2
+
+package:
+  name: telegraf-1.30
+
+advisories:
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:19:40Z
+        type: fixed
+        data:
+          fixed-version: 1.30.1-r1
+
+  - id: CVE-2024-24557
+    aliases:
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-21T11:17:05Z
+        type: fixed
+        data:
+          fixed-version: 1.30.0-r4
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T14:19:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.30
+            componentID: cd8d2c458aa9d86b
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
+      - timestamp: 2024-03-15T13:44:37Z
+        type: fixed
+        data:
+          fixed-version: 1.30.0-r3
+
+  - id: CVE-2024-27289
+    aliases:
+      - GHSA-m7wr-2xf7-cm9p
+    events:
+      - timestamp: 2024-03-13T18:04:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.30
+            componentID: d38bb9ff8ef0b888
+            componentName: github.com/jackc/pgx/v4
+            componentVersion: v4.18.1
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
+      - timestamp: 2024-03-13T19:43:24Z
+        type: fixed
+        data:
+          fixed-version: 1.30.0-r2
+
+  - id: CVE-2024-27304
+    aliases:
+      - GHSA-mrww-27vc-gghv
+    events:
+      - timestamp: 2024-03-15T09:07:57Z
+        type: fixed
+        data:
+          fixed-version: 1.30.0-r2
+
+  - id: CVE-2024-29018
+    aliases:
+      - GHSA-mq39-4gv4-mvpx
+    events:
+      - timestamp: 2024-03-21T11:17:03Z
+        type: fixed
+        data:
+          fixed-version: 1.30.0-r4
+
+  - id: GHSA-7jwh-3vrq-q3m8
+    events:
+      - timestamp: 2024-03-15T09:07:57Z
+        type: fixed
+        data:
+          fixed-version: 1.30.0-r2

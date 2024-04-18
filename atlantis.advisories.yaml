@@ -42,6 +42,15 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:06:09Z
+        type: fixed
+        data:
+          fixed-version: 0.27.2-r2
+
   - id: CVE-2023-48795
     aliases:
       - GHSA-45x7-px36-x8w8
@@ -50,3 +59,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.27.0-r3
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:16:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: atlantis
+            componentID: 5015b8bcde67212c
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/atlantis
+            scanner: grype
+      - timestamp: 2024-03-14T15:19:08Z
+        type: fixed
+        data:
+          fixed-version: 0.27.2-r1

@@ -1,0 +1,77 @@
+schema-version: 2.0.2
+
+package:
+  name: prometheus-2.50
+
+advisories:
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-09T09:11:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.50
+            componentID: b1b40d02ae289a8e
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus
+            scanner: grype
+
+  - id: CVE-2024-24557
+    aliases:
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-22T13:18:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.50-bitnami-compat
+            componentID: c38a4ddb2ec79614
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.0+incompatible
+            componentType: go-module
+            componentLocation: /opt/bitnami/prometheus/bin/prometheus
+            scanner: grype
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:20:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.50
+            componentID: 3ade380a6e3cf8a2
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus
+            scanner: grype
+      - timestamp: 2024-03-16T09:54:48Z
+        type: fixed
+        data:
+          fixed-version: 2.50.1-r2
+
+  - id: CVE-2024-29018
+    aliases:
+      - GHSA-mq39-4gv4-mvpx
+    events:
+      - timestamp: 2024-03-22T13:18:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.50-bitnami-compat
+            componentID: c38a4ddb2ec79614
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.0+incompatible
+            componentType: go-module
+            componentLocation: /opt/bitnami/prometheus/bin/prometheus
+            scanner: grype

@@ -34,6 +34,33 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:05:56Z
+        type: fixed
+        data:
+          fixed-version: 1.29.0-r7
+
+  - id: CVE-2023-45289
+    aliases:
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T07:06:00Z
+        type: fixed
+        data:
+          fixed-version: 1.29.0-r4
+
+  - id: CVE-2023-45290
+    aliases:
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T07:06:01Z
+        type: fixed
+        data:
+          fixed-version: 1.29.0-r4
+
   - id: CVE-2023-47108
     aliases:
       - GHSA-8pgv-569h-w5rw
@@ -54,3 +81,72 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.29.0-r2
+
+  - id: CVE-2024-24557
+    aliases:
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-21T09:31:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: crictl
+            componentID: 35ba693bbd3d51a6
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.7+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/crictl
+            scanner: grype
+      - timestamp: 2024-03-21T11:41:55Z
+        type: fixed
+        data:
+          fixed-version: 1.29.0-r6
+
+  - id: CVE-2024-24783
+    aliases:
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T07:06:02Z
+        type: fixed
+        data:
+          fixed-version: 1.29.0-r4
+
+  - id: CVE-2024-24784
+    aliases:
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T07:05:59Z
+        type: fixed
+        data:
+          fixed-version: 1.29.0-r4
+
+  - id: CVE-2024-24785
+    aliases:
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T07:05:59Z
+        type: fixed
+        data:
+          fixed-version: 1.29.0-r4
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:07:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: crictl
+            componentID: e0b69e5465e88ae6
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/crictl
+            scanner: grype
+      - timestamp: 2024-03-15T09:51:12Z
+        type: fixed
+        data:
+          fixed-version: 1.29.0-r5

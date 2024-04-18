@@ -44,6 +44,27 @@ advisories:
         data:
           fixed-version: 0.15.4-r3
 
+  - id: CVE-2024-29025
+    aliases:
+      - GHSA-5jpm-x58v-624v
+    events:
+      - timestamp: 2024-04-05T07:51:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloudwatch-exporter
+            componentID: eea085595569c39d
+            componentName: netty-codec-http
+            componentVersion: 4.1.100.Final
+            componentType: java-archive
+            componentLocation: /usr/share/java/cloudwatch_exporter/cloudwatch_exporter.jar
+            scanner: grype
+      - timestamp: 2024-04-13T07:09:23Z
+        type: fixed
+        data:
+          fixed-version: 0.15.5-r1
+
   - id: GHSA-xpw8-rcwv-8f8p
     events:
       - timestamp: 2024-02-21T07:15:39Z

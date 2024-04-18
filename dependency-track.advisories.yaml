@@ -4,6 +4,27 @@ package:
   name: dependency-track
 
 advisories:
+  - id: CVE-2023-52428
+    aliases:
+      - GHSA-gvpg-vgmx-xg6w
+    events:
+      - timestamp: 2024-03-16T07:53:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dependency-track-bundled
+            componentID: 250a7ee1fbb48612
+            componentName: nimbus-jose-jwt
+            componentVersion: 9.30.2
+            componentType: java-archive
+            componentLocation: /usr/share/java/dependency-track/dependency-track-bundled.jar
+            scanner: grype
+      - timestamp: 2024-04-06T02:47:29Z
+        type: fixed
+        data:
+          fixed-version: 4.10.1-r3
+
   - id: CVE-2024-1597
     aliases:
       - GHSA-xfg6-62px-cxc2

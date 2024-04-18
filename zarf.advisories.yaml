@@ -20,6 +20,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/zarf
             scanner: grype
+      - timestamp: 2024-03-26T16:35:18Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
 
   - id: CVE-2023-45283
     aliases:
@@ -40,6 +45,32 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-10T01:44:52Z
+        type: fixed
+        data:
+          fixed-version: 0.33.0-r0
+
+  - id: CVE-2024-0406
+    aliases:
+      - GHSA-rhh4-rh7c-7r5v
+    events:
+      - timestamp: 2024-04-10T01:44:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zarf
+            componentID: 6b1ff6605ee52388
+            componentName: github.com/mholt/archiver/v3
+            componentVersion: v3.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/zarf
+            scanner: grype
 
   - id: CVE-2024-21626
     aliases:
@@ -104,6 +135,27 @@ advisories:
         data:
           fixed-version: 0.32.3-r0
 
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T12:20:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zarf
+            componentID: 4ab1fc51622198e4
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/zarf
+            scanner: grype
+      - timestamp: 2024-03-14T15:21:23Z
+        type: fixed
+        data:
+          fixed-version: 0.32.5-r1
+
   - id: CVE-2024-25620
     aliases:
       - GHSA-v53g-5gjp-272r
@@ -145,6 +197,45 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.32.4-r0
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:34:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zarf
+            componentID: 92dd2a1a46e9d9e8
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/zarf
+            scanner: grype
+      - timestamp: 2024-03-08T10:44:21Z
+        type: fixed
+        data:
+          fixed-version: 0.32.4-r2
+
+  - id: CVE-2024-29902
+    aliases:
+      - GHSA-88jx-383q-w4qc
+    events:
+      - timestamp: 2024-04-12T15:04:30Z
+        type: fixed
+        data:
+          fixed-version: 0.33.0-r1
+
+  - id: CVE-2024-29903
+    aliases:
+      - GHSA-95pr-fxf5-86gv
+    events:
+      - timestamp: 2024-04-12T15:04:28Z
+        type: fixed
+        data:
+          fixed-version: 0.33.0-r1
 
   - id: GHSA-9763-4f94-gfch
     events:

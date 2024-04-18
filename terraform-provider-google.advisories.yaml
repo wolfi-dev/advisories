@@ -4,6 +4,27 @@ package:
   name: terraform-provider-google
 
 advisories:
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T14:19:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-google
+            componentID: 951f2c3f1da756ce
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-google
+            scanner: grype
+      - timestamp: 2024-03-17T14:17:04Z
+        type: fixed
+        data:
+          fixed-version: 5.20.0-r1
+
   - id: GHSA-9763-4f94-gfch
     events:
       - timestamp: 2024-02-26T22:18:37Z

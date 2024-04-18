@@ -20,6 +20,29 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/cmctl
             scanner: grype
+      - timestamp: 2024-03-14T23:55:27Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
+
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-08T07:10:03Z
+        type: fixed
+        data:
+          fixed-version: 1.14.4-r3
+
+  - id: CVE-2024-24557
+    aliases:
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-21T12:47:16Z
+        type: fixed
+        data:
+          fixed-version: 1.14.4-r2
 
   - id: CVE-2024-25620
     aliases:
@@ -62,3 +85,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.14.2-r2
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:11:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-manager-1.14
+            componentID: b6f10a015dd64977
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/controller-linux-amd64
+            scanner: grype
+      - timestamp: 2024-03-11T18:21:08Z
+        type: fixed
+        data:
+          fixed-version: 1.14.4-r1

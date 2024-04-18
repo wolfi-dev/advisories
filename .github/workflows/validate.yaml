@@ -8,6 +8,9 @@ on:
     branches:
       - gh-readonly-queue/main/**
 
+permissions:
+  contents: read
+
 jobs:
   lint:
     name: Validate
@@ -17,13 +20,18 @@ jobs:
       contents: read
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Harden Runner
+      uses: step-security/harden-runner@63c24ba6bd7ba022e95695ff85de572c04a18142 # v2.7.0
+      with:
+        egress-policy: audit
+
+    - uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
       with:
         fetch-depth: 0
         path: './wolfi-advisories'
 
     - name: 'Clone Wolfi packages repository'
-      uses: actions/checkout@v4
+      uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
       with:
         repository: 'wolfi-dev/os'
         fetch-depth: 0
@@ -38,7 +46,8 @@ jobs:
         echo "fork point will be $fork_point"
         echo "fork_point=$fork_point" >> $GITHUB_OUTPUT
 
-    - uses: wolfi-dev/actions/advisories-validate@main
+      # this need to point to main to always get the latest action
+    - uses: wolfi-dev/actions/advisories-validate@main # main
       with:
         fork_point: ${{ steps.fork-point.outputs.fork_point }}
         advisories-directory: './wolfi-advisories'

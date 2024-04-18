@@ -1,0 +1,26 @@
+schema-version: 2.0.2
+
+package:
+  name: harbor-registry
+
+advisories:
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-08T07:49:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-registry
+            componentID: b5cd4f2ff8169636
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-registry
+            scanner: grype
+      - timestamp: 2024-04-16T10:48:44Z
+        type: fixed
+        data:
+          fixed-version: 3.0.0_alpha1-r1

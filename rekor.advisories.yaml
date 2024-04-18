@@ -24,6 +24,15 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-10T11:30:55Z
+        type: fixed
+        data:
+          fixed-version: 1.3.6-r1
+
   - id: CVE-2023-48795
     aliases:
       - GHSA-45x7-px36-x8w8
@@ -32,6 +41,48 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.3.4-r2
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:19:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rekor-server
+            componentID: 8aa32ce9a5920a78
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/rekor-server
+            scanner: grype
+      - timestamp: 2024-03-16T11:02:13Z
+        type: fixed
+        data:
+          fixed-version: 1.3.5-r3
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:10:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rekor-backfill-redis
+            componentID: 9f0b81cb2901c5b3
+            componentName: gopkg.in/go-jose/go-jose.v2
+            componentVersion: v2.6.1
+            componentType: go-module
+            componentLocation: /usr/bin/backfill-redis
+            scanner: grype
+      - timestamp: 2024-03-08T22:15:12Z
+        type: fixed
+        data:
+          fixed-version: 1.3.5-r2
 
   - id: GHSA-2c7c-3mj9-8fqh
     events:

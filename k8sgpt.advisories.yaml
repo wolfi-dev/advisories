@@ -20,6 +20,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/k8sgpt
             scanner: grype
+      - timestamp: 2024-03-15T00:01:36Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
 
   - id: CVE-2020-8552
     aliases:
@@ -69,6 +74,31 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    events:
+      - timestamp: 2024-04-10T08:40:19Z
+        type: fixed
+        data:
+          fixed-version: 0.3.29-r1
+
+  - id: CVE-2023-45289
+    aliases:
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T07:11:44Z
+        type: fixed
+        data:
+          fixed-version: 0.3.27-r3
+
+  - id: CVE-2023-45290
+    aliases:
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T07:11:39Z
+        type: fixed
+        data:
+          fixed-version: 0.3.27-r3
+
   - id: CVE-2023-48795
     aliases:
       - GHSA-45x7-px36-x8w8
@@ -89,6 +119,63 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.3.24-r1
+
+  - id: CVE-2024-24557
+    aliases:
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-21T11:17:02Z
+        type: fixed
+        data:
+          fixed-version: 0.3.28-r2
+
+  - id: CVE-2024-24783
+    aliases:
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T07:11:40Z
+        type: fixed
+        data:
+          fixed-version: 0.3.27-r3
+
+  - id: CVE-2024-24784
+    aliases:
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T07:11:41Z
+        type: fixed
+        data:
+          fixed-version: 0.3.27-r3
+
+  - id: CVE-2024-24785
+    aliases:
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T07:11:43Z
+        type: fixed
+        data:
+          fixed-version: 0.3.27-r3
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:16:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k8sgpt
+            componentID: 78a600a89dfebffd
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/k8sgpt
+            scanner: grype
+      - timestamp: 2024-03-15T18:08:16Z
+        type: fixed
+        data:
+          fixed-version: 0.3.28-r1
 
   - id: CVE-2024-25620
     aliases:

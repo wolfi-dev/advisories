@@ -34,6 +34,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-09T10:36:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana
+            componentID: 5904cb806184c857
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+
   - id: CVE-2023-48795
     aliases:
       - GHSA-45x7-px36-x8w8
@@ -63,6 +80,57 @@ advisories:
         type: fixed
         data:
           fixed-version: 10.3.3-r0
+
+  - id: CVE-2024-1442
+    aliases:
+      - GHSA-5mxf-42f5-j782
+    events:
+      - timestamp: 2024-03-08T07:18:33Z
+        type: fixed
+        data:
+          fixed-version: 10.4.0-r0
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:17:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana
+            componentID: 8fdc751801b9b618
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+      - timestamp: 2024-03-14T14:19:07Z
+        type: fixed
+        data:
+          fixed-version: 10.4.0-r3
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:18:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana
+            componentID: c3916d13aa91e911
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+      - timestamp: 2024-03-08T07:50:30Z
+        type: fixed
+        data:
+          fixed-version: 10.4.0-r1
 
   - id: GHSA-9763-4f94-gfch
     events:

@@ -146,3 +146,22 @@ advisories:
             componentType: go-module
             componentLocation: /usr/local/bin/argocd
             scanner: grype
+
+  - id: GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:07:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.8
+            componentID: 01bb87cfc9651e9f
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+      - timestamp: 2024-03-08T20:39:07Z
+        type: fixed
+        data:
+          fixed-version: 2.8.10-r2

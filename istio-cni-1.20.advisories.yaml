@@ -4,6 +4,23 @@ package:
   name: istio-cni-1.20
 
 advisories:
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-06T09:36:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-install-cni-1.20
+            componentID: e6c5a98e0b16d049
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/install-cni
+            scanner: grype
+
   - id: CVE-2023-49290
     aliases:
       - GHSA-7f9x-gw85-8grf
@@ -45,3 +62,66 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.20.2-r2
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:04:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-install-cni-1.20
+            componentID: d53fdd81f2ecb3b1
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/install-cni
+            scanner: grype
+      - timestamp: 2024-03-14T15:19:16Z
+        type: fixed
+        data:
+          fixed-version: 1.20.3-r4
+
+  - id: CVE-2024-28122
+    aliases:
+      - GHSA-hj3v-m684-v259
+    events:
+      - timestamp: 2024-03-08T22:43:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.20
+            componentID: da6d5acb8c0b0ca8
+            componentName: github.com/lestrrat-go/jwx
+            componentVersion: v1.2.28
+            componentType: go-module
+            componentLocation: /usr/bin/istio-cni
+            scanner: grype
+      - timestamp: 2024-03-09T08:32:19Z
+        type: fixed
+        data:
+          fixed-version: 1.20.3-r3
+
+  - id: CVE-2024-28180
+    aliases:
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:04:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-install-cni-1.20
+            componentID: 6020ade94a63de2e
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/install-cni
+            scanner: grype
+      - timestamp: 2024-03-08T23:44:45Z
+        type: fixed
+        data:
+          fixed-version: 1.20.3-r3

@@ -20,6 +20,95 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/helm-operator
             scanner: grype
+      - timestamp: 2024-03-26T16:35:18Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
+
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-09T10:35:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-operator
+            componentID: a1626ddc17d31c32
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/helm-operator
+            scanner: grype
+      - timestamp: 2024-04-16T10:48:14Z
+        type: fixed
+        data:
+          fixed-version: 1.34.1-r3
+
+  - id: CVE-2023-45289
+    aliases:
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-13T10:45:18Z
+        type: fixed
+        data:
+          fixed-version: 1.34.1-r1
+
+  - id: CVE-2023-45290
+    aliases:
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-13T10:45:18Z
+        type: fixed
+        data:
+          fixed-version: 1.34.1-r1
+
+  - id: CVE-2024-24557
+    aliases:
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-23T15:15:55Z
+        type: fixed
+        data:
+          fixed-version: 1.34.1-r2
+
+  - id: CVE-2024-24783
+    aliases:
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-13T10:45:19Z
+        type: fixed
+        data:
+          fixed-version: 1.34.1-r1
+
+  - id: CVE-2024-24784
+    aliases:
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-13T10:45:16Z
+        type: fixed
+        data:
+          fixed-version: 1.34.1-r1
+
+  - id: CVE-2024-24785
+    aliases:
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-13T10:45:17Z
+        type: fixed
+        data:
+          fixed-version: 1.34.1-r1
+
+  - id: CVE-2024-24786
+    aliases:
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-23T15:15:54Z
+        type: fixed
+        data:
+          fixed-version: 1.34.1-r2
 
   - id: CVE-2024-25620
     aliases:
