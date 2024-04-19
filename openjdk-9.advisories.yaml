@@ -292,3 +292,20 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+
+  - id: CVE-2024-21068
+    aliases:
+      - GHSA-q4c6-w389-xqq6
+    events:
+      - timestamp: 2024-04-19T14:43:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openjdk-9-jre-base
+            componentID: bbe1181a4d4a9166
+            componentName: java
+            componentVersion: 9+9-wolfi-r4
+            componentType: binary
+            componentLocation: /usr/lib/jvm/java-1.9-openjdk/bin/java
+            scanner: grype
