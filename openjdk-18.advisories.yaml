@@ -156,3 +156,20 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+
+  - id: CVE-2024-21012
+    aliases:
+      - GHSA-ccmh-gwpx-35xj
+    events:
+      - timestamp: 2024-04-19T16:11:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openjdk-18-jre-base
+            componentID: cd6fb4d96b4adffc
+            componentName: java
+            componentVersion: 18.0.2-internal+0-wolfi-r3
+            componentType: binary
+            componentLocation: /usr/lib/jvm/java-18-openjdk/bin/java
+            scanner: grype
