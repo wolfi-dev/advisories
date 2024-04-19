@@ -177,3 +177,20 @@ advisories:
         type: fix-not-planned
         data:
           note: OpenJDK 14 is no longer supported upstream.
+
+  - id: CVE-2024-21011
+    aliases:
+      - GHSA-7qqv-8pwc-x4xc
+    events:
+      - timestamp: 2024-04-19T15:44:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openjdk-14-default-jdk
+            componentID: b4a24d9d241a800a
+            componentName: openjdk-14-default-jdk
+            componentVersion: 14.0.2.12-r3
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
