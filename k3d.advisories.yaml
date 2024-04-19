@@ -1305,6 +1305,23 @@ advisories:
         data:
           fixed-version: 5.6.0-r11
 
+  - id: CVE-2024-32473
+    aliases:
+      - GHSA-x84c-p2g9-rqv9
+    events:
+      - timestamp: 2024-04-19T13:24:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3d
+            componentID: 95f969648a343c6f
+            componentName: github.com/docker/docker
+            componentVersion: v26.0.0+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/k3d
+            scanner: grype
+
   - id: GHSA-76wf-9vgp-pj7w
     events:
       - timestamp: 2024-02-17T17:00:05Z
