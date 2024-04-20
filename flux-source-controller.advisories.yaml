@@ -74,6 +74,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-20T14:39:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-source-controller
+            componentID: 0fa8ac8cac8e72bb
+            componentName: golang.org/x/net
+            componentVersion: v0.22.0
+            componentType: go-module
+            componentLocation: /usr/bin/source-controller
+            scanner: grype
+
   - id: CVE-2023-46737
     aliases:
       - GHSA-vfp6-jrw2-99g9
