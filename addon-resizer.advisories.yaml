@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: addon-resizer
+
+advisories:
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-20T11:03:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: addon-resizer
+            componentID: e9f2f6256b30ed90
+            componentName: golang.org/x/net
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/pod_nanny
+            scanner: grype
