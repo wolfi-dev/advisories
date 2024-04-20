@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: harbor-2.10
+
+advisories:
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-20T10:34:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-2.10-jobservice
+            componentID: d3aa01970d303ce0
+            componentName: golang.org/x/net
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-jobservice
+            scanner: grype
