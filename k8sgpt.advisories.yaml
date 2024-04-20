@@ -75,6 +75,8 @@ advisories:
           note: Only affects Windows
 
   - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
     events:
       - timestamp: 2024-04-10T08:40:19Z
         type: fixed
@@ -218,6 +220,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.3.27-r2
+
+  - id: GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-20T11:28:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k8sgpt
+            componentID: 344a3c83c290af35
+            componentName: golang.org/x/net
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/k8sgpt
+            scanner: grype
 
   - id: GHSA-6xv5-86q9-7xr8
     events:
