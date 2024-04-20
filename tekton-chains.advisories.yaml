@@ -43,6 +43,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-20T19:11:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tekton-chains
+            componentID: 4b308aa34324f3e8
+            componentName: golang.org/x/net
+            componentVersion: v0.22.0
+            componentType: go-module
+            componentLocation: /usr/bin/tekton-chains
+            scanner: grype
+
   - id: CVE-2023-46737
     aliases:
       - GHSA-vfp6-jrw2-99g9
