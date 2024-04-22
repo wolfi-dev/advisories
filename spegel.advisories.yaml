@@ -1,26 +1,22 @@
 schema-version: 2.0.2
 
 package:
-  name: harbor-2.10
+  name: spegel
 
 advisories:
   - id: CVE-2023-45288
     aliases:
       - GHSA-4v7x-pqxf-cx7m
     events:
-      - timestamp: 2024-04-20T10:34:38Z
+      - timestamp: 2024-04-20T17:30:32Z
         type: detection
         data:
           type: scan/v1
           data:
-            subpackageName: harbor-2.10-jobservice
-            componentID: d3aa01970d303ce0
+            subpackageName: spegel
+            componentID: 73b4b3e5f9c01685
             componentName: golang.org/x/net
             componentVersion: v0.21.0
             componentType: go-module
-            componentLocation: /usr/bin/harbor-jobservice
+            componentLocation: /usr/bin/spegel
             scanner: grype
-      - timestamp: 2024-04-20T14:50:42Z
-        type: fixed
-        data:
-          fixed-version: 2.10.2-r1
