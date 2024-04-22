@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: sig-storage-local-static-provisioner
+
+advisories:
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-20T15:19:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: node-cleanup-controller
+            componentID: ebab3c848c29e8af
+            componentName: golang.org/x/net
+            componentVersion: v0.19.0
+            componentType: go-module
+            componentLocation: /usr/bin/main
+            scanner: grype

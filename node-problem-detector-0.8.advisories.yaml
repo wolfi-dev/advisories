@@ -56,6 +56,27 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-20T15:22:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: log-counter-0.8
+            componentID: 266a32d6e83fe249
+            componentName: golang.org/x/net
+            componentVersion: v0.22.0
+            componentType: go-module
+            componentLocation: /usr/bin/log-counter
+            scanner: grype
+      - timestamp: 2024-04-20T19:30:48Z
+        type: fixed
+        data:
+          fixed-version: 0.8.18-r1
+
   - id: CVE-2023-45289
     aliases:
       - GHSA-32ch-6x54-q4h9

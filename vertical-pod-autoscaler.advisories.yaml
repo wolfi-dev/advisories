@@ -60,6 +60,23 @@ advisories:
         data:
           fixed-version: 1.0.0-r2
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-20T17:43:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vertical-pod-autoscaler-recommender
+            componentID: a3f493c65707229f
+            componentName: golang.org/x/net
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/recommender
+            scanner: grype
+
   - id: CVE-2023-45289
     aliases:
       - GHSA-32ch-6x54-q4h9
