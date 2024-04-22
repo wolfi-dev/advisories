@@ -42,6 +42,27 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-20T07:43:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: crossplane-provider-azure
+            componentID: 17dd4c6a8048fb0b
+            componentName: golang.org/x/net
+            componentVersion: v0.20.0
+            componentType: go-module
+            componentLocation: /usr/bin/provider
+            scanner: grype
+      - timestamp: 2024-04-22T07:17:02Z
+        type: fixed
+        data:
+          fixed-version: 1.0.1-r1
+
   - id: CVE-2023-45289
     aliases:
       - GHSA-32ch-6x54-q4h9

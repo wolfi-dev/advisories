@@ -4,6 +4,27 @@ package:
   name: grafana-operator
 
 advisories:
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-20T15:07:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-operator
+            componentID: 97f2befef4977244
+            componentName: golang.org/x/net
+            componentVersion: v0.20.0
+            componentType: go-module
+            componentLocation: /usr/bin/grafana-operator
+            scanner: grype
+      - timestamp: 2024-04-22T07:24:56Z
+        type: fixed
+        data:
+          fixed-version: 5.8.1-r1
+
   - id: CVE-2023-45289
     aliases:
       - GHSA-32ch-6x54-q4h9

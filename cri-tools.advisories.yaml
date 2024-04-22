@@ -150,3 +150,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.29.0-r5
+
+  - id: CVE-2024-32473
+    aliases:
+      - GHSA-x84c-p2g9-rqv9
+    events:
+      - timestamp: 2024-04-19T07:25:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cri-tools
+            componentID: 7f7e0ecf552fa9e9
+            componentName: github.com/docker/docker
+            componentVersion: v26.0.1+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/crictl
+            scanner: grype
+      - timestamp: 2024-04-20T07:08:32Z
+        type: fixed
+        data:
+          fixed-version: 1.30.0-r1

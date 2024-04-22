@@ -64,6 +64,27 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-20T14:12:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubescape
+            componentID: f070a2da9b142d26
+            componentName: golang.org/x/net
+            componentVersion: v0.22.0
+            componentType: go-module
+            componentLocation: /usr/bin/kubescape
+            scanner: grype
+      - timestamp: 2024-04-22T07:17:48Z
+        type: fixed
+        data:
+          fixed-version: 3.0.8-r3
+
   - id: CVE-2023-46737
     aliases:
       - GHSA-vfp6-jrw2-99g9

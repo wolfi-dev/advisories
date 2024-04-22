@@ -4,6 +4,27 @@ package:
   name: datadog-agent
 
 advisories:
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-20T13:43:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: datadog-agent
+            componentID: c499a63bcc1874d2
+            componentName: golang.org/x/net
+            componentVersion: v0.20.0
+            componentType: go-module
+            componentLocation: /opt/datadog-agent/bin/agent/agent
+            scanner: grype
+      - timestamp: 2024-04-20T15:38:41Z
+        type: fixed
+        data:
+          fixed-version: 7.52.1-r1
+
   - id: CVE-2023-45289
     aliases:
       - GHSA-32ch-6x54-q4h9

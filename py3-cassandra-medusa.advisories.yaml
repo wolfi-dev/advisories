@@ -169,6 +169,27 @@ advisories:
         data:
           fixed-version: 0.19.1-r1
 
+  - id: CVE-2024-27306
+    aliases:
+      - GHSA-7gpw-8wmc-pm8g
+    events:
+      - timestamp: 2024-04-19T14:22:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3-cassandra-medusa
+            componentID: 400f644a0494bed3
+            componentName: aiohttp
+            componentVersion: 3.9.2
+            componentType: python
+            componentLocation: /usr/share/medusa/.venv/lib/python3.11/site-packages/aiohttp-3.9.2.dist-info/METADATA, /usr/share/medusa/.venv/lib/python3.11/site-packages/aiohttp-3.9.2.dist-info/RECORD, /usr/share/medusa/.venv/lib/python3.11/site-packages/aiohttp-3.9.2.dist-info/top_level.txt
+            scanner: grype
+      - timestamp: 2024-04-20T07:13:20Z
+        type: fixed
+        data:
+          fixed-version: 0.20.1-r0
+
   - id: CVE-2024-3651
     aliases:
       - GHSA-jjg7-2v4v-x38h
@@ -185,6 +206,10 @@ advisories:
             componentType: python
             componentLocation: /usr/share/medusa/.venv/lib/python3.11/site-packages/idna-3.6.dist-info/METADATA, /usr/share/medusa/.venv/lib/python3.11/site-packages/idna-3.6.dist-info/RECORD
             scanner: grype
+      - timestamp: 2024-04-20T07:13:23Z
+        type: fixed
+        data:
+          fixed-version: 0.20.1-r0
 
   - id: GHSA-5cpq-8wj7-hf2v
     events:

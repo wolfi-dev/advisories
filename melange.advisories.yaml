@@ -135,6 +135,23 @@ advisories:
         data:
           fixed-version: 0.6.11-r1
 
+  - id: CVE-2024-32473
+    aliases:
+      - GHSA-x84c-p2g9-rqv9
+    events:
+      - timestamp: 2024-04-19T14:13:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: melange
+            componentID: 08328a322eb43774
+            componentName: github.com/docker/docker
+            componentVersion: v26.0.0+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/melange
+            scanner: grype
+
   - id: GHSA-7ww5-4wqc-m92c
     events:
       - timestamp: 2023-12-21T10:58:30Z
