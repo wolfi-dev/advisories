@@ -51,6 +51,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-22T17:29:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: melange
+            componentID: d36966d0a7c849b5
+            componentName: golang.org/x/net
+            componentVersion: v0.22.0
+            componentType: go-module
+            componentLocation: /usr/bin/melange
+            scanner: grype
+
   - id: CVE-2023-46402
     aliases:
       - GHSA-3f2q-6294-fmq5
