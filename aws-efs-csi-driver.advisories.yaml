@@ -194,3 +194,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.7.6-r2
+
+  - id: CVE-2024-3177
+    aliases:
+      - GHSA-pxhw-596r-rwq5
+    events:
+      - timestamp: 2024-04-24T07:41:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-efs-csi-driver
+            componentID: 2e521c880322904f
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.26.11
+            componentType: go-module
+            componentLocation: /usr/bin/aws-efs-csi-driver
+            scanner: grype
