@@ -134,3 +134,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.9.3-r8
+
+  - id: CVE-2024-3177
+    aliases:
+      - GHSA-pxhw-596r-rwq5
+    events:
+      - timestamp: 2024-04-24T08:14:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ip-masq-agent
+            componentID: 26bb55edeb72e609
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.26.11
+            componentType: go-module
+            componentLocation: /usr/bin/ip-masq-agent
+            scanner: grype
