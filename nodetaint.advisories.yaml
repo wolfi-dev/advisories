@@ -324,3 +324,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.0.4-r12
+
+  - id: CVE-2024-3177
+    aliases:
+      - GHSA-pxhw-596r-rwq5
+    events:
+      - timestamp: 2024-04-24T08:32:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nodetaint
+            componentID: 880f9ce39a7bc1db
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.27.8
+            componentType: go-module
+            componentLocation: /usr/bin/nodetaint
+            scanner: grype
