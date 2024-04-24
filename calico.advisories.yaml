@@ -194,3 +194,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.27.2-r3
+
+  - id: CVE-2024-3177
+    aliases:
+      - GHSA-pxhw-596r-rwq5
+    events:
+      - timestamp: 2024-04-24T08:13:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: calico
+            componentID: 1745e3712bfb78d2
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.27.8
+            componentType: go-module
+            componentLocation: /bin/calico-node
+            scanner: grype
