@@ -24,6 +24,23 @@ advisories:
           type: component-vulnerability-mismatch
           note: This is a Kubernetes API flaw, but we don't include an API server in this package.
 
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T13:44:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nodetaint
+            componentID: f07cb0f4baf8eca1
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.27.8
+            componentType: go-module
+            componentLocation: /usr/bin/nodetaint
+            scanner: grype
+
   - id: CVE-2020-8561
     aliases:
       - GHSA-74j8-88mm-7496
