@@ -4,6 +4,23 @@ package:
   name: consul-1.16
 
 advisories:
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T10:04:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: consul-1.16
+            componentID: b8e993e81d51776d
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.26.2
+            componentType: go-module
+            componentLocation: /bin/consul
+            scanner: grype
+
   - id: CVE-2023-3518
     aliases:
       - GHSA-9rhf-q362-77mx
