@@ -4,6 +4,23 @@ package:
   name: aactl
 
 advisories:
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T09:05:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aactl
+            componentID: ca5bef0266c640f9
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.28.3
+            componentType: go-module
+            componentLocation: /usr/bin/aactl
+            scanner: grype
+
   - id: CVE-2023-1732
     aliases:
       - GHSA-2q89-485c-9j2x
