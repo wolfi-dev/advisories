@@ -4,6 +4,23 @@ package:
   name: cass-operator
 
 advisories:
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T09:29:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cass-operator
+            componentID: ffb3e6770c476933
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.26.4
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CVE-2023-39326
     aliases:
       - GHSA-9f76-wg39-x86h
