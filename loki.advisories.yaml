@@ -14,6 +14,23 @@ advisories:
           type: vulnerable-code-not-in-execution-path
           note: This CVE affects the Prometheus UI (Javascript) and not the Go code
 
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T14:10:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: loki
+            componentID: 6431bf3399f259eb
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.29.2
+            componentType: go-module
+            componentLocation: /usr/bin/loki
+            scanner: grype
+
   - id: CVE-2023-40577
     aliases:
       - GHSA-v86x-5fm3-5p7j
