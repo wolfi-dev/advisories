@@ -4,6 +4,23 @@ package:
   name: vault-1.14
 
 advisories:
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T13:28:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-1.14
+            componentID: 19b6b14b64b146b2
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.27.2
+            componentType: go-module
+            componentLocation: /usr/bin/vault
+            scanner: grype
+
   - id: CVE-2023-39325
     aliases:
       - GHSA-4374-p667-p6c8
