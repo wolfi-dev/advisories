@@ -14,6 +14,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Vulnerable code is part of external-csi-driver and not included in kubernetes-dns-node-cache
 
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T13:20:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dns-node-cache
+            componentID: f11cd2afe60ae371
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.24.7
+            componentType: go-module
+            componentLocation: /usr/bin/node-cache
+            scanner: grype
+
   - id: CVE-2021-25743
     aliases:
       - GHSA-f9jg-8p32-2f55
