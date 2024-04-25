@@ -4,6 +4,23 @@ package:
   name: k8ssandra-operator
 
 advisories:
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T09:20:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k8ssandra-operator
+            componentID: 9f275ca7b10107db
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.26.4
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CVE-2023-45288
     aliases:
       - GHSA-4v7x-pqxf-cx7m
