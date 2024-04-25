@@ -4,6 +4,23 @@ package:
   name: melange
 
 advisories:
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T13:37:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: melange
+            componentID: 00c8ba4590bc10cc
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.29.2
+            componentType: go-module
+            componentLocation: /usr/bin/melange
+            scanner: grype
+
   - id: CVE-2023-28840
     aliases:
       - GHSA-232p-vwff-86mp
