@@ -4,6 +4,23 @@ package:
   name: postgres-operator
 
 advisories:
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T13:30:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: postgres-operator
+            componentID: c12246e2a9f05488
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.28.7
+            componentType: go-module
+            componentLocation: /usr/bin/postgres-operator
+            scanner: grype
+
   - id: CVE-2023-45288
     aliases:
       - GHSA-4v7x-pqxf-cx7m
