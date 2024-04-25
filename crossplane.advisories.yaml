@@ -4,6 +4,23 @@ package:
   name: crossplane
 
 advisories:
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T08:36:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: crossplane
+            componentID: 3a770525d9efdc2c
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.29.1
+            componentType: go-module
+            componentLocation: /usr/bin/crossplane
+            scanner: grype
+
   - id: CVE-2023-45283
     aliases:
       - GHSA-vvjp-q62m-2vph
