@@ -4,6 +4,23 @@ package:
   name: kyverno
 
 advisories:
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T13:34:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno
+            componentID: b76e8351c973e726
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/kyverno
+            scanner: grype
+
   - id: CVE-2023-25656
     aliases:
       - GHSA-87x9-7grx-m28v
