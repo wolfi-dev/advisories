@@ -14,6 +14,23 @@ advisories:
           type: component-vulnerability-mismatch
           note: The vulnerability is in an ancient CGI script of the same name
 
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T09:11:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cosign
+            componentID: a086132d3e268cf6
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.28.3
+            componentType: go-module
+            componentLocation: /usr/bin/cosign
+            scanner: grype
+
   - id: CVE-2023-39325
     aliases:
       - GHSA-4374-p667-p6c8
