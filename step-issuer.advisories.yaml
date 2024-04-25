@@ -4,6 +4,23 @@ package:
   name: step-issuer
 
 advisories:
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T14:02:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: step-issuer
+            componentID: a2df0efd9ce2bb7e
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.29.3
+            componentType: go-module
+            componentLocation: /usr/bin/step-issuer
+            scanner: grype
+
   - id: CVE-2023-45288
     aliases:
       - GHSA-4v7x-pqxf-cx7m
