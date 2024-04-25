@@ -26,6 +26,23 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
 
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T14:22:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: up
+            componentID: 36ca65b693c2d650
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.29.1
+            componentType: go-module
+            componentLocation: /usr/bin/up
+            scanner: grype
+
   - id: CVE-2023-28840
     aliases:
       - GHSA-232p-vwff-86mp
