@@ -4,6 +4,23 @@ package:
   name: newrelic-nri-statsd
 
 advisories:
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T13:39:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: newrelic-nri-statsd
+            componentID: 8f7cdde8a9ccb701
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.17.16
+            componentType: go-module
+            componentLocation: /bin/gostatsd
+            scanner: grype
+
   - id: CVE-2023-45288
     aliases:
       - GHSA-4v7x-pqxf-cx7m
