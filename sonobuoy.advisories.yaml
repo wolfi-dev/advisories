@@ -4,6 +4,23 @@ package:
   name: sonobuoy
 
 advisories:
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T13:23:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonobuoy
+            componentID: 5cf4a651f9bf8133
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.27.1
+            componentType: go-module
+            componentLocation: /usr/bin/sonobuoy
+            scanner: grype
+
   - id: CVE-2023-39326
     aliases:
       - GHSA-9f76-wg39-x86h
