@@ -4,6 +4,23 @@ package:
   name: traefik
 
 advisories:
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T14:06:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: traefik
+            componentID: cf3d61d8744baa2e
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.26.3
+            componentType: go-module
+            componentLocation: /usr/bin/traefik
+            scanner: grype
+
   - id: CVE-2021-41803
     aliases:
       - GHSA-hr3v-8cp3-68rf
