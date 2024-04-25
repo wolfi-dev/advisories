@@ -4,6 +4,23 @@ package:
   name: telegraf-1.30
 
 advisories:
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T14:25:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.30
+            componentID: bbd4c073ea3a3089
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.29.3
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
+
   - id: CVE-2023-45288
     aliases:
       - GHSA-4v7x-pqxf-cx7m
