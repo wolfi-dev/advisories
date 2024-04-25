@@ -14,6 +14,23 @@ advisories:
           type: vulnerable-code-not-in-execution-path
           note: This is a Kubernetes API flaw, and this code is not reachable in our package.
 
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T13:25:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-operator
+            componentID: df3d2491f578aadf
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.29.3
+            componentType: go-module
+            componentLocation: /usr/bin/spark-operator
+            scanner: grype
+
   - id: CVE-2020-8561
     aliases:
       - GHSA-74j8-88mm-7496
