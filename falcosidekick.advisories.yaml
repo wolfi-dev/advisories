@@ -4,6 +4,23 @@ package:
   name: falcosidekick
 
 advisories:
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T09:41:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: falcosidekick
+            componentID: 5ff150f0d1016c87
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.27.4
+            componentType: go-module
+            componentLocation: /usr/bin/falcosidekick
+            scanner: grype
+
   - id: CVE-2023-45288
     aliases:
       - GHSA-4v7x-pqxf-cx7m
