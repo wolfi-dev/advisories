@@ -4,6 +4,23 @@ package:
   name: gke-gcloud-auth-plugin
 
 advisories:
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T09:37:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gke-gcloud-auth-plugin
+            componentID: 6746c3a096f271b8
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/gke-gcloud-auth-plugin
+            scanner: grype
+
   - id: CVE-2022-41723
     aliases:
       - GHSA-vvpx-j8f3-3w6h
