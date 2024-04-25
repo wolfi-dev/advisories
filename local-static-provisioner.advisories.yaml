@@ -12,3 +12,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.7.0-r1
+
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T13:32:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: local-static-provisioner
+            componentID: 09e8b30097636343
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.27.8
+            componentType: go-module
+            componentLocation: /usr/bin/local-provisioner
+            scanner: grype
