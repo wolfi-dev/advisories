@@ -4,6 +4,23 @@ package:
   name: apko
 
 advisories:
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T09:35:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apko
+            componentID: 12fb944ecfe01557
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.28.3
+            componentType: go-module
+            componentLocation: /usr/bin/apko
+            scanner: grype
+
   - id: CVE-2023-28840
     aliases:
       - GHSA-232p-vwff-86mp
