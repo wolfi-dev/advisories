@@ -4,6 +4,23 @@ package:
   name: prometheus-2.51
 
 advisories:
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T14:20:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.51
+            componentID: c0dedc304f1b4e74
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.29.2
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus
+            scanner: grype
+
   - id: CVE-2023-45288
     aliases:
       - GHSA-4v7x-pqxf-cx7m
