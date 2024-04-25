@@ -4,6 +4,23 @@ package:
   name: kubernetes-dashboard-metrics-scraper
 
 advisories:
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T19:31:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dashboard-metrics-scraper
+            componentID: 77c28cd329cc5f98
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/metrics-sidecar
+            scanner: grype
+
   - id: CVE-2023-39325
     aliases:
       - GHSA-4374-p667-p6c8
