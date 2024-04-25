@@ -4,6 +4,23 @@ package:
   name: filebeat
 
 advisories:
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T10:16:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: filebeat
+            componentID: 6a4059c4e39d7c1d
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.23.4
+            componentType: go-module
+            componentLocation: /usr/share/filebeat/filebeat
+            scanner: grype
+
   - id: CVE-2023-45288
     aliases:
       - GHSA-4v7x-pqxf-cx7m
