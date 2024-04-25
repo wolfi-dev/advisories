@@ -4,6 +4,23 @@ package:
   name: newrelic-nri-kube-events
 
 advisories:
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T13:38:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: newrelic-nri-kube-events
+            componentID: 8e1940ec11208197
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.29.3
+            componentType: go-module
+            componentLocation: /usr/bin/nri-kube-events
+            scanner: grype
+
   - id: CVE-2023-45283
     aliases:
       - GHSA-vvjp-q62m-2vph
