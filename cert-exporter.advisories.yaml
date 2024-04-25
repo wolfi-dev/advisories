@@ -4,6 +4,23 @@ package:
   name: cert-exporter
 
 advisories:
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T09:18:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-exporter
+            componentID: 2903f2804a8c3935
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.28.3
+            componentType: go-module
+            componentLocation: /usr/bin/cert-exporter
+            scanner: grype
+
   - id: CVE-2023-45288
     aliases:
       - GHSA-4v7x-pqxf-cx7m
