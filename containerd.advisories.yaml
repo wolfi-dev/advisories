@@ -4,6 +4,23 @@ package:
   name: containerd
 
 advisories:
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T08:12:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: containerd
+            componentID: a6ae6fbcecb34ecd
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.26.2
+            componentType: go-module
+            componentLocation: /usr/bin/containerd
+            scanner: grype
+
   - id: CVE-2023-39325
     aliases:
       - GHSA-4374-p667-p6c8
