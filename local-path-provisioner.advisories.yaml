@@ -4,6 +4,23 @@ package:
   name: local-path-provisioner
 
 advisories:
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T13:40:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: local-path-provisioner
+            componentID: 61ce1d477f100a4f
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.28.4
+            componentType: go-module
+            componentLocation: /usr/bin/local-path-provisioner
+            scanner: grype
+
   - id: CVE-2023-39326
     aliases:
       - GHSA-9f76-wg39-x86h
