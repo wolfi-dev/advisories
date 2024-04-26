@@ -4,6 +4,23 @@ package:
   name: consul-1.15
 
 advisories:
+  - id: CVE-2020-7219
+    aliases:
+      - GHSA-23jv-v6qj-3fhh
+    events:
+      - timestamp: 2024-04-26T07:06:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: consul-1.15
+            componentID: d2ede8dd5ffb8330
+            componentName: github.com/hashicorp/consul
+            componentVersion: v0.0.0-20240326214341-4fc94919996f
+            componentType: go-module
+            componentLocation: /bin/consul
+            scanner: grype
+
   - id: CVE-2022-3920
     aliases:
       - GHSA-gw2g-hhc9-wgjh
