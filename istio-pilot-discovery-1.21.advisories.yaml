@@ -4,6 +4,23 @@ package:
   name: istio-pilot-discovery-1.21
 
 advisories:
+  - id: CVE-2021-39155
+    aliases:
+      - GHSA-7774-7vr3-cc8j
+    events:
+      - timestamp: 2024-04-26T10:28:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-discovery-1.21
+            componentID: 2ea3abad673a0a65
+            componentName: istio.io/istio
+            componentVersion: v0.0.0-20240418224740-ed90e14d3473
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-discovery
+            scanner: grype
+
   - id: CVE-2023-45288
     aliases:
       - GHSA-4v7x-pqxf-cx7m
