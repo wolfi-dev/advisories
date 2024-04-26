@@ -24,6 +24,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Go vulndb has marked this code NOT_IMPORTABLE.
 
+  - id: CVE-2022-28224
+    aliases:
+      - GHSA-9394-xfq9-6qrp
+    events:
+      - timestamp: 2024-04-26T07:10:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: calico
+            componentID: 5ad83767079d8c0a
+            componentName: github.com/projectcalico/calico
+            componentVersion: v0.0.0-20240401174130-638464f94665
+            componentType: go-module
+            componentLocation: /usr/bin/calico-filecheck
+            scanner: grype
+
   - id: CVE-2023-2727
     aliases:
       - GHSA-qc2g-gmh6-95p4
