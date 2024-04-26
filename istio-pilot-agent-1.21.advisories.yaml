@@ -4,6 +4,23 @@ package:
   name: istio-pilot-agent-1.21
 
 advisories:
+  - id: CVE-2021-39155
+    aliases:
+      - GHSA-7774-7vr3-cc8j
+    events:
+      - timestamp: 2024-04-26T09:24:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-agent-1.21
+            componentID: 00f6149c3cb9a48b
+            componentName: istio.io/istio
+            componentVersion: v0.0.0-20240418224740-ed90e14d3473
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-agent
+            scanner: grype
+
   - id: CVE-2023-45288
     aliases:
       - GHSA-4v7x-pqxf-cx7m
