@@ -150,6 +150,23 @@ advisories:
         data:
           fixed-version: 0.57.0-r0
 
+  - id: CVE-2024-32473
+    aliases:
+      - GHSA-x84c-p2g9-rqv9
+    events:
+      - timestamp: 2024-04-26T10:37:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tekton-pipelines
+            componentID: 38898468841ea034
+            componentName: github.com/docker/docker
+            componentVersion: v26.0.0+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/tekton-pipelines-controller
+            scanner: grype
+
   - id: GHSA-2c7c-3mj9-8fqh
     events:
       - timestamp: 2023-12-14T09:33:26Z
