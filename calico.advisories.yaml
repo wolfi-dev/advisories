@@ -14,6 +14,23 @@ advisories:
           type: component-vulnerability-mismatch
           note: Vulnerable code is part of external-csi-driver and not included in calico
 
+  - id: CVE-2020-13597
+    aliases:
+      - GHSA-pf59-j7c2-rh6x
+    events:
+      - timestamp: 2024-04-26T07:10:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: calico
+            componentID: 5ad83767079d8c0a
+            componentName: github.com/projectcalico/calico
+            componentVersion: v0.0.0-20240401174130-638464f94665
+            componentType: go-module
+            componentLocation: /usr/bin/calico-filecheck
+            scanner: grype
+
   - id: CVE-2020-8552
     aliases:
       - GHSA-82hx-w2r5-c2wq
