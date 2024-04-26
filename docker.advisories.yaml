@@ -4,6 +4,23 @@ package:
   name: docker
 
 advisories:
+  - id: CVE-2014-6407
+    aliases:
+      - GHSA-5qgp-p5jc-w2rm
+    events:
+      - timestamp: 2024-04-26T08:36:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker
+            componentID: fe8f57ef4cf346a6
+            componentName: github.com/docker/docker
+            componentVersion: v0.0.0-20240422144514-c8af8ebe4a89
+            componentType: go-module
+            componentLocation: /usr/bin/dockerd
+            scanner: grype
+
   - id: CVE-2022-24769
     aliases:
       - GHSA-2mm7-x5h6-5pvq
