@@ -4,6 +4,23 @@ package:
   name: consul-1.16
 
 advisories:
+  - id: CVE-2020-25864
+    aliases:
+      - GHSA-8xmx-h8rq-h94j
+    events:
+      - timestamp: 2024-04-26T08:38:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: consul-1.16
+            componentID: 5cdf92d1aa2d12d7
+            componentName: github.com/hashicorp/consul
+            componentVersion: v0.0.0-20240326214614-cb00a73e9db2
+            componentType: go-module
+            componentLocation: /bin/consul
+            scanner: grype
+
   - id: CVE-2020-7219
     aliases:
       - GHSA-23jv-v6qj-3fhh
