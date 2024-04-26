@@ -51,6 +51,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-26T08:35:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: git-lfs
+            componentID: fd8ea14e91bde724
+            componentName: golang.org/x/net
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/git-lfs
+            scanner: grype
+
   - id: CVE-2023-48795
     aliases:
       - GHSA-45x7-px36-x8w8
