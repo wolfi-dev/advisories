@@ -4,6 +4,23 @@ package:
   name: jaeger-agent
 
 advisories:
+  - id: CVE-2020-10750
+    aliases:
+      - GHSA-gh32-pc56-4c96
+    events:
+      - timestamp: 2024-04-26T10:12:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jaeger-agent
+            componentID: 3742dac0271f15d5
+            componentName: github.com/jaegertracing/jaeger
+            componentVersion: v0.0.0-20240403195740-ecbae67ea32f
+            componentType: go-module
+            componentLocation: /usr/bin/jaeger-agent
+            scanner: grype
+
   - id: CVE-2023-45283
     aliases:
       - GHSA-vvjp-q62m-2vph
