@@ -4,6 +4,23 @@ package:
   name: rook
 
 advisories:
+  - id: CVE-2020-8559
+    aliases:
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-26T11:29:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rook
+            componentID: 1ff2495d7653fdf4
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.29.3
+            componentType: go-module
+            componentLocation: /usr/bin/rook
+            scanner: grype
+
   - id: CVE-2024-24786
     aliases:
       - GHSA-8r3f-844c-mc37
