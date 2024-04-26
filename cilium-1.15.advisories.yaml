@@ -4,6 +4,23 @@ package:
   name: cilium-1.15
 
 advisories:
+  - id: CVE-2023-41332
+    aliases:
+      - GHSA-24m5-r6hv-ccgp
+    events:
+      - timestamp: 2024-04-26T08:43:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.15
+            componentID: baf534dc6a830d5e
+            componentName: github.com/cilium/cilium
+            componentVersion: v0.0.0-20240411222109-9b3f9a8c0d71
+            componentType: go-module
+            componentLocation: /usr/bin/cilium-mount
+            scanner: grype
+
   - id: CVE-2023-45288
     aliases:
       - GHSA-4v7x-pqxf-cx7m
