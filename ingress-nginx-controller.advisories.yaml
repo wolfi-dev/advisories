@@ -4,6 +4,23 @@ package:
   name: ingress-nginx-controller
 
 advisories:
+  - id: CVE-2018-1002104
+    aliases:
+      - GHSA-p3x5-5xpx-9phm
+    events:
+      - timestamp: 2024-04-26T10:33:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ingress-nginx-controller
+            componentID: 6a5c8f9a54bdac1b
+            componentName: k8s.io/ingress-nginx
+            componentVersion: v0.0.0-20240423134412-51847ac1b537
+            componentType: go-module
+            componentLocation: /usr/bin/nginx-ingress-controller
+            scanner: grype
+
   - id: CVE-2020-8553
     aliases:
       - GHSA-hhpm-74pm-hf35
