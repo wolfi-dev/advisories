@@ -4,6 +4,23 @@ package:
   name: nats-server
 
 advisories:
+  - id: CVE-2019-13126
+    aliases:
+      - GHSA-jp4j-47f9-2vc3
+    events:
+      - timestamp: 2024-04-26T09:09:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nats-server
+            componentID: be7798666f434641
+            componentName: github.com/nats-io/nats-server/v2
+            componentVersion: v0.0.0-20240411210706-31af767dda2b
+            componentType: go-module
+            componentLocation: /usr/bin/nats-server
+            scanner: grype
+
   - id: CVE-2020-26521
     aliases:
       - GHSA-h2fg-54x9-5qhq
