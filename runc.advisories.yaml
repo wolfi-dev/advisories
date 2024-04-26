@@ -4,6 +4,23 @@ package:
   name: runc
 
 advisories:
+  - id: CVE-2016-3697
+    aliases:
+      - GHSA-q3j5-32m5-58c2
+    events:
+      - timestamp: 2024-04-26T11:37:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: runc
+            componentID: ca119c038cfdb0d1
+            componentName: github.com/opencontainers/runc
+            componentVersion: v0.0.0-20240123131248-51d5e94601ce
+            componentType: go-module
+            componentLocation: /usr/bin/runc
+            scanner: grype
+
   - id: CVE-2016-9962
     aliases:
       - GHSA-gp4j-w3vj-7299
