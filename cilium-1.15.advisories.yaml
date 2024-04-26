@@ -4,6 +4,23 @@ package:
   name: cilium-1.15
 
 advisories:
+  - id: CVE-2022-29178
+    aliases:
+      - GHSA-6p8v-8cq8-v2r3
+    events:
+      - timestamp: 2024-04-26T08:43:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.15
+            componentID: 835185c6e9895d51
+            componentName: github.com/cilium/cilium
+            componentVersion: v0.0.0-20240411222109-9b3f9a8c0d71
+            componentType: go-module
+            componentLocation: /usr/bin/cilium-dbg
+            scanner: grype
+
   - id: CVE-2023-27593
     aliases:
       - GHSA-4hc4-pgfx-3mrx
