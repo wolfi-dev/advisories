@@ -4,6 +4,23 @@ package:
   name: caddy
 
 advisories:
+  - id: CVE-2022-29718
+    aliases:
+      - GHSA-2927-hv3p-f3vp
+    events:
+      - timestamp: 2024-04-26T09:06:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: caddy
+            componentID: a43d8f418b6d95f9
+            componentName: github.com/caddyserver/caddy/v2
+            componentVersion: v0.0.0-20231207202621-6d9a83376b5e
+            componentType: go-module
+            componentLocation: /usr/bin/caddy
+            scanner: grype
+
   - id: CVE-2023-39325
     aliases:
       - GHSA-4374-p667-p6c8
