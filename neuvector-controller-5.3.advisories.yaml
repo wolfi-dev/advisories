@@ -1,0 +1,15 @@
+schema-version: 2.0.2
+
+package:
+  name: neuvector-controller-5.3
+
+advisories:
+  - id: CVE-2023-32188
+    aliases:
+      - GHSA-622h-h2p8-743x
+    events:
+      - timestamp: 2024-04-26T07:30:15Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: The current build for the main module is 5.3.2, but the scan shows it as 3.39.4. The JWT package dependencies have been bumped.
