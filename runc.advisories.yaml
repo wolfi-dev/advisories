@@ -4,6 +4,23 @@ package:
   name: runc
 
 advisories:
+  - id: CVE-2021-30465
+    aliases:
+      - GHSA-c3xm-pvg7-gh7r
+    events:
+      - timestamp: 2024-04-26T11:37:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: runc
+            componentID: ca119c038cfdb0d1
+            componentName: github.com/opencontainers/runc
+            componentVersion: v0.0.0-20240123131248-51d5e94601ce
+            componentType: go-module
+            componentLocation: /usr/bin/runc
+            scanner: grype
+
   - id: CVE-2023-39325
     aliases:
       - GHSA-4374-p667-p6c8
