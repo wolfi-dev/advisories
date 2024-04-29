@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: buildah
+
+advisories:
+  - id: CVE-2021-3602
+    aliases:
+      - GHSA-7638-r9r3-rmjj
+    events:
+      - timestamp: 2024-04-29T16:12:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buildah
+            componentID: 7b4e246fde7193c2
+            componentName: github.com/containers/buildah
+            componentVersion: v0.0.0-20240329173728-9f0251c1111d
+            componentType: go-module
+            componentLocation: /bin/buildah
+            scanner: grype
