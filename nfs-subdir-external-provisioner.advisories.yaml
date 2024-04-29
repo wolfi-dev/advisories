@@ -46,10 +46,18 @@ advisories:
     aliases:
       - GHSA-4v7x-pqxf-cx7m
     events:
-      - timestamp: 2024-04-26T10:17:02Z
-        type: fixed
+      - timestamp: 2024-04-26T09:12:18Z
+        type: detection
         data:
-          fixed-version: 4.0.18-r5
+          type: scan/v1
+          data:
+            subpackageName: nfs-subdir-external-provisioner
+            componentID: 04a90eb0cbd571b3
+            componentName: golang.org/x/net
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/nfs-subdir-external-provisioner
+            scanner: grype
 
   - id: CVE-2023-45289
     aliases:
