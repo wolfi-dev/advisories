@@ -4,6 +4,23 @@ package:
   name: terraform-provider-aws
 
 advisories:
+  - id: CVE-2018-9057
+    aliases:
+      - GHSA-r48h-jr2j-9g78
+    events:
+      - timestamp: 2024-04-26T10:07:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-aws
+            componentID: 8f79b297df1cf9bd
+            componentName: github.com/hashicorp/terraform-provider-aws
+            componentVersion: v0.0.0-20240425235520-68dd57960739
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-aws
+            scanner: grype
+
   - id: CVE-2023-44487
     aliases:
       - GHSA-m425-mq94-257g
