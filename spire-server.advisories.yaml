@@ -212,3 +212,18 @@ advisories:
         data:
           type: vulnerable-code-not-in-execution-path
           note: Vulnerable code is part of the docker runtime and not being used in this package
+
+  - id: GHSA-m7vp-hqwv-7m5x
+    events:
+      - timestamp: 2024-04-26T11:26:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spire-server
+            componentID: 195ef9b2225d00d7
+            componentName: github.com/spiffe/spire
+            componentVersion: v0.0.0-20240405231231-028ad7403a5a
+            componentType: go-module
+            componentLocation: /usr/bin/spire-server
+            scanner: grype
