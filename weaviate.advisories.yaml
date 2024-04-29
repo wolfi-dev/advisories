@@ -4,6 +4,23 @@ package:
   name: weaviate
 
 advisories:
+  - id: CVE-2023-38976
+    aliases:
+      - GHSA-8697-479h-5mfp
+    events:
+      - timestamp: 2024-04-26T11:14:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: weaviate
+            componentID: ec91931de9eb96cc
+            componentName: github.com/weaviate/weaviate
+            componentVersion: v0.0.0-20240419074054-86660ba6aa78
+            componentType: go-module
+            componentLocation: /bin/weaviate
+            scanner: grype
+
   - id: CVE-2023-39325
     aliases:
       - GHSA-4374-p667-p6c8
