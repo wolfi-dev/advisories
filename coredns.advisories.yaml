@@ -4,6 +4,40 @@ package:
   name: coredns
 
 advisories:
+  - id: CVE-2022-2835
+    aliases:
+      - GHSA-ch7v-37xg-75ph
+    events:
+      - timestamp: 2024-04-26T08:17:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: coredns
+            componentID: e7854537c45ae061
+            componentName: github.com/coredns/coredns
+            componentVersion: v0.0.0-20230815193032-ae2bbc29be1a
+            componentType: go-module
+            componentLocation: /usr/bin/coredns
+            scanner: grype
+
+  - id: CVE-2022-2837
+    aliases:
+      - GHSA-h828-v5pv-33qx
+    events:
+      - timestamp: 2024-04-26T08:17:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: coredns
+            componentID: e7854537c45ae061
+            componentName: github.com/coredns/coredns
+            componentVersion: v0.0.0-20230815193032-ae2bbc29be1a
+            componentType: go-module
+            componentLocation: /usr/bin/coredns
+            scanner: grype
+
   - id: CVE-2023-39325
     aliases:
       - GHSA-4374-p667-p6c8
@@ -51,6 +85,23 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CVE-2023-45288
+    aliases:
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-26T08:17:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: coredns
+            componentID: 20d05749097c1003
+            componentName: golang.org/x/net
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/coredns
+            scanner: grype
 
   - id: CVE-2023-45289
     aliases:
@@ -189,6 +240,21 @@ advisories:
             componentID: fe1ad1ac5d63ddd3
             componentName: google.golang.org/protobuf
             componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/coredns
+            scanner: grype
+
+  - id: GHSA-gv9j-4w24-q7vx
+    events:
+      - timestamp: 2024-04-26T08:17:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: coredns
+            componentID: e7854537c45ae061
+            componentName: github.com/coredns/coredns
+            componentVersion: v0.0.0-20230815193032-ae2bbc29be1a
             componentType: go-module
             componentLocation: /usr/bin/coredns
             scanner: grype
