@@ -286,6 +286,23 @@ advisories:
         data:
           fixed-version: 1.11.4-r5
 
+  - id: CVE-2024-29018
+    aliases:
+      - GHSA-mq39-4gv4-mvpx
+    events:
+      - timestamp: 2024-04-30T18:05:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno
+            componentID: f2ab721710cd8135
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.1+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/kyverno
+            scanner: grype
+
   - id: GHSA-2c7c-3mj9-8fqh
     events:
       - timestamp: 2023-11-22T16:40:41Z
