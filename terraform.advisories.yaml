@@ -161,3 +161,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.5.7-r5
+
+  - id: CVE-2024-3817
+    aliases:
+      - GHSA-q64h-39hv-4cf7
+    events:
+      - timestamp: 2024-05-03T09:44:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform
+            componentID: 370ef1cf2fb4eba8
+            componentName: github.com/hashicorp/go-getter
+            componentVersion: v1.7.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform
+            scanner: grype
