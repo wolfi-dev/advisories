@@ -157,6 +157,23 @@ advisories:
         data:
           fixed-version: 0.16.0-r6
 
+  - id: CVE-2024-34062
+    aliases:
+      - GHSA-g7vv-2v7x-gj9p
+    events:
+      - timestamp: 2024-05-04T09:10:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-katib
+            componentID: caca92c333ffb12d
+            componentName: tqdm
+            componentVersion: 4.66.2
+            componentType: python
+            componentLocation: /opt/katib/cmd/suggestion/hyperopt/v1beta1/lib/python3.10/site-packages/tqdm-4.66.2.dist-info/METADATA, /opt/katib/cmd/suggestion/hyperopt/v1beta1/lib/python3.10/site-packages/tqdm-4.66.2.dist-info/RECORD, /opt/katib/cmd/suggestion/hyperopt/v1beta1/lib/python3.10/site-packages/tqdm-4.66.2.dist-info/top_level.txt
+            scanner: grype
+
   - id: CVE-2024-3651
     aliases:
       - GHSA-jjg7-2v4v-x38h
