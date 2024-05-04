@@ -43,3 +43,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 9.4.7.0-r0
+
+  - id: CVE-2024-34447
+    aliases:
+      - GHSA-4h8f-2wvx-gg5w
+    events:
+      - timestamp: 2024-05-04T07:11:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jruby-9.4
+            componentID: 27410a3982c3d8a1
+            componentName: bcprov-jdk18on
+            componentVersion: "1.74"
+            componentType: java-archive
+            componentLocation: /usr/share/jruby/lib/ruby/stdlib/org/bouncycastle/bcprov-jdk18on/1.74/bcprov-jdk18on-1.74.jar
+            scanner: grype
