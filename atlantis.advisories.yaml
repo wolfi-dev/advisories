@@ -20,6 +20,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/atlantis
             scanner: grype
+      - timestamp: 2024-05-04T17:00:50Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: 'Module "github.com/runatlantis/atlantis" at "/usr/bin/atlantis": the commit of the fixed version (700cffd57ddc12c456e1094f5a60f7d61c86c4db) is an ancestor of installed commit (565fd9d0883285511fa3175c4657d55f9215dc00), which means the installed version was misidentified by the scanner and the vulnerability has actually been fixed.'
 
   - id: CVE-2023-39325
     aliases:
