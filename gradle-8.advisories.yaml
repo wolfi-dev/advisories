@@ -80,6 +80,27 @@ advisories:
         data:
           fixed-version: 8.7.0-r1
 
+  - id: CVE-2023-33202
+    aliases:
+      - GHSA-wjxj-5m7g-mg7q
+    events:
+      - timestamp: 2024-03-15T11:48:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gradle-8
+            componentID: 26b0dd49432bc719
+            componentName: bcprov-jdk15on
+            componentVersion: "1.68"
+            componentType: java-archive
+            componentLocation: /usr/share/java/gradle/lib/plugins/bcprov-jdk15on-1.68.jar
+            scanner: grype
+      - timestamp: 2024-03-31T01:38:54Z
+        type: fixed
+        data:
+          fixed-version: 8.7.0-r1
+
   - id: CVE-2023-35116
     aliases:
       - GHSA-gx6w-fqg7-mc3p
@@ -150,21 +171,19 @@ advisories:
         data:
           fixed-version: 8.7.0-r1
 
-  - id: GHSA-wjxj-5m7g-mg7q
+  - id: CVE-2024-34447
+    aliases:
+      - GHSA-4h8f-2wvx-gg5w
     events:
-      - timestamp: 2024-03-15T11:48:06Z
+      - timestamp: 2024-05-04T07:18:05Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: gradle-8
-            componentID: 26b0dd49432bc719
-            componentName: bcprov-jdk15on
-            componentVersion: "1.68"
+            componentID: 91d9271324b05462
+            componentName: bcprov-jdk18on
+            componentVersion: "1.74"
             componentType: java-archive
-            componentLocation: /usr/share/java/gradle/lib/plugins/bcprov-jdk15on-1.68.jar
+            componentLocation: /usr/share/java/gradle/lib/plugins/bcprov-jdk18on-1.74.jar
             scanner: grype
-      - timestamp: 2024-03-31T01:38:54Z
-        type: fixed
-        data:
-          fixed-version: 8.7.0-r1
