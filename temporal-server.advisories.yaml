@@ -20,6 +20,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/temporal-server
             scanner: grype
+      - timestamp: 2024-05-04T18:04:04Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: 'Module "go.temporal.io/server" at "/usr/bin/tdbg": the commit of the fixed version (b313b7f586415f98dde332c6b4d1801e48b187a4) is an ancestor of installed commit (fad6bdc0e9c0911f28829f3c47285357554e2567), which means the installed version was misidentified by the scanner and the vulnerability has actually been fixed.'
 
   - id: CVE-2023-45283
     aliases:

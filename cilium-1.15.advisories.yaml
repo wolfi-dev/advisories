@@ -156,6 +156,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/hubble-relay
             scanner: grype
+      - timestamp: 2024-05-04T16:36:53Z
+        type: true-positive-determination
+        data:
+          note: 'A govulncheck analysis found the several affected symbols in the APK.'
 
   - id: CVE-2024-24786
     aliases:
@@ -249,6 +253,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/cilium-health
             scanner: grype
+      - timestamp: 2024-05-04T16:36:56Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'A govulncheck analysis found that none of the known affected symbols were present in the APK, after examining the following paths within the package: /usr/bin/cilium-dbg, /usr/bin/cilium-health, /opt/cni/bin/cilium-cni, /usr/bin/cilium-agent, /usr/bin/cilium-bugtool, /usr/bin/cilium-health-responder, /usr/bin/cilium-sysctlfix, /usr/bin/cilium-mount.'
 
   - id: GHSA-pfhr-pccp-hwmh
     events:

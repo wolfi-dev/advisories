@@ -139,6 +139,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/vault
             scanner: grype
+      - timestamp: 2024-05-04T17:59:28Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'A govulncheck analysis found that none of the known affected symbols were present in the APK, after examining the following paths within the package: /usr/bin/vault.'
 
   - id: CVE-2023-3462
     aliases:
@@ -305,6 +310,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/vault
             scanner: grype
+      - timestamp: 2024-05-04T17:59:28Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: 'Module "github.com/hashicorp/vault" at "/usr/bin/vault": the commit of the fixed version (7d15950da2e3d835077f5b896354de5c01f27570) is an ancestor of installed commit (c93b26fd708f1af00e3862df942aff8296d47bf6), which means the installed version was misidentified by the scanner and the vulnerability has actually been fixed.'
 
   - id: CVE-2024-24786
     aliases:
