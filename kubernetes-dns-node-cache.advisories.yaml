@@ -106,6 +106,23 @@ advisories:
         data:
           fixed-version: 1.22.28-r1
 
+  - id: CVE-2024-0874
+    aliases:
+      - GHSA-m9w6-wp3h-vq8g
+    events:
+      - timestamp: 2024-05-06T07:41:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dns-node-cache
+            componentID: c54dda42664e7482
+            componentName: github.com/coredns/coredns
+            componentVersion: v1.10.0
+            componentType: go-module
+            componentLocation: /usr/bin/node-cache
+            scanner: grype
+
   - id: CVE-2024-24783
     aliases:
       - GHSA-3q2c-pvp5-3cqp
