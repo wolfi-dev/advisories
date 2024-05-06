@@ -139,6 +139,23 @@ advisories:
         data:
           note: It is a vendor dependency that includes the vulnerable version. awaiting upstream release that includes the fix from https://github.com/logstash-plugins/logstash-input-http/pull/172
 
+  - id: CVE-2024-34447
+    aliases:
+      - GHSA-4h8f-2wvx-gg5w
+    events:
+      - timestamp: 2024-05-04T09:18:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash
+            componentID: 4e6e001169cbaeb0
+            componentName: bcprov-jdk18on
+            componentVersion: "1.74"
+            componentType: java-archive
+            componentLocation: /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/jruby-openssl-0.14.5-java/lib/org/bouncycastle/bcprov-jdk18on/1.74/bcprov-jdk18on-1.74.jar
+            scanner: grype
+
   - id: GHSA-xc9x-jj77-9p9j
     events:
       - timestamp: 2024-02-06T16:08:38Z
