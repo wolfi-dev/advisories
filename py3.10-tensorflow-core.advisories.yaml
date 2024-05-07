@@ -4,6 +4,23 @@ package:
   name: py3.10-tensorflow-core
 
 advisories:
+  - id: CVE-2024-34069
+    aliases:
+      - GHSA-2g68-c3qc-8985
+    events:
+      - timestamp: 2024-05-07T07:22:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3.10-tensorflow-core
+            componentID: 9e8ab3fc56cd0970
+            componentName: Werkzeug
+            componentVersion: 3.0.1
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/werkzeug-3.0.1.dist-info/METADATA, /usr/lib/python3.10/site-packages/werkzeug-3.0.1.dist-info/RECORD
+            scanner: grype
+
   - id: CVE-2024-3651
     aliases:
       - GHSA-jjg7-2v4v-x38h
