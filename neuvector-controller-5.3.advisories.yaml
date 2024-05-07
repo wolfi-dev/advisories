@@ -21,7 +21,10 @@ advisories:
             componentLocation: /usr/bin/controller
             scanner: grype
       - timestamp: 2024-05-07T11:36:08Z
-        type: component-vulnerability-mismatch
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: neuvector-controller is using a non vulnerable version of neuvector module which has been released after the affected versions
 
   - id: CVE-2024-3154
     aliases:
