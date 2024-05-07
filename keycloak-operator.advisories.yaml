@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: keycloak-operator
+
+advisories:
+  - id: CVE-2024-2700
+    aliases:
+      - GHSA-f8h5-v2vg-46rr
+    events:
+      - timestamp: 2024-05-07T14:42:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak-operator
+            componentID: 2a50739ec644a600
+            componentName: quarkus-core
+            componentVersion: 3.8.3
+            componentType: java-archive
+            componentLocation: /usr/share/java/quarkus-app/lib/main/io.quarkus.quarkus-core-3.8.3.jar
+            scanner: grype
