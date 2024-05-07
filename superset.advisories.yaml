@@ -1,0 +1,39 @@
+schema-version: 2.0.2
+
+package:
+  name: superset
+
+advisories:
+  - id: CVE-2024-34064
+    aliases:
+      - GHSA-h75v-3vvj-5mfj
+    events:
+      - timestamp: 2024-05-07T09:09:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: superset
+            componentID: fcdde36400e84273
+            componentName: Jinja2
+            componentVersion: 3.1.3
+            componentType: python
+            componentLocation: /usr/share/superset/venv/lib/python3.11/site-packages/Jinja2-3.1.3.dist-info/METADATA, /usr/share/superset/venv/lib/python3.11/site-packages/Jinja2-3.1.3.dist-info/RECORD, /usr/share/superset/venv/lib/python3.11/site-packages/Jinja2-3.1.3.dist-info/top_level.txt
+            scanner: grype
+
+  - id: CVE-2024-34069
+    aliases:
+      - GHSA-2g68-c3qc-8985
+    events:
+      - timestamp: 2024-05-07T09:09:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: superset
+            componentID: ce1e866ec74f9d09
+            componentName: Werkzeug
+            componentVersion: 3.0.1
+            componentType: python
+            componentLocation: /usr/share/superset/venv/lib/python3.11/site-packages/werkzeug-3.0.1.dist-info/METADATA, /usr/share/superset/venv/lib/python3.11/site-packages/werkzeug-3.0.1.dist-info/RECORD
+            scanner: grype
