@@ -8,32 +8,8 @@ advisories:
     aliases:
       - GHSA-622h-h2p8-743x
     events:
-      - timestamp: 2024-04-27T10:34:17Z
-        type: detection
+      - timestamp: 2024-05-07T10:31:01Z
+        type: false-positive-determination
         data:
-          type: scan/v1
-          data:
-            subpackageName: neuvector-controller-5.3
-            componentID: 484c8f3083b901da
-            componentName: github.com/neuvector/neuvector
-            componentVersion: v0.0.0-20240408172821-edbdcba63283
-            componentType: go-module
-            componentLocation: /usr/bin/controller
-            scanner: grype
-
-  - id: CVE-2024-3154
-    aliases:
-      - GHSA-c5pj-mqfh-rvc3
-    events:
-      - timestamp: 2024-04-27T10:34:18Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: neuvector-controller-5.3
-            componentID: 72f2ae20e9e68f79
-            componentName: github.com/opencontainers/runc
-            componentVersion: v1.1.12
-            componentType: go-module
-            componentLocation: /usr/bin/controller
-            scanner: grype
+          type: vulnerable-code-version-not-used
+          note: neuvector-controller is using a non vulnerable version of neuvector module which has been released after the affected versions.
