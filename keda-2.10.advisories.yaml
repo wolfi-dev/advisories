@@ -213,3 +213,20 @@ advisories:
         type: fix-not-planned
         data:
           note: Keda 2.10 is longer supported. Security Support ended on 2023-09-28.
+
+  - id: CVE-2024-24787
+    aliases:
+      - GHSA-5fq7-4mxc-535h
+    events:
+      - timestamp: 2024-05-14T07:18:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.10
+            componentID: 0cad97979590e8d2
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/bin/keda
+            scanner: grype
