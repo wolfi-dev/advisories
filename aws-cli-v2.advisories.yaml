@@ -45,3 +45,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.15.35-r0
+
+  - id: CVE-2024-4030
+    aliases:
+      - GHSA-2w87-6hh6-mqrj
+    events:
+      - timestamp: 2024-05-14T07:35:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-cli-v2
+            componentID: 2987fd22393b3a94
+            componentName: python
+            componentVersion: 3.11.9
+            componentType: binary
+            componentLocation: /usr/lib/aws-cli/libpython3.11.so.1.0
+            scanner: grype
