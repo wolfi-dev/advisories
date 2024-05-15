@@ -24,3 +24,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 24.0.4-r0
+
+  - id: CVE-2024-29857
+    aliases:
+      - GHSA-8xfc-gm6g-vgpv
+    events:
+      - timestamp: 2024-05-15T09:29:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak-operator
+            componentID: 63c664707b148834
+            componentName: bcpkix-jdk18on
+            componentVersion: "1.77"
+            componentType: java-archive
+            componentLocation: /usr/share/java/quarkus-app/lib/main/org.bouncycastle.bcpkix-jdk18on-1.77.jar
+            scanner: grype
