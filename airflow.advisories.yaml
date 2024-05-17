@@ -4,6 +4,23 @@ package:
   name: airflow
 
 advisories:
+  - id: CVE-2023-46136
+    aliases:
+      - GHSA-hrfv-mqp8-q5rw
+    events:
+      - timestamp: 2024-05-17T07:30:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow
+            componentID: 66bf9f85cfd5bed8
+            componentName: Werkzeug
+            componentVersion: 2.2.3
+            componentType: python
+            componentLocation: /opt/airflow/venv/lib/python3.12/site-packages/Werkzeug-2.2.3.dist-info/METADATA, /opt/airflow/venv/lib/python3.12/site-packages/Werkzeug-2.2.3.dist-info/RECORD, /opt/airflow/venv/lib/python3.12/site-packages/Werkzeug-2.2.3.dist-info/top_level.txt
+            scanner: grype
+
   - id: CVE-2023-50782
     aliases:
       - GHSA-3ww4-gg4f-jr7f
