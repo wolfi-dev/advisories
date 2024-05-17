@@ -241,6 +241,23 @@ advisories:
             componentLocation: /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/jruby-openssl-0.14.5-java/lib/org/bouncycastle/bcprov-jdk18on/1.74/bcprov-jdk18on-1.74.jar
             scanner: grype
 
+  - id: CVE-2024-35176
+    aliases:
+      - GHSA-vg3r-rm7w-2xgh
+    events:
+      - timestamp: 2024-05-17T08:40:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash
+            componentID: 541e41d66a0d92c9
+            componentName: rexml
+            componentVersion: 3.2.5
+            componentType: gem
+            componentLocation: /usr/share/logstash/vendor/jruby/lib/ruby/gems/shared/specifications/rexml-3.2.5.gemspec
+            scanner: grype
+
   - id: GHSA-r95h-9x8f-r3f7
     events:
       - timestamp: 2024-05-14T08:33:52Z
