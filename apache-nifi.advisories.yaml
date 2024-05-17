@@ -21,6 +21,23 @@ advisories:
             componentLocation: /usr/share/nifi/lib/nifi-hwx-schema-registry-nar-1.26.0.nar
             scanner: grype
 
+  - id: CVE-2021-38153
+    aliases:
+      - GHSA-3j6g-hxx5-3q26
+    events:
+      - timestamp: 2024-05-17T01:00:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 5f0d2c78c1d4b43d
+            componentName: kafka-clients
+            componentVersion: 2.0.0
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-kafka-2-0-nar-1.26.0.nar
+            scanner: grype
+
   - id: CVE-2022-46337
     aliases:
       - GHSA-rcjc-c4pj-xxrp
