@@ -4,6 +4,23 @@ package:
   name: apache-nifi
 
 advisories:
+  - id: CVE-2016-1000027
+    aliases:
+      - GHSA-4wrc-f8pq-fpqp
+    events:
+      - timestamp: 2024-05-17T01:00:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: b5523a0d9d9e4ba1
+            componentName: spring-web
+            componentVersion: 5.3.34
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-framework-nar-1.26.0.nar
+            scanner: grype
+
   - id: CVE-2020-25649
     aliases:
       - GHSA-288c-cq4h-88gq
