@@ -173,6 +173,23 @@ advisories:
         data:
           note: It is a vendor dependency that includes the vulnerable version. awaiting upstream release that includes the fix from https://github.com/logstash-plugins/logstash-input-http/pull/172
 
+  - id: CVE-2024-29857
+    aliases:
+      - GHSA-8xfc-gm6g-vgpv
+    events:
+      - timestamp: 2024-05-17T08:40:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash
+            componentID: 1081b712054e693e
+            componentName: bcpkix-jdk18on
+            componentVersion: "1.74"
+            componentType: java-archive
+            componentLocation: /usr/share/logstash/vendor/jruby/lib/ruby/stdlib/org/bouncycastle/bcpkix-jdk18on/1.74/bcpkix-jdk18on-1.74.jar
+            scanner: grype
+
   - id: CVE-2024-34447
     aliases:
       - GHSA-4h8f-2wvx-gg5w
