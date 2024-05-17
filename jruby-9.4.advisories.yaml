@@ -111,3 +111,20 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/jruby/lib/ruby/stdlib/org/bouncycastle/bcprov-jdk18on/1.74/bcprov-jdk18on-1.74.jar
             scanner: grype
+
+  - id: CVE-2024-35176
+    aliases:
+      - GHSA-vg3r-rm7w-2xgh
+    events:
+      - timestamp: 2024-05-17T07:09:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jruby-9.4
+            componentID: d5985b7f03994d4d
+            componentName: rexml
+            componentVersion: 3.2.5
+            componentType: gem
+            componentLocation: /usr/share/jruby/lib/ruby/gems/shared/specifications/rexml-3.2.5.gemspec
+            scanner: grype
