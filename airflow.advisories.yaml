@@ -1,0 +1,31 @@
+schema-version: 2.0.2
+
+package:
+  name: airflow
+
+advisories:
+  - id: CVE-2023-46136
+    aliases:
+      - GHSA-hrfv-mqp8-q5rw
+    events:
+      - timestamp: 2024-05-14T19:11:19Z
+        type: detection
+        data:
+          type: manual
+      - timestamp: 2024-05-14T20:41:22Z
+        type: pending-upstream-fix
+        data:
+          note: Upgrading werkzeug to v2.3.8 prevents the usage of connexion(pinned to v2.14.2 since connexion v3 breaks init-views; awaiting https://github.com/apache/airflow/issues/35234 resolution"
+
+  - id: CVE-2024-34069
+    aliases:
+      - GHSA-2g68-c3qc-8985
+    events:
+      - timestamp: 2024-05-14T19:10:49Z
+        type: detection
+        data:
+          type: manual
+      - timestamp: 2024-05-14T20:15:00Z
+        type: pending-upstream-fix
+        data:
+          note: build req mentions "Werkzug 3 breaks Flask-Login 0.6.2, also connexion needs to be updated to >= 3.0, we should remove this limitation when FAB supports Flask 2.3 and we migrate connexion to 3+"
