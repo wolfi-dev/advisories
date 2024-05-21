@@ -252,6 +252,23 @@ advisories:
         data:
           fixed-version: 7.52.0-r0
 
+  - id: CVE-2024-35195
+    aliases:
+      - GHSA-9wx4-h78v-vm56
+    events:
+      - timestamp: 2024-05-21T20:45:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: datadog-agent
+            componentID: 76d51e19697c5c59
+            componentName: requests
+            componentVersion: 2.31.0
+            componentType: python
+            componentLocation: /usr/share/datadog-agent/lib/python3.11/site-packages/requests-2.31.0.dist-info/METADATA, /usr/share/datadog-agent/lib/python3.11/site-packages/requests-2.31.0.dist-info/RECORD, /usr/share/datadog-agent/lib/python3.11/site-packages/requests-2.31.0.dist-info/direct_url.json, /usr/share/datadog-agent/lib/python3.11/site-packages/requests-2.31.0.dist-info/top_level.txt
+            scanner: grype
+
   - id: GHSA-77hh-43cm-v8j6
     events:
       - timestamp: 2024-05-21T20:45:17Z
