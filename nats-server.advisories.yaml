@@ -114,6 +114,23 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This package uses a newer version v2.10.14 when the vulnerable code affects any version older than v2.2.0.
 
+  - id: CVE-2021-32026
+    aliases:
+      - GHSA-jj54-5q2m-q7pj
+    events:
+      - timestamp: 2024-05-22T08:13:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nats-server
+            componentID: 3766541b46a26d8b
+            componentName: github.com/nats-io/nats-server/v2
+            componentVersion: v0.0.0-20240521184313-80e29794e56d
+            componentType: go-module
+            componentLocation: /usr/bin/nats-server
+            scanner: grype
+
   - id: CVE-2023-45283
     aliases:
       - GHSA-vvjp-q62m-2vph
