@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: teleport
+
+advisories:
+  - id: CVE-2022-36633
+    aliases:
+      - GHSA-6xf3-5hp7-xqqg
+    events:
+      - timestamp: 2024-05-24T19:03:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: teleport
+            componentID: 3501442b8355c9de
+            componentName: github.com/gravitational/teleport
+            componentVersion: v0.0.0-20240523232127-d8e06e874f3b
+            componentType: go-module
+            componentLocation: /usr/local/bin/tsh
+            scanner: grype
