@@ -25,6 +25,27 @@ advisories:
         data:
           fixed-version: 0.0.77-r0
 
+  - id: CVE-2024-35195
+    aliases:
+      - GHSA-9wx4-h78v-vm56
+    events:
+      - timestamp: 2024-05-22T08:04:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: confluent-docker-utils
+            componentID: 797268599775bb8d
+            componentName: requests
+            componentVersion: 2.31.0
+            componentType: python
+            componentLocation: /usr/lib/python3.12/site-packages/requests-2.31.0.dist-info/METADATA, /usr/lib/python3.12/site-packages/requests-2.31.0.dist-info/RECORD, /usr/lib/python3.12/site-packages/requests-2.31.0.dist-info/top_level.txt
+            scanner: grype
+      - timestamp: 2024-05-24T01:00:36Z
+        type: fixed
+        data:
+          fixed-version: 0.0.78-r0
+
   - id: CVE-2024-3651
     aliases:
       - GHSA-jjg7-2v4v-x38h

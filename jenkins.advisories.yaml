@@ -220,6 +220,81 @@ advisories:
         data:
           fixed-version: 2.447-r0
 
+  - id: CVE-2024-29857
+    aliases:
+      - GHSA-8xfc-gm6g-vgpv
+    events:
+      - timestamp: 2024-05-15T09:40:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jenkins
+            componentID: a4c91d65e18d9066
+            componentName: bcpkix-jdk18on
+            componentVersion: "1.77"
+            componentType: java-archive
+            componentLocation: /usr/share/java/jenkins/jenkins.war
+            scanner: grype
+      - timestamp: 2024-05-27T04:50:45Z
+        type: pending-upstream-fix
+        data:
+          note: 'Bouncycastle cannot be upgraded directly in jenkins. The upstream project needs to upgrade the API plugin first: https://github.com/jenkinsci/bouncycastle-api-plugin'
+      - timestamp: 2024-05-28T07:14:25Z
+        type: fixed
+        data:
+          fixed-version: 2.459-r0
+
+  - id: CVE-2024-30171
+    aliases:
+      - GHSA-v435-xc8x-wvr9
+    events:
+      - timestamp: 2024-05-15T09:40:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jenkins
+            componentID: a4c91d65e18d9066
+            componentName: bcpkix-jdk18on
+            componentVersion: "1.77"
+            componentType: java-archive
+            componentLocation: /usr/share/java/jenkins/jenkins.war
+            scanner: grype
+      - timestamp: 2024-05-27T04:51:02Z
+        type: pending-upstream-fix
+        data:
+          note: 'Bouncycastle cannot be upgraded directly in jenkins. The upstream project needs to upgrade the API plugin first: https://github.com/jenkinsci/bouncycastle-api-plugin'
+      - timestamp: 2024-05-28T07:14:26Z
+        type: fixed
+        data:
+          fixed-version: 2.459-r0
+
+  - id: CVE-2024-30172
+    aliases:
+      - GHSA-m44j-cfrm-g8qc
+    events:
+      - timestamp: 2024-05-15T09:40:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jenkins
+            componentID: a4c91d65e18d9066
+            componentName: bcpkix-jdk18on
+            componentVersion: "1.77"
+            componentType: java-archive
+            componentLocation: /usr/share/java/jenkins/jenkins.war
+            scanner: grype
+      - timestamp: 2024-05-27T04:50:53Z
+        type: pending-upstream-fix
+        data:
+          note: 'Bouncycastle cannot be upgraded directly in jenkins. The upstream project needs to upgrade the API plugin first: https://github.com/jenkinsci/bouncycastle-api-plugin'
+      - timestamp: 2024-05-28T07:14:25Z
+        type: fixed
+        data:
+          fixed-version: 2.459-r0
+
   - id: CVE-2024-34144
     aliases:
       - GHSA-v63g-v339-2673
@@ -278,6 +353,14 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/java/jenkins/jenkins.war
             scanner: grype
+      - timestamp: 2024-05-27T04:50:31Z
+        type: pending-upstream-fix
+        data:
+          note: 'Bouncycastle cannot be upgraded directly in jenkins. The upstream project needs to upgrade the API plugin first: https://github.com/jenkinsci/bouncycastle-api-plugin'
+      - timestamp: 2024-05-28T07:14:26Z
+        type: fixed
+        data:
+          fixed-version: 2.459-r0
 
   - id: GHSA-58qw-p7qm-5rvh
     events:

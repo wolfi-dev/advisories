@@ -361,6 +361,44 @@ advisories:
         data:
           fixed-version: 2.0.3-r3
 
+  - id: CVE-2024-35192
+    aliases:
+      - GHSA-xcq4-m2r3-cmrj
+    events:
+      - timestamp: 2024-05-22T08:27:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zot
+            componentID: 24fdd7e39924289e
+            componentName: github.com/aquasecurity/trivy
+            componentVersion: v0.50.2
+            componentType: go-module
+            componentLocation: /usr/bin/zot
+            scanner: grype
+
+  - id: CVE-2024-3727
+    aliases:
+      - GHSA-6wvf-f2vw-3425
+    events:
+      - timestamp: 2024-05-22T08:27:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zot
+            componentID: 3286582c95b6fc9b
+            componentName: github.com/containers/image/v5
+            componentVersion: v5.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/zot
+            scanner: grype
+      - timestamp: 2024-05-23T01:02:24Z
+        type: fixed
+        data:
+          fixed-version: 2.0.4-r2
+
   - id: CVE-2024-3817
     aliases:
       - GHSA-q64h-39hv-4cf7

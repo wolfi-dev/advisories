@@ -1,0 +1,853 @@
+schema-version: 2.0.2
+
+package:
+  name: apache-nifi
+
+advisories:
+  - id: CVE-2016-1000027
+    aliases:
+      - GHSA-4wrc-f8pq-fpqp
+    events:
+      - timestamp: 2024-05-17T01:00:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: b5523a0d9d9e4ba1
+            componentName: spring-web
+            componentVersion: 5.3.34
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-framework-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: Remediating this CVE will require upgrading from Spring v5 to Spring v6, which is a major version increment with high risk. Awaiting for Upstream to migrate from Spring 5.3.x to 6.x
+      - timestamp: 2024-05-17T16:32:13Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2018-10237
+    aliases:
+      - GHSA-mvr2-9pj6-7w5j
+    events:
+      - timestamp: 2024-05-17T01:01:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 6c75ff4ffd67eac3
+            componentName: guava
+            componentVersion: 14.0.1
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-social-media-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:02Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2020-25649
+    aliases:
+      - GHSA-288c-cq4h-88gq
+    events:
+      - timestamp: 2024-05-17T01:00:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 21fc915d6c30f277
+            componentName: jackson-databind
+            componentVersion: 2.10.1
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-hwx-schema-registry-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:15Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2020-36518
+    aliases:
+      - GHSA-57j2-w4cx-62h2
+    events:
+      - timestamp: 2024-05-17T01:00:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 21fc915d6c30f277
+            componentName: jackson-databind
+            componentVersion: 2.10.1
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-hwx-schema-registry-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:17Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2020-8908
+    aliases:
+      - GHSA-5mg8-w23w-74h3
+    events:
+      - timestamp: 2024-05-17T01:00:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 6c75ff4ffd67eac3
+            componentName: guava
+            componentVersion: 14.0.1
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-social-media-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:03Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2021-22569
+    aliases:
+      - GHSA-wrvw-hg22-4m67
+    events:
+      - timestamp: 2024-05-17T01:01:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 97958e540399f5bc
+            componentName: protobuf-java
+            componentVersion: 2.5.0
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-hbase_2-client-service-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:16Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2021-22570
+    aliases:
+      - GHSA-77rm-9x9h-xj3g
+    events:
+      - timestamp: 2024-05-17T01:00:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 97958e540399f5bc
+            componentName: protobuf-java
+            componentVersion: 2.5.0
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-hbase_2-client-service-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:12Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2021-38153
+    aliases:
+      - GHSA-3j6g-hxx5-3q26
+    events:
+      - timestamp: 2024-05-17T01:00:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 5f0d2c78c1d4b43d
+            componentName: kafka-clients
+            componentVersion: 2.0.0
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-kafka-2-0-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:17Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2021-46877
+    aliases:
+      - GHSA-3x8x-79m2-3w2w
+    events:
+      - timestamp: 2024-05-17T01:00:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 21fc915d6c30f277
+            componentName: jackson-databind
+            componentVersion: 2.10.1
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-hwx-schema-registry-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:11Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2022-3171
+    aliases:
+      - GHSA-h4h5-3hr4-j3g2
+    events:
+      - timestamp: 2024-05-17T01:01:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 97958e540399f5bc
+            componentName: protobuf-java
+            componentVersion: 2.5.0
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-hbase_2-client-service-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:07Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2022-3509
+    aliases:
+      - GHSA-g5ww-5jh7-63cx
+    events:
+      - timestamp: 2024-05-17T01:01:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 97958e540399f5bc
+            componentName: protobuf-java
+            componentVersion: 2.5.0
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-hbase_2-client-service-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:06Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2022-3510
+    aliases:
+      - GHSA-4gg5-vx3j-xwc7
+    events:
+      - timestamp: 2024-05-17T01:00:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 97958e540399f5bc
+            componentName: protobuf-java
+            componentVersion: 2.5.0
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-hbase_2-client-service-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:08Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2022-41881
+    aliases:
+      - GHSA-fx2c-96vj-985v
+    events:
+      - timestamp: 2024-05-17T01:01:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: bead1ce19c1ad2ac
+            componentName: netty-codec-haproxy
+            componentVersion: 4.1.84.Final
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-couchbase-services-api-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:14Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2022-41915
+    aliases:
+      - GHSA-hh82-3pmq-7frp
+    events:
+      - timestamp: 2024-05-17T01:01:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 470809a5bd5857e4
+            componentName: netty-codec-http
+            componentVersion: 4.1.84.Final
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-couchbase-services-api-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:00Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2022-42003
+    aliases:
+      - GHSA-jjjh-jjxp-wpff
+    events:
+      - timestamp: 2024-05-17T01:01:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 21fc915d6c30f277
+            componentName: jackson-databind
+            componentVersion: 2.10.1
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-hwx-schema-registry-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:08Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2022-42004
+    aliases:
+      - GHSA-rgv9-q543-rqg4
+    events:
+      - timestamp: 2024-05-17T01:01:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 21fc915d6c30f277
+            componentName: jackson-databind
+            componentVersion: 2.10.1
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-hwx-schema-registry-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:18Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2022-46337
+    aliases:
+      - GHSA-rcjc-c4pj-xxrp
+    events:
+      - timestamp: 2024-05-17T01:00:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 0716aeac20d45159
+            componentName: derby
+            componentVersion: 10.14.2.0
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-dbcp-service-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:03Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2023-2976
+    aliases:
+      - GHSA-7g45-4rm6-3mm3
+    events:
+      - timestamp: 2024-05-17T01:00:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 6c75ff4ffd67eac3
+            componentName: guava
+            componentVersion: 14.0.1
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-social-media-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:10Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2023-33201
+    aliases:
+      - GHSA-hr8g-6v94-x4m9
+    events:
+      - timestamp: 2024-05-17T01:01:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 84cc2e3aa69dd2b2
+            componentName: bcprov-jdk18on
+            componentVersion: "1.71"
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-scripting-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:01Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2023-33202
+    aliases:
+      - GHSA-wjxj-5m7g-mg7q
+    events:
+      - timestamp: 2024-05-17T01:01:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 5c53423d42f1274f
+            componentName: bcpkix-jdk18on
+            componentVersion: "1.71"
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-scripting-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:02Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2023-34462
+    aliases:
+      - GHSA-6mjq-h674-j845
+    events:
+      - timestamp: 2024-05-17T01:00:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 574e8fc180b6a82e
+            componentName: netty-handler
+            componentVersion: 4.1.84.Final
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-couchbase-services-api-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:07Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2023-46120
+    aliases:
+      - GHSA-mm8h-8587-p46h
+    events:
+      - timestamp: 2024-05-17T01:01:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: b411083892e89e35
+            componentName: amqp-client
+            componentVersion: 5.17.0
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-metrics-reporting-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:06Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2023-51775
+    aliases:
+      - GHSA-6qvw-249j-h44c
+    events:
+      - timestamp: 2024-05-17T01:00:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: d4be8c692b6a1124
+            componentName: jose4j
+            componentVersion: 0.9.3
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-box-services-api-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:05Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2023-52428
+    aliases:
+      - GHSA-gvpg-vgmx-xg6w
+    events:
+      - timestamp: 2024-05-17T01:01:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 6c1946e0c8bdd4ce
+            componentName: nimbus-jose-jwt
+            componentVersion: "7.9"
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-hwx-schema-registry-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:19Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2024-25710
+    aliases:
+      - GHSA-4g9r-vxhx-9pgx
+    events:
+      - timestamp: 2024-05-17T01:00:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: eac3d3f5c1446699
+            componentName: commons-compress
+            componentVersion: "1.21"
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-scripting-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:13Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2024-26308
+    aliases:
+      - GHSA-4265-ccf5-phj5
+    events:
+      - timestamp: 2024-05-17T01:00:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: f6f208bf4083f0ba
+            componentName: commons-compress
+            componentVersion: "1.21"
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-hwx-schema-registry-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:09Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2024-29025
+    aliases:
+      - GHSA-5jpm-x58v-624v
+    events:
+      - timestamp: 2024-05-17T01:00:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 470809a5bd5857e4
+            componentName: netty-codec-http
+            componentVersion: 4.1.84.Final
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-couchbase-services-api-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:12Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2024-29131
+    aliases:
+      - GHSA-xjp4-hw94-mvp5
+    events:
+      - timestamp: 2024-05-17T01:01:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: a8206f409f686724
+            componentName: commons-configuration2
+            componentVersion: 2.1.1
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-hbase_2-client-service-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:04Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2024-29133
+    aliases:
+      - GHSA-9w38-p64v-xpmv
+    events:
+      - timestamp: 2024-05-17T01:01:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: a8206f409f686724
+            componentName: commons-configuration2
+            componentVersion: 2.1.1
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-hbase_2-client-service-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:14Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2024-29857
+    aliases:
+      - GHSA-8xfc-gm6g-vgpv
+    events:
+      - timestamp: 2024-05-17T01:01:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 5c53423d42f1274f
+            componentName: bcpkix-jdk18on
+            componentVersion: "1.71"
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-scripting-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:15Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2024-30171
+    aliases:
+      - GHSA-v435-xc8x-wvr9
+    events:
+      - timestamp: 2024-05-17T01:01:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 5c53423d42f1274f
+            componentName: bcpkix-jdk18on
+            componentVersion: "1.71"
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-scripting-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:09Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2024-30172
+    aliases:
+      - GHSA-m44j-cfrm-g8qc
+    events:
+      - timestamp: 2024-05-17T01:01:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 5c53423d42f1274f
+            componentName: bcpkix-jdk18on
+            componentVersion: "1.71"
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-scripting-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:04Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: CVE-2024-34447
+    aliases:
+      - GHSA-4h8f-2wvx-gg5w
+    events:
+      - timestamp: 2024-05-17T01:00:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 84cc2e3aa69dd2b2
+            componentName: bcprov-jdk18on
+            componentVersion: "1.71"
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-scripting-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:18Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2
+
+  - id: GHSA-xpw8-rcwv-8f8p
+    events:
+      - timestamp: 2024-05-17T01:02:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 9c9e19cf354e3083
+            componentName: netty-codec-http2
+            componentVersion: 4.1.84.Final
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/lib/nifi-couchbase-services-api-nar-1.26.0.nar
+            scanner: grype
+      - timestamp: 2024-05-17T08:31:36Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+      - timestamp: 2024-05-17T16:32:10Z
+        type: fixed
+        data:
+          fixed-version: 1.26.0-r2

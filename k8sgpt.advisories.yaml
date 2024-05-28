@@ -239,6 +239,27 @@ advisories:
         data:
           fixed-version: 0.3.27-r2
 
+  - id: CVE-2024-35192
+    aliases:
+      - GHSA-xcq4-m2r3-cmrj
+    events:
+      - timestamp: 2024-05-22T08:34:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k8sgpt
+            componentID: 7e7f00f7839f6170
+            componentName: github.com/aquasecurity/trivy
+            componentVersion: v0.47.0
+            componentType: go-module
+            componentLocation: /usr/bin/k8sgpt
+            scanner: grype
+      - timestamp: 2024-05-24T16:00:29Z
+        type: fixed
+        data:
+          fixed-version: 0.3.32-r1
+
   - id: GHSA-6xv5-86q9-7xr8
     events:
       - timestamp: 2023-09-09T15:18:16Z

@@ -54,6 +54,18 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.10.13-r5
+      - timestamp: 2024-05-23T07:35:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: python-3.10
+            componentID: 4bd99e38d1761a8a
+            componentName: python
+            componentVersion: 3.10.14
+            componentType: binary
+            componentLocation: /usr/bin/python3.10, /usr/lib/libpython3.10.so.1.0
+            scanner: grype
 
   - id: CVE-2023-36632
     aliases:
@@ -107,3 +119,8 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2024-05-15T14:46:04Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows.

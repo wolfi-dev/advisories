@@ -50,6 +50,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/env2yaml
             scanner: grype
+      - timestamp: 2024-05-21T19:00:38Z
+        type: fixed
+        data:
+          fixed-version: 8.13.4-r0
 
   - id: CVE-2024-24788
     aliases:
@@ -67,6 +71,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/env2yaml
             scanner: grype
+      - timestamp: 2024-05-21T19:00:37Z
+        type: fixed
+        data:
+          fixed-version: 8.13.4-r0
 
   - id: CVE-2024-25126
     aliases:
@@ -173,6 +181,57 @@ advisories:
         data:
           note: It is a vendor dependency that includes the vulnerable version. awaiting upstream release that includes the fix from https://github.com/logstash-plugins/logstash-input-http/pull/172
 
+  - id: CVE-2024-29857
+    aliases:
+      - GHSA-8xfc-gm6g-vgpv
+    events:
+      - timestamp: 2024-05-17T08:40:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash
+            componentID: 1081b712054e693e
+            componentName: bcpkix-jdk18on
+            componentVersion: "1.74"
+            componentType: java-archive
+            componentLocation: /usr/share/logstash/vendor/jruby/lib/ruby/stdlib/org/bouncycastle/bcpkix-jdk18on/1.74/bcpkix-jdk18on-1.74.jar
+            scanner: grype
+
+  - id: CVE-2024-30171
+    aliases:
+      - GHSA-v435-xc8x-wvr9
+    events:
+      - timestamp: 2024-05-17T08:40:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash
+            componentID: d6e3c9184e384761
+            componentName: bcpkix-jdk18on
+            componentVersion: "1.74"
+            componentType: java-archive
+            componentLocation: /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/jruby-openssl-0.14.5-java/lib/org/bouncycastle/bcpkix-jdk18on/1.74/bcpkix-jdk18on-1.74.jar
+            scanner: grype
+
+  - id: CVE-2024-30172
+    aliases:
+      - GHSA-m44j-cfrm-g8qc
+    events:
+      - timestamp: 2024-05-17T08:40:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash
+            componentID: 1081b712054e693e
+            componentName: bcpkix-jdk18on
+            componentVersion: "1.74"
+            componentType: java-archive
+            componentLocation: /usr/share/logstash/vendor/jruby/lib/ruby/stdlib/org/bouncycastle/bcpkix-jdk18on/1.74/bcpkix-jdk18on-1.74.jar
+            scanner: grype
+
   - id: CVE-2024-34447
     aliases:
       - GHSA-4h8f-2wvx-gg5w
@@ -190,6 +249,23 @@ advisories:
             componentLocation: /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/jruby-openssl-0.14.5-java/lib/org/bouncycastle/bcprov-jdk18on/1.74/bcprov-jdk18on-1.74.jar
             scanner: grype
 
+  - id: CVE-2024-35176
+    aliases:
+      - GHSA-vg3r-rm7w-2xgh
+    events:
+      - timestamp: 2024-05-17T08:40:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash
+            componentID: 541e41d66a0d92c9
+            componentName: rexml
+            componentVersion: 3.2.5
+            componentType: gem
+            componentLocation: /usr/share/logstash/vendor/jruby/lib/ruby/gems/shared/specifications/rexml-3.2.5.gemspec
+            scanner: grype
+
   - id: GHSA-r95h-9x8f-r3f7
     events:
       - timestamp: 2024-05-14T08:33:52Z
@@ -204,6 +280,10 @@ advisories:
             componentType: gem
             componentLocation: /usr/share/logstash/vendor/bundle/jruby/3.1.0/specifications/nokogiri-1.16.4-java.gemspec
             scanner: grype
+      - timestamp: 2024-05-21T19:00:38Z
+        type: fixed
+        data:
+          fixed-version: 8.13.4-r0
 
   - id: GHSA-xc9x-jj77-9p9j
     events:
