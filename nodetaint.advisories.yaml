@@ -4,8 +4,9 @@ package:
   name: nodetaint
 
 advisories:
-  - id: CVE-2019-11255
+  - id: CGA-p7qr-f8cg-xpp6
     aliases:
+      - CVE-2019-11255
       - GHSA-f4w6-3rh6-6q4q
     events:
       - timestamp: 2023-08-11T17:53:13Z
@@ -14,8 +15,9 @@ advisories:
           type: component-vulnerability-mismatch
           note: Vuln only present in Kubernets CSI sidecars external-provisioner, external-snapshotter, external-resizer
 
-  - id: CVE-2020-8554
+  - id: CGA-9q7p-wxhr-f632
     aliases:
+      - CVE-2020-8554
       - GHSA-j9wf-vvm6-4r9w
     events:
       - timestamp: 2023-08-11T18:25:13Z
@@ -24,8 +26,9 @@ advisories:
           type: component-vulnerability-mismatch
           note: This is a Kubernetes API flaw, but we don't include an API server in this package.
 
-  - id: CVE-2020-8559
+  - id: CGA-84c7-6rh9-p6w4
     aliases:
+      - CVE-2020-8559
       - GHSA-33c5-9fx5-fvjm
     events:
       - timestamp: 2024-04-25T13:44:16Z
@@ -41,8 +44,9 @@ advisories:
             componentLocation: /usr/bin/nodetaint
             scanner: grype
 
-  - id: CVE-2020-8561
+  - id: CGA-p6xx-pg8g-64f3
     aliases:
+      - CVE-2020-8561
       - GHSA-74j8-88mm-7496
     events:
       - timestamp: 2023-08-11T19:02:42Z
@@ -51,8 +55,9 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This only affects kube-apiserver logs, and code was marked NOT_IMPORTABLE in Golang vulndb
 
-  - id: CVE-2020-8564
+  - id: CGA-x43j-pmh4-w4c6
     aliases:
+      - CVE-2020-8564
       - GHSA-8mjg-8c8g-6h85
     events:
       - timestamp: 2023-08-11T19:22:26Z
@@ -61,8 +66,9 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This does not affect k8s.io/client-go@v0.20.0-alpha.2
 
-  - id: CVE-2020-8565
+  - id: CGA-fmmh-rp4v-x7w7
     aliases:
+      - CVE-2020-8565
       - GHSA-8cfg-vx93-jvxw
     events:
       - timestamp: 2023-08-11T19:17:00Z
@@ -71,8 +77,9 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This does not affect k8s.io/client-go@v0.20.0-alpha.2
 
-  - id: CVE-2021-25736
+  - id: CGA-gxx3-3mwr-6q27
     aliases:
+      - CVE-2021-25736
       - GHSA-35c7-w35f-xwgh
     events:
       - timestamp: 2023-11-12T22:56:54Z
@@ -81,8 +88,9 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: 'This vulnerability affects kube-proxy on Windows and the affected code cannot be imported as part of the golang k8s.io/kubernetes library. The golang vulnerability database reports it as a false-positive: https://github.com/golang/vulndb/blob/47864735862dde2f809a19e4f6ffc1de8d6f3703/data/excluded/GO-2023-2159.yaml'
 
-  - id: CVE-2021-25740
+  - id: CGA-gr55-h9q5-w4hp
     aliases:
+      - CVE-2021-25740
       - GHSA-vw47-mr44-3jf9
     events:
       - timestamp: 2023-08-11T18:11:11Z
@@ -91,8 +99,9 @@ advisories:
           type: component-vulnerability-mismatch
           note: This only affects Kubernetes itself, and code was marked not importable in Golang vulndb
 
-  - id: CVE-2021-25743
+  - id: CGA-85r8-9ch5-m8x6
     aliases:
+      - CVE-2021-25743
       - GHSA-f9jg-8p32-2f55
     events:
       - timestamp: 2023-10-03T20:18:12Z
@@ -101,8 +110,9 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Vulnerable code is specific to kubectl.
 
-  - id: CVE-2023-2431
+  - id: CGA-7h8q-392w-4mp5
     aliases:
+      - CVE-2023-2431
       - GHSA-xc8m-28vv-4pjc
     events:
       - timestamp: 2023-08-11T18:16:32Z
@@ -111,8 +121,9 @@ advisories:
           type: vulnerable-code-not-in-execution-path
           note: This bug affects Kubelet, which isn't in nodetaint -- also Golang vulndb marked as EFFECTIVELY_PRIVATE
 
-  - id: CVE-2023-2727
+  - id: CGA-4338-wjxw-pvqv
     aliases:
+      - CVE-2023-2727
       - GHSA-qc2g-gmh6-95p4
     events:
       - timestamp: 2023-08-11T18:58:45Z
@@ -121,8 +132,9 @@ advisories:
           type: component-vulnerability-mismatch
           note: This is only affecting Kubernetes, and was also mark NOT_IMPORTABLE in Golang vulndb
 
-  - id: CVE-2023-2728
+  - id: CGA-p9r6-jf8v-6m4w
     aliases:
+      - CVE-2023-2728
       - GHSA-cgcv-5272-97pr
     events:
       - timestamp: 2023-08-11T19:05:59Z
@@ -131,8 +143,9 @@ advisories:
           type: component-vulnerability-mismatch
           note: This only impacts Kubernetes itself, and was also marked NOT_IMPORTABLE by Golang vulndb
 
-  - id: CVE-2023-3676
+  - id: CGA-q9q4-ccqr-hcrh
     aliases:
+      - CVE-2023-3676
       - GHSA-7fxm-f474-hf8w
     events:
       - timestamp: 2023-11-12T22:57:12Z
@@ -141,8 +154,9 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: 'This vulnerability affects the Kubernetes application, not the golang k8s.io/kubernetes library. The golang vulnerability database reports it as a false-positive: https://github.com/golang/vulndb/blob/47864735862dde2f809a19e4f6ffc1de8d6f3703/data/excluded/GO-2023-2330.yaml'
 
-  - id: CVE-2023-39325
+  - id: CGA-j337-8mp6-28h9
     aliases:
+      - CVE-2023-39325
       - GHSA-4374-p667-p6c8
     events:
       - timestamp: 2023-10-16T18:52:03Z
@@ -150,8 +164,9 @@ advisories:
         data:
           fixed-version: 0.0.4-r6
 
-  - id: CVE-2023-3955
+  - id: CGA-g98q-p4mq-m3v7
     aliases:
+      - CVE-2023-3955
       - GHSA-q78c-gwqw-jcmc
     events:
       - timestamp: 2023-11-12T22:57:29Z
@@ -160,8 +175,9 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: 'This vulnerability affects the Kubernetes application, not the golang k8s.io/kubernetes library. The golang vulnerability database reports it as a false-positive: https://github.com/golang/vulndb/blob/47864735862dde2f809a19e4f6ffc1de8d6f3703/data/excluded/GO-2023-2170.yaml'
 
-  - id: CVE-2023-3978
+  - id: CGA-fhxp-3m5w-gv9j
     aliases:
+      - CVE-2023-3978
       - GHSA-2wrh-6pvc-2jm9
     events:
       - timestamp: 2023-10-16T18:53:20Z
@@ -169,8 +185,9 @@ advisories:
         data:
           fixed-version: 0.0.4-r6
 
-  - id: CVE-2023-44487
+  - id: CGA-w32j-65w7-364f
     aliases:
+      - CVE-2023-44487
       - GHSA-qppj-fm5r-hxr3
     events:
       - timestamp: 2023-10-16T18:54:11Z
@@ -178,8 +195,9 @@ advisories:
         data:
           fixed-version: 0.0.4-r6
 
-  - id: CVE-2023-45283
+  - id: CGA-696p-q2cj-hrch
     aliases:
+      - CVE-2023-45283
       - GHSA-vvjp-q62m-2vph
     events:
       - timestamp: 2023-11-07T19:34:00Z
@@ -188,8 +206,9 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
-  - id: CVE-2023-45284
+  - id: CGA-38w3-955r-h6x9
     aliases:
+      - CVE-2023-45284
       - GHSA-rq3x-83w4-p28c
     events:
       - timestamp: 2023-11-07T19:34:03Z
@@ -198,8 +217,9 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
-  - id: CVE-2023-45288
+  - id: CGA-832h-jgm6-p8fg
     aliases:
+      - CVE-2023-45288
       - GHSA-4v7x-pqxf-cx7m
     events:
       - timestamp: 2024-04-13T07:12:03Z
@@ -207,8 +227,9 @@ advisories:
         data:
           fixed-version: 0.0.4-r13
 
-  - id: CVE-2023-45289
+  - id: CGA-fvj3-ccqj-p965
     aliases:
+      - CVE-2023-45289
       - GHSA-32ch-6x54-q4h9
     events:
       - timestamp: 2024-03-12T07:11:04Z
@@ -228,8 +249,9 @@ advisories:
         data:
           fixed-version: 0.0.4-r11
 
-  - id: CVE-2023-45290
+  - id: CGA-24mh-g4g8-223f
     aliases:
+      - CVE-2023-45290
       - GHSA-rr6r-cfgf-gc6h
     events:
       - timestamp: 2024-03-12T07:11:07Z
@@ -249,8 +271,9 @@ advisories:
         data:
           fixed-version: 0.0.4-r11
 
-  - id: CVE-2023-5528
+  - id: CGA-6vgv-43xx-xgr7
     aliases:
+      - CVE-2023-5528
       - GHSA-hq6q-c2x6-hmch
     events:
       - timestamp: 2023-11-22T09:27:25Z
@@ -258,8 +281,9 @@ advisories:
         data:
           fixed-version: 0.0.4-r8
 
-  - id: CVE-2024-24783
+  - id: CGA-fh3c-v4qp-f6pr
     aliases:
+      - CVE-2024-24783
       - GHSA-3q2c-pvp5-3cqp
     events:
       - timestamp: 2024-03-12T07:11:10Z
@@ -279,8 +303,9 @@ advisories:
         data:
           fixed-version: 0.0.4-r11
 
-  - id: CVE-2024-24784
+  - id: CGA-g87q-v9pw-4xm4
     aliases:
+      - CVE-2024-24784
       - GHSA-fgq5-q76c-gx78
     events:
       - timestamp: 2024-03-12T07:11:13Z
@@ -300,8 +325,9 @@ advisories:
         data:
           fixed-version: 0.0.4-r11
 
-  - id: CVE-2024-24785
+  - id: CGA-5gv7-f77m-rxx9
     aliases:
+      - CVE-2024-24785
       - GHSA-j6m3-gc37-6r6q
     events:
       - timestamp: 2024-03-12T07:11:16Z
@@ -321,8 +347,9 @@ advisories:
         data:
           fixed-version: 0.0.4-r11
 
-  - id: CVE-2024-24786
+  - id: CGA-f6gq-cmgc-jcpq
     aliases:
+      - CVE-2024-24786
       - GHSA-8r3f-844c-mc37
     events:
       - timestamp: 2024-03-14T08:19:06Z
@@ -342,8 +369,9 @@ advisories:
         data:
           fixed-version: 0.0.4-r12
 
-  - id: CVE-2024-3177
+  - id: CGA-qcw5-c7xj-rqp8
     aliases:
+      - CVE-2024-3177
       - GHSA-pxhw-596r-rwq5
     events:
       - timestamp: 2024-04-24T08:11:11Z
