@@ -4,75 +4,15 @@ package:
   name: local-path-provisioner
 
 advisories:
-  - id: CGA-m3c8-prmx-xr94
+  - id: CGA-5xwg-2m57-56j4
     aliases:
-      - CVE-2020-8559
-      - GHSA-33c5-9fx5-fvjm
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
     events:
-      - timestamp: 2024-04-25T13:40:09Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: local-path-provisioner
-            componentID: 61ce1d477f100a4f
-            componentName: k8s.io/apimachinery
-            componentVersion: v0.28.4
-            componentType: go-module
-            componentLocation: /usr/bin/local-path-provisioner
-            scanner: grype
-
-  - id: CGA-j2hc-cpcv-rx7f
-    aliases:
-      - CVE-2023-39326
-      - GHSA-9f76-wg39-x86h
-    events:
-      - timestamp: 2024-02-14T19:43:12Z
+      - timestamp: 2024-03-13T11:12:02Z
         type: fixed
         data:
-          fixed-version: 0.0.26-r2
-
-  - id: CGA-j979-7j5j-95r9
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:32:48Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-9r77-96h6-fwp4
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:32:49Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-xqgx-9xqx-fr25
-    aliases:
-      - CVE-2023-45285
-      - GHSA-5f94-vhjq-rpg8
-    events:
-      - timestamp: 2024-02-14T19:43:13Z
-        type: fixed
-        data:
-          fixed-version: 0.0.26-r2
-
-  - id: CGA-r3h8-pvhh-9jqv
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-13T07:15:37Z
-        type: fixed
-        data:
-          fixed-version: 0.0.26-r5
+          fixed-version: 0.0.26-r3
 
   - id: CGA-7x66-m48w-35wv
     aliases:
@@ -80,16 +20,6 @@ advisories:
       - GHSA-32ch-6x54-q4h9
     events:
       - timestamp: 2024-03-13T11:12:05Z
-        type: fixed
-        data:
-          fixed-version: 0.0.26-r3
-
-  - id: CGA-5xwg-2m57-56j4
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-13T11:12:02Z
         type: fixed
         data:
           fixed-version: 0.0.26-r3
@@ -116,35 +46,16 @@ advisories:
         data:
           fixed-version: 0.0.26-r2
 
-  - id: CGA-xqqx-pqcc-mwfr
+  - id: CGA-9r77-96h6-fwp4
     aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
     events:
-      - timestamp: 2024-03-13T11:12:03Z
-        type: fixed
+      - timestamp: 2023-11-07T19:32:49Z
+        type: false-positive-determination
         data:
-          fixed-version: 0.0.26-r3
-
-  - id: CGA-cqxm-4h9q-rmp6
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-13T11:12:04Z
-        type: fixed
-        data:
-          fixed-version: 0.0.26-r3
-
-  - id: CGA-gmq2-5pph-cmpc
-    aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
-    events:
-      - timestamp: 2024-03-13T11:12:04Z
-        type: fixed
-        data:
-          fixed-version: 0.0.26-r3
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
 
   - id: CGA-9x44-m7wh-8g26
     aliases:
@@ -173,6 +84,20 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/local-path-provisioner
             scanner: grype
+      - timestamp: 2024-05-29T04:21:41Z
+        type: fixed
+        data:
+          fixed-version: 0.0.27-r0
+
+  - id: CGA-cqxm-4h9q-rmp6
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-13T11:12:04Z
+        type: fixed
+        data:
+          fixed-version: 0.0.26-r3
 
   - id: CGA-g2v8-rh47-hx28
     aliases:
@@ -191,3 +116,82 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/local-path-provisioner
             scanner: grype
+
+  - id: CGA-gmq2-5pph-cmpc
+    aliases:
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-13T11:12:04Z
+        type: fixed
+        data:
+          fixed-version: 0.0.26-r3
+
+  - id: CGA-j2hc-cpcv-rx7f
+    aliases:
+      - CVE-2023-39326
+      - GHSA-9f76-wg39-x86h
+    events:
+      - timestamp: 2024-02-14T19:43:12Z
+        type: fixed
+        data:
+          fixed-version: 0.0.26-r2
+
+  - id: CGA-j979-7j5j-95r9
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:32:48Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-m3c8-prmx-xr94
+    aliases:
+      - CVE-2020-8559
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T13:40:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: local-path-provisioner
+            componentID: 61ce1d477f100a4f
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.28.4
+            componentType: go-module
+            componentLocation: /usr/bin/local-path-provisioner
+            scanner: grype
+
+  - id: CGA-r3h8-pvhh-9jqv
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:15:37Z
+        type: fixed
+        data:
+          fixed-version: 0.0.26-r5
+
+  - id: CGA-xqgx-9xqx-fr25
+    aliases:
+      - CVE-2023-45285
+      - GHSA-5f94-vhjq-rpg8
+    events:
+      - timestamp: 2024-02-14T19:43:13Z
+        type: fixed
+        data:
+          fixed-version: 0.0.26-r2
+
+  - id: CGA-xqqx-pqcc-mwfr
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-13T11:12:03Z
+        type: fixed
+        data:
+          fixed-version: 0.0.26-r3
