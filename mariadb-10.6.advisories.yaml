@@ -4,23 +4,15 @@ package:
   name: mariadb-10.6
 
 advisories:
-  - id: CGA-xwh3-9v2p-54h2
+  - id: CGA-94xj-mvmg-ww4p
     aliases:
-      - CVE-2020-13692
-      - GHSA-88cc-g835-76rp
+      - CVE-2022-47015
+      - GHSA-hc8h-974x-98hr
     events:
-      - timestamp: 2024-02-09T18:35:42Z
-        type: detection
+      - timestamp: 2023-02-12T12:33:40Z
+        type: false-positive-determination
         data:
-          type: scan/v1
-          data:
-            subpackageName: mariadb-10.6-test
-            componentID: a062a333ee9510c1
-            componentName: postgresql
-            componentVersion: 9.4.1208
-            componentType: java-archive
-            componentLocation: /usr/mysql-test/plugin/connect/connect/std_data/JdbcMariaDB.jar
-            scanner: grype
+          type: vulnerable-code-version-not-used
 
   - id: CGA-hwwj-wh5j-p2rj
     aliases:
@@ -58,16 +50,6 @@ advisories:
             componentLocation: /usr/mysql-test/plugin/connect/connect/std_data/JdbcMariaDB.jar
             scanner: grype
 
-  - id: CGA-94xj-mvmg-ww4p
-    aliases:
-      - CVE-2022-47015
-      - GHSA-hc8h-974x-98hr
-    events:
-      - timestamp: 2023-02-12T12:33:40Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-version-not-used
-
   - id: CGA-pp92-9wg6-xwgx
     aliases:
       - CVE-2024-1597
@@ -90,3 +72,33 @@ advisories:
         type: fixed
         data:
           fixed-version: 10.6.17-r0
+      - timestamp: 2024-05-29T07:34:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mariadb-10.6
+            componentID: d50915dad43b8ab7
+            componentName: postgresql
+            componentVersion: 9.4.1208
+            componentType: java-archive
+            componentLocation: /usr/mysql-test/plugin/connect/connect/std_data/JdbcMariaDB.jar
+            scanner: grype
+
+  - id: CGA-xwh3-9v2p-54h2
+    aliases:
+      - CVE-2020-13692
+      - GHSA-88cc-g835-76rp
+    events:
+      - timestamp: 2024-02-09T18:35:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mariadb-10.6-test
+            componentID: a062a333ee9510c1
+            componentName: postgresql
+            componentVersion: 9.4.1208
+            componentType: java-archive
+            componentLocation: /usr/mysql-test/plugin/connect/connect/std_data/JdbcMariaDB.jar
+            scanner: grype
