@@ -4,71 +4,127 @@ package:
   name: kubeflow-pipelines-visualization-server
 
 advisories:
-  - id: CGA-gjrv-pg24-mghr
+  - id: CGA-2pv2-w6q3-fxxh
     aliases:
-      - CVE-2021-32862
-      - GHSA-9jmq-rx5f-8jwq
+      - CVE-2023-29483
+      - GHSA-3rq5-2g8h-59hc
     events:
-      - timestamp: 2024-01-19T19:23:18Z
+      - timestamp: 2024-04-16T07:29:21Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: kubeflow-pipelines-visualization-server
-            componentID: b2459ea87ec9b6c6
-            componentName: nbconvert
-            componentVersion: 5.5.0
+            componentID: 3c8aafcea914b50b
+            componentName: dnspython
+            componentVersion: 2.4.2
             componentType: python
-            componentLocation: /usr/lib/python3.10/site-packages/nbconvert-5.5.0.dist-info/METADATA, /usr/lib/python3.10/site-packages/nbconvert-5.5.0.dist-info/RECORD, /usr/lib/python3.10/site-packages/nbconvert-5.5.0.dist-info/top_level.txt
+            componentLocation: /usr/lib/python3.10/site-packages/dnspython-2.4.2.dist-info/METADATA, /usr/lib/python3.10/site-packages/dnspython-2.4.2.dist-info/RECORD
             scanner: grype
-      - timestamp: 2024-02-21T00:49:08Z
-        type: pending-upstream-fix
+      - timestamp: 2024-05-13T22:12:59Z
+        type: fixed
         data:
-          note: Version 5.5.0 is a hard transitive dependency, and cannot be upgraded.
+          fixed-version: 2.2.0-r0
 
-  - id: CGA-qgmc-7gfh-rwf7
+  - id: CGA-4f6v-wx38-68gq
     aliases:
-      - CVE-2022-21699
-      - GHSA-pq7m-3gw7-gq5x
+      - CVE-2024-34069
+      - GHSA-2g68-c3qc-8985
     events:
-      - timestamp: 2024-01-19T19:23:21Z
+      - timestamp: 2024-05-07T08:02:49Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: kubeflow-pipelines-visualization-server
-            componentID: a1321854b4060a9f
-            componentName: ipython
-            componentVersion: 7.12.0
+            componentID: 62c25d455db83047
+            componentName: Werkzeug
+            componentVersion: 2.1.2
             componentType: python
-            componentLocation: /usr/lib/python3.10/site-packages/ipython-7.12.0.dist-info/METADATA, /usr/lib/python3.10/site-packages/ipython-7.12.0.dist-info/RECORD, /usr/lib/python3.10/site-packages/ipython-7.12.0.dist-info/top_level.txt
+            componentLocation: /usr/lib/python3.10/site-packages/Werkzeug-2.1.2.dist-info/METADATA, /usr/lib/python3.10/site-packages/Werkzeug-2.1.2.dist-info/RECORD, /usr/lib/python3.10/site-packages/Werkzeug-2.1.2.dist-info/top_level.txt
             scanner: grype
-      - timestamp: 2024-02-21T00:38:51Z
+      - timestamp: 2024-05-13T17:26:00Z
         type: pending-upstream-fix
         data:
-          note: 'Bumping the dependency to 7.16.3+ is not possible, the application fails with the error: ImportError: cannot import name ''soft_unicode'' from ''markupsafe'''
+          note: 'Bumping the dependency to 3.0.3 is not possible, the application fails with the error: ImportError: cannot import name ''soft_unicode'' from ''markupsafe'''
+      - timestamp: 2024-05-13T22:12:58Z
+        type: fixed
+        data:
+          fixed-version: 2.2.0-r0
+      - timestamp: 2024-05-29T07:43:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-visualization-server
+            componentID: 62c25d455db83047
+            componentName: Werkzeug
+            componentVersion: 2.1.2
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/Werkzeug-2.1.2.dist-info/METADATA, /usr/lib/python3.10/site-packages/Werkzeug-2.1.2.dist-info/RECORD, /usr/lib/python3.10/site-packages/Werkzeug-2.1.2.dist-info/top_level.txt
+            scanner: grype
 
-  - id: CGA-xp75-qhcg-gpq4
+  - id: CGA-4r2r-wrg9-g9qq
     aliases:
-      - CVE-2022-29241
-      - GHSA-q874-g24w-4q9g
+      - CVE-2023-50447
+      - GHSA-3f63-hfp8-52jq
     events:
-      - timestamp: 2024-01-19T19:23:23Z
+      - timestamp: 2024-01-25T07:13:46Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: kubeflow-pipelines-visualization-server
-            componentID: b8433cdc3fac4774
-            componentName: jupyter-server
-            componentVersion: 1.15.6
+            componentID: 2151056c505b04fb
+            componentName: Pillow
+            componentVersion: 10.1.0
             componentType: python
-            componentLocation: /usr/lib/python3.10/site-packages/jupyter_server-1.15.6.dist-info/METADATA, /usr/lib/python3.10/site-packages/jupyter_server-1.15.6.dist-info/RECORD, /usr/lib/python3.10/site-packages/jupyter_server-1.15.6.dist-info/top_level.txt
+            componentLocation: /usr/lib/python3.10/site-packages/Pillow-10.1.0.dist-info/METADATA, /usr/lib/python3.10/site-packages/Pillow-10.1.0.dist-info/RECORD, /usr/lib/python3.10/site-packages/Pillow-10.1.0.dist-info/top_level.txt
             scanner: grype
-      - timestamp: 2024-02-21T00:42:57Z
+
+  - id: CGA-557c-34r4-4q66
+    aliases:
+      - CVE-2024-22195
+      - GHSA-h5c8-rqwp-cp95
+    events:
+      - timestamp: 2024-01-19T19:23:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-visualization-server
+            componentID: 0a5268baf60be0c1
+            componentName: Jinja2
+            componentVersion: 2.11.3
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/Jinja2-2.11.3.dist-info/METADATA, /usr/lib/python3.10/site-packages/Jinja2-2.11.3.dist-info/RECORD, /usr/lib/python3.10/site-packages/Jinja2-2.11.3.dist-info/top_level.txt
+            scanner: grype
+      - timestamp: 2024-02-21T00:13:23Z
         type: pending-upstream-fix
         data:
-          note: 'Bumping the dependency to 7.16.3+ is not possible, the application fails with the error: ImportError: cannot import name ''soft_unicode'' from ''markupsafe'''
+          note: 'The application runs into segmentation faults when attempting to upgrade Jinja2 to version 3.1.3 '
+
+  - id: CGA-85gv-65g3-483h
+    aliases:
+      - CVE-2024-3651
+      - GHSA-jjg7-2v4v-x38h
+    events:
+      - timestamp: 2024-04-16T07:29:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-visualization-server
+            componentID: f164267319a377e1
+            componentName: idna
+            componentVersion: "3.6"
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/idna-3.6.dist-info/METADATA, /usr/lib/python3.10/site-packages/idna-3.6.dist-info/RECORD
+            scanner: grype
+      - timestamp: 2024-05-13T22:13:01Z
+        type: fixed
+        data:
+          fixed-version: 2.2.0-r0
 
   - id: CGA-88jf-v7r2-2xm7
     aliases:
@@ -92,27 +148,27 @@ advisories:
         data:
           note: 'Bumping the dependency to 2.2.3 is not possible, the application fails with the error: ImportError: cannot import name ''soft_unicode'' from ''markupsafe'''
 
-  - id: CGA-r33j-gmf8-rqgp
+  - id: CGA-932f-77wv-jxv2
     aliases:
-      - CVE-2023-24816
-      - GHSA-29gw-9793-fvw7
+      - CVE-2024-21506
+      - GHSA-cr6f-gf5w-vhrc
     events:
-      - timestamp: 2024-01-19T19:23:17Z
+      - timestamp: 2024-04-10T10:51:00Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: kubeflow-pipelines-visualization-server
-            componentID: a1321854b4060a9f
-            componentName: ipython
-            componentVersion: 7.12.0
+            componentID: 39f67d14783d1138
+            componentName: pymongo
+            componentVersion: 4.6.1
             componentType: python
-            componentLocation: /usr/lib/python3.10/site-packages/ipython-7.12.0.dist-info/METADATA, /usr/lib/python3.10/site-packages/ipython-7.12.0.dist-info/RECORD, /usr/lib/python3.10/site-packages/ipython-7.12.0.dist-info/top_level.txt
+            componentLocation: /usr/lib/python3.10/site-packages/pymongo-4.6.1.dist-info/METADATA, /usr/lib/python3.10/site-packages/pymongo-4.6.1.dist-info/RECORD, /usr/lib/python3.10/site-packages/pymongo-4.6.1.dist-info/top_level.txt
             scanner: grype
-      - timestamp: 2024-02-21T00:38:03Z
-        type: pending-upstream-fix
+      - timestamp: 2024-05-13T22:13:00Z
+        type: fixed
         data:
-          note: 'Bumping the dependency to 7.16.3+ is not possible, the application fails with the error: ImportError: cannot import name ''soft_unicode'' from ''markupsafe'''
+          fixed-version: 2.2.0-r0
 
   - id: CGA-9c9q-cvw3-5jw4
     aliases:
@@ -136,27 +192,98 @@ advisories:
         data:
           note: 'Bumping the dependency to 2.2.3 is not possible, the application fails with the error: ImportError: cannot import name ''soft_unicode'' from ''markupsafe'''
 
-  - id: CGA-2pv2-w6q3-fxxh
+  - id: CGA-g5xx-83xq-8g5j
     aliases:
-      - CVE-2023-29483
-      - GHSA-3rq5-2g8h-59hc
+      - CVE-2024-34064
+      - GHSA-h75v-3vvj-5mfj
     events:
-      - timestamp: 2024-04-16T07:29:21Z
+      - timestamp: 2024-05-07T08:02:53Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: kubeflow-pipelines-visualization-server
-            componentID: 3c8aafcea914b50b
-            componentName: dnspython
-            componentVersion: 2.4.2
+            componentID: 0a5268baf60be0c1
+            componentName: Jinja2
+            componentVersion: 2.11.3
             componentType: python
-            componentLocation: /usr/lib/python3.10/site-packages/dnspython-2.4.2.dist-info/METADATA, /usr/lib/python3.10/site-packages/dnspython-2.4.2.dist-info/RECORD
+            componentLocation: /usr/lib/python3.10/site-packages/Jinja2-2.11.3.dist-info/METADATA, /usr/lib/python3.10/site-packages/Jinja2-2.11.3.dist-info/RECORD, /usr/lib/python3.10/site-packages/Jinja2-2.11.3.dist-info/top_level.txt
             scanner: grype
-      - timestamp: 2024-05-13T22:12:59Z
+      - timestamp: 2024-05-13T17:24:53Z
+        type: pending-upstream-fix
+        data:
+          note: 'Bumping the dependency to 3.0.3 is not possible, the application fails with the error: ImportError: cannot import name ''contextfilter'' from ''jinja2'''
+      - timestamp: 2024-05-13T22:13:00Z
         type: fixed
         data:
           fixed-version: 2.2.0-r0
+
+  - id: CGA-gh59-jm27-68q4
+    aliases:
+      - CVE-2023-47248
+      - GHSA-5wvp-7f3h-6wmm
+    events:
+      - timestamp: 2024-01-19T19:23:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-visualization-server
+            componentID: 1c7c197c61facfb2
+            componentName: pyarrow
+            componentVersion: 10.0.1
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/pyarrow-10.0.1.dist-info/METADATA, /usr/lib/python3.10/site-packages/pyarrow-10.0.1.dist-info/RECORD, /usr/lib/python3.10/site-packages/pyarrow-10.0.1.dist-info/top_level.txt
+            scanner: grype
+      - timestamp: 2024-01-24T18:53:13Z
+        type: false-positive-determination
+        data:
+          type: inline-mitigations-exist
+          note: Imported pyarrow-hotfix to disable vulnerability. See https://github.com/pitrou/pyarrow-hotfix for more information.
+
+  - id: CGA-gjrv-pg24-mghr
+    aliases:
+      - CVE-2021-32862
+      - GHSA-9jmq-rx5f-8jwq
+    events:
+      - timestamp: 2024-01-19T19:23:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-visualization-server
+            componentID: b2459ea87ec9b6c6
+            componentName: nbconvert
+            componentVersion: 5.5.0
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/nbconvert-5.5.0.dist-info/METADATA, /usr/lib/python3.10/site-packages/nbconvert-5.5.0.dist-info/RECORD, /usr/lib/python3.10/site-packages/nbconvert-5.5.0.dist-info/top_level.txt
+            scanner: grype
+      - timestamp: 2024-02-21T00:49:08Z
+        type: pending-upstream-fix
+        data:
+          note: Version 5.5.0 is a hard transitive dependency, and cannot be upgraded.
+
+  - id: CGA-hh4m-9ffq-7hv5
+    aliases:
+      - CVE-2023-49080
+      - GHSA-h56g-gq9v-vc8r
+    events:
+      - timestamp: 2024-01-19T19:23:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-visualization-server
+            componentID: b8433cdc3fac4774
+            componentName: jupyter-server
+            componentVersion: 1.15.6
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/jupyter_server-1.15.6.dist-info/METADATA, /usr/lib/python3.10/site-packages/jupyter_server-1.15.6.dist-info/RECORD, /usr/lib/python3.10/site-packages/jupyter_server-1.15.6.dist-info/top_level.txt
+            scanner: grype
+      - timestamp: 2024-02-21T00:41:34Z
+        type: pending-upstream-fix
+        data:
+          note: 'Bumping the dependency to 2.11.2 is not possible, the application fails with the error: tensorflow-model-analysis 0.45.0 requires attrs<22,>=19.3.0, but you have attrs 23.2.0 which is incompatible.'
 
   - id: CGA-hphx-342h-wpqx
     aliases:
@@ -179,6 +306,134 @@ advisories:
         type: pending-upstream-fix
         data:
           note: 'Bumping the dependency to 2.7.2 is not possible, the application fails with the error: tensorflow-model-analysis 0.45.0 requires attrs<22,>=19.3.0, but you have attrs 23.2.0 which is incompatible.'
+
+  - id: CGA-p7rq-qffc-ch9v
+    aliases:
+      - CVE-2024-4340
+      - GHSA-2m57-hf25-phgg
+    events:
+      - timestamp: 2024-04-16T07:29:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-visualization-server
+            componentID: b8cb7ee41efe8920
+            componentName: sqlparse
+            componentVersion: 0.4.4
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/sqlparse-0.4.4.dist-info/METADATA, /usr/lib/python3.10/site-packages/sqlparse-0.4.4.dist-info/RECORD
+            scanner: grype
+      - timestamp: 2024-05-13T22:12:59Z
+        type: fixed
+        data:
+          fixed-version: 2.2.0-r0
+
+  - id: CGA-phrh-j36c-pqjq
+    aliases:
+      - CVE-2024-35195
+      - GHSA-9wx4-h78v-vm56
+    events:
+      - timestamp: 2024-05-22T07:33:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-visualization-server
+            componentID: f86f11644657a8e2
+            componentName: requests
+            componentVersion: 2.31.0
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/requests-2.31.0.dist-info/METADATA, /usr/lib/python3.10/site-packages/requests-2.31.0.dist-info/RECORD, /usr/lib/python3.10/site-packages/requests-2.31.0.dist-info/top_level.txt
+            scanner: grype
+
+  - id: CGA-qgmc-7gfh-rwf7
+    aliases:
+      - CVE-2022-21699
+      - GHSA-pq7m-3gw7-gq5x
+    events:
+      - timestamp: 2024-01-19T19:23:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-visualization-server
+            componentID: a1321854b4060a9f
+            componentName: ipython
+            componentVersion: 7.12.0
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/ipython-7.12.0.dist-info/METADATA, /usr/lib/python3.10/site-packages/ipython-7.12.0.dist-info/RECORD, /usr/lib/python3.10/site-packages/ipython-7.12.0.dist-info/top_level.txt
+            scanner: grype
+      - timestamp: 2024-02-21T00:38:51Z
+        type: pending-upstream-fix
+        data:
+          note: 'Bumping the dependency to 7.16.3+ is not possible, the application fails with the error: ImportError: cannot import name ''soft_unicode'' from ''markupsafe'''
+
+  - id: CGA-qqc6-pxqx-fjmc
+    aliases:
+      - CVE-2024-28219
+      - GHSA-44wm-f244-xhp3
+    events:
+      - timestamp: 2024-04-10T10:35:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-visualization-server
+            componentID: 4e2ecdff73068c37
+            componentName: pillow
+            componentVersion: 10.2.0
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/pillow-10.2.0.dist-info/METADATA, /usr/lib/python3.10/site-packages/pillow-10.2.0.dist-info/RECORD, /usr/lib/python3.10/site-packages/pillow-10.2.0.dist-info/top_level.txt
+            scanner: grype
+      - timestamp: 2024-05-13T22:13:00Z
+        type: fixed
+        data:
+          fixed-version: 2.2.0-r0
+
+  - id: CGA-r33j-gmf8-rqgp
+    aliases:
+      - CVE-2023-24816
+      - GHSA-29gw-9793-fvw7
+    events:
+      - timestamp: 2024-01-19T19:23:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-visualization-server
+            componentID: a1321854b4060a9f
+            componentName: ipython
+            componentVersion: 7.12.0
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/ipython-7.12.0.dist-info/METADATA, /usr/lib/python3.10/site-packages/ipython-7.12.0.dist-info/RECORD, /usr/lib/python3.10/site-packages/ipython-7.12.0.dist-info/top_level.txt
+            scanner: grype
+      - timestamp: 2024-02-21T00:38:03Z
+        type: pending-upstream-fix
+        data:
+          note: 'Bumping the dependency to 7.16.3+ is not possible, the application fails with the error: ImportError: cannot import name ''soft_unicode'' from ''markupsafe'''
+
+  - id: CGA-rpvh-x34v-659v
+    aliases:
+      - CVE-2024-27454
+      - GHSA-pwr2-4v36-6qpr
+    events:
+      - timestamp: 2024-02-27T07:29:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-visualization-server
+            componentID: c548607c192bc0ae
+            componentName: orjson
+            componentVersion: 3.9.10
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/orjson-3.9.10.dist-info/METADATA, /usr/lib/python3.10/site-packages/orjson-3.9.10.dist-info/RECORD
+            scanner: grype
+      - timestamp: 2024-05-13T22:13:01Z
+        type: fixed
+        data:
+          fixed-version: 2.2.0-r0
 
   - id: CGA-wjw8-jvx7-2x3f
     aliases:
@@ -224,35 +479,12 @@ advisories:
         data:
           note: 'Bumping the dependency to 2.2.3 is not possible, the application fails with the error: ImportError: cannot import name ''soft_unicode'' from ''markupsafe'''
 
-  - id: CGA-gh59-jm27-68q4
+  - id: CGA-xp75-qhcg-gpq4
     aliases:
-      - CVE-2023-47248
-      - GHSA-5wvp-7f3h-6wmm
+      - CVE-2022-29241
+      - GHSA-q874-g24w-4q9g
     events:
-      - timestamp: 2024-01-19T19:23:18Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubeflow-pipelines-visualization-server
-            componentID: 1c7c197c61facfb2
-            componentName: pyarrow
-            componentVersion: 10.0.1
-            componentType: python
-            componentLocation: /usr/lib/python3.10/site-packages/pyarrow-10.0.1.dist-info/METADATA, /usr/lib/python3.10/site-packages/pyarrow-10.0.1.dist-info/RECORD, /usr/lib/python3.10/site-packages/pyarrow-10.0.1.dist-info/top_level.txt
-            scanner: grype
-      - timestamp: 2024-01-24T18:53:13Z
-        type: false-positive-determination
-        data:
-          type: inline-mitigations-exist
-          note: Imported pyarrow-hotfix to disable vulnerability. See https://github.com/pitrou/pyarrow-hotfix for more information.
-
-  - id: CGA-hh4m-9ffq-7hv5
-    aliases:
-      - CVE-2023-49080
-      - GHSA-h56g-gq9v-vc8r
-    events:
-      - timestamp: 2024-01-19T19:23:19Z
+      - timestamp: 2024-01-19T19:23:23Z
         type: detection
         data:
           type: scan/v1
@@ -264,227 +496,7 @@ advisories:
             componentType: python
             componentLocation: /usr/lib/python3.10/site-packages/jupyter_server-1.15.6.dist-info/METADATA, /usr/lib/python3.10/site-packages/jupyter_server-1.15.6.dist-info/RECORD, /usr/lib/python3.10/site-packages/jupyter_server-1.15.6.dist-info/top_level.txt
             scanner: grype
-      - timestamp: 2024-02-21T00:41:34Z
+      - timestamp: 2024-02-21T00:42:57Z
         type: pending-upstream-fix
         data:
-          note: 'Bumping the dependency to 2.11.2 is not possible, the application fails with the error: tensorflow-model-analysis 0.45.0 requires attrs<22,>=19.3.0, but you have attrs 23.2.0 which is incompatible.'
-
-  - id: CGA-4r2r-wrg9-g9qq
-    aliases:
-      - CVE-2023-50447
-      - GHSA-3f63-hfp8-52jq
-    events:
-      - timestamp: 2024-01-25T07:13:46Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubeflow-pipelines-visualization-server
-            componentID: 2151056c505b04fb
-            componentName: Pillow
-            componentVersion: 10.1.0
-            componentType: python
-            componentLocation: /usr/lib/python3.10/site-packages/Pillow-10.1.0.dist-info/METADATA, /usr/lib/python3.10/site-packages/Pillow-10.1.0.dist-info/RECORD, /usr/lib/python3.10/site-packages/Pillow-10.1.0.dist-info/top_level.txt
-            scanner: grype
-
-  - id: CGA-932f-77wv-jxv2
-    aliases:
-      - CVE-2024-21506
-      - GHSA-cr6f-gf5w-vhrc
-    events:
-      - timestamp: 2024-04-10T10:51:00Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubeflow-pipelines-visualization-server
-            componentID: 39f67d14783d1138
-            componentName: pymongo
-            componentVersion: 4.6.1
-            componentType: python
-            componentLocation: /usr/lib/python3.10/site-packages/pymongo-4.6.1.dist-info/METADATA, /usr/lib/python3.10/site-packages/pymongo-4.6.1.dist-info/RECORD, /usr/lib/python3.10/site-packages/pymongo-4.6.1.dist-info/top_level.txt
-            scanner: grype
-      - timestamp: 2024-05-13T22:13:00Z
-        type: fixed
-        data:
-          fixed-version: 2.2.0-r0
-
-  - id: CGA-557c-34r4-4q66
-    aliases:
-      - CVE-2024-22195
-      - GHSA-h5c8-rqwp-cp95
-    events:
-      - timestamp: 2024-01-19T19:23:20Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubeflow-pipelines-visualization-server
-            componentID: 0a5268baf60be0c1
-            componentName: Jinja2
-            componentVersion: 2.11.3
-            componentType: python
-            componentLocation: /usr/lib/python3.10/site-packages/Jinja2-2.11.3.dist-info/METADATA, /usr/lib/python3.10/site-packages/Jinja2-2.11.3.dist-info/RECORD, /usr/lib/python3.10/site-packages/Jinja2-2.11.3.dist-info/top_level.txt
-            scanner: grype
-      - timestamp: 2024-02-21T00:13:23Z
-        type: pending-upstream-fix
-        data:
-          note: 'The application runs into segmentation faults when attempting to upgrade Jinja2 to version 3.1.3 '
-
-  - id: CGA-rpvh-x34v-659v
-    aliases:
-      - CVE-2024-27454
-      - GHSA-pwr2-4v36-6qpr
-    events:
-      - timestamp: 2024-02-27T07:29:19Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubeflow-pipelines-visualization-server
-            componentID: c548607c192bc0ae
-            componentName: orjson
-            componentVersion: 3.9.10
-            componentType: python
-            componentLocation: /usr/lib/python3.10/site-packages/orjson-3.9.10.dist-info/METADATA, /usr/lib/python3.10/site-packages/orjson-3.9.10.dist-info/RECORD
-            scanner: grype
-      - timestamp: 2024-05-13T22:13:01Z
-        type: fixed
-        data:
-          fixed-version: 2.2.0-r0
-
-  - id: CGA-qqc6-pxqx-fjmc
-    aliases:
-      - CVE-2024-28219
-      - GHSA-44wm-f244-xhp3
-    events:
-      - timestamp: 2024-04-10T10:35:44Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubeflow-pipelines-visualization-server
-            componentID: 4e2ecdff73068c37
-            componentName: pillow
-            componentVersion: 10.2.0
-            componentType: python
-            componentLocation: /usr/lib/python3.10/site-packages/pillow-10.2.0.dist-info/METADATA, /usr/lib/python3.10/site-packages/pillow-10.2.0.dist-info/RECORD, /usr/lib/python3.10/site-packages/pillow-10.2.0.dist-info/top_level.txt
-            scanner: grype
-      - timestamp: 2024-05-13T22:13:00Z
-        type: fixed
-        data:
-          fixed-version: 2.2.0-r0
-
-  - id: CGA-g5xx-83xq-8g5j
-    aliases:
-      - CVE-2024-34064
-      - GHSA-h75v-3vvj-5mfj
-    events:
-      - timestamp: 2024-05-07T08:02:53Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubeflow-pipelines-visualization-server
-            componentID: 0a5268baf60be0c1
-            componentName: Jinja2
-            componentVersion: 2.11.3
-            componentType: python
-            componentLocation: /usr/lib/python3.10/site-packages/Jinja2-2.11.3.dist-info/METADATA, /usr/lib/python3.10/site-packages/Jinja2-2.11.3.dist-info/RECORD, /usr/lib/python3.10/site-packages/Jinja2-2.11.3.dist-info/top_level.txt
-            scanner: grype
-      - timestamp: 2024-05-13T17:24:53Z
-        type: pending-upstream-fix
-        data:
-          note: 'Bumping the dependency to 3.0.3 is not possible, the application fails with the error: ImportError: cannot import name ''contextfilter'' from ''jinja2'''
-      - timestamp: 2024-05-13T22:13:00Z
-        type: fixed
-        data:
-          fixed-version: 2.2.0-r0
-
-  - id: CGA-4f6v-wx38-68gq
-    aliases:
-      - CVE-2024-34069
-      - GHSA-2g68-c3qc-8985
-    events:
-      - timestamp: 2024-05-07T08:02:49Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubeflow-pipelines-visualization-server
-            componentID: 62c25d455db83047
-            componentName: Werkzeug
-            componentVersion: 2.1.2
-            componentType: python
-            componentLocation: /usr/lib/python3.10/site-packages/Werkzeug-2.1.2.dist-info/METADATA, /usr/lib/python3.10/site-packages/Werkzeug-2.1.2.dist-info/RECORD, /usr/lib/python3.10/site-packages/Werkzeug-2.1.2.dist-info/top_level.txt
-            scanner: grype
-      - timestamp: 2024-05-13T17:26:00Z
-        type: pending-upstream-fix
-        data:
-          note: 'Bumping the dependency to 3.0.3 is not possible, the application fails with the error: ImportError: cannot import name ''soft_unicode'' from ''markupsafe'''
-      - timestamp: 2024-05-13T22:12:58Z
-        type: fixed
-        data:
-          fixed-version: 2.2.0-r0
-
-  - id: CGA-phrh-j36c-pqjq
-    aliases:
-      - CVE-2024-35195
-      - GHSA-9wx4-h78v-vm56
-    events:
-      - timestamp: 2024-05-22T07:33:37Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubeflow-pipelines-visualization-server
-            componentID: f86f11644657a8e2
-            componentName: requests
-            componentVersion: 2.31.0
-            componentType: python
-            componentLocation: /usr/lib/python3.10/site-packages/requests-2.31.0.dist-info/METADATA, /usr/lib/python3.10/site-packages/requests-2.31.0.dist-info/RECORD, /usr/lib/python3.10/site-packages/requests-2.31.0.dist-info/top_level.txt
-            scanner: grype
-
-  - id: CGA-85gv-65g3-483h
-    aliases:
-      - CVE-2024-3651
-      - GHSA-jjg7-2v4v-x38h
-    events:
-      - timestamp: 2024-04-16T07:29:24Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubeflow-pipelines-visualization-server
-            componentID: f164267319a377e1
-            componentName: idna
-            componentVersion: "3.6"
-            componentType: python
-            componentLocation: /usr/lib/python3.10/site-packages/idna-3.6.dist-info/METADATA, /usr/lib/python3.10/site-packages/idna-3.6.dist-info/RECORD
-            scanner: grype
-      - timestamp: 2024-05-13T22:13:01Z
-        type: fixed
-        data:
-          fixed-version: 2.2.0-r0
-
-  - id: CGA-p7rq-qffc-ch9v
-    aliases:
-      - CVE-2024-4340
-      - GHSA-2m57-hf25-phgg
-    events:
-      - timestamp: 2024-04-16T07:29:19Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubeflow-pipelines-visualization-server
-            componentID: b8cb7ee41efe8920
-            componentName: sqlparse
-            componentVersion: 0.4.4
-            componentType: python
-            componentLocation: /usr/lib/python3.10/site-packages/sqlparse-0.4.4.dist-info/METADATA, /usr/lib/python3.10/site-packages/sqlparse-0.4.4.dist-info/RECORD
-            scanner: grype
-      - timestamp: 2024-05-13T22:12:59Z
-        type: fixed
-        data:
-          fixed-version: 2.2.0-r0
+          note: 'Bumping the dependency to 7.16.3+ is not possible, the application fails with the error: ImportError: cannot import name ''soft_unicode'' from ''markupsafe'''
