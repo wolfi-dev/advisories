@@ -4,26 +4,59 @@ package:
   name: kubeflow-pipelines
 
 advisories:
-  - id: CGA-vcfc-378w-j2p8
+  - id: CGA-25jf-8vf4-pcm7
     aliases:
-      - CVE-2018-1002101
-      - GHSA-wqwf-x5cj-rg56
+      - CVE-2023-2728
+      - GHSA-cgcv-5272-97pr
     events:
-      - timestamp: 2023-10-03T23:51:37Z
+      - timestamp: 2023-09-09T17:14:39Z
         type: false-positive-determination
         data:
           type: vulnerable-code-not-included-in-package
-          note: Vulnerability is only present on Windows.
+          note: Vulnerable code is part of the Kubernetes ServiceAccount admission plugin which is not importable and also code was marked NOT_IMPORTABLE in Golang vulndb
 
-  - id: CGA-4xmg-fgrg-2hvg
+  - id: CGA-2fhf-fh2q-6h6f
     aliases:
-      - CVE-2018-1002102
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
     events:
-      - timestamp: 2024-02-16T01:05:39Z
+      - timestamp: 2024-03-12T09:17:32Z
+        type: fixed
+        data:
+          fixed-version: 2.0.5-r4
+
+  - id: CGA-2wrh-m9wq-83qx
+    aliases:
+      - CVE-2023-2727
+      - GHSA-qc2g-gmh6-95p4
+    events:
+      - timestamp: 2023-09-09T16:54:16Z
         type: false-positive-determination
         data:
           type: vulnerable-code-not-included-in-package
-          note: This vulnerability is specific to the k8s server, not the Golang library. This vulnerability is marked as a false positive by the Go team.
+          note: Vulnerable code is part of the Kubernetes API server and was also mark NOT_IMPORTABLE in Golang vulndb
+
+  - id: CGA-33j3-4fm5-8gvm
+    aliases:
+      - CVE-2021-25741
+      - GHSA-f5f7-6478-qm6p
+    events:
+      - timestamp: 2023-09-09T16:37:23Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Vulnerable code is part of a kubeflow-pipelines and code was marked NOT_IMPORTABLE in Golang vulndb
+
+  - id: CGA-33wh-fj62-mr5q
+    aliases:
+      - CVE-2020-8562
+      - GHSA-qh36-44jv-c8xj
+    events:
+      - timestamp: 2023-09-09T17:33:41Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Vulnerable code is part of a kubeflow-pipelines and code was marked NOT_IMPORTABLE in Golang vulndb
 
   - id: CGA-3m3m-cw2j-cpvj
     aliases:
@@ -35,28 +68,6 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: 'This vulnerability is specific to the k8s server, not the Golang library. This vulnerability is marked as "NOT_IMPORTABLE" by the Go team: https://github.com/golang/vulndb/blob/master/data/excluded/GO-2022-0792.yaml'
-
-  - id: CGA-w892-3j99-vg54
-    aliases:
-      - CVE-2019-1002100
-      - GHSA-q4rr-64r9-fwgf
-    events:
-      - timestamp: 2023-09-09T16:57:09Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Vulnerable code is part of the Kubernetes API server and was also mark EFFECTIVELY_PRIVATE in Golang vulndb
-
-  - id: CGA-g79p-hhqq-39fc
-    aliases:
-      - CVE-2019-1002101
-      - GHSA-34jx-wx69-9x8v
-    events:
-      - timestamp: 2023-09-19T20:38:12Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Vulnerable code is not importable.
 
   - id: CGA-3qf3-94gx-766h
     aliases:
@@ -73,6 +84,95 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: govulncheck confirms the affected code is not present in the compiled binary.
 
+  - id: CGA-3x92-7523-qrff
+    aliases:
+      - CVE-2020-8561
+      - GHSA-74j8-88mm-7496
+    events:
+      - timestamp: 2023-09-09T17:24:33Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This only affects kube-apiserver logs, and code was marked NOT_IMPORTABLE in Golang vulndb
+
+  - id: CGA-43qp-3jrr-r393
+    aliases:
+      - GHSA-2jcg-qqmg-46q6
+    events:
+      - timestamp: 2023-11-01T07:13:06Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This is test code that is never used in production. To get more detail about the false-positive determination, please check https://github.com/browserify/resolve/issues/288
+
+  - id: CGA-4xmg-fgrg-2hvg
+    aliases:
+      - CVE-2018-1002102
+    events:
+      - timestamp: 2024-02-16T01:05:39Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability is specific to the k8s server, not the Golang library. This vulnerability is marked as a false positive by the Go team.
+
+  - id: CGA-56gq-37gw-r4c8
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:09:36Z
+        type: fixed
+        data:
+          fixed-version: 2.0.5-r7
+
+  - id: CGA-62jq-8hgq-c9rv
+    aliases:
+      - CVE-2023-3955
+      - GHSA-q78c-gwqw-jcmc
+    events:
+      - timestamp: 2023-11-03T18:44:58Z
+        type: pending-upstream-fix
+        data:
+          note: The project uses an older version of 'k8s.io/kubernetes (v1.11.1)' package. To fix the CVE, we have to upgrade that to '1.24.17' or later. However, the project is not ready to upgrade the package yet since it will require a lot of changes in the codebase.
+      - timestamp: 2024-03-15T16:44:35Z
+        type: fixed
+        data:
+          fixed-version: 2.0.5-r5
+
+  - id: CGA-65j6-vpjf-wmcw
+    aliases:
+      - CVE-2023-26159
+      - GHSA-jchw-25xp-jwwc
+    events:
+      - timestamp: 2024-01-24T07:08:20Z
+        type: fixed
+        data:
+          fixed-version: 2.0.5-r2
+
+  - id: CGA-68cv-r3hc-wp4x
+    aliases:
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T09:17:42Z
+        type: fixed
+        data:
+          fixed-version: 2.0.5-r4
+
+  - id: CGA-6h42-qg2h-m7r9
+    aliases:
+      - CVE-2020-8565
+      - GHSA-8cfg-vx93-jvxw
+    events:
+      - timestamp: 2023-09-09T17:19:43Z
+        type: true-positive-determination
+        data:
+          note: Pending upstream project to pick up k8s.io/kubernetes 1.20.0-alpha.2+.
+      - timestamp: 2024-02-16T00:48:12Z
+        type: pending-upstream-fix
+        data:
+          note: Pending upstream project to pick  k8s.io/kubernetes 1.20.0-alpha.2+.
+
   - id: CGA-7mwh-q3cw-f4g8
     aliases:
       - CVE-2019-11253
@@ -84,16 +184,15 @@ advisories:
           type: vulnerable-code-not-in-execution-path
           note: The Go team has determined the affected code is effectively private.
 
-  - id: CGA-p76g-p9pf-xx29
+  - id: CGA-82m6-4hxr-w67m
     aliases:
-      - CVE-2020-8552
-      - GHSA-82hx-w2r5-c2wq
+      - CVE-2024-0727
+      - GHSA-9v9h-cgj8-h64p
     events:
-      - timestamp: 2023-09-19T16:43:31Z
-        type: false-positive-determination
+      - timestamp: 2024-02-17T07:40:38Z
+        type: fixed
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Go vulndb has marked this code NOT_IMPORTABLE.
+          fixed-version: 2.0.5-r3
 
   - id: CGA-9qj2-pq4v-mxqq
     aliases:
@@ -106,59 +205,27 @@ advisories:
           type: vulnerable-code-not-in-execution-path
           note: This is a Kubernetes API flaw, and this code is not reachable in our package and also code was marked EFFECTIVELY_PRIVATE in Golang vulndb
 
-  - id: CGA-jmp8-cwq9-qp36
+  - id: CGA-c22w-8fv9-v2hm
     aliases:
-      - CVE-2020-8555
-      - GHSA-x6mj-w4jf-jmgw
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
     events:
-      - timestamp: 2023-09-19T17:12:25Z
+      - timestamp: 2023-11-07T19:31:17Z
         type: false-positive-determination
         data:
           type: vulnerable-code-not-included-in-package
-          note: Go vulndb has marked this code NOT_IMPORTABLE.
+          note: Only affects Windows
 
-  - id: CGA-f9g2-cc8c-9pcp
+  - id: CGA-f4mr-p4pg-j4xf
     aliases:
-      - CVE-2020-8558
-      - GHSA-wqv3-8cm6-h6wg
+      - CVE-2021-25743
+      - GHSA-f9jg-8p32-2f55
     events:
-      - timestamp: 2023-09-09T16:24:48Z
+      - timestamp: 2023-10-03T20:15:51Z
         type: false-positive-determination
         data:
           type: vulnerable-code-not-included-in-package
-          note: Vulnerable code is part of the Kubernetes kubelet and kube-proxy and code was marked NOT_IMPORTABLE in Golang vulndb
-
-  - id: CGA-j37w-9p7g-v3pm
-    aliases:
-      - CVE-2020-8559
-      - GHSA-33c5-9fx5-fvjm
-    events:
-      - timestamp: 2024-04-26T11:14:19Z
-        type: fixed
-        data:
-          fixed-version: 2.1.0-r0
-
-  - id: CGA-3x92-7523-qrff
-    aliases:
-      - CVE-2020-8561
-      - GHSA-74j8-88mm-7496
-    events:
-      - timestamp: 2023-09-09T17:24:33Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: This only affects kube-apiserver logs, and code was marked NOT_IMPORTABLE in Golang vulndb
-
-  - id: CGA-33wh-fj62-mr5q
-    aliases:
-      - CVE-2020-8562
-      - GHSA-qh36-44jv-c8xj
-    events:
-      - timestamp: 2023-09-09T17:33:41Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Vulnerable code is part of a kubeflow-pipelines and code was marked NOT_IMPORTABLE in Golang vulndb
+          note: The vulnerable code is specific to kubectl.
 
   - id: CGA-f5rg-h936-hh73
     aliases:
@@ -175,41 +242,16 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: govulncheck confirms the affected code is not present in the compiled binary.
 
-  - id: CGA-6h42-qg2h-m7r9
+  - id: CGA-f9g2-cc8c-9pcp
     aliases:
-      - CVE-2020-8565
-      - GHSA-8cfg-vx93-jvxw
+      - CVE-2020-8558
+      - GHSA-wqv3-8cm6-h6wg
     events:
-      - timestamp: 2023-09-09T17:19:43Z
-        type: true-positive-determination
-        data:
-          note: Pending upstream project to pick up k8s.io/kubernetes 1.20.0-alpha.2+.
-      - timestamp: 2024-02-16T00:48:12Z
-        type: pending-upstream-fix
-        data:
-          note: Pending upstream project to pick  k8s.io/kubernetes 1.20.0-alpha.2+.
-
-  - id: CGA-vpj9-gfpp-x28x
-    aliases:
-      - CVE-2021-25735
-      - GHSA-g42g-737j-qx6j
-    events:
-      - timestamp: 2023-09-09T17:08:48Z
+      - timestamp: 2023-09-09T16:24:48Z
         type: false-positive-determination
         data:
           type: vulnerable-code-not-included-in-package
-          note: Vulnerable code is part of a kubeflow-pipelines and code was marked NOT_IMPORTABLE in Golang vulndb
-
-  - id: CGA-mhjf-45w8-8626
-    aliases:
-      - CVE-2021-25736
-      - GHSA-35c7-w35f-xwgh
-    events:
-      - timestamp: 2023-11-01T20:56:04Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-in-execution-path
-          note: Vulnerable code is part of the Kubernetes kubeproxy which is not in the execution path of the kubeflow-pipelines
+          note: Vulnerable code is part of the Kubernetes kubelet and kube-proxy and code was marked NOT_IMPORTABLE in Golang vulndb
 
   - id: CGA-fqgh-6rmc-mwq8
     aliases:
@@ -222,27 +264,54 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This only affects Kubernetes itself, and code was marked NOT_IMPORTABLE in Golang vulndb
 
-  - id: CGA-33j3-4fm5-8gvm
+  - id: CGA-g2v2-fcrq-626x
     aliases:
-      - CVE-2021-25741
-      - GHSA-f5f7-6478-qm6p
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
     events:
-      - timestamp: 2023-09-09T16:37:23Z
-        type: false-positive-determination
+      - timestamp: 2024-03-12T09:17:45Z
+        type: fixed
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Vulnerable code is part of a kubeflow-pipelines and code was marked NOT_IMPORTABLE in Golang vulndb
+          fixed-version: 2.0.5-r4
 
-  - id: CGA-f4mr-p4pg-j4xf
+  - id: CGA-g79p-hhqq-39fc
     aliases:
-      - CVE-2021-25743
-      - GHSA-f9jg-8p32-2f55
+      - CVE-2019-1002101
+      - GHSA-34jx-wx69-9x8v
     events:
-      - timestamp: 2023-10-03T20:15:51Z
+      - timestamp: 2023-09-19T20:38:12Z
         type: false-positive-determination
         data:
           type: vulnerable-code-not-included-in-package
-          note: The vulnerable code is specific to kubectl.
+          note: Vulnerable code is not importable.
+
+  - id: CGA-hf9v-fwg4-2jvw
+    aliases:
+      - CVE-2024-35195
+      - GHSA-9wx4-h78v-vm56
+    events:
+      - timestamp: 2024-05-22T07:40:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines
+            componentID: 797268599775bb8d
+            componentName: requests
+            componentVersion: 2.31.0
+            componentType: python
+            componentLocation: /usr/lib/python3.12/site-packages/requests-2.31.0.dist-info/METADATA, /usr/lib/python3.12/site-packages/requests-2.31.0.dist-info/RECORD, /usr/lib/python3.12/site-packages/requests-2.31.0.dist-info/top_level.txt
+            scanner: grype
+
+  - id: CGA-hf9x-fxv8-4wr7
+    aliases:
+      - CVE-2024-3177
+      - GHSA-pxhw-596r-rwq5
+    events:
+      - timestamp: 2024-04-24T10:27:03Z
+        type: fixed
+        data:
+          fixed-version: 2.0.5-r7
 
   - id: CGA-hvww-vpr8-9vp5
     aliases:
@@ -255,47 +324,81 @@ advisories:
           type: vulnerable-code-not-in-execution-path
           note: Vulnerable code is part of the Kubernetes kubelet which is not in the execution path of the kubeflow-pipelines and code was marked EFFECTIVELY_PRIVATE in Golang vulndb
 
-  - id: CGA-65j6-vpjf-wmcw
+  - id: CGA-j37w-9p7g-v3pm
     aliases:
-      - CVE-2023-26159
-      - GHSA-jchw-25xp-jwwc
+      - CVE-2020-8559
+      - GHSA-33c5-9fx5-fvjm
     events:
-      - timestamp: 2024-01-24T07:08:20Z
+      - timestamp: 2024-04-26T11:14:19Z
         type: fixed
         data:
-          fixed-version: 2.0.5-r2
+          fixed-version: 2.1.0-r0
+      - timestamp: 2024-05-29T11:00:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines
+            componentID: a7ea1a314acc9698
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.11.1
+            componentType: go-module
+            componentLocation: /usr/bin/apiserver
+            scanner: grype
 
-  - id: CGA-2wrh-m9wq-83qx
+  - id: CGA-jmp8-cwq9-qp36
     aliases:
-      - CVE-2023-2727
-      - GHSA-qc2g-gmh6-95p4
+      - CVE-2020-8555
+      - GHSA-x6mj-w4jf-jmgw
     events:
-      - timestamp: 2023-09-09T16:54:16Z
+      - timestamp: 2023-09-19T17:12:25Z
         type: false-positive-determination
         data:
           type: vulnerable-code-not-included-in-package
-          note: Vulnerable code is part of the Kubernetes API server and was also mark NOT_IMPORTABLE in Golang vulndb
+          note: Go vulndb has marked this code NOT_IMPORTABLE.
 
-  - id: CGA-25jf-8vf4-pcm7
+  - id: CGA-jwhq-mjhp-pxxf
     aliases:
-      - CVE-2023-2728
-      - GHSA-cgcv-5272-97pr
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
     events:
-      - timestamp: 2023-09-09T17:14:39Z
+      - timestamp: 2024-03-12T09:17:37Z
+        type: fixed
+        data:
+          fixed-version: 2.0.5-r4
+
+  - id: CGA-mg3f-vw2w-8r3r
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:31:21Z
         type: false-positive-determination
         data:
           type: vulnerable-code-not-included-in-package
-          note: Vulnerable code is part of the Kubernetes ServiceAccount admission plugin which is not importable and also code was marked NOT_IMPORTABLE in Golang vulndb
+          note: Only affects Windows
 
-  - id: CGA-vjwx-c2wm-rr6m
+  - id: CGA-mhjf-45w8-8626
     aliases:
-      - CVE-2023-28155
-      - GHSA-p8p7-x288-28g6
+      - CVE-2021-25736
+      - GHSA-35c7-w35f-xwgh
     events:
-      - timestamp: 2023-11-01T07:12:35Z
-        type: pending-upstream-fix
+      - timestamp: 2023-11-01T20:56:04Z
+        type: false-positive-determination
         data:
-          note: cannot fix the CVE because there were no patched versions since the 'request' package is no longer supported by the maintainer.
+          type: vulnerable-code-not-in-execution-path
+          note: Vulnerable code is part of the Kubernetes kubeproxy which is not in the execution path of the kubeflow-pipelines
+
+  - id: CGA-p76g-p9pf-xx29
+    aliases:
+      - CVE-2020-8552
+      - GHSA-82hx-w2r5-c2wq
+    events:
+      - timestamp: 2023-09-19T16:43:31Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Go vulndb has marked this code NOT_IMPORTABLE.
 
   - id: CGA-q88w-r3vj-4qw4
     aliases:
@@ -312,81 +415,27 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Vulnerable code is specific to Windows and is also marked as EFFECTIVELY_PRIVATE in Golang vulndb
 
-  - id: CGA-62jq-8hgq-c9rv
+  - id: CGA-q8w4-pg4w-6j65
     aliases:
-      - CVE-2023-3955
-      - GHSA-q78c-gwqw-jcmc
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
     events:
-      - timestamp: 2023-11-03T18:44:58Z
-        type: pending-upstream-fix
+      - timestamp: 2024-03-14T08:20:11Z
+        type: detection
         data:
-          note: The project uses an older version of 'k8s.io/kubernetes (v1.11.1)' package. To fix the CVE, we have to upgrade that to '1.24.17' or later. However, the project is not ready to upgrade the package yet since it will require a lot of changes in the codebase.
-      - timestamp: 2024-03-15T16:44:35Z
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-cache_server
+            componentID: 8b101bd21f8a7200
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/cache_server
+            scanner: grype
+      - timestamp: 2024-03-15T00:35:52Z
         type: fixed
         data:
           fixed-version: 2.0.5-r5
-
-  - id: CGA-c22w-8fv9-v2hm
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:31:17Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-mg3f-vw2w-8r3r
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:31:21Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-56gq-37gw-r4c8
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-13T07:09:36Z
-        type: fixed
-        data:
-          fixed-version: 2.0.5-r7
-
-  - id: CGA-68cv-r3hc-wp4x
-    aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
-    events:
-      - timestamp: 2024-03-12T09:17:42Z
-        type: fixed
-        data:
-          fixed-version: 2.0.5-r4
-
-  - id: CGA-g2v2-fcrq-626x
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-12T09:17:45Z
-        type: fixed
-        data:
-          fixed-version: 2.0.5-r4
-
-  - id: CGA-rpqm-ggrx-ccxp
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2023-12-21T10:37:47Z
-        type: fixed
-        data:
-          fixed-version: 2.0.5-r1
 
   - id: CGA-qwm9-7cvx-g89j
     aliases:
@@ -421,64 +470,12 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability affects the Kubernetes application, not the golang k8s.io/kubernetes library. Kubernetes clusters are only affected if they are using an in-tree storage plugin for Windows nodes.
 
-  - id: CGA-82m6-4hxr-w67m
+  - id: CGA-r834-rj47-cfj9
     aliases:
-      - CVE-2024-0727
-      - GHSA-9v9h-cgj8-h64p
+      - CVE-2024-28849
+      - GHSA-cxjh-pqwp-8mfp
     events:
-      - timestamp: 2024-02-17T07:40:38Z
-        type: fixed
-        data:
-          fixed-version: 2.0.5-r3
-
-  - id: CGA-xqx5-hcfh-qjwr
-    aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
-    events:
-      - timestamp: 2024-03-12T09:17:28Z
-        type: fixed
-        data:
-          fixed-version: 2.0.5-r4
-
-  - id: CGA-2fhf-fh2q-6h6f
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-12T09:17:32Z
-        type: fixed
-        data:
-          fixed-version: 2.0.5-r4
-
-  - id: CGA-jwhq-mjhp-pxxf
-    aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
-    events:
-      - timestamp: 2024-03-12T09:17:37Z
-        type: fixed
-        data:
-          fixed-version: 2.0.5-r4
-
-  - id: CGA-q8w4-pg4w-6j65
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T08:20:11Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubeflow-pipelines-cache_server
-            componentID: 8b101bd21f8a7200
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.30.0
-            componentType: go-module
-            componentLocation: /usr/bin/cache_server
-            scanner: grype
-      - timestamp: 2024-03-15T00:35:52Z
+      - timestamp: 2024-03-15T08:53:09Z
         type: fixed
         data:
           fixed-version: 2.0.5-r5
@@ -492,16 +489,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.0.5-r3
-
-  - id: CGA-r834-rj47-cfj9
-    aliases:
-      - CVE-2024-28849
-      - GHSA-cxjh-pqwp-8mfp
-    events:
-      - timestamp: 2024-03-15T08:53:09Z
-        type: fixed
-        data:
-          fixed-version: 2.0.5-r5
 
   - id: CGA-rjrm-49wc-v48x
     aliases:
@@ -521,33 +508,58 @@ advisories:
             componentLocation: /server/node_modules/express/package.json
             scanner: grype
 
-  - id: CGA-hf9x-fxv8-4wr7
+  - id: CGA-rpqm-ggrx-ccxp
     aliases:
-      - CVE-2024-3177
-      - GHSA-pxhw-596r-rwq5
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
     events:
-      - timestamp: 2024-04-24T10:27:03Z
+      - timestamp: 2023-12-21T10:37:47Z
         type: fixed
         data:
-          fixed-version: 2.0.5-r7
+          fixed-version: 2.0.5-r1
 
-  - id: CGA-hf9v-fwg4-2jvw
+  - id: CGA-vcfc-378w-j2p8
     aliases:
-      - CVE-2024-35195
-      - GHSA-9wx4-h78v-vm56
+      - CVE-2018-1002101
+      - GHSA-wqwf-x5cj-rg56
     events:
-      - timestamp: 2024-05-22T07:40:46Z
-        type: detection
+      - timestamp: 2023-10-03T23:51:37Z
+        type: false-positive-determination
         data:
-          type: scan/v1
-          data:
-            subpackageName: kubeflow-pipelines
-            componentID: 797268599775bb8d
-            componentName: requests
-            componentVersion: 2.31.0
-            componentType: python
-            componentLocation: /usr/lib/python3.12/site-packages/requests-2.31.0.dist-info/METADATA, /usr/lib/python3.12/site-packages/requests-2.31.0.dist-info/RECORD, /usr/lib/python3.12/site-packages/requests-2.31.0.dist-info/top_level.txt
-            scanner: grype
+          type: vulnerable-code-not-included-in-package
+          note: Vulnerability is only present on Windows.
+
+  - id: CGA-vjwx-c2wm-rr6m
+    aliases:
+      - CVE-2023-28155
+      - GHSA-p8p7-x288-28g6
+    events:
+      - timestamp: 2023-11-01T07:12:35Z
+        type: pending-upstream-fix
+        data:
+          note: cannot fix the CVE because there were no patched versions since the 'request' package is no longer supported by the maintainer.
+
+  - id: CGA-vpj9-gfpp-x28x
+    aliases:
+      - CVE-2021-25735
+      - GHSA-g42g-737j-qx6j
+    events:
+      - timestamp: 2023-09-09T17:08:48Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Vulnerable code is part of a kubeflow-pipelines and code was marked NOT_IMPORTABLE in Golang vulndb
+
+  - id: CGA-w892-3j99-vg54
+    aliases:
+      - CVE-2019-1002100
+      - GHSA-q4rr-64r9-fwgf
+    events:
+      - timestamp: 2023-09-09T16:57:09Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Vulnerable code is part of the Kubernetes API server and was also mark EFFECTIVELY_PRIVATE in Golang vulndb
 
   - id: CGA-xpcj-g2x8-wcc9
     aliases:
@@ -571,12 +583,12 @@ advisories:
         data:
           fixed-version: 2.1.0-r0
 
-  - id: CGA-43qp-3jrr-r393
+  - id: CGA-xqx5-hcfh-qjwr
     aliases:
-      - GHSA-2jcg-qqmg-46q6
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
     events:
-      - timestamp: 2023-11-01T07:13:06Z
-        type: false-positive-determination
+      - timestamp: 2024-03-12T09:17:28Z
+        type: fixed
         data:
-          type: vulnerable-code-not-included-in-package
-          note: This is test code that is never used in production. To get more detail about the false-positive determination, please check https://github.com/browserify/resolve/issues/288
+          fixed-version: 2.0.5-r4
