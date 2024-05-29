@@ -4,42 +4,6 @@ package:
   name: newrelic-fluent-bit-output
 
 advisories:
-  - id: CGA-gr22-wprm-4727
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:33:37Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-jq5w-f63x-38hh
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:33:38Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-8q47-wf6v-wqg5
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-13T07:14:30Z
-        type: fixed
-        data:
-          fixed-version: 1.19.2-r2
-      - timestamp: 2024-05-03T14:24:52Z
-        type: pending-upstream-fix
-        data:
-          note: 'See upstream issue: https://github.com/newrelic/newrelic-fluent-bit-output/pull/144'
-
   - id: CGA-3fw9-g448-cq83
     aliases:
       - CVE-2023-45289
@@ -66,28 +30,54 @@ advisories:
         data:
           note: 'See upstream issue: https://github.com/newrelic/newrelic-fluent-bit-output/pull/144'
 
-  - id: CGA-xr68-h9cg-49cj
+  - id: CGA-67wh-9fxr-2w4p
     aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
     events:
-      - timestamp: 2024-03-12T08:13:48Z
+      - timestamp: 2024-05-14T08:44:31Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: newrelic-fluent-bit-output
-            componentID: 0211a713659ddf28
+            componentID: 09e92b0c2e8ae2a7
             componentName: stdlib
             componentVersion: go1.20.14
             componentType: go-module
             componentLocation: /fluent-bit/bin/out_newrelic.so
             scanner: grype
-      - timestamp: 2024-03-30T17:19:31Z
+      - timestamp: 2024-05-27T04:58:47Z
+        type: pending-upstream-fix
+        data:
+          note: 'See upstream issue: https://github.com/newrelic/newrelic-fluent-bit-output/pull/144'
+      - timestamp: 2024-05-28T07:42:24Z
         type: fixed
         data:
-          fixed-version: 1.19.2-r1
-      - timestamp: 2024-05-03T14:25:21Z
+          fixed-version: 2.0.0-r0
+      - timestamp: 2024-05-29T07:26:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: newrelic-fluent-bit-output
+            componentID: 09e92b0c2e8ae2a7
+            componentName: stdlib
+            componentVersion: go1.20.14
+            componentType: go-module
+            componentLocation: /fluent-bit/bin/out_newrelic.so
+            scanner: grype
+
+  - id: CGA-8q47-wf6v-wqg5
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:14:30Z
+        type: fixed
+        data:
+          fixed-version: 1.19.2-r2
+      - timestamp: 2024-05-03T14:24:52Z
         type: pending-upstream-fix
         data:
           note: 'See upstream issue: https://github.com/newrelic/newrelic-fluent-bit-output/pull/144'
@@ -117,6 +107,28 @@ advisories:
         type: pending-upstream-fix
         data:
           note: 'See upstream issue: https://github.com/newrelic/newrelic-fluent-bit-output/pull/144'
+
+  - id: CGA-gr22-wprm-4727
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:33:37Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-jq5w-f63x-38hh
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:33:38Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
 
   - id: CGA-mxv9-jf2v-cw75
     aliases:
@@ -170,28 +182,28 @@ advisories:
         data:
           note: 'See upstream issue: https://github.com/newrelic/newrelic-fluent-bit-output/pull/144'
 
-  - id: CGA-67wh-9fxr-2w4p
+  - id: CGA-xr68-h9cg-49cj
     aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
     events:
-      - timestamp: 2024-05-14T08:44:31Z
+      - timestamp: 2024-03-12T08:13:48Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: newrelic-fluent-bit-output
-            componentID: 09e92b0c2e8ae2a7
+            componentID: 0211a713659ddf28
             componentName: stdlib
             componentVersion: go1.20.14
             componentType: go-module
             componentLocation: /fluent-bit/bin/out_newrelic.so
             scanner: grype
-      - timestamp: 2024-05-27T04:58:47Z
+      - timestamp: 2024-03-30T17:19:31Z
+        type: fixed
+        data:
+          fixed-version: 1.19.2-r1
+      - timestamp: 2024-05-03T14:25:21Z
         type: pending-upstream-fix
         data:
           note: 'See upstream issue: https://github.com/newrelic/newrelic-fluent-bit-output/pull/144'
-      - timestamp: 2024-05-28T07:42:24Z
-        type: fixed
-        data:
-          fixed-version: 2.0.0-r0
