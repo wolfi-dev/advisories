@@ -4,47 +4,40 @@ package:
   name: datadog-agent
 
 advisories:
-  - id: CGA-v66r-g9c3-r3gv
+  - id: CGA-23wg-fhpm-qgvw
     aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
+      - CVE-2024-21506
+      - GHSA-cr6f-gf5w-vhrc
     events:
-      - timestamp: 2024-04-20T13:43:19Z
+      - timestamp: 2024-05-21T20:45:14Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: datadog-agent
-            componentID: c499a63bcc1874d2
-            componentName: golang.org/x/net
-            componentVersion: v0.20.0
-            componentType: go-module
-            componentLocation: /opt/datadog-agent/bin/agent/agent
+            componentID: e8e51d268f25b77a
+            componentName: pymongo
+            componentVersion: 4.6.2
+            componentType: python
+            componentLocation: /usr/share/datadog-agent/lib/python3.11/site-packages/pymongo-4.6.2.dist-info/METADATA, /usr/share/datadog-agent/lib/python3.11/site-packages/pymongo-4.6.2.dist-info/RECORD, /usr/share/datadog-agent/lib/python3.11/site-packages/pymongo-4.6.2.dist-info/direct_url.json, /usr/share/datadog-agent/lib/python3.11/site-packages/pymongo-4.6.2.dist-info/top_level.txt
             scanner: grype
-      - timestamp: 2024-04-20T15:38:41Z
-        type: fixed
-        data:
-          fixed-version: 7.52.1-r1
 
-  - id: CGA-cm7p-pc38-w76r
+  - id: CGA-2hj4-64c8-5mwp
     aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
+      - GHSA-77hh-43cm-v8j6
     events:
-      - timestamp: 2024-03-12T07:09:59Z
-        type: fixed
+      - timestamp: 2024-05-21T20:45:17Z
+        type: detection
         data:
-          fixed-version: 7.51.1-r1
-
-  - id: CGA-h3hf-jw4f-qh99
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-12T07:10:01Z
-        type: fixed
-        data:
-          fixed-version: 7.51.1-r1
+          type: scan/v1
+          data:
+            subpackageName: datadog-agent
+            componentID: 238dbcd1e6c209e6
+            componentName: tuf
+            componentVersion: 2.0.0
+            componentType: python
+            componentLocation: /usr/share/datadog-agent/lib/python3.11/site-packages/tuf-2.0.0.dist-info/METADATA, /usr/share/datadog-agent/lib/python3.11/site-packages/tuf-2.0.0.dist-info/RECORD, /usr/share/datadog-agent/lib/python3.11/site-packages/tuf-2.0.0.dist-info/direct_url.json
+            scanner: grype
 
   - id: CGA-6p96-qff9-wmqm
     aliases:
@@ -68,22 +61,104 @@ advisories:
         data:
           fixed-version: 7.52.1-r2
 
-  - id: CGA-23wg-fhpm-qgvw
+  - id: CGA-94j3-xw25-m3v3
     aliases:
-      - CVE-2024-21506
-      - GHSA-cr6f-gf5w-vhrc
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
     events:
-      - timestamp: 2024-05-21T20:45:14Z
+      - timestamp: 2024-03-12T07:10:02Z
+        type: fixed
+        data:
+          fixed-version: 7.51.1-r1
+
+  - id: CGA-ccwr-5f2w-9q24
+    aliases:
+      - CVE-2024-3651
+      - GHSA-jjg7-2v4v-x38h
+    events:
+      - timestamp: 2024-05-21T20:45:21Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: datadog-agent
-            componentID: e8e51d268f25b77a
-            componentName: pymongo
-            componentVersion: 4.6.2
+            componentID: 8b76cbfffb47d6d3
+            componentName: idna
+            componentVersion: "3.6"
             componentType: python
-            componentLocation: /usr/share/datadog-agent/lib/python3.11/site-packages/pymongo-4.6.2.dist-info/METADATA, /usr/share/datadog-agent/lib/python3.11/site-packages/pymongo-4.6.2.dist-info/RECORD, /usr/share/datadog-agent/lib/python3.11/site-packages/pymongo-4.6.2.dist-info/direct_url.json, /usr/share/datadog-agent/lib/python3.11/site-packages/pymongo-4.6.2.dist-info/top_level.txt
+            componentLocation: /usr/share/datadog-agent/lib/python3.11/site-packages/idna-3.6.dist-info/METADATA, /usr/share/datadog-agent/lib/python3.11/site-packages/idna-3.6.dist-info/RECORD, /usr/share/datadog-agent/lib/python3.11/site-packages/idna-3.6.dist-info/direct_url.json
+            scanner: grype
+      - timestamp: 2024-05-30T11:00:30Z
+        type: fixed
+        data:
+          fixed-version: 7.54.0-r0
+
+  - id: CGA-cm7p-pc38-w76r
+    aliases:
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T07:09:59Z
+        type: fixed
+        data:
+          fixed-version: 7.51.1-r1
+
+  - id: CGA-f494-jr6m-jmhx
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T07:09:59Z
+        type: fixed
+        data:
+          fixed-version: 7.51.1-r1
+
+  - id: CGA-h3hf-jw4f-qh99
+    aliases:
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T07:10:01Z
+        type: fixed
+        data:
+          fixed-version: 7.51.1-r1
+
+  - id: CGA-hf6w-86h4-m7jp
+    aliases:
+      - CVE-2024-29018
+      - GHSA-mq39-4gv4-mvpx
+    events:
+      - timestamp: 2024-03-21T14:49:35Z
+        type: fixed
+        data:
+          fixed-version: 7.52.0-r0
+
+  - id: CGA-hhc2-42fx-p4rm
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T07:10:00Z
+        type: fixed
+        data:
+          fixed-version: 7.51.1-r1
+
+  - id: CGA-jcgc-jpw2-xpqq
+    aliases:
+      - CVE-2024-35195
+      - GHSA-9wx4-h78v-vm56
+    events:
+      - timestamp: 2024-05-21T20:45:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: datadog-agent
+            componentID: 76d51e19697c5c59
+            componentName: requests
+            componentVersion: 2.31.0
+            componentType: python
+            componentLocation: /usr/share/datadog-agent/lib/python3.11/site-packages/requests-2.31.0.dist-info/METADATA, /usr/share/datadog-agent/lib/python3.11/site-packages/requests-2.31.0.dist-info/RECORD, /usr/share/datadog-agent/lib/python3.11/site-packages/requests-2.31.0.dist-info/direct_url.json, /usr/share/datadog-agent/lib/python3.11/site-packages/requests-2.31.0.dist-info/top_level.txt
             scanner: grype
 
   - id: CGA-p4mm-jvfh-v2c4
@@ -108,10 +183,56 @@ advisories:
         data:
           fixed-version: 7.50.3-r1
 
-  - id: CGA-rm85-gqpf-hfph
+  - id: CGA-q457-jq3v-2r43
     aliases:
-      - CVE-2024-23650
-      - GHSA-9p26-698r-w4hx
+      - CVE-2024-24557
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-21T07:34:46Z
+        type: fixed
+        data:
+          fixed-version: 7.51.1-r3
+
+  - id: CGA-q6w9-959q-j875
+    aliases:
+      - CVE-2024-36039
+      - GHSA-v9hf-5j83-6xpp
+    events:
+      - timestamp: 2024-05-22T08:36:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: datadog-agent
+            componentID: 582b77cb73ddc1c5
+            componentName: PyMySQL
+            componentVersion: 1.1.0
+            componentType: python
+            componentLocation: /usr/share/datadog-agent/lib/python3.11/site-packages/PyMySQL-1.1.0.dist-info/METADATA, /usr/share/datadog-agent/lib/python3.11/site-packages/PyMySQL-1.1.0.dist-info/RECORD, /usr/share/datadog-agent/lib/python3.11/site-packages/PyMySQL-1.1.0.dist-info/direct_url.json, /usr/share/datadog-agent/lib/python3.11/site-packages/PyMySQL-1.1.0.dist-info/top_level.txt
+            scanner: grype
+
+  - id: CGA-qgmj-754c-73g4
+    aliases:
+      - CVE-2024-3772
+      - GHSA-mr82-8j83-vxmv
+    events:
+      - timestamp: 2024-05-21T20:45:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: datadog-agent
+            componentID: 549a6aef63842da8
+            componentName: pydantic
+            componentVersion: 2.0.2
+            componentType: python
+            componentLocation: /usr/share/datadog-agent/lib/python3.11/site-packages/pydantic-2.0.2.dist-info/METADATA, /usr/share/datadog-agent/lib/python3.11/site-packages/pydantic-2.0.2.dist-info/RECORD, /usr/share/datadog-agent/lib/python3.11/site-packages/pydantic-2.0.2.dist-info/direct_url.json
+            scanner: grype
+
+  - id: CGA-rgpg-f9fq-2pv5
+    aliases:
+      - CVE-2024-23651
+      - GHSA-m3r6-h7wv-7xxv
     events:
       - timestamp: 2024-02-01T07:05:43Z
         type: detection
@@ -130,10 +251,10 @@ advisories:
         data:
           fixed-version: 7.50.3-r1
 
-  - id: CGA-rgpg-f9fq-2pv5
+  - id: CGA-rm85-gqpf-hfph
     aliases:
-      - CVE-2024-23651
-      - GHSA-m3r6-h7wv-7xxv
+      - CVE-2024-23650
+      - GHSA-9p26-698r-w4hx
     events:
       - timestamp: 2024-02-01T07:05:43Z
         type: detection
@@ -196,45 +317,27 @@ advisories:
         data:
           fixed-version: 7.50.3-r1
 
-  - id: CGA-q457-jq3v-2r43
+  - id: CGA-v66r-g9c3-r3gv
     aliases:
-      - CVE-2024-24557
-      - GHSA-xw73-rw38-6vjc
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
     events:
-      - timestamp: 2024-03-21T07:34:46Z
+      - timestamp: 2024-04-20T13:43:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: datadog-agent
+            componentID: c499a63bcc1874d2
+            componentName: golang.org/x/net
+            componentVersion: v0.20.0
+            componentType: go-module
+            componentLocation: /opt/datadog-agent/bin/agent/agent
+            scanner: grype
+      - timestamp: 2024-04-20T15:38:41Z
         type: fixed
         data:
-          fixed-version: 7.51.1-r3
-
-  - id: CGA-hhc2-42fx-p4rm
-    aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
-    events:
-      - timestamp: 2024-03-12T07:10:00Z
-        type: fixed
-        data:
-          fixed-version: 7.51.1-r1
-
-  - id: CGA-f494-jr6m-jmhx
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-12T07:09:59Z
-        type: fixed
-        data:
-          fixed-version: 7.51.1-r1
-
-  - id: CGA-94j3-xw25-m3v3
-    aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
-    events:
-      - timestamp: 2024-03-12T07:10:02Z
-        type: fixed
-        data:
-          fixed-version: 7.51.1-r1
+          fixed-version: 7.52.1-r1
 
   - id: CGA-x8r9-xppj-cww2
     aliases:
@@ -257,102 +360,3 @@ advisories:
         type: fixed
         data:
           fixed-version: 7.51.1-r2
-
-  - id: CGA-hf6w-86h4-m7jp
-    aliases:
-      - CVE-2024-29018
-      - GHSA-mq39-4gv4-mvpx
-    events:
-      - timestamp: 2024-03-21T14:49:35Z
-        type: fixed
-        data:
-          fixed-version: 7.52.0-r0
-
-  - id: CGA-jcgc-jpw2-xpqq
-    aliases:
-      - CVE-2024-35195
-      - GHSA-9wx4-h78v-vm56
-    events:
-      - timestamp: 2024-05-21T20:45:19Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: datadog-agent
-            componentID: 76d51e19697c5c59
-            componentName: requests
-            componentVersion: 2.31.0
-            componentType: python
-            componentLocation: /usr/share/datadog-agent/lib/python3.11/site-packages/requests-2.31.0.dist-info/METADATA, /usr/share/datadog-agent/lib/python3.11/site-packages/requests-2.31.0.dist-info/RECORD, /usr/share/datadog-agent/lib/python3.11/site-packages/requests-2.31.0.dist-info/direct_url.json, /usr/share/datadog-agent/lib/python3.11/site-packages/requests-2.31.0.dist-info/top_level.txt
-            scanner: grype
-
-  - id: CGA-q6w9-959q-j875
-    aliases:
-      - CVE-2024-36039
-      - GHSA-v9hf-5j83-6xpp
-    events:
-      - timestamp: 2024-05-22T08:36:46Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: datadog-agent
-            componentID: 582b77cb73ddc1c5
-            componentName: PyMySQL
-            componentVersion: 1.1.0
-            componentType: python
-            componentLocation: /usr/share/datadog-agent/lib/python3.11/site-packages/PyMySQL-1.1.0.dist-info/METADATA, /usr/share/datadog-agent/lib/python3.11/site-packages/PyMySQL-1.1.0.dist-info/RECORD, /usr/share/datadog-agent/lib/python3.11/site-packages/PyMySQL-1.1.0.dist-info/direct_url.json, /usr/share/datadog-agent/lib/python3.11/site-packages/PyMySQL-1.1.0.dist-info/top_level.txt
-            scanner: grype
-
-  - id: CGA-ccwr-5f2w-9q24
-    aliases:
-      - CVE-2024-3651
-      - GHSA-jjg7-2v4v-x38h
-    events:
-      - timestamp: 2024-05-21T20:45:21Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: datadog-agent
-            componentID: 8b76cbfffb47d6d3
-            componentName: idna
-            componentVersion: "3.6"
-            componentType: python
-            componentLocation: /usr/share/datadog-agent/lib/python3.11/site-packages/idna-3.6.dist-info/METADATA, /usr/share/datadog-agent/lib/python3.11/site-packages/idna-3.6.dist-info/RECORD, /usr/share/datadog-agent/lib/python3.11/site-packages/idna-3.6.dist-info/direct_url.json
-            scanner: grype
-
-  - id: CGA-qgmj-754c-73g4
-    aliases:
-      - CVE-2024-3772
-      - GHSA-mr82-8j83-vxmv
-    events:
-      - timestamp: 2024-05-21T20:45:24Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: datadog-agent
-            componentID: 549a6aef63842da8
-            componentName: pydantic
-            componentVersion: 2.0.2
-            componentType: python
-            componentLocation: /usr/share/datadog-agent/lib/python3.11/site-packages/pydantic-2.0.2.dist-info/METADATA, /usr/share/datadog-agent/lib/python3.11/site-packages/pydantic-2.0.2.dist-info/RECORD, /usr/share/datadog-agent/lib/python3.11/site-packages/pydantic-2.0.2.dist-info/direct_url.json
-            scanner: grype
-
-  - id: CGA-2hj4-64c8-5mwp
-    aliases:
-      - GHSA-77hh-43cm-v8j6
-    events:
-      - timestamp: 2024-05-21T20:45:17Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: datadog-agent
-            componentID: 238dbcd1e6c209e6
-            componentName: tuf
-            componentVersion: 2.0.0
-            componentType: python
-            componentLocation: /usr/share/datadog-agent/lib/python3.11/site-packages/tuf-2.0.0.dist-info/METADATA, /usr/share/datadog-agent/lib/python3.11/site-packages/tuf-2.0.0.dist-info/RECORD, /usr/share/datadog-agent/lib/python3.11/site-packages/tuf-2.0.0.dist-info/direct_url.json
-            scanner: grype
