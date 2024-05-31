@@ -4,19 +4,56 @@ package:
   name: nodejs-19
 
 advisories:
-  - id: CGA-wjq3-26cp-cwpj
+  - id: CGA-42pp-gwp5-q5p4
     aliases:
-      - CVE-2023-30581
-      - GHSA-86v4-9wq7-fx97
+      - CVE-2023-44487
+      - GHSA-qppj-fm5r-hxr3
     events:
-      - timestamp: 2023-12-08T19:43:06Z
-        type: true-positive-determination
+      - timestamp: 2023-10-12T11:41:22Z
+        type: false-positive-determination
         data:
-          note: The fix for this vulnerability is in version 20.3.1 of the upstream source code.
-      - timestamp: 2023-12-08T19:44:48Z
-        type: fix-not-planned
+          type: vulnerable-code-not-included-in-package
+          note: This package uses an external implementation of HTTP/2 (via nghttp2).
+
+  - id: CGA-43cx-mvc6-xxx4
+    aliases:
+      - CVE-2023-39332
+      - GHSA-9hm3-chgj-45rm
+    events:
+      - timestamp: 2023-10-27T19:23:31Z
+        type: false-positive-determination
         data:
-          note: This package is locked to 19.x.x and will not receive a fix.
+          type: vulnerable-code-version-not-used
+          note: This vulnerability affects the experimental permission model in Node.js 20.
+
+  - id: CGA-5xm3-qqjg-f7m6
+    aliases:
+      - CVE-2023-39331
+      - GHSA-7xrv-q25v-f95m
+    events:
+      - timestamp: 2023-10-27T19:23:18Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: This vulnerability affects the experimental permission model in Node.js 20.
+
+  - id: CGA-7647-vqc7-r2pg
+    aliases:
+      - CVE-2024-21890
+      - GHSA-m27w-wvc9-v4mq
+    events:
+      - timestamp: 2024-05-31T07:31:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nodejs-19
+            componentID: b69eb443a0ac9498
+            componentName: nodejs-19
+            componentVersion: 19.9.0-r7
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
 
   - id: CGA-7c4q-5jwc-82vc
     aliases:
@@ -40,38 +77,14 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability only affects some versions of Node.js 20. This package is pinned at version 19. Reference: https://nodejs.org/en/blog/vulnerability/august-2023-security-releases'
 
-  - id: CGA-5xm3-qqjg-f7m6
+  - id: CGA-p7xv-cx35-m83g
     aliases:
-      - CVE-2023-39331
-      - GHSA-7xrv-q25v-f95m
+      - CVE-2024-24806
     events:
-      - timestamp: 2023-10-27T19:23:18Z
-        type: false-positive-determination
+      - timestamp: 2024-02-11T15:42:08Z
+        type: fixed
         data:
-          type: vulnerable-code-version-not-used
-          note: This vulnerability affects the experimental permission model in Node.js 20.
-
-  - id: CGA-43cx-mvc6-xxx4
-    aliases:
-      - CVE-2023-39332
-      - GHSA-9hm3-chgj-45rm
-    events:
-      - timestamp: 2023-10-27T19:23:31Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-version-not-used
-          note: This vulnerability affects the experimental permission model in Node.js 20.
-
-  - id: CGA-42pp-gwp5-q5p4
-    aliases:
-      - CVE-2023-44487
-      - GHSA-qppj-fm5r-hxr3
-    events:
-      - timestamp: 2023-10-12T11:41:22Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: This package uses an external implementation of HTTP/2 (via nghttp2).
+          fixed-version: 19.9.0-r6
 
   - id: CGA-pfvh-rj87-m535
     aliases:
@@ -109,11 +122,16 @@ advisories:
             componentLocation: /.PKGINFO
             scanner: grype
 
-  - id: CGA-p7xv-cx35-m83g
+  - id: CGA-wjq3-26cp-cwpj
     aliases:
-      - CVE-2024-24806
+      - CVE-2023-30581
+      - GHSA-86v4-9wq7-fx97
     events:
-      - timestamp: 2024-02-11T15:42:08Z
-        type: fixed
+      - timestamp: 2023-12-08T19:43:06Z
+        type: true-positive-determination
         data:
-          fixed-version: 19.9.0-r6
+          note: The fix for this vulnerability is in version 20.3.1 of the upstream source code.
+      - timestamp: 2023-12-08T19:44:48Z
+        type: fix-not-planned
+        data:
+          note: This package is locked to 19.x.x and will not receive a fix.
