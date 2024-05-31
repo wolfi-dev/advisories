@@ -4,36 +4,6 @@ package:
   name: nodejs-18
 
 advisories:
-  - id: CGA-hcgf-3834-fvf4
-    aliases:
-      - CVE-2023-30581
-      - GHSA-86v4-9wq7-fx97
-    events:
-      - timestamp: 2023-06-20T19:07:00Z
-        type: fixed
-        data:
-          fixed-version: 18.16.1-r0
-
-  - id: CGA-5wm9-hrw7-x765
-    aliases:
-      - CVE-2023-30585
-      - GHSA-4r2r-cf85-vmc7
-    events:
-      - timestamp: 2023-06-20T19:07:00Z
-        type: fixed
-        data:
-          fixed-version: 18.16.1-r0
-
-  - id: CGA-5994-9mfc-rcww
-    aliases:
-      - CVE-2023-30588
-      - GHSA-g526-x7vj-cfv6
-    events:
-      - timestamp: 2023-06-20T19:07:00Z
-        type: fixed
-        data:
-          fixed-version: 18.16.1-r0
-
   - id: CGA-22h6-36xc-f6jc
     aliases:
       - CVE-2023-30589
@@ -44,10 +14,21 @@ advisories:
         data:
           fixed-version: 18.16.1-r0
 
-  - id: CGA-wgrp-hm45-wq5r
+  - id: CGA-4xrc-hqgq-6qw2
     aliases:
-      - CVE-2023-30590
-      - GHSA-v63h-9gvh-2x49
+      - CVE-2023-39332
+      - GHSA-9hm3-chgj-45rm
+    events:
+      - timestamp: 2023-10-27T19:22:49Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: This vulnerability affects the experimental permission model in Node.js 20.
+
+  - id: CGA-5994-9mfc-rcww
+    aliases:
+      - CVE-2023-30588
+      - GHSA-g526-x7vj-cfv6
     events:
       - timestamp: 2023-06-20T19:07:00Z
         type: fixed
@@ -64,6 +45,26 @@ advisories:
         data:
           fixed-version: 18.17.1-r0
 
+  - id: CGA-5m42-5jff-h4r8
+    aliases:
+      - CVE-2023-32006
+      - GHSA-356r-x8g9-vh8c
+    events:
+      - timestamp: 2023-08-10T12:00:44Z
+        type: fixed
+        data:
+          fixed-version: 18.17.1-r0
+
+  - id: CGA-5wm9-hrw7-x765
+    aliases:
+      - CVE-2023-30585
+      - GHSA-4r2r-cf85-vmc7
+    events:
+      - timestamp: 2023-06-20T19:07:00Z
+        type: fixed
+        data:
+          fixed-version: 18.16.1-r0
+
   - id: CGA-6ccj-2hv4-8jr7
     aliases:
       - CVE-2023-32003
@@ -75,27 +76,6 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability only affects some versions of Node.js 20. This package is pinned at version 18. Reference: https://nodejs.org/en/blog/vulnerability/august-2023-security-releases'
 
-  - id: CGA-pgcp-wfw8-m3w4
-    aliases:
-      - CVE-2023-32004
-      - GHSA-x3wm-m4vj-p6px
-    events:
-      - timestamp: 2023-08-23T15:18:42Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-version-not-used
-          note: 'This vulnerability only affects some versions of Node.js 20. This package is pinned at version 18. Reference: https://nodejs.org/en/blog/vulnerability/august-2023-security-releases'
-
-  - id: CGA-5m42-5jff-h4r8
-    aliases:
-      - CVE-2023-32006
-      - GHSA-356r-x8g9-vh8c
-    events:
-      - timestamp: 2023-08-10T12:00:44Z
-        type: fixed
-        data:
-          fixed-version: 18.17.1-r0
-
   - id: CGA-9848-7mr6-j8qr
     aliases:
       - CVE-2023-32559
@@ -106,37 +86,23 @@ advisories:
         data:
           fixed-version: 18.17.1-r0
 
-  - id: CGA-hmx6-v485-68mm
+  - id: CGA-cxgw-xq74-g6gr
     aliases:
-      - CVE-2023-38552
-      - GHSA-x39v-frq9-5hh8
+      - CVE-2024-21890
+      - GHSA-m27w-wvc9-v4mq
     events:
-      - timestamp: 2024-04-10T23:17:49Z
-        type: fixed
+      - timestamp: 2024-05-31T07:26:36Z
+        type: detection
         data:
-          fixed-version: 18.18.2-r0
-
-  - id: CGA-w4fw-9wm9-8227
-    aliases:
-      - CVE-2023-39331
-      - GHSA-7xrv-q25v-f95m
-    events:
-      - timestamp: 2023-10-27T19:22:31Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-version-not-used
-          note: This vulnerability affects the experimental permission model in Node.js 20.
-
-  - id: CGA-4xrc-hqgq-6qw2
-    aliases:
-      - CVE-2023-39332
-      - GHSA-9hm3-chgj-45rm
-    events:
-      - timestamp: 2023-10-27T19:22:49Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-version-not-used
-          note: This vulnerability affects the experimental permission model in Node.js 20.
+          type: scan/v1
+          data:
+            subpackageName: nodejs-18
+            componentID: fa55d7be35badcef
+            componentName: nodejs-18
+            componentVersion: 18.20.3-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
 
   - id: CGA-h4hq-pj3g-852q
     aliases:
@@ -149,6 +115,37 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This package uses an external implementation of HTTP/2 (via nghttp2).
 
+  - id: CGA-hcgf-3834-fvf4
+    aliases:
+      - CVE-2023-30581
+      - GHSA-86v4-9wq7-fx97
+    events:
+      - timestamp: 2023-06-20T19:07:00Z
+        type: fixed
+        data:
+          fixed-version: 18.16.1-r0
+
+  - id: CGA-hmx6-v485-68mm
+    aliases:
+      - CVE-2023-38552
+      - GHSA-x39v-frq9-5hh8
+    events:
+      - timestamp: 2024-04-10T23:17:49Z
+        type: fixed
+        data:
+          fixed-version: 18.18.2-r0
+
+  - id: CGA-pgcp-wfw8-m3w4
+    aliases:
+      - CVE-2023-32004
+      - GHSA-x3wm-m4vj-p6px
+    events:
+      - timestamp: 2023-08-23T15:18:42Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: 'This vulnerability only affects some versions of Node.js 20. This package is pinned at version 18. Reference: https://nodejs.org/en/blog/vulnerability/august-2023-security-releases'
+
   - id: CGA-qc4m-85c7-56g6
     aliases:
       - CVE-2024-24806
@@ -158,6 +155,17 @@ advisories:
         data:
           fixed-version: 18.19.0-r2
 
+  - id: CGA-w4fw-9wm9-8227
+    aliases:
+      - CVE-2023-39331
+      - GHSA-7xrv-q25v-f95m
+    events:
+      - timestamp: 2023-10-27T19:22:31Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: This vulnerability affects the experimental permission model in Node.js 20.
+
   - id: CGA-w9cr-qc36-rw96
     aliases:
       - CVE-2024-27980
@@ -166,3 +174,13 @@ advisories:
         type: fixed
         data:
           fixed-version: 18.20.2-r0
+
+  - id: CGA-wgrp-hm45-wq5r
+    aliases:
+      - CVE-2023-30590
+      - GHSA-v63h-9gvh-2x49
+    events:
+      - timestamp: 2023-06-20T19:07:00Z
+        type: fixed
+        data:
+          fixed-version: 18.16.1-r0
