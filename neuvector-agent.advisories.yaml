@@ -1,0 +1,57 @@
+schema-version: 2.0.2
+
+package:
+  name: neuvector-agent
+
+advisories:
+  - id: CGA-88rh-3522-g7rj
+    aliases:
+      - GHSA-7ww5-4wqc-m92c
+    events:
+      - timestamp: 2024-05-31T21:18:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: neuvector-agent
+            componentID: 319eb82fe335d70b
+            componentName: github.com/containerd/containerd
+            componentVersion: v1.5.18
+            componentType: go-module
+            componentLocation: /usr/local/bin/agent
+            scanner: grype
+
+  - id: CGA-h8xj-6f7x-vgcr
+    aliases:
+      - CVE-2023-44487
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2024-05-31T21:18:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: neuvector-agent
+            componentID: f0bdf49154499377
+            componentName: google.golang.org/grpc
+            componentVersion: v1.30.1
+            componentType: go-module
+            componentLocation: /usr/local/bin/pathWalker
+            scanner: grype
+
+  - id: CGA-mp2h-9vj8-ph5p
+    aliases:
+      - GHSA-m425-mq94-257g
+    events:
+      - timestamp: 2024-05-31T21:18:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: neuvector-agent
+            componentID: f0bdf49154499377
+            componentName: google.golang.org/grpc
+            componentVersion: v1.30.1
+            componentType: go-module
+            componentLocation: /usr/local/bin/pathWalker
+            scanner: grype
