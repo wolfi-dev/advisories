@@ -4,68 +4,6 @@ package:
   name: vault-csi-provider
 
 advisories:
-  - id: CGA-cr6w-26qg-j59g
-    aliases:
-      - CVE-2020-8559
-      - GHSA-33c5-9fx5-fvjm
-    events:
-      - timestamp: 2024-04-25T13:29:23Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: vault-csi-provider
-            componentID: dffe2232aaa03738
-            componentName: k8s.io/apimachinery
-            componentVersion: v0.26.3
-            componentType: go-module
-            componentLocation: /usr/bin/vault-csi-provider
-            scanner: grype
-
-  - id: CGA-9cm4-vcjv-4v2c
-    aliases:
-      - CVE-2023-2878
-      - GHSA-g82w-58jf-gcxx
-    events:
-      - timestamp: 2024-02-14T16:26:37Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: vault-csi-provider
-            componentID: 17a49c9b4d9f2fed
-            componentName: sigs.k8s.io/secrets-store-csi-driver
-            componentVersion: v1.3.2
-            componentType: go-module
-            componentLocation: /usr/bin/vault-csi-provider
-            scanner: grype
-      - timestamp: 2024-02-18T07:52:43Z
-        type: fixed
-        data:
-          fixed-version: 1.4.0-r9
-
-  - id: CGA-968r-g3r4-qf7g
-    aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
-    events:
-      - timestamp: 2024-02-14T16:26:36Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: vault-csi-provider
-            componentID: 01a17e157699c07e
-            componentName: golang.org/x/net
-            componentVersion: v0.8.0
-            componentType: go-module
-            componentLocation: /usr/bin/vault-csi-provider
-            scanner: grype
-      - timestamp: 2024-02-18T07:52:42Z
-        type: fixed
-        data:
-          fixed-version: 1.4.0-r9
-
   - id: CGA-2cfg-274r-mr5q
     aliases:
       - CVE-2023-3978
@@ -110,68 +48,6 @@ advisories:
         data:
           fixed-version: 1.4.0-r9
 
-  - id: CGA-xghr-24gm-3fgj
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:40:12Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-x3vh-297w-j53p
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:40:13Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-94vf-4qw5-ffmc
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-09T12:01:19Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: vault-csi-provider
-            componentID: be25a63bb3f7d656
-            componentName: stdlib
-            componentVersion: go1.22.1
-            componentType: go-module
-            componentLocation: /usr/bin/vault-csi-provider
-            scanner: grype
-
-  - id: CGA-79ch-3f73-565c
-    aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
-    events:
-      - timestamp: 2024-03-12T07:13:16Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: vault-csi-provider
-            componentID: 5e1c905ad7508d67
-            componentName: stdlib
-            componentVersion: go1.22.0
-            componentType: go-module
-            componentLocation: /usr/bin/vault-csi-provider
-            scanner: grype
-      - timestamp: 2024-03-12T10:01:21Z
-        type: fixed
-        data:
-          fixed-version: 1.4.0-r10
-
   - id: CGA-54q4-6ggq-mf7f
     aliases:
       - CVE-2023-45290
@@ -190,94 +66,6 @@ advisories:
             componentLocation: /usr/bin/vault-csi-provider
             scanner: grype
       - timestamp: 2024-03-12T10:01:22Z
-        type: fixed
-        data:
-          fixed-version: 1.4.0-r10
-
-  - id: CGA-c523-rx6r-5345
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2024-02-14T16:26:36Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: vault-csi-provider
-            componentID: 38af58de39698c84
-            componentName: golang.org/x/crypto
-            componentVersion: v0.6.0
-            componentType: go-module
-            componentLocation: /usr/bin/vault-csi-provider
-            scanner: grype
-      - timestamp: 2024-02-18T07:52:43Z
-        type: fixed
-        data:
-          fixed-version: 1.4.0-r9
-
-  - id: CGA-h3qj-57f8-jh7p
-    aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
-    events:
-      - timestamp: 2024-03-12T07:13:19Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: vault-csi-provider
-            componentID: 5e1c905ad7508d67
-            componentName: stdlib
-            componentVersion: go1.22.0
-            componentType: go-module
-            componentLocation: /usr/bin/vault-csi-provider
-            scanner: grype
-      - timestamp: 2024-03-12T10:01:18Z
-        type: fixed
-        data:
-          fixed-version: 1.4.0-r10
-
-  - id: CGA-jvwv-3jhv-7mxf
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-12T07:13:20Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: vault-csi-provider
-            componentID: 5e1c905ad7508d67
-            componentName: stdlib
-            componentVersion: go1.22.0
-            componentType: go-module
-            componentLocation: /usr/bin/vault-csi-provider
-            scanner: grype
-      - timestamp: 2024-03-12T10:01:19Z
-        type: fixed
-        data:
-          fixed-version: 1.4.0-r10
-
-  - id: CGA-h7cc-9p3q-xvm2
-    aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
-    events:
-      - timestamp: 2024-03-12T07:13:22Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: vault-csi-provider
-            componentID: 5e1c905ad7508d67
-            componentName: stdlib
-            componentVersion: go1.22.0
-            componentType: go-module
-            componentLocation: /usr/bin/vault-csi-provider
-            scanner: grype
-      - timestamp: 2024-03-12T10:01:20Z
         type: fixed
         data:
           fixed-version: 1.4.0-r10
@@ -304,6 +92,214 @@ advisories:
         data:
           fixed-version: 1.4.0-r11
 
+  - id: CGA-79ch-3f73-565c
+    aliases:
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T07:13:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-csi-provider
+            componentID: 5e1c905ad7508d67
+            componentName: stdlib
+            componentVersion: go1.22.0
+            componentType: go-module
+            componentLocation: /usr/bin/vault-csi-provider
+            scanner: grype
+      - timestamp: 2024-03-12T10:01:21Z
+        type: fixed
+        data:
+          fixed-version: 1.4.0-r10
+
+  - id: CGA-94vf-4qw5-ffmc
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-09T12:01:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-csi-provider
+            componentID: be25a63bb3f7d656
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/vault-csi-provider
+            scanner: grype
+
+  - id: CGA-968r-g3r4-qf7g
+    aliases:
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2024-02-14T16:26:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-csi-provider
+            componentID: 01a17e157699c07e
+            componentName: golang.org/x/net
+            componentVersion: v0.8.0
+            componentType: go-module
+            componentLocation: /usr/bin/vault-csi-provider
+            scanner: grype
+      - timestamp: 2024-02-18T07:52:42Z
+        type: fixed
+        data:
+          fixed-version: 1.4.0-r9
+
+  - id: CGA-9cm4-vcjv-4v2c
+    aliases:
+      - CVE-2023-2878
+      - GHSA-g82w-58jf-gcxx
+    events:
+      - timestamp: 2024-02-14T16:26:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-csi-provider
+            componentID: 17a49c9b4d9f2fed
+            componentName: sigs.k8s.io/secrets-store-csi-driver
+            componentVersion: v1.3.2
+            componentType: go-module
+            componentLocation: /usr/bin/vault-csi-provider
+            scanner: grype
+      - timestamp: 2024-02-18T07:52:43Z
+        type: fixed
+        data:
+          fixed-version: 1.4.0-r9
+
+  - id: CGA-c523-rx6r-5345
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2024-02-14T16:26:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-csi-provider
+            componentID: 38af58de39698c84
+            componentName: golang.org/x/crypto
+            componentVersion: v0.6.0
+            componentType: go-module
+            componentLocation: /usr/bin/vault-csi-provider
+            scanner: grype
+      - timestamp: 2024-02-18T07:52:43Z
+        type: fixed
+        data:
+          fixed-version: 1.4.0-r9
+
+  - id: CGA-cr6w-26qg-j59g
+    aliases:
+      - CVE-2020-8559
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T13:29:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-csi-provider
+            componentID: dffe2232aaa03738
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.26.3
+            componentType: go-module
+            componentLocation: /usr/bin/vault-csi-provider
+            scanner: grype
+
+  - id: CGA-h3qj-57f8-jh7p
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T07:13:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-csi-provider
+            componentID: 5e1c905ad7508d67
+            componentName: stdlib
+            componentVersion: go1.22.0
+            componentType: go-module
+            componentLocation: /usr/bin/vault-csi-provider
+            scanner: grype
+      - timestamp: 2024-03-12T10:01:18Z
+        type: fixed
+        data:
+          fixed-version: 1.4.0-r10
+
+  - id: CGA-h7cc-9p3q-xvm2
+    aliases:
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T07:13:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-csi-provider
+            componentID: 5e1c905ad7508d67
+            componentName: stdlib
+            componentVersion: go1.22.0
+            componentType: go-module
+            componentLocation: /usr/bin/vault-csi-provider
+            scanner: grype
+      - timestamp: 2024-03-12T10:01:20Z
+        type: fixed
+        data:
+          fixed-version: 1.4.0-r10
+
+  - id: CGA-h7j9-9fq8-52cg
+    aliases:
+      - CVE-2024-28180
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-06-01T08:35:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-csi-provider
+            componentID: c394c5abcb80542b
+            componentName: gopkg.in/square/go-jose.v2
+            componentVersion: v2.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/vault-csi-provider
+            scanner: grype
+
+  - id: CGA-jvwv-3jhv-7mxf
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T07:13:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-csi-provider
+            componentID: 5e1c905ad7508d67
+            componentName: stdlib
+            componentVersion: go1.22.0
+            componentType: go-module
+            componentLocation: /usr/bin/vault-csi-provider
+            scanner: grype
+      - timestamp: 2024-03-12T10:01:19Z
+        type: fixed
+        data:
+          fixed-version: 1.4.0-r10
+
   - id: CGA-qmv8-45h3-5mj9
     aliases:
       - GHSA-m425-mq94-257g
@@ -324,3 +320,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.4.0-r9
+
+  - id: CGA-x3vh-297w-j53p
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:40:13Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-xghr-24gm-3fgj
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:40:12Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
