@@ -4,24 +4,6 @@ package:
   name: neo4j
 
 advisories:
-  - id: CGA-r46j-77v2-jp3g
-    aliases:
-      - CVE-2023-50570
-      - GHSA-qphf-w3cq-jpmx
-    events:
-      - timestamp: 2024-01-11T07:04:20Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: neo4j
-            componentID: 0364be7bd42ab03c
-            componentName: ipaddress
-            componentVersion: 5.4.0
-            componentType: java-archive
-            componentLocation: /usr/share/java/neo4j/lib/ipaddress-5.4.0.jar
-            scanner: grype
-
   - id: CGA-fc4g-frm4-jw6v
     aliases:
       - CVE-2024-22201
@@ -43,6 +25,46 @@ advisories:
         type: fixed
         data:
           fixed-version: 5.18.0-r0
+
+  - id: CGA-gxrv-2q36-c76g
+    aliases:
+      - CVE-2024-29133
+      - GHSA-9w38-p64v-xpmv
+    events:
+      - timestamp: 2024-03-23T13:02:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: neo4j
+            componentID: fd212276536299ae
+            componentName: commons-configuration2
+            componentVersion: 2.9.0
+            componentType: java-archive
+            componentLocation: /usr/share/java/neo4j/lib/commons-configuration2-2.9.0.jar
+            scanner: grype
+
+  - id: CGA-hc93-8f6j-gjx4
+    aliases:
+      - CVE-2024-29025
+      - GHSA-5jpm-x58v-624v
+    events:
+      - timestamp: 2024-04-11T07:24:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: neo4j
+            componentID: 14628ca7a62c3dc8
+            componentName: netty-codec-http
+            componentVersion: 4.1.106.Final
+            componentType: java-archive
+            componentLocation: /usr/share/java/neo4j/lib/netty-codec-http-4.1.106.Final.jar
+            scanner: grype
+      - timestamp: 2024-06-01T03:09:54Z
+        type: fixed
+        data:
+          fixed-version: 5.20.0-r0
 
   - id: CGA-hw3c-xmgp-wcw7
     aliases:
@@ -66,70 +88,12 @@ advisories:
         data:
           fixed-version: 5.18.0-r0
 
-  - id: CGA-x85q-h487-67fx
-    aliases:
-      - CVE-2024-26308
-      - GHSA-4265-ccf5-phj5
-    events:
-      - timestamp: 2024-02-21T07:19:34Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: neo4j
-            componentID: 5c2a0183384fc775
-            componentName: commons-compress
-            componentVersion: 1.25.0
-            componentType: java-archive
-            componentLocation: /usr/share/java/neo4j/lib/commons-compress-1.25.0.jar
-            scanner: grype
-      - timestamp: 2024-03-13T15:43:49Z
-        type: fixed
-        data:
-          fixed-version: 5.18.0-r0
-
-  - id: CGA-hc93-8f6j-gjx4
-    aliases:
-      - CVE-2024-29025
-      - GHSA-5jpm-x58v-624v
-    events:
-      - timestamp: 2024-04-11T07:24:26Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: neo4j
-            componentID: 14628ca7a62c3dc8
-            componentName: netty-codec-http
-            componentVersion: 4.1.106.Final
-            componentType: java-archive
-            componentLocation: /usr/share/java/neo4j/lib/netty-codec-http-4.1.106.Final.jar
-            scanner: grype
-
   - id: CGA-pg3h-88pr-x67h
     aliases:
       - CVE-2024-29131
       - GHSA-xjp4-hw94-mvp5
     events:
       - timestamp: 2024-03-23T13:02:02Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: neo4j
-            componentID: fd212276536299ae
-            componentName: commons-configuration2
-            componentVersion: 2.9.0
-            componentType: java-archive
-            componentLocation: /usr/share/java/neo4j/lib/commons-configuration2-2.9.0.jar
-            scanner: grype
-
-  - id: CGA-gxrv-2q36-c76g
-    aliases:
-      - CVE-2024-29133
-      - GHSA-9w38-p64v-xpmv
-    events:
-      - timestamp: 2024-03-23T13:02:01Z
         type: detection
         data:
           type: scan/v1
@@ -159,3 +123,43 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/java/neo4j/lib/neo4j-cypher-5.18.0-SNAPSHOT.jar
             scanner: grype
+
+  - id: CGA-r46j-77v2-jp3g
+    aliases:
+      - CVE-2023-50570
+      - GHSA-qphf-w3cq-jpmx
+    events:
+      - timestamp: 2024-01-11T07:04:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: neo4j
+            componentID: 0364be7bd42ab03c
+            componentName: ipaddress
+            componentVersion: 5.4.0
+            componentType: java-archive
+            componentLocation: /usr/share/java/neo4j/lib/ipaddress-5.4.0.jar
+            scanner: grype
+
+  - id: CGA-x85q-h487-67fx
+    aliases:
+      - CVE-2024-26308
+      - GHSA-4265-ccf5-phj5
+    events:
+      - timestamp: 2024-02-21T07:19:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: neo4j
+            componentID: 5c2a0183384fc775
+            componentName: commons-compress
+            componentVersion: 1.25.0
+            componentType: java-archive
+            componentLocation: /usr/share/java/neo4j/lib/commons-compress-1.25.0.jar
+            scanner: grype
+      - timestamp: 2024-03-13T15:43:49Z
+        type: fixed
+        data:
+          fixed-version: 5.18.0-r0
