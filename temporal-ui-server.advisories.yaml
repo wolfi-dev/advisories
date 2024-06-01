@@ -4,27 +4,35 @@ package:
   name: temporal-ui-server
 
 advisories:
-  - id: CGA-r649-px6r-gmxm
+  - id: CGA-6858-jjc6-qmgv
     aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
     events:
-      - timestamp: 2023-11-07T19:39:04Z
-        type: false-positive-determination
+      - timestamp: 2024-03-12T09:22:19Z
+        type: fixed
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          fixed-version: 2.24.0-r1
 
-  - id: CGA-m67g-vh48-p529
+  - id: CGA-93v7-8q86-r7x4
     aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
     events:
-      - timestamp: 2023-11-07T19:39:05Z
-        type: false-positive-determination
+      - timestamp: 2024-03-14T15:17:58Z
+        type: fixed
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          fixed-version: 2.25.0-r1
+
+  - id: CGA-gfc8-j77p-659c
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T09:22:17Z
+        type: fixed
+        data:
+          fixed-version: 2.24.0-r1
 
   - id: CGA-hjwr-qh46-9jwg
     aliases:
@@ -46,12 +54,62 @@ advisories:
         data:
           fixed-version: 2.24.0-r1
 
-  - id: CGA-6858-jjc6-qmgv
+  - id: CGA-m67g-vh48-p529
     aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
     events:
-      - timestamp: 2024-03-12T09:22:19Z
+      - timestamp: 2023-11-07T19:39:05Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-mh5j-2prc-2gww
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T09:22:17Z
+        type: fixed
+        data:
+          fixed-version: 2.24.0-r1
+
+  - id: CGA-q338-x595-qvjx
+    aliases:
+      - CVE-2024-28180
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-06-01T07:37:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: temporal-ui-server
+            componentID: d2a9548614a2b1d1
+            componentName: gopkg.in/square/go-jose.v2
+            componentVersion: v2.6.0
+            componentType: go-module
+            componentLocation: /usr/bin/ui-server
+            scanner: grype
+
+  - id: CGA-r649-px6r-gmxm
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:39:04Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-vxj9-98pv-w22j
+    aliases:
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T09:22:18Z
         type: fixed
         data:
           fixed-version: 2.24.0-r1
@@ -88,43 +146,3 @@ advisories:
         data:
           type: vulnerable-code-version-not-used
           note: This package uses a newer version v2.26.2 when the vulnerable code affects any version older than v2.25.0.
-
-  - id: CGA-gfc8-j77p-659c
-    aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
-    events:
-      - timestamp: 2024-03-12T09:22:17Z
-        type: fixed
-        data:
-          fixed-version: 2.24.0-r1
-
-  - id: CGA-mh5j-2prc-2gww
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-12T09:22:17Z
-        type: fixed
-        data:
-          fixed-version: 2.24.0-r1
-
-  - id: CGA-vxj9-98pv-w22j
-    aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
-    events:
-      - timestamp: 2024-03-12T09:22:18Z
-        type: fixed
-        data:
-          fixed-version: 2.24.0-r1
-
-  - id: CGA-93v7-8q86-r7x4
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T15:17:58Z
-        type: fixed
-        data:
-          fixed-version: 2.25.0-r1
