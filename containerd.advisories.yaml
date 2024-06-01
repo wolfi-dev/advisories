@@ -14,16 +14,6 @@ advisories:
         data:
           fixed-version: 1.7.7-r2
 
-  - id: CGA-p6w8-p94c-3c5q
-    aliases:
-      - CVE-2023-3978
-      - GHSA-2wrh-6pvc-2jm9
-    events:
-      - timestamp: 2023-10-13T16:47:25Z
-        type: fixed
-        data:
-          fixed-version: 1.7.7-r2
-
   - id: CGA-4gxm-665f-h24j
     aliases:
       - CVE-2023-45283
@@ -35,6 +25,26 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-62c8-97f8-hxj7
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2024-05-14T09:41:39Z
+        type: fixed
+        data:
+          fixed-version: 1.7.16-r1
+
+  - id: CGA-8r35-6h26-fg83
+    aliases:
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
+    events:
+      - timestamp: 2024-05-14T09:41:37Z
+        type: fixed
+        data:
+          fixed-version: 1.7.16-r1
+
   - id: CGA-9qvx-96xc-2cc2
     aliases:
       - CVE-2023-45284
@@ -45,72 +55,6 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
-
-  - id: CGA-mpxm-2988-mjp5
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-20T09:17:17Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: containerd
-            componentID: bd637285fe22c229
-            componentName: golang.org/x/net
-            componentVersion: v0.17.0
-            componentType: go-module
-            componentLocation: /usr/bin/containerd
-            scanner: grype
-      - timestamp: 2024-04-20T14:43:23Z
-        type: fixed
-        data:
-          fixed-version: 1.7.15-r1
-
-  - id: CGA-hjqc-9fvr-hx3h
-    aliases:
-      - CVE-2023-47108
-      - GHSA-8pgv-569h-w5rw
-    events:
-      - timestamp: 2024-01-16T10:49:18Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: containerd
-            componentID: c2c7716ee702ed24
-            componentName: go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc
-            componentVersion: v0.45.0
-            componentType: go-module
-            componentLocation: /usr/bin/containerd
-            scanner: grype
-      - timestamp: 2024-01-16T19:51:22Z
-        type: fixed
-        data:
-          fixed-version: 1.7.12-r1
-
-  - id: CGA-cgx8-cgc6-3554
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2024-01-16T10:49:17Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: containerd
-            componentID: ed973e396deb930c
-            componentName: golang.org/x/crypto
-            componentVersion: v0.14.0
-            componentType: go-module
-            componentLocation: /usr/bin/containerd
-            scanner: grype
-      - timestamp: 2024-01-16T19:51:22Z
-        type: fixed
-        data:
-          fixed-version: 1.7.12-r1
 
   - id: CGA-cg4m-mqvp-9x48
     aliases:
@@ -134,22 +78,88 @@ advisories:
         data:
           fixed-version: 1.7.14-r1
 
-  - id: CGA-8r35-6h26-fg83
+  - id: CGA-cgx8-cgc6-3554
     aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
     events:
-      - timestamp: 2024-05-14T09:41:37Z
+      - timestamp: 2024-01-16T10:49:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: containerd
+            componentID: ed973e396deb930c
+            componentName: golang.org/x/crypto
+            componentVersion: v0.14.0
+            componentType: go-module
+            componentLocation: /usr/bin/containerd
+            scanner: grype
+      - timestamp: 2024-01-16T19:51:22Z
         type: fixed
         data:
-          fixed-version: 1.7.16-r1
+          fixed-version: 1.7.12-r1
 
-  - id: CGA-62c8-97f8-hxj7
+  - id: CGA-gp4g-hmcf-rgj8
     aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
+      - CVE-2024-28180
+      - GHSA-c5q2-7r4c-mv6g
     events:
-      - timestamp: 2024-05-14T09:41:39Z
+      - timestamp: 2024-06-01T08:21:52Z
         type: fixed
         data:
-          fixed-version: 1.7.16-r1
+          fixed-version: 1.7.17-r0
+
+  - id: CGA-hjqc-9fvr-hx3h
+    aliases:
+      - CVE-2023-47108
+      - GHSA-8pgv-569h-w5rw
+    events:
+      - timestamp: 2024-01-16T10:49:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: containerd
+            componentID: c2c7716ee702ed24
+            componentName: go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc
+            componentVersion: v0.45.0
+            componentType: go-module
+            componentLocation: /usr/bin/containerd
+            scanner: grype
+      - timestamp: 2024-01-16T19:51:22Z
+        type: fixed
+        data:
+          fixed-version: 1.7.12-r1
+
+  - id: CGA-mpxm-2988-mjp5
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-20T09:17:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: containerd
+            componentID: bd637285fe22c229
+            componentName: golang.org/x/net
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/containerd
+            scanner: grype
+      - timestamp: 2024-04-20T14:43:23Z
+        type: fixed
+        data:
+          fixed-version: 1.7.15-r1
+
+  - id: CGA-p6w8-p94c-3c5q
+    aliases:
+      - CVE-2023-3978
+      - GHSA-2wrh-6pvc-2jm9
+    events:
+      - timestamp: 2023-10-13T16:47:25Z
+        type: fixed
+        data:
+          fixed-version: 1.7.7-r2
