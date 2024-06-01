@@ -14,6 +14,16 @@ advisories:
         data:
           fixed-version: 1.11.0-r1
 
+  - id: CGA-g5v9-qvmp-57pf
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2024-05-14T10:41:10Z
+        type: fixed
+        data:
+          fixed-version: 1.12.0-r1
+
   - id: CGA-vgmm-hx39-28c4
     aliases:
       - CVE-2024-24787
@@ -24,12 +34,20 @@ advisories:
         data:
           fixed-version: 1.12.0-r1
 
-  - id: CGA-g5v9-qvmp-57pf
+  - id: CGA-vh4q-hx7w-f5cw
     aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
+      - CVE-2024-28180
+      - GHSA-c5q2-7r4c-mv6g
     events:
-      - timestamp: 2024-05-14T10:41:10Z
-        type: fixed
+      - timestamp: 2024-06-01T08:35:59Z
+        type: detection
         data:
-          fixed-version: 1.12.0-r1
+          type: scan/v1
+          data:
+            subpackageName: flyte
+            componentID: 9b6b70b5dc225a71
+            componentName: gopkg.in/square/go-jose.v2
+            componentVersion: v2.6.0
+            componentType: go-module
+            componentLocation: /usr/bin/flyte
+            scanner: grype
