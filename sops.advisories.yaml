@@ -4,15 +4,16 @@ package:
   name: sops
 
 advisories:
-  - id: CGA-pphv-jmg8-266g
+  - id: CGA-6jp7-h3rh-c67m
     aliases:
-      - CVE-2023-39326
-      - GHSA-9f76-wg39-x86h
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
     events:
-      - timestamp: 2024-02-15T07:40:05Z
-        type: fixed
+      - timestamp: 2023-11-07T19:38:07Z
+        type: false-positive-determination
         data:
-          fixed-version: 3.8.1-r1
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
 
   - id: CGA-hj5q-6g6v-w643
     aliases:
@@ -25,26 +26,39 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
-  - id: CGA-6jp7-h3rh-c67m
+  - id: CGA-hmfp-f3v3-528v
     aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
+      - CVE-2024-28180
+      - GHSA-c5q2-7r4c-mv6g
     events:
-      - timestamp: 2023-11-07T19:38:07Z
-        type: false-positive-determination
+      - timestamp: 2024-03-08T07:32:56Z
+        type: detection
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-x5vx-7g37-jx2c
-    aliases:
-      - CVE-2023-45285
-      - GHSA-5f94-vhjq-rpg8
-    events:
-      - timestamp: 2024-02-15T07:40:05Z
+          type: scan/v1
+          data:
+            subpackageName: sops
+            componentID: 47d264ccece5b9a4
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/sops
+            scanner: grype
+      - timestamp: 2024-03-08T21:57:25Z
         type: fixed
         data:
-          fixed-version: 3.8.1-r1
+          fixed-version: 3.8.1-r4
+      - timestamp: 2024-06-01T08:25:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sops
+            componentID: 680423c8e840ecd8
+            componentName: gopkg.in/square/go-jose.v2
+            componentVersion: v2.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/sops
+            scanner: grype
 
   - id: CGA-hw94-55jc-8h82
     aliases:
@@ -90,6 +104,78 @@ advisories:
         data:
           fixed-version: 3.8.1-r2
 
+  - id: CGA-pf27-r5q5-mppm
+    aliases:
+      - GHSA-2c7c-3mj9-8fqh
+    events:
+      - timestamp: 2024-02-14T15:26:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sops
+            componentID: 42b4f354501a9432
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.0
+            componentType: go-module
+            componentLocation: /usr/bin/sops
+            scanner: grype
+      - timestamp: 2024-02-16T10:34:26Z
+        type: fixed
+        data:
+          fixed-version: 3.8.1-r2
+
+  - id: CGA-pphv-jmg8-266g
+    aliases:
+      - CVE-2023-39326
+      - GHSA-9f76-wg39-x86h
+    events:
+      - timestamp: 2024-02-15T07:40:05Z
+        type: fixed
+        data:
+          fixed-version: 3.8.1-r1
+
+  - id: CGA-pxgh-47rh-fwmf
+    aliases:
+      - GHSA-9763-4f94-gfch
+    events:
+      - timestamp: 2024-02-14T15:26:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sops
+            componentID: 2273313a8d760ea8
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.3.3
+            componentType: go-module
+            componentLocation: /usr/bin/sops
+            scanner: grype
+      - timestamp: 2024-02-16T10:34:26Z
+        type: fixed
+        data:
+          fixed-version: 3.8.1-r2
+
+  - id: CGA-qf78-4869-x5mp
+    aliases:
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
+    events:
+      - timestamp: 2024-05-14T11:32:54Z
+        type: fixed
+        data:
+          fixed-version: 3.8.1-r7
+
+  - id: CGA-vxq9-g8w5-7p9w
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2024-05-14T11:32:56Z
+        type: fixed
+        data:
+          fixed-version: 3.8.1-r7
+
   - id: CGA-wwx9-rv57-p65x
     aliases:
       - CVE-2024-24786
@@ -112,86 +198,12 @@ advisories:
         data:
           fixed-version: 3.8.1-r6
 
-  - id: CGA-qf78-4869-x5mp
+  - id: CGA-x5vx-7g37-jx2c
     aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
+      - CVE-2023-45285
+      - GHSA-5f94-vhjq-rpg8
     events:
-      - timestamp: 2024-05-14T11:32:54Z
+      - timestamp: 2024-02-15T07:40:05Z
         type: fixed
         data:
-          fixed-version: 3.8.1-r7
-
-  - id: CGA-vxq9-g8w5-7p9w
-    aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
-    events:
-      - timestamp: 2024-05-14T11:32:56Z
-        type: fixed
-        data:
-          fixed-version: 3.8.1-r7
-
-  - id: CGA-hmfp-f3v3-528v
-    aliases:
-      - CVE-2024-28180
-      - GHSA-c5q2-7r4c-mv6g
-    events:
-      - timestamp: 2024-03-08T07:32:56Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: sops
-            componentID: 47d264ccece5b9a4
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.1
-            componentType: go-module
-            componentLocation: /usr/bin/sops
-            scanner: grype
-      - timestamp: 2024-03-08T21:57:25Z
-        type: fixed
-        data:
-          fixed-version: 3.8.1-r4
-
-  - id: CGA-pf27-r5q5-mppm
-    aliases:
-      - GHSA-2c7c-3mj9-8fqh
-    events:
-      - timestamp: 2024-02-14T15:26:21Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: sops
-            componentID: 42b4f354501a9432
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.0
-            componentType: go-module
-            componentLocation: /usr/bin/sops
-            scanner: grype
-      - timestamp: 2024-02-16T10:34:26Z
-        type: fixed
-        data:
-          fixed-version: 3.8.1-r2
-
-  - id: CGA-pxgh-47rh-fwmf
-    aliases:
-      - GHSA-9763-4f94-gfch
-    events:
-      - timestamp: 2024-02-14T15:26:22Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: sops
-            componentID: 2273313a8d760ea8
-            componentName: github.com/cloudflare/circl
-            componentVersion: v1.3.3
-            componentType: go-module
-            componentLocation: /usr/bin/sops
-            scanner: grype
-      - timestamp: 2024-02-16T10:34:26Z
-        type: fixed
-        data:
-          fixed-version: 3.8.1-r2
+          fixed-version: 3.8.1-r1
