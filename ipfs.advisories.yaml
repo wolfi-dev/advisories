@@ -4,23 +4,34 @@ package:
   name: ipfs
 
 advisories:
-  - id: CGA-97gj-c86j-gmrh
+  - id: CGA-2x2r-f9rq-xc27
     aliases:
-      - CVE-2023-44487
-      - GHSA-qppj-fm5r-hxr3
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
     events:
-      - timestamp: 2024-01-18T07:26:15Z
+      - timestamp: 2024-03-14T08:20:20Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: ipfs
-            componentID: f892c6cf63989506
-            componentName: google.golang.org/grpc
-            componentVersion: v1.55.0
+            componentID: 9010978ae5274a08
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
             componentType: go-module
             componentLocation: /usr/bin/ipfs
             scanner: grype
+
+  - id: CGA-3f6g-252v-mw56
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:29:38Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
 
   - id: CGA-64p8-8q49-8rpc
     aliases:
@@ -59,31 +70,27 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
-  - id: CGA-3f6g-252v-mw56
+  - id: CGA-97gj-c86j-gmrh
     aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
+      - CVE-2023-44487
+      - GHSA-qppj-fm5r-hxr3
     events:
-      - timestamp: 2023-11-07T19:29:38Z
-        type: false-positive-determination
+      - timestamp: 2024-01-18T07:26:15Z
+        type: detection
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          type: scan/v1
+          data:
+            subpackageName: ipfs
+            componentID: f892c6cf63989506
+            componentName: google.golang.org/grpc
+            componentVersion: v1.55.0
+            componentType: go-module
+            componentLocation: /usr/bin/ipfs
+            scanner: grype
 
-  - id: CGA-w5f6-22m3-57fx
+  - id: CGA-cxhp-2cjv-664h
     aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-13T07:07:14Z
-        type: fixed
-        data:
-          fixed-version: 0.27.0-r4
-
-  - id: CGA-xmh9-g5c7-8mj2
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
+      - GHSA-m425-mq94-257g
     events:
       - timestamp: 2024-01-18T07:26:14Z
         type: detection
@@ -91,12 +98,22 @@ advisories:
           type: scan/v1
           data:
             subpackageName: ipfs
-            componentID: a6fb2763661b8e3c
-            componentName: golang.org/x/crypto
-            componentVersion: v0.16.0
+            componentID: f892c6cf63989506
+            componentName: google.golang.org/grpc
+            componentVersion: v1.55.0
             componentType: go-module
             componentLocation: /usr/bin/ipfs
             scanner: grype
+
+  - id: CGA-q7wj-x3mg-x9x5
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2024-05-14T09:20:39Z
+        type: fixed
+        data:
+          fixed-version: 0.28.0-r2
 
   - id: CGA-qhxv-h28x-32w2
     aliases:
@@ -120,20 +137,30 @@ advisories:
         data:
           fixed-version: 0.28.0-r0
 
-  - id: CGA-2x2r-f9rq-xc27
+  - id: CGA-w5f6-22m3-57fx
     aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
     events:
-      - timestamp: 2024-03-14T08:20:20Z
+      - timestamp: 2024-04-13T07:07:14Z
+        type: fixed
+        data:
+          fixed-version: 0.27.0-r4
+
+  - id: CGA-x9hm-4c8v-88mq
+    aliases:
+      - CVE-2024-28180
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-06-01T07:09:41Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: ipfs
-            componentID: 9010978ae5274a08
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.32.0
+            componentID: 3b0984add5f985ac
+            componentName: gopkg.in/square/go-jose.v2
+            componentVersion: v2.5.1
             componentType: go-module
             componentLocation: /usr/bin/ipfs
             scanner: grype
@@ -148,19 +175,10 @@ advisories:
         data:
           fixed-version: 0.28.0-r2
 
-  - id: CGA-q7wj-x3mg-x9x5
+  - id: CGA-xmh9-g5c7-8mj2
     aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
-    events:
-      - timestamp: 2024-05-14T09:20:39Z
-        type: fixed
-        data:
-          fixed-version: 0.28.0-r2
-
-  - id: CGA-cxhp-2cjv-664h
-    aliases:
-      - GHSA-m425-mq94-257g
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
     events:
       - timestamp: 2024-01-18T07:26:14Z
         type: detection
@@ -168,9 +186,9 @@ advisories:
           type: scan/v1
           data:
             subpackageName: ipfs
-            componentID: f892c6cf63989506
-            componentName: google.golang.org/grpc
-            componentVersion: v1.55.0
+            componentID: a6fb2763661b8e3c
+            componentName: golang.org/x/crypto
+            componentVersion: v0.16.0
             componentType: go-module
             componentLocation: /usr/bin/ipfs
             scanner: grype
