@@ -4,104 +4,12 @@ package:
   name: kubernetes-dashboard
 
 advisories:
-  - id: CGA-rmph-c43c-7r6m
+  - id: CGA-3v67-6xw3-mhh3
     aliases:
-      - CVE-2020-8559
-      - GHSA-33c5-9fx5-fvjm
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
     events:
-      - timestamp: 2024-04-25T13:02:40Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubernetes-dashboard
-            componentID: df29a40d4b0229b6
-            componentName: k8s.io/apimachinery
-            componentVersion: v0.25.0
-            componentType: go-module
-            componentLocation: /usr/share/kubernetes-dashboard/dashboard
-            scanner: grype
-
-  - id: CGA-5mg4-gg44-c6m5
-    aliases:
-      - CVE-2023-2253
-      - GHSA-hqxw-f8mx-cpmw
-    events:
-      - timestamp: 2023-05-26T17:58:25Z
-        type: fixed
-        data:
-          fixed-version: 2.7.0-r2
-
-  - id: CGA-cxcr-g2pw-33h5
-    aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
-    events:
-      - timestamp: 2023-10-13T17:17:35Z
-        type: fixed
-        data:
-          fixed-version: 2.7.0-r9
-
-  - id: CGA-p4vx-crwf-x36c
-    aliases:
-      - CVE-2023-3978
-      - GHSA-2wrh-6pvc-2jm9
-    events:
-      - timestamp: 2023-10-13T17:28:11Z
-        type: fixed
-        data:
-          fixed-version: 2.7.0-r9
-
-  - id: CGA-gvv7-fx4f-7xqv
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:32:11Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-v27q-c2vq-9x4w
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:32:13Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-gmmp-7w24-66h2
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-09T10:34:50Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubernetes-dashboard
-            componentID: 9c2103333cdeb477
-            componentName: stdlib
-            componentVersion: go1.22.1
-            componentType: go-module
-            componentLocation: /usr/share/kubernetes-dashboard/dashboard
-            scanner: grype
-      - timestamp: 2024-04-13T07:06:00Z
-        type: fixed
-        data:
-          fixed-version: 2.7.0-r15
-
-  - id: CGA-f4hv-rh3j-4466
-    aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
-    events:
-      - timestamp: 2024-03-12T08:13:05Z
+      - timestamp: 2024-03-12T08:13:09Z
         type: detection
         data:
           type: scan/v1
@@ -140,6 +48,139 @@ advisories:
         data:
           fixed-version: 2.7.0-r12
 
+  - id: CGA-5mg4-gg44-c6m5
+    aliases:
+      - CVE-2023-2253
+      - GHSA-hqxw-f8mx-cpmw
+    events:
+      - timestamp: 2023-05-26T17:58:25Z
+        type: fixed
+        data:
+          fixed-version: 2.7.0-r2
+
+  - id: CGA-6fv5-vhvq-267g
+    aliases:
+      - CVE-2024-28180
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-06-01T08:05:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dashboard
+            componentID: fb9062a6e4f0c7d9
+            componentName: gopkg.in/square/go-jose.v2
+            componentVersion: v2.6.0
+            componentType: go-module
+            componentLocation: /usr/share/kubernetes-dashboard/dashboard
+            scanner: grype
+
+  - id: CGA-7fv2-8xrw-rg82
+    aliases:
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
+    events:
+      - timestamp: 2024-05-14T10:01:25Z
+        type: fixed
+        data:
+          fixed-version: 2.7.0-r18
+
+  - id: CGA-cxcr-g2pw-33h5
+    aliases:
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2023-10-13T17:17:35Z
+        type: fixed
+        data:
+          fixed-version: 2.7.0-r9
+
+  - id: CGA-f4hv-rh3j-4466
+    aliases:
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T08:13:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dashboard
+            componentID: 1efa2ac7ad7e3ee7
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/share/kubernetes-dashboard/dashboard
+            scanner: grype
+      - timestamp: 2024-03-13T11:12:05Z
+        type: fixed
+        data:
+          fixed-version: 2.7.0-r12
+
+  - id: CGA-fwf5-mffv-5w6j
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2024-05-14T10:01:27Z
+        type: fixed
+        data:
+          fixed-version: 2.7.0-r18
+
+  - id: CGA-gmmp-7w24-66h2
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-09T10:34:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dashboard
+            componentID: 9c2103333cdeb477
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/share/kubernetes-dashboard/dashboard
+            scanner: grype
+      - timestamp: 2024-04-13T07:06:00Z
+        type: fixed
+        data:
+          fixed-version: 2.7.0-r15
+
+  - id: CGA-gvv7-fx4f-7xqv
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:32:11Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-hr5p-qgc9-xj6h
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-16T11:02:42Z
+        type: fixed
+        data:
+          fixed-version: 2.7.0-r13
+
+  - id: CGA-p4vx-crwf-x36c
+    aliases:
+      - CVE-2023-3978
+      - GHSA-2wrh-6pvc-2jm9
+    events:
+      - timestamp: 2023-10-13T17:28:11Z
+        type: fixed
+        data:
+          fixed-version: 2.7.0-r9
+
   - id: CGA-pg7v-w585-jf46
     aliases:
       - CVE-2023-48795
@@ -172,27 +213,34 @@ advisories:
         data:
           fixed-version: 2.7.0-r12
 
-  - id: CGA-3v67-6xw3-mhh3
+  - id: CGA-rmph-c43c-7r6m
     aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
+      - CVE-2020-8559
+      - GHSA-33c5-9fx5-fvjm
     events:
-      - timestamp: 2024-03-12T08:13:09Z
+      - timestamp: 2024-04-25T13:02:40Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: kubernetes-dashboard
-            componentID: 1efa2ac7ad7e3ee7
-            componentName: stdlib
-            componentVersion: go1.21.5
+            componentID: df29a40d4b0229b6
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.25.0
             componentType: go-module
             componentLocation: /usr/share/kubernetes-dashboard/dashboard
             scanner: grype
-      - timestamp: 2024-03-13T11:12:05Z
-        type: fixed
+
+  - id: CGA-v27q-c2vq-9x4w
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:32:13Z
+        type: false-positive-determination
         data:
-          fixed-version: 2.7.0-r12
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
 
   - id: CGA-v6jx-727f-frfx
     aliases:
@@ -215,33 +263,3 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.7.0-r12
-
-  - id: CGA-hr5p-qgc9-xj6h
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-16T11:02:42Z
-        type: fixed
-        data:
-          fixed-version: 2.7.0-r13
-
-  - id: CGA-7fv2-8xrw-rg82
-    aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
-    events:
-      - timestamp: 2024-05-14T10:01:25Z
-        type: fixed
-        data:
-          fixed-version: 2.7.0-r18
-
-  - id: CGA-fwf5-mffv-5w6j
-    aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
-    events:
-      - timestamp: 2024-05-14T10:01:27Z
-        type: fixed
-        data:
-          fixed-version: 2.7.0-r18
