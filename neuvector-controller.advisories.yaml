@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: neuvector-controller
+
+advisories:
+  - id: CGA-8gxg-84p9-2hpq
+    aliases:
+      - CVE-2024-28180
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-06-01T07:19:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: neuvector-controller
+            componentID: 79d3b240ebf467c6
+            componentName: gopkg.in/square/go-jose.v2
+            componentVersion: v2.5.1
+            componentType: go-module
+            componentLocation: /usr/local/bin/controller
+            scanner: grype
