@@ -4,6 +4,34 @@ package:
   name: kube-rbac-proxy
 
 advisories:
+  - id: CGA-44pf-rj9x-hcvg
+    aliases:
+      - CVE-2024-28180
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-06-01T08:23:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-rbac-proxy
+            componentID: 533e139c8a0987bc
+            componentName: gopkg.in/square/go-jose.v2
+            componentVersion: v2.6.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-rbac-proxy
+            scanner: grype
+
+  - id: CGA-5vj4-756x-2r34
+    aliases:
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T08:06:36Z
+        type: fixed
+        data:
+          fixed-version: 0.16.0-r1
+
   - id: CGA-67cc-395f-qrhw
     aliases:
       - CVE-2023-45288
@@ -14,12 +42,12 @@ advisories:
         data:
           fixed-version: 0.16.0-r2
 
-  - id: CGA-9fq5-jv35-72xc
+  - id: CGA-859m-hp6j-3g2p
     aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
     events:
-      - timestamp: 2024-03-12T08:06:34Z
+      - timestamp: 2024-03-12T08:06:35Z
         type: fixed
         data:
           fixed-version: 0.16.0-r1
@@ -34,6 +62,16 @@ advisories:
         data:
           fixed-version: 0.16.0-r1
 
+  - id: CGA-9fq5-jv35-72xc
+    aliases:
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T08:06:34Z
+        type: fixed
+        data:
+          fixed-version: 0.16.0-r1
+
   - id: CGA-cm7r-4mj7-qhg4
     aliases:
       - CVE-2023-48795
@@ -44,30 +82,10 @@ advisories:
         data:
           fixed-version: 0.16.0-r0
 
-  - id: CGA-859m-hp6j-3g2p
-    aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
-    events:
-      - timestamp: 2024-03-12T08:06:35Z
-        type: fixed
-        data:
-          fixed-version: 0.16.0-r1
-
   - id: CGA-xmgh-j232-jhqj
     aliases:
       - CVE-2024-24784
       - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-12T08:06:36Z
-        type: fixed
-        data:
-          fixed-version: 0.16.0-r1
-
-  - id: CGA-5vj4-756x-2r34
-    aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
     events:
       - timestamp: 2024-03-12T08:06:36Z
         type: fixed
