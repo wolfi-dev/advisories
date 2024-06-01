@@ -4,15 +4,15 @@ package:
   name: bank-vaults
 
 advisories:
-  - id: CGA-xwrw-rhw3-5rr7
+  - id: CGA-3f54-v7wq-px99
     aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
     events:
-      - timestamp: 2023-10-13T12:39:05Z
+      - timestamp: 2023-12-27T12:04:01Z
         type: fixed
         data:
-          fixed-version: 1.20.4-r3
+          fixed-version: 1.20.4-r6
 
   - id: CGA-52q6-q7rv-r2wf
     aliases:
@@ -23,28 +23,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.20.4-r3
-
-  - id: CGA-88p4-w4qh-v96g
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:23:36Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-86wv-94gc-62qp
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:23:37Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
 
   - id: CGA-5pg2-gc3x-2cfj
     aliases:
@@ -68,15 +46,15 @@ advisories:
         data:
           fixed-version: 1.20.4-r12
 
-  - id: CGA-3f54-v7wq-px99
+  - id: CGA-7q4g-w33r-pfr9
     aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
     events:
-      - timestamp: 2023-12-27T12:04:01Z
+      - timestamp: 2024-05-14T07:40:53Z
         type: fixed
         data:
-          fixed-version: 1.20.4-r6
+          fixed-version: 1.20.4-r13
 
   - id: CGA-839c-cx2v-q33c
     aliases:
@@ -100,15 +78,27 @@ advisories:
         data:
           fixed-version: 1.20.4-r10
 
-  - id: CGA-7q4g-w33r-pfr9
+  - id: CGA-86wv-94gc-62qp
     aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
     events:
-      - timestamp: 2024-05-14T07:40:53Z
-        type: fixed
+      - timestamp: 2023-11-07T19:23:37Z
+        type: false-positive-determination
         data:
-          fixed-version: 1.20.4-r13
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-88p4-w4qh-v96g
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:23:36Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
 
   - id: CGA-f2jm-hqjq-2m5x
     aliases:
@@ -141,3 +131,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.20.4-r8
+      - timestamp: 2024-06-01T07:17:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: bank-vaults
+            componentID: 5a39ec0793530d60
+            componentName: gopkg.in/square/go-jose.v2
+            componentVersion: v2.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/bank-vaults
+            scanner: grype
+
+  - id: CGA-xwrw-rhw3-5rr7
+    aliases:
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2023-10-13T12:39:05Z
+        type: fixed
+        data:
+          fixed-version: 1.20.4-r3
