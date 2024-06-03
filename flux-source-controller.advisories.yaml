@@ -255,6 +255,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/source-controller
             scanner: grype
+      - timestamp: 2024-06-03T15:55:34Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: CVE GHSA-v554-xwgw-hc3w does not affect the v1.3.0 of the flux-source-controller package. The code in `source-controller/internal/error/sanitized.go` includes the fix that sanitizes error messages by removing query strings from URLs, which addresses the vulnerability.
 
   - id: CGA-mg2v-gvq6-q64m
     aliases:
