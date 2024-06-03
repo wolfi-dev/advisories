@@ -649,6 +649,24 @@ advisories:
         data:
           note: The upstream project relies on a number of "shaded JARs", making it harder to update dependencies. The upstream project will need to migrate away from "alluxio-shaded-client-2.9.3.jar" for this vulnerability to be resolved.
 
+  - id: CGA-x3wj-35rr-5p3w
+    aliases:
+      - CVE-2024-36114
+      - GHSA-973x-65j7-xcf4
+    events:
+      - timestamp: 2024-06-03T07:19:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino
+            componentID: dc05540791fa6173
+            componentName: aircompressor
+            componentVersion: "0.26"
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/aircompressor-0.26.jar
+            scanner: grype
+
   - id: CGA-xfg9-fw7r-q352
     aliases:
       - CVE-2024-23450
