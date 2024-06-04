@@ -4,47 +4,6 @@ package:
   name: ollama
 
 advisories:
-  - id: CGA-38j6-2j73-g4wx
-    aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
-    events:
-      - timestamp: 2023-10-25T11:21:15Z
-        type: fixed
-        data:
-          fixed-version: 0.1.4-r0
-
-  - id: CGA-hcqw-jf56-53rc
-    aliases:
-      - CVE-2023-3978
-      - GHSA-2wrh-6pvc-2jm9
-    events:
-      - timestamp: 2023-10-25T11:22:05Z
-        type: fixed
-        data:
-          fixed-version: 0.1.4-r0
-
-  - id: CGA-jrm6-4p39-vv8f
-    aliases:
-      - CVE-2023-44487
-      - GHSA-qppj-fm5r-hxr3
-    events:
-      - timestamp: 2023-10-25T11:21:46Z
-        type: fixed
-        data:
-          fixed-version: 0.1.4-r0
-
-  - id: CGA-jpgp-8wm4-v9m7
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:35:14Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
   - id: CGA-3693-2xw8-592x
     aliases:
       - CVE-2023-45284
@@ -55,6 +14,16 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CGA-38j6-2j73-g4wx
+    aliases:
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2023-10-25T11:21:15Z
+        type: fixed
+        data:
+          fixed-version: 0.1.4-r0
 
   - id: CGA-5j68-6rm7-758w
     aliases:
@@ -78,6 +47,55 @@ advisories:
         data:
           fixed-version: 0.1.33-r1
 
+  - id: CGA-hcqw-jf56-53rc
+    aliases:
+      - CVE-2023-3978
+      - GHSA-2wrh-6pvc-2jm9
+    events:
+      - timestamp: 2023-10-25T11:22:05Z
+        type: fixed
+        data:
+          fixed-version: 0.1.4-r0
+
+  - id: CGA-hv8x-jmgj-fp3m
+    aliases:
+      - CVE-2024-37032
+      - GHSA-8hqg-whrw-pv92
+    events:
+      - timestamp: 2024-06-04T07:13:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ollama
+            componentID: 9ce1bb7ba598e169
+            componentName: github.com/ollama/ollama
+            componentVersion: v0.0.0-20240602022433-476fb8e89242
+            componentType: go-module
+            componentLocation: /usr/bin/ollama
+            scanner: grype
+
+  - id: CGA-jpgp-8wm4-v9m7
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:35:14Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-jrm6-4p39-vv8f
+    aliases:
+      - CVE-2023-44487
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2023-10-25T11:21:46Z
+        type: fixed
+        data:
+          fixed-version: 0.1.4-r0
+
   - id: CGA-q8v7-pq46-xf26
     aliases:
       - CVE-2023-48795
@@ -87,28 +105,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.1.18-r0
-
-  - id: CGA-x6wh-8rf6-q29v
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T13:17:56Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: ollama
-            componentID: 074dd7d0b53cbec4
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.30.0
-            componentType: go-module
-            componentLocation: /usr/bin/ollama
-            scanner: grype
-      - timestamp: 2024-03-15T02:21:14Z
-        type: fixed
-        data:
-          fixed-version: 0.1.29-r1
 
   - id: CGA-r74m-vg75-32vr
     aliases:
@@ -132,3 +128,25 @@ advisories:
         data:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability was matched to the module "github.com/ollama/ollama" at the location(s): /usr/bin/ollama. In all cases, the installed version of the module (git commit ad897080a299bf86aee16b498edb5ddb250edd35) corresponds to a version tag (0.1.39) that is later than the fixed version (0.1.29).'
+
+  - id: CGA-x6wh-8rf6-q29v
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T13:17:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ollama
+            componentID: 074dd7d0b53cbec4
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/ollama
+            scanner: grype
+      - timestamp: 2024-03-15T02:21:14Z
+        type: fixed
+        data:
+          fixed-version: 0.1.29-r1
