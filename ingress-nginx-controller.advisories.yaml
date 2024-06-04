@@ -27,6 +27,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability was matched to the module "k8s.io/ingress-nginx" at the following location(s): /usr/bin/nginx-dbg, /usr/bin/nginx-ingress-controller, /usr/bin/waitshutdown. In all cases, the fixed version of the module (git commit c32f9a43279425920c41ba2e54dfcb1a54c0daf7) is an ancestor of the installed version commit (51847ac1b537c547cdb7bfb06d14e6d3d8476a73).'
 
+  - id: CGA-2hq2-43gx-99c7
+    aliases:
+      - CVE-2024-24989
+      - GHSA-m46h-9pv9-w5xp
+    events:
+      - timestamp: 2024-06-04T07:10:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ingress-nginx-controller
+            componentID: 215548a4af9e2036
+            componentName: nginx
+            componentVersion: 1.25.3
+            componentType: binary
+            componentLocation: /usr/bin/nginx
+            scanner: grype
+
   - id: CGA-43r2-2869-xw2g
     aliases:
       - CVE-2024-24784
