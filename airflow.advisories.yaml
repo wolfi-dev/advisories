@@ -4,28 +4,6 @@ package:
   name: airflow
 
 advisories:
-  - id: CGA-v94x-q6m7-qgqv
-    aliases:
-      - CVE-2023-46136
-      - GHSA-hrfv-mqp8-q5rw
-    events:
-      - timestamp: 2024-05-17T07:30:09Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: airflow
-            componentID: 66bf9f85cfd5bed8
-            componentName: Werkzeug
-            componentVersion: 2.2.3
-            componentType: python
-            componentLocation: /opt/airflow/venv/lib/python3.12/site-packages/Werkzeug-2.2.3.dist-info/METADATA, /opt/airflow/venv/lib/python3.12/site-packages/Werkzeug-2.2.3.dist-info/RECORD, /opt/airflow/venv/lib/python3.12/site-packages/Werkzeug-2.2.3.dist-info/top_level.txt
-            scanner: grype
-      - timestamp: 2024-05-22T09:33:11Z
-        type: pending-upstream-fix
-        data:
-          note: Vulnerability affects < 3.0.3 however airflow is unable to upgrade to werkzeugto 3+ https://github.com/apache/airflow/blob/2d53c1089f78d8d1416f51af60e1e0354781
-
   - id: CGA-45f3-3fmq-7h5w
     aliases:
       - CVE-2023-50782
@@ -43,23 +21,27 @@ advisories:
             componentType: python
             componentLocation: /opt/airflow/venv/lib/python3.12/site-packages/cryptography-41.0.7.dist-info/METADATA, /opt/airflow/venv/lib/python3.12/site-packages/cryptography-41.0.7.dist-info/RECORD, /opt/airflow/venv/lib/python3.12/site-packages/cryptography-41.0.7.dist-info/top_level.txt
             scanner: grype
+      - timestamp: 2024-06-04T11:42:06Z
+        type: pending-upstream-fix
+        data:
+          note: Upgrading cryptography dependency in hatch_build.py to 42.0.4 causes a build failure
 
-  - id: CGA-v739-9xhw-5vmf
+  - id: CGA-8mx8-8v5r-99xg
     aliases:
-      - CVE-2024-0727
-      - GHSA-9v9h-cgj8-h64p
+      - CVE-2024-35195
+      - GHSA-9wx4-h78v-vm56
     events:
-      - timestamp: 2024-05-17T07:30:07Z
+      - timestamp: 2024-05-22T07:21:05Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: airflow
-            componentID: 4181a0e83441846c
-            componentName: cryptography
-            componentVersion: 41.0.7
+            componentID: 61e842dde812846c
+            componentName: requests
+            componentVersion: 2.31.0
             componentType: python
-            componentLocation: /opt/airflow/venv/lib/python3.12/site-packages/cryptography-41.0.7.dist-info/METADATA, /opt/airflow/venv/lib/python3.12/site-packages/cryptography-41.0.7.dist-info/RECORD, /opt/airflow/venv/lib/python3.12/site-packages/cryptography-41.0.7.dist-info/top_level.txt
+            componentLocation: /opt/airflow/venv/lib/python3.12/site-packages/requests-2.31.0.dist-info/METADATA, /opt/airflow/venv/lib/python3.12/site-packages/requests-2.31.0.dist-info/RECORD, /opt/airflow/venv/lib/python3.12/site-packages/requests-2.31.0.dist-info/top_level.txt
             scanner: grype
 
   - id: CGA-f4qg-9fw4-8247
@@ -79,6 +61,10 @@ advisories:
             componentType: python
             componentLocation: /opt/airflow/venv/lib/python3.12/site-packages/cryptography-41.0.7.dist-info/METADATA, /opt/airflow/venv/lib/python3.12/site-packages/cryptography-41.0.7.dist-info/RECORD, /opt/airflow/venv/lib/python3.12/site-packages/cryptography-41.0.7.dist-info/top_level.txt
             scanner: grype
+      - timestamp: 2024-06-04T11:42:37Z
+        type: pending-upstream-fix
+        data:
+          note: Upgrading cryptography dependency in hatch_build.py to 42.0.4 causes a build failure
 
   - id: CGA-pq4j-wp27-c7j9
     aliases:
@@ -102,20 +88,46 @@ advisories:
         data:
           note: Vulnerability affects < 3.0.3 however airflow is unable to upgrade to werkzeugto 3+ https://github.com/apache/airflow/blob/2d53c1089f78d8d1416f51af60e1e0354781
 
-  - id: CGA-8mx8-8v5r-99xg
+  - id: CGA-v739-9xhw-5vmf
     aliases:
-      - CVE-2024-35195
-      - GHSA-9wx4-h78v-vm56
+      - CVE-2024-0727
+      - GHSA-9v9h-cgj8-h64p
     events:
-      - timestamp: 2024-05-22T07:21:05Z
+      - timestamp: 2024-05-17T07:30:07Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: airflow
-            componentID: 61e842dde812846c
-            componentName: requests
-            componentVersion: 2.31.0
+            componentID: 4181a0e83441846c
+            componentName: cryptography
+            componentVersion: 41.0.7
             componentType: python
-            componentLocation: /opt/airflow/venv/lib/python3.12/site-packages/requests-2.31.0.dist-info/METADATA, /opt/airflow/venv/lib/python3.12/site-packages/requests-2.31.0.dist-info/RECORD, /opt/airflow/venv/lib/python3.12/site-packages/requests-2.31.0.dist-info/top_level.txt
+            componentLocation: /opt/airflow/venv/lib/python3.12/site-packages/cryptography-41.0.7.dist-info/METADATA, /opt/airflow/venv/lib/python3.12/site-packages/cryptography-41.0.7.dist-info/RECORD, /opt/airflow/venv/lib/python3.12/site-packages/cryptography-41.0.7.dist-info/top_level.txt
             scanner: grype
+      - timestamp: 2024-06-04T11:43:08Z
+        type: pending-upstream-fix
+        data:
+          note: Upgrading cryptography dependency in hatch_build.py to 42.0.4 causes a build failure
+
+  - id: CGA-v94x-q6m7-qgqv
+    aliases:
+      - CVE-2023-46136
+      - GHSA-hrfv-mqp8-q5rw
+    events:
+      - timestamp: 2024-05-17T07:30:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow
+            componentID: 66bf9f85cfd5bed8
+            componentName: Werkzeug
+            componentVersion: 2.2.3
+            componentType: python
+            componentLocation: /opt/airflow/venv/lib/python3.12/site-packages/Werkzeug-2.2.3.dist-info/METADATA, /opt/airflow/venv/lib/python3.12/site-packages/Werkzeug-2.2.3.dist-info/RECORD, /opt/airflow/venv/lib/python3.12/site-packages/Werkzeug-2.2.3.dist-info/top_level.txt
+            scanner: grype
+      - timestamp: 2024-05-22T09:33:11Z
+        type: pending-upstream-fix
+        data:
+          note: Vulnerability affects < 3.0.3 however airflow is unable to upgrade to werkzeugto 3+ https://github.com/apache/airflow/blob/2d53c1089f78d8d1416f51af60e1e0354781
