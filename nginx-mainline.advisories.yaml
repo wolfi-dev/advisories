@@ -14,6 +14,16 @@ advisories:
         data:
           fixed-version: 1.25.2-r4
 
+  - id: CGA-7qwj-5w5g-r5r3
+    aliases:
+      - CVE-2024-24990
+      - GHSA-38gr-cjjp-3f5w
+    events:
+      - timestamp: 2024-02-15T13:26:02Z
+        type: fixed
+        data:
+          fixed-version: 1.25.4-r0
+
   - id: CGA-7w9g-v72x-p58f
     aliases:
       - CVE-2024-24989
@@ -24,12 +34,19 @@ advisories:
         data:
           fixed-version: 1.25.4-r0
 
-  - id: CGA-7qwj-5w5g-r5r3
+  - id: CGA-wq6g-r44g-x375
     aliases:
-      - CVE-2024-24990
-      - GHSA-38gr-cjjp-3f5w
+      - CVE-2024-31079
     events:
-      - timestamp: 2024-02-15T13:26:02Z
-        type: fixed
+      - timestamp: 2024-06-04T08:23:05Z
+        type: detection
         data:
-          fixed-version: 1.25.4-r0
+          type: scan/v1
+          data:
+            subpackageName: nginx-mainline
+            componentID: 67a8b88ff18becdc
+            componentName: nginx
+            componentVersion: 1.25.5
+            componentType: binary
+            componentLocation: /usr/sbin/nginx
+            scanner: grype
