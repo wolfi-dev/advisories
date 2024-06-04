@@ -15,122 +15,6 @@ advisories:
           type: component-vulnerability-mismatch
           note: The CVE was against an older version of ruby itself which included this in the stdlib.
 
-  - id: CGA-x8c2-h96v-m94g
-    aliases:
-      - CVE-2023-36617
-      - GHSA-hww2-5g85-429m
-    events:
-      - timestamp: 2023-07-25T15:20:01Z
-        type: true-positive-determination
-        data:
-          note: This has been fixed upstream (commit dd73fe077cae077808e820f4765a12b1f4660521) and we're waiting for a release.
-
-  - id: CGA-x3h9-rj6j-hmh9
-    aliases:
-      - CVE-2023-38037
-      - GHSA-cr5q-6q9f-rq6q
-    events:
-      - timestamp: 2023-08-29T16:45:48Z
-        type: fixed
-        data:
-          fixed-version: 1.17.6-r8
-
-  - id: CGA-j7mf-p576-xgw5
-    aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
-    events:
-      - timestamp: 2023-10-13T19:48:02Z
-        type: fixed
-        data:
-          fixed-version: 1.17.6-r8
-
-  - id: CGA-5q5f-4p4h-qxqx
-    aliases:
-      - CVE-2023-3978
-      - GHSA-2wrh-6pvc-2jm9
-    events:
-      - timestamp: 2023-10-13T19:48:56Z
-        type: fixed
-        data:
-          fixed-version: 1.17.6-r8
-
-  - id: CGA-x2r4-qmqq-w5f4
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:31:00Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-9g23-r8hp-m398
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:31:02Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-8qg5-9qcv-wrp7
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-26T10:26:27Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kube-fluentd-operator
-            componentID: 07a5e4cd9865e0c1
-            componentName: golang.org/x/net
-            componentVersion: v0.17.0
-            componentType: go-module
-            componentLocation: /usr/bin/config-reloader
-            scanner: grype
-      - timestamp: 2024-05-08T08:43:44Z
-        type: fixed
-        data:
-          fixed-version: 1.18.2-r8
-
-  - id: CGA-xfgf-qg5m-ffg9
-    aliases:
-      - CVE-2023-4785
-      - GHSA-p25m-jpj4-qcrr
-    events:
-      - timestamp: 2024-02-12T07:27:23Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kube-fluentd-operator
-            componentID: c37221a114a24f7e
-            componentName: grpc
-            componentVersion: 1.53.0
-            componentType: gem
-            componentLocation: /usr/lib/ruby/gems/3.2.0/ruby/3.2.0/specifications/grpc-1.53.0-x86_64-linux.gemspec
-            scanner: grype
-      - timestamp: 2024-02-28T01:34:41Z
-        type: fixed
-        data:
-          fixed-version: 1.18.2-r1
-
-  - id: CGA-5qr2-mr82-493p
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2023-12-21T09:48:40Z
-        type: fixed
-        data:
-          fixed-version: 1.18.1-r1
-
   - id: CGA-4f9p-qmmw-h6j2
     aliases:
       - CVE-2023-51774
@@ -147,50 +31,6 @@ advisories:
             componentVersion: 1.15.3
             componentType: gem
             componentLocation: /usr/lib/ruby/gems/3.2.0/ruby/3.2.0/specifications/json-jwt-1.15.3.gemspec
-            scanner: grype
-      - timestamp: 2024-03-12T03:56:56Z
-        type: fixed
-        data:
-          fixed-version: 1.18.2-r3
-
-  - id: CGA-gf7x-q6hw-c8fg
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T08:19:19Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kube-fluentd-operator
-            componentID: 587586cd25212548
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.30.0
-            componentType: go-module
-            componentLocation: /usr/bin/config-reloader
-            scanner: grype
-      - timestamp: 2024-03-31T01:33:39Z
-        type: fixed
-        data:
-          fixed-version: 1.18.2-r5
-
-  - id: CGA-pqqq-69p9-48g7
-    aliases:
-      - CVE-2024-25126
-      - GHSA-22f2-v57c-j9cx
-    events:
-      - timestamp: 2024-02-29T08:06:44Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kube-fluentd-operator
-            componentID: 1bdddca2f8dfb39e
-            componentName: rack
-            componentVersion: 3.0.8
-            componentType: gem
-            componentLocation: /usr/lib/ruby/gems/3.2.0/ruby/3.2.0/specifications/rack-3.0.8.gemspec
             scanner: grype
       - timestamp: 2024-03-12T03:56:56Z
         type: fixed
@@ -219,6 +59,59 @@ advisories:
         data:
           fixed-version: 1.18.2-r3
 
+  - id: CGA-5q5f-4p4h-qxqx
+    aliases:
+      - CVE-2023-3978
+      - GHSA-2wrh-6pvc-2jm9
+    events:
+      - timestamp: 2023-10-13T19:48:56Z
+        type: fixed
+        data:
+          fixed-version: 1.17.6-r8
+
+  - id: CGA-5qr2-mr82-493p
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2023-12-21T09:48:40Z
+        type: fixed
+        data:
+          fixed-version: 1.18.1-r1
+
+  - id: CGA-8qg5-9qcv-wrp7
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-26T10:26:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-fluentd-operator
+            componentID: 07a5e4cd9865e0c1
+            componentName: golang.org/x/net
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/config-reloader
+            scanner: grype
+      - timestamp: 2024-05-08T08:43:44Z
+        type: fixed
+        data:
+          fixed-version: 1.18.2-r8
+
+  - id: CGA-9g23-r8hp-m398
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:31:02Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
   - id: CGA-fhw2-86gf-84wg
     aliases:
       - CVE-2024-26146
@@ -241,6 +134,38 @@ advisories:
         data:
           fixed-version: 1.18.2-r3
 
+  - id: CGA-gf7x-q6hw-c8fg
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:19:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-fluentd-operator
+            componentID: 587586cd25212548
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/config-reloader
+            scanner: grype
+      - timestamp: 2024-03-31T01:33:39Z
+        type: fixed
+        data:
+          fixed-version: 1.18.2-r5
+
+  - id: CGA-j7mf-p576-xgw5
+    aliases:
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2023-10-13T19:48:02Z
+        type: fixed
+        data:
+          fixed-version: 1.17.6-r8
+
   - id: CGA-ppg3-gjfr-68f3
     aliases:
       - CVE-2024-35176
@@ -258,3 +183,82 @@ advisories:
             componentType: gem
             componentLocation: /usr/lib/ruby/gems/3.2.0/ruby/3.2.0/specifications/rexml-3.2.6.gemspec
             scanner: grype
+      - timestamp: 2024-06-04T21:31:36Z
+        type: fixed
+        data:
+          fixed-version: 1.18.2-r11
+
+  - id: CGA-pqqq-69p9-48g7
+    aliases:
+      - CVE-2024-25126
+      - GHSA-22f2-v57c-j9cx
+    events:
+      - timestamp: 2024-02-29T08:06:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-fluentd-operator
+            componentID: 1bdddca2f8dfb39e
+            componentName: rack
+            componentVersion: 3.0.8
+            componentType: gem
+            componentLocation: /usr/lib/ruby/gems/3.2.0/ruby/3.2.0/specifications/rack-3.0.8.gemspec
+            scanner: grype
+      - timestamp: 2024-03-12T03:56:56Z
+        type: fixed
+        data:
+          fixed-version: 1.18.2-r3
+
+  - id: CGA-x2r4-qmqq-w5f4
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:31:00Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-x3h9-rj6j-hmh9
+    aliases:
+      - CVE-2023-38037
+      - GHSA-cr5q-6q9f-rq6q
+    events:
+      - timestamp: 2023-08-29T16:45:48Z
+        type: fixed
+        data:
+          fixed-version: 1.17.6-r8
+
+  - id: CGA-x8c2-h96v-m94g
+    aliases:
+      - CVE-2023-36617
+      - GHSA-hww2-5g85-429m
+    events:
+      - timestamp: 2023-07-25T15:20:01Z
+        type: true-positive-determination
+        data:
+          note: This has been fixed upstream (commit dd73fe077cae077808e820f4765a12b1f4660521) and we're waiting for a release.
+
+  - id: CGA-xfgf-qg5m-ffg9
+    aliases:
+      - CVE-2023-4785
+      - GHSA-p25m-jpj4-qcrr
+    events:
+      - timestamp: 2024-02-12T07:27:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-fluentd-operator
+            componentID: c37221a114a24f7e
+            componentName: grpc
+            componentVersion: 1.53.0
+            componentType: gem
+            componentLocation: /usr/lib/ruby/gems/3.2.0/ruby/3.2.0/specifications/grpc-1.53.0-x86_64-linux.gemspec
+            scanner: grype
+      - timestamp: 2024-02-28T01:34:41Z
+        type: fixed
+        data:
+          fixed-version: 1.18.2-r1
