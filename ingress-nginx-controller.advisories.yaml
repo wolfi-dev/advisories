@@ -203,6 +203,23 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This vulnerability was reported to be fixed in 1.8.0, which was the first version shipped by Wolfi. https://www.openwall.com/lists/oss-security/2023/10/25/5
 
+  - id: CGA-ccx3-v5fh-7h28
+    aliases:
+      - CVE-2024-35200
+    events:
+      - timestamp: 2024-06-04T07:11:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ingress-nginx-controller
+            componentID: 215548a4af9e2036
+            componentName: nginx
+            componentVersion: 1.25.3
+            componentType: binary
+            componentLocation: /usr/bin/nginx
+            scanner: grype
+
   - id: CGA-cjgp-vhqf-27hm
     aliases:
       - CVE-2018-1002104
