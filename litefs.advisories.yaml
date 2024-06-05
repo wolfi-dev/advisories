@@ -4,6 +4,47 @@ package:
   name: litefs
 
 advisories:
+  - id: CGA-43pr-rg7f-j5gp
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:32:47Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-4fxg-vj38-g739
+    aliases:
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T09:22:29Z
+        type: fixed
+        data:
+          fixed-version: 0.5.11-r1
+
+  - id: CGA-5qvv-98x6-pqch
+    aliases:
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T09:22:30Z
+        type: fixed
+        data:
+          fixed-version: 0.5.11-r1
+
+  - id: CGA-5xg6-h9m2-x8wv
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T09:22:29Z
+        type: fixed
+        data:
+          fixed-version: 0.5.11-r1
+
   - id: CGA-6xhp-w794-4jrj
     aliases:
       - CVE-2023-45283
@@ -15,16 +56,15 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
-  - id: CGA-43pr-rg7f-j5gp
+  - id: CGA-7qqf-gm2p-xw65
     aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
     events:
-      - timestamp: 2023-11-07T19:32:47Z
-        type: false-positive-determination
+      - timestamp: 2024-03-12T09:22:31Z
+        type: fixed
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          fixed-version: 0.5.11-r1
 
   - id: CGA-945p-c35c-m5m8
     aliases:
@@ -48,56 +88,6 @@ advisories:
         data:
           fixed-version: 0.5.11-r4
 
-  - id: CGA-7qqf-gm2p-xw65
-    aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
-    events:
-      - timestamp: 2024-03-12T09:22:31Z
-        type: fixed
-        data:
-          fixed-version: 0.5.11-r1
-
-  - id: CGA-4fxg-vj38-g739
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-12T09:22:29Z
-        type: fixed
-        data:
-          fixed-version: 0.5.11-r1
-
-  - id: CGA-pvqf-vq84-fwjw
-    aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
-    events:
-      - timestamp: 2024-03-12T09:22:29Z
-        type: fixed
-        data:
-          fixed-version: 0.5.11-r1
-
-  - id: CGA-5xg6-h9m2-x8wv
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-12T09:22:29Z
-        type: fixed
-        data:
-          fixed-version: 0.5.11-r1
-
-  - id: CGA-5qvv-98x6-pqch
-    aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
-    events:
-      - timestamp: 2024-03-12T09:22:30Z
-        type: fixed
-        data:
-          fixed-version: 0.5.11-r1
-
   - id: CGA-hvwc-92p6-6xf6
     aliases:
       - CVE-2024-24786
@@ -120,24 +110,6 @@ advisories:
         data:
           fixed-version: 0.5.11-r2
 
-  - id: CGA-w56x-crv2-7cm6
-    aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
-    events:
-      - timestamp: 2024-05-14T07:16:22Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: litefs
-            componentID: 668d662a8932629f
-            componentName: stdlib
-            componentVersion: go1.22.2
-            componentType: go-module
-            componentLocation: /usr/bin/litefs
-            scanner: grype
-
   - id: CGA-pvjm-5xj9-99jm
     aliases:
       - CVE-2024-24788
@@ -155,3 +127,39 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/litefs
             scanner: grype
+      - timestamp: 2024-06-05T07:30:16Z
+        type: fixed
+        data:
+          fixed-version: 0.5.11-r5
+
+  - id: CGA-pvqf-vq84-fwjw
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T09:22:29Z
+        type: fixed
+        data:
+          fixed-version: 0.5.11-r1
+
+  - id: CGA-w56x-crv2-7cm6
+    aliases:
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
+    events:
+      - timestamp: 2024-05-14T07:16:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: litefs
+            componentID: 668d662a8932629f
+            componentName: stdlib
+            componentVersion: go1.22.2
+            componentType: go-module
+            componentLocation: /usr/bin/litefs
+            scanner: grype
+      - timestamp: 2024-06-05T07:30:15Z
+        type: fixed
+        data:
+          fixed-version: 0.5.11-r5
