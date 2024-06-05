@@ -4,42 +4,12 @@ package:
   name: openjdk-16
 
 advisories:
-  - id: CGA-gjgm-5hqf-4qcg
+  - id: CGA-3gxm-h4h7-fw22
     aliases:
-      - CVE-2023-21930
-      - GHSA-4j35-7cr4-3mc8
+      - CVE-2023-21967
+      - GHSA-wg7x-fvjp-r3fx
     events:
-      - timestamp: 2024-03-31T02:41:35Z
-        type: fix-not-planned
-        data:
-          note: OpenJDK 16 is no longer supported upstream.
-
-  - id: CGA-v4rx-wrhf-gw83
-    aliases:
-      - CVE-2023-21937
-      - GHSA-vr26-5f5w-r829
-    events:
-      - timestamp: 2024-03-31T02:41:10Z
-        type: fix-not-planned
-        data:
-          note: OpenJDK 16 is no longer supported upstream.
-
-  - id: CGA-vwhm-6g44-r477
-    aliases:
-      - CVE-2023-21938
-      - GHSA-9pqg-44mx-r5gr
-    events:
-      - timestamp: 2024-03-31T02:38:57Z
-        type: fix-not-planned
-        data:
-          note: OpenJDK 16 is no longer supported upstream.
-
-  - id: CGA-49v7-m3q8-q2v7
-    aliases:
-      - CVE-2023-21939
-      - GHSA-xfrf-5cgw-f964
-    events:
-      - timestamp: 2024-03-31T02:55:33Z
+      - timestamp: 2024-03-31T02:55:00Z
         type: fix-not-planned
         data:
           note: OpenJDK 16 is no longer supported upstream.
@@ -54,42 +24,75 @@ advisories:
         data:
           note: OpenJDK 16 is no longer supported upstream.
 
-  - id: CGA-3gxm-h4h7-fw22
+  - id: CGA-49v7-m3q8-q2v7
     aliases:
-      - CVE-2023-21967
-      - GHSA-wg7x-fvjp-r3fx
+      - CVE-2023-21939
+      - GHSA-xfrf-5cgw-f964
     events:
-      - timestamp: 2024-03-31T02:55:00Z
+      - timestamp: 2024-03-31T02:55:33Z
         type: fix-not-planned
         data:
           note: OpenJDK 16 is no longer supported upstream.
 
-  - id: CGA-v76x-xh6c-57xq
+  - id: CGA-6hx7-6w3p-7824
     aliases:
-      - CVE-2023-21968
-      - GHSA-r6j2-4r52-mpg7
+      - CVE-2024-20932
+      - GHSA-ccwc-jrj7-h4v6
     events:
-      - timestamp: 2024-03-31T02:40:36Z
-        type: fix-not-planned
+      - timestamp: 2024-05-24T08:13:36Z
+        type: detection
         data:
-          note: OpenJDK 16 is no longer supported upstream.
-
-  - id: CGA-w823-88hj-m77c
-    aliases:
-      - CVE-2023-22041
-      - GHSA-rgxf-494f-377c
-    events:
-      - timestamp: 2024-03-31T02:55:09Z
-        type: fix-not-planned
+          type: scan/v1
+          data:
+            subpackageName: openjdk-16
+            componentID: 3f7e17e515351b4d
+            componentName: openjdk-16
+            componentVersion: 16.0.2.7-r5
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2024-06-05T12:30:02Z
+        type: false-positive-determination
         data:
-          note: OpenJDK 16 is no longer supported upstream.
+          type: vulnerable-code-version-not-used
+          note: NVD record says the affected version is 17.0.9, not a version range.
 
-  - id: CGA-r8q6-rj77-56qj
+  - id: CGA-726q-pm25-jjgc
     aliases:
-      - CVE-2023-25193
-      - GHSA-v8ff-vmc3-wr4m
+      - CVE-2024-21012
+      - GHSA-ccmh-gwpx-35xj
     events:
-      - timestamp: 2024-03-31T02:54:43Z
+      - timestamp: 2024-04-19T13:03:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openjdk-16
+            componentID: 8815c3ad6a30b005
+            componentName: openjdk-16
+            componentVersion: 16.0.2.7-r3
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
+  - id: CGA-72h6-cc9f-fr5q
+    aliases:
+      - CVE-2024-20919
+      - GHSA-vgxv-38wx-r77w
+    events:
+      - timestamp: 2024-04-13T09:27:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openjdk-16-doc
+            componentID: 4cff56e044c42352
+            componentName: openjdk-16-doc
+            componentVersion: 16.0.2.7-r3
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2024-04-15T09:51:35Z
         type: fix-not-planned
         data:
           note: OpenJDK 16 is no longer supported upstream.
@@ -116,28 +119,6 @@ advisories:
         data:
           note: OpenJDK 16 is no longer supported upstream.
 
-  - id: CGA-72h6-cc9f-fr5q
-    aliases:
-      - CVE-2024-20919
-      - GHSA-vgxv-38wx-r77w
-    events:
-      - timestamp: 2024-04-13T09:27:08Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: openjdk-16-doc
-            componentID: 4cff56e044c42352
-            componentName: openjdk-16-doc
-            componentVersion: 16.0.2.7-r3
-            componentType: apk
-            componentLocation: /.PKGINFO
-            scanner: grype
-      - timestamp: 2024-04-15T09:51:35Z
-        type: fix-not-planned
-        data:
-          note: OpenJDK 16 is no longer supported upstream.
-
   - id: CGA-cc49-pmqc-h4ph
     aliases:
       - CVE-2024-20921
@@ -160,20 +141,40 @@ advisories:
         data:
           note: OpenJDK 16 is no longer supported upstream.
 
-  - id: CGA-6hx7-6w3p-7824
+  - id: CGA-gjgm-5hqf-4qcg
     aliases:
-      - CVE-2024-20932
-      - GHSA-ccwc-jrj7-h4v6
+      - CVE-2023-21930
+      - GHSA-4j35-7cr4-3mc8
     events:
-      - timestamp: 2024-05-24T08:13:36Z
+      - timestamp: 2024-03-31T02:41:35Z
+        type: fix-not-planned
+        data:
+          note: OpenJDK 16 is no longer supported upstream.
+
+  - id: CGA-px84-hwgp-hm88
+    aliases:
+      - CVE-2024-20952
+      - GHSA-343v-9ccv-7535
+    events:
+      - timestamp: 2024-03-31T02:41:57Z
+        type: fix-not-planned
+        data:
+          note: OpenJDK 16 is no longer supported upstream.
+
+  - id: CGA-qx82-qhjp-v627
+    aliases:
+      - CVE-2024-21068
+      - GHSA-q4c6-w389-xqq6
+    events:
+      - timestamp: 2024-04-19T13:03:35Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: openjdk-16
-            componentID: 3f7e17e515351b4d
+            componentID: 8815c3ad6a30b005
             componentName: openjdk-16
-            componentVersion: 16.0.2.7-r5
+            componentVersion: 16.0.2.7-r3
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
@@ -200,12 +201,70 @@ advisories:
         data:
           note: OpenJDK 16 is no longer supported upstream.
 
-  - id: CGA-px84-hwgp-hm88
+  - id: CGA-r8q6-rj77-56qj
     aliases:
-      - CVE-2024-20952
-      - GHSA-343v-9ccv-7535
+      - CVE-2023-25193
+      - GHSA-v8ff-vmc3-wr4m
     events:
-      - timestamp: 2024-03-31T02:41:57Z
+      - timestamp: 2024-03-31T02:54:43Z
+        type: fix-not-planned
+        data:
+          note: OpenJDK 16 is no longer supported upstream.
+
+  - id: CGA-rfwp-26m4-mwp7
+    aliases:
+      - CVE-2024-21094
+      - GHSA-g3wm-f7gr-3fwh
+    events:
+      - timestamp: 2024-04-19T13:03:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openjdk-16
+            componentID: 8815c3ad6a30b005
+            componentName: openjdk-16
+            componentVersion: 16.0.2.7-r3
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
+  - id: CGA-v4rx-wrhf-gw83
+    aliases:
+      - CVE-2023-21937
+      - GHSA-vr26-5f5w-r829
+    events:
+      - timestamp: 2024-03-31T02:41:10Z
+        type: fix-not-planned
+        data:
+          note: OpenJDK 16 is no longer supported upstream.
+
+  - id: CGA-v76x-xh6c-57xq
+    aliases:
+      - CVE-2023-21968
+      - GHSA-r6j2-4r52-mpg7
+    events:
+      - timestamp: 2024-03-31T02:40:36Z
+        type: fix-not-planned
+        data:
+          note: OpenJDK 16 is no longer supported upstream.
+
+  - id: CGA-vwhm-6g44-r477
+    aliases:
+      - CVE-2023-21938
+      - GHSA-9pqg-44mx-r5gr
+    events:
+      - timestamp: 2024-03-31T02:38:57Z
+        type: fix-not-planned
+        data:
+          note: OpenJDK 16 is no longer supported upstream.
+
+  - id: CGA-w823-88hj-m77c
+    aliases:
+      - CVE-2023-22041
+      - GHSA-rgxf-494f-377c
+    events:
+      - timestamp: 2024-03-31T02:55:09Z
         type: fix-not-planned
         data:
           note: OpenJDK 16 is no longer supported upstream.
@@ -216,60 +275,6 @@ advisories:
       - GHSA-7qqv-8pwc-x4xc
     events:
       - timestamp: 2024-04-19T13:03:30Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: openjdk-16
-            componentID: 8815c3ad6a30b005
-            componentName: openjdk-16
-            componentVersion: 16.0.2.7-r3
-            componentType: apk
-            componentLocation: /.PKGINFO
-            scanner: grype
-
-  - id: CGA-726q-pm25-jjgc
-    aliases:
-      - CVE-2024-21012
-      - GHSA-ccmh-gwpx-35xj
-    events:
-      - timestamp: 2024-04-19T13:03:32Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: openjdk-16
-            componentID: 8815c3ad6a30b005
-            componentName: openjdk-16
-            componentVersion: 16.0.2.7-r3
-            componentType: apk
-            componentLocation: /.PKGINFO
-            scanner: grype
-
-  - id: CGA-qx82-qhjp-v627
-    aliases:
-      - CVE-2024-21068
-      - GHSA-q4c6-w389-xqq6
-    events:
-      - timestamp: 2024-04-19T13:03:35Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: openjdk-16
-            componentID: 8815c3ad6a30b005
-            componentName: openjdk-16
-            componentVersion: 16.0.2.7-r3
-            componentType: apk
-            componentLocation: /.PKGINFO
-            scanner: grype
-
-  - id: CGA-rfwp-26m4-mwp7
-    aliases:
-      - CVE-2024-21094
-      - GHSA-g3wm-f7gr-3fwh
-    events:
-      - timestamp: 2024-04-19T13:03:37Z
         type: detection
         data:
           type: scan/v1
