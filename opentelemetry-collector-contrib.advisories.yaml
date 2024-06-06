@@ -4,6 +4,43 @@ package:
   name: opentelemetry-collector-contrib
 
 advisories:
+  - id: CGA-726c-h25x-6j3x
+    aliases:
+      - CVE-2024-36129
+      - GHSA-c74f-6mfw-mm4v
+    events:
+      - timestamp: 2024-06-06T07:21:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opentelemetry-collector-contrib
+            componentID: 19a096a1e2066085
+            componentName: go.opentelemetry.io/collector/config/configgrpc
+            componentVersion: v0.102.0
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol-contrib
+            scanner: grype
+
+  - id: CGA-7rcg-w446-w55r
+    aliases:
+      - CVE-2024-3154
+      - GHSA-c5pj-mqfh-rvc3
+      - GHSA-2cgq-h8xw-2v5j
+    events:
+      - timestamp: 2024-04-27T10:28:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opentelemetry-collector-contrib
+            componentID: 054cc453e0edb3f3
+            componentName: github.com/opencontainers/runc
+            componentVersion: v1.1.12
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol-contrib
+            scanner: grype
+
   - id: CGA-fm77-3pch-c7fw
     aliases:
       - CVE-2020-8559
@@ -21,17 +58,6 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/otelcol-contrib
             scanner: grype
-
-  - id: CGA-xxgj-92hg-8g28
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:35:18Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
 
   - id: CGA-qj4w-h574-47gq
     aliases:
@@ -54,20 +80,13 @@ advisories:
         data:
           fixed-version: 0.98.0-r0
 
-  - id: CGA-7rcg-w446-w55r
+  - id: CGA-xxgj-92hg-8g28
     aliases:
-      - CVE-2024-3154
-      - GHSA-c5pj-mqfh-rvc3
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
     events:
-      - timestamp: 2024-04-27T10:28:06Z
-        type: detection
+      - timestamp: 2023-11-07T19:35:18Z
+        type: false-positive-determination
         data:
-          type: scan/v1
-          data:
-            subpackageName: opentelemetry-collector-contrib
-            componentID: 054cc453e0edb3f3
-            componentName: github.com/opencontainers/runc
-            componentVersion: v1.1.12
-            componentType: go-module
-            componentLocation: /usr/bin/otelcol-contrib
-            scanner: grype
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
