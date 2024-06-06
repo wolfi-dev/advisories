@@ -83,6 +83,24 @@ advisories:
         data:
           fixed-version: 7.51.1-r1
 
+  - id: CGA-c8pv-52m7-2mhm
+    aliases:
+      - CVE-2024-36129
+      - GHSA-c74f-6mfw-mm4v
+    events:
+      - timestamp: 2024-06-06T07:15:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: datadog-agent
+            componentID: 67cf16c110f1e70c
+            componentName: go.opentelemetry.io/collector/config/configgrpc
+            componentVersion: v0.98.0
+            componentType: go-module
+            componentLocation: /usr/bin/agent
+            scanner: grype
+
   - id: CGA-ccwr-5f2w-9q24
     aliases:
       - CVE-2024-3651
