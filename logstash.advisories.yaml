@@ -4,6 +4,180 @@ package:
   name: logstash
 
 advisories:
+  - id: CGA-266c-v62g-2862
+    aliases:
+      - CVE-2024-25126
+      - GHSA-22f2-v57c-j9cx
+    events:
+      - timestamp: 2024-02-29T07:23:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash
+            componentID: 11790c267a6cf612
+            componentName: rack
+            componentVersion: 2.2.8
+            componentType: gem
+            componentLocation: /usr/share/logstash/vendor/bundle/jruby/3.1.0/specifications/rack-2.2.8.gemspec
+            scanner: grype
+      - timestamp: 2024-03-12T03:57:19Z
+        type: fixed
+        data:
+          fixed-version: 8.12.2-r2
+
+  - id: CGA-3p4r-wmm9-39fg
+    aliases:
+      - GHSA-r95h-9x8f-r3f7
+    events:
+      - timestamp: 2024-05-14T08:33:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash
+            componentID: 7fca744d1d80eac1
+            componentName: nokogiri
+            componentVersion: 1.16.4
+            componentType: gem
+            componentLocation: /usr/share/logstash/vendor/bundle/jruby/3.1.0/specifications/nokogiri-1.16.4-java.gemspec
+            scanner: grype
+      - timestamp: 2024-05-21T19:00:38Z
+        type: fixed
+        data:
+          fixed-version: 8.13.4-r0
+
+  - id: CGA-4cgj-59hq-h2hc
+    aliases:
+      - CVE-2024-29857
+      - GHSA-8xfc-gm6g-vgpv
+    events:
+      - timestamp: 2024-05-17T08:40:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash
+            componentID: 1081b712054e693e
+            componentName: bcpkix-jdk18on
+            componentVersion: "1.74"
+            componentType: java-archive
+            componentLocation: /usr/share/logstash/vendor/jruby/lib/ruby/stdlib/org/bouncycastle/bcpkix-jdk18on/1.74/bcpkix-jdk18on-1.74.jar
+            scanner: grype
+      - timestamp: 2024-05-30T17:55:17Z
+        type: pending-upstream-fix
+        data:
+          note: Logstash bundles an upstream version of jruby which embeds a version of bouncycastle at lib/ruby/stdlib/org/bouncycastle with the jruby-openssl. Upstream jruby-openssl should update the bouncycastle version that fix this vulnerability as it updates its default gems on some next release.
+
+  - id: CGA-4g9q-786p-g37v
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2024-05-14T08:33:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash
+            componentID: dae6300f0cde848d
+            componentName: stdlib
+            componentVersion: go1.22.2
+            componentType: go-module
+            componentLocation: /usr/bin/env2yaml
+            scanner: grype
+      - timestamp: 2024-05-21T19:00:37Z
+        type: fixed
+        data:
+          fixed-version: 8.13.4-r0
+
+  - id: CGA-7369-wc68-4626
+    aliases:
+      - GHSA-xc9x-jj77-9p9j
+    events:
+      - timestamp: 2024-02-06T16:08:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash
+            componentID: 0ebac1b47c8acab6
+            componentName: nokogiri
+            componentVersion: 1.15.5
+            componentType: gem
+            componentLocation: /usr/share/java/logstash/vendor/bundle/jruby/3.1.0/specifications/nokogiri-1.15.5-java.gemspec
+            scanner: grype
+      - timestamp: 2024-02-13T19:01:10Z
+        type: fixed
+        data:
+          fixed-version: 8.12.1-r1
+
+  - id: CGA-7pp4-hp2q-q39q
+    aliases:
+      - CVE-2024-29025
+      - GHSA-5jpm-x58v-624v
+    events:
+      - timestamp: 2024-04-01T20:18:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-with-output-opensearch
+            componentID: 6dd0292ccec13cae
+            componentName: netty-codec-http
+            componentVersion: 4.1.100.Final
+            componentType: java-archive
+            componentLocation: /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/logstash-input-http-3.8.0-java/vendor/jar-dependencies/io/netty/netty-codec-http/4.1.100.Final/netty-codec-http-4.1.100.Final.jar
+            scanner: grype
+      - timestamp: 2024-04-11T19:10:22Z
+        type: pending-upstream-fix
+        data:
+          note: It is a vendor dependency that includes the vulnerable version. awaiting upstream release that includes the fix from https://github.com/logstash-plugins/logstash-input-http/pull/172
+
+  - id: CGA-8595-m6wp-3rgq
+    aliases:
+      - CVE-2024-30171
+      - GHSA-v435-xc8x-wvr9
+    events:
+      - timestamp: 2024-05-17T08:40:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash
+            componentID: d6e3c9184e384761
+            componentName: bcpkix-jdk18on
+            componentVersion: "1.74"
+            componentType: java-archive
+            componentLocation: /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/jruby-openssl-0.14.5-java/lib/org/bouncycastle/bcpkix-jdk18on/1.74/bcpkix-jdk18on-1.74.jar
+            scanner: grype
+      - timestamp: 2024-05-30T17:55:17Z
+        type: pending-upstream-fix
+        data:
+          note: Logstash bundles an upstream version of jruby which embeds a version of bouncycastle at lib/ruby/stdlib/org/bouncycastle with the jruby-openssl. Upstream jruby-openssl should update the bouncycastle version that fix this vulnerability as it updates its default gems on some next release.
+
+  - id: CGA-862g-ffq3-q4q4
+    aliases:
+      - CVE-2024-26146
+      - GHSA-54rr-7fvw-6x8f
+    events:
+      - timestamp: 2024-02-29T07:23:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash
+            componentID: 11790c267a6cf612
+            componentName: rack
+            componentVersion: 2.2.8
+            componentType: gem
+            componentLocation: /usr/share/logstash/vendor/bundle/jruby/3.1.0/specifications/rack-2.2.8.gemspec
+            scanner: grype
+      - timestamp: 2024-03-12T03:57:19Z
+        type: fixed
+        data:
+          fixed-version: 8.12.2-r2
+
   - id: CGA-97qc-326j-gvj5
     aliases:
       - CVE-2022-46337
@@ -13,6 +187,72 @@ advisories:
         type: pending-upstream-fix
         data:
           note: 'To fix the CVE we need to update derby to 10.17.1.0 which requires requires logstash to be built with JDK 21: https://github.com/logstash-plugins/logstash-integration-jdbc/issues/147'
+
+  - id: CGA-ggc7-mqxg-jcjm
+    aliases:
+      - CVE-2024-30172
+      - GHSA-m44j-cfrm-g8qc
+    events:
+      - timestamp: 2024-05-17T08:40:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash
+            componentID: 1081b712054e693e
+            componentName: bcpkix-jdk18on
+            componentVersion: "1.74"
+            componentType: java-archive
+            componentLocation: /usr/share/logstash/vendor/jruby/lib/ruby/stdlib/org/bouncycastle/bcpkix-jdk18on/1.74/bcpkix-jdk18on-1.74.jar
+            scanner: grype
+      - timestamp: 2024-05-30T17:55:17Z
+        type: pending-upstream-fix
+        data:
+          note: Logstash bundles an upstream version of jruby which embeds a version of bouncycastle at lib/ruby/stdlib/org/bouncycastle with the jruby-openssl. Upstream jruby-openssl should update the bouncycastle version that fix this vulnerability as it updates its default gems on some next release.
+
+  - id: CGA-h6gp-72jh-xc9h
+    aliases:
+      - CVE-2024-35176
+      - GHSA-vg3r-rm7w-2xgh
+    events:
+      - timestamp: 2024-05-17T08:40:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash
+            componentID: 541e41d66a0d92c9
+            componentName: rexml
+            componentVersion: 3.2.5
+            componentType: gem
+            componentLocation: /usr/share/logstash/vendor/jruby/lib/ruby/gems/shared/specifications/rexml-3.2.5.gemspec
+            scanner: grype
+      - timestamp: 2024-06-06T15:54:58Z
+        type: pending-upstream-fix
+        data:
+          note: Logstash bundles an upstream version of jruby which embeds a version of rexml at /usr/share/logstash/vendor/jruby/lib/ruby/gems/shared/specifications. Upstream jruby should update the rexml version that fix this vulnerability as it updates its default gems on some next release.
+
+  - id: CGA-hr6r-398j-373c
+    aliases:
+      - CVE-2024-27281
+      - GHSA-592j-995h-p23j
+    events:
+      - timestamp: 2024-04-01T19:58:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-with-output-opensearch
+            componentID: 4faf0189fb0ce534
+            componentName: rdoc
+            componentVersion: 6.4.0
+            componentType: gem
+            componentLocation: /usr/share/logstash/vendor/jruby/lib/ruby/gems/shared/specifications/default/rdoc-6.4.0.gemspec
+            scanner: grype
+      - timestamp: 2024-04-20T11:18:16Z
+        type: pending-upstream-fix
+        data:
+          note: Logstash bundles an upstream version of jruby. Upstream jruby should fix this vulnerability as it updates its default gems on the next release.
 
   - id: CGA-phpp-mpf2-663m
     aliases:
@@ -58,204 +298,6 @@ advisories:
         data:
           fixed-version: 8.13.4-r0
 
-  - id: CGA-4g9q-786p-g37v
-    aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
-    events:
-      - timestamp: 2024-05-14T08:33:50Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: logstash
-            componentID: dae6300f0cde848d
-            componentName: stdlib
-            componentVersion: go1.22.2
-            componentType: go-module
-            componentLocation: /usr/bin/env2yaml
-            scanner: grype
-      - timestamp: 2024-05-21T19:00:37Z
-        type: fixed
-        data:
-          fixed-version: 8.13.4-r0
-
-  - id: CGA-266c-v62g-2862
-    aliases:
-      - CVE-2024-25126
-      - GHSA-22f2-v57c-j9cx
-    events:
-      - timestamp: 2024-02-29T07:23:00Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: logstash
-            componentID: 11790c267a6cf612
-            componentName: rack
-            componentVersion: 2.2.8
-            componentType: gem
-            componentLocation: /usr/share/logstash/vendor/bundle/jruby/3.1.0/specifications/rack-2.2.8.gemspec
-            scanner: grype
-      - timestamp: 2024-03-12T03:57:19Z
-        type: fixed
-        data:
-          fixed-version: 8.12.2-r2
-
-  - id: CGA-w4p6-p67m-3gc4
-    aliases:
-      - CVE-2024-26141
-      - GHSA-xj5v-6v4g-jfw6
-    events:
-      - timestamp: 2024-02-29T07:23:02Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: logstash
-            componentID: 11790c267a6cf612
-            componentName: rack
-            componentVersion: 2.2.8
-            componentType: gem
-            componentLocation: /usr/share/logstash/vendor/bundle/jruby/3.1.0/specifications/rack-2.2.8.gemspec
-            scanner: grype
-      - timestamp: 2024-03-12T03:57:19Z
-        type: fixed
-        data:
-          fixed-version: 8.12.2-r2
-
-  - id: CGA-862g-ffq3-q4q4
-    aliases:
-      - CVE-2024-26146
-      - GHSA-54rr-7fvw-6x8f
-    events:
-      - timestamp: 2024-02-29T07:23:01Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: logstash
-            componentID: 11790c267a6cf612
-            componentName: rack
-            componentVersion: 2.2.8
-            componentType: gem
-            componentLocation: /usr/share/logstash/vendor/bundle/jruby/3.1.0/specifications/rack-2.2.8.gemspec
-            scanner: grype
-      - timestamp: 2024-03-12T03:57:19Z
-        type: fixed
-        data:
-          fixed-version: 8.12.2-r2
-
-  - id: CGA-hr6r-398j-373c
-    aliases:
-      - CVE-2024-27281
-      - GHSA-592j-995h-p23j
-    events:
-      - timestamp: 2024-04-01T19:58:26Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: logstash-with-output-opensearch
-            componentID: 4faf0189fb0ce534
-            componentName: rdoc
-            componentVersion: 6.4.0
-            componentType: gem
-            componentLocation: /usr/share/logstash/vendor/jruby/lib/ruby/gems/shared/specifications/default/rdoc-6.4.0.gemspec
-            scanner: grype
-      - timestamp: 2024-04-20T11:18:16Z
-        type: pending-upstream-fix
-        data:
-          note: Logstash bundles an upstream version of jruby. Upstream jruby should fix this vulnerability as it updates its default gems on the next release.
-
-  - id: CGA-7pp4-hp2q-q39q
-    aliases:
-      - CVE-2024-29025
-      - GHSA-5jpm-x58v-624v
-    events:
-      - timestamp: 2024-04-01T20:18:12Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: logstash-with-output-opensearch
-            componentID: 6dd0292ccec13cae
-            componentName: netty-codec-http
-            componentVersion: 4.1.100.Final
-            componentType: java-archive
-            componentLocation: /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/logstash-input-http-3.8.0-java/vendor/jar-dependencies/io/netty/netty-codec-http/4.1.100.Final/netty-codec-http-4.1.100.Final.jar
-            scanner: grype
-      - timestamp: 2024-04-11T19:10:22Z
-        type: pending-upstream-fix
-        data:
-          note: It is a vendor dependency that includes the vulnerable version. awaiting upstream release that includes the fix from https://github.com/logstash-plugins/logstash-input-http/pull/172
-
-  - id: CGA-4cgj-59hq-h2hc
-    aliases:
-      - CVE-2024-29857
-      - GHSA-8xfc-gm6g-vgpv
-    events:
-      - timestamp: 2024-05-17T08:40:15Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: logstash
-            componentID: 1081b712054e693e
-            componentName: bcpkix-jdk18on
-            componentVersion: "1.74"
-            componentType: java-archive
-            componentLocation: /usr/share/logstash/vendor/jruby/lib/ruby/stdlib/org/bouncycastle/bcpkix-jdk18on/1.74/bcpkix-jdk18on-1.74.jar
-            scanner: grype
-      - timestamp: 2024-05-30T17:55:17Z
-        type: pending-upstream-fix
-        data:
-          note: Logstash bundles an upstream version of jruby which embeds a version of bouncycastle at lib/ruby/stdlib/org/bouncycastle with the jruby-openssl. Upstream jruby-openssl should update the bouncycastle version that fix this vulnerability as it updates its default gems on some next release.
-
-  - id: CGA-8595-m6wp-3rgq
-    aliases:
-      - CVE-2024-30171
-      - GHSA-v435-xc8x-wvr9
-    events:
-      - timestamp: 2024-05-17T08:40:19Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: logstash
-            componentID: d6e3c9184e384761
-            componentName: bcpkix-jdk18on
-            componentVersion: "1.74"
-            componentType: java-archive
-            componentLocation: /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/jruby-openssl-0.14.5-java/lib/org/bouncycastle/bcpkix-jdk18on/1.74/bcpkix-jdk18on-1.74.jar
-            scanner: grype
-      - timestamp: 2024-05-30T17:55:17Z
-        type: pending-upstream-fix
-        data:
-          note: Logstash bundles an upstream version of jruby which embeds a version of bouncycastle at lib/ruby/stdlib/org/bouncycastle with the jruby-openssl. Upstream jruby-openssl should update the bouncycastle version that fix this vulnerability as it updates its default gems on some next release.
-
-  - id: CGA-ggc7-mqxg-jcjm
-    aliases:
-      - CVE-2024-30172
-      - GHSA-m44j-cfrm-g8qc
-    events:
-      - timestamp: 2024-05-17T08:40:17Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: logstash
-            componentID: 1081b712054e693e
-            componentName: bcpkix-jdk18on
-            componentVersion: "1.74"
-            componentType: java-archive
-            componentLocation: /usr/share/logstash/vendor/jruby/lib/ruby/stdlib/org/bouncycastle/bcpkix-jdk18on/1.74/bcpkix-jdk18on-1.74.jar
-            scanner: grype
-      - timestamp: 2024-05-30T17:55:17Z
-        type: pending-upstream-fix
-        data:
-          note: Logstash bundles an upstream version of jruby which embeds a version of bouncycastle at lib/ruby/stdlib/org/bouncycastle with the jruby-openssl. Upstream jruby-openssl should update the bouncycastle version that fix this vulnerability as it updates its default gems on some next release.
-
   - id: CGA-w4c2-j7jc-rq65
     aliases:
       - CVE-2024-34447
@@ -278,62 +320,24 @@ advisories:
         data:
           note: Logstash bundles an upstream version of jruby. Upstream jruby should fix this vulnerability as it updates its default gems on some next release.
 
-  - id: CGA-h6gp-72jh-xc9h
+  - id: CGA-w4p6-p67m-3gc4
     aliases:
-      - CVE-2024-35176
-      - GHSA-vg3r-rm7w-2xgh
+      - CVE-2024-26141
+      - GHSA-xj5v-6v4g-jfw6
     events:
-      - timestamp: 2024-05-17T08:40:21Z
+      - timestamp: 2024-02-29T07:23:02Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: logstash
-            componentID: 541e41d66a0d92c9
-            componentName: rexml
-            componentVersion: 3.2.5
+            componentID: 11790c267a6cf612
+            componentName: rack
+            componentVersion: 2.2.8
             componentType: gem
-            componentLocation: /usr/share/logstash/vendor/jruby/lib/ruby/gems/shared/specifications/rexml-3.2.5.gemspec
+            componentLocation: /usr/share/logstash/vendor/bundle/jruby/3.1.0/specifications/rack-2.2.8.gemspec
             scanner: grype
-
-  - id: CGA-3p4r-wmm9-39fg
-    aliases:
-      - GHSA-r95h-9x8f-r3f7
-    events:
-      - timestamp: 2024-05-14T08:33:52Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: logstash
-            componentID: 7fca744d1d80eac1
-            componentName: nokogiri
-            componentVersion: 1.16.4
-            componentType: gem
-            componentLocation: /usr/share/logstash/vendor/bundle/jruby/3.1.0/specifications/nokogiri-1.16.4-java.gemspec
-            scanner: grype
-      - timestamp: 2024-05-21T19:00:38Z
+      - timestamp: 2024-03-12T03:57:19Z
         type: fixed
         data:
-          fixed-version: 8.13.4-r0
-
-  - id: CGA-7369-wc68-4626
-    aliases:
-      - GHSA-xc9x-jj77-9p9j
-    events:
-      - timestamp: 2024-02-06T16:08:38Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: logstash
-            componentID: 0ebac1b47c8acab6
-            componentName: nokogiri
-            componentVersion: 1.15.5
-            componentType: gem
-            componentLocation: /usr/share/java/logstash/vendor/bundle/jruby/3.1.0/specifications/nokogiri-1.15.5-java.gemspec
-            scanner: grype
-      - timestamp: 2024-02-13T19:01:10Z
-        type: fixed
-        data:
-          fixed-version: 8.12.1-r1
+          fixed-version: 8.12.2-r2
