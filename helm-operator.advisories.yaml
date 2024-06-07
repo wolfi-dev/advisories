@@ -4,6 +4,84 @@ package:
   name: helm-operator
 
 advisories:
+  - id: CGA-492j-37x4-cmcp
+    aliases:
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-13T10:45:18Z
+        type: fixed
+        data:
+          fixed-version: 1.34.1-r1
+
+  - id: CGA-9cm3-p48h-q366
+    aliases:
+      - CVE-2020-8559
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T21:08:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-operator
+            componentID: a5513675ea4c73c9
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/helm-operator
+            scanner: grype
+
+  - id: CGA-9q4q-585c-73x5
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-13T10:45:16Z
+        type: fixed
+        data:
+          fixed-version: 1.34.1-r1
+
+  - id: CGA-9rjg-7rhp-x2pc
+    aliases:
+      - CVE-2024-24557
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-23T15:15:55Z
+        type: fixed
+        data:
+          fixed-version: 1.34.1-r2
+
+  - id: CGA-c3gp-hxg6-g7p9
+    aliases:
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-13T10:45:18Z
+        type: fixed
+        data:
+          fixed-version: 1.34.1-r1
+
+  - id: CGA-gvf2-hw6h-cxp6
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-23T15:15:54Z
+        type: fixed
+        data:
+          fixed-version: 1.34.1-r2
+
+  - id: CGA-h38c-p58w-9rw7
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2024-05-14T08:36:50Z
+        type: fixed
+        data:
+          fixed-version: 1.34.1-r5
+
   - id: CGA-h674-7fqh-7p26
     aliases:
       - CVE-2019-25210
@@ -27,75 +105,15 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
 
-  - id: CGA-9cm3-p48h-q366
+  - id: CGA-pg2f-6wv5-5mh9
     aliases:
-      - CVE-2020-8559
-      - GHSA-33c5-9fx5-fvjm
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
     events:
-      - timestamp: 2024-04-25T21:08:31Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: helm-operator
-            componentID: a5513675ea4c73c9
-            componentName: k8s.io/apimachinery
-            componentVersion: v0.29.0
-            componentType: go-module
-            componentLocation: /usr/bin/helm-operator
-            scanner: grype
-
-  - id: CGA-x3jx-w3hh-vcm9
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-09T10:35:20Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: helm-operator
-            componentID: a1626ddc17d31c32
-            componentName: stdlib
-            componentVersion: go1.22.1
-            componentType: go-module
-            componentLocation: /usr/bin/helm-operator
-            scanner: grype
-      - timestamp: 2024-05-08T07:25:39Z
+      - timestamp: 2024-06-07T14:28:46Z
         type: fixed
         data:
-          fixed-version: 1.34.1-r4
-
-  - id: CGA-c3gp-hxg6-g7p9
-    aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
-    events:
-      - timestamp: 2024-03-13T10:45:18Z
-        type: fixed
-        data:
-          fixed-version: 1.34.1-r1
-
-  - id: CGA-492j-37x4-cmcp
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-13T10:45:18Z
-        type: fixed
-        data:
-          fixed-version: 1.34.1-r1
-
-  - id: CGA-9rjg-7rhp-x2pc
-    aliases:
-      - CVE-2024-24557
-      - GHSA-xw73-rw38-6vjc
-    events:
-      - timestamp: 2024-03-23T15:15:55Z
-        type: fixed
-        data:
-          fixed-version: 1.34.1-r2
+          fixed-version: 1.34.2-r1
 
   - id: CGA-qv72-h7wf-jmc6
     aliases:
@@ -106,56 +124,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.34.1-r1
-
-  - id: CGA-9q4q-585c-73x5
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-13T10:45:16Z
-        type: fixed
-        data:
-          fixed-version: 1.34.1-r1
-
-  - id: CGA-wmgf-w3p6-gmfw
-    aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
-    events:
-      - timestamp: 2024-03-13T10:45:17Z
-        type: fixed
-        data:
-          fixed-version: 1.34.1-r1
-
-  - id: CGA-gvf2-hw6h-cxp6
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-23T15:15:54Z
-        type: fixed
-        data:
-          fixed-version: 1.34.1-r2
-
-  - id: CGA-x92w-6cpg-x22x
-    aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
-    events:
-      - timestamp: 2024-05-14T08:36:49Z
-        type: fixed
-        data:
-          fixed-version: 1.34.1-r5
-
-  - id: CGA-h38c-p58w-9rw7
-    aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
-    events:
-      - timestamp: 2024-05-14T08:36:50Z
-        type: fixed
-        data:
-          fixed-version: 1.34.1-r5
 
   - id: CGA-vvhg-wrh3-2x3p
     aliases:
@@ -179,6 +147,16 @@ advisories:
         data:
           fixed-version: 1.33.0-r2
 
+  - id: CGA-wmgf-w3p6-gmfw
+    aliases:
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-13T10:45:17Z
+        type: fixed
+        data:
+          fixed-version: 1.34.1-r1
+
   - id: CGA-wqx2-j5x2-gmhg
     aliases:
       - CVE-2024-26147
@@ -200,3 +178,35 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.33.0-r3
+
+  - id: CGA-x3jx-w3hh-vcm9
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-09T10:35:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-operator
+            componentID: a1626ddc17d31c32
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/helm-operator
+            scanner: grype
+      - timestamp: 2024-05-08T07:25:39Z
+        type: fixed
+        data:
+          fixed-version: 1.34.1-r4
+
+  - id: CGA-x92w-6cpg-x22x
+    aliases:
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
+    events:
+      - timestamp: 2024-05-14T08:36:49Z
+        type: fixed
+        data:
+          fixed-version: 1.34.1-r5
