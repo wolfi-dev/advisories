@@ -4,29 +4,6 @@ package:
   name: up
 
 advisories:
-  - id: CGA-57wv-cx35-8wwj
-    aliases:
-      - CVE-2019-25210
-      - GHSA-jw44-4f3j-q396
-    events:
-      - timestamp: 2024-03-06T07:24:36Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: up
-            componentID: 924eab6a49e62cd5
-            componentName: helm.sh/helm/v3
-            componentVersion: v3.14.2
-            componentType: go-module
-            componentLocation: /usr/bin/up
-            scanner: grype
-      - timestamp: 2024-03-26T16:35:18Z
-        type: false-positive-determination
-        data:
-          type: vulnerability-record-analysis-contested
-          note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
-
   - id: CGA-2qqf-7h64-w69f
     aliases:
       - CVE-2020-8559
@@ -44,28 +21,6 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/up
             scanner: grype
-
-  - id: CGA-mp9q-qmqg-gfhm
-    aliases:
-      - CVE-2023-28840
-      - GHSA-232p-vwff-86mp
-    events:
-      - timestamp: 2024-01-31T03:17:59Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: up
-            componentID: 72f6839eb852e356
-            componentName: github.com/docker/docker
-            componentVersion: v20.10.19+incompatible
-            componentType: go-module
-            componentLocation: /usr/bin/up
-            scanner: grype
-      - timestamp: 2024-02-04T09:23:13Z
-        type: fixed
-        data:
-          fixed-version: 0.24.0-r1
 
   - id: CGA-4m36-9xfv-5vg9
     aliases:
@@ -89,12 +44,11 @@ advisories:
         data:
           fixed-version: 0.24.0-r1
 
-  - id: CGA-9xw5-72rj-w22g
+  - id: CGA-4pwr-xx4j-4vg3
     aliases:
-      - CVE-2023-28842
-      - GHSA-6wrf-mxfj-pf5p
+      - GHSA-jq35-85cj-fj4p
     events:
-      - timestamp: 2024-01-31T03:18:01Z
+      - timestamp: 2024-01-31T03:18:05Z
         type: detection
         data:
           type: scan/v1
@@ -111,10 +65,85 @@ advisories:
         data:
           fixed-version: 0.24.0-r1
 
-  - id: CGA-rxhv-fx76-5mg9
+  - id: CGA-4rcp-qm9r-h36m
     aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
+      - GHSA-7ww5-4wqc-m92c
+    events:
+      - timestamp: 2024-01-31T03:18:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: up
+            componentID: ef53d3fbce6a7906
+            componentName: github.com/containerd/containerd
+            componentVersion: v1.7.2
+            componentType: go-module
+            componentLocation: /usr/bin/up
+            scanner: grype
+      - timestamp: 2024-02-04T09:23:13Z
+        type: fixed
+        data:
+          fixed-version: 0.24.0-r1
+
+  - id: CGA-538c-v66p-hggg
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:40:03Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-57wv-cx35-8wwj
+    aliases:
+      - CVE-2019-25210
+      - GHSA-jw44-4f3j-q396
+    events:
+      - timestamp: 2024-03-06T07:24:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: up
+            componentID: 924eab6a49e62cd5
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.2
+            componentType: go-module
+            componentLocation: /usr/bin/up
+            scanner: grype
+      - timestamp: 2024-03-26T16:35:18Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
+
+  - id: CGA-5whw-3j2g-4fgp
+    aliases:
+      - CVE-2024-24557
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-21T12:13:39Z
+        type: fixed
+        data:
+          fixed-version: 0.26.0-r1
+
+  - id: CGA-8pvp-2pjj-r33r
+    aliases:
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T19:55:12Z
+        type: fixed
+        data:
+          fixed-version: 0.25.0-r0
+
+  - id: CGA-95px-9c34-rwxv
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
     events:
       - timestamp: 2024-01-31T03:18:00Z
         type: detection
@@ -122,9 +151,41 @@ advisories:
           type: scan/v1
           data:
             subpackageName: up
-            componentID: 93c1460684a3ed63
-            componentName: golang.org/x/net
-            componentVersion: v0.14.0
+            componentID: 3d6707d2394f4e10
+            componentName: golang.org/x/crypto
+            componentVersion: v0.12.0
+            componentType: go-module
+            componentLocation: /usr/bin/up
+            scanner: grype
+      - timestamp: 2024-02-04T09:23:13Z
+        type: fixed
+        data:
+          fixed-version: 0.24.0-r1
+
+  - id: CGA-9gf3-2r5j-p83f
+    aliases:
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T19:55:21Z
+        type: fixed
+        data:
+          fixed-version: 0.25.0-r0
+
+  - id: CGA-9xw5-72rj-w22g
+    aliases:
+      - CVE-2023-28842
+      - GHSA-6wrf-mxfj-pf5p
+    events:
+      - timestamp: 2024-01-31T03:18:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: up
+            componentID: 72f6839eb852e356
+            componentName: github.com/docker/docker
+            componentVersion: v20.10.19+incompatible
             componentType: go-module
             componentLocation: /usr/bin/up
             scanner: grype
@@ -155,142 +216,6 @@ advisories:
         data:
           fixed-version: 0.24.0-r1
 
-  - id: CGA-pq24-27rh-w59m
-    aliases:
-      - CVE-2023-45142
-      - GHSA-rcjv-mgp8-qvmr
-    events:
-      - timestamp: 2024-01-31T03:18:08Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: up
-            componentID: d0efed1ab1b592e0
-            componentName: go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp
-            componentVersion: v0.42.0
-            componentType: go-module
-            componentLocation: /usr/bin/up
-            scanner: grype
-      - timestamp: 2024-02-04T09:23:13Z
-        type: fixed
-        data:
-          fixed-version: 0.24.0-r1
-
-  - id: CGA-538c-v66p-hggg
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:40:03Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-x6pg-8wjv-whrv
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:40:04Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-j4qc-rxpf-5c4f
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-10T11:43:07Z
-        type: fixed
-        data:
-          fixed-version: 0.28.0-r1
-
-  - id: CGA-8pvp-2pjj-r33r
-    aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
-    events:
-      - timestamp: 2024-03-12T19:55:12Z
-        type: fixed
-        data:
-          fixed-version: 0.25.0-r0
-
-  - id: CGA-hprv-8h22-pfv8
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-12T19:55:14Z
-        type: fixed
-        data:
-          fixed-version: 0.25.0-r0
-
-  - id: CGA-95px-9c34-rwxv
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2024-01-31T03:18:00Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: up
-            componentID: 3d6707d2394f4e10
-            componentName: golang.org/x/crypto
-            componentVersion: v0.12.0
-            componentType: go-module
-            componentLocation: /usr/bin/up
-            scanner: grype
-      - timestamp: 2024-02-04T09:23:13Z
-        type: fixed
-        data:
-          fixed-version: 0.24.0-r1
-
-  - id: CGA-5whw-3j2g-4fgp
-    aliases:
-      - CVE-2024-24557
-      - GHSA-xw73-rw38-6vjc
-    events:
-      - timestamp: 2024-03-21T12:13:39Z
-        type: fixed
-        data:
-          fixed-version: 0.26.0-r1
-
-  - id: CGA-pjjc-frpf-gm64
-    aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
-    events:
-      - timestamp: 2024-03-12T19:55:16Z
-        type: fixed
-        data:
-          fixed-version: 0.25.0-r0
-
-  - id: CGA-q8fg-55f7-xhwh
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-12T19:55:19Z
-        type: fixed
-        data:
-          fixed-version: 0.25.0-r0
-
-  - id: CGA-9gf3-2r5j-p83f
-    aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
-    events:
-      - timestamp: 2024-03-12T19:55:21Z
-        type: fixed
-        data:
-          fixed-version: 0.25.0-r0
-
   - id: CGA-g8w9-pr3x-5qwq
     aliases:
       - CVE-2024-24786
@@ -313,59 +238,25 @@ advisories:
         data:
           fixed-version: 0.26.0-r1
 
-  - id: CGA-wgwf-w5ch-v3q2
+  - id: CGA-hprv-8h22-pfv8
     aliases:
-      - CVE-2024-25620
-      - GHSA-v53g-5gjp-272r
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
     events:
-      - timestamp: 2024-02-16T07:46:05Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: up
-            componentID: f7abb43c8e7d424f
-            componentName: helm.sh/helm/v3
-            componentVersion: v3.14.0
-            componentType: go-module
-            componentLocation: /usr/bin/up
-            scanner: grype
-      - timestamp: 2024-02-17T07:31:08Z
+      - timestamp: 2024-03-12T19:55:14Z
         type: fixed
         data:
-          fixed-version: 0.24.1-r1
+          fixed-version: 0.25.0-r0
 
-  - id: CGA-q6xc-h255-cg48
+  - id: CGA-j4qc-rxpf-5c4f
     aliases:
-      - CVE-2024-26147
-      - GHSA-r53h-jv2g-vpx6
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
     events:
-      - timestamp: 2024-02-23T07:56:16Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: up
-            componentID: 0a53d8b6adb2602f
-            componentName: helm.sh/helm/v3
-            componentVersion: v3.14.1
-            componentType: go-module
-            componentLocation: /usr/bin/up
-            scanner: grype
-      - timestamp: 2024-02-24T08:09:28Z
+      - timestamp: 2024-04-10T11:43:07Z
         type: fixed
         data:
-          fixed-version: 0.24.1-r3
-
-  - id: CGA-x2w4-cwg8-7w59
-    aliases:
-      - CVE-2024-29018
-      - GHSA-mq39-4gv4-mvpx
-    events:
-      - timestamp: 2024-03-21T12:13:42Z
-        type: fixed
-        data:
-          fixed-version: 0.26.0-r1
+          fixed-version: 0.28.0-r1
 
   - id: CGA-jh66-3v5v-72f8
     aliases:
@@ -388,32 +279,12 @@ advisories:
         data:
           fixed-version: 0.24.0-r1
 
-  - id: CGA-4rcp-qm9r-h36m
+  - id: CGA-mp9q-qmqg-gfhm
     aliases:
-      - GHSA-7ww5-4wqc-m92c
+      - CVE-2023-28840
+      - GHSA-232p-vwff-86mp
     events:
-      - timestamp: 2024-01-31T03:18:04Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: up
-            componentID: ef53d3fbce6a7906
-            componentName: github.com/containerd/containerd
-            componentVersion: v1.7.2
-            componentType: go-module
-            componentLocation: /usr/bin/up
-            scanner: grype
-      - timestamp: 2024-02-04T09:23:13Z
-        type: fixed
-        data:
-          fixed-version: 0.24.0-r1
-
-  - id: CGA-4pwr-xx4j-4vg3
-    aliases:
-      - GHSA-jq35-85cj-fj4p
-    events:
-      - timestamp: 2024-01-31T03:18:05Z
+      - timestamp: 2024-01-31T03:17:59Z
         type: detection
         data:
           type: scan/v1
@@ -450,3 +321,142 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.24.0-r1
+
+  - id: CGA-pjjc-frpf-gm64
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T19:55:16Z
+        type: fixed
+        data:
+          fixed-version: 0.25.0-r0
+
+  - id: CGA-pq24-27rh-w59m
+    aliases:
+      - CVE-2023-45142
+      - GHSA-rcjv-mgp8-qvmr
+    events:
+      - timestamp: 2024-01-31T03:18:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: up
+            componentID: d0efed1ab1b592e0
+            componentName: go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/up
+            scanner: grype
+      - timestamp: 2024-02-04T09:23:13Z
+        type: fixed
+        data:
+          fixed-version: 0.24.0-r1
+
+  - id: CGA-q6xc-h255-cg48
+    aliases:
+      - CVE-2024-26147
+      - GHSA-r53h-jv2g-vpx6
+    events:
+      - timestamp: 2024-02-23T07:56:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: up
+            componentID: 0a53d8b6adb2602f
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.1
+            componentType: go-module
+            componentLocation: /usr/bin/up
+            scanner: grype
+      - timestamp: 2024-02-24T08:09:28Z
+        type: fixed
+        data:
+          fixed-version: 0.24.1-r3
+
+  - id: CGA-q8fg-55f7-xhwh
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T19:55:19Z
+        type: fixed
+        data:
+          fixed-version: 0.25.0-r0
+
+  - id: CGA-rxhv-fx76-5mg9
+    aliases:
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2024-01-31T03:18:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: up
+            componentID: 93c1460684a3ed63
+            componentName: golang.org/x/net
+            componentVersion: v0.14.0
+            componentType: go-module
+            componentLocation: /usr/bin/up
+            scanner: grype
+      - timestamp: 2024-02-04T09:23:13Z
+        type: fixed
+        data:
+          fixed-version: 0.24.0-r1
+
+  - id: CGA-w7j5-93wp-g8cj
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T19:09:08Z
+        type: fixed
+        data:
+          fixed-version: 0.30.0-r1
+
+  - id: CGA-wgwf-w5ch-v3q2
+    aliases:
+      - CVE-2024-25620
+      - GHSA-v53g-5gjp-272r
+    events:
+      - timestamp: 2024-02-16T07:46:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: up
+            componentID: f7abb43c8e7d424f
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.0
+            componentType: go-module
+            componentLocation: /usr/bin/up
+            scanner: grype
+      - timestamp: 2024-02-17T07:31:08Z
+        type: fixed
+        data:
+          fixed-version: 0.24.1-r1
+
+  - id: CGA-x2w4-cwg8-7w59
+    aliases:
+      - CVE-2024-29018
+      - GHSA-mq39-4gv4-mvpx
+    events:
+      - timestamp: 2024-03-21T12:13:42Z
+        type: fixed
+        data:
+          fixed-version: 0.26.0-r1
+
+  - id: CGA-x6pg-8wjv-whrv
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:40:04Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
