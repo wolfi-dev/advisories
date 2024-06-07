@@ -4,6 +4,16 @@ package:
   name: nri-kubernetes
 
 advisories:
+  - id: CGA-7r6g-9w32-8w2r
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T10:25:58Z
+        type: fixed
+        data:
+          fixed-version: 3.27.0-r0
+
   - id: CGA-f6pj-7hx4-6jx7
     aliases:
       - CVE-2020-8559
@@ -22,16 +32,15 @@ advisories:
             componentLocation: /usr/bin/nri-kubernetes
             scanner: grype
 
-  - id: CGA-v2g9-6732-8977
+  - id: CGA-j8q6-rhfr-p6ww
     aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
     events:
-      - timestamp: 2023-11-07T19:34:32Z
-        type: false-positive-determination
+      - timestamp: 2024-04-13T07:22:31Z
+        type: fixed
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          fixed-version: 3.28.1-r1
 
   - id: CGA-qj7m-49wg-rxq8
     aliases:
@@ -44,22 +53,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
-  - id: CGA-j8q6-rhfr-p6ww
+  - id: CGA-rg64-jfhg-67xv
     aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
     events:
-      - timestamp: 2024-04-13T07:22:31Z
+      - timestamp: 2024-06-07T12:31:22Z
         type: fixed
         data:
-          fixed-version: 3.28.1-r1
+          fixed-version: 3.28.8-r1
 
-  - id: CGA-7r6g-9w32-8w2r
+  - id: CGA-v2g9-6732-8977
     aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
     events:
-      - timestamp: 2024-03-14T10:25:58Z
-        type: fixed
+      - timestamp: 2023-11-07T19:34:32Z
+        type: false-positive-determination
         data:
-          fixed-version: 3.27.0-r0
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
