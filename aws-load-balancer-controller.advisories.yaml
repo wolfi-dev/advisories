@@ -4,15 +4,25 @@ package:
   name: aws-load-balancer-controller
 
 advisories:
-  - id: CGA-84r8-qrw5-h9m2
+  - id: CGA-45w7-8237-vfrx
     aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
     events:
-      - timestamp: 2023-10-13T12:39:04Z
+      - timestamp: 2024-03-12T07:07:45Z
         type: fixed
         data:
-          fixed-version: 2.6.1-r3
+          fixed-version: 2.7.1-r1
+
+  - id: CGA-59hh-cxjp-42x2
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T10:25:16Z
+        type: fixed
+        data:
+          fixed-version: 2.8.1-r1
 
   - id: CGA-65rj-wccv-3c5c
     aliases:
@@ -23,100 +33,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.6.1-r3
-
-  - id: CGA-gjvg-xqrc-wh4q
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:23:32Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-j6cr-96w3-3rj8
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:23:34Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-x35p-43q5-p68w
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-26T09:10:36Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: aws-load-balancer-controller
-            componentID: 85da518182ea6908
-            componentName: golang.org/x/net
-            componentVersion: v0.17.0
-            componentType: go-module
-            componentLocation: /usr/bin/controller
-            scanner: grype
-      - timestamp: 2024-05-02T17:17:41Z
-        type: fixed
-        data:
-          fixed-version: 2.7.2-r2
-
-  - id: CGA-h5h7-xrjp-q4fj
-    aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
-    events:
-      - timestamp: 2024-03-12T07:07:46Z
-        type: fixed
-        data:
-          fixed-version: 2.7.1-r1
-
-  - id: CGA-9hhx-qgpw-fr33
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-12T07:07:47Z
-        type: fixed
-        data:
-          fixed-version: 2.7.1-r1
-
-  - id: CGA-g38w-w4mf-qhvj
-    aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
-    events:
-      - timestamp: 2024-03-12T07:07:44Z
-        type: fixed
-        data:
-          fixed-version: 2.7.1-r1
-
-  - id: CGA-83v9-8v4f-mf3r
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-12T07:07:45Z
-        type: fixed
-        data:
-          fixed-version: 2.7.1-r1
-
-  - id: CGA-45w7-8237-vfrx
-    aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
-    events:
-      - timestamp: 2024-03-12T07:07:45Z
-        type: fixed
-        data:
-          fixed-version: 2.7.1-r1
 
   - id: CGA-7v6r-mp75-h85h
     aliases:
@@ -139,3 +55,107 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.7.1-r2
+
+  - id: CGA-83v9-8v4f-mf3r
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T07:07:45Z
+        type: fixed
+        data:
+          fixed-version: 2.7.1-r1
+
+  - id: CGA-84r8-qrw5-h9m2
+    aliases:
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2023-10-13T12:39:04Z
+        type: fixed
+        data:
+          fixed-version: 2.6.1-r3
+
+  - id: CGA-9hhx-qgpw-fr33
+    aliases:
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T07:07:47Z
+        type: fixed
+        data:
+          fixed-version: 2.7.1-r1
+
+  - id: CGA-g38w-w4mf-qhvj
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T07:07:44Z
+        type: fixed
+        data:
+          fixed-version: 2.7.1-r1
+
+  - id: CGA-gjvg-xqrc-wh4q
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:23:32Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-h5h7-xrjp-q4fj
+    aliases:
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T07:07:46Z
+        type: fixed
+        data:
+          fixed-version: 2.7.1-r1
+
+  - id: CGA-j6cr-96w3-3rj8
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:23:34Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-qvcp-894p-h762
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T10:25:19Z
+        type: fixed
+        data:
+          fixed-version: 2.8.1-r1
+
+  - id: CGA-x35p-43q5-p68w
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-26T09:10:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-load-balancer-controller
+            componentID: 85da518182ea6908
+            componentName: golang.org/x/net
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/controller
+            scanner: grype
+      - timestamp: 2024-05-02T17:17:41Z
+        type: fixed
+        data:
+          fixed-version: 2.7.2-r2
