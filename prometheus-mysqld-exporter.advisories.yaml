@@ -4,47 +4,57 @@ package:
   name: prometheus-mysqld-exporter
 
 advisories:
-  - id: CGA-g8fx-h4gr-62ch
+  - id: CGA-372h-96r9-v9ff
     aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
     events:
-      - timestamp: 2023-10-13T17:53:29Z
+      - timestamp: 2024-03-14T08:19:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-mysqld-exporter
+            componentID: 89d3a797853f608f
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/mysqld_exporter
+            scanner: grype
+      - timestamp: 2024-03-31T01:37:49Z
         type: fixed
         data:
-          fixed-version: 0.15.0-r6
+          fixed-version: 0.15.1-r4
 
-  - id: CGA-hq9v-c379-hv9v
+  - id: CGA-3hfr-25xf-qc4f
     aliases:
-      - CVE-2023-3978
-      - GHSA-2wrh-6pvc-2jm9
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
     events:
-      - timestamp: 2023-10-13T17:57:06Z
+      - timestamp: 2024-03-12T10:02:59Z
         type: fixed
         data:
-          fixed-version: 0.15.0-r6
+          fixed-version: 0.15.1-r3
 
-  - id: CGA-gpgx-9px7-mr38
+  - id: CGA-4fw9-mm7r-h39f
     aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
     events:
-      - timestamp: 2023-11-07T19:36:00Z
-        type: false-positive-determination
+      - timestamp: 2024-06-07T07:19:18Z
+        type: fixed
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          fixed-version: 0.15.1-r8
 
-  - id: CGA-wjw5-9x5q-gwpf
+  - id: CGA-5gph-frf3-j4cg
     aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
     events:
-      - timestamp: 2023-11-07T19:36:02Z
-        type: false-positive-determination
+      - timestamp: 2024-03-12T10:02:57Z
+        type: fixed
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          fixed-version: 0.15.1-r3
 
   - id: CGA-87pv-v73v-vw26
     aliases:
@@ -68,15 +78,15 @@ advisories:
         data:
           fixed-version: 0.15.1-r6
 
-  - id: CGA-q75q-28xp-47qv
+  - id: CGA-8hqp-vrrv-526w
     aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
     events:
-      - timestamp: 2024-03-12T10:02:56Z
+      - timestamp: 2024-05-15T13:12:40Z
         type: fixed
         data:
-          fixed-version: 0.15.1-r3
+          fixed-version: 0.15.1-r7
 
   - id: CGA-fh84-w5vf-qjmc
     aliases:
@@ -98,15 +108,46 @@ advisories:
         data:
           fixed-version: 0.15.1-r2
 
-  - id: CGA-5gph-frf3-j4cg
+  - id: CGA-g8fx-h4gr-62ch
     aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
     events:
-      - timestamp: 2024-03-12T10:02:57Z
+      - timestamp: 2023-10-13T17:53:29Z
         type: fixed
         data:
-          fixed-version: 0.15.1-r3
+          fixed-version: 0.15.0-r6
+
+  - id: CGA-gpgx-9px7-mr38
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:36:00Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-hq9v-c379-hv9v
+    aliases:
+      - CVE-2023-3978
+      - GHSA-2wrh-6pvc-2jm9
+    events:
+      - timestamp: 2023-10-13T17:57:06Z
+        type: fixed
+        data:
+          fixed-version: 0.15.0-r6
+
+  - id: CGA-j78j-5v8q-mm38
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T07:19:21Z
+        type: fixed
+        data:
+          fixed-version: 0.15.1-r8
 
   - id: CGA-pv2w-fww6-ph69
     aliases:
@@ -118,47 +159,15 @@ advisories:
         data:
           fixed-version: 0.15.1-r3
 
-  - id: CGA-3hfr-25xf-qc4f
+  - id: CGA-q75q-28xp-47qv
     aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
     events:
-      - timestamp: 2024-03-12T10:02:59Z
+      - timestamp: 2024-03-12T10:02:56Z
         type: fixed
         data:
           fixed-version: 0.15.1-r3
-
-  - id: CGA-372h-96r9-v9ff
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T08:19:23Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: prometheus-mysqld-exporter
-            componentID: 89d3a797853f608f
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.31.0
-            componentType: go-module
-            componentLocation: /usr/bin/mysqld_exporter
-            scanner: grype
-      - timestamp: 2024-03-31T01:37:49Z
-        type: fixed
-        data:
-          fixed-version: 0.15.1-r4
-
-  - id: CGA-8hqp-vrrv-526w
-    aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
-    events:
-      - timestamp: 2024-05-15T13:12:40Z
-        type: fixed
-        data:
-          fixed-version: 0.15.1-r7
 
   - id: CGA-wf66-4qvp-vj6j
     aliases:
@@ -169,3 +178,14 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.15.1-r7
+
+  - id: CGA-wjw5-9x5q-gwpf
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:36:02Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
