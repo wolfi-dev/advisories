@@ -4,6 +4,38 @@ package:
   name: skopeo
 
 advisories:
+  - id: CGA-3qm5-65pc-h743
+    aliases:
+      - CVE-2024-28180
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:23:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: skopeo
+            componentID: b283f1e5fc601f52
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/skopeo
+            scanner: grype
+      - timestamp: 2024-03-08T21:20:46Z
+        type: fixed
+        data:
+          fixed-version: 1.14.2-r3
+
+  - id: CGA-4h88-cp96-cc45
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T16:03:51Z
+        type: fixed
+        data:
+          fixed-version: 1.15.1-r1
+
   - id: CGA-553g-4jm8-gv3q
     aliases:
       - CVE-2023-45283
@@ -15,16 +47,45 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
-  - id: CGA-w5cv-jpxj-9fx7
+  - id: CGA-5q8w-6m3r-x6hq
     aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
     events:
-      - timestamp: 2023-11-07T19:37:56Z
-        type: false-positive-determination
+      - timestamp: 2024-05-14T09:25:29Z
+        type: fixed
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          fixed-version: 1.15.0-r4
+
+  - id: CGA-7rvv-64q5-w2f4
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2024-05-14T09:25:31Z
+        type: fixed
+        data:
+          fixed-version: 1.15.0-r4
+
+  - id: CGA-8fx4-23wj-q56r
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T16:03:48Z
+        type: fixed
+        data:
+          fixed-version: 1.15.1-r1
+
+  - id: CGA-9gmw-qjvx-mv2r
+    aliases:
+      - CVE-2024-3727
+      - GHSA-6wvf-f2vw-3425
+    events:
+      - timestamp: 2024-05-22T08:36:08Z
+        type: fixed
+        data:
+          fixed-version: 1.15.1-r0
 
   - id: CGA-9q7h-rhc9-q2p5
     aliases:
@@ -47,6 +108,38 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.15.0-r3
+
+  - id: CGA-g56j-7phc-qv3g
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:19:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: skopeo
+            componentID: 83fabf947c9becc4
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/skopeo
+            scanner: grype
+      - timestamp: 2024-03-15T18:43:09Z
+        type: fixed
+        data:
+          fixed-version: 1.15.0-r0
+
+  - id: CGA-gw28-37q7-492p
+    aliases:
+      - CVE-2024-24557
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-21T11:43:28Z
+        type: fixed
+        data:
+          fixed-version: 1.15.0-r1
 
   - id: CGA-h7v3-56h4-gccp
     aliases:
@@ -92,86 +185,13 @@ advisories:
         data:
           fixed-version: 1.14.2-r1
 
-  - id: CGA-gw28-37q7-492p
+  - id: CGA-w5cv-jpxj-9fx7
     aliases:
-      - CVE-2024-24557
-      - GHSA-xw73-rw38-6vjc
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
     events:
-      - timestamp: 2024-03-21T11:43:28Z
-        type: fixed
+      - timestamp: 2023-11-07T19:37:56Z
+        type: false-positive-determination
         data:
-          fixed-version: 1.15.0-r1
-
-  - id: CGA-g56j-7phc-qv3g
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T08:19:55Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: skopeo
-            componentID: 83fabf947c9becc4
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.31.0
-            componentType: go-module
-            componentLocation: /usr/bin/skopeo
-            scanner: grype
-      - timestamp: 2024-03-15T18:43:09Z
-        type: fixed
-        data:
-          fixed-version: 1.15.0-r0
-
-  - id: CGA-5q8w-6m3r-x6hq
-    aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
-    events:
-      - timestamp: 2024-05-14T09:25:29Z
-        type: fixed
-        data:
-          fixed-version: 1.15.0-r4
-
-  - id: CGA-7rvv-64q5-w2f4
-    aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
-    events:
-      - timestamp: 2024-05-14T09:25:31Z
-        type: fixed
-        data:
-          fixed-version: 1.15.0-r4
-
-  - id: CGA-3qm5-65pc-h743
-    aliases:
-      - CVE-2024-28180
-      - GHSA-c5q2-7r4c-mv6g
-    events:
-      - timestamp: 2024-03-08T07:23:33Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: skopeo
-            componentID: b283f1e5fc601f52
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.1
-            componentType: go-module
-            componentLocation: /usr/bin/skopeo
-            scanner: grype
-      - timestamp: 2024-03-08T21:20:46Z
-        type: fixed
-        data:
-          fixed-version: 1.14.2-r3
-
-  - id: CGA-9gmw-qjvx-mv2r
-    aliases:
-      - CVE-2024-3727
-      - GHSA-6wvf-f2vw-3425
-    events:
-      - timestamp: 2024-05-22T08:36:08Z
-        type: fixed
-        data:
-          fixed-version: 1.15.1-r0
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
