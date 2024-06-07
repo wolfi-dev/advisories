@@ -4,56 +4,6 @@ package:
   name: newrelic-nri-kube-events
 
 advisories:
-  - id: CGA-xf6j-6f8g-69x3
-    aliases:
-      - CVE-2020-8559
-      - GHSA-33c5-9fx5-fvjm
-    events:
-      - timestamp: 2024-04-25T13:38:31Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: newrelic-nri-kube-events
-            componentID: 8e1940ec11208197
-            componentName: k8s.io/apimachinery
-            componentVersion: v0.29.3
-            componentType: go-module
-            componentLocation: /usr/bin/nri-kube-events
-            scanner: grype
-
-  - id: CGA-9mhg-ww8q-7v4w
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:33:49Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-q4pf-v2vx-2jcc
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:33:50Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-8hc8-vfg4-w4gm
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-13T07:27:38Z
-        type: fixed
-        data:
-          fixed-version: 2.9.3-r1
-
   - id: CGA-4366-hrpm-2524
     aliases:
       - CVE-2024-24786
@@ -75,3 +25,63 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.9.3-r0
+
+  - id: CGA-8hc8-vfg4-w4gm
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:27:38Z
+        type: fixed
+        data:
+          fixed-version: 2.9.3-r1
+
+  - id: CGA-9mhg-ww8q-7v4w
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:33:49Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-m2xm-999r-xv8f
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T11:40:32Z
+        type: fixed
+        data:
+          fixed-version: 2.9.8-r1
+
+  - id: CGA-q4pf-v2vx-2jcc
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:33:50Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-xf6j-6f8g-69x3
+    aliases:
+      - CVE-2020-8559
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T13:38:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: newrelic-nri-kube-events
+            componentID: 8e1940ec11208197
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.29.3
+            componentType: go-module
+            componentLocation: /usr/bin/nri-kube-events
+            scanner: grype
