@@ -4,6 +4,17 @@ package:
   name: terraform-provider-aws
 
 advisories:
+  - id: CGA-43ch-mwp2-gv8j
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:39:09Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
   - id: CGA-4fvw-86mv-qrv4
     aliases:
       - CVE-2018-9057
@@ -27,27 +38,35 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This package uses a newer version v5.47.0 when the vulnerable code affects any version older than v1.14.0.
 
-  - id: CGA-wv77-q28p-3ccr
+  - id: CGA-627w-rqjq-mq4p
     aliases:
-      - CVE-2023-44487
-      - GHSA-m425-mq94-257g
-      - GHSA-qppj-fm5r-hxr3
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
     events:
-      - timestamp: 2023-10-26T08:23:49Z
+      - timestamp: 2024-06-07T11:21:43Z
         type: fixed
         data:
-          fixed-version: 5.22.0-r1
+          fixed-version: 5.52.0-r1
 
-  - id: CGA-43ch-mwp2-gv8j
+  - id: CGA-7cx6-cjw8-gmx3
     aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
     events:
-      - timestamp: 2023-11-07T19:39:09Z
-        type: false-positive-determination
+      - timestamp: 2023-12-20T05:28:32Z
+        type: fixed
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          fixed-version: 5.31.0-r1
+
+  - id: CGA-hhv4-m7qp-7mjc
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T11:21:40Z
+        type: fixed
+        data:
+          fixed-version: 5.52.0-r1
 
   - id: CGA-hrr8-p9f6-272f
     aliases:
@@ -59,16 +78,6 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
-
-  - id: CGA-7cx6-cjw8-gmx3
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2023-12-20T05:28:32Z
-        type: fixed
-        data:
-          fixed-version: 5.31.0-r1
 
   - id: CGA-qjp4-ggm6-r5x8
     aliases:
@@ -91,3 +100,14 @@ advisories:
         type: fixed
         data:
           fixed-version: 5.41.0-r1
+
+  - id: CGA-wv77-q28p-3ccr
+    aliases:
+      - CVE-2023-44487
+      - GHSA-m425-mq94-257g
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2023-10-26T08:23:49Z
+        type: fixed
+        data:
+          fixed-version: 5.22.0-r1
