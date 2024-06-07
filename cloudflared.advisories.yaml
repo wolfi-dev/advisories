@@ -4,16 +4,57 @@ package:
   name: cloudflared
 
 advisories:
-  - id: CGA-9r35-v6fc-f4gm
+  - id: CGA-2398-j6c4-x6vv
     aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
     events:
-      - timestamp: 2023-11-07T19:24:26Z
-        type: false-positive-determination
+      - timestamp: 2024-05-14T11:01:43Z
+        type: fixed
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          fixed-version: 2024.1.0-r10
+
+  - id: CGA-29wq-h44j-28mq
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T16:44:18Z
+        type: fixed
+        data:
+          fixed-version: 2024.1.0-r11
+
+  - id: CGA-478v-8vhj-v754
+    aliases:
+      - CVE-2024-28180
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:12:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloudflared
+            componentID: 692eb4bd8dd7e8b0
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/cloudflared
+            scanner: grype
+      - timestamp: 2024-03-10T16:09:55Z
+        type: fixed
+        data:
+          fixed-version: 2024.1.0-r4
+
+  - id: CGA-6f39-q23x-4jc3
+    aliases:
+      - CVE-2024-22189
+      - GHSA-c33x-xqrf-c478
+    events:
+      - timestamp: 2024-04-10T09:12:36Z
+        type: fixed
+        data:
+          fixed-version: 2024.1.0-r7
 
   - id: CGA-6p7v-fqpc-5fj9
     aliases:
@@ -26,27 +67,59 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
-  - id: CGA-h46j-223g-crfh
+  - id: CGA-8ww6-7wwv-g3pc
     aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
+      - GHSA-2c7c-3mj9-8fqh
     events:
-      - timestamp: 2024-04-20T13:21:15Z
+      - timestamp: 2024-01-08T11:54:34Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: cloudflared
-            componentID: ee42aff617c44488
-            componentName: golang.org/x/net
-            componentVersion: v0.19.0
+            componentID: 37c5a062f537ff89
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.0
             componentType: go-module
             componentLocation: /usr/bin/cloudflared
             scanner: grype
-      - timestamp: 2024-04-20T15:39:57Z
+      - timestamp: 2024-01-26T07:06:35Z
         type: fixed
         data:
-          fixed-version: 2024.1.0-r8
+          fixed-version: 2024.1.0-r1
+
+  - id: CGA-9r35-v6fc-f4gm
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:24:26Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-c8mp-j7p2-jmcx
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:03:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloudflared
+            componentID: d37cf71c04f7f40b
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/cloudflared
+            scanner: grype
+      - timestamp: 2024-03-14T15:21:22Z
+        type: fixed
+        data:
+          fixed-version: 2024.1.0-r5
 
   - id: CGA-cr28-42c8-8rhf
     aliases:
@@ -92,37 +165,27 @@ advisories:
         data:
           fixed-version: 2024.1.0-r9
 
-  - id: CGA-6f39-q23x-4jc3
+  - id: CGA-h46j-223g-crfh
     aliases:
-      - CVE-2024-22189
-      - GHSA-c33x-xqrf-c478
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
     events:
-      - timestamp: 2024-04-10T09:12:36Z
-        type: fixed
-        data:
-          fixed-version: 2024.1.0-r7
-
-  - id: CGA-c8mp-j7p2-jmcx
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T07:03:50Z
+      - timestamp: 2024-04-20T13:21:15Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: cloudflared
-            componentID: d37cf71c04f7f40b
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.31.0
+            componentID: ee42aff617c44488
+            componentName: golang.org/x/net
+            componentVersion: v0.19.0
             componentType: go-module
             componentLocation: /usr/bin/cloudflared
             scanner: grype
-      - timestamp: 2024-03-14T15:21:22Z
+      - timestamp: 2024-04-20T15:39:57Z
         type: fixed
         data:
-          fixed-version: 2024.1.0-r5
+          fixed-version: 2024.1.0-r8
 
   - id: CGA-rx6f-7w9c-f8g7
     aliases:
@@ -133,56 +196,3 @@ advisories:
         type: fixed
         data:
           fixed-version: 2024.1.0-r10
-
-  - id: CGA-2398-j6c4-x6vv
-    aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
-    events:
-      - timestamp: 2024-05-14T11:01:43Z
-        type: fixed
-        data:
-          fixed-version: 2024.1.0-r10
-
-  - id: CGA-478v-8vhj-v754
-    aliases:
-      - CVE-2024-28180
-      - GHSA-c5q2-7r4c-mv6g
-    events:
-      - timestamp: 2024-03-08T07:12:50Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: cloudflared
-            componentID: 692eb4bd8dd7e8b0
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.1
-            componentType: go-module
-            componentLocation: /usr/bin/cloudflared
-            scanner: grype
-      - timestamp: 2024-03-10T16:09:55Z
-        type: fixed
-        data:
-          fixed-version: 2024.1.0-r4
-
-  - id: CGA-8ww6-7wwv-g3pc
-    aliases:
-      - GHSA-2c7c-3mj9-8fqh
-    events:
-      - timestamp: 2024-01-08T11:54:34Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: cloudflared
-            componentID: 37c5a062f537ff89
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.0
-            componentType: go-module
-            componentLocation: /usr/bin/cloudflared
-            scanner: grype
-      - timestamp: 2024-01-26T07:06:35Z
-        type: fixed
-        data:
-          fixed-version: 2024.1.0-r1
