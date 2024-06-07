@@ -4,38 +4,15 @@ package:
   name: flux-source-controller
 
 advisories:
-  - id: CGA-hggv-67cc-rjpf
+  - id: CGA-36rc-75gc-w97r
     aliases:
-      - CVE-2019-25210
-      - GHSA-jw44-4f3j-q396
+      - GHSA-6xv5-86q9-7xr8
     events:
-      - timestamp: 2024-03-06T07:12:15Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: flux-source-controller
-            componentID: 7f0bcf9da2d0649b
-            componentName: helm.sh/helm/v3
-            componentVersion: v3.14.2
-            componentType: go-module
-            componentLocation: /usr/bin/source-controller
-            scanner: grype
-      - timestamp: 2024-03-26T16:35:18Z
+      - timestamp: 2023-09-09T15:18:11Z
         type: false-positive-determination
         data:
-          type: vulnerability-record-analysis-contested
-          note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
-
-  - id: CGA-vr55-phx9-f96f
-    aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
-    events:
-      - timestamp: 2023-10-13T16:18:55Z
-        type: fixed
-        data:
-          fixed-version: 1.1.2-r1
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability is only present on Windows.
 
   - id: CGA-4qvf-5747-x844
     aliases:
@@ -47,110 +24,34 @@ advisories:
         data:
           fixed-version: 1.1.2-r1
 
-  - id: CGA-hwq5-r477-jpjj
+  - id: CGA-4vmh-7qp5-jx93
     aliases:
-      - CVE-2023-44487
-      - GHSA-m425-mq94-257g
-      - GHSA-qppj-fm5r-hxr3
+      - CVE-2024-29902
+      - GHSA-88jx-383q-w4qc
     events:
-      - timestamp: 2023-11-03T12:08:04Z
+      - timestamp: 2024-04-13T07:10:09Z
         type: fixed
         data:
-          fixed-version: 1.1.2-r2
+          fixed-version: 1.2.5-r1
 
-  - id: CGA-xjhv-7f4j-vmg9
+  - id: CGA-5264-p26m-q3vr
     aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
     events:
-      - timestamp: 2023-11-07T19:27:06Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-w436-9442-r362
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:27:07Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-gc9p-86v8-4pcx
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-20T14:39:30Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: flux-source-controller
-            componentID: 0fa8ac8cac8e72bb
-            componentName: golang.org/x/net
-            componentVersion: v0.22.0
-            componentType: go-module
-            componentLocation: /usr/bin/source-controller
-            scanner: grype
-      - timestamp: 2024-04-23T16:40:42Z
+      - timestamp: 2024-06-07T15:01:49Z
         type: fixed
         data:
-          fixed-version: 1.2.5-r2
+          fixed-version: 1.3.0-r2
 
-  - id: CGA-rg5m-pv63-j87h
+  - id: CGA-8mx2-2g54-rc67
     aliases:
-      - CVE-2023-46737
-      - GHSA-vfp6-jrw2-99g9
+      - GHSA-9763-4f94-gfch
     events:
-      - timestamp: 2023-11-16T10:54:35Z
-        type: pending-upstream-fix
-        data:
-          note: Pending upstream fix, this will require more upgrades in the code to support the cosign update. GitHub Issue https://github.com/fluxcd/source-controller/pull/1280
-
-  - id: CGA-fjf9-c2hc-c553
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2023-12-19T17:00:24Z
+      - timestamp: 2024-01-26T07:09:55Z
         type: fixed
         data:
-          fixed-version: 1.2.3-r1
-
-  - id: CGA-wx3f-cprc-w93w
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T16:57:21Z
-        type: fixed
-        data:
-          fixed-version: 1.2.4-r5
-
-  - id: CGA-gppj-8h6h-2phw
-    aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
-    events:
-      - timestamp: 2024-05-15T10:43:17Z
-        type: fixed
-        data:
-          fixed-version: 1.3.0-r1
-
-  - id: CGA-x6p4-xgfx-7cf5
-    aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
-    events:
-      - timestamp: 2024-05-15T10:43:20Z
-        type: fixed
-        data:
-          fixed-version: 1.3.0-r1
+          fixed-version: 1.2.3-r3
 
   - id: CGA-f76r-25m7-w73x
     aliases:
@@ -174,6 +75,110 @@ advisories:
         data:
           fixed-version: 1.2.4-r1
 
+  - id: CGA-fjf9-c2hc-c553
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2023-12-19T17:00:24Z
+        type: fixed
+        data:
+          fixed-version: 1.2.3-r1
+
+  - id: CGA-gc9p-86v8-4pcx
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-20T14:39:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-source-controller
+            componentID: 0fa8ac8cac8e72bb
+            componentName: golang.org/x/net
+            componentVersion: v0.22.0
+            componentType: go-module
+            componentLocation: /usr/bin/source-controller
+            scanner: grype
+      - timestamp: 2024-04-23T16:40:42Z
+        type: fixed
+        data:
+          fixed-version: 1.2.5-r2
+
+  - id: CGA-ghv8-cc4x-c632
+    aliases:
+      - GHSA-7ww5-4wqc-m92c
+    events:
+      - timestamp: 2023-12-25T06:33:01Z
+        type: fixed
+        data:
+          fixed-version: 1.2.3-r2
+
+  - id: CGA-gppj-8h6h-2phw
+    aliases:
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
+    events:
+      - timestamp: 2024-05-15T10:43:17Z
+        type: fixed
+        data:
+          fixed-version: 1.3.0-r1
+
+  - id: CGA-hggv-67cc-rjpf
+    aliases:
+      - CVE-2019-25210
+      - GHSA-jw44-4f3j-q396
+    events:
+      - timestamp: 2024-03-06T07:12:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-source-controller
+            componentID: 7f0bcf9da2d0649b
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.2
+            componentType: go-module
+            componentLocation: /usr/bin/source-controller
+            scanner: grype
+      - timestamp: 2024-03-26T16:35:18Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
+
+  - id: CGA-hwq5-r477-jpjj
+    aliases:
+      - CVE-2023-44487
+      - GHSA-m425-mq94-257g
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2023-11-03T12:08:04Z
+        type: fixed
+        data:
+          fixed-version: 1.1.2-r2
+
+  - id: CGA-mg2v-gvq6-q64m
+    aliases:
+      - GHSA-2c7c-3mj9-8fqh
+    events:
+      - timestamp: 2023-11-23T08:32:38Z
+        type: fixed
+        data:
+          fixed-version: 1.1.2-r3
+
+  - id: CGA-mx4h-4v4p-gggm
+    aliases:
+      - GHSA-jq35-85cj-fj4p
+    events:
+      - timestamp: 2023-10-31T20:03:47Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability is in the container runtime itself, not clients of the container runtime.
+
   - id: CGA-p8m8-xcqf-5mxr
     aliases:
       - CVE-2024-26147
@@ -195,38 +200,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.2.4-r2
-
-  - id: CGA-v896-6482-8335
-    aliases:
-      - CVE-2024-28180
-      - GHSA-c5q2-7r4c-mv6g
-    events:
-      - timestamp: 2024-03-08T06:35:00Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: flux-source-controller
-            componentID: 1ef7fabf8796a0f7
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.1
-            componentType: go-module
-            componentLocation: /usr/bin/source-controller
-            scanner: grype
-      - timestamp: 2024-03-08T22:31:58Z
-        type: fixed
-        data:
-          fixed-version: 1.2.4-r4
-
-  - id: CGA-4vmh-7qp5-jx93
-    aliases:
-      - CVE-2024-29902
-      - GHSA-88jx-383q-w4qc
-    events:
-      - timestamp: 2024-04-13T07:10:09Z
-        type: fixed
-        data:
-          fixed-version: 1.2.5-r1
 
   - id: CGA-ppq7-9w5p-f4gc
     aliases:
@@ -261,49 +234,86 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: CVE GHSA-v554-xwgw-hc3w does not affect the v1.3.0 of the flux-source-controller package. The code in `source-controller/internal/error/sanitized.go` includes the fix that sanitizes error messages by removing query strings from URLs, which addresses the vulnerability.
 
-  - id: CGA-mg2v-gvq6-q64m
+  - id: CGA-rg5m-pv63-j87h
     aliases:
-      - GHSA-2c7c-3mj9-8fqh
+      - CVE-2023-46737
+      - GHSA-vfp6-jrw2-99g9
     events:
-      - timestamp: 2023-11-23T08:32:38Z
+      - timestamp: 2023-11-16T10:54:35Z
+        type: pending-upstream-fix
+        data:
+          note: Pending upstream fix, this will require more upgrades in the code to support the cosign update. GitHub Issue https://github.com/fluxcd/source-controller/pull/1280
+
+  - id: CGA-v896-6482-8335
+    aliases:
+      - CVE-2024-28180
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T06:35:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-source-controller
+            componentID: 1ef7fabf8796a0f7
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/source-controller
+            scanner: grype
+      - timestamp: 2024-03-08T22:31:58Z
         type: fixed
         data:
-          fixed-version: 1.1.2-r3
+          fixed-version: 1.2.4-r4
 
-  - id: CGA-36rc-75gc-w97r
+  - id: CGA-vr55-phx9-f96f
     aliases:
-      - GHSA-6xv5-86q9-7xr8
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
     events:
-      - timestamp: 2023-09-09T15:18:11Z
+      - timestamp: 2023-10-13T16:18:55Z
+        type: fixed
+        data:
+          fixed-version: 1.1.2-r1
+
+  - id: CGA-w436-9442-r362
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:27:07Z
         type: false-positive-determination
         data:
           type: vulnerable-code-not-included-in-package
-          note: This vulnerability is only present on Windows.
+          note: Only affects Windows
 
-  - id: CGA-ghv8-cc4x-c632
+  - id: CGA-wx3f-cprc-w93w
     aliases:
-      - GHSA-7ww5-4wqc-m92c
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
     events:
-      - timestamp: 2023-12-25T06:33:01Z
+      - timestamp: 2024-03-14T16:57:21Z
         type: fixed
         data:
-          fixed-version: 1.2.3-r2
+          fixed-version: 1.2.4-r5
 
-  - id: CGA-8mx2-2g54-rc67
+  - id: CGA-x6p4-xgfx-7cf5
     aliases:
-      - GHSA-9763-4f94-gfch
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
     events:
-      - timestamp: 2024-01-26T07:09:55Z
+      - timestamp: 2024-05-15T10:43:20Z
         type: fixed
         data:
-          fixed-version: 1.2.3-r3
+          fixed-version: 1.3.0-r1
 
-  - id: CGA-mx4h-4v4p-gggm
+  - id: CGA-xjhv-7f4j-vmg9
     aliases:
-      - GHSA-jq35-85cj-fj4p
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
     events:
-      - timestamp: 2023-10-31T20:03:47Z
+      - timestamp: 2023-11-07T19:27:06Z
         type: false-positive-determination
         data:
           type: vulnerable-code-not-included-in-package
-          note: This vulnerability is in the container runtime itself, not clients of the container runtime.
+          note: Only affects Windows
