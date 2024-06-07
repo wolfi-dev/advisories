@@ -4,6 +4,50 @@ package:
   name: tekton-pipelines
 
 advisories:
+  - id: CGA-36jv-q8vj-wwgx
+    aliases:
+      - CVE-2023-1732
+      - GHSA-2q89-485c-9j2x
+    events:
+      - timestamp: 2023-08-11T17:23:33Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: Vulnerable packages not in dependency tree.
+
+  - id: CGA-3925-79jh-mqhh
+    aliases:
+      - CVE-2024-28180
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:31:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tekton-pipelines-sidecarlogresults
+            componentID: 78f3a1125a7ed93a
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/tekton-pipelines-sidecarlogresults
+            scanner: grype
+      - timestamp: 2024-03-08T21:20:21Z
+        type: fixed
+        data:
+          fixed-version: 0.57.0-r0
+
+  - id: CGA-3xrw-88xv-whr3
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:38:51Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
   - id: CGA-4xjq-3qg3-ffrw
     aliases:
       - CVE-2020-8559
@@ -22,16 +66,56 @@ advisories:
             componentLocation: /usr/bin/tekton-pipelines-controller
             scanner: grype
 
-  - id: CGA-36jv-q8vj-wwgx
+  - id: CGA-6g5g-xj6c-fvxv
     aliases:
-      - CVE-2023-1732
-      - GHSA-2q89-485c-9j2x
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
     events:
-      - timestamp: 2023-08-11T17:23:33Z
-        type: false-positive-determination
+      - timestamp: 2024-05-15T14:11:42Z
+        type: fixed
         data:
-          type: vulnerable-code-not-in-execution-path
-          note: Vulnerable packages not in dependency tree.
+          fixed-version: 0.59.0-r2
+
+  - id: CGA-85rm-7253-4jgr
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:20:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tekton-pipelines-webhook
+            componentID: 0ab968ec0130e453
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/tekton-pipelines-webhook
+            scanner: grype
+      - timestamp: 2024-03-14T15:19:43Z
+        type: fixed
+        data:
+          fixed-version: 0.57.0-r1
+
+  - id: CGA-f69f-9576-qmxm
+    aliases:
+      - CVE-2023-49568
+      - GHSA-mw99-9chc-xw7r
+    events:
+      - timestamp: 2023-12-28T17:56:45Z
+        type: fixed
+        data:
+          fixed-version: 0.55.0-r2
+
+  - id: CGA-f7pm-8226-8hqh
+    aliases:
+      - GHSA-7ww5-4wqc-m92c
+    events:
+      - timestamp: 2023-12-21T15:27:47Z
+        type: fixed
+        data:
+          fixed-version: 0.54.2-r1
 
   - id: CGA-f9jg-fwgq-6425
     aliases:
@@ -39,17 +123,6 @@ advisories:
       - GHSA-vvjp-q62m-2vph
     events:
       - timestamp: 2023-11-07T19:38:50Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-3xrw-88xv-whr3
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:38:51Z
         type: false-positive-determination
         data:
           type: vulnerable-code-not-included-in-package
@@ -75,16 +148,6 @@ advisories:
         data:
           fixed-version: 0.54.2-r1
 
-  - id: CGA-f69f-9576-qmxm
-    aliases:
-      - CVE-2023-49568
-      - GHSA-mw99-9chc-xw7r
-    events:
-      - timestamp: 2023-12-28T17:56:45Z
-        type: fixed
-        data:
-          fixed-version: 0.55.0-r2
-
   - id: CGA-jjh9-88gj-mx26
     aliases:
       - CVE-2024-24557
@@ -94,48 +157,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.58.0-r1
-
-  - id: CGA-85rm-7253-4jgr
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T08:20:49Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: tekton-pipelines-webhook
-            componentID: 0ab968ec0130e453
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.32.0
-            componentType: go-module
-            componentLocation: /usr/bin/tekton-pipelines-webhook
-            scanner: grype
-      - timestamp: 2024-03-14T15:19:43Z
-        type: fixed
-        data:
-          fixed-version: 0.57.0-r1
-
-  - id: CGA-r3wq-x7c3-5cf2
-    aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
-    events:
-      - timestamp: 2024-05-15T14:11:45Z
-        type: fixed
-        data:
-          fixed-version: 0.59.0-r2
-
-  - id: CGA-6g5g-xj6c-fvxv
-    aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
-    events:
-      - timestamp: 2024-05-15T14:11:42Z
-        type: fixed
-        data:
-          fixed-version: 0.59.0-r2
 
   - id: CGA-mvh6-3mgc-hq8w
     aliases:
@@ -153,28 +174,6 @@ advisories:
             componentVersion: v2.14.0
             componentType: go-module
             componentLocation: /usr/bin/tekton-pipelines-events
-            scanner: grype
-      - timestamp: 2024-03-08T21:20:21Z
-        type: fixed
-        data:
-          fixed-version: 0.57.0-r0
-
-  - id: CGA-3925-79jh-mqhh
-    aliases:
-      - CVE-2024-28180
-      - GHSA-c5q2-7r4c-mv6g
-    events:
-      - timestamp: 2024-03-08T07:31:57Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: tekton-pipelines-sidecarlogresults
-            componentID: 78f3a1125a7ed93a
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.1
-            componentType: go-module
-            componentLocation: /usr/bin/tekton-pipelines-sidecarlogresults
             scanner: grype
       - timestamp: 2024-03-08T21:20:21Z
         type: fixed
@@ -203,6 +202,15 @@ advisories:
         data:
           fixed-version: 0.59.0-r1
 
+  - id: CGA-qr3m-r6rc-r855
+    aliases:
+      - GHSA-jq35-85cj-fj4p
+    events:
+      - timestamp: 2023-12-14T09:33:36Z
+        type: fixed
+        data:
+          fixed-version: 0.54.0-r2
+
   - id: CGA-r255-c833-5j7m
     aliases:
       - GHSA-2c7c-3mj9-8fqh
@@ -212,14 +220,15 @@ advisories:
         data:
           fixed-version: 0.54.0-r2
 
-  - id: CGA-f7pm-8226-8hqh
+  - id: CGA-r3wq-x7c3-5cf2
     aliases:
-      - GHSA-7ww5-4wqc-m92c
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
     events:
-      - timestamp: 2023-12-21T15:27:47Z
+      - timestamp: 2024-05-15T14:11:45Z
         type: fixed
         data:
-          fixed-version: 0.54.2-r1
+          fixed-version: 0.59.0-r2
 
   - id: CGA-v4r9-g9h3-x53w
     aliases:
@@ -238,11 +247,22 @@ advisories:
             componentLocation: /usr/bin/tekton-pipelines-resolvers
             scanner: grype
 
-  - id: CGA-qr3m-r6rc-r855
+  - id: CGA-wc9v-qg8c-m8v8
     aliases:
-      - GHSA-jq35-85cj-fj4p
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
     events:
-      - timestamp: 2023-12-14T09:33:36Z
+      - timestamp: 2024-06-07T07:41:39Z
         type: fixed
         data:
-          fixed-version: 0.54.0-r2
+          fixed-version: 0.60.1-r1
+
+  - id: CGA-x4v9-432h-4755
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T07:41:35Z
+        type: fixed
+        data:
+          fixed-version: 0.60.1-r1
