@@ -4,35 +4,25 @@ package:
   name: memcached-exporter
 
 advisories:
-  - id: CGA-7qfv-33w7-h88v
+  - id: CGA-3m43-w5cv-77jh
     aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
     events:
-      - timestamp: 2023-10-14T18:09:08Z
+      - timestamp: 2024-03-12T08:10:33Z
         type: fixed
         data:
-          fixed-version: 0.13.0-r7
+          fixed-version: 0.14.2-r2
 
-  - id: CGA-v38r-f836-3hvh
+  - id: CGA-3pjq-fc88-c3pv
     aliases:
-      - CVE-2023-3978
-      - GHSA-2wrh-6pvc-2jm9
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
     events:
-      - timestamp: 2023-10-14T18:15:54Z
+      - timestamp: 2024-03-12T08:10:32Z
         type: fixed
         data:
-          fixed-version: 0.13.0-r7
-
-  - id: CGA-mfww-9mm5-5q9p
-    aliases:
-      - CVE-2023-44487
-      - GHSA-qppj-fm5r-hxr3
-    events:
-      - timestamp: 2023-10-14T18:11:31Z
-        type: fixed
-        data:
-          fixed-version: 0.13.0-r7
+          fixed-version: 0.14.2-r2
 
   - id: CGA-63gm-q29r-m8c8
     aliases:
@@ -45,6 +35,38 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-6wqw-jfp2-r23g
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T14:17:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: memcached-exporter
+            componentID: 3a7e059c91ca634a
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/memcached_exporter
+            scanner: grype
+      - timestamp: 2024-03-16T09:56:27Z
+        type: fixed
+        data:
+          fixed-version: 0.14.2-r3
+
+  - id: CGA-7qfv-33w7-h88v
+    aliases:
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2023-10-14T18:09:08Z
+        type: fixed
+        data:
+          fixed-version: 0.13.0-r7
+
   - id: CGA-7qvx-w53q-qmfm
     aliases:
       - CVE-2023-45284
@@ -55,6 +77,46 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CGA-969r-22g6-g6qr
+    aliases:
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T08:10:34Z
+        type: fixed
+        data:
+          fixed-version: 0.14.2-r2
+
+  - id: CGA-9ffp-6r7f-q6qw
+    aliases:
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T08:10:31Z
+        type: fixed
+        data:
+          fixed-version: 0.14.2-r2
+
+  - id: CGA-mfww-9mm5-5q9p
+    aliases:
+      - CVE-2023-44487
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2023-10-14T18:11:31Z
+        type: fixed
+        data:
+          fixed-version: 0.13.0-r7
+
+  - id: CGA-qrcx-xpgm-6vpc
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T18:04:55Z
+        type: fixed
+        data:
+          fixed-version: 0.14.3-r6
 
   - id: CGA-rfj3-p6xw-3mq9
     aliases:
@@ -78,25 +140,15 @@ advisories:
         data:
           fixed-version: 0.14.3-r2
 
-  - id: CGA-v96r-rf9f-9j36
+  - id: CGA-v38r-f836-3hvh
     aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
+      - CVE-2023-3978
+      - GHSA-2wrh-6pvc-2jm9
     events:
-      - timestamp: 2024-03-12T08:10:30Z
+      - timestamp: 2023-10-14T18:15:54Z
         type: fixed
         data:
-          fixed-version: 0.14.2-r2
-
-  - id: CGA-9ffp-6r7f-q6qw
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-12T08:10:31Z
-        type: fixed
-        data:
-          fixed-version: 0.14.2-r2
+          fixed-version: 0.13.0-r7
 
   - id: CGA-v5gm-5r76-p5cr
     aliases:
@@ -108,54 +160,22 @@ advisories:
         data:
           fixed-version: 0.14.1-r1
 
-  - id: CGA-3pjq-fc88-c3pv
+  - id: CGA-v96r-rf9f-9j36
     aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
     events:
-      - timestamp: 2024-03-12T08:10:32Z
+      - timestamp: 2024-03-12T08:10:30Z
         type: fixed
         data:
           fixed-version: 0.14.2-r2
 
-  - id: CGA-3m43-w5cv-77jh
+  - id: CGA-w722-v9vw-9m4q
     aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
     events:
-      - timestamp: 2024-03-12T08:10:33Z
+      - timestamp: 2024-06-07T18:04:51Z
         type: fixed
         data:
-          fixed-version: 0.14.2-r2
-
-  - id: CGA-969r-22g6-g6qr
-    aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
-    events:
-      - timestamp: 2024-03-12T08:10:34Z
-        type: fixed
-        data:
-          fixed-version: 0.14.2-r2
-
-  - id: CGA-6wqw-jfp2-r23g
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T14:17:14Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: memcached-exporter
-            componentID: 3a7e059c91ca634a
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.31.0
-            componentType: go-module
-            componentLocation: /usr/bin/memcached_exporter
-            scanner: grype
-      - timestamp: 2024-03-16T09:56:27Z
-        type: fixed
-        data:
-          fixed-version: 0.14.2-r3
+          fixed-version: 0.14.3-r6
