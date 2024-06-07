@@ -4,26 +4,27 @@ package:
   name: nsc
 
 advisories:
-  - id: CGA-q562-xvxp-8qf5
+  - id: CGA-7hhj-79h8-9mf8
     aliases:
-      - CVE-2023-39326
-      - GHSA-9f76-wg39-x86h
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
     events:
-      - timestamp: 2024-02-15T07:36:55Z
+      - timestamp: 2024-02-14T13:49:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nsc
+            componentID: 3898c7aa7d0b74de
+            componentName: golang.org/x/crypto
+            componentVersion: v0.14.0
+            componentType: go-module
+            componentLocation: /usr/bin/nsc
+            scanner: grype
+      - timestamp: 2024-03-07T16:57:39Z
         type: fixed
         data:
-          fixed-version: 2.8.5-r1
-
-  - id: CGA-cvrw-jphp-jwhc
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:35:02Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          fixed-version: 2.8.6-r0
 
   - id: CGA-7jjc-wc86-wm4r
     aliases:
@@ -45,6 +46,27 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.8.5-r1
+
+  - id: CGA-cvrw-jphp-jwhc
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:35:02Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-grfr-w7rf-r55g
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T09:02:52Z
+        type: fixed
+        data:
+          fixed-version: 2.8.6-r7
 
   - id: CGA-jmh8-jw6g-fp56
     aliases:
@@ -68,24 +90,12 @@ advisories:
         data:
           fixed-version: 2.8.6-r4
 
-  - id: CGA-7hhj-79h8-9mf8
+  - id: CGA-q562-xvxp-8qf5
     aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
+      - CVE-2023-39326
+      - GHSA-9f76-wg39-x86h
     events:
-      - timestamp: 2024-02-14T13:49:53Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: nsc
-            componentID: 3898c7aa7d0b74de
-            componentName: golang.org/x/crypto
-            componentVersion: v0.14.0
-            componentType: go-module
-            componentLocation: /usr/bin/nsc
-            scanner: grype
-      - timestamp: 2024-03-07T16:57:39Z
+      - timestamp: 2024-02-15T07:36:55Z
         type: fixed
         data:
-          fixed-version: 2.8.6-r0
+          fixed-version: 2.8.5-r1
