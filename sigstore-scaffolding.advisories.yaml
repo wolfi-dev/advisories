@@ -14,25 +14,38 @@ advisories:
         data:
           fixed-version: 0.6.8-r4
 
-  - id: CGA-7cc3-hq66-g7c9
+  - id: CGA-3223-394p-2222
     aliases:
-      - CVE-2023-3978
-      - GHSA-2wrh-6pvc-2jm9
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
     events:
-      - timestamp: 2023-10-15T20:47:56Z
-        type: fixed
+      - timestamp: 2023-11-07T19:37:49Z
+        type: false-positive-determination
         data:
-          fixed-version: 0.6.8-r4
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
 
-  - id: CGA-m4ph-vwfq-6p88
+  - id: CGA-34rw-v83v-8j98
     aliases:
-      - CVE-2023-44487
-      - GHSA-qppj-fm5r-hxr3
+      - CVE-2024-28180
+      - GHSA-c5q2-7r4c-mv6g
     events:
-      - timestamp: 2023-10-15T20:48:07Z
+      - timestamp: 2024-03-08T07:10:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sigstore-scaffolding-tsa-createcertchain
+            componentID: 44e349635b4bbbf4
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/tsa-createcertchain
+            scanner: grype
+      - timestamp: 2024-03-08T21:38:50Z
         type: fixed
         data:
-          fixed-version: 0.6.8-r4
+          fixed-version: 0.6.16-r2
 
   - id: CGA-52c8-99fj-q8fj
     aliases:
@@ -45,26 +58,15 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
-  - id: CGA-3223-394p-2222
+  - id: CGA-7cc3-hq66-g7c9
     aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
+      - CVE-2023-3978
+      - GHSA-2wrh-6pvc-2jm9
     events:
-      - timestamp: 2023-11-07T19:37:49Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-fchr-jc3j-8323
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-10T09:31:00Z
+      - timestamp: 2023-10-15T20:47:56Z
         type: fixed
         data:
-          fixed-version: 0.6.17-r2
+          fixed-version: 0.6.8-r4
 
   - id: CGA-7p4p-w4w9-9f4q
     aliases:
@@ -98,24 +100,32 @@ advisories:
         data:
           fixed-version: 0.6.17-r1
 
-  - id: CGA-34rw-v83v-8j98
+  - id: CGA-fchr-jc3j-8323
     aliases:
-      - CVE-2024-28180
-      - GHSA-c5q2-7r4c-mv6g
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
     events:
-      - timestamp: 2024-03-08T07:10:25Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: sigstore-scaffolding-tsa-createcertchain
-            componentID: 44e349635b4bbbf4
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.1
-            componentType: go-module
-            componentLocation: /usr/bin/tsa-createcertchain
-            scanner: grype
-      - timestamp: 2024-03-08T21:38:50Z
+      - timestamp: 2024-04-10T09:31:00Z
         type: fixed
         data:
-          fixed-version: 0.6.16-r2
+          fixed-version: 0.6.17-r2
+
+  - id: CGA-m4ph-vwfq-6p88
+    aliases:
+      - CVE-2023-44487
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2023-10-15T20:48:07Z
+        type: fixed
+        data:
+          fixed-version: 0.6.8-r4
+
+  - id: CGA-vqg8-r9jc-m353
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T19:01:57Z
+        type: fixed
+        data:
+          fixed-version: 0.7.1-r1
