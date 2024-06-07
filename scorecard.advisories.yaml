@@ -4,69 +4,58 @@ package:
   name: scorecard
 
 advisories:
-  - id: CGA-9jp5-rm5h-pfr5
+  - id: CGA-22m5-869v-fj26
     aliases:
-      - CVE-2023-39326
-      - GHSA-9f76-wg39-x86h
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
     events:
-      - timestamp: 2024-02-20T08:01:54Z
+      - timestamp: 2024-05-14T13:04:59Z
         type: fixed
         data:
-          fixed-version: 4.13.1-r1
+          fixed-version: 4.13.1-r8
 
-  - id: CGA-x7vm-wxp7-c7p6
+  - id: CGA-2g99-c7hv-3cx6
     aliases:
-      - CVE-2023-44487
-      - GHSA-qppj-fm5r-hxr3
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
     events:
-      - timestamp: 2024-02-14T15:26:21Z
+      - timestamp: 2024-03-14T13:19:32Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: scorecard
-            componentID: eb510ad7ccd9e8db
-            componentName: google.golang.org/grpc
-            componentVersion: v1.57.0
+            componentID: 142c6372ad146582
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
             componentType: go-module
             componentLocation: /usr/bin/scorecard
             scanner: grype
-      - timestamp: 2024-04-09T13:50:53Z
+      - timestamp: 2024-04-09T13:50:50Z
         type: fixed
         data:
           fixed-version: 4.13.1-r4
 
-  - id: CGA-fvp6-9h5v-hj6g
+  - id: CGA-443m-h4wm-4254
     aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
+      - GHSA-9763-4f94-gfch
     events:
-      - timestamp: 2023-11-07T19:37:32Z
-        type: false-positive-determination
+      - timestamp: 2024-02-14T15:26:14Z
+        type: detection
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-pvqh-chw7-mh4j
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:37:34Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-4qv8-j77j-9f5r
-    aliases:
-      - CVE-2023-45285
-      - GHSA-5f94-vhjq-rpg8
-    events:
-      - timestamp: 2024-02-20T08:01:55Z
+          type: scan/v1
+          data:
+            subpackageName: scorecard
+            componentID: 932b84427566e02d
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.3.3
+            componentType: go-module
+            componentLocation: /usr/bin/scorecard
+            scanner: grype
+      - timestamp: 2024-04-09T13:50:50Z
         type: fixed
         data:
-          fixed-version: 4.13.1-r1
+          fixed-version: 4.13.1-r4
 
   - id: CGA-45jj-xc39-mqmj
     aliases:
@@ -90,12 +79,118 @@ advisories:
         data:
           fixed-version: 4.13.1-r7
 
-  - id: CGA-pm58-jvj5-4g69
+  - id: CGA-4qv8-j77j-9f5r
     aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
+      - CVE-2023-45285
+      - GHSA-5f94-vhjq-rpg8
     events:
-      - timestamp: 2024-03-12T08:01:27Z
+      - timestamp: 2024-02-20T08:01:55Z
+        type: fixed
+        data:
+          fixed-version: 4.13.1-r1
+
+  - id: CGA-4v29-m22x-5m58
+    aliases:
+      - CVE-2024-23652
+      - GHSA-4v98-7qmw-rqr8
+    events:
+      - timestamp: 2024-02-14T15:26:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: scorecard
+            componentID: ffedf2606df6390e
+            componentName: github.com/moby/buildkit
+            componentVersion: v0.12.2
+            componentType: go-module
+            componentLocation: /usr/bin/scorecard
+            scanner: grype
+      - timestamp: 2024-04-09T13:50:49Z
+        type: fixed
+        data:
+          fixed-version: 4.13.1-r4
+
+  - id: CGA-7wvr-qr3c-mh6g
+    aliases:
+      - CVE-2024-24557
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-22T13:33:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: scorecard
+            componentID: 8fd9f63738b717a6
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.4+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/scorecard
+            scanner: grype
+      - timestamp: 2024-04-09T13:50:51Z
+        type: fixed
+        data:
+          fixed-version: 4.13.1-r4
+
+  - id: CGA-9jp5-rm5h-pfr5
+    aliases:
+      - CVE-2023-39326
+      - GHSA-9f76-wg39-x86h
+    events:
+      - timestamp: 2024-02-20T08:01:54Z
+        type: fixed
+        data:
+          fixed-version: 4.13.1-r1
+
+  - id: CGA-fj8m-454h-mf2r
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T08:01:26Z
+        type: fixed
+        data:
+          fixed-version: 4.13.1-r2
+
+  - id: CGA-fvp6-9h5v-hj6g
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:37:32Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-fwxm-w3hh-rg5p
+    aliases:
+      - GHSA-jq35-85cj-fj4p
+    events:
+      - timestamp: 2024-02-14T15:26:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: scorecard
+            componentID: cb51fd81ad6bbbc2
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.4+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/scorecard
+            scanner: grype
+      - timestamp: 2024-04-09T13:50:50Z
+        type: fixed
+        data:
+          fixed-version: 4.13.1-r4
+
+  - id: CGA-g629-v8fr-hjpq
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T08:01:33Z
         type: fixed
         data:
           fixed-version: 4.13.1-r2
@@ -110,24 +205,44 @@ advisories:
         data:
           fixed-version: 4.13.1-r2
 
-  - id: CGA-w3vr-fxhc-4f7m
+  - id: CGA-gpwm-qp45-g833
     aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
     events:
-      - timestamp: 2024-02-14T15:26:13Z
+      - timestamp: 2024-05-14T13:05:02Z
+        type: fixed
+        data:
+          fixed-version: 4.13.1-r8
+
+  - id: CGA-h5j8-p865-h8cx
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T15:10:23Z
+        type: fixed
+        data:
+          fixed-version: 4.13.1-r9
+
+  - id: CGA-m4g3-g2h3-p3rq
+    aliases:
+      - CVE-2024-23651
+      - GHSA-m3r6-h7wv-7xxv
+    events:
+      - timestamp: 2024-02-14T15:26:17Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: scorecard
-            componentID: 8090216521b20a56
-            componentName: golang.org/x/crypto
-            componentVersion: v0.14.0
+            componentID: ffedf2606df6390e
+            componentName: github.com/moby/buildkit
+            componentVersion: v0.12.2
             componentType: go-module
             componentLocation: /usr/bin/scorecard
             scanner: grype
-      - timestamp: 2024-04-09T13:50:54Z
+      - timestamp: 2024-04-09T13:50:53Z
         type: fixed
         data:
           fixed-version: 4.13.1-r4
@@ -154,27 +269,36 @@ advisories:
         data:
           fixed-version: 4.13.1-r4
 
-  - id: CGA-vmvv-wj22-w427
+  - id: CGA-pm58-jvj5-4g69
     aliases:
-      - CVE-2023-49569
-      - GHSA-449p-3h89-pw88
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
     events:
-      - timestamp: 2024-02-14T15:26:12Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: scorecard
-            componentID: 7ed66bf25f454bdf
-            componentName: github.com/go-git/go-git/v5
-            componentVersion: v5.9.0
-            componentType: go-module
-            componentLocation: /usr/bin/scorecard
-            scanner: grype
-      - timestamp: 2024-04-09T13:50:52Z
+      - timestamp: 2024-03-12T08:01:27Z
         type: fixed
         data:
-          fixed-version: 4.13.1-r4
+          fixed-version: 4.13.1-r2
+
+  - id: CGA-prf9-935v-99h7
+    aliases:
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T08:01:31Z
+        type: fixed
+        data:
+          fixed-version: 4.13.1-r2
+
+  - id: CGA-pvqh-chw7-mh4j
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:37:34Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
 
   - id: CGA-pxv5-j3f8-xrpc
     aliases:
@@ -198,42 +322,19 @@ advisories:
         data:
           fixed-version: 4.13.1-r4
 
-  - id: CGA-m4g3-g2h3-p3rq
+  - id: CGA-r9v9-3h8g-vvg8
     aliases:
-      - CVE-2024-23651
-      - GHSA-m3r6-h7wv-7xxv
+      - GHSA-m425-mq94-257g
     events:
-      - timestamp: 2024-02-14T15:26:17Z
+      - timestamp: 2024-02-14T15:26:19Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: scorecard
-            componentID: ffedf2606df6390e
-            componentName: github.com/moby/buildkit
-            componentVersion: v0.12.2
-            componentType: go-module
-            componentLocation: /usr/bin/scorecard
-            scanner: grype
-      - timestamp: 2024-04-09T13:50:53Z
-        type: fixed
-        data:
-          fixed-version: 4.13.1-r4
-
-  - id: CGA-4v29-m22x-5m58
-    aliases:
-      - CVE-2024-23652
-      - GHSA-4v98-7qmw-rqr8
-    events:
-      - timestamp: 2024-02-14T15:26:14Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: scorecard
-            componentID: ffedf2606df6390e
-            componentName: github.com/moby/buildkit
-            componentVersion: v0.12.2
+            componentID: eb510ad7ccd9e8db
+            componentName: google.golang.org/grpc
+            componentVersion: v1.57.0
             componentType: go-module
             componentLocation: /usr/bin/scorecard
             scanner: grype
@@ -264,147 +365,66 @@ advisories:
         data:
           fixed-version: 4.13.1-r4
 
-  - id: CGA-7wvr-qr3c-mh6g
+  - id: CGA-vmvv-wj22-w427
     aliases:
-      - CVE-2024-24557
-      - GHSA-xw73-rw38-6vjc
+      - CVE-2023-49569
+      - GHSA-449p-3h89-pw88
     events:
-      - timestamp: 2024-03-22T13:33:30Z
+      - timestamp: 2024-02-14T15:26:12Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: scorecard
-            componentID: 8fd9f63738b717a6
-            componentName: github.com/docker/docker
-            componentVersion: v24.0.4+incompatible
+            componentID: 7ed66bf25f454bdf
+            componentName: github.com/go-git/go-git/v5
+            componentVersion: v5.9.0
             componentType: go-module
             componentLocation: /usr/bin/scorecard
             scanner: grype
-      - timestamp: 2024-04-09T13:50:51Z
+      - timestamp: 2024-04-09T13:50:52Z
         type: fixed
         data:
           fixed-version: 4.13.1-r4
 
-  - id: CGA-g629-v8fr-hjpq
+  - id: CGA-w3vr-fxhc-4f7m
     aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
     events:
-      - timestamp: 2024-03-12T08:01:33Z
-        type: fixed
-        data:
-          fixed-version: 4.13.1-r2
-
-  - id: CGA-fj8m-454h-mf2r
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-12T08:01:26Z
-        type: fixed
-        data:
-          fixed-version: 4.13.1-r2
-
-  - id: CGA-prf9-935v-99h7
-    aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
-    events:
-      - timestamp: 2024-03-12T08:01:31Z
-        type: fixed
-        data:
-          fixed-version: 4.13.1-r2
-
-  - id: CGA-2g99-c7hv-3cx6
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T13:19:32Z
+      - timestamp: 2024-02-14T15:26:13Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: scorecard
-            componentID: 142c6372ad146582
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.31.0
+            componentID: 8090216521b20a56
+            componentName: golang.org/x/crypto
+            componentVersion: v0.14.0
             componentType: go-module
             componentLocation: /usr/bin/scorecard
             scanner: grype
-      - timestamp: 2024-04-09T13:50:50Z
+      - timestamp: 2024-04-09T13:50:54Z
         type: fixed
         data:
           fixed-version: 4.13.1-r4
 
-  - id: CGA-gpwm-qp45-g833
+  - id: CGA-wmhp-ffcf-q7mv
     aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
     events:
-      - timestamp: 2024-05-14T13:05:02Z
+      - timestamp: 2024-06-07T15:10:30Z
         type: fixed
         data:
-          fixed-version: 4.13.1-r8
+          fixed-version: 4.13.1-r9
 
-  - id: CGA-22m5-869v-fj26
+  - id: CGA-x7vm-wxp7-c7p6
     aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
+      - CVE-2023-44487
+      - GHSA-qppj-fm5r-hxr3
     events:
-      - timestamp: 2024-05-14T13:04:59Z
-        type: fixed
-        data:
-          fixed-version: 4.13.1-r8
-
-  - id: CGA-443m-h4wm-4254
-    aliases:
-      - GHSA-9763-4f94-gfch
-    events:
-      - timestamp: 2024-02-14T15:26:14Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: scorecard
-            componentID: 932b84427566e02d
-            componentName: github.com/cloudflare/circl
-            componentVersion: v1.3.3
-            componentType: go-module
-            componentLocation: /usr/bin/scorecard
-            scanner: grype
-      - timestamp: 2024-04-09T13:50:50Z
-        type: fixed
-        data:
-          fixed-version: 4.13.1-r4
-
-  - id: CGA-fwxm-w3hh-rg5p
-    aliases:
-      - GHSA-jq35-85cj-fj4p
-    events:
-      - timestamp: 2024-02-14T15:26:16Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: scorecard
-            componentID: cb51fd81ad6bbbc2
-            componentName: github.com/docker/docker
-            componentVersion: v24.0.4+incompatible
-            componentType: go-module
-            componentLocation: /usr/bin/scorecard
-            scanner: grype
-      - timestamp: 2024-04-09T13:50:50Z
-        type: fixed
-        data:
-          fixed-version: 4.13.1-r4
-
-  - id: CGA-r9v9-3h8g-vvg8
-    aliases:
-      - GHSA-m425-mq94-257g
-    events:
-      - timestamp: 2024-02-14T15:26:19Z
+      - timestamp: 2024-02-14T15:26:21Z
         type: detection
         data:
           type: scan/v1
@@ -416,7 +436,7 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/scorecard
             scanner: grype
-      - timestamp: 2024-04-09T13:50:49Z
+      - timestamp: 2024-04-09T13:50:53Z
         type: fixed
         data:
           fixed-version: 4.13.1-r4
