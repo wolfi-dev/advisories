@@ -27,60 +27,20 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
 
-  - id: CGA-xwcg-hgf2-9h79
+  - id: CGA-2x35-79qr-mw3q
     aliases:
-      - CVE-2020-8559
-      - GHSA-33c5-9fx5-fvjm
+      - CVE-2024-3817
+      - GHSA-q64h-39hv-4cf7
     events:
-      - timestamp: 2024-04-25T13:14:17Z
+      - timestamp: 2024-05-03T10:04:11Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: zarf
-            componentID: 6b0dc4428e51d5d6
-            componentName: k8s.io/apimachinery
-            componentVersion: v0.29.1
-            componentType: go-module
-            componentLocation: /usr/bin/zarf
-            scanner: grype
-
-  - id: CGA-r68v-733q-vpxj
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:40:55Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-x435-9fcw-h9gh
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:40:56Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-x2fp-h293-fvrg
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-26T09:04:56Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: zarf
-            componentID: 0548360eb856c03d
-            componentName: golang.org/x/net
-            componentVersion: v0.22.0
+            componentID: ec864bd13da65d1b
+            componentName: github.com/hashicorp/go-getter
+            componentVersion: v1.7.3
             componentType: go-module
             componentLocation: /usr/bin/zarf
             scanner: grype
@@ -88,160 +48,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.33.1-r1
-
-  - id: CGA-w4pj-7pv6-3fg6
-    aliases:
-      - CVE-2024-0406
-      - GHSA-rhh4-rh7c-7r5v
-    events:
-      - timestamp: 2024-04-10T01:44:39Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: zarf
-            componentID: 6b1ff6605ee52388
-            componentName: github.com/mholt/archiver/v3
-            componentVersion: v3.5.1
-            componentType: go-module
-            componentLocation: /usr/bin/zarf
-            scanner: grype
-      - timestamp: 2024-05-06T13:09:06Z
-        type: fixed
-        data:
-          fixed-version: 0.33.1-r1
-
-  - id: CGA-p5c4-p5qh-qj2r
-    aliases:
-      - CVE-2024-21626
-      - GHSA-xr7r-f8xq-vfvv
-    events:
-      - timestamp: 2024-02-05T07:12:15Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: zarf
-            componentID: c3f3279efcdc6e49
-            componentName: github.com/opencontainers/runc
-            componentVersion: v1.1.5
-            componentType: go-module
-            componentLocation: /usr/bin/zarf
-            scanner: grype
-      - timestamp: 2024-02-08T15:01:12Z
-        type: fixed
-        data:
-          fixed-version: 0.32.3-r0
-
-  - id: CGA-936c-qp49-vcvp
-    aliases:
-      - CVE-2024-24557
-      - GHSA-xw73-rw38-6vjc
-    events:
-      - timestamp: 2024-02-05T07:12:15Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: zarf
-            componentID: a692d3fc14800fe9
-            componentName: github.com/moby/moby
-            componentVersion: v24.0.7+incompatible
-            componentType: go-module
-            componentLocation: /usr/bin/zarf
-            scanner: grype
-      - timestamp: 2024-02-08T15:01:12Z
-        type: fixed
-        data:
-          fixed-version: 0.32.3-r0
-
-  - id: CGA-687x-cx28-9fcm
-    aliases:
-      - CVE-2024-24579
-      - GHSA-hpxr-w9w7-g4gv
-    events:
-      - timestamp: 2024-02-05T07:12:14Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: zarf
-            componentID: 40ca716927ecc821
-            componentName: github.com/anchore/stereoscope
-            componentVersion: v0.0.0-20240118133533-eb656fc71793
-            componentType: go-module
-            componentLocation: /usr/bin/zarf
-            scanner: grype
-      - timestamp: 2024-02-08T15:01:12Z
-        type: fixed
-        data:
-          fixed-version: 0.32.3-r0
-
-  - id: CGA-hqh3-8vvc-6gh4
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T12:20:02Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: zarf
-            componentID: 4ab1fc51622198e4
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.32.0
-            componentType: go-module
-            componentLocation: /usr/bin/zarf
-            scanner: grype
-      - timestamp: 2024-03-14T15:21:23Z
-        type: fixed
-        data:
-          fixed-version: 0.32.5-r1
-
-  - id: CGA-9hq9-pqrv-fpvf
-    aliases:
-      - CVE-2024-25620
-      - GHSA-v53g-5gjp-272r
-    events:
-      - timestamp: 2024-02-16T08:47:39Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: zarf
-            componentID: be5c3d31ef76dae7
-            componentName: helm.sh/helm/v3
-            componentVersion: v3.14.0
-            componentType: go-module
-            componentLocation: /usr/bin/zarf
-            scanner: grype
-      - timestamp: 2024-02-18T12:55:26Z
-        type: fixed
-        data:
-          fixed-version: 0.32.3-r1
-
-  - id: CGA-p75f-jjr2-x29v
-    aliases:
-      - CVE-2024-26147
-      - GHSA-r53h-jv2g-vpx6
-    events:
-      - timestamp: 2024-02-23T07:53:22Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: zarf
-            componentID: d02de61363f8b25e
-            componentName: helm.sh/helm/v3
-            componentVersion: v3.14.1
-            componentType: go-module
-            componentLocation: /usr/bin/zarf
-            scanner: grype
-      - timestamp: 2024-02-26T22:53:37Z
-        type: fixed
-        data:
-          fixed-version: 0.32.4-r0
 
   - id: CGA-434q-54v4-333c
     aliases:
@@ -275,37 +81,103 @@ advisories:
         data:
           fixed-version: 0.33.0-r1
 
-  - id: CGA-p94c-xvrp-9xph
+  - id: CGA-687x-cx28-9fcm
     aliases:
-      - CVE-2024-29903
-      - GHSA-95pr-fxf5-86gv
+      - CVE-2024-24579
+      - GHSA-hpxr-w9w7-g4gv
     events:
-      - timestamp: 2024-04-12T15:04:28Z
-        type: fixed
-        data:
-          fixed-version: 0.33.0-r1
-
-  - id: CGA-2x35-79qr-mw3q
-    aliases:
-      - CVE-2024-3817
-      - GHSA-q64h-39hv-4cf7
-    events:
-      - timestamp: 2024-05-03T10:04:11Z
+      - timestamp: 2024-02-05T07:12:14Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: zarf
-            componentID: ec864bd13da65d1b
-            componentName: github.com/hashicorp/go-getter
-            componentVersion: v1.7.3
+            componentID: 40ca716927ecc821
+            componentName: github.com/anchore/stereoscope
+            componentVersion: v0.0.0-20240118133533-eb656fc71793
             componentType: go-module
             componentLocation: /usr/bin/zarf
             scanner: grype
-      - timestamp: 2024-05-06T13:09:07Z
+      - timestamp: 2024-02-08T15:01:12Z
         type: fixed
         data:
-          fixed-version: 0.33.1-r1
+          fixed-version: 0.32.3-r0
+
+  - id: CGA-936c-qp49-vcvp
+    aliases:
+      - CVE-2024-24557
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-02-05T07:12:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zarf
+            componentID: a692d3fc14800fe9
+            componentName: github.com/moby/moby
+            componentVersion: v24.0.7+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/zarf
+            scanner: grype
+      - timestamp: 2024-02-08T15:01:12Z
+        type: fixed
+        data:
+          fixed-version: 0.32.3-r0
+
+  - id: CGA-9hq9-pqrv-fpvf
+    aliases:
+      - CVE-2024-25620
+      - GHSA-v53g-5gjp-272r
+    events:
+      - timestamp: 2024-02-16T08:47:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zarf
+            componentID: be5c3d31ef76dae7
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.0
+            componentType: go-module
+            componentLocation: /usr/bin/zarf
+            scanner: grype
+      - timestamp: 2024-02-18T12:55:26Z
+        type: fixed
+        data:
+          fixed-version: 0.32.3-r1
+
+  - id: CGA-cwh3-49c2-6wcg
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T17:14:40Z
+        type: fixed
+        data:
+          fixed-version: 0.34.0-r1
+
+  - id: CGA-hqh3-8vvc-6gh4
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T12:20:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zarf
+            componentID: 4ab1fc51622198e4
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/zarf
+            scanner: grype
+      - timestamp: 2024-03-14T15:21:23Z
+        type: fixed
+        data:
+          fixed-version: 0.32.5-r1
 
   - id: CGA-hx6j-f4jm-xgqm
     aliases:
@@ -327,3 +199,151 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.32.2-r0
+
+  - id: CGA-m2pr-5jwp-62h3
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T17:14:44Z
+        type: fixed
+        data:
+          fixed-version: 0.34.0-r1
+
+  - id: CGA-p5c4-p5qh-qj2r
+    aliases:
+      - CVE-2024-21626
+      - GHSA-xr7r-f8xq-vfvv
+    events:
+      - timestamp: 2024-02-05T07:12:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zarf
+            componentID: c3f3279efcdc6e49
+            componentName: github.com/opencontainers/runc
+            componentVersion: v1.1.5
+            componentType: go-module
+            componentLocation: /usr/bin/zarf
+            scanner: grype
+      - timestamp: 2024-02-08T15:01:12Z
+        type: fixed
+        data:
+          fixed-version: 0.32.3-r0
+
+  - id: CGA-p75f-jjr2-x29v
+    aliases:
+      - CVE-2024-26147
+      - GHSA-r53h-jv2g-vpx6
+    events:
+      - timestamp: 2024-02-23T07:53:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zarf
+            componentID: d02de61363f8b25e
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.1
+            componentType: go-module
+            componentLocation: /usr/bin/zarf
+            scanner: grype
+      - timestamp: 2024-02-26T22:53:37Z
+        type: fixed
+        data:
+          fixed-version: 0.32.4-r0
+
+  - id: CGA-p94c-xvrp-9xph
+    aliases:
+      - CVE-2024-29903
+      - GHSA-95pr-fxf5-86gv
+    events:
+      - timestamp: 2024-04-12T15:04:28Z
+        type: fixed
+        data:
+          fixed-version: 0.33.0-r1
+
+  - id: CGA-r68v-733q-vpxj
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:40:55Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-w4pj-7pv6-3fg6
+    aliases:
+      - CVE-2024-0406
+      - GHSA-rhh4-rh7c-7r5v
+    events:
+      - timestamp: 2024-04-10T01:44:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zarf
+            componentID: 6b1ff6605ee52388
+            componentName: github.com/mholt/archiver/v3
+            componentVersion: v3.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/zarf
+            scanner: grype
+      - timestamp: 2024-05-06T13:09:06Z
+        type: fixed
+        data:
+          fixed-version: 0.33.1-r1
+
+  - id: CGA-x2fp-h293-fvrg
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-26T09:04:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zarf
+            componentID: 0548360eb856c03d
+            componentName: golang.org/x/net
+            componentVersion: v0.22.0
+            componentType: go-module
+            componentLocation: /usr/bin/zarf
+            scanner: grype
+      - timestamp: 2024-05-06T13:09:07Z
+        type: fixed
+        data:
+          fixed-version: 0.33.1-r1
+
+  - id: CGA-x435-9fcw-h9gh
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:40:56Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-xwcg-hgf2-9h79
+    aliases:
+      - CVE-2020-8559
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T13:14:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zarf
+            componentID: 6b0dc4428e51d5d6
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.29.1
+            componentType: go-module
+            componentLocation: /usr/bin/zarf
+            scanner: grype
