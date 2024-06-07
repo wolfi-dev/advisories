@@ -4,6 +4,110 @@ package:
   name: terraform
 
 advisories:
+  - id: CGA-2hfp-9rjw-xgj4
+    aliases:
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2023-10-14T15:12:09Z
+        type: fixed
+        data:
+          fixed-version: 1.5.5-r6
+
+  - id: CGA-2j69-gxh4-hphh
+    aliases:
+      - CVE-2024-3817
+      - GHSA-q64h-39hv-4cf7
+    events:
+      - timestamp: 2024-05-03T09:44:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform
+            componentID: 370ef1cf2fb4eba8
+            componentName: github.com/hashicorp/go-getter
+            componentVersion: v1.7.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform
+            scanner: grype
+      - timestamp: 2024-05-07T15:06:37Z
+        type: fixed
+        data:
+          fixed-version: 1.5.7-r8
+
+  - id: CGA-2xpm-qvcx-9mwh
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T08:01:15Z
+        type: fixed
+        data:
+          fixed-version: 1.5.7-r4
+
+  - id: CGA-37qm-p6gr-mqvr
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:39:15Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-3qh2-3fvx-2gch
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T09:00:35Z
+        type: fixed
+        data:
+          fixed-version: 1.5.7-r12
+
+  - id: CGA-5p6f-3v3g-q75j
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T16:30:52Z
+        type: fixed
+        data:
+          fixed-version: 1.5.7-r5
+
+  - id: CGA-69m8-j38h-xr8h
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T09:00:40Z
+        type: fixed
+        data:
+          fixed-version: 1.5.7-r12
+
+  - id: CGA-6xjx-6pwr-8pc5
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:39:17Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-7884-qj4x-48cp
+    aliases:
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T08:01:16Z
+        type: fixed
+        data:
+          fixed-version: 1.5.7-r4
+
   - id: CGA-7hjf-wfrp-789v
     aliases:
       - CVE-2019-19316
@@ -27,6 +131,36 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability was matched to the module "https://github.com/hashicorp/terraform" at the following location(s): /usr/bin/teraform. In all cases, the installed version of the module (git commit ee58ac1851c8a433005df9863ed47796a9f6b5e7) corresponds to a version tag (v1.5.7) that is later than the fixed version (v0.12.17).'
 
+  - id: CGA-c7f2-cmc5-qw4m
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:14:52Z
+        type: fixed
+        data:
+          fixed-version: 1.5.7-r6
+
+  - id: CGA-fvp6-ppp5-92v3
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2023-12-20T02:04:08Z
+        type: fixed
+        data:
+          fixed-version: 1.5.7-r3
+
+  - id: CGA-j9mh-g47x-39m3
+    aliases:
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T08:01:13Z
+        type: fixed
+        data:
+          fixed-version: 1.5.7-r4
+
   - id: CGA-m7gr-2mxm-4q85
     aliases:
       - CVE-2020-8559
@@ -45,15 +179,25 @@ advisories:
             componentLocation: /usr/bin/terraform
             scanner: grype
 
-  - id: CGA-2hfp-9rjw-xgj4
+  - id: CGA-mf9p-423w-xf4h
     aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
     events:
-      - timestamp: 2023-10-14T15:12:09Z
+      - timestamp: 2024-03-12T08:01:14Z
         type: fixed
         data:
-          fixed-version: 1.5.5-r6
+          fixed-version: 1.5.7-r4
+
+  - id: CGA-rp7g-368r-m657
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T08:01:14Z
+        type: fixed
+        data:
+          fixed-version: 1.5.7-r4
 
   - id: CGA-v3fr-cvm8-7pp5
     aliases:
@@ -79,127 +223,3 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.5.7-r0
-
-  - id: CGA-37qm-p6gr-mqvr
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:39:15Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-6xjx-6pwr-8pc5
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:39:17Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-c7f2-cmc5-qw4m
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-13T07:14:52Z
-        type: fixed
-        data:
-          fixed-version: 1.5.7-r6
-
-  - id: CGA-j9mh-g47x-39m3
-    aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
-    events:
-      - timestamp: 2024-03-12T08:01:13Z
-        type: fixed
-        data:
-          fixed-version: 1.5.7-r4
-
-  - id: CGA-mf9p-423w-xf4h
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-12T08:01:14Z
-        type: fixed
-        data:
-          fixed-version: 1.5.7-r4
-
-  - id: CGA-fvp6-ppp5-92v3
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2023-12-20T02:04:08Z
-        type: fixed
-        data:
-          fixed-version: 1.5.7-r3
-
-  - id: CGA-rp7g-368r-m657
-    aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
-    events:
-      - timestamp: 2024-03-12T08:01:14Z
-        type: fixed
-        data:
-          fixed-version: 1.5.7-r4
-
-  - id: CGA-2xpm-qvcx-9mwh
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-12T08:01:15Z
-        type: fixed
-        data:
-          fixed-version: 1.5.7-r4
-
-  - id: CGA-7884-qj4x-48cp
-    aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
-    events:
-      - timestamp: 2024-03-12T08:01:16Z
-        type: fixed
-        data:
-          fixed-version: 1.5.7-r4
-
-  - id: CGA-5p6f-3v3g-q75j
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T16:30:52Z
-        type: fixed
-        data:
-          fixed-version: 1.5.7-r5
-
-  - id: CGA-2j69-gxh4-hphh
-    aliases:
-      - CVE-2024-3817
-      - GHSA-q64h-39hv-4cf7
-    events:
-      - timestamp: 2024-05-03T09:44:05Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: terraform
-            componentID: 370ef1cf2fb4eba8
-            componentName: github.com/hashicorp/go-getter
-            componentVersion: v1.7.0
-            componentType: go-module
-            componentLocation: /usr/bin/terraform
-            scanner: grype
-      - timestamp: 2024-05-07T15:06:37Z
-        type: fixed
-        data:
-          fixed-version: 1.5.7-r8
