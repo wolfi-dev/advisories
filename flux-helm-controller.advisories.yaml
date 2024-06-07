@@ -4,82 +4,6 @@ package:
   name: flux-helm-controller
 
 advisories:
-  - id: CGA-q85j-83g4-mpgh
-    aliases:
-      - CVE-2019-25210
-      - GHSA-jw44-4f3j-q396
-    events:
-      - timestamp: 2024-03-06T07:19:20Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: flux-helm-controller
-            componentID: 3f3cbae1bff5bfbc
-            componentName: helm.sh/helm/v3
-            componentVersion: v3.14.2
-            componentType: go-module
-            componentLocation: /usr/bin/helm-controller
-            scanner: grype
-      - timestamp: 2024-03-26T16:35:18Z
-        type: false-positive-determination
-        data:
-          type: vulnerability-record-analysis-contested
-          note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
-
-  - id: CGA-ff8x-6q32-qhc8
-    aliases:
-      - CVE-2020-8552
-      - GHSA-82hx-w2r5-c2wq
-    events:
-      - timestamp: 2023-09-19T16:41:21Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Go vulndb has marked this code NOT_IMPORTABLE.
-
-  - id: CGA-49r7-6jcj-3h9c
-    aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
-    events:
-      - timestamp: 2023-10-13T16:16:46Z
-        type: fixed
-        data:
-          fixed-version: 0.36.2-r1
-
-  - id: CGA-xxqw-g729-7p3v
-    aliases:
-      - CVE-2023-3978
-      - GHSA-2wrh-6pvc-2jm9
-    events:
-      - timestamp: 2023-10-13T16:19:40Z
-        type: fixed
-        data:
-          fixed-version: 0.36.2-r1
-
-  - id: CGA-x3c3-mgmr-7hfc
-    aliases:
-      - CVE-2023-44487
-      - GHSA-m425-mq94-257g
-      - GHSA-qppj-fm5r-hxr3
-    events:
-      - timestamp: 2023-11-03T12:06:43Z
-        type: fixed
-        data:
-          fixed-version: 0.36.2-r2
-
-  - id: CGA-xmgc-qmcx-jpx4
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:26:48Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
   - id: CGA-2qpg-5pv4-48fg
     aliases:
       - CVE-2023-45284
@@ -91,88 +15,6 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
-  - id: CGA-9qj7-8jwm-mvhx
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-26T08:44:52Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: flux-helm-controller
-            componentID: 3de15ea1dacf5262
-            componentName: golang.org/x/net
-            componentVersion: v0.20.0
-            componentType: go-module
-            componentLocation: /usr/bin/helm-controller
-            scanner: grype
-      - timestamp: 2024-05-02T17:19:01Z
-        type: fixed
-        data:
-          fixed-version: 0.37.4-r7
-
-  - id: CGA-54pq-cfc2-wg4h
-    aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
-    events:
-      - timestamp: 2024-03-13T09:11:11Z
-        type: fixed
-        data:
-          fixed-version: 0.37.4-r3
-
-  - id: CGA-w3pv-28jx-vvq6
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-13T09:11:12Z
-        type: fixed
-        data:
-          fixed-version: 0.37.4-r3
-
-  - id: CGA-9qrq-8v45-jh89
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2023-12-19T16:59:03Z
-        type: fixed
-        data:
-          fixed-version: 0.37.1-r1
-
-  - id: CGA-fgqw-2xwm-5c2h
-    aliases:
-      - CVE-2024-24557
-      - GHSA-xw73-rw38-6vjc
-    events:
-      - timestamp: 2024-03-22T15:42:09Z
-        type: fixed
-        data:
-          fixed-version: 0.37.4-r5
-
-  - id: CGA-8x96-f6v3-6rq2
-    aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
-    events:
-      - timestamp: 2024-03-13T09:11:14Z
-        type: fixed
-        data:
-          fixed-version: 0.37.4-r3
-
-  - id: CGA-5jg4-982w-q7fc
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-13T09:11:16Z
-        type: fixed
-        data:
-          fixed-version: 0.37.4-r3
-
   - id: CGA-33qf-m298-28rw
     aliases:
       - CVE-2024-24785
@@ -182,50 +24,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.37.4-r3
-
-  - id: CGA-gpqh-ff7f-678f
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T07:03:07Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: flux-helm-controller
-            componentID: 40301a5a75d21663
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.31.0
-            componentType: go-module
-            componentLocation: /usr/bin/helm-controller
-            scanner: grype
-      - timestamp: 2024-03-14T16:57:29Z
-        type: fixed
-        data:
-          fixed-version: 0.37.4-r4
-
-  - id: CGA-9443-52r6-9m28
-    aliases:
-      - CVE-2024-25620
-      - GHSA-v53g-5gjp-272r
-    events:
-      - timestamp: 2024-02-16T07:44:05Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: flux-helm-controller
-            componentID: 7904f8a947517c07
-            componentName: helm.sh/helm/v3
-            componentVersion: v3.13.3
-            componentType: go-module
-            componentLocation: /usr/bin/helm-controller
-            scanner: grype
-      - timestamp: 2024-02-19T11:07:05Z
-        type: fixed
-        data:
-          fixed-version: 0.37.4-r1
 
   - id: CGA-47c6-49xx-rr4p
     aliases:
@@ -249,6 +47,36 @@ advisories:
         data:
           fixed-version: 0.37.4-r2
 
+  - id: CGA-49r7-6jcj-3h9c
+    aliases:
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2023-10-13T16:16:46Z
+        type: fixed
+        data:
+          fixed-version: 0.36.2-r1
+
+  - id: CGA-54pq-cfc2-wg4h
+    aliases:
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-13T09:11:11Z
+        type: fixed
+        data:
+          fixed-version: 0.37.4-r3
+
+  - id: CGA-5jg4-982w-q7fc
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-13T09:11:16Z
+        type: fixed
+        data:
+          fixed-version: 0.37.4-r3
+
   - id: CGA-8rc8-8543-55vv
     aliases:
       - GHSA-6xv5-86q9-7xr8
@@ -259,14 +87,90 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability is only present on Windows.
 
-  - id: CGA-pw42-jjfv-rf6q
+  - id: CGA-8x96-f6v3-6rq2
     aliases:
-      - GHSA-7ww5-4wqc-m92c
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
     events:
-      - timestamp: 2023-12-25T06:32:33Z
+      - timestamp: 2024-03-13T09:11:14Z
         type: fixed
         data:
-          fixed-version: 0.37.2-r1
+          fixed-version: 0.37.4-r3
+
+  - id: CGA-9443-52r6-9m28
+    aliases:
+      - CVE-2024-25620
+      - GHSA-v53g-5gjp-272r
+    events:
+      - timestamp: 2024-02-16T07:44:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-helm-controller
+            componentID: 7904f8a947517c07
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.13.3
+            componentType: go-module
+            componentLocation: /usr/bin/helm-controller
+            scanner: grype
+      - timestamp: 2024-02-19T11:07:05Z
+        type: fixed
+        data:
+          fixed-version: 0.37.4-r1
+
+  - id: CGA-9qj7-8jwm-mvhx
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-26T08:44:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-helm-controller
+            componentID: 3de15ea1dacf5262
+            componentName: golang.org/x/net
+            componentVersion: v0.20.0
+            componentType: go-module
+            componentLocation: /usr/bin/helm-controller
+            scanner: grype
+      - timestamp: 2024-05-02T17:19:01Z
+        type: fixed
+        data:
+          fixed-version: 0.37.4-r7
+
+  - id: CGA-9qrq-8v45-jh89
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2023-12-19T16:59:03Z
+        type: fixed
+        data:
+          fixed-version: 0.37.1-r1
+
+  - id: CGA-ff8x-6q32-qhc8
+    aliases:
+      - CVE-2020-8552
+      - GHSA-82hx-w2r5-c2wq
+    events:
+      - timestamp: 2023-09-19T16:41:21Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Go vulndb has marked this code NOT_IMPORTABLE.
+
+  - id: CGA-fgqw-2xwm-5c2h
+    aliases:
+      - CVE-2024-24557
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-22T15:42:09Z
+        type: fixed
+        data:
+          fixed-version: 0.37.4-r5
 
   - id: CGA-g639-xwcx-8vwf
     aliases:
@@ -277,3 +181,109 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability is in the container runtime itself, not clients of the container runtime.
+
+  - id: CGA-gpqh-ff7f-678f
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:03:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-helm-controller
+            componentID: 40301a5a75d21663
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/helm-controller
+            scanner: grype
+      - timestamp: 2024-03-14T16:57:29Z
+        type: fixed
+        data:
+          fixed-version: 0.37.4-r4
+
+  - id: CGA-pq35-4xgg-96c6
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T08:26:07Z
+        type: fixed
+        data:
+          fixed-version: 1.0.1-r2
+
+  - id: CGA-pw42-jjfv-rf6q
+    aliases:
+      - GHSA-7ww5-4wqc-m92c
+    events:
+      - timestamp: 2023-12-25T06:32:33Z
+        type: fixed
+        data:
+          fixed-version: 0.37.2-r1
+
+  - id: CGA-q85j-83g4-mpgh
+    aliases:
+      - CVE-2019-25210
+      - GHSA-jw44-4f3j-q396
+    events:
+      - timestamp: 2024-03-06T07:19:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-helm-controller
+            componentID: 3f3cbae1bff5bfbc
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.2
+            componentType: go-module
+            componentLocation: /usr/bin/helm-controller
+            scanner: grype
+      - timestamp: 2024-03-26T16:35:18Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
+
+  - id: CGA-w3pv-28jx-vvq6
+    aliases:
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-13T09:11:12Z
+        type: fixed
+        data:
+          fixed-version: 0.37.4-r3
+
+  - id: CGA-x3c3-mgmr-7hfc
+    aliases:
+      - CVE-2023-44487
+      - GHSA-m425-mq94-257g
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2023-11-03T12:06:43Z
+        type: fixed
+        data:
+          fixed-version: 0.36.2-r2
+
+  - id: CGA-xmgc-qmcx-jpx4
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:26:48Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-xxqw-g729-7p3v
+    aliases:
+      - CVE-2023-3978
+      - GHSA-2wrh-6pvc-2jm9
+    events:
+      - timestamp: 2023-10-13T16:19:40Z
+        type: fixed
+        data:
+          fixed-version: 0.36.2-r1
