@@ -4,6 +4,28 @@ package:
   name: cert-exporter
 
 advisories:
+  - id: CGA-29m7-c5g6-236m
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:19:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-exporter
+            componentID: a45cfd41821d90c1
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/cert-exporter
+            scanner: grype
+      - timestamp: 2024-03-15T09:55:54Z
+        type: fixed
+        data:
+          fixed-version: 2.12.0-r2
+
   - id: CGA-48gv-xf63-v6jh
     aliases:
       - CVE-2020-8559
@@ -22,35 +44,15 @@ advisories:
             componentLocation: /usr/bin/cert-exporter
             scanner: grype
 
-  - id: CGA-vx6c-fm79-w26f
+  - id: CGA-4vmq-v5cw-hfxx
     aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
     events:
-      - timestamp: 2024-04-13T07:04:49Z
+      - timestamp: 2024-06-07T10:41:16Z
         type: fixed
         data:
-          fixed-version: 2.12.0-r3
-
-  - id: CGA-p4r4-wvmq-hjfg
-    aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
-    events:
-      - timestamp: 2024-03-12T07:12:13Z
-        type: fixed
-        data:
-          fixed-version: 2.12.0-r1
-
-  - id: CGA-rj32-9cf4-4q59
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-12T07:12:11Z
-        type: fixed
-        data:
-          fixed-version: 2.12.0-r1
+          fixed-version: 2.12.0-r6
 
   - id: CGA-73qx-8wqv-9c8h
     aliases:
@@ -58,6 +60,36 @@ advisories:
       - GHSA-3q2c-pvp5-3cqp
     events:
       - timestamp: 2024-03-12T07:12:12Z
+        type: fixed
+        data:
+          fixed-version: 2.12.0-r1
+
+  - id: CGA-fjp8-4cc8-pw7x
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2024-05-14T09:34:40Z
+        type: fixed
+        data:
+          fixed-version: 2.12.0-r5
+
+  - id: CGA-m8pc-8374-8h5q
+    aliases:
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
+    events:
+      - timestamp: 2024-05-14T09:34:39Z
+        type: fixed
+        data:
+          fixed-version: 2.12.0-r5
+
+  - id: CGA-p4r4-wvmq-hjfg
+    aliases:
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T07:12:13Z
         type: fixed
         data:
           fixed-version: 2.12.0-r1
@@ -82,44 +114,22 @@ advisories:
         data:
           fixed-version: 2.12.0-r1
 
-  - id: CGA-29m7-c5g6-236m
+  - id: CGA-rj32-9cf4-4q59
     aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
     events:
-      - timestamp: 2024-03-14T08:19:48Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: cert-exporter
-            componentID: a45cfd41821d90c1
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.31.0
-            componentType: go-module
-            componentLocation: /usr/bin/cert-exporter
-            scanner: grype
-      - timestamp: 2024-03-15T09:55:54Z
+      - timestamp: 2024-03-12T07:12:11Z
         type: fixed
         data:
-          fixed-version: 2.12.0-r2
+          fixed-version: 2.12.0-r1
 
-  - id: CGA-m8pc-8374-8h5q
+  - id: CGA-vx6c-fm79-w26f
     aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
     events:
-      - timestamp: 2024-05-14T09:34:39Z
+      - timestamp: 2024-04-13T07:04:49Z
         type: fixed
         data:
-          fixed-version: 2.12.0-r5
-
-  - id: CGA-fjp8-4cc8-pw7x
-    aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
-    events:
-      - timestamp: 2024-05-14T09:34:40Z
-        type: fixed
-        data:
-          fixed-version: 2.12.0-r5
+          fixed-version: 2.12.0-r3
