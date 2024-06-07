@@ -4,6 +4,28 @@ package:
   name: docker-compose
 
 advisories:
+  - id: CGA-2q2m-jhm7-f5xc
+    aliases:
+      - CVE-2024-29018
+      - GHSA-mq39-4gv4-mvpx
+    events:
+      - timestamp: 2024-03-21T07:07:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-compose
+            componentID: 0b3ad6c647777761
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.4-0.20240301160236-51e876cd964c+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/docker-compose
+            scanner: grype
+      - timestamp: 2024-03-21T11:44:19Z
+        type: fixed
+        data:
+          fixed-version: 2.25.0-r2
+
   - id: CGA-6jqm-chpx-gm57
     aliases:
       - CVE-2023-45288
@@ -14,27 +36,37 @@ advisories:
         data:
           fixed-version: 2.26.1-r1
 
-  - id: CGA-vwc2-jf2w-fxjp
+  - id: CGA-78hf-3hq6-7j44
     aliases:
-      - CVE-2023-47108
-      - GHSA-8pgv-569h-w5rw
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
     events:
-      - timestamp: 2024-02-14T16:26:19Z
+      - timestamp: 2024-05-14T10:08:53Z
+        type: fixed
+        data:
+          fixed-version: 2.27.0-r1
+
+  - id: CGA-fgff-hm6x-932q
+    aliases:
+      - CVE-2024-32473
+      - GHSA-x84c-p2g9-rqv9
+    events:
+      - timestamp: 2024-04-19T10:04:08Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: docker-compose
-            componentID: 8ab2a5432a3c73fb
-            componentName: go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc
-            componentVersion: v0.45.0
+            componentID: e4915b25607d29f7
+            componentName: github.com/docker/docker
+            componentVersion: v26.0.0+incompatible
             componentType: go-module
             componentLocation: /usr/bin/docker-compose
             scanner: grype
-      - timestamp: 2024-02-21T07:10:19Z
+      - timestamp: 2024-04-22T07:10:35Z
         type: fixed
         data:
-          fixed-version: 2.24.6-r0
+          fixed-version: 2.26.1-r2
 
   - id: CGA-h7cg-hmjw-2jg4
     aliases:
@@ -58,16 +90,6 @@ advisories:
         data:
           fixed-version: 2.25.0-r1
 
-  - id: CGA-78hf-3hq6-7j44
-    aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
-    events:
-      - timestamp: 2024-05-14T10:08:53Z
-        type: fixed
-        data:
-          fixed-version: 2.27.0-r1
-
   - id: CGA-hjhh-9m9w-q6r4
     aliases:
       - CVE-2024-24788
@@ -78,46 +100,34 @@ advisories:
         data:
           fixed-version: 2.27.0-r1
 
-  - id: CGA-2q2m-jhm7-f5xc
+  - id: CGA-vwc2-jf2w-fxjp
     aliases:
-      - CVE-2024-29018
-      - GHSA-mq39-4gv4-mvpx
+      - CVE-2023-47108
+      - GHSA-8pgv-569h-w5rw
     events:
-      - timestamp: 2024-03-21T07:07:17Z
+      - timestamp: 2024-02-14T16:26:19Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: docker-compose
-            componentID: 0b3ad6c647777761
-            componentName: github.com/docker/docker
-            componentVersion: v25.0.4-0.20240301160236-51e876cd964c+incompatible
+            componentID: 8ab2a5432a3c73fb
+            componentName: go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc
+            componentVersion: v0.45.0
             componentType: go-module
             componentLocation: /usr/bin/docker-compose
             scanner: grype
-      - timestamp: 2024-03-21T11:44:19Z
+      - timestamp: 2024-02-21T07:10:19Z
         type: fixed
         data:
-          fixed-version: 2.25.0-r2
+          fixed-version: 2.24.6-r0
 
-  - id: CGA-fgff-hm6x-932q
+  - id: CGA-xp56-4879-9ffg
     aliases:
-      - CVE-2024-32473
-      - GHSA-x84c-p2g9-rqv9
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
     events:
-      - timestamp: 2024-04-19T10:04:08Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: docker-compose
-            componentID: e4915b25607d29f7
-            componentName: github.com/docker/docker
-            componentVersion: v26.0.0+incompatible
-            componentType: go-module
-            componentLocation: /usr/bin/docker-compose
-            scanner: grype
-      - timestamp: 2024-04-22T07:10:35Z
+      - timestamp: 2024-06-07T17:23:42Z
         type: fixed
         data:
-          fixed-version: 2.26.1-r2
+          fixed-version: 2.27.1-r1
