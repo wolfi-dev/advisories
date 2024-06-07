@@ -4,27 +4,25 @@ package:
   name: prometheus-blackbox-exporter
 
 advisories:
-  - id: CGA-3xxv-g9h4-qq3q
+  - id: CGA-2rc7-6348-hqjq
     aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
     events:
-      - timestamp: 2024-02-14T14:31:34Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: prometheus-blackbox-exporter
-            componentID: 7d8a34cf8845f228
-            componentName: golang.org/x/net
-            componentVersion: v0.9.0
-            componentType: go-module
-            componentLocation: /usr/bin/blackbox_exporter
-            scanner: grype
-      - timestamp: 2024-02-16T07:19:01Z
+      - timestamp: 2024-04-09T14:03:22Z
         type: fixed
         data:
-          fixed-version: 0.24.0-r4
+          fixed-version: 0.25.0-r0
+
+  - id: CGA-2w8m-j32j-9fcr
+    aliases:
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T08:10:35Z
+        type: fixed
+        data:
+          fixed-version: 0.24.0-r5
 
   - id: CGA-3gw9-7mcr-qhcf
     aliases:
@@ -48,6 +46,129 @@ advisories:
         data:
           fixed-version: 0.24.0-r4
 
+  - id: CGA-3gxj-vpcf-9wgj
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:35:50Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-3xxv-g9h4-qq3q
+    aliases:
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2024-02-14T14:31:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-blackbox-exporter
+            componentID: 7d8a34cf8845f228
+            componentName: golang.org/x/net
+            componentVersion: v0.9.0
+            componentType: go-module
+            componentLocation: /usr/bin/blackbox_exporter
+            scanner: grype
+      - timestamp: 2024-02-16T07:19:01Z
+        type: fixed
+        data:
+          fixed-version: 0.24.0-r4
+
+  - id: CGA-5xrc-9mj5-8fh2
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T08:10:37Z
+        type: fixed
+        data:
+          fixed-version: 0.24.0-r5
+
+  - id: CGA-7fwp-qrpw-9269
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T19:17:31Z
+        type: fixed
+        data:
+          fixed-version: 0.25.0-r3
+
+  - id: CGA-cr5w-2cmh-w6c6
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T14:16:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-blackbox-exporter
+            componentID: c3cba1092ecf49ea
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/blackbox_exporter
+            scanner: grype
+
+  - id: CGA-fcvw-m672-p73f
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T08:10:36Z
+        type: fixed
+        data:
+          fixed-version: 0.24.0-r5
+
+  - id: CGA-j6xq-fhx7-c7mx
+    aliases:
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T08:10:32Z
+        type: fixed
+        data:
+          fixed-version: 0.24.0-r5
+
+  - id: CGA-j89h-cf4h-q65v
+    aliases:
+      - GHSA-m425-mq94-257g
+    events:
+      - timestamp: 2024-02-14T14:31:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-blackbox-exporter
+            componentID: 360fc722ca82d6a2
+            componentName: google.golang.org/grpc
+            componentVersion: v1.55.0
+            componentType: go-module
+            componentLocation: /usr/bin/blackbox_exporter
+            scanner: grype
+      - timestamp: 2024-02-16T07:19:02Z
+        type: fixed
+        data:
+          fixed-version: 0.24.0-r4
+
+  - id: CGA-j96p-g472-6w34
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:35:52Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
   - id: CGA-r3jw-5855-vm4v
     aliases:
       - CVE-2023-44487
@@ -69,58 +190,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.24.0-r4
-
-  - id: CGA-3gxj-vpcf-9wgj
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:35:50Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-j96p-g472-6w34
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:35:52Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-2rc7-6348-hqjq
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-09T14:03:22Z
-        type: fixed
-        data:
-          fixed-version: 0.25.0-r0
-
-  - id: CGA-r5fx-x5pm-6345
-    aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
-    events:
-      - timestamp: 2024-03-12T08:10:34Z
-        type: fixed
-        data:
-          fixed-version: 0.24.0-r5
-
-  - id: CGA-2w8m-j32j-9fcr
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-12T08:10:35Z
-        type: fixed
-        data:
-          fixed-version: 0.24.0-r5
 
   - id: CGA-r436-58j4-jghr
     aliases:
@@ -144,71 +213,12 @@ advisories:
         data:
           fixed-version: 0.24.0-r4
 
-  - id: CGA-fcvw-m672-p73f
+  - id: CGA-r5fx-x5pm-6345
     aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
     events:
-      - timestamp: 2024-03-12T08:10:36Z
+      - timestamp: 2024-03-12T08:10:34Z
         type: fixed
         data:
           fixed-version: 0.24.0-r5
-
-  - id: CGA-5xrc-9mj5-8fh2
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-12T08:10:37Z
-        type: fixed
-        data:
-          fixed-version: 0.24.0-r5
-
-  - id: CGA-j6xq-fhx7-c7mx
-    aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
-    events:
-      - timestamp: 2024-03-12T08:10:32Z
-        type: fixed
-        data:
-          fixed-version: 0.24.0-r5
-
-  - id: CGA-cr5w-2cmh-w6c6
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T14:16:46Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: prometheus-blackbox-exporter
-            componentID: c3cba1092ecf49ea
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.30.0
-            componentType: go-module
-            componentLocation: /usr/bin/blackbox_exporter
-            scanner: grype
-
-  - id: CGA-j89h-cf4h-q65v
-    aliases:
-      - GHSA-m425-mq94-257g
-    events:
-      - timestamp: 2024-02-14T14:31:35Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: prometheus-blackbox-exporter
-            componentID: 360fc722ca82d6a2
-            componentName: google.golang.org/grpc
-            componentVersion: v1.55.0
-            componentType: go-module
-            componentLocation: /usr/bin/blackbox_exporter
-            scanner: grype
-      - timestamp: 2024-02-16T07:19:02Z
-        type: fixed
-        data:
-          fixed-version: 0.24.0-r4
