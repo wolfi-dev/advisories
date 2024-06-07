@@ -4,56 +4,6 @@ package:
   name: kubernetes-dashboard-metrics-scraper
 
 advisories:
-  - id: CGA-hgpm-8g92-qxf5
-    aliases:
-      - CVE-2020-8559
-      - GHSA-33c5-9fx5-fvjm
-    events:
-      - timestamp: 2024-04-25T19:31:56Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubernetes-dashboard-metrics-scraper
-            componentID: 77c28cd329cc5f98
-            componentName: k8s.io/apimachinery
-            componentVersion: v0.24.0
-            componentType: go-module
-            componentLocation: /usr/bin/metrics-sidecar
-            scanner: grype
-
-  - id: CGA-hq39-j5jw-fqwm
-    aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
-    events:
-      - timestamp: 2023-10-13T17:17:22Z
-        type: fixed
-        data:
-          fixed-version: 1.0.9-r9
-
-  - id: CGA-h2q7-rp5q-9cw7
-    aliases:
-      - CVE-2023-39326
-      - GHSA-9f76-wg39-x86h
-    events:
-      - timestamp: 2024-02-14T13:27:09Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubernetes-dashboard-metrics-scraper
-            componentID: a40bf766269eb7ea
-            componentName: stdlib
-            componentVersion: go1.21.3
-            componentType: go-module
-            componentLocation: /usr/bin/metrics-sidecar
-            scanner: grype
-      - timestamp: 2024-02-16T07:37:58Z
-        type: fixed
-        data:
-          fixed-version: 1.0.9-r10
-
   - id: CGA-2p8c-37j4-2hhh
     aliases:
       - CVE-2023-3978
@@ -64,16 +14,27 @@ advisories:
         data:
           fixed-version: 1.0.9-r9
 
-  - id: CGA-hc94-pc4p-h5m2
+  - id: CGA-2qr6-mpww-fmrh
     aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
     events:
-      - timestamp: 2023-11-07T19:32:08Z
-        type: false-positive-determination
+      - timestamp: 2024-03-12T08:13:14Z
+        type: detection
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dashboard-metrics-scraper
+            componentID: 460d0dbffa5ca5a8
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/bin/metrics-sidecar
+            scanner: grype
+      - timestamp: 2024-03-13T09:12:29Z
+        type: fixed
+        data:
+          fixed-version: 1.0.9-r11
 
   - id: CGA-42m8-5qfv-rwfc
     aliases:
@@ -86,27 +47,37 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
-  - id: CGA-h2hq-cwc3-gv4v
+  - id: CGA-539w-w9pj-963v
     aliases:
-      - CVE-2023-45285
-      - GHSA-5f94-vhjq-rpg8
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
     events:
-      - timestamp: 2024-02-14T13:27:09Z
+      - timestamp: 2024-05-14T08:17:36Z
+        type: fixed
+        data:
+          fixed-version: 1.0.9-r16
+
+  - id: CGA-7rw8-5cqm-r8pj
+    aliases:
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T08:13:15Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: kubernetes-dashboard-metrics-scraper
-            componentID: a40bf766269eb7ea
+            componentID: 460d0dbffa5ca5a8
             componentName: stdlib
-            componentVersion: go1.21.3
+            componentVersion: go1.21.5
             componentType: go-module
             componentLocation: /usr/bin/metrics-sidecar
             scanner: grype
-      - timestamp: 2024-02-16T07:37:58Z
+      - timestamp: 2024-03-13T09:12:29Z
         type: fixed
         data:
-          fixed-version: 1.0.9-r10
+          fixed-version: 1.0.9-r11
 
   - id: CGA-9wrg-6wx3-6rwv
     aliases:
@@ -144,28 +115,6 @@ advisories:
         data:
           fixed-version: 1.0.9-r11
 
-  - id: CGA-xpqh-h8hq-28q4
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-12T08:13:11Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubernetes-dashboard-metrics-scraper
-            componentID: 460d0dbffa5ca5a8
-            componentName: stdlib
-            componentVersion: go1.21.5
-            componentType: go-module
-            componentLocation: /usr/bin/metrics-sidecar
-            scanner: grype
-      - timestamp: 2024-03-13T09:12:29Z
-        type: fixed
-        data:
-          fixed-version: 1.0.9-r11
-
   - id: CGA-gj23-759w-8fvr
     aliases:
       - CVE-2024-24783
@@ -188,49 +137,108 @@ advisories:
         data:
           fixed-version: 1.0.9-r11
 
-  - id: CGA-2qr6-mpww-fmrh
+  - id: CGA-h2hq-cwc3-gv4v
     aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
+      - CVE-2023-45285
+      - GHSA-5f94-vhjq-rpg8
     events:
-      - timestamp: 2024-03-12T08:13:14Z
+      - timestamp: 2024-02-14T13:27:09Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: kubernetes-dashboard-metrics-scraper
-            componentID: 460d0dbffa5ca5a8
+            componentID: a40bf766269eb7ea
             componentName: stdlib
-            componentVersion: go1.21.5
+            componentVersion: go1.21.3
             componentType: go-module
             componentLocation: /usr/bin/metrics-sidecar
             scanner: grype
-      - timestamp: 2024-03-13T09:12:29Z
+      - timestamp: 2024-02-16T07:37:58Z
         type: fixed
         data:
-          fixed-version: 1.0.9-r11
+          fixed-version: 1.0.9-r10
 
-  - id: CGA-7rw8-5cqm-r8pj
+  - id: CGA-h2q7-rp5q-9cw7
     aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
+      - CVE-2023-39326
+      - GHSA-9f76-wg39-x86h
     events:
-      - timestamp: 2024-03-12T08:13:15Z
+      - timestamp: 2024-02-14T13:27:09Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: kubernetes-dashboard-metrics-scraper
-            componentID: 460d0dbffa5ca5a8
+            componentID: a40bf766269eb7ea
             componentName: stdlib
-            componentVersion: go1.21.5
+            componentVersion: go1.21.3
             componentType: go-module
             componentLocation: /usr/bin/metrics-sidecar
             scanner: grype
-      - timestamp: 2024-03-13T09:12:29Z
+      - timestamp: 2024-02-16T07:37:58Z
         type: fixed
         data:
-          fixed-version: 1.0.9-r11
+          fixed-version: 1.0.9-r10
+
+  - id: CGA-hc94-pc4p-h5m2
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:32:08Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-hgpm-8g92-qxf5
+    aliases:
+      - CVE-2020-8559
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T19:31:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dashboard-metrics-scraper
+            componentID: 77c28cd329cc5f98
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/metrics-sidecar
+            scanner: grype
+
+  - id: CGA-hhj7-8f5h-cf9h
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2024-05-14T08:17:38Z
+        type: fixed
+        data:
+          fixed-version: 1.0.9-r16
+
+  - id: CGA-hq39-j5jw-fqwm
+    aliases:
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2023-10-13T17:17:22Z
+        type: fixed
+        data:
+          fixed-version: 1.0.9-r9
+
+  - id: CGA-v985-mx7q-97wm
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T15:04:45Z
+        type: fixed
+        data:
+          fixed-version: 1.0.9-r17
 
   - id: CGA-ww52-jcg3-8rjh
     aliases:
@@ -254,22 +262,24 @@ advisories:
         data:
           fixed-version: 1.0.9-r12
 
-  - id: CGA-539w-w9pj-963v
+  - id: CGA-xpqh-h8hq-28q4
     aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
     events:
-      - timestamp: 2024-05-14T08:17:36Z
+      - timestamp: 2024-03-12T08:13:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dashboard-metrics-scraper
+            componentID: 460d0dbffa5ca5a8
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/bin/metrics-sidecar
+            scanner: grype
+      - timestamp: 2024-03-13T09:12:29Z
         type: fixed
         data:
-          fixed-version: 1.0.9-r16
-
-  - id: CGA-hhj7-8f5h-cf9h
-    aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
-    events:
-      - timestamp: 2024-05-14T08:17:38Z
-        type: fixed
-        data:
-          fixed-version: 1.0.9-r16
+          fixed-version: 1.0.9-r11
