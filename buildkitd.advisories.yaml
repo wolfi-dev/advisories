@@ -4,6 +4,146 @@ package:
   name: buildkitd
 
 advisories:
+  - id: CGA-26hw-5rgh-wxj7
+    aliases:
+      - CVE-2023-3978
+      - GHSA-2wrh-6pvc-2jm9
+    events:
+      - timestamp: 2024-01-30T15:54:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buildkitd
+            componentID: 24fb3ebbebde4ba4
+            componentName: golang.org/x/net
+            componentVersion: v0.8.0
+            componentType: go-module
+            componentLocation: /usr/bin/buildkitd
+            scanner: grype
+      - timestamp: 2024-01-31T17:46:37Z
+        type: fixed
+        data:
+          fixed-version: 0.12.4-r4
+
+  - id: CGA-4wmp-6w9c-3v8q
+    aliases:
+      - CVE-2024-21626
+      - GHSA-xr7r-f8xq-vfvv
+    events:
+      - timestamp: 2024-02-05T07:04:30Z
+        type: fixed
+        data:
+          fixed-version: 0.12.5-r1
+
+  - id: CGA-5r59-v4x3-mcq8
+    aliases:
+      - CVE-2024-23651
+      - GHSA-m3r6-h7wv-7xxv
+    events:
+      - timestamp: 2024-02-01T07:06:14Z
+        type: fixed
+        data:
+          fixed-version: 0.12.5-r0
+
+  - id: CGA-68p7-3997-8577
+    aliases:
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-04-11T19:01:05Z
+        type: fixed
+        data:
+          fixed-version: 0.13.1-r2
+
+  - id: CGA-6jm9-j3j6-7fxh
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2024-01-30T15:54:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buildkitd
+            componentID: 2bce5397fdf60b52
+            componentName: golang.org/x/crypto
+            componentVersion: v0.2.0
+            componentType: go-module
+            componentLocation: /usr/bin/buildkitd
+            scanner: grype
+      - timestamp: 2024-01-31T17:46:37Z
+        type: fixed
+        data:
+          fixed-version: 0.12.4-r4
+
+  - id: CGA-8j5r-c2w7-m2x2
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:23:47Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-8q3r-4wx8-6f9q
+    aliases:
+      - GHSA-7ww5-4wqc-m92c
+    events:
+      - timestamp: 2024-01-30T15:54:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buildkitd
+            componentID: 75c561d61f53d326
+            componentName: github.com/containerd/containerd
+            componentVersion: v1.7.2
+            componentType: go-module
+            componentLocation: /usr/bin/buildkitd
+            scanner: grype
+      - timestamp: 2024-01-31T17:46:36Z
+        type: fixed
+        data:
+          fixed-version: 0.12.4-r4
+      - timestamp: 2024-02-07T20:36:36Z
+        type: pending-upstream-fix
+        data:
+          note: containerd v1.7.11 appears to contain API-incompatible changes with this version of buildkitd. Bumping this dependency downstream causes issues where buildkitd is unable to start due to a conflicting URL schema.
+
+  - id: CGA-9gf3-9vpr-xg6r
+    aliases:
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-04-11T19:00:33Z
+        type: fixed
+        data:
+          fixed-version: 0.13.1-r2
+
+  - id: CGA-9rgp-8f3j-ghcg
+    aliases:
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
+    events:
+      - timestamp: 2024-05-14T07:40:24Z
+        type: fixed
+        data:
+          fixed-version: 0.13.2-r1
+
+  - id: CGA-cffc-qx4h-898j
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T09:21:43Z
+        type: fixed
+        data:
+          fixed-version: 0.13.2-r2
+
   - id: CGA-cpw2-h53q-c5w6
     aliases:
       - CVE-2023-39325
@@ -26,27 +166,27 @@ advisories:
         data:
           fixed-version: 0.12.4-r4
 
-  - id: CGA-26hw-5rgh-wxj7
+  - id: CGA-fvh9-6v4w-vfc5
     aliases:
-      - CVE-2023-3978
-      - GHSA-2wrh-6pvc-2jm9
+      - CVE-2024-29018
+      - GHSA-mq39-4gv4-mvpx
     events:
-      - timestamp: 2024-01-30T15:54:11Z
+      - timestamp: 2024-03-21T07:34:43Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: buildkitd
-            componentID: 24fb3ebbebde4ba4
-            componentName: golang.org/x/net
-            componentVersion: v0.8.0
+            componentID: 19cd3c2af876f2e9
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.3+incompatible
             componentType: go-module
             componentLocation: /usr/bin/buildkitd
             scanner: grype
-      - timestamp: 2024-01-31T17:46:37Z
+      - timestamp: 2024-03-21T11:43:47Z
         type: fixed
         data:
-          fixed-version: 0.12.4-r4
+          fixed-version: 0.13.1-r1
 
   - id: CGA-g8fr-g5rp-4g53
     aliases:
@@ -70,20 +210,19 @@ advisories:
         data:
           fixed-version: 0.12.4-r4
 
-  - id: CGA-h2vq-f2rf-jwrq
+  - id: CGA-gh3x-4cv3-3r74
     aliases:
-      - CVE-2023-45142
-      - GHSA-rcjv-mgp8-qvmr
+      - GHSA-m425-mq94-257g
     events:
-      - timestamp: 2024-01-30T15:54:16Z
+      - timestamp: 2024-01-30T15:54:14Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: buildkitd
-            componentID: d187dc2cd891df14
-            componentName: go.opentelemetry.io/contrib/instrumentation/net/http/httptrace/otelhttptrace
-            componentVersion: v0.40.0
+            componentID: 5479b9a00cbef3b2
+            componentName: google.golang.org/grpc
+            componentVersion: v1.53.0
             componentType: go-module
             componentLocation: /usr/bin/buildkitd
             scanner: grype
@@ -91,62 +230,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.12.4-r4
-      - timestamp: 2024-02-07T20:38:51Z
-        type: pending-upstream-fix
-        data:
-          note: otelhttptrace and otelhttp have been both bumped to v0.45.0 in the upstream via https://github.com/moby/buildkit/commit/5ecfec1039959e8b742494eec8f7b5fd8202df5a, but this change is yet to be released. Bumping this dependency downstream causes build-time issues with missing required packages.
-
-  - id: CGA-qjhp-rhq4-4qxr
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:23:46Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-8j5r-c2w7-m2x2
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:23:47Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-h6wq-3vfj-vrgv
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-12T08:47:08Z
-        type: fixed
-        data:
-          fixed-version: 0.13.1-r2
-
-  - id: CGA-9gf3-9vpr-xg6r
-    aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
-    events:
-      - timestamp: 2024-04-11T19:00:33Z
-        type: fixed
-        data:
-          fixed-version: 0.13.1-r2
-
-  - id: CGA-j6c2-xp4q-vhg8
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-04-11T19:01:17Z
-        type: fixed
-        data:
-          fixed-version: 0.13.1-r2
 
   - id: CGA-gw7m-mhvq-98vj
     aliases:
@@ -174,20 +257,20 @@ advisories:
         data:
           note: otelgrpc v0.46.0 appears to contain API-incompatible changes with this version of buildkitd. Bumping this dependency causes build-time issues with missing required packages.
 
-  - id: CGA-6jm9-j3j6-7fxh
+  - id: CGA-h2vq-f2rf-jwrq
     aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
+      - CVE-2023-45142
+      - GHSA-rcjv-mgp8-qvmr
     events:
-      - timestamp: 2024-01-30T15:54:12Z
+      - timestamp: 2024-01-30T15:54:16Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: buildkitd
-            componentID: 2bce5397fdf60b52
-            componentName: golang.org/x/crypto
-            componentVersion: v0.2.0
+            componentID: d187dc2cd891df14
+            componentName: go.opentelemetry.io/contrib/instrumentation/net/http/httptrace/otelhttptrace
+            componentVersion: v0.40.0
             componentType: go-module
             componentLocation: /usr/bin/buildkitd
             scanner: grype
@@ -195,46 +278,40 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.12.4-r4
+      - timestamp: 2024-02-07T20:38:51Z
+        type: pending-upstream-fix
+        data:
+          note: otelhttptrace and otelhttp have been both bumped to v0.45.0 in the upstream via https://github.com/moby/buildkit/commit/5ecfec1039959e8b742494eec8f7b5fd8202df5a, but this change is yet to be released. Bumping this dependency downstream causes build-time issues with missing required packages.
 
-  - id: CGA-4wmp-6w9c-3v8q
+  - id: CGA-h6wq-3vfj-vrgv
     aliases:
-      - CVE-2024-21626
-      - GHSA-xr7r-f8xq-vfvv
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
     events:
-      - timestamp: 2024-02-05T07:04:30Z
+      - timestamp: 2024-04-12T08:47:08Z
         type: fixed
         data:
-          fixed-version: 0.12.5-r1
+          fixed-version: 0.13.1-r2
 
-  - id: CGA-pwq3-833q-q6jr
+  - id: CGA-hx6m-5pw9-29pm
     aliases:
-      - CVE-2024-23650
-      - GHSA-9p26-698r-w4hx
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
     events:
-      - timestamp: 2024-02-01T07:06:16Z
+      - timestamp: 2024-05-14T07:40:20Z
         type: fixed
         data:
-          fixed-version: 0.12.5-r0
+          fixed-version: 0.13.2-r1
 
-  - id: CGA-5r59-v4x3-mcq8
+  - id: CGA-j6c2-xp4q-vhg8
     aliases:
-      - CVE-2024-23651
-      - GHSA-m3r6-h7wv-7xxv
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
     events:
-      - timestamp: 2024-02-01T07:06:14Z
+      - timestamp: 2024-04-11T19:01:17Z
         type: fixed
         data:
-          fixed-version: 0.12.5-r0
-
-  - id: CGA-wgv3-9hrx-gj3g
-    aliases:
-      - CVE-2024-23652
-      - GHSA-4v98-7qmw-rqr8
-    events:
-      - timestamp: 2024-02-01T07:06:15Z
-        type: fixed
-        data:
-          fixed-version: 0.12.5-r0
+          fixed-version: 0.13.1-r2
 
   - id: CGA-jh96-52rx-r7gm
     aliases:
@@ -256,15 +333,26 @@ advisories:
         data:
           fixed-version: 0.13.1-r2
 
-  - id: CGA-xq26-g4pf-7x8c
+  - id: CGA-pwq3-833q-q6jr
     aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
+      - CVE-2024-23650
+      - GHSA-9p26-698r-w4hx
     events:
-      - timestamp: 2024-04-11T19:00:52Z
+      - timestamp: 2024-02-01T07:06:16Z
         type: fixed
         data:
-          fixed-version: 0.13.1-r2
+          fixed-version: 0.12.5-r0
+
+  - id: CGA-qjhp-rhq4-4qxr
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:23:46Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
 
   - id: CGA-qvgx-w72v-859j
     aliases:
@@ -276,15 +364,15 @@ advisories:
         data:
           fixed-version: 0.13.1-r2
 
-  - id: CGA-68p7-3997-8577
+  - id: CGA-wgv3-9hrx-gj3g
     aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
+      - CVE-2024-23652
+      - GHSA-4v98-7qmw-rqr8
     events:
-      - timestamp: 2024-04-11T19:01:05Z
+      - timestamp: 2024-02-01T07:06:15Z
         type: fixed
         data:
-          fixed-version: 0.13.1-r2
+          fixed-version: 0.12.5-r0
 
   - id: CGA-wh8j-mhfv-89f7
     aliases:
@@ -308,90 +396,22 @@ advisories:
         data:
           fixed-version: 0.13.0-r1
 
-  - id: CGA-9rgp-8f3j-ghcg
+  - id: CGA-wr87-ff6v-q75v
     aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
     events:
-      - timestamp: 2024-05-14T07:40:24Z
+      - timestamp: 2024-06-07T09:21:50Z
         type: fixed
         data:
-          fixed-version: 0.13.2-r1
+          fixed-version: 0.13.2-r2
 
-  - id: CGA-hx6m-5pw9-29pm
+  - id: CGA-xq26-g4pf-7x8c
     aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
     events:
-      - timestamp: 2024-05-14T07:40:20Z
+      - timestamp: 2024-04-11T19:00:52Z
         type: fixed
         data:
-          fixed-version: 0.13.2-r1
-
-  - id: CGA-fvh9-6v4w-vfc5
-    aliases:
-      - CVE-2024-29018
-      - GHSA-mq39-4gv4-mvpx
-    events:
-      - timestamp: 2024-03-21T07:34:43Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: buildkitd
-            componentID: 19cd3c2af876f2e9
-            componentName: github.com/docker/docker
-            componentVersion: v25.0.3+incompatible
-            componentType: go-module
-            componentLocation: /usr/bin/buildkitd
-            scanner: grype
-      - timestamp: 2024-03-21T11:43:47Z
-        type: fixed
-        data:
-          fixed-version: 0.13.1-r1
-
-  - id: CGA-8q3r-4wx8-6f9q
-    aliases:
-      - GHSA-7ww5-4wqc-m92c
-    events:
-      - timestamp: 2024-01-30T15:54:13Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: buildkitd
-            componentID: 75c561d61f53d326
-            componentName: github.com/containerd/containerd
-            componentVersion: v1.7.2
-            componentType: go-module
-            componentLocation: /usr/bin/buildkitd
-            scanner: grype
-      - timestamp: 2024-01-31T17:46:36Z
-        type: fixed
-        data:
-          fixed-version: 0.12.4-r4
-      - timestamp: 2024-02-07T20:36:36Z
-        type: pending-upstream-fix
-        data:
-          note: containerd v1.7.11 appears to contain API-incompatible changes with this version of buildkitd. Bumping this dependency downstream causes issues where buildkitd is unable to start due to a conflicting URL schema.
-
-  - id: CGA-gh3x-4cv3-3r74
-    aliases:
-      - GHSA-m425-mq94-257g
-    events:
-      - timestamp: 2024-01-30T15:54:14Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: buildkitd
-            componentID: 5479b9a00cbef3b2
-            componentName: google.golang.org/grpc
-            componentVersion: v1.53.0
-            componentType: go-module
-            componentLocation: /usr/bin/buildkitd
-            scanner: grype
-      - timestamp: 2024-01-31T17:46:37Z
-        type: fixed
-        data:
-          fixed-version: 0.12.4-r4
+          fixed-version: 0.13.1-r2
