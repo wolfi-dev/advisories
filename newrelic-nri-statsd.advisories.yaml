@@ -4,6 +4,38 @@ package:
   name: newrelic-nri-statsd
 
 advisories:
+  - id: CGA-2hm5-vvc6-4rqm
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2024-05-14T08:23:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: newrelic-nri-statsd
+            componentID: 4c21d492e48d49b0
+            componentName: stdlib
+            componentVersion: go1.22.2
+            componentType: go-module
+            componentLocation: /bin/gostatsd
+            scanner: grype
+      - timestamp: 2024-05-22T11:00:30Z
+        type: fixed
+        data:
+          fixed-version: 2.9.1-r3
+
+  - id: CGA-4cfr-mr48-mrff
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T15:26:57Z
+        type: fixed
+        data:
+          fixed-version: 2.9.1-r4
+
   - id: CGA-8q6x-g4mj-m8qp
     aliases:
       - CVE-2020-8559
@@ -21,6 +53,16 @@ advisories:
             componentType: go-module
             componentLocation: /bin/gostatsd
             scanner: grype
+
+  - id: CGA-j22m-cr2v-p6m2
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T15:26:58Z
+        type: fixed
+        data:
+          fixed-version: 2.9.1-r4
 
   - id: CGA-m66g-qwq8-c9x2
     aliases:
@@ -62,28 +104,6 @@ advisories:
             componentLocation: /bin/gostatsd
             scanner: grype
       - timestamp: 2024-05-22T11:00:29Z
-        type: fixed
-        data:
-          fixed-version: 2.9.1-r3
-
-  - id: CGA-2hm5-vvc6-4rqm
-    aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
-    events:
-      - timestamp: 2024-05-14T08:23:14Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: newrelic-nri-statsd
-            componentID: 4c21d492e48d49b0
-            componentName: stdlib
-            componentVersion: go1.22.2
-            componentType: go-module
-            componentLocation: /bin/gostatsd
-            scanner: grype
-      - timestamp: 2024-05-22T11:00:30Z
         type: fixed
         data:
           fixed-version: 2.9.1-r3
