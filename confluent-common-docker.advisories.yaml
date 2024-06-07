@@ -14,27 +14,25 @@ advisories:
         data:
           fixed-version: 7.6.0-r4
 
-  - id: CGA-mr3f-9x3p-x695
+  - id: CGA-89f9-f5f4-444p
     aliases:
-      - CVE-2023-51775
-      - GHSA-6qvw-249j-h44c
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
     events:
-      - timestamp: 2024-03-19T16:20:01Z
-        type: detection
+      - timestamp: 2024-05-14T11:44:32Z
+        type: fixed
         data:
-          type: scan/v1
-          data:
-            subpackageName: confluent-common-docker
-            componentID: bc7e78f5849d3b9b
-            componentName: jose4j
-            componentVersion: 0.9.3
-            componentType: java-archive
-            componentLocation: /usr/share/java/cp-base-new/docker-utils-jar-with-dependencies.jar
-            scanner: grype
-      - timestamp: 2024-03-20T07:06:26Z
-        type: pending-upstream-fix
+          fixed-version: 7.6.0-r5
+
+  - id: CGA-fj24-9296-294j
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2024-05-14T11:44:33Z
+        type: fixed
         data:
-          note: Confluent should publish the latest version of common package to their maven repository. They do not have any jars/poms past 7.6.x but they have 7.7.x tags in their GitHub repository.
+          fixed-version: 7.6.0-r5
 
   - id: CGA-gw4m-4mj9-6g69
     aliases:
@@ -58,22 +56,34 @@ advisories:
         data:
           note: Confluent should publish the latest version of common package to their maven repository. They do not have any jars/poms past 7.6.x but they have 7.7.x tags in their GitHub repository.
 
-  - id: CGA-89f9-f5f4-444p
+  - id: CGA-mr3f-9x3p-x695
     aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
+      - CVE-2023-51775
+      - GHSA-6qvw-249j-h44c
     events:
-      - timestamp: 2024-05-14T11:44:32Z
-        type: fixed
+      - timestamp: 2024-03-19T16:20:01Z
+        type: detection
         data:
-          fixed-version: 7.6.0-r5
+          type: scan/v1
+          data:
+            subpackageName: confluent-common-docker
+            componentID: bc7e78f5849d3b9b
+            componentName: jose4j
+            componentVersion: 0.9.3
+            componentType: java-archive
+            componentLocation: /usr/share/java/cp-base-new/docker-utils-jar-with-dependencies.jar
+            scanner: grype
+      - timestamp: 2024-03-20T07:06:26Z
+        type: pending-upstream-fix
+        data:
+          note: Confluent should publish the latest version of common package to their maven repository. They do not have any jars/poms past 7.6.x but they have 7.7.x tags in their GitHub repository.
 
-  - id: CGA-fj24-9296-294j
+  - id: CGA-mwrh-5p47-r979
     aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
     events:
-      - timestamp: 2024-05-14T11:44:33Z
+      - timestamp: 2024-06-07T18:24:38Z
         type: fixed
         data:
-          fixed-version: 7.6.0-r5
+          fixed-version: 7.6.0-r6
