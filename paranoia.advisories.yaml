@@ -4,28 +4,6 @@ package:
   name: paranoia
 
 advisories:
-  - id: CGA-wjpw-wwfh-x75x
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:35:30Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-g4xv-jfr4-98jv
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:35:31Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
   - id: CGA-26h8-845v-vp5c
     aliases:
       - CVE-2023-45288
@@ -47,6 +25,68 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.2.1-r13
+
+  - id: CGA-64cm-9q58-xw35
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T07:09:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: paranoia
+            componentID: dc2455dd88ee9d04
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/bin/paranoia
+            scanner: grype
+      - timestamp: 2024-03-12T09:16:49Z
+        type: fixed
+        data:
+          fixed-version: 0.2.1-r11
+
+  - id: CGA-7m63-jjx8-f885
+    aliases:
+      - GHSA-jq35-85cj-fj4p
+    events:
+      - timestamp: 2023-12-22T11:06:45Z
+        type: fixed
+        data:
+          fixed-version: 0.2.1-r9
+
+  - id: CGA-8g6r-4rwj-hgjh
+    aliases:
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
+    events:
+      - timestamp: 2024-05-14T13:06:43Z
+        type: fixed
+        data:
+          fixed-version: 0.2.1-r14
+
+  - id: CGA-9xhf-qp74-c342
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T18:37:31Z
+        type: fixed
+        data:
+          fixed-version: 0.2.1-r15
+
+  - id: CGA-g4xv-jfr4-98jv
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:35:31Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
 
   - id: CGA-mphm-vcwh-g9gx
     aliases:
@@ -70,49 +110,15 @@ advisories:
         data:
           fixed-version: 0.2.1-r11
 
-  - id: CGA-w6m2-mvgx-63xm
+  - id: CGA-r4v8-29f2-6w9r
     aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
     events:
-      - timestamp: 2024-03-12T07:09:42Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: paranoia
-            componentID: dc2455dd88ee9d04
-            componentName: stdlib
-            componentVersion: go1.21.5
-            componentType: go-module
-            componentLocation: /usr/bin/paranoia
-            scanner: grype
-      - timestamp: 2024-03-12T09:16:48Z
+      - timestamp: 2024-05-14T13:06:45Z
         type: fixed
         data:
-          fixed-version: 0.2.1-r11
-
-  - id: CGA-64cm-9q58-xw35
-    aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
-    events:
-      - timestamp: 2024-03-12T07:09:43Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: paranoia
-            componentID: dc2455dd88ee9d04
-            componentName: stdlib
-            componentVersion: go1.21.5
-            componentType: go-module
-            componentLocation: /usr/bin/paranoia
-            scanner: grype
-      - timestamp: 2024-03-12T09:16:49Z
-        type: fixed
-        data:
-          fixed-version: 0.2.1-r11
+          fixed-version: 0.2.1-r14
 
   - id: CGA-v6w2-q3pv-4824
     aliases:
@@ -158,31 +164,35 @@ advisories:
         data:
           fixed-version: 0.2.1-r11
 
-  - id: CGA-8g6r-4rwj-hgjh
+  - id: CGA-w6m2-mvgx-63xm
     aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
     events:
-      - timestamp: 2024-05-14T13:06:43Z
+      - timestamp: 2024-03-12T07:09:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: paranoia
+            componentID: dc2455dd88ee9d04
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/bin/paranoia
+            scanner: grype
+      - timestamp: 2024-03-12T09:16:48Z
         type: fixed
         data:
-          fixed-version: 0.2.1-r14
+          fixed-version: 0.2.1-r11
 
-  - id: CGA-r4v8-29f2-6w9r
+  - id: CGA-wjpw-wwfh-x75x
     aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
     events:
-      - timestamp: 2024-05-14T13:06:45Z
-        type: fixed
+      - timestamp: 2023-11-07T19:35:30Z
+        type: false-positive-determination
         data:
-          fixed-version: 0.2.1-r14
-
-  - id: CGA-7m63-jjx8-f885
-    aliases:
-      - GHSA-jq35-85cj-fj4p
-    events:
-      - timestamp: 2023-12-22T11:06:45Z
-        type: fixed
-        data:
-          fixed-version: 0.2.1-r9
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
