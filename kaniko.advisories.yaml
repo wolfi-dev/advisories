@@ -4,66 +4,12 @@ package:
   name: kaniko
 
 advisories:
-  - id: CGA-5p8w-9jgj-hp22
+  - id: CGA-5fx8-mrwp-mm4w
     aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:30:15Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-7r5m-3qvr-5xq2
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:30:16Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-prfp-vc2h-7jf5
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-13T07:10:48Z
-        type: fixed
-        data:
-          fixed-version: 1.22.0-r1
-
-  - id: CGA-p43v-r7vp-qqhj
-    aliases:
-      - CVE-2024-21626
-      - GHSA-xr7r-f8xq-vfvv
+      - CVE-2024-23653
+      - GHSA-wr6v-9f75-vh2g
     events:
       - timestamp: 2024-02-09T09:12:58Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kaniko-warmer
-            componentID: f35299cf1fc293fc
-            componentName: github.com/opencontainers/runc
-            componentVersion: v1.1.5
-            componentType: go-module
-            componentLocation: /usr/bin/warmer
-            scanner: grype
-      - timestamp: 2024-02-10T04:06:50Z
-        type: fixed
-        data:
-          fixed-version: 1.20.1-r0
-
-  - id: CGA-hc95-x7c3-393j
-    aliases:
-      - CVE-2024-23650
-      - GHSA-9p26-698r-w4hx
-    events:
-      - timestamp: 2024-02-09T09:12:57Z
         type: detection
         data:
           type: scan/v1
@@ -80,27 +26,37 @@ advisories:
         data:
           fixed-version: 1.20.1-r0
 
-  - id: CGA-v5x3-4vp7-q26m
+  - id: CGA-5p8w-9jgj-hp22
     aliases:
-      - CVE-2024-23651
-      - GHSA-m3r6-h7wv-7xxv
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
     events:
-      - timestamp: 2024-02-09T09:12:57Z
-        type: detection
+      - timestamp: 2023-11-07T19:30:15Z
+        type: false-positive-determination
         data:
-          type: scan/v1
-          data:
-            subpackageName: kaniko-warmer
-            componentID: 10a5630b162399db
-            componentName: github.com/moby/buildkit
-            componentVersion: v0.11.6
-            componentType: go-module
-            componentLocation: /usr/bin/warmer
-            scanner: grype
-      - timestamp: 2024-02-10T04:06:50Z
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-73c4-v4fq-x6f8
+    aliases:
+      - CVE-2024-32473
+      - GHSA-x84c-p2g9-rqv9
+    events:
+      - timestamp: 2024-04-19T10:19:17Z
         type: fixed
         data:
-          fixed-version: 1.20.1-r0
+          fixed-version: 1.22.0-r2
+
+  - id: CGA-7r5m-3qvr-5xq2
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:30:16Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
 
   - id: CGA-7wr2-gxv6-5g96
     aliases:
@@ -124,27 +80,26 @@ advisories:
         data:
           fixed-version: 1.20.1-r0
 
-  - id: CGA-5fx8-mrwp-mm4w
+  - id: CGA-f5hh-5rrg-27h8
     aliases:
-      - CVE-2024-23653
-      - GHSA-wr6v-9f75-vh2g
+      - GHSA-7ww5-4wqc-m92c
     events:
-      - timestamp: 2024-02-09T09:12:58Z
+      - timestamp: 2024-03-01T02:01:11Z
         type: detection
         data:
           type: scan/v1
           data:
-            subpackageName: kaniko-warmer
-            componentID: 10a5630b162399db
-            componentName: github.com/moby/buildkit
-            componentVersion: v0.11.6
+            subpackageName: kaniko
+            componentID: 666561d790f8970c
+            componentName: github.com/containerd/containerd
+            componentVersion: v1.7.6
             componentType: go-module
-            componentLocation: /usr/bin/warmer
+            componentLocation: /usr/bin/executor
             scanner: grype
-      - timestamp: 2024-02-10T04:06:51Z
+      - timestamp: 2024-03-02T07:13:56Z
         type: fixed
         data:
-          fixed-version: 1.20.1-r0
+          fixed-version: 1.21.0-r1
 
   - id: CGA-fqx2-gw9v-9px4
     aliases:
@@ -168,6 +123,38 @@ advisories:
         data:
           fixed-version: 1.21.1-r1
 
+  - id: CGA-hc95-x7c3-393j
+    aliases:
+      - CVE-2024-23650
+      - GHSA-9p26-698r-w4hx
+    events:
+      - timestamp: 2024-02-09T09:12:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kaniko-warmer
+            componentID: 10a5630b162399db
+            componentName: github.com/moby/buildkit
+            componentVersion: v0.11.6
+            componentType: go-module
+            componentLocation: /usr/bin/warmer
+            scanner: grype
+      - timestamp: 2024-02-10T04:06:51Z
+        type: fixed
+        data:
+          fixed-version: 1.20.1-r0
+
+  - id: CGA-m2m7-v68m-6whj
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T11:17:36Z
+        type: fixed
+        data:
+          fixed-version: 1.23.0-r1
+
   - id: CGA-p33q-g3gf-v6gx
     aliases:
       - CVE-2024-29018
@@ -178,36 +165,69 @@ advisories:
         data:
           fixed-version: 1.21.1-r1
 
-  - id: CGA-73c4-v4fq-x6f8
+  - id: CGA-p43v-r7vp-qqhj
     aliases:
-      - CVE-2024-32473
-      - GHSA-x84c-p2g9-rqv9
+      - CVE-2024-21626
+      - GHSA-xr7r-f8xq-vfvv
     events:
-      - timestamp: 2024-04-19T10:19:17Z
-        type: fixed
-        data:
-          fixed-version: 1.22.0-r2
-
-  - id: CGA-f5hh-5rrg-27h8
-    aliases:
-      - GHSA-7ww5-4wqc-m92c
-    events:
-      - timestamp: 2024-03-01T02:01:11Z
+      - timestamp: 2024-02-09T09:12:58Z
         type: detection
         data:
           type: scan/v1
           data:
-            subpackageName: kaniko
-            componentID: 666561d790f8970c
-            componentName: github.com/containerd/containerd
-            componentVersion: v1.7.6
+            subpackageName: kaniko-warmer
+            componentID: f35299cf1fc293fc
+            componentName: github.com/opencontainers/runc
+            componentVersion: v1.1.5
             componentType: go-module
-            componentLocation: /usr/bin/executor
+            componentLocation: /usr/bin/warmer
             scanner: grype
-      - timestamp: 2024-03-02T07:13:56Z
+      - timestamp: 2024-02-10T04:06:50Z
         type: fixed
         data:
-          fixed-version: 1.21.0-r1
+          fixed-version: 1.20.1-r0
+
+  - id: CGA-prfp-vc2h-7jf5
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:10:48Z
+        type: fixed
+        data:
+          fixed-version: 1.22.0-r1
+
+  - id: CGA-v5x3-4vp7-q26m
+    aliases:
+      - CVE-2024-23651
+      - GHSA-m3r6-h7wv-7xxv
+    events:
+      - timestamp: 2024-02-09T09:12:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kaniko-warmer
+            componentID: 10a5630b162399db
+            componentName: github.com/moby/buildkit
+            componentVersion: v0.11.6
+            componentType: go-module
+            componentLocation: /usr/bin/warmer
+            scanner: grype
+      - timestamp: 2024-02-10T04:06:50Z
+        type: fixed
+        data:
+          fixed-version: 1.20.1-r0
+
+  - id: CGA-vph9-q67m-4c5h
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T11:17:39Z
+        type: fixed
+        data:
+          fixed-version: 1.23.0-r1
 
   - id: CGA-vwrv-x875-377x
     aliases:
