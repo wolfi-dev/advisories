@@ -4,33 +4,15 @@ package:
   name: kubernetes-csi-external-attacher-4.3
 
 advisories:
-  - id: CGA-772f-68w4-84cv
+  - id: CGA-22q9-vxjw-77rv
     aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
     events:
-      - timestamp: 2023-10-13T17:15:11Z
+      - timestamp: 2024-05-14T10:23:00Z
         type: fixed
         data:
-          fixed-version: 4.3.0-r9
-
-  - id: CGA-v3r5-4gxj-cmgc
-    aliases:
-      - CVE-2023-39326
-      - GHSA-9f76-wg39-x86h
-    events:
-      - timestamp: 2024-02-14T13:27:12Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubernetes-csi-external-attacher-4.3
-            componentID: cf6fd59f91f3cb19
-            componentName: stdlib
-            componentVersion: go1.21.3
-            componentType: go-module
-            componentLocation: /usr/bin/csi-attacher
-            scanner: grype
+          fixed-version: 4.3.0-r16
 
   - id: CGA-4qpf-f6gx-pg7r
     aliases:
@@ -41,68 +23,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 4.3.0-r9
-
-  - id: CGA-cfpj-5fv4-gmqx
-    aliases:
-      - CVE-2023-44487
-      - GHSA-qppj-fm5r-hxr3
-    events:
-      - timestamp: 2024-02-14T13:27:15Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubernetes-csi-external-attacher-4.3
-            componentID: 7f3680559c610f95
-            componentName: google.golang.org/grpc
-            componentVersion: v1.54.0
-            componentType: go-module
-            componentLocation: /usr/bin/csi-attacher
-            scanner: grype
-      - timestamp: 2024-02-15T10:32:28Z
-        type: fixed
-        data:
-          fixed-version: 4.3.0-r11
-
-  - id: CGA-wf3w-vx3h-2qch
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:31:45Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-m9j3-j78w-7fp8
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:31:47Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-9mqh-95mq-qwjc
-    aliases:
-      - CVE-2023-45285
-      - GHSA-5f94-vhjq-rpg8
-    events:
-      - timestamp: 2024-02-14T13:27:13Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubernetes-csi-external-attacher-4.3
-            componentID: cf6fd59f91f3cb19
-            componentName: stdlib
-            componentVersion: go1.21.3
-            componentType: go-module
-            componentLocation: /usr/bin/csi-attacher
-            scanner: grype
 
   - id: CGA-6qxf-wjmx-345v
     aliases:
@@ -126,6 +46,38 @@ advisories:
         data:
           fixed-version: 4.3.0-r15
 
+  - id: CGA-72j7-5pxj-cq3g
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T11:16:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-attacher-4.3
+            componentID: 05a9d1eec1290e30
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/csi-attacher
+            scanner: grype
+      - timestamp: 2024-03-14T21:59:37Z
+        type: fixed
+        data:
+          fixed-version: 4.3.0-r13
+
+  - id: CGA-772f-68w4-84cv
+    aliases:
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2023-10-13T17:15:11Z
+        type: fixed
+        data:
+          fixed-version: 4.3.0-r9
+
   - id: CGA-8qp6-9phg-5jp3
     aliases:
       - CVE-2023-45289
@@ -148,49 +100,66 @@ advisories:
         data:
           fixed-version: 4.3.0-r12
 
-  - id: CGA-vjp4-27jq-7m53
+  - id: CGA-9mqh-95mq-qwjc
     aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
+      - CVE-2023-45285
+      - GHSA-5f94-vhjq-rpg8
     events:
-      - timestamp: 2024-03-12T08:11:00Z
+      - timestamp: 2024-02-14T13:27:13Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: kubernetes-csi-external-attacher-4.3
-            componentID: 6fea1f349c086158
+            componentID: cf6fd59f91f3cb19
             componentName: stdlib
-            componentVersion: go1.22.0
+            componentVersion: go1.21.3
             componentType: go-module
             componentLocation: /usr/bin/csi-attacher
             scanner: grype
-      - timestamp: 2024-03-12T09:17:31Z
-        type: fixed
-        data:
-          fixed-version: 4.3.0-r12
 
-  - id: CGA-wq2v-g5rx-wpc5
+  - id: CGA-cfpj-5fv4-gmqx
     aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
+      - CVE-2023-44487
+      - GHSA-qppj-fm5r-hxr3
     events:
-      - timestamp: 2024-03-12T08:11:02Z
+      - timestamp: 2024-02-14T13:27:15Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: kubernetes-csi-external-attacher-4.3
-            componentID: 6fea1f349c086158
-            componentName: stdlib
-            componentVersion: go1.22.0
+            componentID: 7f3680559c610f95
+            componentName: google.golang.org/grpc
+            componentVersion: v1.54.0
             componentType: go-module
             componentLocation: /usr/bin/csi-attacher
             scanner: grype
-      - timestamp: 2024-03-12T09:17:26Z
+      - timestamp: 2024-02-15T10:32:28Z
         type: fixed
         data:
-          fixed-version: 4.3.0-r12
+          fixed-version: 4.3.0-r11
+
+  - id: CGA-m9j3-j78w-7fp8
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:31:47Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-mgvp-3v73-hm86
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2024-05-14T10:23:03Z
+        type: fixed
+        data:
+          fixed-version: 4.3.0-r16
 
   - id: CGA-mrhq-cmqf-6r88
     aliases:
@@ -214,6 +183,66 @@ advisories:
         data:
           fixed-version: 4.3.0-r12
 
+  - id: CGA-pqrq-w55p-ch6g
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T17:08:58Z
+        type: fixed
+        data:
+          fixed-version: 4.3.0-r17
+
+  - id: CGA-v3r5-4gxj-cmgc
+    aliases:
+      - CVE-2023-39326
+      - GHSA-9f76-wg39-x86h
+    events:
+      - timestamp: 2024-02-14T13:27:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-attacher-4.3
+            componentID: cf6fd59f91f3cb19
+            componentName: stdlib
+            componentVersion: go1.21.3
+            componentType: go-module
+            componentLocation: /usr/bin/csi-attacher
+            scanner: grype
+
+  - id: CGA-vjp4-27jq-7m53
+    aliases:
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T08:11:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-attacher-4.3
+            componentID: 6fea1f349c086158
+            componentName: stdlib
+            componentVersion: go1.22.0
+            componentType: go-module
+            componentLocation: /usr/bin/csi-attacher
+            scanner: grype
+      - timestamp: 2024-03-12T09:17:31Z
+        type: fixed
+        data:
+          fixed-version: 4.3.0-r12
+
+  - id: CGA-vp7x-8jjj-9h6x
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T17:08:53Z
+        type: fixed
+        data:
+          fixed-version: 4.3.0-r17
+
   - id: CGA-w97h-mj6m-7p9p
     aliases:
       - CVE-2024-24785
@@ -236,47 +265,38 @@ advisories:
         data:
           fixed-version: 4.3.0-r12
 
-  - id: CGA-72j7-5pxj-cq3g
+  - id: CGA-wf3w-vx3h-2qch
     aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
     events:
-      - timestamp: 2024-03-14T11:16:23Z
+      - timestamp: 2023-11-07T19:31:45Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-wq2v-g5rx-wpc5
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T08:11:02Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: kubernetes-csi-external-attacher-4.3
-            componentID: 05a9d1eec1290e30
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.30.0
+            componentID: 6fea1f349c086158
+            componentName: stdlib
+            componentVersion: go1.22.0
             componentType: go-module
             componentLocation: /usr/bin/csi-attacher
             scanner: grype
-      - timestamp: 2024-03-14T21:59:37Z
+      - timestamp: 2024-03-12T09:17:26Z
         type: fixed
         data:
-          fixed-version: 4.3.0-r13
-
-  - id: CGA-22q9-vxjw-77rv
-    aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
-    events:
-      - timestamp: 2024-05-14T10:23:00Z
-        type: fixed
-        data:
-          fixed-version: 4.3.0-r16
-
-  - id: CGA-mgvp-3v73-hm86
-    aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
-    events:
-      - timestamp: 2024-05-14T10:23:03Z
-        type: fixed
-        data:
-          fixed-version: 4.3.0-r16
+          fixed-version: 4.3.0-r12
 
   - id: CGA-xw4j-jwp2-3pcj
     aliases:
