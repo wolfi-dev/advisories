@@ -4,6 +4,16 @@ package:
   name: supercronic
 
 advisories:
+  - id: CGA-447j-8f38-8fvg
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-14T13:18:14Z
+        type: fixed
+        data:
+          fixed-version: 0.2.29-r1
+
   - id: CGA-6gf9-g2jq-gx4q
     aliases:
       - CVE-2023-45283
@@ -15,6 +25,26 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-9j3h-mw56-vv7c
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T12:34:11Z
+        type: fixed
+        data:
+          fixed-version: 0.2.29-r8
+
+  - id: CGA-9wm9-439w-6wx5
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T12:34:14Z
+        type: fixed
+        data:
+          fixed-version: 0.2.29-r8
+
   - id: CGA-cw4f-fmgc-6xfm
     aliases:
       - CVE-2023-45284
@@ -25,6 +55,48 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CGA-frc5-36h7-j6fg
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-04-03T23:16:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: supercronic
+            componentID: eff7242672a0581d
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/supercronic
+            scanner: grype
+      - timestamp: 2024-05-13T18:13:16Z
+        type: fixed
+        data:
+          fixed-version: 0.2.29-r5
+
+  - id: CGA-h2hp-r846-6gh2
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-14T13:18:15Z
+        type: fixed
+        data:
+          fixed-version: 0.2.29-r1
+
+  - id: CGA-pprv-fh6c-4w4c
+    aliases:
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-14T13:18:15Z
+        type: fixed
+        data:
+          fixed-version: 0.2.29-r1
 
   - id: CGA-q836-5wpw-7h58
     aliases:
@@ -55,55 +127,3 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.2.29-r1
-
-  - id: CGA-447j-8f38-8fvg
-    aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
-    events:
-      - timestamp: 2024-03-14T13:18:14Z
-        type: fixed
-        data:
-          fixed-version: 0.2.29-r1
-
-  - id: CGA-h2hp-r846-6gh2
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-14T13:18:15Z
-        type: fixed
-        data:
-          fixed-version: 0.2.29-r1
-
-  - id: CGA-pprv-fh6c-4w4c
-    aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
-    events:
-      - timestamp: 2024-03-14T13:18:15Z
-        type: fixed
-        data:
-          fixed-version: 0.2.29-r1
-
-  - id: CGA-frc5-36h7-j6fg
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-04-03T23:16:58Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: supercronic
-            componentID: eff7242672a0581d
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.30.0
-            componentType: go-module
-            componentLocation: /usr/bin/supercronic
-            scanner: grype
-      - timestamp: 2024-05-13T18:13:16Z
-        type: fixed
-        data:
-          fixed-version: 0.2.29-r5
