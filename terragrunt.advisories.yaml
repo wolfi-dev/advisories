@@ -4,16 +4,27 @@ package:
   name: terragrunt
 
 advisories:
-  - id: CGA-qcf7-65c5-2x7f
+  - id: CGA-53qr-p9pr-gvq7
     aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
+      - CVE-2024-28180
+      - GHSA-c5q2-7r4c-mv6g
     events:
-      - timestamp: 2023-11-07T19:39:18Z
-        type: false-positive-determination
+      - timestamp: 2024-03-12T19:56:27Z
+        type: detection
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          type: scan/v1
+          data:
+            subpackageName: terragrunt
+            componentID: ec99f394ed4900a5
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.0
+            componentType: go-module
+            componentLocation: /usr/bin/terragrunt
+            scanner: grype
+      - timestamp: 2024-03-13T12:11:19Z
+        type: fixed
+        data:
+          fixed-version: 0.55.14-r1
 
   - id: CGA-7c2r-q33m-wcrm
     aliases:
@@ -25,26 +36,6 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
-
-  - id: CGA-ghw7-h4f2-r3gc
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-20T07:17:35Z
-        type: fixed
-        data:
-          fixed-version: 0.57.5-r0
-
-  - id: CGA-q9m9-p9j9-g9vj
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2023-12-19T20:32:51Z
-        type: fixed
-        data:
-          fixed-version: 0.54.8-r0
 
   - id: CGA-8mf4-rv58-jwhm
     aliases:
@@ -68,28 +59,6 @@ advisories:
         data:
           fixed-version: 0.55.15-r1
 
-  - id: CGA-53qr-p9pr-gvq7
-    aliases:
-      - CVE-2024-28180
-      - GHSA-c5q2-7r4c-mv6g
-    events:
-      - timestamp: 2024-03-12T19:56:27Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: terragrunt
-            componentID: ec99f394ed4900a5
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.0
-            componentType: go-module
-            componentLocation: /usr/bin/terragrunt
-            scanner: grype
-      - timestamp: 2024-03-13T12:11:19Z
-        type: fixed
-        data:
-          fixed-version: 0.55.14-r1
-
   - id: CGA-f54x-xrpq-qmc5
     aliases:
       - GHSA-2c7c-3mj9-8fqh
@@ -110,6 +79,47 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.55.14-r1
+
+  - id: CGA-ghw7-h4f2-r3gc
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-20T07:17:35Z
+        type: fixed
+        data:
+          fixed-version: 0.57.5-r0
+
+  - id: CGA-m752-fvv7-555x
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T11:39:49Z
+        type: fixed
+        data:
+          fixed-version: 0.58.14-r1
+
+  - id: CGA-q9m9-p9j9-g9vj
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2023-12-19T20:32:51Z
+        type: fixed
+        data:
+          fixed-version: 0.54.8-r0
+
+  - id: CGA-qcf7-65c5-2x7f
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:39:18Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
 
   - id: CGA-wrvw-cm98-67w8
     aliases:
