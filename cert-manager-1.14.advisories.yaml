@@ -4,38 +4,27 @@ package:
   name: cert-manager-1.14
 
 advisories:
-  - id: CGA-xj2h-hmvh-f742
+  - id: CGA-22j8-xhq6-3m5j
     aliases:
-      - CVE-2019-25210
-      - GHSA-jw44-4f3j-q396
+      - CVE-2024-28180
+      - GHSA-c5q2-7r4c-mv6g
     events:
-      - timestamp: 2024-03-06T07:08:36Z
+      - timestamp: 2024-03-08T07:11:22Z
         type: detection
         data:
           type: scan/v1
           data:
-            subpackageName: cmctl-1.14
-            componentID: 9e52fb76e7c198d1
-            componentName: helm.sh/helm/v3
-            componentVersion: v3.14.2
+            subpackageName: cert-manager-1.14
+            componentID: b6f10a015dd64977
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
             componentType: go-module
-            componentLocation: /usr/bin/cmctl
+            componentLocation: /usr/bin/controller-linux-amd64
             scanner: grype
-      - timestamp: 2024-03-14T23:55:27Z
-        type: false-positive-determination
-        data:
-          type: vulnerability-record-analysis-contested
-          note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
-
-  - id: CGA-48q5-6fxp-56p8
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-08T07:10:03Z
+      - timestamp: 2024-03-11T18:21:08Z
         type: fixed
         data:
-          fixed-version: 1.14.4-r3
+          fixed-version: 1.14.4-r1
 
   - id: CGA-2gpw-4jjj-6w6p
     aliases:
@@ -47,15 +36,47 @@ advisories:
         data:
           fixed-version: 1.14.4-r2
 
-  - id: CGA-qr7x-78qw-m49q
+  - id: CGA-3jg2-5m28-f2v4
     aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
+      - CVE-2024-26147
+      - GHSA-r53h-jv2g-vpx6
     events:
-      - timestamp: 2024-05-14T09:28:49Z
+      - timestamp: 2024-02-23T07:04:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cmctl-1.14
+            componentID: 3012c3d7648f7741
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.1
+            componentType: go-module
+            componentLocation: /usr/bin/cmctl
+            scanner: grype
+      - timestamp: 2024-02-24T07:51:52Z
         type: fixed
         data:
-          fixed-version: 1.14.5-r1
+          fixed-version: 1.14.2-r2
+
+  - id: CGA-48q5-6fxp-56p8
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-08T07:10:03Z
+        type: fixed
+        data:
+          fixed-version: 1.14.4-r3
+
+  - id: CGA-jgwg-6x43-4hh7
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T14:35:36Z
+        type: fixed
+        data:
+          fixed-version: 1.14.5-r2
 
   - id: CGA-jx4w-4944-hxj3
     aliases:
@@ -63,6 +84,16 @@ advisories:
       - GHSA-2jwv-jmq4-4j3r
     events:
       - timestamp: 2024-05-14T09:28:48Z
+        type: fixed
+        data:
+          fixed-version: 1.14.5-r1
+
+  - id: CGA-qr7x-78qw-m49q
+    aliases:
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
+    events:
+      - timestamp: 2024-05-14T09:28:49Z
         type: fixed
         data:
           fixed-version: 1.14.5-r1
@@ -89,46 +120,25 @@ advisories:
         data:
           fixed-version: 1.14.2-r1
 
-  - id: CGA-3jg2-5m28-f2v4
+  - id: CGA-xj2h-hmvh-f742
     aliases:
-      - CVE-2024-26147
-      - GHSA-r53h-jv2g-vpx6
+      - CVE-2019-25210
+      - GHSA-jw44-4f3j-q396
     events:
-      - timestamp: 2024-02-23T07:04:13Z
+      - timestamp: 2024-03-06T07:08:36Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: cmctl-1.14
-            componentID: 3012c3d7648f7741
+            componentID: 9e52fb76e7c198d1
             componentName: helm.sh/helm/v3
-            componentVersion: v3.14.1
+            componentVersion: v3.14.2
             componentType: go-module
             componentLocation: /usr/bin/cmctl
             scanner: grype
-      - timestamp: 2024-02-24T07:51:52Z
-        type: fixed
+      - timestamp: 2024-03-14T23:55:27Z
+        type: false-positive-determination
         data:
-          fixed-version: 1.14.2-r2
-
-  - id: CGA-22j8-xhq6-3m5j
-    aliases:
-      - CVE-2024-28180
-      - GHSA-c5q2-7r4c-mv6g
-    events:
-      - timestamp: 2024-03-08T07:11:22Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: cert-manager-1.14
-            componentID: b6f10a015dd64977
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.1
-            componentType: go-module
-            componentLocation: /usr/bin/controller-linux-amd64
-            scanner: grype
-      - timestamp: 2024-03-11T18:21:08Z
-        type: fixed
-        data:
-          fixed-version: 1.14.4-r1
+          type: vulnerability-record-analysis-contested
+          note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
