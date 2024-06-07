@@ -4,28 +4,6 @@ package:
   name: prometheus-bind-exporter
 
 advisories:
-  - id: CGA-9xmc-qjr8-5m23
-    aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
-    events:
-      - timestamp: 2024-02-14T14:31:42Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: prometheus-bind-exporter
-            componentID: eafd0a1834df4bcb
-            componentName: golang.org/x/net
-            componentVersion: v0.10.0
-            componentType: go-module
-            componentLocation: /usr/bin/bind_exporter
-            scanner: grype
-      - timestamp: 2024-02-14T19:30:29Z
-        type: fixed
-        data:
-          fixed-version: 0.7.0-r6
-
   - id: CGA-2c54-93g6-r6gp
     aliases:
       - CVE-2023-39326
@@ -35,6 +13,57 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.7.0-r5
+
+  - id: CGA-2wh6-g5j6-vgmw
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T09:17:25Z
+        type: fixed
+        data:
+          fixed-version: 0.7.0-r7
+
+  - id: CGA-3xjp-77xf-fhhc
+    aliases:
+      - CVE-2023-45285
+      - GHSA-5f94-vhjq-rpg8
+    events:
+      - timestamp: 2024-02-14T14:28:32Z
+        type: fixed
+        data:
+          fixed-version: 0.7.0-r5
+
+  - id: CGA-55rm-5mvf-358q
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T09:17:23Z
+        type: fixed
+        data:
+          fixed-version: 0.7.0-r7
+
+  - id: CGA-586x-8v37-ch77
+    aliases:
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T09:17:20Z
+        type: fixed
+        data:
+          fixed-version: 0.7.0-r7
+
+  - id: CGA-6xjc-f67x-hxc6
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:35:49Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
 
   - id: CGA-7x46-gqpq-727w
     aliases:
@@ -58,12 +87,12 @@ advisories:
         data:
           fixed-version: 0.7.0-r6
 
-  - id: CGA-wx95-wrvj-5fxq
+  - id: CGA-9xmc-qjr8-5m23
     aliases:
-      - CVE-2023-44487
-      - GHSA-qppj-fm5r-hxr3
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
     events:
-      - timestamp: 2024-02-14T14:31:43Z
+      - timestamp: 2024-02-14T14:31:42Z
         type: detection
         data:
           type: scan/v1
@@ -91,26 +120,27 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
-  - id: CGA-6xjc-f67x-hxc6
+  - id: CGA-jw3m-h94j-w7r2
     aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
     events:
-      - timestamp: 2023-11-07T19:35:49Z
-        type: false-positive-determination
+      - timestamp: 2024-03-14T08:19:59Z
+        type: detection
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-3xjp-77xf-fhhc
-    aliases:
-      - CVE-2023-45285
-      - GHSA-5f94-vhjq-rpg8
-    events:
-      - timestamp: 2024-02-14T14:28:32Z
+          type: scan/v1
+          data:
+            subpackageName: prometheus-bind-exporter
+            componentID: e00a9fa3e2416fb6
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/bind_exporter
+            scanner: grype
+      - timestamp: 2024-03-16T09:55:53Z
         type: fixed
         data:
-          fixed-version: 0.7.0-r5
+          fixed-version: 0.7.0-r8
 
   - id: CGA-mfw3-9p4f-353f
     aliases:
@@ -121,6 +151,16 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.7.0-r10
+
+  - id: CGA-pwcj-p254-rppg
+    aliases:
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
+    events:
+      - timestamp: 2024-05-14T12:37:18Z
+        type: fixed
+        data:
+          fixed-version: 0.7.0-r11
 
   - id: CGA-qh9g-xvvc-5m58
     aliases:
@@ -164,67 +204,27 @@ advisories:
         data:
           fixed-version: 0.7.0-r6
 
-  - id: CGA-55rm-5mvf-358q
+  - id: CGA-wx95-wrvj-5fxq
     aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
+      - CVE-2023-44487
+      - GHSA-qppj-fm5r-hxr3
     events:
-      - timestamp: 2024-03-12T09:17:23Z
-        type: fixed
-        data:
-          fixed-version: 0.7.0-r7
-
-  - id: CGA-2wh6-g5j6-vgmw
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-12T09:17:25Z
-        type: fixed
-        data:
-          fixed-version: 0.7.0-r7
-
-  - id: CGA-586x-8v37-ch77
-    aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
-    events:
-      - timestamp: 2024-03-12T09:17:20Z
-        type: fixed
-        data:
-          fixed-version: 0.7.0-r7
-
-  - id: CGA-jw3m-h94j-w7r2
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T08:19:59Z
+      - timestamp: 2024-02-14T14:31:43Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: prometheus-bind-exporter
-            componentID: e00a9fa3e2416fb6
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.30.0
+            componentID: eafd0a1834df4bcb
+            componentName: golang.org/x/net
+            componentVersion: v0.10.0
             componentType: go-module
             componentLocation: /usr/bin/bind_exporter
             scanner: grype
-      - timestamp: 2024-03-16T09:55:53Z
+      - timestamp: 2024-02-14T19:30:29Z
         type: fixed
         data:
-          fixed-version: 0.7.0-r8
-
-  - id: CGA-pwcj-p254-rppg
-    aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
-    events:
-      - timestamp: 2024-05-14T12:37:18Z
-        type: fixed
-        data:
-          fixed-version: 0.7.0-r11
+          fixed-version: 0.7.0-r6
 
   - id: CGA-x2m8-phfw-47cx
     aliases:
@@ -235,3 +235,13 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.7.0-r11
+
+  - id: CGA-xgff-63gq-jcpm
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T16:39:50Z
+        type: fixed
+        data:
+          fixed-version: 0.7.0-r12
