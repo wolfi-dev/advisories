@@ -4,15 +4,15 @@ package:
   name: newrelic-infrastructure-agent
 
 advisories:
-  - id: CGA-m99v-c9cq-945q
+  - id: CGA-3jf9-cjcr-57m8
     aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
+      - GHSA-jq35-85cj-fj4p
     events:
-      - timestamp: 2023-10-16T18:51:50Z
-        type: fixed
+      - timestamp: 2023-10-31T20:03:59Z
+        type: false-positive-determination
         data:
-          fixed-version: 1.47.2-r3
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability is in the container runtime itself, not clients of the container runtime.
 
   - id: CGA-4f39-8r9g-7w4m
     aliases:
@@ -23,6 +23,58 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.47.2-r3
+
+  - id: CGA-68r7-j988-qxjf
+    aliases:
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T09:19:59Z
+        type: fixed
+        data:
+          fixed-version: 1.50.0-r1
+
+  - id: CGA-6xhq-m263-q2gh
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T13:21:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: newrelic-infrastructure-agent
+            componentID: 521d713e2cc593f8
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/newrelic-infra-ctl
+            scanner: grype
+      - timestamp: 2024-03-16T09:54:36Z
+        type: fixed
+        data:
+          fixed-version: 1.50.0-r2
+
+  - id: CGA-7cgp-9c9p-v4pg
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T09:20:01Z
+        type: fixed
+        data:
+          fixed-version: 1.50.0-r1
+
+  - id: CGA-8jmh-8cgv-2vxg
+    aliases:
+      - CVE-2024-21626
+      - GHSA-xr7r-f8xq-vfvv
+    events:
+      - timestamp: 2024-02-06T09:37:33Z
+        type: fixed
+        data:
+          fixed-version: 1.48.4-r1
 
   - id: CGA-8qxj-xqxm-g9rj
     aliases:
@@ -44,6 +96,65 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CGA-9rxx-cjwc-rgq3
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T09:19:58Z
+        type: fixed
+        data:
+          fixed-version: 1.50.0-r1
+
+  - id: CGA-fw2v-xmfj-8q66
+    aliases:
+      - GHSA-7ww5-4wqc-m92c
+    events:
+      - timestamp: 2023-12-26T04:05:25Z
+        type: fixed
+        data:
+          fixed-version: 1.48.1-r2
+
+  - id: CGA-g3m7-cfh3-3p28
+    aliases:
+      - CVE-2024-24557
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-21T11:23:08Z
+        type: fixed
+        data:
+          fixed-version: 1.50.0-r3
+
+  - id: CGA-g784-qjpf-4r9m
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T13:29:00Z
+        type: fixed
+        data:
+          fixed-version: 1.52.3-r1
+
+  - id: CGA-m99v-c9cq-945q
+    aliases:
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2023-10-16T18:51:50Z
+        type: fixed
+        data:
+          fixed-version: 1.47.2-r3
+
+  - id: CGA-mwc3-w383-rx65
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T13:29:04Z
+        type: fixed
+        data:
+          fixed-version: 1.52.3-r1
 
   - id: CGA-p57p-g3qf-g8vg
     aliases:
@@ -88,56 +199,6 @@ advisories:
         data:
           fixed-version: 1.50.0-r1
 
-  - id: CGA-68r7-j988-qxjf
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-12T09:19:59Z
-        type: fixed
-        data:
-          fixed-version: 1.50.0-r1
-
-  - id: CGA-8jmh-8cgv-2vxg
-    aliases:
-      - CVE-2024-21626
-      - GHSA-xr7r-f8xq-vfvv
-    events:
-      - timestamp: 2024-02-06T09:37:33Z
-        type: fixed
-        data:
-          fixed-version: 1.48.4-r1
-
-  - id: CGA-g3m7-cfh3-3p28
-    aliases:
-      - CVE-2024-24557
-      - GHSA-xw73-rw38-6vjc
-    events:
-      - timestamp: 2024-03-21T11:23:08Z
-        type: fixed
-        data:
-          fixed-version: 1.50.0-r3
-
-  - id: CGA-9rxx-cjwc-rgq3
-    aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
-    events:
-      - timestamp: 2024-03-12T09:19:58Z
-        type: fixed
-        data:
-          fixed-version: 1.50.0-r1
-
-  - id: CGA-7cgp-9c9p-v4pg
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-12T09:20:01Z
-        type: fixed
-        data:
-          fixed-version: 1.50.0-r1
-
   - id: CGA-w6mc-mhc8-qhc8
     aliases:
       - CVE-2024-24785
@@ -147,44 +208,3 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.50.0-r1
-
-  - id: CGA-6xhq-m263-q2gh
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T13:21:41Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: newrelic-infrastructure-agent
-            componentID: 521d713e2cc593f8
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.31.0
-            componentType: go-module
-            componentLocation: /usr/bin/newrelic-infra-ctl
-            scanner: grype
-      - timestamp: 2024-03-16T09:54:36Z
-        type: fixed
-        data:
-          fixed-version: 1.50.0-r2
-
-  - id: CGA-fw2v-xmfj-8q66
-    aliases:
-      - GHSA-7ww5-4wqc-m92c
-    events:
-      - timestamp: 2023-12-26T04:05:25Z
-        type: fixed
-        data:
-          fixed-version: 1.48.1-r2
-
-  - id: CGA-3jf9-cjcr-57m8
-    aliases:
-      - GHSA-jq35-85cj-fj4p
-    events:
-      - timestamp: 2023-10-31T20:03:59Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: This vulnerability is in the container runtime itself, not clients of the container runtime.
