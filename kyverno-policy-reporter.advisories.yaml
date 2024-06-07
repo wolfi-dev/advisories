@@ -4,46 +4,6 @@ package:
   name: kyverno-policy-reporter
 
 advisories:
-  - id: CGA-8272-r558-5rmv
-    aliases:
-      - CVE-2020-8559
-      - GHSA-33c5-9fx5-fvjm
-    events:
-      - timestamp: 2024-04-25T13:10:36Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kyverno-policy-reporter
-            componentID: e4a79c15707508f9
-            componentName: k8s.io/apimachinery
-            componentVersion: v0.30.0
-            componentType: go-module
-            componentLocation: /usr/bin/policyreporter
-            scanner: grype
-
-  - id: CGA-gxrp-vrfw-664f
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:32:38Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-whpf-hrwm-44x9
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:32:40Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
   - id: CGA-4v89-j3f2-6rmm
     aliases:
       - CVE-2023-45288
@@ -64,55 +24,23 @@ advisories:
         data:
           fixed-version: 2.18.1-r1
 
-  - id: CGA-vm4f-5j5h-9prm
+  - id: CGA-8272-r558-5rmv
     aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
+      - CVE-2020-8559
+      - GHSA-33c5-9fx5-fvjm
     events:
-      - timestamp: 2024-03-12T08:12:07Z
-        type: fixed
+      - timestamp: 2024-04-25T13:10:36Z
+        type: detection
         data:
-          fixed-version: 2.18.1-r1
-
-  - id: CGA-v3cq-g4p9-888v
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2023-12-20T03:47:47Z
-        type: fixed
-        data:
-          fixed-version: 2.17.4-r2
-
-  - id: CGA-gqhm-vj5g-m538
-    aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
-    events:
-      - timestamp: 2024-03-12T08:12:08Z
-        type: fixed
-        data:
-          fixed-version: 2.18.1-r1
-
-  - id: CGA-v3v6-335m-cvg4
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-12T08:12:08Z
-        type: fixed
-        data:
-          fixed-version: 2.18.1-r1
-
-  - id: CGA-mxm7-9r6v-8m7j
-    aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
-    events:
-      - timestamp: 2024-03-12T08:12:06Z
-        type: fixed
-        data:
-          fixed-version: 2.18.1-r1
+          type: scan/v1
+          data:
+            subpackageName: kyverno-policy-reporter
+            componentID: e4a79c15707508f9
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/policyreporter
+            scanner: grype
 
   - id: CGA-fgwr-xwcr-5gmv
     aliases:
@@ -135,3 +63,85 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.18.1-r2
+
+  - id: CGA-gqhm-vj5g-m538
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T08:12:08Z
+        type: fixed
+        data:
+          fixed-version: 2.18.1-r1
+
+  - id: CGA-gxrp-vrfw-664f
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:32:38Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-mxm7-9r6v-8m7j
+    aliases:
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T08:12:06Z
+        type: fixed
+        data:
+          fixed-version: 2.18.1-r1
+
+  - id: CGA-p3qh-f767-56g8
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T18:31:18Z
+        type: fixed
+        data:
+          fixed-version: 2.19.0-r1
+
+  - id: CGA-v3cq-g4p9-888v
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2023-12-20T03:47:47Z
+        type: fixed
+        data:
+          fixed-version: 2.17.4-r2
+
+  - id: CGA-v3v6-335m-cvg4
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T08:12:08Z
+        type: fixed
+        data:
+          fixed-version: 2.18.1-r1
+
+  - id: CGA-vm4f-5j5h-9prm
+    aliases:
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T08:12:07Z
+        type: fixed
+        data:
+          fixed-version: 2.18.1-r1
+
+  - id: CGA-whpf-hrwm-44x9
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:32:40Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
