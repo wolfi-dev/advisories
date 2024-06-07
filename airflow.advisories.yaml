@@ -4,6 +4,23 @@ package:
   name: airflow
 
 advisories:
+  - id: CGA-3mg6-hjmp-vwjr
+    aliases:
+      - GHSA-w235-7p84-xx57
+    events:
+      - timestamp: 2024-06-07T08:05:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow
+            componentID: 700ca6ad4ba5b3d9
+            componentName: tornado
+            componentVersion: "6.4"
+            componentType: python
+            componentLocation: /opt/airflow/venv/lib/python3.12/site-packages/tornado-6.4.dist-info/METADATA, /opt/airflow/venv/lib/python3.12/site-packages/tornado-6.4.dist-info/RECORD, /opt/airflow/venv/lib/python3.12/site-packages/tornado-6.4.dist-info/top_level.txt
+            scanner: grype
+
   - id: CGA-45f3-3fmq-7h5w
     aliases:
       - CVE-2023-50782
@@ -187,3 +204,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.9.1-r1
+
+  - id: CGA-wq3q-35vc-xj9h
+    aliases:
+      - GHSA-753j-mpmx-qq6g
+    events:
+      - timestamp: 2024-06-07T08:05:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow
+            componentID: 700ca6ad4ba5b3d9
+            componentName: tornado
+            componentVersion: "6.4"
+            componentType: python
+            componentLocation: /opt/airflow/venv/lib/python3.12/site-packages/tornado-6.4.dist-info/METADATA, /opt/airflow/venv/lib/python3.12/site-packages/tornado-6.4.dist-info/RECORD, /opt/airflow/venv/lib/python3.12/site-packages/tornado-6.4.dist-info/top_level.txt
+            scanner: grype
