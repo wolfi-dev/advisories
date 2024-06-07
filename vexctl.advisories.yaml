@@ -4,46 +4,33 @@ package:
   name: vexctl
 
 advisories:
-  - id: CGA-xhhp-rrrj-j569
+  - id: CGA-27vx-gj95-fhvq
     aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
     events:
-      - timestamp: 2023-11-07T19:40:23Z
-        type: false-positive-determination
+      - timestamp: 2024-06-07T14:02:16Z
+        type: fixed
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          fixed-version: 0.2.6-r8
 
-  - id: CGA-7vv3-phv5-p6pg
+  - id: CGA-3j2f-79mr-gq32
     aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
+      - GHSA-9763-4f94-gfch
     events:
-      - timestamp: 2023-11-07T19:40:25Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-px79-gjfw-mh96
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-26T10:44:41Z
+      - timestamp: 2024-01-14T07:32:43Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: vexctl
-            componentID: edbb920195dee7c7
-            componentName: golang.org/x/net
-            componentVersion: v0.19.0
+            componentID: e948b966771e0109
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.3.5
             componentType: go-module
             componentLocation: /usr/bin/vexctl
             scanner: grype
-      - timestamp: 2024-05-23T17:36:44Z
+      - timestamp: 2024-05-23T17:36:45Z
         type: fixed
         data:
           fixed-version: 0.2.6-r7
@@ -57,132 +44,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.2.6-r1
-
-  - id: CGA-hxq6-3v7v-w42v
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-13T11:11:51Z
-        type: fixed
-        data:
-          fixed-version: 0.2.6-r1
-
-  - id: CGA-p7f3-hwj6-2gg4
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2024-01-14T07:32:43Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: vexctl
-            componentID: 113cf588a629d1b2
-            componentName: golang.org/x/crypto
-            componentVersion: v0.16.0
-            componentType: go-module
-            componentLocation: /usr/bin/vexctl
-            scanner: grype
-      - timestamp: 2024-05-23T17:36:46Z
-        type: fixed
-        data:
-          fixed-version: 0.2.6-r7
-
-  - id: CGA-pg2j-3xqg-v57p
-    aliases:
-      - CVE-2023-49290
-      - GHSA-7f9x-gw85-8grf
-    events:
-      - timestamp: 2024-02-22T07:52:48Z
-        type: fixed
-        data:
-          fixed-version: 0.2.6-r0
-
-  - id: CGA-vj65-w6g4-3hxv
-    aliases:
-      - CVE-2024-21664
-      - GHSA-pvcr-v8j8-j5q3
-    events:
-      - timestamp: 2024-02-22T07:52:49Z
-        type: fixed
-        data:
-          fixed-version: 0.2.6-r0
-
-  - id: CGA-h55m-gqgg-6877
-    aliases:
-      - CVE-2024-24557
-      - GHSA-xw73-rw38-6vjc
-    events:
-      - timestamp: 2024-04-04T11:31:19Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: vexctl
-            componentID: c72444d571cca09f
-            componentName: github.com/docker/docker
-            componentVersion: v24.0.7+incompatible
-            componentType: go-module
-            componentLocation: /usr/bin/vexctl
-            scanner: grype
-      - timestamp: 2024-05-23T17:36:47Z
-        type: fixed
-        data:
-          fixed-version: 0.2.6-r7
-
-  - id: CGA-f3qp-j434-7gcw
-    aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
-    events:
-      - timestamp: 2024-03-13T11:11:49Z
-        type: fixed
-        data:
-          fixed-version: 0.2.6-r1
-
-  - id: CGA-p8mv-r263-rj87
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-13T11:11:50Z
-        type: fixed
-        data:
-          fixed-version: 0.2.6-r1
-
-  - id: CGA-gjf9-86g3-6vrq
-    aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
-    events:
-      - timestamp: 2024-03-13T11:11:53Z
-        type: fixed
-        data:
-          fixed-version: 0.2.6-r1
-
-  - id: CGA-hwpp-g5vx-77gw
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T14:18:58Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: vexctl
-            componentID: cc98450e21700bef
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.31.0
-            componentType: go-module
-            componentLocation: /usr/bin/vexctl
-            scanner: grype
-      - timestamp: 2024-05-23T17:36:46Z
-        type: fixed
-        data:
-          fixed-version: 0.2.6-r7
 
   - id: CGA-742r-cmg5-2r64
     aliases:
@@ -228,6 +89,101 @@ advisories:
         data:
           fixed-version: 0.2.6-r7
 
+  - id: CGA-7vv3-phv5-p6pg
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:40:25Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-f3qp-j434-7gcw
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-13T11:11:49Z
+        type: fixed
+        data:
+          fixed-version: 0.2.6-r1
+
+  - id: CGA-fm9x-hwpr-5f8j
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T14:02:12Z
+        type: fixed
+        data:
+          fixed-version: 0.2.6-r8
+
+  - id: CGA-gjf9-86g3-6vrq
+    aliases:
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-13T11:11:53Z
+        type: fixed
+        data:
+          fixed-version: 0.2.6-r1
+
+  - id: CGA-h55m-gqgg-6877
+    aliases:
+      - CVE-2024-24557
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-04-04T11:31:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vexctl
+            componentID: c72444d571cca09f
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.7+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/vexctl
+            scanner: grype
+      - timestamp: 2024-05-23T17:36:47Z
+        type: fixed
+        data:
+          fixed-version: 0.2.6-r7
+
+  - id: CGA-hwpp-g5vx-77gw
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T14:18:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vexctl
+            componentID: cc98450e21700bef
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/vexctl
+            scanner: grype
+      - timestamp: 2024-05-23T17:36:46Z
+        type: fixed
+        data:
+          fixed-version: 0.2.6-r7
+
+  - id: CGA-hxq6-3v7v-w42v
+    aliases:
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-13T11:11:51Z
+        type: fixed
+        data:
+          fixed-version: 0.2.6-r1
+
   - id: CGA-m2cr-qxf3-cp73
     aliases:
       - CVE-2024-29903
@@ -250,6 +206,70 @@ advisories:
         data:
           fixed-version: 0.2.6-r7
 
+  - id: CGA-p7f3-hwj6-2gg4
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2024-01-14T07:32:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vexctl
+            componentID: 113cf588a629d1b2
+            componentName: golang.org/x/crypto
+            componentVersion: v0.16.0
+            componentType: go-module
+            componentLocation: /usr/bin/vexctl
+            scanner: grype
+      - timestamp: 2024-05-23T17:36:46Z
+        type: fixed
+        data:
+          fixed-version: 0.2.6-r7
+
+  - id: CGA-p8mv-r263-rj87
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-13T11:11:50Z
+        type: fixed
+        data:
+          fixed-version: 0.2.6-r1
+
+  - id: CGA-pg2j-3xqg-v57p
+    aliases:
+      - CVE-2023-49290
+      - GHSA-7f9x-gw85-8grf
+    events:
+      - timestamp: 2024-02-22T07:52:48Z
+        type: fixed
+        data:
+          fixed-version: 0.2.6-r0
+
+  - id: CGA-px79-gjfw-mh96
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-26T10:44:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vexctl
+            componentID: edbb920195dee7c7
+            componentName: golang.org/x/net
+            componentVersion: v0.19.0
+            componentType: go-module
+            componentLocation: /usr/bin/vexctl
+            scanner: grype
+      - timestamp: 2024-05-23T17:36:44Z
+        type: fixed
+        data:
+          fixed-version: 0.2.6-r7
+
   - id: CGA-v668-vm2q-rh5j
     aliases:
       - GHSA-2c7c-3mj9-8fqh
@@ -259,23 +279,23 @@ advisories:
         data:
           fixed-version: 0.2.6-r0
 
-  - id: CGA-3j2f-79mr-gq32
+  - id: CGA-vj65-w6g4-3hxv
     aliases:
-      - GHSA-9763-4f94-gfch
+      - CVE-2024-21664
+      - GHSA-pvcr-v8j8-j5q3
     events:
-      - timestamp: 2024-01-14T07:32:43Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: vexctl
-            componentID: e948b966771e0109
-            componentName: github.com/cloudflare/circl
-            componentVersion: v1.3.5
-            componentType: go-module
-            componentLocation: /usr/bin/vexctl
-            scanner: grype
-      - timestamp: 2024-05-23T17:36:45Z
+      - timestamp: 2024-02-22T07:52:49Z
         type: fixed
         data:
-          fixed-version: 0.2.6-r7
+          fixed-version: 0.2.6-r0
+
+  - id: CGA-xhhp-rrrj-j569
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:40:23Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
