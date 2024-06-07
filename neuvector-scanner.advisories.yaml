@@ -4,29 +4,6 @@ package:
   name: neuvector-scanner
 
 advisories:
-  - id: CGA-gh7q-jm66-7fgv
-    aliases:
-      - CVE-2023-32188
-      - GHSA-622h-h2p8-743x
-    events:
-      - timestamp: 2024-04-23T16:00:48Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: neuvector-scanner
-            componentID: 3f4b65ae20a4c8e7
-            componentName: github.com/neuvector/neuvector
-            componentVersion: v0.0.0-20240411013726-6a6b32c3e597
-            componentType: go-module
-            componentLocation: /usr/bin/neuvector-scanner
-            scanner: grype
-      - timestamp: 2024-04-23T16:21:15Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-version-not-used
-          note: neuvector-scanner is using a non vulnerable version of neuvector module which has been released after the affected versions.
-
   - id: CGA-883p-xmch-hq45
     aliases:
       - CVE-2023-45288
@@ -48,16 +25,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 0_git20240417-r1
-
-  - id: CGA-pr9f-cpc8-2r3c
-    aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
-    events:
-      - timestamp: 2024-05-15T11:19:54Z
-        type: fixed
-        data:
-          fixed-version: 0_git20240417-r2
 
   - id: CGA-939x-5gf5-w5x3
     aliases:
@@ -109,3 +76,56 @@ advisories:
         type: fixed
         data:
           fixed-version: 0_git20240417-r1
+
+  - id: CGA-gh7q-jm66-7fgv
+    aliases:
+      - CVE-2023-32188
+      - GHSA-622h-h2p8-743x
+    events:
+      - timestamp: 2024-04-23T16:00:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: neuvector-scanner
+            componentID: 3f4b65ae20a4c8e7
+            componentName: github.com/neuvector/neuvector
+            componentVersion: v0.0.0-20240411013726-6a6b32c3e597
+            componentType: go-module
+            componentLocation: /usr/bin/neuvector-scanner
+            scanner: grype
+      - timestamp: 2024-04-23T16:21:15Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: neuvector-scanner is using a non vulnerable version of neuvector module which has been released after the affected versions.
+
+  - id: CGA-pr9f-cpc8-2r3c
+    aliases:
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
+    events:
+      - timestamp: 2024-05-15T11:19:54Z
+        type: fixed
+        data:
+          fixed-version: 0_git20240417-r2
+
+  - id: CGA-qfh9-h4cf-82hw
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T07:34:01Z
+        type: fixed
+        data:
+          fixed-version: 0_git20240528-r4
+
+  - id: CGA-r38c-vgv7-wf8j
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T07:34:03Z
+        type: fixed
+        data:
+          fixed-version: 0_git20240528-r4
