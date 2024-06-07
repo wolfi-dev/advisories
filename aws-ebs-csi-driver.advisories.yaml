@@ -4,16 +4,15 @@ package:
   name: aws-ebs-csi-driver
 
 advisories:
-  - id: CGA-6wch-6pp3-q2p7
+  - id: CGA-2926-jmm7-pjv5
     aliases:
-      - CVE-2019-11255
-      - GHSA-f4w6-3rh6-6q4q
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
     events:
-      - timestamp: 2023-08-11T20:10:42Z
-        type: false-positive-determination
+      - timestamp: 2024-03-12T07:08:16Z
+        type: fixed
         data:
-          type: component-vulnerability-mismatch
-          note: Vulnerable code is present in external-csi-driver which is outside of aws-ebs-csi-driver
+          fixed-version: 1.28.0-r1
 
   - id: CGA-2fwg-fxgv-vq96
     aliases:
@@ -26,15 +25,87 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Go vulndb has marked this code NOT_IMPORTABLE.
 
-  - id: CGA-p25j-mr26-4rvv
+  - id: CGA-2wpr-j9vj-jgwp
     aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
     events:
-      - timestamp: 2023-10-13T12:39:01Z
+      - timestamp: 2024-03-12T07:08:14Z
         type: fixed
         data:
-          fixed-version: 1.23.1-r4
+          fixed-version: 1.28.0-r1
+
+  - id: CGA-3wp3-rv44-4j6r
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T07:26:12Z
+        type: fixed
+        data:
+          fixed-version: 1.31.0-r1
+
+  - id: CGA-5gff-gqp8-r2xh
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-10T09:12:22Z
+        type: fixed
+        data:
+          fixed-version: 1.29.1-r1
+
+  - id: CGA-6wch-6pp3-q2p7
+    aliases:
+      - CVE-2019-11255
+      - GHSA-f4w6-3rh6-6q4q
+    events:
+      - timestamp: 2023-08-11T20:10:42Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: Vulnerable code is present in external-csi-driver which is outside of aws-ebs-csi-driver
+
+  - id: CGA-7232-w9m3-j7g7
+    aliases:
+      - CVE-2023-5528
+      - GHSA-hq6q-c2x6-hmch
+    events:
+      - timestamp: 2023-11-17T10:01:52Z
+        type: fixed
+        data:
+          fixed-version: 1.25.0-r2
+
+  - id: CGA-75q2-r2mg-xp73
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:23:19Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-96gj-3g36-x5m6
+    aliases:
+      - CVE-2024-3177
+      - GHSA-pxhw-596r-rwq5
+    events:
+      - timestamp: 2024-04-24T07:31:18Z
+        type: fixed
+        data:
+          fixed-version: 1.30.0-r0
+
+  - id: CGA-987w-4j3v-755c
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2024-05-14T10:02:38Z
+        type: fixed
+        data:
+          fixed-version: 1.30.0-r1
 
   - id: CGA-9m9p-x4pq-xjjj
     aliases:
@@ -57,87 +128,6 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
-  - id: CGA-75q2-r2mg-xp73
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:23:19Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-5gff-gqp8-r2xh
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-10T09:12:22Z
-        type: fixed
-        data:
-          fixed-version: 1.29.1-r1
-
-  - id: CGA-2926-jmm7-pjv5
-    aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
-    events:
-      - timestamp: 2024-03-12T07:08:16Z
-        type: fixed
-        data:
-          fixed-version: 1.28.0-r1
-
-  - id: CGA-rv45-r89r-c696
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-12T07:08:17Z
-        type: fixed
-        data:
-          fixed-version: 1.28.0-r1
-
-  - id: CGA-mpvf-vpc6-gqrj
-    aliases:
-      - CVE-2023-47108
-      - GHSA-8pgv-569h-w5rw
-    events:
-      - timestamp: 2023-11-17T10:01:34Z
-        type: fixed
-        data:
-          fixed-version: 1.25.0-r2
-
-  - id: CGA-7232-w9m3-j7g7
-    aliases:
-      - CVE-2023-5528
-      - GHSA-hq6q-c2x6-hmch
-    events:
-      - timestamp: 2023-11-17T10:01:52Z
-        type: fixed
-        data:
-          fixed-version: 1.25.0-r2
-
-  - id: CGA-x4q4-m622-m6rj
-    aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
-    events:
-      - timestamp: 2024-03-12T07:08:13Z
-        type: fixed
-        data:
-          fixed-version: 1.28.0-r1
-
-  - id: CGA-2wpr-j9vj-jgwp
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-12T07:08:14Z
-        type: fixed
-        data:
-          fixed-version: 1.28.0-r1
-
   - id: CGA-cjr4-6vvh-5gfr
     aliases:
       - CVE-2024-24785
@@ -158,6 +148,46 @@ advisories:
         data:
           fixed-version: 1.28.0-r2
 
+  - id: CGA-mpvf-vpc6-gqrj
+    aliases:
+      - CVE-2023-47108
+      - GHSA-8pgv-569h-w5rw
+    events:
+      - timestamp: 2023-11-17T10:01:34Z
+        type: fixed
+        data:
+          fixed-version: 1.25.0-r2
+
+  - id: CGA-p25j-mr26-4rvv
+    aliases:
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2023-10-13T12:39:01Z
+        type: fixed
+        data:
+          fixed-version: 1.23.1-r4
+
+  - id: CGA-rv45-r89r-c696
+    aliases:
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T07:08:17Z
+        type: fixed
+        data:
+          fixed-version: 1.28.0-r1
+
+  - id: CGA-x4q4-m622-m6rj
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T07:08:13Z
+        type: fixed
+        data:
+          fixed-version: 1.28.0-r1
+
   - id: CGA-xj62-994h-j4rh
     aliases:
       - CVE-2024-24787
@@ -167,23 +197,3 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.30.0-r1
-
-  - id: CGA-987w-4j3v-755c
-    aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
-    events:
-      - timestamp: 2024-05-14T10:02:38Z
-        type: fixed
-        data:
-          fixed-version: 1.30.0-r1
-
-  - id: CGA-96gj-3g36-x5m6
-    aliases:
-      - CVE-2024-3177
-      - GHSA-pxhw-596r-rwq5
-    events:
-      - timestamp: 2024-04-24T07:31:18Z
-        type: fixed
-        data:
-          fixed-version: 1.30.0-r0
