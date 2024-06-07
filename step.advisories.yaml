@@ -4,16 +4,70 @@ package:
   name: step
 
 advisories:
-  - id: CGA-jjhf-886x-7g84
+  - id: CGA-4445-w2m5-fvwc
     aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
     events:
-      - timestamp: 2023-11-07T19:38:30Z
-        type: false-positive-determination
+      - timestamp: 2024-04-13T08:01:25Z
+        type: fixed
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          fixed-version: 0.26.0-r1
+
+  - id: CGA-54wq-9fw9-wmhr
+    aliases:
+      - CVE-2024-27289
+      - GHSA-m7wr-2xf7-cm9p
+    events:
+      - timestamp: 2024-03-13T08:30:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: step
+            componentID: 5b607a38055daba8
+            componentName: github.com/jackc/pgx/v4
+            componentVersion: v4.18.0
+            componentType: go-module
+            componentLocation: /usr/bin/step
+            scanner: grype
+
+  - id: CGA-9jr3-7qr5-rgr3
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2024-05-14T12:28:52Z
+        type: fixed
+        data:
+          fixed-version: 0.26.1-r1
+
+  - id: CGA-c795-4f2c-q7r5
+    aliases:
+      - GHSA-7jwh-3vrq-q3m8
+    events:
+      - timestamp: 2024-03-15T07:44:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: step
+            componentID: 5f3a480021cf933b
+            componentName: github.com/jackc/pgproto3/v2
+            componentVersion: v2.3.2
+            componentType: go-module
+            componentLocation: /usr/bin/step
+            scanner: grype
+
+  - id: CGA-gjcv-hf53-qx58
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T18:32:34Z
+        type: fixed
+        data:
+          fixed-version: 0.26.1-r2
 
   - id: CGA-hg86-2j4v-66q8
     aliases:
@@ -26,16 +80,6 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
-  - id: CGA-4445-w2m5-fvwc
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-13T08:01:25Z
-        type: fixed
-        data:
-          fixed-version: 0.26.0-r1
-
   - id: CGA-j4vw-whvp-5jgf
     aliases:
       - CVE-2023-48795
@@ -45,6 +89,35 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.25.2-r0
+
+  - id: CGA-jjhf-886x-7g84
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:38:30Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-ppxp-7x4f-jrj7
+    aliases:
+      - CVE-2024-27304
+      - GHSA-mrww-27vc-gghv
+    events:
+      - timestamp: 2024-03-15T07:44:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: step
+            componentID: 5f3a480021cf933b
+            componentName: github.com/jackc/pgproto3/v2
+            componentVersion: v2.3.2
+            componentType: go-module
+            componentLocation: /usr/bin/step
+            scanner: grype
 
   - id: CGA-q22c-jgqc-mwfx
     aliases:
@@ -74,51 +147,15 @@ advisories:
         data:
           fixed-version: 0.26.1-r1
 
-  - id: CGA-9jr3-7qr5-rgr3
+  - id: CGA-q6x4-r58g-m4fq
     aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
     events:
-      - timestamp: 2024-05-14T12:28:52Z
+      - timestamp: 2024-06-07T18:32:31Z
         type: fixed
         data:
-          fixed-version: 0.26.1-r1
-
-  - id: CGA-54wq-9fw9-wmhr
-    aliases:
-      - CVE-2024-27289
-      - GHSA-m7wr-2xf7-cm9p
-    events:
-      - timestamp: 2024-03-13T08:30:47Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: step
-            componentID: 5b607a38055daba8
-            componentName: github.com/jackc/pgx/v4
-            componentVersion: v4.18.0
-            componentType: go-module
-            componentLocation: /usr/bin/step
-            scanner: grype
-
-  - id: CGA-ppxp-7x4f-jrj7
-    aliases:
-      - CVE-2024-27304
-      - GHSA-mrww-27vc-gghv
-    events:
-      - timestamp: 2024-03-15T07:44:40Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: step
-            componentID: 5f3a480021cf933b
-            componentName: github.com/jackc/pgproto3/v2
-            componentVersion: v2.3.2
-            componentType: go-module
-            componentLocation: /usr/bin/step
-            scanner: grype
+          fixed-version: 0.26.1-r2
 
   - id: CGA-wp67-rx7w-wrmx
     aliases:
@@ -141,20 +178,3 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.25.2-r2
-
-  - id: CGA-c795-4f2c-q7r5
-    aliases:
-      - GHSA-7jwh-3vrq-q3m8
-    events:
-      - timestamp: 2024-03-15T07:44:35Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: step
-            componentID: 5f3a480021cf933b
-            componentName: github.com/jackc/pgproto3/v2
-            componentVersion: v2.3.2
-            componentType: go-module
-            componentLocation: /usr/bin/step
-            scanner: grype
