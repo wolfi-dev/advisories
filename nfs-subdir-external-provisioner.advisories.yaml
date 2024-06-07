@@ -4,47 +4,79 @@ package:
   name: nfs-subdir-external-provisioner
 
 advisories:
-  - id: CGA-gxxg-c39c-3gp2
+  - id: CGA-33rm-83m3-hh4w
     aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
     events:
-      - timestamp: 2023-10-12T18:21:03Z
+      - timestamp: 2024-03-12T08:09:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nfs-subdir-external-provisioner
+            componentID: 29dd075ac2827c2a
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/bin/nfs-subdir-external-provisioner
+            scanner: grype
+      - timestamp: 2024-03-14T15:19:35Z
         type: fixed
         data:
-          fixed-version: 4.0.18-r1
+          fixed-version: 4.0.18-r4
 
-  - id: CGA-f7mm-635x-2gj2
+  - id: CGA-3c78-8m9g-xvhq
     aliases:
-      - CVE-2023-3978
-      - GHSA-2wrh-6pvc-2jm9
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
     events:
-      - timestamp: 2023-10-12T18:17:43Z
+      - timestamp: 2024-05-14T11:41:39Z
         type: fixed
         data:
-          fixed-version: 4.0.18-r1
+          fixed-version: 4.0.18-r7
 
-  - id: CGA-mqgr-793x-25wq
+  - id: CGA-3x9x-fw2f-vc33
     aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
     events:
-      - timestamp: 2023-11-07T19:33:54Z
-        type: false-positive-determination
+      - timestamp: 2024-05-14T11:41:38Z
+        type: fixed
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          fixed-version: 4.0.18-r7
 
-  - id: CGA-pqww-4rhp-wxm7
+  - id: CGA-463q-hg9h-vw2j
     aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
     events:
-      - timestamp: 2023-11-07T19:33:55Z
-        type: false-positive-determination
+      - timestamp: 2024-03-12T08:09:34Z
+        type: detection
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          type: scan/v1
+          data:
+            subpackageName: nfs-subdir-external-provisioner
+            componentID: 29dd075ac2827c2a
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/bin/nfs-subdir-external-provisioner
+            scanner: grype
+      - timestamp: 2024-03-14T15:19:34Z
+        type: fixed
+        data:
+          fixed-version: 4.0.18-r4
+
+  - id: CGA-6237-pxwx-7g6g
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T11:09:31Z
+        type: fixed
+        data:
+          fixed-version: 4.0.18-r8
 
   - id: CGA-6g7c-qm8p-r28f
     aliases:
@@ -68,6 +100,38 @@ advisories:
         data:
           fixed-version: 4.0.18-r6
 
+  - id: CGA-6m9c-v365-vpmj
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T08:09:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nfs-subdir-external-provisioner
+            componentID: 29dd075ac2827c2a
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/bin/nfs-subdir-external-provisioner
+            scanner: grype
+      - timestamp: 2024-03-14T15:19:34Z
+        type: fixed
+        data:
+          fixed-version: 4.0.18-r4
+
+  - id: CGA-f7mm-635x-2gj2
+    aliases:
+      - CVE-2023-3978
+      - GHSA-2wrh-6pvc-2jm9
+    events:
+      - timestamp: 2023-10-12T18:17:43Z
+        type: fixed
+        data:
+          fixed-version: 4.0.18-r1
+
   - id: CGA-fhw5-64fg-8h65
     aliases:
       - CVE-2023-45289
@@ -90,12 +154,22 @@ advisories:
         data:
           fixed-version: 4.0.18-r4
 
-  - id: CGA-33rm-83m3-hh4w
+  - id: CGA-gxxg-c39c-3gp2
     aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
     events:
-      - timestamp: 2024-03-12T08:09:30Z
+      - timestamp: 2023-10-12T18:21:03Z
+        type: fixed
+        data:
+          fixed-version: 4.0.18-r1
+
+  - id: CGA-jq94-jqvc-98h9
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T08:09:32Z
         type: detection
         data:
           type: scan/v1
@@ -122,71 +196,27 @@ advisories:
         data:
           fixed-version: 4.0.18-r3
 
-  - id: CGA-jq94-jqvc-98h9
+  - id: CGA-mqgr-793x-25wq
     aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
     events:
-      - timestamp: 2024-03-12T08:09:32Z
-        type: detection
+      - timestamp: 2023-11-07T19:33:54Z
+        type: false-positive-determination
         data:
-          type: scan/v1
-          data:
-            subpackageName: nfs-subdir-external-provisioner
-            componentID: 29dd075ac2827c2a
-            componentName: stdlib
-            componentVersion: go1.21.5
-            componentType: go-module
-            componentLocation: /usr/bin/nfs-subdir-external-provisioner
-            scanner: grype
-      - timestamp: 2024-03-14T15:19:35Z
-        type: fixed
-        data:
-          fixed-version: 4.0.18-r4
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
 
-  - id: CGA-6m9c-v365-vpmj
+  - id: CGA-pqww-4rhp-wxm7
     aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
     events:
-      - timestamp: 2024-03-12T08:09:33Z
-        type: detection
+      - timestamp: 2023-11-07T19:33:55Z
+        type: false-positive-determination
         data:
-          type: scan/v1
-          data:
-            subpackageName: nfs-subdir-external-provisioner
-            componentID: 29dd075ac2827c2a
-            componentName: stdlib
-            componentVersion: go1.21.5
-            componentType: go-module
-            componentLocation: /usr/bin/nfs-subdir-external-provisioner
-            scanner: grype
-      - timestamp: 2024-03-14T15:19:34Z
-        type: fixed
-        data:
-          fixed-version: 4.0.18-r4
-
-  - id: CGA-463q-hg9h-vw2j
-    aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
-    events:
-      - timestamp: 2024-03-12T08:09:34Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: nfs-subdir-external-provisioner
-            componentID: 29dd075ac2827c2a
-            componentName: stdlib
-            componentVersion: go1.21.5
-            componentType: go-module
-            componentLocation: /usr/bin/nfs-subdir-external-provisioner
-            scanner: grype
-      - timestamp: 2024-03-14T15:19:34Z
-        type: fixed
-        data:
-          fixed-version: 4.0.18-r4
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
 
   - id: CGA-q8m3-xmfg-hw4f
     aliases:
@@ -197,23 +227,3 @@ advisories:
         type: fixed
         data:
           fixed-version: 4.0.18-r4
-
-  - id: CGA-3x9x-fw2f-vc33
-    aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
-    events:
-      - timestamp: 2024-05-14T11:41:38Z
-        type: fixed
-        data:
-          fixed-version: 4.0.18-r7
-
-  - id: CGA-3c78-8m9g-xvhq
-    aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
-    events:
-      - timestamp: 2024-05-14T11:41:39Z
-        type: fixed
-        data:
-          fixed-version: 4.0.18-r7
