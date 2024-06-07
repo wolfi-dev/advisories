@@ -4,12 +4,73 @@ package:
   name: runc
 
 advisories:
-  - id: CGA-xvxp-4fwf-9gc6
+  - id: CGA-242x-732c-vg83
     aliases:
-      - CVE-2016-3697
-      - GHSA-q3j5-32m5-58c2
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
     events:
-      - timestamp: 2024-04-26T11:37:22Z
+      - timestamp: 2024-03-12T08:10:29Z
+        type: fixed
+        data:
+          fixed-version: 1.1.12-r1
+
+  - id: CGA-2rh9-h7wx-h638
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T08:10:28Z
+        type: fixed
+        data:
+          fixed-version: 1.1.12-r1
+
+  - id: CGA-33q5-3wg7-xc7c
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:37:25Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-3q9m-263j-9f6x
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-11T20:18:59Z
+        type: fixed
+        data:
+          fixed-version: 1.1.12-r3
+
+  - id: CGA-5qcr-54jc-x9mm
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T16:02:28Z
+        type: fixed
+        data:
+          fixed-version: 1.1.12-r7
+
+  - id: CGA-7f3p-hqwm-8cm3
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2024-05-14T11:23:01Z
+        type: fixed
+        data:
+          fixed-version: 1.1.12-r6
+
+  - id: CGA-8xc4-6qc9-8xgc
+    aliases:
+      - CVE-2021-43784
+      - GHSA-v95c-p5hm-xq8f
+    events:
+      - timestamp: 2024-04-26T11:37:25Z
         type: detection
         data:
           type: scan/v1
@@ -27,12 +88,12 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This package uses a newer version v1.1.12 while the vulnerable code affects an older version.
 
-  - id: CGA-hm4m-crc5-fc47
+  - id: CGA-959m-f2hx-94gg
     aliases:
-      - CVE-2016-9962
-      - GHSA-gp4j-w3vj-7299
+      - CVE-2023-28642
+      - GHSA-g2j6-57v7-gm8c
     events:
-      - timestamp: 2024-04-26T11:37:17Z
+      - timestamp: 2024-04-26T11:37:12Z
         type: detection
         data:
           type: scan/v1
@@ -49,29 +110,11 @@ advisories:
         data:
           type: vulnerable-code-version-not-used
           note: This package uses a newer version v1.1.12 while the vulnerable code affects an older version.
-
-  - id: CGA-wm7q-q3pw-mv7c
-    aliases:
-      - CVE-2019-16884
-      - GHSA-fgv8-vj5c-2ppq
-    events:
-      - timestamp: 2024-04-26T11:37:08Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: runc
-            componentID: ca119c038cfdb0d1
-            componentName: github.com/opencontainers/runc
-            componentVersion: v0.0.0-20240123131248-51d5e94601ce
-            componentType: go-module
-            componentLocation: /usr/bin/runc
-            scanner: grype
-      - timestamp: 2024-04-29T12:45:26Z
+      - timestamp: 2024-04-28T12:12:46Z
         type: false-positive-determination
         data:
           type: vulnerable-code-version-not-used
-          note: This package uses a newer version v1.1.12 while the vulnerable code affects an older version.
+          note: This package uses a newer version v1.1.12 while the vulnerable code affects any version older than v1.1.5.
 
   - id: CGA-99c3-m3q6-5pf4
     aliases:
@@ -119,12 +162,90 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This package uses a newer version v1.1.12 while the vulnerable code affects an older version.
 
-  - id: CGA-8xc4-6qc9-8xgc
+  - id: CGA-f6v8-j96g-hhr7
     aliases:
-      - CVE-2021-43784
-      - GHSA-v95c-p5hm-xq8f
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
     events:
-      - timestamp: 2024-04-26T11:37:25Z
+      - timestamp: 2024-03-14T07:16:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: runc
+            componentID: 8e7c18888cffcca1
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.27.1
+            componentType: go-module
+            componentLocation: /usr/bin/runc
+            scanner: grype
+      - timestamp: 2024-03-16T11:02:35Z
+        type: fixed
+        data:
+          fixed-version: 1.1.12-r2
+
+  - id: CGA-g7rx-jxr6-8xc6
+    aliases:
+      - CVE-2023-25809
+      - GHSA-m8cg-xc2p-r3fc
+    events:
+      - timestamp: 2024-04-26T11:37:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: runc
+            componentID: ca119c038cfdb0d1
+            componentName: github.com/opencontainers/runc
+            componentVersion: v0.0.0-20240123131248-51d5e94601ce
+            componentType: go-module
+            componentLocation: /usr/bin/runc
+            scanner: grype
+      - timestamp: 2024-04-29T12:45:26Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: This package uses a newer version v1.1.12 while the vulnerable code affects an older version.
+
+  - id: CGA-ggcv-jmx5-3387
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:37:24Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-hm4m-crc5-fc47
+    aliases:
+      - CVE-2016-9962
+      - GHSA-gp4j-w3vj-7299
+    events:
+      - timestamp: 2024-04-26T11:37:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: runc
+            componentID: ca119c038cfdb0d1
+            componentName: github.com/opencontainers/runc
+            componentVersion: v0.0.0-20240123131248-51d5e94601ce
+            componentType: go-module
+            componentLocation: /usr/bin/runc
+            scanner: grype
+      - timestamp: 2024-04-29T12:45:26Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: This package uses a newer version v1.1.12 while the vulnerable code affects an older version.
+
+  - id: CGA-jjmq-qmwg-qjfq
+    aliases:
+      - GHSA-g54h-m393-cpwq
+    events:
+      - timestamp: 2024-04-26T11:37:15Z
         type: detection
         data:
           type: scan/v1
@@ -165,56 +286,15 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This package uses a newer version v1.1.12 while the vulnerable code affects an older version.
 
-  - id: CGA-g7rx-jxr6-8xc6
+  - id: CGA-p47v-59xp-3gjm
     aliases:
-      - CVE-2023-25809
-      - GHSA-m8cg-xc2p-r3fc
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
     events:
-      - timestamp: 2024-04-26T11:37:19Z
-        type: detection
+      - timestamp: 2024-03-12T08:10:28Z
+        type: fixed
         data:
-          type: scan/v1
-          data:
-            subpackageName: runc
-            componentID: ca119c038cfdb0d1
-            componentName: github.com/opencontainers/runc
-            componentVersion: v0.0.0-20240123131248-51d5e94601ce
-            componentType: go-module
-            componentLocation: /usr/bin/runc
-            scanner: grype
-      - timestamp: 2024-04-29T12:45:26Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-version-not-used
-          note: This package uses a newer version v1.1.12 while the vulnerable code affects an older version.
-
-  - id: CGA-959m-f2hx-94gg
-    aliases:
-      - CVE-2023-28642
-      - GHSA-g2j6-57v7-gm8c
-    events:
-      - timestamp: 2024-04-26T11:37:12Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: runc
-            componentID: ca119c038cfdb0d1
-            componentName: github.com/opencontainers/runc
-            componentVersion: v0.0.0-20240123131248-51d5e94601ce
-            componentType: go-module
-            componentLocation: /usr/bin/runc
-            scanner: grype
-      - timestamp: 2024-04-29T12:45:26Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-version-not-used
-          note: This package uses a newer version v1.1.12 while the vulnerable code affects an older version.
-      - timestamp: 2024-04-28T12:12:46Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-version-not-used
-          note: This package uses a newer version v1.1.12 while the vulnerable code affects any version older than v1.1.5.
+          fixed-version: 1.1.12-r1
 
   - id: CGA-p772-vp57-v9mp
     aliases:
@@ -226,6 +306,16 @@ advisories:
         data:
           fixed-version: 1.1.9-r5
 
+  - id: CGA-pg4f-3xf9-cm5m
+    aliases:
+      - GHSA-6xv5-86q9-7xr8
+    events:
+      - timestamp: 2023-09-09T15:18:20Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability is only present on Windows.
+
   - id: CGA-q5fp-m5fj-cgxr
     aliases:
       - CVE-2023-3978
@@ -235,48 +325,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.1.9-r5
-
-  - id: CGA-ggcv-jmx5-3387
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:37:24Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-33q5-3wg7-xc7c
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:37:25Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-3q9m-263j-9f6x
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-11T20:18:59Z
-        type: fixed
-        data:
-          fixed-version: 1.1.12-r3
-
-  - id: CGA-vxhj-xwf8-vrg3
-    aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
-    events:
-      - timestamp: 2024-03-12T08:10:30Z
-        type: fixed
-        data:
-          fixed-version: 1.1.12-r1
 
   - id: CGA-vp3w-x9jf-wc6v
     aliases:
@@ -298,93 +346,22 @@ advisories:
         data:
           fixed-version: 1.1.12-r0
 
-  - id: CGA-2rh9-h7wx-h638
+  - id: CGA-vxhj-xwf8-vrg3
     aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
     events:
-      - timestamp: 2024-03-12T08:10:28Z
+      - timestamp: 2024-03-12T08:10:30Z
         type: fixed
         data:
           fixed-version: 1.1.12-r1
 
-  - id: CGA-p47v-59xp-3gjm
+  - id: CGA-wm7q-q3pw-mv7c
     aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
+      - CVE-2019-16884
+      - GHSA-fgv8-vj5c-2ppq
     events:
-      - timestamp: 2024-03-12T08:10:28Z
-        type: fixed
-        data:
-          fixed-version: 1.1.12-r1
-
-  - id: CGA-242x-732c-vg83
-    aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
-    events:
-      - timestamp: 2024-03-12T08:10:29Z
-        type: fixed
-        data:
-          fixed-version: 1.1.12-r1
-
-  - id: CGA-f6v8-j96g-hhr7
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T07:16:23Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: runc
-            componentID: 8e7c18888cffcca1
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.27.1
-            componentType: go-module
-            componentLocation: /usr/bin/runc
-            scanner: grype
-      - timestamp: 2024-03-16T11:02:35Z
-        type: fixed
-        data:
-          fixed-version: 1.1.12-r2
-
-  - id: CGA-xxh6-gcg8-6vq2
-    aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
-    events:
-      - timestamp: 2024-05-14T11:22:58Z
-        type: fixed
-        data:
-          fixed-version: 1.1.12-r6
-
-  - id: CGA-7f3p-hqwm-8cm3
-    aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
-    events:
-      - timestamp: 2024-05-14T11:23:01Z
-        type: fixed
-        data:
-          fixed-version: 1.1.12-r6
-
-  - id: CGA-pg4f-3xf9-cm5m
-    aliases:
-      - GHSA-6xv5-86q9-7xr8
-    events:
-      - timestamp: 2023-09-09T15:18:20Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: This vulnerability is only present on Windows.
-
-  - id: CGA-jjmq-qmwg-qjfq
-    aliases:
-      - GHSA-g54h-m393-cpwq
-    events:
-      - timestamp: 2024-04-26T11:37:15Z
+      - timestamp: 2024-04-26T11:37:08Z
         type: detection
         data:
           type: scan/v1
@@ -401,3 +378,36 @@ advisories:
         data:
           type: vulnerable-code-version-not-used
           note: This package uses a newer version v1.1.12 while the vulnerable code affects an older version.
+
+  - id: CGA-xvxp-4fwf-9gc6
+    aliases:
+      - CVE-2016-3697
+      - GHSA-q3j5-32m5-58c2
+    events:
+      - timestamp: 2024-04-26T11:37:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: runc
+            componentID: ca119c038cfdb0d1
+            componentName: github.com/opencontainers/runc
+            componentVersion: v0.0.0-20240123131248-51d5e94601ce
+            componentType: go-module
+            componentLocation: /usr/bin/runc
+            scanner: grype
+      - timestamp: 2024-04-29T12:45:26Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: This package uses a newer version v1.1.12 while the vulnerable code affects an older version.
+
+  - id: CGA-xxh6-gcg8-6vq2
+    aliases:
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
+    events:
+      - timestamp: 2024-05-14T11:22:58Z
+        type: fixed
+        data:
+          fixed-version: 1.1.12-r6
