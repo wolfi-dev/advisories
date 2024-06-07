@@ -15,6 +15,32 @@ advisories:
         data:
           fixed-version: 0.72.0-r1
 
+  - id: CGA-6x4c-pr93-9j7v
+    aliases:
+      - GHSA-9763-4f94-gfch
+    events:
+      - timestamp: 2024-01-12T07:21:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grype
+            componentID: 3890a9050b73a40c
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.3.3
+            componentType: go-module
+            componentLocation: /usr/bin/grype
+            scanner: grype
+
+  - id: CGA-7vvg-p7p7-p9jq
+    aliases:
+      - GHSA-7ww5-4wqc-m92c
+    events:
+      - timestamp: 2023-12-20T16:19:08Z
+        type: fixed
+        data:
+          fixed-version: 0.73.4-r2
+
   - id: CGA-8gv3-m8m2-665w
     aliases:
       - CVE-2023-45283
@@ -26,33 +52,32 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
-  - id: CGA-jpq6-mjpq-g8pv
+  - id: CGA-92wq-wc5c-v7w8
     aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
+      - CVE-2024-29018
+      - GHSA-mq39-4gv4-mvpx
     events:
-      - timestamp: 2023-11-07T19:28:48Z
+      - timestamp: 2024-03-21T11:17:05Z
+        type: fixed
+        data:
+          fixed-version: 0.74.7-r3
+
+  - id: CGA-cp9w-3346-fjr9
+    aliases:
+      - GHSA-jq35-85cj-fj4p
+    events:
+      - timestamp: 2023-10-31T20:03:48Z
         type: false-positive-determination
         data:
           type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          note: This vulnerability is in the container runtime itself, not clients of the container runtime.
 
-  - id: CGA-m64g-r94p-8x25
+  - id: CGA-f36q-q5w3-h2mg
     aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
     events:
-      - timestamp: 2024-03-13T07:07:05Z
-        type: fixed
-        data:
-          fixed-version: 0.74.7-r1
-
-  - id: CGA-fwc6-cr6g-cx9q
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-13T07:06:59Z
+      - timestamp: 2024-03-13T07:07:03Z
         type: fixed
         data:
           fixed-version: 0.74.7-r1
@@ -66,6 +91,67 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.73.4-r2
+
+  - id: CGA-fwc6-cr6g-cx9q
+    aliases:
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-13T07:06:59Z
+        type: fixed
+        data:
+          fixed-version: 0.74.7-r1
+
+  - id: CGA-j69c-4v3w-c425
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-13T07:07:02Z
+        type: fixed
+        data:
+          fixed-version: 0.74.7-r1
+
+  - id: CGA-jpq6-mjpq-g8pv
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:28:48Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-jv22-r6w5-339m
+    aliases:
+      - CVE-2024-32473
+      - GHSA-x84c-p2g9-rqv9
+    events:
+      - timestamp: 2024-04-19T10:19:52Z
+        type: fixed
+        data:
+          fixed-version: 0.77.0-r1
+
+  - id: CGA-m23h-26vh-86wf
+    aliases:
+      - CVE-2024-24579
+      - GHSA-hpxr-w9w7-g4gv
+    events:
+      - timestamp: 2024-02-01T12:00:39Z
+        type: fixed
+        data:
+          fixed-version: 0.74.4-r0
+
+  - id: CGA-m64g-r94p-8x25
+    aliases:
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-13T07:07:05Z
+        type: fixed
+        data:
+          fixed-version: 0.74.7-r1
 
   - id: CGA-mg57-2h9q-j725
     aliases:
@@ -89,15 +175,15 @@ advisories:
         data:
           fixed-version: 0.74.4-r1
 
-  - id: CGA-m23h-26vh-86wf
+  - id: CGA-mpgc-58r7-cmgv
     aliases:
-      - CVE-2024-24579
-      - GHSA-hpxr-w9w7-g4gv
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
     events:
-      - timestamp: 2024-02-01T12:00:39Z
+      - timestamp: 2024-06-07T18:10:08Z
         type: fixed
         data:
-          fixed-version: 0.74.4-r0
+          fixed-version: 0.78.0-r1
 
   - id: CGA-p82f-4h64-wjxp
     aliases:
@@ -105,26 +191,6 @@ advisories:
       - GHSA-3q2c-pvp5-3cqp
     events:
       - timestamp: 2024-03-13T07:07:00Z
-        type: fixed
-        data:
-          fixed-version: 0.74.7-r1
-
-  - id: CGA-j69c-4v3w-c425
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-13T07:07:02Z
-        type: fixed
-        data:
-          fixed-version: 0.74.7-r1
-
-  - id: CGA-f36q-q5w3-h2mg
-    aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
-    events:
-      - timestamp: 2024-03-13T07:07:03Z
         type: fixed
         data:
           fixed-version: 0.74.7-r1
@@ -139,19 +205,20 @@ advisories:
         data:
           fixed-version: 0.74.7-r2
 
-  - id: CGA-92wq-wc5c-v7w8
+  - id: CGA-qx7c-cvvm-j77g
     aliases:
-      - CVE-2024-29018
-      - GHSA-mq39-4gv4-mvpx
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
     events:
-      - timestamp: 2024-03-21T11:17:05Z
+      - timestamp: 2024-06-07T18:10:04Z
         type: fixed
         data:
-          fixed-version: 0.74.7-r3
+          fixed-version: 0.78.0-r1
 
   - id: CGA-vh68-j979-h86v
     aliases:
       - CVE-2024-3154
+      - GHSA-2cgq-h8xw-2v5j
       - GHSA-c5pj-mqfh-rvc3
     events:
       - timestamp: 2024-04-27T09:01:40Z
@@ -166,49 +233,3 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/grype
             scanner: grype
-
-  - id: CGA-jv22-r6w5-339m
-    aliases:
-      - CVE-2024-32473
-      - GHSA-x84c-p2g9-rqv9
-    events:
-      - timestamp: 2024-04-19T10:19:52Z
-        type: fixed
-        data:
-          fixed-version: 0.77.0-r1
-
-  - id: CGA-7vvg-p7p7-p9jq
-    aliases:
-      - GHSA-7ww5-4wqc-m92c
-    events:
-      - timestamp: 2023-12-20T16:19:08Z
-        type: fixed
-        data:
-          fixed-version: 0.73.4-r2
-
-  - id: CGA-6x4c-pr93-9j7v
-    aliases:
-      - GHSA-9763-4f94-gfch
-    events:
-      - timestamp: 2024-01-12T07:21:02Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: grype
-            componentID: 3890a9050b73a40c
-            componentName: github.com/cloudflare/circl
-            componentVersion: v1.3.3
-            componentType: go-module
-            componentLocation: /usr/bin/grype
-            scanner: grype
-
-  - id: CGA-cp9w-3346-fjr9
-    aliases:
-      - GHSA-jq35-85cj-fj4p
-    events:
-      - timestamp: 2023-10-31T20:03:48Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: This vulnerability is in the container runtime itself, not clients of the container runtime.
