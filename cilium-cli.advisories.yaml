@@ -4,57 +4,6 @@ package:
   name: cilium-cli
 
 advisories:
-  - id: CGA-x76g-3jw7-c6wg
-    aliases:
-      - CVE-2019-25210
-      - GHSA-jw44-4f3j-q396
-    events:
-      - timestamp: 2024-03-06T19:02:17Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: cilium-cli
-            componentID: ca9168bfd81f2319
-            componentName: helm.sh/helm/v3
-            componentVersion: v3.14.2
-            componentType: go-module
-            componentLocation: /usr/bin/cilium
-            scanner: grype
-      - timestamp: 2024-03-15T23:03:35Z
-        type: fixed
-        data:
-          fixed-version: 0.16.2-r0
-
-  - id: CGA-qqfv-gj29-9ww2
-    aliases:
-      - CVE-2020-8559
-      - GHSA-33c5-9fx5-fvjm
-    events:
-      - timestamp: 2024-04-25T07:36:43Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: cilium-cli
-            componentID: 00e8fb82f5e61cc3
-            componentName: k8s.io/apimachinery
-            componentVersion: v0.29.2
-            componentType: go-module
-            componentLocation: /usr/bin/cilium
-            scanner: grype
-
-  - id: CGA-xmfc-wcvc-mc58
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:24:15Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
   - id: CGA-4qr7-fhm4-gh75
     aliases:
       - CVE-2023-45284
@@ -66,22 +15,11 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
-  - id: CGA-xf76-vchp-j99m
+  - id: CGA-535j-mpp6-wm37
     aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
+      - GHSA-7ww5-4wqc-m92c
     events:
-      - timestamp: 2024-04-13T07:16:16Z
-        type: fixed
-        data:
-          fixed-version: 0.16.4-r1
-
-  - id: CGA-83v9-4c8h-7585
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2024-01-25T07:12:55Z
+      - timestamp: 2024-01-25T07:12:56Z
         type: fixed
         data:
           fixed-version: 0.15.20-r0
@@ -96,47 +34,43 @@ advisories:
         data:
           fixed-version: 0.16.1-r0
 
-  - id: CGA-rm3r-298w-7jmg
+  - id: CGA-83v9-4c8h-7585
     aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
     events:
-      - timestamp: 2024-05-14T09:39:14Z
+      - timestamp: 2024-01-25T07:12:55Z
         type: fixed
         data:
-          fixed-version: 0.16.7-r1
+          fixed-version: 0.15.20-r0
 
-  - id: CGA-x7rg-qj6j-xjcq
+  - id: CGA-9h8w-5rh6-7wh8
     aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
     events:
-      - timestamp: 2024-05-14T09:39:16Z
+      - timestamp: 2024-06-07T17:10:07Z
         type: fixed
         data:
-          fixed-version: 0.16.7-r1
+          fixed-version: 0.16.9-r1
 
-  - id: CGA-q7m7-vrfm-vw8x
+  - id: CGA-fpxq-pxh4-cgwg
     aliases:
-      - CVE-2024-25620
-      - GHSA-v53g-5gjp-272r
+      - CVE-2024-29018
+      - GHSA-mq39-4gv4-mvpx
     events:
-      - timestamp: 2024-02-16T07:20:05Z
+      - timestamp: 2024-03-25T09:22:18Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: cilium-cli
-            componentID: 25b1778a1d8043dc
-            componentName: helm.sh/helm/v3
-            componentVersion: v3.14.0
+            componentID: 8758da7de28199e7
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.3+incompatible
             componentType: go-module
             componentLocation: /usr/bin/cilium
             scanner: grype
-      - timestamp: 2024-02-16T11:25:11Z
-        type: fixed
-        data:
-          fixed-version: 0.15.23-r1
 
   - id: CGA-gxjr-qgvh-8rp5
     aliases:
@@ -160,29 +94,105 @@ advisories:
         data:
           fixed-version: 0.15.23-r2
 
-  - id: CGA-fpxq-pxh4-cgwg
+  - id: CGA-q7m7-vrfm-vw8x
     aliases:
-      - CVE-2024-29018
-      - GHSA-mq39-4gv4-mvpx
+      - CVE-2024-25620
+      - GHSA-v53g-5gjp-272r
     events:
-      - timestamp: 2024-03-25T09:22:18Z
+      - timestamp: 2024-02-16T07:20:05Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: cilium-cli
-            componentID: 8758da7de28199e7
-            componentName: github.com/docker/docker
-            componentVersion: v25.0.3+incompatible
+            componentID: 25b1778a1d8043dc
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.0
+            componentType: go-module
+            componentLocation: /usr/bin/cilium
+            scanner: grype
+      - timestamp: 2024-02-16T11:25:11Z
+        type: fixed
+        data:
+          fixed-version: 0.15.23-r1
+
+  - id: CGA-qqfv-gj29-9ww2
+    aliases:
+      - CVE-2020-8559
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T07:36:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-cli
+            componentID: 00e8fb82f5e61cc3
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.29.2
             componentType: go-module
             componentLocation: /usr/bin/cilium
             scanner: grype
 
-  - id: CGA-535j-mpp6-wm37
+  - id: CGA-rm3r-298w-7jmg
     aliases:
-      - GHSA-7ww5-4wqc-m92c
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
     events:
-      - timestamp: 2024-01-25T07:12:56Z
+      - timestamp: 2024-05-14T09:39:14Z
         type: fixed
         data:
-          fixed-version: 0.15.20-r0
+          fixed-version: 0.16.7-r1
+
+  - id: CGA-x76g-3jw7-c6wg
+    aliases:
+      - CVE-2019-25210
+      - GHSA-jw44-4f3j-q396
+    events:
+      - timestamp: 2024-03-06T19:02:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-cli
+            componentID: ca9168bfd81f2319
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.2
+            componentType: go-module
+            componentLocation: /usr/bin/cilium
+            scanner: grype
+      - timestamp: 2024-03-15T23:03:35Z
+        type: fixed
+        data:
+          fixed-version: 0.16.2-r0
+
+  - id: CGA-x7rg-qj6j-xjcq
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2024-05-14T09:39:16Z
+        type: fixed
+        data:
+          fixed-version: 0.16.7-r1
+
+  - id: CGA-xf76-vchp-j99m
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:16:16Z
+        type: fixed
+        data:
+          fixed-version: 0.16.4-r1
+
+  - id: CGA-xmfc-wcvc-mc58
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:24:15Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
