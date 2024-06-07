@@ -4,17 +4,6 @@ package:
   name: syft
 
 advisories:
-  - id: CGA-h9cg-99wm-5w84
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:38:36Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
   - id: CGA-5g2f-fgw6-g365
     aliases:
       - CVE-2023-45284
@@ -26,37 +15,22 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
-  - id: CGA-qc9x-2pqm-hf8v
+  - id: CGA-5q6r-qcj2-h3c6
     aliases:
-      - CVE-2024-21626
-      - GHSA-xr7r-f8xq-vfvv
+      - GHSA-9763-4f94-gfch
     events:
-      - timestamp: 2024-02-05T07:14:10Z
+      - timestamp: 2024-01-12T07:21:43Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: syft
-            componentID: c367a9a602e3dfd9
-            componentName: github.com/opencontainers/runc
-            componentVersion: v1.1.5
+            componentID: 79fa7b404ae3d368
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.3.3
             componentType: go-module
             componentLocation: /usr/bin/syft
             scanner: grype
-      - timestamp: 2024-02-07T21:46:31Z
-        type: fixed
-        data:
-          fixed-version: 0.104.0-r0
-
-  - id: CGA-m6cf-8qcr-fgv9
-    aliases:
-      - CVE-2024-24579
-      - GHSA-hpxr-w9w7-g4gv
-    events:
-      - timestamp: 2024-02-05T07:14:12Z
-        type: fixed
-        data:
-          fixed-version: 0.103.1-r0
 
   - id: CGA-9p3c-3ffx-hwr2
     aliases:
@@ -80,6 +54,49 @@ advisories:
         data:
           fixed-version: 1.2.0-r0
 
+  - id: CGA-h9cg-99wm-5w84
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:38:36Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-m6cf-8qcr-fgv9
+    aliases:
+      - CVE-2024-24579
+      - GHSA-hpxr-w9w7-g4gv
+    events:
+      - timestamp: 2024-02-05T07:14:12Z
+        type: fixed
+        data:
+          fixed-version: 0.103.1-r0
+
+  - id: CGA-qc9x-2pqm-hf8v
+    aliases:
+      - CVE-2024-21626
+      - GHSA-xr7r-f8xq-vfvv
+    events:
+      - timestamp: 2024-02-05T07:14:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: syft
+            componentID: c367a9a602e3dfd9
+            componentName: github.com/opencontainers/runc
+            componentVersion: v1.1.5
+            componentType: go-module
+            componentLocation: /usr/bin/syft
+            scanner: grype
+      - timestamp: 2024-02-07T21:46:31Z
+        type: fixed
+        data:
+          fixed-version: 0.104.0-r0
+
   - id: CGA-r7j4-wmpm-hgg6
     aliases:
       - CVE-2024-29018
@@ -100,19 +117,12 @@ advisories:
         data:
           fixed-version: 1.2.0-r1
 
-  - id: CGA-5q6r-qcj2-h3c6
+  - id: CGA-xh52-8gvh-cm6r
     aliases:
-      - GHSA-9763-4f94-gfch
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
     events:
-      - timestamp: 2024-01-12T07:21:43Z
-        type: detection
+      - timestamp: 2024-06-07T08:05:48Z
+        type: fixed
         data:
-          type: scan/v1
-          data:
-            subpackageName: syft
-            componentID: 79fa7b404ae3d368
-            componentName: github.com/cloudflare/circl
-            componentVersion: v1.3.3
-            componentType: go-module
-            componentLocation: /usr/bin/syft
-            scanner: grype
+          fixed-version: 1.5.0-r1
