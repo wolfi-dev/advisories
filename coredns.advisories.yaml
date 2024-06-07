@@ -4,28 +4,46 @@ package:
   name: coredns
 
 advisories:
-  - id: CGA-rgr8-gg9j-r4mv
+  - id: CGA-277h-gmxh-hxpj
     aliases:
-      - CVE-2022-2835
-      - GHSA-ch7v-37xg-75ph
+      - CVE-2024-0874
+      - GHSA-m9w6-wp3h-vq8g
     events:
-      - timestamp: 2024-04-26T08:17:25Z
+      - timestamp: 2024-05-06T07:08:35Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: coredns
-            componentID: e7854537c45ae061
+            componentID: e99924cf99f4dd54
             componentName: github.com/coredns/coredns
-            componentVersion: v0.0.0-20230815193032-ae2bbc29be1a
+            componentVersion: v0.0.0-20240426190847-a7ed346585e3
             componentType: go-module
             componentLocation: /usr/bin/coredns
             scanner: grype
-      - timestamp: 2024-05-16T16:35:15Z
+      - timestamp: 2024-05-16T16:36:10Z
         type: false-positive-determination
         data:
           type: vulnerable-code-version-not-used
-          note: This vulnerability affects versions < 1.9.3, but the installed commit corresponds to version 1.11.3.
+          note: This vulnerability affects versions < 1.11.2, but the installed commit corresponds to version 1.11.3.
+
+  - id: CGA-5v8q-m4r5-757v
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T07:11:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: coredns
+            componentID: 74051bbab0ed87f1
+            componentName: stdlib
+            componentVersion: go1.20.14
+            componentType: go-module
+            componentLocation: /usr/bin/coredns
+            scanner: grype
 
   - id: CGA-66wc-mcp8-329v
     aliases:
@@ -50,15 +68,51 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This vulnerability affects versions < 1.9.3, but the installed commit corresponds to version 1.11.3.
 
-  - id: CGA-j42h-hfmv-hr83
+  - id: CGA-6fxv-h652-6rh8
     aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
     events:
-      - timestamp: 2023-10-13T16:46:07Z
+      - timestamp: 2024-03-12T07:11:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: coredns
+            componentID: 74051bbab0ed87f1
+            componentName: stdlib
+            componentVersion: go1.20.14
+            componentType: go-module
+            componentLocation: /usr/bin/coredns
+            scanner: grype
+
+  - id: CGA-6xw8-764h-6r7f
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2023-12-19T19:13:44Z
         type: fixed
         data:
-          fixed-version: 1.11.1-r5
+          fixed-version: 1.11.1-r9
+
+  - id: CGA-924r-vp5h-4mxg
+    aliases:
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T07:11:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: coredns
+            componentID: 74051bbab0ed87f1
+            componentName: stdlib
+            componentVersion: go1.20.14
+            componentType: go-module
+            componentLocation: /usr/bin/coredns
+            scanner: grype
 
   - id: CGA-983m-v7p8-fjgg
     aliases:
@@ -69,6 +123,16 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.11.1-r5
+
+  - id: CGA-9jrx-59hr-fjw4
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T19:38:48Z
+        type: fixed
+        data:
+          fixed-version: 1.11.3-r2
 
   - id: CGA-cc75-jr7m-v4rg
     aliases:
@@ -81,16 +145,75 @@ advisories:
         data:
           fixed-version: 1.11.1-r6
 
-  - id: CGA-q4vp-fjrv-m7jc
+  - id: CGA-cffh-xmf5-f43v
     aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
+      - GHSA-gv9j-4w24-q7vx
     events:
-      - timestamp: 2023-11-07T19:25:05Z
+      - timestamp: 2024-04-26T08:17:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: coredns
+            componentID: e7854537c45ae061
+            componentName: github.com/coredns/coredns
+            componentVersion: v0.0.0-20230815193032-ae2bbc29be1a
+            componentType: go-module
+            componentLocation: /usr/bin/coredns
+            scanner: grype
+      - timestamp: 2024-05-05T15:17:04Z
         type: false-positive-determination
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          type: vulnerable-code-version-not-used
+          note: 'This vulnerability was matched to the module "github.com/coredns/coredns" at the following location(s): /usr/bin/coredns. In all cases, the fixed version of the module (git commit 6a7a75e0cc14159177e604d0157836cc32add343) is an ancestor of the installed version commit (a7ed346585e30b99317d36e4d007b7b19a228ea5).'
+
+  - id: CGA-cvx6-gcmr-689q
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T07:11:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: coredns
+            componentID: 74051bbab0ed87f1
+            componentName: stdlib
+            componentVersion: go1.20.14
+            componentType: go-module
+            componentLocation: /usr/bin/coredns
+            scanner: grype
+
+  - id: CGA-gv5r-6rhm-qg5g
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2024-05-14T08:42:51Z
+        type: fixed
+        data:
+          fixed-version: 1.11.3-r1
+
+  - id: CGA-j42h-hfmv-hr83
+    aliases:
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2023-10-13T16:46:07Z
+        type: fixed
+        data:
+          fixed-version: 1.11.1-r5
+
+  - id: CGA-jq73-4ph4-v4jv
+    aliases:
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
+    events:
+      - timestamp: 2024-05-14T08:42:48Z
+        type: fixed
+        data:
+          fixed-version: 1.11.3-r1
 
   - id: CGA-mgrc-94fh-gfg7
     aliases:
@@ -125,51 +248,34 @@ advisories:
         data:
           fixed-version: 1.11.3-r0
 
-  - id: CGA-6fxv-h652-6rh8
+  - id: CGA-q4vp-fjrv-m7jc
     aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
     events:
-      - timestamp: 2024-03-12T07:11:12Z
+      - timestamp: 2023-11-07T19:25:05Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-qv59-522c-5m8v
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-20T09:04:10Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: coredns
-            componentID: 74051bbab0ed87f1
-            componentName: stdlib
-            componentVersion: go1.20.14
+            componentID: fe1ad1ac5d63ddd3
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
             componentType: go-module
             componentLocation: /usr/bin/coredns
             scanner: grype
-
-  - id: CGA-924r-vp5h-4mxg
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-12T07:11:14Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: coredns
-            componentID: 74051bbab0ed87f1
-            componentName: stdlib
-            componentVersion: go1.20.14
-            componentType: go-module
-            componentLocation: /usr/bin/coredns
-            scanner: grype
-
-  - id: CGA-6xw8-764h-6r7f
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2023-12-19T19:13:44Z
-        type: fixed
-        data:
-          fixed-version: 1.11.1-r9
 
   - id: CGA-qwf7-jm3j-pqjh
     aliases:
@@ -193,28 +299,38 @@ advisories:
         data:
           fixed-version: 1.11.1-r10
 
-  - id: CGA-277h-gmxh-hxpj
+  - id: CGA-rgr8-gg9j-r4mv
     aliases:
-      - CVE-2024-0874
-      - GHSA-m9w6-wp3h-vq8g
+      - CVE-2022-2835
+      - GHSA-ch7v-37xg-75ph
     events:
-      - timestamp: 2024-05-06T07:08:35Z
+      - timestamp: 2024-04-26T08:17:25Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: coredns
-            componentID: e99924cf99f4dd54
+            componentID: e7854537c45ae061
             componentName: github.com/coredns/coredns
-            componentVersion: v0.0.0-20240426190847-a7ed346585e3
+            componentVersion: v0.0.0-20230815193032-ae2bbc29be1a
             componentType: go-module
             componentLocation: /usr/bin/coredns
             scanner: grype
-      - timestamp: 2024-05-16T16:36:10Z
+      - timestamp: 2024-05-16T16:35:15Z
         type: false-positive-determination
         data:
           type: vulnerable-code-version-not-used
-          note: This vulnerability affects versions < 1.11.2, but the installed commit corresponds to version 1.11.3.
+          note: This vulnerability affects versions < 1.9.3, but the installed commit corresponds to version 1.11.3.
+
+  - id: CGA-vxh5-v53v-mx2p
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T19:38:42Z
+        type: fixed
+        data:
+          fixed-version: 1.11.3-r2
 
   - id: CGA-x74p-fj93-mrmq
     aliases:
@@ -225,42 +341,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.11.1-r12
-
-  - id: CGA-cvx6-gcmr-689q
-    aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
-    events:
-      - timestamp: 2024-03-12T07:11:16Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: coredns
-            componentID: 74051bbab0ed87f1
-            componentName: stdlib
-            componentVersion: go1.20.14
-            componentType: go-module
-            componentLocation: /usr/bin/coredns
-            scanner: grype
-
-  - id: CGA-5v8q-m4r5-757v
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-12T07:11:18Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: coredns
-            componentID: 74051bbab0ed87f1
-            componentName: stdlib
-            componentVersion: go1.20.14
-            componentType: go-module
-            componentLocation: /usr/bin/coredns
-            scanner: grype
 
   - id: CGA-xqjf-mc58-gqj8
     aliases:
@@ -279,63 +359,3 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/coredns
             scanner: grype
-
-  - id: CGA-qv59-522c-5m8v
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-20T09:04:10Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: coredns
-            componentID: fe1ad1ac5d63ddd3
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.31.0
-            componentType: go-module
-            componentLocation: /usr/bin/coredns
-            scanner: grype
-
-  - id: CGA-jq73-4ph4-v4jv
-    aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
-    events:
-      - timestamp: 2024-05-14T08:42:48Z
-        type: fixed
-        data:
-          fixed-version: 1.11.3-r1
-
-  - id: CGA-gv5r-6rhm-qg5g
-    aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
-    events:
-      - timestamp: 2024-05-14T08:42:51Z
-        type: fixed
-        data:
-          fixed-version: 1.11.3-r1
-
-  - id: CGA-cffh-xmf5-f43v
-    aliases:
-      - GHSA-gv9j-4w24-q7vx
-    events:
-      - timestamp: 2024-04-26T08:17:27Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: coredns
-            componentID: e7854537c45ae061
-            componentName: github.com/coredns/coredns
-            componentVersion: v0.0.0-20230815193032-ae2bbc29be1a
-            componentType: go-module
-            componentLocation: /usr/bin/coredns
-            scanner: grype
-      - timestamp: 2024-05-05T15:17:04Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-version-not-used
-          note: 'This vulnerability was matched to the module "github.com/coredns/coredns" at the following location(s): /usr/bin/coredns. In all cases, the fixed version of the module (git commit 6a7a75e0cc14159177e604d0157836cc32add343) is an ancestor of the installed version commit (a7ed346585e30b99317d36e4d007b7b19a228ea5).'
