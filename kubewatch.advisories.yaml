@@ -4,40 +4,12 @@ package:
   name: kubewatch
 
 advisories:
-  - id: CGA-hf7v-mm48-p3m9
-    aliases:
-      - CVE-2020-8559
-      - GHSA-33c5-9fx5-fvjm
-    events:
-      - timestamp: 2024-04-25T13:09:24Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubewatch
-            componentID: fe634fb5b65b962c
-            componentName: k8s.io/apimachinery
-            componentVersion: v0.20.15
-            componentType: go-module
-            componentLocation: /usr/bin/kubewatch
-            scanner: grype
-
   - id: CGA-28rc-23x2-7hpg
     aliases:
       - CVE-2023-39325
       - GHSA-4374-p667-p6c8
     events:
       - timestamp: 2023-10-16T19:07:47Z
-        type: fixed
-        data:
-          fixed-version: 2.5.0-r7
-
-  - id: CGA-5vqw-8hpq-grmr
-    aliases:
-      - CVE-2023-3978
-      - GHSA-2wrh-6pvc-2jm9
-    events:
-      - timestamp: 2023-10-16T19:08:22Z
         type: fixed
         data:
           fixed-version: 2.5.0-r7
@@ -52,27 +24,27 @@ advisories:
         data:
           fixed-version: 2.5.0-r7
 
-  - id: CGA-4w3x-3c5g-68f3
+  - id: CGA-428q-gcq2-6mw5
     aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
     events:
-      - timestamp: 2023-11-07T19:32:27Z
-        type: false-positive-determination
+      - timestamp: 2024-03-12T07:09:53Z
+        type: detection
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-95h7-63pv-4464
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:32:29Z
-        type: false-positive-determination
+          type: scan/v1
+          data:
+            subpackageName: kubewatch
+            componentID: 545953cd8fc2ec41
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/bin/kubewatch
+            scanner: grype
+      - timestamp: 2024-03-13T11:16:21Z
+        type: fixed
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          fixed-version: 2.5.0-r10
 
   - id: CGA-4495-qr3m-35h5
     aliases:
@@ -96,12 +68,23 @@ advisories:
         data:
           fixed-version: 2.5.0-r12
 
-  - id: CGA-wm38-85r4-453h
+  - id: CGA-4w3x-3c5g-68f3
     aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
     events:
-      - timestamp: 2024-03-12T07:09:49Z
+      - timestamp: 2023-11-07T19:32:27Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-54vf-6v2r-x22m
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T07:09:52Z
         type: detection
         data:
           type: scan/v1
@@ -117,6 +100,45 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.5.0-r10
+
+  - id: CGA-5vqw-8hpq-grmr
+    aliases:
+      - CVE-2023-3978
+      - GHSA-2wrh-6pvc-2jm9
+    events:
+      - timestamp: 2023-10-16T19:08:22Z
+        type: fixed
+        data:
+          fixed-version: 2.5.0-r7
+
+  - id: CGA-95h7-63pv-4464
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:32:29Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-hf7v-mm48-p3m9
+    aliases:
+      - CVE-2020-8559
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T13:09:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubewatch
+            componentID: fe634fb5b65b962c
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.20.15
+            componentType: go-module
+            componentLocation: /usr/bin/kubewatch
+            scanner: grype
 
   - id: CGA-hw5f-wxcf-4m6g
     aliases:
@@ -150,12 +172,34 @@ advisories:
         data:
           fixed-version: 2.5.0-r9
 
-  - id: CGA-54vf-6v2r-x22m
+  - id: CGA-v58c-cxv3-8wxq
     aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
     events:
-      - timestamp: 2024-03-12T07:09:52Z
+      - timestamp: 2024-03-14T08:20:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubewatch
+            componentID: 6aa0e9abb2e8cc2c
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/kubewatch
+            scanner: grype
+      - timestamp: 2024-03-31T01:38:19Z
+        type: fixed
+        data:
+          fixed-version: 2.5.0-r11
+
+  - id: CGA-wm38-85r4-453h
+    aliases:
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T07:09:49Z
         type: detection
         data:
           type: scan/v1
@@ -172,27 +216,15 @@ advisories:
         data:
           fixed-version: 2.5.0-r10
 
-  - id: CGA-428q-gcq2-6mw5
+  - id: CGA-wvw8-9rxv-6548
     aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
     events:
-      - timestamp: 2024-03-12T07:09:53Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubewatch
-            componentID: 545953cd8fc2ec41
-            componentName: stdlib
-            componentVersion: go1.21.5
-            componentType: go-module
-            componentLocation: /usr/bin/kubewatch
-            scanner: grype
-      - timestamp: 2024-03-13T11:16:21Z
+      - timestamp: 2024-05-14T08:40:20Z
         type: fixed
         data:
-          fixed-version: 2.5.0-r10
+          fixed-version: 2.6.0-r1
 
   - id: CGA-xgrp-c6pp-8wv6
     aliases:
@@ -216,37 +248,15 @@ advisories:
         data:
           fixed-version: 2.5.0-r10
 
-  - id: CGA-v58c-cxv3-8wxq
+  - id: CGA-xrqh-93w6-9xmr
     aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
     events:
-      - timestamp: 2024-03-14T08:20:12Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubewatch
-            componentID: 6aa0e9abb2e8cc2c
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.25.0
-            componentType: go-module
-            componentLocation: /usr/bin/kubewatch
-            scanner: grype
-      - timestamp: 2024-03-31T01:38:19Z
+      - timestamp: 2024-06-07T07:29:40Z
         type: fixed
         data:
-          fixed-version: 2.5.0-r11
-
-  - id: CGA-wvw8-9rxv-6548
-    aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
-    events:
-      - timestamp: 2024-05-14T08:40:20Z
-        type: fixed
-        data:
-          fixed-version: 2.6.0-r1
+          fixed-version: 2.6.0-r2
 
   - id: CGA-xw4j-9ww2-xvw2
     aliases:
