@@ -4,37 +4,15 @@ package:
   name: certificate-transparency
 
 advisories:
-  - id: CGA-pfv7-c7c2-8w9g
+  - id: CGA-34r7-rw8w-76xg
     aliases:
-      - CVE-2019-3826
-      - GHSA-3m87-5598-2v4f
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
     events:
-      - timestamp: 2023-12-17T17:35:38Z
-        type: false-positive-determination
+      - timestamp: 2024-06-07T16:33:18Z
+        type: fixed
         data:
-          type: vulnerable-code-version-not-used
-          note: This vulnerability has been fixed in version v2.7.1 which corresponds to the Go library version v0.7.1 and this package includes a later version.
-
-  - id: CGA-vv3c-w85g-r8wx
-    aliases:
-      - CVE-2023-44487
-      - GHSA-qppj-fm5r-hxr3
-    events:
-      - timestamp: 2023-11-01T14:45:08Z
-        type: pending-upstream-fix
-        data:
-          note: Pending upstream fix, this fix will require some code changes.
-
-  - id: CGA-6g54-3j2r-m464
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:24:07Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          fixed-version: 1.2.1-r1
 
   - id: CGA-437j-q755-9v6v
     aliases:
@@ -42,6 +20,17 @@ advisories:
       - GHSA-rq3x-83w4-p28c
     events:
       - timestamp: 2023-11-07T19:24:08Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-6g54-3j2r-m464
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:24:07Z
         type: false-positive-determination
         data:
           type: vulnerable-code-not-included-in-package
@@ -57,6 +46,36 @@ advisories:
         data:
           fixed-version: 1.1.8-r1
 
+  - id: CGA-7855-j3w8-gh6g
+    aliases:
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
+    events:
+      - timestamp: 2024-05-15T10:45:46Z
+        type: fixed
+        data:
+          fixed-version: 1.1.8-r3
+
+  - id: CGA-9qrj-xrqh-8f34
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T16:33:21Z
+        type: fixed
+        data:
+          fixed-version: 1.2.1-r1
+
+  - id: CGA-fgw3-q252-264p
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2024-05-15T10:45:48Z
+        type: fixed
+        data:
+          fixed-version: 1.1.8-r3
+
   - id: CGA-mj2g-2g73-xhf7
     aliases:
       - CVE-2023-48795
@@ -66,6 +85,17 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.1.7-r2
+
+  - id: CGA-pfv7-c7c2-8w9g
+    aliases:
+      - CVE-2019-3826
+      - GHSA-3m87-5598-2v4f
+    events:
+      - timestamp: 2023-12-17T17:35:38Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: This vulnerability has been fixed in version v2.7.1 which corresponds to the Go library version v0.7.1 and this package includes a later version.
 
   - id: CGA-rcr2-hq8r-78rm
     aliases:
@@ -77,22 +107,12 @@ advisories:
         data:
           fixed-version: 1.1.8-r0
 
-  - id: CGA-7855-j3w8-gh6g
+  - id: CGA-vv3c-w85g-r8wx
     aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
+      - CVE-2023-44487
+      - GHSA-qppj-fm5r-hxr3
     events:
-      - timestamp: 2024-05-15T10:45:46Z
-        type: fixed
+      - timestamp: 2023-11-01T14:45:08Z
+        type: pending-upstream-fix
         data:
-          fixed-version: 1.1.8-r3
-
-  - id: CGA-fgw3-q252-264p
-    aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
-    events:
-      - timestamp: 2024-05-15T10:45:48Z
-        type: fixed
-        data:
-          fixed-version: 1.1.8-r3
+          note: Pending upstream fix, this fix will require some code changes.
