@@ -4,28 +4,38 @@ package:
   name: rekor
 
 advisories:
-  - id: CGA-8577-2m79-fvjr
+  - id: CGA-2rf6-cjpx-9ffx
     aliases:
-      - CVE-2023-30551
-      - GHSA-2h5h-59f5-c5x9
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
     events:
-      - timestamp: 2024-04-26T12:01:51Z
+      - timestamp: 2024-03-14T08:19:16Z
         type: detection
         data:
           type: scan/v1
           data:
-            subpackageName: rekor
-            componentID: a7a3b7998c961b32
-            componentName: github.com/sigstore/rekor
-            componentVersion: v0.0.0-20240402041636-a6788566cd62
+            subpackageName: rekor-server
+            componentID: 8aa32ce9a5920a78
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
             componentType: go-module
             componentLocation: /usr/bin/rekor-server
             scanner: grype
-      - timestamp: 2024-05-04T17:53:49Z
+      - timestamp: 2024-03-16T11:02:13Z
+        type: fixed
+        data:
+          fixed-version: 1.3.5-r3
+
+  - id: CGA-3f7p-rrcv-r7m5
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:37:09Z
         type: false-positive-determination
         data:
-          type: vulnerable-code-version-not-used
-          note: 'Module "github.com/sigstore/rekor" at "/usr/bin/rekor-server": the commit of the fixed version (0c1914e5e955cb9f514e32b222cf61a13e91ab08) is an ancestor of installed commit (a6788566cd62facb0fb0450e9d2c2867f551e37c), which means the installed version was misidentified by the scanner and the vulnerability has actually been fixed.'
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
 
   - id: CGA-3jqc-49mm-8wx2
     aliases:
@@ -50,70 +60,6 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'Module "github.com/sigstore/rekor" at "/usr/bin/rekor-server": the commit of the fixed version (20a995116b1548b79e62ba0ad9c29800387e8641) is an ancestor of installed commit (a6788566cd62facb0fb0450e9d2c2867f551e37c), which means the installed version was misidentified by the scanner and the vulnerability has actually been fixed.'
 
-  - id: CGA-3f7p-rrcv-r7m5
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:37:09Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-p9v7-hjmx-44w3
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:37:10Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-cqc9-vf23-2xmw
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-10T11:30:55Z
-        type: fixed
-        data:
-          fixed-version: 1.3.6-r1
-
-  - id: CGA-v8pg-g99j-pp56
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2023-12-21T16:29:05Z
-        type: fixed
-        data:
-          fixed-version: 1.3.4-r2
-
-  - id: CGA-2rf6-cjpx-9ffx
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T08:19:16Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: rekor-server
-            componentID: 8aa32ce9a5920a78
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.32.0
-            componentType: go-module
-            componentLocation: /usr/bin/rekor-server
-            scanner: grype
-      - timestamp: 2024-03-16T11:02:13Z
-        type: fixed
-        data:
-          fixed-version: 1.3.5-r3
-
   - id: CGA-6c24-w5p4-jfh3
     aliases:
       - CVE-2024-24787
@@ -124,15 +70,48 @@ advisories:
         data:
           fixed-version: 1.3.6-r3
 
-  - id: CGA-v343-9m7v-3rgm
+  - id: CGA-8577-2m79-fvjr
     aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
+      - CVE-2023-30551
+      - GHSA-2h5h-59f5-c5x9
     events:
-      - timestamp: 2024-05-14T13:22:09Z
+      - timestamp: 2024-04-26T12:01:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rekor
+            componentID: a7a3b7998c961b32
+            componentName: github.com/sigstore/rekor
+            componentVersion: v0.0.0-20240402041636-a6788566cd62
+            componentType: go-module
+            componentLocation: /usr/bin/rekor-server
+            scanner: grype
+      - timestamp: 2024-05-04T17:53:49Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: 'Module "github.com/sigstore/rekor" at "/usr/bin/rekor-server": the commit of the fixed version (0c1914e5e955cb9f514e32b222cf61a13e91ab08) is an ancestor of installed commit (a6788566cd62facb0fb0450e9d2c2867f551e37c), which means the installed version was misidentified by the scanner and the vulnerability has actually been fixed.'
+
+  - id: CGA-9rgv-3f7x-2vvw
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T14:00:57Z
         type: fixed
         data:
-          fixed-version: 1.3.6-r3
+          fixed-version: 1.3.6-r4
+
+  - id: CGA-cqc9-vf23-2xmw
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-10T11:30:55Z
+        type: fixed
+        data:
+          fixed-version: 1.3.6-r1
 
   - id: CGA-f29x-9m8w-jcxg
     aliases:
@@ -156,6 +135,27 @@ advisories:
         data:
           fixed-version: 1.3.5-r2
 
+  - id: CGA-g3pw-fqrm-rv83
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T14:01:00Z
+        type: fixed
+        data:
+          fixed-version: 1.3.6-r4
+
+  - id: CGA-p9v7-hjmx-44w3
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:37:10Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
   - id: CGA-r8ww-4x3r-m7vw
     aliases:
       - GHSA-2c7c-3mj9-8fqh
@@ -164,3 +164,23 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.3.3-r1
+
+  - id: CGA-v343-9m7v-3rgm
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2024-05-14T13:22:09Z
+        type: fixed
+        data:
+          fixed-version: 1.3.6-r3
+
+  - id: CGA-v8pg-g99j-pp56
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2023-12-21T16:29:05Z
+        type: fixed
+        data:
+          fixed-version: 1.3.4-r2
