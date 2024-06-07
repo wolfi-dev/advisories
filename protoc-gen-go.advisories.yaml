@@ -4,23 +4,27 @@ package:
   name: protoc-gen-go
 
 advisories:
+  - id: CGA-2qf3-v342-5frv
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T10:27:42Z
+        type: fixed
+        data:
+          fixed-version: 1.33.0-r0
+      - timestamp: 2024-05-15T12:40:33Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: This vulnerability affects any version older than v1.33.0 while this package is at version v1.34.1 containing non-vulnerable code.
+
   - id: CGA-3j4p-92x8-rxfm
     aliases:
       - CVE-2023-45283
       - GHSA-vvjp-q62m-2vph
     events:
       - timestamp: 2023-11-07T19:36:35Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-p452-9m7g-gf68
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:36:36Z
         type: false-positive-determination
         data:
           type: vulnerable-code-not-included-in-package
@@ -36,17 +40,23 @@ advisories:
         data:
           fixed-version: 1.33.0-r1
 
-  - id: CGA-2qf3-v342-5frv
+  - id: CGA-p452-9m7g-gf68
     aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
     events:
-      - timestamp: 2024-03-14T10:27:42Z
-        type: fixed
-        data:
-          fixed-version: 1.33.0-r0
-      - timestamp: 2024-05-15T12:40:33Z
+      - timestamp: 2023-11-07T19:36:36Z
         type: false-positive-determination
         data:
-          type: vulnerable-code-version-not-used
-          note: This vulnerability affects any version older than v1.33.0 while this package is at version v1.34.1 containing non-vulnerable code.
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-v2h2-j63v-mchx
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T17:18:50Z
+        type: fixed
+        data:
+          fixed-version: 1.34.1-r3
