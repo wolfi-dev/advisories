@@ -4,60 +4,6 @@ package:
   name: wolfictl
 
 advisories:
-  - id: CGA-jm9m-5hm9-f52q
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:40:45Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-jxq6-9r2h-ph84
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:40:47Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-f9fw-4v87-xm62
-    aliases:
-      - CVE-2024-0406
-      - GHSA-rhh4-rh7c-7r5v
-    events:
-      - timestamp: 2024-04-13T07:08:28Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: wolfictl
-            componentID: 035b8f7d25c7c4ae
-            componentName: github.com/mholt/archiver/v3
-            componentVersion: v3.5.1
-            componentType: go-module
-            componentLocation: /usr/bin/wolfictl
-            scanner: grype
-      - timestamp: 2024-04-30T10:00:25Z
-        type: fixed
-        data:
-          fixed-version: 0.16.6-r1
-
-  - id: CGA-6v2j-g2f3-pvgw
-    aliases:
-      - CVE-2024-21626
-      - GHSA-xr7r-f8xq-vfvv
-    events:
-      - timestamp: 2024-02-02T10:07:02Z
-        type: fixed
-        data:
-          fixed-version: 0.14.13-r0
-
   - id: CGA-2q4q-6mhr-c6v7
     aliases:
       - CVE-2024-24579
@@ -112,15 +58,35 @@ advisories:
         data:
           fixed-version: 0.15.7-r1
 
-  - id: CGA-q9fm-pxp4-j86g
+  - id: CGA-6v2j-g2f3-pvgw
     aliases:
-      - CVE-2024-29902
-      - GHSA-88jx-383q-w4qc
+      - CVE-2024-21626
+      - GHSA-xr7r-f8xq-vfvv
     events:
-      - timestamp: 2024-04-13T07:07:49Z
+      - timestamp: 2024-02-02T10:07:02Z
         type: fixed
         data:
-          fixed-version: 0.15.18-r1
+          fixed-version: 0.14.13-r0
+
+  - id: CGA-76jj-628v-667f
+    aliases:
+      - CVE-2024-32473
+      - GHSA-x84c-p2g9-rqv9
+    events:
+      - timestamp: 2024-04-19T10:19:23Z
+        type: fixed
+        data:
+          fixed-version: 0.15.19-r1
+
+  - id: CGA-9426-fg8r-jf98
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T09:37:43Z
+        type: fixed
+        data:
+          fixed-version: 0.16.15-r1
 
   - id: CGA-c23h-v4gm-gqw3
     aliases:
@@ -132,37 +98,49 @@ advisories:
         data:
           fixed-version: 0.15.18-r1
 
-  - id: CGA-r3h7-vx67-86jg
+  - id: CGA-f9fw-4v87-xm62
     aliases:
-      - CVE-2024-3154
-      - GHSA-c5pj-mqfh-rvc3
+      - CVE-2024-0406
+      - GHSA-rhh4-rh7c-7r5v
     events:
-      - timestamp: 2024-04-29T14:00:36Z
+      - timestamp: 2024-04-13T07:08:28Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: wolfictl
-            componentID: 11d41e4706795223
-            componentName: github.com/opencontainers/runc
-            componentVersion: v1.1.12
+            componentID: 035b8f7d25c7c4ae
+            componentName: github.com/mholt/archiver/v3
+            componentVersion: v3.5.1
             componentType: go-module
             componentLocation: /usr/bin/wolfictl
             scanner: grype
-      - timestamp: 2024-04-30T10:00:26Z
+      - timestamp: 2024-04-30T10:00:25Z
         type: fixed
         data:
           fixed-version: 0.16.6-r1
 
-  - id: CGA-76jj-628v-667f
+  - id: CGA-jm9m-5hm9-f52q
     aliases:
-      - CVE-2024-32473
-      - GHSA-x84c-p2g9-rqv9
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
     events:
-      - timestamp: 2024-04-19T10:19:23Z
-        type: fixed
+      - timestamp: 2023-11-07T19:40:45Z
+        type: false-positive-determination
         data:
-          fixed-version: 0.15.19-r1
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-jxq6-9r2h-ph84
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:40:47Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
 
   - id: CGA-q8cg-653r-89r9
     aliases:
@@ -184,3 +162,46 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.14.1-r0
+
+  - id: CGA-q9fm-pxp4-j86g
+    aliases:
+      - CVE-2024-29902
+      - GHSA-88jx-383q-w4qc
+    events:
+      - timestamp: 2024-04-13T07:07:49Z
+        type: fixed
+        data:
+          fixed-version: 0.15.18-r1
+
+  - id: CGA-r3h7-vx67-86jg
+    aliases:
+      - CVE-2024-3154
+      - GHSA-2cgq-h8xw-2v5j
+      - GHSA-c5pj-mqfh-rvc3
+    events:
+      - timestamp: 2024-04-29T14:00:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wolfictl
+            componentID: 11d41e4706795223
+            componentName: github.com/opencontainers/runc
+            componentVersion: v1.1.12
+            componentType: go-module
+            componentLocation: /usr/bin/wolfictl
+            scanner: grype
+      - timestamp: 2024-04-30T10:00:26Z
+        type: fixed
+        data:
+          fixed-version: 0.16.6-r1
+
+  - id: CGA-xr5v-3h53-v43r
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T09:37:46Z
+        type: fixed
+        data:
+          fixed-version: 0.16.15-r1
