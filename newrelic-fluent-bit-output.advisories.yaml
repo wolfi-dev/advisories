@@ -82,6 +82,24 @@ advisories:
         data:
           note: 'See upstream issue: https://github.com/newrelic/newrelic-fluent-bit-output/pull/144'
 
+  - id: CGA-f485-vg75-v33q
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T07:25:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: newrelic-fluent-bit-output
+            componentID: 09e92b0c2e8ae2a7
+            componentName: stdlib
+            componentVersion: go1.20.14
+            componentType: go-module
+            componentLocation: /fluent-bit/bin/out_newrelic.so
+            scanner: grype
+
   - id: CGA-f95r-g332-q2hr
     aliases:
       - CVE-2024-24783
