@@ -4,38 +4,57 @@ package:
   name: cri-tools
 
 advisories:
-  - id: CGA-q2qw-vhcq-9j87
+  - id: CGA-832h-x37w-8wwj
     aliases:
-      - CVE-2019-11255
-      - GHSA-f4w6-3rh6-6q4q
+      - CVE-2024-32473
+      - GHSA-x84c-p2g9-rqv9
     events:
-      - timestamp: 2023-08-11T16:52:08Z
-        type: false-positive-determination
+      - timestamp: 2024-04-19T07:25:44Z
+        type: detection
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Vulnerable code is part of an external controller not included kubernetes/kubernetes library
+          type: scan/v1
+          data:
+            subpackageName: cri-tools
+            componentID: 7f7e0ecf552fa9e9
+            componentName: github.com/docker/docker
+            componentVersion: v26.0.1+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/crictl
+            scanner: grype
+      - timestamp: 2024-04-20T07:08:32Z
+        type: fixed
+        data:
+          fixed-version: 1.30.0-r1
 
-  - id: CGA-qj9v-p3j2-f53r
+  - id: CGA-9536-qrf6-pwgj
     aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
     events:
-      - timestamp: 2023-11-07T19:25:19Z
-        type: false-positive-determination
+      - timestamp: 2024-03-12T07:05:59Z
+        type: fixed
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          fixed-version: 1.29.0-r4
 
-  - id: CGA-q3jw-98hj-56qm
+  - id: CGA-9wm8-6f8v-rvvm
     aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
     events:
-      - timestamp: 2023-11-07T19:25:20Z
-        type: false-positive-determination
+      - timestamp: 2024-05-14T12:41:27Z
+        type: fixed
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          fixed-version: 1.30.0-r2
+
+  - id: CGA-cwxm-cgcx-fw3g
+    aliases:
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T07:05:59Z
+        type: fixed
+        data:
+          fixed-version: 1.29.0-r4
 
   - id: CGA-gj4m-vq4g-mx8m
     aliases:
@@ -47,16 +66,6 @@ advisories:
         data:
           fixed-version: 1.29.0-r7
 
-  - id: CGA-hwxq-2vf3-m26q
-    aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
-    events:
-      - timestamp: 2024-03-12T07:06:00Z
-        type: fixed
-        data:
-          fixed-version: 1.29.0-r4
-
   - id: CGA-gjwm-p9gc-q9pj
     aliases:
       - CVE-2023-45290
@@ -67,27 +76,35 @@ advisories:
         data:
           fixed-version: 1.29.0-r4
 
-  - id: CGA-xcfj-23mp-rgxx
+  - id: CGA-gp83-v98g-2v5v
     aliases:
-      - CVE-2023-47108
-      - GHSA-8pgv-569h-w5rw
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
     events:
-      - timestamp: 2024-01-11T07:06:55Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: crictl
-            componentID: 7ea7b73b0dc5700e
-            componentName: go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc
-            componentVersion: v0.42.0
-            componentType: go-module
-            componentLocation: /usr/bin/crictl
-            scanner: grype
-      - timestamp: 2024-01-24T07:05:17Z
+      - timestamp: 2024-03-12T07:06:02Z
         type: fixed
         data:
-          fixed-version: 1.29.0-r2
+          fixed-version: 1.29.0-r4
+
+  - id: CGA-gw5h-6q93-v2x6
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T08:39:47Z
+        type: fixed
+        data:
+          fixed-version: 1.30.0-r3
+
+  - id: CGA-hwxq-2vf3-m26q
+    aliases:
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T07:06:00Z
+        type: fixed
+        data:
+          fixed-version: 1.29.0-r4
 
   - id: CGA-hx4x-59v6-957v
     aliases:
@@ -111,35 +128,48 @@ advisories:
         data:
           fixed-version: 1.29.0-r6
 
-  - id: CGA-gp83-v98g-2v5v
+  - id: CGA-q2qw-vhcq-9j87
     aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
+      - CVE-2019-11255
+      - GHSA-f4w6-3rh6-6q4q
     events:
-      - timestamp: 2024-03-12T07:06:02Z
-        type: fixed
+      - timestamp: 2023-08-11T16:52:08Z
+        type: false-positive-determination
         data:
-          fixed-version: 1.29.0-r4
+          type: vulnerable-code-not-included-in-package
+          note: Vulnerable code is part of an external controller not included kubernetes/kubernetes library
 
-  - id: CGA-9536-qrf6-pwgj
+  - id: CGA-q3jw-98hj-56qm
     aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
     events:
-      - timestamp: 2024-03-12T07:05:59Z
-        type: fixed
+      - timestamp: 2023-11-07T19:25:20Z
+        type: false-positive-determination
         data:
-          fixed-version: 1.29.0-r4
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
 
-  - id: CGA-cwxm-cgcx-fw3g
+  - id: CGA-qj9v-p3j2-f53r
     aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
     events:
-      - timestamp: 2024-03-12T07:05:59Z
+      - timestamp: 2023-11-07T19:25:19Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-vg8f-f39h-5f2p
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T08:39:43Z
         type: fixed
         data:
-          fixed-version: 1.29.0-r4
+          fixed-version: 1.30.0-r3
 
   - id: CGA-vpgj-8f5x-8qq3
     aliases:
@@ -163,16 +193,6 @@ advisories:
         data:
           fixed-version: 1.29.0-r5
 
-  - id: CGA-9wm8-6f8v-rvvm
-    aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
-    events:
-      - timestamp: 2024-05-14T12:41:27Z
-        type: fixed
-        data:
-          fixed-version: 1.30.0-r2
-
   - id: CGA-x5fv-545j-6357
     aliases:
       - CVE-2024-24788
@@ -183,24 +203,24 @@ advisories:
         data:
           fixed-version: 1.30.0-r2
 
-  - id: CGA-832h-x37w-8wwj
+  - id: CGA-xcfj-23mp-rgxx
     aliases:
-      - CVE-2024-32473
-      - GHSA-x84c-p2g9-rqv9
+      - CVE-2023-47108
+      - GHSA-8pgv-569h-w5rw
     events:
-      - timestamp: 2024-04-19T07:25:44Z
+      - timestamp: 2024-01-11T07:06:55Z
         type: detection
         data:
           type: scan/v1
           data:
-            subpackageName: cri-tools
-            componentID: 7f7e0ecf552fa9e9
-            componentName: github.com/docker/docker
-            componentVersion: v26.0.1+incompatible
+            subpackageName: crictl
+            componentID: 7ea7b73b0dc5700e
+            componentName: go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc
+            componentVersion: v0.42.0
             componentType: go-module
             componentLocation: /usr/bin/crictl
             scanner: grype
-      - timestamp: 2024-04-20T07:08:32Z
+      - timestamp: 2024-01-24T07:05:17Z
         type: fixed
         data:
-          fixed-version: 1.30.0-r1
+          fixed-version: 1.29.0-r2
