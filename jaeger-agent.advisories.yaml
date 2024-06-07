@@ -4,24 +4,6 @@ package:
   name: jaeger-agent
 
 advisories:
-  - id: CGA-r3m6-j9rf-6qrg
-    aliases:
-      - CVE-2020-10750
-      - GHSA-gh32-pc56-4c96
-    events:
-      - timestamp: 2024-04-26T10:12:26Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: jaeger-agent
-            componentID: 3742dac0271f15d5
-            componentName: github.com/jaegertracing/jaeger
-            componentVersion: v0.0.0-20240403195740-ecbae67ea32f
-            componentType: go-module
-            componentLocation: /usr/bin/jaeger-agent
-            scanner: grype
-
   - id: CGA-7gmq-3r33-85hg
     aliases:
       - CVE-2023-45283
@@ -33,38 +15,25 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
-  - id: CGA-hm4v-92r9-qv5m
+  - id: CGA-979v-vx96-vg64
     aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
     events:
-      - timestamp: 2023-11-07T19:30:01Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-f8pj-rm5q-vw8h
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-20T13:41:45Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: jaeger-agent
-            componentID: e19a3985de994866
-            componentName: golang.org/x/net
-            componentVersion: v0.22.0
-            componentType: go-module
-            componentLocation: /usr/bin/jaeger-agent
-            scanner: grype
-      - timestamp: 2024-04-23T10:03:56Z
+      - timestamp: 2024-05-15T07:17:07Z
         type: fixed
         data:
-          fixed-version: 1.56.0-r1
+          fixed-version: 1.57.0-r1
+
+  - id: CGA-99cr-m464-74cx
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T14:43:01Z
+        type: fixed
+        data:
+          fixed-version: 1.57.0-r2
 
   - id: CGA-9w38-5hvp-8hjw
     aliases:
@@ -88,15 +57,27 @@ advisories:
         data:
           fixed-version: 1.55.0-r1
 
-  - id: CGA-979v-vx96-vg64
+  - id: CGA-f8pj-rm5q-vw8h
     aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
     events:
-      - timestamp: 2024-05-15T07:17:07Z
+      - timestamp: 2024-04-20T13:41:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jaeger-agent
+            componentID: e19a3985de994866
+            componentName: golang.org/x/net
+            componentVersion: v0.22.0
+            componentType: go-module
+            componentLocation: /usr/bin/jaeger-agent
+            scanner: grype
+      - timestamp: 2024-04-23T10:03:56Z
         type: fixed
         data:
-          fixed-version: 1.57.0-r1
+          fixed-version: 1.56.0-r1
 
   - id: CGA-frvh-9mmw-hpp2
     aliases:
@@ -107,6 +88,17 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.57.0-r1
+
+  - id: CGA-hm4v-92r9-qv5m
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:30:01Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
 
   - id: CGA-j2v8-pp2j-f2wv
     aliases:
@@ -129,3 +121,21 @@ advisories:
         data:
           type: vulnerable-code-version-not-used
           note: This package uses a newer version v1.56.0 when the vulnerable code affects any version older than v1.47.0.
+
+  - id: CGA-r3m6-j9rf-6qrg
+    aliases:
+      - CVE-2020-10750
+      - GHSA-gh32-pc56-4c96
+    events:
+      - timestamp: 2024-04-26T10:12:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jaeger-agent
+            componentID: 3742dac0271f15d5
+            componentName: github.com/jaegertracing/jaeger
+            componentVersion: v0.0.0-20240403195740-ecbae67ea32f
+            componentType: go-module
+            componentLocation: /usr/bin/jaeger-agent
+            scanner: grype
