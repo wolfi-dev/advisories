@@ -4,16 +4,47 @@ package:
   name: terraform-provider-azurerm
 
 advisories:
-  - id: CGA-v8m6-hgvj-q9jx
+  - id: CGA-34p4-vq54-3q43
     aliases:
-      - CVE-2023-44487
-      - GHSA-m425-mq94-257g
-      - GHSA-qppj-fm5r-hxr3
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
     events:
-      - timestamp: 2023-10-26T08:41:01Z
+      - timestamp: 2024-03-14T14:17:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-azurerm
+            componentID: 0c50c5d41e769c66
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-azurerm
+            scanner: grype
+      - timestamp: 2024-03-15T03:36:20Z
         type: fixed
         data:
-          fixed-version: 3.77.0-r1
+          fixed-version: 3.96.0-r0
+
+  - id: CGA-879j-4wqj-qhh6
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2023-12-20T05:28:52Z
+        type: fixed
+        data:
+          fixed-version: 3.85.0-r1
+
+  - id: CGA-fqh9-g78j-wcwr
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T13:22:17Z
+        type: fixed
+        data:
+          fixed-version: 3.106.1-r1
 
   - id: CGA-fvmm-5w62-39c9
     aliases:
@@ -37,6 +68,17 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-v8m6-hgvj-q9jx
+    aliases:
+      - CVE-2023-44487
+      - GHSA-m425-mq94-257g
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2023-10-26T08:41:01Z
+        type: fixed
+        data:
+          fixed-version: 3.77.0-r1
+
   - id: CGA-vmj4-6fpv-mjvp
     aliases:
       - CVE-2023-45288
@@ -46,35 +88,3 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.100.0-r1
-
-  - id: CGA-879j-4wqj-qhh6
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2023-12-20T05:28:52Z
-        type: fixed
-        data:
-          fixed-version: 3.85.0-r1
-
-  - id: CGA-34p4-vq54-3q43
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T14:17:51Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: terraform-provider-azurerm
-            componentID: 0c50c5d41e769c66
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.31.0
-            componentType: go-module
-            componentLocation: /usr/bin/terraform-provider-azurerm
-            scanner: grype
-      - timestamp: 2024-03-15T03:36:20Z
-        type: fixed
-        data:
-          fixed-version: 3.96.0-r0
