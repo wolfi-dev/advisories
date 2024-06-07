@@ -4,37 +4,15 @@ package:
   name: kustomize
 
 advisories:
-  - id: CGA-8gw4-j778-288q
+  - id: CGA-253m-2v8m-m8w8
     aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
     events:
-      - timestamp: 2023-11-07T19:32:30Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-9j9v-c5r3-fqjc
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:32:32Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-jcjj-xjfc-hm42
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-12T08:44:13Z
+      - timestamp: 2024-03-12T09:17:58Z
         type: fixed
         data:
-          fixed-version: 5.4.1-r0
+          fixed-version: 5.3.0-r2
 
   - id: CGA-4g84-vx4j-h73w
     aliases:
@@ -66,15 +44,59 @@ advisories:
         data:
           fixed-version: 5.3.0-r2
 
-  - id: CGA-253m-2v8m-m8w8
+  - id: CGA-8gw4-j778-288q
     aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
     events:
-      - timestamp: 2024-03-12T09:17:58Z
+      - timestamp: 2023-11-07T19:32:30Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-9597-27qj-98r9
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2024-05-14T07:14:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kustomize
+            componentID: 3509dc6d566eaf98
+            componentName: stdlib
+            componentVersion: go1.22.2
+            componentType: go-module
+            componentLocation: /usr/bin/kustomize
+            scanner: grype
+      - timestamp: 2024-05-22T09:21:37Z
         type: fixed
         data:
-          fixed-version: 5.3.0-r2
+          fixed-version: 5.4.1-r4
+
+  - id: CGA-9j9v-c5r3-fqjc
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:32:32Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-jcjj-xjfc-hm42
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-12T08:44:13Z
+        type: fixed
+        data:
+          fixed-version: 5.4.1-r0
 
   - id: CGA-jhxw-rrj8-wm67
     aliases:
@@ -85,6 +107,16 @@ advisories:
         type: fixed
         data:
           fixed-version: 5.3.0-r2
+
+  - id: CGA-v5hp-frxr-x26g
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T12:11:12Z
+        type: fixed
+        data:
+          fixed-version: 5.4.2-r2
 
   - id: CGA-w6h7-464c-5hx4
     aliases:
@@ -130,24 +162,12 @@ advisories:
         data:
           fixed-version: 5.4.1-r4
 
-  - id: CGA-9597-27qj-98r9
+  - id: CGA-xrpp-xwhg-q6mw
     aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
     events:
-      - timestamp: 2024-05-14T07:14:31Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kustomize
-            componentID: 3509dc6d566eaf98
-            componentName: stdlib
-            componentVersion: go1.22.2
-            componentType: go-module
-            componentLocation: /usr/bin/kustomize
-            scanner: grype
-      - timestamp: 2024-05-22T09:21:37Z
+      - timestamp: 2024-06-07T12:11:09Z
         type: fixed
         data:
-          fixed-version: 5.4.1-r4
+          fixed-version: 5.4.2-r2
