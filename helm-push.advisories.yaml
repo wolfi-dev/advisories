@@ -4,6 +4,17 @@ package:
   name: helm-push
 
 advisories:
+  - id: CGA-2w5q-jwcp-68cc
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:28:58Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
   - id: CGA-337p-jfx9-hj55
     aliases:
       - CVE-2019-25210
@@ -27,6 +38,211 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
 
+  - id: CGA-3mg3-p7mv-xg2c
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T11:16:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-push
+            componentID: b02cbc376478767f
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/libexec/helm-plugins/helm-push/bin/helm-cm-push
+            scanner: grype
+
+  - id: CGA-4f5c-g2fq-xp97
+    aliases:
+      - CVE-2024-32473
+      - GHSA-x84c-p2g9-rqv9
+    events:
+      - timestamp: 2024-04-19T10:19:33Z
+        type: fixed
+        data:
+          fixed-version: 0.10.4-r8
+
+  - id: CGA-6c5g-6wqv-9wpg
+    aliases:
+      - CVE-2023-45285
+      - GHSA-5f94-vhjq-rpg8
+    events:
+      - timestamp: 2024-02-15T07:11:47Z
+        type: fixed
+        data:
+          fixed-version: 0.10.4-r1
+
+  - id: CGA-6fgx-p3xv-c54f
+    aliases:
+      - GHSA-jq35-85cj-fj4p
+    events:
+      - timestamp: 2023-11-07T04:27:03Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability is in the container runtime itself, not clients of the container runtime.
+
+  - id: CGA-7gcp-5jvh-rxqq
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2024-02-14T12:28:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-push
+            componentID: dc2efc59a44cd238
+            componentName: golang.org/x/crypto
+            componentVersion: v0.14.0
+            componentType: go-module
+            componentLocation: /usr/libexec/helm-plugins/helm-push/bin/helm-cm-push
+            scanner: grype
+      - timestamp: 2024-02-21T13:32:20Z
+        type: fixed
+        data:
+          fixed-version: 0.10.4-r2
+
+  - id: CGA-87cp-vv6g-953p
+    aliases:
+      - CVE-2024-26147
+      - GHSA-r53h-jv2g-vpx6
+    events:
+      - timestamp: 2024-02-23T07:17:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-push
+            componentID: 12bb606b4bc15413
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.1
+            componentType: go-module
+            componentLocation: /usr/libexec/helm-plugins/helm-push/bin/helm-cm-push
+            scanner: grype
+      - timestamp: 2024-02-25T11:53:42Z
+        type: fixed
+        data:
+          fixed-version: 0.10.4-r3
+
+  - id: CGA-9j47-9vh8-g945
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T07:14:34Z
+        type: fixed
+        data:
+          fixed-version: 0.10.4-r4
+
+  - id: CGA-c24r-29xx-8xp3
+    aliases:
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T07:14:32Z
+        type: fixed
+        data:
+          fixed-version: 0.10.4-r4
+
+  - id: CGA-cj29-mh3f-jxqc
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T19:35:19Z
+        type: fixed
+        data:
+          fixed-version: 0.10.4-r11
+
+  - id: CGA-cjm8-r9fm-4gfh
+    aliases:
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T07:14:37Z
+        type: fixed
+        data:
+          fixed-version: 0.10.4-r4
+
+  - id: CGA-crxc-726h-76wm
+    aliases:
+      - CVE-2024-25620
+      - GHSA-v53g-5gjp-272r
+    events:
+      - timestamp: 2024-02-16T07:33:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-push
+            componentID: 341d908462577653
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.11.2
+            componentType: go-module
+            componentLocation: /usr/libexec/helm-plugins/helm-push/bin/helm-cm-push
+            scanner: grype
+      - timestamp: 2024-02-21T13:32:19Z
+        type: fixed
+        data:
+          fixed-version: 0.10.4-r2
+
+  - id: CGA-j9h6-qp5w-c863
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T07:14:35Z
+        type: fixed
+        data:
+          fixed-version: 0.10.4-r4
+
+  - id: CGA-jm43-4p5f-qxrc
+    aliases:
+      - GHSA-7ww5-4wqc-m92c
+    events:
+      - timestamp: 2024-02-14T12:29:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-push
+            componentID: dfde00ac0aa6bb70
+            componentName: github.com/containerd/containerd
+            componentVersion: v1.6.18
+            componentType: go-module
+            componentLocation: /usr/libexec/helm-plugins/helm-push/bin/helm-cm-push
+            scanner: grype
+      - timestamp: 2024-02-21T13:32:19Z
+        type: fixed
+        data:
+          fixed-version: 0.10.4-r2
+
+  - id: CGA-jp3m-xg9r-8j4m
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2024-05-15T12:45:22Z
+        type: fixed
+        data:
+          fixed-version: 0.10.4-r10
+
+  - id: CGA-qm9h-6g4x-37g3
+    aliases:
+      - GHSA-6xv5-86q9-7xr8
+    events:
+      - timestamp: 2023-11-07T04:26:32Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability is only present on Windows.
+
   - id: CGA-qqcp-xr24-6857
     aliases:
       - CVE-2023-39326
@@ -36,6 +252,16 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.10.4-r1
+
+  - id: CGA-qwr5-2mjr-qh38
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T19:35:14Z
+        type: fixed
+        data:
+          fixed-version: 0.10.4-r11
 
   - id: CGA-r872-3m9x-4mmx
     aliases:
@@ -48,26 +274,15 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
-  - id: CGA-2w5q-jwcp-68cc
+  - id: CGA-rcmh-hrrf-ff9j
     aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
     events:
-      - timestamp: 2023-11-07T19:28:58Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-6c5g-6wqv-9wpg
-    aliases:
-      - CVE-2023-45285
-      - GHSA-5f94-vhjq-rpg8
-    events:
-      - timestamp: 2024-02-15T07:11:47Z
+      - timestamp: 2024-05-15T12:45:25Z
         type: fixed
         data:
-          fixed-version: 0.10.4-r1
+          fixed-version: 0.10.4-r10
 
   - id: CGA-v8vx-hxmc-c3fv
     aliases:
@@ -100,198 +315,3 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.10.4-r4
-
-  - id: CGA-c24r-29xx-8xp3
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-12T07:14:32Z
-        type: fixed
-        data:
-          fixed-version: 0.10.4-r4
-
-  - id: CGA-7gcp-5jvh-rxqq
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2024-02-14T12:28:59Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: helm-push
-            componentID: dc2efc59a44cd238
-            componentName: golang.org/x/crypto
-            componentVersion: v0.14.0
-            componentType: go-module
-            componentLocation: /usr/libexec/helm-plugins/helm-push/bin/helm-cm-push
-            scanner: grype
-      - timestamp: 2024-02-21T13:32:20Z
-        type: fixed
-        data:
-          fixed-version: 0.10.4-r2
-
-  - id: CGA-9j47-9vh8-g945
-    aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
-    events:
-      - timestamp: 2024-03-12T07:14:34Z
-        type: fixed
-        data:
-          fixed-version: 0.10.4-r4
-
-  - id: CGA-j9h6-qp5w-c863
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-12T07:14:35Z
-        type: fixed
-        data:
-          fixed-version: 0.10.4-r4
-
-  - id: CGA-cjm8-r9fm-4gfh
-    aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
-    events:
-      - timestamp: 2024-03-12T07:14:37Z
-        type: fixed
-        data:
-          fixed-version: 0.10.4-r4
-
-  - id: CGA-3mg3-p7mv-xg2c
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T11:16:20Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: helm-push
-            componentID: b02cbc376478767f
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.31.0
-            componentType: go-module
-            componentLocation: /usr/libexec/helm-plugins/helm-push/bin/helm-cm-push
-            scanner: grype
-
-  - id: CGA-rcmh-hrrf-ff9j
-    aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
-    events:
-      - timestamp: 2024-05-15T12:45:25Z
-        type: fixed
-        data:
-          fixed-version: 0.10.4-r10
-
-  - id: CGA-jp3m-xg9r-8j4m
-    aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
-    events:
-      - timestamp: 2024-05-15T12:45:22Z
-        type: fixed
-        data:
-          fixed-version: 0.10.4-r10
-
-  - id: CGA-crxc-726h-76wm
-    aliases:
-      - CVE-2024-25620
-      - GHSA-v53g-5gjp-272r
-    events:
-      - timestamp: 2024-02-16T07:33:27Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: helm-push
-            componentID: 341d908462577653
-            componentName: helm.sh/helm/v3
-            componentVersion: v3.11.2
-            componentType: go-module
-            componentLocation: /usr/libexec/helm-plugins/helm-push/bin/helm-cm-push
-            scanner: grype
-      - timestamp: 2024-02-21T13:32:19Z
-        type: fixed
-        data:
-          fixed-version: 0.10.4-r2
-
-  - id: CGA-87cp-vv6g-953p
-    aliases:
-      - CVE-2024-26147
-      - GHSA-r53h-jv2g-vpx6
-    events:
-      - timestamp: 2024-02-23T07:17:56Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: helm-push
-            componentID: 12bb606b4bc15413
-            componentName: helm.sh/helm/v3
-            componentVersion: v3.14.1
-            componentType: go-module
-            componentLocation: /usr/libexec/helm-plugins/helm-push/bin/helm-cm-push
-            scanner: grype
-      - timestamp: 2024-02-25T11:53:42Z
-        type: fixed
-        data:
-          fixed-version: 0.10.4-r3
-
-  - id: CGA-4f5c-g2fq-xp97
-    aliases:
-      - CVE-2024-32473
-      - GHSA-x84c-p2g9-rqv9
-    events:
-      - timestamp: 2024-04-19T10:19:33Z
-        type: fixed
-        data:
-          fixed-version: 0.10.4-r8
-
-  - id: CGA-qm9h-6g4x-37g3
-    aliases:
-      - GHSA-6xv5-86q9-7xr8
-    events:
-      - timestamp: 2023-11-07T04:26:32Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: This vulnerability is only present on Windows.
-
-  - id: CGA-jm43-4p5f-qxrc
-    aliases:
-      - GHSA-7ww5-4wqc-m92c
-    events:
-      - timestamp: 2024-02-14T12:29:00Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: helm-push
-            componentID: dfde00ac0aa6bb70
-            componentName: github.com/containerd/containerd
-            componentVersion: v1.6.18
-            componentType: go-module
-            componentLocation: /usr/libexec/helm-plugins/helm-push/bin/helm-cm-push
-            scanner: grype
-      - timestamp: 2024-02-21T13:32:19Z
-        type: fixed
-        data:
-          fixed-version: 0.10.4-r2
-
-  - id: CGA-6fgx-p3xv-c54f
-    aliases:
-      - GHSA-jq35-85cj-fj4p
-    events:
-      - timestamp: 2023-11-07T04:27:03Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: This vulnerability is in the container runtime itself, not clients of the container runtime.
