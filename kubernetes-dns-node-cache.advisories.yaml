@@ -4,6 +4,27 @@ package:
   name: kubernetes-dns-node-cache
 
 advisories:
+  - id: CGA-42wm-qf33-wg92
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:32:16Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-5249-cgw6-x64r
+    aliases:
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-13T10:45:32Z
+        type: fixed
+        data:
+          fixed-version: 1.23.0-r1
+
   - id: CGA-5jfw-w68x-xw62
     aliases:
       - CVE-2019-11255
@@ -14,24 +35,6 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Vulnerable code is part of external-csi-driver and not included in kubernetes-dns-node-cache
-
-  - id: CGA-x39f-c65p-7jxp
-    aliases:
-      - CVE-2020-8559
-      - GHSA-33c5-9fx5-fvjm
-    events:
-      - timestamp: 2024-04-25T13:20:17Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubernetes-dns-node-cache
-            componentID: f11cd2afe60ae371
-            componentName: k8s.io/apimachinery
-            componentVersion: v0.24.7
-            componentType: go-module
-            componentLocation: /usr/bin/node-cache
-            scanner: grype
 
   - id: CGA-5vj3-6w7x-qww5
     aliases:
@@ -44,16 +47,6 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: The vulnerable code is specific to kubectl.
 
-  - id: CGA-q279-rw64-wwjw
-    aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
-    events:
-      - timestamp: 2023-10-13T17:17:47Z
-        type: fixed
-        data:
-          fixed-version: 1.22.20-r5
-
   - id: CGA-6pcg-84g4-c34j
     aliases:
       - CVE-2023-45283
@@ -65,26 +58,15 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
-  - id: CGA-42wm-qf33-wg92
+  - id: CGA-9435-7j5v-5j5x
     aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
     events:
-      - timestamp: 2023-11-07T19:32:16Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-gx5x-qrj3-xpvm
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-13T07:11:44Z
+      - timestamp: 2024-06-07T11:18:21Z
         type: fixed
         data:
-          fixed-version: 1.23.0-r3
+          fixed-version: 1.23.1-r1
 
   - id: CGA-9g9v-7p56-2j9v
     aliases:
@@ -95,48 +77,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.23.0-r1
-
-  - id: CGA-fr69-3qfh-m9gw
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-13T10:45:34Z
-        type: fixed
-        data:
-          fixed-version: 1.23.0-r1
-
-  - id: CGA-pp28-cm29-q36g
-    aliases:
-      - CVE-2023-5528
-      - GHSA-hq6q-c2x6-hmch
-    events:
-      - timestamp: 2023-11-23T10:59:15Z
-        type: fixed
-        data:
-          fixed-version: 1.22.28-r1
-
-  - id: CGA-wcwj-qxf4-fp8c
-    aliases:
-      - CVE-2024-0874
-      - GHSA-m9w6-wp3h-vq8g
-    events:
-      - timestamp: 2024-05-06T07:41:32Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubernetes-dns-node-cache
-            componentID: c54dda42664e7482
-            componentName: github.com/coredns/coredns
-            componentVersion: v1.10.0
-            componentType: go-module
-            componentLocation: /usr/bin/node-cache
-            scanner: grype
-      - timestamp: 2024-05-20T10:16:23Z
-        type: fixed
-        data:
-          fixed-version: 1.23.0-r7
 
   - id: CGA-9j88-phjg-5gq3
     aliases:
@@ -158,12 +98,12 @@ advisories:
         data:
           fixed-version: 1.23.0-r1
 
-  - id: CGA-5249-cgw6-x64r
+  - id: CGA-fr69-3qfh-m9gw
     aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
     events:
-      - timestamp: 2024-03-13T10:45:32Z
+      - timestamp: 2024-03-13T10:45:34Z
         type: fixed
         data:
           fixed-version: 1.23.0-r1
@@ -190,6 +130,16 @@ advisories:
         data:
           fixed-version: 1.23.0-r2
 
+  - id: CGA-gx5x-qrj3-xpvm
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:11:44Z
+        type: fixed
+        data:
+          fixed-version: 1.23.0-r3
+
   - id: CGA-h4rj-wpw5-mmg5
     aliases:
       - CVE-2024-24787
@@ -200,15 +150,15 @@ advisories:
         data:
           fixed-version: 1.23.0-r6
 
-  - id: CGA-v278-5hpx-x73p
+  - id: CGA-pp28-cm29-q36g
     aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
+      - CVE-2023-5528
+      - GHSA-hq6q-c2x6-hmch
     events:
-      - timestamp: 2024-05-14T11:13:48Z
+      - timestamp: 2023-11-23T10:59:15Z
         type: fixed
         data:
-          fixed-version: 1.23.0-r6
+          fixed-version: 1.22.28-r1
 
   - id: CGA-pwhh-73hw-3gqj
     aliases:
@@ -231,3 +181,63 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.23.0-r5
+
+  - id: CGA-q279-rw64-wwjw
+    aliases:
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2023-10-13T17:17:47Z
+        type: fixed
+        data:
+          fixed-version: 1.22.20-r5
+
+  - id: CGA-v278-5hpx-x73p
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2024-05-14T11:13:48Z
+        type: fixed
+        data:
+          fixed-version: 1.23.0-r6
+
+  - id: CGA-wcwj-qxf4-fp8c
+    aliases:
+      - CVE-2024-0874
+      - GHSA-m9w6-wp3h-vq8g
+    events:
+      - timestamp: 2024-05-06T07:41:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dns-node-cache
+            componentID: c54dda42664e7482
+            componentName: github.com/coredns/coredns
+            componentVersion: v1.10.0
+            componentType: go-module
+            componentLocation: /usr/bin/node-cache
+            scanner: grype
+      - timestamp: 2024-05-20T10:16:23Z
+        type: fixed
+        data:
+          fixed-version: 1.23.0-r7
+
+  - id: CGA-x39f-c65p-7jxp
+    aliases:
+      - CVE-2020-8559
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T13:20:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dns-node-cache
+            componentID: f11cd2afe60ae371
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.24.7
+            componentType: go-module
+            componentLocation: /usr/bin/node-cache
+            scanner: grype
