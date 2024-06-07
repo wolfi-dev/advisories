@@ -4,15 +4,35 @@ package:
   name: kubernetes-csi-driver-hostpath
 
 advisories:
-  - id: CGA-rh83-9w4h-m426
+  - id: CGA-5ccp-726v-pvvx
     aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
     events:
-      - timestamp: 2024-04-13T07:05:44Z
+      - timestamp: 2024-05-14T13:11:10Z
         type: fixed
         data:
-          fixed-version: 1.13.0-r2
+          fixed-version: 1.13.0-r4
+
+  - id: CGA-759j-7f22-8232
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T11:19:11Z
+        type: fixed
+        data:
+          fixed-version: 1.13.0-r5
+
+  - id: CGA-9w5g-pr55-vwx4
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T11:19:09Z
+        type: fixed
+        data:
+          fixed-version: 1.13.0-r5
 
   - id: CGA-f7gm-j25v-gh6w
     aliases:
@@ -24,38 +44,6 @@ advisories:
         data:
           type: vulnerable-code-not-in-execution-path
           note: Only affects Windows
-
-  - id: CGA-vg7r-gv8h-j54w
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T07:06:44Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubernetes-csi-driver-hostpath
-            componentID: 941c0c3e9a01aef8
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.32.0
-            componentType: go-module
-            componentLocation: /usr/bin/hostpathplugin
-            scanner: grype
-      - timestamp: 2024-03-15T10:44:50Z
-        type: fixed
-        data:
-          fixed-version: 1.13.0-r1
-
-  - id: CGA-5ccp-726v-pvvx
-    aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
-    events:
-      - timestamp: 2024-05-14T13:11:10Z
-        type: fixed
-        data:
-          fixed-version: 1.13.0-r4
 
   - id: CGA-fwg5-qf7m-r6j2
     aliases:
@@ -88,3 +76,35 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.13.0-r3
+
+  - id: CGA-rh83-9w4h-m426
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:05:44Z
+        type: fixed
+        data:
+          fixed-version: 1.13.0-r2
+
+  - id: CGA-vg7r-gv8h-j54w
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:06:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-driver-hostpath
+            componentID: 941c0c3e9a01aef8
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/hostpathplugin
+            scanner: grype
+      - timestamp: 2024-03-15T10:44:50Z
+        type: fixed
+        data:
+          fixed-version: 1.13.0-r1
