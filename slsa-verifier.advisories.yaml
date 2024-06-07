@@ -4,6 +4,137 @@ package:
   name: slsa-verifier
 
 advisories:
+  - id: CGA-24xm-qmxc-957j
+    aliases:
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T09:19:59Z
+        type: fixed
+        data:
+          fixed-version: 2.4.1-r2
+
+  - id: CGA-25qw-cjpf-8qv3
+    aliases:
+      - CVE-2024-29903
+      - GHSA-95pr-fxf5-86gv
+    events:
+      - timestamp: 2024-04-14T07:34:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: slsa-verifier
+            componentID: 4d246825d1a5711f
+            componentName: github.com/sigstore/cosign/v2
+            componentVersion: v2.2.0
+            componentType: go-module
+            componentLocation: /usr/bin/slsa-verifier
+            scanner: grype
+      - timestamp: 2024-05-13T18:20:27Z
+        type: fixed
+        data:
+          fixed-version: 2.5.1-r4
+
+  - id: CGA-26mm-g94g-pxc2
+    aliases:
+      - CVE-2024-29902
+      - GHSA-88jx-383q-w4qc
+    events:
+      - timestamp: 2024-04-14T07:34:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: slsa-verifier
+            componentID: 4d246825d1a5711f
+            componentName: github.com/sigstore/cosign/v2
+            componentVersion: v2.2.0
+            componentType: go-module
+            componentLocation: /usr/bin/slsa-verifier
+            scanner: grype
+      - timestamp: 2024-05-13T18:20:28Z
+        type: fixed
+        data:
+          fixed-version: 2.5.1-r4
+
+  - id: CGA-2cx5-cjqj-rfmx
+    aliases:
+      - CVE-2023-46737
+      - GHSA-vfp6-jrw2-99g9
+    events:
+      - timestamp: 2024-02-14T15:26:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: slsa-verifier
+            componentID: fc48db59d9cec645
+            componentName: github.com/sigstore/cosign/v2
+            componentVersion: v2.2.0
+            componentType: go-module
+            componentLocation: /usr/bin/slsa-verifier
+            scanner: grype
+      - timestamp: 2024-05-13T18:20:30Z
+        type: fixed
+        data:
+          fixed-version: 2.5.1-r4
+
+  - id: CGA-3gjh-ghv2-xcc9
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:37:59Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-3qc4-4rpc-fw57
+    aliases:
+      - CVE-2023-44487
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2024-02-14T15:26:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: slsa-verifier
+            componentID: a2a2b15ba55b23e1
+            componentName: golang.org/x/net
+            componentVersion: v0.14.0
+            componentType: go-module
+            componentLocation: /usr/bin/slsa-verifier
+            scanner: grype
+      - timestamp: 2024-03-26T18:02:43Z
+        type: fixed
+        data:
+          fixed-version: 2.5.1-r0
+
+  - id: CGA-48c4-6v2c-p63x
+    aliases:
+      - GHSA-r2xv-vpr2-42m9
+    events:
+      - timestamp: 2024-05-13T16:01:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: slsa-verifier
+            componentID: 97e86623ea233388
+            componentName: github.com/slsa-framework/slsa-verifier/v2
+            componentVersion: v0.0.0-20240325145453-eb7007070baa
+            componentType: go-module
+            componentLocation: /usr/bin/slsa-verifier
+            scanner: grype
+      - timestamp: 2024-05-13T16:50:20Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: This vulnerability affects to version olders than v2.4.0 while the current package is using v2.5.1.
+
   - id: CGA-4v6h-4h5f-jqr4
     aliases:
       - CVE-2020-8559
@@ -21,6 +152,112 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/slsa-verifier
             scanner: grype
+
+  - id: CGA-5227-fv4m-wvcg
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T09:19:56Z
+        type: fixed
+        data:
+          fixed-version: 2.4.1-r2
+
+  - id: CGA-5q7j-fh45-2w4x
+    aliases:
+      - GHSA-m425-mq94-257g
+    events:
+      - timestamp: 2024-02-14T15:26:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: slsa-verifier
+            componentID: 271b04fd9e88ddda
+            componentName: google.golang.org/grpc
+            componentVersion: v1.57.0
+            componentType: go-module
+            componentLocation: /usr/bin/slsa-verifier
+            scanner: grype
+      - timestamp: 2024-03-26T18:02:42Z
+        type: fixed
+        data:
+          fixed-version: 2.5.1-r0
+
+  - id: CGA-6847-57ww-4rj4
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2024-02-14T15:26:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: slsa-verifier
+            componentID: 464c828a248e8cee
+            componentName: golang.org/x/crypto
+            componentVersion: v0.12.0
+            componentType: go-module
+            componentLocation: /usr/bin/slsa-verifier
+            scanner: grype
+      - timestamp: 2024-03-26T18:02:44Z
+        type: fixed
+        data:
+          fixed-version: 2.5.1-r0
+
+  - id: CGA-6g67-p3q7-899m
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T19:27:42Z
+        type: fixed
+        data:
+          fixed-version: 2.5.1-r7
+
+  - id: CGA-6xxf-m8j7-q2vc
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:37:57Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-c6g4-g76f-w9c3
+    aliases:
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T09:19:54Z
+        type: fixed
+        data:
+          fixed-version: 2.4.1-r2
+
+  - id: CGA-c6jj-gh57-54rh
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-26T10:36:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: slsa-verifier
+            componentID: 692b38623724e03e
+            componentName: golang.org/x/net
+            componentVersion: v0.20.0
+            componentType: go-module
+            componentLocation: /usr/bin/slsa-verifier
+            scanner: grype
+      - timestamp: 2024-05-13T18:20:28Z
+        type: fixed
+        data:
+          fixed-version: 2.5.1-r4
 
   - id: CGA-f76w-v36g-35w2
     aliases:
@@ -54,49 +291,36 @@ advisories:
         data:
           fixed-version: 2.4.1-r1
 
-  - id: CGA-3qc4-4rpc-fw57
+  - id: CGA-h3m2-ppgf-58hc
     aliases:
-      - CVE-2023-44487
-      - GHSA-qppj-fm5r-hxr3
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
     events:
-      - timestamp: 2024-02-14T15:26:51Z
+      - timestamp: 2024-03-12T09:19:53Z
+        type: fixed
+        data:
+          fixed-version: 2.4.1-r2
+
+  - id: CGA-jfmq-h56g-gvj2
+    aliases:
+      - GHSA-9763-4f94-gfch
+    events:
+      - timestamp: 2024-02-14T15:26:49Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: slsa-verifier
-            componentID: a2a2b15ba55b23e1
-            componentName: golang.org/x/net
-            componentVersion: v0.14.0
+            componentID: eb7d1c6a7cdba1c5
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.3.3
             componentType: go-module
             componentLocation: /usr/bin/slsa-verifier
             scanner: grype
-      - timestamp: 2024-03-26T18:02:43Z
+      - timestamp: 2024-05-13T18:20:29Z
         type: fixed
         data:
-          fixed-version: 2.5.1-r0
-
-  - id: CGA-6xxf-m8j7-q2vc
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:37:57Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-3gjh-ghv2-xcc9
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:37:59Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          fixed-version: 2.5.1-r4
 
   - id: CGA-jg88-j7w4-v44j
     aliases:
@@ -108,74 +332,9 @@ advisories:
         data:
           fixed-version: 2.4.1-r1
 
-  - id: CGA-c6jj-gh57-54rh
+  - id: CGA-jhxm-cvq3-9g9v
     aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-26T10:36:52Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: slsa-verifier
-            componentID: 692b38623724e03e
-            componentName: golang.org/x/net
-            componentVersion: v0.20.0
-            componentType: go-module
-            componentLocation: /usr/bin/slsa-verifier
-            scanner: grype
-      - timestamp: 2024-05-13T18:20:28Z
-        type: fixed
-        data:
-          fixed-version: 2.5.1-r4
-
-  - id: CGA-c6g4-g76f-w9c3
-    aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
-    events:
-      - timestamp: 2024-03-12T09:19:54Z
-        type: fixed
-        data:
-          fixed-version: 2.4.1-r2
-
-  - id: CGA-qpfc-r8vc-qvh3
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-12T09:19:57Z
-        type: fixed
-        data:
-          fixed-version: 2.4.1-r2
-
-  - id: CGA-2cx5-cjqj-rfmx
-    aliases:
-      - CVE-2023-46737
-      - GHSA-vfp6-jrw2-99g9
-    events:
-      - timestamp: 2024-02-14T15:26:53Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: slsa-verifier
-            componentID: fc48db59d9cec645
-            componentName: github.com/sigstore/cosign/v2
-            componentVersion: v2.2.0
-            componentType: go-module
-            componentLocation: /usr/bin/slsa-verifier
-            scanner: grype
-      - timestamp: 2024-05-13T18:20:30Z
-        type: fixed
-        data:
-          fixed-version: 2.5.1-r4
-
-  - id: CGA-6847-57ww-4rj4
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
+      - GHSA-2c7c-3mj9-8fqh
     events:
       - timestamp: 2024-02-14T15:26:48Z
         type: detection
@@ -183,13 +342,13 @@ advisories:
           type: scan/v1
           data:
             subpackageName: slsa-verifier
-            componentID: 464c828a248e8cee
-            componentName: golang.org/x/crypto
-            componentVersion: v0.12.0
+            componentID: 70ad28fade285dd2
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.0
             componentType: go-module
             componentLocation: /usr/bin/slsa-verifier
             scanner: grype
-      - timestamp: 2024-03-26T18:02:44Z
+      - timestamp: 2024-03-26T18:02:43Z
         type: fixed
         data:
           fixed-version: 2.5.1-r0
@@ -216,32 +375,12 @@ advisories:
         data:
           fixed-version: 2.5.1-r4
 
-  - id: CGA-5227-fv4m-wvcg
+  - id: CGA-qpfc-r8vc-qvh3
     aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
     events:
-      - timestamp: 2024-03-12T09:19:56Z
-        type: fixed
-        data:
-          fixed-version: 2.4.1-r2
-
-  - id: CGA-h3m2-ppgf-58hc
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-12T09:19:53Z
-        type: fixed
-        data:
-          fixed-version: 2.4.1-r2
-
-  - id: CGA-24xm-qmxc-957j
-    aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
-    events:
-      - timestamp: 2024-03-12T09:19:59Z
+      - timestamp: 2024-03-12T09:19:57Z
         type: fixed
         data:
           fixed-version: 2.4.1-r2
@@ -290,91 +429,15 @@ advisories:
         data:
           fixed-version: 2.5.1-r4
 
-  - id: CGA-26mm-g94g-pxc2
+  - id: CGA-wvf8-gg7q-7f8f
     aliases:
-      - CVE-2024-29902
-      - GHSA-88jx-383q-w4qc
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
     events:
-      - timestamp: 2024-04-14T07:34:15Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: slsa-verifier
-            componentID: 4d246825d1a5711f
-            componentName: github.com/sigstore/cosign/v2
-            componentVersion: v2.2.0
-            componentType: go-module
-            componentLocation: /usr/bin/slsa-verifier
-            scanner: grype
-      - timestamp: 2024-05-13T18:20:28Z
+      - timestamp: 2024-06-07T19:27:48Z
         type: fixed
         data:
-          fixed-version: 2.5.1-r4
-
-  - id: CGA-25qw-cjpf-8qv3
-    aliases:
-      - CVE-2024-29903
-      - GHSA-95pr-fxf5-86gv
-    events:
-      - timestamp: 2024-04-14T07:34:18Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: slsa-verifier
-            componentID: 4d246825d1a5711f
-            componentName: github.com/sigstore/cosign/v2
-            componentVersion: v2.2.0
-            componentType: go-module
-            componentLocation: /usr/bin/slsa-verifier
-            scanner: grype
-      - timestamp: 2024-05-13T18:20:27Z
-        type: fixed
-        data:
-          fixed-version: 2.5.1-r4
-
-  - id: CGA-jhxm-cvq3-9g9v
-    aliases:
-      - GHSA-2c7c-3mj9-8fqh
-    events:
-      - timestamp: 2024-02-14T15:26:48Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: slsa-verifier
-            componentID: 70ad28fade285dd2
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.0
-            componentType: go-module
-            componentLocation: /usr/bin/slsa-verifier
-            scanner: grype
-      - timestamp: 2024-03-26T18:02:43Z
-        type: fixed
-        data:
-          fixed-version: 2.5.1-r0
-
-  - id: CGA-jfmq-h56g-gvj2
-    aliases:
-      - GHSA-9763-4f94-gfch
-    events:
-      - timestamp: 2024-02-14T15:26:49Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: slsa-verifier
-            componentID: eb7d1c6a7cdba1c5
-            componentName: github.com/cloudflare/circl
-            componentVersion: v1.3.3
-            componentType: go-module
-            componentLocation: /usr/bin/slsa-verifier
-            scanner: grype
-      - timestamp: 2024-05-13T18:20:29Z
-        type: fixed
-        data:
-          fixed-version: 2.5.1-r4
+          fixed-version: 2.5.1-r7
 
   - id: CGA-xf3p-5pr5-5f67
     aliases:
@@ -396,46 +459,3 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.5.1-r0
-
-  - id: CGA-5q7j-fh45-2w4x
-    aliases:
-      - GHSA-m425-mq94-257g
-    events:
-      - timestamp: 2024-02-14T15:26:51Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: slsa-verifier
-            componentID: 271b04fd9e88ddda
-            componentName: google.golang.org/grpc
-            componentVersion: v1.57.0
-            componentType: go-module
-            componentLocation: /usr/bin/slsa-verifier
-            scanner: grype
-      - timestamp: 2024-03-26T18:02:42Z
-        type: fixed
-        data:
-          fixed-version: 2.5.1-r0
-
-  - id: CGA-48c4-6v2c-p63x
-    aliases:
-      - GHSA-r2xv-vpr2-42m9
-    events:
-      - timestamp: 2024-05-13T16:01:52Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: slsa-verifier
-            componentID: 97e86623ea233388
-            componentName: github.com/slsa-framework/slsa-verifier/v2
-            componentVersion: v0.0.0-20240325145453-eb7007070baa
-            componentType: go-module
-            componentLocation: /usr/bin/slsa-verifier
-            scanner: grype
-      - timestamp: 2024-05-13T16:50:20Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-version-not-used
-          note: This vulnerability affects to version olders than v2.4.0 while the current package is using v2.5.1.
