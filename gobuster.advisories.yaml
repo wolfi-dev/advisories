@@ -4,6 +4,27 @@ package:
   name: gobuster
 
 advisories:
+  - id: CGA-42wq-xxjx-hg6x
+    aliases:
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-13T07:06:21Z
+        type: fixed
+        data:
+          fixed-version: 3.6.0-r5
+
+  - id: CGA-4jwp-rr7h-g49m
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:28:20Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
   - id: CGA-5r94-8964-g5q8
     aliases:
       - CVE-2023-39325
@@ -26,6 +47,27 @@ advisories:
         data:
           fixed-version: 3.6.0-r9
 
+  - id: CGA-8w47-fjx2-96gj
+    aliases:
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-13T07:06:24Z
+        type: fixed
+        data:
+          fixed-version: 3.6.0-r5
+
+  - id: CGA-9w4q-mgxv-rmrg
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:28:18Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
   - id: CGA-gjwc-rf7c-293c
     aliases:
       - CVE-2023-39326
@@ -35,6 +77,80 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.6.0-r4
+
+  - id: CGA-gqhh-38hj-29fj
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-13T07:06:26Z
+        type: fixed
+        data:
+          fixed-version: 3.6.0-r5
+
+  - id: CGA-h3hp-j9wj-p2xp
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-13T07:06:22Z
+        type: fixed
+        data:
+          fixed-version: 3.6.0-r5
+
+  - id: CGA-hrmr-x9w6-68wv
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T14:45:51Z
+        type: fixed
+        data:
+          fixed-version: 3.6.0-r12
+
+  - id: CGA-mvf4-v5wv-m85f
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2024-02-14T12:30:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gobuster
+            componentID: 727718da13b5e537
+            componentName: golang.org/x/crypto
+            componentVersion: v0.12.0
+            componentType: go-module
+            componentLocation: /usr/bin/gobuster
+            scanner: grype
+      - timestamp: 2024-05-13T20:40:26Z
+        type: fixed
+        data:
+          fixed-version: 3.6.0-r9
+
+  - id: CGA-qcg4-w6w7-4758
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-26T08:24:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gobuster
+            componentID: 3dd7e84c4a780f28
+            componentName: golang.org/x/net
+            componentVersion: v0.11.0
+            componentType: go-module
+            componentLocation: /usr/bin/gobuster
+            scanner: grype
+      - timestamp: 2024-05-13T20:40:28Z
+        type: fixed
+        data:
+          fixed-version: 3.6.0-r9
 
   - id: CGA-qw99-hxpx-3xxv
     aliases:
@@ -80,28 +196,6 @@ advisories:
         data:
           fixed-version: 3.6.0-r9
 
-  - id: CGA-9w4q-mgxv-rmrg
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:28:18Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-4jwp-rr7h-g49m
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:28:20Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
   - id: CGA-wgvj-8fv5-rrfm
     aliases:
       - CVE-2023-45285
@@ -111,90 +205,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.6.0-r4
-
-  - id: CGA-qcg4-w6w7-4758
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-26T08:24:24Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: gobuster
-            componentID: 3dd7e84c4a780f28
-            componentName: golang.org/x/net
-            componentVersion: v0.11.0
-            componentType: go-module
-            componentLocation: /usr/bin/gobuster
-            scanner: grype
-      - timestamp: 2024-05-13T20:40:28Z
-        type: fixed
-        data:
-          fixed-version: 3.6.0-r9
-
-  - id: CGA-8w47-fjx2-96gj
-    aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
-    events:
-      - timestamp: 2024-03-13T07:06:24Z
-        type: fixed
-        data:
-          fixed-version: 3.6.0-r5
-
-  - id: CGA-42wq-xxjx-hg6x
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-13T07:06:21Z
-        type: fixed
-        data:
-          fixed-version: 3.6.0-r5
-
-  - id: CGA-mvf4-v5wv-m85f
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2024-02-14T12:30:08Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: gobuster
-            componentID: 727718da13b5e537
-            componentName: golang.org/x/crypto
-            componentVersion: v0.12.0
-            componentType: go-module
-            componentLocation: /usr/bin/gobuster
-            scanner: grype
-      - timestamp: 2024-05-13T20:40:26Z
-        type: fixed
-        data:
-          fixed-version: 3.6.0-r9
-
-  - id: CGA-gqhh-38hj-29fj
-    aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
-    events:
-      - timestamp: 2024-03-13T07:06:26Z
-        type: fixed
-        data:
-          fixed-version: 3.6.0-r5
-
-  - id: CGA-h3hp-j9wj-p2xp
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-13T07:06:22Z
-        type: fixed
-        data:
-          fixed-version: 3.6.0-r5
 
   - id: CGA-x9c3-jm3h-hf8m
     aliases:
