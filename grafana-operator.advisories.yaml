@@ -4,42 +4,30 @@ package:
   name: grafana-operator
 
 advisories:
-  - id: CGA-pfc9-7869-wf47
+  - id: CGA-2537-mwh4-wcgm
     aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
     events:
-      - timestamp: 2024-04-20T15:07:21Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: grafana-operator
-            componentID: 97f2befef4977244
-            componentName: golang.org/x/net
-            componentVersion: v0.20.0
-            componentType: go-module
-            componentLocation: /usr/bin/grafana-operator
-            scanner: grype
-      - timestamp: 2024-04-22T07:24:56Z
+      - timestamp: 2024-06-07T11:07:38Z
         type: fixed
         data:
-          fixed-version: 5.8.1-r1
+          fixed-version: 5.9.2-r1
+
+  - id: CGA-2f84-7cgr-ggrx
+    aliases:
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
+    events:
+      - timestamp: 2024-05-15T14:14:11Z
+        type: fixed
+        data:
+          fixed-version: 5.9.0-r1
 
   - id: CGA-35fx-xmf2-8269
     aliases:
       - CVE-2023-45289
       - GHSA-32ch-6x54-q4h9
-    events:
-      - timestamp: 2024-03-13T07:08:58Z
-        type: fixed
-        data:
-          fixed-version: 5.6.3-r1
-
-  - id: CGA-c543-7hcp-h38q
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
     events:
       - timestamp: 2024-03-13T07:08:58Z
         type: fixed
@@ -76,6 +64,48 @@ advisories:
         data:
           fixed-version: 5.6.3-r1
 
+  - id: CGA-8qq7-28v9-22wv
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2024-05-15T14:14:13Z
+        type: fixed
+        data:
+          fixed-version: 5.9.0-r1
+
+  - id: CGA-c543-7hcp-h38q
+    aliases:
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-13T07:08:58Z
+        type: fixed
+        data:
+          fixed-version: 5.6.3-r1
+
+  - id: CGA-pfc9-7869-wf47
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-20T15:07:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-operator
+            componentID: 97f2befef4977244
+            componentName: golang.org/x/net
+            componentVersion: v0.20.0
+            componentType: go-module
+            componentLocation: /usr/bin/grafana-operator
+            scanner: grype
+      - timestamp: 2024-04-22T07:24:56Z
+        type: fixed
+        data:
+          fixed-version: 5.8.1-r1
+
   - id: CGA-v8x6-xcf5-32gq
     aliases:
       - CVE-2024-24786
@@ -97,23 +127,3 @@ advisories:
         type: fixed
         data:
           fixed-version: 5.7.0-r1
-
-  - id: CGA-2f84-7cgr-ggrx
-    aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
-    events:
-      - timestamp: 2024-05-15T14:14:11Z
-        type: fixed
-        data:
-          fixed-version: 5.9.0-r1
-
-  - id: CGA-8qq7-28v9-22wv
-    aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
-    events:
-      - timestamp: 2024-05-15T14:14:13Z
-        type: fixed
-        data:
-          fixed-version: 5.9.0-r1
