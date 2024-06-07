@@ -4,51 +4,37 @@ package:
   name: crossplane
 
 advisories:
-  - id: CGA-pgw2-jmgx-j6r6
+  - id: CGA-2hvf-q6mf-258g
     aliases:
-      - CVE-2023-27484
-      - GHSA-v829-x6hh-cqfq
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
     events:
-      - timestamp: 2024-04-26T07:09:12Z
-        type: detection
+      - timestamp: 2024-03-12T07:12:34Z
+        type: fixed
         data:
-          type: scan/v1
-          data:
-            subpackageName: crossplane
-            componentID: 62d6bd43d544a08d
-            componentName: github.com/crossplane/crossplane
-            componentVersion: v0.0.0-20240409140320-432e1637f677
-            componentType: go-module
-            componentLocation: /usr/bin/crossplane
-            scanner: grype
-      - timestamp: 2024-05-05T14:56:57Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-version-not-used
-          note: 'This vulnerability was matched to the module "github.com/crossplane/crossplane" at the following location(s): /usr/bin/crossplane. In all cases, the installed version of the module (git commit 432e1637f677bf46e3fa5b84211bc903141409bb) corresponds to a version tag (v1.15.2) that is later than the fixed version (1.9.2).'
+          fixed-version: 1.15.0-r1
 
-  - id: CGA-52wp-wf7j-h6rp
+  - id: CGA-36jp-xjv8-gp79
     aliases:
-      - CVE-2023-37900
-      - GHSA-68p4-95xf-7gx8
+      - CVE-2024-29018
+      - GHSA-mq39-4gv4-mvpx
     events:
-      - timestamp: 2024-04-26T07:09:08Z
+      - timestamp: 2024-03-21T07:07:48Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: crossplane
-            componentID: 62d6bd43d544a08d
-            componentName: github.com/crossplane/crossplane
-            componentVersion: v0.0.0-20240409140320-432e1637f677
+            componentID: c50fd69f50f2a147
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.2+incompatible
             componentType: go-module
             componentLocation: /usr/bin/crossplane
             scanner: grype
-      - timestamp: 2024-05-05T14:56:57Z
-        type: false-positive-determination
+      - timestamp: 2024-03-21T11:42:22Z
+        type: fixed
         data:
-          type: vulnerable-code-version-not-used
-          note: 'This vulnerability was matched to the module "github.com/crossplane/crossplane" at the following location(s): /usr/bin/crossplane. In all cases, the installed version of the module (git commit 432e1637f677bf46e3fa5b84211bc903141409bb) corresponds to a version tag (v1.15.2) that is later than the fixed version (1.11.5).'
+          fixed-version: 1.15.1-r1
 
   - id: CGA-46h3-844v-3jgv
     aliases:
@@ -73,17 +59,6 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability was matched to the module "github.com/crossplane/crossplane" at the following location(s): /usr/bin/crossplane. In all cases, the installed version of the module (git commit 432e1637f677bf46e3fa5b84211bc903141409bb) corresponds to a version tag (v1.15.2) that is later than the fixed version (1.11.5).'
 
-  - id: CGA-7w3h-g77c-7jfh
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:25:31Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
   - id: CGA-4r88-2r25-7m4q
     aliases:
       - CVE-2023-45284
@@ -95,15 +70,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
-  - id: CGA-g74f-9jqm-p8g9
+  - id: CGA-52wp-wf7j-h6rp
     aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
+      - CVE-2023-37900
+      - GHSA-68p4-95xf-7gx8
     events:
-      - timestamp: 2024-04-06T12:02:41Z
-        type: fixed
+      - timestamp: 2024-04-26T07:09:08Z
+        type: detection
         data:
-          fixed-version: 1.15.1-r2
+          type: scan/v1
+          data:
+            subpackageName: crossplane
+            componentID: 62d6bd43d544a08d
+            componentName: github.com/crossplane/crossplane
+            componentVersion: v0.0.0-20240409140320-432e1637f677
+            componentType: go-module
+            componentLocation: /usr/bin/crossplane
+            scanner: grype
+      - timestamp: 2024-05-05T14:56:57Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: 'This vulnerability was matched to the module "github.com/crossplane/crossplane" at the following location(s): /usr/bin/crossplane. In all cases, the installed version of the module (git commit 432e1637f677bf46e3fa5b84211bc903141409bb) corresponds to a version tag (v1.15.2) that is later than the fixed version (1.11.5).'
 
   - id: CGA-778v-pww7-73xq
     aliases:
@@ -115,6 +103,27 @@ advisories:
         data:
           fixed-version: 1.15.0-r1
 
+  - id: CGA-7w3h-g77c-7jfh
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:25:31Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-9mx5-rxww-g3jf
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T12:18:44Z
+        type: fixed
+        data:
+          fixed-version: 1.16.0-r1
+
   - id: CGA-c74h-pf9m-384p
     aliases:
       - CVE-2023-45290
@@ -125,6 +134,26 @@ advisories:
         data:
           fixed-version: 1.15.0-r1
 
+  - id: CGA-g74f-9jqm-p8g9
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-06T12:02:41Z
+        type: fixed
+        data:
+          fixed-version: 1.15.1-r2
+
+  - id: CGA-j4hv-g6c6-vmvq
+    aliases:
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
+    events:
+      - timestamp: 2024-05-14T09:36:43Z
+        type: fixed
+        data:
+          fixed-version: 1.15.2-r1
+
   - id: CGA-jv95-x8v2-hww3
     aliases:
       - CVE-2023-48795
@@ -134,36 +163,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.14.5-r1
-
-  - id: CGA-v32v-64mr-8vm9
-    aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
-    events:
-      - timestamp: 2024-03-12T07:12:33Z
-        type: fixed
-        data:
-          fixed-version: 1.15.0-r1
-
-  - id: CGA-r99g-8pw4-32q2
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-12T07:12:33Z
-        type: fixed
-        data:
-          fixed-version: 1.15.0-r1
-
-  - id: CGA-2hvf-q6mf-258g
-    aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
-    events:
-      - timestamp: 2024-03-12T07:12:34Z
-        type: fixed
-        data:
-          fixed-version: 1.15.0-r1
 
   - id: CGA-m5g7-7q68-fhqr
     aliases:
@@ -187,15 +186,28 @@ advisories:
         data:
           fixed-version: 1.15.0-r2
 
-  - id: CGA-j4hv-g6c6-vmvq
+  - id: CGA-pgw2-jmgx-j6r6
     aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
+      - CVE-2023-27484
+      - GHSA-v829-x6hh-cqfq
     events:
-      - timestamp: 2024-05-14T09:36:43Z
-        type: fixed
+      - timestamp: 2024-04-26T07:09:12Z
+        type: detection
         data:
-          fixed-version: 1.15.2-r1
+          type: scan/v1
+          data:
+            subpackageName: crossplane
+            componentID: 62d6bd43d544a08d
+            componentName: github.com/crossplane/crossplane
+            componentVersion: v0.0.0-20240409140320-432e1637f677
+            componentType: go-module
+            componentLocation: /usr/bin/crossplane
+            scanner: grype
+      - timestamp: 2024-05-05T14:56:57Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: 'This vulnerability was matched to the module "github.com/crossplane/crossplane" at the following location(s): /usr/bin/crossplane. In all cases, the installed version of the module (git commit 432e1637f677bf46e3fa5b84211bc903141409bb) corresponds to a version tag (v1.15.2) that is later than the fixed version (1.9.2).'
 
   - id: CGA-q3cr-jqhq-g7jh
     aliases:
@@ -206,28 +218,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.15.2-r1
-
-  - id: CGA-36jp-xjv8-gp79
-    aliases:
-      - CVE-2024-29018
-      - GHSA-mq39-4gv4-mvpx
-    events:
-      - timestamp: 2024-03-21T07:07:48Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: crossplane
-            componentID: c50fd69f50f2a147
-            componentName: github.com/docker/docker
-            componentVersion: v25.0.2+incompatible
-            componentType: go-module
-            componentLocation: /usr/bin/crossplane
-            scanner: grype
-      - timestamp: 2024-03-21T11:42:22Z
-        type: fixed
-        data:
-          fixed-version: 1.15.1-r1
 
   - id: CGA-q6gp-9rg9-8w4m
     aliases:
@@ -249,3 +239,33 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.14.5-r2
+
+  - id: CGA-r99g-8pw4-32q2
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T07:12:33Z
+        type: fixed
+        data:
+          fixed-version: 1.15.0-r1
+
+  - id: CGA-v32v-64mr-8vm9
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T07:12:33Z
+        type: fixed
+        data:
+          fixed-version: 1.15.0-r1
+
+  - id: CGA-vrr9-6xv8-ch3p
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T12:18:39Z
+        type: fixed
+        data:
+          fixed-version: 1.16.0-r1
