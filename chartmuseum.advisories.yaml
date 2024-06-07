@@ -27,125 +27,27 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
 
-  - id: CGA-jqvh-gj5f-3rgw
+  - id: CGA-4v62-mgwp-fff2
     aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
+      - CVE-2024-26147
+      - GHSA-r53h-jv2g-vpx6
     events:
-      - timestamp: 2023-10-13T16:43:17Z
-        type: fixed
-        data:
-          fixed-version: 0.16.0-r6
-
-  - id: CGA-c73w-j4vf-x9rc
-    aliases:
-      - CVE-2023-3978
-      - GHSA-2wrh-6pvc-2jm9
-    events:
-      - timestamp: 2023-10-13T16:44:30Z
-        type: fixed
-        data:
-          fixed-version: 0.16.0-r6
-
-  - id: CGA-cqxr-gcj4-75jp
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:24:12Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-jrmw-37p2-pr9q
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:24:14Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-xgpv-3737-26mg
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-13T07:09:07Z
-        type: fixed
-        data:
-          fixed-version: 0.16.1-r8
-
-  - id: CGA-gr7j-j3cq-84cc
-    aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
-    events:
-      - timestamp: 2024-03-12T07:11:39Z
-        type: fixed
-        data:
-          fixed-version: 0.16.1-r4
-
-  - id: CGA-h934-c3jq-65w2
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-12T07:11:40Z
-        type: fixed
-        data:
-          fixed-version: 0.16.1-r4
-
-  - id: CGA-7crv-88x3-p5jm
-    aliases:
-      - CVE-2024-24557
-      - GHSA-xw73-rw38-6vjc
-    events:
-      - timestamp: 2024-03-22T07:18:34Z
+      - timestamp: 2024-02-23T07:47:22Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: chartmuseum
-            componentID: e8713d467cb089c5
-            componentName: github.com/docker/docker
-            componentVersion: v24.0.7+incompatible
+            componentID: 7094954d3fc6b88e
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.1
             componentType: go-module
             componentLocation: /usr/bin/chartmuseum
             scanner: grype
-
-  - id: CGA-gcfg-9w23-693v
-    aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
-    events:
-      - timestamp: 2024-03-12T07:11:42Z
+      - timestamp: 2024-02-25T12:11:33Z
         type: fixed
         data:
-          fixed-version: 0.16.1-r4
-
-  - id: CGA-ww4m-35h3-m4hx
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-12T07:11:37Z
-        type: fixed
-        data:
-          fixed-version: 0.16.1-r4
-
-  - id: CGA-j4mq-q8m9-2qw7
-    aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
-    events:
-      - timestamp: 2024-03-12T07:11:38Z
-        type: fixed
-        data:
-          fixed-version: 0.16.1-r4
+          fixed-version: 0.16.1-r3
 
   - id: CGA-6w44-gg42-vwcq
     aliases:
@@ -169,6 +71,34 @@ advisories:
         data:
           fixed-version: 0.16.1-r5
 
+  - id: CGA-6x34-vv5j-r6cx
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T13:06:39Z
+        type: fixed
+        data:
+          fixed-version: 0.16.2-r1
+
+  - id: CGA-7crv-88x3-p5jm
+    aliases:
+      - CVE-2024-24557
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-22T07:18:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: chartmuseum
+            componentID: e8713d467cb089c5
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.7+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/chartmuseum
+            scanner: grype
+
   - id: CGA-976f-r2v4-9963
     aliases:
       - CVE-2024-24787
@@ -179,15 +109,87 @@ advisories:
         data:
           fixed-version: 0.16.1-r10
 
-  - id: CGA-xqp9-3v2h-76qq
+  - id: CGA-c73w-j4vf-x9rc
     aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
+      - CVE-2023-3978
+      - GHSA-2wrh-6pvc-2jm9
     events:
-      - timestamp: 2024-05-14T12:25:43Z
+      - timestamp: 2023-10-13T16:44:30Z
         type: fixed
         data:
-          fixed-version: 0.16.1-r10
+          fixed-version: 0.16.0-r6
+
+  - id: CGA-cqxr-gcj4-75jp
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:24:12Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-gcfg-9w23-693v
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T07:11:42Z
+        type: fixed
+        data:
+          fixed-version: 0.16.1-r4
+
+  - id: CGA-gr7j-j3cq-84cc
+    aliases:
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T07:11:39Z
+        type: fixed
+        data:
+          fixed-version: 0.16.1-r4
+
+  - id: CGA-h934-c3jq-65w2
+    aliases:
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T07:11:40Z
+        type: fixed
+        data:
+          fixed-version: 0.16.1-r4
+
+  - id: CGA-j4mq-q8m9-2qw7
+    aliases:
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T07:11:38Z
+        type: fixed
+        data:
+          fixed-version: 0.16.1-r4
+
+  - id: CGA-jqvh-gj5f-3rgw
+    aliases:
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2023-10-13T16:43:17Z
+        type: fixed
+        data:
+          fixed-version: 0.16.0-r6
+
+  - id: CGA-jrmw-37p2-pr9q
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:24:14Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
 
   - id: CGA-qg8g-2fv6-gq78
     aliases:
@@ -211,27 +213,15 @@ advisories:
         data:
           fixed-version: 0.16.1-r2
 
-  - id: CGA-4v62-mgwp-fff2
+  - id: CGA-ww4m-35h3-m4hx
     aliases:
-      - CVE-2024-26147
-      - GHSA-r53h-jv2g-vpx6
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
     events:
-      - timestamp: 2024-02-23T07:47:22Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: chartmuseum
-            componentID: 7094954d3fc6b88e
-            componentName: helm.sh/helm/v3
-            componentVersion: v3.14.1
-            componentType: go-module
-            componentLocation: /usr/bin/chartmuseum
-            scanner: grype
-      - timestamp: 2024-02-25T12:11:33Z
+      - timestamp: 2024-03-12T07:11:37Z
         type: fixed
         data:
-          fixed-version: 0.16.1-r3
+          fixed-version: 0.16.1-r4
 
   - id: CGA-xchx-jxmm-4vrp
     aliases:
@@ -241,3 +231,23 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.16.0-r9
+
+  - id: CGA-xgpv-3737-26mg
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:09:07Z
+        type: fixed
+        data:
+          fixed-version: 0.16.1-r8
+
+  - id: CGA-xqp9-3v2h-76qq
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2024-05-14T12:25:43Z
+        type: fixed
+        data:
+          fixed-version: 0.16.1-r10
