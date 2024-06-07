@@ -4,65 +4,47 @@ package:
   name: kyverno
 
 advisories:
-  - id: CGA-prf7-85vc-c3v9
+  - id: CGA-3pqj-cmfm-r8jv
     aliases:
-      - CVE-2020-8559
-      - GHSA-33c5-9fx5-fvjm
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
     events:
-      - timestamp: 2024-04-25T13:34:25Z
+      - timestamp: 2023-12-20T03:47:59Z
+        type: fixed
+        data:
+          fixed-version: 1.11.1-r2
+
+  - id: CGA-5xfh-w4w2-9jpm
+    aliases:
+      - CVE-2024-24557
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-21T09:31:37Z
         type: detection
         data:
           type: scan/v1
           data:
-            subpackageName: kyverno
-            componentID: b76e8351c973e726
-            componentName: k8s.io/apimachinery
-            componentVersion: v0.29.0
+            subpackageName: kyverno-reports-controller
+            componentID: ce2e520604ff454a
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.7+incompatible
             componentType: go-module
-            componentLocation: /usr/bin/kyverno
+            componentLocation: /usr/bin/reports-controller
             scanner: grype
-
-  - id: CGA-gxhc-4frj-pvq5
-    aliases:
-      - CVE-2023-25656
-      - GHSA-87x9-7grx-m28v
-    events:
-      - timestamp: 2023-11-16T14:25:50Z
+      - timestamp: 2024-03-21T11:42:15Z
         type: fixed
         data:
-          fixed-version: 1.11.0-r1
+          fixed-version: 1.11.4-r8
 
-  - id: CGA-vf8g-7w98-m5gj
+  - id: CGA-65m8-6847-6jg9
     aliases:
-      - CVE-2023-30551
-      - GHSA-2h5h-59f5-c5x9
+      - CVE-2023-45142
+      - GHSA-rcjv-mgp8-qvmr
     events:
-      - timestamp: 2023-08-08T23:51:19Z
-        type: false-positive-determination
+      - timestamp: 2023-10-25T21:06:43Z
+        type: true-positive-determination
         data:
-          type: vulnerable-code-not-included-in-package
-          note: The vulnerable code in Rekor cannot be imported.
-
-  - id: CGA-pfw2-4hwf-pcc6
-    aliases:
-      - CVE-2023-33199
-      - GHSA-frqx-jfcm-6jjr
-    events:
-      - timestamp: 2023-08-08T23:51:19Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: The vulnerable code is effectively private. The vulnerable code is unlikely to ever be imported.
-
-  - id: CGA-9h64-qxcj-h5wh
-    aliases:
-      - CVE-2023-33959
-      - GHSA-xhg5-42rf-296r
-    events:
-      - timestamp: 2023-11-16T14:26:11Z
-        type: fixed
-        data:
-          fixed-version: 1.11.0-r1
+          note: Confirmed that the affected code is present in the binary, but Kyverno needs to migrate its code off of the Go packages keeping it at the affected version of go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp. It looks like the release-1.11 branch has made these adjustments and dependency updates, and once the final 1.11 release is out, this Wolfi package will get updated.
 
   - id: CGA-6f27-mj52-cmc7
     aliases:
@@ -87,56 +69,15 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability was matched to the module "github.com/kyverno/kyverno" at the following location(s): /usr/bin/kyverno. In all cases, the installed version of the module (git commit 84fba8e2448df1ee306d33379f4fb831e8f1381e) corresponds to a version tag (v1.12.1) that is later than the fixed version (1.10.0).'
 
-  - id: CGA-f9gx-m8gx-h458
+  - id: CGA-6xqx-mwgc-pf8r
     aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
+      - CVE-2023-49290
+      - GHSA-7f9x-gw85-8grf
     events:
-      - timestamp: 2023-10-16T19:07:53Z
+      - timestamp: 2024-01-24T07:49:15Z
         type: fixed
         data:
-          fixed-version: 1.10.3-r6
-
-  - id: CGA-wf5g-gww9-h5mj
-    aliases:
-      - CVE-2023-3978
-      - GHSA-2wrh-6pvc-2jm9
-    events:
-      - timestamp: 2023-10-16T19:08:27Z
-        type: fixed
-        data:
-          fixed-version: 1.10.3-r6
-
-  - id: CGA-rx36-6r58-w9cv
-    aliases:
-      - CVE-2023-44487
-      - GHSA-qppj-fm5r-hxr3
-    events:
-      - timestamp: 2023-10-16T19:08:57Z
-        type: fixed
-        data:
-          fixed-version: 1.10.3-r6
-
-  - id: CGA-65m8-6847-6jg9
-    aliases:
-      - CVE-2023-45142
-      - GHSA-rcjv-mgp8-qvmr
-    events:
-      - timestamp: 2023-10-25T21:06:43Z
-        type: true-positive-determination
-        data:
-          note: Confirmed that the affected code is present in the binary, but Kyverno needs to migrate its code off of the Go packages keeping it at the affected version of go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp. It looks like the release-1.11 branch has made these adjustments and dependency updates, and once the final 1.11 release is out, this Wolfi package will get updated.
-
-  - id: CGA-vvh6-px7j-cwrr
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:32:41Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          fixed-version: 1.11.4-r1
 
   - id: CGA-8hcx-438r-8ppc
     aliases:
@@ -149,37 +90,47 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
-  - id: CGA-rcr8-m2g6-cfg3
+  - id: CGA-9h64-qxcj-h5wh
     aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
+      - CVE-2023-33959
+      - GHSA-xhg5-42rf-296r
     events:
-      - timestamp: 2024-04-26T09:18:28Z
+      - timestamp: 2023-11-16T14:26:11Z
+        type: fixed
+        data:
+          fixed-version: 1.11.0-r1
+
+  - id: CGA-9j3p-7c82-4r3r
+    aliases:
+      - GHSA-6xv5-86q9-7xr8
+    events:
+      - timestamp: 2023-09-09T15:18:18Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability is only present on Windows.
+
+  - id: CGA-9wgm-r37w-jwx7
+    aliases:
+      - CVE-2024-28122
+      - GHSA-hj3v-m684-v259
+    events:
+      - timestamp: 2024-03-09T07:10:04Z
         type: detection
         data:
           type: scan/v1
           data:
-            subpackageName: kyverno
-            componentID: d290f7f49281e68d
-            componentName: golang.org/x/net
-            componentVersion: v0.21.0
+            subpackageName: kyverno-init-container
+            componentID: 6c06d40d92eaef14
+            componentName: github.com/lestrrat-go/jwx/v2
+            componentVersion: v2.0.19
             componentType: go-module
-            componentLocation: /usr/bin/kyverno
+            componentLocation: /usr/bin/kyvernopre
             scanner: grype
-      - timestamp: 2024-04-30T10:01:45Z
+      - timestamp: 2024-03-09T14:57:56Z
         type: fixed
         data:
-          fixed-version: 1.11.4-r10
-
-  - id: CGA-c7wx-f339-pq6c
-    aliases:
-      - CVE-2023-47108
-      - GHSA-8pgv-569h-w5rw
-    events:
-      - timestamp: 2023-11-16T15:42:17Z
-        type: fixed
-        data:
-          fixed-version: 1.11.0-r1
+          fixed-version: 1.11.4-r6
 
   - id: CGA-c543-c588-r8w8
     aliases:
@@ -204,101 +155,25 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability was matched to the module "github.com/kyverno/kyverno" at the following location(s): /usr/bin/kyverno. In all cases, the installed version of the module (git commit 84fba8e2448df1ee306d33379f4fb831e8f1381e) corresponds to a version tag (v1.12.1) that is later than the fixed version (1.10.5).'
 
-  - id: CGA-3pqj-cmfm-r8jv
+  - id: CGA-c6g7-4q94-9977
     aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
     events:
-      - timestamp: 2023-12-20T03:47:59Z
+      - timestamp: 2024-06-07T10:04:12Z
         type: fixed
         data:
-          fixed-version: 1.11.1-r2
+          fixed-version: 1.12.3-r1
 
-  - id: CGA-6xqx-mwgc-pf8r
+  - id: CGA-c7wx-f339-pq6c
     aliases:
-      - CVE-2023-49290
-      - GHSA-7f9x-gw85-8grf
+      - CVE-2023-47108
+      - GHSA-8pgv-569h-w5rw
     events:
-      - timestamp: 2024-01-24T07:49:15Z
+      - timestamp: 2023-11-16T15:42:17Z
         type: fixed
         data:
-          fixed-version: 1.11.4-r1
-
-  - id: CGA-jfrc-jjm2-6m26
-    aliases:
-      - CVE-2024-21664
-      - GHSA-pvcr-v8j8-j5q3
-    events:
-      - timestamp: 2024-01-24T07:49:16Z
-        type: fixed
-        data:
-          fixed-version: 1.11.4-r1
-
-  - id: CGA-5xfh-w4w2-9jpm
-    aliases:
-      - CVE-2024-24557
-      - GHSA-xw73-rw38-6vjc
-    events:
-      - timestamp: 2024-03-21T09:31:37Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kyverno-reports-controller
-            componentID: ce2e520604ff454a
-            componentName: github.com/docker/docker
-            componentVersion: v24.0.7+incompatible
-            componentType: go-module
-            componentLocation: /usr/bin/reports-controller
-            scanner: grype
-      - timestamp: 2024-03-21T11:42:15Z
-        type: fixed
-        data:
-          fixed-version: 1.11.4-r8
-
-  - id: CGA-x8qw-7fhq-q3c6
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T11:17:05Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kyverno-reports-controller
-            componentID: 7fd1607563065571
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.31.0
-            componentType: go-module
-            componentLocation: /usr/bin/reports-controller
-            scanner: grype
-      - timestamp: 2024-03-14T15:19:05Z
-        type: fixed
-        data:
-          fixed-version: 1.11.4-r7
-
-  - id: CGA-cgg6-799h-7qw3
-    aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
-    events:
-      - timestamp: 2024-05-14T09:00:43Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kyverno
-            componentID: 019ee600c6c205d1
-            componentName: stdlib
-            componentVersion: go1.22.2
-            componentType: go-module
-            componentLocation: /usr/bin/kyverno
-            scanner: grype
-      - timestamp: 2024-05-22T11:00:58Z
-        type: fixed
-        data:
-          fixed-version: 1.12.1-r2
+          fixed-version: 1.11.0-r1
 
   - id: CGA-cfr9-hjwx-99vf
     aliases:
@@ -322,27 +197,74 @@ advisories:
         data:
           fixed-version: 1.12.1-r2
 
-  - id: CGA-9wgm-r37w-jwx7
+  - id: CGA-cgg6-799h-7qw3
     aliases:
-      - CVE-2024-28122
-      - GHSA-hj3v-m684-v259
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
     events:
-      - timestamp: 2024-03-09T07:10:04Z
+      - timestamp: 2024-05-14T09:00:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno
+            componentID: 019ee600c6c205d1
+            componentName: stdlib
+            componentVersion: go1.22.2
+            componentType: go-module
+            componentLocation: /usr/bin/kyverno
+            scanner: grype
+      - timestamp: 2024-05-22T11:00:58Z
+        type: fixed
+        data:
+          fixed-version: 1.12.1-r2
+
+  - id: CGA-f9gx-m8gx-h458
+    aliases:
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2023-10-16T19:07:53Z
+        type: fixed
+        data:
+          fixed-version: 1.10.3-r6
+
+  - id: CGA-gxhc-4frj-pvq5
+    aliases:
+      - CVE-2023-25656
+      - GHSA-87x9-7grx-m28v
+    events:
+      - timestamp: 2023-11-16T14:25:50Z
+        type: fixed
+        data:
+          fixed-version: 1.11.0-r1
+
+  - id: CGA-h45m-ffg9-7r5c
+    aliases:
+      - GHSA-9763-4f94-gfch
+    events:
+      - timestamp: 2024-01-11T07:07:18Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: kyverno-init-container
-            componentID: 6c06d40d92eaef14
-            componentName: github.com/lestrrat-go/jwx/v2
-            componentVersion: v2.0.19
+            componentID: 16f7996c56b1558e
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.3.5
             componentType: go-module
             componentLocation: /usr/bin/kyvernopre
             scanner: grype
-      - timestamp: 2024-03-09T14:57:56Z
+
+  - id: CGA-hj59-vxcv-hpxq
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T10:04:04Z
         type: fixed
         data:
-          fixed-version: 1.11.4-r6
+          fixed-version: 1.12.3-r1
 
   - id: CGA-hrqx-74pg-5m88
     aliases:
@@ -365,6 +287,76 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.11.4-r5
+
+  - id: CGA-jfrc-jjm2-6m26
+    aliases:
+      - CVE-2024-21664
+      - GHSA-pvcr-v8j8-j5q3
+    events:
+      - timestamp: 2024-01-24T07:49:16Z
+        type: fixed
+        data:
+          fixed-version: 1.11.4-r1
+
+  - id: CGA-pfw2-4hwf-pcc6
+    aliases:
+      - CVE-2023-33199
+      - GHSA-frqx-jfcm-6jjr
+    events:
+      - timestamp: 2023-08-08T23:51:19Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: The vulnerable code is effectively private. The vulnerable code is unlikely to ever be imported.
+
+  - id: CGA-prf7-85vc-c3v9
+    aliases:
+      - CVE-2020-8559
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T13:34:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno
+            componentID: b76e8351c973e726
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/kyverno
+            scanner: grype
+
+  - id: CGA-rcr8-m2g6-cfg3
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-26T09:18:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno
+            componentID: d290f7f49281e68d
+            componentName: golang.org/x/net
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/kyverno
+            scanner: grype
+      - timestamp: 2024-04-30T10:01:45Z
+        type: fixed
+        data:
+          fixed-version: 1.11.4-r10
+
+  - id: CGA-rggv-pw33-fwwx
+    aliases:
+      - GHSA-2c7c-3mj9-8fqh
+    events:
+      - timestamp: 2023-11-22T16:40:41Z
+        type: fixed
+        data:
+          fixed-version: 1.11.0-r2
 
   - id: CGA-rv94-4937-v56h
     aliases:
@@ -389,41 +381,79 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: 'A govulncheck analysis found that none of the known affected symbols were present in the APK, after examining the following paths within the package: /usr/bin/kyverno.'
 
-  - id: CGA-rggv-pw33-fwwx
+  - id: CGA-rx36-6r58-w9cv
     aliases:
-      - GHSA-2c7c-3mj9-8fqh
+      - CVE-2023-44487
+      - GHSA-qppj-fm5r-hxr3
     events:
-      - timestamp: 2023-11-22T16:40:41Z
+      - timestamp: 2023-10-16T19:08:57Z
         type: fixed
         data:
-          fixed-version: 1.11.0-r2
+          fixed-version: 1.10.3-r6
 
-  - id: CGA-9j3p-7c82-4r3r
+  - id: CGA-v66v-97vv-jr53
     aliases:
-      - GHSA-6xv5-86q9-7xr8
+      - GHSA-jq35-85cj-fj4p
     events:
-      - timestamp: 2023-09-09T15:18:18Z
+      - timestamp: 2023-10-31T20:03:57Z
         type: false-positive-determination
         data:
           type: vulnerable-code-not-included-in-package
-          note: This vulnerability is only present on Windows.
+          note: This vulnerability is in the container runtime itself, not clients of the container runtime.
 
-  - id: CGA-h45m-ffg9-7r5c
+  - id: CGA-vf8g-7w98-m5gj
     aliases:
-      - GHSA-9763-4f94-gfch
+      - CVE-2023-30551
+      - GHSA-2h5h-59f5-c5x9
     events:
-      - timestamp: 2024-01-11T07:07:18Z
+      - timestamp: 2023-08-08T23:51:19Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: The vulnerable code in Rekor cannot be imported.
+
+  - id: CGA-vvh6-px7j-cwrr
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:32:41Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-wf5g-gww9-h5mj
+    aliases:
+      - CVE-2023-3978
+      - GHSA-2wrh-6pvc-2jm9
+    events:
+      - timestamp: 2023-10-16T19:08:27Z
+        type: fixed
+        data:
+          fixed-version: 1.10.3-r6
+
+  - id: CGA-x8qw-7fhq-q3c6
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T11:17:05Z
         type: detection
         data:
           type: scan/v1
           data:
-            subpackageName: kyverno-init-container
-            componentID: 16f7996c56b1558e
-            componentName: github.com/cloudflare/circl
-            componentVersion: v1.3.5
+            subpackageName: kyverno-reports-controller
+            componentID: 7fd1607563065571
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
             componentType: go-module
-            componentLocation: /usr/bin/kyvernopre
+            componentLocation: /usr/bin/reports-controller
             scanner: grype
+      - timestamp: 2024-03-14T15:19:05Z
+        type: fixed
+        data:
+          fixed-version: 1.11.4-r7
 
   - id: CGA-xp3q-9cq4-9x8v
     aliases:
@@ -446,13 +476,3 @@ advisories:
         data:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability was matched to the module "github.com/kyverno/kyverno" at the following location(s): /usr/bin/kyverno. In all cases, the installed version of the module (git commit 84fba8e2448df1ee306d33379f4fb831e8f1381e) corresponds to a version tag (v1.12.1) that is later than the fixed version (1.9.5).'
-
-  - id: CGA-v66v-97vv-jr53
-    aliases:
-      - GHSA-jq35-85cj-fj4p
-    events:
-      - timestamp: 2023-10-31T20:03:57Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: This vulnerability is in the container runtime itself, not clients of the container runtime.
