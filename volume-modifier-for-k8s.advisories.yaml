@@ -4,72 +4,12 @@ package:
   name: volume-modifier-for-k8s
 
 advisories:
-  - id: CGA-qp47-27c2-6fc3
+  - id: CGA-2j8q-v84w-xg59
     aliases:
-      - CVE-2020-8559
-      - GHSA-33c5-9fx5-fvjm
-    events:
-      - timestamp: 2024-04-25T13:12:02Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: volume-modifier-for-k8s
-            componentID: 30f0bf23699dddc5
-            componentName: k8s.io/apimachinery
-            componentVersion: v0.29.0
-            componentType: go-module
-            componentLocation: /usr/bin/volume-modifier-for-k8s
-            scanner: grype
-
-  - id: CGA-c572-q3qw-4jwc
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:40:26Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-54hg-q68f-92cw
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:40:27Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-96xm-gw6v-6q93
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-05-01T08:43:44Z
-        type: fixed
-        data:
-          fixed-version: 0.2.1-r4
-
-  - id: CGA-wjwx-292w-gcwp
-    aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
     events:
       - timestamp: 2024-03-13T10:45:03Z
-        type: fixed
-        data:
-          fixed-version: 0.2.1-r1
-
-  - id: CGA-9qr8-3p24-fmpc
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-13T10:45:04Z
         type: fixed
         data:
           fixed-version: 0.2.1-r1
@@ -92,15 +32,16 @@ advisories:
             componentLocation: /usr/bin/volume-modifier-for-k8s
             scanner: grype
 
-  - id: CGA-9gfx-x34r-9g99
+  - id: CGA-54hg-q68f-92cw
     aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
     events:
-      - timestamp: 2024-03-13T10:45:02Z
-        type: fixed
+      - timestamp: 2023-11-07T19:40:27Z
+        type: false-positive-determination
         data:
-          fixed-version: 0.2.1-r1
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
 
   - id: CGA-55mv-vjmh-w5f7
     aliases:
@@ -112,15 +53,56 @@ advisories:
         data:
           fixed-version: 0.2.1-r1
 
-  - id: CGA-2j8q-v84w-xg59
+  - id: CGA-96xm-gw6v-6q93
     aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
     events:
-      - timestamp: 2024-03-13T10:45:03Z
+      - timestamp: 2024-05-01T08:43:44Z
+        type: fixed
+        data:
+          fixed-version: 0.2.1-r4
+
+  - id: CGA-9c8x-ghw4-j2q7
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T13:24:43Z
+        type: fixed
+        data:
+          fixed-version: 0.2.1-r6
+
+  - id: CGA-9gfx-x34r-9g99
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-13T10:45:02Z
         type: fixed
         data:
           fixed-version: 0.2.1-r1
+
+  - id: CGA-9qr8-3p24-fmpc
+    aliases:
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-13T10:45:04Z
+        type: fixed
+        data:
+          fixed-version: 0.2.1-r1
+
+  - id: CGA-c572-q3qw-4jwc
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:40:26Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
 
   - id: CGA-q2vp-j5xv-7976
     aliases:
@@ -144,6 +126,24 @@ advisories:
         data:
           fixed-version: 0.2.1-r2
 
+  - id: CGA-qp47-27c2-6fc3
+    aliases:
+      - CVE-2020-8559
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T13:12:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: volume-modifier-for-k8s
+            componentID: 30f0bf23699dddc5
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/volume-modifier-for-k8s
+            scanner: grype
+
   - id: CGA-w466-59gh-gw6h
     aliases:
       - CVE-2024-24787
@@ -153,6 +153,16 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.2.1-r5
+
+  - id: CGA-wjwx-292w-gcwp
+    aliases:
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-13T10:45:03Z
+        type: fixed
+        data:
+          fixed-version: 0.2.1-r1
 
   - id: CGA-wrv4-fwpp-qwxw
     aliases:
