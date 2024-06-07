@@ -4,6 +4,24 @@ package:
   name: newrelic-fluent-bit-output
 
 advisories:
+  - id: CGA-22mf-4rrg-rv2h
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T07:25:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: newrelic-fluent-bit-output
+            componentID: 09e92b0c2e8ae2a7
+            componentName: stdlib
+            componentVersion: go1.20.14
+            componentType: go-module
+            componentLocation: /fluent-bit/bin/out_newrelic.so
+            scanner: grype
+
   - id: CGA-3fw9-g448-cq83
     aliases:
       - CVE-2023-45289
