@@ -4,27 +4,25 @@ package:
   name: hubble-ui
 
 advisories:
-  - id: CGA-x7vf-3f42-fmcq
+  - id: CGA-2wq4-q9qg-x5rx
     aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
     events:
-      - timestamp: 2023-11-07T19:29:13Z
-        type: false-positive-determination
+      - timestamp: 2024-05-14T11:25:47Z
+        type: fixed
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          fixed-version: 0.13.0-r9
 
-  - id: CGA-x275-5pxv-h7qr
+  - id: CGA-6fr7-jfph-3wjx
     aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
     events:
-      - timestamp: 2023-11-07T19:29:15Z
-        type: false-positive-determination
+      - timestamp: 2024-06-07T17:29:30Z
+        type: fixed
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          fixed-version: 0.13.1-r1
 
   - id: CGA-6pmm-4rjx-7wg5
     aliases:
@@ -48,42 +46,12 @@ advisories:
         data:
           fixed-version: 0.13.0-r7
 
-  - id: CGA-xcm6-93mw-wh5f
-    aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
-    events:
-      - timestamp: 2024-03-12T09:23:21Z
-        type: fixed
-        data:
-          fixed-version: 0.13.0-r1
-
   - id: CGA-86m8-hvf5-v86r
     aliases:
       - CVE-2023-45290
       - GHSA-rr6r-cfgf-gc6h
     events:
       - timestamp: 2024-03-12T09:23:22Z
-        type: fixed
-        data:
-          fixed-version: 0.13.0-r1
-
-  - id: CGA-jq27-m55v-4h4g
-    aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
-    events:
-      - timestamp: 2024-03-12T09:23:20Z
-        type: fixed
-        data:
-          fixed-version: 0.13.0-r1
-
-  - id: CGA-jgqh-9jcc-j3r2
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-12T09:23:21Z
         type: fixed
         data:
           fixed-version: 0.13.0-r1
@@ -98,35 +66,27 @@ advisories:
         data:
           fixed-version: 0.13.0-r1
 
-  - id: CGA-qcp6-cw7j-g8xx
+  - id: CGA-9983-whmm-q4gv
     aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
+      - CVE-2024-28250
+      - GHSA-v6q2-4qr3-5cw6
     events:
-      - timestamp: 2024-03-18T11:57:15Z
+      - timestamp: 2024-03-19T09:09:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: hubble-ui-backend
+            componentID: 5c42cb480883a6b5
+            componentName: github.com/cilium/cilium
+            componentVersion: v1.15.0
+            componentType: go-module
+            componentLocation: /usr/bin/backend
+            scanner: grype
+      - timestamp: 2024-03-26T15:28:54Z
         type: fixed
         data:
-          fixed-version: 0.13.0-r2
-
-  - id: CGA-h6ph-m94m-jv7v
-    aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
-    events:
-      - timestamp: 2024-05-14T11:25:45Z
-        type: fixed
-        data:
-          fixed-version: 0.13.0-r9
-
-  - id: CGA-2wq4-q9qg-x5rx
-    aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
-    events:
-      - timestamp: 2024-05-14T11:25:47Z
-        type: fixed
-        data:
-          fixed-version: 0.13.0-r9
+          fixed-version: 0.13.0-r3
 
   - id: CGA-9pw6-343j-92r6
     aliases:
@@ -134,50 +94,6 @@ advisories:
       - GHSA-68mj-9pjq-mc85
     events:
       - timestamp: 2024-03-19T09:09:02Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: hubble-ui-backend
-            componentID: 5c42cb480883a6b5
-            componentName: github.com/cilium/cilium
-            componentVersion: v1.15.0
-            componentType: go-module
-            componentLocation: /usr/bin/backend
-            scanner: grype
-      - timestamp: 2024-03-26T15:28:54Z
-        type: fixed
-        data:
-          fixed-version: 0.13.0-r3
-
-  - id: CGA-hpg4-jxgr-3qw5
-    aliases:
-      - CVE-2024-28249
-      - GHSA-j89h-qrvr-xc36
-    events:
-      - timestamp: 2024-03-19T09:09:05Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: hubble-ui-backend
-            componentID: 5c42cb480883a6b5
-            componentName: github.com/cilium/cilium
-            componentVersion: v1.15.0
-            componentType: go-module
-            componentLocation: /usr/bin/backend
-            scanner: grype
-      - timestamp: 2024-03-26T15:28:54Z
-        type: fixed
-        data:
-          fixed-version: 0.13.0-r3
-
-  - id: CGA-9983-whmm-q4gv
-    aliases:
-      - CVE-2024-28250
-      - GHSA-v6q2-4qr3-5cw6
-    events:
-      - timestamp: 2024-03-19T09:09:06Z
         type: detection
         data:
           type: scan/v1
@@ -203,3 +119,97 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.13.0-r6
+
+  - id: CGA-h6ph-m94m-jv7v
+    aliases:
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
+    events:
+      - timestamp: 2024-05-14T11:25:45Z
+        type: fixed
+        data:
+          fixed-version: 0.13.0-r9
+
+  - id: CGA-hpg4-jxgr-3qw5
+    aliases:
+      - CVE-2024-28249
+      - GHSA-j89h-qrvr-xc36
+    events:
+      - timestamp: 2024-03-19T09:09:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: hubble-ui-backend
+            componentID: 5c42cb480883a6b5
+            componentName: github.com/cilium/cilium
+            componentVersion: v1.15.0
+            componentType: go-module
+            componentLocation: /usr/bin/backend
+            scanner: grype
+      - timestamp: 2024-03-26T15:28:54Z
+        type: fixed
+        data:
+          fixed-version: 0.13.0-r3
+
+  - id: CGA-jgqh-9jcc-j3r2
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T09:23:21Z
+        type: fixed
+        data:
+          fixed-version: 0.13.0-r1
+
+  - id: CGA-jq27-m55v-4h4g
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T09:23:20Z
+        type: fixed
+        data:
+          fixed-version: 0.13.0-r1
+
+  - id: CGA-qcp6-cw7j-g8xx
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-18T11:57:15Z
+        type: fixed
+        data:
+          fixed-version: 0.13.0-r2
+
+  - id: CGA-x275-5pxv-h7qr
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:29:15Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-x7vf-3f42-fmcq
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:29:13Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-xcm6-93mw-wh5f
+    aliases:
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T09:23:21Z
+        type: fixed
+        data:
+          fixed-version: 0.13.0-r1
