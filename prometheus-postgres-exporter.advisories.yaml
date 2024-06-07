@@ -14,26 +14,47 @@ advisories:
         data:
           fixed-version: 0.14.0-r3
 
-  - id: CGA-q82x-88r8-6j3h
+  - id: CGA-4hrf-2mhj-pvjp
     aliases:
-      - CVE-2023-3978
-      - GHSA-2wrh-6pvc-2jm9
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
     events:
-      - timestamp: 2023-10-13T17:57:41Z
+      - timestamp: 2024-03-14T15:21:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-postgres-exporter
+            componentID: 726a57eca1af69cf
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/postgres_exporter
+            scanner: grype
+      - timestamp: 2024-03-16T11:02:13Z
         type: fixed
         data:
-          fixed-version: 0.14.0-r3
+          fixed-version: 0.15.0-r5
 
-  - id: CGA-p3qg-3697-4x2v
+  - id: CGA-57wx-hrr7-mg6c
     aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
     events:
-      - timestamp: 2023-11-07T19:36:13Z
-        type: false-positive-determination
+      - timestamp: 2024-03-12T09:22:54Z
+        type: fixed
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          fixed-version: 0.15.0-r4
+
+  - id: CGA-5jf4-qjx6-jwhp
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2024-06-07T16:17:31Z
+        type: fixed
+        data:
+          fixed-version: 0.15.0-r10
 
   - id: CGA-67wj-jqjh-q42r
     aliases:
@@ -56,36 +77,6 @@ advisories:
         data:
           fixed-version: 0.15.0-r6
 
-  - id: CGA-g23g-x4fp-qhm6
-    aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
-    events:
-      - timestamp: 2024-03-12T09:22:53Z
-        type: fixed
-        data:
-          fixed-version: 0.15.0-r4
-
-  - id: CGA-57wx-hrr7-mg6c
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-12T09:22:54Z
-        type: fixed
-        data:
-          fixed-version: 0.15.0-r4
-
-  - id: CGA-h5m4-4hqx-g8jw
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2024-02-15T07:38:10Z
-        type: fixed
-        data:
-          fixed-version: 0.15.0-r2
-
   - id: CGA-cxfv-4rjc-w469
     aliases:
       - CVE-2024-24783
@@ -96,12 +87,12 @@ advisories:
         data:
           fixed-version: 0.15.0-r4
 
-  - id: CGA-v33j-h3x9-48pw
+  - id: CGA-g23g-x4fp-qhm6
     aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
     events:
-      - timestamp: 2024-03-12T09:22:51Z
+      - timestamp: 2024-03-12T09:22:53Z
         type: fixed
         data:
           fixed-version: 0.15.0-r4
@@ -116,24 +107,43 @@ advisories:
         data:
           fixed-version: 0.15.0-r4
 
-  - id: CGA-4hrf-2mhj-pvjp
+  - id: CGA-h5m4-4hqx-g8jw
     aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
     events:
-      - timestamp: 2024-03-14T15:21:39Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: prometheus-postgres-exporter
-            componentID: 726a57eca1af69cf
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.31.0
-            componentType: go-module
-            componentLocation: /usr/bin/postgres_exporter
-            scanner: grype
-      - timestamp: 2024-03-16T11:02:13Z
+      - timestamp: 2024-02-15T07:38:10Z
         type: fixed
         data:
-          fixed-version: 0.15.0-r5
+          fixed-version: 0.15.0-r2
+
+  - id: CGA-p3qg-3697-4x2v
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:36:13Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-q82x-88r8-6j3h
+    aliases:
+      - CVE-2023-3978
+      - GHSA-2wrh-6pvc-2jm9
+    events:
+      - timestamp: 2023-10-13T17:57:41Z
+        type: fixed
+        data:
+          fixed-version: 0.14.0-r3
+
+  - id: CGA-v33j-h3x9-48pw
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T09:22:51Z
+        type: fixed
+        data:
+          fixed-version: 0.15.0-r4
