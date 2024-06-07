@@ -4,6 +4,16 @@ package:
   name: go-1.21
 
 advisories:
+  - id: CGA-3vqc-vvrp-m34h
+    aliases:
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2023-10-12T23:54:38Z
+        type: fixed
+        data:
+          fixed-version: 1.21.3-r0
+
   - id: CGA-42fw-c8vq-58fc
     aliases:
       - CVE-2020-29509
@@ -17,6 +27,47 @@ advisories:
         type: false-positive-determination
         data:
           type: vulnerable-code-not-in-execution-path
+
+  - id: CGA-4gm6-937v-989c
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:25:35Z
+        type: fixed
+        data:
+          fixed-version: 1.21.9-r0
+
+  - id: CGA-8gf2-r7xv-f9fj
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-07T16:04:59Z
+        type: fixed
+        data:
+          fixed-version: 1.21.11-r0
+
+  - id: CGA-cgw7-rj35-5w6f
+    aliases:
+      - CVE-2023-29409
+      - GHSA-xc82-5m89-g4jv
+    events:
+      - timestamp: 2023-08-14T20:19:14Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: This CVE was fixed in go 1.20.7, before 1.21 was branched.
+
+  - id: CGA-cr58-399j-7g3g
+    aliases:
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
+    events:
+      - timestamp: 2024-05-15T09:05:08Z
+        type: fixed
+        data:
+          fixed-version: 1.21.10-r0
 
   - id: CGA-gq67-gqrr-qc3q
     aliases:
@@ -32,36 +83,15 @@ advisories:
         data:
           type: vulnerable-code-not-in-execution-path
 
-  - id: CGA-wvwh-gjjr-vw5q
+  - id: CGA-h9m5-756c-m5pr
     aliases:
-      - CVE-2023-29406
-      - GHSA-f8f7-69v5-w4vx
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
     events:
-      - timestamp: 2023-07-14T13:10:46Z
-        type: true-positive-determination
-        data:
-          note: The Go team hasn't applied the patch yet since this is currently an rc release stream.
-
-  - id: CGA-cgw7-rj35-5w6f
-    aliases:
-      - CVE-2023-29409
-      - GHSA-xc82-5m89-g4jv
-    events:
-      - timestamp: 2023-08-14T20:19:14Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-version-not-used
-          note: This CVE was fixed in go 1.20.7, before 1.21 was branched.
-
-  - id: CGA-3vqc-vvrp-m34h
-    aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
-    events:
-      - timestamp: 2023-10-12T23:54:38Z
+      - timestamp: 2024-06-07T16:05:02Z
         type: fixed
         data:
-          fixed-version: 1.21.3-r0
+          fixed-version: 1.21.11-r0
 
   - id: CGA-wpgg-99hr-xrpq
     aliases:
@@ -73,22 +103,12 @@ advisories:
         data:
           fixed-version: 1.21.5-r0
 
-  - id: CGA-4gm6-937v-989c
+  - id: CGA-wvwh-gjjr-vw5q
     aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
+      - CVE-2023-29406
+      - GHSA-f8f7-69v5-w4vx
     events:
-      - timestamp: 2024-04-13T07:25:35Z
-        type: fixed
+      - timestamp: 2023-07-14T13:10:46Z
+        type: true-positive-determination
         data:
-          fixed-version: 1.21.9-r0
-
-  - id: CGA-cr58-399j-7g3g
-    aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
-    events:
-      - timestamp: 2024-05-15T09:05:08Z
-        type: fixed
-        data:
-          fixed-version: 1.21.10-r0
+          note: The Go team hasn't applied the patch yet since this is currently an rc release stream.
