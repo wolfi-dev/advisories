@@ -4,206 +4,6 @@ package:
   name: metrics-server
 
 advisories:
-  - id: CGA-h5x5-8j55-vm99
-    aliases:
-      - CVE-2019-3826
-      - GHSA-3m87-5598-2v4f
-    events:
-      - timestamp: 2023-08-13T22:49:44Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: This CVE affects the Prometheus UI (Javascript) and not the Go code. See prometheus/prometheus#12403 and prometheus/prometheus#5163
-
-  - id: CGA-cmxm-53xg-9v7m
-    aliases:
-      - CVE-2020-8552
-      - GHSA-82hx-w2r5-c2wq
-    events:
-      - timestamp: 2023-09-19T16:44:40Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Go vulndb has marked this code NOT_IMPORTABLE.
-
-  - id: CGA-vvmj-m8jv-q296
-    aliases:
-      - CVE-2023-39318
-      - GHSA-vq7j-gx56-rxjh
-    events:
-      - timestamp: 2023-11-06T19:16:44Z
-        type: fixed
-        data:
-          fixed-version: 0.6.4-r1
-
-  - id: CGA-xv6p-j2f2-fv4c
-    aliases:
-      - CVE-2023-39319
-      - GHSA-vv9m-32rr-3g55
-    events:
-      - timestamp: 2023-11-06T19:15:19Z
-        type: fixed
-        data:
-          fixed-version: 0.6.4-r1
-
-  - id: CGA-8j4j-qxh6-9m2p
-    aliases:
-      - CVE-2023-39320
-      - GHSA-rxv8-v965-v333
-    events:
-      - timestamp: 2023-11-06T19:13:06Z
-        type: fixed
-        data:
-          fixed-version: 0.6.4-r1
-
-  - id: CGA-h3q9-hr2x-w3hj
-    aliases:
-      - CVE-2023-39321
-      - GHSA-9v7r-x7cv-v437
-    events:
-      - timestamp: 2023-11-06T19:14:59Z
-        type: fixed
-        data:
-          fixed-version: 0.6.4-r1
-
-  - id: CGA-pqhf-4q5p-p77r
-    aliases:
-      - CVE-2023-39322
-      - GHSA-892h-r6cr-53g4
-    events:
-      - timestamp: 2023-11-06T19:14:31Z
-        type: fixed
-        data:
-          fixed-version: 0.6.4-r1
-
-  - id: CGA-g4vx-6jc8-92h4
-    aliases:
-      - CVE-2023-39323
-      - GHSA-679v-hh23-h5jh
-    events:
-      - timestamp: 2023-11-06T19:15:36Z
-        type: fixed
-        data:
-          fixed-version: 0.6.4-r2
-
-  - id: CGA-467f-2724-pc37
-    aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
-    events:
-      - timestamp: 2023-10-14T18:08:06Z
-        type: fixed
-        data:
-          fixed-version: 0.6.4-r4
-
-  - id: CGA-h8h2-464m-2qr4
-    aliases:
-      - CVE-2023-39326
-      - GHSA-9f76-wg39-x86h
-    events:
-      - timestamp: 2023-12-16T00:09:16Z
-        type: fixed
-        data:
-          fixed-version: 0.6.4-r8
-
-  - id: CGA-pv8g-j2gh-frwp
-    aliases:
-      - CVE-2023-3978
-      - GHSA-2wrh-6pvc-2jm9
-    events:
-      - timestamp: 2023-10-14T18:15:28Z
-        type: fixed
-        data:
-          fixed-version: 0.6.4-r4
-
-  - id: CGA-828f-q9xr-h575
-    aliases:
-      - CVE-2023-44487
-      - GHSA-m425-mq94-257g
-      - GHSA-qppj-fm5r-hxr3
-    events:
-      - timestamp: 2023-10-14T18:11:15Z
-        type: fixed
-        data:
-          fixed-version: 0.6.4-r4
-      - timestamp: 2023-11-09T18:07:47Z
-        type: fixed
-        data:
-          fixed-version: 0.6.4-r5
-
-  - id: CGA-gqfx-g935-v5xg
-    aliases:
-      - CVE-2023-45142
-      - GHSA-rcjv-mgp8-qvmr
-    events:
-      - timestamp: 2023-10-25T21:59:51Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Govulncheck confirms that the affected code is not actually present in the compiled binary.
-
-  - id: CGA-vgff-jwxf-32vq
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:33:14Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-wwq6-9r7j-5prq
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:33:16Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-f25g-8jr2-6p8g
-    aliases:
-      - CVE-2023-45285
-      - GHSA-5f94-vhjq-rpg8
-    events:
-      - timestamp: 2023-12-16T00:09:26Z
-        type: fixed
-        data:
-          fixed-version: 0.6.4-r8
-
-  - id: CGA-75v2-8qfq-hmf3
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-11T20:21:15Z
-        type: fixed
-        data:
-          fixed-version: 0.7.1-r1
-
-  - id: CGA-mp8w-6729-rwx8
-    aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
-    events:
-      - timestamp: 2024-03-13T07:12:19Z
-        type: fixed
-        data:
-          fixed-version: 0.7.0-r1
-
-  - id: CGA-p6w6-28r4-3x3w
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-13T07:12:21Z
-        type: fixed
-        data:
-          fixed-version: 0.7.0-r1
-
   - id: CGA-2gj5-wvvf-9x5h
     aliases:
       - CVE-2023-47108
@@ -214,35 +14,15 @@ advisories:
         data:
           note: Pending upstream fix, this fix will require some code changes due to the usage of one year old Kubernetes dependencies (e.g. k8s.io/apiserver@v0.23.17). These dependencies need to be updated to upgrade the vulnerable otel dependencies. In addition, the latest stable release of the metrics-server project was triggered on June.
 
-  - id: CGA-v9hm-5426-vrfx
+  - id: CGA-467f-2724-pc37
     aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
     events:
-      - timestamp: 2023-12-22T15:01:54Z
+      - timestamp: 2023-10-14T18:08:06Z
         type: fixed
         data:
-          fixed-version: 0.6.4-r9
-
-  - id: CGA-vj3j-mr4j-q7wr
-    aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
-    events:
-      - timestamp: 2024-03-13T07:12:23Z
-        type: fixed
-        data:
-          fixed-version: 0.7.0-r1
-
-  - id: CGA-m87p-vxjr-9v64
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-13T07:12:15Z
-        type: fixed
-        data:
-          fixed-version: 0.7.0-r1
+          fixed-version: 0.6.4-r4
 
   - id: CGA-66gx-c2c5-36hx
     aliases:
@@ -264,15 +44,30 @@ advisories:
         data:
           fixed-version: 0.7.0-r2
 
-  - id: CGA-f4r3-7crv-vwh6
+  - id: CGA-75v2-8qfq-hmf3
     aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
     events:
-      - timestamp: 2024-05-14T12:19:07Z
+      - timestamp: 2024-04-11T20:21:15Z
         type: fixed
         data:
-          fixed-version: 0.7.1-r3
+          fixed-version: 0.7.1-r1
+
+  - id: CGA-828f-q9xr-h575
+    aliases:
+      - CVE-2023-44487
+      - GHSA-m425-mq94-257g
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2023-10-14T18:11:15Z
+        type: fixed
+        data:
+          fixed-version: 0.6.4-r4
+      - timestamp: 2023-11-09T18:07:47Z
+        type: fixed
+        data:
+          fixed-version: 0.6.4-r5
 
   - id: CGA-86gc-q59v-qf62
     aliases:
@@ -283,3 +78,218 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.7.1-r3
+
+  - id: CGA-8j4j-qxh6-9m2p
+    aliases:
+      - CVE-2023-39320
+      - GHSA-rxv8-v965-v333
+    events:
+      - timestamp: 2023-11-06T19:13:06Z
+        type: fixed
+        data:
+          fixed-version: 0.6.4-r1
+
+  - id: CGA-cmxm-53xg-9v7m
+    aliases:
+      - CVE-2020-8552
+      - GHSA-82hx-w2r5-c2wq
+    events:
+      - timestamp: 2023-09-19T16:44:40Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Go vulndb has marked this code NOT_IMPORTABLE.
+
+  - id: CGA-f25g-8jr2-6p8g
+    aliases:
+      - CVE-2023-45285
+      - GHSA-5f94-vhjq-rpg8
+    events:
+      - timestamp: 2023-12-16T00:09:26Z
+        type: fixed
+        data:
+          fixed-version: 0.6.4-r8
+
+  - id: CGA-f4r3-7crv-vwh6
+    aliases:
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
+    events:
+      - timestamp: 2024-05-14T12:19:07Z
+        type: fixed
+        data:
+          fixed-version: 0.7.1-r3
+
+  - id: CGA-g4vx-6jc8-92h4
+    aliases:
+      - CVE-2023-39323
+      - GHSA-679v-hh23-h5jh
+    events:
+      - timestamp: 2023-11-06T19:15:36Z
+        type: fixed
+        data:
+          fixed-version: 0.6.4-r2
+
+  - id: CGA-gqfx-g935-v5xg
+    aliases:
+      - CVE-2023-45142
+      - GHSA-rcjv-mgp8-qvmr
+    events:
+      - timestamp: 2023-10-25T21:59:51Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck confirms that the affected code is not actually present in the compiled binary.
+
+  - id: CGA-h3q9-hr2x-w3hj
+    aliases:
+      - CVE-2023-39321
+      - GHSA-9v7r-x7cv-v437
+    events:
+      - timestamp: 2023-11-06T19:14:59Z
+        type: fixed
+        data:
+          fixed-version: 0.6.4-r1
+
+  - id: CGA-h5x5-8j55-vm99
+    aliases:
+      - CVE-2019-3826
+      - GHSA-3m87-5598-2v4f
+    events:
+      - timestamp: 2023-08-13T22:49:44Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This CVE affects the Prometheus UI (Javascript) and not the Go code. See prometheus/prometheus#12403 and prometheus/prometheus#5163
+
+  - id: CGA-h8h2-464m-2qr4
+    aliases:
+      - CVE-2023-39326
+      - GHSA-9f76-wg39-x86h
+    events:
+      - timestamp: 2023-12-16T00:09:16Z
+        type: fixed
+        data:
+          fixed-version: 0.6.4-r8
+
+  - id: CGA-m87p-vxjr-9v64
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-13T07:12:15Z
+        type: fixed
+        data:
+          fixed-version: 0.7.0-r1
+
+  - id: CGA-mp8w-6729-rwx8
+    aliases:
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-13T07:12:19Z
+        type: fixed
+        data:
+          fixed-version: 0.7.0-r1
+
+  - id: CGA-p6w6-28r4-3x3w
+    aliases:
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-13T07:12:21Z
+        type: fixed
+        data:
+          fixed-version: 0.7.0-r1
+
+  - id: CGA-pqhf-4q5p-p77r
+    aliases:
+      - CVE-2023-39322
+      - GHSA-892h-r6cr-53g4
+    events:
+      - timestamp: 2023-11-06T19:14:31Z
+        type: fixed
+        data:
+          fixed-version: 0.6.4-r1
+
+  - id: CGA-pv8g-j2gh-frwp
+    aliases:
+      - CVE-2023-3978
+      - GHSA-2wrh-6pvc-2jm9
+    events:
+      - timestamp: 2023-10-14T18:15:28Z
+        type: fixed
+        data:
+          fixed-version: 0.6.4-r4
+
+  - id: CGA-rw54-2rwj-8rw6
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2024-06-08T09:05:11Z
+        type: fixed
+        data:
+          fixed-version: 0.7.1-r4
+
+  - id: CGA-v9hm-5426-vrfx
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2023-12-22T15:01:54Z
+        type: fixed
+        data:
+          fixed-version: 0.6.4-r9
+
+  - id: CGA-vgff-jwxf-32vq
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:33:14Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-vj3j-mr4j-q7wr
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-13T07:12:23Z
+        type: fixed
+        data:
+          fixed-version: 0.7.0-r1
+
+  - id: CGA-vvmj-m8jv-q296
+    aliases:
+      - CVE-2023-39318
+      - GHSA-vq7j-gx56-rxjh
+    events:
+      - timestamp: 2023-11-06T19:16:44Z
+        type: fixed
+        data:
+          fixed-version: 0.6.4-r1
+
+  - id: CGA-wwq6-9r7j-5prq
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:33:16Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-xv6p-j2f2-fv4c
+    aliases:
+      - CVE-2023-39319
+      - GHSA-vv9m-32rr-3g55
+    events:
+      - timestamp: 2023-11-06T19:15:19Z
+        type: fixed
+        data:
+          fixed-version: 0.6.4-r1
