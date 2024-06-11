@@ -1,4 +1,4 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: php-8.2
@@ -14,20 +14,30 @@ advisories:
         data:
           type: vulnerability-record-analysis-contested
 
+  - id: CGA-9q75-mmfg-qh8f
+    aliases:
+      - CVE-2024-5458
+    events:
+      - timestamp: 2024-06-11T09:43:46Z
+        type: fixed
+        data:
+          fixed-version: 8.2.20-r0
+
+  - id: CGA-9qjv-ggm9-22h2
+    aliases:
+      - CVE-2022-4900
+      - GHSA-95cc-jq89-8hvw
+    events:
+      - timestamp: 2023-11-12T05:18:10Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: 'This vulnerability was fixed in PHP 8.0.22 in this commit: https://github.com/php/php-src/commit/789a37f14405e2d1a05a76c9fb4ed2d49d4580d5. Wolfi never had an affected version of PHP (earliest is 8.1.23)'
+
   - id: CGA-9wf2-hfrx-5rvg
     aliases:
       - CVE-2007-3205
       - GHSA-9j84-7rq9-w2fq
-    events:
-      - timestamp: 2023-09-07T22:18:51Z
-        type: false-positive-determination
-        data:
-          type: vulnerability-record-analysis-contested
-
-  - id: CGA-hjj9-68qc-mm2p
-    aliases:
-      - CVE-2007-4596
-      - GHSA-85qm-c7q8-mxvh
     events:
       - timestamp: 2023-09-07T22:18:51Z
         type: false-positive-determination
@@ -45,16 +55,15 @@ advisories:
           type: component-vulnerability-mismatch
           note: This is a packaging defect specific to the php-fpm package included in RHEL.  The Wolfi php-fpm package does not include this defect.
 
-  - id: CGA-ph22-3f7q-6gg3
+  - id: CGA-hjj9-68qc-mm2p
     aliases:
-      - CVE-2017-6485
-      - GHSA-76rq-rhfj-3qrf
+      - CVE-2007-4596
+      - GHSA-85qm-c7q8-mxvh
     events:
       - timestamp: 2023-09-07T22:18:51Z
         type: false-positive-determination
         data:
-          type: component-vulnerability-mismatch
-          note: This CVE targets a PHP-based web application called "PHP Calendar," and is unrelated to the PHP calendar extension.
+          type: vulnerability-record-analysis-contested
 
   - id: CGA-j899-x8fm-w43p
     aliases:
@@ -67,13 +76,13 @@ advisories:
           type: component-vulnerability-mismatch
           note: This CVE targets a PHP-based web application called "PHP Calendar," and is unrelated to the PHP calendar extension.
 
-  - id: CGA-9qjv-ggm9-22h2
+  - id: CGA-ph22-3f7q-6gg3
     aliases:
-      - CVE-2022-4900
-      - GHSA-95cc-jq89-8hvw
+      - CVE-2017-6485
+      - GHSA-76rq-rhfj-3qrf
     events:
-      - timestamp: 2023-11-12T05:18:10Z
+      - timestamp: 2023-09-07T22:18:51Z
         type: false-positive-determination
         data:
-          type: vulnerable-code-version-not-used
-          note: 'This vulnerability was fixed in PHP 8.0.22 in this commit: https://github.com/php/php-src/commit/789a37f14405e2d1a05a76c9fb4ed2d49d4580d5. Wolfi never had an affected version of PHP (earliest is 8.1.23)'
+          type: component-vulnerability-mismatch
+          note: This CVE targets a PHP-based web application called "PHP Calendar," and is unrelated to the PHP calendar extension.
