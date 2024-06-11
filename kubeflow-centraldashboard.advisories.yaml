@@ -4,6 +4,66 @@ package:
   name: kubeflow-centraldashboard
 
 advisories:
+  - id: CGA-3vxq-pj3w-xvh2
+    aliases:
+      - CVE-2024-37168
+      - GHSA-7v5v-9h63-cj86
+    events:
+      - timestamp: 2024-06-11T08:19:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-centraldashboard
+            componentID: abacfb247366792e
+            componentName: '@grpc/grpc-js'
+            componentVersion: 1.4.4
+            componentType: npm
+            componentLocation: /app/node_modules/@grpc/grpc-js/package.json
+            scanner: grype
+
+  - id: CGA-5389-98xc-vr78
+    aliases:
+      - CVE-2024-29041
+      - GHSA-rv95-896h-c2vc
+    events:
+      - timestamp: 2024-03-31T15:55:23Z
+        type: fixed
+        data:
+          fixed-version: 1.8.0-r3
+
+  - id: CGA-896m-v6ff-2q96
+    aliases:
+      - CVE-2024-28849
+      - GHSA-cxjh-pqwp-8mfp
+    events:
+      - timestamp: 2024-03-15T07:46:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-centraldashboard
+            componentID: 1ffd80573f2f3da8
+            componentName: follow-redirects
+            componentVersion: 1.15.4
+            componentType: npm
+            componentLocation: /app/node_modules/follow-redirects/package.json
+            scanner: grype
+      - timestamp: 2024-04-05T17:29:54Z
+        type: fixed
+        data:
+          fixed-version: 1.8.0-r3
+
+  - id: CGA-ffmp-gwcg-grr7
+    aliases:
+      - GHSA-2jcg-qqmg-46q6
+    events:
+      - timestamp: 2023-12-02T07:16:06Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This is test code that is never used in production. To get more detail about the false-positive determination, please check https://github.com/browserify/resolve/issues/288
+
   - id: CGA-h52f-rm4v-7p8p
     aliases:
       - CVE-2019-10790
@@ -33,45 +93,3 @@ advisories:
         type: pending-upstream-fix
         data:
           note: cannot fix the CVE because there were no patched versions since the 'request' package is no longer supported by the maintainer.
-
-  - id: CGA-896m-v6ff-2q96
-    aliases:
-      - CVE-2024-28849
-      - GHSA-cxjh-pqwp-8mfp
-    events:
-      - timestamp: 2024-03-15T07:46:21Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubeflow-centraldashboard
-            componentID: 1ffd80573f2f3da8
-            componentName: follow-redirects
-            componentVersion: 1.15.4
-            componentType: npm
-            componentLocation: /app/node_modules/follow-redirects/package.json
-            scanner: grype
-      - timestamp: 2024-04-05T17:29:54Z
-        type: fixed
-        data:
-          fixed-version: 1.8.0-r3
-
-  - id: CGA-5389-98xc-vr78
-    aliases:
-      - CVE-2024-29041
-      - GHSA-rv95-896h-c2vc
-    events:
-      - timestamp: 2024-03-31T15:55:23Z
-        type: fixed
-        data:
-          fixed-version: 1.8.0-r3
-
-  - id: CGA-ffmp-gwcg-grr7
-    aliases:
-      - GHSA-2jcg-qqmg-46q6
-    events:
-      - timestamp: 2023-12-02T07:16:06Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: This is test code that is never used in production. To get more detail about the false-positive determination, please check https://github.com/browserify/resolve/issues/288
