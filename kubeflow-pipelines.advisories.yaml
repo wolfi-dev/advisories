@@ -444,6 +444,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Go vulndb has marked this code NOT_IMPORTABLE.
 
+  - id: CGA-pgjg-vpg5-5fq3
+    aliases:
+      - CVE-2024-4068
+      - GHSA-grv7-fg5c-xmjg
+    events:
+      - timestamp: 2024-06-11T07:35:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines
+            componentID: 877fba7341544462
+            componentName: braces
+            componentVersion: 2.3.2
+            componentType: npm
+            componentLocation: /server/node_modules/braces/package.json
+            scanner: grype
+
   - id: CGA-q88w-r3vj-4qw4
     aliases:
       - CVE-2023-3676
