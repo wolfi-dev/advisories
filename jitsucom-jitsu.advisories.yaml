@@ -27,6 +27,24 @@ advisories:
           note: |
             A Regular Expression Denial of Service (ReDoS) flaw was found in kangax html-minifier 4.0.0 via the candidate variable in htmlminifier.js. The ReDoS vulnerability can be mitigated with several best practices described here: [https://snyk.io/blog/redos-and-catastrophic-backtracking/]. The issue is still open and has not been fixed yet: 'https://github.com/kangax/html-minifier/issues/1135'
 
+  - id: CGA-w377-c6cx-3vgh
+    aliases:
+      - CVE-2024-37168
+      - GHSA-7v5v-9h63-cj86
+    events:
+      - timestamp: 2024-06-11T08:44:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jitsucom-jitsu
+            componentID: cea0685ae4e90ae4
+            componentName: '@grpc/grpc-js'
+            componentVersion: 1.8.13
+            componentType: npm
+            componentLocation: /app/node_modules/.pnpm/@grpc+grpc-js@1.8.13/node_modules/@grpc/grpc-js/package.json
+            scanner: grype
+
   - id: CGA-wpm2-67f8-c286
     aliases:
       - CVE-2024-34351
