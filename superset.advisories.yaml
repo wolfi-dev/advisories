@@ -4,6 +4,28 @@ package:
   name: superset
 
 advisories:
+  - id: CGA-77h5-pgh2-r2fg
+    aliases:
+      - CVE-2024-35195
+      - GHSA-9wx4-h78v-vm56
+    events:
+      - timestamp: 2024-05-22T08:21:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: superset
+            componentID: 01326d7c7cddcad4
+            componentName: requests
+            componentVersion: 2.31.0
+            componentType: python
+            componentLocation: /usr/share/superset/venv/lib/python3.11/site-packages/requests-2.31.0.dist-info/METADATA, /usr/share/superset/venv/lib/python3.11/site-packages/requests-2.31.0.dist-info/RECORD, /usr/share/superset/venv/lib/python3.11/site-packages/requests-2.31.0.dist-info/top_level.txt
+            scanner: grype
+      - timestamp: 2024-06-11T15:00:38Z
+        type: fixed
+        data:
+          fixed-version: 4.0.1-r1
+
   - id: CGA-8hp4-mxq9-cfjp
     aliases:
       - CVE-2024-34064
@@ -47,21 +69,3 @@ advisories:
         type: fixed
         data:
           fixed-version: 4.0.1-r0
-
-  - id: CGA-77h5-pgh2-r2fg
-    aliases:
-      - CVE-2024-35195
-      - GHSA-9wx4-h78v-vm56
-    events:
-      - timestamp: 2024-05-22T08:21:32Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: superset
-            componentID: 01326d7c7cddcad4
-            componentName: requests
-            componentVersion: 2.31.0
-            componentType: python
-            componentLocation: /usr/share/superset/venv/lib/python3.11/site-packages/requests-2.31.0.dist-info/METADATA, /usr/share/superset/venv/lib/python3.11/site-packages/requests-2.31.0.dist-info/RECORD, /usr/share/superset/venv/lib/python3.11/site-packages/requests-2.31.0.dist-info/top_level.txt
-            scanner: grype
