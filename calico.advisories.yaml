@@ -4,17 +4,6 @@ package:
   name: calico
 
 advisories:
-  - id: CGA-xpgv-5933-6hp8
-    aliases:
-      - CVE-2019-11255
-      - GHSA-f4w6-3rh6-6q4q
-    events:
-      - timestamp: 2023-08-11T21:07:34Z
-        type: false-positive-determination
-        data:
-          type: component-vulnerability-mismatch
-          note: Vulnerable code is part of external-csi-driver and not included in calico
-
   - id: CGA-2cvj-f2mr-fc7r
     aliases:
       - CVE-2020-13597
@@ -38,39 +27,25 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This vulnerbility affects versions 3.14.0 and below, but the installed commit corresponds to version 3.28.0.
 
-  - id: CGA-8wx7-fm9g-94xf
+  - id: CGA-35qx-c4ph-xfm9
     aliases:
-      - CVE-2020-8552
-      - GHSA-82hx-w2r5-c2wq
+      - CVE-2023-5528
+      - GHSA-hq6q-c2x6-hmch
     events:
-      - timestamp: 2023-09-19T16:40:39Z
-        type: false-positive-determination
+      - timestamp: 2023-11-22T09:29:22Z
+        type: fixed
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Go vulndb has marked this code NOT_IMPORTABLE.
+          fixed-version: 3.26.4-r1
 
-  - id: CGA-9g26-x9q7-w8vh
+  - id: CGA-3mf3-62wc-gr85
     aliases:
-      - CVE-2022-28224
-      - GHSA-9394-xfq9-6qrp
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
     events:
-      - timestamp: 2024-04-26T07:10:23Z
-        type: detection
+      - timestamp: 2023-12-19T10:31:08Z
+        type: fixed
         data:
-          type: scan/v1
-          data:
-            subpackageName: calico
-            componentID: 5ad83767079d8c0a
-            componentName: github.com/projectcalico/calico
-            componentVersion: v0.0.0-20240401174130-638464f94665
-            componentType: go-module
-            componentLocation: /usr/bin/calico-filecheck
-            scanner: grype
-      - timestamp: 2024-05-06T00:09:48Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-version-not-used
-          note: 'This vulnerability was matched to the module "github.com/projectcalico/calico" at the following location(s): /usr/bin/calicoctl. In all cases, the installed version of the module (git commit 638464f946657417dd4900724112eb844ce5be03) corresponds to a version tag (v3.27.3) that is later than the fixed version (3.20.5).'
+          fixed-version: 3.27.0-r0
 
   - id: CGA-5hp6-8xch-g7p7
     aliases:
@@ -81,81 +56,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.26.1-r5
-
-  - id: CGA-8cf4-mmm4-2rr5
-    aliases:
-      - CVE-2023-32731
-      - GHSA-cfgp-2977-2fmm
-    events:
-      - timestamp: 2023-07-06T19:08:10Z
-        type: fixed
-        data:
-          fixed-version: 3.26.1-r5
-
-  - id: CGA-p4rc-vvrv-gcqw
-    aliases:
-      - CVE-2023-3955
-      - GHSA-q78c-gwqw-jcmc
-    events:
-      - timestamp: 2023-11-02T14:08:02Z
-        type: fixed
-        data:
-          fixed-version: 3.26.3-r5
-
-  - id: CGA-w36x-cq9x-2c3j
-    aliases:
-      - CVE-2023-41378
-      - GHSA-5r5h-q934-cccp
-    events:
-      - timestamp: 2024-04-26T07:10:21Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: calico
-            componentID: 0c887b83763f5ef6
-            componentName: github.com/projectcalico/calico
-            componentVersion: v0.0.0-20240401174130-638464f94665
-            componentType: go-module
-            componentLocation: /usr/bin/calico-apiserver
-            scanner: grype
-      - timestamp: 2024-05-06T00:09:48Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-version-not-used
-          note: 'This vulnerability was matched to the module "github.com/projectcalico/calico" at the following location(s): /usr/bin/calicoctl. In all cases, the installed version of the module (git commit 638464f946657417dd4900724112eb844ce5be03) corresponds to a version tag (v3.27.3) that is later than the fixed version (3.26.3).'
-
-  - id: CGA-h3hf-wvxm-w8fq
-    aliases:
-      - CVE-2023-44487
-      - GHSA-m425-mq94-257g
-      - GHSA-qppj-fm5r-hxr3
-    events:
-      - timestamp: 2023-10-30T10:57:46Z
-        type: fixed
-        data:
-          fixed-version: 3.26.3-r4
-
-  - id: CGA-6gv6-6q3m-628r
-    aliases:
-      - CVE-2023-45142
-      - GHSA-rcjv-mgp8-qvmr
-    events:
-      - timestamp: 2023-10-30T12:36:29Z
-        type: fixed
-        data:
-          fixed-version: 3.26.3-r4
-
-  - id: CGA-q488-wj55-wx4j
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:23:51Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
 
   - id: CGA-5rx5-w72p-44h8
     aliases:
@@ -168,27 +68,15 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
-  - id: CGA-9c58-fhmc-cvq5
+  - id: CGA-6gv6-6q3m-628r
     aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
+      - CVE-2023-45142
+      - GHSA-rcjv-mgp8-qvmr
     events:
-      - timestamp: 2024-04-20T12:15:40Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: calico-felix
-            componentID: 79f1ea4bfeb6abea
-            componentName: golang.org/x/net
-            componentVersion: v0.19.0
-            componentType: go-module
-            componentLocation: /usr/bin/iptables-locker
-            scanner: grype
-      - timestamp: 2024-04-20T14:44:36Z
+      - timestamp: 2023-10-30T12:36:29Z
         type: fixed
         data:
-          fixed-version: 3.27.3-r1
+          fixed-version: 3.26.3-r4
 
   - id: CGA-84hf-mcg7-797m
     aliases:
@@ -196,66 +84,6 @@ advisories:
       - GHSA-32ch-6x54-q4h9
     events:
       - timestamp: 2024-03-12T07:10:13Z
-        type: fixed
-        data:
-          fixed-version: 3.27.2-r2
-
-  - id: CGA-pr9r-wvpf-hqjp
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-12T07:10:16Z
-        type: fixed
-        data:
-          fixed-version: 3.27.2-r2
-
-  - id: CGA-3mf3-62wc-gr85
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2023-12-19T10:31:08Z
-        type: fixed
-        data:
-          fixed-version: 3.27.0-r0
-
-  - id: CGA-35qx-c4ph-xfm9
-    aliases:
-      - CVE-2023-5528
-      - GHSA-hq6q-c2x6-hmch
-    events:
-      - timestamp: 2023-11-22T09:29:22Z
-        type: fixed
-        data:
-          fixed-version: 3.26.4-r1
-
-  - id: CGA-fpwp-859h-r7h7
-    aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
-    events:
-      - timestamp: 2024-03-12T07:10:17Z
-        type: fixed
-        data:
-          fixed-version: 3.27.2-r2
-
-  - id: CGA-p3r2-w7pg-893h
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-12T07:10:14Z
-        type: fixed
-        data:
-          fixed-version: 3.27.2-r2
-
-  - id: CGA-fxrq-3q78-hxqf
-    aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
-    events:
-      - timestamp: 2024-03-12T07:10:19Z
         type: fixed
         data:
           fixed-version: 3.27.2-r2
@@ -282,6 +110,144 @@ advisories:
         data:
           fixed-version: 3.27.2-r3
 
+  - id: CGA-8cf4-mmm4-2rr5
+    aliases:
+      - CVE-2023-32731
+      - GHSA-cfgp-2977-2fmm
+    events:
+      - timestamp: 2023-07-06T19:08:10Z
+        type: fixed
+        data:
+          fixed-version: 3.26.1-r5
+
+  - id: CGA-8wx7-fm9g-94xf
+    aliases:
+      - CVE-2020-8552
+      - GHSA-82hx-w2r5-c2wq
+    events:
+      - timestamp: 2023-09-19T16:40:39Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Go vulndb has marked this code NOT_IMPORTABLE.
+
+  - id: CGA-9c58-fhmc-cvq5
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-20T12:15:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: calico-felix
+            componentID: 79f1ea4bfeb6abea
+            componentName: golang.org/x/net
+            componentVersion: v0.19.0
+            componentType: go-module
+            componentLocation: /usr/bin/iptables-locker
+            scanner: grype
+      - timestamp: 2024-04-20T14:44:36Z
+        type: fixed
+        data:
+          fixed-version: 3.27.3-r1
+
+  - id: CGA-9g26-x9q7-w8vh
+    aliases:
+      - CVE-2022-28224
+      - GHSA-9394-xfq9-6qrp
+    events:
+      - timestamp: 2024-04-26T07:10:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: calico
+            componentID: 5ad83767079d8c0a
+            componentName: github.com/projectcalico/calico
+            componentVersion: v0.0.0-20240401174130-638464f94665
+            componentType: go-module
+            componentLocation: /usr/bin/calico-filecheck
+            scanner: grype
+      - timestamp: 2024-05-06T00:09:48Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: 'This vulnerability was matched to the module "github.com/projectcalico/calico" at the following location(s): /usr/bin/calicoctl. In all cases, the installed version of the module (git commit 638464f946657417dd4900724112eb844ce5be03) corresponds to a version tag (v3.27.3) that is later than the fixed version (3.20.5).'
+
+  - id: CGA-fpwp-859h-r7h7
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T07:10:17Z
+        type: fixed
+        data:
+          fixed-version: 3.27.2-r2
+
+  - id: CGA-fxrq-3q78-hxqf
+    aliases:
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T07:10:19Z
+        type: fixed
+        data:
+          fixed-version: 3.27.2-r2
+
+  - id: CGA-h3hf-wvxm-w8fq
+    aliases:
+      - CVE-2023-44487
+      - GHSA-m425-mq94-257g
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2023-10-30T10:57:46Z
+        type: fixed
+        data:
+          fixed-version: 3.26.3-r4
+
+  - id: CGA-p3r2-w7pg-893h
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T07:10:14Z
+        type: fixed
+        data:
+          fixed-version: 3.27.2-r2
+
+  - id: CGA-p4rc-vvrv-gcqw
+    aliases:
+      - CVE-2023-3955
+      - GHSA-q78c-gwqw-jcmc
+    events:
+      - timestamp: 2023-11-02T14:08:02Z
+        type: fixed
+        data:
+          fixed-version: 3.26.3-r5
+
+  - id: CGA-pr9r-wvpf-hqjp
+    aliases:
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T07:10:16Z
+        type: fixed
+        data:
+          fixed-version: 3.27.2-r2
+
+  - id: CGA-q488-wj55-wx4j
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:23:51Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
   - id: CGA-v7vw-h5w2-c4qw
     aliases:
       - CVE-2024-3177
@@ -303,3 +269,55 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.28.0-r0
+
+  - id: CGA-vw5m-65r5-hgf5
+    aliases:
+      - CVE-2024-33522
+      - GHSA-6362-gv4m-53ww
+    events:
+      - timestamp: 2024-06-11T08:09:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: calico
+            componentID: 0a9fb93e8e3d86bc
+            componentName: github.com/projectcalico/calico
+            componentVersion: v0.0.0-20240510230432-413e6f5593a8
+            componentType: go-module
+            componentLocation: /usr/bin/calico-apiserver
+            scanner: grype
+
+  - id: CGA-w36x-cq9x-2c3j
+    aliases:
+      - CVE-2023-41378
+      - GHSA-5r5h-q934-cccp
+    events:
+      - timestamp: 2024-04-26T07:10:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: calico
+            componentID: 0c887b83763f5ef6
+            componentName: github.com/projectcalico/calico
+            componentVersion: v0.0.0-20240401174130-638464f94665
+            componentType: go-module
+            componentLocation: /usr/bin/calico-apiserver
+            scanner: grype
+      - timestamp: 2024-05-06T00:09:48Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: 'This vulnerability was matched to the module "github.com/projectcalico/calico" at the following location(s): /usr/bin/calicoctl. In all cases, the installed version of the module (git commit 638464f946657417dd4900724112eb844ce5be03) corresponds to a version tag (v3.27.3) that is later than the fixed version (3.26.3).'
+
+  - id: CGA-xpgv-5933-6hp8
+    aliases:
+      - CVE-2019-11255
+      - GHSA-f4w6-3rh6-6q4q
+    events:
+      - timestamp: 2023-08-11T21:07:34Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: Vulnerable code is part of external-csi-driver and not included in calico
