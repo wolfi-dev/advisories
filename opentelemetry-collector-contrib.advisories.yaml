@@ -29,8 +29,8 @@ advisories:
   - id: CGA-7rcg-w446-w55r
     aliases:
       - CVE-2024-3154
-      - GHSA-c5pj-mqfh-rvc3
       - GHSA-2cgq-h8xw-2v5j
+      - GHSA-c5pj-mqfh-rvc3
     events:
       - timestamp: 2024-04-27T10:28:06Z
         type: detection
@@ -59,6 +59,23 @@ advisories:
             componentID: 08ae5fe8ee7e5f21
             componentName: k8s.io/apimachinery
             componentVersion: v0.29.3
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol-contrib
+            scanner: grype
+
+  - id: CGA-jj45-rqfh-mhq4
+    aliases:
+      - GHSA-87m9-rv8p-rgmg
+    events:
+      - timestamp: 2024-06-11T08:02:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opentelemetry-collector-contrib
+            componentID: 4cc760fc959ff1b1
+            componentName: github.com/mostynb/go-grpc-compression
+            componentVersion: v1.2.2
             componentType: go-module
             componentLocation: /usr/bin/otelcol-contrib
             scanner: grype
