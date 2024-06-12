@@ -4,16 +4,15 @@ package:
   name: pulumi
 
 advisories:
-  - id: CGA-4f97-m8hr-66cr
+  - id: CGA-2wpm-6m9q-2jmx
     aliases:
-      - CVE-2018-20225
-      - GHSA-7p5p-7qq5-cc86
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
     events:
-      - timestamp: 2023-07-27T23:10:39Z
-        type: false-positive-determination
+      - timestamp: 2024-03-12T09:15:13Z
+        type: fixed
         data:
-          type: vulnerability-record-analysis-contested
-          note: This vulnerability is disputed, and the consensus in the security community is that this is intended behavior, not a security flaw.
+          fixed-version: 3.103.1-r3
 
   - id: CGA-36gr-625g-pfwp
     aliases:
@@ -24,103 +23,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.88.1-r1
-
-  - id: CGA-gfpw-jf87-66m3
-    aliases:
-      - CVE-2023-3978
-      - GHSA-2wrh-6pvc-2jm9
-    events:
-      - timestamp: 2023-10-15T16:56:27Z
-        type: fixed
-        data:
-          fixed-version: 3.88.1-r1
-
-  - id: CGA-w6jr-m8cm-cm2q
-    aliases:
-      - CVE-2023-44487
-      - GHSA-m425-mq94-257g
-      - GHSA-qppj-fm5r-hxr3
-    events:
-      - timestamp: 2023-10-15T16:56:27Z
-        type: fixed
-        data:
-          fixed-version: 3.88.1-r1
-      - timestamp: 2023-10-31T08:32:34Z
-        type: fixed
-        data:
-          fixed-version: 3.91.1-r1
-
-  - id: CGA-g7mw-p7wj-f8gc
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:36:52Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-mq33-2wmx-rmjp
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:36:54Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-mjwq-f94x-wpxq
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-13T07:17:46Z
-        type: fixed
-        data:
-          fixed-version: 3.112.0-r1
-
-  - id: CGA-g4q7-w9f8-8rf5
-    aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
-    events:
-      - timestamp: 2024-03-12T09:15:11Z
-        type: fixed
-        data:
-          fixed-version: 3.103.1-r3
-
-  - id: CGA-g32r-wjc4-cjp2
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-12T09:15:12Z
-        type: fixed
-        data:
-          fixed-version: 3.103.1-r3
-
-  - id: CGA-6crg-mmpj-g522
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2023-12-21T12:27:47Z
-        type: fixed
-        data:
-          fixed-version: 3.99.0-r1
-
-  - id: CGA-8846-v282-jc4f
-    aliases:
-      - CVE-2023-49568
-      - GHSA-mw99-9chc-xw7r
-    events:
-      - timestamp: 2023-12-28T17:56:33Z
-        type: fixed
-        data:
-          fixed-version: 3.99.0-r2
 
   - id: CGA-3cxw-qp9h-mmm7
     aliases:
@@ -144,15 +46,57 @@ advisories:
         data:
           fixed-version: 3.103.1-r2
 
-  - id: CGA-2wpm-6m9q-2jmx
+  - id: CGA-4f97-m8hr-66cr
     aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
+      - CVE-2018-20225
+      - GHSA-7p5p-7qq5-cc86
     events:
-      - timestamp: 2024-03-12T09:15:13Z
+      - timestamp: 2023-07-27T23:10:39Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: This vulnerability is disputed, and the consensus in the security community is that this is intended behavior, not a security flaw.
+
+  - id: CGA-6crg-mmpj-g522
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2023-12-21T12:27:47Z
         type: fixed
         data:
-          fixed-version: 3.103.1-r3
+          fixed-version: 3.99.0-r1
+
+  - id: CGA-8846-v282-jc4f
+    aliases:
+      - CVE-2023-49568
+      - GHSA-mw99-9chc-xw7r
+    events:
+      - timestamp: 2023-12-28T17:56:33Z
+        type: fixed
+        data:
+          fixed-version: 3.99.0-r2
+
+  - id: CGA-c878-mf2j-gc32
+    aliases:
+      - GHSA-9763-4f94-gfch
+    events:
+      - timestamp: 2024-01-10T19:56:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pulumi-language-nodejs
+            componentID: 3b2e289c05324a04
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.3.3
+            componentType: go-module
+            componentLocation: /usr/bin/pulumi-language-nodejs
+            scanner: grype
+      - timestamp: 2024-01-18T14:29:51Z
+        type: fixed
+        data:
+          fixed-version: 3.101.1-r1
 
   - id: CGA-f7fq-2crx-6cxm
     aliases:
@@ -164,15 +108,46 @@ advisories:
         data:
           fixed-version: 3.103.1-r3
 
-  - id: CGA-vcgp-wvjm-m2vh
+  - id: CGA-g32r-wjc4-cjp2
     aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
     events:
-      - timestamp: 2024-03-12T09:15:16Z
+      - timestamp: 2024-03-12T09:15:12Z
         type: fixed
         data:
           fixed-version: 3.103.1-r3
+
+  - id: CGA-g4q7-w9f8-8rf5
+    aliases:
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T09:15:11Z
+        type: fixed
+        data:
+          fixed-version: 3.103.1-r3
+
+  - id: CGA-g7mw-p7wj-f8gc
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:36:52Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-gfpw-jf87-66m3
+    aliases:
+      - CVE-2023-3978
+      - GHSA-2wrh-6pvc-2jm9
+    events:
+      - timestamp: 2023-10-15T16:56:27Z
+        type: fixed
+        data:
+          fixed-version: 3.88.1-r1
 
   - id: CGA-gw3x-rwx3-hc2q
     aliases:
@@ -196,23 +171,66 @@ advisories:
         data:
           fixed-version: 3.110.0-r1
 
-  - id: CGA-c878-mf2j-gc32
+  - id: CGA-mjwq-f94x-wpxq
     aliases:
-      - GHSA-9763-4f94-gfch
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
     events:
-      - timestamp: 2024-01-10T19:56:14Z
+      - timestamp: 2024-04-13T07:17:46Z
+        type: fixed
+        data:
+          fixed-version: 3.112.0-r1
+
+  - id: CGA-mq33-2wmx-rmjp
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:36:54Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-vcgp-wvjm-m2vh
+    aliases:
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T09:15:16Z
+        type: fixed
+        data:
+          fixed-version: 3.103.1-r3
+
+  - id: CGA-w6jr-m8cm-cm2q
+    aliases:
+      - CVE-2023-44487
+      - GHSA-m425-mq94-257g
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2023-10-15T16:56:27Z
+        type: fixed
+        data:
+          fixed-version: 3.88.1-r1
+      - timestamp: 2023-10-31T08:32:34Z
+        type: fixed
+        data:
+          fixed-version: 3.91.1-r1
+
+  - id: CGA-xcg6-jg76-p7wq
+    aliases:
+      - CVE-2024-35255
+      - GHSA-m5vv-6r4h-3vj9
+    events:
+      - timestamp: 2024-06-12T09:38:18Z
         type: detection
         data:
           type: scan/v1
           data:
-            subpackageName: pulumi-language-nodejs
-            componentID: 3b2e289c05324a04
-            componentName: github.com/cloudflare/circl
-            componentVersion: v1.3.3
+            subpackageName: pulumi
+            componentID: f7f04e15b35ba004
+            componentName: github.com/Azure/azure-sdk-for-go/sdk/azidentity
+            componentVersion: v1.5.1
             componentType: go-module
-            componentLocation: /usr/bin/pulumi-language-nodejs
+            componentLocation: /usr/bin/pulumi
             scanner: grype
-      - timestamp: 2024-01-18T14:29:51Z
-        type: fixed
-        data:
-          fixed-version: 3.101.1-r1
