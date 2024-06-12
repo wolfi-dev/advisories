@@ -4,6 +4,24 @@ package:
   name: gitlab-runner
 
 advisories:
+  - id: CGA-3hgh-xw5g-q968
+    aliases:
+      - CVE-2024-35255
+      - GHSA-m5vv-6r4h-3vj9
+    events:
+      - timestamp: 2024-06-12T10:08:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner
+            componentID: 17a6408ba7e8c832
+            componentName: github.com/Azure/azure-sdk-for-go/sdk/azidentity
+            componentVersion: v1.3.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-runner
+            scanner: grype
+
   - id: CGA-3qfw-m6ff-cv2r
     aliases:
       - CVE-2024-24789
