@@ -4,6 +4,24 @@ package:
   name: grafana-agent-operator
 
 advisories:
+  - id: CGA-73qv-xhj6-j54c
+    aliases:
+      - CVE-2024-35255
+      - GHSA-m5vv-6r4h-3vj9
+    events:
+      - timestamp: 2024-06-12T07:37:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-agent-operator
+            componentID: 54361aed828f26b7
+            componentName: github.com/Azure/azure-sdk-for-go/sdk/azidentity
+            componentVersion: v1.4.0
+            componentType: go-module
+            componentLocation: /usr/bin/grafana-agent-operator
+            scanner: grype
+
   - id: CGA-8x4h-m585-6pxf
     aliases:
       - CVE-2024-24789
