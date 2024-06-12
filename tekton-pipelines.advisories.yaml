@@ -128,6 +128,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-fcv3-88m9-wp7j
+    aliases:
+      - CVE-2024-35255
+      - GHSA-m5vv-6r4h-3vj9
+    events:
+      - timestamp: 2024-06-12T07:09:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tekton-pipelines
+            componentID: 73dfaf1a73711fb5
+            componentName: github.com/Azure/azure-sdk-for-go/sdk/azidentity
+            componentVersion: v1.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/tekton-pipelines-controller
+            scanner: grype
+
   - id: CGA-fx7v-7f27-h9x2
     aliases:
       - CVE-2023-45288
