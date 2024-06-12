@@ -4,28 +4,55 @@ package:
   name: hugo
 
 advisories:
-  - id: CGA-xqvj-hq58-xgh8
+  - id: CGA-444p-x8p5-rch5
     aliases:
-      - CVE-2020-26284
-      - GHSA-8j34-9876-pvfq
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
     events:
-      - timestamp: 2024-04-26T10:24:03Z
+      - timestamp: 2023-11-07T19:29:21Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-4r3q-fgcw-49c7
+    aliases:
+      - CVE-2023-44487
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2023-10-16T18:11:37Z
+        type: fixed
+        data:
+          fixed-version: 0.119.0-r4
+
+  - id: CGA-7cm7-grm3-m43v
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:29:23Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-925c-qrgr-37xp
+    aliases:
+      - CVE-2024-35255
+      - GHSA-m5vv-6r4h-3vj9
+    events:
+      - timestamp: 2024-06-12T10:01:56Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: hugo
-            componentID: 74231451e8003eb8
-            componentName: github.com/gohugoio/hugo
-            componentVersion: v0.0.0-20240425132726-cc3574ef4f41
+            componentID: 8908c608e475d61b
+            componentName: github.com/Azure/azure-sdk-for-go/sdk/azidentity
+            componentVersion: v1.4.0
             componentType: go-module
             componentLocation: /usr/bin/hugo
             scanner: grype
-      - timestamp: 2024-05-05T15:18:07Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-version-not-used
-          note: 'This vulnerability was matched to the module "github.com/gohugoio/hugo" at the following location(s): /usr/bin/hugo. In all cases, the installed version of the module (git commit c8b9f9f81c375f5b391e61bae711ee63fc76c1fd) corresponds to a version tag (v0.125.5) that is later than the fixed version (0.79.1).'
 
   - id: CGA-h8g4-gjw5-phvq
     aliases:
@@ -46,38 +73,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.119.0-r4
-
-  - id: CGA-4r3q-fgcw-49c7
-    aliases:
-      - CVE-2023-44487
-      - GHSA-qppj-fm5r-hxr3
-    events:
-      - timestamp: 2023-10-16T18:11:37Z
-        type: fixed
-        data:
-          fixed-version: 0.119.0-r4
-
-  - id: CGA-444p-x8p5-rch5
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:29:21Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-7cm7-grm3-m43v
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:29:23Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
 
   - id: CGA-wgmx-93r6-w5cf
     aliases:
@@ -120,3 +115,26 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.124.0-r1
+
+  - id: CGA-xqvj-hq58-xgh8
+    aliases:
+      - CVE-2020-26284
+      - GHSA-8j34-9876-pvfq
+    events:
+      - timestamp: 2024-04-26T10:24:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: hugo
+            componentID: 74231451e8003eb8
+            componentName: github.com/gohugoio/hugo
+            componentVersion: v0.0.0-20240425132726-cc3574ef4f41
+            componentType: go-module
+            componentLocation: /usr/bin/hugo
+            scanner: grype
+      - timestamp: 2024-05-05T15:18:07Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: 'This vulnerability was matched to the module "github.com/gohugoio/hugo" at the following location(s): /usr/bin/hugo. In all cases, the installed version of the module (git commit c8b9f9f81c375f5b391e61bae711ee63fc76c1fd) corresponds to a version tag (v0.125.5) that is later than the fixed version (0.79.1).'
