@@ -4,6 +4,24 @@ package:
   name: policy-controller
 
 advisories:
+  - id: CGA-2q47-7rqc-rvpr
+    aliases:
+      - CVE-2024-35255
+      - GHSA-m5vv-6r4h-3vj9
+    events:
+      - timestamp: 2024-06-12T08:27:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: policy-controller
+            componentID: 1690195e2e9b35e9
+            componentName: github.com/Azure/azure-sdk-for-go/sdk/azidentity
+            componentVersion: v1.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/policy-controller
+            scanner: grype
+
   - id: CGA-38jf-rm6q-8p72
     aliases:
       - CVE-2024-24787
