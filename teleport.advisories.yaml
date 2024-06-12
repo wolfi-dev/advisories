@@ -4,6 +4,24 @@ package:
   name: teleport
 
 advisories:
+  - id: CGA-35qq-v4x7-g8hr
+    aliases:
+      - CVE-2024-35255
+      - GHSA-m5vv-6r4h-3vj9
+    events:
+      - timestamp: 2024-06-12T10:11:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: teleport
+            componentID: 70dac3f1714e42bf
+            componentName: github.com/Azure/azure-sdk-for-go/sdk/azidentity
+            componentVersion: v1.5.1
+            componentType: go-module
+            componentLocation: /usr/local/bin/teleport
+            scanner: grype
+
   - id: CGA-644c-2prj-2r2x
     aliases:
       - CVE-2024-24789
