@@ -243,6 +243,24 @@ advisories:
           type: vulnerable-code-not-in-execution-path
           note: Vulnerable code is part of the docker runtime and not being used in this package
 
+  - id: CGA-mpvw-q85f-chh9
+    aliases:
+      - CVE-2024-35255
+      - GHSA-m5vv-6r4h-3vj9
+    events:
+      - timestamp: 2024-06-12T09:25:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spire-server
+            componentID: dcd3f5cb4c2c7b2f
+            componentName: github.com/Azure/azure-sdk-for-go/sdk/azidentity
+            componentVersion: v1.5.2
+            componentType: go-module
+            componentLocation: /usr/bin/spire-server
+            scanner: grype
+
   - id: CGA-w383-9wx6-9qwj
     aliases:
       - GHSA-9763-4f94-gfch
