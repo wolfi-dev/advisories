@@ -14,6 +14,24 @@ advisories:
         data:
           fixed-version: 3.0.0-r2
 
+  - id: CGA-q643-mc95-9f4f
+    aliases:
+      - CVE-2024-35255
+      - GHSA-m5vv-6r4h-3vj9
+    events:
+      - timestamp: 2024-06-12T07:24:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: fluent-bit-plugin-loki
+            componentID: 48e9e313fff1d960
+            componentName: github.com/Azure/azure-sdk-for-go/sdk/azidentity
+            componentVersion: v1.5.1
+            componentType: go-module
+            componentLocation: /fluent-bit/bin/out_grafana_loki.so
+            scanner: grype
+
   - id: CGA-vxxj-g2f7-m9cx
     aliases:
       - CVE-2024-24789
