@@ -254,6 +254,24 @@ advisories:
         data:
           note: Pending upstream fix, this will require more upgrades in the code to support the cosign update. GitHub Issue https://github.com/fluxcd/source-controller/pull/1280
 
+  - id: CGA-rm3q-73jc-4q9m
+    aliases:
+      - CVE-2024-35255
+      - GHSA-m5vv-6r4h-3vj9
+    events:
+      - timestamp: 2024-06-12T07:38:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-source-controller
+            componentID: 98ff4c1baed2837a
+            componentName: github.com/Azure/azure-sdk-for-go/sdk/azidentity
+            componentVersion: v1.5.2
+            componentType: go-module
+            componentLocation: /usr/bin/source-controller
+            scanner: grype
+
   - id: CGA-v896-6482-8335
     aliases:
       - CVE-2024-28180
