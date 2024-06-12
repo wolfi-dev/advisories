@@ -157,6 +157,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'Module "github.com/fluxcd/kustomize-controller" at "/usr/bin/kustomize-controller": the commit of the fixed version (69a9e9d6bf4666eb02d2367210b29d0a66262580) is an ancestor of installed commit (7a5ae11e2da9c326350216f6783caa0a0214a322), which means the installed version was misidentified by the scanner and the vulnerability has actually been fixed.'
 
+  - id: CGA-v3cj-jgcv-jmhw
+    aliases:
+      - CVE-2024-35255
+      - GHSA-m5vv-6r4h-3vj9
+    events:
+      - timestamp: 2024-06-12T07:14:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-kustomize-controller
+            componentID: a12acde502bc13c4
+            componentName: github.com/Azure/azure-sdk-for-go/sdk/azidentity
+            componentVersion: v1.5.2
+            componentType: go-module
+            componentLocation: /usr/bin/kustomize-controller
+            scanner: grype
+
   - id: CGA-vv9v-crcc-cc3f
     aliases:
       - CVE-2024-24788
