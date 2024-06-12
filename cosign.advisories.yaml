@@ -222,6 +222,24 @@ advisories:
           type: component-vulnerability-mismatch
           note: The vulnerability is in an ancient CGI script of the same name
 
+  - id: CGA-wcmr-gjcv-ccpm
+    aliases:
+      - CVE-2024-35255
+      - GHSA-m5vv-6r4h-3vj9
+    events:
+      - timestamp: 2024-06-12T07:06:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cosign
+            componentID: ea8c8b2b5695d409
+            componentName: github.com/Azure/azure-sdk-for-go/sdk/azidentity
+            componentVersion: v1.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/cosign
+            scanner: grype
+
   - id: CGA-wvrc-wj8h-p9m6
     aliases:
       - CVE-2024-28180
