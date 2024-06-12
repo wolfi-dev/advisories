@@ -4,16 +4,33 @@ package:
   name: hugo-extended
 
 advisories:
-  - id: CGA-4r74-w9mc-9hvw
+  - id: CGA-2xfh-qmgq-vx5v
     aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
+      - CVE-2024-35255
+      - GHSA-m5vv-6r4h-3vj9
     events:
-      - timestamp: 2023-11-07T19:29:18Z
-        type: false-positive-determination
+      - timestamp: 2024-06-12T08:06:50Z
+        type: detection
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          type: scan/v1
+          data:
+            subpackageName: hugo-extended
+            componentID: 8908c608e475d61b
+            componentName: github.com/Azure/azure-sdk-for-go/sdk/azidentity
+            componentVersion: v1.4.0
+            componentType: go-module
+            componentLocation: /usr/bin/hugo
+            scanner: grype
+
+  - id: CGA-35ph-cgpf-8fgh
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-10T12:05:46Z
+        type: fixed
+        data:
+          fixed-version: 0.124.1-r1
 
   - id: CGA-3jg7-vj89-7c2j
     aliases:
@@ -26,15 +43,16 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
-  - id: CGA-35ph-cgpf-8fgh
+  - id: CGA-4r74-w9mc-9hvw
     aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
     events:
-      - timestamp: 2024-04-10T12:05:46Z
-        type: fixed
+      - timestamp: 2023-11-07T19:29:18Z
+        type: false-positive-determination
         data:
-          fixed-version: 0.124.1-r1
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
 
   - id: CGA-f8vw-c33f-jxxq
     aliases:
