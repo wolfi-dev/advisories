@@ -1299,6 +1299,24 @@ advisories:
         data:
           note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
 
+  - id: CGA-v5ww-c56j-4phc
+    aliases:
+      - CVE-2024-35255
+      - GHSA-m5vv-6r4h-3vj9
+    events:
+      - timestamp: 2024-06-12T07:28:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 3ee24ec264f71a5d
+            componentName: azure-identity
+            componentVersion: 1.11.2
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/nifi-current/lib/properties/azure-identity-1.11.2.jar
+            scanner: grype
+
   - id: CGA-vp49-2674-66w8
     aliases:
       - CVE-2016-1000027
