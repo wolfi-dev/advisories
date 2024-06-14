@@ -4,23 +4,16 @@ package:
   name: hubble
 
 advisories:
-  - id: CGA-vgc5-r8x4-pg84
+  - id: CGA-3p3f-64hf-fcrq
     aliases:
-      - CVE-2020-8559
-      - GHSA-33c5-9fx5-fvjm
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
     events:
-      - timestamp: 2024-04-25T13:05:01Z
-        type: detection
+      - timestamp: 2023-11-07T19:29:17Z
+        type: false-positive-determination
         data:
-          type: scan/v1
-          data:
-            subpackageName: hubble
-            componentID: 306dad84d6cc56bf
-            componentName: k8s.io/apimachinery
-            componentVersion: v0.29.2
-            componentType: go-module
-            componentLocation: /usr/bin/hubble
-            scanner: grype
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
 
   - id: CGA-c9xq-m8w8-cx44
     aliases:
@@ -28,17 +21,6 @@ advisories:
       - GHSA-vvjp-q62m-2vph
     events:
       - timestamp: 2023-11-07T19:29:16Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-3p3f-64hf-fcrq
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:29:17Z
         type: false-positive-determination
         data:
           type: vulnerable-code-not-included-in-package
@@ -66,15 +48,15 @@ advisories:
         data:
           fixed-version: 0.13.3-r1
 
-  - id: CGA-vfm4-x947-3432
+  - id: CGA-j3gx-5mpp-xgw7
     aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
+      - CVE-2024-25631
+      - GHSA-x989-52fc-4vr4
     events:
-      - timestamp: 2024-03-16T11:02:09Z
+      - timestamp: 2024-02-21T07:20:53Z
         type: fixed
         data:
-          fixed-version: 0.13.2-r1
+          fixed-version: 0.13.0-r0
 
   - id: CGA-m5mc-v5jj-fq26
     aliases:
@@ -86,12 +68,48 @@ advisories:
         data:
           fixed-version: 0.13.0-r0
 
-  - id: CGA-j3gx-5mpp-xgw7
+  - id: CGA-p8cv-xfxg-fg8f
     aliases:
-      - CVE-2024-25631
-      - GHSA-x989-52fc-4vr4
+      - CVE-2024-37307
+      - GHSA-wh78-7948-358j
     events:
-      - timestamp: 2024-02-21T07:20:53Z
+      - timestamp: 2024-06-14T08:33:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: hubble
+            componentID: 99ad3020ee39cab0
+            componentName: github.com/cilium/cilium
+            componentVersion: v1.15.4
+            componentType: go-module
+            componentLocation: /usr/bin/hubble
+            scanner: grype
+
+  - id: CGA-vfm4-x947-3432
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-16T11:02:09Z
         type: fixed
         data:
-          fixed-version: 0.13.0-r0
+          fixed-version: 0.13.2-r1
+
+  - id: CGA-vgc5-r8x4-pg84
+    aliases:
+      - CVE-2020-8559
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T13:05:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: hubble
+            componentID: 306dad84d6cc56bf
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.29.2
+            componentType: go-module
+            componentLocation: /usr/bin/hubble
+            scanner: grype
