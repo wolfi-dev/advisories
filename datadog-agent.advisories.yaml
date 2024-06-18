@@ -55,6 +55,24 @@ advisories:
         data:
           note: The tuf non-vulnerable version is not available among the list of hosted datadog dependencies. Datadog needs to upgrade the available tuf dependency to use the non-vulnerable version.
 
+  - id: CGA-688x-4mm6-g5vm
+    aliases:
+      - CVE-2024-37891
+      - GHSA-34jh-p97f-mpxf
+    events:
+      - timestamp: 2024-06-18T07:27:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: datadog-agent
+            componentID: f92d18b33cfdcc1b
+            componentName: urllib3
+            componentVersion: 1.26.18
+            componentType: python
+            componentLocation: /usr/share/datadog-agent/lib/python3.11/site-packages/urllib3-1.26.18.dist-info/METADATA, /usr/share/datadog-agent/lib/python3.11/site-packages/urllib3-1.26.18.dist-info/RECORD, /usr/share/datadog-agent/lib/python3.11/site-packages/urllib3-1.26.18.dist-info/direct_url.json, /usr/share/datadog-agent/lib/python3.11/site-packages/urllib3-1.26.18.dist-info/top_level.txt
+            scanner: grype
+
   - id: CGA-6p96-qff9-wmqm
     aliases:
       - CVE-2024-0406
