@@ -104,6 +104,24 @@ advisories:
         data:
           note: 'The application runs into segmentation faults when attempting to upgrade Jinja2 to version 3.1.3 '
 
+  - id: CGA-79f4-wh3m-fmm4
+    aliases:
+      - CVE-2024-5206
+      - GHSA-jw8x-6495-233v
+    events:
+      - timestamp: 2024-06-18T08:25:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-visualization-server
+            componentID: d74d5edf2f287aca
+            componentName: scikit-learn
+            componentVersion: 1.1.0
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/scikit_learn-1.1.0.dist-info/METADATA, /usr/lib/python3.10/site-packages/scikit_learn-1.1.0.dist-info/RECORD, /usr/lib/python3.10/site-packages/scikit_learn-1.1.0.dist-info/top_level.txt
+            scanner: grype
+
   - id: CGA-84xp-hmch-gmjw
     aliases:
       - CVE-2024-35178
@@ -209,6 +227,24 @@ advisories:
         type: pending-upstream-fix
         data:
           note: 'Bumping the dependency to 2.2.3 is not possible, the application fails with the error: ImportError: cannot import name ''soft_unicode'' from ''markupsafe'''
+
+  - id: CGA-cx62-9vw2-mmpq
+    aliases:
+      - CVE-2024-37891
+      - GHSA-34jh-p97f-mpxf
+    events:
+      - timestamp: 2024-06-18T08:25:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-visualization-server
+            componentID: d1bba2f117f75987
+            componentName: urllib3
+            componentVersion: 2.2.1
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/urllib3-2.2.1.dist-info/METADATA, /usr/lib/python3.10/site-packages/urllib3-2.2.1.dist-info/RECORD
+            scanner: grype
 
   - id: CGA-g5xx-83xq-8g5j
     aliases:
