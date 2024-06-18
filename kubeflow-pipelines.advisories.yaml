@@ -532,6 +532,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability affects the Kubernetes application, not the golang k8s.io/kubernetes library. Kubernetes clusters are only affected if they are using an in-tree storage plugin for Windows nodes.
 
+  - id: CGA-r6qh-9mxv-rrj2
+    aliases:
+      - CVE-2024-37890
+      - GHSA-3h5v-q93c-6h6q
+    events:
+      - timestamp: 2024-06-18T07:26:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines
+            componentID: 125866acce85289d
+            componentName: ws
+            componentVersion: 6.2.2
+            componentType: npm
+            componentLocation: /server/node_modules/ws/package.json
+            scanner: grype
+
   - id: CGA-r834-rj47-cfj9
     aliases:
       - CVE-2024-28849
@@ -611,6 +629,24 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Vulnerable code is part of a kubeflow-pipelines and code was marked NOT_IMPORTABLE in Golang vulndb
+
+  - id: CGA-w3h9-h7jv-6q22
+    aliases:
+      - CVE-2024-37891
+      - GHSA-34jh-p97f-mpxf
+    events:
+      - timestamp: 2024-06-18T07:25:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines
+            componentID: 49cc740170115c5f
+            componentName: urllib3
+            componentVersion: 1.26.18
+            componentType: python
+            componentLocation: /usr/lib/python3.12/site-packages/urllib3-1.26.18.dist-info/METADATA, /usr/lib/python3.12/site-packages/urllib3-1.26.18.dist-info/RECORD, /usr/lib/python3.12/site-packages/urllib3-1.26.18.dist-info/top_level.txt
+            scanner: grype
 
   - id: CGA-w892-3j99-vg54
     aliases:
