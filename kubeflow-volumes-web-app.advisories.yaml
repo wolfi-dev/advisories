@@ -4,26 +4,6 @@ package:
   name: kubeflow-volumes-web-app
 
 advisories:
-  - id: CGA-68qr-436c-3j3g
-    aliases:
-      - CVE-2023-41419
-      - GHSA-x7m3-jprg-wc5g
-    events:
-      - timestamp: 2023-09-26T17:50:08Z
-        type: fixed
-        data:
-          fixed-version: 1.7.0-r5
-
-  - id: CGA-56g7-689g-xp6r
-    aliases:
-      - CVE-2023-43804
-      - GHSA-v845-jxx5-vc9f
-    events:
-      - timestamp: 2023-10-04T21:17:24Z
-        type: fixed
-        data:
-          fixed-version: 1.7.0-r6
-
   - id: CGA-2mh2-vjwv-24h5
     aliases:
       - CVE-2023-45803
@@ -66,6 +46,44 @@ advisories:
         data:
           fixed-version: 1.8.0-r6
 
+  - id: CGA-56g7-689g-xp6r
+    aliases:
+      - CVE-2023-43804
+      - GHSA-v845-jxx5-vc9f
+    events:
+      - timestamp: 2023-10-04T21:17:24Z
+        type: fixed
+        data:
+          fixed-version: 1.7.0-r6
+
+  - id: CGA-68qr-436c-3j3g
+    aliases:
+      - CVE-2023-41419
+      - GHSA-x7m3-jprg-wc5g
+    events:
+      - timestamp: 2023-09-26T17:50:08Z
+        type: fixed
+        data:
+          fixed-version: 1.7.0-r5
+
+  - id: CGA-69g4-mv22-46cq
+    aliases:
+      - CVE-2024-37891
+      - GHSA-34jh-p97f-mpxf
+    events:
+      - timestamp: 2024-06-18T07:16:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-volumes-web-app
+            componentID: 0129e6462fea6094
+            componentName: urllib3
+            componentVersion: 2.2.1
+            componentType: python
+            componentLocation: /usr/lib/python3.12/site-packages/urllib3-2.2.1.dist-info/METADATA, /usr/lib/python3.12/site-packages/urllib3-2.2.1.dist-info/RECORD
+            scanner: grype
+
   - id: CGA-ph4r-hmw2-vp9r
     aliases:
       - CVE-2024-34064
@@ -84,6 +102,28 @@ advisories:
             componentLocation: /usr/lib/python3.12/site-packages/Jinja2-3.1.3.dist-info/METADATA, /usr/lib/python3.12/site-packages/Jinja2-3.1.3.dist-info/RECORD, /usr/lib/python3.12/site-packages/Jinja2-3.1.3.dist-info/top_level.txt
             scanner: grype
       - timestamp: 2024-05-22T00:00:34Z
+        type: fixed
+        data:
+          fixed-version: 1.8.0-r6
+
+  - id: CGA-v584-967x-qgpm
+    aliases:
+      - CVE-2024-3651
+      - GHSA-jjg7-2v4v-x38h
+    events:
+      - timestamp: 2024-04-14T07:37:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-volumes-web-app
+            componentID: b4475ae039563c27
+            componentName: idna
+            componentVersion: "3.6"
+            componentType: python
+            componentLocation: /usr/lib/python3.12/site-packages/idna-3.6.dist-info/METADATA, /usr/lib/python3.12/site-packages/idna-3.6.dist-info/RECORD
+            scanner: grype
+      - timestamp: 2024-05-22T00:00:35Z
         type: fixed
         data:
           fixed-version: 1.8.0-r6
@@ -116,28 +156,6 @@ advisories:
       - GHSA-9wx4-h78v-vm56
     events:
       - timestamp: 2024-05-23T08:29:48Z
-        type: fixed
-        data:
-          fixed-version: 1.8.0-r6
-
-  - id: CGA-v584-967x-qgpm
-    aliases:
-      - CVE-2024-3651
-      - GHSA-jjg7-2v4v-x38h
-    events:
-      - timestamp: 2024-04-14T07:37:35Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubeflow-volumes-web-app
-            componentID: b4475ae039563c27
-            componentName: idna
-            componentVersion: "3.6"
-            componentType: python
-            componentLocation: /usr/lib/python3.12/site-packages/idna-3.6.dist-info/METADATA, /usr/lib/python3.12/site-packages/idna-3.6.dist-info/RECORD
-            scanner: grype
-      - timestamp: 2024-05-22T00:00:35Z
         type: fixed
         data:
           fixed-version: 1.8.0-r6
