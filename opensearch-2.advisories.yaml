@@ -4,163 +4,22 @@ package:
   name: opensearch-2
 
 advisories:
-  - id: CGA-fphx-pxgp-6hwg
+  - id: CGA-2wgv-29fq-xg2j
     aliases:
-      - CVE-2022-45146
-      - GHSA-68m8-v89j-7j2p
+      - CVE-2024-34447
+      - GHSA-4h8f-2wvx-gg5w
     events:
-      - timestamp: 2023-12-09T03:12:54Z
-        type: fixed
-        data:
-          fixed-version: 2.11.1-r1
-
-  - id: CGA-v7p5-95m9-xcc5
-    aliases:
-      - CVE-2023-35116
-      - GHSA-gx6w-fqg7-mc3p
-    events:
-      - timestamp: 2023-08-11T20:28:34Z
-        type: false-positive-determination
-        data:
-          type: vulnerability-record-analysis-contested
-          note: CVE disputed by upstream developers, nothing specific to this application.
-
-  - id: CGA-793c-mm63-qv25
-    aliases:
-      - CVE-2023-42503
-      - GHSA-cgwf-w82q-5jrr
-    events:
-      - timestamp: 2023-10-01T17:49:15Z
-        type: fixed
-        data:
-          fixed-version: 2.10.0-r1
-
-  - id: CGA-rfg9-4wqj-36v6
-    aliases:
-      - CVE-2024-21742
-      - GHSA-jw7r-rxff-gv24
-    events:
-      - timestamp: 2024-02-28T07:23:49Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: opensearch-2-ingest-attachment
-            componentID: e72cbd4941137157
-            componentName: apache-mime4j-core
-            componentVersion: 0.8.8
-            componentType: java-archive
-            componentLocation: /usr/share/opensearch/plugins/opensearch-ingest-attachment/apache-mime4j-core-0.8.8.jar
-            scanner: grype
-      - timestamp: 2024-05-15T23:01:03Z
-        type: fixed
-        data:
-          fixed-version: 2.14.0-r0
-
-  - id: CGA-679f-cjh5-5f6q
-    aliases:
-      - CVE-2024-25710
-      - GHSA-4g9r-vxhx-9pgx
-    events:
-      - timestamp: 2024-03-01T07:19:40Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: opensearch-2-ml-commons
-            componentID: 2d079fd65eb2c423
-            componentName: commons-compress
-            componentVersion: 1.25.0
-            componentType: java-archive
-            componentLocation: /usr/share/opensearch/plugins/opensearch-ml/commons-compress-1.25.0.jar
-            scanner: grype
-      - timestamp: 2024-03-15T00:23:46Z
-        type: fixed
-        data:
-          fixed-version: 2.12.0-r1
-
-  - id: CGA-rq5c-r89h-7gmf
-    aliases:
-      - CVE-2024-26308
-      - GHSA-4265-ccf5-phj5
-    events:
-      - timestamp: 2024-02-21T07:46:55Z
+      - timestamp: 2024-05-04T08:03:27Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: opensearch-2
-            componentID: 8f2bc9688f5f8d17
-            componentName: commons-compress
-            componentVersion: 1.24.0
+            componentID: f4c2085f82131314
+            componentName: bcprov-jdk18on
+            componentVersion: "1.77"
             componentType: java-archive
-            componentLocation: /usr/share/opensearch/lib/tools/plugin-cli/commons-compress-1.24.0.jar
-            scanner: grype
-      - timestamp: 2024-03-15T00:23:46Z
-        type: fixed
-        data:
-          fixed-version: 2.12.0-r1
-
-  - id: CGA-877w-8xxp-xv6m
-    aliases:
-      - CVE-2024-28752
-      - GHSA-qmgx-j96g-4428
-    events:
-      - timestamp: 2024-03-19T09:08:06Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: opensearch-2-security
-            componentID: 52a961a22760ca4d
-            componentName: cxf-core
-            componentVersion: 4.0.3
-            componentType: java-archive
-            componentLocation: /usr/share/opensearch/plugins/opensearch-security/cxf-core-4.0.3.jar
-            scanner: grype
-      - timestamp: 2024-04-13T07:16:14Z
-        type: fixed
-        data:
-          fixed-version: 2.13.0-r0
-
-  - id: CGA-q576-4g28-x6p5
-    aliases:
-      - CVE-2024-29025
-      - GHSA-5jpm-x58v-624v
-    events:
-      - timestamp: 2024-03-31T13:28:12Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: opensearch-2-repository-azure
-            componentID: 9293931f36f599bb
-            componentName: netty-codec-http
-            componentVersion: 4.1.106.Final
-            componentType: java-archive
-            componentLocation: /usr/share/opensearch/plugins/opensearch-repository-azure/netty-codec-http-4.1.106.Final.jar
-            scanner: grype
-      - timestamp: 2024-04-13T07:12:30Z
-        type: fixed
-        data:
-          fixed-version: 2.13.0-r0
-
-  - id: CGA-vmgg-m99c-vcmm
-    aliases:
-      - CVE-2024-29857
-      - GHSA-8xfc-gm6g-vgpv
-    events:
-      - timestamp: 2024-05-15T10:02:40Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: opensearch-2
-            componentID: a9d106cc8866270f
-            componentName: bc-fips
-            componentVersion: 1.0.2.4
-            componentType: java-archive
-            componentLocation: /usr/share/opensearch/lib/tools/plugin-cli/bc-fips-1.0.2.4.jar
+            componentLocation: /usr/share/opensearch/plugins/opensearch-identity-shiro/bcprov-jdk18on-1.77.jar
             scanner: grype
       - timestamp: 2024-05-30T23:00:31Z
         type: pending-upstream-fix
@@ -189,6 +48,88 @@ advisories:
         data:
           note: The subpackage opensearch-performance-analyzer compilation hardcodes the cloning a specific branch of opensearch-performance-analyzer-rca repository with the vulnerable libraries. This requires upstream changes to opensearch-performance-analyzer-rca repository.
 
+  - id: CGA-679f-cjh5-5f6q
+    aliases:
+      - CVE-2024-25710
+      - GHSA-4g9r-vxhx-9pgx
+    events:
+      - timestamp: 2024-03-01T07:19:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-2-ml-commons
+            componentID: 2d079fd65eb2c423
+            componentName: commons-compress
+            componentVersion: 1.25.0
+            componentType: java-archive
+            componentLocation: /usr/share/opensearch/plugins/opensearch-ml/commons-compress-1.25.0.jar
+            scanner: grype
+      - timestamp: 2024-03-15T00:23:46Z
+        type: fixed
+        data:
+          fixed-version: 2.12.0-r1
+
+  - id: CGA-793c-mm63-qv25
+    aliases:
+      - CVE-2023-42503
+      - GHSA-cgwf-w82q-5jrr
+    events:
+      - timestamp: 2023-10-01T17:49:15Z
+        type: fixed
+        data:
+          fixed-version: 2.10.0-r1
+
+  - id: CGA-877w-8xxp-xv6m
+    aliases:
+      - CVE-2024-28752
+      - GHSA-qmgx-j96g-4428
+    events:
+      - timestamp: 2024-03-19T09:08:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-2-security
+            componentID: 52a961a22760ca4d
+            componentName: cxf-core
+            componentVersion: 4.0.3
+            componentType: java-archive
+            componentLocation: /usr/share/opensearch/plugins/opensearch-security/cxf-core-4.0.3.jar
+            scanner: grype
+      - timestamp: 2024-04-13T07:16:14Z
+        type: fixed
+        data:
+          fixed-version: 2.13.0-r0
+
+  - id: CGA-c6gj-pfw2-897g
+    aliases:
+      - CVE-2024-37902
+      - GHSA-w877-jfw7-46rj
+    events:
+      - timestamp: 2024-06-18T07:41:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-2
+            componentID: f3497f4f891d9c31
+            componentName: api
+            componentVersion: 0.21.0
+            componentType: java-archive
+            componentLocation: /usr/share/opensearch/plugins/opensearch-ml/api-0.21.0.jar
+            scanner: grype
+
+  - id: CGA-fphx-pxgp-6hwg
+    aliases:
+      - CVE-2022-45146
+      - GHSA-68m8-v89j-7j2p
+    events:
+      - timestamp: 2023-12-09T03:12:54Z
+        type: fixed
+        data:
+          fixed-version: 2.11.1-r1
+
   - id: CGA-h94h-f38q-chh8
     aliases:
       - CVE-2024-30172
@@ -211,22 +152,99 @@ advisories:
         data:
           note: The subpackage opensearch-performance-analyzer compilation hardcodes the cloning a specific branch of opensearch-performance-analyzer-rca repository with the vulnerable libraries. This requires upstream changes to opensearch-performance-analyzer-rca repository.
 
-  - id: CGA-2wgv-29fq-xg2j
+  - id: CGA-q576-4g28-x6p5
     aliases:
-      - CVE-2024-34447
-      - GHSA-4h8f-2wvx-gg5w
+      - CVE-2024-29025
+      - GHSA-5jpm-x58v-624v
     events:
-      - timestamp: 2024-05-04T08:03:27Z
+      - timestamp: 2024-03-31T13:28:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-2-repository-azure
+            componentID: 9293931f36f599bb
+            componentName: netty-codec-http
+            componentVersion: 4.1.106.Final
+            componentType: java-archive
+            componentLocation: /usr/share/opensearch/plugins/opensearch-repository-azure/netty-codec-http-4.1.106.Final.jar
+            scanner: grype
+      - timestamp: 2024-04-13T07:12:30Z
+        type: fixed
+        data:
+          fixed-version: 2.13.0-r0
+
+  - id: CGA-rfg9-4wqj-36v6
+    aliases:
+      - CVE-2024-21742
+      - GHSA-jw7r-rxff-gv24
+    events:
+      - timestamp: 2024-02-28T07:23:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-2-ingest-attachment
+            componentID: e72cbd4941137157
+            componentName: apache-mime4j-core
+            componentVersion: 0.8.8
+            componentType: java-archive
+            componentLocation: /usr/share/opensearch/plugins/opensearch-ingest-attachment/apache-mime4j-core-0.8.8.jar
+            scanner: grype
+      - timestamp: 2024-05-15T23:01:03Z
+        type: fixed
+        data:
+          fixed-version: 2.14.0-r0
+
+  - id: CGA-rq5c-r89h-7gmf
+    aliases:
+      - CVE-2024-26308
+      - GHSA-4265-ccf5-phj5
+    events:
+      - timestamp: 2024-02-21T07:46:55Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: opensearch-2
-            componentID: f4c2085f82131314
-            componentName: bcprov-jdk18on
-            componentVersion: "1.77"
+            componentID: 8f2bc9688f5f8d17
+            componentName: commons-compress
+            componentVersion: 1.24.0
             componentType: java-archive
-            componentLocation: /usr/share/opensearch/plugins/opensearch-identity-shiro/bcprov-jdk18on-1.77.jar
+            componentLocation: /usr/share/opensearch/lib/tools/plugin-cli/commons-compress-1.24.0.jar
+            scanner: grype
+      - timestamp: 2024-03-15T00:23:46Z
+        type: fixed
+        data:
+          fixed-version: 2.12.0-r1
+
+  - id: CGA-v7p5-95m9-xcc5
+    aliases:
+      - CVE-2023-35116
+      - GHSA-gx6w-fqg7-mc3p
+    events:
+      - timestamp: 2023-08-11T20:28:34Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: CVE disputed by upstream developers, nothing specific to this application.
+
+  - id: CGA-vmgg-m99c-vcmm
+    aliases:
+      - CVE-2024-29857
+      - GHSA-8xfc-gm6g-vgpv
+    events:
+      - timestamp: 2024-05-15T10:02:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-2
+            componentID: a9d106cc8866270f
+            componentName: bc-fips
+            componentVersion: 1.0.2.4
+            componentType: java-archive
+            componentLocation: /usr/share/opensearch/lib/tools/plugin-cli/bc-fips-1.0.2.4.jar
             scanner: grype
       - timestamp: 2024-05-30T23:00:31Z
         type: pending-upstream-fix
