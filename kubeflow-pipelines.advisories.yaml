@@ -532,6 +532,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability affects the Kubernetes application, not the golang k8s.io/kubernetes library. Kubernetes clusters are only affected if they are using an in-tree storage plugin for Windows nodes.
 
+  - id: CGA-r6qh-9mxv-rrj2
+    aliases:
+      - CVE-2024-37890
+      - GHSA-3h5v-q93c-6h6q
+    events:
+      - timestamp: 2024-06-18T07:26:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines
+            componentID: 125866acce85289d
+            componentName: ws
+            componentVersion: 6.2.2
+            componentType: npm
+            componentLocation: /server/node_modules/ws/package.json
+            scanner: grype
+
   - id: CGA-r834-rj47-cfj9
     aliases:
       - CVE-2024-28849
