@@ -210,6 +210,24 @@ advisories:
         data:
           note: 'Bumping the dependency to 2.2.3 is not possible, the application fails with the error: ImportError: cannot import name ''soft_unicode'' from ''markupsafe'''
 
+  - id: CGA-cx62-9vw2-mmpq
+    aliases:
+      - CVE-2024-37891
+      - GHSA-34jh-p97f-mpxf
+    events:
+      - timestamp: 2024-06-18T08:25:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-visualization-server
+            componentID: d1bba2f117f75987
+            componentName: urllib3
+            componentVersion: 2.2.1
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/urllib3-2.2.1.dist-info/METADATA, /usr/lib/python3.10/site-packages/urllib3-2.2.1.dist-info/RECORD
+            scanner: grype
+
   - id: CGA-g5xx-83xq-8g5j
     aliases:
       - CVE-2024-34064
