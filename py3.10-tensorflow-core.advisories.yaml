@@ -26,28 +26,6 @@ advisories:
         data:
           fixed-version: 2.16.1-r1
 
-  - id: CGA-rrq3-6489-25cv
-    aliases:
-      - CVE-2024-35195
-      - GHSA-9wx4-h78v-vm56
-    events:
-      - timestamp: 2024-05-22T08:14:29Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: py3.10-tensorflow-core
-            componentID: 811c7713ef56ac13
-            componentName: requests
-            componentVersion: 2.31.0
-            componentType: python
-            componentLocation: /usr/lib/python3.10/site-packages/requests-2.31.0.dist-info/METADATA, /usr/lib/python3.10/site-packages/requests-2.31.0.dist-info/RECORD, /usr/lib/python3.10/site-packages/requests-2.31.0.dist-info/top_level.txt
-            scanner: grype
-      - timestamp: 2024-05-25T22:32:59Z
-        type: fixed
-        data:
-          fixed-version: 2.16.1-r1
-
   - id: CGA-4w25-8r45-gxwf
     aliases:
       - CVE-2024-3651
@@ -66,6 +44,46 @@ advisories:
             componentLocation: /usr/lib/python3.10/site-packages/idna-3.6.dist-info/METADATA, /usr/lib/python3.10/site-packages/idna-3.6.dist-info/RECORD
             scanner: grype
       - timestamp: 2024-05-25T22:33:00Z
+        type: fixed
+        data:
+          fixed-version: 2.16.1-r1
+
+  - id: CGA-ppr4-9gcx-66xm
+    aliases:
+      - CVE-2024-37891
+      - GHSA-34jh-p97f-mpxf
+    events:
+      - timestamp: 2024-06-18T08:08:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3.10-tensorflow-core
+            componentID: b2385be579ceb518
+            componentName: urllib3
+            componentVersion: 2.2.1
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/urllib3-2.2.1.dist-info/METADATA, /usr/lib/python3.10/site-packages/urllib3-2.2.1.dist-info/RECORD
+            scanner: grype
+
+  - id: CGA-rrq3-6489-25cv
+    aliases:
+      - CVE-2024-35195
+      - GHSA-9wx4-h78v-vm56
+    events:
+      - timestamp: 2024-05-22T08:14:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3.10-tensorflow-core
+            componentID: 811c7713ef56ac13
+            componentName: requests
+            componentVersion: 2.31.0
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/requests-2.31.0.dist-info/METADATA, /usr/lib/python3.10/site-packages/requests-2.31.0.dist-info/RECORD, /usr/lib/python3.10/site-packages/requests-2.31.0.dist-info/top_level.txt
+            scanner: grype
+      - timestamp: 2024-05-25T22:32:59Z
         type: fixed
         data:
           fixed-version: 2.16.1-r1
