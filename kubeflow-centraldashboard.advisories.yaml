@@ -74,6 +74,24 @@ advisories:
         data:
           note: cannot fix the CVE because there were no patched versions since the 'taffydb' package is quite old and no longer maintained.
 
+  - id: CGA-h8rj-78mh-45v7
+    aliases:
+      - CVE-2024-37890
+      - GHSA-3h5v-q93c-6h6q
+    events:
+      - timestamp: 2024-06-18T07:11:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-centraldashboard
+            componentID: a5eca6ee6f949f46
+            componentName: ws
+            componentVersion: 6.2.2
+            componentType: npm
+            componentLocation: /app/node_modules/ws/package.json
+            scanner: grype
+
   - id: CGA-whm7-gm9q-6v85
     aliases:
       - CVE-2023-26159
