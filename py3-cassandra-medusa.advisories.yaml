@@ -92,6 +92,24 @@ advisories:
         data:
           fixed-version: 0.19.1-r1
 
+  - id: CGA-64rf-gm8h-pg8g
+    aliases:
+      - CVE-2024-37891
+      - GHSA-34jh-p97f-mpxf
+    events:
+      - timestamp: 2024-06-18T08:18:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3-cassandra-medusa
+            componentID: d06aa5334d0cfbbb
+            componentName: urllib3
+            componentVersion: 2.0.7
+            componentType: python
+            componentLocation: /home/cassandra/.venv/lib/python3.11/site-packages/urllib3-2.0.7.dist-info/METADATA, /home/cassandra/.venv/lib/python3.11/site-packages/urllib3-2.0.7.dist-info/RECORD
+            scanner: grype
+
   - id: CGA-692f-82fw-6r2x
     aliases:
       - CVE-2024-27306
