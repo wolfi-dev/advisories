@@ -4,15 +4,23 @@ package:
   name: k8s-sidecar
 
 advisories:
-  - id: CGA-h89x-4j9m-pw85
+  - id: CGA-3ggr-w55x-hf5j
     aliases:
-      - CVE-2023-43804
-      - GHSA-v845-jxx5-vc9f
+      - CVE-2024-37891
+      - GHSA-34jh-p97f-mpxf
     events:
-      - timestamp: 2023-10-04T21:16:51Z
-        type: fixed
+      - timestamp: 2024-06-18T08:44:46Z
+        type: detection
         data:
-          fixed-version: 1.25.1-r2
+          type: scan/v1
+          data:
+            subpackageName: k8s-sidecar
+            componentID: 25e461c0e6b05bfe
+            componentName: urllib3
+            componentVersion: 2.2.1
+            componentType: python
+            componentLocation: /usr/lib/python3.12/site-packages/urllib3-2.2.1.dist-info/METADATA, /usr/lib/python3.12/site-packages/urllib3-2.2.1.dist-info/RECORD
+            scanner: grype
 
   - id: CGA-4354-v6cq-3f5f
     aliases:
@@ -57,3 +65,13 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.26.1-r1
+
+  - id: CGA-h89x-4j9m-pw85
+    aliases:
+      - CVE-2023-43804
+      - GHSA-v845-jxx5-vc9f
+    events:
+      - timestamp: 2023-10-04T21:16:51Z
+        type: fixed
+        data:
+          fixed-version: 1.25.1-r2
