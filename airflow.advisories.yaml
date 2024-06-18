@@ -89,6 +89,24 @@ advisories:
         data:
           fixed-version: 2.9.2-r0
 
+  - id: CGA-8f64-fgpv-jxj2
+    aliases:
+      - CVE-2024-37891
+      - GHSA-34jh-p97f-mpxf
+    events:
+      - timestamp: 2024-06-18T07:01:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow
+            componentID: 91504e6f5de46ab8
+            componentName: urllib3
+            componentVersion: 2.2.1
+            componentType: python
+            componentLocation: /opt/airflow/venv/lib/python3.12/site-packages/urllib3-2.2.1.dist-info/METADATA, /opt/airflow/venv/lib/python3.12/site-packages/urllib3-2.2.1.dist-info/RECORD
+            scanner: grype
+
   - id: CGA-8mx8-8v5r-99xg
     aliases:
       - CVE-2024-35195
