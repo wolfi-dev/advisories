@@ -4,6 +4,24 @@ package:
   name: ggshield
 
 advisories:
+  - id: CGA-2vvm-h2g8-jrwc
+    aliases:
+      - CVE-2024-37891
+      - GHSA-34jh-p97f-mpxf
+    events:
+      - timestamp: 2024-06-18T08:02:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ggshield
+            componentID: 0129e6462fea6094
+            componentName: urllib3
+            componentVersion: 2.2.1
+            componentType: python
+            componentLocation: /usr/lib/python3.12/site-packages/urllib3-2.2.1.dist-info/METADATA, /usr/lib/python3.12/site-packages/urllib3-2.2.1.dist-info/RECORD
+            scanner: grype
+
   - id: CGA-3xrv-rvqh-mppg
     aliases:
       - CVE-2023-50782
@@ -48,46 +66,6 @@ advisories:
         data:
           fixed-version: 1.25.0-r0
 
-  - id: CGA-pp43-3329-7mh9
-    aliases:
-      - CVE-2024-26130
-      - GHSA-6vqw-3v5j-54x4
-    events:
-      - timestamp: 2024-02-22T07:05:47Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: ggshield
-            componentID: e6652d54538fdb06
-            componentName: cryptography
-            componentVersion: 41.0.7
-            componentType: python
-            componentLocation: /usr/lib/python3.12/site-packages/cryptography-41.0.7.dist-info/METADATA, /usr/lib/python3.12/site-packages/cryptography-41.0.7.dist-info/RECORD, /usr/lib/python3.12/site-packages/cryptography-41.0.7.dist-info/top_level.txt
-            scanner: grype
-      - timestamp: 2024-02-27T16:00:50Z
-        type: fixed
-        data:
-          fixed-version: 1.25.0-r0
-
-  - id: CGA-p79x-5pxg-f77m
-    aliases:
-      - CVE-2024-35195
-      - GHSA-9wx4-h78v-vm56
-    events:
-      - timestamp: 2024-05-22T08:01:40Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: ggshield
-            componentID: e43be9b161505a96
-            componentName: requests
-            componentVersion: 2.31.0
-            componentType: python
-            componentLocation: /usr/lib/python3.12/site-packages/requests-2.31.0.dist-info/METADATA, /usr/lib/python3.12/site-packages/requests-2.31.0.dist-info/RECORD, /usr/lib/python3.12/site-packages/requests-2.31.0.dist-info/top_level.txt
-            scanner: grype
-
   - id: CGA-7cvw-824f-57qj
     aliases:
       - CVE-2024-3651
@@ -109,3 +87,43 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.27.0-r0
+
+  - id: CGA-p79x-5pxg-f77m
+    aliases:
+      - CVE-2024-35195
+      - GHSA-9wx4-h78v-vm56
+    events:
+      - timestamp: 2024-05-22T08:01:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ggshield
+            componentID: e43be9b161505a96
+            componentName: requests
+            componentVersion: 2.31.0
+            componentType: python
+            componentLocation: /usr/lib/python3.12/site-packages/requests-2.31.0.dist-info/METADATA, /usr/lib/python3.12/site-packages/requests-2.31.0.dist-info/RECORD, /usr/lib/python3.12/site-packages/requests-2.31.0.dist-info/top_level.txt
+            scanner: grype
+
+  - id: CGA-pp43-3329-7mh9
+    aliases:
+      - CVE-2024-26130
+      - GHSA-6vqw-3v5j-54x4
+    events:
+      - timestamp: 2024-02-22T07:05:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ggshield
+            componentID: e6652d54538fdb06
+            componentName: cryptography
+            componentVersion: 41.0.7
+            componentType: python
+            componentLocation: /usr/lib/python3.12/site-packages/cryptography-41.0.7.dist-info/METADATA, /usr/lib/python3.12/site-packages/cryptography-41.0.7.dist-info/RECORD, /usr/lib/python3.12/site-packages/cryptography-41.0.7.dist-info/top_level.txt
+            scanner: grype
+      - timestamp: 2024-02-27T16:00:50Z
+        type: fixed
+        data:
+          fixed-version: 1.25.0-r0
