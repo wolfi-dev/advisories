@@ -21,60 +21,11 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
-
-  - id: CGA-jf7q-rjm5-7whg
-    aliases:
-      - CVE-2019-13139
-      - GHSA-33j8-c2xf-8225
-    events:
-      - timestamp: 2024-01-28T01:26:15Z
-        type: detection
+      - timestamp: 2024-06-19T08:02:07Z
+        type: false-positive-determination
         data:
-          type: scan/v1
-          data:
-            subpackageName: py3-docker
-            componentID: 079f62a2883be623
-            componentName: py3-docker
-            componentVersion: 7.0.0-r1
-            componentType: apk
-            componentLocation: /.PKGINFO
-            scanner: grype
-
-  - id: CGA-vpvg-5mcq-5hm2
-    aliases:
-      - CVE-2019-13509
-      - GHSA-j249-ghv5-7mxv
-    events:
-      - timestamp: 2024-01-28T01:26:15Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: py3-docker
-            componentID: 079f62a2883be623
-            componentName: py3-docker
-            componentVersion: 7.0.0-r1
-            componentType: apk
-            componentLocation: /.PKGINFO
-            scanner: grype
-
-  - id: CGA-wqv7-w84w-3758
-    aliases:
-      - CVE-2019-16884
-      - GHSA-fgv8-vj5c-2ppq
-    events:
-      - timestamp: 2024-01-28T01:26:15Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: py3-docker
-            componentID: 079f62a2883be623
-            componentName: py3-docker
-            componentVersion: 7.0.0-r1
-            componentType: apk
-            componentLocation: /.PKGINFO
-            scanner: grype
+          type: component-vulnerability-mismatch
+          note: This affect the Docker Engine. The package is a client api and does not have the vulnerability in question.
 
   - id: CGA-358x-29h6-cwgv
     aliases:
@@ -93,6 +44,11 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2024-06-19T07:47:10Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: This affect the runc in old/EOL version. The package is a client api and does not have the vulnerability in question.
 
   - id: CGA-757p-6hmf-7jxq
     aliases:
@@ -111,24 +67,11 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
-
-  - id: CGA-q775-gjgx-8578
-    aliases:
-      - CVE-2021-21284
-      - GHSA-7452-xqpj-6rpc
-    events:
-      - timestamp: 2024-01-28T01:26:17Z
-        type: detection
+      - timestamp: 2024-06-19T07:55:52Z
+        type: false-positive-determination
         data:
-          type: scan/v1
-          data:
-            subpackageName: py3-docker
-            componentID: 079f62a2883be623
-            componentName: py3-docker
-            componentVersion: 7.0.0-r1
-            componentType: apk
-            componentLocation: /.PKGINFO
-            scanner: grype
+          type: component-vulnerability-mismatch
+          note: This affect the Docker Engine. The package is a client api and does not have the vulnerability in question.
 
   - id: CGA-f36g-7w73-75hj
     aliases:
@@ -147,6 +90,57 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2024-06-19T07:52:09Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: This affect the Docker daemon in old/EOL version. The package is a client api and does not have the vulnerability in question.
+
+  - id: CGA-jf7q-rjm5-7whg
+    aliases:
+      - CVE-2019-13139
+      - GHSA-33j8-c2xf-8225
+    events:
+      - timestamp: 2024-01-28T01:26:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3-docker
+            componentID: 079f62a2883be623
+            componentName: py3-docker
+            componentVersion: 7.0.0-r1
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2024-06-19T07:53:50Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: This affect the Docker in old/EOL version specific for docker build. The package is a client api and does not have the vulnerability in question.
+
+  - id: CGA-q775-gjgx-8578
+    aliases:
+      - CVE-2021-21284
+      - GHSA-7452-xqpj-6rpc
+    events:
+      - timestamp: 2024-01-28T01:26:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3-docker
+            componentID: 079f62a2883be623
+            componentName: py3-docker
+            componentVersion: 7.0.0-r1
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2024-06-19T07:57:58Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: This affect the Docker Engine. The package is a client api and does not have the vulnerability in question.
 
   - id: CGA-rhc7-rcgc-wv4r
     aliases:
@@ -165,3 +159,54 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2024-06-19T07:54:55Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: This affect the Docker Engine. The package is a client api and does not have the vulnerability in question.
+
+  - id: CGA-vpvg-5mcq-5hm2
+    aliases:
+      - CVE-2019-13509
+      - GHSA-j249-ghv5-7mxv
+    events:
+      - timestamp: 2024-01-28T01:26:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3-docker
+            componentID: 079f62a2883be623
+            componentName: py3-docker
+            componentVersion: 7.0.0-r1
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2024-06-19T07:49:33Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: This affect the Docker engine in old/EOL version. The package is a client api and does not have the vulnerability in question.
+
+  - id: CGA-wqv7-w84w-3758
+    aliases:
+      - CVE-2019-16884
+      - GHSA-fgv8-vj5c-2ppq
+    events:
+      - timestamp: 2024-01-28T01:26:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3-docker
+            componentID: 079f62a2883be623
+            componentName: py3-docker
+            componentVersion: 7.0.0-r1
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2024-06-19T07:58:31Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: This affect the Runc. The package is a client api and does not have the vulnerability in question.
