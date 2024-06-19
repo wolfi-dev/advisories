@@ -4,23 +4,27 @@ package:
   name: spdx-tools-java
 
 advisories:
-  - id: CGA-c5f6-f2ff-f6g9
+  - id: CGA-2xg7-8qm4-vx87
     aliases:
-      - CVE-2020-8908
-      - GHSA-5mg8-w23w-74h3
+      - CVE-2024-25710
+      - GHSA-4g9r-vxhx-9pgx
     events:
-      - timestamp: 2024-04-19T16:26:11Z
+      - timestamp: 2024-04-19T16:26:10Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: spdx-tools-java
-            componentID: 60bdf641722d1bc5
-            componentName: guava
-            componentVersion: 28.2-android
+            componentID: c12a26919c97268d
+            componentName: commons-compress
+            componentVersion: 1.24.0
             componentType: java-archive
             componentLocation: /usr/lib/java/spdx/tools-java-1.1.8-jar-with-dependencies.jar
             scanner: grype
+      - timestamp: 2024-06-19T09:11:59Z
+        type: fixed
+        data:
+          fixed-version: 1.1.8-r1
 
   - id: CGA-5wxh-2846-4r2x
     aliases:
@@ -39,24 +43,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/java/spdx/tools-java-1.1.8-jar-with-dependencies.jar
             scanner: grype
-
-  - id: CGA-2xg7-8qm4-vx87
-    aliases:
-      - CVE-2024-25710
-      - GHSA-4g9r-vxhx-9pgx
-    events:
-      - timestamp: 2024-04-19T16:26:10Z
-        type: detection
+      - timestamp: 2024-06-19T09:12:00Z
+        type: fixed
         data:
-          type: scan/v1
-          data:
-            subpackageName: spdx-tools-java
-            componentID: c12a26919c97268d
-            componentName: commons-compress
-            componentVersion: 1.24.0
-            componentType: java-archive
-            componentLocation: /usr/lib/java/spdx/tools-java-1.1.8-jar-with-dependencies.jar
-            scanner: grype
+          fixed-version: 1.1.8-r1
 
   - id: CGA-96mq-j5w6-4gc5
     aliases:
@@ -75,3 +65,29 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/java/spdx/tools-java-1.1.8-jar-with-dependencies.jar
             scanner: grype
+      - timestamp: 2024-06-19T09:11:59Z
+        type: fixed
+        data:
+          fixed-version: 1.1.8-r1
+
+  - id: CGA-c5f6-f2ff-f6g9
+    aliases:
+      - CVE-2020-8908
+      - GHSA-5mg8-w23w-74h3
+    events:
+      - timestamp: 2024-04-19T16:26:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spdx-tools-java
+            componentID: 60bdf641722d1bc5
+            componentName: guava
+            componentVersion: 28.2-android
+            componentType: java-archive
+            componentLocation: /usr/lib/java/spdx/tools-java-1.1.8-jar-with-dependencies.jar
+            scanner: grype
+      - timestamp: 2024-06-19T09:12:00Z
+        type: fixed
+        data:
+          fixed-version: 1.1.8-r1
