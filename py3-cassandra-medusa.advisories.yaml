@@ -109,6 +109,10 @@ advisories:
             componentType: python
             componentLocation: /home/cassandra/.venv/lib/python3.11/site-packages/urllib3-2.0.7.dist-info/METADATA, /home/cassandra/.venv/lib/python3.11/site-packages/urllib3-2.0.7.dist-info/RECORD
             scanner: grype
+      - timestamp: 2024-06-20T18:57:46Z
+        type: pending-upstream-fix
+        data:
+          note: cassandra-medusa depends on botocore which latest version is still depends on urllib3 (>=1.25.4,<1.27). Require botocore to update urllib3 dependency.
 
   - id: CGA-692f-82fw-6r2x
     aliases:
