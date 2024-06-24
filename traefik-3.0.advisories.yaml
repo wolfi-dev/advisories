@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: traefik-3.0
+
+advisories:
+  - id: CGA-p979-hx8c-5rmf
+    aliases:
+      - CVE-2024-28180
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-06-24T16:00:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: traefik-3.0
+            componentID: 51448bcd714b0573
+            componentName: gopkg.in/square/go-jose.v2
+            componentVersion: v2.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/traefik
+            scanner: grype
