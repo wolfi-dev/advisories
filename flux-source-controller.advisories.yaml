@@ -14,6 +14,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability is only present on Windows.
 
+  - id: CGA-4847-vww5-7f48
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2024-06-25T07:37:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-source-controller
+            componentID: 7b93a022f191f54e
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.5
+            componentType: go-module
+            componentLocation: /usr/bin/source-controller
+            scanner: grype
+
   - id: CGA-4qvf-5747-x844
     aliases:
       - CVE-2023-3978
