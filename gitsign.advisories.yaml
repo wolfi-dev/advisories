@@ -4,6 +4,24 @@ package:
   name: gitsign
 
 advisories:
+  - id: CGA-279c-c845-mg77
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2024-06-25T07:15:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitsign
+            componentID: b7371d63bcf289a8
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.5
+            componentType: go-module
+            componentLocation: /usr/bin/gitsign
+            scanner: grype
+
   - id: CGA-34h5-5pxj-hvrw
     aliases:
       - GHSA-2c7c-3mj9-8fqh
