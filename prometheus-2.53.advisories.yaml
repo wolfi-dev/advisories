@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: prometheus-2.53
+
+advisories:
+  - id: CGA-vr63-h43x-c39j
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2024-06-25T08:06:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.53
+            componentID: b24ab4745a22c4da
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.4
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus
+            scanner: grype
