@@ -4,12 +4,12 @@ package:
   name: mariadb-10.11
 
 advisories:
-  - id: CGA-69ff-4xff-qv2w
+  - id: CGA-4p65-rcvr-255v
     aliases:
-      - CVE-2020-13692
-      - GHSA-88cc-g835-76rp
+      - CVE-2022-21724
+      - GHSA-v7wg-cpwc-24m4
     events:
-      - timestamp: 2024-01-24T16:39:12Z
+      - timestamp: 2024-01-24T16:39:13Z
         type: detection
         data:
           type: scan/v1
@@ -22,12 +22,12 @@ advisories:
             componentLocation: /usr/mysql-test/plugin/connect/connect/std_data/JdbcMariaDB.jar
             scanner: grype
 
-  - id: CGA-4p65-rcvr-255v
+  - id: CGA-69ff-4xff-qv2w
     aliases:
-      - CVE-2022-21724
-      - GHSA-v7wg-cpwc-24m4
+      - CVE-2020-13692
+      - GHSA-88cc-g835-76rp
     events:
-      - timestamp: 2024-01-24T16:39:13Z
+      - timestamp: 2024-01-24T16:39:12Z
         type: detection
         data:
           type: scan/v1
@@ -76,3 +76,8 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/mysql-test/plugin/connect/connect/std_data/JdbcMariaDB.jar
             scanner: grype
+      - timestamp: 2024-06-25T18:11:51Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: This CVE appears to stem from a hardcoded postgres jar file used specifically for a stale test
