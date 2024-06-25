@@ -4,6 +4,24 @@ package:
   name: influxd
 
 advisories:
+  - id: CGA-3r45-5277-prr2
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2024-06-25T07:11:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: influxd
+            componentID: 15896fdc34d194e8
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.6.4
+            componentType: go-module
+            componentLocation: /usr/bin/influxd
+            scanner: grype
+
   - id: CGA-65rg-48gm-x8c9
     aliases:
       - CVE-2023-45283
