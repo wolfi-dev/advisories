@@ -306,6 +306,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This vulnerability affects versions >= 1.13.0, < 1.13.2, but the installed commit corresponds to version 1.15.11.
 
+  - id: CGA-hh84-2wfx-r9gj
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2024-06-25T07:41:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: consul-1.15
+            componentID: da7944f47a50bf24
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.4
+            componentType: go-module
+            componentLocation: /bin/consul
+            scanner: grype
+
   - id: CGA-hm79-g7p2-cx8j
     aliases:
       - CVE-2024-24783
