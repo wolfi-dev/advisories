@@ -56,3 +56,21 @@ advisories:
         type: pending-upstream-fix
         data:
           note: It requires the upstream apply the changes and release it.
+
+  - id: CGA-rgvj-fgvg-j6cx
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2024-06-25T09:39:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opentelemetry-collector
+            componentID: bd47f578c3406c52
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.4
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol
+            scanner: grype
