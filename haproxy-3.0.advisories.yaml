@@ -21,6 +21,11 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2024-06-25T04:15:45Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: 'The fix for this vulnerability has been backported to versions 2.0+. Versions 2.8+ are not affected since they were released after this vulnerability was fixed. Reference: https://github.com/haproxy/haproxy/issues/1972'
 
   - id: CGA-j39q-832w-xx98
     aliases:
@@ -39,3 +44,8 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2024-06-25T04:10:10Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'tripleo-image-elements is not included in this package and has been deprecated upstream: https://github.com/openstack-archive/tripleo-image-elements'
