@@ -4,6 +4,16 @@ package:
   name: dependency-track
 
 advisories:
+  - id: CGA-6ffw-f2qw-rxwj
+    aliases:
+      - CVE-2024-38374
+      - GHSA-683x-4444-jxh8
+    events:
+      - timestamp: 2024-06-26T07:08:51Z
+        type: fixed
+        data:
+          fixed-version: 4.11.4-r0
+
   - id: CGA-7847-h394-6rg8
     aliases:
       - CVE-2023-52428
@@ -49,28 +59,6 @@ advisories:
         data:
           fixed-version: 4.10.1-r1
 
-  - id: CGA-w8q8-p4r5-xxg9
-    aliases:
-      - CVE-2024-25710
-      - GHSA-4g9r-vxhx-9pgx
-    events:
-      - timestamp: 2024-03-01T07:20:10Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: dependency-track
-            componentID: df378e6669f6aac2
-            componentName: commons-compress
-            componentVersion: 1.25.0
-            componentType: java-archive
-            componentLocation: /usr/share/java/dependency-track/dependency-track-apiserver.jar
-            scanner: grype
-      - timestamp: 2024-03-05T17:08:23Z
-        type: fixed
-        data:
-          fixed-version: 4.10.1-r2
-
   - id: CGA-ppj7-32h7-rr4m
     aliases:
       - CVE-2024-26308
@@ -87,6 +75,28 @@ advisories:
             componentVersion: 1.25.0
             componentType: java-archive
             componentLocation: /usr/share/java/dependency-track/dependency-track-bundled.jar
+            scanner: grype
+      - timestamp: 2024-03-05T17:08:23Z
+        type: fixed
+        data:
+          fixed-version: 4.10.1-r2
+
+  - id: CGA-w8q8-p4r5-xxg9
+    aliases:
+      - CVE-2024-25710
+      - GHSA-4g9r-vxhx-9pgx
+    events:
+      - timestamp: 2024-03-01T07:20:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dependency-track
+            componentID: df378e6669f6aac2
+            componentName: commons-compress
+            componentVersion: 1.25.0
+            componentType: java-archive
+            componentLocation: /usr/share/java/dependency-track/dependency-track-apiserver.jar
             scanner: grype
       - timestamp: 2024-03-05T17:08:23Z
         type: fixed
