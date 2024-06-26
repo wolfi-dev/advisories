@@ -4,6 +4,24 @@ package:
   name: tfsec
 
 advisories:
+  - id: CGA-2h9p-9x34-5864
+    aliases:
+      - CVE-2024-6257
+      - GHSA-xfhp-jf8p-mh5w
+    events:
+      - timestamp: 2024-06-26T07:42:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tfsec
+            componentID: 4051cbc245f1fb6d
+            componentName: github.com/hashicorp/go-getter
+            componentVersion: v1.7.4
+            componentType: go-module
+            componentLocation: /usr/bin/tfsec
+            scanner: grype
+
   - id: CGA-45j5-wg5j-cfr9
     aliases:
       - CVE-2024-3817
