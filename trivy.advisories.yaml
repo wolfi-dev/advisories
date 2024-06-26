@@ -92,6 +92,24 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
 
+  - id: CGA-7rq5-jph4-8hg2
+    aliases:
+      - CVE-2024-6257
+      - GHSA-xfhp-jf8p-mh5w
+    events:
+      - timestamp: 2024-06-26T08:42:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trivy
+            componentID: 78372d81a8ec1ae0
+            componentName: github.com/hashicorp/go-getter
+            componentVersion: v1.7.4
+            componentType: go-module
+            componentLocation: /usr/bin/trivy
+            scanner: grype
+
   - id: CGA-9p49-67j6-3fwx
     aliases:
       - CVE-2024-26147
