@@ -147,3 +147,21 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/sonarqube/elasticsearch/modules/transport-netty4/netty-codec-http-4.1.94.Final.jar
             scanner: grype
+
+  - id: CGA-x8cc-rj68-9cmc
+    aliases:
+      - CVE-2024-30172
+      - GHSA-m44j-cfrm-g8qc
+    events:
+      - timestamp: 2024-06-27T18:26:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube
+            componentID: 8c839ac88a8188f1
+            componentName: bcpkix-jdk18on
+            componentVersion: "1.76"
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/elasticsearch/lib/tools/security-cli/bcpkix-jdk18on-1.76.jar
+            scanner: grype
