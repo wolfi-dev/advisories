@@ -313,6 +313,24 @@ advisories:
         data:
           note: 'Bouncycastle cannot be upgraded directly in jenkins. The upstream project needs to upgrade the API plugin first: https://github.com/jenkinsci/bouncycastle-api-plugin'
 
+  - id: CGA-jvfh-392w-c357
+    aliases:
+      - CVE-2024-39458
+      - GHSA-xfx3-cr74-x3cv
+    events:
+      - timestamp: 2024-06-27T08:00:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jenkins
+            componentID: 00594c7ce7f04997
+            componentName: structs
+            componentVersion: 337.v1b_04ea_4df7c8
+            componentType: jenkins-plugin
+            componentLocation: /usr/share/java/jenkins/jenkins.war
+            scanner: grype
+
   - id: CGA-jvx2-3xj2-cqqv
     aliases:
       - CVE-2024-34144
