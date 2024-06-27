@@ -4,6 +4,24 @@ package:
   name: sonarqube
 
 advisories:
+  - id: CGA-275w-jvqp-v3pw
+    aliases:
+      - CVE-2024-23445
+      - GHSA-4c7q-m7hc-pc92
+    events:
+      - timestamp: 2024-06-27T18:26:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube
+            componentID: d979fa88c2c9538f
+            componentName: elasticsearch
+            componentVersion: 8.13.4
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/elasticsearch/lib/elasticsearch-8.13.4.jar
+            scanner: grype
+
   - id: CGA-c5gx-g32r-3gqj
     aliases:
       - CVE-2022-40152
