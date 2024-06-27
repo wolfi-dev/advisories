@@ -112,6 +112,24 @@ advisories:
             componentLocation: /usr/share/sonarqube/elasticsearch/modules/x-pack-core/nimbus-jose-jwt-9.23.jar
             scanner: grype
 
+  - id: CGA-v5fx-p7v7-3cr3
+    aliases:
+      - CVE-2024-30171
+      - GHSA-v435-xc8x-wvr9
+    events:
+      - timestamp: 2024-06-27T18:26:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube
+            componentID: 8c839ac88a8188f1
+            componentName: bcpkix-jdk18on
+            componentVersion: "1.76"
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/elasticsearch/lib/tools/security-cli/bcpkix-jdk18on-1.76.jar
+            scanner: grype
+
   - id: CGA-v624-8gwr-rpcg
     aliases:
       - CVE-2024-29857
