@@ -93,3 +93,21 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/sonarqube/elasticsearch/modules/x-pack-core/nimbus-jose-jwt-9.23.jar
             scanner: grype
+
+  - id: CGA-wp52-8p82-hhcp
+    aliases:
+      - CVE-2024-29025
+      - GHSA-5jpm-x58v-624v
+    events:
+      - timestamp: 2024-06-27T18:26:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube
+            componentID: cf51f381a7827198
+            componentName: netty-codec-http
+            componentVersion: 4.1.94.Final
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/elasticsearch/modules/transport-netty4/netty-codec-http-4.1.94.Final.jar
+            scanner: grype
