@@ -162,6 +162,28 @@ advisories:
         data:
           fixed-version: 2.2.4-r4
 
+  - id: CGA-gcf7-2j3w-86c7
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2024-06-25T07:02:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cosign
+            componentID: d56a3e18533c30be
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.5
+            componentType: go-module
+            componentLocation: /usr/bin/cosign
+            scanner: grype
+      - timestamp: 2024-06-25T09:13:36Z
+        type: fixed
+        data:
+          fixed-version: 2.2.4-r7
+
   - id: CGA-hmh4-g97q-rfvv
     aliases:
       - CVE-2023-46737

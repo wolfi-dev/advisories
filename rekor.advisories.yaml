@@ -167,6 +167,28 @@ advisories:
         data:
           fixed-version: 1.3.6-r4
 
+  - id: CGA-gww5-9mj4-pcr4
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2024-06-25T09:11:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rekor
+            componentID: 11b8a19cc2c43e93
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.5
+            componentType: go-module
+            componentLocation: /usr/bin/rekor-server
+            scanner: grype
+      - timestamp: 2024-06-25T12:35:26Z
+        type: fixed
+        data:
+          fixed-version: 1.3.6-r6
+
   - id: CGA-p9v7-hjmx-44w3
     aliases:
       - CVE-2023-45284

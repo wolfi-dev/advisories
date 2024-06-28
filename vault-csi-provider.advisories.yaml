@@ -190,6 +190,28 @@ advisories:
         data:
           fixed-version: 1.4.0-r9
 
+  - id: CGA-9f9x-vf2h-x36g
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2024-06-25T09:16:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-csi-provider
+            componentID: fe9b03b5a416831c
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.6.6
+            componentType: go-module
+            componentLocation: /usr/bin/vault-csi-provider
+            scanner: grype
+      - timestamp: 2024-06-25T16:12:09Z
+        type: fixed
+        data:
+          fixed-version: 1.4.0-r15
+
   - id: CGA-c523-rx6r-5345
     aliases:
       - CVE-2023-48795
@@ -291,6 +313,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/vault-csi-provider
             scanner: grype
+      - timestamp: 2024-06-25T09:19:43Z
+        type: pending-upstream-fix
+        data:
+          note: There is no fix for dependency gopkg.in/square/go-jose.v2 and to fix that need code changes to replace the affected dependency.
 
   - id: CGA-jvpc-p2v5-92fx
     aliases:

@@ -201,6 +201,28 @@ advisories:
         data:
           fixed-version: 1.9.1-r2
 
+  - id: CGA-hpwx-25jh-jmh3
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2024-06-25T08:11:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spire-server
+            componentID: 506c49a9af775fd2
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.6
+            componentType: go-module
+            componentLocation: /usr/bin/spire-server
+            scanner: grype
+      - timestamp: 2024-06-25T10:07:14Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r1
+
   - id: CGA-hx64-r6pw-g756
     aliases:
       - CVE-2024-21664

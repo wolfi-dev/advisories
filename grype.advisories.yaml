@@ -4,6 +4,28 @@ package:
   name: grype
 
 advisories:
+  - id: CGA-22m6-c957-gm9j
+    aliases:
+      - CVE-2024-6257
+      - GHSA-xfhp-jf8p-mh5w
+    events:
+      - timestamp: 2024-06-26T07:08:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grype
+            componentID: eea0998e00cc8900
+            componentName: github.com/hashicorp/go-getter
+            componentVersion: v1.7.4
+            componentType: go-module
+            componentLocation: /usr/bin/grype
+            scanner: grype
+      - timestamp: 2024-06-26T10:23:51Z
+        type: fixed
+        data:
+          fixed-version: 0.79.1-r1
+
   - id: CGA-6w85-h2rp-4xf2
     aliases:
       - CVE-2023-44487

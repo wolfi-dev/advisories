@@ -14,6 +14,28 @@ advisories:
         data:
           fixed-version: 1.7-r2
 
+  - id: CGA-4vmm-7hrf-9rx6
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2024-06-25T07:25:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-event-exporter
+            componentID: 5e01539330380570
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.1
+            componentType: go-module
+            componentLocation: /usr/bin/kubernetes-event-exporter
+            scanner: grype
+      - timestamp: 2024-06-25T13:36:25Z
+        type: fixed
+        data:
+          fixed-version: 1.7-r9
+
   - id: CGA-5m8m-p2g2-55x4
     aliases:
       - CVE-2024-24785

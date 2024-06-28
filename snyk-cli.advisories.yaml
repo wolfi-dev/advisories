@@ -4,6 +4,28 @@ package:
   name: snyk-cli
 
 advisories:
+  - id: CGA-3jg9-fc27-v269
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2024-06-25T09:10:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: snyk-cli
+            componentID: 77576665a6e34ea0
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.1
+            componentType: go-module
+            componentLocation: /usr/bin/snyk
+            scanner: grype
+      - timestamp: 2024-06-25T22:23:44Z
+        type: fixed
+        data:
+          fixed-version: 1.1291.1-r2
+
   - id: CGA-8mpw-48fv-8cpp
     aliases:
       - CVE-2024-24789
@@ -43,3 +65,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.1291.1-r1
+
+  - id: CGA-rr8v-2x66-39g9
+    aliases:
+      - CVE-2024-6257
+      - GHSA-xfhp-jf8p-mh5w
+    events:
+      - timestamp: 2024-06-26T07:18:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: snyk-cli
+            componentID: 8d026f1704c5454e
+            componentName: github.com/hashicorp/go-getter
+            componentVersion: v1.7.4
+            componentType: go-module
+            componentLocation: /usr/bin/snyk
+            scanner: grype
+      - timestamp: 2024-06-26T09:28:16Z
+        type: fixed
+        data:
+          fixed-version: 1.1291.1-r3

@@ -14,6 +14,28 @@ advisories:
         data:
           fixed-version: 0.31.2-r1
 
+  - id: CGA-3jjq-g42x-mm83
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2024-06-25T07:08:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-image-reflector-controller
+            componentID: 4a123c6fffe7ad75
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.5
+            componentType: go-module
+            componentLocation: /usr/bin/image-reflector-controller
+            scanner: grype
+      - timestamp: 2024-06-25T10:11:21Z
+        type: fixed
+        data:
+          fixed-version: 0.32.0-r4
+
   - id: CGA-4pjf-4583-fw3p
     aliases:
       - GHSA-jq35-85cj-fj4p

@@ -26,6 +26,28 @@ advisories:
         data:
           fixed-version: 2.14.0-r4
 
+  - id: CGA-p96m-7x99-267h
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2024-06-25T07:18:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.14
+            componentID: dda136bb18d04d57
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.5
+            componentType: go-module
+            componentLocation: /usr/bin/keda
+            scanner: grype
+      - timestamp: 2024-06-25T10:12:39Z
+        type: fixed
+        data:
+          fixed-version: 2.14.0-r5
+
   - id: CGA-w2q5-x8w8-r28g
     aliases:
       - CVE-2024-24789

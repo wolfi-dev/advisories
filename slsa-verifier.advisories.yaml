@@ -259,6 +259,28 @@ advisories:
         data:
           fixed-version: 2.5.1-r4
 
+  - id: CGA-cqcr-2xfq-7j62
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2024-06-25T07:32:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: slsa-verifier
+            componentID: 08013da8935c3925
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.5
+            componentType: go-module
+            componentLocation: /usr/bin/slsa-verifier
+            scanner: grype
+      - timestamp: 2024-06-25T13:00:36Z
+        type: fixed
+        data:
+          fixed-version: 2.5.1-r8
+
   - id: CGA-f76w-v36g-35w2
     aliases:
       - CVE-2023-39325

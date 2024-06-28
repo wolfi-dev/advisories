@@ -34,6 +34,28 @@ advisories:
         data:
           fixed-version: 4.3.1-r1
 
+  - id: CGA-mg73-r3cj-jq88
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2024-06-25T08:23:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ksops
+            componentID: 7083f9d4246c5382
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.1
+            componentType: go-module
+            componentLocation: /usr/bin/ksops
+            scanner: grype
+      - timestamp: 2024-06-25T11:03:06Z
+        type: fixed
+        data:
+          fixed-version: 4.3.1-r5
+
   - id: CGA-wwww-fc3r-f74g
     aliases:
       - CVE-2024-35255

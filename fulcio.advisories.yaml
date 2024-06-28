@@ -141,6 +141,28 @@ advisories:
         data:
           fixed-version: 1.4.5-r4
 
+  - id: CGA-hwqp-mwvw-gjpg
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2024-06-25T07:13:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: fulcio
+            componentID: 02b75fe0a713b507
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.1
+            componentType: go-module
+            componentLocation: /usr/bin/fulcio
+            scanner: grype
+      - timestamp: 2024-06-25T12:39:46Z
+        type: fixed
+        data:
+          fixed-version: 1.4.5-r5
+
   - id: CGA-w59q-2h8g-r6q9
     aliases:
       - CVE-2023-45288

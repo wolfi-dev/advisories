@@ -430,6 +430,28 @@ advisories:
         data:
           fixed-version: 0.4.12-r5
 
+  - id: CGA-x834-pfx6-mr5v
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2024-06-25T07:01:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aactl
+            componentID: 185613a37ff1b0f5
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.5
+            componentType: go-module
+            componentLocation: /usr/bin/aactl
+            scanner: grype
+      - timestamp: 2024-06-25T12:01:37Z
+        type: fixed
+        data:
+          fixed-version: 0.4.12-r14
+
   - id: CGA-xc2m-xw4w-f7jr
     aliases:
       - CVE-2023-2253

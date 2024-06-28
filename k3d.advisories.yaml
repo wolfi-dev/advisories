@@ -819,6 +819,28 @@ advisories:
         data:
           fixed-version: 5.6.0-r6
 
+  - id: CGA-m9fq-hq52-q783
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2024-06-25T07:16:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3d
+            componentID: 7b2a8ddf40ff5fc0
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.5
+            componentType: go-module
+            componentLocation: /usr/bin/confd
+            scanner: grype
+      - timestamp: 2024-06-25T13:40:13Z
+        type: fixed
+        data:
+          fixed-version: 5.6.3-r4
+
   - id: CGA-mf8w-mfq9-frmf
     aliases:
       - CVE-2024-24790

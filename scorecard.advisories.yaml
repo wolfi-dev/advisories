@@ -365,6 +365,28 @@ advisories:
         data:
           fixed-version: 4.13.1-r4
 
+  - id: CGA-v39w-pgvg-cxxj
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2024-06-25T09:17:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: scorecard
+            componentID: ef2d803c4241a259
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.4
+            componentType: go-module
+            componentLocation: /usr/bin/scorecard
+            scanner: grype
+      - timestamp: 2024-06-25T13:01:49Z
+        type: fixed
+        data:
+          fixed-version: 4.13.1-r10
+
   - id: CGA-vmvv-wj22-w427
     aliases:
       - CVE-2023-49569

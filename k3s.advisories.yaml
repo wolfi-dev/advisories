@@ -97,6 +97,28 @@ advisories:
         data:
           fixed-version: 1.29.2-r5
 
+  - id: CGA-7f3j-5pqw-9q37
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2024-06-25T07:26:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s
+            componentID: 5d777eec0ea844a4
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.4
+            componentType: go-module
+            componentLocation: /bin/_k3s-inner
+            scanner: grype
+      - timestamp: 2024-06-25T09:28:42Z
+        type: fixed
+        data:
+          fixed-version: 1.30.1-r2
+
   - id: CGA-7jcp-vfhv-643j
     aliases:
       - CVE-2023-46129

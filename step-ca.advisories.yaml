@@ -207,6 +207,28 @@ advisories:
         data:
           fixed-version: 0.26.1-r2
 
+  - id: CGA-w9vv-57v9-38rf
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2024-06-25T08:38:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: step-ca
+            componentID: 17d7c916206d6e6a
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.6
+            componentType: go-module
+            componentLocation: /usr/bin/step-ca
+            scanner: grype
+      - timestamp: 2024-06-25T11:04:15Z
+        type: fixed
+        data:
+          fixed-version: 0.26.2-r1
+
   - id: CGA-wmjp-f7q5-w65w
     aliases:
       - CVE-2023-48795

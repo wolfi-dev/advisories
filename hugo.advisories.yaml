@@ -4,6 +4,28 @@ package:
   name: hugo
 
 advisories:
+  - id: CGA-3797-x2q6-6f92
+    aliases:
+      - CVE-2024-24792
+      - GHSA-9phm-fm57-rhg8
+    events:
+      - timestamp: 2024-06-27T07:27:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: hugo
+            componentID: 869216f0be3488bd
+            componentName: golang.org/x/image
+            componentVersion: v0.16.0
+            componentType: go-module
+            componentLocation: /usr/bin/hugo
+            scanner: grype
+      - timestamp: 2024-06-27T09:27:21Z
+        type: fixed
+        data:
+          fixed-version: 0.128.0-r1
+
   - id: CGA-444p-x8p5-rch5
     aliases:
       - CVE-2023-45283

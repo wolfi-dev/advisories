@@ -289,3 +289,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.24.0-r0
+
+  - id: CGA-xjr4-v493-j9m5
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2024-06-25T07:31:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser
+            componentID: 3e4752cc289ba6a6
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.5
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+      - timestamp: 2024-06-25T09:30:41Z
+        type: fixed
+        data:
+          fixed-version: 2.0.1-r2

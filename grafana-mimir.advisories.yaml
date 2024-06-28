@@ -4,6 +4,28 @@ package:
   name: grafana-mimir
 
 advisories:
+  - id: CGA-6j8x-q78q-cpp3
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2024-06-25T08:13:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-mimir
+            componentID: 05e138503bd7feb7
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.4
+            componentType: go-module
+            componentLocation: /usr/bin/grafana-mimir
+            scanner: grype
+      - timestamp: 2024-06-25T12:38:47Z
+        type: fixed
+        data:
+          fixed-version: 2.12.0-r3
+
   - id: CGA-6qc6-rmfj-4h49
     aliases:
       - CVE-2024-24789

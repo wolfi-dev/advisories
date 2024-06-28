@@ -108,6 +108,28 @@ advisories:
         data:
           fixed-version: 0.51.1-r1
 
+  - id: CGA-v8xv-x639-qmvw
+    aliases:
+      - CVE-2024-6257
+      - GHSA-xfhp-jf8p-mh5w
+    events:
+      - timestamp: 2024-06-26T08:11:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tflint
+            componentID: 118743a30bdda20e
+            componentName: github.com/hashicorp/go-getter
+            componentVersion: v1.7.4
+            componentType: go-module
+            componentLocation: /usr/bin/tflint
+            scanner: grype
+      - timestamp: 2024-06-26T10:43:29Z
+        type: fixed
+        data:
+          fixed-version: 0.51.1-r2
+
   - id: CGA-vrcj-6q58-r447
     aliases:
       - CVE-2023-45289

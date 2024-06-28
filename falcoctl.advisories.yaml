@@ -154,6 +154,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-m597-crp6-vcmx
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2024-06-25T08:19:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: falcoctl
+            componentID: af2c04e18b7bd9e7
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.5
+            componentType: go-module
+            componentLocation: /usr/bin/falcoctl
+            scanner: grype
+      - timestamp: 2024-06-25T10:30:28Z
+        type: fixed
+        data:
+          fixed-version: 0.8.0-r3
+
   - id: CGA-m8w2-3xpp-66vp
     aliases:
       - CVE-2024-24790

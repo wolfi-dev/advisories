@@ -87,6 +87,28 @@ advisories:
         data:
           fixed-version: 1.5.7-r12
 
+  - id: CGA-6r9r-jphg-6g39
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2024-06-25T09:23:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform
+            componentID: 7541906920a643d0
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.2
+            componentType: go-module
+            componentLocation: /usr/bin/terraform
+            scanner: grype
+      - timestamp: 2024-06-25T12:19:43Z
+        type: fixed
+        data:
+          fixed-version: 1.5.7-r13
+
   - id: CGA-6xjx-6pwr-8pc5
     aliases:
       - CVE-2023-45284
@@ -223,3 +245,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.5.7-r0
+
+  - id: CGA-x3mp-jp2j-7h65
+    aliases:
+      - CVE-2024-6257
+      - GHSA-xfhp-jf8p-mh5w
+    events:
+      - timestamp: 2024-06-26T07:10:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform
+            componentID: cabd61102c60e194
+            componentName: github.com/hashicorp/go-getter
+            componentVersion: v1.7.4
+            componentType: go-module
+            componentLocation: /usr/bin/terraform
+            scanner: grype
+      - timestamp: 2024-06-26T09:15:39Z
+        type: fixed
+        data:
+          fixed-version: 1.5.7-r14

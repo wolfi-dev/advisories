@@ -215,6 +215,28 @@ advisories:
         data:
           fixed-version: 7.54.0-r2
 
+  - id: CGA-g8hg-7gx4-5ccf
+    aliases:
+      - CVE-2024-6257
+      - GHSA-xfhp-jf8p-mh5w
+    events:
+      - timestamp: 2024-06-26T08:20:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: datadog-agent
+            componentID: bfcbe5c02e8f2c6f
+            componentName: github.com/hashicorp/go-getter
+            componentVersion: v1.7.4
+            componentType: go-module
+            componentLocation: /usr/bin/agent
+            scanner: grype
+      - timestamp: 2024-06-26T10:20:46Z
+        type: fixed
+        data:
+          fixed-version: 7.54.1-r1
+
   - id: CGA-h3hf-jw4f-qh99
     aliases:
       - CVE-2023-45290

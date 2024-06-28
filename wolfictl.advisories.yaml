@@ -88,6 +88,28 @@ advisories:
         data:
           fixed-version: 0.16.15-r1
 
+  - id: CGA-9j65-gr8f-f2gm
+    aliases:
+      - CVE-2024-6257
+      - GHSA-xfhp-jf8p-mh5w
+    events:
+      - timestamp: 2024-06-26T08:18:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wolfictl
+            componentID: b159a397341f2e62
+            componentName: github.com/hashicorp/go-getter
+            componentVersion: v1.7.4
+            componentType: go-module
+            componentLocation: /usr/bin/wolfictl
+            scanner: grype
+      - timestamp: 2024-06-26T09:41:18Z
+        type: fixed
+        data:
+          fixed-version: 0.19.0-r1
+
   - id: CGA-c23h-v4gm-gqw3
     aliases:
       - CVE-2024-29903

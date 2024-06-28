@@ -31,6 +31,32 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/argocd
             scanner: grype
+      - timestamp: 2024-06-27T01:35:56Z
+        type: pending-upstream-fix
+        data:
+          note: "This vulnerability requires upstream changes to upgrade a strict dependency 'github.com/Azure/kubelogin' from the current v0.0.20 version to v0.1.3 which does not contain any vulnerable code."
+
+  - id: CGA-8x39-9j48-5wcw
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2024-06-25T07:05:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.11
+            componentID: 6b5d20c11cef20fb
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.4
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+      - timestamp: 2024-06-26T21:39:47Z
+        type: fixed
+        data:
+          fixed-version: 2.11.3-r1
 
   - id: CGA-gh74-cvjm-rgxp
     aliases:
