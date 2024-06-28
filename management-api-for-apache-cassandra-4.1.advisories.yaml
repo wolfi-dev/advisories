@@ -4,6 +4,24 @@ package:
   name: management-api-for-apache-cassandra-4.1
 
 advisories:
+  - id: CGA-6phc-ggx6-f65h
+    aliases:
+      - CVE-2022-38751
+      - GHSA-98wm-3w3q-mw94
+    events:
+      - timestamp: 2024-06-28T20:36:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: management-api-for-apache-cassandra-4.1
+            componentID: 42c9fac88d63d420
+            componentName: snakeyaml
+            componentVersion: "1.26"
+            componentType: java-archive
+            componentLocation: /opt/management-api/datastax-mgmtapi-server-0.1.0-SNAPSHOT.jar
+            scanner: grype
+
   - id: CGA-9x5v-7r6g-f8w9
     aliases:
       - CVE-2020-36518
