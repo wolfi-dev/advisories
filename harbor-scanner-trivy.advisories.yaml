@@ -66,6 +66,24 @@ advisories:
         data:
           fixed-version: 0.31.0-r2
 
+  - id: CGA-v7fr-mcr9-jwcq
+    aliases:
+      - CVE-2024-37298
+      - GHSA-3669-72x9-r9p3
+    events:
+      - timestamp: 2024-07-02T07:23:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-scanner-trivy
+            componentID: 20d2cda07490a26c
+            componentName: github.com/gorilla/schema
+            componentVersion: v1.4.0
+            componentType: go-module
+            componentLocation: /usr/bin/scanner-trivy
+            scanner: grype
+
   - id: CGA-wvq2-99x5-6r7w
     aliases:
       - CVE-2024-24787
