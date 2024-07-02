@@ -4,6 +4,50 @@ package:
   name: jruby-9.4
 
 advisories:
+  - id: CGA-9j68-hcjr-5xfx
+    aliases:
+      - CVE-2024-30172
+      - GHSA-m44j-cfrm-g8qc
+    events:
+      - timestamp: 2024-05-15T07:29:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jruby-9.4
+            componentID: 41b9e6f0b0683812
+            componentName: bcpkix-jdk18on
+            componentVersion: "1.74"
+            componentType: java-archive
+            componentLocation: /usr/share/jruby/lib/ruby/stdlib/org/bouncycastle/bcpkix-jdk18on/1.74/bcpkix-jdk18on-1.74.jar
+            scanner: grype
+      - timestamp: 2024-07-02T23:18:54Z
+        type: fixed
+        data:
+          fixed-version: 9.4.8.0-r0
+
+  - id: CGA-fw2f-x94j-v2g6
+    aliases:
+      - CVE-2024-34447
+      - GHSA-4h8f-2wvx-gg5w
+    events:
+      - timestamp: 2024-05-04T07:11:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jruby-9.4
+            componentID: 27410a3982c3d8a1
+            componentName: bcprov-jdk18on
+            componentVersion: "1.74"
+            componentType: java-archive
+            componentLocation: /usr/share/jruby/lib/ruby/stdlib/org/bouncycastle/bcprov-jdk18on/1.74/bcprov-jdk18on-1.74.jar
+            scanner: grype
+      - timestamp: 2024-07-02T23:18:53Z
+        type: fixed
+        data:
+          fixed-version: 9.4.8.0-r0
+
   - id: CGA-h36x-r2gm-hcmg
     aliases:
       - CVE-2012-5370
@@ -14,6 +58,28 @@ advisories:
         data:
           type: vulnerable-code-version-not-used
           note: vulnerability was patched in 2012 https://github.com/jruby/jruby/commit/5e4aab28b26fd127112b76fabfac9a33b64caf77
+
+  - id: CGA-j49x-3x3f-7v84
+    aliases:
+      - CVE-2024-30171
+      - GHSA-v435-xc8x-wvr9
+    events:
+      - timestamp: 2024-05-15T07:29:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jruby-9.4
+            componentID: 41b9e6f0b0683812
+            componentName: bcpkix-jdk18on
+            componentVersion: "1.74"
+            componentType: java-archive
+            componentLocation: /usr/share/jruby/lib/ruby/stdlib/org/bouncycastle/bcpkix-jdk18on/1.74/bcpkix-jdk18on-1.74.jar
+            scanner: grype
+      - timestamp: 2024-07-02T23:18:53Z
+        type: fixed
+        data:
+          fixed-version: 9.4.8.0-r0
 
   - id: CGA-jxxf-8vm5-7mfr
     aliases:
@@ -47,78 +113,6 @@ advisories:
         data:
           fixed-version: 9.4.7.0-r0
 
-  - id: CGA-xx3m-cg2g-f46r
-    aliases:
-      - CVE-2024-29857
-      - GHSA-8xfc-gm6g-vgpv
-    events:
-      - timestamp: 2024-05-15T07:29:35Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: jruby-9.4
-            componentID: 41b9e6f0b0683812
-            componentName: bcpkix-jdk18on
-            componentVersion: "1.74"
-            componentType: java-archive
-            componentLocation: /usr/share/jruby/lib/ruby/stdlib/org/bouncycastle/bcpkix-jdk18on/1.74/bcpkix-jdk18on-1.74.jar
-            scanner: grype
-
-  - id: CGA-j49x-3x3f-7v84
-    aliases:
-      - CVE-2024-30171
-      - GHSA-v435-xc8x-wvr9
-    events:
-      - timestamp: 2024-05-15T07:29:37Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: jruby-9.4
-            componentID: 41b9e6f0b0683812
-            componentName: bcpkix-jdk18on
-            componentVersion: "1.74"
-            componentType: java-archive
-            componentLocation: /usr/share/jruby/lib/ruby/stdlib/org/bouncycastle/bcpkix-jdk18on/1.74/bcpkix-jdk18on-1.74.jar
-            scanner: grype
-
-  - id: CGA-9j68-hcjr-5xfx
-    aliases:
-      - CVE-2024-30172
-      - GHSA-m44j-cfrm-g8qc
-    events:
-      - timestamp: 2024-05-15T07:29:36Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: jruby-9.4
-            componentID: 41b9e6f0b0683812
-            componentName: bcpkix-jdk18on
-            componentVersion: "1.74"
-            componentType: java-archive
-            componentLocation: /usr/share/jruby/lib/ruby/stdlib/org/bouncycastle/bcpkix-jdk18on/1.74/bcpkix-jdk18on-1.74.jar
-            scanner: grype
-
-  - id: CGA-fw2f-x94j-v2g6
-    aliases:
-      - CVE-2024-34447
-      - GHSA-4h8f-2wvx-gg5w
-    events:
-      - timestamp: 2024-05-04T07:11:10Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: jruby-9.4
-            componentID: 27410a3982c3d8a1
-            componentName: bcprov-jdk18on
-            componentVersion: "1.74"
-            componentType: java-archive
-            componentLocation: /usr/share/jruby/lib/ruby/stdlib/org/bouncycastle/bcprov-jdk18on/1.74/bcprov-jdk18on-1.74.jar
-            scanner: grype
-
   - id: CGA-wxwx-mfr5-9j7c
     aliases:
       - CVE-2024-35176
@@ -136,3 +130,29 @@ advisories:
             componentType: gem
             componentLocation: /usr/share/jruby/lib/ruby/gems/shared/specifications/rexml-3.2.5.gemspec
             scanner: grype
+      - timestamp: 2024-07-02T23:18:54Z
+        type: fixed
+        data:
+          fixed-version: 9.4.8.0-r0
+
+  - id: CGA-xx3m-cg2g-f46r
+    aliases:
+      - CVE-2024-29857
+      - GHSA-8xfc-gm6g-vgpv
+    events:
+      - timestamp: 2024-05-15T07:29:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jruby-9.4
+            componentID: 41b9e6f0b0683812
+            componentName: bcpkix-jdk18on
+            componentVersion: "1.74"
+            componentType: java-archive
+            componentLocation: /usr/share/jruby/lib/ruby/stdlib/org/bouncycastle/bcpkix-jdk18on/1.74/bcpkix-jdk18on-1.74.jar
+            scanner: grype
+      - timestamp: 2024-07-02T23:18:52Z
+        type: fixed
+        data:
+          fixed-version: 9.4.8.0-r0
