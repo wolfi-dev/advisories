@@ -176,6 +176,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability was matched to the module "github.com/projectcalico/calico" at the following location(s): /usr/bin/calicoctl. In all cases, the installed version of the module (git commit 638464f946657417dd4900724112eb844ce5be03) corresponds to a version tag (v3.27.3) that is later than the fixed version (3.20.5).'
 
+  - id: CGA-9mcm-vfq6-7r34
+    aliases:
+      - CVE-2024-24791
+      - GHSA-hw49-2p59-3mhj
+    events:
+      - timestamp: 2024-07-04T07:06:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: calico
+            componentID: b13e0e06ee7fd897
+            componentName: stdlib
+            componentVersion: go1.22.4
+            componentType: go-module
+            componentLocation: /bin/calico-node
+            scanner: grype
+
   - id: CGA-fpwp-859h-r7h7
     aliases:
       - CVE-2024-24783
