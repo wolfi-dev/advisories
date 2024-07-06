@@ -732,6 +732,23 @@ advisories:
           type: component-vulnerability-mismatch
           note: 'This vulnerability affects versions for v8.1.x. Since we are building v9.x, we suspect this is a false positive attributed to this Syft bug: https://github.com/anchore/syft/issues/2980'
 
+  - id: CGA-xp5f-fh8m-3gqr
+    aliases:
+      - GHSA-mh55-gqvf-xfwm
+    events:
+      - timestamp: 2024-07-06T07:43:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-9
+            componentID: e6edbd33d083b26e
+            componentName: github.com/rs/cors
+            componentVersion: v1.10.1
+            componentType: go-module
+            componentLocation: /usr/bin/mattermost
+            scanner: grype
+
   - id: CGA-xp9r-x8q4-5w2c
     aliases:
       - CVE-2024-21848
