@@ -4,6 +4,24 @@ package:
   name: patroni
 
 advisories:
+  - id: CGA-3727-xg6m-m6g6
+    aliases:
+      - CVE-2024-39689
+      - GHSA-248v-346w-9cwc
+    events:
+      - timestamp: 2024-07-06T07:39:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: patroni
+            componentID: 94f0f37e252773b2
+            componentName: certifi
+            componentVersion: 2024.6.2
+            componentType: python
+            componentLocation: /usr/lib/python3.12/site-packages/certifi-2024.6.2.dist-info/METADATA, /usr/lib/python3.12/site-packages/certifi-2024.6.2.dist-info/RECORD, /usr/lib/python3.12/site-packages/certifi-2024.6.2.dist-info/top_level.txt
+            scanner: grype
+
   - id: CGA-v542-whj6-7mj4
     aliases:
       - CVE-2024-35195
