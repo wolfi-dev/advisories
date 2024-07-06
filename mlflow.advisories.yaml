@@ -160,6 +160,24 @@ advisories:
         data:
           note: 'The latest versions have been recognized as affected. The upstream project has been alerted: https://github.com/mlflow/mlflow/issues/12256'
 
+  - id: CGA-c75v-5wrv-rvg2
+    aliases:
+      - CVE-2024-39689
+      - GHSA-248v-346w-9cwc
+    events:
+      - timestamp: 2024-07-06T08:12:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mlflow
+            componentID: 3a639495d2ae1054
+            componentName: certifi
+            componentVersion: 2024.6.2
+            componentType: python
+            componentLocation: /usr/share/mlflow/lib/python3.12/site-packages/certifi-2024.6.2.dist-info/METADATA, /usr/share/mlflow/lib/python3.12/site-packages/certifi-2024.6.2.dist-info/RECORD, /usr/share/mlflow/lib/python3.12/site-packages/certifi-2024.6.2.dist-info/top_level.txt
+            scanner: grype
+
   - id: CGA-cm9x-7fjr-fcm9
     aliases:
       - CVE-2024-37061
