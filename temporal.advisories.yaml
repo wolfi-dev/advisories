@@ -42,6 +42,23 @@ advisories:
           type: component-vulnerability-mismatch
           note: Our 'temporal' package is actually the temporal CLI, not the temporal server itself. (The found CPE is a related component.)
 
+  - id: CGA-6754-mjh7-cr7v
+    aliases:
+      - GHSA-xr7q-jx4m-x55m
+    events:
+      - timestamp: 2024-07-10T07:14:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: temporal
+            componentID: 6299bdc0a7d6acb4
+            componentName: google.golang.org/grpc
+            componentVersion: v1.64.0
+            componentType: go-module
+            componentLocation: /usr/bin/temporal
+            scanner: grype
+
   - id: CGA-6ffp-4hxf-7q7p
     aliases:
       - CVE-2024-28180
