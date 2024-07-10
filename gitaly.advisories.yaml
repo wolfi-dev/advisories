@@ -4,6 +4,23 @@ package:
   name: gitaly
 
 advisories:
+  - id: CGA-86c6-4mv3-xr7w
+    aliases:
+      - GHSA-xr7q-jx4m-x55m
+    events:
+      - timestamp: 2024-07-10T07:04:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitaly
+            componentID: 9cf6be14933976bf
+            componentName: google.golang.org/grpc
+            componentVersion: v1.64.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitaly
+            scanner: grype
+
   - id: CGA-8mw8-4mhc-rvxm
     aliases:
       - CVE-2024-24791
