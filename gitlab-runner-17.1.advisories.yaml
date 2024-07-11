@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: gitlab-runner-17.1
+
+advisories:
+  - id: CGA-4p9w-pcxp-qj7c
+    aliases:
+      - GHSA-xr7q-jx4m-x55m
+    events:
+      - timestamp: 2024-07-11T07:21:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-17.1
+            componentID: 8a1a016c046b377f
+            componentName: google.golang.org/grpc
+            componentVersion: v1.64.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-runner
+            scanner: grype
