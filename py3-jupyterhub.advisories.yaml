@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: py3-jupyterhub
+
+advisories:
+  - id: CGA-phxw-qhp9-c3m7
+    aliases:
+      - CVE-2024-38999
+      - GHSA-x3m3-4wpv-5vgc
+    events:
+      - timestamp: 2024-07-11T07:21:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3-jupyterhub
+            componentID: 6af8cb1ec95febf7
+            componentName: requirejs
+            componentVersion: 2.3.6
+            componentType: npm
+            componentLocation: /usr/share/jupyterhub/static/components/requirejs/package.json
+            scanner: grype
