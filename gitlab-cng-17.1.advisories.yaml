@@ -4,6 +4,24 @@ package:
   name: gitlab-cng-17.1
 
 advisories:
+  - id: CGA-2cqf-m65r-7vrq
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-07-15T00:01:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-cng-17.1
+            componentID: 36f8833885c285ac
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/registry
+            scanner: grype
+
   - id: CGA-cjw5-fvrj-mh4c
     aliases:
       - CVE-2023-45288
