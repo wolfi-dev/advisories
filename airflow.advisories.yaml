@@ -207,6 +207,24 @@ advisories:
         data:
           note: Upgrading cryptography dependency in hatch_build.py to 42.0.4 causes a build failure
 
+  - id: CGA-h5gv-qmmr-9r2w
+    aliases:
+      - CVE-2024-39877
+      - GHSA-g5hv-r743-v8pm
+    events:
+      - timestamp: 2024-07-18T07:02:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow
+            componentID: 1860f024d4a010d6
+            componentName: apache-airflow
+            componentVersion: 2.9.2
+            componentType: python
+            componentLocation: /opt/airflow/venv/lib/python3.12/site-packages/apache_airflow-2.9.2.dist-info/METADATA, /opt/airflow/venv/lib/python3.12/site-packages/apache_airflow-2.9.2.dist-info/RECORD, /opt/airflow/venv/lib/python3.12/site-packages/apache_airflow-2.9.2.dist-info/direct_url.json
+            scanner: grype
+
   - id: CGA-pq4j-wp27-c7j9
     aliases:
       - CVE-2024-34069
