@@ -151,6 +151,24 @@ advisories:
           type: vulnerable-code-not-in-execution-path
           note: Vulnerable code is part of the Kubernetes API server which is not in the execution path of aws-efs-csi-driver
 
+  - id: CGA-9qhr-xqp2-qgxq
+    aliases:
+      - CVE-2024-5321
+      - GHSA-82m2-cv7p-4m75
+    events:
+      - timestamp: 2024-07-19T07:01:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-efs-csi-driver
+            componentID: 121d1d4a0e63c16a
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.26.11
+            componentType: go-module
+            componentLocation: /usr/bin/aws-efs-csi-driver
+            scanner: grype
+
   - id: CGA-g675-xr52-846m
     aliases:
       - CVE-2024-24787
