@@ -4,276 +4,6 @@ package:
   name: spark-operator
 
 advisories:
-  - id: CGA-jm6q-34mv-9q8g
-    aliases:
-      - CVE-2020-8554
-      - GHSA-j9wf-vvm6-4r9w
-    events:
-      - timestamp: 2023-09-07T13:49:44Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-in-execution-path
-          note: This is a Kubernetes API flaw, and this code is not reachable in our package.
-
-  - id: CGA-h7q4-8m4j-g4gr
-    aliases:
-      - CVE-2020-8559
-      - GHSA-33c5-9fx5-fvjm
-    events:
-      - timestamp: 2024-04-25T13:25:50Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: spark-operator
-            componentID: df3d2491f578aadf
-            componentName: k8s.io/apimachinery
-            componentVersion: v0.29.3
-            componentType: go-module
-            componentLocation: /usr/bin/spark-operator
-            scanner: grype
-
-  - id: CGA-c5q7-57h2-rq9c
-    aliases:
-      - CVE-2020-8561
-      - GHSA-74j8-88mm-7496
-    events:
-      - timestamp: 2023-09-07T14:01:11Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: This only affects kube-apiserver logs, and code was marked NOT_IMPORTABLE in Golang vulndb
-
-  - id: CGA-q5r9-p48p-pvgj
-    aliases:
-      - CVE-2020-8564
-      - GHSA-8mjg-8c8g-6h85
-    events:
-      - timestamp: 2023-09-07T13:55:27Z
-        type: true-positive-determination
-        data:
-          note: Pending upstream project to pick up k8s.io/kubernetes 1.20.0-alpha.1+.
-      - timestamp: 2024-02-15T07:26:05Z
-        type: fixed
-        data:
-          fixed-version: 1.1.27-r17
-
-  - id: CGA-qqmw-pgch-66cr
-    aliases:
-      - CVE-2020-8565
-      - GHSA-8cfg-vx93-jvxw
-    events:
-      - timestamp: 2023-09-07T13:59:27Z
-        type: true-positive-determination
-        data:
-          note: Pending upstream project to pick up k8s.io/kubernetes 1.20.0-alpha.2+.
-
-  - id: CGA-h5cj-jfjv-735q
-    aliases:
-      - CVE-2021-25736
-      - GHSA-35c7-w35f-xwgh
-    events:
-      - timestamp: 2023-11-02T00:16:10Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Vulnerability is specific to Windows and the affected code is not imported.
-
-  - id: CGA-jv5x-48c5-q44r
-    aliases:
-      - CVE-2021-25740
-      - GHSA-vw47-mr44-3jf9
-    events:
-      - timestamp: 2023-09-07T14:04:51Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: This only affects Kubernetes itself, and code was marked not importable in Golang vulndb
-
-  - id: CGA-hfpv-mqvg-347w
-    aliases:
-      - CVE-2021-25743
-      - GHSA-f9jg-8p32-2f55
-    events:
-      - timestamp: 2023-10-03T20:18:35Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Vulnerable code is specific to kubectl.
-
-  - id: CGA-ph7j-j629-pq93
-    aliases:
-      - CVE-2023-2431
-      - GHSA-xc8m-28vv-4pjc
-    events:
-      - timestamp: 2023-09-07T13:45:11Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-in-execution-path
-          note: Vulnerable code is part of the Kubernetes kubelet which is not in the execution path of the spark-operator
-
-  - id: CGA-jwfh-48f4-3ppx
-    aliases:
-      - CVE-2023-2727
-      - GHSA-qc2g-gmh6-95p4
-    events:
-      - timestamp: 2023-09-07T13:47:12Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Vulnerable code is part of the Kubernetes API server and not importable.
-
-  - id: CGA-55gm-2q49-wrmm
-    aliases:
-      - CVE-2023-2728
-      - GHSA-cgcv-5272-97pr
-    events:
-      - timestamp: 2023-09-07T13:53:32Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Vulnerable code is part of the Kubernetes ServiceAccount admission plugin which is not importable
-
-  - id: CGA-jwpc-v5f6-r6fx
-    aliases:
-      - CVE-2023-3676
-      - GHSA-7fxm-f474-hf8w
-    events:
-      - timestamp: 2023-11-13T00:04:13Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: 'This vulnerability affects the Kubernetes application, not the golang k8s.io/kubernetes library. The golang vulnerability database reports it as a false-positive: https://github.com/golang/vulndb/blob/47864735862dde2f809a19e4f6ffc1de8d6f3703/data/excluded/GO-2023-2330.yaml'
-
-  - id: CGA-gw9p-r6rw-g9qp
-    aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
-    events:
-      - timestamp: 2023-10-15T20:49:29Z
-        type: fixed
-        data:
-          fixed-version: 1.1.27-r13
-
-  - id: CGA-5q63-w7m9-2j88
-    aliases:
-      - CVE-2023-3955
-      - GHSA-q78c-gwqw-jcmc
-    events:
-      - timestamp: 2023-11-13T00:04:33Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: 'This vulnerability affects the Kubernetes application, not the golang k8s.io/kubernetes library. The golang vulnerability database reports it as a false-positive: https://github.com/golang/vulndb/blob/47864735862dde2f809a19e4f6ffc1de8d6f3703/data/excluded/GO-2023-2170.yaml'
-
-  - id: CGA-qpvx-6gm8-822q
-    aliases:
-      - CVE-2023-3978
-      - GHSA-2wrh-6pvc-2jm9
-    events:
-      - timestamp: 2023-10-15T20:50:02Z
-        type: fixed
-        data:
-          fixed-version: 1.1.27-r13
-
-  - id: CGA-x87p-5crv-79j5
-    aliases:
-      - CVE-2023-44487
-      - GHSA-qppj-fm5r-hxr3
-    events:
-      - timestamp: 2023-10-15T20:50:22Z
-        type: fixed
-        data:
-          fixed-version: 1.1.27-r13
-
-  - id: CGA-8x76-7357-7m5v
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:38:09Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-f2jx-c58c-v47p
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:38:11Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-566f-p6j8-5jqg
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-07T08:41:31Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: spark-operator
-            componentID: a3e52153f3d6c95e
-            componentName: stdlib
-            componentVersion: go1.22.1
-            componentType: go-module
-            componentLocation: /usr/bin/spark-operator
-            scanner: grype
-      - timestamp: 2024-04-10T09:37:01Z
-        type: fixed
-        data:
-          fixed-version: 1.1.27-r21
-
-  - id: CGA-8wmr-wrg2-c9pf
-    aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
-    events:
-      - timestamp: 2024-03-12T08:02:44Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: sparkctl
-            componentID: 6896a8a2102fcdfd
-            componentName: stdlib
-            componentVersion: go1.22.0
-            componentType: go-module
-            componentLocation: /usr/bin/sparkctl
-            scanner: grype
-      - timestamp: 2024-03-12T10:01:21Z
-        type: fixed
-        data:
-          fixed-version: 1.1.27-r19
-
-  - id: CGA-78r4-rv9g-p25h
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-12T08:03:01Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: sparkctl
-            componentID: 6896a8a2102fcdfd
-            componentName: stdlib
-            componentVersion: go1.22.0
-            componentType: go-module
-            componentLocation: /usr/bin/sparkctl
-            scanner: grype
-      - timestamp: 2024-03-12T10:01:24Z
-        type: fixed
-        data:
-          fixed-version: 1.1.27-r19
-
   - id: CGA-34v7-9wfw-22r7
     aliases:
       - CVE-2023-48795
@@ -310,6 +40,71 @@ advisories:
         data:
           fixed-version: 1.1.27-r17
 
+  - id: CGA-4xr2-rg4j-42g5
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T08:04:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sparkctl
+            componentID: 6896a8a2102fcdfd
+            componentName: stdlib
+            componentVersion: go1.22.0
+            componentType: go-module
+            componentLocation: /usr/bin/sparkctl
+            scanner: grype
+      - timestamp: 2024-03-12T10:01:16Z
+        type: fixed
+        data:
+          fixed-version: 1.1.27-r19
+
+  - id: CGA-55gm-2q49-wrmm
+    aliases:
+      - CVE-2023-2728
+      - GHSA-cgcv-5272-97pr
+    events:
+      - timestamp: 2023-09-07T13:53:32Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Vulnerable code is part of the Kubernetes ServiceAccount admission plugin which is not importable
+
+  - id: CGA-566f-p6j8-5jqg
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-07T08:41:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-operator
+            componentID: a3e52153f3d6c95e
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/spark-operator
+            scanner: grype
+      - timestamp: 2024-04-10T09:37:01Z
+        type: fixed
+        data:
+          fixed-version: 1.1.27-r21
+
+  - id: CGA-566g-fvfx-fpxc
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T15:21:10Z
+        type: fixed
+        data:
+          fixed-version: 1.1.27-r20
+
   - id: CGA-586w-4r54-cqqg
     aliases:
       - CVE-2024-24783
@@ -332,12 +127,23 @@ advisories:
         data:
           fixed-version: 1.1.27-r19
 
-  - id: CGA-4xr2-rg4j-42g5
+  - id: CGA-5q63-w7m9-2j88
     aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
+      - CVE-2023-3955
+      - GHSA-q78c-gwqw-jcmc
     events:
-      - timestamp: 2024-03-12T08:04:00Z
+      - timestamp: 2023-11-13T00:04:33Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'This vulnerability affects the Kubernetes application, not the golang k8s.io/kubernetes library. The golang vulnerability database reports it as a false-positive: https://github.com/golang/vulndb/blob/47864735862dde2f809a19e4f6ffc1de8d6f3703/data/excluded/GO-2023-2170.yaml'
+
+  - id: CGA-78r4-rv9g-p25h
+    aliases:
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T08:03:01Z
         type: detection
         data:
           type: scan/v1
@@ -349,7 +155,7 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/sparkctl
             scanner: grype
-      - timestamp: 2024-03-12T10:01:16Z
+      - timestamp: 2024-03-12T10:01:24Z
         type: fixed
         data:
           fixed-version: 1.1.27-r19
@@ -376,15 +182,78 @@ advisories:
         data:
           fixed-version: 1.1.27-r19
 
-  - id: CGA-566g-fvfx-fpxc
+  - id: CGA-8wmr-wrg2-c9pf
     aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
     events:
-      - timestamp: 2024-03-14T15:21:10Z
+      - timestamp: 2024-03-12T08:02:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sparkctl
+            componentID: 6896a8a2102fcdfd
+            componentName: stdlib
+            componentVersion: go1.22.0
+            componentType: go-module
+            componentLocation: /usr/bin/sparkctl
+            scanner: grype
+      - timestamp: 2024-03-12T10:01:21Z
         type: fixed
         data:
-          fixed-version: 1.1.27-r20
+          fixed-version: 1.1.27-r19
+
+  - id: CGA-8x76-7357-7m5v
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:38:09Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-c5q7-57h2-rq9c
+    aliases:
+      - CVE-2020-8561
+      - GHSA-74j8-88mm-7496
+    events:
+      - timestamp: 2023-09-07T14:01:11Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This only affects kube-apiserver logs, and code was marked NOT_IMPORTABLE in Golang vulndb
+
+  - id: CGA-c85c-q8mq-6x53
+    aliases:
+      - CVE-2024-5321
+      - GHSA-82m2-cv7p-4m75
+    events:
+      - timestamp: 2024-07-19T08:35:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-operator
+            componentID: 37d787b00b4385c3
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.29.4
+            componentType: go-module
+            componentLocation: /usr/bin/sparkctl
+            scanner: grype
+
+  - id: CGA-f2jx-c58c-v47p
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:38:11Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
 
   - id: CGA-f4qh-cvqh-xp3p
     aliases:
@@ -396,6 +265,132 @@ advisories:
         data:
           fixed-version: 1.2.15-r0
 
+  - id: CGA-gw9p-r6rw-g9qp
+    aliases:
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2023-10-15T20:49:29Z
+        type: fixed
+        data:
+          fixed-version: 1.1.27-r13
+
+  - id: CGA-h5cj-jfjv-735q
+    aliases:
+      - CVE-2021-25736
+      - GHSA-35c7-w35f-xwgh
+    events:
+      - timestamp: 2023-11-02T00:16:10Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Vulnerability is specific to Windows and the affected code is not imported.
+
+  - id: CGA-h7q4-8m4j-g4gr
+    aliases:
+      - CVE-2020-8559
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T13:25:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-operator
+            componentID: df3d2491f578aadf
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.29.3
+            componentType: go-module
+            componentLocation: /usr/bin/spark-operator
+            scanner: grype
+
+  - id: CGA-hfpv-mqvg-347w
+    aliases:
+      - CVE-2021-25743
+      - GHSA-f9jg-8p32-2f55
+    events:
+      - timestamp: 2023-10-03T20:18:35Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Vulnerable code is specific to kubectl.
+
+  - id: CGA-jm6q-34mv-9q8g
+    aliases:
+      - CVE-2020-8554
+      - GHSA-j9wf-vvm6-4r9w
+    events:
+      - timestamp: 2023-09-07T13:49:44Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: This is a Kubernetes API flaw, and this code is not reachable in our package.
+
+  - id: CGA-jv5x-48c5-q44r
+    aliases:
+      - CVE-2021-25740
+      - GHSA-vw47-mr44-3jf9
+    events:
+      - timestamp: 2023-09-07T14:04:51Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This only affects Kubernetes itself, and code was marked not importable in Golang vulndb
+
+  - id: CGA-jwfh-48f4-3ppx
+    aliases:
+      - CVE-2023-2727
+      - GHSA-qc2g-gmh6-95p4
+    events:
+      - timestamp: 2023-09-07T13:47:12Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Vulnerable code is part of the Kubernetes API server and not importable.
+
+  - id: CGA-jwpc-v5f6-r6fx
+    aliases:
+      - CVE-2023-3676
+      - GHSA-7fxm-f474-hf8w
+    events:
+      - timestamp: 2023-11-13T00:04:13Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'This vulnerability affects the Kubernetes application, not the golang k8s.io/kubernetes library. The golang vulnerability database reports it as a false-positive: https://github.com/golang/vulndb/blob/47864735862dde2f809a19e4f6ffc1de8d6f3703/data/excluded/GO-2023-2330.yaml'
+
+  - id: CGA-m2p9-447r-r54m
+    aliases:
+      - GHSA-m425-mq94-257g
+    events:
+      - timestamp: 2024-02-02T23:43:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sparkctl
+            componentID: 584fbc590698e5ee
+            componentName: google.golang.org/grpc
+            componentVersion: v1.47.0
+            componentType: go-module
+            componentLocation: /usr/bin/sparkctl
+            scanner: grype
+      - timestamp: 2024-02-15T07:37:02Z
+        type: fixed
+        data:
+          fixed-version: 1.1.27-r17
+
+  - id: CGA-ph7j-j629-pq93
+    aliases:
+      - CVE-2023-2431
+      - GHSA-xc8m-28vv-4pjc
+    events:
+      - timestamp: 2023-09-07T13:45:11Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: Vulnerable code is part of the Kubernetes kubelet which is not in the execution path of the spark-operator
+
   - id: CGA-pqhx-2qg9-25vw
     aliases:
       - CVE-2024-24788
@@ -405,6 +400,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.2.15-r0
+
+  - id: CGA-q5r9-p48p-pvgj
+    aliases:
+      - CVE-2020-8564
+      - GHSA-8mjg-8c8g-6h85
+    events:
+      - timestamp: 2023-09-07T13:55:27Z
+        type: true-positive-determination
+        data:
+          note: Pending upstream project to pick up k8s.io/kubernetes 1.20.0-alpha.1+.
+      - timestamp: 2024-02-15T07:26:05Z
+        type: fixed
+        data:
+          fixed-version: 1.1.27-r17
 
   - id: CGA-qfhv-m284-gpvr
     aliases:
@@ -428,23 +437,32 @@ advisories:
         data:
           fixed-version: 1.2.12-r1
 
-  - id: CGA-m2p9-447r-r54m
+  - id: CGA-qpvx-6gm8-822q
     aliases:
-      - GHSA-m425-mq94-257g
+      - CVE-2023-3978
+      - GHSA-2wrh-6pvc-2jm9
     events:
-      - timestamp: 2024-02-02T23:43:57Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: sparkctl
-            componentID: 584fbc590698e5ee
-            componentName: google.golang.org/grpc
-            componentVersion: v1.47.0
-            componentType: go-module
-            componentLocation: /usr/bin/sparkctl
-            scanner: grype
-      - timestamp: 2024-02-15T07:37:02Z
+      - timestamp: 2023-10-15T20:50:02Z
         type: fixed
         data:
-          fixed-version: 1.1.27-r17
+          fixed-version: 1.1.27-r13
+
+  - id: CGA-qqmw-pgch-66cr
+    aliases:
+      - CVE-2020-8565
+      - GHSA-8cfg-vx93-jvxw
+    events:
+      - timestamp: 2023-09-07T13:59:27Z
+        type: true-positive-determination
+        data:
+          note: Pending upstream project to pick up k8s.io/kubernetes 1.20.0-alpha.2+.
+
+  - id: CGA-x87p-5crv-79j5
+    aliases:
+      - CVE-2023-44487
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2023-10-15T20:50:22Z
+        type: fixed
+        data:
+          fixed-version: 1.1.27-r13
