@@ -25,6 +25,24 @@ advisories:
         data:
           fixed-version: 2.2.0-r5
 
+  - id: CGA-26wh-g97j-fh3r
+    aliases:
+      - CVE-2024-5321
+      - GHSA-82m2-cv7p-4m75
+    events:
+      - timestamp: 2024-07-19T08:17:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines
+            componentID: 026660afcc84b653
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.27.13
+            componentType: go-module
+            componentLocation: /usr/bin/apiserver
+            scanner: grype
+
   - id: CGA-2fhf-fh2q-6h6f
     aliases:
       - CVE-2024-24784
