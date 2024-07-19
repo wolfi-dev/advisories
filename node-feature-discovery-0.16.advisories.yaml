@@ -23,3 +23,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.16.0-r2
+
+  - id: CGA-rcw4-3w7j-xf23
+    aliases:
+      - CVE-2024-5321
+      - GHSA-82m2-cv7p-4m75
+    events:
+      - timestamp: 2024-07-19T07:21:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: node-feature-discovery-0.16
+            componentID: 05a3afc37fade636
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/kubectl-nfd
+            scanner: grype
