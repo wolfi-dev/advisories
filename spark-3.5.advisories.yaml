@@ -26,6 +26,23 @@ advisories:
         data:
           note: This relates to jackson-mapper-asl, which is no longer maintained. Apache Spark has taken actions to remove their own dependency on the library, however a transitive dependency (ranger), still requires it. Waiting for upstream https://issues.apache.org/jira/browse/NIFI-11659.
 
+  - id: CGA-2c2c-g9hq-66c4
+    aliases:
+      - GHSA-crjg-w57m-rqqf
+    events:
+      - timestamp: 2024-07-23T07:42:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5
+            componentID: 291504a965f6100d
+            componentName: dnsjava
+            componentVersion: 2.1.7
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.6.jar
+            scanner: grype
+
   - id: CGA-2f6h-hv6v-qjjj
     aliases:
       - CVE-2024-26308
@@ -291,6 +308,23 @@ advisories:
         data:
           note: This relates to guava v30.1.1-jre, which is included by the shaded JARs hadoop-shaded-guava-1.1.1.jar and hadoop-client-runtime-3.3.6.jar.
 
+  - id: CGA-j2wq-qxcv-mc23
+    aliases:
+      - GHSA-mmwx-rj87-vfgr
+    events:
+      - timestamp: 2024-07-23T07:42:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5
+            componentID: 291504a965f6100d
+            componentName: dnsjava
+            componentVersion: 2.1.7
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.6.jar
+            scanner: grype
+
   - id: CGA-j9vp-fhqv-x9mf
     aliases:
       - CVE-2024-36114
@@ -378,6 +412,24 @@ advisories:
         type: pending-upstream-fix
         data:
           note: This relates to protobuf-java v3.3.0 included by the shaded JARs mesos-1.4.3-shaded-protobuf.jar and hadoop-client-runtime-3.3.6.jar. There are no newer versions of these shaded JARs available to fix the vulnerability.
+
+  - id: CGA-pv3f-mmpx-7xwc
+    aliases:
+      - CVE-2024-25638
+      - GHSA-cfxw-4h78-h7fw
+    events:
+      - timestamp: 2024-07-23T07:41:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5
+            componentID: 291504a965f6100d
+            componentName: dnsjava
+            componentVersion: 2.1.7
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.6.jar
+            scanner: grype
 
   - id: CGA-pwpf-r92v-g6h8
     aliases:
