@@ -107,6 +107,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/argocd
             scanner: grype
+      - timestamp: 2024-07-25T16:45:06Z
+        type: pending-upstream-fix
+        data:
+          note: Any upgrade on the Kubernetes dependencies causes conflicts due to a strict dependency on github.com/argoproj/gitops-engine which supports Kubernetes v1.23 while the non-vulnerable code is on Kubernetes v1.27.16.
 
   - id: CGA-w6mf-rxg5-j7gh
     aliases:
