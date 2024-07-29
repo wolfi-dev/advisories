@@ -4,6 +4,24 @@ package:
   name: pgcat
 
 advisories:
+  - id: CGA-2rc2-pjfw-93q6
+    aliases:
+      - CVE-2020-26235
+      - GHSA-wcg3-cvx6-7396
+    events:
+      - timestamp: 2024-07-29T10:35:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pgcat
+            componentID: 86e7a0c13dd72a66
+            componentName: time
+            componentVersion: 0.1.45
+            componentType: rust-crate
+            componentLocation: /usr/bin/pgcat
+            scanner: grype
+
   - id: CGA-896q-7j3w-vqv7
     aliases:
       - GHSA-c827-hfw6-qwvm
