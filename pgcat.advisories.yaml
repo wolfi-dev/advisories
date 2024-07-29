@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: pgcat
+
+advisories:
+  - id: CGA-m575-v8fm-22gm
+    aliases:
+      - CVE-2024-32650
+      - GHSA-6g7w-8wpp-frhj
+    events:
+      - timestamp: 2024-07-29T10:35:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pgcat
+            componentID: eba6e731673a5334
+            componentName: rustls
+            componentVersion: 0.21.5
+            componentType: rust-crate
+            componentLocation: /usr/bin/pgcat
+            scanner: grype
