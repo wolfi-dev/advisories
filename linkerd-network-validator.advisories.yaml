@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: linkerd-network-validator
+
+advisories:
+  - id: CGA-3fg3-mcm8-83j9
+    aliases:
+      - CVE-2024-27308
+      - GHSA-r8w9-5wcg-vfj7
+    events:
+      - timestamp: 2024-07-29T10:36:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: linkerd-network-validator
+            componentID: e551db70d0f610a9
+            componentName: mio
+            componentVersion: 0.8.4
+            componentType: rust-crate
+            componentLocation: /usr/bin/linkerd-network-validator
+            scanner: grype
