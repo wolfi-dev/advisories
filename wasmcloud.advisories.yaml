@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: wasmcloud
+
+advisories:
+  - id: CGA-qpj4-gwrp-pjfc
+    aliases:
+      - CVE-2024-32650
+      - GHSA-6g7w-8wpp-frhj
+    events:
+      - timestamp: 2024-07-30T16:15:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wasmcloud
+            componentID: 8b9a778a12521655
+            componentName: rustls
+            componentVersion: 0.21.10
+            componentType: rust-crate
+            componentLocation: /usr/bin/wasmcloud
+            scanner: grype
