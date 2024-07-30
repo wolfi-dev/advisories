@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: efs-utils
+
+advisories:
+  - id: CGA-8w3c-hpc9-xgmg
+    aliases:
+      - GHSA-52xf-5p2m-9wrv
+    events:
+      - timestamp: 2024-07-30T08:20:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: efs-utils
+            componentID: 7114d95fb5fa2e05
+            componentName: s2n-tls
+            componentVersion: 0.0.41
+            componentType: rust-crate
+            componentLocation: /usr/bin/efs-proxy
+            scanner: grype
