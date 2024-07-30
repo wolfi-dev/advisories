@@ -1,0 +1,40 @@
+schema-version: 2.0.2
+
+package:
+  name: buck2
+
+advisories:
+  - id: CGA-6cf8-49j8-g8m2
+    aliases:
+      - GHSA-8qv2-5vq6-g2g7
+    events:
+      - timestamp: 2024-07-30T07:03:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buck2
+            componentID: 0e9895e889044139
+            componentName: webpki
+            componentVersion: 0.21.4
+            componentType: rust-crate
+            componentLocation: /usr/bin/buck2
+            scanner: grype
+
+  - id: CGA-7x36-fpv3-2vfj
+    aliases:
+      - CVE-2021-38187
+      - GHSA-hc92-9h3m-c39j
+    events:
+      - timestamp: 2024-07-30T07:03:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buck2
+            componentID: d524ae68101acd7d
+            componentName: anymap
+            componentVersion: 0.12.1
+            componentType: rust-crate
+            componentLocation: /usr/bin/buck2
+            scanner: grype
