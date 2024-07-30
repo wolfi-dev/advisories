@@ -1,0 +1,40 @@
+schema-version: 2.0.2
+
+package:
+  name: sdp-k8s-injector
+
+advisories:
+  - id: CGA-8pf9-6852-jjrp
+    aliases:
+      - GHSA-q445-7m23-qrmw
+    events:
+      - timestamp: 2024-07-30T16:16:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sdp-identity-service
+            componentID: 962f1d05b5ace8e7
+            componentName: openssl
+            componentVersion: 0.10.64
+            componentType: rust-crate
+            componentLocation: /usr/bin/sdp-identity-service
+            scanner: grype
+
+  - id: CGA-98c5-3q27-7cf3
+    aliases:
+      - CVE-2024-28854
+      - GHSA-2qph-qpvm-2qf7
+    events:
+      - timestamp: 2024-07-30T16:16:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sdp-identity-service
+            componentID: a9b4dff599364011
+            componentName: tls-listener
+            componentVersion: 0.5.1
+            componentType: rust-crate
+            componentLocation: /usr/bin/sdp-injector
+            scanner: grype
