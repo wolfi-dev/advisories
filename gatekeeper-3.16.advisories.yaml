@@ -24,6 +24,24 @@ advisories:
         data:
           fixed-version: 3.16.3-r2
 
+  - id: CGA-jg5g-8xx5-j444
+    aliases:
+      - CVE-2024-41110
+      - GHSA-v23v-6jw2-98fq
+    events:
+      - timestamp: 2024-07-31T07:11:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.16
+            componentID: 2fab0ca9bd597400
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.5+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/gator
+            scanner: grype
+
   - id: CGA-jxf6-5552-q42v
     aliases:
       - CVE-2024-24789
