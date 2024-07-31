@@ -4,6 +4,24 @@ package:
   name: cri-tools
 
 advisories:
+  - id: CGA-6c83-4hvv-h5c7
+    aliases:
+      - CVE-2024-41110
+      - GHSA-v23v-6jw2-98fq
+    events:
+      - timestamp: 2024-07-31T07:18:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cri-tools
+            componentID: 68902904b53b353f
+            componentName: github.com/docker/docker
+            componentVersion: v26.0.2+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/crictl
+            scanner: grype
+
   - id: CGA-832h-x37w-8wwj
     aliases:
       - CVE-2024-32473
