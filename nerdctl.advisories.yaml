@@ -4,6 +4,24 @@ package:
   name: nerdctl
 
 advisories:
+  - id: CGA-22pr-5vwr-fhjj
+    aliases:
+      - CVE-2024-41110
+      - GHSA-v23v-6jw2-98fq
+    events:
+      - timestamp: 2024-07-31T07:31:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nerdctl
+            componentID: 825367a60f5a004e
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.9+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/nerdctl
+            scanner: grype
+
   - id: CGA-4c7q-5q3x-mwqw
     aliases:
       - CVE-2023-48795
