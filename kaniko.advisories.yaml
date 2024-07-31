@@ -80,6 +80,24 @@ advisories:
         data:
           fixed-version: 1.20.1-r0
 
+  - id: CGA-86cp-ph7f-gvcm
+    aliases:
+      - CVE-2024-41110
+      - GHSA-v23v-6jw2-98fq
+    events:
+      - timestamp: 2024-07-31T10:18:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kaniko
+            componentID: 77fa67ca51386b96
+            componentName: github.com/docker/docker
+            componentVersion: v27.0.3+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/executor
+            scanner: grype
+
   - id: CGA-f5hh-5rrg-27h8
     aliases:
       - GHSA-7ww5-4wqc-m92c
