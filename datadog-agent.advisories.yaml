@@ -166,6 +166,24 @@ advisories:
         data:
           fixed-version: 7.51.1-r1
 
+  - id: CGA-9xxq-jrwg-j4fv
+    aliases:
+      - CVE-2024-41110
+      - GHSA-v23v-6jw2-98fq
+    events:
+      - timestamp: 2024-07-31T08:03:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: datadog-agent
+            componentID: cf35a190a0313686
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.5+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/agent
+            scanner: grype
+
   - id: CGA-c8pv-52m7-2mhm
     aliases:
       - CVE-2024-36129
