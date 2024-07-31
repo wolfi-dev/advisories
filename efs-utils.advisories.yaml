@@ -37,6 +37,10 @@ advisories:
             componentType: rust-crate
             componentLocation: /usr/bin/efs-proxy
             scanner: grype
+      - timestamp: 2024-07-31T13:04:18Z
+        type: fix-not-planned
+        data:
+          note: On windows, atty dereferences a potentially unaligned pointer.  In practice however, the pointer won't be unaligned unless a custom global allocator is used. However the atty package seems to be unmaintained.
 
   - id: CGA-pq88-q4c9-qrxw
     aliases:
@@ -72,6 +76,10 @@ advisories:
             componentType: rust-crate
             componentLocation: /usr/bin/efs-proxy
             scanner: grype
+      - timestamp: 2024-07-31T13:10:04Z
+        type: fix-not-planned
+        data:
+          note: typemap seems unmaintained and looks like there is not fix for this CVE.
 
   - id: CGA-x3xx-9p7p-22vp
     aliases:
@@ -89,3 +97,7 @@ advisories:
             componentType: rust-crate
             componentLocation: /usr/bin/efs-proxy
             scanner: grype
+      - timestamp: 2024-07-31T13:09:11Z
+        type: fix-not-planned
+        data:
+          note: traitobject seems unmaintained and looks like there is not fix for this CVE.
