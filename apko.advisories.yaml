@@ -4,35 +4,33 @@ package:
   name: apko
 
 advisories:
-  - id: CGA-vw39-p8xw-v5hv
+  - id: CGA-2pv6-4gjh-fqfr
     aliases:
-      - CVE-2023-28840
-      - GHSA-232p-vwff-86mp
+      - CVE-2024-41110
+      - GHSA-v23v-6jw2-98fq
     events:
-      - timestamp: 2023-04-05T14:22:32Z
-        type: fixed
+      - timestamp: 2024-07-31T07:29:00Z
+        type: detection
         data:
-          fixed-version: 0.7.3-r1
+          type: scan/v1
+          data:
+            subpackageName: apko
+            componentID: 6e842826c306e581
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.9+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/apko
+            scanner: grype
 
-  - id: CGA-j5rx-rrgv-vwrj
+  - id: CGA-386m-pr6v-7wq2
     aliases:
-      - CVE-2023-28841
-      - GHSA-33pg-m6jh-5237
+      - CVE-2023-49568
+      - GHSA-mw99-9chc-xw7r
     events:
-      - timestamp: 2023-04-05T14:22:32Z
+      - timestamp: 2023-12-29T21:34:42Z
         type: fixed
         data:
-          fixed-version: 0.7.3-r1
-
-  - id: CGA-gjxp-xr95-gvpj
-    aliases:
-      - CVE-2023-28842
-      - GHSA-6wrf-mxfj-pf5p
-    events:
-      - timestamp: 2023-04-05T14:22:32Z
-        type: fixed
-        data:
-          fixed-version: 0.7.3-r1
+          fixed-version: 0.13.2-r0
 
   - id: CGA-3hhc-wp8w-cgrh
     aliases:
@@ -43,26 +41,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.8.0-r1
-
-  - id: CGA-7fr2-w7x2-34w3
-    aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
-    events:
-      - timestamp: 2023-10-13T12:38:57Z
-        type: fixed
-        data:
-          fixed-version: 0.10.0-r6
-
-  - id: CGA-rvmp-7c2w-5x25
-    aliases:
-      - CVE-2023-3978
-      - GHSA-2wrh-6pvc-2jm9
-    events:
-      - timestamp: 2023-10-13T12:38:12Z
-        type: fixed
-        data:
-          fixed-version: 0.10.0-r6
 
   - id: CGA-3jvc-525f-3ggf
     aliases:
@@ -75,16 +53,15 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
-  - id: CGA-jgq5-c6pr-47hp
+  - id: CGA-5383-wjhq-x4r5
     aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
+      - CVE-2024-29903
+      - GHSA-95pr-fxf5-86gv
     events:
-      - timestamp: 2023-11-07T19:23:00Z
-        type: false-positive-determination
+      - timestamp: 2024-04-12T15:04:58Z
+        type: fixed
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          fixed-version: 0.14.0-r6
 
   - id: CGA-6c34-8779-3pff
     aliases:
@@ -108,35 +85,75 @@ advisories:
         data:
           fixed-version: 0.14.0-r7
 
-  - id: CGA-mp8f-5q7x-gcgh
+  - id: CGA-6q9p-7438-p25m
     aliases:
-      - CVE-2023-46737
-      - GHSA-vfp6-jrw2-99g9
+      - GHSA-jq35-85cj-fj4p
     events:
-      - timestamp: 2023-11-16T12:39:51Z
-        type: fixed
+      - timestamp: 2023-10-31T20:03:39Z
+        type: false-positive-determination
         data:
-          fixed-version: 0.11.3-r0
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability is in the container runtime itself, not clients of the container runtime.
 
-  - id: CGA-xc48-24mh-c3jm
+  - id: CGA-7fr2-w7x2-34w3
     aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
     events:
-      - timestamp: 2023-12-19T16:56:36Z
+      - timestamp: 2023-10-13T12:38:57Z
         type: fixed
         data:
-          fixed-version: 0.12.0-r2
+          fixed-version: 0.10.0-r6
 
-  - id: CGA-386m-pr6v-7wq2
+  - id: CGA-fr9x-mfm9-9rpj
     aliases:
-      - CVE-2023-49568
-      - GHSA-mw99-9chc-xw7r
+      - CVE-2024-29902
+      - GHSA-88jx-383q-w4qc
     events:
-      - timestamp: 2023-12-29T21:34:42Z
+      - timestamp: 2024-04-12T15:04:55Z
         type: fixed
         data:
-          fixed-version: 0.13.2-r0
+          fixed-version: 0.14.0-r6
+
+  - id: CGA-fvwh-x5hf-34g9
+    aliases:
+      - GHSA-9763-4f94-gfch
+    events:
+      - timestamp: 2024-01-27T07:12:38Z
+        type: fixed
+        data:
+          fixed-version: 0.13.3-r0
+
+  - id: CGA-gjxp-xr95-gvpj
+    aliases:
+      - CVE-2023-28842
+      - GHSA-6wrf-mxfj-pf5p
+    events:
+      - timestamp: 2023-04-05T14:22:32Z
+        type: fixed
+        data:
+          fixed-version: 0.7.3-r1
+
+  - id: CGA-j5rx-rrgv-vwrj
+    aliases:
+      - CVE-2023-28841
+      - GHSA-33pg-m6jh-5237
+    events:
+      - timestamp: 2023-04-05T14:22:32Z
+        type: fixed
+        data:
+          fixed-version: 0.7.3-r1
+
+  - id: CGA-jgq5-c6pr-47hp
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:23:00Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
 
   - id: CGA-jgxc-mgm2-cp8r
     aliases:
@@ -160,41 +177,42 @@ advisories:
         data:
           fixed-version: 0.14.0-r3
 
-  - id: CGA-fr9x-mfm9-9rpj
+  - id: CGA-mp8f-5q7x-gcgh
     aliases:
-      - CVE-2024-29902
-      - GHSA-88jx-383q-w4qc
+      - CVE-2023-46737
+      - GHSA-vfp6-jrw2-99g9
     events:
-      - timestamp: 2024-04-12T15:04:55Z
+      - timestamp: 2023-11-16T12:39:51Z
         type: fixed
         data:
-          fixed-version: 0.14.0-r6
+          fixed-version: 0.11.3-r0
 
-  - id: CGA-5383-wjhq-x4r5
+  - id: CGA-rvmp-7c2w-5x25
     aliases:
-      - CVE-2024-29903
-      - GHSA-95pr-fxf5-86gv
+      - CVE-2023-3978
+      - GHSA-2wrh-6pvc-2jm9
     events:
-      - timestamp: 2024-04-12T15:04:58Z
+      - timestamp: 2023-10-13T12:38:12Z
         type: fixed
         data:
-          fixed-version: 0.14.0-r6
+          fixed-version: 0.10.0-r6
 
-  - id: CGA-fvwh-x5hf-34g9
+  - id: CGA-vw39-p8xw-v5hv
     aliases:
-      - GHSA-9763-4f94-gfch
+      - CVE-2023-28840
+      - GHSA-232p-vwff-86mp
     events:
-      - timestamp: 2024-01-27T07:12:38Z
+      - timestamp: 2023-04-05T14:22:32Z
         type: fixed
         data:
-          fixed-version: 0.13.3-r0
+          fixed-version: 0.7.3-r1
 
-  - id: CGA-6q9p-7438-p25m
+  - id: CGA-xc48-24mh-c3jm
     aliases:
-      - GHSA-jq35-85cj-fj4p
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
     events:
-      - timestamp: 2023-10-31T20:03:39Z
-        type: false-positive-determination
+      - timestamp: 2023-12-19T16:56:36Z
+        type: fixed
         data:
-          type: vulnerable-code-not-included-in-package
-          note: This vulnerability is in the container runtime itself, not clients of the container runtime.
+          fixed-version: 0.12.0-r2
