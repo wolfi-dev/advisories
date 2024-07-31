@@ -191,6 +191,24 @@ advisories:
         data:
           fixed-version: 3.5.5-r3
 
+  - id: CGA-pxvv-gwc6-mm84
+    aliases:
+      - CVE-2024-41110
+      - GHSA-v23v-6jw2-98fq
+    events:
+      - timestamp: 2024-07-31T07:07:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-workflow-cli
+            componentID: 7e97d8ccdc0df13c
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.9+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/workflow-controller
+            scanner: grype
+
   - id: CGA-qg2p-wmx3-mx9q
     aliases:
       - CVE-2024-29041
