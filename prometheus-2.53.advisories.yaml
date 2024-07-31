@@ -4,6 +4,24 @@ package:
   name: prometheus-2.53
 
 advisories:
+  - id: CGA-2r4p-9jq9-gc3r
+    aliases:
+      - CVE-2024-41110
+      - GHSA-v23v-6jw2-98fq
+    events:
+      - timestamp: 2024-07-31T10:35:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.53
+            componentID: 593a1baab7503325
+            componentName: github.com/docker/docker
+            componentVersion: v26.1.3+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus
+            scanner: grype
+
   - id: CGA-42xw-m687-xw7w
     aliases:
       - CVE-2024-24791
