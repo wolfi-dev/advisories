@@ -162,3 +162,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 8.12.2-r2
+
+  - id: CGA-wx39-pppf-3vpx
+    aliases:
+      - CVE-2024-41110
+      - GHSA-v23v-6jw2-98fq
+    events:
+      - timestamp: 2024-07-31T07:35:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: filebeat
+            componentID: 6cb3916f50a88df1
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.9+incompatible
+            componentType: go-module
+            componentLocation: /usr/share/filebeat/filebeat
+            scanner: grype
