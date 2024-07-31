@@ -245,6 +245,24 @@ advisories:
         data:
           fixed-version: 1.29.0-r1
 
+  - id: CGA-phw6-pr7g-2v87
+    aliases:
+      - CVE-2024-41110
+      - GHSA-v23v-6jw2-98fq
+    events:
+      - timestamp: 2024-07-31T10:00:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s
+            componentID: b977cd2f8d1e031b
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.5+incompatible
+            componentType: go-module
+            componentLocation: /bin/_k3s-inner
+            scanner: grype
+
   - id: CGA-qfhr-78m7-prm9
     aliases:
       - GHSA-jq35-85cj-fj4p
