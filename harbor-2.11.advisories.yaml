@@ -4,6 +4,24 @@ package:
   name: harbor-2.11
 
 advisories:
+  - id: CGA-4wfp-cpjm-549m
+    aliases:
+      - CVE-2024-41110
+      - GHSA-v23v-6jw2-98fq
+    events:
+      - timestamp: 2024-07-31T09:42:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-2.11
+            componentID: 3215da9e49ff0579
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.9+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-core
+            scanner: grype
+
   - id: CGA-8m74-393p-mc58
     aliases:
       - CVE-2024-24791
