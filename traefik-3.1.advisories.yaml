@@ -25,3 +25,21 @@ advisories:
         type: pending-upstream-fix
         data:
           note: There is no fix for dependency gopkg.in/square/go-jose.v2 as it is unmaintained, and to fix this vulnerability would require non-trivial upstream code changes to replace the affected dependency.
+
+  - id: CGA-jvcw-vg7q-4795
+    aliases:
+      - CVE-2024-41110
+      - GHSA-v23v-6jw2-98fq
+    events:
+      - timestamp: 2024-07-31T07:03:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: traefik-3.1
+            componentID: 1cc04d61ce71f8c1
+            componentName: github.com/docker/docker
+            componentVersion: v27.0.3+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/traefik
+            scanner: grype
