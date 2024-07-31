@@ -135,6 +135,24 @@ advisories:
         data:
           fixed-version: 1.34.2-r1
 
+  - id: CGA-pw76-rxmx-99h5
+    aliases:
+      - CVE-2024-41110
+      - GHSA-v23v-6jw2-98fq
+    events:
+      - timestamp: 2024-07-31T07:29:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-operator
+            componentID: 0fafe39f13bc107f
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.5+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/helm-operator
+            scanner: grype
+
   - id: CGA-qv72-h7wf-jmc6
     aliases:
       - CVE-2024-24783
