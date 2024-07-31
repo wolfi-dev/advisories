@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: kyverno-1.12
+
+advisories:
+  - id: CGA-w3rv-p339-45cc
+    aliases:
+      - CVE-2024-41110
+      - GHSA-v23v-6jw2-98fq
+    events:
+      - timestamp: 2024-07-31T07:21:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-1.12
+            componentID: e03c44315d313dbc
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.5+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/kyverno
+            scanner: grype
