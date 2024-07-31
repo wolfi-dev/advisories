@@ -4,6 +4,24 @@ package:
   name: melange
 
 advisories:
+  - id: CGA-2rrq-c4gg-67x7
+    aliases:
+      - CVE-2024-41110
+      - GHSA-v23v-6jw2-98fq
+    events:
+      - timestamp: 2024-07-31T07:08:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: melange
+            componentID: 06ea9832e66da406
+            componentName: github.com/docker/docker
+            componentVersion: v27.0.3+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/melange
+            scanner: grype
+
   - id: CGA-3c7v-p5g9-f5wx
     aliases:
       - GHSA-9763-4f94-gfch
