@@ -35,3 +35,21 @@ advisories:
         type: pending-upstream-fix
         data:
           note: There is no fix for dependency gopkg.in/square/go-jose.v2 and a fix for this CVE would need code changes to replace the affected dependendency.
+
+  - id: CGA-whf2-h439-h2w7
+    aliases:
+      - CVE-2024-41110
+      - GHSA-v23v-6jw2-98fq
+    events:
+      - timestamp: 2024-07-31T07:22:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: neuvector
+            componentID: d3af5218747e511f
+            componentName: github.com/docker/docker
+            componentVersion: v26.1.3+incompatible
+            componentType: go-module
+            componentLocation: /usr/local/bin/controller
+            scanner: grype
