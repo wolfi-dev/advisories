@@ -4,6 +4,24 @@ package:
   name: rancher-2.8
 
 advisories:
+  - id: CGA-5m86-9rg2-mqwg
+    aliases:
+      - CVE-2024-29018
+      - GHSA-mq39-4gv4-mvpx
+    events:
+      - timestamp: 2024-07-31T20:11:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-2.8
+            componentID: 310ffe85e04e3d7f
+            componentName: github.com/docker/docker
+            componentVersion: v20.10.25+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/agent
+            scanner: grype
+
   - id: CGA-73j9-fh3v-qpg7
     aliases:
       - GHSA-jq35-85cj-fj4p
