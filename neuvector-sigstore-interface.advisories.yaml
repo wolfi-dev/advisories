@@ -121,3 +121,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 0_git20240520-r2
+
+  - id: CGA-wq22-2qxm-6656
+    aliases:
+      - CVE-2024-41110
+      - GHSA-v23v-6jw2-98fq
+    events:
+      - timestamp: 2024-07-31T10:09:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: neuvector-sigstore-interface
+            componentID: fe0b5c4ae0f05b8e
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.9+incompatible
+            componentType: go-module
+            componentLocation: /usr/local/bin/sigstore-interface
+            scanner: grype
