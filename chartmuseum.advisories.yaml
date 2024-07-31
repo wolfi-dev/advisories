@@ -211,6 +211,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-mx47-8v83-h76m
+    aliases:
+      - CVE-2024-41110
+      - GHSA-v23v-6jw2-98fq
+    events:
+      - timestamp: 2024-07-31T07:04:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: chartmuseum
+            componentID: 393d2f5036819af3
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.9+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/chartmuseum
+            scanner: grype
+
   - id: CGA-qg8g-2fv6-gq78
     aliases:
       - CVE-2024-25620
