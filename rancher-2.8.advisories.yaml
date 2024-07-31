@@ -4,6 +4,24 @@ package:
   name: rancher-2.8
 
 advisories:
+  - id: CGA-m84c-5w9m-cv49
+    aliases:
+      - CVE-2023-47108
+      - GHSA-8pgv-569h-w5rw
+    events:
+      - timestamp: 2024-07-31T20:11:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-2.8
+            componentID: ea3d002c0b8dd926
+            componentName: go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc
+            componentVersion: v0.35.0
+            componentType: go-module
+            componentLocation: /usr/bin/agent
+            scanner: grype
+
   - id: CGA-v5w8-9r93-wg5m
     aliases:
       - GHSA-7ww5-4wqc-m92c
