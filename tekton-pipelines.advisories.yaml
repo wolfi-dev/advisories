@@ -341,3 +341,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.60.1-r1
+
+  - id: CGA-xp4v-8f98-xcpm
+    aliases:
+      - CVE-2024-41110
+      - GHSA-v23v-6jw2-98fq
+    events:
+      - timestamp: 2024-07-31T09:15:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tekton-pipelines
+            componentID: c941f202807dbb80
+            componentName: github.com/docker/docker
+            componentVersion: v26.1.3+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/tekton-pipelines-controller
+            scanner: grype
