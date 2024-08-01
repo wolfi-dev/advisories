@@ -26,24 +26,6 @@ advisories:
         data:
           fixed-version: 0.2.1-r13
 
-  - id: CGA-2qch-h95j-fx4g
-    aliases:
-      - CVE-2024-41110
-      - GHSA-v23v-6jw2-98fq
-    events:
-      - timestamp: 2024-07-31T08:44:45Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: paranoia
-            componentID: 95d29f95b18db30c
-            componentName: github.com/docker/docker
-            componentVersion: v24.0.9+incompatible
-            componentType: go-module
-            componentLocation: /usr/bin/paranoia
-            scanner: grype
-
   - id: CGA-64cm-9q58-xw35
     aliases:
       - CVE-2024-24783
@@ -121,6 +103,18 @@ advisories:
       - CVE-2024-41110
       - GHSA-v23v-6jw2-98fq
     events:
+      - timestamp: 2024-07-31T08:44:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: paranoia
+            componentID: 95d29f95b18db30c
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.9+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/paranoia
+            scanner: grype
       - timestamp: 2024-07-31T13:04:53Z
         type: fixed
         data:
