@@ -1,0 +1,622 @@
+schema-version: 2.0.2
+
+package:
+  name: druid
+
+advisories:
+  - id: CGA-23vr-f599-cmcv
+    aliases:
+      - CVE-2022-1471
+      - GHSA-mjmj-j48q-9wg2
+    events:
+      - timestamp: 2024-08-01T19:04:25Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: snakeyaml is used only in test scope in Druid core with trusted inputs
+
+  - id: CGA-28mh-rc9h-v973
+    aliases:
+      - CVE-2020-8908
+      - GHSA-5mg8-w23w-74h3
+    events:
+      - timestamp: 2024-08-02T04:09:41Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability relates to Guava 14.0.1, a transitive dependency of the shaded JAR ambari-metrics-emitter used by Druid. No newer versions of this shaded JAR are available to fix the vulnerability.
+
+  - id: CGA-2vx5-qv6g-67jq
+    aliases:
+      - CVE-2021-43797
+      - GHSA-wx5j-54mm-rqqq
+    events:
+      - timestamp: 2024-08-02T00:59:27Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: Druid does not decode user HTTP requests nor forward them to remote systems - https://github.com/advisories/GHSA-wx5j-54mm-rqqq
+
+  - id: CGA-2xm9-r3qf-3842
+    aliases:
+      - CVE-2023-50298
+      - GHSA-xrj7-x7gp-wwqr
+    events:
+      - timestamp: 2024-08-02T05:58:16Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability is part of rancher-plugins-audit 2.4.0, the latest version currently available, which does not yet have a fix.
+
+  - id: CGA-37q9-qc23-8f8m
+    aliases:
+      - CVE-2021-37136
+      - GHSA-grg4-wf29-r9vv
+    events:
+      - timestamp: 2024-08-02T00:37:48Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability relates to Netty 3.10.5, a transitive dependency of the shaded JAR ambari-metrics-emitter used by Druid. No newer versions of this shaded JAR are available to fix the vulnerability.
+
+  - id: CGA-48pw-w48m-hrfg
+    aliases:
+      - CVE-2021-37533
+      - GHSA-cgp8-4m63-fhh5
+    events:
+      - timestamp: 2024-08-02T05:22:43Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability is related to hadoop-client-runtime 3.3.4 included in druid-deltalake-extensions, requiring code changes by the upstream maintainers to remediate.
+
+  - id: CGA-494w-f4g6-835m
+    aliases:
+      - CVE-2021-21409
+      - GHSA-f256-j965-7f32
+    events:
+      - timestamp: 2024-08-02T00:59:02Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: druid does not use HttpPostRequestDecoder or HttpPostMultiPartRequestDecoder which uses vulnerable AbstractDiskHttpData - https://github.com/advisories/GHSA-5mcr-gq6c-3hq2
+
+  - id: CGA-53rj-39m2-53xg
+    aliases:
+      - CVE-2022-42004
+      - GHSA-rgv9-q543-rqg4
+    events:
+      - timestamp: 2024-08-02T05:28:44Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: The UNWRAP_SINGLE_VALUE_ARRAYS feature is not used
+
+  - id: CGA-5g5x-fq8f-h2pq
+    aliases:
+      - CVE-2022-3510
+      - GHSA-4gg5-vx3j-xwc7
+    events:
+      - timestamp: 2024-08-02T05:44:30Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability relates to protobuf-java 3.7.1, included by the shaded JAR hadoop-client-runtime-3.3.6.jar.
+
+  - id: CGA-5mgm-j25w-77hj
+    aliases:
+      - CVE-2023-52428
+      - GHSA-gvpg-vgmx-xg6w
+    events:
+      - timestamp: 2024-08-02T05:43:08Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to nimbus-jose-jwt v9.8.1 included by the shaded JAR hadoop-client-runtime-3.3.6.jar
+
+  - id: CGA-5vjh-7w5c-x799
+    aliases:
+      - CVE-2024-29131
+      - GHSA-xjp4-hw94-mvp5
+    events:
+      - timestamp: 2024-08-02T05:00:05Z
+        type: pending-upstream-fix
+        data:
+          note: This is related to hadoop-client-runtime 3.3.6 and requires code changes by the upstream maintainers to remediate
+
+  - id: CGA-7gc7-wh45-w2hm
+    aliases:
+      - CVE-2023-34453
+      - GHSA-pqr6-cmr2-h8hf
+    events:
+      - timestamp: 2024-08-02T06:09:06Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability relates to snappy-java v1.1.8.2, included by the shaded JARs hadoop-client-api-3.3.6.jar. Upgrading to version 3.4.0 will fix the vulnerability, but it requires code changes by the upstream maintainers.
+
+  - id: CGA-7hrq-h45h-6c5f
+    aliases:
+      - CVE-2024-26308
+      - GHSA-4265-ccf5-phj5
+    events:
+      - timestamp: 2024-08-02T04:55:42Z
+        type: pending-upstream-fix
+        data:
+          note: This is related to hadoop-client-runtime 3.3.6 and requires code changes by the upstream maintainers to remediate
+
+  - id: CGA-8jjf-fchm-77wg
+    aliases:
+      - CVE-2024-25638
+      - GHSA-cfxw-4h78-h7fw
+    events:
+      - timestamp: 2024-08-02T05:24:51Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability is related to hadoop-client-runtime 3.3.4 included in druid-deltalake-extensions, requiring code changes by the upstream maintainers to remediate.
+
+  - id: CGA-8wrm-wc9c-gxxw
+    aliases:
+      - CVE-2019-17571
+      - GHSA-2qrg-x229-3v8q
+    events:
+      - timestamp: 2024-08-02T00:34:57Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability relates to log4j 1.2.17, a transitive dependency of the shaded JAR ambari-metrics-emitter used by Druid. No newer versions of this shaded JAR are available to fix the vulnerability.
+
+  - id: CGA-92vj-53vx-2wfj
+    aliases:
+      - CVE-2020-13949
+      - GHSA-g2fg-mr77-6vrm
+    events:
+      - timestamp: 2024-08-02T05:51:57Z
+        type: pending-upstream-fix
+        data:
+          note: This is related to libthrift-0.13.0.jar. It requires code changes to remediate this by upstream maintainers
+
+  - id: CGA-976p-p5pv-286x
+    aliases:
+      - CVE-2022-45685
+      - GHSA-7rf3-mqpx-h7xg
+    events:
+      - timestamp: 2024-08-02T03:11:38Z
+        type: pending-upstream-fix
+        data:
+          note: com.netflix.astyanax:astyanax needs to be replaced with com.datastax.oss:java-driver-core in extensions-contrib/cassandra-storage by upstream maintainers
+
+  - id: CGA-9wjh-34xp-9928
+    aliases:
+      - CVE-2022-2047
+      - GHSA-cj7v-27pg-wf7q
+    events:
+      - timestamp: 2024-08-02T05:32:37Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability is related to hadoop-client-runtime 3.3.4 included in druid-deltalake-extensions, requiring code changes by the upstream maintainers to remediate.
+
+  - id: CGA-c453-74rv-2qcc
+    aliases:
+      - CVE-2022-46337
+      - GHSA-rcjc-c4pj-xxrp
+    events:
+      - timestamp: 2024-08-02T06:10:47Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability is related to derby 10.14.2.0. Upgrading to the latest version 10.17.1.0 will fix the vulnerability, but it requires code changes in the Druid upstream repository.
+
+  - id: CGA-c5fg-gm82-jrmq
+    aliases:
+      - CVE-2022-45693
+      - GHSA-grr4-wv38-f68w
+    events:
+      - timestamp: 2024-08-02T03:11:58Z
+        type: pending-upstream-fix
+        data:
+          note: com.netflix.astyanax:astyanax needs to be replaced with com.datastax.oss:java-driver-core in extensions-contrib/cassandra-storage by upstream maintainers
+
+  - id: CGA-cpv4-g6rc-q46h
+    aliases:
+      - GHSA-crjg-w57m-rqqf
+    events:
+      - timestamp: 2024-08-02T05:25:47Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability is related to hadoop-client-runtime 3.3.4 included in druid-deltalake-extensions, requiring code changes by the upstream maintainers to remediate.
+
+  - id: CGA-f836-4mqx-vr2w
+    aliases:
+      - CVE-2019-20445
+      - GHSA-p2v9-g2qv-p635
+    events:
+      - timestamp: 2024-08-02T04:34:16Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: This vulnerability relates to Netty 3.10.5, a transitive dependency of the shaded JAR ambari-metrics-emitter used by Druid. No newer versions of this shaded JAR are available to fix the vulnerability.
+
+  - id: CGA-ff5w-hw89-88j8
+    aliases:
+      - CVE-2018-11798
+      - GHSA-vx85-mj8c-4qm6
+    events:
+      - timestamp: 2024-08-02T05:53:18Z
+        type: pending-upstream-fix
+        data:
+          note: This is related to libthrift-0.13.0.jar. It requires code changes to remediate this by upstream maintainers
+
+  - id: CGA-fp7c-364q-pvhc
+    aliases:
+      - CVE-2022-23302
+      - GHSA-w9p3-5cr8-m3jj
+    events:
+      - timestamp: 2024-08-02T00:35:48Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability relates to log4j 1.2.17, a transitive dependency of the shaded JAR ambari-metrics-emitter used by Druid. No newer versions of this shaded JAR are available to fix the vulnerability.
+
+  - id: CGA-fqmv-h753-pwr7
+    aliases:
+      - CVE-2022-42003
+      - GHSA-jjjh-jjxp-wpff
+    events:
+      - timestamp: 2024-08-02T05:31:02Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: The UNWRAP_SINGLE_VALUE_ARRAYS feature is not used
+
+  - id: CGA-fqwf-wxhw-63wh
+    aliases:
+      - CVE-2023-39410
+      - GHSA-rhrv-645h-fjfh
+    events:
+      - timestamp: 2024-08-02T04:53:10Z
+        type: pending-upstream-fix
+        data:
+          note: This is related to hadoop-client-runtime 3.3.6 and requires code changes by the upstream maintainers to remediate
+
+  - id: CGA-g98w-gx2v-54wx
+    aliases:
+      - CVE-2023-34455
+      - GHSA-qcwq-55hx-v3vh
+    events:
+      - timestamp: 2024-08-02T06:09:41Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability relates to snappy-java v1.1.8.2, included by the shaded JARs hadoop-client-api-3.3.6.jar. Upgrading to version 3.4.0 will fix the vulnerability, but it requires code changes by the upstream maintainers.
+
+  - id: CGA-gmp3-7m33-2h3v
+    aliases:
+      - CVE-2021-44521
+      - GHSA-8ffc-79xg-29w8
+    events:
+      - timestamp: 2024-08-02T04:46:04Z
+        type: pending-upstream-fix
+        data:
+          note: This is a transitive dependency of com.netflix.astyanax:astyanax:jar. It will need to be mitigated by the upstream maintainers
+
+  - id: CGA-h9pg-8x4v-69rh
+    aliases:
+      - CVE-2022-23307
+      - GHSA-f7vh-qwp3-x37m
+    events:
+      - timestamp: 2024-08-02T00:37:08Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to log4j 1.2.17, which is a transitive dependency of the shaded JAR ambari-metrics-emitter, which is used by druid. There are no newer versions of this shaded JAR available to fix the vulnerability
+
+  - id: CGA-hcxh-3f34-3v4m
+    aliases:
+      - CVE-2022-3509
+      - GHSA-g5ww-5jh7-63cx
+    events:
+      - timestamp: 2024-08-02T05:45:59Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability relates to protobuf-java 3.7.1, included by the shaded JAR hadoop-client-runtime-3.3.6.jar.
+
+  - id: CGA-hg68-rm6h-6m37
+    aliases:
+      - CVE-2023-40167
+      - GHSA-hmr7-m48g-48f6
+    events:
+      - timestamp: 2024-08-02T05:34:14Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability is related to hadoop-client-runtime 3.3.4 included in druid-deltalake-extensions, requiring code changes by the upstream maintainers to remediate.
+
+  - id: CGA-hgh3-fvcg-8w58
+    aliases:
+      - CVE-2019-0205
+      - GHSA-rj7p-rfgp-852x
+    events:
+      - timestamp: 2024-08-02T04:49:42Z
+        type: pending-upstream-fix
+        data:
+          note: com.netflix.astyanax:astyanax needs to be replaced with com.datastax.oss:java-driver-core in extensions-contrib/cassandra-storage by upstream maintainers
+
+  - id: CGA-hmfp-mpjh-cq5p
+    aliases:
+      - CVE-2024-35255
+      - GHSA-m5vv-6r4h-3vj9
+    events:
+      - timestamp: 2024-08-02T04:38:51Z
+        type: pending-upstream-fix
+        data:
+          note: This is part of druid-azure-extensions and would need code changes to update the affected dependendency.
+
+  - id: CGA-hwmr-55j2-h7vv
+    aliases:
+      - CVE-2022-40150
+      - GHSA-x27m-9w8j-5vcw
+    events:
+      - timestamp: 2024-08-02T03:13:11Z
+        type: pending-upstream-fix
+        data:
+          note: com.netflix.astyanax:astyanax needs to be replaced with com.datastax.oss:java-driver-core in extensions-contrib/cassandra-storage by upstream maintainers
+
+  - id: CGA-j5f2-993v-mjp9
+    aliases:
+      - CVE-2022-40149
+      - GHSA-56h3-78gp-v83r
+    events:
+      - timestamp: 2024-08-02T03:11:14Z
+        type: pending-upstream-fix
+        data:
+          note: com.netflix.astyanax:astyanax needs to be replaced with com.datastax.oss:java-driver-core in extensions-contrib/cassandra-storage by upstream maintainers
+
+  - id: CGA-j6p8-pcc9-34jq
+    aliases:
+      - CVE-2023-1436
+      - GHSA-q6g2-g7f3-rr83
+    events:
+      - timestamp: 2024-08-02T03:12:29Z
+        type: pending-upstream-fix
+        data:
+          note: com.netflix.astyanax:astyanax needs to be replaced with com.datastax.oss:java-driver-core in extensions-contrib/cassandra-storage by upstream maintainers
+
+  - id: CGA-m2gq-4r7p-hp2x
+    aliases:
+      - CVE-2023-43642
+      - GHSA-55g7-9cwv-5qfv
+    events:
+      - timestamp: 2024-08-02T06:07:46Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability relates to snappy-java v1.1.8.2, included by the shaded JARs hadoop-client-api-3.3.6.jar. Upgrading to version 3.4.0 will fix the vulnerability, but it requires code changes by the upstream maintainers.
+
+  - id: CGA-m35f-vgjj-4rrc
+    aliases:
+      - GHSA-mmwx-rj87-vfgr
+    events:
+      - timestamp: 2024-08-02T05:26:26Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability is related to hadoop-client-runtime 3.3.4 included in druid-deltalake-extensions, requiring code changes by the upstream maintainers to remediate.
+
+  - id: CGA-mcwj-rq2h-55gw
+    aliases:
+      - CVE-2021-37137
+      - GHSA-9vjp-v76f-g363
+    events:
+      - timestamp: 2024-08-02T00:40:22Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability relates to Netty 3.10.6, a transitive dependency of the shaded JAR ambari-metrics-emitter used by Druid. No newer versions of this shaded JAR are available to fix the vulnerability.
+
+  - id: CGA-mq7j-q5j2-r64c
+    aliases:
+      - CVE-2024-29133
+      - GHSA-9w38-p64v-xpmv
+    events:
+      - timestamp: 2024-08-02T04:59:15Z
+        type: pending-upstream-fix
+        data:
+          note: This is related to hadoop-client-runtime 3.3.6 and requires code changes by the upstream maintainers to remediate
+
+  - id: CGA-p4jx-6r87-3vrq
+    aliases:
+      - CVE-2022-3171
+      - GHSA-h4h5-3hr4-j3g2
+    events:
+      - timestamp: 2024-08-02T05:47:46Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability relates to protobuf-java 3.7.1, included by the shaded JAR hadoop-client-runtime-3.3.6.jar.
+
+  - id: CGA-pggr-9xq4-g3qh
+    aliases:
+      - CVE-2021-31684
+      - GHSA-fg2v-w576-w4v3
+    events:
+      - timestamp: 2024-08-02T05:38:58Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability relates to json-smart v1.3.2, included by the shaded JAR hadoop-client-runtime-3.3.6.jar. No newer versions of this shaded JAR are available to fix the vulnerability.
+
+  - id: CGA-pq38-jvh7-23gx
+    aliases:
+      - CVE-2023-2976
+      - GHSA-7g45-4rm6-3mm3
+    events:
+      - timestamp: 2024-08-02T04:29:17Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: Druid does not use com.google.common.io.FileBackedOutputStream
+
+  - id: CGA-pq3p-4w2f-4wcq
+    aliases:
+      - CVE-2023-1370
+      - GHSA-493p-pfq6-5258
+    events:
+      - timestamp: 2024-08-02T05:37:44Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability relates to json-smart v1.3.2, included by the shaded JAR hadoop-client-runtime-3.3.6.jar. No newer versions of this shaded JAR are available to fix the vulnerability.
+
+  - id: CGA-pr8w-qc54-h2c9
+    aliases:
+      - CVE-2023-3635
+      - GHSA-w33c-445m-f8w7
+    events:
+      - timestamp: 2024-08-02T05:54:53Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-cannot-be-controlled-by-adversary
+          note: okio requests in Druid are internal, and not user-facing
+
+  - id: CGA-q2r4-h625-gc35
+    aliases:
+      - CVE-2018-10237
+      - GHSA-mvr2-9pj6-7w5j
+    events:
+      - timestamp: 2024-08-01T22:32:28Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to guava 14.0.1, which is a transitive dependency of the shaded JAR ambari-metrics-emitter, which is used by druid. There are no newer versions of this shaded JAR available to fix the vulnerability.
+
+  - id: CGA-qh66-pjg5-8hw7
+    aliases:
+      - CVE-2023-34454
+      - GHSA-fjpj-2g6w-x25r
+    events:
+      - timestamp: 2024-08-02T06:08:21Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability relates to snappy-java v1.1.8.2, included by the shaded JARs hadoop-client-api-3.3.6.jar. Upgrading to version 3.4.0 will fix the vulnerability, but it requires code changes by the upstream maintainers.
+
+  - id: CGA-qm53-pfmc-7gxx
+    aliases:
+      - CVE-2021-29425
+      - GHSA-gwrp-pvrq-jmwv
+    events:
+      - timestamp: 2024-08-01T22:29:40Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability relates to commons-io 2.4, a transitive dependency of the shaded JAR ambari-metrics-emitter used by Druid. No newer versions of this shaded JAR are available to fix the vulnerability.
+
+  - id: CGA-qrw9-p79v-r8f7
+    aliases:
+      - CVE-2021-21290
+      - GHSA-5mcr-gq6c-3hq2
+    events:
+      - timestamp: 2024-08-02T00:55:35Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: druid does not use HttpPostRequestDecoder or HttpPostMultiPartRequestDecoder which uses vulnerable AbstractDiskHttpData - https://github.com/advisories/GHSA-5mcr-gq6c-3hq2
+
+  - id: CGA-qwp3-phx4-p2m8
+    aliases:
+      - CVE-2021-22570
+      - GHSA-77rm-9x9h-xj3g
+    events:
+      - timestamp: 2024-08-02T05:45:21Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability relates to protobuf-java 3.7.1, included by the shaded JAR hadoop-client-runtime-3.3.6.jar.
+
+  - id: CGA-r7x7-r564-6cjq
+    aliases:
+      - CVE-2024-25710
+      - GHSA-4g9r-vxhx-9pgx
+    events:
+      - timestamp: 2024-08-02T04:56:35Z
+        type: pending-upstream-fix
+        data:
+          note: This is related to hadoop-client-runtime 3.3.6 and requires code changes by the upstream maintainers to remediate
+
+  - id: CGA-rxwj-44rv-6h93
+    aliases:
+      - CVE-2021-22569
+      - GHSA-wrvw-hg22-4m67
+    events:
+      - timestamp: 2024-08-02T05:48:34Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability relates to protobuf-java 3.7.1, included by the shaded JAR hadoop-client-runtime-3.3.6.jar.
+
+  - id: CGA-v8q4-jg2w-6fvj
+    aliases:
+      - GHSA-58qw-p7qm-5rvh
+    events:
+      - timestamp: 2024-08-02T05:35:04Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability is related to hadoop-client-runtime 3.3.4 included in druid-deltalake-extensions, requiring code changes by the upstream maintainers to remediate.
+
+  - id: CGA-w2gp-wc62-wqxq
+    aliases:
+      - CVE-2018-1320
+      - GHSA-wjxj-f8rg-99wx
+    events:
+      - timestamp: 2024-08-02T04:50:46Z
+        type: pending-upstream-fix
+        data:
+          note: com.netflix.astyanax:astyanax needs to be replaced with com.datastax.oss:java-driver-core in extensions-contrib/cassandra-storage by upstream maintainers
+
+  - id: CGA-x4qp-2ggp-3xgp
+    aliases:
+      - CVE-2022-40152
+      - GHSA-3f7h-mf4q-vrm4
+    events:
+      - timestamp: 2024-08-02T04:44:20Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability is related to hadoop-client-runtime 3.3.4 included in druid-deltalake-extensions, requiring code changes by the upstream maintainers to remediate
+
+  - id: CGA-x4rr-rgp6-pm43
+    aliases:
+      - CVE-2021-4104
+      - GHSA-fp5r-v3w9-4333
+    events:
+      - timestamp: 2024-08-02T00:35:29Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability relates to log4j 1.2.17, a transitive dependency of the shaded JAR ambari-metrics-emitter used by Druid. No newer versions of this shaded JAR are available to fix the vulnerability.
+
+  - id: CGA-xf65-82jr-gw83
+    aliases:
+      - CVE-2019-20444
+      - GHSA-cqqj-4p63-rrmm
+    events:
+      - timestamp: 2024-08-02T00:37:28Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability relates to Netty 3.10.6, a transitive dependency of the shaded JAR ambari-metrics-emitter used by Druid. No newer versions of this shaded JAR are available to fix the vulnerability.
+
+  - id: CGA-xfcq-49wx-5rmr
+    aliases:
+      - CVE-2022-23305
+      - GHSA-65fg-84f6-3jq3
+    events:
+      - timestamp: 2024-08-02T00:36:43Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability relates to log4j 1.2.17, a transitive dependency of the shaded JAR ambari-metrics-emitter used by Druid. No newer versions of this shaded JAR are available to fix the vulnerability.
+
+  - id: CGA-xh32-h668-455p
+    aliases:
+      - CVE-2021-21295
+      - GHSA-wm47-8v5p-wjpj
+    events:
+      - timestamp: 2024-08-02T00:58:21Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: druid does not use HttpPostRequestDecoder or HttpPostMultiPartRequestDecoder which uses vulnerable AbstractDiskHttpData - https://github.com/advisories/GHSA-5mcr-gq6c-3hq2
+
+  - id: CGA-xmq4-5j86-jchp
+    aliases:
+      - CVE-2020-13956
+      - GHSA-7r82-7xv7-xcpj
+    events:
+      - timestamp: 2024-08-02T00:34:02Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability relates to httpclient v4.5.2, a transitive dependency of the shaded JAR ambari-metrics-emitter used by Druid. No newer versions of this shaded JAR are available to fix the vulnerability.
+
+  - id: CGA-xvvg-7x64-v7fj
+    aliases:
+      - CVE-2024-36114
+      - GHSA-973x-65j7-xcf4
+    events:
+      - timestamp: 2024-08-01T17:23:13Z
+        type: pending-upstream-fix
+        data:
+          note: Aircompressor 0.21 is included in the shaded JAR orc-core used by druid-orc-extensions. No newer versions of this shaded JAR are available to fix the vulnerability.
