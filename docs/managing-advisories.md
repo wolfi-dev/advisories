@@ -142,7 +142,7 @@ The same process can be followed for other status updates, whether you wish to m
 ## Further Reading
 
 In this guide, you learned how to use the `wolfictl` tool to interact with Chainguard’s Security Advisories feed. You used `wolfictl` to explore existing advisories, and also created and updated your new security advisory. The steps shown in this guide allowed you to make local changes to your advisory feed. If you wish to contribute to the open-source Wolfi OS advisory feed, please read through our [How To Patch CVEs](
-https://github.com/wolfi-dev/os/blob/main/HOW_TO_PATCH_CVES.md) guide and our [How Chainguard Issues Security Advisories](^^^ LINK TO OTHER ARTICLE ^^^) article first.
+https://github.com/wolfi-dev/os/blob/main/HOW_TO_PATCH_CVES.md) guide first.
 
 Be sure to routinely check [our Security Advisories page](https://images.chainguard.dev/security/) when your scanners pick up new CVEs in your images. If you want to learn more about how you can interpret a security advisory, and what its status means for your security, read our [article on using advisories](https://edu.chainguard.dev/chainguard/chainguard-images/working-with-images/security-advisories/). 
 
