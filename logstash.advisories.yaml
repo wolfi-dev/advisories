@@ -4,6 +4,24 @@ package:
   name: logstash
 
 advisories:
+  - id: CGA-24jw-g87x-3mgj
+    aliases:
+      - CVE-2024-41123
+      - GHSA-r55c-59qm-vjw6
+    events:
+      - timestamp: 2024-08-02T08:44:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash
+            componentID: 541e41d66a0d92c9
+            componentName: rexml
+            componentVersion: 3.2.5
+            componentType: gem
+            componentLocation: /usr/share/logstash/vendor/jruby/lib/ruby/gems/shared/specifications/rexml-3.2.5.gemspec
+            scanner: grype
+
   - id: CGA-266c-v62g-2862
     aliases:
       - CVE-2024-25126
