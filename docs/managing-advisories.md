@@ -112,7 +112,7 @@ First, we will be asked to enter the package in which the CVE was found. For our
 - fix-not-planned (Fix not planned)
 - pending-upstream-fix (Pending upstream fix)
 
-To learn more about the meanings of each of these identifiers, please refer to our [documentation on event types](https://github.com/wolfi-dev/advisories/blob/main/docs/event_types.md). The following shows an example of the `wolfictl advisory create` command in action. **Please note that the vulnerability exemplified here is an arbitary CVE ID for demonstration purposes and does not reflect an actual vulnerability found in the `glibc` package.**
+To learn more about the meanings of each of these identifiers, please refer to our [documentation on event types](https://github.com/wolfi-dev/advisories/blob/main/docs/event_types.md). The following shows an example of the `wolfictl advisory create` command in action. **Please note that the vulnerability exemplified here is an arbitrary CVE ID for demonstration purposes and does not reflect an actual vulnerability found in the `glibc` package.**
 
 ```sh
 Auto-detected distro: Wolfi
