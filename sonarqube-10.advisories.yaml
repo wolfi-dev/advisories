@@ -4,6 +4,24 @@ package:
   name: sonarqube-10
 
 advisories:
+  - id: CGA-683m-fm7m-7mvf
+    aliases:
+      - CVE-2024-37280
+      - GHSA-4q22-422g-m4pj
+    events:
+      - timestamp: 2024-08-03T23:41:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube-10
+            componentID: d979fa88c2c9538f
+            componentName: elasticsearch
+            componentVersion: 8.13.4
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/elasticsearch/lib/elasticsearch-8.13.4.jar
+            scanner: grype
+
   - id: CGA-f3c9-jr4v-wvfr
     aliases:
       - CVE-2023-1370
