@@ -40,6 +40,24 @@ advisories:
             componentLocation: /usr/share/sonarqube/elasticsearch/lib/elasticsearch-8.13.4.jar
             scanner: grype
 
+  - id: CGA-7fm6-4c5m-gw2x
+    aliases:
+      - CVE-2024-30171
+      - GHSA-v435-xc8x-wvr9
+    events:
+      - timestamp: 2024-08-03T23:41:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube-10
+            componentID: 8c839ac88a8188f1
+            componentName: bcpkix-jdk18on
+            componentVersion: "1.76"
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/elasticsearch/lib/tools/security-cli/bcpkix-jdk18on-1.76.jar
+            scanner: grype
+
   - id: CGA-88mj-xqrj-5rg4
     aliases:
       - CVE-2023-52428
