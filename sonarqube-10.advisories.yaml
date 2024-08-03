@@ -4,6 +4,24 @@ package:
   name: sonarqube-10
 
 advisories:
+  - id: CGA-2w8r-393p-7pwv
+    aliases:
+      - CVE-2024-30172
+      - GHSA-m44j-cfrm-g8qc
+    events:
+      - timestamp: 2024-08-03T23:41:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube-10
+            componentID: 8c839ac88a8188f1
+            componentName: bcpkix-jdk18on
+            componentVersion: "1.76"
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/elasticsearch/lib/tools/security-cli/bcpkix-jdk18on-1.76.jar
+            scanner: grype
+
   - id: CGA-683m-fm7m-7mvf
     aliases:
       - CVE-2024-37280
