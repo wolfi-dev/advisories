@@ -22,6 +22,24 @@ advisories:
             componentLocation: /usr/share/sonarqube/elasticsearch/lib/tools/security-cli/bcpkix-jdk18on-1.76.jar
             scanner: grype
 
+  - id: CGA-682v-c9wh-7m2f
+    aliases:
+      - CVE-2023-44483
+      - GHSA-xfrj-6vvc-3xm2
+    events:
+      - timestamp: 2024-08-03T23:41:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube-10
+            componentID: ddf06de269455114
+            componentName: xmlsec
+            componentVersion: 2.2.3
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/lib/sonar-application-10.6.0.92116.jar
+            scanner: grype
+
   - id: CGA-683m-fm7m-7mvf
     aliases:
       - CVE-2024-37280
