@@ -22,6 +22,24 @@ advisories:
             componentLocation: /usr/share/sonarqube/elasticsearch/modules/x-pack-core/nimbus-jose-jwt-9.23.jar
             scanner: grype
 
+  - id: CGA-hc2h-3vhp-c8h8
+    aliases:
+      - CVE-2024-34447
+      - GHSA-4h8f-2wvx-gg5w
+    events:
+      - timestamp: 2024-08-03T23:41:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube-10
+            componentID: 70bad0179cc2ac61
+            componentName: bcprov-jdk18on
+            componentVersion: "1.76"
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/elasticsearch/lib/tools/security-cli/bcprov-jdk18on-1.76.jar
+            scanner: grype
+
   - id: CGA-qp58-m8qf-7mmx
     aliases:
       - CVE-2024-23445
