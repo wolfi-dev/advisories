@@ -58,6 +58,24 @@ advisories:
             componentLocation: /usr/share/sonarqube/elasticsearch/lib/tools/security-cli/bcprov-jdk18on-1.76.jar
             scanner: grype
 
+  - id: CGA-q64j-qccg-v8v2
+    aliases:
+      - CVE-2024-29025
+      - GHSA-5jpm-x58v-624v
+    events:
+      - timestamp: 2024-08-03T23:41:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube-10
+            componentID: cf51f381a7827198
+            componentName: netty-codec-http
+            componentVersion: 4.1.94.Final
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/elasticsearch/modules/transport-netty4/netty-codec-http-4.1.94.Final.jar
+            scanner: grype
+
   - id: CGA-qp58-m8qf-7mmx
     aliases:
       - CVE-2024-23445
