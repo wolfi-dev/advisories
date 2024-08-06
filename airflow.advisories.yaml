@@ -4,6 +4,24 @@ package:
   name: airflow
 
 advisories:
+  - id: CGA-222c-fw64-wpxf
+    aliases:
+      - CVE-2024-42447
+      - GHSA-62qf-qm3g-fvcw
+    events:
+      - timestamp: 2024-08-06T09:33:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow
+            componentID: ac580815a7b6d1cd
+            componentName: apache-airflow-providers-fab
+            componentVersion: 1.2.1
+            componentType: python
+            componentLocation: /opt/airflow/venv/lib/python3.12/site-packages/apache_airflow_providers_fab-1.2.1.dist-info/METADATA, /opt/airflow/venv/lib/python3.12/site-packages/apache_airflow_providers_fab-1.2.1.dist-info/RECORD
+            scanner: grype
+
   - id: CGA-33w6-99cx-72gx
     aliases:
       - CVE-2024-25142
