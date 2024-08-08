@@ -1,5 +1,7 @@
 # Using `wolfictl` to Manage Security Advisories
 
+*[This guide can also be found on the Chainguard Academy.](https://edu.chainguard.dev/chainguard/chainguard-images/working-with-images/security-advisories/managing-advisories)*
+
 Chainguard operates its own [Security Advisories](https://images.chainguard.dev/security/) page to alert users about the status of vulnerabilities found in Chainguard Images. To maintain this database, we use [`wolfictl`](https://github.com/wolfi-dev/wolfictl/), a tool developed for working with the [Wolfi un-distro](https://github.com/wolfi-dev/).
 
 In this guide, you will walk through using `wolfictl` to create an advisory for a vulnerable package. You’ll also learn how to update this advisory as more information about the vulnerability is disclosed over time. To follow along, you will need to have [`git`](https://git-scm.com/) and the [Go programming language](https://go.dev/dl/) installed on your machine. 
