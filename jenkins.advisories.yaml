@@ -57,6 +57,24 @@ advisories:
           type: vulnerable-code-not-in-execution-path
           note: This is a dependency of a test dependency only.
 
+  - id: CGA-4828-r7m8-fq87
+    aliases:
+      - CVE-2024-43044
+      - GHSA-h856-ffvv-xvr4
+    events:
+      - timestamp: 2024-08-09T08:09:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jenkins
+            componentID: 27829f8d5053850f
+            componentName: remoting
+            componentVersion: 3256.3256.3258.v858f3c9a_f69d
+            componentType: java-archive
+            componentLocation: /usr/share/jenkins/remoting-3256.3256.3258.v858f3c9a_f69d.jar
+            scanner: grype
+
   - id: CGA-6rcw-x28r-rxmh
     aliases:
       - CVE-2024-34145
@@ -392,6 +410,16 @@ advisories:
         data:
           type: vulnerability-record-analysis-contested
           note: The vulnerable code is not present in the Jenkins snakeyaml plugin, see https://github.com/jenkinsci/snakeyaml-api-plugin/pull/75#issuecomment-1482964755.
+
+  - id: CGA-p6rj-hwc9-9gj3
+    aliases:
+      - CVE-2024-43045
+      - GHSA-8pv9-qh96-9hc6
+    events:
+      - timestamp: 2024-08-09T09:16:35Z
+        type: fixed
+        data:
+          fixed-version: 2.471-r0
 
   - id: CGA-q3hr-q8wm-wcrp
     aliases:

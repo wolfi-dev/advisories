@@ -123,6 +123,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-w8x7-4w8c-66cp
+    aliases:
+      - CVE-2024-6923
+      - GHSA-87qc-q3w7-7m8w
+    events:
+      - timestamp: 2024-08-03T07:32:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: python-3.12
+            componentID: b66e0e98c7ad975e
+            componentName: python-3.12
+            componentVersion: 3.12.4-r1
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2024-08-08T14:31:44Z
+        type: fixed
+        data:
+          fixed-version: 3.12.5-r0
+
   - id: CGA-xh4x-jg73-pf94
     aliases:
       - CVE-2023-24329

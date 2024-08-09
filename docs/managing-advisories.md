@@ -32,6 +32,7 @@ wolfictl version
 A successful installation of `wolfictl` will display output similar to the following. Note that the exact output will vary over time as new `wolfictl` versions are released. 
 
 ```Output
+
  __        __   ___    _       _____   ___    ____   _____   _
  \ \      / /  / _ \  | |     |  ___| |_ _|  / ___| |_   _| | |
   \ \ /\ / /  | | | | | |     | |_     | |  | |       | |   | |
@@ -65,6 +66,7 @@ With `wolfictl` installed and these two repositories cloned locally, you are now
 
 
 ## Viewing Existing Advisories
+
 
 First we will take a look at the existing advisories issued for packages in Wolfi. Keep in mind that the results shown here, and on your own machine, are snapshots in time. You should regularly check for changes to the upstream repository as new packages and advisories are issued. 
 

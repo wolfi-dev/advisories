@@ -586,6 +586,28 @@ advisories:
         data:
           fixed-version: 0.7.7-r13
 
+  - id: CGA-pmmq-q48j-rf4p
+    aliases:
+      - CVE-2024-41110
+      - GHSA-v23v-6jw2-98fq
+    events:
+      - timestamp: 2024-07-31T07:43:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ctop
+            componentID: 1dab67f1ee831dd3
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.5+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/ctop
+            scanner: grype
+      - timestamp: 2024-08-01T10:20:20Z
+        type: fixed
+        data:
+          fixed-version: 0.7.7-r17
+
   - id: CGA-q3rg-3jgg-2q6c
     aliases:
       - CVE-2024-24557
