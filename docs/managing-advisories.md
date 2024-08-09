@@ -60,6 +60,7 @@ You will need to clone two additional repositories: the [`wolfi-dev/os`](https:/
 ```sh
 git clone git@github.com:wolfi-dev/os.git 
 git clone git@github.com:wolfi-dev/advisories.git && cd advisories
+```
 
 With `wolfictl` installed and these two repositories cloned locally, you are now ready to interact with the security advisory database.
 
