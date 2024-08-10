@@ -57,6 +57,24 @@ advisories:
         data:
           fixed-version: 2024.1.0-r2
 
+  - id: CGA-4pvr-9jgj-4vq4
+    aliases:
+      - CVE-2024-42367
+      - GHSA-jwhx-xcg6-8xhj
+    events:
+      - timestamp: 2024-08-10T07:19:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dask-gateway
+            componentID: c01d8ed77309c3e7
+            componentName: aiohttp
+            componentVersion: 3.9.5
+            componentType: python
+            componentLocation: /usr/share/dask-gateway/.venv/lib/python3.12/site-packages/aiohttp-3.9.5.dist-info/METADATA, /usr/share/dask-gateway/.venv/lib/python3.12/site-packages/aiohttp-3.9.5.dist-info/RECORD, /usr/share/dask-gateway/.venv/lib/python3.12/site-packages/aiohttp-3.9.5.dist-info/top_level.txt
+            scanner: grype
+
   - id: CGA-5wwh-8j8r-pp2h
     aliases:
       - CVE-2024-24791
