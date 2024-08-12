@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: maven-3.8
+
+advisories:
+  - id: CGA-c366-p93w-q4pr
+    aliases:
+      - CVE-2020-8908
+      - GHSA-5mg8-w23w-74h3
+    events:
+      - timestamp: 2024-08-12T20:26:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: maven-3.8
+            componentID: b109f35876ae1664
+            componentName: guava
+            componentVersion: 25.1-android
+            componentType: java-archive
+            componentLocation: /usr/share/java/maven/lib/guava-25.1-android.jar
+            scanner: grype
