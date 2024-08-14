@@ -57,3 +57,21 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/kube-apiserver-1.31
             scanner: grype
+
+  - id: CGA-rh4p-q32m-p74g
+    aliases:
+      - CVE-2016-1906
+      - GHSA-m3fm-h5jp-q79p
+    events:
+      - timestamp: 2024-08-14T01:18:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-apiserver-1.31
+            componentID: b2f22354289b04d0
+            componentName: kubernetes-1.31
+            componentVersion: 1.31.0-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
