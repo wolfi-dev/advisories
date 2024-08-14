@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: kubernetes-1.31
+
+advisories:
+  - id: CGA-9f4r-hvc2-r3wg
+    aliases:
+      - CVE-2024-28180
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-08-14T01:18:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-apiserver-1.31
+            componentID: d20bb6d4ad6ed71d
+            componentName: gopkg.in/square/go-jose.v2
+            componentVersion: v2.6.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-apiserver-1.31
+            scanner: grype
