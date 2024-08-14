@@ -4,6 +4,24 @@ package:
   name: py3-cassandra-medusa
 
 advisories:
+  - id: CGA-33gc-5mwq-w26g
+    aliases:
+      - CVE-2024-42367
+      - GHSA-jwhx-xcg6-8xhj
+    events:
+      - timestamp: 2024-08-10T08:19:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3-cassandra-medusa
+            componentID: 4e5a3218fe10cfbb
+            componentName: aiohttp
+            componentVersion: 3.9.4
+            componentType: python
+            componentLocation: /home/cassandra/.venv/lib/python3.11/site-packages/aiohttp-3.9.4.dist-info/METADATA, /home/cassandra/.venv/lib/python3.11/site-packages/aiohttp-3.9.4.dist-info/RECORD, /home/cassandra/.venv/lib/python3.11/site-packages/aiohttp-3.9.4.dist-info/top_level.txt
+            scanner: grype
+
   - id: CGA-4pr8-qqxf-65pm
     aliases:
       - CVE-2023-49081
