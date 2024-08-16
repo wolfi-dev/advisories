@@ -15,6 +15,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-3253-v43h-cgx5
+    aliases:
+      - CVE-2023-45803
+      - GHSA-g4mx-q9vg-27p4
+    events:
+      - timestamp: 2024-08-16T15:03:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: katib-controller
+            componentID: 944292b892fbf913
+            componentName: urllib3
+            componentVersion: 1.26.17
+            componentType: python
+            componentLocation: /opt/katib/cmd/earlystopping/medianstop/v1beta1/lib/python3.10/site-packages/pip/_vendor/vendor.txt
+            scanner: grype
+
   - id: CGA-328h-w8g9-8xpv
     aliases:
       - CVE-2023-48795
