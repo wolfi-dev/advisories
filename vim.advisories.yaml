@@ -1,23 +1,9 @@
-schema-version: "2"
+schema-version: 2.0.2
 
 package:
   name: vim
 
 advisories:
-  - id: CGA-xmcc-rgw8-5gvc
-    aliases:
-      - CVE-2023-1127
-      - GHSA-wvg5-x3jq-vp4g
-    events:
-      - timestamp: 2023-03-10T00:43:53Z
-        type: detection
-        data:
-          type: manual
-      - timestamp: 2023-03-10T00:45:56Z
-        type: fixed
-        data:
-          fixed-version: 9.0.1378-r0
-
   - id: CGA-7f94-897j-fh9r
     aliases:
       - CVE-2023-1175
@@ -46,6 +32,23 @@ advisories:
         data:
           fixed-version: 9.0.1392-r0
 
+  - id: CGA-q6w5-7xwr-h9v8
+    aliases:
+      - CVE-2024-43374
+    events:
+      - timestamp: 2024-08-20T07:12:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vim
+            componentID: 0cb873b850805c56
+            componentName: vim
+            componentVersion: 9.1.0675-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-r22w-3x58-rc66
     aliases:
       - CVE-2023-1355
@@ -59,3 +62,17 @@ advisories:
         type: fixed
         data:
           fixed-version: 9.0.1402-r0
+
+  - id: CGA-xmcc-rgw8-5gvc
+    aliases:
+      - CVE-2023-1127
+      - GHSA-wvg5-x3jq-vp4g
+    events:
+      - timestamp: 2023-03-10T00:43:53Z
+        type: detection
+        data:
+          type: manual
+      - timestamp: 2023-03-10T00:45:56Z
+        type: fixed
+        data:
+          fixed-version: 9.0.1378-r0
