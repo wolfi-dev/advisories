@@ -30,6 +30,24 @@ advisories:
         data:
           note: GHSA-r55c-59qm-vjw6 is still vulnerable in the currently vendored/bundled rexml 3.3.2 and is still pending upstream fix in logstash by bumping the bundled version of jruby (and thus rexml). jruby has landed changes upstream @ https://github.com/jruby/jruby/commit/201a87abd48d0630acc1b5a21787d079d3050180 but no new tag has been created yet.
 
+  - id: CGA-24v2-cqfr-9j2w
+    aliases:
+      - CVE-2024-43398
+      - GHSA-vmwr-mc7x-5vc3
+    events:
+      - timestamp: 2024-08-23T08:43:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash
+            componentID: 0b51d65aa43eda57
+            componentName: rexml
+            componentVersion: 3.3.2
+            componentType: gem
+            componentLocation: /usr/share/logstash/vendor/bundle/jruby/3.1.0/specifications/rexml-3.3.2.gemspec
+            scanner: grype
+
   - id: CGA-266c-v62g-2862
     aliases:
       - CVE-2024-25126
