@@ -27,6 +27,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Affected package is an entrypoint script used to setup environment and config files, this doesn't include and wordpress php code
 
+  - id: CGA-6fj7-2fc2-hgq2
+    aliases:
+      - GHSA-q87j-q95m-j3x3
+    events:
+      - timestamp: 2024-08-27T08:34:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wordpress
+            componentID: 362d96127a23b643
+            componentName: twentytwentyone
+            componentVersion: 2.3.0
+            componentType: npm
+            componentLocation: /usr/src/wordpress/wp-content/themes/twentytwentyone/package.json
+            scanner: grype
+
   - id: CGA-8gfh-h5vg-754q
     aliases:
       - CVE-2011-5216
