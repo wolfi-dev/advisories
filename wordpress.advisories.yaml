@@ -43,6 +43,11 @@ advisories:
             componentType: npm
             componentLocation: /usr/src/wordpress/wp-content/themes/twentytwentyone/package.json
             scanner: grype
+      - timestamp: 2024-08-30T21:35:42Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: The vulnerable code was a package hosted by NPM that contained an install script leading to malicious malware. Chainguard does not source the twentytwentyone template from this now removed NPM source and pulls directy from the wordpress git repo. Chainguard's twentytwentyone package.json has been checked and verifed to not include install scripts that pull from a remote source.
 
   - id: CGA-8gfh-h5vg-754q
     aliases:
