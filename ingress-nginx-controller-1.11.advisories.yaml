@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: ingress-nginx-controller-1.11
+
+advisories:
+  - id: CGA-v3g7-gmqg-m2m5
+    aliases:
+      - CVE-2024-45310
+      - GHSA-jfvp-7x6p-h2pv
+    events:
+      - timestamp: 2024-09-04T09:16:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ingress-nginx-controller-1.11
+            componentID: e42e0624688f7863
+            componentName: github.com/opencontainers/runc
+            componentVersion: v1.1.13
+            componentType: go-module
+            componentLocation: /usr/bin/nginx-ingress-controller
+            scanner: grype
