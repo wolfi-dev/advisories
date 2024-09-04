@@ -144,6 +144,7 @@ advisories:
   - id: CGA-7f8c-576x-66pp
     aliases:
       - CVE-2024-41110
+      - GHSA-v23v-6jw2-98fq
     events:
       - timestamp: 2024-07-26T08:14:32Z
         type: fixed
@@ -279,6 +280,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 25.0.2-r0
+
+  - id: CGA-g657-qm32-r3p2
+    aliases:
+      - CVE-2024-45310
+      - GHSA-jfvp-7x6p-h2pv
+    events:
+      - timestamp: 2024-09-04T07:08:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker
+            componentID: 513ecf7bc9afb4dd
+            componentName: github.com/opencontainers/runc
+            componentVersion: v1.1.13
+            componentType: go-module
+            componentLocation: /usr/bin/dockerd
+            scanner: grype
 
   - id: CGA-h87r-65gx-q8w9
     aliases:
