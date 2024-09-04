@@ -4,6 +4,24 @@ package:
   name: kubernetes-1.31
 
 advisories:
+  - id: CGA-3fxg-c74h-7rhw
+    aliases:
+      - CVE-2024-45310
+      - GHSA-jfvp-7x6p-h2pv
+    events:
+      - timestamp: 2024-09-04T08:33:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-apiserver-1.31
+            componentID: 81d8b38e7cb664f6
+            componentName: github.com/opencontainers/runc
+            componentVersion: v1.1.13
+            componentType: go-module
+            componentLocation: /usr/bin/kube-apiserver-1.31
+            scanner: grype
+
   - id: CGA-4grp-ghj6-8c46
     aliases:
       - CVE-2015-7561
