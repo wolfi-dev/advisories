@@ -49,6 +49,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows.
 
+  - id: CGA-8v84-p6q7-fc4w
+    aliases:
+      - CVE-2024-7592
+      - GHSA-7pwv-g7hj-39pr
+    events:
+      - timestamp: 2024-08-21T08:14:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: python-3.11
+            componentID: 51e6b8ae69ad22b8
+            componentName: python-3.11
+            componentVersion: 3.11.9-r7
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2024-08-29T07:03:41Z
+        type: pending-upstream-fix
+        data:
+          note: 'Waiting for upstream fix to be merged into 3.11 branch. PR: https://github.com/python/cpython/pull/123105'
+
   - id: CGA-95mj-h49g-qh4h
     aliases:
       - CVE-2024-6923
@@ -71,27 +93,23 @@ advisories:
         data:
           note: 'CVE remediation is awaiting core review then release on the 3.11 branch. More information can be found here: https://github.com/python/cpython/pull/122608'
 
-  - id: CGA-8v84-p6q7-fc4w
+  - id: CGA-crq7-9946-pwg9
     aliases:
-      - CVE-2024-7592
-      - GHSA-7pwv-g7hj-39pr
+      - CVE-2024-6232
+      - GHSA-mmm5-wgvp-wp8r
     events:
-      - timestamp: 2024-08-21T08:14:35Z
+      - timestamp: 2024-09-05T07:24:23Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: python-3.11
-            componentID: 51e6b8ae69ad22b8
+            componentID: bf6b861ab6ee4c59
             componentName: python-3.11
-            componentVersion: 3.11.9-r7
+            componentVersion: 3.11.9-r8
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
-      - timestamp: 2024-08-29T07:03:41Z
-        type: pending-upstream-fix
-        data:
-          note: 'Waiting for upstream fix to be merged into 3.11 branch. PR: https://github.com/python/cpython/pull/123105'
 
   - id: CGA-fvmf-843x-pvhj
     aliases:
