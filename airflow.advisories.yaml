@@ -164,6 +164,10 @@ advisories:
             componentType: python
             componentLocation: /opt/airflow/venv/lib/python3.12/site-packages/apache_airflow-2.9.3.dist-info/METADATA, /opt/airflow/venv/lib/python3.12/site-packages/apache_airflow-2.9.3.dist-info/RECORD, /opt/airflow/venv/lib/python3.12/site-packages/apache_airflow-2.9.3.dist-info/direct_url.json
             scanner: grype
+      - timestamp: 2024-09-05T01:35:46Z
+        type: fixed
+        data:
+          fixed-version: 2.10.0-r0
 
   - id: CGA-6v56-8m7g-x649
     aliases:
@@ -384,6 +388,10 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.9.1-r1
+      - timestamp: 2024-09-05T01:24:48Z
+        type: pending-upstream-fix
+        data:
+          note: Fixed versions of Werkzeug (v2.3.8 and above) are not compatible with the current version of apache airflow. There is an open PR in airflow addressing this that will natively support Werkzeug v2.3.8 (https://github.com/apache/airflow/pull/36052)
 
   - id: CGA-wq3q-35vc-xj9h
     aliases:
