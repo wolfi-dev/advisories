@@ -111,6 +111,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-869q-hp45-8g5r
+    aliases:
+      - CVE-2024-45395
+      - GHSA-cq38-jh5f-37mq
+    events:
+      - timestamp: 2024-09-05T07:19:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cosign
+            componentID: 1fe38be087ce8a50
+            componentName: github.com/sigstore/sigstore-go
+            componentVersion: v0.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/cosign
+            scanner: grype
+
   - id: CGA-86jr-m2mm-xq6m
     aliases:
       - GHSA-jq35-85cj-fj4p
