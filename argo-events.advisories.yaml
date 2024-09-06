@@ -4,6 +4,24 @@ package:
   name: argo-events
 
 advisories:
+  - id: CGA-3f4q-g4mj-3x9x
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2024-09-06T15:24:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-events
+            componentID: a734d18a8ce28c7d
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.2
+            componentType: go-module
+            componentLocation: /usr/bin/argo-events
+            scanner: grype
+
   - id: CGA-562h-vqjm-ghfg
     aliases:
       - CVE-2024-35255
