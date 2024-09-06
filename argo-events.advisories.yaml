@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: argo-events
+
+advisories:
+  - id: CGA-87mm-7cv7-9jrw
+    aliases:
+      - CVE-2023-46402
+      - GHSA-3f2q-6294-fmq5
+    events:
+      - timestamp: 2024-09-06T15:24:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-events
+            componentID: 6fe962df09571769
+            componentName: github.com/whilp/git-urls
+            componentVersion: v0.0.0-20191001220047-6db9661140c0
+            componentType: go-module
+            componentLocation: /usr/bin/argo-events
+            scanner: grype
