@@ -1,4 +1,27 @@
 schema-version: 2.0.2
 
 package:
-  name: loki-3.1.advisories.yaml
+  name: loki-3.1
+
+advisories:
+  - id: CGA-xxg7-c777-977q
+    aliases:
+      - CVE-2024-41110
+      - GHSA-v23v-6jw2-98fq
+    events:
+      - timestamp: 2024-07-31T07:26:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: loki-3
+            componentID: a1dab9ea115ab3cf
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.5+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/promtail
+            scanner: grype
+      - timestamp: 2024-07-31T09:34:34Z
+        type: fixed
+        data:
+          fixed-version: 3.1.0-r1
