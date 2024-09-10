@@ -4,6 +4,24 @@ package:
   name: cni-plugins
 
 advisories:
+  - id: CGA-36vp-p9hp-2cg5
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2024-09-10T16:15:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cni-plugins
+            componentID: 3aa5f45f81c51152
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/tap
+            scanner: grype
+
   - id: CGA-3ghp-9335-7g9v
     aliases:
       - CVE-2023-39326
