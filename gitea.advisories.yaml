@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: gitea
+
+advisories:
+  - id: CGA-m89w-f32m-m9pm
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2024-09-10T18:17:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitea
+            componentID: 7e270b6c4c6e12d7
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitea
+            scanner: grype
