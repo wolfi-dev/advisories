@@ -75,6 +75,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-hpq2-wfrp-9ffv
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-09-10T23:02:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: configmap-reload
+            componentID: 98cf02fce177af3d
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/configmap-reload
+            scanner: grype
+
   - id: CGA-mg8j-h498-qr7p
     aliases:
       - CVE-2024-24783
