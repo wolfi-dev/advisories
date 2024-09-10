@@ -4,6 +4,24 @@ package:
   name: nri-memcached
 
 advisories:
+  - id: CGA-2c2h-8fj5-55vx
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-09-10T12:34:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-memcached
+            componentID: 0c253285d30418f1
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/nri-memcached
+            scanner: grype
+
   - id: CGA-4w3g-cfhr-x3c6
     aliases:
       - CVE-2023-45288
