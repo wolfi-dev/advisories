@@ -27,6 +27,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This vulnerability affects versions < 1.11.2, but the installed commit corresponds to version 1.11.3.
 
+  - id: CGA-28x2-962x-qc42
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-09-10T12:12:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: coredns
+            componentID: 18ea2cfcbe7d8229
+            componentName: stdlib
+            componentVersion: go1.22.6
+            componentType: go-module
+            componentLocation: /usr/bin/coredns
+            scanner: grype
+
   - id: CGA-5v8q-m4r5-757v
     aliases:
       - CVE-2024-24784
