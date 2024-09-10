@@ -121,3 +121,21 @@ advisories:
         data:
           type: vulnerable-code-version-not-used
           note: We build 15.3.6 version of Teleport but the vulnerability is associated with 8.3.17, so this is a false-positive determination
+
+  - id: CGA-wr5g-f2gc-w3rv
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2024-09-10T07:14:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: teleport
+            componentID: a7f73eb37ccec01a
+            componentName: stdlib
+            componentVersion: go1.22.6
+            componentType: go-module
+            componentLocation: /usr/local/bin/tbot
+            scanner: grype
