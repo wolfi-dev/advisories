@@ -159,6 +159,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-x7mp-x8cx-hvp7
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2024-09-10T07:39:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-policy-reporter-kyverno-plugin
+            componentID: c02b1a51e8e6f230
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/kyverno-plugin
+            scanner: grype
+
   - id: CGA-xf26-chjm-5jqf
     aliases:
       - CVE-2023-45284
