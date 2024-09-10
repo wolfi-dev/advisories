@@ -35,3 +35,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.30.2-r1
+
+  - id: CGA-vxf5-mf7m-m3qq
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2024-09-10T17:07:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-autoscaler-1.30
+            componentID: 75bbb52b4efc2bc7
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-autoscaler
+            scanner: grype
