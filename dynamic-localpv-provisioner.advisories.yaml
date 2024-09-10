@@ -313,3 +313,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.5.0-r4
+
+  - id: CGA-xffr-2qf7-frrw
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-09-10T11:35:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dynamic-localpv-provisioner
+            componentID: b447bf3173e1c2e7
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/provisioner-localpv
+            scanner: grype
