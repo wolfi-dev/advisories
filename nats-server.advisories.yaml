@@ -110,6 +110,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This package uses a newer version v2.10.16 when the vulnerable code affects any version older than v2.2.3.
 
+  - id: CGA-6357-pgr4-q9ww
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-09-10T15:22:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nats-server
+            componentID: b1cb79466d0c6b12
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/nats-server
+            scanner: grype
+
   - id: CGA-6c2q-f3cm-vw48
     aliases:
       - CVE-2020-26892
