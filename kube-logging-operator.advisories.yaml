@@ -4,6 +4,24 @@ package:
   name: kube-logging-operator
 
 advisories:
+  - id: CGA-424h-gq43-rjpj
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-09-10T20:37:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-logging-operator
+            componentID: 0de339ee143df8c3
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-525x-33h8-mm7p
     aliases:
       - CVE-2023-45283
