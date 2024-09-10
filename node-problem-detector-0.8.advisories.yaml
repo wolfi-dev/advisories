@@ -137,6 +137,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability is only present on Windows.
 
+  - id: CGA-m72m-j96c-59w3
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2024-09-10T17:37:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: health-checker-0.8
+            componentID: bff7b75b885629d0
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/health-checker
+            scanner: grype
+
   - id: CGA-pf7v-mx83-wgg9
     aliases:
       - CVE-2024-24789
