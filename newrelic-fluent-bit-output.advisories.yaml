@@ -187,6 +187,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-hx2p-7rp7-q2p5
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2024-09-10T22:38:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: newrelic-fluent-bit-output
+            componentID: 2fcb1dbe758f4648
+            componentName: stdlib
+            componentVersion: go1.20.14
+            componentType: go-module
+            componentLocation: /fluent-bit/bin/out_newrelic.so
+            scanner: grype
+
   - id: CGA-jq5w-f63x-38hh
     aliases:
       - CVE-2023-45284
