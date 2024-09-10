@@ -123,3 +123,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.4.0-r6
+
+  - id: CGA-vgw7-m2q4-whpp
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2024-09-10T14:41:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-beat-exporter
+            componentID: 28aaa0d3a8c082fc
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/beat-exporter
+            scanner: grype
