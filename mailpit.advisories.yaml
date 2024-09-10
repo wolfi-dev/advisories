@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: mailpit
+
+advisories:
+  - id: CGA-wq46-r5px-q99w
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2024-09-10T09:30:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mailpit
+            componentID: 9aa5120b28452bb3
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/mailpit
+            scanner: grype
