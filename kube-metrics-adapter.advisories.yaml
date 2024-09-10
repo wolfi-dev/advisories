@@ -4,6 +4,24 @@ package:
   name: kube-metrics-adapter
 
 advisories:
+  - id: CGA-56xx-qh5q-gw66
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2024-09-10T19:25:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-metrics-adapter
+            componentID: 0e1cccffe4619c7b
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/kube-metrics-adapter
+            scanner: grype
+
   - id: CGA-9q7f-5rqj-qc7m
     aliases:
       - CVE-2024-34155
