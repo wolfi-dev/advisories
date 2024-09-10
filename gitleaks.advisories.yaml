@@ -4,6 +4,24 @@ package:
   name: gitleaks
 
 advisories:
+  - id: CGA-3fp4-wrpr-7hhr
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-09-10T09:13:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitleaks
+            componentID: 3dba50eca19ad736
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/gitleaks
+            scanner: grype
+
   - id: CGA-3m4r-5jm8-crc5
     aliases:
       - CVE-2023-45288
