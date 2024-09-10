@@ -4,6 +4,24 @@ package:
   name: victoriametrics-cluster
 
 advisories:
+  - id: CGA-c53v-qh7w-4xpr
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2024-09-10T18:36:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: victoriametrics-cluster
+            componentID: 78574f22772c3fbe
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/vmagent
+            scanner: grype
+
   - id: CGA-q43m-qhhh-2x77
     aliases:
       - CVE-2024-34156
