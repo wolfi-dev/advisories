@@ -227,6 +227,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-8h3g-8252-qg48
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-09-10T19:04:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: slsa-verifier
+            componentID: 415cce152324b77a
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/slsa-verifier
+            scanner: grype
+
   - id: CGA-8hf5-2fg3-hgv2
     aliases:
       - CVE-2024-24791
