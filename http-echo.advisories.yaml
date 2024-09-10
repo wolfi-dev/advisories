@@ -25,6 +25,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-69r6-prfm-mc37
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-09-10T10:08:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: http-echo
+            componentID: b86b79d864ce2787
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/http-echo
+            scanner: grype
+
   - id: CGA-8wr9-x848-9qh6
     aliases:
       - CVE-2024-24790
