@@ -217,3 +217,21 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CGA-xr5q-2xpm-pm8q
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-09-10T13:32:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-mysqld-exporter
+            componentID: 73eecbf04d576819
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/mysqld_exporter
+            scanner: grype
