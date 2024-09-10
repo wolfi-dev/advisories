@@ -88,6 +88,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-rqfr-jq4v-pmv3
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2024-09-10T07:31:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: newrelic-nri-kube-events
+            componentID: 9dc124272858bcec
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/nri-kube-events
+            scanner: grype
+
   - id: CGA-xf6j-6f8g-69x3
     aliases:
       - CVE-2020-8559
