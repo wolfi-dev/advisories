@@ -93,6 +93,24 @@ advisories:
         data:
           note: It requires the upstream apply the changes and release it.
 
+  - id: CGA-c88r-gr27-jxwc
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2024-09-10T07:35:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opentelemetry-collector
+            componentID: bf4ac386ec567068
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol
+            scanner: grype
+
   - id: CGA-fp6j-q7hc-8xvc
     aliases:
       - CVE-2024-24791
