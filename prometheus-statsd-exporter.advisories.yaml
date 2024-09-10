@@ -176,6 +176,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-j3h5-4qw2-26mq
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-09-10T16:39:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-statsd-exporter
+            componentID: a745b236fa352365
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/statsd_exporter
+            scanner: grype
+
   - id: CGA-jqf7-m9wx-ppvm
     aliases:
       - CVE-2023-39325
