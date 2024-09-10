@@ -4,6 +4,24 @@ package:
   name: helm-docs
 
 advisories:
+  - id: CGA-3gcw-82cr-xwhg
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2024-09-10T20:39:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-docs
+            componentID: f0c950e10b1d97ae
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/helm-docs
+            scanner: grype
+
   - id: CGA-3x9q-x34r-7c4w
     aliases:
       - CVE-2024-24790
