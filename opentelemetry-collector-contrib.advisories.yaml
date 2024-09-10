@@ -202,6 +202,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-vj3w-hj9v-3r8w
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2024-09-10T08:33:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opentelemetry-collector-contrib
+            componentID: f5b09f84e956047d
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol-contrib
+            scanner: grype
+
   - id: CGA-xpj6-7jh7-2q38
     aliases:
       - CVE-2023-45288
