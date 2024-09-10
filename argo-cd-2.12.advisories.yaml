@@ -65,3 +65,21 @@ advisories:
         type: pending-upstream-fix
         data:
           note: This vulnerability requires code changes in the upstream repository and an upgrade of the used Kubernetes version with potential unexpected results.
+
+  - id: CGA-x55r-5fg4-3vxv
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-09-10T07:12:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.12
+            componentID: 93ba1e2cd6e62782
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
