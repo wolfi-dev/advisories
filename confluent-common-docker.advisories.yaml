@@ -84,6 +84,24 @@ advisories:
         data:
           note: Confluent should publish the latest version of common package to their maven repository. They do not have any jars/poms past 7.6.x but they have 7.7.x tags in their GitHub repository.
 
+  - id: CGA-hvjq-2w6x-w9vx
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2024-09-10T13:37:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: confluent-common-docker
+            componentID: 2bdc75382af26c09
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/ub
+            scanner: grype
+
   - id: CGA-j5rq-gqwv-5j8j
     aliases:
       - CVE-2024-24789
