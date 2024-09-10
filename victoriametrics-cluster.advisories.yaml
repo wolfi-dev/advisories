@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: victoriametrics-cluster
+
+advisories:
+  - id: CGA-v685-qvrp-7782
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2024-09-10T18:36:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: victoriametrics-cluster
+            componentID: 78574f22772c3fbe
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/vmagent
+            scanner: grype
