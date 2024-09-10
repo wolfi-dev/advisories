@@ -360,6 +360,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: govulncheck confirms the affected code is not present in the compiled binary.
 
+  - id: CGA-f882-85xg-6jg8
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2024-09-10T08:26:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines
+            componentID: 9e8cd5fb3d1cb9ec
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/apiserver
+            scanner: grype
+
   - id: CGA-f9g2-cc8c-9pcp
     aliases:
       - CVE-2020-8558
