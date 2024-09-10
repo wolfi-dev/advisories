@@ -47,6 +47,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'Module "github.com/runatlantis/atlantis" at "/usr/bin/atlantis": the commit of the fixed version (700cffd57ddc12c456e1094f5a60f7d61c86c4db) is an ancestor of installed commit (565fd9d0883285511fa3175c4657d55f9215dc00), which means the installed version was misidentified by the scanner and the vulnerability has actually been fixed.'
 
+  - id: CGA-4qx4-8pr9-f8x9
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2024-09-10T08:39:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: atlantis
+            componentID: 451bae1b5da904da
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/atlantis
+            scanner: grype
+
   - id: CGA-6rqp-fc25-fh2h
     aliases:
       - CVE-2024-24790
