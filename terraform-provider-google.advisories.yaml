@@ -4,6 +4,24 @@ package:
   name: terraform-provider-google
 
 advisories:
+  - id: CGA-4h2x-2w78-p8p7
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-09-10T12:36:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-google
+            componentID: 4467e6b1d5b03afc
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-google
+            scanner: grype
+
   - id: CGA-53fq-398c-r2gg
     aliases:
       - GHSA-xr7q-jx4m-x55m
