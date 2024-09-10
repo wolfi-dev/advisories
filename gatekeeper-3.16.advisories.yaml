@@ -55,3 +55,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.16.3-r1
+
+  - id: CGA-xpc9-6v34-qmx5
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2024-09-10T07:25:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.16
+            componentID: 91ee08d337874853
+            componentName: stdlib
+            componentVersion: go1.22.6
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
