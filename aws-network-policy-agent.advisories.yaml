@@ -4,6 +4,24 @@ package:
   name: aws-network-policy-agent
 
 advisories:
+  - id: CGA-7fgg-37cg-5rhw
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2024-09-10T07:09:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-network-policy-agent
+            componentID: 5b6aee2ab34bfadd
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/aws-eks-na-cli
+            scanner: grype
+
   - id: CGA-f3q7-mhw8-j7px
     aliases:
       - CVE-2024-24791
