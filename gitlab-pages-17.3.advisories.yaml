@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: gitlab-pages-17.3
+
+advisories:
+  - id: CGA-chcm-wcrf-h4jr
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2024-09-10T07:21:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-pages-17.3
+            componentID: fd085b21799d0ab1
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-pages
+            scanner: grype
