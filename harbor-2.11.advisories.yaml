@@ -4,6 +4,24 @@ package:
   name: harbor-2.11
 
 advisories:
+  - id: CGA-23xj-pg4w-r99w
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2024-09-10T14:43:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-2.11
+            componentID: f11c8eef5b65d790
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-core
+            scanner: grype
+
   - id: CGA-2rfh-f76g-2qr8
     aliases:
       - CVE-2024-40464
