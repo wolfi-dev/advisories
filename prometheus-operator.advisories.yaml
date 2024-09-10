@@ -119,6 +119,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-f7jj-h729-p7ww
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-09-10T07:11:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-admission-webhook
+            componentID: e7ec4d0c6fe16b9c
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/admission-webhook
+            scanner: grype
+
   - id: CGA-jx34-6h53-cg55
     aliases:
       - CVE-2024-24785
@@ -171,6 +189,42 @@ advisories:
         data:
           type: vulnerable-code-version-not-used
           note: This CVE only impacts prometheus 2.7 but our prometheus-operator is using v0.46.0 Go library which is in fact prothemeus 2.46
+
+  - id: CGA-p2c9-fmw8-fhrq
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2024-09-10T07:12:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-admission-webhook
+            componentID: e7ec4d0c6fe16b9c
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/admission-webhook
+            scanner: grype
+
+  - id: CGA-qwjx-9h4v-57mw
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2024-09-10T07:11:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-admission-webhook
+            componentID: e7ec4d0c6fe16b9c
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/admission-webhook
+            scanner: grype
 
   - id: CGA-r8cw-v96g-jwpv
     aliases:
