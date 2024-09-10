@@ -4,6 +4,24 @@ package:
   name: flux-helm-controller
 
 advisories:
+  - id: CGA-23jm-5732-jm6c
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2024-09-10T07:20:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-helm-controller
+            componentID: 5d36ab73da72fa8b
+            componentName: stdlib
+            componentVersion: go1.22.6
+            componentType: go-module
+            componentLocation: /usr/bin/helm-controller
+            scanner: grype
+
   - id: CGA-2qpg-5pv4-48fg
     aliases:
       - CVE-2023-45284
