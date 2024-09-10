@@ -15,6 +15,24 @@ advisories:
           type: component-vulnerability-mismatch
           note: The CVE was against an older version of ruby itself which included this in the stdlib.
 
+  - id: CGA-34g5-w55r-2wj6
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-09-10T10:14:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-fluentd-operator
+            componentID: a6d24a2102814bed
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/config-reloader
+            scanner: grype
+
   - id: CGA-4f9p-qmmw-h6j2
     aliases:
       - CVE-2023-51774
