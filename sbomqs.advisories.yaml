@@ -105,3 +105,21 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CGA-wf79-r944-hp6j
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2024-09-10T17:34:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sbomqs
+            componentID: f59fc30ceca35c3e
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/sbomqs
+            scanner: grype
