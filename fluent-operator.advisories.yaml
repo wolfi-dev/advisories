@@ -4,6 +4,24 @@ package:
   name: fluent-operator
 
 advisories:
+  - id: CGA-86hj-83fr-7cfj
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2024-09-10T22:40:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: fluent-operator
+            componentID: 0de339ee143df8c3
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-cg54-ch59-phgg
     aliases:
       - CVE-2024-24790
