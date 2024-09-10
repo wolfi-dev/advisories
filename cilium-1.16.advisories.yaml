@@ -62,3 +62,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.16.1-r0
+
+  - id: CGA-w2vm-ffx5-jprg
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-09-10T21:09:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.16
+            componentID: d5dd83c778e6945a
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /opt/cni/bin/cilium-cni
+            scanner: grype
