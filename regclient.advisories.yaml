@@ -153,3 +153,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.6.0-r4
+
+  - id: CGA-xxfq-cmpm-h3p3
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-09-10T17:35:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: regclient
+            componentID: 1d5284dc58096702
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/regctl
+            scanner: grype
