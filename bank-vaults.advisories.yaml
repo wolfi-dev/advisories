@@ -258,6 +258,24 @@ advisories:
         data:
           note: There is no fix for dependency gopkg.in/square/go-jose.v2 and a fix for this CVE would need code changes to replace the affected dependendency.
 
+  - id: CGA-wwm5-52vh-h6cp
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2024-09-10T07:13:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: bank-vaults
+            componentID: db44deccda379e00
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/bank-vaults
+            scanner: grype
+
   - id: CGA-xwrw-rhw3-5rr7
     aliases:
       - CVE-2023-39325
