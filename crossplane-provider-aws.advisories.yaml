@@ -36,6 +36,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-7f9f-jxp9-53r6
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2024-09-10T22:03:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: crossplane-provider-aws
+            componentID: 28c05719c80819fe
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/provider
+            scanner: grype
+
   - id: CGA-7p62-qgm7-gx8h
     aliases:
       - CVE-2023-39325
