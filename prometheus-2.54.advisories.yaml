@@ -4,6 +4,24 @@ package:
   name: prometheus-2.54
 
 advisories:
+  - id: CGA-8q2m-w6v7-qx6j
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2024-09-10T17:14:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.54
+            componentID: 0dfe49e0752f7c8a
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus
+            scanner: grype
+
   - id: CGA-cqmv-c2wf-h52r
     aliases:
       - CVE-2024-34156
