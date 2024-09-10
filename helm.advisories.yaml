@@ -4,6 +4,24 @@ package:
   name: helm
 
 advisories:
+  - id: CGA-37w7-7p32-qrmp
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-09-10T19:27:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm
+            componentID: bcd8dbe9292b405b
+            componentName: stdlib
+            componentVersion: go1.22.6
+            componentType: go-module
+            componentLocation: /usr/bin/helm
+            scanner: grype
+
   - id: CGA-437h-jm9g-rh24
     aliases:
       - CVE-2023-25165
