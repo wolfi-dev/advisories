@@ -146,6 +146,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This vulnerability has been fixed in version v2.7.1 which corresponds to the Go library version v0.7.1 and this package includes a later version.
 
+  - id: CGA-pj9h-x4rj-mvm4
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2024-09-10T07:18:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: certificate-transparency
+            componentID: fbe3773a25c3c6e6
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/trillian-ctserver
+            scanner: grype
+
   - id: CGA-ppcq-3jqx-wq7x
     aliases:
       - CVE-2024-34156
