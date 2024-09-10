@@ -4,6 +4,24 @@ package:
   name: syft
 
 advisories:
+  - id: CGA-298p-qpf2-fp57
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-09-10T08:45:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: syft
+            componentID: 53d074c29808ec62
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/syft
+            scanner: grype
+
   - id: CGA-5g2f-fgw6-g365
     aliases:
       - CVE-2023-45284
