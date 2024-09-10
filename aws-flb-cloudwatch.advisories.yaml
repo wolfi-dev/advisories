@@ -4,6 +4,24 @@ package:
   name: aws-flb-cloudwatch
 
 advisories:
+  - id: CGA-2c45-5f9c-xhhx
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2024-09-10T12:44:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-flb-cloudwatch
+            componentID: 9c3ae8a41200da55
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/cloudwatch.so
+            scanner: grype
+
   - id: CGA-3r4x-29m7-9pf8
     aliases:
       - CVE-2023-39326
