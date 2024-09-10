@@ -346,6 +346,24 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
 
+  - id: CGA-vq6v-v86x-f4m6
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2024-09-10T07:21:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-helm-controller
+            componentID: 5d36ab73da72fa8b
+            componentName: stdlib
+            componentVersion: go1.22.6
+            componentType: go-module
+            componentLocation: /usr/bin/helm-controller
+            scanner: grype
+
   - id: CGA-w3pv-28jx-vvq6
     aliases:
       - CVE-2023-45290
