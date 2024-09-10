@@ -4,6 +4,24 @@ package:
   name: etcd-3.5
 
 advisories:
+  - id: CGA-22qq-hx22-6m7w
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-09-10T08:16:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: etcd-3.5
+            componentID: 5bb18774e3d685b0
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/etcd
+            scanner: grype
+
   - id: CGA-42c6-wg7v-89qp
     aliases:
       - CVE-2024-24787
