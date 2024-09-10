@@ -4,6 +4,24 @@ package:
   name: cloudnative-pg
 
 advisories:
+  - id: CGA-236w-r283-f75v
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-09-10T13:43:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloudnative-pg
+            componentID: a31952e5e5f0657a
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /bin/manager_amd64
+            scanner: grype
+
   - id: CGA-3r5q-j6c8-mg53
     aliases:
       - CVE-2024-34155
