@@ -4,6 +4,24 @@ package:
   name: kubernetes-csi-driver-hostpath
 
 advisories:
+  - id: CGA-4962-fr4j-5567
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2024-09-10T15:20:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-driver-hostpath
+            componentID: 94f35e21e3a4cc17
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/hostpathplugin
+            scanner: grype
+
   - id: CGA-5ccp-726v-pvvx
     aliases:
       - CVE-2024-24787
