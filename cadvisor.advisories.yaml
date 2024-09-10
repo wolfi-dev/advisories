@@ -216,6 +216,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability is only present on Windows.
 
+  - id: CGA-ffwp-6vr6-6x5f
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2024-09-10T16:22:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cadvisor
+            componentID: 59f853d6c8e2dc66
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/cadvisor
+            scanner: grype
+
   - id: CGA-gp9x-p6qf-v46m
     aliases:
       - CVE-2024-24788
