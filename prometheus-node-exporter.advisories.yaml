@@ -4,6 +4,24 @@ package:
   name: prometheus-node-exporter
 
 advisories:
+  - id: CGA-2x8x-9778-3fm2
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2024-09-10T22:01:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-node-exporter
+            componentID: f56e3f19fe9ae371
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/node_exporter
+            scanner: grype
+
   - id: CGA-35m9-3xg4-vvq5
     aliases:
       - CVE-2023-45284
