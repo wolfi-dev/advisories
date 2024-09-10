@@ -26,6 +26,24 @@ advisories:
         data:
           fixed-version: 0.14.1-r8
 
+  - id: CGA-4xv8-7868-4wj4
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2024-09-10T20:16:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-stackdriver-exporter
+            componentID: 4785551a9bdd31c5
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/stackdriver_exporter
+            scanner: grype
+
   - id: CGA-72rv-77f5-42v9
     aliases:
       - CVE-2024-24791
