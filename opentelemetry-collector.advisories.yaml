@@ -28,6 +28,24 @@ advisories:
         data:
           note: Due to the runtime building process of this project, there are dependencies included at build time. Consequently, this vulnerability requires upstream changes in a new release.
 
+  - id: CGA-7hwj-6pqm-582q
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-09-10T07:35:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opentelemetry-collector
+            componentID: bf4ac386ec567068
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol
+            scanner: grype
+
   - id: CGA-86g4-rqwj-4vj5
     aliases:
       - GHSA-xr7q-jx4m-x55m
