@@ -4,6 +4,24 @@ package:
   name: calico-3.28
 
 advisories:
+  - id: CGA-8gwv-9pxv-p9vw
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2024-09-10T09:16:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: calico-3.28
+            componentID: 898616cdc92bc7b0
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/calico-apiserver
+            scanner: grype
+
   - id: CGA-hx23-8cgq-h8xc
     aliases:
       - CVE-2024-34156
