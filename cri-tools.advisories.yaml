@@ -4,6 +4,24 @@ package:
   name: cri-tools
 
 advisories:
+  - id: CGA-3h64-5fpj-r93x
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-09-10T12:14:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cri-tools
+            componentID: 6ef95ea517e55619
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/crictl
+            scanner: grype
+
   - id: CGA-6c83-4hvv-h5c7
     aliases:
       - CVE-2024-41110
