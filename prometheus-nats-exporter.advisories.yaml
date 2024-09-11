@@ -36,6 +36,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-6q25-m67x-f4vx
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2024-09-11T03:41:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-nats-exporter
+            componentID: 0a01bbe87a6e8a68
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus-nats-exporter
+            scanner: grype
+
   - id: CGA-7f9v-f5c5-2rp7
     aliases:
       - CVE-2023-48795
