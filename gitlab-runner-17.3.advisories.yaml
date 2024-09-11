@@ -4,6 +4,24 @@ package:
   name: gitlab-runner-17.3
 
 advisories:
+  - id: CGA-44p9-wvcg-3x6h
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2024-09-11T01:22:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-docker-machine-17.3
+            componentID: 430369e7aeb70d09
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/docker-machine
+            scanner: grype
+
   - id: CGA-6f9p-v74g-jcx7
     aliases:
       - CVE-2024-41110
@@ -25,3 +43,39 @@ advisories:
         type: pending-upstream-fix
         data:
           note: This vulnerability requires many upstream code changes and as a consequence a new release is needed to fix this vulnerability.
+
+  - id: CGA-j46w-4jhr-2q8j
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-09-11T01:22:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-docker-machine-17.3
+            componentID: 430369e7aeb70d09
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/docker-machine
+            scanner: grype
+
+  - id: CGA-x92r-gq2c-mv5q
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2024-09-11T01:22:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-docker-machine-17.3
+            componentID: 430369e7aeb70d09
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/docker-machine
+            scanner: grype
