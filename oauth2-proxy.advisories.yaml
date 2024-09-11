@@ -58,6 +58,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-c6rx-hrp5-32g4
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2024-09-11T04:28:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: oauth2-proxy
+            componentID: 6a85c7e7c3659790
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/oauth2-proxy
+            scanner: grype
+
   - id: CGA-f3vh-f4mj-jr28
     aliases:
       - GHSA-2c7c-3mj9-8fqh
