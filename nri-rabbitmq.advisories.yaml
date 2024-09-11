@@ -4,6 +4,24 @@ package:
   name: nri-rabbitmq
 
 advisories:
+  - id: CGA-3cfg-3fg7-85w5
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2024-09-11T03:23:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-rabbitmq
+            componentID: 8cc96f8be90aa822
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/nri-rabbitmq
+            scanner: grype
+
   - id: CGA-8pjf-68c9-fcgr
     aliases:
       - CVE-2024-24783
