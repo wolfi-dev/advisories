@@ -4,6 +4,24 @@ package:
   name: kyverno-1.12
 
 advisories:
+  - id: CGA-4c96-29jw-c339
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2024-09-11T03:39:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-1.12
+            componentID: 0c7adbf922f8acb8
+            componentName: stdlib
+            componentVersion: go1.22.6
+            componentType: go-module
+            componentLocation: /usr/bin/kyverno
+            scanner: grype
+
   - id: CGA-q67p-fvg6-538p
     aliases:
       - CVE-2024-34156
