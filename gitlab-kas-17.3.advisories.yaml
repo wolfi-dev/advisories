@@ -4,6 +4,24 @@ package:
   name: gitlab-kas-17.3
 
 advisories:
+  - id: CGA-32jf-6pgg-8822
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-09-11T00:42:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-kas-17.3
+            componentID: 08dc8ef6a5ca8b28
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/kas
+            scanner: grype
+
   - id: CGA-jrf2-x4hh-vg98
     aliases:
       - CVE-2024-34155
