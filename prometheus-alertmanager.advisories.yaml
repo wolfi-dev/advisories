@@ -86,6 +86,24 @@ advisories:
         data:
           fixed-version: 0.27.0-r2
 
+  - id: CGA-c7vh-fg74-v72p
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-09-11T04:32:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-alertmanager
+            componentID: 99accd1c27ef63e1
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/alertmanager
+            scanner: grype
+
   - id: CGA-cp98-m225-5r8c
     aliases:
       - CVE-2023-40577
