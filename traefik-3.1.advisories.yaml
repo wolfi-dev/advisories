@@ -4,6 +4,24 @@ package:
   name: traefik-3.1
 
 advisories:
+  - id: CGA-6q77-rm5j-xgw7
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2024-09-11T00:15:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: traefik-3.1
+            componentID: 3704a7618aee5579
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/traefik
+            scanner: grype
+
   - id: CGA-6w58-8v92-qmq7
     aliases:
       - CVE-2024-28180
