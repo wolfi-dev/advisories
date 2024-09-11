@@ -4,6 +4,24 @@ package:
   name: nri-cassandra
 
 advisories:
+  - id: CGA-3qcq-jm6f-f8w8
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-09-11T03:26:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-cassandra
+            componentID: 06ad5e78c6d84ce6
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/nri-cassandra
+            scanner: grype
+
   - id: CGA-4cpr-w335-2873
     aliases:
       - CVE-2024-24783
