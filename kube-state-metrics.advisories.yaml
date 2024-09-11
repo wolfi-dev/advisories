@@ -153,6 +153,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-p99g-x738-8vr9
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2024-09-11T04:29:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-state-metrics
+            componentID: 61365d5deb9bb82d
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/kube-state-metrics
+            scanner: grype
+
   - id: CGA-q4gf-xvwj-g392
     aliases:
       - CVE-2023-45283
