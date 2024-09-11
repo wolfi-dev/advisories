@@ -104,6 +104,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-qmvc-ghm4-9qm9
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2024-09-11T03:23:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-rabbitmq
+            componentID: 8cc96f8be90aa822
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/nri-rabbitmq
+            scanner: grype
+
   - id: CGA-vrxm-7w5h-m9pj
     aliases:
       - CVE-2023-45289
