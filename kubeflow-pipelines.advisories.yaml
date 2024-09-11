@@ -939,6 +939,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Vulnerable code is part of the Kubernetes API server and was also mark EFFECTIVELY_PRIVATE in Golang vulndb
 
+  - id: CGA-wr33-h89w-rmmm
+    aliases:
+      - CVE-2024-45590
+      - GHSA-qwcr-r2fm-qrc7
+    events:
+      - timestamp: 2024-09-11T15:24:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines
+            componentID: 3f9141440495a2f4
+            componentName: body-parser
+            componentVersion: 1.20.2
+            componentType: npm
+            componentLocation: /server/node_modules/body-parser/package.json
+            scanner: grype
+
   - id: CGA-xpcj-g2x8-wcc9
     aliases:
       - CVE-2024-3651
