@@ -179,6 +179,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-mmv8-59vq-gq6x
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2024-09-11T04:32:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-alertmanager
+            componentID: 99accd1c27ef63e1
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/alertmanager
+            scanner: grype
+
   - id: CGA-mppq-g3f5-wp3m
     aliases:
       - CVE-2023-45289
