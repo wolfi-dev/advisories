@@ -4,6 +4,24 @@ package:
   name: nri-apache
 
 advisories:
+  - id: CGA-3j25-6h67-j4pg
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2024-09-11T02:00:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-apache
+            componentID: 543d14bc4cb799a9
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/nri-apache
+            scanner: grype
+
   - id: CGA-799j-q8wg-qpjv
     aliases:
       - CVE-2024-24791
