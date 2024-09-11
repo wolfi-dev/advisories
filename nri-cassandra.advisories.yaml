@@ -63,6 +63,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-926m-pf7c-83fx
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2024-09-11T03:26:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-cassandra
+            componentID: 06ad5e78c6d84ce6
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/nri-cassandra
+            scanner: grype
+
   - id: CGA-cjxp-fq9q-rr6x
     aliases:
       - CVE-2024-24789
