@@ -362,6 +362,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability is only present on Windows.
 
+  - id: CGA-pp5j-r3h7-v68h
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2024-09-11T03:08:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: runc
+            componentID: dbd0046c1223526c
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/runc
+            scanner: grype
+
   - id: CGA-q5fp-m5fj-cgxr
     aliases:
       - CVE-2023-3978
