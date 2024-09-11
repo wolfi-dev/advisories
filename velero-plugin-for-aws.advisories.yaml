@@ -4,6 +4,24 @@ package:
   name: velero-plugin-for-aws
 
 advisories:
+  - id: CGA-7393-78m8-7j4x
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-09-11T02:23:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: velero-plugin-for-aws
+            componentID: e9f0ac9cb50275cd
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/cp-plugin
+            scanner: grype
+
   - id: CGA-7566-xxpp-c9gj
     aliases:
       - CVE-2024-24791
