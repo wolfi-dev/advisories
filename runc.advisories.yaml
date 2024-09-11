@@ -296,6 +296,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This package uses a newer version v1.1.12 while the vulnerable code affects an older version.
 
+  - id: CGA-mgp2-gcfx-x8cw
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2024-09-11T03:08:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: runc
+            componentID: dbd0046c1223526c
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/runc
+            scanner: grype
+
   - id: CGA-p47v-59xp-3gjm
     aliases:
       - CVE-2024-24784
