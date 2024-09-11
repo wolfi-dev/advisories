@@ -8,6 +8,7 @@ advisories:
     aliases:
       - CVE-2024-5967
       - GHSA-gmrm-8fx4-66x7
+      - GHSA-c25h-c27q-5qpv
     events:
       - timestamp: 2024-06-19T10:15:31Z
         type: fixed
@@ -35,6 +36,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 24.0.4-r2
+
+  - id: CGA-82w7-62fp-w77f
+    aliases:
+      - CVE-2023-6841
+      - GHSA-w97f-w3hq-36g2
+    events:
+      - timestamp: 2024-09-11T11:42:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak-operator
+            componentID: 76e0ba9b7bb9188a
+            componentName: keycloak-core
+            componentVersion: 25.0.5
+            componentType: java-archive
+            componentLocation: /usr/share/java/quarkus-app/lib/main/org.keycloak.keycloak-core-25.0.5.jar
+            scanner: grype
 
   - id: CGA-gfj5-2q78-6f2f
     aliases:
