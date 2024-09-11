@@ -62,6 +62,24 @@ advisories:
         data:
           note: rancher-machine has a strict dependency to an old docker version 'v20.10.27'. This major version has not been upgraded in long time.
 
+  - id: CGA-x5gm-78cq-9733
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-09-11T04:16:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-2.9
+            componentID: 5c0669f051854e2b
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/agent
+            scanner: grype
+
   - id: CGA-xc23-3j3m-4jg6
     aliases:
       - CVE-2024-29018
