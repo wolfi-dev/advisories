@@ -15,6 +15,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-3f3p-rp58-8qw9
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2024-09-11T00:43:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: frp
+            componentID: 48d6851672686ed6
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/frpc
+            scanner: grype
+
   - id: CGA-653x-35qj-9r48
     aliases:
       - CVE-2023-48795
