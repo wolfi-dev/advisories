@@ -55,6 +55,24 @@ advisories:
           type: component-vulnerability-mismatch
           note: The vulnerability is against the Kubernetes API server itself, not the apiserver client library.
 
+  - id: CGA-8ww3-25p4-w9cq
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-09-11T04:31:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kargo
+            componentID: 3758836a587ceab5
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/kargo
+            scanner: grype
+
   - id: CGA-9www-cxjj-vjw2
     aliases:
       - CVE-2023-45283
