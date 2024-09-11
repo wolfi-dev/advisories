@@ -107,3 +107,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.25.4-r1
+
+  - id: CGA-x849-g8j2-36mh
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2024-09-11T03:03:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flannel
+            componentID: 12e85bae3f4eb7fe
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/flanneld
+            scanner: grype
