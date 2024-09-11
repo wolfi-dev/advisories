@@ -67,6 +67,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-8v6w-4h4c-3g9r
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-09-11T02:45:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-postgres-exporter
+            componentID: 99bc4581b15b8fa6
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/postgres_exporter
+            scanner: grype
+
   - id: CGA-93xq-c6pj-3298
     aliases:
       - CVE-2023-45288
