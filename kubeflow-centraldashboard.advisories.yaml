@@ -126,6 +126,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This is test code that is never used in production. To get more detail about the false-positive determination, please check https://github.com/browserify/resolve/issues/288
 
+  - id: CGA-fh9q-m32j-c356
+    aliases:
+      - CVE-2024-45590
+      - GHSA-qwcr-r2fm-qrc7
+    events:
+      - timestamp: 2024-09-12T11:38:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-centraldashboard
+            componentID: e5157981d9cafb58
+            componentName: body-parser
+            componentVersion: 1.20.2
+            componentType: npm
+            componentLocation: /app/node_modules/body-parser/package.json
+            scanner: grype
+
   - id: CGA-h52f-rm4v-7p8p
     aliases:
       - CVE-2019-10790
