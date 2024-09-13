@@ -31,4 +31,22 @@ advisories:
         type: false-positive-determination
         data:
           type: vulnerable-code-version-not-used
-          note: 'This vulnerability affects to v4 while this package is already using a v5 version. '
+          note: 'This vulnerability affects to v4 while this package is already using a v5 version.'
+
+  - id: CGA-pcxv-fph7-rx28
+    aliases:
+      - CVE-2022-29162
+      - GHSA-f3fp-gc8g-vw66
+    events:
+      - timestamp: 2024-09-13T19:33:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: podman
+            componentID: 607bdc78afb1fe37
+            componentName: github.com/opencontainers/runc
+            componentVersion: v1.1.1-0.20240131200429-02120488a4c0
+            componentType: go-module
+            componentLocation: /usr/bin/podman
+            scanner: grype
