@@ -225,6 +225,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: NVD record says the affected version is 17.0.9, not a version range.
 
+  - id: CGA-v4mj-jgr4-262v
+    aliases:
+      - CVE-2023-22025
+      - GHSA-7498-h3m9-7wv2
+    events:
+      - timestamp: 2024-09-17T08:17:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openjdk-12
+            componentID: 9d507437db42f3e4
+            componentName: java/jre
+            componentVersion: 12.0.2-internal+0-wolfi-r3
+            componentType: binary
+            componentLocation: /usr/lib/jvm/java-12-openjdk/bin/java
+            scanner: grype
+
   - id: CGA-v656-jrm7-545q
     aliases:
       - CVE-2023-21968
