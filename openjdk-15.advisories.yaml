@@ -111,6 +111,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'NVD record says the affected version is 17.0.11, not a version range. Record: https://nvd.nist.gov/vuln/detail/CVE-2024-21131'
 
+  - id: CGA-755c-5289-c3xj
+    aliases:
+      - CVE-2023-22044
+      - GHSA-h5rw-8p92-pmrf
+    events:
+      - timestamp: 2024-09-17T09:44:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openjdk-15
+            componentID: 0b8c3f7ef36b8742
+            componentName: openjdk-15
+            componentVersion: 15.0.10.5-r6
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-7mw5-55mq-g7f8
     aliases:
       - CVE-2023-21938
