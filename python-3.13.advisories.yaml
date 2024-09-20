@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: python-3.13
+
+advisories:
+  - id: CGA-7294-qj27-xc67
+    aliases:
+      - CVE-2007-4559
+      - GHSA-gw9q-c7gh-j9vm
+    events:
+      - timestamp: 2024-09-18T17:53:05Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: Upon further investigation, we have determined that this is not a security issue in the Python package itself. It's still possible to misuse the Python standard library, such as by supplying untrusted data to the tar extraction functions, in which case a vulnerability should be identified in the caller code.
+
+  - id: CGA-28qm-gfcc-x4f8
+    aliases:
+      - CVE-2023-36632
+      - GHSA-gv66-v8c8-v69c
+    events:
+      - timestamp: 2024-09-18T17:53:05Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: The vendor's perspective is that this is neither a vulnerability nor a bug.
+
+  - id: CGA-5pwp-qpw4-qf7w
+    aliases:
+      - CVE-2024-4030
+      - GHSA-2w87-6hh6-mqrj
+    events:
+      - timestamp: 2024-09-18T17:53:05Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-hj52-2pc9-jmj6
+    aliases:
+      - CVE-2023-24329
+      - GHSA-r32r-rqw2-wv5m
+    events:
+      - timestamp: 2024-09-18T17:53:05Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: The upstream issue has been deemed expected behavior, not a security issue. See https://github.com/python/cpython/issues/102153.
