@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: gatekeeper-3.17
+
+advisories:
+  - id: CGA-8xfg-4hw5-vjcj
+    aliases:
+      - CVE-2024-8260
+      - GHSA-c77r-fh37-x2px
+    events:
+      - timestamp: 2024-09-21T07:25:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.17
+            componentID: d2f4b2ad7b8ae35a
+            componentName: github.com/open-policy-agent/opa
+            componentVersion: v0.67.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
