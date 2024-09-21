@@ -490,6 +490,24 @@ advisories:
         data:
           note: This vulnerability relates to snappy-java v1.1.8.2, included by the shaded JARs hadoop-client-api-3.3.6.jar. Upgrading to version 3.4.0 will fix the vulnerability, but it requires code changes by the upstream maintainers.
 
+  - id: CGA-qj62-9qwq-2x3m
+    aliases:
+      - CVE-2024-7254
+      - GHSA-735f-pc8j-v9w8
+    events:
+      - timestamp: 2024-09-21T08:11:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: druid
+            componentID: 0c2079944749d522
+            componentName: protobuf-java
+            componentVersion: 3.24.0
+            componentType: java-archive
+            componentLocation: /usr/share/java/druid/lib/protobuf-java-3.24.0.jar
+            scanner: grype
+
   - id: CGA-qm53-pfmc-7gxx
     aliases:
       - CVE-2021-29425
