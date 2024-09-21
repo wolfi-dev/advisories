@@ -77,6 +77,24 @@ advisories:
         data:
           note: The tuf non-vulnerable version is not available among the list of hosted datadog dependencies. Datadog needs to upgrade the available tuf dependency to use the non-vulnerable version.
 
+  - id: CGA-59q6-6hwx-3gcf
+    aliases:
+      - CVE-2024-8260
+      - GHSA-c77r-fh37-x2px
+    events:
+      - timestamp: 2024-09-21T09:09:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: datadog-agent
+            componentID: 03c631cb39b0473e
+            componentName: github.com/open-policy-agent/opa
+            componentVersion: v0.65.0
+            componentType: go-module
+            componentLocation: /usr/bin/agent
+            scanner: grype
+
   - id: CGA-5w2j-66hh-qhcf
     aliases:
       - CVE-2024-24791
