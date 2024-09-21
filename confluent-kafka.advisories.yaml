@@ -4,15 +4,23 @@ package:
   name: confluent-kafka
 
 advisories:
-  - id: CGA-v6v3-xqmh-6g49
+  - id: CGA-c87c-r7j2-6c2f
     aliases:
-      - CVE-2023-51775
-      - GHSA-6qvw-249j-h44c
+      - CVE-2024-7254
+      - GHSA-735f-pc8j-v9w8
     events:
-      - timestamp: 2024-03-25T18:13:26Z
-        type: pending-upstream-fix
+      - timestamp: 2024-09-21T07:14:46Z
+        type: detection
         data:
-          note: Confluent should publish the latest version of common package to their maven repository. They do not have any jars/poms past 7.6.x but they have 7.7.x tags in their GitHub repository.
+          type: scan/v1
+          data:
+            subpackageName: confluent-kafka
+            componentID: 5363bddef53d238c
+            componentName: protobuf-java
+            componentVersion: 3.23.4
+            componentType: java-archive
+            componentLocation: /usr/lib/kafka/libs/protobuf-java-3.23.4.jar
+            scanner: grype
 
   - id: CGA-rf22-c48h-w77h
     aliases:
@@ -20,6 +28,16 @@ advisories:
       - GHSA-r978-9m6m-6gm6
     events:
       - timestamp: 2024-03-25T18:14:57Z
+        type: pending-upstream-fix
+        data:
+          note: Confluent should publish the latest version of common package to their maven repository. They do not have any jars/poms past 7.6.x but they have 7.7.x tags in their GitHub repository.
+
+  - id: CGA-v6v3-xqmh-6g49
+    aliases:
+      - CVE-2023-51775
+      - GHSA-6qvw-249j-h44c
+    events:
+      - timestamp: 2024-03-25T18:13:26Z
         type: pending-upstream-fix
         data:
           note: Confluent should publish the latest version of common package to their maven repository. They do not have any jars/poms past 7.6.x but they have 7.7.x tags in their GitHub repository.
