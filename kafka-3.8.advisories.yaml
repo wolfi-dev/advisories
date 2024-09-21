@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: kafka-3.8
+
+advisories:
+  - id: CGA-xrwq-83cw-2mjc
+    aliases:
+      - CVE-2024-7254
+      - GHSA-735f-pc8j-v9w8
+    events:
+      - timestamp: 2024-09-21T10:19:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kafka-3.8
+            componentID: 5363bddef53d238c
+            componentName: protobuf-java
+            componentVersion: 3.23.4
+            componentType: java-archive
+            componentLocation: /usr/lib/kafka/libs/protobuf-java-3.23.4.jar
+            scanner: grype
