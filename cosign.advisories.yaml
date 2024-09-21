@@ -46,6 +46,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-2j3j-4mm5-fpm7
+    aliases:
+      - CVE-2024-8260
+      - GHSA-c77r-fh37-x2px
+    events:
+      - timestamp: 2024-09-21T07:06:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cosign
+            componentID: 313ecdb4429916c8
+            componentName: github.com/open-policy-agent/opa
+            componentVersion: v0.67.0
+            componentType: go-module
+            componentLocation: /usr/bin/cosign
+            scanner: grype
+
   - id: CGA-2j9x-8f9v-frhg
     aliases:
       - CVE-2024-41110
