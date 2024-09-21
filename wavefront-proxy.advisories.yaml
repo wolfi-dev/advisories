@@ -4,74 +4,24 @@ package:
   name: wavefront-proxy
 
 advisories:
-  - id: CGA-w2q6-vjq6-xv28
+  - id: CGA-3978-p594-95vw
     aliases:
-      - CVE-2023-1428
-      - GHSA-6628-q6j9-w8vg
+      - CVE-2023-4586
+      - GHSA-57m8-f3v5-hm5m
     events:
-      - timestamp: 2023-11-21T10:54:55Z
+      - timestamp: 2023-10-19T00:46:13Z
         type: fixed
         data:
-          fixed-version: 13.4-r1
+          fixed-version: 13.3-r1
 
-  - id: CGA-ggp4-vw2x-23hx
+  - id: CGA-6774-f4f4-5fh3
     aliases:
-      - CVE-2023-32731
-      - GHSA-cfgp-2977-2fmm
+      - GHSA-xpw8-rcwv-8f8p
     events:
-      - timestamp: 2023-11-21T10:53:18Z
+      - timestamp: 2023-10-19T00:45:42Z
         type: fixed
         data:
-          fixed-version: 13.4-r1
-
-  - id: CGA-mpfj-qrf3-73fp
-    aliases:
-      - CVE-2023-32732
-      - GHSA-9hxf-ppjv-w6rq
-    events:
-      - timestamp: 2023-11-21T10:54:43Z
-        type: fixed
-        data:
-          fixed-version: 13.4-r1
-
-  - id: CGA-r5mp-477x-xh5j
-    aliases:
-      - CVE-2023-34462
-      - GHSA-6mjq-h674-j845
-    events:
-      - timestamp: 2023-08-11T18:20:24Z
-        type: detection
-        data:
-          type: manual
-      - timestamp: 2023-08-11T19:56:03Z
-        type: fixed
-        data:
-          fixed-version: 13.1-r1
-
-  - id: CGA-v493-rv47-j3qj
-    aliases:
-      - CVE-2023-35116
-      - GHSA-gx6w-fqg7-mc3p
-    events:
-      - timestamp: 2023-08-11T18:19:16Z
-        type: false-positive-determination
-        data:
-          type: vulnerability-record-analysis-contested
-          note: CVE is being considered by the community a false positive. See https://github.com/FasterXML/jackson-databind/issues/3972 and https://github.com/anchore/grype/issues/1386
-
-  - id: CGA-mcqv-hc9j-chjg
-    aliases:
-      - CVE-2023-3635
-      - GHSA-w33c-445m-f8w7
-    events:
-      - timestamp: 2023-10-19T00:50:42Z
-        type: fix-not-planned
-        data:
-          note: The affected dependency (com.squareup.okio:okio) is introduced because upstream is using a deprecated dependency (io.jaegertracing:jaeger-thrift). Upstream would need to migrate to a solution that doesn't depend on the affected component.
-      - timestamp: 2024-04-19T08:56:37Z
-        type: fixed
-        data:
-          fixed-version: 13.4-r4
+          fixed-version: 13.3-r1
 
   - id: CGA-8q34-h6rx-rrwj
     aliases:
@@ -79,16 +29,6 @@ advisories:
       - GHSA-rhrv-645h-fjfh
     events:
       - timestamp: 2023-10-19T00:46:35Z
-        type: fixed
-        data:
-          fixed-version: 13.3-r1
-
-  - id: CGA-3978-p594-95vw
-    aliases:
-      - CVE-2023-4586
-      - GHSA-57m8-f3v5-hm5m
-    events:
-      - timestamp: 2023-10-19T00:46:13Z
         type: fixed
         data:
           fixed-version: 13.3-r1
@@ -137,6 +77,34 @@ advisories:
         data:
           fixed-version: 13.4-r3
 
+  - id: CGA-ggp4-vw2x-23hx
+    aliases:
+      - CVE-2023-32731
+      - GHSA-cfgp-2977-2fmm
+    events:
+      - timestamp: 2023-11-21T10:53:18Z
+        type: fixed
+        data:
+          fixed-version: 13.4-r1
+
+  - id: CGA-h5p9-89pr-8jw6
+    aliases:
+      - CVE-2024-7254
+      - GHSA-735f-pc8j-v9w8
+    events:
+      - timestamp: 2024-09-21T10:07:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wavefront-proxy
+            componentID: 25f8b6f0e959757b
+            componentName: protobuf-java
+            componentVersion: 3.25.3
+            componentType: java-archive
+            componentLocation: /usr/share/java/wavefront/wavefront-proxy/wavefront-proxy.jar
+            scanner: grype
+
   - id: CGA-j2pm-vhxf-h6gg
     aliases:
       - CVE-2024-26308
@@ -158,6 +126,30 @@ advisories:
         type: fixed
         data:
           fixed-version: 13.4-r3
+
+  - id: CGA-mcqv-hc9j-chjg
+    aliases:
+      - CVE-2023-3635
+      - GHSA-w33c-445m-f8w7
+    events:
+      - timestamp: 2023-10-19T00:50:42Z
+        type: fix-not-planned
+        data:
+          note: The affected dependency (com.squareup.okio:okio) is introduced because upstream is using a deprecated dependency (io.jaegertracing:jaeger-thrift). Upstream would need to migrate to a solution that doesn't depend on the affected component.
+      - timestamp: 2024-04-19T08:56:37Z
+        type: fixed
+        data:
+          fixed-version: 13.4-r4
+
+  - id: CGA-mpfj-qrf3-73fp
+    aliases:
+      - CVE-2023-32732
+      - GHSA-9hxf-ppjv-w6rq
+    events:
+      - timestamp: 2023-11-21T10:54:43Z
+        type: fixed
+        data:
+          fixed-version: 13.4-r1
 
   - id: CGA-r5f9-9h89-fvvx
     aliases:
@@ -181,11 +173,37 @@ advisories:
         data:
           fixed-version: 13.4-r4
 
-  - id: CGA-6774-f4f4-5fh3
+  - id: CGA-r5mp-477x-xh5j
     aliases:
-      - GHSA-xpw8-rcwv-8f8p
+      - CVE-2023-34462
+      - GHSA-6mjq-h674-j845
     events:
-      - timestamp: 2023-10-19T00:45:42Z
+      - timestamp: 2023-08-11T18:20:24Z
+        type: detection
+        data:
+          type: manual
+      - timestamp: 2023-08-11T19:56:03Z
         type: fixed
         data:
-          fixed-version: 13.3-r1
+          fixed-version: 13.1-r1
+
+  - id: CGA-v493-rv47-j3qj
+    aliases:
+      - CVE-2023-35116
+      - GHSA-gx6w-fqg7-mc3p
+    events:
+      - timestamp: 2023-08-11T18:19:16Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: CVE is being considered by the community a false positive. See https://github.com/FasterXML/jackson-databind/issues/3972 and https://github.com/anchore/grype/issues/1386
+
+  - id: CGA-w2q6-vjq6-xv28
+    aliases:
+      - CVE-2023-1428
+      - GHSA-6628-q6j9-w8vg
+    events:
+      - timestamp: 2023-11-21T10:54:55Z
+        type: fixed
+        data:
+          fixed-version: 13.4-r1
