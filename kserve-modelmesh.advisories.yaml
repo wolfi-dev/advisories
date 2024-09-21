@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: kserve-modelmesh
+
+advisories:
+  - id: CGA-m76c-26vf-3vhr
+    aliases:
+      - CVE-2024-7254
+      - GHSA-735f-pc8j-v9w8
+    events:
+      - timestamp: 2024-09-21T07:11:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kserve-modelmesh
+            componentID: 775067d86b91d787
+            componentName: protobuf-java
+            componentVersion: 3.25.3
+            componentType: java-archive
+            componentLocation: /opt/kserve/mmesh/dockerhome/lib/protobuf-java-3.25.3.jar
+            scanner: grype
