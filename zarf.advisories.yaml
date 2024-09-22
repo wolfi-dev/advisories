@@ -4,6 +4,24 @@ package:
   name: zarf
 
 advisories:
+  - id: CGA-29xx-pjpw-7x2r
+    aliases:
+      - CVE-2024-8260
+      - GHSA-c77r-fh37-x2px
+    events:
+      - timestamp: 2024-09-22T09:27:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zarf
+            componentID: 81cb5e97648b01d7
+            componentName: github.com/open-policy-agent/opa
+            componentVersion: v0.63.0
+            componentType: go-module
+            componentLocation: /usr/bin/zarf
+            scanner: grype
+
   - id: CGA-2cj2-8mc2-3rx5
     aliases:
       - CVE-2019-25210
