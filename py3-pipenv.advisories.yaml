@@ -4,6 +4,24 @@ package:
   name: py3-pipenv
 
 advisories:
+  - id: CGA-5j79-5g3g-jm38
+    aliases:
+      - CVE-2024-6345
+      - GHSA-cx63-2mw6-8hw5
+    events:
+      - timestamp: 2024-09-23T08:23:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3-pipenv
+            componentID: d7278c576cb79d38
+            componentName: setuptools
+            componentVersion: 68.0.0
+            componentType: python
+            componentLocation: /usr/lib/python3.12/site-packages/pipenv/patched/pip/_vendor/vendor.txt
+            scanner: grype
+
   - id: CGA-pvg9-7wqq-v3c5
     aliases:
       - CVE-2024-39689
