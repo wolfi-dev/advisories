@@ -4,6 +4,24 @@ package:
   name: mattermost-10.0
 
 advisories:
+  - id: CGA-2g46-8ch9-2qp6
+    aliases:
+      - CVE-2024-1402
+      - GHSA-32h7-7j94-8fc2
+    events:
+      - timestamp: 2024-09-24T21:30:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-10.0-compat
+            componentID: 52749c3112c73c38
+            componentName: github.com/mattermost/mattermost/server/v8
+            componentVersion: v3.46.0
+            componentType: go-module
+            componentLocation: /usr/bin/mattermost
+            scanner: grype
+
   - id: CGA-g3g9-wf86-ppjf
     aliases:
       - CVE-2022-4045
