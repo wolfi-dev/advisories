@@ -4,6 +4,24 @@ package:
   name: podman
 
 advisories:
+  - id: CGA-pcc8-jrq6-wc28
+    aliases:
+      - CVE-2024-3056
+      - GHSA-rpcc-p8xm-rc6p
+    events:
+      - timestamp: 2024-09-24T16:10:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: podman-doc
+            componentID: 4783eaf1001ee42d
+            componentName: github.com/containers/podman/v5
+            componentVersion: v3.45.1
+            componentType: go-module
+            componentLocation: /usr/bin/podman
+            scanner: grype
+
   - id: CGA-pg8c-46w3-4rmx
     aliases:
       - CVE-2024-1753
