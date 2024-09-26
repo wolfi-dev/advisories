@@ -56,6 +56,24 @@ advisories:
         data:
           note: This vulnerability is part of rancher-plugins-audit 2.4.0, the latest version currently available, which does not yet have a fix.
 
+  - id: CGA-32wr-vfrj-q2m6
+    aliases:
+      - CVE-2024-23454
+      - GHSA-f5fw-25gw-5m92
+    events:
+      - timestamp: 2024-09-26T07:14:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: druid
+            componentID: 118fe119e3389c34
+            componentName: hadoop-common
+            componentVersion: 3.3.6
+            componentType: java-archive
+            componentLocation: /usr/share/java/druid/extensions/druid-avro-extensions/hadoop-client-api-3.3.6.jar
+            scanner: grype
+
   - id: CGA-37q9-qc23-8f8m
     aliases:
       - CVE-2021-37136
