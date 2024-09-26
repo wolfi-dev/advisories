@@ -19,24 +19,6 @@ advisories:
             componentName: github.com/containers/podman/v5
             componentVersion: v3.45.1
 
-  - id: CGA-23cq-v8q4-vmr3
-    aliases:
-      - CVE-2024-1753
-      - GHSA-874v-pj72-92f3
-    events:
-      - timestamp: 2024-09-13T19:33:39Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: podman
-            componentID: 1882f2178bff6d27
-            componentName: github.com/containers/podman/v5
-            componentVersion: 3.45.1
-            componentType: go-module
-            componentLocation: /usr/bin/podman
-            scanner: grype
-
   - id: CGA-7hph-xqmq-7wr4
     aliases:
       - CVE-2024-45310
@@ -96,6 +78,18 @@ advisories:
       - CVE-2024-1753
       - GHSA-874v-pj72-92f3
     events:
+      - timestamp: 2024-09-13T19:33:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: podman
+            componentID: 1882f2178bff6d27
+            componentName: github.com/containers/podman/v5
+            componentVersion: 3.45.1
+            componentType: go-module
+            componentLocation: /usr/bin/podman
+            scanner: grype
       - timestamp: 2024-09-14T19:09:03Z
         type: false-positive-determination
         data:
