@@ -4,6 +4,24 @@ package:
   name: cassandra-5.0
 
 advisories:
+  - id: CGA-2mmr-v32w-2chv
+    aliases:
+      - CVE-2022-38750
+      - GHSA-hhhw-99gj-p3c3
+    events:
+      - timestamp: 2024-09-27T12:36:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cassandra-5.0-compat
+            componentID: fc817545bae772a3
+            componentName: snakeyaml
+            componentVersion: "1.26"
+            componentType: java-archive
+            componentLocation: /usr/share/java/cassandra/lib/snakeyaml-1.26.jar
+            scanner: grype
+
   - id: CGA-3gw6-5crj-7ph4
     aliases:
       - CVE-2022-38751
