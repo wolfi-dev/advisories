@@ -480,6 +480,24 @@ advisories:
         data:
           note: This relates to protobuf-java v3.3.0 included by the shaded JARs mesos-1.4.3-shaded-protobuf.jar and hadoop-client-runtime-3.3.6.jar. There are no newer versions of these shaded JARs available to fix the vulnerability.
 
+  - id: CGA-pj4w-6xf6-cx8q
+    aliases:
+      - CVE-2024-23454
+      - GHSA-f5fw-25gw-5m92
+    events:
+      - timestamp: 2024-09-28T08:05:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-openjdk-11
+            componentID: ccc431f9453e0a27
+            componentName: hadoop-common
+            componentVersion: 3.3.6
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-api-3.3.6.jar
+            scanner: grype
+
   - id: CGA-pv3f-mmpx-7xwc
     aliases:
       - CVE-2024-25638
