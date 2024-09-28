@@ -4,6 +4,24 @@ package:
   name: vitess
 
 advisories:
+  - id: CGA-3mxj-jfpc-mcp3
+    aliases:
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-09-28T10:12:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vitess-compat
+            componentID: 2a259cea32bde5e6
+            componentName: stdlib
+            componentVersion: go1.20.7
+            componentType: go-module
+            componentLocation: /vt/web/vtadmin/node_modules/@esbuild/linux-x64/bin/esbuild
+            scanner: grype
+
   - id: CGA-4v4q-h3q6-hp75
     aliases:
       - CVE-2023-39319
