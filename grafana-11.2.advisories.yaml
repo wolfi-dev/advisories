@@ -49,6 +49,11 @@ advisories:
           note: |
             Remediating this CVE requires upgrading to v0.250.0 or later of the 'grafana-plugin-sdk-go'.
             Upgrading this plugin in the current version of the code, results in build issues.
+      - timestamp: 2024-09-30T16:01:24Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: The vulnerability applies to build scripts in the grafana-go-sdk, not the library itself. Further, we don't pass sensitive information in our git clone urls so our builds of grafana would not be affected anyway.
 
   - id: CGA-893x-8wh7-jvw3
     aliases:
