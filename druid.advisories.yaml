@@ -525,6 +525,18 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/java/druid/lib/protobuf-java-3.24.0.jar
             scanner: grype
+      - timestamp: 2024-10-01T18:03:48Z
+        type: fixed
+        data:
+          fixed-version: 30.0.1-r1
+      - timestamp: 2024-10-01T18:13:22Z
+        type: detection
+        data:
+          type: manual
+      - timestamp: 2024-10-01T18:13:55Z
+        type: pending-upstream-fix
+        data:
+          note: The protobuf 3.7 dependency causing this CVE is the result of a transitive dependency from hadoop used in druid extensions and must be remediated upstream.
 
   - id: CGA-qm53-pfmc-7gxx
     aliases:
