@@ -4,24 +4,6 @@ package:
   name: podman
 
 advisories:
-  - id: CGA-pcc8-jrq6-wc28
-    aliases:
-      - CVE-2024-3056
-      - GHSA-rpcc-p8xm-rc6p
-    events:
-      - timestamp: 2024-09-24T16:10:02Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: podman-doc
-            componentID: 4783eaf1001ee42d
-            componentName: github.com/containers/podman/v5
-            componentVersion: v3.45.1
-            componentType: go-module
-            componentLocation: /usr/bin/podman
-            scanner: grype
-
   - id: CGA-7hph-xqmq-7wr4
     aliases:
       - CVE-2024-45310
@@ -66,6 +48,24 @@ advisories:
         data:
           fixed-version: 5.2.2-r1
 
+  - id: CGA-gm82-mrg6-7grc
+    aliases:
+      - CVE-2024-9341
+      - GHSA-mc76-5925-c5p6
+    events:
+      - timestamp: 2024-10-02T09:11:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: podman-doc
+            componentID: ef35e6c0238b3bc4
+            componentName: github.com/containers/common
+            componentVersion: v0.60.3
+            componentType: go-module
+            componentLocation: /usr/bin/podman
+            scanner: grype
+
   - id: CGA-hqm9-wq7w-hpgg
     aliases:
       - CVE-2023-28642
@@ -84,6 +84,86 @@ advisories:
             componentLocation: /usr/bin/podman
             scanner: grype
       - timestamp: 2024-09-14T13:07:26Z
+        type: fixed
+        data:
+          fixed-version: 5.2.2-r1
+
+  - id: CGA-j7hw-j4wg-mh26
+    aliases:
+      - CVE-2023-27561
+      - GHSA-vpvm-3wq2-2wvm
+    events:
+      - timestamp: 2024-09-13T19:33:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: podman
+            componentID: 607bdc78afb1fe37
+            componentName: github.com/opencontainers/runc
+            componentVersion: v1.1.1-0.20240131200429-02120488a4c0
+            componentType: go-module
+            componentLocation: /usr/bin/podman
+            scanner: grype
+      - timestamp: 2024-09-14T13:07:27Z
+        type: fixed
+        data:
+          fixed-version: 5.2.2-r1
+
+  - id: CGA-j7xr-f8vm-6fwh
+    aliases:
+      - CVE-2024-9407
+      - GHSA-fhqq-8f65-5xfc
+    events:
+      - timestamp: 2024-10-02T09:11:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: podman-doc
+            componentID: 954d70635b14b725
+            componentName: github.com/containers/buildah
+            componentVersion: v1.37.3
+            componentType: go-module
+            componentLocation: /usr/bin/podman
+            scanner: grype
+
+  - id: CGA-pcc8-jrq6-wc28
+    aliases:
+      - CVE-2024-3056
+      - GHSA-rpcc-p8xm-rc6p
+    events:
+      - timestamp: 2024-09-24T16:10:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: podman-doc
+            componentID: 4783eaf1001ee42d
+            componentName: github.com/containers/podman/v5
+            componentVersion: v3.45.1
+            componentType: go-module
+            componentLocation: /usr/bin/podman
+            scanner: grype
+
+  - id: CGA-pcxv-fph7-rx28
+    aliases:
+      - CVE-2022-29162
+      - GHSA-f3fp-gc8g-vw66
+    events:
+      - timestamp: 2024-09-13T19:33:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: podman
+            componentID: 607bdc78afb1fe37
+            componentName: github.com/opencontainers/runc
+            componentVersion: v1.1.1-0.20240131200429-02120488a4c0
+            componentType: go-module
+            componentLocation: /usr/bin/podman
+            scanner: grype
+      - timestamp: 2024-09-14T13:07:25Z
         type: fixed
         data:
           fixed-version: 5.2.2-r1
@@ -109,51 +189,7 @@ advisories:
         type: false-positive-determination
         data:
           type: vulnerable-code-version-not-used
-          note: 'This vulnerability affects to v4 while this package is already using a v5 version.'
-
-  - id: CGA-j7hw-j4wg-mh26
-    aliases:
-      - CVE-2023-27561
-      - GHSA-vpvm-3wq2-2wvm
-    events:
-      - timestamp: 2024-09-13T19:33:35Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: podman
-            componentID: 607bdc78afb1fe37
-            componentName: github.com/opencontainers/runc
-            componentVersion: v1.1.1-0.20240131200429-02120488a4c0
-            componentType: go-module
-            componentLocation: /usr/bin/podman
-            scanner: grype
-      - timestamp: 2024-09-14T13:07:27Z
-        type: fixed
-        data:
-          fixed-version: 5.2.2-r1
-
-  - id: CGA-pcxv-fph7-rx28
-    aliases:
-      - CVE-2022-29162
-      - GHSA-f3fp-gc8g-vw66
-    events:
-      - timestamp: 2024-09-13T19:33:30Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: podman
-            componentID: 607bdc78afb1fe37
-            componentName: github.com/opencontainers/runc
-            componentVersion: v1.1.1-0.20240131200429-02120488a4c0
-            componentType: go-module
-            componentLocation: /usr/bin/podman
-            scanner: grype
-      - timestamp: 2024-09-14T13:07:25Z
-        type: fixed
-        data:
-          fixed-version: 5.2.2-r1
+          note: This vulnerability affects to v4 while this package is already using a v5 version.
 
   - id: CGA-wv8f-5cm6-7x5x
     aliases:
