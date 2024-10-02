@@ -4,6 +4,24 @@ package:
   name: qdrant
 
 advisories:
+  - id: CGA-c6v5-62wh-j5x5
+    aliases:
+      - CVE-2024-47609
+      - GHSA-4jwc-w2hc-78qv
+    events:
+      - timestamp: 2024-10-02T08:41:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: qdrant-oci-compat
+            componentID: db2c4e6430911ee1
+            componentName: tonic
+            componentVersion: 0.11.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/qdrant
+            scanner: grype
+
   - id: CGA-fvv9-9gwx-2fj7
     aliases:
       - CVE-2024-41178
