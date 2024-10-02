@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: linkerd2-proxy
+
+advisories:
+  - id: CGA-87x9-9pxx-92vc
+    aliases:
+      - CVE-2024-47609
+      - GHSA-4jwc-w2hc-78qv
+    events:
+      - timestamp: 2024-10-02T07:13:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: linkerd2-proxy
+            componentID: 2e250d34daaac148
+            componentName: tonic
+            componentVersion: 0.10.2
+            componentType: rust-crate
+            componentLocation: /usr/bin/linkerd2-proxy
+            scanner: grype
