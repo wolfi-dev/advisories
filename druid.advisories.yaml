@@ -73,6 +73,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/java/druid/extensions/druid-avro-extensions/hadoop-client-api-3.3.6.jar
             scanner: grype
+      - timestamp: 2024-10-03T17:52:35Z
+        type: pending-upstream-fix
+        data:
+          note: 'The dependency hadoop.compile which determines this whole project''s subsequent hadoop jars versions currently has an open PR seen here: https://github.com/apache/druid/pull/16815 that will bump the version from 3.3.6 to 3.4.0 remediating this CVE however as of 10/3/24 it is failing in CI and we are awaiting upstream maintainers to implement.'
 
   - id: CGA-37q9-qc23-8f8m
     aliases:
