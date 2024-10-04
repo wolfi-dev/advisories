@@ -4,6 +4,24 @@ package:
   name: kafka-3.8
 
 advisories:
+  - id: CGA-9rwq-q6m2-g373
+    aliases:
+      - CVE-2024-47554
+      - GHSA-78wr-2p64-hpwj
+    events:
+      - timestamp: 2024-10-04T07:39:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kafka-bitnami-compat-3.8
+            componentID: a35c192074c0d09f
+            componentName: commons-io
+            componentVersion: 2.11.0
+            componentType: java-archive
+            componentLocation: /usr/lib/kafka/libs/commons-io-2.11.0.jar
+            scanner: grype
+
   - id: CGA-xrwq-83cw-2mjc
     aliases:
       - CVE-2024-7254
