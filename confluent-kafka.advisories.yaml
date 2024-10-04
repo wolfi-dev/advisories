@@ -45,3 +45,21 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Confluent should publish the latest version of common package to their maven repository. They do not have any jars/poms past 7.6.x but they have 7.7.x tags in their GitHub repository.
+
+  - id: CGA-v9q6-cg5v-8pf7
+    aliases:
+      - CVE-2024-47554
+      - GHSA-78wr-2p64-hpwj
+    events:
+      - timestamp: 2024-10-04T07:19:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: confluent-kafka
+            componentID: a35c192074c0d09f
+            componentName: commons-io
+            componentVersion: 2.11.0
+            componentType: java-archive
+            componentLocation: /usr/lib/kafka/libs/commons-io-2.11.0.jar
+            scanner: grype
