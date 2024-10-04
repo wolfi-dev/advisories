@@ -26,6 +26,24 @@ advisories:
         data:
           note: 'To fix the CVE, we have to upgrade ''swagger-jaxrs2'' to ''2.2.10'' or later but this fix will require some code change since the upgrade cause the build to fail due to compilation errors like: ''src/main/java/com/datastax/mgmtapi/resources/LifecycleResources.java:[425,28] cannot access com.fasterxml.jackson.core.exc.StreamWriteException'''
 
+  - id: CGA-5w59-gp3v-29fh
+    aliases:
+      - CVE-2024-47554
+      - GHSA-78wr-2p64-hpwj
+    events:
+      - timestamp: 2024-10-04T08:25:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: management-api-for-apache-cassandra-4.1-compat
+            componentID: 093ed7e7a57f49e5
+            componentName: commons-io
+            componentVersion: 2.9.0
+            componentType: java-archive
+            componentLocation: /opt/management-api/datastax-mgmtapi-server-0.1.0-SNAPSHOT.jar
+            scanner: grype
+
   - id: CGA-69cr-q4xf-g62p
     aliases:
       - CVE-2021-47621
@@ -46,7 +64,7 @@ advisories:
       - timestamp: 2024-07-01T07:24:57Z
         type: pending-upstream-fix
         data:
-          note: 'To fix the CVE, we have to upgrade ''classgraph'' to ''4.8.112'' or later but this fix will require some code changes on the upstream repository.'
+          note: To fix the CVE, we have to upgrade 'classgraph' to '4.8.112' or later but this fix will require some code changes on the upstream repository.
 
   - id: CGA-6phc-ggx6-f65h
     aliases:
