@@ -178,6 +178,24 @@ advisories:
         data:
           note: Spark v3.5.0 is incompatible with higher versions of libthrift. https://github.com/apache/spark/pull/34878
 
+  - id: CGA-5hff-fh2h-5q22
+    aliases:
+      - CVE-2024-47554
+      - GHSA-78wr-2p64-hpwj
+    events:
+      - timestamp: 2024-10-05T09:16:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-openjdk-11
+            componentID: a87f961b0c37942c
+            componentName: commons-io
+            componentVersion: 2.8.0
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.6.jar
+            scanner: grype
+
   - id: CGA-5v9q-v7xh-qmf9
     aliases:
       - CVE-2024-29131
