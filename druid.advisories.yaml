@@ -120,6 +120,24 @@ advisories:
           type: vulnerable-code-not-in-execution-path
           note: The UNWRAP_SINGLE_VALUE_ARRAYS feature is not used
 
+  - id: CGA-59p4-56wq-rq6r
+    aliases:
+      - CVE-2024-47554
+      - GHSA-78wr-2p64-hpwj
+    events:
+      - timestamp: 2024-10-05T07:21:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: druid-compat
+            componentID: ddde340b2bec551a
+            componentName: commons-io
+            componentVersion: 2.11.0
+            componentType: java-archive
+            componentLocation: /usr/share/java/druid/lib/commons-io-2.11.0.jar
+            scanner: grype
+
   - id: CGA-5g5x-fq8f-h2pq
     aliases:
       - CVE-2022-3510
