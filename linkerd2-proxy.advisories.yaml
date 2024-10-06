@@ -21,3 +21,10 @@ advisories:
             componentType: rust-crate
             componentLocation: /usr/bin/linkerd2-proxy
             scanner: grype
+      - timestamp: 2024-10-06T01:02:56Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            Remediating this vulnerability requires upgrading tonic to v0.12.13.
+            However, upgrading this causes issues with other dependencies, namely linkerd-app-core, which is not compatible with this version.
+            Pending upstream fix.
