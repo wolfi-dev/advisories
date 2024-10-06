@@ -20,6 +20,13 @@ advisories:
             componentType: rust-crate
             componentLocation: /usr/bin/atuin
             scanner: grype
+      - timestamp: 2024-10-06T15:01:37Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            This vulnerability is related to the 'rsa' dependency, of which atuin is already installing the most recent version (0.9.6).
+            There is no release of 'rsa' today with a fix for this vulnerability, but it does the RSA GitHub repo is working on pre-releases, so a fix may be expected soon.
+            Waiting for upstream (RSA) to cut a new release with a fix, and for atuin to consume.
 
   - id: CGA-6v33-3rmm-7hcq
     aliases:
@@ -56,6 +63,13 @@ advisories:
             componentType: rust-crate
             componentLocation: /usr/bin/atuin
             scanner: grype
+      - timestamp: 2024-10-06T15:02:12Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            This vulnerability is related to the 'rsa' dependency, of which atuin is already installing the most recent version (0.9.6).
+            There is no release of 'rsa' today with a fix for this vulnerability, but it does the RSA GitHub repo is working on pre-releases, so a fix may be expected soon.
+            Waiting for upstream (RSA) to cut a new release with a fix, and for atuin to consume.
 
   - id: CGA-pmwr-r5vj-67r4
     aliases:
@@ -90,3 +104,11 @@ advisories:
             componentType: rust-crate
             componentLocation: /usr/bin/atuin
             scanner: grype
+      - timestamp: 2024-10-06T15:59:01Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            Remediating this vulnerability requires upgrading: sqlx to version 0.8.1 or higher.
+            However, attempting to upgrade this results in build errors, as other dependencies expect different versions of sqlx.
+            The main branch has upgraded to sqlx v0.8.1, however this has not made it into a release yet.
+            Pending fix from upstream in the next release.
