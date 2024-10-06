@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: percona-server-8.4
+
+advisories:
+  - id: CGA-2q72-45j3-9qq8
+    aliases:
+      - CVE-2020-26542
+      - GHSA-q88m-4hg8-4h3h
+    events:
+      - timestamp: 2024-10-06T16:00:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: percona-server-8.4-oci-entrypoint
+            componentID: 6f6453efde2dedf3
+            componentName: percona-server-8.4
+            componentVersion: 8.4.0-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
