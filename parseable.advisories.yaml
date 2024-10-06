@@ -42,6 +42,14 @@ advisories:
             componentType: rust-crate
             componentLocation: /usr/bin/parseable
             scanner: grype
+      - timestamp: 2024-10-05T21:41:06Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            Fixing this vulnerability requires upgrading lexical-core to v1.0.0.
+            However, another dependency: arrow-json, will not function with lexical-core v1.0.0.
+            arrow-json is preparing a 53.1.0 release, which upgrades it's dependency to a newer version of lexical-core.
+            However, this has not been released yet. Pending fix from upstream.
 
   - id: CGA-jhg5-22p5-x752
     aliases:
