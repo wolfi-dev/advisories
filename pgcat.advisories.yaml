@@ -21,6 +21,14 @@ advisories:
             componentType: rust-crate
             componentLocation: /usr/bin/pgcat
             scanner: grype
+      - timestamp: 2024-10-08T00:36:29Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            Remediating this vulnerability requires upgrading 'time' to 0.2.23 or later.
+            Unfortunately, we are not able to upgrade this dependency, without build compilation issues.
+            Specifically, the 'chrono' dependency expects an older version of time.
+            Pending fix from upstream.
 
   - id: CGA-896q-7j3w-vqv7
     aliases:
@@ -115,6 +123,13 @@ advisories:
             componentType: rust-crate
             componentLocation: /usr/bin/pgcat
             scanner: grype
+      - timestamp: 2024-10-08T00:35:31Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            Remediating this vulnerability requires upgrading rustls-webpki to 0.101.4 or later.
+            Unfortunately, we are not able to upgrade this dependency, without build compilation issues.
+            Pending fix from upstream.
 
   - id: CGA-w35m-69h5-g4h3
     aliases:
