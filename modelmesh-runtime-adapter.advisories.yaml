@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: modelmesh-runtime-adapter
+
+advisories:
+  - id: CGA-q5hr-pxrh-2j32
+    aliases:
+      - CVE-2024-35255
+      - GHSA-m5vv-6r4h-3vj9
+    events:
+      - timestamp: 2024-10-08T22:24:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: modelmesh-runtime-adapter-mlserver-adapter
+            componentID: 8fb26e1f47ca9102
+            componentName: github.com/Azure/azure-sdk-for-go/sdk/azidentity
+            componentVersion: v0.13.2
+            componentType: go-module
+            componentLocation: /usr/bin/mlserver-adapter
+            scanner: grype
