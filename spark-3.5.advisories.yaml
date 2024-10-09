@@ -262,6 +262,24 @@ advisories:
         data:
           note: This relates to protobuf-java v3.3.0 included by the shaded JARs mesos-1.4.3-shaded-protobuf.jar and hadoop-client-runtime-3.3.6.jar. There are no newer versions of these shaded JARs available to fix the vulnerability.
 
+  - id: CGA-7xqx-ff4c-hwm8
+    aliases:
+      - CVE-2024-47561
+      - GHSA-r7pg-v2c8-mfg3
+    events:
+      - timestamp: 2024-10-09T10:14:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-openjdk-11
+            componentID: 197c1f6a57d8d1ba
+            componentName: avro
+            componentVersion: 1.11.3
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/avro-1.11.3.jar
+            scanner: grype
+
   - id: CGA-cch5-m8vc-66rh
     aliases:
       - CVE-2022-46337
