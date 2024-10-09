@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: logstash-8
+
+advisories:
+  - id: CGA-937h-9qvw-8r89
+    aliases:
+      - CVE-2024-47554
+      - GHSA-78wr-2p64-hpwj
+    events:
+      - timestamp: 2024-10-09T18:42:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-8-env2yaml
+            componentID: 5c921aacf49abcc9
+            componentName: commons-io
+            componentVersion: 2.13.0
+            componentType: java-archive
+            componentLocation: /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/logstash-input-tcp-6.4.2-java/vendor/jar-dependencies/commons-io/commons-io/2.13.0/commons-io-2.13.0.jar
+            scanner: grype
