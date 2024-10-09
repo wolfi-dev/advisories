@@ -1,0 +1,41 @@
+schema-version: 2.0.2
+
+package:
+  name: logstash-8
+
+advisories:
+  - id: CGA-24wg-f7c9-6234
+    aliases:
+      - CVE-2024-47561
+      - GHSA-r7pg-v2c8-mfg3
+    events:
+      - timestamp: 2024-10-09T18:42:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-8-env2yaml
+            componentID: 89942756b5dd08b8
+            componentName: avro
+            componentVersion: 1.11.3
+            componentType: java-archive
+            componentLocation: /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/logstash-integration-kafka-11.5.1-java/vendor/jar-dependencies/org/apache/avro/avro/1.11.3/avro-1.11.3.jar
+            scanner: grype
+
+  - id: CGA-937h-9qvw-8r89
+    aliases:
+      - CVE-2024-47554
+      - GHSA-78wr-2p64-hpwj
+    events:
+      - timestamp: 2024-10-09T18:42:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-8-env2yaml
+            componentID: 5c921aacf49abcc9
+            componentName: commons-io
+            componentVersion: 2.13.0
+            componentType: java-archive
+            componentLocation: /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/logstash-input-tcp-6.4.2-java/vendor/jar-dependencies/commons-io/commons-io/2.13.0/commons-io-2.13.0.jar
+            scanner: grype
