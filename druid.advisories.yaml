@@ -339,6 +339,24 @@ advisories:
         data:
           note: This is a transitive dependency of com.netflix.astyanax:astyanax:jar. It will need to be mitigated by the upstream maintainers
 
+  - id: CGA-h9fq-x6wj-cjf9
+    aliases:
+      - CVE-2024-47561
+      - GHSA-r7pg-v2c8-mfg3
+    events:
+      - timestamp: 2024-10-09T07:41:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: druid-compat
+            componentID: 2e500517fca7e8f1
+            componentName: avro
+            componentVersion: 1.11.3
+            componentType: java-archive
+            componentLocation: /usr/share/java/druid/extensions/druid-avro-extensions/avro-1.11.3.jar
+            scanner: grype
+
   - id: CGA-h9pg-8x4v-69rh
     aliases:
       - CVE-2022-23307
