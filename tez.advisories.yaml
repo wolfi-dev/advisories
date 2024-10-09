@@ -92,6 +92,24 @@ advisories:
         data:
           note: The nimbus-jose-jwt transitive dependency must be bumped to 9.37.2 in the upstream project Hadoop.
 
+  - id: CGA-6hqm-x64f-4f58
+    aliases:
+      - CVE-2024-47561
+      - GHSA-r7pg-v2c8-mfg3
+    events:
+      - timestamp: 2024-10-09T07:16:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tez
+            componentID: d2ac800911561a27
+            componentName: avro
+            componentVersion: 1.9.2
+            componentType: java-archive
+            componentLocation: /usr/share/java/tez/lib/avro-1.9.2.jar
+            scanner: grype
+
   - id: CGA-7pfp-wfcr-cm2m
     aliases:
       - CVE-2019-10172
