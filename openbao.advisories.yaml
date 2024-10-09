@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: openbao
+
+advisories:
+  - id: CGA-928c-p927-cjwf
+    aliases:
+      - CVE-2024-0406
+      - GHSA-rhh4-rh7c-7r5v
+    events:
+      - timestamp: 2024-10-09T11:00:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openbao-compat
+            componentID: 922de952c464a18f
+            componentName: github.com/mholt/archiver/v3
+            componentVersion: v3.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/bao
+            scanner: grype
