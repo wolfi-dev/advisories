@@ -327,6 +327,14 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/cosign
             scanner: grype
+      - timestamp: 2024-10-10T22:21:12Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            There are two separately named releases for 'go-tuf'. This application currently depends on both, 'go-tuf', and 'go-tuf/v2'.
+            go-tuf does not contain a fix for this vulnerability, and looks depreciated in favor of 'go-tuf/v2'.
+            Pending fix from upstream, which will involve removing their dependency on the depreciated version.
+            Related information: https://github.com/github/advisory-database/pull/4893.
 
   - id: CGA-hmh4-g97q-rfvv
     aliases:
