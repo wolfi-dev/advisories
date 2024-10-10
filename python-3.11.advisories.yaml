@@ -193,6 +193,11 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2024-10-10T00:13:56Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: This CVE is claimed to be inaccurate and is disputed by the vendor because (1) neither 3.7 nor any other release is affected (it is a bug in some 3.12 pre-releases and up); (2) there are no common scenarios in which an adversary can call _asyncio._swap_current_task but does not already have the ability to call arbitrary functions; and (3) there are no common scenarios in which sensitive information, which is not already accessible to an adversary, becomes accessible through this bug. Affected versions can be found under the tags here in this commit https://github.com/python/cpython/commit/a474e04388c2ef6aca75c26cb70a1b6200235feb and PR that resolved the bug here https://github.com/python/cpython/issues/105987
 
   - id: CGA-p85w-jmjj-g7hv
     aliases:
