@@ -115,6 +115,24 @@ advisories:
             There is no release of 'rsa' today with a fix for this vulnerability. The RSA GitHub project repo is working on pre-releases, so a fix may be expected soon.
             Waiting for upstream (RSA) to cut a new release with a fix, and for zed to consume.
 
+  - id: CGA-gjjh-q4xg-fjw4
+    aliases:
+      - CVE-2024-47813
+      - GHSA-7qmx-3fpx-r45m
+    events:
+      - timestamp: 2024-10-10T08:18:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zed
+            componentID: e8c6ed3706bafc2a
+            componentName: wasmtime
+            componentVersion: 24.0.0
+            componentType: rust-crate
+            componentLocation: /usr/libexec/zed
+            scanner: grype
+
   - id: CGA-hpm6-2qvq-4337
     aliases:
       - GHSA-4grx-2x9w-596c
@@ -134,6 +152,7 @@ advisories:
 
   - id: CGA-hv6w-7882-f89g
     aliases:
+      - CVE-2024-43806
       - GHSA-c827-hfw6-qwvm
     events:
       - timestamp: 2024-07-12T18:23:50Z
