@@ -4,6 +4,17 @@ package:
   name: jitsucom-jitsu
 
 advisories:
+  - id: CGA-4chm-qjp7-j98q
+    aliases:
+      - CVE-2015-9235
+      - GHSA-c7hr-j4mj-j2w6
+    events:
+      - timestamp: 2024-10-09T09:05:01Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: 'The lowest version of jsonwebtoken used in the jitsucom-jitsu-console is 9.0.0 and the fix version outlined in the CVE GHSA-c7hr-j4mj-j2w6 is 4.2.2 '
+
   - id: CGA-9ph2-9r6m-2j4q
     aliases:
       - CVE-2024-39338
@@ -48,6 +59,26 @@ advisories:
         data:
           fixed-version: 2.8.2-r1
 
+  - id: CGA-cvq8-8423-6v9f
+    aliases:
+      - CVE-2016-10541
+      - GHSA-qg8p-v9q4-gh34
+    events:
+      - timestamp: 2024-10-09T09:03:03Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: 'The version of shell-quote included in this package, version 1.7.3, is above the patched version (1.6.1) that resolves the vulnerability described in CVE GHSA-qg8p-v9q4-gh34. '
+
+  - id: CGA-fggr-qmgm-5v3m
+    aliases:
+      - GHSA-76p3-8jx3-jpfq
+    events:
+      - timestamp: 2024-10-09T09:15:54Z
+        type: pending-upstream-fix
+        data:
+          note: The affected dependency loader-utils v2.0.0 exists within the dependency next v14.2.15 and due to the nature of this transitive dependency it will need to be addressed upstream.
+
   - id: CGA-hchv-5xpf-mwj3
     aliases:
       - CVE-2024-47764
@@ -65,6 +96,16 @@ advisories:
             componentType: npm
             componentLocation: /app/node_modules/.pnpm/cookie@0.5.0/node_modules/cookie/package.json
             scanner: grype
+
+  - id: CGA-hwrj-cwxw-pr4r
+    aliases:
+      - GHSA-8g7p-74h8-hg48
+    events:
+      - timestamp: 2024-10-09T09:08:13Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: The lowest version of https-proxy-agent used in jitsucom-jitsu-console is 5.0.0 and the fix version outlined in CVE GHSA-8g7p-74h8-hg48 is 2.2.0
 
   - id: CGA-mvv3-xjv4-w9gc
     aliases:
@@ -88,6 +129,17 @@ advisories:
         data:
           note: |
             A Regular Expression Denial of Service (ReDoS) flaw was found in kangax html-minifier 4.0.0 via the candidate variable in htmlminifier.js. The ReDoS vulnerability can be mitigated with several best practices described here: [https://snyk.io/blog/redos-and-catastrophic-backtracking/]. The issue is still open and has not been fixed yet: 'https://github.com/kangax/html-minifier/issues/1135'
+
+  - id: CGA-rfq7-3777-23gj
+    aliases:
+      - CVE-2021-42740
+      - GHSA-g4rg-993r-mgx7
+    events:
+      - timestamp: 2024-10-09T09:02:11Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: 'The version of shell-quote included in this package, version 1.7.3, is the patched version that resolves the vulnerability described in CVE GHSA-g4rg-993r-mgx7. Additionally, the @types/shell-quote package (version 1.7.1) only contains TypeScript type definitions, which are not executable and are used solely during development. Type packages like @types/shell-quote do not affect the runtime behavior or security of the project and have no impact on its security integrity. '
 
   - id: CGA-w377-c6cx-3vgh
     aliases:
