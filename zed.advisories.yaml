@@ -107,6 +107,31 @@ advisories:
             componentType: rust-crate
             componentLocation: /usr/libexec/zed
             scanner: grype
+      - timestamp: 2024-10-09T19:30:41Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            This vulnerability is related to the 'rsa' dependency, of which zed is already installing the most recent version (0.9.6).
+            There is no release of 'rsa' today with a fix for this vulnerability. The RSA GitHub project repo is working on pre-releases, so a fix may be expected soon.
+            Waiting for upstream (RSA) to cut a new release with a fix, and for zed to consume.
+
+  - id: CGA-gjjh-q4xg-fjw4
+    aliases:
+      - CVE-2024-47813
+      - GHSA-7qmx-3fpx-r45m
+    events:
+      - timestamp: 2024-10-10T08:18:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zed
+            componentID: e8c6ed3706bafc2a
+            componentName: wasmtime
+            componentVersion: 24.0.0
+            componentType: rust-crate
+            componentLocation: /usr/libexec/zed
+            scanner: grype
 
   - id: CGA-hpm6-2qvq-4337
     aliases:
@@ -127,6 +152,7 @@ advisories:
 
   - id: CGA-hv6w-7882-f89g
     aliases:
+      - CVE-2024-43806
       - GHSA-c827-hfw6-qwvm
     events:
       - timestamp: 2024-07-12T18:23:50Z
@@ -209,6 +235,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.146.3-r0
+
+  - id: CGA-qxpw-wpcp-p399
+    aliases:
+      - CVE-2024-47763
+      - GHSA-q8hx-mm92-4wvg
+    events:
+      - timestamp: 2024-10-10T08:18:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zed
+            componentID: e8c6ed3706bafc2a
+            componentName: wasmtime
+            componentVersion: 24.0.0
+            componentType: rust-crate
+            componentLocation: /usr/libexec/zed
+            scanner: grype
 
   - id: CGA-wc5p-vj8w-jm26
     aliases:
