@@ -4,6 +4,28 @@ package:
   name: wash
 
 advisories:
+  - id: CGA-3652-mr4r-qqj4
+    aliases:
+      - CVE-2024-47763
+      - GHSA-q8hx-mm92-4wvg
+    events:
+      - timestamp: 2024-10-10T10:21:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wash
+            componentID: 34ee1ea9b273750b
+            componentName: wasmtime
+            componentVersion: 25.0.1
+            componentType: rust-crate
+            componentLocation: /usr/bin/wash
+            scanner: grype
+      - timestamp: 2024-10-10T11:25:48Z
+        type: fixed
+        data:
+          fixed-version: 0.34.1-r2
+
   - id: CGA-rrxp-vx65-hrrv
     aliases:
       - GHSA-x4gp-pqpj-f43q
@@ -64,3 +86,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.32.1-r1
+
+  - id: CGA-x6r2-g5c2-44p2
+    aliases:
+      - CVE-2024-47813
+      - GHSA-7qmx-3fpx-r45m
+    events:
+      - timestamp: 2024-10-10T10:21:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wash
+            componentID: 34ee1ea9b273750b
+            componentName: wasmtime
+            componentVersion: 25.0.1
+            componentType: rust-crate
+            componentLocation: /usr/bin/wash
+            scanner: grype
+      - timestamp: 2024-10-10T11:25:47Z
+        type: fixed
+        data:
+          fixed-version: 0.34.1-r2
