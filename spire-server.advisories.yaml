@@ -406,17 +406,3 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/spire-server
             scanner: grype
-
-  - id: CGA-qjjx-7rr6-52h2
-    aliases:
-      - CVE-2024-47534
-      - GHSA-4f8r-qqr9-fq8j
-    events:
-      - timestamp: 2024-10-10T20:24:56Z
-        type: pending-upstream-fix
-        data:
-          note: |
-            spire-server currently relies on an affected version of 'go-tuf', which looks to have been depreciated in favor of 'go-tuf/v2'.
-            There are significant changes between these releases, and attempting to upgrade results in build errors.
-            Pending fix from upstream, which will involve removing their dependency on the depreciated version.
-            Related information: https://github.com/github/advisory-database/pull/4893.
