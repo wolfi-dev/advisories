@@ -276,11 +276,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/tuf-server
             scanner: grype
-      - timestamp: 2024-10-10T16:15:22Z
-        type: true-positive-determination
+      - timestamp: 2024-10-10T20:24:56Z
+        type: pending-upstream-fix
         data:
           note: |
-            This package depends on 'go-tuf', of which there are two separately named releases published: 'go-tuf' and 'go-tuf/v2'.Both use different versioning.
-            Unfortunately, the GitHub advisory data, at the time of writing, is marking both as 'resolved' in v2.0.0, but there is no 2.0.0 release for 'go-tuf', only 'go-tuf/v2'.
-            The vulnerability was not fixed in 'go-tuf', and the latest version of that release is v0.7.0.
-            A ticket was opened to query / correct the GH advisory data: https://github.com/github/advisory-database/pull/4893.
+            There are two separately named releases for 'go-tuf'. This application currently depends on both, 'go-tuf', and 'go-tuf/v2'.
+            go-tuf does not contain a fix for this vulnerability, and looks depreciated in favour of 'go-tuf/v2'.
+            Pending fix from upstream, which will involve removing their dependency on the depreciated version.
+            Related information: https://github.com/github/advisory-database/pull/4893.
