@@ -120,6 +120,24 @@ advisories:
         data:
           note: This is a transitive dependency that is brought in as a part of elasticsearch dependency. Elasticsearch has been updated to the most recent version and so this requires a fix from upstream maintainers.
 
+  - id: CGA-8cc7-m97x-rcw7
+    aliases:
+      - CVE-2024-7254
+      - GHSA-735f-pc8j-v9w8
+    events:
+      - timestamp: 2024-10-11T09:08:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube-10-docker-compat
+            componentID: e29c9f3a53b91626
+            componentName: protobuf-java
+            componentVersion: 3.21.9
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/elasticsearch/modules/x-pack-inference/protobuf-java-3.21.9.jar
+            scanner: grype
+
   - id: CGA-f3c9-jr4v-wvfr
     aliases:
       - CVE-2023-1370
