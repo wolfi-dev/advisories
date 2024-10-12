@@ -4,16 +4,15 @@ package:
   name: tiff
 
 advisories:
-  - id: CGA-98f7-c6v2-54wg
+  - id: CGA-3wmj-vvmm-743g
     aliases:
-      - CVE-2015-7313
-      - GHSA-2j29-7372-8rgg
+      - CVE-2024-7006
+      - GHSA-r7x8-hv2q-v9r7
     events:
-      - timestamp: 2023-08-18T16:10:08Z
-        type: false-positive-determination
+      - timestamp: 2024-10-12T11:18:13Z
+        type: fixed
         data:
-          type: vulnerable-code-version-not-used
-          note: This was fixed upstream sometime around the 4.0.7 release, prior to wolfi packaging. It was also deemed not a security issue, but it was fixed anyway.
+          fixed-version: 4.7.0-r0
 
   - id: CGA-6hr5-pfjh-246w
     aliases:
@@ -36,29 +35,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 4.6.0-r0
-
-  - id: CGA-p38m-7xhg-hw5f
-    aliases:
-      - CVE-2023-52355
-      - GHSA-fh6j-mgh8-7prh
-    events:
-      - timestamp: 2024-02-05T07:12:11Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: tiff
-            componentID: 7236a49003c6a3b7
-            componentName: tiff
-            componentVersion: 4.6.0-r2
-            componentType: apk
-            componentLocation: /.PKGINFO
-            scanner: grype
-      - timestamp: 2024-02-09T02:18:37Z
-        type: false-positive-determination
-        data:
-          type: vulnerability-record-analysis-contested
-          note: The upstream maintainer disagrees with this finding. See https://gitlab.com/libtiff/libtiff/-/issues/621#note_1628293670.
 
   - id: CGA-88p2-wcq4-ph4q
     aliases:
@@ -83,15 +59,16 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: The upstream maintainer disagrees with this finding. See https://gitlab.com/libtiff/libtiff/-/issues/622#note_1750379532.
 
-  - id: CGA-pqr8-gq2f-vqr2
+  - id: CGA-98f7-c6v2-54wg
     aliases:
-      - CVE-2023-6228
-      - GHSA-4v5g-xjvw-59g6
+      - CVE-2015-7313
+      - GHSA-2j29-7372-8rgg
     events:
-      - timestamp: 2023-12-29T17:47:04Z
-        type: fixed
+      - timestamp: 2023-08-18T16:10:08Z
+        type: false-positive-determination
         data:
-          fixed-version: 4.6.0-r2
+          type: vulnerable-code-version-not-used
+          note: This was fixed upstream sometime around the 4.0.7 release, prior to wolfi packaging. It was also deemed not a security issue, but it was fixed anyway.
 
   - id: CGA-j7hc-vcr6-qf8g
     aliases:
@@ -102,3 +79,36 @@ advisories:
         type: fixed
         data:
           fixed-version: 4.6.0-r1
+
+  - id: CGA-p38m-7xhg-hw5f
+    aliases:
+      - CVE-2023-52355
+      - GHSA-fh6j-mgh8-7prh
+    events:
+      - timestamp: 2024-02-05T07:12:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tiff
+            componentID: 7236a49003c6a3b7
+            componentName: tiff
+            componentVersion: 4.6.0-r2
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2024-02-09T02:18:37Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: The upstream maintainer disagrees with this finding. See https://gitlab.com/libtiff/libtiff/-/issues/621#note_1628293670.
+
+  - id: CGA-pqr8-gq2f-vqr2
+    aliases:
+      - CVE-2023-6228
+      - GHSA-4v5g-xjvw-59g6
+    events:
+      - timestamp: 2023-12-29T17:47:04Z
+        type: fixed
+        data:
+          fixed-version: 4.6.0-r2
