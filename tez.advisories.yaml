@@ -238,6 +238,24 @@ advisories:
         data:
           note: The bcprov-jdk15on transitive dependency must be bumped in the upstream project Hadoop, but there's no fix available yet.
 
+  - id: CGA-cwf8-x2j8-62fg
+    aliases:
+      - CVE-2024-6763
+      - GHSA-qh8g-58pp-2wxh
+    events:
+      - timestamp: 2024-10-15T07:15:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tez
+            componentID: 78357cb010b702fc
+            componentName: jetty-http
+            componentVersion: 9.4.53.v20231009
+            componentType: java-archive
+            componentLocation: /usr/share/java/tez/lib/jetty-http-9.4.53.v20231009.jar
+            scanner: grype
+
   - id: CGA-cxfp-ggmh-c85x
     aliases:
       - CVE-2023-6378
