@@ -1366,6 +1366,24 @@ advisories:
         data:
           note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
 
+  - id: CGA-mj2j-pchp-6q44
+    aliases:
+      - CVE-2024-6763
+      - GHSA-qh8g-58pp-2wxh
+    events:
+      - timestamp: 2024-10-15T09:10:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi-compat
+            componentID: 2d161de2c3143a1a
+            componentName: jetty-http
+            componentVersion: 9.4.54.v20240208
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/nifi-toolkit-current/lib/jetty-http-9.4.54.v20240208.jar
+            scanner: grype
+
   - id: CGA-q59c-5jjp-7wcw
     aliases:
       - CVE-2024-25638
