@@ -4,50 +4,6 @@ package:
   name: cloudwatch-exporter
 
 advisories:
-  - id: CGA-cp7x-r3q6-pfcj
-    aliases:
-      - CVE-2023-34462
-      - GHSA-6mjq-h674-j845
-    events:
-      - timestamp: 2023-08-11T21:39:51Z
-        type: detection
-        data:
-          type: manual
-      - timestamp: 2023-08-14T15:53:34Z
-        type: fixed
-        data:
-          fixed-version: 0.15.4-r2
-
-  - id: CGA-fq64-7x7j-66q4
-    aliases:
-      - CVE-2023-36479
-      - GHSA-3gh6-v5v9-6v9j
-    events:
-      - timestamp: 2023-09-22T19:31:25Z
-        type: fixed
-        data:
-          fixed-version: 0.15.4-r3
-
-  - id: CGA-vqpm-qwj8-mfq5
-    aliases:
-      - CVE-2023-40167
-      - GHSA-hmr7-m48g-48f6
-    events:
-      - timestamp: 2023-09-22T19:32:39Z
-        type: fixed
-        data:
-          fixed-version: 0.15.4-r3
-
-  - id: CGA-gxjq-vrjj-q4mq
-    aliases:
-      - CVE-2023-41900
-      - GHSA-pwh8-58vv-vw48
-    events:
-      - timestamp: 2023-09-22T19:33:07Z
-        type: fixed
-        data:
-          fixed-version: 0.15.4-r3
-
   - id: CGA-7p98-j4rx-8p2r
     aliases:
       - CVE-2024-29025
@@ -70,6 +26,38 @@ advisories:
         data:
           fixed-version: 0.15.5-r1
 
+  - id: CGA-8gjp-4rcc-xgr3
+    aliases:
+      - CVE-2024-6763
+      - GHSA-qh8g-58pp-2wxh
+    events:
+      - timestamp: 2024-10-15T07:11:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloudwatch-exporter
+            componentID: 16deb5f4d69e0b62
+            componentName: jetty-http
+            componentVersion: 11.0.22
+            componentType: java-archive
+            componentLocation: /usr/share/java/cloudwatch_exporter/cloudwatch_exporter.jar
+            scanner: grype
+
+  - id: CGA-cp7x-r3q6-pfcj
+    aliases:
+      - CVE-2023-34462
+      - GHSA-6mjq-h674-j845
+    events:
+      - timestamp: 2023-08-11T21:39:51Z
+        type: detection
+        data:
+          type: manual
+      - timestamp: 2023-08-14T15:53:34Z
+        type: fixed
+        data:
+          fixed-version: 0.15.4-r2
+
   - id: CGA-f5mc-g9q8-mr85
     aliases:
       - GHSA-xpw8-rcwv-8f8p
@@ -78,3 +66,51 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.15.5-r0
+
+  - id: CGA-fq64-7x7j-66q4
+    aliases:
+      - CVE-2023-36479
+      - GHSA-3gh6-v5v9-6v9j
+    events:
+      - timestamp: 2023-09-22T19:31:25Z
+        type: fixed
+        data:
+          fixed-version: 0.15.4-r3
+
+  - id: CGA-gxjq-vrjj-q4mq
+    aliases:
+      - CVE-2023-41900
+      - GHSA-pwh8-58vv-vw48
+    events:
+      - timestamp: 2023-09-22T19:33:07Z
+        type: fixed
+        data:
+          fixed-version: 0.15.4-r3
+
+  - id: CGA-vqpm-qwj8-mfq5
+    aliases:
+      - CVE-2023-40167
+      - GHSA-hmr7-m48g-48f6
+    events:
+      - timestamp: 2023-09-22T19:32:39Z
+        type: fixed
+        data:
+          fixed-version: 0.15.4-r3
+
+  - id: CGA-xj92-8mfm-x22p
+    aliases:
+      - CVE-2024-8184
+      - GHSA-g8m5-722r-8whq
+    events:
+      - timestamp: 2024-10-15T07:10:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloudwatch-exporter
+            componentID: c440c73f5e064f4d
+            componentName: jetty-server
+            componentVersion: 11.0.22
+            componentType: java-archive
+            componentLocation: /usr/share/java/cloudwatch_exporter/cloudwatch_exporter.jar
+            scanner: grype
