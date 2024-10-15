@@ -280,6 +280,24 @@ advisories:
             componentLocation: /usr/lib/spark/jars/avro-1.11.3.jar
             scanner: grype
 
+  - id: CGA-c7jc-pc4g-5wpx
+    aliases:
+      - CVE-2024-8184
+      - GHSA-g8m5-722r-8whq
+    events:
+      - timestamp: 2024-10-15T07:41:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-openjdk-11
+            componentID: e1fb798f7628ee9d
+            componentName: jetty-server
+            componentVersion: 9.4.54.v20240208
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/spark-core_2.12-3.5.3.jar
+            scanner: grype
+
   - id: CGA-cch5-m8vc-66rh
     aliases:
       - CVE-2022-46337
@@ -651,6 +669,24 @@ advisories:
         type: pending-upstream-fix
         data:
           note: This relates to nimbus-jose-jwt v9.8.1 included by the shaded JAR hadoop-client-runtime-3.3.6.jar. Spark is planning an upgrade to Hadoop 3.4.0 for Spark 4.0.0, but as of today, the shaded JAR for Hadoop 3.4.0 still includes this vulnerability.
+
+  - id: CGA-rr5c-hcff-7v96
+    aliases:
+      - CVE-2024-6763
+      - GHSA-qh8g-58pp-2wxh
+    events:
+      - timestamp: 2024-10-15T07:41:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-openjdk-11
+            componentID: 06f197c670442add
+            componentName: jetty-http
+            componentVersion: 9.4.51.v20230217
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.6.jar
+            scanner: grype
 
   - id: CGA-w968-x9p4-fhjf
     aliases:
