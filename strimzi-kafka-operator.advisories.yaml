@@ -4,6 +4,24 @@ package:
   name: strimzi-kafka-operator
 
 advisories:
+  - id: CGA-4x6r-cwfp-wvmh
+    aliases:
+      - CVE-2024-8184
+      - GHSA-g8m5-722r-8whq
+    events:
+      - timestamp: 2024-10-15T07:29:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kafka-strimzi-compat
+            componentID: 6e384788698da72c
+            componentName: jetty-server
+            componentVersion: 9.4.53.v20231009
+            componentType: java-archive
+            componentLocation: /opt/cruise-control/libs/jetty-server-9.4.53.v20231009.jar
+            scanner: grype
+
   - id: CGA-wcj9-xx49-cqh2
     aliases:
       - CVE-2024-47554
