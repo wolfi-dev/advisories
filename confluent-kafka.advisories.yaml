@@ -4,6 +4,24 @@ package:
   name: confluent-kafka
 
 advisories:
+  - id: CGA-45xv-w77x-56w8
+    aliases:
+      - CVE-2024-8184
+      - GHSA-g8m5-722r-8whq
+    events:
+      - timestamp: 2024-10-15T09:38:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: confluent-kafka
+            componentID: ac23b5fbaec59c13
+            componentName: jetty-server
+            componentVersion: 9.4.54.v20240208
+            componentType: java-archive
+            componentLocation: /usr/lib/kafka/libs/jetty-server-9.4.54.v20240208.jar
+            scanner: grype
+
   - id: CGA-c87c-r7j2-6c2f
     aliases:
       - CVE-2024-7254
@@ -29,6 +47,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 8.0.0.6-r0
+
+  - id: CGA-mxx8-x83g-hc6c
+    aliases:
+      - CVE-2024-6763
+      - GHSA-qh8g-58pp-2wxh
+    events:
+      - timestamp: 2024-10-15T09:38:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: confluent-kafka
+            componentID: 1e10f7a075e7370c
+            componentName: jetty-http
+            componentVersion: 9.4.54.v20240208
+            componentType: java-archive
+            componentLocation: /usr/lib/kafka/libs/jetty-http-9.4.54.v20240208.jar
+            scanner: grype
 
   - id: CGA-rf22-c48h-w77h
     aliases:

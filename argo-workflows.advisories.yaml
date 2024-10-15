@@ -253,6 +253,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability is in the container runtime itself, not clients of the container runtime.
 
+  - id: CGA-c8mw-2r5f-43qx
+    aliases:
+      - CVE-2024-47875
+      - GHSA-gx9m-whjm-85jf
+    events:
+      - timestamp: 2024-10-12T07:39:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-workflow-cli
+            componentID: 32c064bad93c2b62
+            componentName: dompurify
+            componentVersion: 3.0.2
+            componentType: npm
+            componentLocation: /usr/lib/argo-workflows-ui/ui/node_modules/dompurify/package.json
+            scanner: grype
+
   - id: CGA-cg8v-mvqg-95m4
     aliases:
       - CVE-2024-24557

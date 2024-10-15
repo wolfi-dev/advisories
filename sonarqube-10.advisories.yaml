@@ -39,6 +39,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/sonarqube/lib/sonar-application-10.6.0.92116.jar
             scanner: grype
+      - timestamp: 2024-10-11T04:53:04Z
+        type: pending-upstream-fix
+        data:
+          note: The xmlsec dependency is a transitive dependency that is brought in as a part of the sonar-application.jar and is not defined in the declared dependencies. This requires a fix from upstream maintainers.
 
   - id: CGA-683m-fm7m-7mvf
     aliases:
@@ -111,6 +115,28 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/sonarqube/elasticsearch/modules/x-pack-core/nimbus-jose-jwt-9.23.jar
             scanner: grype
+      - timestamp: 2024-10-11T07:46:07Z
+        type: pending-upstream-fix
+        data:
+          note: This is a transitive dependency that is brought in as a part of elasticsearch dependency. Elasticsearch has been updated to the most recent version and so this requires a fix from upstream maintainers.
+
+  - id: CGA-8cc7-m97x-rcw7
+    aliases:
+      - CVE-2024-7254
+      - GHSA-735f-pc8j-v9w8
+    events:
+      - timestamp: 2024-10-11T09:08:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube-10-docker-compat
+            componentID: e29c9f3a53b91626
+            componentName: protobuf-java
+            componentVersion: 3.21.9
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/elasticsearch/modules/x-pack-inference/protobuf-java-3.21.9.jar
+            scanner: grype
 
   - id: CGA-f3c9-jr4v-wvfr
     aliases:
@@ -129,6 +155,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/sonarqube/elasticsearch/modules/x-pack-core/nimbus-jose-jwt-9.23.jar
             scanner: grype
+      - timestamp: 2024-10-11T04:48:18Z
+        type: pending-upstream-fix
+        data:
+          note: This is a transitive dependency that is brought in as a part of elasticsearch dependency. Elasticsearch has been updated to the most recent version and so this requires a fix from upstream maintainers.
 
   - id: CGA-g9h5-gx89-c9v8
     aliases:
@@ -147,6 +177,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/sonarqube/elasticsearch/lib/tools/plugin-cli/bc-fips-1.0.2.4.jar
             scanner: grype
+      - timestamp: 2024-10-11T07:41:34Z
+        type: pending-upstream-fix
+        data:
+          note: 'This is a transitive dependency that is brought in as a part of elasticsearch dependency. Elasticsearch has been updated to the most recent version and so this requires a fix from upstream maintainers. '
 
   - id: CGA-hc2h-3vhp-c8h8
     aliases:
@@ -219,3 +253,7 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/sonarqube/lib/sonar-application-10.6.0.92116.jar
             scanner: grype
+      - timestamp: 2024-10-11T04:50:54Z
+        type: pending-upstream-fix
+        data:
+          note: This is a transitive dependency that is brought in as a part of elasticsearch dependency. Elasticsearch has been updated to the most recent version and so this requires a fix from upstream maintainers.
