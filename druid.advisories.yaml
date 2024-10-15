@@ -188,6 +188,24 @@ advisories:
         data:
           note: This is related to hadoop-client-runtime 3.3.6 and requires code changes by the upstream maintainers to remediate
 
+  - id: CGA-7m6m-q68q-cc7f
+    aliases:
+      - CVE-2024-6763
+      - GHSA-qh8g-58pp-2wxh
+    events:
+      - timestamp: 2024-10-15T07:43:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: druid-compat
+            componentID: 959104188b8117f8
+            componentName: jetty-http
+            componentVersion: 9.4.43.v20210629
+            componentType: java-archive
+            componentLocation: /usr/share/java/druid/extensions/druid-deltalake-extensions/hadoop-client-runtime-3.3.4.jar
+            scanner: grype
+
   - id: CGA-8jjf-fchm-77wg
     aliases:
       - CVE-2024-25638
@@ -455,6 +473,24 @@ advisories:
         type: pending-upstream-fix
         data:
           note: This vulnerability is related to hadoop-client-runtime 3.3.4 included in druid-deltalake-extensions, requiring code changes by the upstream maintainers to remediate.
+
+  - id: CGA-m9gp-rqph-jfcv
+    aliases:
+      - CVE-2024-8184
+      - GHSA-g8m5-722r-8whq
+    events:
+      - timestamp: 2024-10-15T07:43:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: druid-compat
+            componentID: 936cbc966834d93e
+            componentName: jetty-server
+            componentVersion: 9.4.54.v20240208
+            componentType: java-archive
+            componentLocation: /usr/share/java/druid/lib/jetty-server-9.4.54.v20240208.jar
+            scanner: grype
 
   - id: CGA-mcwj-rq2h-55gw
     aliases:
