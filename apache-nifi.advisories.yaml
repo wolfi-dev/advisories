@@ -85,6 +85,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/nifi/nifi-current/lib/nifi-hadoop-libraries-nar-1.27.0.nar
             scanner: grype
+      - timestamp: 2024-10-16T01:59:35Z
+        type: pending-upstream-fix
+        data:
+          note: The transitive dependency commons-io v2.8.0 is found in nifi-hadoop-libraries-nar where the commons-io version is compiled based off of the parent pom.xml’s definition of org.apache.commons.io.version which is at the latest version (2.17.0) This requires upstream maintainers to update.
 
   - id: CGA-2x43-4rcw-8pc3
     aliases:
