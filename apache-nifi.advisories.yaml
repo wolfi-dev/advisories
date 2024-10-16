@@ -88,7 +88,7 @@ advisories:
       - timestamp: 2024-10-16T01:59:35Z
         type: pending-upstream-fix
         data:
-          note: The transitive dependency commons-io v2.8.0 is found in nifi-hadoop-libraries-nar where the commons-io version is compiled based off of the parent pom.xml’s definition of org.apache.commons.io.version which is at the latest version (2.17.0) This requires upstream maintainers to update.
+          note: The transitive dependency commons-io v2.8.0 is found in [nifi-hadoop-libraries-nar](https://github.com/apache/nifi/blob/244400f54925a52e89ccf4f821b58a72ff9777a5/nifi-extension-bundles/nifi-hadoop-libraries-bundle/nifi-hadoop-libraries-nar/pom.xml) where commons-io is being brought in by [hadoop-client.](https://github.com/apache/nifi/blob/244400f54925a52e89ccf4f821b58a72ff9777a5/nifi-extension-bundles/nifi-hadoop-libraries-bundle/nifi-hadoop-libraries-nar/pom.xml#L29) The version is compiled based off of the parent [pom.xml’s definition](https://github.com/apache/nifi/blob/244400f54925a52e89ccf4f821b58a72ff9777a5/pom.xml#L145) of hadoop.version which requires upstream maintainers to update.
 
   - id: CGA-2x43-4rcw-8pc3
     aliases:
