@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: vitess-20.0
+
+advisories:
+  - id: CGA-cp9r-hc7f-8gr9
+    aliases:
+      - CVE-2024-45296
+      - GHSA-9wv6-86v2-598j
+    events:
+      - timestamp: 2024-10-17T18:25:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vitess-20.0-compat
+            componentID: 5751b3155dc3a9cc
+            componentName: path-to-regexp
+            componentVersion: 1.8.0
+            componentType: npm
+            componentLocation: /vt/web/vtadmin/node_modules/react-router/node_modules/path-to-regexp/package.json
+            scanner: grype
