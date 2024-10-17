@@ -39,3 +39,7 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/logstash-input-tcp-6.4.2-java/vendor/jar-dependencies/commons-io/commons-io/2.13.0/commons-io-2.13.0.jar
             scanner: grype
+      - timestamp: 2024-10-17T10:08:52Z
+        type: pending-upstream-fix
+        data:
+          note: The commons-io dependency that exists in the logstash-with-output-opensearch subpackage is brought in as transitive from logstash-input-tcp-6.4.2. This dependency is not able to be upgraded to a higher version and requires upstream maintainers to implement.
