@@ -137,6 +137,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/java/druid/lib/commons-io-2.11.0.jar
             scanner: grype
+      - timestamp: 2024-10-16T19:43:07Z
+        type: pending-upstream-fix
+        data:
+          note: The remaining commons-io dependencies that exist in the druid package are brought as transitive dependencies. For commons-io v2.4.0 this is ambari-metrics-common-2.7.0.0.0.jar and commons-io v2.8.0 is brought in via velocity-engine-core-2.3.jar, hadoop-client-runtime-3.3.4.jar / v3.3.6. These dependencies are not able to be upgraded to a higher version and require upstream maintainers to implement.
 
   - id: CGA-5g5x-fq8f-h2pq
     aliases:
