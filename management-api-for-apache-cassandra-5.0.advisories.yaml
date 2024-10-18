@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: management-api-for-apache-cassandra-5.0
+
+advisories:
+  - id: CGA-w753-xwwq-8ch4
+    aliases:
+      - CVE-2022-25857
+      - GHSA-3mc7-4q67-w48m
+    events:
+      - timestamp: 2024-10-18T14:35:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: management-api-for-apache-cassandra-5.0-compat
+            componentID: 42c9fac88d63d420
+            componentName: snakeyaml
+            componentVersion: "1.26"
+            componentType: java-archive
+            componentLocation: /opt/management-api/datastax-mgmtapi-server-0.1.0-SNAPSHOT.jar
+            scanner: grype
