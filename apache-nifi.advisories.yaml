@@ -1054,6 +1054,24 @@ advisories:
         data:
           note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
 
+  - id: CGA-gvjp-vvhp-q286
+    aliases:
+      - CVE-2024-38820
+      - GHSA-4gc7-5j7h-4qph
+    events:
+      - timestamp: 2024-10-19T07:08:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi-compat
+            componentID: ec9b964e49bcc5b8
+            componentName: spring-context
+            componentVersion: 5.3.39
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/nifi-toolkit-current/lib/spring-context-5.3.39.jar
+            scanner: grype
+
   - id: CGA-h8j8-9v3w-chjj
     aliases:
       - CVE-2021-22569
