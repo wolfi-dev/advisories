@@ -214,6 +214,24 @@ advisories:
         data:
           note: 'Bouncycastle cannot be upgraded directly in jenkins. The upstream project needs to upgrade the API plugin first: https://github.com/jenkinsci/bouncycastle-api-plugin'
 
+  - id: CGA-c6cq-22q6-hc8w
+    aliases:
+      - CVE-2024-38820
+      - GHSA-4gc7-5j7h-4qph
+    events:
+      - timestamp: 2024-10-19T08:25:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jenkins-compat
+            componentID: 0697d68f0e2c7780
+            componentName: spring-context
+            componentVersion: 6.1.13
+            componentType: java-archive
+            componentLocation: /usr/share/java/jenkins/jenkins.war
+            scanner: grype
+
   - id: CGA-cm9w-hfx3-j2p6
     aliases:
       - CVE-2024-26308
