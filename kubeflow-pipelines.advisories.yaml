@@ -57,6 +57,24 @@ advisories:
         data:
           fixed-version: 2.0.5-r4
 
+  - id: CGA-2fx5-9fp8-79mf
+    aliases:
+      - CVE-2024-21536
+      - GHSA-c7qv-q95q-8v27
+    events:
+      - timestamp: 2024-10-23T07:43:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-apiserver
+            componentID: 20f49a53dd3a8849
+            componentName: http-proxy-middleware
+            componentVersion: 0.18.0
+            componentType: npm
+            componentLocation: /server/node_modules/http-proxy-middleware/package.json
+            scanner: grype
+
   - id: CGA-2wrh-m9wq-83qx
     aliases:
       - CVE-2023-2727
