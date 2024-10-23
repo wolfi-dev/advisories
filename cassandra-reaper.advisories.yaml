@@ -249,6 +249,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/local/lib/cassandra-reaper.jar
             scanner: grype
+      - timestamp: 2024-10-23T20:59:04Z
+        type: pending-upstream-fix
+        data:
+          note: This is a vulnerability in jetty, which is a transitive dependency brought in as a part of dropwizard. Dropwizard has numerous major version updates available (no updated minor versions on this major version), and therefore this requires a fix from upstream maintainers as updating Dropwizard would lead to numerous breaking changes.
 
   - id: CGA-wx62-j2gw-cp39
     aliases:
