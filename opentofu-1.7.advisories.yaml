@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: opentofu-1.7
+
+advisories:
+  - id: CGA-6hr5-gp9w-3cq9
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2024-10-25T09:25:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opentofu-1.7-compat
+            componentID: 6a9dfe37de03cded
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.4
+            componentType: go-module
+            componentLocation: /usr/bin/tofu
+            scanner: grype
