@@ -131,6 +131,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/python3.11/site-packages/ray/jars/ray_dist.jar
             scanner: grype
+      - timestamp: 2024-10-25T16:39:59Z
+        type: pending-upstream-fix
+        data:
+          note: The commons-io:commons-io:2.7.0 dependency is transitive from a direct dependency on the python package ray. To fix this vulnerability, we'd require ray to upgrade to commons-io:commons-io:2.14.0 (there is currently no released version of ray with that fix) and we'd have to upgrade the version of ray used in kserve to that fixed version.
 
   - id: CGA-w2cp-3rgq-pfhv
     aliases:
@@ -193,3 +197,8 @@ advisories:
             componentType: python
             componentLocation: /usr/lib/python3.11/site-packages/starlette-0.36.3.dist-info/METADATA, /usr/lib/python3.11/site-packages/starlette-0.36.3.dist-info/RECORD
             scanner: grype
+      - timestamp: 2024-10-25T16:08:42Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: vulnerable version of Starlette python package used (v0.36.3, fixed is v0.40.0), but no vulnerable functions are used in kserve. The vulnerable DoS attack vector involves a very specific case of functions in the starlette.applications and starlette.routing subpackages, but those are never used in kserve. We cannot simply upgrade to the fixed version because kserve enforces starlette version >=0.37.2,<0.39.0. Waiting on upstream to migrate to fixed versions, but in the meantime, false-positive-determination."
