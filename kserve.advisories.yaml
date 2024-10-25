@@ -131,6 +131,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/python3.11/site-packages/ray/jars/ray_dist.jar
             scanner: grype
+      - timestamp: 2024-10-25T16:39:59Z
+        type: pending-upstream-fix
+        data:
+          note: The commons-io:commons-io:2.7.0 dependency is transitive from a direct dependency on the python package ray. To fix this vulnerability, we'd require ray to upgrade to commons-io:commons-io:2.14.0 (there is currently no released version of ray with that fix) and we'd have to upgrade the version of ray used in kserve to that fixed version.
 
   - id: CGA-w2cp-3rgq-pfhv
     aliases:
