@@ -56,6 +56,24 @@ advisories:
         data:
           note: 'The latest versions have been recognized as affected. The upstream project has been alerted: https://github.com/mlflow/mlflow/issues/12256'
 
+  - id: CGA-5qqw-78qf-xfwg
+    aliases:
+      - CVE-2024-49767
+      - GHSA-q34m-jh98-gwm2
+    events:
+      - timestamp: 2024-10-26T09:31:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mlflow-bitnami
+            componentID: bb40ca08ce288d34
+            componentName: werkzeug
+            componentVersion: 3.0.4
+            componentType: python
+            componentLocation: /usr/share/mlflow/lib/python3.12/site-packages/werkzeug-3.0.4.dist-info/METADATA, /usr/share/mlflow/lib/python3.12/site-packages/werkzeug-3.0.4.dist-info/RECORD
+            scanner: grype
+
   - id: CGA-5rg5-hmwm-f62r
     aliases:
       - CVE-2024-37056
