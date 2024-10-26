@@ -73,6 +73,24 @@ advisories:
         data:
           note: 'Upstream has pinned version of python package cryptography as seen here: https://github.com/apache/superset/blob/f0971a850c12c69b5f09874ab50b25976788a6de/requirements/base.txt#L83 Changes in 42.x.x to 43.x.x require upstream changes.'
 
+  - id: CGA-6vr6-fpjg-j7qg
+    aliases:
+      - CVE-2024-49767
+      - GHSA-q34m-jh98-gwm2
+    events:
+      - timestamp: 2024-10-26T07:04:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: superset
+            componentID: 4f342224da2b308e
+            componentName: werkzeug
+            componentVersion: 3.0.3
+            componentType: python
+            componentLocation: /usr/share/superset/venv/lib/python3.11/site-packages/werkzeug-3.0.3.dist-info/METADATA, /usr/share/superset/venv/lib/python3.11/site-packages/werkzeug-3.0.3.dist-info/RECORD
+            scanner: grype
+
   - id: CGA-77h5-pgh2-r2fg
     aliases:
       - CVE-2024-35195
@@ -116,6 +134,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 4.0.1-r0
+
+  - id: CGA-c7v3-5cq2-7m57
+    aliases:
+      - CVE-2024-49766
+      - GHSA-f9vj-2wh5-fj8j
+    events:
+      - timestamp: 2024-10-26T07:04:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: superset
+            componentID: 4f342224da2b308e
+            componentName: werkzeug
+            componentVersion: 3.0.3
+            componentType: python
+            componentLocation: /usr/share/superset/venv/lib/python3.11/site-packages/werkzeug-3.0.3.dist-info/METADATA, /usr/share/superset/venv/lib/python3.11/site-packages/werkzeug-3.0.3.dist-info/RECORD
+            scanner: grype
 
   - id: CGA-fvpq-c5rc-92h6
     aliases:
