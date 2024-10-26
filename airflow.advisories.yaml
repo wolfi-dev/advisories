@@ -213,6 +213,24 @@ advisories:
         data:
           fixed-version: 2.9.2-r2
 
+  - id: CGA-7j7g-hp89-c8x3
+    aliases:
+      - CVE-2024-49766
+      - GHSA-f9vj-2wh5-fj8j
+    events:
+      - timestamp: 2024-10-26T08:01:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow
+            componentID: 001c572a9b5ab7fb
+            componentName: werkzeug
+            componentVersion: 2.2.3
+            componentType: python
+            componentLocation: /opt/airflow/venv/lib/python3.12/site-packages/Werkzeug-2.2.3.dist-info/METADATA, /opt/airflow/venv/lib/python3.12/site-packages/Werkzeug-2.2.3.dist-info/RECORD, /opt/airflow/venv/lib/python3.12/site-packages/Werkzeug-2.2.3.dist-info/top_level.txt
+            scanner: grype
+
   - id: CGA-8f64-fgpv-jxj2
     aliases:
       - CVE-2024-37891
