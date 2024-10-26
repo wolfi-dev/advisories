@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: emissary
+
+advisories:
+  - id: CGA-rxxc-wrc4-x6r3
+    aliases:
+      - CVE-2024-49766
+      - GHSA-f9vj-2wh5-fj8j
+    events:
+      - timestamp: 2024-10-26T07:38:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3.10-ambassador
+            componentID: 6519043296d6f0f9
+            componentName: werkzeug
+            componentVersion: 3.0.3
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/werkzeug-3.0.3.dist-info/METADATA, /usr/lib/python3.10/site-packages/werkzeug-3.0.3.dist-info/RECORD
+            scanner: grype
