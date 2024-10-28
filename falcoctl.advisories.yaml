@@ -349,6 +349,14 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/falcoctl
             scanner: grype
+      - timestamp: 2024-10-28T17:05:14Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            falcoctl currently relies on an affected version of 'go-tuf', which looks to have been depreciated in favor of 'go-tuf/v2'.
+            There are significant changes between these releases, and attempting to upgrade results in build errors.
+            Pending fix from upstream, which will involve removing their dependency on the depreciated version.
+            Related information: https://github.com/github/advisory-database/pull/4893.
 
   - id: CGA-wg8q-f7fj-h4rv
     aliases:
