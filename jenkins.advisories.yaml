@@ -264,6 +264,24 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: This was deemed to not be a vulnerability in the code itself. Applications can use it incorrectly, but there's no evidence of that here.
 
+  - id: CGA-f4v6-8g9q-cvhm
+    aliases:
+      - CVE-2024-38821
+      - GHSA-c4q5-6c82-3qpw
+    events:
+      - timestamp: 2024-10-29T09:38:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jenkins-compat
+            componentID: 787f3c88e4013c21
+            componentName: spring-security-web
+            componentVersion: 6.3.3
+            componentType: java-archive
+            componentLocation: /usr/share/java/jenkins/jenkins.war
+            scanner: grype
+
   - id: CGA-f846-fggc-qm9g
     aliases:
       - CVE-2023-27902
