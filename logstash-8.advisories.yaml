@@ -65,3 +65,21 @@ advisories:
         type: pending-upstream-fix
         data:
           note: The commons-io dependency that exists in the logstash-with-output-opensearch subpackage is brought in as transitive from logstash-input-tcp-6.4.2. This dependency is not able to be upgraded to a higher version and requires upstream maintainers to implement.
+
+  - id: CGA-cqv9-vmcm-5vx5
+    aliases:
+      - CVE-2024-49761
+      - GHSA-2rxp-v6pw-ch6m
+    events:
+      - timestamp: 2024-10-29T08:13:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-8-compat
+            componentID: dc5482b664923d71
+            componentName: rexml
+            componentVersion: 3.3.6
+            componentType: gem
+            componentLocation: /opt/bitnami/logstash/vendor/bundle/jruby/3.1.0/specifications/rexml-3.3.6.gemspec
+            scanner: grype
