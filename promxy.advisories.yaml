@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: promxy
+
+advisories:
+  - id: CGA-prgg-wpw3-4mjv
+    aliases:
+      - CVE-2023-40577
+      - GHSA-v86x-5fm3-5p7j
+    events:
+      - timestamp: 2024-10-29T16:45:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: promxy-compat
+            componentID: 547ecbfe76f0b38d
+            componentName: github.com/prometheus/alertmanager
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/promxy
+            scanner: grype
