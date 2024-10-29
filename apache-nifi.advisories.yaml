@@ -522,6 +522,24 @@ advisories:
         data:
           note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
 
+  - id: CGA-7m9h-6gc8-vcqq
+    aliases:
+      - CVE-2024-38821
+      - GHSA-c4q5-6c82-3qpw
+    events:
+      - timestamp: 2024-10-29T09:16:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi-compat
+            componentID: cbcac0d97bb75cf2
+            componentName: spring-security-web
+            componentVersion: 5.8.14
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/nifi-toolkit-current/lib/spring-security-web-5.8.14.jar
+            scanner: grype
+
   - id: CGA-7rjh-334q-pq8g
     aliases:
       - CVE-2020-8908
