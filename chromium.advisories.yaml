@@ -1159,6 +1159,24 @@ advisories:
           type: inline-mitigations-exist
           note: 'This vulnerability (nickname "Logjam") was disclosed in 2015. You can read the chromium team response here: https://groups.google.com/a/chromium.org/g/security-dev/c/WyGIpevBV1s/m/68W-VMOoxqkJ. Chromium recognizes this vulnerability as a server configuration issue. Chrome increased the minimum DH size to 1024 bits in version 45. You can find useful information about this vulnerability here: https://weakdh.org/'
 
+  - id: CGA-fxh8-4hqm-23hw
+    aliases:
+      - CVE-2024-10488
+      - GHSA-p3wf-f274-7gx2
+    events:
+      - timestamp: 2024-10-31T08:03:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: chromium-docker-selenium-compat
+            componentID: b622242e061cfd66
+            componentName: chromium
+            componentVersion: 130.0.6723.69-r1
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-gm52-6gff-7wjh
     aliases:
       - CVE-2024-5841
