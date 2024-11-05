@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: git-sync
+
+advisories:
+  - id: CGA-4r5f-f96v-63rv
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2024-11-05T09:13:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: git-sync-compat
+            componentID: 8aea9e5ffa17dc01
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
+            componentType: go-module
+            componentLocation: /usr/bin/git-sync
+            scanner: grype
