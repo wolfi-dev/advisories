@@ -59,6 +59,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: vulnerable version is v<0.1.0 and wolfi uses 0.2.0
 
+  - id: CGA-j69m-896c-hr75
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2024-11-05T07:39:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: octo-sts
+            componentID: 5e7a9caae3c4fe38
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
+            componentType: go-module
+            componentLocation: /usr/bin/octo-sts
+            scanner: grype
+
   - id: CGA-q83j-4w27-mqjc
     aliases:
       - CVE-2024-24789
