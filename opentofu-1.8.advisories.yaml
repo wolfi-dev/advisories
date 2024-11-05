@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: opentofu-1.8
+
+advisories:
+  - id: CGA-64rv-fhj2-vcrg
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2024-11-05T09:34:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opentofu-1.8-local-provider-config
+            componentID: 4d2f2ac58204847a
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.4.2
+            componentType: go-module
+            componentLocation: /usr/bin/tofu
+            scanner: grype
