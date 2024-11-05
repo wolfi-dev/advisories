@@ -43,3 +43,21 @@ advisories:
         type: pending-upstream-fix
         data:
           note: 'GitLab advises that maintainers should NOT upgrade dependency versions manually, as their automation would have already applied this in cases of simple version increments. If a dependency version has not yet been upgraded, there is usually a good reason. Additionally, past attempts to upgrade GitLab dependencies ahead of the upstream release have resulted in build issues. '
+
+  - id: CGA-v82r-r59h-mxq8
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2024-11-05T09:01:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-geo-logcursor-scripts-17.5
+            componentID: 0b1f07dcda6ff875
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
+            componentType: go-module
+            componentLocation: /usr/bin/registry
+            scanner: grype
