@@ -25,3 +25,21 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Security advisory reported to upstream
+
+  - id: CGA-q8hw-qh84-ggf2
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2024-11-05T08:45:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: promxy-compat
+            componentID: bcab48134d17386b
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
+            componentType: go-module
+            componentLocation: /usr/bin/promxy
+            scanner: grype
