@@ -253,6 +253,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability is in the container runtime itself, not clients of the container runtime.
 
+  - id: CGA-c67j-2mf5-f9rq
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2024-11-05T07:14:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-workflows-known-hosts
+            componentID: c073caf892d64bc4
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
+            componentType: go-module
+            componentLocation: /usr/bin/workflow-controller
+            scanner: grype
+
   - id: CGA-c8mw-2r5f-43qx
     aliases:
       - CVE-2024-47875
