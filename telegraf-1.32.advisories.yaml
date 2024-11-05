@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: telegraf-1.32
+
+advisories:
+  - id: CGA-78p3-pvfq-mx99
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2024-11-05T11:32:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.32
+            componentID: a8862e2c4015edc0
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
