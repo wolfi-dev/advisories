@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: argo-rollouts
+
+advisories:
+  - id: CGA-4x3w-pm5j-g8x7
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2024-11-05T08:06:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-rollouts
+            componentID: fe3ac507749aa853
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
+            componentType: go-module
+            componentLocation: /usr/bin/rollouts-controller
+            scanner: grype
