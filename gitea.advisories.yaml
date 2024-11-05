@@ -4,6 +4,24 @@ package:
   name: gitea
 
 advisories:
+  - id: CGA-7qfg-5mv9-fmv3
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2024-11-05T07:41:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitea-compat
+            componentID: 68d79dc24aaa78a1
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitea
+            scanner: grype
+
   - id: CGA-9j6q-8v6r-h5fh
     aliases:
       - CVE-2024-34158
