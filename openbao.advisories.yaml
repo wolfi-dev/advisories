@@ -4,6 +4,24 @@ package:
   name: openbao
 
 advisories:
+  - id: CGA-68v5-6464-cfm6
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2024-11-05T08:25:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openbao-compat
+            componentID: 4ee745f0ddd65e27
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
+            componentType: go-module
+            componentLocation: /usr/bin/bao
+            scanner: grype
+
   - id: CGA-928c-p927-cjwf
     aliases:
       - CVE-2024-0406
