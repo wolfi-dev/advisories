@@ -414,6 +414,24 @@ advisories:
         data:
           fixed-version: 25.0.2-r0
 
+  - id: CGA-jw5c-242m-qc3p
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2024-11-05T07:34:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-rootless
+            componentID: 6bd1a8c39a837670
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
+            componentType: go-module
+            componentLocation: /usr/bin/dockerd
+            scanner: grype
+
   - id: CGA-mmph-f248-hw6m
     aliases:
       - CVE-2014-9357
