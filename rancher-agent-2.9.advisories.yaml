@@ -4,34 +4,30 @@ package:
   name: rancher-agent-2.9
 
 advisories:
+  - id: CGA-gp62-q3qg-j99w
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2024-11-05T11:14:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-agent-2.9
+            componentID: c3050dac1329ac16
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
+            componentType: go-module
+            componentLocation: /usr/bin/agent
+            scanner: grype
+
   - id: CGA-m997-pj62-gp57
     aliases:
       - CVE-2024-41110
       - GHSA-v23v-6jw2-98fq
     events:
       - timestamp: 2024-09-13T14:00:48Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: rancher-agent-2.9
-            componentID: 8d75a4b90dabcbff
-            componentName: github.com/docker/docker
-            componentVersion: v20.10.27+incompatible
-            componentType: go-module
-            componentLocation: /usr/bin/agent
-            scanner: grype
-      - timestamp: 2024-09-17T16:46:05Z
-        type: pending-upstream-fix
-        data:
-          note: This vulnerability requires upstream changes. The non-vulnerable version >= v24.0.9 does not contain a module 'github.com/docker/docker/pkg/term' that exists in older version such as v20.10.27.
-
-  - id: CGA-qx43-vfhw-v22q
-    aliases:
-      - CVE-2024-29018
-      - GHSA-mq39-4gv4-mvpx
-    events:
-      - timestamp: 2024-09-13T14:00:47Z
         type: detection
         data:
           type: scan/v1
@@ -69,3 +65,25 @@ advisories:
         type: pending-upstream-fix
         data:
           note: This vulnerability requires upstream changes. The non-vulnerable version v24.0.9 does not contain a module 'github.com/docker/docker/pkg/term' that exists in older version such as v20.10.27.
+
+  - id: CGA-qx43-vfhw-v22q
+    aliases:
+      - CVE-2024-29018
+      - GHSA-mq39-4gv4-mvpx
+    events:
+      - timestamp: 2024-09-13T14:00:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-agent-2.9
+            componentID: 8d75a4b90dabcbff
+            componentName: github.com/docker/docker
+            componentVersion: v20.10.27+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/agent
+            scanner: grype
+      - timestamp: 2024-09-17T16:46:05Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability requires upstream changes. The non-vulnerable version >= v24.0.9 does not contain a module 'github.com/docker/docker/pkg/term' that exists in older version such as v20.10.27.
