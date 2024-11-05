@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: gitlab-runner-17.5
+
+advisories:
+  - id: CGA-qhp2-hw25-wmcc
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2024-11-05T07:34:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-helper-compat-17.5
+            componentID: dca2bb5e871266d1
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.0.0
+            componentType: go-module
+            componentLocation: /usr/bin/docker-machine
+            scanner: grype
