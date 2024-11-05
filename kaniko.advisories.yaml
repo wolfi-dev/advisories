@@ -102,6 +102,24 @@ advisories:
         data:
           note: There has been two attempts at remediating this CVE upstream wit attempted docker upgrades @ https://github.com/GoogleContainerTools/kaniko/pull/3278 and https://github.com/GoogleContainerTools/kaniko/pull/3270. Both attempts failed with failing tests. As such marking this CVE as pending-upstream-fix.
 
+  - id: CGA-cj8g-9qwp-28pq
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2024-11-05T08:33:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kaniko-warmer
+            componentID: 88971da9608830f0
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
+            componentType: go-module
+            componentLocation: /usr/bin/warmer
+            scanner: grype
+
   - id: CGA-f5hh-5rrg-27h8
     aliases:
       - GHSA-7ww5-4wqc-m92c
