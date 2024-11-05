@@ -4,6 +4,24 @@ package:
   name: flux-notification-controller
 
 advisories:
+  - id: CGA-2mh5-42fq-4j9r
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2024-11-05T07:22:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-notification-controller
+            componentID: 4d17b1c37ad4ffe6
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
+            componentType: go-module
+            componentLocation: /usr/bin/notification-controller
+            scanner: grype
+
   - id: CGA-4273-6794-662q
     aliases:
       - CVE-2023-45284
