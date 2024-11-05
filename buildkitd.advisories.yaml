@@ -172,6 +172,24 @@ advisories:
         data:
           note: containerd v1.7.11 appears to contain API-incompatible changes with this version of buildkitd. Bumping this dependency downstream causes issues where buildkitd is unable to start due to a conflicting URL schema.
 
+  - id: CGA-94qp-jq9h-fvq6
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2024-11-05T09:12:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buildctl
+            componentID: 31f7cac9cfe08ed2
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
+            componentType: go-module
+            componentLocation: /usr/bin/buildkitd
+            scanner: grype
+
   - id: CGA-9gf3-9vpr-xg6r
     aliases:
       - CVE-2023-45289
