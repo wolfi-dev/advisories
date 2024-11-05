@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: azuredisk-csi-1.31
+
+advisories:
+  - id: CGA-7pp9-w933-vxgj
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2024-11-05T07:18:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: azuredisk-csi-1.31-compat
+            componentID: 6bb641c4b965cb56
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
+            componentType: go-module
+            componentLocation: /usr/bin/azurediskplugin
+            scanner: grype
