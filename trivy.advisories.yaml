@@ -91,6 +91,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-427f-83pc-jg2x
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2024-11-05T10:08:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trivy
+            componentID: 0c0d124049013591
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
+            componentType: go-module
+            componentLocation: /usr/bin/trivy
+            scanner: grype
+
   - id: CGA-44cm-cg7p-926c
     aliases:
       - GHSA-xr7q-jx4m-x55m
