@@ -428,6 +428,24 @@ advisories:
           type: component-vulnerability-mismatch
           note: The vulnerability is in an ancient CGI script of the same name
 
+  - id: CGA-vwrc-f7gg-8qj6
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2024-11-05T09:03:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cosign
+            componentID: 58c7ca281ae5bf2f
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
+            componentType: go-module
+            componentLocation: /usr/bin/cosign
+            scanner: grype
+
   - id: CGA-wcmr-gjcv-ccpm
     aliases:
       - CVE-2024-35255
