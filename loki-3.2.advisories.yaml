@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: loki-3.2
+
+advisories:
+  - id: CGA-q9xr-hjpx-99pw
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2024-11-05T07:06:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: loki-3.2
+            componentID: 782f15f5320f5af3
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
+            componentType: go-module
+            componentLocation: /usr/bin/loki
+            scanner: grype
