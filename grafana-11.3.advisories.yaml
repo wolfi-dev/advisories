@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: grafana-11.3
+
+advisories:
+  - id: CGA-j9jv-xm98-888x
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2024-11-05T07:32:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-11.3-oci-compat
+            componentID: 749528c8805ecfa3
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
