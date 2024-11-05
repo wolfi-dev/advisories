@@ -48,6 +48,24 @@ advisories:
         data:
           fixed-version: 2.12.3-r1
 
+  - id: CGA-vh5m-4339-22x7
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2024-11-05T09:11:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.12-compat
+            componentID: 08c5531f09b43f1b
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
+            componentType: go-module
+            componentLocation: /usr/local/bin/argocd
+            scanner: grype
+
   - id: CGA-w23p-x3vf-72hx
     aliases:
       - CVE-2024-5321
