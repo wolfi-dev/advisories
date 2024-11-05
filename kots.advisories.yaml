@@ -559,3 +559,21 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CGA-xc73-gf4w-4gx8
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2024-11-05T09:01:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kots-symlink-compat
+            componentID: f966a47a151e1b51
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
+            componentType: go-module
+            componentLocation: /usr/bin/kots
+            scanner: grype
