@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: argo-cd-2.13
+
+advisories:
+  - id: CGA-7xh8-794m-627j
+    aliases:
+      - CVE-2024-35255
+      - GHSA-m5vv-6r4h-3vj9
+    events:
+      - timestamp: 2024-11-06T09:03:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.13-repo-server
+            componentID: 8c834c4ead047f14
+            componentName: github.com/Azure/azure-sdk-for-go/sdk/azidentity
+            componentVersion: v1.1.0
+            componentType: go-module
+            componentLocation: /usr/local/bin/argocd
+            scanner: grype
