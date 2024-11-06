@@ -4,61 +4,6 @@ package:
   name: kubernetes-1.27
 
 advisories:
-  - id: CGA-g459-vchh-j8gq
-    aliases:
-      - CVE-2015-7561
-      - GHSA-2h9c-34v6-3qmr
-    events:
-      - timestamp: 2023-08-18T17:06:45Z
-        type: false-positive-determination
-        data:
-          type: component-vulnerability-mismatch
-          note: Vulnerability only impacts OpenShift
-
-  - id: CGA-vw8v-c3c7-vq3h
-    aliases:
-      - CVE-2016-1905
-      - GHSA-xx8c-m748-xr4j
-    events:
-      - timestamp: 2023-08-18T17:06:46Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-version-not-used
-          note: Fixed in Kubernetes 1.2
-
-  - id: CGA-4rw5-j6g6-wjhp
-    aliases:
-      - CVE-2016-1906
-      - GHSA-m3fm-h5jp-q79p
-    events:
-      - timestamp: 2023-08-18T17:06:46Z
-        type: false-positive-determination
-        data:
-          type: component-vulnerability-mismatch
-          note: Vulnerability only impacts OpenShift
-
-  - id: CGA-pw5m-wfvc-5r8q
-    aliases:
-      - CVE-2016-7075
-      - GHSA-7w66-j2r2-vm3p
-    events:
-      - timestamp: 2023-08-18T17:06:48Z
-        type: false-positive-determination
-        data:
-          type: component-vulnerability-mismatch
-          note: Vulnerability only impacts OpenShift
-
-  - id: CGA-5pmr-pq4h-vm2v
-    aliases:
-      - CVE-2019-11255
-      - GHSA-f4w6-3rh6-6q4q
-    events:
-      - timestamp: 2023-08-18T17:06:47Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-version-not-used
-          note: Fixed in Kubernetes 1.2
-
   - id: CGA-32mx-cg74-rfpj
     aliases:
       - CVE-2020-8554
@@ -70,22 +15,32 @@ advisories:
           type: vulnerable-code-version-not-used
           note: Fixed in Kubernetes 1.21
 
-  - id: CGA-wpxc-7x68-g27q
+  - id: CGA-3778-g26c-46xx
     aliases:
-      - CVE-2021-25740
-      - GHSA-vw47-mr44-3jf9
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
     events:
-      - timestamp: 2024-01-12T07:25:23Z
+      - timestamp: 2024-03-13T11:18:10Z
+        type: fixed
+        data:
+          fixed-version: 1.27.11-r1
+
+  - id: CGA-42jp-v72q-8pgc
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2024-01-11T07:11:37Z
         type: detection
         data:
           type: scan/v1
           data:
-            subpackageName: kubernetes-1.27
-            componentID: 6deefa15ecd700f3
-            componentName: kubernetes-1.27
-            componentVersion: 1.27.9-r0
-            componentType: apk
-            componentLocation: /.PKGINFO
+            subpackageName: kubeadm-1.27
+            componentID: b4f0ee5ee1155fc5
+            componentName: golang.org/x/crypto
+            componentVersion: v0.14.0
+            componentType: go-module
+            componentLocation: /usr/bin/kubeadm-1.27
             scanner: grype
 
   - id: CGA-4fhx-qrp7-wpqq
@@ -106,16 +61,101 @@ advisories:
             componentLocation: /usr/bin/kubelet
             scanner: grype
 
-  - id: CGA-gpff-pgw9-x577
+  - id: CGA-4rw5-j6g6-wjhp
     aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
+      - CVE-2016-1906
+      - GHSA-m3fm-h5jp-q79p
     events:
-      - timestamp: 2023-11-07T19:31:37Z
+      - timestamp: 2023-08-18T17:06:46Z
         type: false-positive-determination
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          type: component-vulnerability-mismatch
+          note: Vulnerability only impacts OpenShift
+
+  - id: CGA-5pmr-pq4h-vm2v
+    aliases:
+      - CVE-2019-11255
+      - GHSA-f4w6-3rh6-6q4q
+    events:
+      - timestamp: 2023-08-18T17:06:47Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: Fixed in Kubernetes 1.2
+
+  - id: CGA-6538-qw22-p9w4
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T08:18:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeadm-1.27
+            componentID: 0129633010ef1092
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/kubeadm-1.27
+            scanner: grype
+
+  - id: CGA-737j-h747-cq5j
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-13T11:18:10Z
+        type: fixed
+        data:
+          fixed-version: 1.27.11-r1
+
+  - id: CGA-79m2-r687-w3fm
+    aliases:
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-13T11:18:10Z
+        type: fixed
+        data:
+          fixed-version: 1.27.11-r1
+
+  - id: CGA-7fgj-67v6-22vm
+    aliases:
+      - CVE-2024-34158
+    events:
+      - timestamp: 2024-11-06T17:54:09Z
+        type: fix-not-planned
+        data:
+          note: This package is no longer supported upstream and has reached its end of life on '2024-06-28'.
+
+  - id: CGA-8wg7-8c9q-cjfw
+    aliases:
+      - CVE-2023-47108
+      - GHSA-8pgv-569h-w5rw
+    events:
+      - timestamp: 2024-01-12T07:25:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-1.27
+            componentID: 84e8bc5fbda868ae
+            componentName: go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc
+            componentVersion: v0.35.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-apiserver
+            scanner: grype
+
+  - id: CGA-cxvp-xqv5-gr9r
+    aliases:
+      - CVE-2024-34155
+    events:
+      - timestamp: 2024-11-06T17:54:09Z
+        type: fix-not-planned
+        data:
+          note: This package is no longer supported upstream and has reached its end of life on '2024-06-28'.
 
   - id: CGA-f5rq-8qr8-vg78
     aliases:
@@ -123,6 +163,28 @@ advisories:
       - GHSA-rq3x-83w4-p28c
     events:
       - timestamp: 2023-11-07T19:31:39Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-g459-vchh-j8gq
+    aliases:
+      - CVE-2015-7561
+      - GHSA-2h9c-34v6-3qmr
+    events:
+      - timestamp: 2023-08-18T17:06:45Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: Vulnerability only impacts OpenShift
+
+  - id: CGA-gpff-pgw9-x577
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:31:37Z
         type: false-positive-determination
         data:
           type: vulnerable-code-not-included-in-package
@@ -146,61 +208,26 @@ advisories:
             componentLocation: /usr/bin/kubeadm-1.27
             scanner: grype
 
-  - id: CGA-79m2-r687-w3fm
+  - id: CGA-gvx2-76qc-6chf
     aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
     events:
-      - timestamp: 2024-03-13T11:18:10Z
+      - timestamp: 2024-03-13T11:18:11Z
         type: fixed
         data:
           fixed-version: 1.27.11-r1
 
-  - id: CGA-3778-g26c-46xx
+  - id: CGA-pw5m-wfvc-5r8q
     aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
+      - CVE-2016-7075
+      - GHSA-7w66-j2r2-vm3p
     events:
-      - timestamp: 2024-03-13T11:18:10Z
-        type: fixed
+      - timestamp: 2023-08-18T17:06:48Z
+        type: false-positive-determination
         data:
-          fixed-version: 1.27.11-r1
-
-  - id: CGA-8wg7-8c9q-cjfw
-    aliases:
-      - CVE-2023-47108
-      - GHSA-8pgv-569h-w5rw
-    events:
-      - timestamp: 2024-01-12T07:25:24Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubernetes-1.27
-            componentID: 84e8bc5fbda868ae
-            componentName: go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc
-            componentVersion: v0.35.0
-            componentType: go-module
-            componentLocation: /usr/bin/kube-apiserver
-            scanner: grype
-
-  - id: CGA-42jp-v72q-8pgc
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2024-01-11T07:11:37Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubeadm-1.27
-            componentID: b4f0ee5ee1155fc5
-            componentName: golang.org/x/crypto
-            componentVersion: v0.14.0
-            componentType: go-module
-            componentLocation: /usr/bin/kubeadm-1.27
-            scanner: grype
+          type: component-vulnerability-mismatch
+          note: Vulnerability only impacts OpenShift
 
   - id: CGA-r7cv-m4hg-j33q
     aliases:
@@ -220,15 +247,43 @@ advisories:
             componentLocation: /usr/bin/kube-controller-manager-1.27
             scanner: grype
 
-  - id: CGA-737j-h747-cq5j
+  - id: CGA-v3m2-px2x-g3ff
     aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
+      - CVE-2024-34156
     events:
-      - timestamp: 2024-03-13T11:18:10Z
-        type: fixed
+      - timestamp: 2024-11-06T17:54:09Z
+        type: fix-not-planned
         data:
-          fixed-version: 1.27.11-r1
+          note: This package is no longer supported upstream and has reached its end of life on '2024-06-28'.
+
+  - id: CGA-vw8v-c3c7-vq3h
+    aliases:
+      - CVE-2016-1905
+      - GHSA-xx8c-m748-xr4j
+    events:
+      - timestamp: 2023-08-18T17:06:46Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: Fixed in Kubernetes 1.2
+
+  - id: CGA-wpxc-7x68-g27q
+    aliases:
+      - CVE-2021-25740
+      - GHSA-vw47-mr44-3jf9
+    events:
+      - timestamp: 2024-01-12T07:25:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-1.27
+            componentID: 6deefa15ecd700f3
+            componentName: kubernetes-1.27
+            componentVersion: 1.27.9-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
 
   - id: CGA-x73p-3vmc-84fh
     aliases:
@@ -239,31 +294,3 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.27.11-r1
-
-  - id: CGA-gvx2-76qc-6chf
-    aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
-    events:
-      - timestamp: 2024-03-13T11:18:11Z
-        type: fixed
-        data:
-          fixed-version: 1.27.11-r1
-
-  - id: CGA-6538-qw22-p9w4
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T08:18:49Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubeadm-1.27
-            componentID: 0129633010ef1092
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.31.0
-            componentType: go-module
-            componentLocation: /usr/bin/kubeadm-1.27
-            scanner: grype
