@@ -82,6 +82,13 @@ advisories:
             componentType: rust-crate
             componentLocation: /usr/bin/wizer
             scanner: grype
+      - timestamp: 2024-11-07T23:00:36Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            This vulnerability relates to dependency: wasmtime, and a fixed version is available: v24.0.2.
+            Unfortunately, we are not able to upgrade to the fixed version of wasmtime, as this results in build errors.
+            There are other dependencies which expect wasmtime v23. Waiting for upstream to fix.
 
   - id: CGA-mr6c-9hp4-wqvf
     aliases:
