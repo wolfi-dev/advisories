@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: kyverno-1.13
+
+advisories:
+  - id: CGA-jrg2-7vwv-5566
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2024-11-07T20:00:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-1.13
+            componentID: f6183ea20f72f587
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
+            componentType: go-module
+            componentLocation: /usr/bin/kyvernopre
+            scanner: grype
