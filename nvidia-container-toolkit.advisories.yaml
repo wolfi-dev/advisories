@@ -62,6 +62,7 @@ advisories:
     aliases:
       - CVE-2024-0133
       - GHSA-g4pj-mx9f-m2mh
+      - GHSA-f748-7hpg-88ch
     events:
       - timestamp: 2024-09-26T20:03:14Z
         type: detection
@@ -102,10 +103,29 @@ advisories:
         data:
           fixed-version: 1.15.0-r3
 
+  - id: CGA-q7w3-7g49-4prv
+    aliases:
+      - CVE-2024-0134
+      - GHSA-7jm9-xpwx-v999
+    events:
+      - timestamp: 2024-11-09T14:31:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nvidia-container-toolkit
+            componentID: 03e4040af4227984
+            componentName: nvidia-container-toolkit
+            componentVersion: 1.16.2-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-qr4q-976m-gxf8
     aliases:
       - CVE-2024-0132
       - GHSA-536j-xxhg-6pgg
+      - GHSA-mjjw-553x-87pq
     events:
       - timestamp: 2024-09-26T20:01:44Z
         type: detection
