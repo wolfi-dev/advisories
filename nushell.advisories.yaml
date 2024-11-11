@@ -20,3 +20,10 @@ advisories:
             componentType: rust-crate
             componentLocation: /usr/bin/nu_plugin_polars
             scanner: grype
+      - timestamp: 2024-11-10T22:09:11Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            This vulnerability relates to the 'lexical-core' dependency, and is fixed in v1.0.0.
+            Unfortunately, nushell has other dependencies which depend on an older version of lexical-core.
+            Upgrading lexical-core causes build failures. Waiting for upstream to fix.
