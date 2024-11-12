@@ -525,6 +525,15 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/mattermost
             scanner: grype
+      - timestamp: 2024-11-12T21:54:51Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |
+            This vulnerability relates to v8.1.x of mattermost, which is several releases old.
+            The componentVersion is also being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
+            See: https://github.com/anchore/syft/issues/2980.
 
   - id: CGA-r3x9-cq8h-p7qc
     aliases:
