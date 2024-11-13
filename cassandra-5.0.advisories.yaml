@@ -192,6 +192,24 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: 'CVE considered a false positive by the maintainers: https://github.com/apache/cassandra/blob/cassandra-5.0/.build/owasp/dependency-check-suppressions.xml'
 
+  - id: CGA-jvxx-j7p9-gw4r
+    aliases:
+      - CVE-2024-47535
+      - GHSA-xq3w-v528-46rv
+    events:
+      - timestamp: 2024-11-13T07:04:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cassandra-5.0
+            componentID: 7d6375c938d09a14
+            componentName: netty-common
+            componentVersion: 4.1.96.Final
+            componentType: java-archive
+            componentLocation: /usr/share/java/cassandra/lib/netty-common-4.1.96.Final.jar
+            scanner: grype
+
   - id: CGA-jx7r-g27c-g947
     aliases:
       - CVE-2023-6378
