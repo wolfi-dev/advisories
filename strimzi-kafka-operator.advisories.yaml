@@ -26,6 +26,24 @@ advisories:
         data:
           note: 'The vulnerable jetty version is pulled in as part of the cruise-control dependency. No upstream version contains a fix, and therefore we must wait for upstream to release a new version. '
 
+  - id: CGA-rpgv-63f6-9wq8
+    aliases:
+      - CVE-2024-47535
+      - GHSA-xq3w-v528-46rv
+    events:
+      - timestamp: 2024-11-13T07:36:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: strimzi-kafka-operator
+            componentID: 717af6b2abeb537c
+            componentName: netty-common
+            componentVersion: 4.1.110.Final
+            componentType: java-archive
+            componentLocation: /opt/cruise-control/libs/netty-common-4.1.110.Final.jar
+            scanner: grype
+
   - id: CGA-vfc8-v7wp-gpmx
     aliases:
       - CVE-2024-6763
