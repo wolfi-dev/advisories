@@ -84,6 +84,24 @@ advisories:
         data:
           note: This is a transitive dependency that is brought in through sonar plugins. These are built externally and therefore require a fix from upstream maintainers.
 
+  - id: CGA-6gx5-gm6g-66w5
+    aliases:
+      - CVE-2024-47535
+      - GHSA-xq3w-v528-46rv
+    events:
+      - timestamp: 2024-11-13T09:35:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube-10
+            componentID: 3018875fd84aa284
+            componentName: netty-common
+            componentVersion: 4.1.109.Final
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/elasticsearch/modules/transport-netty4/netty-common-4.1.109.Final.jar
+            scanner: grype
+
   - id: CGA-7fm6-4c5m-gw2x
     aliases:
       - CVE-2024-30171
