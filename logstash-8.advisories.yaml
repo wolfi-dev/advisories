@@ -105,3 +105,21 @@ advisories:
             componentType: gem
             componentLocation: /opt/bitnami/logstash/vendor/bundle/jruby/3.1.0/specifications/rexml-3.3.6.gemspec
             scanner: grype
+
+  - id: CGA-g3qf-wprc-ppf2
+    aliases:
+      - CVE-2024-47535
+      - GHSA-xq3w-v528-46rv
+    events:
+      - timestamp: 2024-11-13T08:04:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-8
+            componentID: 10aa5557b83e95df
+            componentName: netty-common
+            componentVersion: 4.1.109.Final
+            componentType: java-archive
+            componentLocation: /opt/bitnami/logstash/vendor/bundle/jruby/3.1.0/gems/logstash-input-beats-6.8.4-java/vendor/jar-dependencies/io/netty/netty-common/4.1.109.Final/netty-common-4.1.109.Final.jar
+            scanner: grype
