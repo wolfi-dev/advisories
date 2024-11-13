@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: docker-selenium
+
+advisories:
+  - id: CGA-pfvc-73r9-g8ww
+    aliases:
+      - CVE-2024-47535
+      - GHSA-xq3w-v528-46rv
+    events:
+      - timestamp: 2024-11-13T09:41:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-selenium
+            componentID: 4a07bbca50bc5e2b
+            componentName: netty-common
+            componentVersion: 4.1.110.Final
+            componentType: java-archive
+            componentLocation: /external_jars/https/repo1.maven.org/maven2/io/netty/netty-common/4.1.110.Final/netty-common-4.1.110.Final.jar
+            scanner: grype
