@@ -27,3 +27,20 @@ advisories:
             This vulnerability relates to the 'lexical-core' dependency, and is fixed in v1.0.0.
             Unfortunately, nushell has other dependencies which depend on an older version of lexical-core.
             Upgrading lexical-core causes build failures. Waiting for upstream to fix.
+
+  - id: CGA-j597-7xg9-grgj
+    aliases:
+      - GHSA-x8jh-xj3x-gx3c
+    events:
+      - timestamp: 2024-11-13T09:16:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nushell
+            componentID: 4b22fc6bedec0322
+            componentName: fast-float
+            componentVersion: 0.2.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/nu_plugin_polars
+            scanner: grype
