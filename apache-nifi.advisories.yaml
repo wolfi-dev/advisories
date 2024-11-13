@@ -1354,6 +1354,24 @@ advisories:
         data:
           note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
 
+  - id: CGA-jw36-9qc4-j785
+    aliases:
+      - CVE-2024-47535
+      - GHSA-xq3w-v528-46rv
+    events:
+      - timestamp: 2024-11-13T07:12:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: cadabb8f21ca3af6
+            componentName: netty-common
+            componentVersion: 4.1.114.Final
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/nifi-current/lib/nifi-distributed-cache-services-nar-2.0.0.nar
+            scanner: grype
+
   - id: CGA-m9x3-8pwv-rjh3
     aliases:
       - CVE-2022-3509
