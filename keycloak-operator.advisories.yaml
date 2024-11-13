@@ -7,8 +7,8 @@ advisories:
   - id: CGA-25xr-q758-v6q8
     aliases:
       - CVE-2024-5967
-      - GHSA-gmrm-8fx4-66x7
       - GHSA-c25h-c27q-5qpv
+      - GHSA-gmrm-8fx4-66x7
     events:
       - timestamp: 2024-06-19T10:15:31Z
         type: fixed
@@ -53,6 +53,24 @@ advisories:
             componentVersion: 25.0.5
             componentType: java-archive
             componentLocation: /usr/share/java/quarkus-app/lib/main/org.keycloak.keycloak-core-25.0.5.jar
+            scanner: grype
+
+  - id: CGA-fp8m-fwcf-c57x
+    aliases:
+      - CVE-2024-47535
+      - GHSA-xq3w-v528-46rv
+    events:
+      - timestamp: 2024-11-13T07:45:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak-operator
+            componentID: 58fbb03576be6895
+            componentName: netty-common
+            componentVersion: 4.1.111.Final
+            componentType: java-archive
+            componentLocation: /usr/share/java/quarkus-app/lib/main/io.netty.netty-common-4.1.111.Final.jar
             scanner: grype
 
   - id: CGA-gfj5-2q78-6f2f
