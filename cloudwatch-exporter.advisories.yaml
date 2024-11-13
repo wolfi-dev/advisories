@@ -4,6 +4,24 @@ package:
   name: cloudwatch-exporter
 
 advisories:
+  - id: CGA-662r-hr8g-368h
+    aliases:
+      - CVE-2024-47535
+      - GHSA-xq3w-v528-46rv
+    events:
+      - timestamp: 2024-11-13T07:11:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloudwatch-exporter
+            componentID: fd2d14af5fb027df
+            componentName: netty-common
+            componentVersion: 4.1.112.Final
+            componentType: java-archive
+            componentLocation: /usr/share/java/cloudwatch_exporter/cloudwatch_exporter.jar
+            scanner: grype
+
   - id: CGA-7p98-j4rx-8p2r
     aliases:
       - CVE-2024-29025
