@@ -115,3 +115,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 8.0.0.6-r0
+
+  - id: CGA-x6pw-hh9f-9g3j
+    aliases:
+      - CVE-2024-47535
+      - GHSA-xq3w-v528-46rv
+    events:
+      - timestamp: 2024-11-14T07:11:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: confluent-kafka
+            componentID: 5cbddf064f77b84d
+            componentName: netty-common
+            componentVersion: 4.1.111.Final
+            componentType: java-archive
+            componentLocation: /usr/lib/kafka/libs/netty-common-4.1.111.Final.jar
+            scanner: grype
