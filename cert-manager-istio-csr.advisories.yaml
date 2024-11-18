@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: cert-manager-istio-csr
+
+advisories:
+  - id: CGA-pw2v-5gqw-v996
+    aliases:
+      - CVE-2021-39155
+      - GHSA-7774-7vr3-cc8j
+    events:
+      - timestamp: 2024-11-18T12:00:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-manager-istio-csr
+            componentID: 89baf9e635c19868
+            componentName: istio.io/istio
+            componentVersion: v0.0.0-20240821191124-89d73dc1f639
+            componentType: go-module
+            componentLocation: /usr/bin/cmd
+            scanner: grype
