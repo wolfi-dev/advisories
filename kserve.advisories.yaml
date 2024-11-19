@@ -136,6 +136,24 @@ advisories:
         data:
           note: The commons-io:commons-io:2.7.0 dependency is transitive from a direct dependency on the python package ray. To fix this vulnerability, we'd require ray to upgrade to commons-io:commons-io:2.14.0 (there is currently no released version of ray with that fix) and we'd have to upgrade the version of ray used in kserve to that fixed version.
 
+  - id: CGA-j6j7-cxqc-pwjf
+    aliases:
+      - CVE-2024-52304
+      - GHSA-8495-4g3g-x7pr
+    events:
+      - timestamp: 2024-11-19T07:34:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kserve
+            componentID: e8d3143d57519281
+            componentName: aiohttp
+            componentVersion: 3.10.5
+            componentType: python
+            componentLocation: /usr/lib/python3.11/site-packages/aiohttp-3.10.5.dist-info/METADATA, /usr/lib/python3.11/site-packages/aiohttp-3.10.5.dist-info/RECORD, /usr/lib/python3.11/site-packages/aiohttp-3.10.5.dist-info/top_level.txt
+            scanner: grype
+
   - id: CGA-w2cp-3rgq-pfhv
     aliases:
       - CVE-2024-30251
