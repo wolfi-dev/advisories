@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: spark-3.5-scala-2.13
+
+advisories:
+  - id: CGA-5wh4-5p8j-33rj
+    aliases:
+      - CVE-2022-40152
+      - GHSA-3f7h-mf4q-vrm4
+    events:
+      - timestamp: 2024-11-20T13:12:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: 2b57bbf9cc4b8a50
+            componentName: woodstox-core
+            componentVersion: 5.3.0
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/hadoop-client-runtime-3.3.4.jar
+            scanner: grype
