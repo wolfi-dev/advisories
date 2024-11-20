@@ -311,6 +311,24 @@ advisories:
         data:
           note: This vulnerability is related to hadoop-client-runtime 3.3.4 included in druid-deltalake-extensions, requiring code changes by the upstream maintainers to remediate.
 
+  - id: CGA-cqh5-2339-79w3
+    aliases:
+      - CVE-2024-31141
+      - GHSA-2x2g-32r7-p4x8
+    events:
+      - timestamp: 2024-11-20T08:41:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: druid
+            componentID: ac546b797116843e
+            componentName: kafka-clients
+            componentVersion: 2.8.1
+            componentType: java-archive
+            componentLocation: /usr/share/java/druid/extensions/druid-ranger-security/kafka-clients-2.8.1.jar
+            scanner: grype
+
   - id: CGA-f836-4mqx-vr2w
     aliases:
       - CVE-2019-20445
