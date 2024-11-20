@@ -1354,6 +1354,24 @@ advisories:
         data:
           note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
 
+  - id: CGA-jvwv-m346-267w
+    aliases:
+      - CVE-2024-31141
+      - GHSA-2x2g-32r7-p4x8
+    events:
+      - timestamp: 2024-11-20T07:08:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: e42da746035e6440
+            componentName: kafka-clients
+            componentVersion: 3.6.2
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/nifi-current/lib/nifi-aws-nar-2.0.0.nar
+            scanner: grype
+
   - id: CGA-jw36-9qc4-j785
     aliases:
       - CVE-2024-47535
