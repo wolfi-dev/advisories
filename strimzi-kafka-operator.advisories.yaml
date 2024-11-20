@@ -26,6 +26,24 @@ advisories:
         data:
           note: 'The vulnerable jetty version is pulled in as part of the cruise-control dependency. No upstream version contains a fix, and therefore we must wait for upstream to release a new version. '
 
+  - id: CGA-5hwv-4v3q-5782
+    aliases:
+      - CVE-2024-31141
+      - GHSA-2x2g-32r7-p4x8
+    events:
+      - timestamp: 2024-11-20T09:31:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: strimzi-kafka-operator
+            componentID: 1836d0f1eb41468d
+            componentName: kafka-clients
+            componentVersion: 3.6.2
+            componentType: java-archive
+            componentLocation: /opt/strimzi/lib/org.apache.kafka.kafka-clients-3.6.2.jar
+            scanner: grype
+
   - id: CGA-rpgv-63f6-9wq8
     aliases:
       - CVE-2024-47535
