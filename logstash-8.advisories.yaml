@@ -66,6 +66,24 @@ advisories:
         data:
           fixed-version: 8.16.0-r0
 
+  - id: CGA-7g8h-6fqh-f235
+    aliases:
+      - CVE-2024-31141
+      - GHSA-2x2g-32r7-p4x8
+    events:
+      - timestamp: 2024-11-20T07:18:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-8
+            componentID: 781c640c1ace4917
+            componentName: kafka-clients
+            componentVersion: 3.4.1
+            componentType: java-archive
+            componentLocation: /opt/bitnami/logstash/vendor/bundle/jruby/3.1.0/gems/logstash-integration-kafka-11.5.2-java/vendor/jar-dependencies/org/apache/kafka/kafka-clients/3.4.1/kafka-clients-3.4.1.jar
+            scanner: grype
+
   - id: CGA-937h-9qvw-8r89
     aliases:
       - CVE-2024-47554
