@@ -4,6 +4,24 @@ package:
   name: spark-3.5-scala-2.13
 
 advisories:
+  - id: CGA-2fxh-wjvr-pgc3
+    aliases:
+      - CVE-2024-26308
+      - GHSA-4265-ccf5-phj5
+    events:
+      - timestamp: 2024-11-20T13:12:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: ce12a22816f06df1
+            componentName: commons-compress
+            componentVersion: "1.21"
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/hadoop-client-runtime-3.3.4.jar
+            scanner: grype
+
   - id: CGA-5wh4-5p8j-33rj
     aliases:
       - CVE-2022-40152
