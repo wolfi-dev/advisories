@@ -147,6 +147,24 @@ advisories:
             componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/hadoop-client-runtime-3.3.4.jar
             scanner: grype
 
+  - id: CGA-hcx6-4xcx-96pr
+    aliases:
+      - CVE-2023-2976
+      - GHSA-7g45-4rm6-3mm3
+    events:
+      - timestamp: 2024-11-20T13:12:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: 8798fe24bdba8a8a
+            componentName: guava
+            componentVersion: 24.1.1-android
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/guava-24.1.1-android.jar
+            scanner: grype
+
   - id: CGA-pgr9-2j9x-h3gg
     aliases:
       - CVE-2020-8908
