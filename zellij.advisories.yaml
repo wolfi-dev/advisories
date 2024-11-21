@@ -23,6 +23,7 @@ advisories:
 
   - id: CGA-6qg7-2wh6-26w3
     aliases:
+      - CVE-2024-43806
       - GHSA-c827-hfw6-qwvm
     events:
       - timestamp: 2024-07-30T16:16:04Z
@@ -146,6 +147,24 @@ advisories:
             Remediating this vulnerability requires upgrading 'time' to 0.2.23 or later.
             Unfortunately, we are not able to upgrade this dependency, without build compilation issues.
             Pending fix from upstream.
+
+  - id: CGA-qrv3-p65m-5rgp
+    aliases:
+      - CVE-2024-51745
+      - GHSA-c2f5-jxjv-2hh8
+    events:
+      - timestamp: 2024-11-21T13:24:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zellij
+            componentID: d65817d3c2c3676c
+            componentName: wasmtime
+            componentVersion: 21.0.2
+            componentType: rust-crate
+            componentLocation: /usr/bin/zellij
+            scanner: grype
 
   - id: CGA-wwr7-2chc-98v2
     aliases:
