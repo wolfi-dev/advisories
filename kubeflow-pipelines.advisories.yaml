@@ -708,6 +708,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-mgfp-fw74-782v
+    aliases:
+      - CVE-2024-10220
+      - GHSA-27wf-5967-98gx
+    events:
+      - timestamp: 2024-11-23T08:30:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines
+            componentID: 0a3e4cab970d6a28
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.27.16
+            componentType: go-module
+            componentLocation: /usr/bin/apiserver
+            scanner: grype
+
   - id: CGA-mhjf-45w8-8626
     aliases:
       - CVE-2021-25736
