@@ -517,6 +517,10 @@ advisories:
             componentType: python
             componentLocation: /opt/datadog-agent/embedded/lib/python3.11/site-packages/snowflake_connector_python-3.12.1.dist-info/METADATA, /opt/datadog-agent/embedded/lib/python3.11/site-packages/snowflake_connector_python-3.12.1.dist-info/RECORD, /opt/datadog-agent/embedded/lib/python3.11/site-packages/snowflake_connector_python-3.12.1.dist-info/direct_url.json, /opt/datadog-agent/embedded/lib/python3.11/site-packages/snowflake_connector_python-3.12.1.dist-info/top_level.txt
             scanner: grype
+      - timestamp: 2024-11-22T01:19:30Z
+        type: pending-upstream-fix
+        data:
+          note: 'Datadog/integrations-core requires the use of Python 3.11 however the latest release of snowflake-connector-python (version 3.12.3) does not include support for Python 3.11. Instead, this version is built for Python 3.12 (cp312). The absence of a compatible wheel for Python 3.11 (cp311) prevents us from upgrading to version 3.12.3. Support for Python 3.11 requires upstream maintainers to implement. '
 
   - id: CGA-p4mm-jvfh-v2c4
     aliases:
