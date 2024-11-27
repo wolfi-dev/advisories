@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: rancher-agent-2.10
+
+advisories:
+  - id: CGA-7hqw-pw3h-mpxx
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2024-11-27T18:00:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-agent-2.10
+            componentID: c3813e748d35859d
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
+            componentType: go-module
+            componentLocation: /usr/bin/agent
+            scanner: grype
