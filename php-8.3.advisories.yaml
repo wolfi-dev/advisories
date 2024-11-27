@@ -1,19 +1,46 @@
-schema-version: "2"
+schema-version: 2.0.2
 
 package:
   name: php-8.3
 
 advisories:
-  - id: CGA-xwhp-v2jx-vhcq
+  - id: CGA-22c5-h8rp-wh49
     aliases:
-      - CVE-2007-2728
-      - GHSA-g6ph-v22v-23j6
+      - CVE-2024-8932
+    events:
+      - timestamp: 2024-11-27T15:03:16Z
+        type: fixed
+        data:
+          fixed-version: 8.3.14-r0
+
+  - id: CGA-5q74-q9fw-2mf8
+    aliases:
+      - CVE-2015-3211
+      - GHSA-6mh8-r4fc-h3ch
     events:
       - timestamp: 2023-10-17T21:24:51Z
         type: false-positive-determination
         data:
-          type: vulnerable-code-not-included-in-package
-          note: 'vulnerable code was removed 20160705: https://github.com/php/php-src/commit/b21de28bb70117d9bfe73efeb7d6bb5691b043e5#diff-18d10bfd6dddfbf3e844f417fb0c4128bb86808934f4f958d8fecd142eee3dc4L646'
+          type: component-vulnerability-mismatch
+          note: This is a packaging defect specific to the php-fpm package included in RHEL. The Wolfi php-fpm package does not include this defect.
+
+  - id: CGA-cg4w-v9p8-wr94
+    aliases:
+      - CVE-2024-11234
+    events:
+      - timestamp: 2024-11-27T15:03:19Z
+        type: fixed
+        data:
+          fixed-version: 8.3.14-r0
+
+  - id: CGA-gqjf-jq86-4v92
+    aliases:
+      - CVE-2024-11236
+    events:
+      - timestamp: 2024-11-27T15:03:08Z
+        type: fixed
+        data:
+          fixed-version: 8.3.14-r0
 
   - id: CGA-gwcr-hfpm-9r46
     aliases:
@@ -26,6 +53,26 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: 'Official statement from Red Hat (20070626): This is not a security vulnerability: it is the expected behaviour of parse_str when used without a second parameter. https://nvd.nist.gov/vuln/detail/CVE-2007-3205'
 
+  - id: CGA-h2xj-w29w-5255
+    aliases:
+      - CVE-2024-11233
+    events:
+      - timestamp: 2024-11-27T15:03:11Z
+        type: fixed
+        data:
+          fixed-version: 8.3.14-r0
+
+  - id: CGA-h8fm-g4h3-r7cw
+    aliases:
+      - CVE-2022-4455
+      - GHSA-3957-4jhv-xcc7
+    events:
+      - timestamp: 2023-11-14T22:18:51Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: This CVE targets a PHP-based web application called "PHP Calendar," and is unrelated to the PHP calendar extension.
+
   - id: CGA-pgpr-rvpc-pj98
     aliases:
       - CVE-2007-4596
@@ -36,17 +83,6 @@ advisories:
         data:
           type: vulnerability-record-analysis-contested
           note: 'Official statement from Mandriva (20070921): Due to the nature of safe_mode and open_basedir restrictions, and in alignment with the PHP group’s stance on these features, Mandriva does not consider this a security issue. https://nvd.nist.gov/vuln/detail/CVE-2007-4596'
-
-  - id: CGA-5q74-q9fw-2mf8
-    aliases:
-      - CVE-2015-3211
-      - GHSA-6mh8-r4fc-h3ch
-    events:
-      - timestamp: 2023-10-17T21:24:51Z
-        type: false-positive-determination
-        data:
-          type: component-vulnerability-mismatch
-          note: This is a packaging defect specific to the php-fpm package included in RHEL. The Wolfi php-fpm package does not include this defect.
 
   - id: CGA-v832-mjfv-7f22
     aliases:
@@ -70,13 +106,22 @@ advisories:
           type: component-vulnerability-mismatch
           note: This CVE targets a PHP-based web application called "PHP Calendar," and is unrelated to the PHP calendar extension.
 
-  - id: CGA-h8fm-g4h3-r7cw
+  - id: CGA-w2w9-c8v9-mwh6
     aliases:
-      - CVE-2022-4455
-      - GHSA-3957-4jhv-xcc7
+      - CVE-2024-8929
     events:
-      - timestamp: 2023-11-14T22:18:51Z
+      - timestamp: 2024-11-27T15:03:13Z
+        type: fixed
+        data:
+          fixed-version: 8.3.14-r0
+
+  - id: CGA-xwhp-v2jx-vhcq
+    aliases:
+      - CVE-2007-2728
+      - GHSA-g6ph-v22v-23j6
+    events:
+      - timestamp: 2023-10-17T21:24:51Z
         type: false-positive-determination
         data:
-          type: component-vulnerability-mismatch
-          note: This CVE targets a PHP-based web application called "PHP Calendar," and is unrelated to the PHP calendar extension.
+          type: vulnerable-code-not-included-in-package
+          note: 'vulnerable code was removed 20160705: https://github.com/php/php-src/commit/b21de28bb70117d9bfe73efeb7d6bb5691b043e5#diff-18d10bfd6dddfbf3e844f417fb0c4128bb86808934f4f958d8fecd142eee3dc4L646'
