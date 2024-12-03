@@ -79,6 +79,24 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: This vulnerability is disputed, and the consensus in the security community is that this is intended behavior, not a security flaw.
 
+  - id: CGA-5j94-hq8c-4597
+    aliases:
+      - CVE-2024-36621
+      - GHSA-2mj3-vfvx-fc43
+    events:
+      - timestamp: 2024-12-03T09:23:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pulumi
+            componentID: b3d68f6e904e1420
+            componentName: github.com/moby/moby
+            componentVersion: v25.0.4+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/pulumi
+            scanner: grype
+
   - id: CGA-62m6-qv5q-jcpc
     aliases:
       - CVE-2024-24791
