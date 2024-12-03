@@ -296,6 +296,24 @@ advisories:
         data:
           note: Upstream kubevela requires an older version of kubectl v0.26.3 that conflicts with the version used by Helm which is v0.29.0. Any upgrade of the Kubernetes version requires multiple changes in kubevela and its dependencies.
 
+  - id: CGA-jhxr-j224-5xw4
+    aliases:
+      - CVE-2024-36623
+      - GHSA-gh5c-3h97-2f3q
+    events:
+      - timestamp: 2024-12-03T10:43:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubevela
+            componentID: fe539c4c88e13c3a
+            componentName: github.com/moby/moby
+            componentVersion: v24.0.9+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-m372-ff2w-87x4
     aliases:
       - GHSA-6xv5-86q9-7xr8
@@ -357,6 +375,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.9.11-r6
+
+  - id: CGA-rj2h-qgvq-f849
+    aliases:
+      - CVE-2024-36621
+      - GHSA-2mj3-vfvx-fc43
+    events:
+      - timestamp: 2024-12-03T10:43:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubevela
+            componentID: fe539c4c88e13c3a
+            componentName: github.com/moby/moby
+            componentVersion: v24.0.9+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
 
   - id: CGA-v2gj-w87r-9wmf
     aliases:
