@@ -579,6 +579,11 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2024-12-04T14:41:29Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: 'This vulnerability relates to v7.x of mattermost, which is several releases old. The componentVersion is also being flagged incorrectly here by some scanners. A bug has been filed upstream against Syft, and the maintainers have confirmed it''s a scanner issue. See: https://github.com/anchore/syft/issues/2980.'
 
   - id: CGA-hxh6-329f-wm9m
     aliases:
