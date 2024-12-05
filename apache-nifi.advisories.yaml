@@ -1009,6 +1009,24 @@ advisories:
         data:
           note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
 
+  - id: CGA-fv62-wffg-c9q4
+    aliases:
+      - CVE-2024-38829
+      - GHSA-mqvr-2rp8-j7h4
+    events:
+      - timestamp: 2024-12-05T07:28:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: d64bc1f6e16d1c93
+            componentName: spring-ldap-core
+            componentVersion: 3.2.7
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/nifi-current/lib/nifi-ldap-iaa-providers-nar-2.0.0.nar
+            scanner: grype
+
   - id: CGA-g8pm-vcpp-9jxq
     aliases:
       - CVE-2023-2976
