@@ -123,6 +123,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: 'This vulnerability is specific to the k8s server, not the Golang library. This vulnerability is marked as "NOT_IMPORTABLE" by the Go team: https://github.com/golang/vulndb/blob/master/data/excluded/GO-2022-0792.yaml'
 
+  - id: CGA-3q69-c424-w54c
+    aliases:
+      - CVE-2024-52798
+      - GHSA-rhx6-c78j-4q9w
+    events:
+      - timestamp: 2024-12-06T09:19:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines
+            componentID: 38ad90bf933649b8
+            componentName: path-to-regexp
+            componentVersion: 0.1.10
+            componentType: npm
+            componentLocation: /server/node_modules/path-to-regexp/package.json
+            scanner: grype
+
   - id: CGA-3qf3-94gx-766h
     aliases:
       - CVE-2019-11250
