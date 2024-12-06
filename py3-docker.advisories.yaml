@@ -188,6 +188,24 @@ advisories:
           type: component-vulnerability-mismatch
           note: This affect the Docker engine in old/EOL version. The package is a client api and does not have the vulnerability in question.
 
+  - id: CGA-vr3f-c957-gvx4
+    aliases:
+      - CVE-2024-36621
+      - GHSA-2mj3-vfvx-fc43
+    events:
+      - timestamp: 2024-12-06T08:17:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3-docker
+            componentID: ac87a94f6a9f206b
+            componentName: py3.11-docker
+            componentVersion: 7.1.0-r2
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-wqv7-w84w-3758
     aliases:
       - CVE-2019-16884
