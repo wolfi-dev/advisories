@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: grafana-image-renderer
+
+advisories:
+  - id: CGA-46v3-9cq9-rx8v
+    aliases:
+      - CVE-2024-52798
+      - GHSA-rhx6-c78j-4q9w
+    events:
+      - timestamp: 2024-12-06T07:21:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-image-renderer
+            componentID: 672b86c6c7692ce4
+            componentName: path-to-regexp
+            componentVersion: 0.1.10
+            componentType: npm
+            componentLocation: /usr/src/app/node_modules/path-to-regexp/package.json
+            scanner: grype
