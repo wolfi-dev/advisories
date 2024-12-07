@@ -199,6 +199,13 @@ advisories:
             componentType: rust-crate
             componentLocation: /usr/bin/zellij
             scanner: grype
+      - timestamp: 2024-11-07T23:00:36Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            This vulnerability relates to dependency: wasmtime, and a fixed version is available: v25.0.0.
+            Unfortunately, we are not able to upgrade to the fixed version of wasmtime, as this results in build errors.
+            There are other dependencies which depend on an older wasmtime version. Waiting for upstream to fix.
 
   - id: CGA-wwr7-2chc-98v2
     aliases:
