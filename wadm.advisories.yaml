@@ -73,3 +73,21 @@ advisories:
             Remediating this vulnerability requires upgrading tonic to v0.12.13.
             However, upgrading this causes issues with other dependencies, namely opentelemetry-otlp and wadm-cli, which are not compatible with this version.
             Pending upstream fix.
+
+  - id: CGA-q94g-vpv9-hw34
+    aliases:
+      - CVE-2024-12224
+      - GHSA-h97m-ww89-6jmq
+    events:
+      - timestamp: 2024-12-10T13:04:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wadm
+            componentID: ec1b36eedcd27d24
+            componentName: idna
+            componentVersion: 0.5.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/wadm
+            scanner: grype
