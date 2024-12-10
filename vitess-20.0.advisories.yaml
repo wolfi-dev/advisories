@@ -51,6 +51,24 @@ advisories:
         data:
           note: Even on the upstream main branch, the vtadmin version is set to 0.1.0 in the packages.json under web/vtadmin.
 
+  - id: CGA-q99g-63m8-c4r8
+    aliases:
+      - CVE-2024-55565
+      - GHSA-mwcw-c2x4-8c55
+    events:
+      - timestamp: 2024-12-10T13:15:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vitess-20.0
+            componentID: a0c9712680d8e1e3
+            componentName: nanoid
+            componentVersion: 3.3.7
+            componentType: npm
+            componentLocation: /vt/web/vtadmin/node_modules/nanoid/package.json
+            scanner: grype
+
   - id: CGA-qw57-j898-5h79
     aliases:
       - CVE-2024-53257
