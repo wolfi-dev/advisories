@@ -49,6 +49,24 @@ advisories:
             We can't bump the earlier versions to the latest v15.x streams, as the project explicitly depends on multiple versions.
             Waiting for fix from upstream. Ref: https://github.com/istio/ztunnel/blob/1.24.1/Cargo.lock#L1095-L1119
 
+  - id: CGA-gfhm-mmvx-rqwp
+    aliases:
+      - CVE-2024-12224
+      - GHSA-h97m-ww89-6jmq
+    events:
+      - timestamp: 2024-12-10T07:09:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ztunnel-1.24
+            componentID: c57c22b9dfbcb17f
+            componentName: idna
+            componentVersion: 0.4.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/ztunnel
+            scanner: grype
+
   - id: CGA-ww5r-3x7r-r6p7
     aliases:
       - GHSA-qg5g-gv98-5ffh
