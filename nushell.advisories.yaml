@@ -52,6 +52,24 @@ advisories:
             is active work to migrate to a new, maintained `fast-float2` as per https://github.com/aldanor/fast-float-rust/issues/35.
             Upstream will have to migrate to this forked implementation.
 
+  - id: CGA-pgc5-rf4c-j9xj
+    aliases:
+      - CVE-2024-12224
+      - GHSA-h97m-ww89-6jmq
+    events:
+      - timestamp: 2024-12-10T12:44:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nushell
+            componentID: 8c38251fda076c98
+            componentName: idna
+            componentVersion: 0.5.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/nu_plugin_gstat
+            scanner: grype
+
   - id: CGA-wjjh-84v2-frv2
     aliases:
       - GHSA-wwq9-3cpr-mm53
