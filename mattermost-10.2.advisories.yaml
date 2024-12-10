@@ -580,10 +580,10 @@ advisories:
             componentLocation: /.PKGINFO
             scanner: grype
       - timestamp: 2024-12-04T14:41:29Z
-        type: false-positive-determination
+        type: vulnerable-code-version-not-used
         data:
           type: component-vulnerability-mismatch
-          note: 'This vulnerability relates to v7.x of mattermost, which is several releases old. The componentVersion is also being flagged incorrectly here by some scanners. A bug has been filed upstream against Syft, and the maintainers have confirmed it''s a scanner issue. See: https://github.com/anchore/syft/issues/2980.'
+          note: 'This vulnerability relates to versions of mattermost prior to v7.4.0, which is several releases old. Several sources tie the credit of the individual contributing to the remediation, the custom mattermost CVE ID (MMSA-2022-00124) and the CVE ID found in the National Vulnerability Database which leads to the conculsion this is caused by an overly broad CPE configuration on the NVD record causing all versions of mattermost to become flagged. '
 
   - id: CGA-hxh6-329f-wm9m
     aliases:
