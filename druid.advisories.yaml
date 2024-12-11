@@ -289,6 +289,14 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/java/druid/lib/derby-10.14.2.0.jar
             scanner: grype
+      - timestamp: 2024-12-11T22:09:12Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            This vulnerability is related to 'derby', one of the dependencies of Apache druid.
+            A fix is available, but requires upgrading 'derby' to 'v10.17.1.0'. Attempting to upgrade druid to this version results in build failures.
+            derby v10.17.1.0 requires Java 21. Apache druid does not support currently support Java 21.
+            Ref: https://github.com/apache/druid/blob/druid-31.0.0/docs/operations/java.md and https://db.apache.org/derby/releases/release-10_17_1_0.cgi.
 
   - id: CGA-c5fg-gm82-jrmq
     aliases:
