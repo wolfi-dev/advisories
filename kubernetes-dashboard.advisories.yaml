@@ -116,6 +116,24 @@ advisories:
         data:
           fixed-version: 7.5.0-r0
 
+  - id: CGA-6h2r-v74w-mrm2
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T07:21:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dashboard
+            componentID: 07fa36c9a6ba0f2f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/share/kubernetes-dashboard/dashboard
+            scanner: grype
+
   - id: CGA-7fv2-8xrw-rg82
     aliases:
       - CVE-2024-24787
