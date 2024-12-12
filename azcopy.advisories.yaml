@@ -4,6 +4,24 @@ package:
   name: azcopy
 
 advisories:
+  - id: CGA-4365-mwxv-5qhf
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T07:08:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: azcopy
+            componentID: 470740f39e9851d9
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/azcopy
+            scanner: grype
+
   - id: CGA-5xqg-phpc-cj8f
     aliases:
       - CVE-2024-34155
