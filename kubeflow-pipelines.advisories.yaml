@@ -639,6 +639,24 @@ advisories:
         data:
           note: The project uses an older version of 'k8s.io/kubernetes (v1.11.1)' package. To fix the CVE, we have to upgrade that to '1.24.17' or later. However, the project is not ready to upgrade the package yet since it will require a lot of changes in the codebase.
 
+  - id: CGA-hpv4-7q3j-33gh
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T08:04:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines
+            componentID: fa22d3b3f73588ea
+            componentName: golang.org/x/crypto
+            componentVersion: v0.22.0
+            componentType: go-module
+            componentLocation: /usr/bin/apiserver
+            scanner: grype
+
   - id: CGA-hvww-vpr8-9vp5
     aliases:
       - CVE-2023-2431
