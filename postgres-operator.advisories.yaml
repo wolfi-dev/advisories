@@ -42,6 +42,24 @@ advisories:
         data:
           fixed-version: 1.12.0-r1
 
+  - id: CGA-9rxv-wxx9-v7rr
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T22:27:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: postgres-operator
+            componentID: 6ee194d71d5cf0f2
+            componentName: golang.org/x/crypto
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/postgres-operator
+            scanner: grype
+
   - id: CGA-ff25-9pgr-v35m
     aliases:
       - CVE-2023-45288
