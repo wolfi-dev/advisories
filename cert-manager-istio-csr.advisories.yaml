@@ -48,6 +48,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: 'The upstream project ignored the vulnerability since they import non-tagged versions in go.mod, for more information see: https://github.com/cert-manager/istio-csr/pull/344/files.'
 
+  - id: CGA-c7qh-252v-jjrg
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T07:17:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-manager-istio-csr
+            componentID: d9b3456ad91b5e0e
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/cmd
+            scanner: grype
+
   - id: CGA-h284-r9mg-9p97
     aliases:
       - CVE-2019-14993
