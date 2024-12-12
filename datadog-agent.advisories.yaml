@@ -407,6 +407,24 @@ advisories:
         data:
           fixed-version: 7.54.1-r1
 
+  - id: CGA-gg42-hvx9-34jm
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T12:18:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: datadog-agent
+            componentID: c843f1f57c12fdab
+            componentName: golang.org/x/crypto
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/datadog-cluster-agent
+            scanner: grype
+
   - id: CGA-gpwc-7f5f-8m65
     aliases:
       - GHSA-mh55-gqvf-xfwm
