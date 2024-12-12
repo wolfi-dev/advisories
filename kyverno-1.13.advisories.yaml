@@ -4,6 +4,24 @@ package:
   name: kyverno-1.13
 
 advisories:
+  - id: CGA-gvfr-wwf9-32w9
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T11:40:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-1.13
+            componentID: 68cc4ecedfe5d08c
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/background-controller
+            scanner: grype
+
   - id: CGA-jrg2-7vwv-5566
     aliases:
       - CVE-2024-51744
