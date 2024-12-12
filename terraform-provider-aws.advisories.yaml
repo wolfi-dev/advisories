@@ -109,6 +109,24 @@ advisories:
         data:
           fixed-version: 5.56.0-r1
 
+  - id: CGA-p9c4-rrvc-jm8g
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T08:09:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-aws
+            componentID: e73c448eab86c74d
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-aws
+            scanner: grype
+
   - id: CGA-qjp4-ggm6-r5x8
     aliases:
       - CVE-2024-24786
