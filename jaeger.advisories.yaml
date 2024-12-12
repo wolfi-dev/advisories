@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: jaeger
+
+advisories:
+  - id: CGA-2cq9-whwg-vcq7
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T11:45:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jaeger
+            componentID: bdf51ae9b1a7eac7
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/all-in-one
+            scanner: grype
