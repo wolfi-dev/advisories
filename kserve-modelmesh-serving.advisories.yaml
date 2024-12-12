@@ -4,6 +4,24 @@ package:
   name: kserve-modelmesh-serving
 
 advisories:
+  - id: CGA-8xhw-pw8q-xw76
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T12:42:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kserve-modelmesh-serving
+            componentID: 8293ca9b53d7500a
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-mvqw-vhj2-w73h
     aliases:
       - CVE-2024-34155
