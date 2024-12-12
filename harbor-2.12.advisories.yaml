@@ -25,3 +25,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.12.0-r1
+
+  - id: CGA-qxv3-8352-vrq5
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T10:08:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-2.12
+            componentID: 9dc90eff15bce3ad
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-core
+            scanner: grype
