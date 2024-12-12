@@ -4,6 +4,24 @@ package:
   name: modelmesh-runtime-adapter
 
 advisories:
+  - id: CGA-7jcm-h3m5-fw37
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T10:25:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: modelmesh-runtime-adapter
+            componentID: c6f0f8084cc37d7d
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/mlserver-adapter
+            scanner: grype
+
   - id: CGA-q5hr-pxrh-2j32
     aliases:
       - CVE-2024-35255
