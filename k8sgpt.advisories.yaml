@@ -282,6 +282,24 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
 
+  - id: CGA-gxgf-572r-m86g
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T15:16:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k8sgpt
+            componentID: 43fa3894e6fedd2e
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/k8sgpt
+            scanner: grype
+
   - id: CGA-h765-qvw7-g6cg
     aliases:
       - GHSA-6xv5-86q9-7xr8
