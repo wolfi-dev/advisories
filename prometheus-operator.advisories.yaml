@@ -45,6 +45,24 @@ advisories:
         data:
           fixed-version: 0.72.0-r1
 
+  - id: CGA-4cmq-3qw8-c33m
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T11:02:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-operator
+            componentID: 485d0eafe4ec3d7d
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus-config-reloader
+            scanner: grype
+
   - id: CGA-68g9-hch7-5grp
     aliases:
       - CVE-2024-24790
