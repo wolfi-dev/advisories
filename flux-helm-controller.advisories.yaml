@@ -237,6 +237,24 @@ advisories:
         data:
           fixed-version: 0.37.1-r1
 
+  - id: CGA-c5fx-82mm-hv2v
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T14:35:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-helm-controller
+            componentID: c6e79f1e9569ab62
+            componentName: golang.org/x/crypto
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/helm-controller
+            scanner: grype
+
   - id: CGA-ff8x-6q32-qhc8
     aliases:
       - CVE-2020-8552
