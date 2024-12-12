@@ -40,6 +40,24 @@ advisories:
         data:
           fixed-version: 1.1.27-r17
 
+  - id: CGA-3gxh-267v-q6gf
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T07:26:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-operator
+            componentID: 1a171b10fb00e35a
+            componentName: golang.org/x/crypto
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/sparkctl
+            scanner: grype
+
   - id: CGA-42q9-w6hw-f2jx
     aliases:
       - CVE-2024-34156
