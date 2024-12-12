@@ -213,3 +213,21 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Pending upstream fix, this fix will require some code changes.
+
+  - id: CGA-xxrv-9627-w8wm
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T11:17:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: certificate-transparency
+            componentID: cab39b122200cb78
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/trillian-ctserver
+            scanner: grype
