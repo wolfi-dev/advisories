@@ -96,6 +96,24 @@ advisories:
         data:
           fixed-version: 2.12.0-r1
 
+  - id: CGA-f8p2-pcmm-23rc
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T08:34:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-exporter
+            componentID: cf080f81a6c2683b
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/cert-exporter
+            scanner: grype
+
   - id: CGA-fjp8-4cc8-pw7x
     aliases:
       - CVE-2024-24788
