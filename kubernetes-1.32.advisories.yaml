@@ -21,3 +21,21 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/kube-controller-manager-1.32
             scanner: grype
+
+  - id: CGA-847w-hfp3-fpwq
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-13T11:30:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-1.32
+            componentID: 0a4d6510ec4bc0b9
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-controller-manager-1.32
+            scanner: grype
