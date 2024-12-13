@@ -455,6 +455,24 @@ advisories:
         data:
           note: The zookeeper transitive dependency must be bumped to 3.8.4 in the upstream project Hadoop.
 
+  - id: CGA-ppgw-f77h-jrgr
+    aliases:
+      - CVE-2024-53990
+      - GHSA-mfj5-cf8g-g2fv
+    events:
+      - timestamp: 2024-12-13T10:23:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tez
+            componentID: b94d80187d4fad0a
+            componentName: async-http-client
+            componentVersion: 2.12.3
+            componentType: java-archive
+            componentLocation: /usr/share/java/tez/lib/async-http-client-2.12.3.jar
+            scanner: grype
+
   - id: CGA-x2r8-2m8h-66gj
     aliases:
       - CVE-2023-39410
