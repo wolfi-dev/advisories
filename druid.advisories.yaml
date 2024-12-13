@@ -793,6 +793,24 @@ advisories:
         data:
           note: This vulnerability relates to log4j 1.2.17, a transitive dependency of the shaded JAR ambari-metrics-emitter used by Druid. No newer versions of this shaded JAR are available to fix the vulnerability.
 
+  - id: CGA-x74c-2j5w-4cp2
+    aliases:
+      - CVE-2024-53990
+      - GHSA-mfj5-cf8g-g2fv
+    events:
+      - timestamp: 2024-12-13T07:41:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: druid
+            componentID: fc02a16d9e86ea59
+            componentName: async-http-client
+            componentVersion: 2.5.3
+            componentType: java-archive
+            componentLocation: /usr/share/java/druid/lib/async-http-client-2.5.3.jar
+            scanner: grype
+
   - id: CGA-xf65-82jr-gw83
     aliases:
       - CVE-2019-20444
