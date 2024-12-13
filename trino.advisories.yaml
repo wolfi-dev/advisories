@@ -446,6 +446,24 @@ advisories:
             componentLocation: /usr/lib/trino/lib/net.snowflake_snowflake-jdbc-3.19.1.jar
             scanner: grype
 
+  - id: CGA-cg76-c5w2-h82c
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2024-12-13T18:01:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino
+            componentID: 94aa19367dc256dd
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/lib/trino/bin/darwin-amd64/launcher
+            scanner: grype
+
   - id: CGA-cvrj-h7rr-r975
     aliases:
       - CVE-2024-29025
