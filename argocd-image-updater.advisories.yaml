@@ -4,6 +4,24 @@ package:
   name: argocd-image-updater
 
 advisories:
+  - id: CGA-fghq-cmj5-4jgc
+    aliases:
+      - CVE-2024-5321
+      - GHSA-82m2-cv7p-4m75
+    events:
+      - timestamp: 2024-12-16T09:44:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argocd-image-updater
+            componentID: 9558a962455517a8
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.26.11
+            componentType: go-module
+            componentLocation: /usr/bin/argocd-image-updater
+            scanner: grype
+
   - id: CGA-pv28-fqqh-4xj7
     aliases:
       - CVE-2024-10220
