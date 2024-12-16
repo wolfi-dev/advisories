@@ -233,6 +233,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-m8hr-4jrh-j292
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T07:05:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: bom
+            componentID: a5879b929a6eff94
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/bom
+            scanner: grype
+      - timestamp: 2024-12-13T10:24:13Z
+        type: fixed
+        data:
+          fixed-version: 0.6.0-r11
+
   - id: CGA-pwgv-86p9-qc78
     aliases:
       - CVE-2024-24787

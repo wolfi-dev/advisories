@@ -113,3 +113,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.9.2-r1
+
+  - id: CGA-vh6q-382j-gphg
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T07:07:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-events
+            componentID: bc7d58d04d71a98f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/argo-events
+            scanner: grype
+      - timestamp: 2024-12-12T11:29:07Z
+        type: fixed
+        data:
+          fixed-version: 1.9.3-r1

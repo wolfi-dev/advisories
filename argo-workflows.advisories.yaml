@@ -102,6 +102,28 @@ advisories:
             componentLocation: /usr/lib/argo-workflows-ui/ui/node_modules/send/package.json
             scanner: grype
 
+  - id: CGA-5vg8-mq5j-wg95
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T07:24:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-workflows
+            componentID: 49af56dfcd7b199a
+            componentName: golang.org/x/crypto
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/workflow-controller
+            scanner: grype
+      - timestamp: 2024-12-14T07:36:28Z
+        type: fixed
+        data:
+          fixed-version: 3.6.2-r1
+
   - id: CGA-677p-5hf2-fq8p
     aliases:
       - GHSA-2jcg-qqmg-46q6
@@ -223,6 +245,28 @@ advisories:
             componentType: npm
             componentLocation: /usr/lib/argo-workflows-ui/ui/node_modules/express/package.json
             scanner: grype
+
+  - id: CGA-7vgc-xh8x-76q3
+    aliases:
+      - CVE-2024-53862
+      - GHSA-h36c-m3rf-34h9
+    events:
+      - timestamp: 2024-12-03T10:40:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-workflows
+            componentID: 4aba9571343b31de
+            componentName: github.com/argoproj/argo-workflows/v3
+            componentVersion: v3.6.0
+            componentType: go-module
+            componentLocation: /usr/bin/argo
+            scanner: grype
+      - timestamp: 2024-12-04T14:34:28Z
+        type: fixed
+        data:
+          fixed-version: 3.6.2-r0
 
   - id: CGA-7x65-24gc-h66m
     aliases:
@@ -822,6 +866,28 @@ advisories:
             componentType: npm
             componentLocation: /usr/lib/argo-workflows-ui/ui/node_modules/sane/node_modules/braces/package.json
             scanner: grype
+
+  - id: CGA-wwx6-ggqg-hrxj
+    aliases:
+      - CVE-2024-52798
+      - GHSA-rhx6-c78j-4q9w
+    events:
+      - timestamp: 2024-12-06T08:36:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-workflows
+            componentID: 15ad1b285835f145
+            componentName: path-to-regexp
+            componentVersion: 0.1.10
+            componentType: npm
+            componentLocation: /usr/lib/argo-workflows-ui/ui/node_modules/path-to-regexp/package.json
+            scanner: grype
+      - timestamp: 2024-12-14T07:36:27Z
+        type: fixed
+        data:
+          fixed-version: 3.6.2-r1
 
   - id: CGA-x5fj-mf5j-g2mx
     aliases:

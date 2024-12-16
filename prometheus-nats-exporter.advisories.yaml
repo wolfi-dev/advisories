@@ -195,3 +195,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.15.0-r3
+
+  - id: CGA-xg63-rghc-rjx3
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T10:11:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-nats-exporter
+            componentID: 50e485fb9dd8eea1
+            componentName: golang.org/x/crypto
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus-nats-exporter
+            scanner: grype
+      - timestamp: 2024-12-12T18:14:32Z
+        type: fixed
+        data:
+          fixed-version: 0.16.0-r1

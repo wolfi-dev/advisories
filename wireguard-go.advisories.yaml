@@ -132,6 +132,28 @@ advisories:
         data:
           fixed-version: 0.0.20230223-r15
 
+  - id: CGA-9mx9-7g57-cxgr
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T11:18:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wireguard-go
+            componentID: 645ccd93b8d563e0
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/wireguard-go
+            scanner: grype
+      - timestamp: 2024-12-12T21:08:40Z
+        type: fixed
+        data:
+          fixed-version: 0.0.20230223-r16
+
   - id: CGA-9v82-pc88-mfrw
     aliases:
       - CVE-2023-45290

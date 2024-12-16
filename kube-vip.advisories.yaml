@@ -4,6 +4,28 @@ package:
   name: kube-vip
 
 advisories:
+  - id: CGA-4xpw-4r3f-2jwj
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T08:20:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-vip
+            componentID: 2fa235668c616edc
+            componentName: golang.org/x/crypto
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-vip
+            scanner: grype
+      - timestamp: 2024-12-12T12:42:01Z
+        type: fixed
+        data:
+          fixed-version: 0.8.7-r1
+
   - id: CGA-7x98-92fj-pqx7
     aliases:
       - CVE-2024-24790

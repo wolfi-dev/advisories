@@ -4,6 +4,48 @@ package:
   name: starship
 
 advisories:
+  - id: CGA-5683-79rw-5g8w
+    aliases:
+      - CVE-2024-12224
+      - GHSA-h97m-ww89-6jmq
+    events:
+      - timestamp: 2024-12-10T13:03:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: starship
+            componentID: 139aa8b2934a171f
+            componentName: idna
+            componentVersion: 0.5.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/starship
+            scanner: grype
+
+  - id: CGA-5w43-vvgj-p984
+    aliases:
+      - GHSA-wwq9-3cpr-mm53
+    events:
+      - timestamp: 2024-12-05T10:22:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: starship
+            componentID: 0fc32554b6db0471
+            componentName: hashbrown
+            componentVersion: 0.15.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/starship
+            scanner: grype
+      - timestamp: 2024-12-07T19:57:12Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            starship currently depends on multiple versions of hashbrown - v12.x , v14.x and v15.x.
+            We can't bump the earlier versions to the latest v15.x streams, as the project explicitly depends on multiple versions.
+            Waiting for fix from upstream. Ref: https://github.com/starship/starship/blob/v1.21.1/Cargo.lock#L1490-L1510
+
   - id: CGA-685m-5372-7jmp
     aliases:
       - CVE-2024-45405

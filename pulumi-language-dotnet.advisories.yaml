@@ -224,6 +224,28 @@ advisories:
         data:
           fixed-version: 3.59.0-r3
 
+  - id: CGA-v8v3-cqgr-3v6f
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T21:02:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pulumi-language-dotnet
+            componentID: 57d883c26dbfdcfb
+            componentName: golang.org/x/crypto
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/pulumi-language-dotnet
+            scanner: grype
+      - timestamp: 2024-12-13T15:41:34Z
+        type: fixed
+        data:
+          fixed-version: 3.71.0-r1
+
   - id: CGA-xgf8-prq5-vrvj
     aliases:
       - CVE-2024-24789

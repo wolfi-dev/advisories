@@ -120,6 +120,28 @@ advisories:
         data:
           fixed-version: 0.34.1-r1
 
+  - id: CGA-92jg-f62g-rx9g
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T18:13:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: thanos
+            componentID: 4407d2e67f57448f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/thanos
+            scanner: grype
+      - timestamp: 2024-12-14T17:08:02Z
+        type: fixed
+        data:
+          fixed-version: 0.37.2-r1
+
   - id: CGA-gq22-qmjg-x6rf
     aliases:
       - CVE-2024-24788

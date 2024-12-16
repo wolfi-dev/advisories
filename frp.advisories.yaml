@@ -165,6 +165,50 @@ advisories:
         data:
           fixed-version: 0.53.2-r1
 
+  - id: CGA-j8wr-h729-hp3x
+    aliases:
+      - CVE-2024-53259
+      - GHSA-px8v-pp82-rcvr
+    events:
+      - timestamp: 2024-12-03T10:19:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: frp
+            componentID: c93d961061ef458d
+            componentName: github.com/quic-go/quic-go
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/frpc
+            scanner: grype
+      - timestamp: 2024-12-09T16:45:30Z
+        type: fixed
+        data:
+          fixed-version: 0.61.0-r1
+
+  - id: CGA-mpqp-fr27-g8q3
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T09:29:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: frp
+            componentID: fcc955c17d3c3455
+            componentName: golang.org/x/crypto
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/frpc
+            scanner: grype
+      - timestamp: 2024-12-12T18:23:21Z
+        type: fixed
+        data:
+          fixed-version: 0.61.0-r2
+
   - id: CGA-p6hj-fwmg-8cvm
     aliases:
       - CVE-2024-24786

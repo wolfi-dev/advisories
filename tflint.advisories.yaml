@@ -227,6 +227,28 @@ advisories:
         data:
           fixed-version: 0.51.1-r2
 
+  - id: CGA-vjpm-5vg7-g4j3
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T21:10:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tflint
+            componentID: 47c2c1b1133b0894
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/tflint
+            scanner: grype
+      - timestamp: 2024-12-13T16:20:26Z
+        type: fixed
+        data:
+          fixed-version: 0.54.0-r1
+
   - id: CGA-vrcj-6q58-r447
     aliases:
       - CVE-2023-45289

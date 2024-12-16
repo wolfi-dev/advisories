@@ -220,6 +220,28 @@ advisories:
         data:
           fixed-version: 4.2.0-r8
 
+  - id: CGA-f2v8-4gm9-9cg4
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T07:06:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: amass
+            componentID: d99d5e1dc5ee0caf
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/amass
+            scanner: grype
+      - timestamp: 2024-12-12T11:27:19Z
+        type: fixed
+        data:
+          fixed-version: 4.2.0-r14
+
   - id: CGA-gfg9-3r2c-93h9
     aliases:
       - CVE-2024-24783

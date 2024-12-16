@@ -35,6 +35,28 @@ advisories:
         data:
           fixed-version: 2.1.0-r2
 
+  - id: CGA-7mp3-fw8m-fj56
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T08:35:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-manager-cmctl
+            componentID: ef4a6d7e46425d21
+            componentName: golang.org/x/crypto
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/cmctl
+            scanner: grype
+      - timestamp: 2024-12-12T17:10:11Z
+        type: fixed
+        data:
+          fixed-version: 2.1.1-r2
+
   - id: CGA-j894-rcfx-pjc4
     aliases:
       - CVE-2024-41110

@@ -36,6 +36,24 @@ advisories:
         data:
           fixed-version: 3.96.0-r0
 
+  - id: CGA-67x2-5g2x-9pvm
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T16:34:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-azurerm
+            componentID: 9ea230d4eb011a56
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-azurerm
+            scanner: grype
+
   - id: CGA-85pf-gj63-5xcv
     aliases:
       - CVE-2024-34158
