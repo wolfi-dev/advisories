@@ -726,3 +726,21 @@ advisories:
         type: pending-upstream-fix
         data:
           note: The dependency responsible for this CVE is a transitive dependency where the version of said dependency is not explicitly defined in the project but rather brought in under the hadoop-client-runtime jar. This requires upstream maintainers to implement a fix.
+
+  - id: CGA-xrrx-ff7q-346j
+    aliases:
+      - CVE-2024-8184
+      - GHSA-g8m5-722r-8whq
+    events:
+      - timestamp: 2024-12-17T12:10:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: da89e80c628306a3
+            componentName: jetty-server
+            componentVersion: 9.4.52.v20230823
+            componentType: java-archive
+            componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/spark-core_2.13-3.5.3.jar
+            scanner: grype
