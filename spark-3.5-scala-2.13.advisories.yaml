@@ -687,6 +687,24 @@ advisories:
         data:
           note: 'The dependency responsible for this CVE is a transitive dependency where the version of said dependency is not explicitly defined in the project but rather brought in under the hadoop-client-runtime jar. This requires upstream maintainers to implement a fix. '
 
+  - id: CGA-wm3r-r32c-m93r
+    aliases:
+      - CVE-2020-13949
+      - GHSA-g2fg-mr77-6vrm
+    events:
+      - timestamp: 2024-12-17T12:10:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: f60f3eb47fc6c430
+            componentName: libthrift
+            componentVersion: 0.12.0
+            componentType: java-archive
+            componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/libthrift-0.12.0.jar
+            scanner: grype
+
   - id: CGA-x64f-h9cm-wv76
     aliases:
       - CVE-2022-2047
