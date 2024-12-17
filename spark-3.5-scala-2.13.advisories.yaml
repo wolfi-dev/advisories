@@ -362,6 +362,24 @@ advisories:
         data:
           note: The dependency responsible for this CVE is a transitive dependency where the version of said dependency is not explicitly defined in the project but rather brought in under the hadoop-client-runtime jar. This requires upstream maintainers to implement a fix.
 
+  - id: CGA-99mx-25gg-f2q5
+    aliases:
+      - CVE-2018-10237
+      - GHSA-mvr2-9pj6-7w5j
+    events:
+      - timestamp: 2024-12-17T01:01:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: b02a2a4806fec2e3
+            componentName: guava
+            componentVersion: 14.0.1
+            componentType: java-archive
+            componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/guava-14.0.1.jar
+            scanner: grype
+
   - id: CGA-9g23-pgwc-p32g
     aliases:
       - CVE-2022-36944
