@@ -175,6 +175,24 @@ advisories:
         data:
           note: The dependency responsible for this CVE is a transitive dependency where the version of said dependency is not explicitly defined in the project but rather brought in under the hadoop-client-runtime jar. This requires upstream maintainers to implement a fix.
 
+  - id: CGA-7mgp-57h7-566c
+    aliases:
+      - CVE-2024-29025
+      - GHSA-5jpm-x58v-624v
+    events:
+      - timestamp: 2024-12-17T12:09:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: c22abcb350512607
+            componentName: netty-codec-http
+            componentVersion: 4.1.96.Final
+            componentType: java-archive
+            componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/netty-codec-http-4.1.96.Final.jar
+            scanner: grype
+
   - id: CGA-95rq-pqfg-9383
     aliases:
       - CVE-2024-47554
