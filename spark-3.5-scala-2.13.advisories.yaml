@@ -227,6 +227,15 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/netty-codec-http-4.1.96.Final.jar
             scanner: grype
+      - timestamp: 2024-12-17T22:26:10Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            This vulnerability relates to 'netty-codec-http', which is used by one of spark's other dependencies - pyspark.
+            pyspark copies a number of jar's from the spark build process, one of those being 'netty-codec-http'.
+            This has been fixed in netty > v4.1.108, and spark has upgraded to a later version in main.
+            However, attempts to backport this upgrade in this release of spark, result in build failures.
+            Awaiting for fix / backport from upstream to address this issue.
 
   - id: CGA-86x3-7p58-9qhp
     aliases:
