@@ -742,6 +742,24 @@ advisories:
         data:
           note: This relates to json-smart v1.3.2 included by the shaded JAR hadoop-client-runtime-3.3.4.jar. There are no newer versions of this shaded JAR available to fix the vulnerability.
 
+  - id: CGA-pxx7-7x8p-vcp9
+    aliases:
+      - CVE-2022-46751
+      - GHSA-2jc4-r94c-rp7h
+    events:
+      - timestamp: 2024-12-17T01:00:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: 1e18d09ac1baf17b
+            componentName: ivy
+            componentVersion: 2.5.1
+            componentType: java-archive
+            componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/ivy-2.5.1.jar
+            scanner: grype
+
   - id: CGA-qmj2-q7px-44mh
     aliases:
       - CVE-2022-42003
