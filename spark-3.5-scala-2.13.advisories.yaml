@@ -26,6 +26,24 @@ advisories:
         data:
           note: The dependency responsible for this CVE is a transitive dependency where the version of said dependency is not explicitly defined in the project but rather brought in under the hadoop-client-runtime jar. This requires upstream maintainers to implement a fix.
 
+  - id: CGA-2h4j-4pw4-rjhj
+    aliases:
+      - CVE-2022-46337
+      - GHSA-rcjc-c4pj-xxrp
+    events:
+      - timestamp: 2024-12-17T01:02:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: 200af9573e83185e
+            componentName: derby
+            componentVersion: 10.14.2.0
+            componentType: java-archive
+            componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/derby-10.14.2.0.jar
+            scanner: grype
+
   - id: CGA-45m6-3663-vmrw
     aliases:
       - CVE-2022-3510
