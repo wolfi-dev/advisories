@@ -25,3 +25,47 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.12.0-r1
+
+  - id: CGA-hj2q-98gh-8q5c
+    aliases:
+      - CVE-2024-55885
+      - GHSA-9j3m-fr7q-jxfw
+    events:
+      - timestamp: 2024-12-13T12:31:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-2.12
+            componentID: 2110c8262ad730dd
+            componentName: github.com/beego/beego/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-jobservice
+            scanner: grype
+      - timestamp: 2024-12-14T11:10:17Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability requires a new release of the Harbor. Harbor 2.12.0 is not compatible with the github.com/beego/beego/v2@v2.3.4 yet.
+
+  - id: CGA-qxv3-8352-vrq5
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T10:08:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-2.12
+            componentID: 9dc90eff15bce3ad
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-core
+            scanner: grype
+      - timestamp: 2024-12-12T17:26:40Z
+        type: fixed
+        data:
+          fixed-version: 2.12.0-r2

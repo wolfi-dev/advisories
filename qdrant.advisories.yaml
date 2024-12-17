@@ -20,6 +20,14 @@ advisories:
             componentType: rust-crate
             componentLocation: /usr/bin/qdrant
             scanner: grype
+      - timestamp: 2024-12-08T08:52:38Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            qdrant currently depends on multiple versions of pprof - v0.12.x and v0.13.x.
+            Remediating this vulnerability would require removing dependencies on the older versions.
+            Given that multiple versions are intentionally defined, waiting for upstream to upgrade this dependency.
+            Ref: https://github.com/qdrant/qdrant/blob/v1.12.4/Cargo.lock#L4476-L4519
 
   - id: CGA-c6v5-62wh-j5x5
     aliases:
@@ -61,6 +69,24 @@ advisories:
         data:
           fixed-version: 1.11.0-r0
 
+  - id: CGA-hxqc-vvc2-qmhw
+    aliases:
+      - CVE-2024-12224
+      - GHSA-h97m-ww89-6jmq
+    events:
+      - timestamp: 2024-12-10T13:12:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: qdrant
+            componentID: 92b0685dc6594df5
+            componentName: idna
+            componentVersion: 0.5.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/qdrant
+            scanner: grype
+
   - id: CGA-mmm5-8q9j-5wvr
     aliases:
       - CVE-2024-45311
@@ -99,6 +125,18 @@ advisories:
             componentType: rust-crate
             componentLocation: /usr/bin/qdrant
             scanner: grype
+      - timestamp: 2024-12-08T08:52:38Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            qdrant currently depends on multiple versions of rustls - v0.21.x, v0.22.x and v0.23.x.
+            Remediating this vulnerability would require removing dependencies on the older versions.
+            Given multiple versions are intentionally defined, waiting for upstream to upgrade this dependency.
+            Ref: https://github.com/qdrant/qdrant/blob/v1.12.4/Cargo.lock#L4476-L4519
+      - timestamp: 2024-12-09T18:00:40Z
+        type: fixed
+        data:
+          fixed-version: 1.12.5-r0
 
   - id: CGA-v422-6gmm-2v22
     aliases:
@@ -116,6 +154,18 @@ advisories:
             componentType: rust-crate
             componentLocation: /usr/bin/qdrant
             scanner: grype
+      - timestamp: 2024-12-08T08:49:12Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            qdrant currently depends on multiple versions of hashbrown - v12.x , v14.x and v15.x.
+            Remediating this vulnerability would require removing dependencies on the older versions.
+            Given that multiple versions are intentionally defined, waiting for upstream to upgrade this dependency.
+            Waiting for fix from upstream. Ref: https://github.com/qdrant/qdrant/blob/v1.12.4/Cargo.lock#L2479-L2499
+      - timestamp: 2024-12-09T18:00:41Z
+        type: fixed
+        data:
+          fixed-version: 1.12.5-r0
 
   - id: CGA-vghx-m9qr-wvfv
     aliases:

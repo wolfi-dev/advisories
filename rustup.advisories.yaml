@@ -48,3 +48,21 @@ advisories:
             Remediating this vulnerability requires upgrading the 'openssl' crate to 0.10.66 or later.
             Unfortunately, we are not able to upgrade this dependency, without build compilation issues.
             Pending fix from upstream.
+
+  - id: CGA-p8wq-c9m5-j8f3
+    aliases:
+      - CVE-2024-12224
+      - GHSA-h97m-ww89-6jmq
+    events:
+      - timestamp: 2024-12-10T12:07:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rustup
+            componentID: 616c2fe07d35f182
+            componentName: idna
+            componentVersion: 0.5.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/rustup-init
+            scanner: grype

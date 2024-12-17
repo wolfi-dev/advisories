@@ -33,6 +33,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-47xh-5xr2-gqmx
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T07:08:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ipfs
+            componentID: e11b3e3b26019361
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/ipfs
+            scanner: grype
+      - timestamp: 2024-12-12T14:16:46Z
+        type: fixed
+        data:
+          fixed-version: 0.32.1-r2
+
   - id: CGA-64p8-8q49-8rpc
     aliases:
       - CVE-2023-45142

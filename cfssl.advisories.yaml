@@ -88,6 +88,28 @@ advisories:
         data:
           fixed-version: 1.6.5-r2
 
+  - id: CGA-7hxm-pppp-2962
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T09:15:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cfssl
+            componentID: 820a0f42c2f545ee
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/cfssl-certinfo
+            scanner: grype
+      - timestamp: 2024-12-12T16:00:38Z
+        type: fixed
+        data:
+          fixed-version: 1.6.5-r11
+
   - id: CGA-8f4p-xvjr-rg6g
     aliases:
       - CVE-2023-45290

@@ -48,6 +48,28 @@ advisories:
         data:
           fixed-version: 0.3.5-r1
 
+  - id: CGA-qp7g-84hh-mw3r
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T10:36:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: fscrypt
+            componentID: 334636b22ef9ab54
+            componentName: golang.org/x/crypto
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/fscrypt
+            scanner: grype
+      - timestamp: 2024-12-12T19:15:29Z
+        type: fixed
+        data:
+          fixed-version: 0.3.5-r3
+
   - id: CGA-vpgg-7gfh-5rf7
     aliases:
       - CVE-2024-34158

@@ -148,3 +148,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.9.2-r1
+
+  - id: CGA-xm22-gv2v-8724
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T14:01:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: step-issuer
+            componentID: 709e464319060510
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/step-issuer
+            scanner: grype
+      - timestamp: 2024-12-13T03:45:01Z
+        type: fixed
+        data:
+          fixed-version: 0.9.6-r1

@@ -122,6 +122,28 @@ advisories:
         data:
           fixed-version: 1.5.0-r1
 
+  - id: CGA-r53h-8h6c-7rw7
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T22:06:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spqr
+            componentID: 8bb1378bc5f8bdfa
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/spqr-balancer
+            scanner: grype
+      - timestamp: 2024-12-13T21:36:02Z
+        type: fixed
+        data:
+          fixed-version: 2.1.0-r1
+
   - id: CGA-w84r-xqxc-pcx6
     aliases:
       - CVE-2024-24790

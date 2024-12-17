@@ -248,6 +248,28 @@ advisories:
             componentLocation: /bin/buildah
             scanner: grype
 
+  - id: CGA-rm3g-prjv-vvq6
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T07:02:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buildah
+            componentID: c6c881d4b63fc6a0
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /bin/buildah
+            scanner: grype
+      - timestamp: 2024-12-13T08:01:19Z
+        type: fixed
+        data:
+          fixed-version: 1.38.0-r1
+
   - id: CGA-w3x9-fj4v-fj48
     aliases:
       - CVE-2024-34158

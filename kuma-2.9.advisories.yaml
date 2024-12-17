@@ -4,6 +4,28 @@ package:
   name: kuma-2.9
 
 advisories:
+  - id: CGA-58rr-49pg-c9mr
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T11:34:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kuma-2.9
+            componentID: 3ee13a32c076fa51
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/kumactl
+            scanner: grype
+      - timestamp: 2024-12-13T11:04:46Z
+        type: fixed
+        data:
+          fixed-version: 2.9.2-r1
+
   - id: CGA-9347-j92r-7489
     aliases:
       - CVE-2024-51744

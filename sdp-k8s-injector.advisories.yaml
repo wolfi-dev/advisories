@@ -46,3 +46,21 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Manually updating the tls-listener crate to a fixed version (v0.10.0) causes a build failure. The update and the corresponding code changes need to be done upstream.
+
+  - id: CGA-xj5v-v38v-3pmg
+    aliases:
+      - CVE-2024-12224
+      - GHSA-h97m-ww89-6jmq
+    events:
+      - timestamp: 2024-12-10T13:14:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sdp-k8s-injector
+            componentID: 5bded76a2b944694
+            componentName: idna
+            componentVersion: 0.5.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/sdp-injector
+            scanner: grype

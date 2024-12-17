@@ -260,6 +260,28 @@ advisories:
         data:
           fixed-version: 3.6.0-r12
 
+  - id: CGA-vwvm-2vhv-p5q7
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T08:16:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gobuster
+            componentID: 0247b61cc40e79f7
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/gobuster
+            scanner: grype
+      - timestamp: 2024-12-12T12:20:30Z
+        type: fixed
+        data:
+          fixed-version: 3.6.0-r15
+
   - id: CGA-wcpm-f328-p4gm
     aliases:
       - CVE-2023-44487

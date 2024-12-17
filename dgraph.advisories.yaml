@@ -516,6 +516,28 @@ advisories:
         data:
           fixed-version: 23.1.0-r5
 
+  - id: CGA-wcrw-4592-hcjq
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T07:16:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dgraph
+            componentID: 4ec8634c8128575d
+            componentName: golang.org/x/crypto
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/dgraph
+            scanner: grype
+      - timestamp: 2024-12-12T16:21:28Z
+        type: fixed
+        data:
+          fixed-version: 24.0.5-r1
+
   - id: CGA-x34v-r8fw-vwjq
     aliases:
       - CVE-2024-24784

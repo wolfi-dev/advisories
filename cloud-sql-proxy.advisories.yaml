@@ -161,6 +161,28 @@ advisories:
         data:
           fixed-version: 2.7.0-r1
 
+  - id: CGA-q3gf-j58r-8449
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T08:02:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-sql-proxy
+            componentID: e6b3d8aff3d9067e
+            componentName: golang.org/x/crypto
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/cloud-sql-proxy
+            scanner: grype
+      - timestamp: 2024-12-12T11:23:27Z
+        type: fixed
+        data:
+          fixed-version: 2.14.2-r1
+
   - id: CGA-vcf3-x373-xvwj
     aliases:
       - CVE-2024-24791

@@ -4,6 +4,28 @@ package:
   name: prometheus-adapter
 
 advisories:
+  - id: CGA-2h6c-ggxq-885c
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T13:21:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-adapter
+            componentID: 58b51da7b2f46136
+            componentName: golang.org/x/crypto
+            componentVersion: v0.22.0
+            componentType: go-module
+            componentLocation: /usr/bin/adapter
+            scanner: grype
+      - timestamp: 2024-12-13T04:00:52Z
+        type: fixed
+        data:
+          fixed-version: 0.12.0-r4
+
   - id: CGA-6q8v-hmw3-xp99
     aliases:
       - CVE-2024-24790

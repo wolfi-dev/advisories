@@ -409,6 +409,28 @@ advisories:
         data:
           fixed-version: 0.10.2-r7
 
+  - id: CGA-vh32-h495-m545
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T10:33:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitsign
+            componentID: 2d5ce89f45d3b0a0
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitsign
+            scanner: grype
+      - timestamp: 2024-12-12T19:00:41Z
+        type: fixed
+        data:
+          fixed-version: 0.11.0-r2
+
   - id: CGA-vhvw-4cmq-jvrp
     aliases:
       - GHSA-9763-4f94-gfch

@@ -307,6 +307,28 @@ advisories:
         data:
           fixed-version: 0.22.0-r1
 
+  - id: CGA-qwf9-5xrv-v47m
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T17:23:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tekton-chains
+            componentID: 6a4654625eff697a
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/tekton-chains
+            scanner: grype
+      - timestamp: 2024-12-13T18:42:37Z
+        type: fixed
+        data:
+          fixed-version: 0.23.0-r1
+
   - id: CGA-r26g-xfxj-353j
     aliases:
       - CVE-2024-24791

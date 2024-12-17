@@ -46,6 +46,28 @@ advisories:
         data:
           fixed-version: 0.0.30-r2
 
+  - id: CGA-fv6c-cmvh-7rwg
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T12:07:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sbomqs
+            componentID: f7edf27f3c477713
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/sbomqs
+            scanner: grype
+      - timestamp: 2024-12-13T08:07:24Z
+        type: fixed
+        data:
+          fixed-version: 0.2.3-r1
+
   - id: CGA-gcp8-9fxr-gr7m
     aliases:
       - CVE-2024-34158

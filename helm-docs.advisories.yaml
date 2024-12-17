@@ -4,6 +4,28 @@ package:
   name: helm-docs
 
 advisories:
+  - id: CGA-22m6-2hv7-7wqc
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T13:40:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-docs
+            componentID: 8449caadd7f284aa
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/helm-docs
+            scanner: grype
+      - timestamp: 2024-12-13T10:27:34Z
+        type: fixed
+        data:
+          fixed-version: 1.14.2-r3
+
   - id: CGA-3gcw-82cr-xwhg
     aliases:
       - CVE-2024-34155

@@ -222,6 +222,28 @@ advisories:
         data:
           fixed-version: 0.2.6-r6
 
+  - id: CGA-q3qg-5fvw-744j
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T10:37:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kaf
+            componentID: 7159e0271b0b782b
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/kaf
+            scanner: grype
+      - timestamp: 2024-12-12T19:18:01Z
+        type: fixed
+        data:
+          fixed-version: 0.2.8-r7
+
   - id: CGA-r5hp-j25h-6365
     aliases:
       - CVE-2023-39325

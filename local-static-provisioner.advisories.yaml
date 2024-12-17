@@ -48,6 +48,28 @@ advisories:
         data:
           fixed-version: 2.7.0-r7
 
+  - id: CGA-6v78-xcp2-pvj8
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T15:29:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: local-static-provisioner
+            componentID: b2d5c44335fd2d69
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/local-provisioner
+            scanner: grype
+      - timestamp: 2024-12-13T05:08:48Z
+        type: fixed
+        data:
+          fixed-version: 2.7.0-r8
+
   - id: CGA-8frv-vqqv-wgfj
     aliases:
       - CVE-2020-8559
@@ -135,6 +157,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/local-provisioner
             scanner: grype
+      - timestamp: 2024-12-13T05:08:47Z
+        type: fixed
+        data:
+          fixed-version: 2.7.0-r8
 
   - id: CGA-m45j-9r9h-352w
     aliases:

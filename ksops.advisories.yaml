@@ -24,6 +24,28 @@ advisories:
         data:
           fixed-version: 4.3.1-r3
 
+  - id: CGA-4rcv-353x-8h7c
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T07:20:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ksops
+            componentID: a35365a477d6ea84
+            componentName: golang.org/x/crypto
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/ksops
+            scanner: grype
+      - timestamp: 2024-12-12T17:05:50Z
+        type: fixed
+        data:
+          fixed-version: 4.3.2-r4
+
   - id: CGA-6fp2-m26p-6vqj
     aliases:
       - CVE-2024-24788

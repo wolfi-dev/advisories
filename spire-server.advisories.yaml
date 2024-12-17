@@ -384,6 +384,28 @@ advisories:
             Pending fix from upstream, which will involve removing their dependency on the depreciated version.
             Related information: https://github.com/github/advisory-database/pull/4893.
 
+  - id: CGA-v452-6jxf-3ccc
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T20:14:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spire-server
+            componentID: 70e9603055d53930
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/oidc-discovery-provider
+            scanner: grype
+      - timestamp: 2024-12-12T23:04:00Z
+        type: fixed
+        data:
+          fixed-version: 1.11.1-r0
+
   - id: CGA-w383-9wx6-9qwj
     aliases:
       - GHSA-9763-4f94-gfch

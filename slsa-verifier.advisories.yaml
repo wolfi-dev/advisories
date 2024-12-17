@@ -419,6 +419,28 @@ advisories:
         data:
           fixed-version: 2.4.1-r2
 
+  - id: CGA-j79j-mmh8-xg6w
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T08:31:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: slsa-verifier
+            componentID: 8da6046e174f8e4d
+            componentName: golang.org/x/crypto
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/slsa-verifier
+            scanner: grype
+      - timestamp: 2024-12-12T14:00:48Z
+        type: fixed
+        data:
+          fixed-version: 2.6.0-r6
+
   - id: CGA-jfmq-h56g-gvj2
     aliases:
       - GHSA-9763-4f94-gfch

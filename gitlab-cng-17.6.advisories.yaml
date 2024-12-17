@@ -1,0 +1,63 @@
+schema-version: 2.0.2
+
+package:
+  name: gitlab-cng-17.6
+
+advisories:
+  - id: CGA-hp26-6px8-www7
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T09:13:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-cng-17.6
+            componentID: 404b8d45eba5d15b
+            componentName: golang.org/x/crypto
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /srv/gitlab-shell/bin/gitlab-sshd
+            scanner: grype
+      - timestamp: 2024-12-17T00:10:21Z
+        type: fixed
+        data:
+          fixed-version: 17.6.0-r2
+
+  - id: CGA-qwr2-296x-fxhx
+    aliases:
+      - CVE-2024-45614
+      - GHSA-9hf4-67fc-4vf4
+    events:
+      - timestamp: 2024-12-09T16:39:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-cng-17.6
+            componentID: a1828d3537c9f344
+            componentName: puma
+            componentVersion: 5.6.8
+            componentType: gem
+            componentLocation: /usr/lib/ruby/gems/3.2.0/specifications/puma-5.6.8.gemspec
+            scanner: grype
+
+  - id: CGA-vvw2-vc5h-cmrj
+    aliases:
+      - CVE-2024-21510
+      - GHSA-hxx2-7vcw-mqr3
+    events:
+      - timestamp: 2024-12-09T16:39:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-cng-17.6
+            componentID: 77233ea61077972c
+            componentName: sinatra
+            componentVersion: 2.2.4
+            componentType: gem
+            componentLocation: /usr/lib/ruby/gems/3.2.0/specifications/sinatra-2.2.4.gemspec
+            scanner: grype
