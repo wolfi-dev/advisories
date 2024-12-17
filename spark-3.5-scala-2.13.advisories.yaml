@@ -526,6 +526,23 @@ advisories:
         data:
           note: This relates to protobuf-java v3.7.1 included by the hadoop-client-runtime-3.3.4.jar. There are no newer versions of these shaded JARs available to fix the vulnerability.
 
+  - id: CGA-fhq5-cpq2-jr9c
+    aliases:
+      - GHSA-xpw8-rcwv-8f8p
+    events:
+      - timestamp: 2024-12-17T01:02:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: 4ef4cfe177f6b1a4
+            componentName: netty-codec-http2
+            componentVersion: 4.1.96.Final
+            componentType: java-archive
+            componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/netty-codec-http2-4.1.96.Final.jar
+            scanner: grype
+
   - id: CGA-fq2m-vp93-v8gm
     aliases:
       - CVE-2021-37533
