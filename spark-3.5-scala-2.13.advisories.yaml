@@ -123,6 +123,24 @@ advisories:
         data:
           note: This relates to commons-compress 1.21 included by the shaded JARs hadoop-client-runtime-3.3.4.jar. There are no newer versions of the shaded JARs available to fix the vulnerability.
 
+  - id: CGA-4wr8-3pj8-m8c2
+    aliases:
+      - CVE-2019-0205
+      - GHSA-rj7p-rfgp-852x
+    events:
+      - timestamp: 2024-12-17T01:02:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: f60f3eb47fc6c430
+            componentName: libthrift
+            componentVersion: 0.12.0
+            componentType: java-archive
+            componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/libthrift-0.12.0.jar
+            scanner: grype
+
   - id: CGA-56ph-vwr9-h9cf
     aliases:
       - GHSA-58qw-p7qm-5rvh
