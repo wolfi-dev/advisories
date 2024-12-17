@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: apache-pulsar
+
+advisories:
+  - id: CGA-3mr5-vjhc-vp3x
+    aliases:
+      - CVE-2024-53990
+      - GHSA-mfj5-cf8g-g2fv
+    events:
+      - timestamp: 2024-12-17T21:08:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-pulsar
+            componentID: d9d962ed5f911dfc
+            componentName: async-http-client
+            componentVersion: 2.12.1
+            componentType: java-archive
+            componentLocation: /usr/share/java/pulsar/lib/org.asynchttpclient-async-http-client-2.12.1.jar
+            scanner: grype
