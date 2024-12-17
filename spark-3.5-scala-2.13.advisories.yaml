@@ -507,6 +507,24 @@ advisories:
         data:
           note: This relates to protobuf-java v3.7.1 included by hadoop-client-runtime-3.3.4.jar. There are no newer versions of these shaded JARs available to fix the vulnerability.
 
+  - id: CGA-gxvv-v998-c384
+    aliases:
+      - CVE-2022-46337
+      - GHSA-rcjc-c4pj-xxrp
+    events:
+      - timestamp: 2024-12-17T12:11:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: 200af9573e83185e
+            componentName: derby
+            componentVersion: 10.14.2.0
+            componentType: java-archive
+            componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/derby-10.14.2.0.jar
+            scanner: grype
+
   - id: CGA-hcx6-4xcx-96pr
     aliases:
       - CVE-2023-2976
