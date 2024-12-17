@@ -625,6 +625,24 @@ advisories:
         data:
           note: This relates to commons-configuration2 2.1.1 included by the shaded JARs hadoop-client-runtime-3.3.4.jar. Spark is planning an upgrade to Hadoop 3.4.0 for Spark 4.0.0, but as of today, the shaded JAR for Hadoop 3.4.0 still includes this vulnerability.
 
+  - id: CGA-r34h-9qpx-jc57
+    aliases:
+      - CVE-2019-10202
+      - GHSA-c27h-mcmw-48hv
+    events:
+      - timestamp: 2024-12-17T01:01:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: 0fe41f5e205e0c74
+            componentName: jackson-mapper-asl
+            componentVersion: 1.9.13
+            componentType: java-archive
+            componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/jackson-mapper-asl-1.9.13.jar
+            scanner: grype
+
   - id: CGA-v37r-crxx-4j4j
     aliases:
       - CVE-2023-1370
