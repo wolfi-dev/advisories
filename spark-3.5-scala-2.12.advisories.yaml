@@ -4,6 +4,24 @@ package:
   name: spark-3.5-scala-2.12
 
 advisories:
+  - id: CGA-3h6q-7rxp-58mp
+    aliases:
+      - CVE-2023-2976
+      - GHSA-7g45-4rm6-3mm3
+    events:
+      - timestamp: 2024-12-18T02:01:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.12
+            componentID: 8c99a40a1b2617db
+            componentName: guava
+            componentVersion: 30.1.1-jre
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-shaded-guava-1.1.1.jar
+            scanner: grype
+
   - id: CGA-75v9-fc2q-898r
     aliases:
       - CVE-2024-7254
