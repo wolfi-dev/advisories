@@ -88,6 +88,28 @@ advisories:
         data:
           fixed-version: 2.2.22-r4
 
+  - id: CGA-cr82-4fvp-9ch6
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T22:11:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wgcf
+            componentID: 743ce17b17c89ad5
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/wgcf
+            scanner: grype
+      - timestamp: 2024-12-13T18:33:54Z
+        type: fixed
+        data:
+          fixed-version: 2.2.23-r1
+
   - id: CGA-hxhc-x5p6-8q2v
     aliases:
       - CVE-2024-24787

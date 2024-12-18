@@ -21,6 +21,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/agent
             scanner: grype
+      - timestamp: 2024-12-17T22:20:49Z
+        type: fixed
+        data:
+          fixed-version: 2.10.0-r1
 
   - id: CGA-7hqw-pw3h-mpxx
     aliases:
@@ -39,6 +43,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/agent
             scanner: grype
+      - timestamp: 2024-12-17T22:20:48Z
+        type: fixed
+        data:
+          fixed-version: 2.10.0-r1
 
   - id: CGA-82j8-wm64-pc68
     aliases:
@@ -57,6 +65,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/agent
             scanner: grype
+      - timestamp: 2024-12-16T20:40:12Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: govulncheck analysis shows that the github.com/docker/docker golang package is not used by the rancher-agent binary as there are no symbols referenced for the vulnerable code.
 
   - id: CGA-ppx7-757f-46h3
     aliases:
@@ -75,6 +88,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/agent
             scanner: grype
+      - timestamp: 2024-12-16T21:11:42Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: govulncheck analysis shows that the github.com/docker/docker golang package is not used by the rancher-agent binary as there are no symbols referenced for the vulnerable code.
 
   - id: CGA-rmh4-52mg-g8pr
     aliases:
@@ -93,3 +111,30 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/agent
             scanner: grype
+      - timestamp: 2024-12-16T21:07:46Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: govulncheck analysis shows that the github.com/docker/docker golang package is not used by the rancher-agent binary as there are no symbols referenced for the vulnerable code.
+
+  - id: CGA-vrcm-5rpr-rxfp
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T14:27:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-agent-2.10
+            componentID: 12029cf99ac0e767
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/agent
+            scanner: grype
+      - timestamp: 2024-12-17T22:20:47Z
+        type: fixed
+        data:
+          fixed-version: 2.10.0-r1

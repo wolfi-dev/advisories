@@ -117,6 +117,28 @@ advisories:
         data:
           fixed-version: 1.2.0-r3
 
+  - id: CGA-cjfg-46qj-f6v9
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T11:26:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: oras
+            componentID: f4d0595c38a591a7
+            componentName: golang.org/x/crypto
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/oras
+            scanner: grype
+      - timestamp: 2024-12-17T18:29:37Z
+        type: fixed
+        data:
+          fixed-version: 1.2.1-r1
+
   - id: CGA-g8rq-3f7h-37j9
     aliases:
       - CVE-2024-34158

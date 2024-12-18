@@ -136,6 +136,28 @@ advisories:
         data:
           fixed-version: 2.13.0-r1
 
+  - id: CGA-hggw-7f3j-mj95
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T17:28:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-state-metrics
+            componentID: 3d4f6e7014909256
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-state-metrics
+            scanner: grype
+      - timestamp: 2024-12-13T19:37:37Z
+        type: fixed
+        data:
+          fixed-version: 2.14.0-r1
+
   - id: CGA-jqgh-327h-v377
     aliases:
       - CVE-2024-24786

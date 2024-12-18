@@ -58,6 +58,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-722j-p23c-v724
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T11:01:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dns-node-cache
+            componentID: a7aae2ff8b771a08
+            componentName: golang.org/x/crypto
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/node-cache
+            scanner: grype
+      - timestamp: 2024-12-12T20:20:18Z
+        type: fixed
+        data:
+          fixed-version: 1.24.0-r1
+
   - id: CGA-8h4r-qgj9-rq59
     aliases:
       - CVE-2024-34156

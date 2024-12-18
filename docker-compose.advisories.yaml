@@ -78,6 +78,28 @@ advisories:
         data:
           fixed-version: 2.29.1-r0
 
+  - id: CGA-8hrr-jxm5-vpwx
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-13T09:02:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-compose
+            componentID: 27339689815c8f31
+            componentName: golang.org/x/crypto
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/docker-compose
+            scanner: grype
+      - timestamp: 2024-12-13T11:42:29Z
+        type: fixed
+        data:
+          fixed-version: 2.32.0-r0
+
   - id: CGA-9whg-332v-jwx2
     aliases:
       - CVE-2024-24790

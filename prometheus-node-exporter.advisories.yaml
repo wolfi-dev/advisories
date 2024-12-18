@@ -89,6 +89,28 @@ advisories:
         data:
           fixed-version: 1.8.1-r1
 
+  - id: CGA-7h4h-5g3h-xf5f
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T11:43:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-node-exporter
+            componentID: 53c63ad8c523dc82
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/node_exporter
+            scanner: grype
+      - timestamp: 2024-12-13T13:11:54Z
+        type: fixed
+        data:
+          fixed-version: 1.8.2-r3
+
   - id: CGA-89c4-85h9-xh4w
     aliases:
       - CVE-2024-24783

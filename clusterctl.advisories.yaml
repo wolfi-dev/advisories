@@ -94,6 +94,28 @@ advisories:
         data:
           fixed-version: 1.6.3-r0
 
+  - id: CGA-jfpj-xwv7-v2cp
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T12:16:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: clusterctl
+            componentID: c7acfd2da49a51fd
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/clusterctl
+            scanner: grype
+      - timestamp: 2024-12-13T03:24:46Z
+        type: fixed
+        data:
+          fixed-version: 1.9.0-r1
+
   - id: CGA-jvx9-5v2w-c99g
     aliases:
       - CVE-2024-24788

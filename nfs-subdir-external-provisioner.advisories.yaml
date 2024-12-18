@@ -313,3 +313,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 4.0.18-r4
+
+  - id: CGA-rrgc-mj58-j5cc
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T15:26:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nfs-subdir-external-provisioner
+            componentID: 2d51d25a25daf12d
+            componentName: golang.org/x/crypto
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/nfs-subdir-external-provisioner
+            scanner: grype
