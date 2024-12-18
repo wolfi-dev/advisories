@@ -40,6 +40,24 @@ advisories:
             componentLocation: /usr/lib/spark/jars/mesos-1.4.3-shaded-protobuf.jar
             scanner: grype
 
+  - id: CGA-hfgh-8x66-8pq3
+    aliases:
+      - CVE-2020-8908
+      - GHSA-5mg8-w23w-74h3
+    events:
+      - timestamp: 2024-12-18T02:01:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.12
+            componentID: 8c99a40a1b2617db
+            componentName: guava
+            componentVersion: 30.1.1-jre
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-shaded-guava-1.1.1.jar
+            scanner: grype
+
   - id: CGA-pqmx-9gfc-r76g
     aliases:
       - CVE-2022-46337
