@@ -4,6 +4,24 @@ package:
   name: spark-3.5-scala-2.12
 
 advisories:
+  - id: CGA-283c-hrwq-243g
+    aliases:
+      - CVE-2023-52428
+      - GHSA-gvpg-vgmx-xg6w
+    events:
+      - timestamp: 2024-12-18T02:02:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.12
+            componentID: f9e3959f7fa07432
+            componentName: nimbus-jose-jwt
+            componentVersion: 9.8.1
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.6.jar
+            scanner: grype
+
   - id: CGA-2whx-g953-gpmc
     aliases:
       - CVE-2024-47554
