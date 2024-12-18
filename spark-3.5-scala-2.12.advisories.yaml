@@ -4,6 +4,24 @@ package:
   name: spark-3.5-scala-2.12
 
 advisories:
+  - id: CGA-2whx-g953-gpmc
+    aliases:
+      - CVE-2024-47554
+      - GHSA-78wr-2p64-hpwj
+    events:
+      - timestamp: 2024-12-18T02:01:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.12
+            componentID: a87f961b0c37942c
+            componentName: commons-io
+            componentVersion: 2.8.0
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.6.jar
+            scanner: grype
+
   - id: CGA-3h6q-7rxp-58mp
     aliases:
       - CVE-2023-2976
