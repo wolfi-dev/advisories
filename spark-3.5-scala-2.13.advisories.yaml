@@ -43,6 +43,16 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/guava-14.0.1.jar
             scanner: grype
+      - timestamp: 2024-12-18T00:50:09Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            This vulnerability relates to 'guava', one of spark's dependencies.
+            Remediating this requires upgrading guava to v24.1.1 or higher, which is a significant version upgrade.
+            Spark has already upgraded to a fixed version in the main branch, but this is yet to be backported to the spark v3.5 release.
+            Attempting to upgrade guava results in build issues. For more information, see:
+             - https://issues.apache.org/jira/browse/SPARK-38262
+             - https://github.com/apache/spark/pull/36231
 
   - id: CGA-3m72-vw57-x7x9
     aliases:
@@ -60,6 +70,14 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/netty-codec-http2-4.1.96.Final.jar
             scanner: grype
+      - timestamp: 2024-12-18T00:50:09Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            This vulnerability relates to 'netty-codec-http2', which is used by one of spark's other dependencies - pyspark.
+            This has been fixed in netty > v4.1.100, and spark has upgraded to a later version in main.
+            However, attempts to backport to this release of spark, result in build failures.
+            Awaiting for fix / backport from upstream to address this issue.
 
   - id: CGA-45m6-3663-vmrw
     aliases:
