@@ -25,3 +25,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 17.6.0-r1
+
+  - id: CGA-hc8v-j4mj-82j8
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T08:02:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-17.6
+            componentID: 186fb8fe69e22787
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-runner-helper
+            scanner: grype
