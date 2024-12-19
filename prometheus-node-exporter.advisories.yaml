@@ -26,6 +26,24 @@ advisories:
         data:
           fixed-version: 1.8.2-r2
 
+  - id: CGA-34gr-cf7g-pmh4
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T12:13:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-node-exporter
+            componentID: a8aa190f96d5ab65
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/node_exporter
+            scanner: grype
+
   - id: CGA-35m9-3xg4-vvq5
     aliases:
       - CVE-2023-45284
