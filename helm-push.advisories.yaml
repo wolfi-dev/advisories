@@ -353,6 +353,24 @@ advisories:
         data:
           fixed-version: 0.10.4-r15
 
+  - id: CGA-mfm4-h8jc-x624
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T10:26:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-push
+            componentID: c217bd7aa8683aaf
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/libexec/helm-plugins/helm-push/bin/helm-cm-push
+            scanner: grype
+
   - id: CGA-qm9h-6g4x-37g3
     aliases:
       - GHSA-6xv5-86q9-7xr8
