@@ -83,6 +83,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-4558-3c28-p62w
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T12:27:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-efs-csi-driver
+            componentID: 010254d92bed0e7a
+            componentName: golang.org/x/net
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/aws-efs-csi-driver
+            scanner: grype
+
   - id: CGA-4mv2-94mh-jjc8
     aliases:
       - CVE-2024-24784
