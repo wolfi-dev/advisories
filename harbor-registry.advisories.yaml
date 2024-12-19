@@ -142,6 +142,24 @@ advisories:
         data:
           fixed-version: 3.0.0_alpha1-r8
 
+  - id: CGA-qmf3-x7cv-pmj8
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T07:36:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-registry
+            componentID: 5311faf984b55953
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-registry
+            scanner: grype
+
   - id: CGA-vrf4-vxxr-6f4c
     aliases:
       - CVE-2024-34156
