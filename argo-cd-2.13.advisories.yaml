@@ -26,6 +26,24 @@ advisories:
         data:
           fixed-version: 2.13.0-r1
 
+  - id: CGA-875c-5xx8-qwjf
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T21:12:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.13
+            componentID: 0b45878c6faef543
+            componentName: golang.org/x/net
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
   - id: CGA-v7rv-j84g-g5fj
     aliases:
       - CVE-2024-45337
