@@ -4,6 +4,24 @@ package:
   name: traefik-3.2
 
 advisories:
+  - id: CGA-42fq-cf7c-9r5v
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T10:10:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: traefik-3.2
+            componentID: 007fe04a37a21838
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/traefik
+            scanner: grype
+
   - id: CGA-7wcq-cw6w-3j7m
     aliases:
       - CVE-2024-45337
