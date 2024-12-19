@@ -4,6 +4,24 @@ package:
   name: kubevela
 
 advisories:
+  - id: CGA-254h-f3jm-hc8c
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T10:14:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubevela
+            componentID: 175377fb83ac368d
+            componentName: golang.org/x/net
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-3hc3-qg7v-phrh
     aliases:
       - CVE-2024-24784
