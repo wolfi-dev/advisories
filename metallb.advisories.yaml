@@ -108,6 +108,28 @@ advisories:
         data:
           fixed-version: 0.14.3-r1
 
+  - id: CGA-j3p3-rqwj-g3xh
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T07:17:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: metallb
+            componentID: 71548e7473d501c9
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /frr-metrics
+            scanner: grype
+      - timestamp: 2024-12-19T14:22:22Z
+        type: fixed
+        data:
+          fixed-version: 0.14.9-r2
+
   - id: CGA-jq39-q77w-8j38
     aliases:
       - CVE-2023-45284

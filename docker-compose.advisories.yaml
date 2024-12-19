@@ -176,6 +176,28 @@ advisories:
         data:
           fixed-version: 2.25.0-r1
 
+  - id: CGA-hfhj-h8j2-ph8x
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T07:26:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-compose
+            componentID: 06a5647bd7e46d1d
+            componentName: golang.org/x/net
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/docker-compose
+            scanner: grype
+      - timestamp: 2024-12-19T10:44:19Z
+        type: fixed
+        data:
+          fixed-version: 2.32.1-r1
+
   - id: CGA-hjhh-9m9w-q6r4
     aliases:
       - CVE-2024-24788

@@ -4,6 +4,24 @@ package:
   name: gitlab-cng-17.6
 
 advisories:
+  - id: CGA-8mcx-h9rj-jh35
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T09:07:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-cng-17.6
+            componentID: 5bc6a670c7290cf7
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-elasticsearch-indexer
+            scanner: grype
+
   - id: CGA-hp26-6px8-www7
     aliases:
       - CVE-2024-45337

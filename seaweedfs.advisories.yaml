@@ -4,6 +4,28 @@ package:
   name: seaweedfs
 
 advisories:
+  - id: CGA-3h9j-37fv-g293
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T08:01:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: seaweedfs
+            componentID: f31d697d6eb96a9a
+            componentName: golang.org/x/net
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/weed
+            scanner: grype
+      - timestamp: 2024-12-19T19:40:52Z
+        type: fixed
+        data:
+          fixed-version: 3.80-r3
+
   - id: CGA-4mv8-7x3p-wc44
     aliases:
       - CVE-2024-34155

@@ -140,6 +140,28 @@ advisories:
         data:
           fixed-version: 0.10.1-r1
 
+  - id: CGA-jfvc-m4cv-9pwx
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T08:30:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dagger
+            componentID: 222e61953ca2655b
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/dagger
+            scanner: grype
+      - timestamp: 2024-12-19T13:40:08Z
+        type: fixed
+        data:
+          fixed-version: 0.15.1-r2
+
   - id: CGA-jjg5-q454-4g5h
     aliases:
       - CVE-2024-24783

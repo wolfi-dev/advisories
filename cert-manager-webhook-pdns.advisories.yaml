@@ -14,6 +14,24 @@ advisories:
         data:
           fixed-version: 2.5.1-r3
 
+  - id: CGA-3336-xcgc-m4h8
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T07:15:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-manager-webhook-pdns
+            componentID: a3c015555efd53c1
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/webhook
+            scanner: grype
+
   - id: CGA-4h67-68h3-pg8m
     aliases:
       - CVE-2024-34155

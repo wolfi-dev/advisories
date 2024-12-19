@@ -25,3 +25,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.0.1-r1
+
+  - id: CGA-xcv8-9p89-3vf4
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T10:33:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-3.0
+            componentID: a614c23d44d5cb1c
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus
+            scanner: grype
+      - timestamp: 2024-12-19T13:22:44Z
+        type: fixed
+        data:
+          fixed-version: 3.0.1-r3

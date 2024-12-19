@@ -46,6 +46,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-73x7-vf8c-wgrq
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T10:41:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: hey
+            componentID: 1d2f92602249607f
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/hey
+            scanner: grype
+      - timestamp: 2024-12-19T20:03:17Z
+        type: fixed
+        data:
+          fixed-version: 0.1.4-r17
+
   - id: CGA-85m7-vwm2-3rgx
     aliases:
       - CVE-2023-44487

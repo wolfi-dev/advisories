@@ -94,6 +94,28 @@ advisories:
         data:
           fixed-version: 1.57.0-r1
 
+  - id: CGA-5rmp-67vr-6wx4
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T08:08:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: newrelic-infrastructure-agent
+            componentID: e254f4470ee5e398
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/newrelic-infra
+            scanner: grype
+      - timestamp: 2024-12-19T12:20:35Z
+        type: fixed
+        data:
+          fixed-version: 1.58.1-r1
+
   - id: CGA-68r7-j988-qxjf
     aliases:
       - CVE-2023-45290

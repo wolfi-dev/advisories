@@ -4,6 +4,28 @@ package:
   name: controller-gen
 
 advisories:
+  - id: CGA-2345-58qr-rcwr
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T07:13:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: controller-gen
+            componentID: bb89dcd691d57aff
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/controller-gen
+            scanner: grype
+      - timestamp: 2024-12-19T10:21:58Z
+        type: fixed
+        data:
+          fixed-version: 0.16.5-r1
+
   - id: CGA-4gf3-c3cf-vwh8
     aliases:
       - CVE-2024-24784

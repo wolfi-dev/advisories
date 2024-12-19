@@ -4,6 +4,24 @@ package:
   name: harbor-2.12
 
 advisories:
+  - id: CGA-2673-v6pw-7pcc
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T14:19:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-2.12
+            componentID: d19d8bb7e2573fe9
+            componentName: golang.org/x/net
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-jobservice
+            scanner: grype
+
   - id: CGA-3j6v-fq99-qchj
     aliases:
       - CVE-2024-51744

@@ -4,6 +4,24 @@ package:
   name: openbao-k8s
 
 advisories:
+  - id: CGA-vr23-4pp7-4rhp
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T12:28:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openbao-k8s
+            componentID: 61ccc46f591aae91
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/openbao-k8s
+            scanner: grype
+
   - id: CGA-w95r-p5xp-fpmf
     aliases:
       - CVE-2024-45337

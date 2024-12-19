@@ -4,6 +4,28 @@ package:
   name: cue
 
 advisories:
+  - id: CGA-2mpf-622c-gjw3
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T08:11:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cue
+            componentID: 1e088a09226c7219
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/cue
+            scanner: grype
+      - timestamp: 2024-12-19T12:31:05Z
+        type: fixed
+        data:
+          fixed-version: 0.11.1-r1
+
   - id: CGA-3wqh-7q59-mgqx
     aliases:
       - CVE-2024-24785

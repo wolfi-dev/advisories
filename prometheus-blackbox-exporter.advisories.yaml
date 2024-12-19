@@ -221,6 +221,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-j9xx-cqf4-7fmx
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T08:41:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-blackbox-exporter
+            componentID: a8c260b362d126bb
+            componentName: golang.org/x/net
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/blackbox_exporter
+            scanner: grype
+      - timestamp: 2024-12-19T18:33:07Z
+        type: fixed
+        data:
+          fixed-version: 0.25.0-r9
+
   - id: CGA-r3jw-5855-vm4v
     aliases:
       - CVE-2023-44487

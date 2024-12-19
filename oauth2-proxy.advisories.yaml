@@ -143,6 +143,28 @@ advisories:
         data:
           fixed-version: 7.6.0-r6
 
+  - id: CGA-h8q6-r4gx-r8rc
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T09:18:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: oauth2-proxy
+            componentID: 3638b2ef208f0dbb
+            componentName: golang.org/x/net
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/oauth2-proxy
+            scanner: grype
+      - timestamp: 2024-12-19T18:12:41Z
+        type: fixed
+        data:
+          fixed-version: 7.7.1-r3
+
   - id: CGA-hjxg-fwfx-qj8f
     aliases:
       - CVE-2022-41723

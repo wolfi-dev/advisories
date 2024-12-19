@@ -76,6 +76,28 @@ advisories:
         data:
           fixed-version: 5.6.3-r1
 
+  - id: CGA-769g-xc74-mqj5
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T07:37:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-operator
+            componentID: a8b0b3e02dbd65d6
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/grafana-operator
+            scanner: grype
+      - timestamp: 2024-12-19T17:34:51Z
+        type: fixed
+        data:
+          fixed-version: 5.15.1-r1
+
   - id: CGA-89r7-j887-jcx8
     aliases:
       - CVE-2024-24785

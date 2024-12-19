@@ -261,6 +261,28 @@ advisories:
         data:
           fixed-version: 0.13.0-r3
 
+  - id: CGA-99hh-wq6g-f88p
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T11:13:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: hubble-ui
+            componentID: af76cefd53045eeb
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/backend
+            scanner: grype
+      - timestamp: 2024-12-19T20:05:41Z
+        type: fixed
+        data:
+          fixed-version: 0.13.1-r8
+
   - id: CGA-9pw6-343j-92r6
     aliases:
       - CVE-2024-28248

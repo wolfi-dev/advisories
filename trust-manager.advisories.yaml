@@ -183,6 +183,28 @@ advisories:
         data:
           fixed-version: 0.6.0-r5
 
+  - id: CGA-qx5c-q2q6-mccq
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T09:39:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trust-manager
+            componentID: 44f2779f048649dd
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/trust-manager
+            scanner: grype
+      - timestamp: 2024-12-19T16:21:17Z
+        type: fixed
+        data:
+          fixed-version: 0.14.0-r4
+
   - id: CGA-qx95-c274-qqh8
     aliases:
       - CVE-2024-24789

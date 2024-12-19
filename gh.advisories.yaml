@@ -56,6 +56,28 @@ advisories:
         data:
           fixed-version: 2.50.0-r1
 
+  - id: CGA-65rq-hhp7-gq74
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T07:29:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gh
+            componentID: c91b7b1bafcf2b33
+            componentName: golang.org/x/net
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/gh
+            scanner: grype
+      - timestamp: 2024-12-19T17:28:55Z
+        type: fixed
+        data:
+          fixed-version: 2.63.2-r2
+
   - id: CGA-6g7m-443v-9h7g
     aliases:
       - CVE-2024-24784

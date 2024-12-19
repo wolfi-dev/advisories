@@ -131,6 +131,28 @@ advisories:
         data:
           fixed-version: 4.5.6-r1
 
+  - id: CGA-pm6w-g8r5-974h
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T11:30:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-logging-operator
+            componentID: 9ee86dac30a348fb
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2024-12-19T18:35:58Z
+        type: fixed
+        data:
+          fixed-version: 5.0.1-r0
+
   - id: CGA-qgjv-3hjw-xpch
     aliases:
       - CVE-2024-24789

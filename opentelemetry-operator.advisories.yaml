@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: opentelemetry-operator
+
+advisories:
+  - id: CGA-5hjx-695w-24c5
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T08:13:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opentelemetry-operator
+            componentID: ceea8888ac7450ae
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2024-12-19T14:34:55Z
+        type: fixed
+        data:
+          fixed-version: 0.115.0-r1

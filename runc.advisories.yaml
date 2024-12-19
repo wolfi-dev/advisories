@@ -412,6 +412,28 @@ advisories:
         data:
           fixed-version: 1.1.14-r0
 
+  - id: CGA-r69g-6v9x-vv6g
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T09:30:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: runc
+            componentID: af11c30d64bf4748
+            componentName: golang.org/x/net
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/runc
+            scanner: grype
+      - timestamp: 2024-12-19T18:11:50Z
+        type: fixed
+        data:
+          fixed-version: 1.2.3-r1
+
   - id: CGA-r75j-47f7-8vjx
     aliases:
       - CVE-2024-24791

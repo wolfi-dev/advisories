@@ -4,6 +4,28 @@ package:
   name: aws-privateca-issuer
 
 advisories:
+  - id: CGA-7cpp-3vpr-388r
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T11:15:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-privateca-issuer
+            componentID: 871f7c5b1ab4cde3
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2024-12-19T19:41:42Z
+        type: fixed
+        data:
+          fixed-version: 1.4.0-r2
+
   - id: CGA-jx3x-wc5f-q2h8
     aliases:
       - GHSA-r4pg-vg54-wxx4

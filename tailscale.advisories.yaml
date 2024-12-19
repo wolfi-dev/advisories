@@ -215,3 +215,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.60.1-r1
+
+  - id: CGA-wwxq-v64v-59ph
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T11:20:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tailscale
+            componentID: bd575de42f558b6f
+            componentName: golang.org/x/net
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/tailscale
+            scanner: grype
+      - timestamp: 2024-12-19T20:09:49Z
+        type: fixed
+        data:
+          fixed-version: 1.78.1-r2

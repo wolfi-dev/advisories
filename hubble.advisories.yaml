@@ -4,6 +4,24 @@ package:
   name: hubble
 
 advisories:
+  - id: CGA-2ch4-cfc2-m5r9
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T21:18:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: hubble
+            componentID: 12c06d9a75fe7073
+            componentName: golang.org/x/net
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/hubble
+            scanner: grype
+
   - id: CGA-3p3f-64hf-fcrq
     aliases:
       - CVE-2023-45284

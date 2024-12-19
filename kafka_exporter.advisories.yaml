@@ -70,6 +70,28 @@ advisories:
         data:
           fixed-version: 1.8.0-r1
 
+  - id: CGA-9mq8-4x39-h662
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T08:05:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kafka_exporter
+            componentID: 0361bfa14cdae31d
+            componentName: golang.org/x/net
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/kafka_exporter
+            scanner: grype
+      - timestamp: 2024-12-19T11:30:50Z
+        type: fixed
+        data:
+          fixed-version: 1.8.0-r4
+
   - id: CGA-jhrh-28fx-vx8c
     aliases:
       - CVE-2024-34158

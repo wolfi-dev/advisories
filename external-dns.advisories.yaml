@@ -265,6 +265,28 @@ advisories:
         data:
           fixed-version: 0.15.0-r0
 
+  - id: CGA-p5wr-m58x-x4vc
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T08:11:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: external-dns
+            componentID: 096d4e319821577a
+            componentName: golang.org/x/net
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/external-dns
+            scanner: grype
+      - timestamp: 2024-12-19T12:30:26Z
+        type: fixed
+        data:
+          fixed-version: 0.15.0-r2
+
   - id: CGA-phqm-95f4-crjm
     aliases:
       - CVE-2024-24789

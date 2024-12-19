@@ -26,6 +26,28 @@ advisories:
         data:
           fixed-version: 0.8.0-r1
 
+  - id: CGA-hx4v-c2v7-x28r
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T11:02:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: whereabouts
+            componentID: c4b5b84065c77fde
+            componentName: golang.org/x/net
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/controlloop
+            scanner: grype
+      - timestamp: 2024-12-19T19:16:51Z
+        type: fixed
+        data:
+          fixed-version: 0.8.0-r2
+
   - id: CGA-r37r-ww59-6gwf
     aliases:
       - CVE-2024-24791

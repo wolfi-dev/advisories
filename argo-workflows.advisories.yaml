@@ -827,6 +827,28 @@ advisories:
         data:
           fixed-version: 3.5.2-r3
 
+  - id: CGA-w7wf-97wr-mr64
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T10:45:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-workflows
+            componentID: cfed58ae10fd1897
+            componentName: golang.org/x/net
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/workflow-controller
+            scanner: grype
+      - timestamp: 2024-12-19T20:04:01Z
+        type: fixed
+        data:
+          fixed-version: 3.6.2-r2
+
   - id: CGA-wh3x-jr2v-9cw2
     aliases:
       - CVE-2024-4067

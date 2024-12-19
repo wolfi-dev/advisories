@@ -14,6 +14,28 @@ advisories:
         data:
           fixed-version: 3.5.1-r6
 
+  - id: CGA-2qmc-h2hr-vcv2
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T07:32:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: git-lfs
+            componentID: 061d58cfa080145a
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/git-lfs
+            scanner: grype
+      - timestamp: 2024-12-19T17:27:27Z
+        type: fixed
+        data:
+          fixed-version: 3.6.0-r4
+
   - id: CGA-6fpv-jrc4-fc9h
     aliases:
       - CVE-2024-34155

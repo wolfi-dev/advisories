@@ -110,6 +110,28 @@ advisories:
         data:
           fixed-version: 0.0.2-r13
 
+  - id: CGA-cwhc-r5p9-fr9j
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T10:42:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gke-gcloud-auth-plugin
+            componentID: d0a94d06a029bcc0
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/gke-gcloud-auth-plugin
+            scanner: grype
+      - timestamp: 2024-12-19T20:02:32Z
+        type: fixed
+        data:
+          fixed-version: 0.0.2-r15
+
   - id: CGA-f769-3rpv-g2r6
     aliases:
       - CVE-2023-45289

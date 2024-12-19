@@ -366,3 +366,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 4.2.0-r4
+
+  - id: CGA-wxm2-7cp2-gphh
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T07:04:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: amass
+            componentID: e6afaaea8dedce26
+            componentName: golang.org/x/net
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/amass
+            scanner: grype
+      - timestamp: 2024-12-19T11:34:04Z
+        type: fixed
+        data:
+          fixed-version: 4.2.0-r15

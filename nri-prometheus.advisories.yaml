@@ -129,6 +129,28 @@ advisories:
         data:
           fixed-version: 2.21.2-r1
 
+  - id: CGA-fj32-q655-qwq3
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T08:35:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-prometheus
+            componentID: bf474f8f9368fa52
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/nri-prometheus
+            scanner: grype
+      - timestamp: 2024-12-19T13:30:33Z
+        type: fixed
+        data:
+          fixed-version: 2.22.0-r2
+
   - id: CGA-fm4g-h5cv-pwcw
     aliases:
       - CVE-2024-24783

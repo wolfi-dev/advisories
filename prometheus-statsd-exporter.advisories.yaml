@@ -181,6 +181,24 @@ advisories:
         data:
           fixed-version: 0.26.0-r2
 
+  - id: CGA-gh36-5pfj-m5gf
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T21:15:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-statsd-exporter
+            componentID: 6a291323b1710b9d
+            componentName: golang.org/x/net
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/statsd_exporter
+            scanner: grype
+
   - id: CGA-hww2-h7j7-5hcf
     aliases:
       - CVE-2024-24783

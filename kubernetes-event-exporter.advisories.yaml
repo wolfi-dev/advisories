@@ -4,6 +4,24 @@ package:
   name: kubernetes-event-exporter
 
 advisories:
+  - id: CGA-33mx-gpmw-58qq
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T18:22:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-event-exporter
+            componentID: fd44e1cf4fee832c
+            componentName: golang.org/x/net
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/kubernetes-event-exporter
+            scanner: grype
+
   - id: CGA-4mp6-554h-g95v
     aliases:
       - CVE-2023-45289

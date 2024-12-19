@@ -78,6 +78,28 @@ advisories:
         data:
           fixed-version: 0.0.3-r1
 
+  - id: CGA-7jmq-rhjm-frq7
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T07:14:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dagdotdev
+            componentID: 7c36049b822b90ec
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/dagdotdev
+            scanner: grype
+      - timestamp: 2024-12-19T13:10:59Z
+        type: fixed
+        data:
+          fixed-version: 0.0.12-r1
+
   - id: CGA-828f-995g-64rq
     aliases:
       - CVE-2024-34158

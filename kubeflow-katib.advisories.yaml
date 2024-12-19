@@ -157,6 +157,28 @@ advisories:
             componentLocation: /usr/bin/katib-controller
             scanner: grype
 
+  - id: CGA-h4px-w464-3vqf
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T08:38:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-katib
+            componentID: 767db8ab1c568842
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/katib-controller
+            scanner: grype
+      - timestamp: 2024-12-19T20:08:59Z
+        type: fixed
+        data:
+          fixed-version: 0.17.0-r8
+
   - id: CGA-h59c-cgq2-j2cq
     aliases:
       - CVE-2023-3978

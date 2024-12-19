@@ -122,6 +122,28 @@ advisories:
         data:
           fixed-version: 3.0.0-r2
 
+  - id: CGA-wc2h-4pvr-xpm6
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T09:42:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: fluent-bit-plugin-loki
+            componentID: 01a958d7c842cc2c
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /fluent-bit/bin/out_grafana_loki.so
+            scanner: grype
+      - timestamp: 2024-12-19T16:22:29Z
+        type: fixed
+        data:
+          fixed-version: 3.3.2-r1
+
   - id: CGA-wrwq-xmr6-5mcj
     aliases:
       - CVE-2024-34155

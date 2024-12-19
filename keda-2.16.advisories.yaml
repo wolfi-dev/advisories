@@ -4,6 +4,24 @@ package:
   name: keda-2.16
 
 advisories:
+  - id: CGA-5m82-cxgx-fgfq
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T13:19:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.16
+            componentID: a39ba8d469b4645f
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/keda-adapter
+            scanner: grype
+
   - id: CGA-x8m9-hwhg-8v8q
     aliases:
       - CVE-2024-45337

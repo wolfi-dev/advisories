@@ -207,3 +207,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.8.5-r1
+
+  - id: CGA-v34q-7hcx-3ph5
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T10:29:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nsc
+            componentID: 83b83080467e4da9
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/nsc
+            scanner: grype
+      - timestamp: 2024-12-19T18:37:49Z
+        type: fixed
+        data:
+          fixed-version: 2.10.1-r1

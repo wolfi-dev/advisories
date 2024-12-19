@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: kapp
+
+advisories:
+  - id: CGA-hm8m-h24v-7hcf
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T09:35:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kapp
+            componentID: c1470ef560a037d8
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/kapp
+            scanner: grype
+      - timestamp: 2024-12-19T16:23:55Z
+        type: fixed
+        data:
+          fixed-version: 0.64.0-r1

@@ -4,6 +4,24 @@ package:
   name: mailpit
 
 advisories:
+  - id: CGA-6xfg-p2h4-5g47
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T17:05:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mailpit
+            componentID: aafc632a59e2c027
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/mailpit
+            scanner: grype
+
   - id: CGA-q8rw-q663-8gw8
     aliases:
       - CVE-2024-34156

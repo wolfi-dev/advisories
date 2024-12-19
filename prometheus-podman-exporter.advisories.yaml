@@ -26,6 +26,28 @@ advisories:
         data:
           fixed-version: 1.13.3-r1
 
+  - id: CGA-mjrr-hhxj-pv9m
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T09:23:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-podman-exporter
+            componentID: 0407eafc6869107c
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/podman_exporter
+            scanner: grype
+      - timestamp: 2024-12-19T16:28:00Z
+        type: fixed
+        data:
+          fixed-version: 1.14.0-r1
+
   - id: CGA-wfcf-wqfj-vg9w
     aliases:
       - CVE-2024-9675

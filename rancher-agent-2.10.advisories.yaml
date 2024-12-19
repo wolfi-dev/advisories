@@ -26,6 +26,28 @@ advisories:
         data:
           fixed-version: 2.10.0-r1
 
+  - id: CGA-646f-284f-4r7w
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T10:05:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-agent-2.10
+            componentID: 62438bff7c1b3d67
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/agent
+            scanner: grype
+      - timestamp: 2024-12-19T18:44:59Z
+        type: fixed
+        data:
+          fixed-version: 2.10.1-r0
+
   - id: CGA-7hqw-pw3h-mpxx
     aliases:
       - CVE-2024-51744

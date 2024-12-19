@@ -4,6 +4,24 @@ package:
   name: terraform-provider-aws
 
 advisories:
+  - id: CGA-42cf-xvwx-4974
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T11:19:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-aws
+            componentID: c4a04fc73eed467d
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-aws
+            scanner: grype
+
   - id: CGA-43ch-mwp2-gv8j
     aliases:
       - CVE-2023-45283

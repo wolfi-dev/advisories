@@ -4,6 +4,28 @@ package:
   name: containerd-1
 
 advisories:
+  - id: CGA-j3g2-m3qp-w798
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T07:33:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: containerd-1
+            componentID: 153226a87e25b173
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/containerd
+            scanner: grype
+      - timestamp: 2024-12-19T15:01:59Z
+        type: fixed
+        data:
+          fixed-version: 1.7.24-r4
+
   - id: CGA-p66j-66w2-r9fx
     aliases:
       - CVE-2024-45337
