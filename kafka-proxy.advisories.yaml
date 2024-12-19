@@ -121,3 +121,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.3.10-r2
+
+  - id: CGA-r36r-2hq8-55gm
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T08:03:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kafka-proxy
+            componentID: 618a97091a6d107e
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/kafka-proxy
+            scanner: grype
