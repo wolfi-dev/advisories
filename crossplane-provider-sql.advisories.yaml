@@ -4,6 +4,24 @@ package:
   name: crossplane-provider-sql
 
 advisories:
+  - id: CGA-h734-vfcw-48v4
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T08:07:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: crossplane-provider-sql
+            componentID: 71cf40db95c1b54a
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/crossplane-sql-provider
+            scanner: grype
+
   - id: CGA-hjfv-h3rf-vr9p
     aliases:
       - CVE-2024-45337
