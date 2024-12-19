@@ -4,6 +4,24 @@ package:
   name: guac
 
 advisories:
+  - id: CGA-2489-j9r3-xx48
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T12:28:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: guac
+            componentID: acc8b5b441143436
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/guacone
+            scanner: grype
+
   - id: CGA-28v8-7f8r-m9ww
     aliases:
       - CVE-2024-35255
