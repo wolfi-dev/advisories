@@ -112,6 +112,24 @@ advisories:
         data:
           note: 'Issue has been opened in litestream repository. No prior issues, PRs or commits that reference this CVE and the affected version is the most current release. Issue: https://github.com/benbjohnson/litestream/issues/602'
 
+  - id: CGA-ccv6-g9wj-vr86
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T17:24:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: litestream
+            componentID: 9eeebdacc63032cd
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/litestream
+            scanner: grype
+
   - id: CGA-fm8f-cmvr-fj72
     aliases:
       - CVE-2024-24790
