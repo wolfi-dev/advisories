@@ -4,6 +4,24 @@ package:
   name: tekton-pipelines
 
 advisories:
+  - id: CGA-2pqx-m9cx-39mj
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T12:19:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tekton-pipelines
+            componentID: 5c2c93e044257817
+            componentName: golang.org/x/net
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/tekton-pipelines-sidecarlogresults
+            scanner: grype
+
   - id: CGA-36jv-q8vj-wwgx
     aliases:
       - CVE-2023-1732
