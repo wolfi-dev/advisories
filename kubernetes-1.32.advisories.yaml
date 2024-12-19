@@ -138,6 +138,24 @@ advisories:
         data:
           fixed-version: 1.32.0-r2
 
+  - id: CGA-hrr5-96x7-xv53
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T15:38:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-1.32
+            componentID: 0190c89beeffe47e
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/kubectl-1.32
+            scanner: grype
+
   - id: CGA-qrg7-3ww8-2p9g
     aliases:
       - CVE-2016-7075
