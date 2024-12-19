@@ -47,3 +47,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.8.7-r1
+
+  - id: CGA-xqrj-fmqj-wgg2
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T16:15:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opentofu-1.8
+            componentID: c80a14b26cf0667b
+            componentName: golang.org/x/net
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/tofu
+            scanner: grype
