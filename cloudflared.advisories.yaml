@@ -326,3 +326,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 2024.1.0-r10
+
+  - id: CGA-wx55-4wv4-xwc7
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T18:02:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloudflared
+            componentID: 0c94992d92ebae28
+            componentName: golang.org/x/net
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/cloudflared
+            scanner: grype
