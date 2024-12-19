@@ -26,6 +26,24 @@ advisories:
         data:
           fixed-version: 0.6.0-r1
 
+  - id: CGA-cjxp-688c-rjpc
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T09:29:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k8ssandra-client
+            componentID: 8ea76a63925b009e
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/kubectl-k8ssandra
+            scanner: grype
+
   - id: CGA-h25c-2q7f-5f4g
     aliases:
       - CVE-2024-34158
