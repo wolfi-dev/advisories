@@ -132,6 +132,24 @@ advisories:
         data:
           fixed-version: 0.15.1-r7
 
+  - id: CGA-94jw-g7w5-h2gx
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T16:20:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-mysqld-exporter
+            componentID: cafa380de7a946db
+            componentName: golang.org/x/net
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/mysqld_exporter
+            scanner: grype
+
   - id: CGA-cfgr-vm64-rjxc
     aliases:
       - CVE-2024-24791
