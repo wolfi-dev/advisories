@@ -4,6 +4,24 @@ package:
   name: kapp-controller
 
 advisories:
+  - id: CGA-f5hj-h6f6-v6m6
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T14:11:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kapp-controller
+            componentID: 3a571d5b9a921750
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/kapp-controller
+            scanner: grype
+
   - id: CGA-v86q-qv97-g798
     aliases:
       - CVE-2024-45337
