@@ -74,3 +74,21 @@ advisories:
         data:
           type: vulnerable-code-cannot-be-controlled-by-adversary
           note: Vulnerability affects only Windows systems.
+
+  - id: CGA-v3gv-5vpv-r7rp
+    aliases:
+      - CVE-2024-12801
+      - GHSA-6v67-2wr5-gvf4
+    events:
+      - timestamp: 2024-12-20T11:21:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kserve-modelmesh
+            componentID: c948b345596efe89
+            componentName: logback-core
+            componentVersion: 1.2.13
+            componentType: java-archive
+            componentLocation: /opt/kserve/mmesh/lib/logback-core-1.2.13.jar
+            scanner: grype
