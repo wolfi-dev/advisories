@@ -108,6 +108,24 @@ advisories:
         data:
           note: The bcprov-jdk15on transitive dependency must be bumped to 1.78 in the upstream project Hadoop.
 
+  - id: CGA-3v5c-372f-h5wh
+    aliases:
+      - CVE-2024-12798
+      - GHSA-pr98-23f8-jwxv
+    events:
+      - timestamp: 2024-12-20T10:17:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tez
+            componentID: d951f0dceb1052b3
+            componentName: logback-core
+            componentVersion: 1.2.10
+            componentType: java-archive
+            componentLocation: /usr/share/java/tez/lib/logback-core-1.2.10.jar
+            scanner: grype
+
   - id: CGA-459v-8fm2-rw72
     aliases:
       - CVE-2023-52428
