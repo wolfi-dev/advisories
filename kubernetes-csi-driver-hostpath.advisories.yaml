@@ -110,6 +110,28 @@ advisories:
         data:
           fixed-version: 1.13.0-r5
 
+  - id: CGA-cwrx-325r-3q88
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-20T13:41:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-driver-hostpath
+            componentID: 2a63af04e3b3d562
+            componentName: golang.org/x/net
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/hostpathplugin
+            scanner: grype
+      - timestamp: 2024-12-21T04:13:48Z
+        type: fixed
+        data:
+          fixed-version: 1.15.0-r3
+
   - id: CGA-f7gm-j25v-gh6w
     aliases:
       - CVE-2023-5528

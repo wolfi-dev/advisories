@@ -66,6 +66,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-453v-qgw6-299g
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T17:23:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grpcurl
+            componentID: 8e38bfbd4453f09d
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/grpcurl
+            scanner: grype
+      - timestamp: 2024-12-21T07:13:43Z
+        type: fixed
+        data:
+          fixed-version: 1.9.2-r2
+
   - id: CGA-47v2-6jxh-6cxf
     aliases:
       - CVE-2022-32149

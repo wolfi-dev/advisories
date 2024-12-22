@@ -44,6 +44,28 @@ advisories:
         data:
           fixed-version: 1.6.2-r1
 
+  - id: CGA-6rvc-4gfx-wgm8
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-20T12:25:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeadm-controlplane-controller
+            componentID: f95296618a23644e
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/kubeadm-controlplane-controller
+            scanner: grype
+      - timestamp: 2024-12-21T18:04:32Z
+        type: fixed
+        data:
+          fixed-version: 1.9.2-r1
+
   - id: CGA-7m4f-cm35-r6vq
     aliases:
       - CVE-2024-24790

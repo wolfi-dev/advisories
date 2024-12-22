@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: sriov-network-device-plugin
+
+advisories:
+  - id: CGA-h9pf-76gq-pmv2
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-21T07:09:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sriov-network-device-plugin
+            componentID: b97317af14dc0673
+            componentName: golang.org/x/net
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/sriovdp
+            scanner: grype
+      - timestamp: 2024-12-21T18:02:00Z
+        type: fixed
+        data:
+          fixed-version: 3.8.0-r1

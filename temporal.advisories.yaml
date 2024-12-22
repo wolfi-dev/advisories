@@ -155,6 +155,28 @@ advisories:
         data:
           fixed-version: 1.1.2-r0
 
+  - id: CGA-78rm-m3xg-x945
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-21T07:33:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: temporal
+            componentID: 4bce6711fe59f15b
+            componentName: golang.org/x/net
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/temporal
+            scanner: grype
+      - timestamp: 2024-12-21T18:08:23Z
+        type: fixed
+        data:
+          fixed-version: 1.1.2-r2
+
   - id: CGA-87q2-mwvf-7f59
     aliases:
       - CVE-2024-24783

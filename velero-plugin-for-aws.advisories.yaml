@@ -36,6 +36,28 @@ advisories:
         data:
           fixed-version: 1.10.0-r1
 
+  - id: CGA-c38x-3vjq-ww2x
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-20T12:41:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: velero-plugin-for-aws
+            componentID: b09c3f12e5bffe06
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /plugins/velero-plugin-for-aws
+            scanner: grype
+      - timestamp: 2024-12-21T02:43:07Z
+        type: fixed
+        data:
+          fixed-version: 1.11.0-r1
+
   - id: CGA-c8fq-wh67-pf6c
     aliases:
       - CVE-2024-24790

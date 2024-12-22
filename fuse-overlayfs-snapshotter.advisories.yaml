@@ -242,6 +242,28 @@ advisories:
         data:
           fixed-version: 1.0.8-r11
 
+  - id: CGA-pv3x-cpm5-97gj
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T20:35:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: fuse-overlayfs-snapshotter
+            componentID: c657f6df5dff38d7
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/containerd-fuse-overlayfs-grpc
+            scanner: grype
+      - timestamp: 2024-12-20T16:19:23Z
+        type: fixed
+        data:
+          fixed-version: 2.1.0-r1
+
   - id: CGA-wx8x-pgm9-h33g
     aliases:
       - CVE-2023-45284

@@ -148,6 +148,28 @@ advisories:
         data:
           fixed-version: 0.16.15-r1
 
+  - id: CGA-9f7m-49wj-p737
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T22:04:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wolfictl
+            componentID: 00d154ceb80db1eb
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/wolfictl
+            scanner: grype
+      - timestamp: 2024-12-20T17:42:41Z
+        type: fixed
+        data:
+          fixed-version: 0.27.2-r1
+
   - id: CGA-9j65-gr8f-f2gm
     aliases:
       - CVE-2024-6257

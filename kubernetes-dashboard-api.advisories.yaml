@@ -4,6 +4,28 @@ package:
   name: kubernetes-dashboard-api
 
 advisories:
+  - id: CGA-5xfg-49r5-j5q6
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T21:03:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dashboard-api
+            componentID: ff1a068da0a77a28
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/dashboard-api
+            scanner: grype
+      - timestamp: 2024-12-20T15:28:07Z
+        type: fixed
+        data:
+          fixed-version: 1.10.1-r2
+
   - id: CGA-jhhw-w8gg-53px
     aliases:
       - CVE-2024-45337
