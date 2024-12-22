@@ -77,6 +77,28 @@ advisories:
         data:
           fixed-version: 1.0.69-r1
 
+  - id: CGA-7qhp-66xg-jcfp
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-20T09:35:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: stakater-reloader
+            componentID: f7b64b1f273ce716
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2024-12-20T23:13:20Z
+        type: fixed
+        data:
+          fixed-version: 1.2.0-r2
+
   - id: CGA-8p4w-473f-q585
     aliases:
       - CVE-2024-24791

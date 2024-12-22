@@ -864,3 +864,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.0.4-r1
+
+  - id: CGA-xm8j-qxpf-3fxc
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-20T08:04:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zot
+            componentID: 3af6b43312e3d0ac
+            componentName: golang.org/x/net
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/zot
+            scanner: grype
+      - timestamp: 2024-12-20T22:31:11Z
+        type: fixed
+        data:
+          fixed-version: 2.1.1-r7
