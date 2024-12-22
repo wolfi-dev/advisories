@@ -4,6 +4,28 @@ package:
   name: calico-3.29
 
 advisories:
+  - id: CGA-q5mr-jvrm-h5x8
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T19:45:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: calico-3.29
+            componentID: 88e9a2830417a92d
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /bin/calico-node
+            scanner: grype
+      - timestamp: 2024-12-20T17:10:43Z
+        type: fixed
+        data:
+          fixed-version: 3.29.1-r2
+
   - id: CGA-qx9g-2jr3-8gjm
     aliases:
       - CVE-2024-45337

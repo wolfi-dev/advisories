@@ -4,6 +4,28 @@ package:
   name: vault-benchmark
 
 advisories:
+  - id: CGA-cqvv-x332-mc5m
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-20T10:34:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-benchmark
+            componentID: 28a2d4cf2b2e51dc
+            componentName: golang.org/x/net
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/vault-benchmark
+            scanner: grype
+      - timestamp: 2024-12-21T01:21:38Z
+        type: fixed
+        data:
+          fixed-version: 0.3.0-r2
+
   - id: CGA-crqg-m8c2-w7jj
     aliases:
       - CVE-2024-45337

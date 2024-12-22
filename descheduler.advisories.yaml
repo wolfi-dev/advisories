@@ -4,6 +4,28 @@ package:
   name: descheduler
 
 advisories:
+  - id: CGA-63rc-3395-99px
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-20T09:30:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: descheduler
+            componentID: bcd59f231430da21
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/descheduler
+            scanner: grype
+      - timestamp: 2024-12-20T23:15:02Z
+        type: fixed
+        data:
+          fixed-version: 0.31.0-r2
+
   - id: CGA-6x4f-vxv5-2cvh
     aliases:
       - CVE-2024-34158

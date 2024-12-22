@@ -25,6 +25,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-3g6v-9mvx-4jc6
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T22:44:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tflint
+            componentID: ddb1fe2893df5d04
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/tflint
+            scanner: grype
+      - timestamp: 2024-12-20T16:00:53Z
+        type: fixed
+        data:
+          fixed-version: 0.54.0-r2
+
   - id: CGA-4p42-95xw-rhj7
     aliases:
       - CVE-2023-45283

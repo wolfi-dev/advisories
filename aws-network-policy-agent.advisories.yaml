@@ -4,6 +4,28 @@ package:
   name: aws-network-policy-agent
 
 advisories:
+  - id: CGA-752r-6jf6-pxgv
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T18:44:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-network-policy-agent
+            componentID: cb2e822c26f59f8a
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/aws-eks-na-cli
+            scanner: grype
+      - timestamp: 2024-12-20T12:19:39Z
+        type: fixed
+        data:
+          fixed-version: 1.1.5-r1
+
   - id: CGA-7fgg-37cg-5rhw
     aliases:
       - CVE-2024-34158

@@ -391,6 +391,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-ww39-rq4c-pg4f
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-20T15:18:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: melange
+            componentID: 95a2974e8f87ac20
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/melange
+            scanner: grype
+      - timestamp: 2024-12-21T05:09:07Z
+        type: fixed
+        data:
+          fixed-version: 0.18.1-r1
+
   - id: CGA-wwg2-q2wv-h5v7
     aliases:
       - CVE-2024-32473

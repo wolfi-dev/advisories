@@ -48,6 +48,28 @@ advisories:
         data:
           fixed-version: 2.7.0-r7
 
+  - id: CGA-6pmq-p696-hw7x
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T18:15:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: local-static-provisioner
+            componentID: 23b28d336c609b7b
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/local-provisioner
+            scanner: grype
+      - timestamp: 2024-12-20T22:05:59Z
+        type: fixed
+        data:
+          fixed-version: 2.7.0-r10
+
   - id: CGA-6v78-xcp2-pvj8
     aliases:
       - CVE-2024-45337
