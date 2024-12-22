@@ -25,3 +25,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.0.1_git20241214-r0
+
+  - id: CGA-76v6-m4wp-5v3g
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-20T13:25:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-notation-aws
+            componentID: adb044ea7714c218
+            componentName: golang.org/x/net
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/kyverno-notation-aws
+            scanner: grype
+      - timestamp: 2024-12-21T03:02:53Z
+        type: fixed
+        data:
+          fixed-version: 1.0.1_git20241216-r1
