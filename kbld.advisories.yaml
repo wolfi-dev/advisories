@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: kbld
+
+advisories:
+  - id: CGA-4ph5-3vjx-gv68
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T16:31:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kbld
+            componentID: 8ac05d077a361ee4
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/kbld
+            scanner: grype
+      - timestamp: 2024-12-20T08:05:36Z
+        type: fixed
+        data:
+          fixed-version: 0.45.0-r1

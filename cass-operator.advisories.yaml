@@ -130,6 +130,28 @@ advisories:
         data:
           fixed-version: 1.21.0-r1
 
+  - id: CGA-9c4v-2j9c-pcvp
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T14:20:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cass-operator
+            componentID: 9d26f4c7df95ea04
+            componentName: golang.org/x/net
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2024-12-20T02:16:30Z
+        type: fixed
+        data:
+          fixed-version: 1.23.0-r1
+
   - id: CGA-g5jq-3vwf-3388
     aliases:
       - CVE-2024-24783

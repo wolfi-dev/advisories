@@ -158,3 +158,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.65.0-r1
+
+  - id: CGA-x66j-9g2c-ffv3
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T14:12:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opa
+            componentID: 177f35b5c8a774f8
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/opa
+            scanner: grype
+      - timestamp: 2024-12-20T01:31:10Z
+        type: fixed
+        data:
+          fixed-version: 0.70.0-r1

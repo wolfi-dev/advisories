@@ -228,6 +228,28 @@ advisories:
         data:
           fixed-version: 0.32.4-r5
 
+  - id: CGA-p2mg-647h-rhcr
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T21:01:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k9s
+            componentID: e1f696e2d0a023f2
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/k9s
+            scanner: grype
+      - timestamp: 2024-12-20T15:20:28Z
+        type: fixed
+        data:
+          fixed-version: 0.32.7-r2
+
   - id: CGA-q6cq-5275-4cx8
     aliases:
       - CVE-2024-24787

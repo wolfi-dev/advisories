@@ -132,6 +132,28 @@ advisories:
         data:
           fixed-version: 3.67.0-r0
 
+  - id: CGA-j556-g76v-hvjv
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T18:37:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pulumi-language-dotnet
+            componentID: 65cc964541f78527
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/pulumi-language-dotnet
+            scanner: grype
+      - timestamp: 2024-12-20T20:05:12Z
+        type: fixed
+        data:
+          fixed-version: 3.71.1-r1
+
   - id: CGA-jj2c-5h9v-pv9g
     aliases:
       - CVE-2023-45288

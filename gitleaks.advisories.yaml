@@ -86,6 +86,28 @@ advisories:
         data:
           fixed-version: 8.18.3-r1
 
+  - id: CGA-9897-cxvp-vvw8
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-20T13:11:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitleaks
+            componentID: e5bda04d33a9ca24
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitleaks
+            scanner: grype
+      - timestamp: 2024-12-20T18:02:06Z
+        type: fixed
+        data:
+          fixed-version: 8.22.0-r1
+
   - id: CGA-m639-pvh6-69x9
     aliases:
       - CVE-2021-38561

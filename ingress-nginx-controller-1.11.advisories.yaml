@@ -26,6 +26,28 @@ advisories:
         data:
           fixed-version: 1.11.2-r2
 
+  - id: CGA-9x9g-r37m-x5f4
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T14:16:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ingress-nginx-controller-1.11
+            componentID: d93026909f195d9a
+            componentName: golang.org/x/net
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/nginx-ingress-controller
+            scanner: grype
+      - timestamp: 2024-12-20T01:44:38Z
+        type: fixed
+        data:
+          fixed-version: 1.11.3-r5
+
   - id: CGA-gp7f-vf47-fr9x
     aliases:
       - CVE-2024-34158

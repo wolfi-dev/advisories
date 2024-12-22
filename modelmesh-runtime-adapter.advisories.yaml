@@ -51,3 +51,21 @@ advisories:
             Upgrading this dependency, results in compatibility issues with another dependency, 'azblob'.
             Attempting to upgrade both azidentity and azblob was also not successful.
             Waiting on fix from upstream.
+
+  - id: CGA-v34g-4q55-gmhq
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T16:23:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: modelmesh-runtime-adapter
+            componentID: 38c48361ace7d069
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/mlserver-adapter
+            scanner: grype

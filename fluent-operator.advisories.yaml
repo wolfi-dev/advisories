@@ -26,6 +26,28 @@ advisories:
         data:
           fixed-version: 3.1.0-r1
 
+  - id: CGA-9x76-wgj7-rcf7
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T13:02:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: fluent-operator
+            componentID: 1b6e020913dfe36a
+            componentName: golang.org/x/net
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2024-12-20T00:30:28Z
+        type: fixed
+        data:
+          fixed-version: 3.2.0-r5
+
   - id: CGA-cg54-ch59-phgg
     aliases:
       - CVE-2024-24790

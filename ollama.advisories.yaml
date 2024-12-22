@@ -111,6 +111,28 @@ advisories:
         data:
           fixed-version: 0.1.41-r1
 
+  - id: CGA-g3p2-fj92-rcj4
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T19:18:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ollama
+            componentID: d22b81e610580709
+            componentName: golang.org/x/net
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/ollama
+            scanner: grype
+      - timestamp: 2024-12-20T20:08:16Z
+        type: fixed
+        data:
+          fixed-version: 0.5.1-r2
+
   - id: CGA-hcqw-jf56-53rc
     aliases:
       - CVE-2023-3978

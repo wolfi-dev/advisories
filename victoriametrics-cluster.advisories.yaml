@@ -26,6 +26,28 @@ advisories:
         data:
           fixed-version: 1.103.0-r1
 
+  - id: CGA-fgj7-g95g-6j84
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T20:34:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: victoriametrics-cluster
+            componentID: b1e163a13805fc84
+            componentName: golang.org/x/net
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/vmagent
+            scanner: grype
+      - timestamp: 2024-12-20T19:20:03Z
+        type: fixed
+        data:
+          fixed-version: 1.108.1-r1
+
   - id: CGA-q43m-qhhh-2x77
     aliases:
       - CVE-2024-34156

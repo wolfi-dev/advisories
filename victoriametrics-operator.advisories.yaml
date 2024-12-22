@@ -26,6 +26,28 @@ advisories:
         data:
           fixed-version: 0.47.3-r1
 
+  - id: CGA-p2g6-jh9v-756q
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T15:17:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: victoriametrics-operator
+            componentID: 306680d3271606a4
+            componentName: golang.org/x/net
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/app
+            scanner: grype
+      - timestamp: 2024-12-20T00:03:57Z
+        type: fixed
+        data:
+          fixed-version: 0.51.1-r0
+
   - id: CGA-q4wm-j8p2-jvhh
     aliases:
       - CVE-2024-34156

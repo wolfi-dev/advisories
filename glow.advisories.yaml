@@ -48,6 +48,28 @@ advisories:
         data:
           fixed-version: 2.0.0-r1
 
+  - id: CGA-hmc9-7m57-r8p2
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T17:04:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: glow
+            componentID: 37cc71b5f28d26f1
+            componentName: golang.org/x/net
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/glow
+            scanner: grype
+      - timestamp: 2024-12-22T13:38:48Z
+        type: fixed
+        data:
+          fixed-version: 2.0.0-r3
+
   - id: CGA-mxwc-74fh-p77h
     aliases:
       - CVE-2024-34155
