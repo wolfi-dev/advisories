@@ -40,6 +40,24 @@ advisories:
         data:
           fixed-version: 2.9.2-r0
 
+  - id: CGA-372m-j842-xpmm
+    aliases:
+      - CVE-2024-56201
+      - GHSA-gmj6-6f8f-6699
+    events:
+      - timestamp: 2024-12-24T07:08:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow
+            componentID: 569cc0f68ce28b67
+            componentName: jinja2
+            componentVersion: 3.1.4
+            componentType: python
+            componentLocation: /opt/airflow/lib/python3.12/site-packages/jinja2-3.1.4.dist-info/METADATA, /opt/airflow/lib/python3.12/site-packages/jinja2-3.1.4.dist-info/RECORD
+            scanner: grype
+
   - id: CGA-3fx6-xvfc-v75r
     aliases:
       - CVE-2024-45314
@@ -368,6 +386,24 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Upgrading cryptography dependency in hatch_build.py to 42.0.4 causes a build failure
+
+  - id: CGA-f7wq-crqm-v76f
+    aliases:
+      - CVE-2024-56326
+      - GHSA-q2x7-8rv6-6q7h
+    events:
+      - timestamp: 2024-12-24T07:08:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow
+            componentID: 569cc0f68ce28b67
+            componentName: jinja2
+            componentVersion: 3.1.4
+            componentType: python
+            componentLocation: /opt/airflow/lib/python3.12/site-packages/jinja2-3.1.4.dist-info/METADATA, /opt/airflow/lib/python3.12/site-packages/jinja2-3.1.4.dist-info/RECORD
+            scanner: grype
 
   - id: CGA-frqv-94jm-v4q7
     aliases:
