@@ -262,6 +262,24 @@ advisories:
         data:
           note: 'Bumping the dependency to 2.2.3 is not possible, the application fails with the error: ImportError: cannot import name ''soft_unicode'' from ''markupsafe'''
 
+  - id: CGA-c34w-g7m2-c8hh
+    aliases:
+      - CVE-2024-56201
+      - GHSA-gmj6-6f8f-6699
+    events:
+      - timestamp: 2024-12-24T07:13:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-visualization-server
+            componentID: 14c568a9925304fe
+            componentName: jinja2
+            componentVersion: 2.11.3
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/Jinja2-2.11.3.dist-info/METADATA, /usr/lib/python3.10/site-packages/Jinja2-2.11.3.dist-info/RECORD, /usr/lib/python3.10/site-packages/Jinja2-2.11.3.dist-info/top_level.txt
+            scanner: grype
+
   - id: CGA-cwvc-2mhw-gmxh
     aliases:
       - CVE-2024-49767
