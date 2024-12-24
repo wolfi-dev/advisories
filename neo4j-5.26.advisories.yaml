@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: neo4j-5.26
+
+advisories:
+  - id: CGA-r9mv-rv77-836x
+    aliases:
+      - CVE-2024-6763
+      - GHSA-qh8g-58pp-2wxh
+    events:
+      - timestamp: 2024-12-24T17:45:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: neo4j-5.26
+            componentID: a1b71050f120d8f4
+            componentName: jetty-http
+            componentVersion: 10.0.24
+            componentType: java-archive
+            componentLocation: /usr/share/java/neo4j/lib/jetty-http-10.0.24.jar
+            scanner: grype
