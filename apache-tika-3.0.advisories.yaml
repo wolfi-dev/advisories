@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: apache-tika-3.0
+
+advisories:
+  - id: CGA-hgr8-8g24-xqf7
+    aliases:
+      - CVE-2024-6763
+      - GHSA-qh8g-58pp-2wxh
+    events:
+      - timestamp: 2024-12-26T22:00:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-tika-3.0
+            componentID: 3083bedd54b4ec69
+            componentName: jetty-http
+            componentVersion: 11.0.24
+            componentType: java-archive
+            componentLocation: /usr/share/java/tika-server-standard-3.0.0.jar
+            scanner: grype
