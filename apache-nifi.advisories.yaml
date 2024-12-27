@@ -388,6 +388,24 @@ advisories:
         data:
           note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
 
+  - id: CGA-69xr-35vw-ch6p
+    aliases:
+      - CVE-2024-52046
+      - GHSA-76h9-2vwh-w278
+    events:
+      - timestamp: 2024-12-27T07:18:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: dbc6285e2369eea9
+            componentName: mina-core
+            componentVersion: 2.2.3
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/nifi-current/lib/nifi-standard-nar-2.1.0.nar
+            scanner: grype
+
   - id: CGA-6h6p-w435-25j2
     aliases:
       - CVE-2023-46120
