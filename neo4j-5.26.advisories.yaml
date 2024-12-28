@@ -21,3 +21,12 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/java/neo4j/lib/jetty-http-10.0.24.jar
             scanner: grype
+      - timestamp: 2024-12-25T08:50:22Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            This vulnerability relates to the 'jetty-http' dependency, which is fixed in v12.0.12 and later.
+            Unfortunately, we are not able to remediate this CVE, as bumping this dependency version results in build failures.
+            Specifically, there are version conflicts between the various jetty dependencies. Attempting to bump the related dependencies to the same version, results in different build issues.
+            Another component: 'jetty-servlet', has also been relocated to a new location in maven central: https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-servlet. This requires additional code changes.
+            All attempts were made to chain up the required changes, but to no avail. Pending fix from upstream.
