@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: gitlab-runner-17.7
+
+advisories:
+  - id: CGA-7whf-qg3p-r2mh
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-30T19:04:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-17.7
+            componentID: c9d8e17370fc0413
+            componentName: golang.org/x/crypto
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-runner-helper
+            scanner: grype
