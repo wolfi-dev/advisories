@@ -217,6 +217,16 @@ advisories:
             componentType: rust-crate
             componentLocation: /usr/bin/zellij
             scanner: grype
+      - timestamp: 2025-01-027T10:54:22Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: |
+            This vulnerability relates to the 'wasmtime' dependency, used by zellij.
+            This only affects windows. zellij does not support windows, and neither does our Chainguard package builds.
+            Upstream maintainers are working at upgrading this dependency in any event. Ref:
+             - https://github.com/advisories/GHSA-c2f5-jxjv-2hh8
+             - https://github.com/zellij-org/zellij/pull/3902#issuecomment-2565894058
 
   - id: CGA-wwr7-2chc-98v2
     aliases:
