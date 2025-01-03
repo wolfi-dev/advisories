@@ -108,6 +108,28 @@ advisories:
         data:
           fixed-version: 1.27.0-r1
 
+  - id: CGA-2x95-fmjg-q2cg
+    aliases:
+      - CVE-2024-12798
+      - GHSA-pr98-23f8-jwxv
+    events:
+      - timestamp: 2024-12-20T07:13:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 1e4f51616d98e809
+            componentName: logback-core
+            componentVersion: 1.5.12
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/nifi-current/lib/bootstrap/logback-core-1.5.12.jar
+            scanner: grype
+      - timestamp: 2024-12-24T13:32:03Z
+        type: fixed
+        data:
+          fixed-version: 2.1.0-r0
+
   - id: CGA-439m-2c4m-j5r4
     aliases:
       - CVE-2024-38808
@@ -365,6 +387,28 @@ advisories:
         type: pending-upstream-fix
         data:
           note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+
+  - id: CGA-69xr-35vw-ch6p
+    aliases:
+      - CVE-2024-52046
+      - GHSA-76h9-2vwh-w278
+    events:
+      - timestamp: 2024-12-27T07:18:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: dbc6285e2369eea9
+            componentName: mina-core
+            componentVersion: 2.2.3
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/nifi-current/lib/nifi-standard-nar-2.1.0.nar
+            scanner: grype
+      - timestamp: 2024-12-27T16:39:10Z
+        type: fixed
+        data:
+          fixed-version: 2.1.0-r1
 
   - id: CGA-6h6p-w435-25j2
     aliases:
@@ -1009,6 +1053,40 @@ advisories:
         data:
           note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
 
+  - id: CGA-fv62-wffg-c9q4
+    aliases:
+      - CVE-2024-38829
+      - GHSA-mqvr-2rp8-j7h4
+    events:
+      - timestamp: 2024-12-05T07:28:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: d64bc1f6e16d1c93
+            componentName: spring-ldap-core
+            componentVersion: 3.2.7
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/nifi-current/lib/nifi-ldap-iaa-providers-nar-2.0.0.nar
+            scanner: grype
+      - timestamp: 2024-12-16T07:15:06Z
+        type: fixed
+        data:
+          fixed-version: 2.0.0-r5
+      - timestamp: 2024-12-18T07:06:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: d64bc1f6e16d1c93
+            componentName: spring-ldap-core
+            componentVersion: 3.2.7
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/nifi-current/lib/nifi-ldap-iaa-providers-nar-2.0.0.nar
+            scanner: grype
+
   - id: CGA-g8pm-vcpp-9jxq
     aliases:
       - CVE-2023-2976
@@ -1371,6 +1449,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/nifi/nifi-current/lib/nifi-aws-nar-2.0.0.nar
             scanner: grype
+      - timestamp: 2024-11-21T14:06:10Z
+        type: fixed
+        data:
+          fixed-version: 2.0.0-r4
 
   - id: CGA-jw36-9qc4-j785
     aliases:
@@ -1508,6 +1590,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.0.0-r0
+
+  - id: CGA-p3h7-687g-jhcm
+    aliases:
+      - CVE-2024-12801
+      - GHSA-6v67-2wr5-gvf4
+    events:
+      - timestamp: 2024-12-20T07:12:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 1e4f51616d98e809
+            componentName: logback-core
+            componentVersion: 1.5.12
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/nifi-current/lib/bootstrap/logback-core-1.5.12.jar
+            scanner: grype
+      - timestamp: 2024-12-24T13:32:02Z
+        type: fixed
+        data:
+          fixed-version: 2.1.0-r0
 
   - id: CGA-q59c-5jjp-7wcw
     aliases:

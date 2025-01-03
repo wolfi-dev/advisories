@@ -4,6 +4,28 @@ package:
   name: mkcert
 
 advisories:
+  - id: CGA-3rh6-wvw2-4jrp
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T16:06:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mkcert
+            componentID: 4a3549be1d91bde1
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/mkcert
+            scanner: grype
+      - timestamp: 2024-12-20T06:13:17Z
+        type: fixed
+        data:
+          fixed-version: 1.4.4-r7
+
   - id: CGA-4ffp-xj8g-j8f7
     aliases:
       - CVE-2024-24789
@@ -13,6 +35,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.4.4-r3
+
+  - id: CGA-4q9g-8rhj-5j5q
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T13:08:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mkcert
+            componentID: 148597bd500f5ca4
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/mkcert
+            scanner: grype
+      - timestamp: 2024-12-13T17:06:34Z
+        type: fixed
+        data:
+          fixed-version: 1.4.4-r6
 
   - id: CGA-99p6-mj8q-gpj5
     aliases:

@@ -488,6 +488,50 @@ advisories:
         data:
           fixed-version: 0.0.4-r16
 
+  - id: CGA-qw54-7jcm-89vf
+    aliases:
+      - CVE-2024-10220
+      - GHSA-27wf-5967-98gx
+    events:
+      - timestamp: 2024-11-23T10:05:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nodetaint
+            componentID: f77abdbea268231f
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.27.16
+            componentType: go-module
+            componentLocation: /usr/bin/nodetaint
+            scanner: grype
+      - timestamp: 2024-12-13T05:08:11Z
+        type: fixed
+        data:
+          fixed-version: 0.0.4-r23
+
+  - id: CGA-rx57-4h8q-cx46
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T16:02:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nodetaint
+            componentID: ca6d99712a25165c
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/nodetaint
+            scanner: grype
+      - timestamp: 2024-12-20T06:10:32Z
+        type: fixed
+        data:
+          fixed-version: 0.0.4-r25
+
   - id: CGA-w32j-65w7-364f
     aliases:
       - CVE-2023-44487

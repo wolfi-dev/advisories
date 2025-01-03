@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: gitlab-kas-17.6
+
+advisories:
+  - id: CGA-8x4f-mrjw-3rrh
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T10:07:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-kas-17.6
+            componentID: 604b38c86aa52f51
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/agentk
+            scanner: grype
+      - timestamp: 2024-12-12T17:24:33Z
+        type: fixed
+        data:
+          fixed-version: 17.6.2-r1
+
+  - id: CGA-x59p-mmrw-qjpv
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T16:38:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-kas-17.6
+            componentID: 3c48dfc360b5f755
+            componentName: golang.org/x/net
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/agentk
+            scanner: grype
+      - timestamp: 2024-12-21T09:16:37Z
+        type: fixed
+        data:
+          fixed-version: 17.6.2-r2

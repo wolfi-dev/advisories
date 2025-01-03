@@ -23,6 +23,28 @@ advisories:
         data:
           fixed-version: 1.23.0-r0
 
+  - id: CGA-2wqc-x4rr-vx4c
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T11:10:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: temporal-server
+            componentID: 679eb6748d97e873
+            componentName: golang.org/x/crypto
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/temporal-sql-tool
+            scanner: grype
+      - timestamp: 2024-12-13T17:17:15Z
+        type: fixed
+        data:
+          fixed-version: 1.25.2-r1
+
   - id: CGA-3w3g-g537-q2jr
     aliases:
       - CVE-2023-3485
@@ -55,6 +77,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.22.6-r1
+
+  - id: CGA-5m2j-h8p9-834m
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T16:36:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: temporal-server
+            componentID: 973dcab532ef1e89
+            componentName: golang.org/x/net
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/temporal-cassandra-tool
+            scanner: grype
+      - timestamp: 2024-12-20T03:19:52Z
+        type: fixed
+        data:
+          fixed-version: 1.25.2-r2
 
   - id: CGA-6qjq-38jq-6vc6
     aliases:

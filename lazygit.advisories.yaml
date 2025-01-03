@@ -4,6 +4,28 @@ package:
   name: lazygit
 
 advisories:
+  - id: CGA-3pcr-3wm7-w9qx
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T18:44:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: lazygit
+            componentID: 187c398fa3296206
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/lazygit
+            scanner: grype
+      - timestamp: 2024-12-20T13:10:20Z
+        type: fixed
+        data:
+          fixed-version: 0.44.1-r3
+
   - id: CGA-3q79-fjqf-x98j
     aliases:
       - CVE-2023-45289
@@ -73,6 +95,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.44.0-r0
+
+  - id: CGA-fjg2-gm44-jqv2
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T15:30:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: lazygit
+            componentID: 1a00419cb3723cfc
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/lazygit
+            scanner: grype
+      - timestamp: 2024-12-13T06:23:51Z
+        type: fixed
+        data:
+          fixed-version: 0.44.1-r1
 
   - id: CGA-j5f3-4xj5-w9p3
     aliases:

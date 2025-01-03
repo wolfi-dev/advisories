@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: aws-application-networking-k8s
+
+advisories:
+  - id: CGA-pwjw-j294-24qr
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T07:09:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-application-networking-k8s
+            componentID: ab75254f02078bd3
+            componentName: golang.org/x/net
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2024-12-20T07:11:45Z
+        type: fixed
+        data:
+          fixed-version: 1.1.0-r1

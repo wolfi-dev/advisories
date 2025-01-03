@@ -32,6 +32,7 @@ advisories:
 
   - id: CGA-896q-7j3w-vqv7
     aliases:
+      - CVE-2024-43806
       - GHSA-c827-hfw6-qwvm
     events:
       - timestamp: 2024-07-29T10:35:28Z
@@ -114,6 +115,41 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.2.0-r1
+
+  - id: CGA-q4hr-6pr9-jvmw
+    aliases:
+      - GHSA-2rxc-gjrp-vjhx
+    events:
+      - timestamp: 2024-12-05T08:15:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pgcat
+            componentID: e477ae5c9c7128d5
+            componentName: anstream
+            componentVersion: 0.3.2
+            componentType: rust-crate
+            componentLocation: /usr/bin/pgcat
+            scanner: grype
+
+  - id: CGA-qhv6-4hxj-2g6c
+    aliases:
+      - CVE-2024-12224
+      - GHSA-h97m-ww89-6jmq
+    events:
+      - timestamp: 2024-12-10T11:17:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pgcat
+            componentID: f43019a103df1f0d
+            componentName: idna
+            componentVersion: 0.2.3
+            componentType: rust-crate
+            componentLocation: /usr/bin/pgcat
+            scanner: grype
 
   - id: CGA-rq7w-438m-4vjp
     aliases:

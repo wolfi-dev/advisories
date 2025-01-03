@@ -4,6 +4,50 @@ package:
   name: loki-3.3
 
 advisories:
+  - id: CGA-4wxq-qx43-qf56
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T16:17:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: loki-3.3
+            componentID: 37c1fd76ab95429b
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/promtail
+            scanner: grype
+      - timestamp: 2024-12-20T07:02:31Z
+        type: fixed
+        data:
+          fixed-version: 3.3.2-r1
+
+  - id: CGA-g5gw-3fr6-hqhj
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T15:13:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: loki-3.3
+            componentID: a4b75fca3d4043d7
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/logcli
+            scanner: grype
+      - timestamp: 2024-12-14T11:18:07Z
+        type: fixed
+        data:
+          fixed-version: 3.3.1-r1
+
   - id: CGA-pw7w-ff7j-8rjg
     aliases:
       - CVE-2024-51744

@@ -1,0 +1,37 @@
+schema-version: 2.0.2
+
+package:
+  name: telegraf-1.33
+
+advisories:
+  - id: CGA-3jv7-v9p9-hmgx
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T20:20:59Z
+        type: fixed
+        data:
+          fixed-version: 1.33.0-r1
+
+  - id: CGA-7gqm-xf2p-7xjv
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-20T07:04:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.33
+            componentID: 8f3dde3011f2a336
+            componentName: golang.org/x/net
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
+      - timestamp: 2024-12-20T20:30:33Z
+        type: fixed
+        data:
+          fixed-version: 1.33.0-r2

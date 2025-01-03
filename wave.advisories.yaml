@@ -110,6 +110,28 @@ advisories:
         data:
           fixed-version: 0.8.0-r1
 
+  - id: CGA-vm73-cgq9-c7rm
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T09:30:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wave
+            componentID: ea4699c3dba65263
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/wave
+            scanner: grype
+      - timestamp: 2024-12-19T16:15:58Z
+        type: fixed
+        data:
+          fixed-version: 0.10.0-r1
+
   - id: CGA-xp5x-v26m-36j8
     aliases:
       - CVE-2024-24791

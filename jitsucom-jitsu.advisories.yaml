@@ -15,6 +15,28 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'The lowest version of jsonwebtoken used in the jitsucom-jitsu-console is 9.0.0 and the fix version outlined in the CVE GHSA-c7hr-j4mj-j2w6 is 4.2.2 '
 
+  - id: CGA-8c38-5wj2-q369
+    aliases:
+      - CVE-2024-55565
+      - GHSA-mwcw-c2x4-8c55
+    events:
+      - timestamp: 2024-12-10T09:36:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jitsucom-jitsu
+            componentID: 3673e2cea62546db
+            componentName: nanoid
+            componentVersion: 3.3.7
+            componentType: npm
+            componentLocation: /app/node_modules/.pnpm/nanoid@3.3.7/node_modules/nanoid/package.json
+            scanner: grype
+      - timestamp: 2024-12-30T16:31:31Z
+        type: fixed
+        data:
+          fixed-version: 2.8.5-r0
+
   - id: CGA-9ph2-9r6m-2j4q
     aliases:
       - CVE-2024-39338
@@ -135,6 +157,10 @@ advisories:
         data:
           note: |
             A Regular Expression Denial of Service (ReDoS) flaw was found in kangax html-minifier 4.0.0 via the candidate variable in htmlminifier.js. The ReDoS vulnerability can be mitigated with several best practices described here: [https://snyk.io/blog/redos-and-catastrophic-backtracking/]. The issue is still open and has not been fixed yet: 'https://github.com/kangax/html-minifier/issues/1135'
+      - timestamp: 2024-12-17T03:00:51Z
+        type: fixed
+        data:
+          fixed-version: 2.8.4-r0
 
   - id: CGA-r799-xvgx-mjjx
     aliases:

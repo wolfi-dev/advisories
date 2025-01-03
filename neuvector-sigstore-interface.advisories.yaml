@@ -80,6 +80,28 @@ advisories:
         data:
           fixed-version: 0_git20240520-r1
 
+  - id: CGA-f45q-rv7m-rwr2
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T13:10:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: neuvector-sigstore-interface
+            componentID: a2cf202077bea6d1
+            componentName: golang.org/x/crypto
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/local/bin/sigstore-interface
+            scanner: grype
+      - timestamp: 2024-12-14T21:07:18Z
+        type: fixed
+        data:
+          fixed-version: 0_git20240801-r3
+
   - id: CGA-gr5p-p2fg-423g
     aliases:
       - CVE-2024-29903
@@ -159,6 +181,28 @@ advisories:
             There are significant changes between these releases, and attempting to upgrade results in build errors.
             Pending fix from upstream, which will involve removing their dependency on the depreciated version.
             Related information: https://github.com/github/advisory-database/pull/4893.
+
+  - id: CGA-rh3v-73ch-jh8v
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T10:01:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: neuvector-sigstore-interface
+            componentID: 70650607459e2b76
+            componentName: golang.org/x/net
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/local/bin/sigstore-interface
+            scanner: grype
+      - timestamp: 2024-12-20T01:05:36Z
+        type: fixed
+        data:
+          fixed-version: 0_git20240801-r4
 
   - id: CGA-v924-gcj3-ccj2
     aliases:

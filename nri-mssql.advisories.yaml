@@ -109,6 +109,28 @@ advisories:
         data:
           fixed-version: 2.12.0-r1
 
+  - id: CGA-j9rf-q6h3-v7qg
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T20:27:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-mssql
+            componentID: 44e6dd12867ee60a
+            componentName: golang.org/x/crypto
+            componentVersion: v0.18.0
+            componentType: go-module
+            componentLocation: /usr/bin/nri-mssql
+            scanner: grype
+      - timestamp: 2024-12-16T21:00:53Z
+        type: fixed
+        data:
+          fixed-version: 2.13.0-r1
+
   - id: CGA-jh2q-g899-5m38
     aliases:
       - CVE-2024-24789

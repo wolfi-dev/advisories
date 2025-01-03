@@ -230,6 +230,28 @@ advisories:
             componentLocation: /usr/bin/volume-modifier-for-k8s
             scanner: grype
 
+  - id: CGA-rjxf-32m5-p6hm
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-20T08:44:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: volume-modifier-for-k8s
+            componentID: 7721aaf90a85ddf6
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/volume-modifier-for-k8s
+            scanner: grype
+      - timestamp: 2024-12-20T22:15:28Z
+        type: fixed
+        data:
+          fixed-version: 0.5.0-r1
+
   - id: CGA-w466-59gh-gw6h
     aliases:
       - CVE-2024-24787

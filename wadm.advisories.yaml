@@ -4,6 +4,55 @@ package:
   name: wadm
 
 advisories:
+  - id: CGA-25q2-xqvw-c65c
+    aliases:
+      - GHSA-wwq9-3cpr-mm53
+    events:
+      - timestamp: 2024-12-05T09:39:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wadm
+            componentID: 4e6df20128046003
+            componentName: hashbrown
+            componentVersion: 0.15.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/wadm
+            scanner: grype
+      - timestamp: 2024-12-07T19:57:12Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            wadm currently depends on two versions of hashbrown - v12.x and v15.x.
+            We can't bump v12.x to remediate this CVE, as the project explicitly depends on it.
+            Waiting for fix from upstream. Ref: https://github.com/wasmCloud/wadm/blob/v0.18.0/Cargo.lock#L1084-L1094.
+      - timestamp: 2025-01-02T18:15:37Z
+        type: fixed
+        data:
+          fixed-version: 0.19.0-r0
+
+  - id: CGA-fx37-952j-3xmc
+    aliases:
+      - GHSA-qg5g-gv98-5ffh
+    events:
+      - timestamp: 2024-11-26T09:18:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wadm
+            componentID: b3bae60c87c0b205
+            componentName: rustls
+            componentVersion: 0.23.13
+            componentType: rust-crate
+            componentLocation: /usr/bin/wadm
+            scanner: grype
+      - timestamp: 2024-11-26T13:30:54Z
+        type: fixed
+        data:
+          fixed-version: 0.18.0-r2
+
   - id: CGA-g74c-9x7h-rc75
     aliases:
       - CVE-2024-47609
@@ -28,3 +77,25 @@ advisories:
             Remediating this vulnerability requires upgrading tonic to v0.12.13.
             However, upgrading this causes issues with other dependencies, namely opentelemetry-otlp and wadm-cli, which are not compatible with this version.
             Pending upstream fix.
+
+  - id: CGA-q94g-vpv9-hw34
+    aliases:
+      - CVE-2024-12224
+      - GHSA-h97m-ww89-6jmq
+    events:
+      - timestamp: 2024-12-10T13:04:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wadm
+            componentID: ec1b36eedcd27d24
+            componentName: idna
+            componentVersion: 0.5.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/wadm
+            scanner: grype
+      - timestamp: 2025-01-02T18:15:36Z
+        type: fixed
+        data:
+          fixed-version: 0.19.0-r0

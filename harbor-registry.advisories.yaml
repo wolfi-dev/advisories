@@ -120,6 +120,50 @@ advisories:
         data:
           fixed-version: 3.0.0_alpha1-r4
 
+  - id: CGA-p35f-qv46-7jwr
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T13:05:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-registry
+            componentID: 6cc3268c4b3b367a
+            componentName: golang.org/x/crypto
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-registry
+            scanner: grype
+      - timestamp: 2024-12-13T12:43:02Z
+        type: fixed
+        data:
+          fixed-version: 3.0.0_alpha1-r8
+
+  - id: CGA-qmf3-x7cv-pmj8
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T07:36:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-registry
+            componentID: 5311faf984b55953
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-registry
+            scanner: grype
+      - timestamp: 2024-12-19T17:35:38Z
+        type: fixed
+        data:
+          fixed-version: 3.0.0_alpha1-r9
+
   - id: CGA-vrf4-vxxr-6f4c
     aliases:
       - CVE-2024-34156

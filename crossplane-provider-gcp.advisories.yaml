@@ -14,6 +14,50 @@ advisories:
         data:
           fixed-version: 1.1.0-r3
 
+  - id: CGA-34fp-v8gh-86rp
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T12:02:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: crossplane-provider-gcp
+            componentID: 2ef6048f625a181b
+            componentName: golang.org/x/net
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/provider
+            scanner: grype
+      - timestamp: 2024-12-19T22:21:23Z
+        type: fixed
+        data:
+          fixed-version: 1.11.1-r1
+
+  - id: CGA-83p4-j7xg-58pg
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T15:14:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: crossplane-provider-gcp
+            componentID: f96fdb723ad82e43
+            componentName: golang.org/x/crypto
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/provider
+            scanner: grype
+      - timestamp: 2024-12-13T06:26:58Z
+        type: fixed
+        data:
+          fixed-version: 1.11.0-r1
+
   - id: CGA-845p-47xj-pqx8
     aliases:
       - CVE-2023-45288

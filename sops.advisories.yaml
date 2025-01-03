@@ -91,6 +91,50 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-927x-f937-89jc
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T11:43:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sops
+            componentID: cd13fc68c294acc6
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/sops
+            scanner: grype
+      - timestamp: 2024-12-12T22:42:07Z
+        type: fixed
+        data:
+          fixed-version: 3.9.2-r1
+
+  - id: CGA-9hfq-fxcg-88xx
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T09:07:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sops
+            componentID: 7ce5dfc5384e66e8
+            componentName: golang.org/x/net
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/sops
+            scanner: grype
+      - timestamp: 2024-12-19T17:32:26Z
+        type: fixed
+        data:
+          fixed-version: 3.9.2-r2
+
   - id: CGA-9qj5-2jw4-h936
     aliases:
       - CVE-2024-34156
@@ -193,6 +237,27 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.8.1-r6
+
+  - id: CGA-jfgh-gjh6-g8fv
+    aliases:
+      - GHSA-32gq-x56h-299c
+    events:
+      - timestamp: 2024-12-19T09:07:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sops
+            componentID: 32beddbc6a6188cf
+            componentName: filippo.io/age
+            componentVersion: v1.2.0
+            componentType: go-module
+            componentLocation: /usr/bin/sops
+            scanner: grype
+      - timestamp: 2024-12-19T17:32:25Z
+        type: fixed
+        data:
+          fixed-version: 3.9.2-r2
 
   - id: CGA-p5cr-3f5q-x52x
     aliases:

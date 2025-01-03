@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: cloud-provider-aws-1.31
+
+advisories:
+  - id: CGA-86qh-q5wf-2p3h
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-13T09:39:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-provider-aws-1.31
+            componentID: 9e57be123dfffffa
+            componentName: golang.org/x/crypto
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/aws-cloud-controller-manager
+            scanner: grype
+      - timestamp: 2024-12-13T22:13:48Z
+        type: fixed
+        data:
+          fixed-version: 1.31.4-r1
+
+  - id: CGA-xv7x-6mxc-wmvv
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T08:06:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-provider-aws-1.31
+            componentID: c73a0d38b5b50bc5
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/ecr-credential-provider
+            scanner: grype
+      - timestamp: 2024-12-19T17:39:05Z
+        type: fixed
+        data:
+          fixed-version: 1.31.4-r2

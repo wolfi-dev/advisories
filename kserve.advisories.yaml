@@ -48,6 +48,28 @@ advisories:
         data:
           fixed-version: 0.13.1-r5
 
+  - id: CGA-8744-8f68-67x8
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-20T12:05:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kserve
+            componentID: 6ed0442bc52ddd1c
+            componentName: golang.org/x/net
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/agent
+            scanner: grype
+      - timestamp: 2024-12-21T04:09:25Z
+        type: fixed
+        data:
+          fixed-version: 0.14.0-r3
+
   - id: CGA-8fwp-6445-pppv
     aliases:
       - CVE-2024-34155
@@ -92,6 +114,28 @@ advisories:
         data:
           fixed-version: 0.13.1-r3
 
+  - id: CGA-crfr-r549-cvmg
+    aliases:
+      - CVE-2024-56326
+      - GHSA-q2x7-8rv6-6q7h
+    events:
+      - timestamp: 2024-12-24T09:12:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kserve
+            componentID: 78b06eb6e23e6d85
+            componentName: jinja2
+            componentVersion: 3.1.4
+            componentType: python
+            componentLocation: /usr/lib/python3.11/site-packages/jinja2-3.1.4.dist-info/METADATA, /usr/lib/python3.11/site-packages/jinja2-3.1.4.dist-info/RECORD
+            scanner: grype
+      - timestamp: 2024-12-25T16:13:38Z
+        type: fixed
+        data:
+          fixed-version: 0.14.1-r0
+
   - id: CGA-fm37-6x82-hrg9
     aliases:
       - CVE-2024-34156
@@ -135,6 +179,10 @@ advisories:
         type: pending-upstream-fix
         data:
           note: The commons-io:commons-io:2.7.0 dependency is transitive from a direct dependency on the python package ray. To fix this vulnerability, we'd require ray to upgrade to commons-io:commons-io:2.14.0 (there is currently no released version of ray with that fix) and we'd have to upgrade the version of ray used in kserve to that fixed version.
+      - timestamp: 2024-12-13T17:01:47Z
+        type: fixed
+        data:
+          fixed-version: 0.14.0-r0
 
   - id: CGA-j6j7-cxqc-pwjf
     aliases:
@@ -153,6 +201,32 @@ advisories:
             componentType: python
             componentLocation: /usr/lib/python3.11/site-packages/aiohttp-3.10.5.dist-info/METADATA, /usr/lib/python3.11/site-packages/aiohttp-3.10.5.dist-info/RECORD, /usr/lib/python3.11/site-packages/aiohttp-3.10.5.dist-info/top_level.txt
             scanner: grype
+      - timestamp: 2024-12-13T17:01:46Z
+        type: fixed
+        data:
+          fixed-version: 0.14.0-r0
+
+  - id: CGA-vj82-v565-x8xj
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T19:08:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kserve
+            componentID: 4819f18015f36922
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/agent
+            scanner: grype
+      - timestamp: 2024-12-13T17:01:47Z
+        type: fixed
+        data:
+          fixed-version: 0.14.0-r0
 
   - id: CGA-w2cp-3rgq-pfhv
     aliases:
@@ -175,6 +249,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.13.1-r3
+
+  - id: CGA-whf8-42p9-686q
+    aliases:
+      - CVE-2024-56201
+      - GHSA-gmj6-6f8f-6699
+    events:
+      - timestamp: 2024-12-24T09:12:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kserve
+            componentID: 78b06eb6e23e6d85
+            componentName: jinja2
+            componentVersion: 3.1.4
+            componentType: python
+            componentLocation: /usr/lib/python3.11/site-packages/jinja2-3.1.4.dist-info/METADATA, /usr/lib/python3.11/site-packages/jinja2-3.1.4.dist-info/RECORD
+            scanner: grype
+      - timestamp: 2024-12-25T16:13:39Z
+        type: fixed
+        data:
+          fixed-version: 0.14.1-r0
 
   - id: CGA-xw8q-xp4x-825w
     aliases:

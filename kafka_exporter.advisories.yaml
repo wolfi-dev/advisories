@@ -26,6 +26,28 @@ advisories:
         data:
           fixed-version: 1.8.0-r1
 
+  - id: CGA-65ff-8pm3-368q
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T08:17:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kafka_exporter
+            componentID: fd930598177f5e0d
+            componentName: golang.org/x/crypto
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/kafka_exporter
+            scanner: grype
+      - timestamp: 2024-12-12T12:33:01Z
+        type: fixed
+        data:
+          fixed-version: 1.8.0-r3
+
   - id: CGA-84mp-g4rq-hr87
     aliases:
       - CVE-2024-34155
@@ -47,6 +69,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.8.0-r1
+
+  - id: CGA-9mq8-4x39-h662
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T08:05:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kafka_exporter
+            componentID: 0361bfa14cdae31d
+            componentName: golang.org/x/net
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/kafka_exporter
+            scanner: grype
+      - timestamp: 2024-12-19T11:30:50Z
+        type: fixed
+        data:
+          fixed-version: 1.8.0-r4
 
   - id: CGA-jhrh-28fx-vx8c
     aliases:

@@ -78,6 +78,28 @@ advisories:
         data:
           fixed-version: 2.10.1-r1
 
+  - id: CGA-g92p-793f-c2hg
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T16:00:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-sql-proxy
+            componentID: d8749282f72e1d54
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/cloud-sql-proxy
+            scanner: grype
+      - timestamp: 2024-12-20T03:13:32Z
+        type: fixed
+        data:
+          fixed-version: 2.14.2-r2
+
   - id: CGA-mc9r-gxf4-3wq9
     aliases:
       - CVE-2024-24783
@@ -160,6 +182,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.7.0-r1
+
+  - id: CGA-q3gf-j58r-8449
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T08:02:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-sql-proxy
+            componentID: e6b3d8aff3d9067e
+            componentName: golang.org/x/crypto
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/cloud-sql-proxy
+            scanner: grype
+      - timestamp: 2024-12-12T11:23:27Z
+        type: fixed
+        data:
+          fixed-version: 2.14.2-r1
 
   - id: CGA-vcf3-x373-xvwj
     aliases:

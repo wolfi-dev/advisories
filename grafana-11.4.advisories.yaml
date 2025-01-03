@@ -1,0 +1,152 @@
+schema-version: 2.0.2
+
+package:
+  name: grafana-11.4
+
+advisories:
+  - id: CGA-2fmg-wxxp-jcw2
+    aliases:
+      - CVE-2018-14040
+      - GHSA-3wqf-4x89-9g79
+    events:
+      - timestamp: 2024-12-19T02:13:16Z
+        type: pending-upstream-fix
+        data:
+          note: 'Grafana project maintainers claim the bootstrap lib is only there now to support Angular plugins that still use them. Angular is planned to be removed as a part of the Grafana 12 release which can be seen here: https://github.com/grafana/grafana/issues/95822 Until then this library is required. However, since the release of Grafana v11, the angular_support_enabled configuration parameter to inherently support for AngularJS based plugins is set to false by default as seen here: https://github.com/grafana/grafana/blob/9225f4a1cbd1cfe8b69f1aa2d62309a9700533a5/conf/defaults.ini#L401 The bootstrap vulnerability exposure is entirely controlled by the configuration and use cases determined by the user. '
+
+  - id: CGA-4pjh-pg33-w9rq
+    aliases:
+      - CVE-2024-6485
+      - GHSA-vxmc-5x29-h64v
+    events:
+      - timestamp: 2024-12-19T02:13:30Z
+        type: pending-upstream-fix
+        data:
+          note: 'Grafana project maintainers claim the bootstrap lib is only there now to support Angular plugins that still use them. Angular is planned to be removed as a part of the Grafana 12 release which can be seen here: https://github.com/grafana/grafana/issues/95822 Until then this library is required. However, since the release of Grafana v11, the angular_support_enabled configuration parameter to inherently support for AngularJS based plugins is set to false by default as seen here: https://github.com/grafana/grafana/blob/9225f4a1cbd1cfe8b69f1aa2d62309a9700533a5/conf/defaults.ini#L401 The bootstrap vulnerability exposure is entirely controlled by the configuration and use cases determined by the user. '
+
+  - id: CGA-4xrx-7jw4-6gwx
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T08:09:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-11.4
+            componentID: 4ea25e1cd79b13d6
+            componentName: golang.org/x/net
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+      - timestamp: 2024-12-19T12:41:01Z
+        type: fixed
+        data:
+          fixed-version: 11.4.0-r3
+
+  - id: CGA-662q-6m6x-qggx
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2024-12-09T20:22:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-11.4
+            componentID: 484ec5ec3049f2cf
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+      - timestamp: 2024-12-09T21:00:43Z
+        type: fixed
+        data:
+          fixed-version: 11.4.0-r1
+
+  - id: CGA-999j-724c-xf7v
+    aliases:
+      - CVE-2018-20676
+      - GHSA-3mgp-fx93-9xv5
+    events:
+      - timestamp: 2024-12-19T02:13:23Z
+        type: pending-upstream-fix
+        data:
+          note: 'Grafana project maintainers claim the bootstrap lib is only there now to support Angular plugins that still use them. Angular is planned to be removed as a part of the Grafana 12 release which can be seen here: https://github.com/grafana/grafana/issues/95822 Until then this library is required. However, since the release of Grafana v11, the angular_support_enabled configuration parameter to inherently support for AngularJS based plugins is set to false by default as seen here: https://github.com/grafana/grafana/blob/9225f4a1cbd1cfe8b69f1aa2d62309a9700533a5/conf/defaults.ini#L401 The bootstrap vulnerability exposure is entirely controlled by the configuration and use cases determined by the user. '
+
+  - id: CGA-gf3v-8r72-w784
+    aliases:
+      - CVE-2016-10735
+      - GHSA-4p24-vmcr-4gqj
+    events:
+      - timestamp: 2024-12-19T02:13:12Z
+        type: pending-upstream-fix
+        data:
+          note: 'Grafana project maintainers claim the bootstrap lib is only there now to support Angular plugins that still use them. Angular is planned to be removed as a part of the Grafana 12 release which can be seen here: https://github.com/grafana/grafana/issues/95822 Until then this library is required. However, since the release of Grafana v11, the angular_support_enabled configuration parameter to inherently support for AngularJS based plugins is set to false by default as seen here: https://github.com/grafana/grafana/blob/9225f4a1cbd1cfe8b69f1aa2d62309a9700533a5/conf/defaults.ini#L401 The bootstrap vulnerability exposure is entirely controlled by the configuration and use cases determined by the user. '
+
+  - id: CGA-h4p2-gf67-r7gm
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T20:19:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-11.4
+            componentID: f792c4160ec186b9
+            componentName: golang.org/x/crypto
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+      - timestamp: 2024-12-16T22:37:17Z
+        type: fixed
+        data:
+          fixed-version: 11.4.0-r2
+
+  - id: CGA-j7rm-p6jq-j3xc
+    aliases:
+      - CVE-2018-14042
+      - GHSA-7mvr-5x2g-wfc8
+    events:
+      - timestamp: 2024-12-19T02:13:20Z
+        type: pending-upstream-fix
+        data:
+          note: Grafana project maintainers claim the bootstrap lib is only there now to support Angular plugins that still use them. Angular is planned to be removed as a part of the Grafana 12 release. Until then this library is required. However, since the release of Grafana v11, the angular_support_enabled configuration parameter to inherently support for AngularJS based plugins is set to false by default. The bootstrap vulnerability exposure is entirely controlled by the configuration and use cases determined by the user
+
+  - id: CGA-r23r-h965-qf53
+    aliases:
+      - CVE-2018-20677
+      - GHSA-ph58-4vrj-w6hr
+    events:
+      - timestamp: 2024-12-19T02:13:27Z
+        type: pending-upstream-fix
+        data:
+          note: Grafana project maintainers claim the bootstrap lib is only there now to support Angular plugins that still use them. Angular is planned to be removed as a part of the Grafana 12 release. Until then this library is required. However, since the release of Grafana v11, the angular_support_enabled configuration parameter to inherently support for AngularJS based plugins is set to false by default. The bootstrap vulnerability exposure is entirely controlled by the configuration and use cases determined by the user
+
+  - id: CGA-w6m3-p2m8-xrcv
+    aliases:
+      - GHSA-32gq-x56h-299c
+    events:
+      - timestamp: 2024-12-19T08:09:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-11.4
+            componentID: 825a2b8071c7e637
+            componentName: filippo.io/age
+            componentVersion: v1.1.1
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+      - timestamp: 2024-12-19T12:41:01Z
+        type: fixed
+        data:
+          fixed-version: 11.4.0-r3

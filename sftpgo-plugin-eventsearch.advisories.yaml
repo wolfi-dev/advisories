@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: sftpgo-plugin-eventsearch
+
+advisories:
+  - id: CGA-r786-mcqw-6fmw
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T20:43:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sftpgo-plugin-eventsearch
+            componentID: f05e4309757152a2
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/sftpgo-plugin-eventsearch
+            scanner: grype
+      - timestamp: 2024-12-13T15:38:54Z
+        type: fixed
+        data:
+          fixed-version: 1.0.19-r1
+
+  - id: CGA-xv6v-gpcx-mhjf
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T20:14:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sftpgo-plugin-eventsearch
+            componentID: 0f3566eb7e7d434c
+            componentName: golang.org/x/net
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/sftpgo-plugin-eventsearch
+            scanner: grype
+      - timestamp: 2024-12-20T14:45:14Z
+        type: fixed
+        data:
+          fixed-version: 1.0.19-r2

@@ -4,6 +4,28 @@ package:
   name: nfs-subdir-external-provisioner
 
 advisories:
+  - id: CGA-2jh5-h589-r97p
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T09:10:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nfs-subdir-external-provisioner
+            componentID: 6c67b9028708f893
+            componentName: golang.org/x/net
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/nfs-subdir-external-provisioner
+            scanner: grype
+      - timestamp: 2024-12-19T17:28:10Z
+        type: fixed
+        data:
+          fixed-version: 4.0.18-r12
+
   - id: CGA-33rm-83m3-hh4w
     aliases:
       - CVE-2023-45290
@@ -313,3 +335,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 4.0.18-r4
+
+  - id: CGA-rrgc-mj58-j5cc
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T15:26:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nfs-subdir-external-provisioner
+            componentID: 2d51d25a25daf12d
+            componentName: golang.org/x/crypto
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/nfs-subdir-external-provisioner
+            scanner: grype
+      - timestamp: 2024-12-15T17:43:07Z
+        type: fixed
+        data:
+          fixed-version: 4.0.18-r11

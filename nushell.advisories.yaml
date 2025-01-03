@@ -27,6 +27,10 @@ advisories:
             This vulnerability relates to the 'lexical-core' dependency, and is fixed in v1.0.0.
             Unfortunately, nushell has other dependencies which depend on an older version of lexical-core.
             Upgrading lexical-core causes build failures. Waiting for upstream to fix.
+      - timestamp: 2024-12-22T20:18:06Z
+        type: fixed
+        data:
+          fixed-version: 0.101.0-r0
 
   - id: CGA-j597-7xg9-grgj
     aliases:
@@ -51,3 +55,46 @@ advisories:
             There is currently no fixed version of the `fast-float` rust crate (as that repository is unmaintained), but there
             is active work to migrate to a new, maintained `fast-float2` as per https://github.com/aldanor/fast-float-rust/issues/35.
             Upstream will have to migrate to this forked implementation.
+
+  - id: CGA-pgc5-rf4c-j9xj
+    aliases:
+      - CVE-2024-12224
+      - GHSA-h97m-ww89-6jmq
+    events:
+      - timestamp: 2024-12-10T12:44:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nushell
+            componentID: 8c38251fda076c98
+            componentName: idna
+            componentVersion: 0.5.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/nu_plugin_gstat
+            scanner: grype
+      - timestamp: 2024-12-22T20:18:07Z
+        type: fixed
+        data:
+          fixed-version: 0.101.0-r0
+
+  - id: CGA-wjjh-84v2-frv2
+    aliases:
+      - GHSA-wwq9-3cpr-mm53
+    events:
+      - timestamp: 2024-12-05T07:44:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nushell
+            componentID: 65ce4e8b661ced5d
+            componentName: hashbrown
+            componentVersion: 0.15.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/nu_plugin_custom_values
+            scanner: grype
+      - timestamp: 2024-12-22T20:18:07Z
+        type: fixed
+        data:
+          fixed-version: 0.101.0-r0

@@ -116,3 +116,29 @@ advisories:
             However, attempting to upgrade this results in build errors, as other dependencies expect different versions of sqlx.
             The main branch has upgraded to sqlx v0.8.1, however this has not made it into a release yet.
             Pending fix from upstream in the next release.
+      - timestamp: 2024-12-28T10:26:15Z
+        type: fixed
+        data:
+          fixed-version: 18.4.0-r0
+
+  - id: CGA-xr7j-xw6p-fpq8
+    aliases:
+      - CVE-2024-12224
+      - GHSA-h97m-ww89-6jmq
+    events:
+      - timestamp: 2024-12-10T08:18:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: atuin
+            componentID: befd4dea57deee0f
+            componentName: idna
+            componentVersion: 0.5.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/atuin
+            scanner: grype
+      - timestamp: 2024-12-28T10:26:14Z
+        type: fixed
+        data:
+          fixed-version: 18.4.0-r0

@@ -37,6 +37,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-6h9j-f4pj-w4xr
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T19:24:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kaniko
+            componentID: bbfd05dbb379275b
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/warmer
+            scanner: grype
+      - timestamp: 2024-12-20T13:22:06Z
+        type: fixed
+        data:
+          fixed-version: 1.23.2-r7
+
   - id: CGA-73c4-v4fq-x6f8
     aliases:
       - CVE-2024-32473
@@ -144,6 +166,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.21.0-r1
+
+  - id: CGA-f9cj-8fqf-pm58
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T20:34:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kaniko
+            componentID: 558b91acf9326f7e
+            componentName: golang.org/x/crypto
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/executor
+            scanner: grype
+      - timestamp: 2024-12-13T15:28:06Z
+        type: fixed
+        data:
+          fixed-version: 1.23.2-r6
 
   - id: CGA-fqx2-gw9v-9px4
     aliases:

@@ -34,6 +34,28 @@ advisories:
         data:
           fixed-version: 0.7.1-r4
 
+  - id: CGA-4p49-g6gf-r9ph
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T19:36:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: metrics-server
+            componentID: 23745204a37413c6
+            componentName: golang.org/x/net
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/metrics-server
+            scanner: grype
+      - timestamp: 2024-12-20T13:23:16Z
+        type: fixed
+        data:
+          fixed-version: 0.7.2-r3
+
   - id: CGA-66gx-c2c5-36hx
     aliases:
       - CVE-2024-24785
@@ -78,6 +100,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.6.4-r5
+
+  - id: CGA-82gr-6h3h-qv54
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T10:40:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: metrics-server
+            componentID: 159bf6cc12455d5b
+            componentName: golang.org/x/crypto
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/metrics-server
+            scanner: grype
+      - timestamp: 2024-12-12T19:16:07Z
+        type: fixed
+        data:
+          fixed-version: 0.7.2-r2
 
   - id: CGA-86gc-q59v-qf62
     aliases:

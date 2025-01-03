@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: envoy-gateway
+
+advisories:
+  - id: CGA-9gr2-cmw7-cmq2
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T08:15:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: envoy-gateway
+            componentID: 3e12994374218cc2
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/egctl
+            scanner: grype
+      - timestamp: 2024-12-12T12:29:03Z
+        type: fixed
+        data:
+          fixed-version: 1.2.3-r1
+
+  - id: CGA-fh6x-v262-28jh
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-20T15:24:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: envoy-gateway
+            componentID: 8590a42cde83f569
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/egctl
+            scanner: grype
+      - timestamp: 2024-12-21T05:16:37Z
+        type: fixed
+        data:
+          fixed-version: 1.2.4-r1

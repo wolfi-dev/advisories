@@ -4,6 +4,46 @@ package:
   name: flannel
 
 advisories:
+  - id: CGA-4r3q-3x2g-3mqj
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T08:22:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flannel
+            componentID: 4e75eb24d583119c
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/flanneld
+            scanner: grype
+
+  - id: CGA-4rr2-wqv3-9xjm
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T07:27:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flannel
+            componentID: 9c33182a21cd73a1
+            componentName: golang.org/x/net
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/flanneld
+            scanner: grype
+      - timestamp: 2024-12-19T17:14:57Z
+        type: fixed
+        data:
+          fixed-version: 0.26.2-r2
+
   - id: CGA-85qx-c4j8-q973
     aliases:
       - CVE-2023-45283

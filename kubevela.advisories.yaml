@@ -4,6 +4,28 @@ package:
   name: kubevela
 
 advisories:
+  - id: CGA-254h-f3jm-hc8c
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T10:14:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubevela
+            componentID: 175377fb83ac368d
+            componentName: golang.org/x/net
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2024-12-19T18:24:35Z
+        type: fixed
+        data:
+          fixed-version: 1.9.13-r5
+
   - id: CGA-3hc3-qg7v-phrh
     aliases:
       - CVE-2024-24784
@@ -296,6 +318,28 @@ advisories:
         data:
           note: Upstream kubevela requires an older version of kubectl v0.26.3 that conflicts with the version used by Helm which is v0.29.0. Any upgrade of the Kubernetes version requires multiple changes in kubevela and its dependencies.
 
+  - id: CGA-jhxr-j224-5xw4
+    aliases:
+      - CVE-2024-36623
+      - GHSA-gh5c-3h97-2f3q
+    events:
+      - timestamp: 2024-12-03T10:43:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubevela
+            componentID: fe539c4c88e13c3a
+            componentName: github.com/moby/moby
+            componentVersion: v24.0.9+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2024-12-12T01:42:32Z
+        type: fixed
+        data:
+          fixed-version: 1.9.13-r2
+
   - id: CGA-m372-ff2w-87x4
     aliases:
       - GHSA-6xv5-86q9-7xr8
@@ -358,6 +402,28 @@ advisories:
         data:
           fixed-version: 1.9.11-r6
 
+  - id: CGA-rj2h-qgvq-f849
+    aliases:
+      - CVE-2024-36621
+      - GHSA-2mj3-vfvx-fc43
+    events:
+      - timestamp: 2024-12-03T10:43:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubevela
+            componentID: fe539c4c88e13c3a
+            componentName: github.com/moby/moby
+            componentVersion: v24.0.9+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2024-12-12T01:42:31Z
+        type: fixed
+        data:
+          fixed-version: 1.9.13-r2
+
   - id: CGA-v2gj-w87r-9wmf
     aliases:
       - CVE-2023-39325
@@ -377,6 +443,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.9.7-r3
+
+  - id: CGA-v4p7-qg79-m8c2
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-13T09:14:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubevela
+            componentID: 77f527992234c9d0
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2024-12-13T22:16:12Z
+        type: fixed
+        data:
+          fixed-version: 1.9.13-r3
 
   - id: CGA-wfrf-xfjx-jg4v
     aliases:

@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: sftpgo-plugin-auth
+
+advisories:
+  - id: CGA-6h44-69mr-359m
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T11:23:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sftpgo-plugin-auth
+            componentID: 00da29e52435a604
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/sftpgo-plugin-auth
+            scanner: grype
+      - timestamp: 2024-12-12T21:15:54Z
+        type: fixed
+        data:
+          fixed-version: 1.0.10-r1
+
+  - id: CGA-cv2m-g2v8-fwmh
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T12:34:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sftpgo-plugin-auth
+            componentID: 0f0e18210337fba3
+            componentName: golang.org/x/net
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/sftpgo-plugin-auth
+            scanner: grype
+      - timestamp: 2024-12-19T23:22:16Z
+        type: fixed
+        data:
+          fixed-version: 1.0.10-r2

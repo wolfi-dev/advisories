@@ -57,6 +57,28 @@ advisories:
         data:
           fixed-version: 1.68.0-r0
 
+  - id: CGA-3cp6-44f3-3vq9
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T10:41:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rclone
+            componentID: f39b6a38f7e00b60
+            componentName: golang.org/x/crypto
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/rclone
+            scanner: grype
+      - timestamp: 2024-12-12T19:14:50Z
+        type: fixed
+        data:
+          fixed-version: 1.68.2-r2
+
   - id: CGA-4fg9-28h4-5hqf
     aliases:
       - GHSA-hrxh-9w67-g4cv
@@ -95,6 +117,27 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.68.2-r0
+
+  - id: CGA-9m77-vw65-c838
+    aliases:
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T20:08:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rclone
+            componentID: f40d6361426da8c3
+            componentName: golang.org/x/net
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/rclone
+            scanner: grype
+      - timestamp: 2024-12-20T14:44:13Z
+        type: fixed
+        data:
+          fixed-version: 1.68.2-r3
 
   - id: CGA-c2q6-cwjp-95gq
     aliases:

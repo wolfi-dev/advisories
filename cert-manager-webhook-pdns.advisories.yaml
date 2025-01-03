@@ -14,6 +14,28 @@ advisories:
         data:
           fixed-version: 2.5.1-r3
 
+  - id: CGA-3336-xcgc-m4h8
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T07:15:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-manager-webhook-pdns
+            componentID: a3c015555efd53c1
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/webhook
+            scanner: grype
+      - timestamp: 2024-12-20T07:35:49Z
+        type: fixed
+        data:
+          fixed-version: 2.5.1-r9
+
   - id: CGA-4h67-68h3-pg8m
     aliases:
       - CVE-2024-34155
@@ -45,6 +67,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.5.1-r4
+
+  - id: CGA-c658-r73m-8ch5
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T08:05:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-manager-webhook-pdns
+            componentID: 39a1f0004270af3b
+            componentName: golang.org/x/crypto
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/webhook
+            scanner: grype
+      - timestamp: 2024-12-12T16:30:28Z
+        type: fixed
+        data:
+          fixed-version: 2.5.1-r8
 
   - id: CGA-crx2-mhj6-m6r4
     aliases:
@@ -136,6 +180,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/webhook
             scanner: grype
+      - timestamp: 2024-11-22T07:09:35Z
+        type: fixed
+        data:
+          fixed-version: 2.5.1-r7
 
   - id: CGA-wwfj-2vcc-vv9w
     aliases:

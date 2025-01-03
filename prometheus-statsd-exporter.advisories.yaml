@@ -26,6 +26,28 @@ advisories:
         data:
           fixed-version: 0.26.1-r2
 
+  - id: CGA-29fm-776f-638j
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T18:37:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-statsd-exporter
+            componentID: 670595bdb793e4f5
+            componentName: golang.org/x/crypto
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/statsd_exporter
+            scanner: grype
+      - timestamp: 2024-12-13T11:44:31Z
+        type: fixed
+        data:
+          fixed-version: 0.28.0-r1
+
   - id: CGA-2jgg-m4pg-728h
     aliases:
       - CVE-2023-48795
@@ -158,6 +180,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.26.0-r2
+
+  - id: CGA-gh36-5pfj-m5gf
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T21:15:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-statsd-exporter
+            componentID: 6a291323b1710b9d
+            componentName: golang.org/x/net
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/statsd_exporter
+            scanner: grype
+      - timestamp: 2024-12-20T16:26:18Z
+        type: fixed
+        data:
+          fixed-version: 0.28.0-r2
 
   - id: CGA-hww2-h7j7-5hcf
     aliases:

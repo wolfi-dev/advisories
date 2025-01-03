@@ -110,6 +110,28 @@ advisories:
         data:
           fixed-version: 1.7.5-r0
 
+  - id: CGA-9rjx-rq39-c2g8
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T16:04:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nerdctl
+            componentID: 49fe79c51fab02af
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/nerdctl
+            scanner: grype
+      - timestamp: 2024-12-20T06:00:59Z
+        type: fixed
+        data:
+          fixed-version: 2.0.2-r2
+
   - id: CGA-f6f6-m49c-74qc
     aliases:
       - CVE-2024-24790
@@ -243,6 +265,28 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/nerdctl
             scanner: grype
+
+  - id: CGA-vqmj-97w8-99gr
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T19:40:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nerdctl
+            componentID: 12b380c5b15222dc
+            componentName: golang.org/x/crypto
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/nerdctl
+            scanner: grype
+      - timestamp: 2024-12-13T14:35:06Z
+        type: fixed
+        data:
+          fixed-version: 2.0.2-r1
 
   - id: CGA-wrgw-q647-968r
     aliases:

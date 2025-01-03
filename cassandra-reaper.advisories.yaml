@@ -46,6 +46,24 @@ advisories:
         data:
           note: 'To fix the CVE we should bump the ''jersey-common'' dependency to ''2.34'' or higher, to do that, we should bump the ''dropwizard-core'' version to 2.1 or higher this is because ''amqp-client'' is one of the dependencies of the ''dropwizard-core'' but we cannot do that because the project does not work due to this error ''java.lang.NoSuchMethodError: void org.glassfish.jersey.server.ServerExecutorProvidersConfigurator.registerExecutors(org.glassfish.jersey.internal.inject.InjectionManager, org.glassfish.jersey.model.internal.ComponentBag, org.glassfish.jersey.spi.ExecutorServiceProvider, org.glassfish.jersey.spi.ScheduledExecutorServiceProvider)''. There is an issue already created for raising an awareness about this CVE : https://github.com/thelastpickle/cassandra-reaper/issues/1462'
 
+  - id: CGA-7gp4-vgxf-86c5
+    aliases:
+      - CVE-2024-12798
+      - GHSA-pr98-23f8-jwxv
+    events:
+      - timestamp: 2024-12-20T07:43:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cassandra-reaper
+            componentID: 14348277486a4f7d
+            componentName: logback-core
+            componentVersion: 1.3.14
+            componentType: java-archive
+            componentLocation: /usr/local/lib/cassandra-reaper.jar
+            scanner: grype
+
   - id: CGA-88qf-p624-3qcw
     aliases:
       - CVE-2023-36479
@@ -151,6 +169,24 @@ advisories:
         type: pending-upstream-fix
         data:
           note: 'To fix the CVE we should bump the ''amqp-client'' dependency to ''5.18.0'' or higher, to do that, we should bump the ''dropwizard-core'' version to 2.1 or higher this is because ''amqp-client'' is one of the dependencies of the ''dropwizard-core'' but we cannot do that because the project does not work due to this error ''java.lang.NoSuchMethodError: void org.glassfish.jersey.server.ServerExecutorProvidersConfigurator.registerExecutors(org.glassfish.jersey.internal.inject.InjectionManager, org.glassfish.jersey.model.internal.ComponentBag, org.glassfish.jersey.spi.ExecutorServiceProvider, org.glassfish.jersey.spi.ScheduledExecutorServiceProvider)''. There is an issue already created for raising an awareness about this CVE : https://github.com/thelastpickle/cassandra-reaper/issues/1462'
+
+  - id: CGA-h993-24g4-v362
+    aliases:
+      - CVE-2024-12801
+      - GHSA-6v67-2wr5-gvf4
+    events:
+      - timestamp: 2024-12-20T07:43:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cassandra-reaper
+            componentID: 14348277486a4f7d
+            componentName: logback-core
+            componentVersion: 1.3.14
+            componentType: java-archive
+            componentLocation: /usr/local/lib/cassandra-reaper.jar
+            scanner: grype
 
   - id: CGA-j7w7-m586-rmf6
     aliases:

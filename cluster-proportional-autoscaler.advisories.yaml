@@ -111,6 +111,28 @@ advisories:
         data:
           fixed-version: 1.8.11-r7
 
+  - id: CGA-85pr-6fg3-3cf6
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T16:10:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-proportional-autoscaler
+            componentID: 978294a2a3266f17
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-proportional-autoscaler
+            scanner: grype
+      - timestamp: 2024-12-20T06:42:24Z
+        type: fixed
+        data:
+          fixed-version: 1.9.0-r2
+
   - id: CGA-ccjw-q6mw-7p76
     aliases:
       - CVE-2024-24784

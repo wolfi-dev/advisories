@@ -113,6 +113,50 @@ advisories:
         data:
           fixed-version: 1.6.0-r7
 
+  - id: CGA-c49h-28c2-cpwj
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T21:35:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-elasticsearch-exporter
+            componentID: 111d5160079c907b
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/elasticsearch_exporter
+            scanner: grype
+      - timestamp: 2024-12-20T22:27:05Z
+        type: fixed
+        data:
+          fixed-version: 1.8.0-r2
+
+  - id: CGA-c57q-f6c6-9jj7
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T14:28:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-elasticsearch-exporter
+            componentID: 227490eeb9c99fb1
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/elasticsearch_exporter
+            scanner: grype
+      - timestamp: 2024-12-13T04:17:17Z
+        type: fixed
+        data:
+          fixed-version: 1.8.0-r1
+
   - id: CGA-c7x5-5gw4-jgr2
     aliases:
       - CVE-2024-34156

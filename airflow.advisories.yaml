@@ -40,6 +40,24 @@ advisories:
         data:
           fixed-version: 2.9.2-r0
 
+  - id: CGA-372m-j842-xpmm
+    aliases:
+      - CVE-2024-56201
+      - GHSA-gmj6-6f8f-6699
+    events:
+      - timestamp: 2024-12-24T07:08:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow
+            componentID: 569cc0f68ce28b67
+            componentName: jinja2
+            componentVersion: 3.1.4
+            componentType: python
+            componentLocation: /opt/airflow/lib/python3.12/site-packages/jinja2-3.1.4.dist-info/METADATA, /opt/airflow/lib/python3.12/site-packages/jinja2-3.1.4.dist-info/RECORD
+            scanner: grype
+
   - id: CGA-3fx6-xvfc-v75r
     aliases:
       - CVE-2024-45314
@@ -86,6 +104,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.9.2-r0
+
+  - id: CGA-3v4v-rfpp-3jqp
+    aliases:
+      - CVE-2024-12745
+      - GHSA-8gc2-vq6m-rwjw
+    events:
+      - timestamp: 2024-12-27T08:23:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow
+            componentID: 390eb32ee3f8c5db
+            componentName: redshift-connector
+            componentVersion: 2.1.4
+            componentType: python
+            componentLocation: /opt/airflow/lib/python3.12/site-packages/redshift_connector-2.1.4.dist-info/METADATA, /opt/airflow/lib/python3.12/site-packages/redshift_connector-2.1.4.dist-info/RECORD, /opt/airflow/lib/python3.12/site-packages/redshift_connector-2.1.4.dist-info/top_level.txt
+            scanner: grype
 
   - id: CGA-45cj-mqr9-6j37
     aliases:
@@ -190,6 +226,10 @@ advisories:
             componentType: python
             componentLocation: /opt/airflow/venv/lib/python3.12/site-packages/aiohttp-3.10.10.dist-info/METADATA, /opt/airflow/venv/lib/python3.12/site-packages/aiohttp-3.10.10.dist-info/RECORD, /opt/airflow/venv/lib/python3.12/site-packages/aiohttp-3.10.10.dist-info/top_level.txt
             scanner: grype
+      - timestamp: 2024-12-16T11:23:07Z
+        type: fixed
+        data:
+          fixed-version: 2.10.3-r2
 
   - id: CGA-6h8r-33x9-cmw8
     aliases:
@@ -257,6 +297,16 @@ advisories:
         data:
           note: 'Fixed versions of Werkzeug (v2.3.8 and above) are not compatible with the current version of apache airflow. There is an open PR in airflow addressing this that will natively support Werkzeug v2.3.8 (https://github.com/apache/airflow/pull/36052) '
 
+  - id: CGA-7fh9-6mqm-xmmj
+    aliases:
+      - CVE-2024-21272
+      - GHSA-hgjp-83m4-h4fj
+    events:
+      - timestamp: 2024-10-26T08:43:53Z
+        type: fixed
+        data:
+          fixed-version: 2.10.2-r1
+
   - id: CGA-8f64-fgpv-jxj2
     aliases:
       - CVE-2024-37891
@@ -321,7 +371,17 @@ advisories:
       - timestamp: 2024-11-13T04:47:26Z
         type: pending-upstream-fix
         data:
-          note: 'Fixed versions of Werkzeug (v2.3.8 and above) are not compatible with the current version of apache airflow. There is an open PR in airflow addressing this that will natively support Werkzeug v2.3.8 (https://github.com/apache/airflow/pull/36052) '
+          note: 'Fixed versions of Werkzeug (v2.3.8 and above) are not compatible with the current version of apache airflow. There is an open PR in airflow addressing this that will natively support Werkzeug v2.3.8 (https://github.com/apache/airflow/pull/36052)'
+
+  - id: CGA-95r3-gmgc-pcqh
+    aliases:
+      - CVE-2024-49750
+      - GHSA-5vvg-pvhp-hv2m
+    events:
+      - timestamp: 2024-10-26T08:43:46Z
+        type: fixed
+        data:
+          fixed-version: 2.10.2-r1
 
   - id: CGA-f4qg-9fw4-8247
     aliases:
@@ -364,6 +424,24 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Upgrading cryptography dependency in hatch_build.py to 42.0.4 causes a build failure
+
+  - id: CGA-f7wq-crqm-v76f
+    aliases:
+      - CVE-2024-56326
+      - GHSA-q2x7-8rv6-6q7h
+    events:
+      - timestamp: 2024-12-24T07:08:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow
+            componentID: 569cc0f68ce28b67
+            componentName: jinja2
+            componentVersion: 3.1.4
+            componentType: python
+            componentLocation: /opt/airflow/lib/python3.12/site-packages/jinja2-3.1.4.dist-info/METADATA, /opt/airflow/lib/python3.12/site-packages/jinja2-3.1.4.dist-info/RECORD
+            scanner: grype
 
   - id: CGA-frqv-94jm-v4q7
     aliases:
@@ -418,6 +496,28 @@ advisories:
         type: fix-not-planned
         data:
           note: Vulnerability affects < 3.0.3 however airflow is unable to upgrade to werkzeugto 3+ https://github.com/apache/airflow/blob/2d53c1089f78d8d1416f51af60e1e0354781
+
+  - id: CGA-qpm7-q69q-w66w
+    aliases:
+      - CVE-2024-52804
+      - GHSA-8w49-h785-mj3c
+    events:
+      - timestamp: 2024-11-23T08:04:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow
+            componentID: 6f7f43d47b009995
+            componentName: tornado
+            componentVersion: 6.4.1
+            componentType: python
+            componentLocation: /opt/airflow/venv/lib/python3.12/site-packages/tornado-6.4.1.dist-info/METADATA, /opt/airflow/venv/lib/python3.12/site-packages/tornado-6.4.1.dist-info/RECORD, /opt/airflow/venv/lib/python3.12/site-packages/tornado-6.4.1.dist-info/top_level.txt
+            scanner: grype
+      - timestamp: 2024-12-16T11:23:09Z
+        type: fixed
+        data:
+          fixed-version: 2.10.3-r2
 
   - id: CGA-r95c-6w6h-wgm6
     aliases:
@@ -593,6 +693,10 @@ advisories:
             componentType: python
             componentLocation: /opt/airflow/venv/lib/python3.12/site-packages/aiohttp-3.10.10.dist-info/METADATA, /opt/airflow/venv/lib/python3.12/site-packages/aiohttp-3.10.10.dist-info/RECORD, /opt/airflow/venv/lib/python3.12/site-packages/aiohttp-3.10.10.dist-info/top_level.txt
             scanner: grype
+      - timestamp: 2024-12-16T11:23:08Z
+        type: fixed
+        data:
+          fixed-version: 2.10.3-r2
 
   - id: CGA-x72m-49rr-rrcp
     aliases:

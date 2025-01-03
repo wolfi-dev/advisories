@@ -33,6 +33,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-47xh-5xr2-gqmx
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T07:08:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ipfs
+            componentID: e11b3e3b26019361
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/ipfs
+            scanner: grype
+      - timestamp: 2024-12-12T14:16:46Z
+        type: fixed
+        data:
+          fixed-version: 0.32.1-r2
+
   - id: CGA-64p8-8q49-8rpc
     aliases:
       - CVE-2023-45142
@@ -191,6 +213,28 @@ advisories:
         data:
           fixed-version: 0.30.0-r0
 
+  - id: CGA-jjw6-4vfh-82fq
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T10:43:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ipfs
+            componentID: 17c3f0083b565a52
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/ipfs
+            scanner: grype
+      - timestamp: 2024-12-19T19:42:32Z
+        type: fixed
+        data:
+          fixed-version: 0.32.1-r3
+
   - id: CGA-p3vj-42hh-3h47
     aliases:
       - CVE-2024-24790
@@ -264,6 +308,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.30.0-r0
+
+  - id: CGA-r9p5-cx5q-xmj6
+    aliases:
+      - CVE-2024-53259
+      - GHSA-px8v-pp82-rcvr
+    events:
+      - timestamp: 2024-12-03T10:07:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ipfs
+            componentID: 8258b0fba14b48f8
+            componentName: github.com/quic-go/quic-go
+            componentVersion: v0.48.1
+            componentType: go-module
+            componentLocation: /usr/bin/ipfs
+            scanner: grype
+      - timestamp: 2024-12-03T15:07:00Z
+        type: fixed
+        data:
+          fixed-version: 0.32.1-r1
 
   - id: CGA-vhc5-9cqp-6669
     aliases:

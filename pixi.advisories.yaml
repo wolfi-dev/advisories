@@ -4,6 +4,27 @@ package:
   name: pixi
 
 advisories:
+  - id: CGA-26mh-2j9v-93f6
+    aliases:
+      - GHSA-qg5g-gv98-5ffh
+    events:
+      - timestamp: 2024-11-26T10:13:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pixi
+            componentID: e0c0c90d848eb49e
+            componentName: rustls
+            componentVersion: 0.23.14
+            componentType: rust-crate
+            componentLocation: /usr/bin/pixi
+            scanner: grype
+      - timestamp: 2024-11-26T13:15:36Z
+        type: fixed
+        data:
+          fixed-version: 0.37.0-r1
+
   - id: CGA-5rm6-834r-w797
     aliases:
       - GHSA-q445-7m23-qrmw
@@ -67,3 +88,45 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.31.0-r0
+
+  - id: CGA-p5q7-pxgg-w3g4
+    aliases:
+      - CVE-2024-12224
+      - GHSA-h97m-ww89-6jmq
+    events:
+      - timestamp: 2024-12-10T13:01:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pixi
+            componentID: ae9d41a8ff75a1c9
+            componentName: idna
+            componentVersion: 0.5.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/pixi
+            scanner: grype
+
+  - id: CGA-vj5v-j84r-44mx
+    aliases:
+      - GHSA-wwq9-3cpr-mm53
+    events:
+      - timestamp: 2024-12-05T09:39:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pixi
+            componentID: c9fc68bc086a4612
+            componentName: hashbrown
+            componentVersion: 0.15.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/pixi
+            scanner: grype
+      - timestamp: 2024-12-07T19:57:12Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            pixi currently depends on multiple versions of hashbrown - v12.x , v14.x and v15.x.
+            We can't bump the earlier versions to the latest v15.x streams, as the project explicitly depends on multiple versions.
+            Waiting for fix from upstream. Ref: https://github.com/prefix-dev/pixi/blob/656ecd6c38c4808a1415623b18c853d4c2a0c4a1/Cargo.lock#L1847-L1867

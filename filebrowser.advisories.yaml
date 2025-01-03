@@ -1,0 +1,93 @@
+schema-version: 2.0.2
+
+package:
+  name: filebrowser
+
+advisories:
+  - id: CGA-76p7-h46w-33m6
+    aliases:
+      - CVE-2024-0406
+      - GHSA-rhh4-rh7c-7r5v
+    events:
+      - timestamp: 2024-12-11T17:14:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: filebrowser
+            componentID: 351a7596c82af1d4
+            componentName: github.com/mholt/archiver/v3
+            componentVersion: v3.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/filebrowser
+            scanner: grype
+      - timestamp: 2024-12-31T14:38:26Z
+        type: pending-upstream-fix
+        data:
+          note: govulncheck confirms vulnerable symbols in binary. upstream maintainers must replace github.com/mholt/archiver/v3, package has been archived
+
+  - id: CGA-p6cp-g4vh-9345
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T09:13:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: filebrowser
+            componentID: cdbefda045655622
+            componentName: golang.org/x/crypto
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/filebrowser
+            scanner: grype
+      - timestamp: 2024-12-12T16:17:23Z
+        type: fixed
+        data:
+          fixed-version: 2.31.2-r1
+
+  - id: CGA-r26w-cp5r-rprc
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T07:35:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: filebrowser
+            componentID: be5fe785e1efb9ce
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/filebrowser
+            scanner: grype
+      - timestamp: 2024-12-19T14:36:05Z
+        type: fixed
+        data:
+          fixed-version: 2.31.2-r2
+
+  - id: CGA-wpwv-jh3m-4q65
+    aliases:
+      - CVE-2023-36308
+      - GHSA-q7pp-wcgr-pffx
+    events:
+      - timestamp: 2024-12-11T17:14:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: filebrowser
+            componentID: 37977f610a9c61b7
+            componentName: github.com/disintegration/imaging
+            componentVersion: v1.6.2
+            componentType: go-module
+            componentLocation: /usr/bin/filebrowser
+            scanner: grype
+      - timestamp: 2024-12-31T14:35:28Z
+        type: pending-upstream-fix
+        data:
+          note: 'github.com/disintegration/imaging@v1.6.2 is the latest available version. upstream maintainers must address and fix. '

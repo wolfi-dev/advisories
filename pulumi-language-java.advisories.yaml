@@ -181,6 +181,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-m9vm-8wmj-f9xx
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T09:00:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pulumi-language-java
+            componentID: a5c666cf4c45e275
+            componentName: golang.org/x/net
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/pulumi-language-java
+            scanner: grype
+      - timestamp: 2024-12-19T17:31:38Z
+        type: fixed
+        data:
+          fixed-version: 0.20.0-r2
+
   - id: CGA-q2m8-hwwh-4qqf
     aliases:
       - CVE-2024-34158
@@ -263,3 +285,13 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.9.9-r2
+
+  - id: CGA-xwxp-rp97-54mm
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T12:24:14Z
+        type: fixed
+        data:
+          fixed-version: 0.20.0-r0

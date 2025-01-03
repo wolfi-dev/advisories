@@ -110,6 +110,28 @@ advisories:
         data:
           fixed-version: 1.4.1-r2
 
+  - id: CGA-6p4h-63p4-vwhj
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T09:28:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-source-controller
+            componentID: 00710045fe91b867
+            componentName: golang.org/x/net
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/source-controller
+            scanner: grype
+      - timestamp: 2024-12-19T18:08:17Z
+        type: fixed
+        data:
+          fixed-version: 1.4.1-r5
+
   - id: CGA-86h4-wwvx-p4rq
     aliases:
       - CVE-2024-34158
@@ -460,6 +482,28 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CGA-wh2x-w96c-r8xm
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T09:07:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-source-controller
+            componentID: 9853641738e116f4
+            componentName: golang.org/x/crypto
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/source-controller
+            scanner: grype
+      - timestamp: 2024-12-12T14:43:05Z
+        type: fixed
+        data:
+          fixed-version: 1.4.1-r3
 
   - id: CGA-wrfp-hx68-f3g5
     aliases:

@@ -58,6 +58,28 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This package uses a newer version v1.24.10 when the vulnerable code affects any version older than v1.20.6.
 
+  - id: CGA-6w46-mfhh-4w97
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-13T10:25:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: weaviate
+            componentID: 966e6fa42ad774c7
+            componentName: golang.org/x/crypto
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /bin/weaviate
+            scanner: grype
+      - timestamp: 2024-12-13T22:24:37Z
+        type: fixed
+        data:
+          fixed-version: 1.28.0-r1
+
   - id: CGA-8hc6-9xcp-xx9j
     aliases:
       - CVE-2024-34156
@@ -193,6 +215,16 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.21.6-r1
+
+  - id: CGA-rrjx-xfmf-35wx
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-20T19:25:43Z
+        type: fixed
+        data:
+          fixed-version: 1.28.2-r0
 
   - id: CGA-vx3g-m66f-4mm3
     aliases:

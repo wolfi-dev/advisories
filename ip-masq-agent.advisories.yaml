@@ -4,6 +4,16 @@ package:
   name: ip-masq-agent
 
 advisories:
+  - id: CGA-2c47-4vw9-394r
+    aliases:
+      - CVE-2024-10220
+      - GHSA-27wf-5967-98gx
+    events:
+      - timestamp: 2024-11-23T14:02:04Z
+        type: fixed
+        data:
+          fixed-version: 2.12.0-r0
+
   - id: CGA-2hwc-pv3c-ggr5
     aliases:
       - CVE-2024-24791
@@ -33,6 +43,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.9.3-r7
+
+  - id: CGA-3q6p-375v-fc62
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T12:06:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ip-masq-agent
+            componentID: 596b04e7b880d24b
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/ip-masq-agent
+            scanner: grype
+      - timestamp: 2024-12-19T22:15:18Z
+        type: fixed
+        data:
+          fixed-version: 2.12.0-r2
 
   - id: CGA-4vfp-8g34-phf9
     aliases:

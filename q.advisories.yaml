@@ -24,6 +24,28 @@ advisories:
         data:
           fixed-version: 0.19.2-r1
 
+  - id: CGA-35ww-v6f7-hx5c
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T14:44:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: q
+            componentID: ae61d21e48a0cf47
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/q
+            scanner: grype
+      - timestamp: 2024-12-13T05:20:53Z
+        type: fixed
+        data:
+          fixed-version: 0.19.2-r9
+
   - id: CGA-4c6f-q3q5-mcc3
     aliases:
       - CVE-2024-24788
@@ -53,6 +75,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.19.2-r1
+
+  - id: CGA-5h96-jjw8-pwf2
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T15:07:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: q
+            componentID: df3cde3c20ba89ef
+            componentName: golang.org/x/net
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/q
+            scanner: grype
+      - timestamp: 2024-12-20T04:15:50Z
+        type: fixed
+        data:
+          fixed-version: 0.19.2-r11
 
   - id: CGA-63vj-gf7r-62gh
     aliases:
@@ -128,6 +172,33 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.19.2-r8
+
+  - id: CGA-c8h6-cp5m-vqhq
+    aliases:
+      - CVE-2024-53259
+      - GHSA-px8v-pp82-rcvr
+    events:
+      - timestamp: 2024-12-03T09:30:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: q
+            componentID: 22f11b4e2b1c757a
+            componentName: github.com/quic-go/quic-go
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/q
+            scanner: grype
+      - timestamp: 2024-12-11T23:37:12Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            This vulnerability is related to 'quic-go', one of the dependencies of the 'q' package.
+            A fix is available, but requires upgrading 'quic-go' to 'v0.48.2'. Attempting to upgrade to this version results in build failures.
+            Specifically, 'QuicConfig' may have been deprecated in favor of 'QUICConfig'.
+            Attempts to patch the likely areas of the codebase were unsuccessful, and still resulted in build failures.
+            Will require the upstream 'q' project to address in a future release.
 
   - id: CGA-frjr-28p5-8x9r
     aliases:

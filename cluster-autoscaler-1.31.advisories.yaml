@@ -40,6 +40,28 @@ advisories:
             componentLocation: /usr/bin/cluster-autoscaler
             scanner: grype
 
+  - id: CGA-vm7j-gq76-gwj2
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T07:16:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-autoscaler-1.31
+            componentID: "6200982042177855"
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-autoscaler
+            scanner: grype
+      - timestamp: 2024-12-19T18:09:07Z
+        type: fixed
+        data:
+          fixed-version: 1.31.1-r3
+
   - id: CGA-vwpg-hm4q-cg43
     aliases:
       - CVE-2024-51744
@@ -61,3 +83,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.31.0-r2
+
+  - id: CGA-xfcw-6x9f-jp7h
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T08:41:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-autoscaler-1.31
+            componentID: 58c011f50a888e4f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-autoscaler
+            scanner: grype
+      - timestamp: 2024-12-12T23:01:24Z
+        type: fixed
+        data:
+          fixed-version: 1.31.1-r1

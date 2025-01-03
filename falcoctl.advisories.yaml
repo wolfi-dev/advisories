@@ -153,6 +153,50 @@ advisories:
         data:
           fixed-version: 0.7.3-r4
 
+  - id: CGA-h787-cw3r-52rf
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T13:06:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: falcoctl
+            componentID: 6452b78f08a3848d
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/falcoctl
+            scanner: grype
+      - timestamp: 2024-12-13T04:03:40Z
+        type: fixed
+        data:
+          fixed-version: 0.10.1-r1
+
+  - id: CGA-h875-2c6m-jjgg
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T11:26:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: falcoctl
+            componentID: 43afd905d736e362
+            componentName: golang.org/x/net
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/falcoctl
+            scanner: grype
+      - timestamp: 2024-12-19T21:10:05Z
+        type: fixed
+        data:
+          fixed-version: 0.10.1-r2
+
   - id: CGA-jfmv-mw42-7cg6
     aliases:
       - CVE-2023-3978

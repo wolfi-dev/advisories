@@ -1,0 +1,59 @@
+schema-version: 2.0.2
+
+package:
+  name: linkerd2
+
+advisories:
+  - id: CGA-8x9g-jq2w-cp2w
+    aliases:
+      - CVE-2024-12224
+      - GHSA-h97m-ww89-6jmq
+    events:
+      - timestamp: 2024-12-10T10:42:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: linkerd2
+            componentID: bf7a26798a15d73e
+            componentName: idna
+            componentVersion: 0.5.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/linkerd-policy-controller
+            scanner: grype
+      - timestamp: 2024-12-16T11:36:07Z
+        type: fixed
+        data:
+          fixed-version: 24.11.8-r1
+
+  - id: CGA-m25p-vxc9-4g24
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T14:12:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: linkerd2
+            componentID: 0925356e21823823
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/linkerd
+            scanner: grype
+      - timestamp: 2024-12-16T11:36:06Z
+        type: fixed
+        data:
+          fixed-version: 24.11.8-r1
+
+  - id: CGA-r835-wcm9-x5qr
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T20:07:20Z
+        type: fixed
+        data:
+          fixed-version: 24.11.8-r2

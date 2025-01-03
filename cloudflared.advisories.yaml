@@ -112,6 +112,28 @@ advisories:
         data:
           fixed-version: 2024.1.0-r13
 
+  - id: CGA-63w8-p6mh-835w
+    aliases:
+      - CVE-2024-53259
+      - GHSA-px8v-pp82-rcvr
+    events:
+      - timestamp: 2024-12-03T09:15:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloudflared
+            componentID: d1edec708c918acf
+            componentName: github.com/quic-go/quic-go
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/cloudflared
+            scanner: grype
+      - timestamp: 2024-12-12T01:38:09Z
+        type: fixed
+        data:
+          fixed-version: 2024.12.1-r0
+
   - id: CGA-6f39-q23x-4jc3
     aliases:
       - CVE-2024-22189
@@ -132,6 +154,28 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CGA-7jm6-hwmw-vwwm
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-13T10:13:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloudflared
+            componentID: b9c5b1e2859beae8
+            componentName: golang.org/x/crypto
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/cloudflared
+            scanner: grype
+      - timestamp: 2024-12-13T22:29:28Z
+        type: fixed
+        data:
+          fixed-version: 2024.12.1-r1
 
   - id: CGA-8ww6-7wwv-g3pc
     aliases:
@@ -282,3 +326,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 2024.1.0-r10
+
+  - id: CGA-wx55-4wv4-xwc7
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T18:02:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloudflared
+            componentID: 0c94992d92ebae28
+            componentName: golang.org/x/net
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/cloudflared
+            scanner: grype
+      - timestamp: 2024-12-20T20:16:58Z
+        type: fixed
+        data:
+          fixed-version: 2024.12.2-r1

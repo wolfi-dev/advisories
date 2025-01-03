@@ -159,3 +159,25 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CGA-vhpc-hwmr-qmq6
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-20T11:34:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-kubernetes
+            componentID: 82d555a2c7c0812e
+            componentName: golang.org/x/net
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/nri-kubernetes
+            scanner: grype
+      - timestamp: 2024-12-21T02:25:30Z
+        type: fixed
+        data:
+          fixed-version: 3.32.1-r1

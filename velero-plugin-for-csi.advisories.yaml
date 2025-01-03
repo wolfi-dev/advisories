@@ -36,6 +36,28 @@ advisories:
         data:
           fixed-version: 0.7.1-r7
 
+  - id: CGA-7w5c-986m-8jmr
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T09:12:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: velero-plugin-for-csi
+            componentID: e9ca6a1eaf74ae5f
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/velero-plugin-for-csi
+            scanner: grype
+      - timestamp: 2024-12-19T18:29:09Z
+        type: fixed
+        data:
+          fixed-version: 0.7.1-r8
+
   - id: CGA-9h4w-gh58-wx5m
     aliases:
       - CVE-2024-34158

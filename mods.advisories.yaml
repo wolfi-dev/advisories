@@ -48,6 +48,28 @@ advisories:
         data:
           fixed-version: 1.6.0-r0
 
+  - id: CGA-34x3-c383-4hh6
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T08:33:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mods
+            componentID: 1a8f76856dfbbf3d
+            componentName: golang.org/x/net
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/mods
+            scanner: grype
+      - timestamp: 2024-12-19T13:23:52Z
+        type: fixed
+        data:
+          fixed-version: 1.6.0-r2
+
   - id: CGA-4hpf-rc6p-7w4g
     aliases:
       - CVE-2024-24790

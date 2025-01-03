@@ -26,6 +26,28 @@ advisories:
         data:
           fixed-version: 1.8.2-r2
 
+  - id: CGA-34gr-cf7g-pmh4
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T12:13:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-node-exporter
+            componentID: a8aa190f96d5ab65
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/node_exporter
+            scanner: grype
+      - timestamp: 2024-12-19T22:16:04Z
+        type: fixed
+        data:
+          fixed-version: 1.8.2-r4
+
   - id: CGA-35m9-3xg4-vvq5
     aliases:
       - CVE-2023-45284
@@ -88,6 +110,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.8.1-r1
+
+  - id: CGA-7h4h-5g3h-xf5f
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T11:43:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-node-exporter
+            componentID: 53c63ad8c523dc82
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/node_exporter
+            scanner: grype
+      - timestamp: 2024-12-13T13:11:54Z
+        type: fixed
+        data:
+          fixed-version: 1.8.2-r3
 
   - id: CGA-89c4-85h9-xh4w
     aliases:

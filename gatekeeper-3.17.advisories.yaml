@@ -25,3 +25,47 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.17.1-r2
+
+  - id: CGA-mx49-r777-xccm
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T12:08:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.17
+            componentID: 5cf4ab5cbaa24339
+            componentName: golang.org/x/net
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2024-12-19T22:20:41Z
+        type: fixed
+        data:
+          fixed-version: 3.17.1-r5
+
+  - id: CGA-qg9x-whvc-99rm
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T17:05:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.17
+            componentID: 835bbbdafd7ce8d0
+            componentName: golang.org/x/crypto
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2024-12-14T09:26:46Z
+        type: fixed
+        data:
+          fixed-version: 3.17.1-r4

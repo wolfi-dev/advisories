@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: kubernetes-replicator
+
+advisories:
+  - id: CGA-3463-52j9-v66w
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T10:11:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-replicator
+            componentID: a422e35df77dd576
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/kubernetes-replicator
+            scanner: grype
+      - timestamp: 2024-12-19T17:08:09Z
+        type: fixed
+        data:
+          fixed-version: 2.11.0-r1

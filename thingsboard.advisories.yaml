@@ -4,6 +4,42 @@ package:
   name: thingsboard
 
 advisories:
+  - id: CGA-2c95-vj5f-q7g6
+    aliases:
+      - CVE-2024-12801
+      - GHSA-6v67-2wr5-gvf4
+    events:
+      - timestamp: 2024-12-20T11:09:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: thingsboard
+            componentID: cb5bb93ac9484ef0
+            componentName: logback-core
+            componentVersion: 1.5.5
+            componentType: java-archive
+            componentLocation: /usr/share/tb-mqtt-transport/bin/tb-mqtt-transport.jar
+            scanner: grype
+
+  - id: CGA-39xg-q8v3-42r5
+    aliases:
+      - CVE-2024-12798
+      - GHSA-pr98-23f8-jwxv
+    events:
+      - timestamp: 2024-12-20T11:09:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: thingsboard
+            componentID: cb5bb93ac9484ef0
+            componentName: logback-core
+            componentVersion: 1.5.5
+            componentType: java-archive
+            componentLocation: /usr/share/tb-mqtt-transport/bin/tb-mqtt-transport.jar
+            scanner: grype
+
   - id: CGA-542v-cxhr-j3qf
     aliases:
       - CVE-2022-24329
@@ -40,6 +76,28 @@ advisories:
             componentID: d69d2dcfe7c63458
             componentName: kafka-clients
             componentVersion: 3.7.0
+            componentType: java-archive
+            componentLocation: /usr/share/tb-mqtt-transport/bin/tb-mqtt-transport.jar
+            scanner: grype
+      - timestamp: 2024-12-19T17:33:13Z
+        type: fixed
+        data:
+          fixed-version: 3.8.1-r4
+
+  - id: CGA-5749-245m-24vg
+    aliases:
+      - CVE-2024-50379
+      - GHSA-5j33-cvvr-w245
+    events:
+      - timestamp: 2024-12-28T10:14:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: thingsboard
+            componentID: 5a6d14c989d55779
+            componentName: tomcat-embed-core
+            componentVersion: 10.1.33
             componentType: java-archive
             componentLocation: /usr/share/tb-mqtt-transport/bin/tb-mqtt-transport.jar
             scanner: grype
@@ -149,6 +207,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.7-r4
+
+  - id: CGA-99vm-8q2m-vxj6
+    aliases:
+      - CVE-2024-53990
+      - GHSA-mfj5-cf8g-g2fv
+    events:
+      - timestamp: 2024-12-13T10:36:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: thingsboard
+            componentID: 4e434a90b0dac877
+            componentName: async-http-client
+            componentVersion: 2.12.1
+            componentType: java-archive
+            componentLocation: /usr/share/tb-mqtt-transport/bin/tb-mqtt-transport.jar
+            scanner: grype
 
   - id: CGA-9cw3-8w4j-827w
     aliases:
@@ -282,6 +358,28 @@ advisories:
             componentType: npm
             componentLocation: /usr/share/tb-js-executor/node_modules/cookie/package.json
             scanner: grype
+
+  - id: CGA-vjmv-g97f-36p7
+    aliases:
+      - CVE-2024-52798
+      - GHSA-rhx6-c78j-4q9w
+    events:
+      - timestamp: 2024-12-06T10:17:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: thingsboard
+            componentID: 0f97581f353a759a
+            componentName: path-to-regexp
+            componentVersion: 0.1.10
+            componentType: npm
+            componentLocation: /usr/share/tb-js-executor/node_modules/path-to-regexp/package.json
+            scanner: grype
+      - timestamp: 2024-12-19T17:33:14Z
+        type: fixed
+        data:
+          fixed-version: 3.8.1-r4
 
   - id: CGA-x4j9-cwr8-9r3c
     aliases:

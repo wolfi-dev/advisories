@@ -70,3 +70,39 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Updating jetty to a non-vulnerable version would require 3 major version bumps, which would be a very significant upgrade with multiple breaking changes, and should only be undertaken by the upstream maintainers.
+
+  - id: CGA-qp6f-2pwr-jwx7
+    aliases:
+      - CVE-2024-12798
+      - GHSA-pr98-23f8-jwxv
+    events:
+      - timestamp: 2024-12-20T08:37:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: akhq
+            componentID: 62d92cb2cd477b80
+            componentName: logback-core
+            componentVersion: 1.4.14
+            componentType: java-archive
+            componentLocation: /usr/share/java/akhq/akhq.jar
+            scanner: grype
+
+  - id: CGA-whpw-8qw9-7f8q
+    aliases:
+      - CVE-2024-12801
+      - GHSA-6v67-2wr5-gvf4
+    events:
+      - timestamp: 2024-12-20T08:37:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: akhq
+            componentID: 62d92cb2cd477b80
+            componentName: logback-core
+            componentVersion: 1.4.14
+            componentType: java-archive
+            componentLocation: /usr/share/java/akhq/akhq.jar
+            scanner: grype

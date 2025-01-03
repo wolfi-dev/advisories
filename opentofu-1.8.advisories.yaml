@@ -25,3 +25,47 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.8.5-r1
+
+  - id: CGA-q69c-ggmp-5wrg
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T19:06:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opentofu-1.8
+            componentID: 549cf704411e3244
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/tofu
+            scanner: grype
+      - timestamp: 2024-12-13T13:17:53Z
+        type: fixed
+        data:
+          fixed-version: 1.8.7-r1
+
+  - id: CGA-xqrj-fmqj-wgg2
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T16:15:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opentofu-1.8
+            componentID: c80a14b26cf0667b
+            componentName: golang.org/x/net
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/tofu
+            scanner: grype
+      - timestamp: 2024-12-20T06:14:57Z
+        type: fixed
+        data:
+          fixed-version: 1.8.7-r4

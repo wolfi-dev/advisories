@@ -58,6 +58,28 @@ advisories:
         data:
           fixed-version: 0.12.0-r3
 
+  - id: CGA-43r9-hjw7-m833
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T10:32:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: temporal
+            componentID: 33b7cf110918281b
+            componentName: golang.org/x/crypto
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/temporal
+            scanner: grype
+      - timestamp: 2024-12-12T19:18:40Z
+        type: fixed
+        data:
+          fixed-version: 1.1.2-r1
+
   - id: CGA-4cfg-whvv-qrjf
     aliases:
       - CVE-2024-24785
@@ -128,6 +150,32 @@ advisories:
         type: pending-upstream-fix
         data:
           note: There is no fix for dependency gopkg.in/square/go-jose.v2 and to fix that need code changes to replace the affected dependency.
+      - timestamp: 2024-11-26T17:16:04Z
+        type: fixed
+        data:
+          fixed-version: 1.1.2-r0
+
+  - id: CGA-78rm-m3xg-x945
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-21T07:33:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: temporal
+            componentID: 4bce6711fe59f15b
+            componentName: golang.org/x/net
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/temporal
+            scanner: grype
+      - timestamp: 2024-12-21T18:08:23Z
+        type: fixed
+        data:
+          fixed-version: 1.1.2-r2
 
   - id: CGA-87q2-mwvf-7f59
     aliases:

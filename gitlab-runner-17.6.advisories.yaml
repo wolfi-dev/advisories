@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: gitlab-runner-17.6
+
+advisories:
+  - id: CGA-58vx-6h3x-5qx2
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T10:36:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-17.6
+            componentID: a86a4b44afa1c0ff
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-runner
+            scanner: grype
+      - timestamp: 2024-12-13T10:18:57Z
+        type: fixed
+        data:
+          fixed-version: 17.6.0-r1
+
+  - id: CGA-hc8v-j4mj-82j8
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T08:02:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-17.6
+            componentID: 186fb8fe69e22787
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-runner-helper
+            scanner: grype
+      - timestamp: 2024-12-20T00:05:16Z
+        type: fixed
+        data:
+          fixed-version: 17.6.0-r2

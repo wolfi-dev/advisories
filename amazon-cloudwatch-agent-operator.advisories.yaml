@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: amazon-cloudwatch-agent-operator
+
+advisories:
+  - id: CGA-hx53-29r5-p52v
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T20:27:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: amazon-cloudwatch-agent-operator
+            componentID: 6ad17659974f190e
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2024-12-20T15:40:55Z
+        type: fixed
+        data:
+          fixed-version: 2.0.1-r1
+
+  - id: CGA-v92g-3668-mcc3
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T07:12:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: amazon-cloudwatch-agent-operator
+            componentID: 84157f76e8290ada
+            componentName: golang.org/x/crypto
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2024-12-13T07:29:22Z
+        type: fixed
+        data:
+          fixed-version: 2.0.0-r1

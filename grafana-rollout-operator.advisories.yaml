@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: grafana-rollout-operator
+
+advisories:
+  - id: CGA-488c-mq7m-rpfr
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T07:40:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-rollout-operator
+            componentID: f6b312e38a021528
+            componentName: golang.org/x/net
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/rollout-operator
+            scanner: grype
+      - timestamp: 2024-12-19T11:25:56Z
+        type: fixed
+        data:
+          fixed-version: 0.22.0-r1

@@ -219,6 +219,28 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability was matched to the module "https://github.com/hashicorp/terraform" at the following location(s): /usr/bin/teraform. In all cases, the installed version of the module (git commit ee58ac1851c8a433005df9863ed47796a9f6b5e7) corresponds to a version tag (v1.5.7) that is later than the fixed version (v0.12.17).'
 
+  - id: CGA-c6jc-gjgh-r235
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-20T15:30:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform
+            componentID: 59eb3ca6a1c57b1a
+            componentName: golang.org/x/net
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform
+            scanner: grype
+      - timestamp: 2024-12-21T05:17:15Z
+        type: fixed
+        data:
+          fixed-version: 1.5.7-r19
+
   - id: CGA-c7f2-cmc5-qw4m
     aliases:
       - CVE-2023-45288
@@ -343,6 +365,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.5.7-r0
+
+  - id: CGA-wqjh-jc5x-gxj2
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T21:24:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform
+            componentID: a8a4aa3be048af1e
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform
+            scanner: grype
+      - timestamp: 2024-12-13T16:26:02Z
+        type: fixed
+        data:
+          fixed-version: 1.5.7-r18
 
   - id: CGA-x3mp-jp2j-7h65
     aliases:

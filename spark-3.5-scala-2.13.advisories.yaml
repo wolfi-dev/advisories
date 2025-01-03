@@ -21,6 +21,63 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/hadoop-client-runtime-3.3.4.jar
             scanner: grype
+      - timestamp: 2024-12-16T13:26:09Z
+        type: pending-upstream-fix
+        data:
+          note: The dependency responsible for this CVE is a transitive dependency where the version of said dependency is not explicitly defined in the project but rather brought in under the hadoop-client-runtime jar. This requires upstream maintainers to implement a fix.
+
+  - id: CGA-3gjc-2qgg-6j5c
+    aliases:
+      - CVE-2018-10237
+      - GHSA-mvr2-9pj6-7w5j
+    events:
+      - timestamp: 2024-12-17T12:10:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: b02a2a4806fec2e3
+            componentName: guava
+            componentVersion: 14.0.1
+            componentType: java-archive
+            componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/guava-14.0.1.jar
+            scanner: grype
+      - timestamp: 2024-12-18T00:50:09Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            This vulnerability relates to 'guava', one of spark's dependencies.
+            Remediating this requires upgrading guava to v24.1.1 or higher, which is a significant version upgrade.
+            Spark has already upgraded to a fixed version in the main branch, but this is yet to be backported to the spark v3.5 release.
+            Attempting to upgrade guava results in build issues. For more information, see:
+             - https://issues.apache.org/jira/browse/SPARK-38262
+             - https://github.com/apache/spark/pull/36231
+
+  - id: CGA-3m72-vw57-x7x9
+    aliases:
+      - GHSA-xpw8-rcwv-8f8p
+    events:
+      - timestamp: 2024-12-17T12:11:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: 4ef4cfe177f6b1a4
+            componentName: netty-codec-http2
+            componentVersion: 4.1.96.Final
+            componentType: java-archive
+            componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/netty-codec-http2-4.1.96.Final.jar
+            scanner: grype
+      - timestamp: 2024-12-18T00:50:09Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            This vulnerability relates to 'netty-codec-http2', which is used by one of spark's other dependencies - pyspark.
+            This has been fixed in netty > v4.1.100, and spark has upgraded to a later version in main.
+            However, attempts to backport to this release of spark, result in build failures.
+            Awaiting for fix / backport from upstream to address this issue.
 
   - id: CGA-45m6-3663-vmrw
     aliases:
@@ -39,6 +96,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/hadoop-client-runtime-3.3.4.jar
             scanner: grype
+      - timestamp: 2024-12-16T13:23:38Z
+        type: pending-upstream-fix
+        data:
+          note: The dependency responsible for this CVE is a transitive dependency where the version of said dependency is not explicitly defined in the project but rather brought in under the hadoop-client-runtime jar. This requires upstream maintainers to implement a fix.
 
   - id: CGA-4q67-3fwg-vmq6
     aliases:
@@ -57,6 +118,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/hadoop-client-runtime-3.3.4.jar
             scanner: grype
+      - timestamp: 2024-12-16T12:35:32Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to commons-compress 1.21 included by the shaded JARs hadoop-client-runtime-3.3.4.jar. There are no newer versions of the shaded JARs available to fix the vulnerability.
 
   - id: CGA-56ph-vwr9-h9cf
     aliases:
@@ -73,6 +138,28 @@ advisories:
             componentVersion: 9.4.43.v20210629
             componentType: java-archive
             componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/hadoop-client-runtime-3.3.4.jar
+            scanner: grype
+      - timestamp: 2024-12-16T14:07:44Z
+        type: pending-upstream-fix
+        data:
+          note: The dependency responsible for this CVE is a transitive dependency where the version of said dependency is not explicitly defined in the project but rather brought in under the hadoop-client-runtime jar. This requires upstream maintainers to implement a fix.
+
+  - id: CGA-5ggj-xgwc-pxh5
+    aliases:
+      - CVE-2022-46751
+      - GHSA-2jc4-r94c-rp7h
+    events:
+      - timestamp: 2024-12-17T12:09:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: 1e18d09ac1baf17b
+            componentName: ivy
+            componentVersion: 2.5.1
+            componentType: java-archive
+            componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/ivy-2.5.1.jar
             scanner: grype
 
   - id: CGA-5rrm-wv6p-5c39
@@ -92,6 +179,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/hadoop-client-runtime-3.3.4.jar
             scanner: grype
+      - timestamp: 2024-12-16T12:35:32Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to nimbus-jose-jwt v9.8.1 included by the shaded JAR hadoop-client-runtime-3.3.6.jar. Spark is planning an upgrade to Hadoop 3.4.0 for Spark 4.0.0, but as of today, the shaded JAR for Hadoop 3.4.0 still includes this vulnerability.
 
   - id: CGA-5wh4-5p8j-33rj
     aliases:
@@ -110,6 +201,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/hadoop-client-runtime-3.3.4.jar
             scanner: grype
+      - timestamp: 2024-12-16T13:31:54Z
+        type: pending-upstream-fix
+        data:
+          note: The dependency responsible for this CVE is a transitive dependency where the version of said dependency is not explicitly defined in the project but rather brought in under the hadoop-client-runtime jar. This requires upstream maintainers to implement a fix.
 
   - id: CGA-6hpx-mm5q-grch
     aliases:
@@ -127,6 +222,82 @@ advisories:
             componentVersion: 1.7.7
             componentType: java-archive
             componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/hadoop-client-runtime-3.3.4.jar
+            scanner: grype
+      - timestamp: 2024-12-16T13:22:20Z
+        type: pending-upstream-fix
+        data:
+          note: The dependency responsible for this CVE is a transitive dependency where the version of said dependency is not explicitly defined in the project but rather brought in under the hadoop-client-runtime jar. This requires upstream maintainers to implement a fix.
+
+  - id: CGA-7mgp-57h7-566c
+    aliases:
+      - CVE-2024-29025
+      - GHSA-5jpm-x58v-624v
+    events:
+      - timestamp: 2024-12-17T12:09:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: c22abcb350512607
+            componentName: netty-codec-http
+            componentVersion: 4.1.96.Final
+            componentType: java-archive
+            componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/netty-codec-http-4.1.96.Final.jar
+            scanner: grype
+      - timestamp: 2024-12-17T22:26:10Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            This vulnerability relates to 'netty-codec-http', which is used by one of spark's other dependencies - pyspark.
+            pyspark copies a number of jar's from the spark build process, one of those being 'netty-codec-http'.
+            This has been fixed in netty > v4.1.108, and spark has upgraded to a later version in main.
+            However, attempts to backport to this release of spark, result in build failures.
+            Awaiting for fix / backport from upstream to address this issue.
+
+  - id: CGA-86x3-7p58-9qhp
+    aliases:
+      - CVE-2019-0205
+      - GHSA-rj7p-rfgp-852x
+    events:
+      - timestamp: 2024-12-17T12:11:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: f60f3eb47fc6c430
+            componentName: libthrift
+            componentVersion: 0.12.0
+            componentType: java-archive
+            componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/libthrift-0.12.0.jar
+            scanner: grype
+      - timestamp: 2024-12-17T17:51:12Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            This vulnerability relates to the 'libthrift' used by spark. A fixed version is available in v0.13.0.
+            Upstream have upgraded to a fixed version in the main branch, but not back ported this to spark v3.
+            Attempting to upgrade this dependency in spark v3 results in build failures, specifically compatibility issues with the 'maven-shade-plugin'.
+            Separate attempts to update the maven-shade-plugin to a later version in parallel, did not resolve the issue.
+            Awaiting for fix / backport from upstream to address this issue.
+
+  - id: CGA-93w3-x4hw-7w7g
+    aliases:
+      - CVE-2019-10172
+      - GHSA-r6j9-8759-g62w
+    events:
+      - timestamp: 2024-12-17T12:10:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: 0fe41f5e205e0c74
+            componentName: jackson-mapper-asl
+            componentVersion: 1.9.13
+            componentType: java-archive
+            componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/jackson-mapper-asl-1.9.13.jar
             scanner: grype
 
   - id: CGA-95rq-pqfg-9383
@@ -146,6 +317,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/hadoop-client-runtime-3.3.4.jar
             scanner: grype
+      - timestamp: 2024-12-16T12:35:32Z
+        type: pending-upstream-fix
+        data:
+          note: commons-io v2.8.0 is a transitive dependency that is brought in under hadoop-client-runtime-3.3.4.jar. This requires a hadoop-client-runtime update from upstream maintainers
 
   - id: CGA-9623-89qx-877m
     aliases:
@@ -164,6 +339,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/hadoop-client-runtime-3.3.4.jar
             scanner: grype
+      - timestamp: 2024-12-16T13:24:12Z
+        type: pending-upstream-fix
+        data:
+          note: The dependency responsible for this CVE is a transitive dependency where the version of said dependency is not explicitly defined in the project but rather brought in under the hadoop-client-runtime jar. This requires upstream maintainers to implement a fix.
 
   - id: CGA-9g23-pgwc-p32g
     aliases:
@@ -200,6 +379,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/hadoop-client-runtime-3.3.4.jar
             scanner: grype
+      - timestamp: 2024-12-16T12:35:32Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to avro v1.7.7, which is a transitive dependency of the shaded JAR hadoop-client-runtime, which is used by Spark. There are no newer versions of this shaded JAR available to fix the vulnerability.
 
   - id: CGA-c3mr-w98r-ch3c
     aliases:
@@ -218,6 +401,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/hadoop-client-runtime-3.3.4.jar
             scanner: grype
+      - timestamp: 2024-12-16T12:35:32Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to commons-configuration2 2.1.1 included by the shaded JARs hadoop-client-runtime-3.3.4.jar. Spark is planning an upgrade to Hadoop 3.4.0 for Spark 4.0.0, but as of today, the shaded JAR for Hadoop 3.4.0 still includes this vulnerability.
 
   - id: CGA-cfpv-j2r6-pgf4
     aliases:
@@ -236,6 +423,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/hadoop-client-runtime-3.3.4.jar
             scanner: grype
+      - timestamp: 2024-12-16T12:35:32Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to protobuf-java v3.7.1 included by the hadoop-client-runtime-3.3.4.jar. There are no newer versions of these shaded JARs available to fix the vulnerability.
 
   - id: CGA-f57h-4h74-xh48
     aliases:
@@ -254,6 +445,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/hadoop-client-runtime-3.3.4.jar
             scanner: grype
+      - timestamp: 2024-12-16T12:35:32Z
+        type: pending-upstream-fix
+        data:
+          note: Updating jetty to a non-vulnerable version would require 3 major version bumps, which would be a very significant upgrade with multiple breaking changes, and should only be undertaken by the upstream maintainers.
 
   - id: CGA-f7wh-q7gp-f4wq
     aliases:
@@ -272,6 +467,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/hadoop-client-runtime-3.3.4.jar
             scanner: grype
+      - timestamp: 2024-12-16T12:35:32Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to protobuf-java v3.7.1 included by the hadoop-client-runtime-3.3.4.jar. There are no newer versions of these shaded JARs available to fix the vulnerability.
 
   - id: CGA-fq2m-vp93-v8gm
     aliases:
@@ -290,6 +489,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/hadoop-client-runtime-3.3.4.jar
             scanner: grype
+      - timestamp: 2024-12-16T13:25:11Z
+        type: pending-upstream-fix
+        data:
+          note: The dependency responsible for this CVE is a transitive dependency where the version of said dependency is not explicitly defined in the project but rather brought in under the hadoop-client-runtime jar. This requires upstream maintainers to implement a fix.
 
   - id: CGA-fqjr-mqj6-7cpp
     aliases:
@@ -308,6 +511,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/hadoop-client-runtime-3.3.4.jar
             scanner: grype
+      - timestamp: 2024-12-16T12:35:32Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to protobuf-java v3.7.1 included by the hadoop-client-runtime-3.3.6.jar. There are no newer versions of these shaded JARs available to fix the vulnerability.
 
   - id: CGA-g946-j9fh-xg4v
     aliases:
@@ -325,6 +532,28 @@ advisories:
             componentVersion: 3.3.4
             componentType: java-archive
             componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/hadoop-client-api-3.3.4.jar
+            scanner: grype
+      - timestamp: 2024-12-16T14:04:34Z
+        type: pending-upstream-fix
+        data:
+          note: The dependency responsible for this CVE is a transitive dependency where the version of said dependency is not explicitly defined in the project but rather brought in under the hadoop-client-api  jar. This requires upstream maintainers to implement a fix.
+
+  - id: CGA-g9g4-vq86-q338
+    aliases:
+      - CVE-2019-10202
+      - GHSA-c27h-mcmw-48hv
+    events:
+      - timestamp: 2024-12-17T12:09:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: 0fe41f5e205e0c74
+            componentName: jackson-mapper-asl
+            componentVersion: 1.9.13
+            componentType: java-archive
+            componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/jackson-mapper-asl-1.9.13.jar
             scanner: grype
 
   - id: CGA-g9g9-hh8j-v9h4
@@ -344,6 +573,28 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/hadoop-client-runtime-3.3.4.jar
             scanner: grype
+      - timestamp: 2024-12-16T12:35:32Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to protobuf-java v3.7.1 included by hadoop-client-runtime-3.3.4.jar. There are no newer versions of these shaded JARs available to fix the vulnerability.
+
+  - id: CGA-gxvv-v998-c384
+    aliases:
+      - CVE-2022-46337
+      - GHSA-rcjc-c4pj-xxrp
+    events:
+      - timestamp: 2024-12-17T12:11:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: 200af9573e83185e
+            componentName: derby
+            componentVersion: 10.14.2.0
+            componentType: java-archive
+            componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/derby-10.14.2.0.jar
+            scanner: grype
 
   - id: CGA-hcx6-4xcx-96pr
     aliases:
@@ -362,6 +613,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/guava-24.1.1-android.jar
             scanner: grype
+      - timestamp: 2024-12-16T13:41:42Z
+        type: pending-upstream-fix
+        data:
+          note: 'This relates to guava v30.1.1-jre, which is included by the shaded JARs hadoop-shaded-guava-1.1.1.jar and hadoop-client-runtime-3.3.6.jar. This dependency is required to be updated by upstream maintainers '
 
   - id: CGA-hvrv-q645-jvc9
     aliases:
@@ -380,6 +635,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/hadoop-client-runtime-3.3.4.jar
             scanner: grype
+      - timestamp: 2024-12-16T13:19:55Z
+        type: pending-upstream-fix
+        data:
+          note: The dependency responsible for this CVE is a transitive dependency where the version of said dependency is not explicitly defined in the project but rather brought in under the hadoop-client-runtime jar. This requires upstream maintainers to implement a fix.
 
   - id: CGA-j948-p6wg-rq6h
     aliases:
@@ -399,6 +658,24 @@ advisories:
             componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/zookeeper-3.7.2.jar
             scanner: grype
 
+  - id: CGA-mp9j-gvpf-q352
+    aliases:
+      - CVE-2024-9823
+      - GHSA-j26w-f9rq-mr2q
+    events:
+      - timestamp: 2024-12-17T12:10:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: a0e780c4c4d2c582
+            componentName: jetty-servlets
+            componentVersion: 9.4.52.v20230823
+            componentType: java-archive
+            componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/spark-core_2.13-3.5.3.jar
+            scanner: grype
+
   - id: CGA-mx94-xp7q-7x32
     aliases:
       - CVE-2023-40167
@@ -416,6 +693,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/hadoop-client-runtime-3.3.4.jar
             scanner: grype
+      - timestamp: 2024-12-16T13:21:43Z
+        type: pending-upstream-fix
+        data:
+          note: The dependency responsible for this CVE is a transitive dependency where the version of said dependency is not explicitly defined in the project but rather brought in under the hadoop-client-runtime jar. This requires upstream maintainers to implement a fix.
 
   - id: CGA-pgr9-2j9x-h3gg
     aliases:
@@ -434,6 +715,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/guava-24.1.1-android.jar
             scanner: grype
+      - timestamp: 2024-12-16T12:35:32Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to guava v24.1.1-android, which is included by the shaded JARs spark-network-common jar, the version is dependent on the project version and so updating the dependency to resolve this issue needs to be done by upstream maintainers.
 
   - id: CGA-pm4j-36rg-wx67
     aliases:
@@ -452,6 +737,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/hadoop-client-runtime-3.3.4.jar
             scanner: grype
+      - timestamp: 2024-12-16T12:35:32Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to json-smart v1.3.2 included by the shaded JAR hadoop-client-runtime-3.3.4.jar. There are no newer versions of this shaded JAR available to fix the vulnerability.
 
   - id: CGA-qmj2-q7px-44mh
     aliases:
@@ -470,6 +759,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/hadoop-client-runtime-3.3.4.jar
             scanner: grype
+      - timestamp: 2024-12-16T14:06:36Z
+        type: pending-upstream-fix
+        data:
+          note: The dependency responsible for this CVE is a transitive dependency where the version of said dependency is not explicitly defined in the project but rather brought in under the hadoop-client-runtime jar. This requires upstream maintainers to implement a fix.
 
   - id: CGA-qrhc-cv5f-6x94
     aliases:
@@ -488,6 +781,35 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/hadoop-client-runtime-3.3.4.jar
             scanner: grype
+      - timestamp: 2024-12-16T12:35:32Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to commons-configuration2 2.1.1 included by the shaded JARs hadoop-client-runtime-3.3.4.jar. Spark is planning an upgrade to Hadoop 3.4.0 for Spark 4.0.0, but as of today, the shaded JAR for Hadoop 3.4.0 still includes this vulnerability.
+
+  - id: CGA-rgc4-vjv4-vx8m
+    aliases:
+      - CVE-2024-47535
+      - GHSA-xq3w-v528-46rv
+    events:
+      - timestamp: 2024-12-17T12:11:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: 263babdecb97a8bc
+            componentName: netty-common
+            componentVersion: 4.1.96.Final
+            componentType: java-archive
+            componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/netty-common-4.1.96.Final.jar
+            scanner: grype
+      - timestamp: 2024-12-17T22:26:10Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            This vulnerability relates to 'netty-common', used by spark. A fixed version is available in v4.1.115.
+            Spark has upgraded to a later version in main, but attempts to backport to this release of spark, result in build failures.
+            Awaiting for fix / backport from upstream to address this issue.
 
   - id: CGA-v37r-crxx-4j4j
     aliases:
@@ -506,6 +828,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/hadoop-client-runtime-3.3.4.jar
             scanner: grype
+      - timestamp: 2024-12-16T12:35:32Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to json-smart v1.3.2 included by the shaded JAR hadoop-client-runtime-3.3.4.jar. There are no newer versions of this shaded JAR available to fix the vulnerability. This requires upstream maintainers to implement a fix.
 
   - id: CGA-wf44-r5r7-gv7f
     aliases:
@@ -524,6 +850,32 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/hadoop-client-runtime-3.3.4.jar
             scanner: grype
+      - timestamp: 2024-12-16T13:42:43Z
+        type: pending-upstream-fix
+        data:
+          note: 'The dependency responsible for this CVE is a transitive dependency where the version of said dependency is not explicitly defined in the project but rather brought in under the hadoop-client-runtime jar. This requires upstream maintainers to implement a fix. '
+
+  - id: CGA-wm3r-r32c-m93r
+    aliases:
+      - CVE-2020-13949
+      - GHSA-g2fg-mr77-6vrm
+    events:
+      - timestamp: 2024-12-17T12:10:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: f60f3eb47fc6c430
+            componentName: libthrift
+            componentVersion: 0.12.0
+            componentType: java-archive
+            componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/libthrift-0.12.0.jar
+            scanner: grype
+      - timestamp: 2024-12-20T22:38:05Z
+        type: pending-upstream-fix
+        data:
+          note: 'The version of libthrift is not able to be upgraded from .12 to .16 which can be seen in this PR: https://github.com/apache/spark/pull/46468 due to version incompatibility with the parent dependency Hive, Spark-3.5 is only able to support I Hive 2.3.9. To remediate this libthrift CVE would require Hive 2.3.10 which needs to be implemented by upstream maintainers. Upstream is targeting this to be included in the Spark-4.0 release as seen here: https://issues.apache.org/jira/browse/SPARK-47018'
 
   - id: CGA-x64f-h9cm-wv76
     aliases:
@@ -541,4 +893,26 @@ advisories:
             componentVersion: 9.4.43.v20210629
             componentType: java-archive
             componentLocation: /usr/lib/spark/assembly/target/scala-2.13/jars/hadoop-client-runtime-3.3.4.jar
+            scanner: grype
+      - timestamp: 2024-12-16T14:03:41Z
+        type: pending-upstream-fix
+        data:
+          note: The dependency responsible for this CVE is a transitive dependency where the version of said dependency is not explicitly defined in the project but rather brought in under the hadoop-client-runtime jar. This requires upstream maintainers to implement a fix.
+
+  - id: CGA-xrrx-ff7q-346j
+    aliases:
+      - CVE-2024-8184
+      - GHSA-g8m5-722r-8whq
+    events:
+      - timestamp: 2024-12-17T12:10:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: da89e80c628306a3
+            componentName: jetty-server
+            componentVersion: 9.4.52.v20230823
+            componentType: java-archive
+            componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/spark-core_2.13-3.5.3.jar
             scanner: grype

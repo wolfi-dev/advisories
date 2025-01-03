@@ -48,6 +48,50 @@ advisories:
         data:
           fixed-version: 0.10.1-r1
 
+  - id: CGA-m9rg-wpwq-v8q7
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T16:21:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-fleet
+            componentID: 9aadaf64f79eea76
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/fleetagent
+            scanner: grype
+      - timestamp: 2024-12-13T16:19:19Z
+        type: fixed
+        data:
+          fixed-version: 0.11.2-r1
+
+  - id: CGA-q9f6-pr7f-3hgw
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T10:05:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-fleet
+            componentID: 5bf295bb886ab155
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/fleetagent
+            scanner: grype
+      - timestamp: 2024-12-19T17:23:19Z
+        type: fixed
+        data:
+          fixed-version: 0.11.2-r2
+
   - id: CGA-wmwj-vg4v-ppx5
     aliases:
       - CVE-2024-34158

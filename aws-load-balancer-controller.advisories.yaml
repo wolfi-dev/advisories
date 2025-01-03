@@ -183,6 +183,28 @@ advisories:
         data:
           fixed-version: 2.7.1-r1
 
+  - id: CGA-hmgc-8r2j-fvw6
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T07:09:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-load-balancer-controller
+            componentID: 5b134a6daf8fc540
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/controller
+            scanner: grype
+      - timestamp: 2024-12-19T10:23:11Z
+        type: fixed
+        data:
+          fixed-version: 2.11.0-r1
+
   - id: CGA-j6cr-96w3-3rj8
     aliases:
       - CVE-2023-45284

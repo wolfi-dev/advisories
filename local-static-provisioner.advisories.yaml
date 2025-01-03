@@ -48,6 +48,50 @@ advisories:
         data:
           fixed-version: 2.7.0-r7
 
+  - id: CGA-6pmq-p696-hw7x
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T18:15:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: local-static-provisioner
+            componentID: 23b28d336c609b7b
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/local-provisioner
+            scanner: grype
+      - timestamp: 2024-12-20T22:05:59Z
+        type: fixed
+        data:
+          fixed-version: 2.7.0-r10
+
+  - id: CGA-6v78-xcp2-pvj8
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T15:29:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: local-static-provisioner
+            componentID: b2d5c44335fd2d69
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/local-provisioner
+            scanner: grype
+      - timestamp: 2024-12-13T05:08:48Z
+        type: fixed
+        data:
+          fixed-version: 2.7.0-r8
+
   - id: CGA-8frv-vqqv-wgfj
     aliases:
       - CVE-2020-8559
@@ -117,6 +161,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.7.0-r2
+
+  - id: CGA-jp33-457g-mqfh
+    aliases:
+      - CVE-2024-10220
+      - GHSA-27wf-5967-98gx
+    events:
+      - timestamp: 2024-11-23T08:10:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: local-static-provisioner
+            componentID: 5384172688b2ede3
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.27.16
+            componentType: go-module
+            componentLocation: /usr/bin/local-provisioner
+            scanner: grype
+      - timestamp: 2024-12-13T05:08:47Z
+        type: fixed
+        data:
+          fixed-version: 2.7.0-r8
 
   - id: CGA-m45j-9r9h-352w
     aliases:

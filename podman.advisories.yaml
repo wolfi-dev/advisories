@@ -4,6 +4,28 @@ package:
   name: podman
 
 advisories:
+  - id: CGA-3644-8cwr-wm6w
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T22:00:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: podman
+            componentID: d64cb93d8f9fc917
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/podman
+            scanner: grype
+      - timestamp: 2024-12-16T20:00:50Z
+        type: fixed
+        data:
+          fixed-version: 5.3.1-r1
+
   - id: CGA-7hph-xqmq-7wr4
     aliases:
       - CVE-2024-45310
@@ -135,6 +157,28 @@ advisories:
             This vulnerability was fixed in podman version v5.2.4, however, grype is still reporting this vulnerability when scanning the v5.2.4 package.
             For evidence of the fix, please see the advisory, which lists v5.2.4 as the fixed version: https://github.com/advisories/GHSA-fhqq-8f65-5xfc.
             Additionally, see the podman release notes, which list v5.2.4 as the fixed version of for this CVE. The code diff also shows buildah being bumped to v1.37.4: https://github.com/containers/podman/releases/tag/v5.2.4.
+
+  - id: CGA-m8c3-3q32-vffq
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T09:43:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: podman
+            componentID: 52a6ca35a7e93088
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/podman
+            scanner: grype
+      - timestamp: 2024-12-20T00:32:57Z
+        type: fixed
+        data:
+          fixed-version: 5.3.1-r2
 
   - id: CGA-pcc8-jrq6-wc28
     aliases:

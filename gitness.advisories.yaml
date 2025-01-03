@@ -69,6 +69,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-5w74-4qh5-2758
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T11:05:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitness
+            componentID: 23085bed89f385e7
+            componentName: golang.org/x/net
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitness
+            scanner: grype
+      - timestamp: 2024-12-19T19:14:46Z
+        type: fixed
+        data:
+          fixed-version: 3.0.1-r2
+
   - id: CGA-7phg-4jpv-jjc7
     aliases:
       - CVE-2023-45290
@@ -248,6 +270,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.0.0_beta6-r6
+
+  - id: CGA-p599-xf5w-c9r2
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T10:26:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitness
+            componentID: a1c353fb515e7b89
+            componentName: golang.org/x/crypto
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitness
+            scanner: grype
+      - timestamp: 2024-12-12T18:19:17Z
+        type: fixed
+        data:
+          fixed-version: 3.0.1-r1
 
   - id: CGA-p6wp-rm4j-6gxr
     aliases:

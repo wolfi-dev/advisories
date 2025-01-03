@@ -88,6 +88,28 @@ advisories:
         data:
           fixed-version: 1.6.5-r2
 
+  - id: CGA-7hxm-pppp-2962
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T09:15:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cfssl
+            componentID: 820a0f42c2f545ee
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/cfssl-certinfo
+            scanner: grype
+      - timestamp: 2024-12-12T16:00:38Z
+        type: fixed
+        data:
+          fixed-version: 1.6.5-r11
+
   - id: CGA-8f4p-xvjr-rg6g
     aliases:
       - CVE-2023-45290
@@ -170,6 +192,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.6.4-r5
+
+  - id: CGA-pm46-w96g-hjwc
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T18:09:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cfssl
+            componentID: fe8e272ff88949da
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/cfssl-bundle
+            scanner: grype
+      - timestamp: 2024-12-20T11:05:52Z
+        type: fixed
+        data:
+          fixed-version: 1.6.5-r13
 
   - id: CGA-pvqm-gv3j-7xfw
     aliases:

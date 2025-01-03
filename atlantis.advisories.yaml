@@ -248,3 +248,47 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.27.2-r1
+
+  - id: CGA-vmh2-7q3x-q76v
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T08:12:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: atlantis
+            componentID: adb4ddb5ad132f05
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/atlantis
+            scanner: grype
+      - timestamp: 2024-12-19T12:18:26Z
+        type: fixed
+        data:
+          fixed-version: 0.31.0-r2
+
+  - id: CGA-x29g-9rpf-c3v8
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T20:04:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: atlantis
+            componentID: 7165295df79341ee
+            componentName: golang.org/x/crypto
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/atlantis
+            scanner: grype
+      - timestamp: 2024-12-13T13:27:49Z
+        type: fixed
+        data:
+          fixed-version: 0.31.0-r1

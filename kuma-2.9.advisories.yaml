@@ -4,11 +4,67 @@ package:
   name: kuma-2.9
 
 advisories:
+  - id: CGA-58rr-49pg-c9mr
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T11:34:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kuma-2.9
+            componentID: 3ee13a32c076fa51
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/kumactl
+            scanner: grype
+      - timestamp: 2024-12-13T11:04:46Z
+        type: fixed
+        data:
+          fixed-version: 2.9.2-r1
+
+  - id: CGA-8m37-q7fh-43rj
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T16:16:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kuma-2.9
+            componentID: 62cc9411c1ca53b2
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/kuma-dp
+            scanner: grype
+      - timestamp: 2024-12-20T07:01:00Z
+        type: fixed
+        data:
+          fixed-version: 2.9.2-r2
+
   - id: CGA-9347-j92r-7489
     aliases:
       - CVE-2024-51744
       - GHSA-29wx-vh33-7x7r
     events:
+      - timestamp: 2024-11-05T08:45:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kumactl-2.9
+            componentID: d7f06e275ec27f20
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
+            componentType: go-module
+            componentLocation: /usr/bin/kumactl
+            scanner: grype
       - timestamp: 2024-11-07T11:02:07Z
         type: fixed
         data:

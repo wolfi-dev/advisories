@@ -4,6 +4,28 @@ package:
   name: mailpit
 
 advisories:
+  - id: CGA-6xfg-p2h4-5g47
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T17:05:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mailpit
+            componentID: aafc632a59e2c027
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/mailpit
+            scanner: grype
+      - timestamp: 2024-12-20T05:15:01Z
+        type: fixed
+        data:
+          fixed-version: 1.21.8-r0
+
   - id: CGA-q8rw-q663-8gw8
     aliases:
       - CVE-2024-34156
@@ -69,3 +91,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.20.4-r1
+
+  - id: CGA-wxvp-3cmv-6vj2
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T13:03:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mailpit
+            componentID: cc9c12121355f88d
+            componentName: golang.org/x/crypto
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/mailpit
+            scanner: grype
+      - timestamp: 2024-12-14T11:16:23Z
+        type: fixed
+        data:
+          fixed-version: 1.21.7-r0

@@ -47,18 +47,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.9.1-r2
-      - timestamp: 2024-11-14T07:39:19Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: kubeflow-centraldashboard
-            componentID: 96a6cd2eae2faa3e
-            componentName: jsonpath-plus
-            componentVersion: 10.0.0
-            componentType: npm
-            componentLocation: /app/node_modules/jsonpath-plus/package.json
-            scanner: grype
 
   - id: CGA-4g7r-gq6m-3fjw
     aliases:
@@ -221,6 +209,24 @@ advisories:
         type: pending-upstream-fix
         data:
           note: cannot fix the CVE because there were no patched versions since the 'taffydb' package is quite old and no longer maintained.
+
+  - id: CGA-h864-qfx6-rqww
+    aliases:
+      - CVE-2024-52798
+      - GHSA-rhx6-c78j-4q9w
+    events:
+      - timestamp: 2024-12-06T08:39:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-centraldashboard
+            componentID: f62c5a91e48e5c62
+            componentName: path-to-regexp
+            componentVersion: 0.1.10
+            componentType: npm
+            componentLocation: /app/node_modules/path-to-regexp/package.json
+            scanner: grype
 
   - id: CGA-h8rj-78mh-45v7
     aliases:

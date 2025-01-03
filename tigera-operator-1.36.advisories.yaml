@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: tigera-operator-1.36
+
+advisories:
+  - id: CGA-gpwr-4x48-2896
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T14:39:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tigera-operator-1.36
+            componentID: 62f1c0f078ba9fa8
+            componentName: golang.org/x/net
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+      - timestamp: 2024-12-20T03:12:54Z
+        type: fixed
+        data:
+          fixed-version: 1.36.3-r2
+
+  - id: CGA-jq3j-9rpr-p742
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T13:44:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tigera-operator-1.36
+            componentID: 0a284cbc50739628
+            componentName: golang.org/x/crypto
+            componentVersion: v0.22.0
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+      - timestamp: 2024-12-13T04:02:52Z
+        type: fixed
+        data:
+          fixed-version: 1.36.3-r1

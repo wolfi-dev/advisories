@@ -125,6 +125,28 @@ advisories:
         data:
           fixed-version: 1.6.0-r5
 
+  - id: CGA-7633-3r78-7m4j
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T20:25:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trillian
+            componentID: 6d504944a8c36e37
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/trillian_log_server
+            scanner: grype
+      - timestamp: 2024-12-14T01:04:22Z
+        type: fixed
+        data:
+          fixed-version: 1.7.0-r1
+
   - id: CGA-7wpw-8wcv-4c9w
     aliases:
       - CVE-2024-24787
@@ -177,6 +199,28 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CGA-hvwv-x624-392j
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T20:21:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trillian
+            componentID: 91fbe63bef334355
+            componentName: golang.org/x/net
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/trillian_log_server
+            scanner: grype
+      - timestamp: 2024-12-20T15:30:48Z
+        type: fixed
+        data:
+          fixed-version: 1.7.0-r2
 
   - id: CGA-hwvf-996p-m3pm
     aliases:

@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: keda-2.16
+
+advisories:
+  - id: CGA-5m82-cxgx-fgfq
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T13:19:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.16
+            componentID: a39ba8d469b4645f
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/keda-adapter
+            scanner: grype
+      - timestamp: 2024-12-20T00:15:14Z
+        type: fixed
+        data:
+          fixed-version: 2.16.0-r2
+
+  - id: CGA-x8m9-hwhg-8v8q
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T11:16:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.16
+            componentID: d6c2c51c0da60343
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/keda-adapter
+            scanner: grype
+      - timestamp: 2024-12-12T23:03:22Z
+        type: fixed
+        data:
+          fixed-version: 2.16.0-r1

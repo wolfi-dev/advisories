@@ -4,6 +4,28 @@ package:
   name: velero
 
 advisories:
+  - id: CGA-35x3-qm7j-c4x7
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-20T11:08:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: velero
+            componentID: 0383f55fd59de45c
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/velero
+            scanner: grype
+      - timestamp: 2024-12-21T01:20:22Z
+        type: fixed
+        data:
+          fixed-version: 1.15.0-r2
+
   - id: CGA-54mj-gq23-2hrf
     aliases:
       - CVE-2024-24783
@@ -150,6 +172,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.13.0-r1
+
+  - id: CGA-f244-x97j-93mq
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T20:10:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: velero
+            componentID: 4bb2cfd288a74877
+            componentName: golang.org/x/crypto
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/velero
+            scanner: grype
+      - timestamp: 2024-12-13T13:30:46Z
+        type: fixed
+        data:
+          fixed-version: 1.15.0-r1
 
   - id: CGA-hcp5-xcfp-2vq8
     aliases:

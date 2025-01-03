@@ -4,6 +4,28 @@ package:
   name: gptscript
 
 advisories:
+  - id: CGA-27mq-c8jc-h222
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T09:41:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gptscript
+            componentID: ac04e800a6b69841
+            componentName: golang.org/x/crypto
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/gptscript
+            scanner: grype
+      - timestamp: 2024-12-12T17:16:23Z
+        type: fixed
+        data:
+          fixed-version: 0.9.5-r1
+
   - id: CGA-942h-h4gc-c984
     aliases:
       - CVE-2024-34156
@@ -47,6 +69,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.9.4-r1
+
+  - id: CGA-gghw-53mj-qwxj
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T12:15:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gptscript
+            componentID: 1681a524107539f3
+            componentName: golang.org/x/net
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/gptscript
+            scanner: grype
+      - timestamp: 2024-12-19T22:09:24Z
+        type: fixed
+        data:
+          fixed-version: 0.9.5-r3
 
   - id: CGA-vr67-g63f-4wcg
     aliases:

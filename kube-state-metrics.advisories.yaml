@@ -4,6 +4,28 @@ package:
   name: kube-state-metrics
 
 advisories:
+  - id: CGA-248r-gw7f-v7cf
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T18:40:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-state-metrics
+            componentID: 312d87f5b179f319
+            componentName: golang.org/x/net
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-state-metrics
+            scanner: grype
+      - timestamp: 2024-12-20T12:24:11Z
+        type: fixed
+        data:
+          fixed-version: 2.14.0-r2
+
   - id: CGA-3hjh-p7fc-jmp2
     aliases:
       - CVE-2024-24783
@@ -135,6 +157,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.13.0-r1
+
+  - id: CGA-hggw-7f3j-mj95
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T17:28:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-state-metrics
+            componentID: 3d4f6e7014909256
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-state-metrics
+            scanner: grype
+      - timestamp: 2024-12-13T19:37:37Z
+        type: fixed
+        data:
+          fixed-version: 2.14.0-r1
 
   - id: CGA-jqgh-327h-v377
     aliases:

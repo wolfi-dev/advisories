@@ -4,6 +4,50 @@ package:
   name: kiali
 
 advisories:
+  - id: CGA-4rvm-jh29-m8c2
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T07:44:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kiali
+            componentID: c9435d86c82234c4
+            componentName: golang.org/x/net
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /opt/kiali/kiali
+            scanner: grype
+      - timestamp: 2024-12-19T17:40:42Z
+        type: fixed
+        data:
+          fixed-version: 2.2.0-r2
+
+  - id: CGA-j276-fj8m-j66f
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T15:11:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kiali
+            componentID: 4d8cd305a5ee03d4
+            componentName: golang.org/x/crypto
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /opt/kiali/kiali
+            scanner: grype
+      - timestamp: 2024-12-15T18:20:38Z
+        type: fixed
+        data:
+          fixed-version: 2.2.0-r1
+
   - id: CGA-x2wv-7p28-8wfg
     aliases:
       - CVE-2022-3962

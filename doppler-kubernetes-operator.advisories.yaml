@@ -130,6 +130,28 @@ advisories:
         data:
           fixed-version: 1.5.0-r1
 
+  - id: CGA-grgc-f36m-w2cw
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T13:26:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: doppler-kubernetes-operator
+            componentID: 3c955aa94d91efce
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2024-12-13T07:35:46Z
+        type: fixed
+        data:
+          fixed-version: 1.5.1-r6
+
   - id: CGA-gwp9-cmhg-q6gp
     aliases:
       - CVE-2024-24786
@@ -203,3 +225,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.5.1-r4
+
+  - id: CGA-xh4j-5mpw-6mcw
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T16:40:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: doppler-kubernetes-operator
+            componentID: a0e307f94056c9c4
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2024-12-20T11:37:14Z
+        type: fixed
+        data:
+          fixed-version: 1.5.1-r7

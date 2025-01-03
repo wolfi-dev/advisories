@@ -100,6 +100,28 @@ advisories:
         data:
           fixed-version: 4.1.0-r1
 
+  - id: CGA-x923-4h78-6fm4
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T16:12:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: multus-cni
+            componentID: cf32077eae53a7a2
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/multus
+            scanner: grype
+      - timestamp: 2024-12-20T06:02:41Z
+        type: fixed
+        data:
+          fixed-version: 4.1.4-r1
+
   - id: CGA-xv9p-g33g-2vqj
     aliases:
       - CVE-2024-24791

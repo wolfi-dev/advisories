@@ -172,6 +172,28 @@ advisories:
         data:
           fixed-version: 1.13.0-r1
 
+  - id: CGA-wr3c-3g2c-x4f8
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T21:07:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k8ssandra-operator
+            componentID: ac5abbde6db19bdc
+            componentName: golang.org/x/net
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2024-12-20T16:06:04Z
+        type: fixed
+        data:
+          fixed-version: 1.20.2-r1
+
   - id: CGA-xqwf-fg9j-vh58
     aliases:
       - CVE-2024-24786

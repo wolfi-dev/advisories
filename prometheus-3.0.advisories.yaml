@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: prometheus-3.0
+
+advisories:
+  - id: CGA-q598-x4c2-qcg9
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T14:37:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-3.0
+            componentID: fe4385285023b629
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /opt/bitnami/prometheus/bin/prometheus
+            scanner: grype
+      - timestamp: 2024-12-15T18:12:25Z
+        type: fixed
+        data:
+          fixed-version: 3.0.1-r1
+
+  - id: CGA-xcv8-9p89-3vf4
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T10:33:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-3.0
+            componentID: a614c23d44d5cb1c
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus
+            scanner: grype
+      - timestamp: 2024-12-19T13:22:44Z
+        type: fixed
+        data:
+          fixed-version: 3.0.1-r3

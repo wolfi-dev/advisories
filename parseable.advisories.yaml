@@ -26,6 +26,24 @@ advisories:
         data:
           fixed-version: 1.4.0-r0
 
+  - id: CGA-62fg-f2w8-6wgc
+    aliases:
+      - CVE-2024-12224
+      - GHSA-h97m-ww89-6jmq
+    events:
+      - timestamp: 2024-12-10T10:28:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: parseable
+            componentID: 54932fa972104e6e
+            componentName: idna
+            componentVersion: 0.5.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/parseable
+            scanner: grype
+
   - id: CGA-6r5w-wwq4-cx4v
     aliases:
       - GHSA-2326-pfpj-vx3h
@@ -50,6 +68,23 @@ advisories:
             However, another dependency: arrow-json, will not function with lexical-core v1.0.0.
             arrow-json is preparing a 53.1.0 release, which upgrades it's dependency to a newer version of lexical-core.
             However, this has not been released yet. Pending fix from upstream.
+
+  - id: CGA-7fc6-v334-xq56
+    aliases:
+      - GHSA-qg5g-gv98-5ffh
+    events:
+      - timestamp: 2024-11-26T09:45:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: parseable
+            componentID: d5144388e3b8c75e
+            componentName: rustls
+            componentVersion: 0.23.13
+            componentType: rust-crate
+            componentLocation: /usr/bin/parseable
+            scanner: grype
 
   - id: CGA-jhg5-22p5-x752
     aliases:

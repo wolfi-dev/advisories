@@ -212,6 +212,50 @@ advisories:
         data:
           fixed-version: 1.104.7-r1
 
+  - id: CGA-9qpq-jvm2-jjgg
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T16:19:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kots
+            componentID: f816744e4611965c
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/kots
+            scanner: grype
+      - timestamp: 2024-12-20T06:43:06Z
+        type: fixed
+        data:
+          fixed-version: 1.122.0-r1
+
+  - id: CGA-c593-jq73-qjc8
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T13:31:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kots
+            componentID: 7e6b7bb309fafc18
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/kots
+            scanner: grype
+      - timestamp: 2024-12-13T15:37:01Z
+        type: fixed
+        data:
+          fixed-version: 1.122.0-r0
+
   - id: CGA-f3ch-6fcj-r53w
     aliases:
       - CVE-2024-21626

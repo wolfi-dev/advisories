@@ -25,3 +25,24 @@ advisories:
         data:
           type: vulnerable-code-version-not-used
           note: Only affects Windows
+
+  - id: CGA-pqp9-3x22-6wp4
+    aliases:
+      - GHSA-qg5g-gv98-5ffh
+    events:
+      - timestamp: 2024-11-26T09:40:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wasm-pack
+            componentID: cfc03ffde0c55652
+            componentName: rustls
+            componentVersion: 0.23.16
+            componentType: rust-crate
+            componentLocation: /usr/bin/wasm-pack
+            scanner: grype
+      - timestamp: 2024-11-26T13:20:48Z
+        type: fixed
+        data:
+          fixed-version: 0.13.1-r1

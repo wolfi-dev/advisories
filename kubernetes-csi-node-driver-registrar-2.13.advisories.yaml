@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: kubernetes-csi-node-driver-registrar-2.13
+
+advisories:
+  - id: CGA-cc9c-wqcq-7xrj
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-27T18:26:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-node-driver-registrar-2.13
+            componentID: 44cf62934b5f7d47
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/csi-node-driver-registrar
+            scanner: grype
+      - timestamp: 2024-12-31T19:35:22Z
+        type: fixed
+        data:
+          fixed-version: 2.13.0-r1

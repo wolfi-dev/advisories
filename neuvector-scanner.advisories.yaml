@@ -198,6 +198,40 @@ advisories:
         data:
           fixed-version: 0_git20240528-r5
 
+  - id: CGA-p3vv-43gp-p32f
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-20T10:44:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: neuvector-scanner
+            componentID: bf92469ac1521c7c
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/local/bin/scanner
+            scanner: grype
+      - timestamp: 2024-12-21T01:22:15Z
+        type: fixed
+        data:
+          fixed-version: 0_git20240528-r10
+      - timestamp: 2024-12-22T10:31:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: neuvector-scanner
+            componentID: bf92469ac1521c7c
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/local/bin/scanner
+            scanner: grype
+
   - id: CGA-p8xg-r44c-55h5
     aliases:
       - CVE-2024-41110

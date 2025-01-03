@@ -22,6 +22,24 @@ advisories:
             componentLocation: /usr/share/sonarqube/elasticsearch/lib/tools/security-cli/bcpkix-jdk18on-1.76.jar
             scanner: grype
 
+  - id: CGA-3f3w-63hg-g69h
+    aliases:
+      - CVE-2024-12801
+      - GHSA-6v67-2wr5-gvf4
+    events:
+      - timestamp: 2024-12-20T15:34:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube-10
+            componentID: 5afd5a1dd1315b5d
+            componentName: logback-core
+            componentVersion: 1.5.6
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/lib/scanner/sonar-scanner-engine-shaded-24.12.0.100206-all.jar
+            scanner: grype
+
   - id: CGA-682v-c9wh-7m2f
     aliases:
       - CVE-2023-44483
@@ -83,6 +101,10 @@ advisories:
         type: pending-upstream-fix
         data:
           note: This is a transitive dependency that is brought in through sonar plugins. These are built externally and therefore require a fix from upstream maintainers.
+      - timestamp: 2024-12-10T19:00:44Z
+        type: fixed
+        data:
+          fixed-version: 24.12.0.100206-r0
 
   - id: CGA-6gx5-gm6g-66w5
     aliases:
@@ -265,6 +287,24 @@ advisories:
             componentVersion: 8.13.4
             componentType: java-archive
             componentLocation: /usr/share/sonarqube/elasticsearch/lib/elasticsearch-8.13.4.jar
+            scanner: grype
+
+  - id: CGA-r659-hqw5-wvhw
+    aliases:
+      - CVE-2024-12798
+      - GHSA-pr98-23f8-jwxv
+    events:
+      - timestamp: 2024-12-20T15:34:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube-10
+            componentID: 5afd5a1dd1315b5d
+            componentName: logback-core
+            componentVersion: 1.5.6
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/lib/scanner/sonar-scanner-engine-shaded-24.12.0.100206-all.jar
             scanner: grype
 
   - id: CGA-xg3g-4h7j-5c3r

@@ -128,6 +128,28 @@ advisories:
         data:
           fixed-version: 3.4.1-r3
 
+  - id: CGA-8cj8-f9q2-c2g9
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T12:09:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dynamic-localpv-provisioner
+            componentID: 79491835c95c8b0f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/provisioner-localpv
+            scanner: grype
+      - timestamp: 2024-12-13T07:27:51Z
+        type: fixed
+        data:
+          fixed-version: 4.1.2-r1
+
   - id: CGA-8m3x-mwvw-32xh
     aliases:
       - CVE-2024-24788
@@ -339,6 +361,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.5.0-r4
+
+  - id: CGA-x576-26x4-8v63
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T20:12:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dynamic-localpv-provisioner
+            componentID: e0edf2d31c221907
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/provisioner-localpv
+            scanner: grype
+      - timestamp: 2024-12-20T14:32:40Z
+        type: fixed
+        data:
+          fixed-version: 4.1.2-r2
 
   - id: CGA-xffr-2qf7-frrw
     aliases:

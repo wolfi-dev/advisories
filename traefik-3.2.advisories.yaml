@@ -4,6 +4,72 @@ package:
   name: traefik-3.2
 
 advisories:
+  - id: CGA-42fq-cf7c-9r5v
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T10:10:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: traefik-3.2
+            componentID: 007fe04a37a21838
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/traefik
+            scanner: grype
+      - timestamp: 2024-12-20T16:20:32Z
+        type: fixed
+        data:
+          fixed-version: 3.2.3-r1
+
+  - id: CGA-7wcq-cw6w-3j7m
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T08:07:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: traefik-3.2
+            componentID: f5706a35027a8ce1
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/traefik
+            scanner: grype
+      - timestamp: 2024-12-12T16:26:43Z
+        type: fixed
+        data:
+          fixed-version: 3.2.2-r1
+
+  - id: CGA-9w2r-526h-q76r
+    aliases:
+      - CVE-2024-53259
+      - GHSA-px8v-pp82-rcvr
+    events:
+      - timestamp: 2024-12-03T11:13:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: traefik-3.2
+            componentID: a925b3ff0c8ef4fb
+            componentName: github.com/quic-go/quic-go
+            componentVersion: v0.47.0
+            componentType: go-module
+            componentLocation: /usr/bin/traefik
+            scanner: grype
+      - timestamp: 2024-12-03T12:12:34Z
+        type: fixed
+        data:
+          fixed-version: 3.2.1-r1
+
   - id: CGA-j4v3-whmm-486j
     aliases:
       - CVE-2024-28180

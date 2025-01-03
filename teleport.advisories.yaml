@@ -67,6 +67,16 @@ advisories:
         data:
           fixed-version: 15.3.7-r1
 
+  - id: CGA-78fp-p73m-78fg
+    aliases:
+      - CVE-2024-53259
+      - GHSA-px8v-pp82-rcvr
+    events:
+      - timestamp: 2024-12-06T12:17:07Z
+        type: fixed
+        data:
+          fixed-version: 17.0.3-r0
+
   - id: CGA-7rvf-hrj9-3pw2
     aliases:
       - CVE-2024-34156
@@ -106,6 +116,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/local/bin/tbot
             scanner: grype
+      - timestamp: 2024-11-05T09:45:18Z
+        type: fixed
+        data:
+          fixed-version: 16.4.6-r2
 
   - id: CGA-8gwv-f2vm-w7xh
     aliases:
@@ -161,6 +175,28 @@ advisories:
         data:
           type: vulnerable-code-version-not-used
           note: We build 15.3.6 version of Teleport but the vulnerability is associated with 8.3.17, so this is a false-positive determination
+
+  - id: CGA-p49w-jmvf-8j87
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T14:41:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: teleport
+            componentID: bfb0903e20aecb9e
+            componentName: golang.org/x/crypto
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/local/bin/tbot
+            scanner: grype
+      - timestamp: 2024-12-16T19:36:36Z
+        type: fixed
+        data:
+          fixed-version: 17.0.5-r0
 
   - id: CGA-wr5g-f2gc-w3rv
     aliases:

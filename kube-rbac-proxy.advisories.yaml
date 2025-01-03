@@ -114,6 +114,28 @@ advisories:
         data:
           fixed-version: 0.16.0-r1
 
+  - id: CGA-8mjh-5rwh-rp3w
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T10:09:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-rbac-proxy
+            componentID: 74dc3eb0c110a6fd
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-rbac-proxy
+            scanner: grype
+      - timestamp: 2024-12-19T18:26:23Z
+        type: fixed
+        data:
+          fixed-version: 0.18.2-r2
+
   - id: CGA-9fq5-jv35-72xc
     aliases:
       - CVE-2023-45289
@@ -184,3 +206,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.16.0-r1
+
+  - id: CGA-xpg7-78v6-qgf2
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T12:15:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-rbac-proxy
+            componentID: baadfc171cc9e92c
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-rbac-proxy
+            scanner: grype
+      - timestamp: 2024-12-13T03:36:15Z
+        type: fixed
+        data:
+          fixed-version: 0.18.2-r1

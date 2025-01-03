@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: gitlab-pages-17.6
+
+advisories:
+  - id: CGA-j7w4-wcvf-px8g
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T12:43:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-pages-17.6
+            componentID: a4efe72f8bae1cd8
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-pages
+            scanner: grype
+      - timestamp: 2024-12-13T03:42:56Z
+        type: fixed
+        data:
+          fixed-version: 17.6.2-r1
+
+  - id: CGA-rmw5-gjhc-3cr6
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T10:32:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-pages-17.6
+            componentID: 27e74e37f0e26b30
+            componentName: golang.org/x/net
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-pages
+            scanner: grype
+      - timestamp: 2024-12-19T18:21:46Z
+        type: fixed
+        data:
+          fixed-version: 17.6.2-r2

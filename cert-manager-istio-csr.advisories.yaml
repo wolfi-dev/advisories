@@ -20,6 +20,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/cmd
             scanner: grype
+      - timestamp: 2024-11-22T10:28:10Z
+        type: fixed
+        data:
+          fixed-version: 0.12.0-r1
 
   - id: CGA-6c94-vvvg-cv4v
     aliases:
@@ -38,6 +42,33 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/cmd
             scanner: grype
+      - timestamp: 2024-11-21T12:09:03Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'The upstream project ignored the vulnerability since they import non-tagged versions in go.mod, for more information see: https://github.com/cert-manager/istio-csr/pull/344/files.'
+
+  - id: CGA-c7qh-252v-jjrg
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T07:17:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-manager-istio-csr
+            componentID: d9b3456ad91b5e0e
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/cmd
+            scanner: grype
+      - timestamp: 2024-12-12T14:13:28Z
+        type: fixed
+        data:
+          fixed-version: 0.13.0-r1
 
   - id: CGA-h284-r9mg-9p97
     aliases:
@@ -56,6 +87,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/cmd
             scanner: grype
+      - timestamp: 2024-11-21T12:09:08Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'The upstream project ignored the vulnerability since they import non-tagged versions in go.mod, for more information see: https://github.com/cert-manager/istio-csr/pull/344/files.'
 
   - id: CGA-jw75-prhc-9gq3
     aliases:
@@ -74,6 +110,33 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/cmd
             scanner: grype
+      - timestamp: 2024-11-21T12:09:15Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'The upstream project ignored the vulnerability since they import non-tagged versions in go.mod, for more information see: https://github.com/cert-manager/istio-csr/pull/344/files.'
+
+  - id: CGA-m24w-7f29-vfjq
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-20T07:22:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-manager-istio-csr
+            componentID: 7eea074db6939525
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/cmd
+            scanner: grype
+      - timestamp: 2024-12-20T21:00:53Z
+        type: fixed
+        data:
+          fixed-version: 0.13.0-r2
 
   - id: CGA-pw2v-5gqw-v996
     aliases:
@@ -92,6 +155,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/cmd
             scanner: grype
+      - timestamp: 2024-11-21T12:09:29Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'The upstream project ignored the vulnerability since they import non-tagged versions in go.mod, for more information see: https://github.com/cert-manager/istio-csr/pull/344/files.'
 
   - id: CGA-rhqc-632m-q62c
     aliases:
@@ -110,3 +178,8 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/cmd
             scanner: grype
+      - timestamp: 2024-11-21T12:09:32Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'The upstream project ignored the vulnerability since they import non-tagged versions in go.mod, for more information see: https://github.com/cert-manager/istio-csr/pull/344/files.'

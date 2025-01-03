@@ -4,6 +4,24 @@ package:
   name: k3s
 
 advisories:
+  - id: CGA-26pm-q8qj-c6gx
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T17:31:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s
+            componentID: 64a8a3be43c767f8
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /bin/containerd-shim-runc-v2
+            scanner: grype
+
   - id: CGA-326m-8f4m-788p
     aliases:
       - CVE-2023-32187
@@ -271,6 +289,28 @@ advisories:
         data:
           fixed-version: 1.30.4.1-r1
 
+  - id: CGA-9vqc-x2r3-pqjf
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-13T13:25:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s
+            componentID: b50b4d53705f0233
+            componentName: golang.org/x/crypto
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /bin/k3s
+            scanner: grype
+      - timestamp: 2024-12-14T01:29:18Z
+        type: fixed
+        data:
+          fixed-version: 1.31.3.1-r1
+
   - id: CGA-c2xx-5x54-r22j
     aliases:
       - CVE-2024-22189
@@ -371,6 +411,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.29.0-r1
+
+  - id: CGA-p45q-537g-hfxx
+    aliases:
+      - CVE-2024-53259
+      - GHSA-px8v-pp82-rcvr
+    events:
+      - timestamp: 2024-12-03T09:16:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s
+            componentID: 889a7433fe590292
+            componentName: github.com/quic-go/quic-go
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /bin/k3s
+            scanner: grype
+      - timestamp: 2024-12-12T01:12:54Z
+        type: fixed
+        data:
+          fixed-version: 1.31.3.1-r0
 
   - id: CGA-phw6-pr7g-2v87
     aliases:

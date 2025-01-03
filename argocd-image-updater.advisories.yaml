@@ -1,0 +1,125 @@
+schema-version: 2.0.2
+
+package:
+  name: argocd-image-updater
+
+advisories:
+  - id: CGA-5prg-fc3x-7vrg
+    aliases:
+      - CVE-2023-2253
+      - GHSA-hqxw-f8mx-cpmw
+    events:
+      - timestamp: 2024-12-16T09:44:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argocd-image-updater
+            componentID: f6b503101cd0c1bb
+            componentName: github.com/docker/distribution
+            componentVersion: v2.8.1+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/argocd-image-updater
+            scanner: grype
+      - timestamp: 2024-12-19T01:41:09Z
+        type: pending-upstream-fix
+        data:
+          note: This CVE is caused by a 'go replace' block in the go.mod file pulling in the dependency, despite the package using the latest version as defined elsewhere in the go.mod file. An upstream patch has been submitted and merged which will remove this old dependency in future versions. See https://github.com/argoproj-labs/argocd-image-updater/pull/969
+
+  - id: CGA-8f2g-mfp5-w93h
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T12:16:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argocd-image-updater
+            componentID: bb3b35edacb0c7e0
+            componentName: golang.org/x/net
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd-image-updater
+            scanner: grype
+      - timestamp: 2024-12-20T01:06:21Z
+        type: fixed
+        data:
+          fixed-version: 0.15.1-r1
+
+  - id: CGA-cjr4-f6q7-9mh7
+    aliases:
+      - CVE-2024-0793
+      - GHSA-h7wq-jj8r-qm7p
+    events:
+      - timestamp: 2024-12-16T09:44:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argocd-image-updater
+            componentID: 9558a962455517a8
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.26.11
+            componentType: go-module
+            componentLocation: /usr/bin/argocd-image-updater
+            scanner: grype
+
+  - id: CGA-fghq-cmj5-4jgc
+    aliases:
+      - CVE-2024-5321
+      - GHSA-82m2-cv7p-4m75
+    events:
+      - timestamp: 2024-12-16T09:44:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argocd-image-updater
+            componentID: 9558a962455517a8
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.26.11
+            componentType: go-module
+            componentLocation: /usr/bin/argocd-image-updater
+            scanner: grype
+
+  - id: CGA-hrx6-hvq8-xj45
+    aliases:
+      - CVE-2024-3177
+      - GHSA-pxhw-596r-rwq5
+    events:
+      - timestamp: 2024-12-16T09:44:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argocd-image-updater
+            componentID: 9558a962455517a8
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.26.11
+            componentType: go-module
+            componentLocation: /usr/bin/argocd-image-updater
+            scanner: grype
+
+  - id: CGA-pv28-fqqh-4xj7
+    aliases:
+      - CVE-2024-10220
+      - GHSA-27wf-5967-98gx
+    events:
+      - timestamp: 2024-12-16T09:44:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argocd-image-updater
+            componentID: 9558a962455517a8
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.26.11
+            componentType: go-module
+            componentLocation: /usr/bin/argocd-image-updater
+            scanner: grype
+      - timestamp: 2024-12-19T02:15:53Z
+        type: pending-upstream-fix
+        data:
+          note: 'Attempting to patch this CVE via updating the affected module leads to resolution errors with other modules, therefore a patch from upstream is required to remediate this CVE. '

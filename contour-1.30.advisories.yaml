@@ -69,3 +69,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.30.0-r3
+
+  - id: CGA-hvmf-hrx2-8rxc
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T11:38:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: contour-1.30
+            componentID: 2d99e14b5332d22f
+            componentName: golang.org/x/net
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/contour
+            scanner: grype
+      - timestamp: 2024-12-19T21:16:52Z
+        type: fixed
+        data:
+          fixed-version: 1.30.1-r2

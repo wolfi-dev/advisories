@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: portieris
+
+advisories:
+  - id: CGA-88vw-hx9v-86wf
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T15:19:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: portieris
+            componentID: 3d6da6493f36454b
+            componentName: golang.org/x/net
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/portieris
+            scanner: grype
+      - timestamp: 2024-12-20T04:17:18Z
+        type: fixed
+        data:
+          fixed-version: 0.13.22-r2
+
+  - id: CGA-f3ph-rgv3-8x94
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T21:42:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: portieris
+            componentID: 2514c1d30bceb0de
+            componentName: golang.org/x/crypto
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/portieris
+            scanner: grype
+      - timestamp: 2024-12-13T17:30:45Z
+        type: fixed
+        data:
+          fixed-version: 0.13.22-r1

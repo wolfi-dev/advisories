@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: kyverno-notation-aws
+
+advisories:
+  - id: CGA-228h-fjfr-4vfr
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T13:13:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-notation-aws
+            componentID: 4d7944cdf5f6629e
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/kyverno-notation-aws
+            scanner: grype
+      - timestamp: 2024-12-14T14:35:33Z
+        type: fixed
+        data:
+          fixed-version: 1.0.1_git20241214-r0
+
+  - id: CGA-76v6-m4wp-5v3g
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-20T13:25:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-notation-aws
+            componentID: adb044ea7714c218
+            componentName: golang.org/x/net
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/kyverno-notation-aws
+            scanner: grype
+      - timestamp: 2024-12-21T03:02:53Z
+        type: fixed
+        data:
+          fixed-version: 1.0.1_git20241216-r1

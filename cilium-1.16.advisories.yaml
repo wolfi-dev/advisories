@@ -4,6 +4,28 @@ package:
   name: cilium-1.16
 
 advisories:
+  - id: CGA-2m2c-qv67-j46r
+    aliases:
+      - CVE-2024-52529
+      - GHSA-xg58-75qf-9r67
+    events:
+      - timestamp: 2024-11-26T07:42:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.16
+            componentID: eda8cbf9eabefb91
+            componentName: github.com/cilium/cilium
+            componentVersion: v1.16.3
+            componentType: go-module
+            componentLocation: /usr/bin/hubble-relay
+            scanner: grype
+      - timestamp: 2024-12-11T19:12:07Z
+        type: fixed
+        data:
+          fixed-version: 1.16.4-r0
+
   - id: CGA-3h33-xq7m-h74h
     aliases:
       - GHSA-xr7q-jx4m-x55m
@@ -24,6 +46,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.16.0-r1
+
+  - id: CGA-3wvx-mrgh-54fh
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T08:12:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.16
+            componentID: 0ad325f345d89ca5
+            componentName: golang.org/x/crypto
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/cilium-agent
+            scanner: grype
+      - timestamp: 2024-12-12T14:17:29Z
+        type: fixed
+        data:
+          fixed-version: 1.16.4-r1
 
   - id: CGA-5wgc-fxg3-g28q
     aliases:
@@ -46,6 +90,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.16.1-r2
+
+  - id: CGA-7r9w-mvgw-738x
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T16:22:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.16
+            componentID: d43fcf976fc94c7c
+            componentName: golang.org/x/net
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/cilium-operator-aws
+            scanner: grype
+      - timestamp: 2024-12-24T03:03:01Z
+        type: fixed
+        data:
+          fixed-version: 1.16.5-r2
 
   - id: CGA-cmww-rq29-94hm
     aliases:

@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: kubernetes-dashboard-web
+
+advisories:
+  - id: CGA-hgh6-g93x-4m88
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T10:06:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dashboard-web
+            componentID: d46384cf76bb8914
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/dashboard-web
+            scanner: grype
+      - timestamp: 2024-12-12T17:22:59Z
+        type: fixed
+        data:
+          fixed-version: 1.6.0-r1
+
+  - id: CGA-ppxg-h398-pvvx
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T18:01:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dashboard-web
+            componentID: 8aeade633e6590d3
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/dashboard-web
+            scanner: grype
+      - timestamp: 2024-12-20T21:42:57Z
+        type: fixed
+        data:
+          fixed-version: 1.6.0-r2

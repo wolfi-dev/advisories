@@ -43,6 +43,10 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2024-11-20T09:39:33Z
+        type: pending-upstream-fix
+        data:
+          note: The vulnerability stems from how HTTP/2 interacts with TCP congestion windows and does not depend solely on the browser. As a result, some aspects of the attack are beyond the browser’s control
 
   - id: CGA-2f8q-jcq2-gg2g
     aliases:
@@ -105,6 +109,11 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2024-11-20T09:49:16Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: This vulnerability affects Firefox versions from 2009. Current version 132.0.1-r1 includes numerous security improvements and architectural changes that prevent this type of attack. The JavaScript engine and document loading mechanisms have been completely rewritten since then.
 
   - id: CGA-2mhr-7g54-434g
     aliases:
@@ -179,6 +188,16 @@ advisories:
         type: fixed
         data:
           fixed-version: 128.0-r0
+
+  - id: CGA-3358-j9c2-m9g4
+    aliases:
+      - CVE-2024-11692
+      - GHSA-cpxj-fx45-9pgm
+    events:
+      - timestamp: 2024-11-28T13:41:13Z
+        type: fixed
+        data:
+          fixed-version: 133.0-r0
 
   - id: CGA-3cf7-vwj9-8639
     aliases:
@@ -264,6 +283,16 @@ advisories:
         data:
           fixed-version: 132.0-r0
 
+  - id: CGA-3hc7-w6wv-wh27
+    aliases:
+      - CVE-2024-11695
+      - GHSA-rh22-rcv2-42x3
+    events:
+      - timestamp: 2024-11-28T13:36:53Z
+        type: fixed
+        data:
+          fixed-version: 133.0-r0
+
   - id: CGA-3jr3-6g7x-w6pc
     aliases:
       - CVE-2007-0896
@@ -281,6 +310,21 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2024-11-20T10:06:27Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: CVE-2007-0896 affects the Sage RSS reader extension for Firefox from 2007, not Firefox itself. The Sage extension is not part of the Firefox package and the vulnerability is not applicable to the browser itself.
+
+  - id: CGA-3pqh-ch38-36q5
+    aliases:
+      - CVE-2024-11699
+      - GHSA-9g2q-259c-66mq
+    events:
+      - timestamp: 2024-11-28T13:26:24Z
+        type: fixed
+        data:
+          fixed-version: 133.0-r0
 
   - id: CGA-3vhq-5rj7-rrx9
     aliases:
@@ -321,6 +365,21 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2024-11-20T09:50:14Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: This vulnerability affects Firefox versions from 2007. The current version (132.0.1) was released in 2024 and includes completely rewritten cookie handling mechanisms that prevent this vulnerability.
+
+  - id: CGA-4fpm-cff7-fm29
+    aliases:
+      - CVE-2024-11697
+      - GHSA-4jp9-q9g7-48gr
+    events:
+      - timestamp: 2024-11-28T13:30:05Z
+        type: fixed
+        data:
+          fixed-version: 133.0-r0
 
   - id: CGA-4h6p-w3r6-fc89
     aliases:
@@ -386,6 +445,16 @@ advisories:
         data:
           fixed-version: 127.0.2-r0
 
+  - id: CGA-4xrx-p72j-pcv9
+    aliases:
+      - CVE-2024-11700
+      - GHSA-845f-27fw-gjw9
+    events:
+      - timestamp: 2024-11-28T13:40:05Z
+        type: fixed
+        data:
+          fixed-version: 133.0-r0
+
   - id: CGA-59hm-5x6m-p5g5
     aliases:
       - CVE-2024-8384
@@ -407,6 +476,16 @@ advisories:
         type: fixed
         data:
           fixed-version: 130.0-r0
+
+  - id: CGA-5cwf-79gm-6ccg
+    aliases:
+      - CVE-2024-11708
+      - GHSA-3r9h-5xmh-8j4q
+    events:
+      - timestamp: 2024-11-28T13:29:09Z
+        type: fixed
+        data:
+          fixed-version: 133.0-r0
 
   - id: CGA-5j66-j7pf-j27m
     aliases:
@@ -491,6 +570,11 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2024-11-20T09:40:34Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: Firefox 132.0.1 is not affected by CVE-2009-2409 as this vulnerability was fixed in 2009 and modern Firefox versions have completely removed MD2 support in certificates since Firefox 3.6
 
   - id: CGA-6gg7-26rq-2xr4
     aliases:
@@ -509,6 +593,11 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2024-11-20T10:14:26Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: 'This vulnerability from 2009 affects old Firefox versions and their DNS prefetching implementation. Modern Firefox (132.0.1) uses a completely different DNS prefetching system. Additionally, Mozilla disputed the significance of this issue even in 2009. More info in the following links: https://bugzilla.mozilla.org/show_bug.cgi?id=492196 https://bugzilla.mozilla.org/show_bug.cgi?id=453403 '
 
   - id: CGA-6p23-542h-cf7x
     aliases:
@@ -630,6 +719,21 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2024-11-20T09:38:30Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: CVE-2007-4013 specifically affects Citrix Access Gateway plugins and components that are not part of the Firefox browser package. The vulnerable DLLs (Net6Helper.DLL and npCtxCAO.dll) are not included in Firefox distribution.
+
+  - id: CGA-75x5-5rmx-34vj
+    aliases:
+      - CVE-2024-53975
+      - GHSA-jxv2-pgjw-vg3v
+    events:
+      - timestamp: 2024-11-28T13:37:53Z
+        type: fixed
+        data:
+          fixed-version: 133.0-r0
 
   - id: CGA-799g-26x7-wpmm
     aliases:
@@ -652,6 +756,16 @@ advisories:
         type: fixed
         data:
           fixed-version: 129.0.2-r0
+
+  - id: CGA-7h68-jh4v-3c4v
+    aliases:
+      - CVE-2024-11701
+      - GHSA-p9vw-xw86-3f2w
+    events:
+      - timestamp: 2024-11-28T13:35:52Z
+        type: fixed
+        data:
+          fixed-version: 133.0-r0
 
   - id: CGA-7p7m-h85g-qv6v
     aliases:
@@ -872,6 +986,11 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2024-11-20T10:23:58Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: CVE-2011-0064 affects old versions of HarfBuzz from 2011. Firefox 132.0.1 includes modern HarfBuzz versions that have long since fixed this vulnerability.
 
   - id: CGA-9r49-w4fq-55hf
     aliases:
@@ -890,6 +1009,21 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2024-11-20T10:05:42Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Firefox 132.0.1 does not include SPDY protocol support as it was removed in Firefox 51.0 (2017). The current version uses HTTP/2 and HTTP/3 with proper protections against CRIME attacks.
+
+  - id: CGA-9rrc-mr27-8vvx
+    aliases:
+      - CVE-2024-11694
+      - GHSA-mjcw-r3mg-3848
+    events:
+      - timestamp: 2024-11-28T13:34:53Z
+        type: fixed
+        data:
+          fixed-version: 133.0-r0
 
   - id: CGA-9rrg-m2rj-5373
     aliases:
@@ -958,6 +1092,11 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2024-11-20T09:42:17Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: This vulnerability was fixed in Firefox 15.0 (2012). Current version 132.0.1 includes these fixes and modern TLS security improvements that prevent CRIME attacks.
 
   - id: CGA-cxvq-mj6g-7435
     aliases:
@@ -976,6 +1115,11 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2024-11-20T10:20:59Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: This vulnerability affects Firefox versions from 2007. The current version 132.0.1 includes completely redesigned certificate handling architecture and security model updates that make this vulnerability inapplicable.
 
   - id: CGA-f58c-62w3-pr5f
     aliases:
@@ -1036,6 +1180,11 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2024-11-20T09:43:15Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: This vulnerability from 2009 affects historical Firefox versions and their PDF handling mechanisms. Modern Firefox (132.0.1-r1) uses completely different security architecture and PDF handling mechanisms that are not vulnerable to this attack.
 
   - id: CGA-fpvq-p9xc-7232
     aliases:
@@ -1064,6 +1213,16 @@ advisories:
         type: fixed
         data:
           fixed-version: 128.0-r0
+
+  - id: CGA-frg2-r3rf-g7jg
+    aliases:
+      - CVE-2024-11693
+      - GHSA-qxf6-g9x3-8w74
+    events:
+      - timestamp: 2024-11-28T13:32:56Z
+        type: fixed
+        data:
+          fixed-version: 133.0-r0
 
   - id: CGA-fvg3-6vrf-6hph
     aliases:
@@ -1220,6 +1379,11 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2024-11-20T10:10:16Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-cannot-be-controlled-by-adversary
+          note: Modern Firefox versions include mitigations for WebGL-based attacks. The vulnerability primarily affects hardware and Firefox 132.0.1 implements sufficient protections.
 
   - id: CGA-j7wc-3x4r-jmx3
     aliases:
@@ -1287,6 +1451,16 @@ advisories:
         data:
           fixed-version: 129.0.2-r0
 
+  - id: CGA-jvqj-h7v5-v52w
+    aliases:
+      - CVE-2024-11691
+      - GHSA-53mx-8hhc-gmp3
+    events:
+      - timestamp: 2024-11-28T13:42:21Z
+        type: fixed
+        data:
+          fixed-version: 133.0-r0
+
   - id: CGA-jx3g-34f8-cg42
     aliases:
       - CVE-2011-3389
@@ -1328,6 +1502,16 @@ advisories:
             componentLocation: /.PKGINFO
             scanner: grype
 
+  - id: CGA-m39j-hg2c-jcjh
+    aliases:
+      - CVE-2024-11696
+      - GHSA-g5wv-cvf4-2r98
+    events:
+      - timestamp: 2024-11-28T13:43:29Z
+        type: fixed
+        data:
+          fixed-version: 133.0-r0
+
   - id: CGA-m3hj-297h-hcfm
     aliases:
       - CVE-2024-7519
@@ -1349,6 +1533,26 @@ advisories:
         type: fixed
         data:
           fixed-version: 129.0.2-r0
+
+  - id: CGA-m4vr-q5x8-ccv8
+    aliases:
+      - CVE-2024-11702
+      - GHSA-7r4q-q89f-2mcg
+    events:
+      - timestamp: 2024-11-28T13:27:19Z
+        type: fixed
+        data:
+          fixed-version: 133.0-r0
+
+  - id: CGA-m7xq-whpp-4wgc
+    aliases:
+      - CVE-2024-11698
+      - GHSA-m59j-fmqm-3q93
+    events:
+      - timestamp: 2024-11-28T13:44:37Z
+        type: fixed
+        data:
+          fixed-version: 133.0-r0
 
   - id: CGA-m89r-85rg-prfp
     aliases:
@@ -1465,6 +1669,11 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2024-11-20T10:11:15Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: This vulnerability affects Firefox versions from 2007. The current version (132.0.1) implements completely different security architecture for mixed content handling, making this vulnerability inapplicable.
 
   - id: CGA-mv3m-3jrm-f6gf
     aliases:
@@ -1630,6 +1839,16 @@ advisories:
         data:
           fixed-version: 132.0-r0
 
+  - id: CGA-p7j4-cmrg-m9cm
+    aliases:
+      - CVE-2024-11705
+      - GHSA-h43c-gg33-qj9g
+    events:
+      - timestamp: 2024-11-28T13:31:59Z
+        type: fixed
+        data:
+          fixed-version: 133.0-r0
+
   - id: CGA-ph9w-jfgc-g62h
     aliases:
       - CVE-2022-4066
@@ -1737,6 +1956,11 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2024-11-20T10:25:41Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: This vulnerability affects Firefox versions from 2007. The current version 132.0.1 is not affected as the code base has been completely rewritten multiple times since then.
 
   - id: CGA-qg2f-25c4-49g8
     aliases:
@@ -1755,6 +1979,11 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2024-11-20T10:17:04Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: CVE-2014-6492 affects Java SE deployment technology when running on Firefox, not Firefox itself. The vulnerability is specific to Java SE versions 6u81, 7u67, and 8u20 and is not applicable to the Firefox package.
 
   - id: CGA-qqfj-gq7r-w8mm
     aliases:
@@ -1773,6 +2002,11 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2024-11-20T10:01:53Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-cannot-be-controlled-by-adversary
+          note: Affected component is present but version (132.0.1-r1) is well beyond when mitigations were implemented. This vulnerability was disclosed and mitigated in 2016, making this a false positive for current Firefox versions. Moreover, vulnerable code paths have been modified since original disclosure and Firefox version 132.0.1-r1 includes mitigations against HEIST attacks.
 
   - id: CGA-qvrf-xfqj-hfw7
     aliases:
@@ -1877,6 +2111,11 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2024-11-20T10:19:44Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: Package version 132.0.1-r1 is not affected by this 2007 vulnerability. The vulnerable code has been completely rewritten in modern Firefox versions.
 
   - id: CGA-rfg4-9cg5-p67v
     aliases:
@@ -1895,6 +2134,11 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2024-11-20T10:04:52Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: This vulnerability affects Firefox 3.x from 2009. Current package version 132.0.1-r1 has completely different codebase and security architecture for script dialogs.
 
   - id: CGA-v636-48rw-4879
     aliases:
@@ -1935,6 +2179,11 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2024-11-20T09:43:57Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: This vulnerability is specific to Windows OS interactions between Internet Explorer and Firefox URI handlers from 2007. The vulnerability is not applicable to Firefox running on Wolfi OS due to different operating system architecture and absence of Internet Explorer integration.
 
   - id: CGA-vxhw-37hm-9qg9
     aliases:
@@ -1957,6 +2206,26 @@ advisories:
         type: fixed
         data:
           fixed-version: 129.0.2-r0
+
+  - id: CGA-vxq8-vf9m-j79w
+    aliases:
+      - CVE-2024-11703
+      - GHSA-wjq6-6xvc-xr82
+    events:
+      - timestamp: 2024-11-28T13:33:55Z
+        type: fixed
+        data:
+          fixed-version: 133.0-r0
+
+  - id: CGA-w33q-7rrj-pjv9
+    aliases:
+      - CVE-2024-11704
+      - GHSA-h8gv-f7pf-7c4p
+    events:
+      - timestamp: 2024-11-28T13:28:14Z
+        type: fixed
+        data:
+          fixed-version: 133.0-r0
 
   - id: CGA-w4ph-2mvf-prm5
     aliases:
@@ -2002,6 +2271,16 @@ advisories:
         data:
           fixed-version: 129.0.2-r0
 
+  - id: CGA-wcpp-8j99-87m4
+    aliases:
+      - CVE-2024-11706
+      - GHSA-8rq4-c5x2-x4g8
+    events:
+      - timestamp: 2024-11-28T13:31:01Z
+        type: fixed
+        data:
+          fixed-version: 133.0-r0
+
   - id: CGA-wh48-v64g-vvj4
     aliases:
       - CVE-2003-1492
@@ -2019,6 +2298,11 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2024-11-20T10:26:21Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: This vulnerability affects Netscape Navigator 7.0.2 from 2003. Modern Firefox 132.0.1 uses completely different cookie handling architecture and codebase.
 
   - id: CGA-whx3-wgvf-q5gx
     aliases:
@@ -2037,6 +2321,11 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2024-11-20T10:16:15Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: This vulnerability affects the Sage RSS reader extension version 1.4.3 and earlier from 2009, not Firefox itself. The Sage extension is not included in the Wolfi Firefox package.
 
   - id: CGA-wxgc-vwf3-9prp
     aliases:
@@ -2103,6 +2392,16 @@ advisories:
         type: fixed
         data:
           fixed-version: 129.0.2-r0
+
+  - id: CGA-x79w-3pg9-p4j4
+    aliases:
+      - CVE-2024-53976
+      - GHSA-4c4w-pcg8-6hq9
+    events:
+      - timestamp: 2024-11-28T13:38:57Z
+        type: fixed
+        data:
+          fixed-version: 133.0-r0
 
   - id: CGA-x7j6-c29p-8gc6
     aliases:

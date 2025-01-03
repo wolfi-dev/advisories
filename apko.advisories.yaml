@@ -26,6 +26,28 @@ advisories:
         data:
           fixed-version: 0.17.0-r1
 
+  - id: CGA-369f-74v7-83c6
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T07:03:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apko
+            componentID: 16ae2b8adafafe37
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/apko
+            scanner: grype
+      - timestamp: 2024-12-12T11:01:37Z
+        type: fixed
+        data:
+          fixed-version: 0.21.0-r1
+
   - id: CGA-386m-pr6v-7wq2
     aliases:
       - CVE-2023-49568
@@ -178,6 +200,24 @@ advisories:
             There are significant changes between these releases, and attempting to upgrade results in build errors.
             Pending fix from upstream, which will involve removing their dependency on the depreciated version.
             Related information: https://github.com/github/advisory-database/pull/4893.
+
+  - id: CGA-f3qw-q6r9-j52v
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T07:04:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apko
+            componentID: 2d524b8bccb8ad88
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/apko
+            scanner: grype
 
   - id: CGA-fr9x-mfm9-9rpj
     aliases:

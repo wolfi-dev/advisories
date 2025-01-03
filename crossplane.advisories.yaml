@@ -36,6 +36,28 @@ advisories:
         data:
           fixed-version: 1.15.1-r1
 
+  - id: CGA-3rgj-87fj-6728
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T10:03:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: crossplane
+            componentID: 9b7c447ba1749aa7
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/crossplane
+            scanner: grype
+      - timestamp: 2024-12-12T17:25:58Z
+        type: fixed
+        data:
+          fixed-version: 1.18.1-r1
+
   - id: CGA-46h3-844v-3jgv
     aliases:
       - CVE-2023-38495
@@ -92,6 +114,28 @@ advisories:
         data:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability was matched to the module "github.com/crossplane/crossplane" at the following location(s): /usr/bin/crossplane. In all cases, the installed version of the module (git commit 432e1637f677bf46e3fa5b84211bc903141409bb) corresponds to a version tag (v1.15.2) that is later than the fixed version (1.11.5).'
+
+  - id: CGA-6mww-6542-fq9c
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-20T15:44:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: crossplane
+            componentID: 9c911b76a055442d
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/crank
+            scanner: grype
+      - timestamp: 2024-12-21T05:15:59Z
+        type: fixed
+        data:
+          fixed-version: 1.18.2-r1
 
   - id: CGA-6pm2-cr33-vxg8
     aliases:

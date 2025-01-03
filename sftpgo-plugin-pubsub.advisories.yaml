@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: sftpgo-plugin-pubsub
+
+advisories:
+  - id: CGA-m8j7-934p-cxrc
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T18:21:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sftpgo-plugin-pubsub
+            componentID: 6d8c956a28bb5072
+            componentName: golang.org/x/net
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/sftpgo-plugin-pubsub
+            scanner: grype
+      - timestamp: 2024-12-20T11:39:10Z
+        type: fixed
+        data:
+          fixed-version: 1.0.13-r2
+
+  - id: CGA-rrp7-934v-555r
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T11:27:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sftpgo-plugin-pubsub
+            componentID: 03f7d9e72e28ff6b
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/sftpgo-plugin-pubsub
+            scanner: grype
+      - timestamp: 2024-12-12T21:18:17Z
+        type: fixed
+        data:
+          fixed-version: 1.0.13-r1

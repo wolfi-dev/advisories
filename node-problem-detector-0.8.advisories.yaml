@@ -135,6 +135,28 @@ advisories:
         data:
           fixed-version: 0.8.17-r0
 
+  - id: CGA-crpp-6834-52pg
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-20T15:19:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: node-problem-detector-0.8
+            componentID: 65af66a1fea8b562
+            componentName: golang.org/x/net
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/node-problem-detector
+            scanner: grype
+      - timestamp: 2024-12-21T05:18:52Z
+        type: fixed
+        data:
+          fixed-version: 0.8.20-r3
+
   - id: CGA-frcj-xrww-85fr
     aliases:
       - CVE-2024-24790
@@ -154,6 +176,28 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability is only present on Windows.
+
+  - id: CGA-gpfg-9qjj-j45w
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T20:03:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: node-problem-detector-0.8
+            componentID: 131bb8c82becf5f8
+            componentName: golang.org/x/crypto
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/node-problem-detector
+            scanner: grype
+      - timestamp: 2024-12-14T17:28:34Z
+        type: fixed
+        data:
+          fixed-version: 0.8.20-r2
 
   - id: CGA-m72m-j96c-59w3
     aliases:

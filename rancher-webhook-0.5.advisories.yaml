@@ -48,6 +48,28 @@ advisories:
         data:
           fixed-version: 0.5.0-r1
 
+  - id: CGA-qjw7-pv7h-82w6
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T15:41:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-webhook-0.5
+            componentID: c7004a8c06583167
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/webhook
+            scanner: grype
+      - timestamp: 2024-12-13T13:26:02Z
+        type: fixed
+        data:
+          fixed-version: 0.5.4-r1
+
   - id: CGA-r9fp-739p-6rp3
     aliases:
       - CVE-2024-34155
@@ -69,3 +91,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.5.0-r1
+
+  - id: CGA-vr53-x9h4-p5v6
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T14:37:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-webhook-0.5
+            componentID: 4fe632d647f28864
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/webhook
+            scanner: grype
+      - timestamp: 2024-12-20T03:00:54Z
+        type: fixed
+        data:
+          fixed-version: 0.5.4-r2

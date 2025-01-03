@@ -26,6 +26,28 @@ advisories:
         data:
           fixed-version: 2.7.6-r4
 
+  - id: CGA-46vw-7wwc-c2pq
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T07:19:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: influxd
+            componentID: 76b40a9c77ab7117
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/influxd
+            scanner: grype
+      - timestamp: 2024-12-19T13:42:44Z
+        type: fixed
+        data:
+          fixed-version: 2.7.11-r2
+
   - id: CGA-65rg-48gm-x8c9
     aliases:
       - CVE-2023-45283
@@ -56,6 +78,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.7.5-r2
+
+  - id: CGA-82cc-4jcw-59cm
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T14:26:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: influxd
+            componentID: 8d0ceae90d2e5a1d
+            componentName: golang.org/x/crypto
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/influxd
+            scanner: grype
+      - timestamp: 2024-12-17T01:29:03Z
+        type: fixed
+        data:
+          fixed-version: 2.7.11-r1
 
   - id: CGA-88q2-6mq3-4wvv
     aliases:

@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: crossplane-provider-sql
+
+advisories:
+  - id: CGA-h734-vfcw-48v4
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T08:07:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: crossplane-provider-sql
+            componentID: 71cf40db95c1b54a
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/crossplane-sql-provider
+            scanner: grype
+      - timestamp: 2024-12-19T12:19:29Z
+        type: fixed
+        data:
+          fixed-version: 0.10.0-r1
+
+  - id: CGA-hjfv-h3rf-vr9p
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T09:34:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: crossplane-provider-sql
+            componentID: 84da33b15408ba24
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/crossplane-sql-provider
+            scanner: grype
+      - timestamp: 2024-12-12T17:20:25Z
+        type: fixed
+        data:
+          fixed-version: 0.9.0-r2

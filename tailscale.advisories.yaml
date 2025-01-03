@@ -36,6 +36,28 @@ advisories:
         data:
           fixed-version: 1.64.2-r1
 
+  - id: CGA-cf7j-p2gj-8r5x
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T12:12:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tailscale
+            componentID: 07553ed9e2efa5ae
+            componentName: golang.org/x/crypto
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/tailscale
+            scanner: grype
+      - timestamp: 2024-12-13T12:19:52Z
+        type: fixed
+        data:
+          fixed-version: 1.78.1-r1
+
   - id: CGA-ff83-cgp9-8vvc
     aliases:
       - CVE-2024-34155
@@ -193,3 +215,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.60.1-r1
+
+  - id: CGA-wwxq-v64v-59ph
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T11:20:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tailscale
+            componentID: bd575de42f558b6f
+            componentName: golang.org/x/net
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/tailscale
+            scanner: grype
+      - timestamp: 2024-12-19T20:09:49Z
+        type: fixed
+        data:
+          fixed-version: 1.78.1-r2

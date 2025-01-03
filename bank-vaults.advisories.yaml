@@ -164,6 +164,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-8f5q-wfh3-r5r6
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T11:23:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: bank-vaults
+            componentID: 69f77b033c24894c
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/template
+            scanner: grype
+      - timestamp: 2024-12-19T21:20:05Z
+        type: fixed
+        data:
+          fixed-version: 1.20.4-r22
+
   - id: CGA-f2jm-hqjq-2m5x
     aliases:
       - CVE-2024-24788
@@ -205,6 +227,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.20.4-r20
+
+  - id: CGA-gfgg-vw6c-v7f9
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T16:31:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: bank-vaults
+            componentID: 3736fcc6005bb3ff
+            componentName: golang.org/x/crypto
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/template
+            scanner: grype
+      - timestamp: 2024-12-13T12:25:37Z
+        type: fixed
+        data:
+          fixed-version: 1.20.4-r21
 
   - id: CGA-hjwx-8794-hj5w
     aliases:

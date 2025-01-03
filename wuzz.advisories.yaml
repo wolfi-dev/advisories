@@ -4,6 +4,28 @@ package:
   name: wuzz
 
 advisories:
+  - id: CGA-3p7c-2h7x-xxjx
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T16:34:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wuzz
+            componentID: 68e0b534ea6af091
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/wuzz
+            scanner: grype
+      - timestamp: 2024-12-20T11:21:37Z
+        type: fixed
+        data:
+          fixed-version: 0.5.0-r3
+
   - id: CGA-c3vw-ch6p-x443
     aliases:
       - CVE-2024-34158

@@ -4,6 +4,64 @@ package:
   name: emissary
 
 advisories:
+  - id: CGA-42vh-553h-qc6r
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T09:06:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: emissary
+            componentID: 3d31d0a8bd22871b
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/busyambassador
+            scanner: grype
+      - timestamp: 2024-12-19T18:34:02Z
+        type: fixed
+        data:
+          fixed-version: 3.9.1-r7
+
+  - id: CGA-5c4c-gf45-j7fv
+    aliases:
+      - CVE-2024-56201
+      - GHSA-gmj6-6f8f-6699
+    events:
+      - timestamp: 2024-12-25T09:38:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: emissary
+            componentID: cb78d5ecd39b576e
+            componentName: jinja2
+            componentVersion: 3.1.4
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/jinja2-3.1.4.dist-info/METADATA, /usr/lib/python3.10/site-packages/jinja2-3.1.4.dist-info/RECORD
+            scanner: grype
+
+  - id: CGA-6x5x-2jv3-mxqp
+    aliases:
+      - CVE-2024-56326
+      - GHSA-q2x7-8rv6-6q7h
+    events:
+      - timestamp: 2024-12-25T09:38:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: emissary
+            componentID: cb78d5ecd39b576e
+            componentName: jinja2
+            componentVersion: 3.1.4
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/jinja2-3.1.4.dist-info/METADATA, /usr/lib/python3.10/site-packages/jinja2-3.1.4.dist-info/RECORD
+            scanner: grype
+
   - id: CGA-p5gp-26hq-j5rc
     aliases:
       - CVE-2024-49767

@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: cert-manager-1.16
+
+advisories:
+  - id: CGA-84xh-r6qp-rrr8
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T20:35:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-manager-1.16
+            componentID: 02744989ea8324a9
+            componentName: golang.org/x/crypto
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/controller
+            scanner: grype
+      - timestamp: 2024-12-13T21:32:00Z
+        type: fixed
+        data:
+          fixed-version: 1.16.2-r2
+
+  - id: CGA-g827-x32f-rc39
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T14:18:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-manager-1.16
+            componentID: 2371862d93d83015
+            componentName: golang.org/x/net
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/controller
+            scanner: grype
+      - timestamp: 2024-12-20T02:01:01Z
+        type: fixed
+        data:
+          fixed-version: 1.16.2-r3

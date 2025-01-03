@@ -4,6 +4,24 @@ package:
   name: vitess-20.0
 
 advisories:
+  - id: CGA-2j9m-pjx4-3mq5
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T17:26:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vitess-20.0
+            componentID: 4a6f0f650d7db84e
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/authztestgen
+            scanner: grype
+
   - id: CGA-cp9r-hc7f-8gr9
     aliases:
       - CVE-2024-45296
@@ -30,6 +48,28 @@ advisories:
         data:
           fixed-version: 20.0.3-r0
 
+  - id: CGA-f4h3-pqfc-gpwp
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T14:02:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vitess-20.0
+            componentID: 4925926a885ad0cc
+            componentName: golang.org/x/crypto
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/vtbackup
+            scanner: grype
+      - timestamp: 2024-12-17T01:34:02Z
+        type: fixed
+        data:
+          fixed-version: 20.0.4-r1
+
   - id: CGA-j7j8-w9gx-789v
     aliases:
       - GHSA-f46q-gmg5-36hm
@@ -50,6 +90,46 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Even on the upstream main branch, the vtadmin version is set to 0.1.0 in the packages.json under web/vtadmin.
+
+  - id: CGA-q99g-63m8-c4r8
+    aliases:
+      - CVE-2024-55565
+      - GHSA-mwcw-c2x4-8c55
+    events:
+      - timestamp: 2024-12-10T13:15:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vitess-20.0
+            componentID: a0c9712680d8e1e3
+            componentName: nanoid
+            componentVersion: 3.3.7
+            componentType: npm
+            componentLocation: /vt/web/vtadmin/node_modules/nanoid/package.json
+            scanner: grype
+      - timestamp: 2024-12-22T13:13:36Z
+        type: fixed
+        data:
+          fixed-version: 20.0.4-r3
+
+  - id: CGA-qw57-j898-5h79
+    aliases:
+      - CVE-2024-53257
+      - GHSA-7mwh-q3xm-qh6p
+    events:
+      - timestamp: 2024-12-04T09:30:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vitess-20.0
+            componentID: 3233aee32ffccb7f
+            componentName: vitess.io/vitess
+            componentVersion: v1.16.1
+            componentType: go-module
+            componentLocation: /usr/bin/demo
+            scanner: grype
 
   - id: CGA-r45j-3c47-p272
     aliases:
@@ -90,6 +170,10 @@ advisories:
         type: pending-upstream-fix
         data:
           note: It's not possible to bump 3 minor versions on this package, other dependencies still depend on this.
+      - timestamp: 2024-12-22T13:13:37Z
+        type: fixed
+        data:
+          fixed-version: 20.0.4-r3
 
   - id: CGA-wpr6-q8w2-pw5m
     aliases:

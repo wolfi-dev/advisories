@@ -144,6 +144,28 @@ advisories:
         data:
           fixed-version: 0.15.0-r0
 
+  - id: CGA-hgcp-c6c6-8v5v
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T16:09:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-stackdriver-exporter
+            componentID: 0893d95859cb2ba2
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/stackdriver_exporter
+            scanner: grype
+      - timestamp: 2024-12-13T08:45:12Z
+        type: fixed
+        data:
+          fixed-version: 0.17.0-r1
+
   - id: CGA-m2rg-gw8g-jq3g
     aliases:
       - CVE-2023-44487
@@ -175,6 +197,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.15.0-r1
+
+  - id: CGA-p2rv-g632-r43m
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T14:01:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-stackdriver-exporter
+            componentID: 72faaa3dce8cb4f9
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/stackdriver_exporter
+            scanner: grype
+      - timestamp: 2024-12-20T01:17:20Z
+        type: fixed
+        data:
+          fixed-version: 0.17.0-r2
 
   - id: CGA-p7v4-6cmg-g4w7
     aliases:

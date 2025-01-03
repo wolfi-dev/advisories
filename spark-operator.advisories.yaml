@@ -40,6 +40,28 @@ advisories:
         data:
           fixed-version: 1.1.27-r17
 
+  - id: CGA-3gxh-267v-q6gf
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T07:26:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-operator
+            componentID: 1a171b10fb00e35a
+            componentName: golang.org/x/crypto
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/sparkctl
+            scanner: grype
+      - timestamp: 2024-12-12T12:37:28Z
+        type: fixed
+        data:
+          fixed-version: 2.0.2-r2
+
   - id: CGA-42q9-w6hw-f2jx
     aliases:
       - CVE-2024-34156
@@ -203,6 +225,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.1.27-r19
+
+  - id: CGA-8c54-6m6h-2rx2
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-20T10:14:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-operator
+            componentID: d400f9f51066c869
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/spark-operator
+            scanner: grype
+      - timestamp: 2024-12-21T00:01:04Z
+        type: fixed
+        data:
+          fixed-version: 2.1.0-r1
 
   - id: CGA-8wmr-wrg2-c9pf
     aliases:

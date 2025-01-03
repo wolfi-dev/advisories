@@ -58,6 +58,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-722j-p23c-v724
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T11:01:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dns-node-cache
+            componentID: a7aae2ff8b771a08
+            componentName: golang.org/x/crypto
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/node-cache
+            scanner: grype
+      - timestamp: 2024-12-12T20:20:18Z
+        type: fixed
+        data:
+          fixed-version: 1.24.0-r1
+
   - id: CGA-8h4r-qgj9-rq59
     aliases:
       - CVE-2024-34156
@@ -206,6 +228,50 @@ advisories:
         data:
           fixed-version: 1.23.0-r2
 
+  - id: CGA-gh7h-rmf2-3j5v
+    aliases:
+      - CVE-2024-53259
+      - GHSA-px8v-pp82-rcvr
+    events:
+      - timestamp: 2024-12-03T11:03:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dns-node-cache
+            componentID: 52071df8b8532664
+            componentName: github.com/quic-go/quic-go
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/node-cache
+            scanner: grype
+      - timestamp: 2024-12-03T11:14:24Z
+        type: fixed
+        data:
+          fixed-version: 1.23.1-r6
+
+  - id: CGA-gp2q-gw6h-6c7p
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T12:42:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dns-node-cache
+            componentID: 3a2080e83be0d997
+            componentName: golang.org/x/net
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/node-cache
+            scanner: grype
+      - timestamp: 2024-12-19T23:22:59Z
+        type: fixed
+        data:
+          fixed-version: 1.24.0-r3
+
   - id: CGA-gx5x-qrj3-xpvm
     aliases:
       - CVE-2023-45288
@@ -215,6 +281,16 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.23.0-r3
+
+  - id: CGA-h373-j6gv-96rw
+    aliases:
+      - CVE-2024-10220
+      - GHSA-27wf-5967-98gx
+    events:
+      - timestamp: 2024-11-23T13:39:38Z
+        type: fixed
+        data:
+          fixed-version: 1.23.1-r5
 
   - id: CGA-h4rj-wpw5-mmg5
     aliases:

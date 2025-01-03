@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: velero-plugin-for-microsoft-azure
+
+advisories:
+  - id: CGA-4g46-hxjp-w3v5
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T21:06:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: velero-plugin-for-microsoft-azure
+            componentID: e7d0be2622f5c5c2
+            componentName: golang.org/x/crypto
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /plugins/velero-plugin-for-microsoft-azure
+            scanner: grype
+      - timestamp: 2024-12-13T21:32:37Z
+        type: fixed
+        data:
+          fixed-version: 1.11.0-r1
+
+  - id: CGA-82wg-mj3x-g2pw
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T07:44:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: velero-plugin-for-microsoft-azure
+            componentID: 70126cff91d7235e
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/velero-plugin-for-microsoft-azure
+            scanner: grype
+      - timestamp: 2024-12-19T17:38:17Z
+        type: fixed
+        data:
+          fixed-version: 1.11.0-r2

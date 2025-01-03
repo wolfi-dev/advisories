@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: yunikorn-k8shim
+
+advisories:
+  - id: CGA-5p6c-p47w-m9g2
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T14:23:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: yunikorn-k8shim
+            componentID: fd5a2e07023d8d35
+            componentName: golang.org/x/net
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/yunikorn-scheduler
+            scanner: grype
+      - timestamp: 2024-12-20T02:15:10Z
+        type: fixed
+        data:
+          fixed-version: 1.6.0-r1

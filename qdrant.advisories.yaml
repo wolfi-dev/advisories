@@ -4,6 +4,31 @@ package:
   name: qdrant
 
 advisories:
+  - id: CGA-3f8q-gpp7-f46x
+    aliases:
+      - GHSA-gw5w-5j7f-jmjj
+    events:
+      - timestamp: 2024-12-06T08:20:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: qdrant
+            componentID: 9441c9f02571bc40
+            componentName: pprof
+            componentVersion: 0.12.1
+            componentType: rust-crate
+            componentLocation: /usr/bin/qdrant
+            scanner: grype
+      - timestamp: 2024-12-08T08:52:38Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            qdrant currently depends on multiple versions of pprof - v0.12.x and v0.13.x.
+            Remediating this vulnerability would require removing dependencies on the older versions.
+            Given that multiple versions are intentionally defined, waiting for upstream to upgrade this dependency.
+            Ref: https://github.com/qdrant/qdrant/blob/v1.12.4/Cargo.lock#L4476-L4519
+
   - id: CGA-c6v5-62wh-j5x5
     aliases:
       - CVE-2024-47609
@@ -44,6 +69,24 @@ advisories:
         data:
           fixed-version: 1.11.0-r0
 
+  - id: CGA-hxqc-vvc2-qmhw
+    aliases:
+      - CVE-2024-12224
+      - GHSA-h97m-ww89-6jmq
+    events:
+      - timestamp: 2024-12-10T13:12:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: qdrant
+            componentID: 92b0685dc6594df5
+            componentName: idna
+            componentVersion: 0.5.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/qdrant
+            scanner: grype
+
   - id: CGA-mmm5-8q9j-5wvr
     aliases:
       - CVE-2024-45311
@@ -65,6 +108,64 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.11.3-r1
+
+  - id: CGA-rmmh-9fvj-5h5f
+    aliases:
+      - GHSA-qg5g-gv98-5ffh
+    events:
+      - timestamp: 2024-11-26T10:16:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: qdrant
+            componentID: 51e2e8d8e2f41879
+            componentName: rustls
+            componentVersion: 0.23.16
+            componentType: rust-crate
+            componentLocation: /usr/bin/qdrant
+            scanner: grype
+      - timestamp: 2024-12-08T08:52:38Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            qdrant currently depends on multiple versions of rustls - v0.21.x, v0.22.x and v0.23.x.
+            Remediating this vulnerability would require removing dependencies on the older versions.
+            Given multiple versions are intentionally defined, waiting for upstream to upgrade this dependency.
+            Ref: https://github.com/qdrant/qdrant/blob/v1.12.4/Cargo.lock#L4476-L4519
+      - timestamp: 2024-12-09T18:00:40Z
+        type: fixed
+        data:
+          fixed-version: 1.12.5-r0
+
+  - id: CGA-v422-6gmm-2v22
+    aliases:
+      - GHSA-wwq9-3cpr-mm53
+    events:
+      - timestamp: 2024-12-05T08:17:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: qdrant
+            componentID: e4e459dcabe8969a
+            componentName: hashbrown
+            componentVersion: 0.15.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/qdrant
+            scanner: grype
+      - timestamp: 2024-12-08T08:49:12Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            qdrant currently depends on multiple versions of hashbrown - v12.x , v14.x and v15.x.
+            Remediating this vulnerability would require removing dependencies on the older versions.
+            Given that multiple versions are intentionally defined, waiting for upstream to upgrade this dependency.
+            Waiting for fix from upstream. Ref: https://github.com/qdrant/qdrant/blob/v1.12.4/Cargo.lock#L2479-L2499
+      - timestamp: 2024-12-09T18:00:41Z
+        type: fixed
+        data:
+          fixed-version: 1.12.5-r0
 
   - id: CGA-vghx-m9qr-wvfv
     aliases:

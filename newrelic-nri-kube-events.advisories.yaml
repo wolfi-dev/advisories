@@ -67,6 +67,28 @@ advisories:
         data:
           fixed-version: 2.9.8-r1
 
+  - id: CGA-grmc-f69v-xmxm
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-20T08:13:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: newrelic-nri-kube-events
+            componentID: a6c3fc7a7a21f96c
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/nri-kube-events
+            scanner: grype
+      - timestamp: 2024-12-20T22:18:49Z
+        type: fixed
+        data:
+          fixed-version: 2.11.3-r2
+
   - id: CGA-j95j-99xj-46qw
     aliases:
       - CVE-2024-34158

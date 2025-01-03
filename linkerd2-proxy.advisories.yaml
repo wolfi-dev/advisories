@@ -28,3 +28,46 @@ advisories:
             Remediating this vulnerability requires upgrading tonic to v0.12.13.
             However, upgrading this causes issues with other dependencies, namely linkerd-app-core, which is not compatible with this version.
             Pending upstream fix.
+
+  - id: CGA-9cv3-3ghw-2w28
+    aliases:
+      - CVE-2024-12224
+      - GHSA-h97m-ww89-6jmq
+    events:
+      - timestamp: 2024-12-10T11:07:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: linkerd2-proxy
+            componentID: 8f120ee0b6470273
+            componentName: idna
+            componentVersion: 0.4.0
+            componentType: rust-crate
+            componentLocation: /usr/lib/linkerd/linkerd2-proxy
+            scanner: grype
+      - timestamp: 2024-12-18T06:19:55Z
+        type: fixed
+        data:
+          fixed-version: 2.272.0-r0
+
+  - id: CGA-x8q5-4432-qq34
+    aliases:
+      - GHSA-wwq9-3cpr-mm53
+    events:
+      - timestamp: 2024-12-05T09:07:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: linkerd2-proxy
+            componentID: 798734be849649b2
+            componentName: hashbrown
+            componentVersion: 0.15.0
+            componentType: rust-crate
+            componentLocation: /usr/lib/linkerd/linkerd2-proxy
+            scanner: grype
+      - timestamp: 2024-12-12T01:44:17Z
+        type: fixed
+        data:
+          fixed-version: 2.271.0-r0

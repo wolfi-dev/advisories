@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: gcp-compute-persistent-disk-csi-driver-1.15
+
+advisories:
+  - id: CGA-hfjh-c8h2-25v4
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T12:03:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gcp-compute-persistent-disk-csi-driver-1.15
+            componentID: cd1d92a09898d76e
+            componentName: golang.org/x/net
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/gce-pd-csi-driver
+            scanner: grype
+      - timestamp: 2024-12-19T23:23:42Z
+        type: fixed
+        data:
+          fixed-version: 1.15.3-r1
+
+  - id: CGA-wv8j-6rfq-7p4v
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T17:42:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gcp-compute-persistent-disk-csi-driver-1.15
+            componentID: 77e4f9509a7698be
+            componentName: golang.org/x/crypto
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/gce-pd-csi-driver
+            scanner: grype
+      - timestamp: 2024-12-19T23:23:41Z
+        type: fixed
+        data:
+          fixed-version: 1.15.3-r1

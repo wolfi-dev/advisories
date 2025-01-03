@@ -1,0 +1,89 @@
+schema-version: 2.0.2
+
+package:
+  name: ztunnel-1.24
+
+advisories:
+  - id: CGA-4qj3-h8f9-qm65
+    aliases:
+      - GHSA-gw5w-5j7f-jmjj
+    events:
+      - timestamp: 2024-12-06T10:41:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ztunnel-1.24
+            componentID: b1487cd49186140d
+            componentName: pprof
+            componentVersion: 0.13.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/ztunnel
+            scanner: grype
+      - timestamp: 2024-12-08T17:00:41Z
+        type: fixed
+        data:
+          fixed-version: 1.24.1-r2
+
+  - id: CGA-875p-mmm9-5f44
+    aliases:
+      - GHSA-wwq9-3cpr-mm53
+    events:
+      - timestamp: 2024-12-05T09:27:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ztunnel-1.24
+            componentID: 621c3eb1aa569ab7
+            componentName: hashbrown
+            componentVersion: 0.15.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/ztunnel
+            scanner: grype
+      - timestamp: 2024-12-07T19:57:12Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            ztunnel currently depends on multiple versions of hashbrown - v12.x , v14.x and v15.x.
+            We can't bump the earlier versions to the latest v15.x streams, as the project explicitly depends on multiple versions.
+            Waiting for fix from upstream. Ref: https://github.com/istio/ztunnel/blob/1.24.1/Cargo.lock#L1095-L1119
+
+  - id: CGA-gfhm-mmvx-rqwp
+    aliases:
+      - CVE-2024-12224
+      - GHSA-h97m-ww89-6jmq
+    events:
+      - timestamp: 2024-12-10T07:09:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ztunnel-1.24
+            componentID: c57c22b9dfbcb17f
+            componentName: idna
+            componentVersion: 0.4.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/ztunnel
+            scanner: grype
+
+  - id: CGA-ww5r-3x7r-r6p7
+    aliases:
+      - GHSA-qg5g-gv98-5ffh
+    events:
+      - timestamp: 2024-11-26T09:27:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ztunnel-1.24
+            componentID: 3e93339b6958faa0
+            componentName: rustls
+            componentVersion: 0.23.14
+            componentType: rust-crate
+            componentLocation: /usr/bin/ztunnel
+            scanner: grype
+      - timestamp: 2024-11-26T14:11:30Z
+        type: fixed
+        data:
+          fixed-version: 1.24.1-r1

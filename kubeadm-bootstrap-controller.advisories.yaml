@@ -64,6 +64,28 @@ advisories:
         data:
           fixed-version: 1.6.2-r1
 
+  - id: CGA-cv6m-273p-6hc5
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T16:11:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeadm-bootstrap-controller
+            componentID: 88d6148c1148de82
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/kubeadm-bootstrap-controller
+            scanner: grype
+      - timestamp: 2024-12-20T06:05:05Z
+        type: fixed
+        data:
+          fixed-version: 1.9.1-r2
+
   - id: CGA-gg64-vgv4-x47v
     aliases:
       - CVE-2023-45290

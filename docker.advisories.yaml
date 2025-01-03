@@ -47,6 +47,28 @@ advisories:
         data:
           fixed-version: 27.2.1-r0
 
+  - id: CGA-4xjp-2f97-5xg2
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T13:15:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker
+            componentID: 7987fdfa6e66a1fc
+            componentName: golang.org/x/crypto
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/dockerd
+            scanner: grype
+      - timestamp: 2024-12-13T18:07:55Z
+        type: fixed
+        data:
+          fixed-version: 27.4.0-r1
+
   - id: CGA-524r-9jqj-x2rv
     aliases:
       - CVE-2015-3627
@@ -322,6 +344,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 27.2.0-r1
+
+  - id: CGA-h5g8-g3cv-7pfw
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T14:35:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker
+            componentID: a3abbe9d0fb7d2c0
+            componentName: golang.org/x/net
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/dockerd
+            scanner: grype
+      - timestamp: 2024-12-20T03:37:36Z
+        type: fixed
+        data:
+          fixed-version: 27.4.1-r1
 
   - id: CGA-h87r-65gx-q8w9
     aliases:

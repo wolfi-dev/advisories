@@ -149,6 +149,50 @@ advisories:
         data:
           fixed-version: 0.27.0-r1
 
+  - id: CGA-g83w-hp6g-c9fm
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T17:30:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-alertmanager
+            componentID: db5c3b69a84639f0
+            componentName: golang.org/x/net
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/alertmanager
+            scanner: grype
+      - timestamp: 2024-12-22T13:42:10Z
+        type: fixed
+        data:
+          fixed-version: 0.27.0-r13
+
+  - id: CGA-hmfg-p87v-vwv4
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T18:05:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-alertmanager
+            componentID: 28eb89896b05e992
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/alertmanager
+            scanner: grype
+      - timestamp: 2024-12-15T18:06:33Z
+        type: fixed
+        data:
+          fixed-version: 0.27.0-r11
+
   - id: CGA-hx3h-4xvx-pg6h
     aliases:
       - CVE-2024-24789

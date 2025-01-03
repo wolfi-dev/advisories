@@ -4,6 +4,28 @@ package:
   name: tekton-pipelines
 
 advisories:
+  - id: CGA-2pqx-m9cx-39mj
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T12:19:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tekton-pipelines
+            componentID: 5c2c93e044257817
+            componentName: golang.org/x/net
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/tekton-pipelines-sidecarlogresults
+            scanner: grype
+      - timestamp: 2024-12-19T22:23:19Z
+        type: fixed
+        data:
+          fixed-version: 0.66.0-r3
+
   - id: CGA-36jv-q8vj-wwgx
     aliases:
       - CVE-2023-1732
@@ -163,6 +185,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.57.0-r1
+
+  - id: CGA-9mv2-f437-jgh8
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T12:04:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tekton-pipelines
+            componentID: 6d6ab02a847bc74f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/tekton-pipelines-entrypoint
+            scanner: grype
+      - timestamp: 2024-12-13T16:05:09Z
+        type: fixed
+        data:
+          fixed-version: 0.66.0-r1
 
   - id: CGA-f69f-9576-qmxm
     aliases:

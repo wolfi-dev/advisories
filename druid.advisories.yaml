@@ -273,6 +273,30 @@ advisories:
         type: pending-upstream-fix
         data:
           note: This vulnerability is related to derby 10.14.2.0. Upgrading to the latest version 10.17.1.0 will fix the vulnerability, but it requires code changes in the Druid upstream repository.
+      - timestamp: 2024-12-02T11:38:32Z
+        type: fixed
+        data:
+          fixed-version: 31.0.0-r2
+      - timestamp: 2024-12-04T07:37:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: druid
+            componentID: a2da94957723bfa6
+            componentName: derby
+            componentVersion: 10.14.2.0
+            componentType: java-archive
+            componentLocation: /usr/share/java/druid/lib/derby-10.14.2.0.jar
+            scanner: grype
+      - timestamp: 2024-12-11T22:09:12Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            This vulnerability is related to 'derby', one of the dependencies of Apache druid.
+            A fix is available, but requires upgrading 'derby' to 'v10.17.1.0'. Attempting to upgrade druid to this version results in build failures.
+            derby v10.17.1.0 requires Java 21. Apache druid does not support currently support Java 21.
+            Ref: https://github.com/apache/druid/blob/druid-31.0.0/docs/operations/java.md and https://db.apache.org/derby/releases/release-10_17_1_0.cgi.
 
   - id: CGA-c5fg-gm82-jrmq
     aliases:
@@ -768,6 +792,28 @@ advisories:
         type: pending-upstream-fix
         data:
           note: This vulnerability relates to log4j 1.2.17, a transitive dependency of the shaded JAR ambari-metrics-emitter used by Druid. No newer versions of this shaded JAR are available to fix the vulnerability.
+
+  - id: CGA-x74c-2j5w-4cp2
+    aliases:
+      - CVE-2024-53990
+      - GHSA-mfj5-cf8g-g2fv
+    events:
+      - timestamp: 2024-12-13T07:41:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: druid
+            componentID: fc02a16d9e86ea59
+            componentName: async-http-client
+            componentVersion: 2.5.3
+            componentType: java-archive
+            componentLocation: /usr/share/java/druid/lib/async-http-client-2.5.3.jar
+            scanner: grype
+      - timestamp: 2024-12-16T19:28:23Z
+        type: pending-upstream-fix
+        data:
+          note: 'async-http-client 3.0.1 dependency bump requires code changes to be made in the upstream codebase.  Error while trying to bump the dependency: HttpPostEmitter.java:[776,51] incompatible types: int cannot be converted to java.time.Duration'
 
   - id: CGA-xf65-82jr-gw83
     aliases:

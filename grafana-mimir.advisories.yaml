@@ -4,6 +4,28 @@ package:
   name: grafana-mimir
 
 advisories:
+  - id: CGA-2xvx-2chr-r3h7
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T16:44:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-mimir
+            componentID: c90560ad13eac7db
+            componentName: golang.org/x/net
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/grafana-mimir
+            scanner: grype
+      - timestamp: 2024-12-21T13:39:18Z
+        type: fixed
+        data:
+          fixed-version: 2.14.2-r2
+
   - id: CGA-6j8x-q78q-cpp3
     aliases:
       - CVE-2024-6104
@@ -67,6 +89,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.12.0-r2
+
+  - id: CGA-f3pw-84ch-q3jh
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T11:31:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-mimir
+            componentID: 59643a1778238f94
+            componentName: golang.org/x/crypto
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/grafana-mimir
+            scanner: grype
+      - timestamp: 2024-12-12T21:10:52Z
+        type: fixed
+        data:
+          fixed-version: 2.14.2-r1
 
   - id: CGA-ghp9-hc5v-vhcm
     aliases:

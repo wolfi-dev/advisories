@@ -1,0 +1,93 @@
+schema-version: 2.0.2
+
+package:
+  name: gitlab-cng-17.6
+
+advisories:
+  - id: CGA-8mcx-h9rj-jh35
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T09:07:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-cng-17.6
+            componentID: 5bc6a670c7290cf7
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-elasticsearch-indexer
+            scanner: grype
+      - timestamp: 2024-12-20T15:43:19Z
+        type: fixed
+        data:
+          fixed-version: 17.6.0-r3
+
+  - id: CGA-hp26-6px8-www7
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T09:13:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-cng-17.6
+            componentID: 404b8d45eba5d15b
+            componentName: golang.org/x/crypto
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /srv/gitlab-shell/bin/gitlab-sshd
+            scanner: grype
+      - timestamp: 2024-12-17T00:10:21Z
+        type: fixed
+        data:
+          fixed-version: 17.6.0-r2
+
+  - id: CGA-qwr2-296x-fxhx
+    aliases:
+      - CVE-2024-45614
+      - GHSA-9hf4-67fc-4vf4
+    events:
+      - timestamp: 2024-12-09T16:39:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-cng-17.6
+            componentID: a1828d3537c9f344
+            componentName: puma
+            componentVersion: 5.6.8
+            componentType: gem
+            componentLocation: /usr/lib/ruby/gems/3.2.0/specifications/puma-5.6.8.gemspec
+            scanner: grype
+      - timestamp: 2024-12-17T14:16:21Z
+        type: pending-upstream-fix
+        data:
+          note: 'This vulnerability relates to a GitLab gem dependency. GitLab advises that maintainers should NOT upgrade dependency versions manually, as their automation would have already applied this in cases of simple version increments. If a dependency version has not yet been upgraded, there is usually a good reason. Additionally, past attempts to upgrade GitLab dependencies ahead of the upstream release have resulted in build issues. Deferring to upstream (GitLab) to address this CVE in a subsequent update. See: https://docs.gitlab.com/ee/development/dependencies.html.'
+
+  - id: CGA-vvw2-vc5h-cmrj
+    aliases:
+      - CVE-2024-21510
+      - GHSA-hxx2-7vcw-mqr3
+    events:
+      - timestamp: 2024-12-09T16:39:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-cng-17.6
+            componentID: 77233ea61077972c
+            componentName: sinatra
+            componentVersion: 2.2.4
+            componentType: gem
+            componentLocation: /usr/lib/ruby/gems/3.2.0/specifications/sinatra-2.2.4.gemspec
+            scanner: grype
+      - timestamp: 2024-12-17T14:16:21Z
+        type: pending-upstream-fix
+        data:
+          note: 'This vulnerability relates to a GitLab gem dependency. GitLab advises that maintainers should NOT upgrade dependency versions manually, as their automation would have already applied this in cases of simple version increments. If a dependency version has not yet been upgraded, there is usually a good reason. Additionally, past attempts to upgrade GitLab dependencies ahead of the upstream release have resulted in build issues. Deferring to upstream (GitLab) to address this CVE in a subsequent update. See: https://docs.gitlab.com/ee/development/dependencies.html.'

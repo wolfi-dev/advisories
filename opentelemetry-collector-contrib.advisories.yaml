@@ -4,6 +4,28 @@ package:
   name: opentelemetry-collector-contrib
 
 advisories:
+  - id: CGA-36jx-4h2r-78fw
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-20T09:06:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opentelemetry-collector-contrib
+            componentID: b175efadf7ad6ffa
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol-contrib
+            scanner: grype
+      - timestamp: 2024-12-20T22:37:23Z
+        type: fixed
+        data:
+          fixed-version: 0.116.0-r1
+
   - id: CGA-4vwg-vfmq-jp43
     aliases:
       - GHSA-xr7q-jx4m-x55m
@@ -263,6 +285,28 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/otelcol-contrib
             scanner: grype
+
+  - id: CGA-v895-95j9-5q8g
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T12:23:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opentelemetry-collector-contrib
+            componentID: 2d84fcfd409cb79b
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol-contrib
+            scanner: grype
+      - timestamp: 2024-12-13T16:39:50Z
+        type: fixed
+        data:
+          fixed-version: 0.115.0-r1
 
   - id: CGA-vj3w-hj9v-3r8w
     aliases:

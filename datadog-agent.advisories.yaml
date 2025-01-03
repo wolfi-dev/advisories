@@ -375,6 +375,28 @@ advisories:
         data:
           fixed-version: 7.51.1-r1
 
+  - id: CGA-f4p3-h4rj-v8cc
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T11:14:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: datadog-agent
+            componentID: 23b7e21306eecea4
+            componentName: golang.org/x/net
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/datadog-cluster-agent
+            scanner: grype
+      - timestamp: 2024-12-20T01:01:38Z
+        type: fixed
+        data:
+          fixed-version: 7.59.1-r2
+
   - id: CGA-g53h-xwg9-vg9f
     aliases:
       - CVE-2024-24789
@@ -406,6 +428,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 7.54.1-r1
+
+  - id: CGA-gg42-hvx9-34jm
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T12:18:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: datadog-agent
+            componentID: c843f1f57c12fdab
+            componentName: golang.org/x/crypto
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/datadog-cluster-agent
+            scanner: grype
+      - timestamp: 2024-12-13T04:02:12Z
+        type: fixed
+        data:
+          fixed-version: 7.59.1-r1
 
   - id: CGA-gpwc-7f5f-8m65
     aliases:
@@ -517,6 +561,10 @@ advisories:
             componentType: python
             componentLocation: /opt/datadog-agent/embedded/lib/python3.11/site-packages/snowflake_connector_python-3.12.1.dist-info/METADATA, /opt/datadog-agent/embedded/lib/python3.11/site-packages/snowflake_connector_python-3.12.1.dist-info/RECORD, /opt/datadog-agent/embedded/lib/python3.11/site-packages/snowflake_connector_python-3.12.1.dist-info/direct_url.json, /opt/datadog-agent/embedded/lib/python3.11/site-packages/snowflake_connector_python-3.12.1.dist-info/top_level.txt
             scanner: grype
+      - timestamp: 2024-11-22T01:19:30Z
+        type: pending-upstream-fix
+        data:
+          note: 'Datadog/integrations-core requires the use of Python 3.11 however the latest release of snowflake-connector-python (version 3.12.3) does not include support for Python 3.11. Instead, this version is built for Python 3.12 (cp312). The absence of a compatible wheel for Python 3.11 (cp311) prevents us from upgrading to version 3.12.3. Support for Python 3.11 requires upstream maintainers to implement. '
 
   - id: CGA-p4mm-jvfh-v2c4
     aliases:

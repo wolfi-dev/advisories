@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: go-discover
+
+advisories:
+  - id: CGA-p28m-rmw3-gr8x
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T08:35:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: go-discover
+            componentID: 0b23710e45e3f49d
+            componentName: golang.org/x/crypto
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/discover
+            scanner: grype
+      - timestamp: 2024-12-12T17:03:47Z
+        type: fixed
+        data:
+          fixed-version: 0_git20241212-r1
+
+  - id: CGA-qv64-jh5p-fph4
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T19:11:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: go-discover
+            componentID: 2a3b8826aa8a703c
+            componentName: golang.org/x/net
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/discover
+            scanner: grype
+      - timestamp: 2024-12-20T18:10:09Z
+        type: fixed
+        data:
+          fixed-version: 0_git20241218-r1

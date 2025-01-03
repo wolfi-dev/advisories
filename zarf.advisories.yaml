@@ -129,6 +129,28 @@ advisories:
             Pending fix from upstream, which will involve removing their dependency on the depreciated version.
             Related information: https://github.com/github/advisory-database/pull/4893.
 
+  - id: CGA-5qpw-rjrw-58hm
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T19:34:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zarf
+            componentID: e735ec667d5d7a3a
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/zarf
+            scanner: grype
+      - timestamp: 2024-12-20T18:16:28Z
+        type: fixed
+        data:
+          fixed-version: 0.45.0-r2
+
   - id: CGA-658v-w5jj-qjgv
     aliases:
       - CVE-2024-41110
@@ -456,6 +478,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.39.0-r1
+
+  - id: CGA-prm5-xj5j-vq7r
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T17:11:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zarf
+            componentID: c733632d03ac1fb2
+            componentName: golang.org/x/crypto
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/zarf
+            scanner: grype
+      - timestamp: 2024-12-12T22:15:42Z
+        type: fixed
+        data:
+          fixed-version: 0.45.0-r0
 
   - id: CGA-qrpp-w9rh-hx25
     aliases:

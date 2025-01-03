@@ -238,6 +238,50 @@ advisories:
         data:
           fixed-version: 1.24.0-r0
 
+  - id: CGA-h64g-c5hf-w334
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T19:22:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser
+            componentID: cb0d51c479acb169
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+      - timestamp: 2024-12-20T17:06:55Z
+        type: fixed
+        data:
+          fixed-version: 2.5.0-r1
+
+  - id: CGA-hpc9-3m9v-4chh
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T15:07:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser
+            componentID: 2cefd52179976325
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+      - timestamp: 2024-12-13T05:20:16Z
+        type: fixed
+        data:
+          fixed-version: 2.4.8-r1
+
   - id: CGA-jmf8-qmq3-ppp3
     aliases:
       - CVE-2023-45288

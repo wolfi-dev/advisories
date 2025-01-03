@@ -1,0 +1,65 @@
+schema-version: 2.0.2
+
+package:
+  name: tealdeer
+
+advisories:
+  - id: CGA-2262-pv3v-4g5m
+    aliases:
+      - CVE-2024-12224
+      - GHSA-h97m-ww89-6jmq
+    events:
+      - timestamp: 2024-12-10T11:06:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tealdeer
+            componentID: 775c9712600a4c52
+            componentName: idna
+            componentVersion: 0.5.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/tldr
+            scanner: grype
+
+  - id: CGA-9484-g85q-227p
+    aliases:
+      - GHSA-qg5g-gv98-5ffh
+    events:
+      - timestamp: 2024-11-26T07:26:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tealdeer
+            componentID: 5f5de0d0cc1d9dc7
+            componentName: rustls
+            componentVersion: 0.23.13
+            componentType: rust-crate
+            componentLocation: /usr/bin/tldr
+            scanner: grype
+      - timestamp: 2024-11-26T11:00:56Z
+        type: fixed
+        data:
+          fixed-version: 1.7.1-r1
+
+  - id: CGA-vgh7-wv45-fc2v
+    aliases:
+      - GHSA-wwq9-3cpr-mm53
+    events:
+      - timestamp: 2024-12-05T09:12:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tealdeer
+            componentID: 14089e4e41deea9b
+            componentName: hashbrown
+            componentVersion: 0.15.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/tldr
+            scanner: grype
+      - timestamp: 2024-12-05T10:33:01Z
+        type: fixed
+        data:
+          fixed-version: 1.7.1-r2

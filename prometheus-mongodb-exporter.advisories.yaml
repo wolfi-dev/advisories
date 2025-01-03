@@ -4,6 +4,28 @@ package:
   name: prometheus-mongodb-exporter
 
 advisories:
+  - id: CGA-22mg-v3w8-qq3v
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T13:07:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-mongodb-exporter
+            componentID: 5c84dc9d08f4a3ca
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/mongodb_exporter
+            scanner: grype
+      - timestamp: 2024-12-13T08:24:55Z
+        type: fixed
+        data:
+          fixed-version: 0.43.0-r1
+
   - id: CGA-2jg2-3495-36r2
     aliases:
       - CVE-2023-45283
@@ -106,6 +128,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.40.0-r3
+
+  - id: CGA-m3vv-4q63-r828
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T15:23:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-mongodb-exporter
+            componentID: 5e380b4a81d2d328
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/mongodb_exporter
+            scanner: grype
+      - timestamp: 2024-12-20T05:16:29Z
+        type: fixed
+        data:
+          fixed-version: 0.43.1-r1
 
   - id: CGA-m5q5-g7r2-f2rw
     aliases:

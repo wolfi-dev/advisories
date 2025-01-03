@@ -4,6 +4,23 @@ package:
   name: rye
 
 advisories:
+  - id: CGA-pq33-v7gp-3mmc
+    aliases:
+      - GHSA-4fg7-vxc8-qx5w
+    events:
+      - timestamp: 2024-12-19T12:21:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rye
+            componentID: 9826fed1fbbe6fa3
+            componentName: age
+            componentVersion: 0.10.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/rye
+            scanner: grype
+
   - id: CGA-pqf5-73f6-2j68
     aliases:
       - GHSA-x4gp-pqpj-f43q
@@ -24,3 +41,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.38.0-r0
+
+  - id: CGA-wqv8-vfwq-7gj4
+    aliases:
+      - CVE-2024-12224
+      - GHSA-h97m-ww89-6jmq
+    events:
+      - timestamp: 2024-12-11T07:44:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rye
+            componentID: 9ee10ed80c826ac0
+            componentName: idna
+            componentVersion: 0.5.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/rye
+            scanner: grype

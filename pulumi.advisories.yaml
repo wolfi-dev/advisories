@@ -68,6 +68,50 @@ advisories:
         data:
           fixed-version: 3.132.0-r0
 
+  - id: CGA-3vc4-9624-rfjr
+    aliases:
+      - CVE-2024-36620
+      - GHSA-q59j-vv4j-v33c
+    events:
+      - timestamp: 2024-12-05T08:01:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pulumi
+            componentID: b3d68f6e904e1420
+            componentName: github.com/moby/moby
+            componentVersion: v25.0.4+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/pulumi
+            scanner: grype
+      - timestamp: 2024-12-09T10:29:42Z
+        type: fixed
+        data:
+          fixed-version: 3.142.0-r1
+
+  - id: CGA-3wcq-mg37-h77f
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T15:14:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pulumi
+            componentID: 0d416f87671099e5
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/pulumi-language-go
+            scanner: grype
+      - timestamp: 2024-12-20T07:01:45Z
+        type: fixed
+        data:
+          fixed-version: 3.143.0-r1
+
   - id: CGA-4f97-m8hr-66cr
     aliases:
       - CVE-2018-20225
@@ -78,6 +122,28 @@ advisories:
         data:
           type: vulnerability-record-analysis-contested
           note: This vulnerability is disputed, and the consensus in the security community is that this is intended behavior, not a security flaw.
+
+  - id: CGA-5j94-hq8c-4597
+    aliases:
+      - CVE-2024-36621
+      - GHSA-2mj3-vfvx-fc43
+    events:
+      - timestamp: 2024-12-03T09:23:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pulumi
+            componentID: b3d68f6e904e1420
+            componentName: github.com/moby/moby
+            componentVersion: v25.0.4+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/pulumi
+            scanner: grype
+      - timestamp: 2024-12-09T10:29:43Z
+        type: fixed
+        data:
+          fixed-version: 3.142.0-r1
 
   - id: CGA-62m6-qv5q-jcpc
     aliases:
@@ -267,6 +333,38 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CGA-mq9q-hgpw-qg49
+    aliases:
+      - CVE-2024-36623
+      - GHSA-gh5c-3h97-2f3q
+    events:
+      - timestamp: 2024-12-03T09:23:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pulumi
+            componentID: b3d68f6e904e1420
+            componentName: github.com/moby/moby
+            componentVersion: v25.0.4+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/pulumi
+            scanner: grype
+      - timestamp: 2024-12-09T10:29:43Z
+        type: fixed
+        data:
+          fixed-version: 3.142.0-r1
+
+  - id: CGA-rfvw-gg2w-hmq8
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T11:29:56Z
+        type: fixed
+        data:
+          fixed-version: 3.143.0-r0
 
   - id: CGA-vcgp-wvjm-m2vh
     aliases:

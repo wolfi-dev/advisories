@@ -326,6 +326,28 @@ advisories:
         data:
           fixed-version: 1.9.4-r1
 
+  - id: CGA-mcp7-m975-vqcg
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T17:32:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spire-server
+            componentID: e2e2807099f4d970
+            componentName: golang.org/x/net
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/spire-agent
+            scanner: grype
+      - timestamp: 2024-12-20T17:06:08Z
+        type: fixed
+        data:
+          fixed-version: 1.11.1-r1
+
   - id: CGA-mg75-7r2p-7m82
     aliases:
       - GHSA-jq35-85cj-fj4p
@@ -383,6 +405,28 @@ advisories:
             There are significant changes between these releases, and attempting to upgrade results in build errors.
             Pending fix from upstream, which will involve removing their dependency on the depreciated version.
             Related information: https://github.com/github/advisory-database/pull/4893.
+
+  - id: CGA-v452-6jxf-3ccc
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T20:14:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spire-server
+            componentID: 70e9603055d53930
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/oidc-discovery-provider
+            scanner: grype
+      - timestamp: 2024-12-12T23:04:00Z
+        type: fixed
+        data:
+          fixed-version: 1.11.1-r0
 
   - id: CGA-w383-9wx6-9qwj
     aliases:

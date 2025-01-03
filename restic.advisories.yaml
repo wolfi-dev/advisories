@@ -57,6 +57,28 @@ advisories:
         data:
           fixed-version: 0.17.1-r1
 
+  - id: CGA-95wm-p2qv-6jmm
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T15:36:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: restic
+            componentID: d21a23043754f9ed
+            componentName: golang.org/x/crypto
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/restic
+            scanner: grype
+      - timestamp: 2024-12-12T18:15:46Z
+        type: fixed
+        data:
+          fixed-version: 0.17.3-r1
+
   - id: CGA-c229-pjjq-wrvx
     aliases:
       - CVE-2024-24790
@@ -77,6 +99,28 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CGA-grqg-g6f8-w2r8
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T20:28:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: restic
+            componentID: 4900ce485ef7dcdd
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/restic
+            scanner: grype
+      - timestamp: 2024-12-20T15:26:26Z
+        type: fixed
+        data:
+          fixed-version: 0.17.3-r2
 
   - id: CGA-j3cf-pjrj-7wv5
     aliases:

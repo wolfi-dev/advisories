@@ -15,6 +15,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-449p-g337-rc7x
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T08:04:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k8sgpt
+            componentID: 5fbd841e87e43d57
+            componentName: golang.org/x/net
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/k8sgpt
+            scanner: grype
+      - timestamp: 2024-12-19T11:23:42Z
+        type: fixed
+        data:
+          fixed-version: 0.3.48-r2
+
   - id: CGA-493r-q7fm-2gxf
     aliases:
       - CVE-2024-24785
@@ -281,6 +303,28 @@ advisories:
         data:
           type: vulnerability-record-analysis-contested
           note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
+
+  - id: CGA-gxgf-572r-m86g
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T15:16:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k8sgpt
+            componentID: 43fa3894e6fedd2e
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/k8sgpt
+            scanner: grype
+      - timestamp: 2024-12-13T06:19:00Z
+        type: fixed
+        data:
+          fixed-version: 0.3.48-r1
 
   - id: CGA-h765-qvw7-g6cg
     aliases:

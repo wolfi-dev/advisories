@@ -100,6 +100,50 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-jh22-p8xx-jqmp
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-20T13:19:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: timestamp-authority
+            componentID: 3bda7e47a8064c5a
+            componentName: golang.org/x/net
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/timestamp-server
+            scanner: grype
+      - timestamp: 2024-12-21T04:12:07Z
+        type: fixed
+        data:
+          fixed-version: 1.2.3-r2
+
+  - id: CGA-jv7h-cgwm-hfx6
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T14:31:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: timestamp-authority
+            componentID: 8e68db7044b7e5a1
+            componentName: golang.org/x/crypto
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/timestamp-server
+            scanner: grype
+      - timestamp: 2024-12-12T23:05:18Z
+        type: fixed
+        data:
+          fixed-version: 1.2.3-r1
+
   - id: CGA-p257-fff6-4h7w
     aliases:
       - CVE-2024-28180

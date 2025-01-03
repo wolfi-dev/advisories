@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: openbao-k8s
+
+advisories:
+  - id: CGA-vr23-4pp7-4rhp
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T12:28:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openbao-k8s
+            componentID: 61ccc46f591aae91
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/openbao-k8s
+            scanner: grype
+      - timestamp: 2024-12-19T23:21:34Z
+        type: fixed
+        data:
+          fixed-version: 1.4.0-r2
+
+  - id: CGA-w95r-p5xp-fpmf
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T19:10:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openbao-k8s
+            componentID: 3a25f221d909b817
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/openbao-k8s
+            scanner: grype
+      - timestamp: 2024-12-13T16:15:27Z
+        type: fixed
+        data:
+          fixed-version: 1.4.0-r1

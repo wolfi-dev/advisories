@@ -176,6 +176,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-gc49-jmcx-3r34
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-13T08:37:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: step-ca
+            componentID: 641d6215c685a597
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/step-ca
+            scanner: grype
+      - timestamp: 2024-12-14T14:08:30Z
+        type: fixed
+        data:
+          fixed-version: 0.28.1-r1
+
   - id: CGA-gf32-mc2v-gp85
     aliases:
       - CVE-2023-45284
@@ -283,6 +305,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.27.2-r1
+
+  - id: CGA-q934-h92r-75fg
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-21T09:18:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: step-ca
+            componentID: cb6ffe544c2aa690
+            componentName: golang.org/x/net
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/step-ca
+            scanner: grype
+      - timestamp: 2024-12-21T16:26:18Z
+        type: fixed
+        data:
+          fixed-version: 0.28.1-r2
 
   - id: CGA-w3fx-x557-vmrw
     aliases:

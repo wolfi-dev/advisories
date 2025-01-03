@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: docker-cli-buildx
+
+advisories:
+  - id: CGA-pm5p-rjx9-74xw
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T07:29:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-cli-buildx
+            componentID: 0de06a8d5d1b80d2
+            componentName: golang.org/x/crypto
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/libexec/docker/cli-plugins/docker-buildx
+            scanner: grype
+      - timestamp: 2024-12-13T09:08:50Z
+        type: fixed
+        data:
+          fixed-version: 0.19.2-r1
+
+  - id: CGA-qjgm-rgcf-8h7f
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T07:23:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-cli-buildx
+            componentID: 83f385edf7ea5d04
+            componentName: golang.org/x/net
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/libexec/docker/cli-plugins/docker-buildx
+            scanner: grype
+      - timestamp: 2024-12-19T13:38:24Z
+        type: fixed
+        data:
+          fixed-version: 0.19.3-r1

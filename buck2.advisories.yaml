@@ -63,6 +63,23 @@ advisories:
         data:
           note: The affected dependency is no longer maintained in an official capacity and is the responsibility of upstream maintainers to implement a different dependency or fix.
 
+  - id: CGA-g37g-cgr5-vmc5
+    aliases:
+      - GHSA-wwq9-3cpr-mm53
+    events:
+      - timestamp: 2024-12-05T08:19:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buck2
+            componentID: 086819d4d95d14d5
+            componentName: hashbrown
+            componentVersion: 0.15.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/buck2
+            scanner: grype
+
   - id: CGA-g62h-6j69-738r
     aliases:
       - CVE-2024-47609
@@ -77,6 +94,24 @@ advisories:
             componentID: 1bae579c23114e66
             componentName: tonic
             componentVersion: 0.9.2
+            componentType: rust-crate
+            componentLocation: /usr/bin/buck2
+            scanner: grype
+
+  - id: CGA-phfv-856w-g6rj
+    aliases:
+      - CVE-2024-12224
+      - GHSA-h97m-ww89-6jmq
+    events:
+      - timestamp: 2024-12-10T08:30:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buck2
+            componentID: dd995b088b85142e
+            componentName: idna
+            componentVersion: 0.5.0
             componentType: rust-crate
             componentLocation: /usr/bin/buck2
             scanner: grype

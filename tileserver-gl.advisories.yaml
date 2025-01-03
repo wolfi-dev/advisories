@@ -21,3 +21,29 @@ advisories:
             componentType: npm
             componentLocation: /usr/src/app/node_modules/npm-run-all/node_modules/cross-spawn/package.json
             scanner: grype
+      - timestamp: 2024-11-29T11:39:16Z
+        type: fixed
+        data:
+          fixed-version: 5.0.0-r4
+
+  - id: CGA-677r-6f8m-hg48
+    aliases:
+      - CVE-2024-52798
+      - GHSA-rhx6-c78j-4q9w
+    events:
+      - timestamp: 2024-12-06T08:34:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tileserver-gl
+            componentID: 672b86c6c7692ce4
+            componentName: path-to-regexp
+            componentVersion: 0.1.10
+            componentType: npm
+            componentLocation: /usr/src/app/node_modules/path-to-regexp/package.json
+            scanner: grype
+      - timestamp: 2024-12-26T20:01:21Z
+        type: pending-upstream-fix
+        data:
+          note: 'This CVE is not able to be remediated at this time as upgrading to path-to-regexp v0.1.12 introduces breaking changes. v0.1.12 is an attempt to fix backtracking (again) seen here: https://github.com/pillarjs/path-to-regexp/releases/tag/v0.1.12 this causes internal test failures that were remediated in v0.1.10: https://github.com/pillarjs/path-to-regexp/security/advisories/GHSA-9wv6-86v2-598j Upstream maintainers of tileserver-gl need to fix the regex used in their internal testing to remediate. '

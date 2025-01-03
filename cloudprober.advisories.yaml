@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: cloudprober
+
+advisories:
+  - id: CGA-47r9-36jr-c26g
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T07:39:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloudprober
+            componentID: 15f87cd3de44022a
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/cloudprober
+            scanner: grype
+      - timestamp: 2024-12-19T11:21:41Z
+        type: fixed
+        data:
+          fixed-version: 0.13.8-r2
+
+  - id: CGA-wv7w-9jhf-g93w
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T07:24:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloudprober
+            componentID: 11bf0b39bbe5a6a6
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/cloudprober
+            scanner: grype
+      - timestamp: 2024-12-12T14:33:53Z
+        type: fixed
+        data:
+          fixed-version: 0.13.8-r1

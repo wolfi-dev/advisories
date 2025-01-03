@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: gitaly-17.6
+
+advisories:
+  - id: CGA-4w38-4wcw-v4q3
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T11:03:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitaly-17.6
+            componentID: ab0ad33fc06176f0
+            componentName: golang.org/x/net
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitaly-backup
+            scanner: grype
+      - timestamp: 2024-12-19T19:15:39Z
+        type: fixed
+        data:
+          fixed-version: 17.6.2-r2
+
+  - id: CGA-g3vw-vvp3-m48g
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T16:02:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitaly-17.6
+            componentID: 9dc0bf0a4fbdf753
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitaly
+            scanner: grype
+      - timestamp: 2024-12-13T08:14:25Z
+        type: fixed
+        data:
+          fixed-version: 17.6.2-r1

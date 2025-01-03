@@ -154,6 +154,50 @@ advisories:
         data:
           fixed-version: 0.4.32-r1
 
+  - id: CGA-j6gr-88g8-hw7v
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T17:32:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grpc-health-probe
+            componentID: 4ee7d87450b9287f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/grpc-health-probe
+            scanner: grype
+      - timestamp: 2024-12-13T13:00:47Z
+        type: fixed
+        data:
+          fixed-version: 0.4.35-r1
+
+  - id: CGA-rc7p-rj8x-8rff
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T08:36:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grpc-health-probe
+            componentID: 1b710c68f71ccfb9
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/grpc-health-probe
+            scanner: grype
+      - timestamp: 2024-12-19T13:25:01Z
+        type: fixed
+        data:
+          fixed-version: 0.4.36-r1
+
   - id: CGA-rxpx-g273-j7pm
     aliases:
       - CVE-2024-24786

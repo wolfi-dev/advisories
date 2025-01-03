@@ -4,6 +4,28 @@ package:
   name: guac
 
 advisories:
+  - id: CGA-2489-j9r3-xx48
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T12:28:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: guac
+            componentID: acc8b5b441143436
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/guacone
+            scanner: grype
+      - timestamp: 2024-12-20T19:16:28Z
+        type: fixed
+        data:
+          fixed-version: 0.12.3-r1
+
   - id: CGA-28v8-7f8r-m9ww
     aliases:
       - CVE-2024-35255
@@ -133,6 +155,28 @@ advisories:
         data:
           fixed-version: 0.7.2-r3
 
+  - id: CGA-5fc4-rx58-fg5v
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T14:42:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: guac
+            componentID: 5804f0fc6ac63f09
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/guaccollect
+            scanner: grype
+      - timestamp: 2024-12-12T19:01:20Z
+        type: fixed
+        data:
+          fixed-version: 0.12.0-r2
+
   - id: CGA-77rr-pw42-jr4h
     aliases:
       - CVE-2024-23653
@@ -219,6 +263,18 @@ advisories:
       - CVE-2024-51744
       - GHSA-29wx-vh33-7x7r
     events:
+      - timestamp: 2024-11-05T07:44:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: guacingest
+            componentID: 09067982fd4b2d93
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
+            componentType: go-module
+            componentLocation: /usr/bin/guacingest
+            scanner: grype
       - timestamp: 2024-11-07T11:34:51Z
         type: fixed
         data:

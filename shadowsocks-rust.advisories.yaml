@@ -1,0 +1,48 @@
+schema-version: 2.0.2
+
+package:
+  name: shadowsocks-rust
+
+advisories:
+  - id: CGA-544m-rxph-q88q
+    aliases:
+      - GHSA-wwq9-3cpr-mm53
+    events:
+      - timestamp: 2024-12-05T07:32:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: shadowsocks-rust
+            componentID: b1b92ec0ed2980f5
+            componentName: hashbrown
+            componentVersion: 0.15.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/sslocal
+            scanner: grype
+      - timestamp: 2024-12-05T11:09:27Z
+        type: fixed
+        data:
+          fixed-version: 1.21.2-r2
+
+  - id: CGA-fvp8-r7cx-vc96
+    aliases:
+      - CVE-2024-12224
+      - GHSA-h97m-ww89-6jmq
+    events:
+      - timestamp: 2024-12-10T13:10:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: shadowsocks-rust
+            componentID: da9ea761630fe68d
+            componentName: idna
+            componentVersion: 0.4.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/ssserver
+            scanner: grype
+      - timestamp: 2024-12-30T10:35:42Z
+        type: fixed
+        data:
+          fixed-version: 1.21.2-r3

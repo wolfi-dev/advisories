@@ -70,6 +70,50 @@ advisories:
         data:
           fixed-version: 6.0.3-r1
 
+  - id: CGA-mm7j-69qm-4m75
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T14:27:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: minio-operator
+            componentID: b8527cb2c7856214
+            componentName: golang.org/x/net
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/minio-operator
+            scanner: grype
+      - timestamp: 2024-12-20T02:15:50Z
+        type: fixed
+        data:
+          fixed-version: 6.0.4-r4
+
+  - id: CGA-vhxq-cvr8-2xgg
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T08:28:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: minio-operator
+            componentID: 6447895a6138ac12
+            componentName: golang.org/x/crypto
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/minio-operator-sidecar
+            scanner: grype
+      - timestamp: 2024-12-12T14:14:12Z
+        type: fixed
+        data:
+          fixed-version: 6.0.4-r3
+
   - id: CGA-wpfq-pjpv-q99q
     aliases:
       - CVE-2024-51744

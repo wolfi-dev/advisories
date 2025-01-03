@@ -26,6 +26,28 @@ advisories:
         data:
           fixed-version: 0.12.4-r4
 
+  - id: CGA-28rj-6mp6-vf8g
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T08:04:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buildkitd
+            componentID: 232f6a7b2b291a81
+            componentName: golang.org/x/crypto
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/buildkitd
+            scanner: grype
+      - timestamp: 2024-12-12T16:31:06Z
+        type: fixed
+        data:
+          fixed-version: 0.18.1-r2
+
   - id: CGA-4823-c588-79x4
     aliases:
       - CVE-2024-34156
@@ -43,6 +65,28 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/buildctl
             scanner: grype
+
+  - id: CGA-4jgr-8hg2-hpf8
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T08:27:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buildkitd
+            componentID: 38b0d432f912b65b
+            componentName: golang.org/x/net
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/buildctl
+            scanner: grype
+      - timestamp: 2024-12-19T13:39:07Z
+        type: fixed
+        data:
+          fixed-version: 0.18.2-r1
 
   - id: CGA-4wmp-6w9c-3v8q
     aliases:

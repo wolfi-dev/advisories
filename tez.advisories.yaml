@@ -21,6 +21,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/java/tez/lib/jetty-server-9.4.53.v20231009.jar
             scanner: grype
+      - timestamp: 2024-11-22T14:19:57Z
+        type: pending-upstream-fix
+        data:
+          note: The dependency responsible for this CVE is a transitive dependency where the version of said dependency is not explicitly defined in the project but rather brought in under the hadoop-client-runtime jar. This requires upstream maintainers to implement a fix.
 
   - id: CGA-2hvc-45v7-8f34
     aliases:
@@ -69,7 +73,7 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.10.4-r1
-      - timestamp: 2024-11-20T08:37:40Z
+      - timestamp: 2024-12-18T09:10:48Z
         type: detection
         data:
           type: scan/v1
@@ -103,6 +107,24 @@ advisories:
         type: pending-upstream-fix
         data:
           note: The bcprov-jdk15on transitive dependency must be bumped to 1.78 in the upstream project Hadoop.
+
+  - id: CGA-3v5c-372f-h5wh
+    aliases:
+      - CVE-2024-12798
+      - GHSA-pr98-23f8-jwxv
+    events:
+      - timestamp: 2024-12-20T10:17:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tez
+            componentID: d951f0dceb1052b3
+            componentName: logback-core
+            componentVersion: 1.2.10
+            componentType: java-archive
+            componentLocation: /usr/share/java/tez/lib/logback-core-1.2.10.jar
+            scanner: grype
 
   - id: CGA-459v-8fm2-rw72
     aliases:
@@ -143,6 +165,28 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/java/tez/lib/avro-1.9.2.jar
             scanner: grype
+      - timestamp: 2024-11-22T14:19:03Z
+        type: pending-upstream-fix
+        data:
+          note: The dependency responsible for this CVE is a transitive dependency where the version of said dependency is not explicitly defined in the project but rather brought in under the hadoop-client-runtime jar. This requires upstream maintainers to implement a fix.
+
+  - id: CGA-7228-rrfq-76c4
+    aliases:
+      - CVE-2024-12801
+      - GHSA-6v67-2wr5-gvf4
+    events:
+      - timestamp: 2024-12-20T10:17:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tez
+            componentID: d951f0dceb1052b3
+            componentName: logback-core
+            componentVersion: 1.2.10
+            componentType: java-archive
+            componentLocation: /usr/share/java/tez/lib/logback-core-1.2.10.jar
+            scanner: grype
 
   - id: CGA-7pfp-wfcr-cm2m
     aliases:
@@ -169,7 +213,7 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.10.4-r1
-      - timestamp: 2024-11-20T08:37:47Z
+      - timestamp: 2024-12-18T09:10:57Z
         type: detection
         data:
           type: scan/v1
@@ -310,6 +354,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/java/tez/lib/jetty-http-9.4.53.v20231009.jar
             scanner: grype
+      - timestamp: 2024-11-22T14:19:26Z
+        type: pending-upstream-fix
+        data:
+          note: The dependency responsible for this CVE is a transitive dependency where the version of said dependency is not explicitly defined in the project but rather brought in under the hadoop-client-runtime jar. This requires upstream maintainers to implement a fix.
 
   - id: CGA-cxfp-ggmh-c85x
     aliases:
@@ -442,6 +490,24 @@ advisories:
         type: pending-upstream-fix
         data:
           note: The zookeeper transitive dependency must be bumped to 3.8.4 in the upstream project Hadoop.
+
+  - id: CGA-ppgw-f77h-jrgr
+    aliases:
+      - CVE-2024-53990
+      - GHSA-mfj5-cf8g-g2fv
+    events:
+      - timestamp: 2024-12-13T10:23:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tez
+            componentID: b94d80187d4fad0a
+            componentName: async-http-client
+            componentVersion: 2.12.3
+            componentType: java-archive
+            componentLocation: /usr/share/java/tez/lib/async-http-client-2.12.3.jar
+            scanner: grype
 
   - id: CGA-x2r8-2m8h-66gj
     aliases:

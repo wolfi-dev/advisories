@@ -36,6 +36,28 @@ advisories:
         data:
           fixed-version: 2.8.9-r0
 
+  - id: CGA-6h6q-x48q-2f7m
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T15:20:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nsc
+            componentID: 90b155d2e18d310a
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/nsc
+            scanner: grype
+      - timestamp: 2024-12-13T06:24:27Z
+        type: fixed
+        data:
+          fixed-version: 2.10.0-r1
+
   - id: CGA-7hhj-79h8-9mf8
     aliases:
       - CVE-2023-48795
@@ -185,3 +207,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.8.5-r1
+
+  - id: CGA-v34q-7hcx-3ph5
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T10:29:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nsc
+            componentID: 83b83080467e4da9
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/nsc
+            scanner: grype
+      - timestamp: 2024-12-19T18:37:49Z
+        type: fixed
+        data:
+          fixed-version: 2.10.1-r1

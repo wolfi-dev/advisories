@@ -4,6 +4,28 @@ package:
   name: terraform-provider-google
 
 advisories:
+  - id: CGA-3j7v-jxcq-4f62
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T18:20:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-google
+            componentID: 996a21f31be38fa0
+            componentName: golang.org/x/net
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-google
+            scanner: grype
+      - timestamp: 2024-12-20T21:45:32Z
+        type: fixed
+        data:
+          fixed-version: 6.14.1-r1
+
   - id: CGA-4h2x-2w78-p8p7
     aliases:
       - CVE-2024-34156
@@ -131,6 +153,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 5.32.0-r1
+
+  - id: CGA-gjwr-2c3v-9g43
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T20:08:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-google
+            componentID: acd118b87acfa079
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-google
+            scanner: grype
+      - timestamp: 2024-12-13T18:23:01Z
+        type: fixed
+        data:
+          fixed-version: 6.13.0-r1
 
   - id: CGA-j73m-h3rr-m9mh
     aliases:

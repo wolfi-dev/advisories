@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: apache-pulsar
+
+advisories:
+  - id: CGA-3mr5-vjhc-vp3x
+    aliases:
+      - CVE-2024-53990
+      - GHSA-mfj5-cf8g-g2fv
+    events:
+      - timestamp: 2024-12-17T21:08:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-pulsar
+            componentID: d9d962ed5f911dfc
+            componentName: async-http-client
+            componentVersion: 2.12.1
+            componentType: java-archive
+            componentLocation: /usr/share/java/pulsar/lib/org.asynchttpclient-async-http-client-2.12.1.jar
+            scanner: grype
+      - timestamp: 2024-12-18T00:08:34Z
+        type: fixed
+        data:
+          fixed-version: 4.0.1-r1
+
+  - id: CGA-w8m5-m487-94w6
+    aliases:
+      - CVE-2024-6763
+      - GHSA-qh8g-58pp-2wxh
+    events:
+      - timestamp: 2024-12-17T21:08:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-pulsar
+            componentID: 71c4c3b48deaff20
+            componentName: jetty-http
+            componentVersion: 9.4.56.v20240826
+            componentType: java-archive
+            componentLocation: /usr/share/java/pulsar/lib/org.eclipse.jetty-jetty-http-9.4.56.v20240826.jar
+            scanner: grype
+      - timestamp: 2024-12-18T14:41:16Z
+        type: pending-upstream-fix
+        data:
+          note: The fix version of jetty-http is >=12.0.12, requiring a large refactor; there is an issue tracking the effort https://github.com/apache/pulsar/issues/22939

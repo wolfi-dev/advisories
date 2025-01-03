@@ -24,6 +24,28 @@ advisories:
         data:
           fixed-version: 1.0.1-r1
 
+  - id: CGA-c3hp-g9qv-p8vv
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T07:13:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: authservice
+            componentID: da2cd6b2ca6a7ae7
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/authservice
+            scanner: grype
+      - timestamp: 2024-12-20T08:31:28Z
+        type: fixed
+        data:
+          fixed-version: 1.0.3-r3
+
   - id: CGA-cjp7-6pfh-pjq4
     aliases:
       - CVE-2024-34156
@@ -43,3 +65,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.0.2-r0
+
+  - id: CGA-w78m-575p-jq85
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T13:24:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: authservice
+            componentID: d499d6bd6e36c648
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/authservice
+            scanner: grype
+      - timestamp: 2024-12-13T03:41:23Z
+        type: fixed
+        data:
+          fixed-version: 1.0.3-r1

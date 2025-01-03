@@ -4,6 +4,28 @@ package:
   name: azuredisk-csi-1.31
 
 advisories:
+  - id: CGA-52q6-rp99-g282
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T18:35:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: azuredisk-csi-1.31
+            componentID: 2371aae620e97aac
+            componentName: golang.org/x/net
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/azurediskplugin
+            scanner: grype
+      - timestamp: 2024-12-20T11:24:28Z
+        type: fixed
+        data:
+          fixed-version: 1.31.1-r2
+
   - id: CGA-7pp9-w933-vxgj
     aliases:
       - CVE-2024-51744
@@ -25,3 +47,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.31.0-r3
+
+  - id: CGA-w5qq-94m2-qmh9
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T15:17:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: azuredisk-csi-1.31
+            componentID: 32130bebefd71c27
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/azurediskplugin
+            scanner: grype
+      - timestamp: 2024-12-13T06:26:14Z
+        type: fixed
+        data:
+          fixed-version: 1.31.1-r1

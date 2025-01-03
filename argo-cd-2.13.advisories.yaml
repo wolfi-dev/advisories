@@ -25,3 +25,47 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.13.0-r1
+
+  - id: CGA-875c-5xx8-qwjf
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T21:12:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.13
+            componentID: 0b45878c6faef543
+            componentName: golang.org/x/net
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+      - timestamp: 2024-12-20T15:32:32Z
+        type: fixed
+        data:
+          fixed-version: 2.13.2-r2
+
+  - id: CGA-v7rv-j84g-g5fj
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T07:09:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.13
+            componentID: 0975cd8371881464
+            componentName: golang.org/x/crypto
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/local/bin/argocd
+            scanner: grype
+      - timestamp: 2024-12-13T07:33:21Z
+        type: fixed
+        data:
+          fixed-version: 2.13.2-r1

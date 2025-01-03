@@ -150,6 +150,28 @@ advisories:
         data:
           fixed-version: 1.6.3-r7
 
+  - id: CGA-mxhw-66rp-rrvc
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T16:43:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-policy-reporter-kyverno-plugin
+            componentID: 0e03c02baf176992
+            componentName: golang.org/x/net
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/kyverno-plugin
+            scanner: grype
+      - timestamp: 2024-12-20T12:40:24Z
+        type: fixed
+        data:
+          fixed-version: 1.6.4-r2
+
   - id: CGA-pmm6-8ff5-mvjq
     aliases:
       - CVE-2024-34156

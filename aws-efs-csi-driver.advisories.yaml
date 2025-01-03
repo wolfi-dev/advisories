@@ -67,6 +67,10 @@ advisories:
         type: pending-upstream-fix
         data:
           note: The non vulnerable code requires to upgrade Kubernetes dependencies to v1.27.13 but this package has a dependency of k8s.io/client-go@v1.26.15. So it requires upstream changes to support newer Kubernetes versions.
+      - timestamp: 2024-12-04T20:00:55Z
+        type: fixed
+        data:
+          fixed-version: 2.1.1-r0
 
   - id: CGA-43v9-gw5h-mxwf
     aliases:
@@ -78,6 +82,28 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CGA-4558-3c28-p62w
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T12:27:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-efs-csi-driver
+            componentID: 010254d92bed0e7a
+            componentName: golang.org/x/net
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/aws-efs-csi-driver
+            scanner: grype
+      - timestamp: 2024-12-20T01:04:52Z
+        type: fixed
+        data:
+          fixed-version: 2.1.2-r3
 
   - id: CGA-4mv2-94mh-jjc8
     aliases:
@@ -106,6 +132,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/aws-efs-csi-driver
             scanner: grype
+      - timestamp: 2024-12-04T20:00:55Z
+        type: fixed
+        data:
+          fixed-version: 2.1.1-r0
 
   - id: CGA-754c-4gp9-66fm
     aliases:
@@ -148,6 +178,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.7.0-r5
+
+  - id: CGA-8ffj-5fmx-j87h
+    aliases:
+      - CVE-2024-10220
+      - GHSA-27wf-5967-98gx
+    events:
+      - timestamp: 2024-11-23T10:10:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-efs-csi-driver
+            componentID: d92ac679f1de7fb8
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.26.11
+            componentType: go-module
+            componentLocation: /usr/bin/aws-efs-csi-driver
+            scanner: grype
+      - timestamp: 2024-12-13T22:14:34Z
+        type: fixed
+        data:
+          fixed-version: 2.1.2-r0
 
   - id: CGA-8h59-7f4f-gj59
     aliases:
@@ -212,6 +264,10 @@ advisories:
         type: pending-upstream-fix
         data:
           note: The non vulnerable code requires to upgrade Kubernetes dependencies to v1.27.16 but this package has a dependency of k8s.io/client-go@v1.26.15. So it requires upstream changes to support newer Kubernetes versions.
+      - timestamp: 2024-12-04T20:00:54Z
+        type: fixed
+        data:
+          fixed-version: 2.1.1-r0
 
   - id: CGA-g675-xr52-846m
     aliases:

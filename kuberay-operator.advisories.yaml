@@ -133,3 +133,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.2.1-r0
+
+  - id: CGA-x738-rr83-5mg5
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T16:24:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kuberay-operator
+            componentID: b8430ee6e44a012a
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2024-12-20T20:32:16Z
+        type: fixed
+        data:
+          fixed-version: 1.2.2-r1

@@ -75,6 +75,28 @@ advisories:
         data:
           fixed-version: 0.105.0-r0
 
+  - id: CGA-8w4p-cp76-gpvp
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T20:25:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opentelemetry-collector
+            componentID: c50abe913da11e06
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol
+            scanner: grype
+      - timestamp: 2024-12-20T16:28:53Z
+        type: fixed
+        data:
+          fixed-version: 0.116.0-r1
+
   - id: CGA-9qrc-2mhh-q5mh
     aliases:
       - CVE-2024-35255
@@ -197,3 +219,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.105.0-r0
+
+  - id: CGA-vh94-92jf-wrgw
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T13:19:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opentelemetry-collector
+            componentID: 8a4871089d22a9e2
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol
+            scanner: grype
+      - timestamp: 2024-12-14T21:04:04Z
+        type: fixed
+        data:
+          fixed-version: 0.115.0-r1

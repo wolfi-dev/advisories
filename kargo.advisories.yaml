@@ -4,6 +4,28 @@ package:
   name: kargo
 
 advisories:
+  - id: CGA-3728-m7xc-m6c7
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T17:12:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kargo
+            componentID: e1f92ab0b82b7584
+            componentName: golang.org/x/net
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/kargo
+            scanner: grype
+      - timestamp: 2024-12-20T17:43:55Z
+        type: fixed
+        data:
+          fixed-version: 1.1.1-r2
+
   - id: CGA-4h94-rv8q-4vhm
     aliases:
       - CVE-2024-34155
@@ -259,3 +281,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.7.1-r3
+
+  - id: CGA-xhpf-3gjh-w494
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T12:30:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kargo
+            componentID: 1d9d7e298e03cf76
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/kargo
+            scanner: grype
+      - timestamp: 2024-12-16T23:14:28Z
+        type: fixed
+        data:
+          fixed-version: 1.1.1-r1

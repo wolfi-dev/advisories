@@ -48,3 +48,47 @@ advisories:
         data:
           type: vulnerable-code-not-in-execution-path
           note: The archiver package is only used to create archives here (https://github.com/openbao/openbao/blob/03792a4/command/debug.go#L973-L974). Vulnerability requires passing a mailicious archive and have the application read it.
+
+  - id: CGA-95cg-cj7v-4h99
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T22:13:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openbao
+            componentID: 8b7c41d9d922f43b
+            componentName: golang.org/x/net
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/bao
+            scanner: grype
+      - timestamp: 2024-12-20T18:31:04Z
+        type: fixed
+        data:
+          fixed-version: 2.1.0-r2
+
+  - id: CGA-x4c9-8x9h-9882
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T13:02:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openbao
+            componentID: 49e747b335ca9b69
+            componentName: golang.org/x/crypto
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/bao
+            scanner: grype
+      - timestamp: 2024-12-13T14:16:02Z
+        type: fixed
+        data:
+          fixed-version: 2.1.0-r1

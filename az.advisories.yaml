@@ -4,6 +4,28 @@ package:
   name: az
 
 advisories:
+  - id: CGA-22hm-4r66-wr76
+    aliases:
+      - CVE-2024-53861
+      - GHSA-75c5-xw7c-p5pm
+    events:
+      - timestamp: 2024-12-03T10:29:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: az
+            componentID: 374686e6226cd1f2
+            componentName: pyjwt
+            componentVersion: 2.10.0
+            componentType: python
+            componentLocation: /usr/share/az/.venv/lib/python3.11/site-packages/PyJWT-2.10.0.dist-info/METADATA, /usr/share/az/.venv/lib/python3.11/site-packages/PyJWT-2.10.0.dist-info/RECORD, /usr/share/az/.venv/lib/python3.11/site-packages/PyJWT-2.10.0.dist-info/top_level.txt
+            scanner: grype
+      - timestamp: 2024-12-10T21:17:56Z
+        type: fixed
+        data:
+          fixed-version: 2.67.0-r1
+
   - id: CGA-374g-f8mr-whvm
     aliases:
       - CVE-2024-6345
@@ -25,18 +47,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.62.0-r1
-      - timestamp: 2024-10-08T14:28:55Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: az
-            componentID: ee3f4e32631c7d46
-            componentName: setuptools
-            componentVersion: 68.0.0
-            componentType: python
-            componentLocation: /usr/share/az/.venv/lib/python3.11/site-packages/pip/_vendor/vendor.txt
-            scanner: grype
 
   - id: CGA-3q54-hjw3-8927
     aliases:
@@ -69,18 +79,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.61.0-r2
-      - timestamp: 2024-10-08T14:28:46Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: az
-            componentID: 56ee46fe4e2e374d
-            componentName: certifi
-            componentVersion: 2023.7.22
-            componentType: python
-            componentLocation: /usr/share/az/.venv/lib/python3.11/site-packages/pip/_vendor/vendor.txt
-            scanner: grype
 
   - id: CGA-f62w-c924-7874
     aliases:
@@ -121,6 +119,10 @@ advisories:
             componentType: python
             componentLocation: /usr/share/az/.venv/lib/python3.11/site-packages/pip/_vendor/vendor.txt
             scanner: grype
+      - timestamp: 2024-12-10T21:17:55Z
+        type: fixed
+        data:
+          fixed-version: 2.67.0-r1
 
   - id: CGA-gpgf-5mhx-g7f3
     aliases:
@@ -164,18 +166,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.61.0-r1
-      - timestamp: 2024-10-08T14:28:49Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: az
-            componentID: 48c213778a6fc48e
-            componentName: urllib3
-            componentVersion: 1.26.17
-            componentType: python
-            componentLocation: /usr/share/az/.venv/lib/python3.11/site-packages/pip/_vendor/vendor.txt
-            scanner: grype
 
   - id: CGA-v263-vf6g-w8hh
     aliases:
@@ -230,15 +220,3 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.60.0-r0
-      - timestamp: 2024-10-08T14:28:58Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: az
-            componentID: 3aa988217bdddab9
-            componentName: idna
-            componentVersion: "3.4"
-            componentType: python
-            componentLocation: /usr/share/az/.venv/lib/python3.11/site-packages/pip/_vendor/vendor.txt
-            scanner: grype

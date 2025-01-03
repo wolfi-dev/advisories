@@ -4,6 +4,28 @@ package:
   name: flyte
 
 advisories:
+  - id: CGA-276c-9qq4-hc2j
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T12:01:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flyte
+            componentID: 1255a9e706b9b1d7
+            componentName: golang.org/x/net
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/flyte
+            scanner: grype
+      - timestamp: 2024-12-20T00:20:30Z
+        type: fixed
+        data:
+          fixed-version: 1.14.1-r1
+
   - id: CGA-2hjr-9jhq-h5wc
     aliases:
       - CVE-2024-34156
@@ -77,6 +99,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.12.0-r1
+
+  - id: CGA-gfm8-26hm-rwvj
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T08:19:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flyte
+            componentID: 1538cd39eefd81b1
+            componentName: golang.org/x/crypto
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/flyte
+            scanner: grype
+      - timestamp: 2024-12-12T16:34:32Z
+        type: fixed
+        data:
+          fixed-version: 1.14.0-r1
 
   - id: CGA-gwpg-5c34-m87c
     aliases:

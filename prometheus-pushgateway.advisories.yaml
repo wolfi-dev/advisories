@@ -141,6 +141,28 @@ advisories:
         data:
           fixed-version: 1.7.0-r2
 
+  - id: CGA-fxjv-37gg-4wcg
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T11:07:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-pushgateway
+            componentID: 2cf8067251afcebf
+            componentName: golang.org/x/net
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/pushgateway
+            scanner: grype
+      - timestamp: 2024-12-19T19:17:41Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r2
+
   - id: CGA-fxm5-w2p7-mqcc
     aliases:
       - CVE-2023-45283
@@ -171,6 +193,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.7.0-r2
+
+  - id: CGA-hcmf-c28m-5hj8
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T16:23:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-pushgateway
+            componentID: fcd6c689e7f0e90a
+            componentName: golang.org/x/crypto
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/pushgateway
+            scanner: grype
+      - timestamp: 2024-12-13T12:22:55Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r1
 
   - id: CGA-m76q-7f94-8xx8
     aliases:

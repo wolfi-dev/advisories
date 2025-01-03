@@ -1,0 +1,71 @@
+schema-version: 2.0.2
+
+package:
+  name: prometheus-podman-exporter
+
+advisories:
+  - id: CGA-6395-xhp7-85w4
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T12:29:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-podman-exporter
+            componentID: 3c6e36b551d6577b
+            componentName: golang.org/x/crypto
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/podman_exporter
+            scanner: grype
+      - timestamp: 2024-12-13T13:40:18Z
+        type: fixed
+        data:
+          fixed-version: 1.13.3-r1
+
+  - id: CGA-mjrr-hhxj-pv9m
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T09:23:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-podman-exporter
+            componentID: 0407eafc6869107c
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/podman_exporter
+            scanner: grype
+      - timestamp: 2024-12-19T16:28:00Z
+        type: fixed
+        data:
+          fixed-version: 1.14.0-r1
+
+  - id: CGA-wfcf-wqfj-vg9w
+    aliases:
+      - CVE-2024-9675
+      - GHSA-586p-749j-fhwp
+    events:
+      - timestamp: 2024-12-13T10:30:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-podman-exporter
+            componentID: 614ad10e7f91a66e
+            componentName: github.com/containers/buildah
+            componentVersion: v1.37.5
+            componentType: go-module
+            componentLocation: /usr/bin/podman_exporter
+            scanner: grype
+      - timestamp: 2024-12-14T08:09:50Z
+        type: fixed
+        data:
+          fixed-version: 1.13.3-r2

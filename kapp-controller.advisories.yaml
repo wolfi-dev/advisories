@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: kapp-controller
+
+advisories:
+  - id: CGA-f5hj-h6f6-v6m6
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T14:11:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kapp-controller
+            componentID: 3a571d5b9a921750
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/kapp-controller
+            scanner: grype
+      - timestamp: 2024-12-20T01:25:16Z
+        type: fixed
+        data:
+          fixed-version: 0.54.1-r2
+
+  - id: CGA-v86q-qv97-g798
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T15:14:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kapp-controller
+            componentID: 48792d67c6f3473f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/kapp-controller
+            scanner: grype
+      - timestamp: 2024-12-14T01:23:31Z
+        type: fixed
+        data:
+          fixed-version: 0.54.1-r1

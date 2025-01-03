@@ -80,6 +80,28 @@ advisories:
         data:
           fixed-version: 7.5.0-r1
 
+  - id: CGA-4cv7-4h9m-7phm
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T09:36:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dashboard
+            componentID: 6d61a8d87d1fceb3
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/share/kubernetes-dashboard/dashboard
+            scanner: grype
+      - timestamp: 2024-12-19T16:20:16Z
+        type: fixed
+        data:
+          fixed-version: 7.10.0-r2
+
   - id: CGA-5mg4-gg44-c6m5
     aliases:
       - CVE-2023-2253
@@ -115,6 +137,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 7.5.0-r0
+
+  - id: CGA-6h2r-v74w-mrm2
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T07:21:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dashboard
+            componentID: 07fa36c9a6ba0f2f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/share/kubernetes-dashboard/dashboard
+            scanner: grype
+      - timestamp: 2024-12-14T21:00:40Z
+        type: fixed
+        data:
+          fixed-version: 7.10.0-r1
 
   - id: CGA-7fv2-8xrw-rg82
     aliases:

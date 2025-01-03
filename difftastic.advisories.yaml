@@ -37,3 +37,11 @@ advisories:
             componentType: rust-crate
             componentLocation: /usr/bin/difft
             scanner: grype
+      - timestamp: 2024-12-30T12:34:35Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            This vulnerability relates to the 'mimalloc' dependency. A fixed version exists, v0.1.39 or later.
+            The fixed version of mimalloc, also requires a later version of 'libmimalloc-sys'.
+            This project has a hard dependency on an older version of libmimalloc-sys, and has intentionally locked to v0.1.24. For more information:
+            - https://github.com/Wilfred/difftastic/blob/b3606fc219ed54c4da56cd97c3065c42b3cdb336/Cargo.toml#L50-L51

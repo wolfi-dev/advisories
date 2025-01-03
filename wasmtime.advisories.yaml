@@ -4,6 +4,28 @@ package:
   name: wasmtime
 
 advisories:
+  - id: CGA-3f7v-m2x6-hx76
+    aliases:
+      - CVE-2024-12224
+      - GHSA-h97m-ww89-6jmq
+    events:
+      - timestamp: 2024-12-10T13:17:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wasmtime
+            componentID: 8c779fa78be647bb
+            componentName: idna
+            componentVersion: 0.3.0
+            componentType: rust-crate
+            componentLocation: /usr/lib/libwasmtime.so
+            scanner: grype
+      - timestamp: 2024-12-27T17:30:52Z
+        type: fixed
+        data:
+          fixed-version: 28.0.0-r0
+
   - id: CGA-463j-2hvv-w52g
     aliases:
       - GHSA-2qv5-7mw5-j3cg

@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: undock
+
+advisories:
+  - id: CGA-9447-8rx3-2v2g
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T18:34:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: undock
+            componentID: db8165f7e06b82c6
+            componentName: golang.org/x/crypto
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/undock
+            scanner: grype
+      - timestamp: 2024-12-13T11:45:34Z
+        type: fixed
+        data:
+          fixed-version: 0.8.0-r2
+
+  - id: CGA-gxxg-5m4c-4hf6
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T15:23:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: undock
+            componentID: aca8619a57b43c78
+            componentName: golang.org/x/net
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/undock
+            scanner: grype
+      - timestamp: 2024-12-20T05:15:49Z
+        type: fixed
+        data:
+          fixed-version: 0.8.0-r3

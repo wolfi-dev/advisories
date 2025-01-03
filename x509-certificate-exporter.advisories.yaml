@@ -1,0 +1,37 @@
+schema-version: 2.0.2
+
+package:
+  name: x509-certificate-exporter
+
+advisories:
+  - id: CGA-7cv5-p2pw-5r6g
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T15:30:58Z
+        type: fixed
+        data:
+          fixed-version: 3.18.0-r0
+
+  - id: CGA-h6gp-75m9-qp4g
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T20:30:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: x509-certificate-exporter
+            componentID: b0f575cecbdc0a12
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/x509-certificate-exporter
+            scanner: grype
+      - timestamp: 2024-12-13T21:30:33Z
+        type: fixed
+        data:
+          fixed-version: 3.17.0-r2

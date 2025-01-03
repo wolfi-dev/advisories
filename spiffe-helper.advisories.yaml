@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: spiffe-helper
+
+advisories:
+  - id: CGA-j8vc-j8rx-pvp9
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T22:04:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spiffe-helper
+            componentID: 8ecb53281c3757ae
+            componentName: golang.org/x/crypto
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/spiffe-helper
+            scanner: grype
+      - timestamp: 2024-12-13T18:43:23Z
+        type: fixed
+        data:
+          fixed-version: 0.9.0-r1
+
+  - id: CGA-v9mm-6xmj-v89q
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T10:02:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spiffe-helper
+            componentID: ee765bc8d0f1999c
+            componentName: golang.org/x/net
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/spiffe-helper
+            scanner: grype
+      - timestamp: 2024-12-19T17:14:09Z
+        type: fixed
+        data:
+          fixed-version: 0.9.0-r2

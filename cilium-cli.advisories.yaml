@@ -221,6 +221,28 @@ advisories:
         data:
           fixed-version: 0.16.9-r1
 
+  - id: CGA-p2r6-gxw7-8683
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T12:35:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-cli
+            componentID: 80bc1ae6bedb7c2b
+            componentName: golang.org/x/crypto
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/cilium
+            scanner: grype
+      - timestamp: 2024-12-13T07:30:32Z
+        type: fixed
+        data:
+          fixed-version: 0.16.22-r1
+
   - id: CGA-q7m7-vrfm-vw8x
     aliases:
       - CVE-2024-25620
@@ -260,6 +282,28 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/cilium
             scanner: grype
+
+  - id: CGA-rghh-gj8p-m22w
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-19T07:10:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-cli
+            componentID: 7525d2d7d374a2e5
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/cilium
+            scanner: grype
+      - timestamp: 2024-12-20T07:17:46Z
+        type: fixed
+        data:
+          fixed-version: 0.16.22-r2
 
   - id: CGA-rm3r-298w-7jmg
     aliases:

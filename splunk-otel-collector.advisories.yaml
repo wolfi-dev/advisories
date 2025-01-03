@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: splunk-otel-collector
+
+advisories:
+  - id: CGA-8226-gq6c-h5h6
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2024-12-12T20:12:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: splunk-otel-collector
+            componentID: 62e88f290ec4d57a
+            componentName: golang.org/x/crypto
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol
+            scanner: grype
+      - timestamp: 2024-12-15T16:31:08Z
+        type: fixed
+        data:
+          fixed-version: 0.114.0-r1
+
+  - id: CGA-g9w6-g4x6-6jc9
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2024-12-20T12:08:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: splunk-otel-collector
+            componentID: 0fd8684ba300235b
+            componentName: golang.org/x/net
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol
+            scanner: grype
+      - timestamp: 2024-12-21T02:24:45Z
+        type: fixed
+        data:
+          fixed-version: 0.115.0-r1

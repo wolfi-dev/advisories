@@ -56,6 +56,10 @@ advisories:
             componentType: rust-crate
             componentLocation: /usr/bin/zellij
             scanner: grype
+      - timestamp: 2024-11-22T23:00:48Z
+        type: fixed
+        data:
+          fixed-version: 0.41.2-r1
 
   - id: CGA-9cpp-q87g-p8fw
     aliases:
@@ -136,6 +140,24 @@ advisories:
         data:
           fixed-version: 0.41.2-r0
 
+  - id: CGA-phr3-6m3w-7f27
+    aliases:
+      - CVE-2024-12224
+      - GHSA-h97m-ww89-6jmq
+    events:
+      - timestamp: 2024-12-10T13:11:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zellij
+            componentID: e930fd218a7a44c8
+            componentName: idna
+            componentVersion: 0.5.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/zellij
+            scanner: grype
+
   - id: CGA-pqrx-g5p4-qcjm
     aliases:
       - GHSA-g98v-hv3f-hcfr
@@ -195,6 +217,16 @@ advisories:
             componentType: rust-crate
             componentLocation: /usr/bin/zellij
             scanner: grype
+      - timestamp: 2025-01-02T11:05:49Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: |
+            This vulnerability relates to the 'wasmtime' dependency, used by zellij.
+            This only affects windows. zellij does not support windows, and neither does our Chainguard package builds.
+            Upstream maintainers are working at upgrading this dependency in any event. Ref:
+             - https://github.com/advisories/GHSA-c2f5-jxjv-2hh8
+             - https://github.com/zellij-org/zellij/pull/3902#issuecomment-2565894058
 
   - id: CGA-wwr7-2chc-98v2
     aliases:
