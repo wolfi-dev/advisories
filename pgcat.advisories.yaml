@@ -150,6 +150,10 @@ advisories:
             componentType: rust-crate
             componentLocation: /usr/bin/pgcat
             scanner: grype
+      - timestamp: 2025-01-03T17:56:52Z
+        type: pending-upstream-fix
+        data:
+          note: 'idna is pulled in as a transitive dependency of trust-dns-resolver, and cannot be remediated at this time due to numerous build failures when attempting to switch to hickory-proto@0.24.2, which is the replacement package with the upgraded idna dependency. Upstream will need to make these changes. '
 
   - id: CGA-rq7w-438m-4vjp
     aliases:
