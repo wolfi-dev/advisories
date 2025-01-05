@@ -157,6 +157,14 @@ advisories:
             componentType: rust-crate
             componentLocation: /usr/bin/zellij
             scanner: grype
+      - timestamp: 2025-01-05T18:15:22Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            This vulnerability relates to the 'idna' dependency, and is fixed in v1.0.0 and later.
+            Attempts to upgrade 'idna' have failed, as there are multiple dependencies requiring different versions of `idna`.
+            For example, the 'url' requires idna v0.5.0, and upgrading 'url' to a newer version, results in version conflicts with multiple other zellij dependencies.
+            Pending fix from upstream.
 
   - id: CGA-pqrx-g5p4-qcjm
     aliases:
