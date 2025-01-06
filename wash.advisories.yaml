@@ -43,6 +43,13 @@ advisories:
             componentType: rust-crate
             componentLocation: /usr/bin/wash
             scanner: grype
+      - timestamp: 2025-01-04T22:48:02Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            This vulnerability relates to the 'idna' dependency. A fix is available in v1.0.0 and later.
+            Multiple crates used by this project depend on older versions of 'idna'.
+            Attempts to upgrade 'idna' to v1.0.0, and related dependencies were not successful. Waiting for fix from upstream.
 
   - id: CGA-8jhv-f5ch-84pg
     aliases:
@@ -201,6 +208,10 @@ advisories:
             componentType: rust-crate
             componentLocation: /usr/bin/wash
             scanner: grype
+      - timestamp: 2025-01-04T23:00:12Z
+        type: fix-not-planned
+        data:
+          note: On windows, atty dereferences a potentially unaligned pointer.  In practice however, the pointer won't be unaligned unless a custom global allocator is used. However the atty package seems to be unmaintained.
 
   - id: CGA-x6r2-g5c2-44p2
     aliases:
