@@ -21,6 +21,14 @@ advisories:
             componentType: rust-crate
             componentLocation: /usr/bin/samply
             scanner: grype
+      - timestamp: 2025-01-05T01:51:42Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            This vulnerability relates to the 'idna' dependency, and is fixed in v1.0.0 and later.
+            Attempts to upgrade 'idna' have failed, as there are multiple dependencies requiring different versions of `idna`.
+            For example, 'url' requires idna v0.5.0 - upgrading 'url' to a newer version, results in compatibility issues with 'reqwest'.
+            Pending fix from upstream.
 
   - id: CGA-mx8x-g2gv-8xrq
     aliases:
