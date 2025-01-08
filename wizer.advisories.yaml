@@ -64,6 +64,10 @@ advisories:
             componentType: rust-crate
             componentLocation: /usr/bin/wizer
             scanner: grype
+      - timestamp: 2025-01-05T14:57:22Z
+        type: fix-not-planned
+        data:
+          note: On windows, atty dereferences a potentially unaligned pointer.  In practice however, the pointer won't be unaligned unless a custom global allocator is used. However the atty package seems to be unmaintained.
 
   - id: CGA-82pj-77h5-rh52
     aliases:
