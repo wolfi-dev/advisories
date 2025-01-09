@@ -41,6 +41,10 @@ advisories:
             componentType: go-module
             componentLocation: /bin/containerd-shim-runc-v2
             scanner: grype
+      - timestamp: 2025-01-09T13:40:46Z
+        type: pending-upstream-fix
+        data:
+          note: The CVE GHSA-w32m-9786-jp63 from the container-shim-runc binary cannot be fixed due to the dependency on https://github.com/k3s-io/containerd/blob/v1.7.23/go.mod, any newer tag also uses x/net@v0.23.0 which is also affected by this vulnerability. Upstream maintainers must implement remediation.
 
   - id: CGA-326m-8f4m-788p
     aliases:
