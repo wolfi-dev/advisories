@@ -37,6 +37,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-3h2w-crfm-c9gv
+    aliases:
+      - CVE-2025-21614
+      - GHSA-r9px-m959-cxf4
+    events:
+      - timestamp: 2025-01-07T09:14:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kots
+            componentID: b83358f7045598c1
+            componentName: github.com/go-git/go-git/v5
+            componentVersion: v5.12.0
+            componentType: go-module
+            componentLocation: /usr/bin/kots
+            scanner: grype
+      - timestamp: 2025-01-07T17:25:49Z
+        type: fixed
+        data:
+          fixed-version: 1.123.0-r1
+
   - id: CGA-3xg6-gcx4-gmw7
     aliases:
       - GHSA-6xv5-86q9-7xr8
@@ -150,6 +172,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.116.0-r0
+
+  - id: CGA-76wv-2jg5-vrrv
+    aliases:
+      - CVE-2025-21613
+      - GHSA-v725-9546-7q7m
+    events:
+      - timestamp: 2025-01-07T09:15:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kots
+            componentID: b83358f7045598c1
+            componentName: github.com/go-git/go-git/v5
+            componentVersion: v5.12.0
+            componentType: go-module
+            componentLocation: /usr/bin/kots
+            scanner: grype
+      - timestamp: 2025-01-07T17:25:50Z
+        type: fixed
+        data:
+          fixed-version: 1.123.0-r1
 
   - id: CGA-7qvp-4pvh-v368
     aliases:
