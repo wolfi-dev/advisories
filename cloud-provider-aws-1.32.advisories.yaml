@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: cloud-provider-aws-1.32
+
+advisories:
+  - id: CGA-gm3m-4gj7-m7fr
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-01-13T19:00:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-provider-aws-1.32
+            componentID: 9e57be123dfffffa
+            componentName: golang.org/x/crypto
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/aws-cloud-controller-manager
+            scanner: grype
