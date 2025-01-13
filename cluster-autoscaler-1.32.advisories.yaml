@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: cluster-autoscaler-1.32
+
+advisories:
+  - id: CGA-3243-26v8-89vw
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2025-01-13T19:01:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-autoscaler-1.32
+            componentID: fb5d0c52b0e09fc2
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-autoscaler
+            scanner: grype
