@@ -4,6 +4,17 @@ package:
   name: zed
 
 advisories:
+  - id: CGA-3cvh-mmr8-9rqh
+    aliases:
+      - CVE-2021-29937
+      - GHSA-hpcx-3pw8-g3j2
+    events:
+      - timestamp: 2025-01-13T12:39:03Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: 'zed has its own in-repo telemetry crate which is incorrectly being detected as the unrelated crates.io crate'
+
   - id: CGA-4x9j-r2r9-x33c
     aliases:
       - CVE-2023-43669
