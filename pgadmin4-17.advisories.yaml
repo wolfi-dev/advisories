@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: pgadmin4-17
+
+advisories:
+  - id: CGA-f6m6-7phg-3hp8
+    aliases:
+      - CVE-2024-21538
+      - GHSA-3xgq-45jj-v275
+    events:
+      - timestamp: 2025-01-13T20:37:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pgadmin4-17
+            componentID: 2c5ea8e95e41031a
+            componentName: cross-spawn
+            componentVersion: 5.1.0
+            componentType: npm
+            componentLocation: /pgadmin4/web/node_modules/execa/node_modules/cross-spawn/package.json
+            scanner: grype
