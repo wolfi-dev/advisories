@@ -137,9 +137,10 @@ advisories:
           note: |
             This vulnerability detection relates to the parent package (vitess), and is fixed in v20.4.
             The vitess project creates multiple release tags for each release in GitHub. For example, v20.4 and v20.0.4.
+            Vitess uses v20.0.4 for the image / product version, but uses v20.4 for the published Go binary.
             There are no code differences between these release tags: https://github.com/vitessio/vitess/compare/v0.20.4...v20.0.4.
             The GH Advisory DB favors the version used by the published Go binary: https://github.com/advisories/GHSA-7mwh-q3xm-qh6p.
-            Further validation, this is the fix, which was merged into the v20.0 branch: https://github.com/vitessio/vitess/commit/b56b717bbd68ef0c0d0141541e5d160307eb095e.
+            Also confirmed by upstream in the following issue: https://github.com/vitessio/vitess/issues/17547.
 
   - id: CGA-r45j-3c47-p272
     aliases:
