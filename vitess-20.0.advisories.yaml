@@ -130,6 +130,16 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/demo
             scanner: grype
+      - timestamp: 2025-01-15T20:20:12Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: |
+            This vulnerability detection relates to the parent package (vitess), and is fixed in v20.4.
+            The vitess project creates multiple release tags for each release in GitHub. For example, v20.4 and v20.0.4.
+            There are no code differences between these release tags: https://github.com/vitessio/vitess/compare/v0.20.4...v20.0.4.
+            The GH Advisory DB favors the version used by the published Go binary: https://github.com/advisories/GHSA-7mwh-q3xm-qh6p.
+            Further validation, this is the fix, which was merged into the v20.0 branch: https://github.com/vitessio/vitess/commit/b56b717bbd68ef0c0d0141541e5d160307eb095e.
 
   - id: CGA-r45j-3c47-p272
     aliases:
