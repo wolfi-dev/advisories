@@ -168,3 +168,14 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/grafana
             scanner: grype
+      - timestamp: 2025-01-16T13:16:58Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            This vulnerability relates to the openfga dependency, and is fixed in v1.8.3 and later.
+            Upstream is still using an older version and has not upgraded yet.
+            Attempts to upgrade to v1.8.3 introduce build issues, specifically around the zanzana component, likely introduced by a datastore change in v1.6.1 of openfga.
+            The main branch may include refactors to accommodate this, but these haven't been released.
+            Main is still several versions behind the CVE fixed version.
+            - https://github.com/openfga/openfga/releases/tag/v1.6.1
+            - https://github.com/grafana/grafana/pull/94485/files
