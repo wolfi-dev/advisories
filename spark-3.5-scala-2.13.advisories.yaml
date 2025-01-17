@@ -299,6 +299,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/jackson-mapper-asl-1.9.13.jar
             scanner: grype
+      - timestamp: 2025-01-17T11:23:37Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to jackson-mapper-asl, which is no longer maintained. Apache Spark has taken actions to remove their own dependency on the library, however a transitive dependency (ranger), still requires it. Waiting for upstream https://issues.apache.org/jira/browse/NIFI-11659.
 
   - id: CGA-95rq-pqfg-9383
     aliases:
@@ -555,6 +559,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/jackson-mapper-asl-1.9.13.jar
             scanner: grype
+      - timestamp: 2025-01-17T11:21:23Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to jackson-mapper-asl, which is no longer maintained. Apache Spark has taken actions to remove their own dependency on the library, however a transitive dependency (ranger), still requires it. Waiting for upstream https://issues.apache.org/jira/browse/NIFI-11659.
 
   - id: CGA-g9g9-hh8j-v9h4
     aliases:
@@ -595,6 +603,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/derby-10.14.2.0.jar
             scanner: grype
+      - timestamp: 2025-01-16T18:08:57Z
+        type: pending-upstream-fix
+        data:
+          note: This relates to 'derby'. Various fixes where committed to main branch in Dec 2023 but we are waiting for a release to be created with these changes. https://github.com/apache/spark/pull/44174
 
   - id: CGA-hcx6-4xcx-96pr
     aliases:
