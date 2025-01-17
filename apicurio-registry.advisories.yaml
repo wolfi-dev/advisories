@@ -21,6 +21,17 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/java/apicurio-registry/lib/io.netty.netty-common-4.1.111.Final.jar
             scanner: grype
+      - timestamp: 2025-01-17T00:56:02Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            netty is a transitive dependency of this project, and is affected by this CVE.
+            Remediating this CVE would require upgrading a chain of dependencies: (quarkus <-- quarkus-http <-- netty).
+            The latest version of quarkus-http (at the time of writing), still depends on an older, affected version of netty.
+            Regardless, attempting to upgrade netty results in build failures. Waiting for upstream to address in a future release.
+             - https://github.com/quarkusio/quarkus/blob/a98a3f91fc06c959672b67ece75516bb59b994cd/bom/application/pom.xml#L38
+             - https://github.com/Apicurio/apicurio-registry/blob/779f0994a1de5ebd48f617f476f3e3b7c5a36e48/pom.xml#L147
+             - https://github.com/quarkusio/quarkus-http/blob/314574122c3616e96d2e76edb15da2692036edc8/pom.xml#L67
 
   - id: CGA-9vf2-8c9q-q94f
     aliases:
@@ -39,6 +50,17 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/java/apicurio-registry/lib/io.quarkus.http.quarkus-http-core-5.3.2.jar
             scanner: grype
+      - timestamp: 2025-01-17T00:56:02Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            apicurio-registry, depends on 'quarkus', which in turn depends on 'quarkus-http', affected by this CVE.
+            This is addressed in 'quarkus-http' v5.3.4, but the 'quarkus' version used by this project, depends on 'quarkus-http v5.3.2'.
+            Attempts to upgrade quarkus resulted in build errors. The project has noted caveats when bumping quarkus in the code base.
+            Waiting for upstream to address in a future release.
+             - https://github.com/quarkusio/quarkus/blob/a98a3f91fc06c959672b67ece75516bb59b994cd/bom/application/pom.xml#L38
+             - https://github.com/Apicurio/apicurio-registry/blob/779f0994a1de5ebd48f617f476f3e3b7c5a36e48/pom.xml#L147
+             - https://github.com/quarkusio/quarkus-http
 
   - id: CGA-x2pj-p6gm-xpqp
     aliases:
