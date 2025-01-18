@@ -1,0 +1,76 @@
+schema-version: 2.0.2
+
+package:
+  name: vitess-21.0
+
+advisories:
+  - id: CGA-45rj-vp5p-xrm7
+    aliases:
+      - CVE-2024-21538
+      - GHSA-3xgq-45jj-v275
+    events:
+      - timestamp: 2025-01-18T00:02:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vitess-21.0
+            componentID: a8420621ae8c3cc5
+            componentName: cross-spawn
+            componentVersion: 7.0.3
+            componentType: npm
+            componentLocation: /vt/web/vtadmin/node_modules/npm/node_modules/cross-spawn/package.json
+            scanner: grype
+
+  - id: CGA-892h-wqw6-wxg5
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-01-18T00:02:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vitess-21.0
+            componentID: 9a451aa62dbd892f
+            componentName: golang.org/x/net
+            componentVersion: v0.29.0
+            componentType: go-module
+            componentLocation: /usr/bin/authztestgen
+            scanner: grype
+
+  - id: CGA-j6p8-7rgj-5wf5
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-01-18T00:02:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vitess-21.0
+            componentID: 0a71a4b3f4c5fbb5
+            componentName: golang.org/x/crypto
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/vtbackup
+            scanner: grype
+
+  - id: CGA-m6v3-rrpr-8rgp
+    aliases:
+      - GHSA-f46q-gmg5-36hm
+    events:
+      - timestamp: 2025-01-18T00:02:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vitess-21.0
+            componentID: 2ca4298bc657771d
+            componentName: vtadmin
+            componentVersion: 0.1.0
+            componentType: npm
+            componentLocation: /vt/web/vtadmin/package.json
+            scanner: grype
