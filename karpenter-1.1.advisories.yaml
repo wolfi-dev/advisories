@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: karpenter-1.1
+
+advisories:
+  - id: CGA-h5jv-4rrm-fw79
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-01-20T15:00:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: karpenter-1.1
+            componentID: 3c5f38e436be49d2
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/controller
+            scanner: grype
