@@ -21,6 +21,10 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2025-01-21T21:42:34Z
+        type: pending-upstream-fix
+        data:
+          note: 'Patch was being worked on in 2019 but no work since then. Upstream will need to address issue: https://security-tracker.debian.org/tracker/CVE-2019-12067'
 
   - id: CGA-7qj2-p58m-m78j
     aliases:
@@ -39,6 +43,10 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2025-01-21T21:51:12Z
+        type: pending-upstream-fix
+        data:
+          note: '"Fixed was being worked on but was not applied. Upstream maintainer will have to address: https://lists.gnu.org/archive/html/qemu-devel/2021-02/msg06098.html"'
 
   - id: CGA-jmwf-c2f5-8wjp
     aliases:
@@ -57,6 +65,10 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2025-01-21T21:26:40Z
+        type: pending-upstream-fix
+        data:
+          note: '"Orginally was addressed in 10/12/2018 but changes were not moved forward and applying fix now results in breaking change. Upstream maintainer will need to address the issue: https://lists.gnu.org/archive/html/qemu-devel/2018-10/msg02402.html"'
 
   - id: CGA-m53x-h6x5-f624
     aliases:
@@ -75,6 +87,10 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2025-01-21T14:10:50Z
+        type: fix-not-planned
+        data:
+          note: Upstream maintainers have no plan to address issue. Mitigation for the vulnerability is to disable RSS on the nic/virtio driver. '-device virtio-net-pci,rss=off', or, alternatively, by directly modifying the KVM XML file to disable RSS using a standard configuration tool. https://access.redhat.com/security/cve/CVE-2024-6505
 
   - id: CGA-mm6x-w9q4-pxp3
     aliases:
@@ -93,6 +109,10 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2025-01-21T13:53:54Z
+        type: pending-upstream-fix
+        data:
+          note: 'Issue is confirmed with upstream maintainer and is being tracked as security issue. No timeline given for fix: https://gitlab.com/qemu-project/qemu/-/issues/2548'
 
   - id: CGA-qjgx-fw7r-vqj4
     aliases:
@@ -111,6 +131,10 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2025-01-21T13:56:51Z
+        type: pending-upstream-fix
+        data:
+          note: 'Issue has been identified with upstream maintainer. No timeline has been provided for fix: https://gitlab.com/qemu-project/qemu/-/issues/2579'
 
   - id: CGA-v52x-9ff2-46m9
     aliases:
@@ -129,3 +153,8 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2025-01-21T21:54:30Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: '"Upstream QEMU is not affected by CVE-2023-2680 and is specific to qemu-kvm packages that are produced by Red Hat. See: https://bugzilla.redhat.com/show_bug.cgi?id=2203387"'
