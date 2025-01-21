@@ -21,6 +21,10 @@ advisories:
             componentType: npm
             componentLocation: /vt/web/vtadmin/node_modules/npm/node_modules/cross-spawn/package.json
             scanner: grype
+      - timestamp: 2025-01-21T17:44:33Z
+        type: fixed
+        data:
+          fixed-version: 21.0.2-r0
 
   - id: CGA-892h-wqw6-wxg5
     aliases:
@@ -82,3 +86,8 @@ advisories:
             componentType: npm
             componentLocation: /vt/web/vtadmin/package.json
             scanner: grype
+      - timestamp: 2025-01-21T17:54:32Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: The vitess package builds the vtadmin from the web/vtadmin directory as part of the vitess source. The vulnerability GHSA-f46q-gmg5-36hm references a dependency present/removed from NPM remote repos. This vulnerable code is not present in vitess source code itself. Upstream comments https://github.com/vitessio/vitess/issues/17602
