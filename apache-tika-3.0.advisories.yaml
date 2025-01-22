@@ -25,3 +25,21 @@ advisories:
         type: pending-upstream-fix
         data:
           note: 'Attempting to patch this CVE leads to build failures, and will require an update from upstream maintainers to remediate. '
+
+  - id: CGA-pqmq-rmg6-cmrc
+    aliases:
+      - CVE-2025-23184
+      - GHSA-fh5r-crhr-qrrq
+    events:
+      - timestamp: 2025-01-22T07:26:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-tika-3.0
+            componentID: 080f9571dcc5d597
+            componentName: cxf-core
+            componentVersion: 4.0.5
+            componentType: java-archive
+            componentLocation: /usr/share/java/tika-server-standard-3.0.0.jar
+            scanner: grype
