@@ -50,6 +50,24 @@ advisories:
           type: component-vulnerability-mismatch
           note: The CVE was against an older version of the buildah module itself (< v1.14.4), and this package includes v1.36.0.
 
+  - id: CGA-693x-82vw-grgf
+    aliases:
+      - CVE-2024-11218
+      - GHSA-5vpc-35f4-r8w6
+    events:
+      - timestamp: 2025-01-22T10:05:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buildah
+            componentID: 1d68476cd8203c4e
+            componentName: github.com/containers/buildah
+            componentVersion: v1.2.3
+            componentType: go-module
+            componentLocation: /bin/buildah
+            scanner: grype
+
   - id: CGA-6q96-mpjg-2qg6
     aliases:
       - CVE-2024-3727
