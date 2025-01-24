@@ -572,6 +572,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/derby-10.14.2.0.jar
             scanner: grype
+      - timestamp: 2025-01-24T12:46:52Z
+        type: fix-not-planned
+        data:
+          note: 'This relates to ''derby'',Spark-3.5 currently uses version 10.14.2.0, while the closest fixed version available in the Maven Central repository is 10.17.1.0. However, this version requires a minimum of Java 17 to build, whereas Spark-3.5 is built with Java 8 and 11 as well. Upgrading to 10.17.1.0 would cause a build break due to Java bytecode version incompatibility. At this time, we are not planning to upgrade the version of Derby in Spark-3.5. The upstream project has updated to version 10.16.1.1, which does not resolve the vulnerability. The upstream is currently waiting for a backport to Derby version 10.16.2.x which they have planed to fix in version spark-4 or later. For reference, see: https://github.com/apache/spark/pull/44174'
 
   - id: CGA-r5px-mvhg-cw5m
     aliases:
