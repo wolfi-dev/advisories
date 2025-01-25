@@ -4,6 +4,16 @@ package:
   name: nodejs-20
 
 advisories:
+  - id: CGA-3mfp-58qw-ff6j
+    aliases:
+      - CVE-2025-23083
+      - GHSA-wv7p-rjf3-9fr5
+    events:
+      - timestamp: 2025-01-25T14:08:19Z
+        type: fixed
+        data:
+          fixed-version: 20.18.2-r0
+
   - id: CGA-459f-7q78-rxc5
     aliases:
       - CVE-2023-32558
@@ -36,6 +46,7 @@ advisories:
   - id: CGA-4j7c-3p2p-hhmh
     aliases:
       - CVE-2023-30584
+      - GHSA-jpgc-8hrm-hvwj
     events:
       - timestamp: 2023-06-20T19:07:00Z
         type: fixed
@@ -45,6 +56,7 @@ advisories:
   - id: CGA-5h2h-m8p6-8h83
     aliases:
       - CVE-2024-27980
+      - GHSA-fm6v-wmjp-5rxq
     events:
       - timestamp: 2024-04-10T18:06:05Z
         type: fixed
@@ -60,6 +72,19 @@ advisories:
         type: fixed
         data:
           fixed-version: 20.3.1-r0
+
+  - id: CGA-c23x-7ppp-8vqm
+    aliases:
+      - CVE-2024-6923
+      - GHSA-87qc-q3w7-7m8w
+    events:
+      - timestamp: 2024-08-30T15:48:05Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            This CVE relates to python 3.11, which is only included in the nodejs -dev image variant.
+            CVE remediation is awaiting core review then release on the 3.11 branch.
+            More information can be found here: https://github.com/python/cpython/pull/122608
 
   - id: CGA-cg3j-j6rp-gcgj
     aliases:
@@ -94,6 +119,7 @@ advisories:
   - id: CGA-fjfw-xh9r-h88h
     aliases:
       - CVE-2023-30587
+      - GHSA-c595-v5xp-gv8w
     events:
       - timestamp: 2023-06-20T19:07:00Z
         type: fixed
@@ -130,6 +156,19 @@ advisories:
         data:
           fixed-version: 20.15.1-r0
 
+  - id: CGA-hjjp-j4vg-j855
+    aliases:
+      - CVE-2024-7592
+      - GHSA-7pwv-g7hj-39pr
+    events:
+      - timestamp: 2024-08-30T15:48:05Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            This CVE relates to python 3.11, which is only included in the nodejs -dev image variant.
+            A fix has been proposed upstream but it has yet to be approved or merged.
+            More information can be found here: https://github.com/python/cpython/pull/123105'
+
   - id: CGA-hr5v-2cjc-4h99
     aliases:
       - CVE-2023-30581
@@ -164,6 +203,7 @@ advisories:
   - id: CGA-mp3v-hhvh-f5q3
     aliases:
       - CVE-2023-30583
+      - GHSA-9ccp-4gjg-264g
     events:
       - timestamp: 2023-06-20T19:07:00Z
         type: fixed
@@ -203,6 +243,7 @@ advisories:
   - id: CGA-rr3h-9vqx-rqmp
     aliases:
       - CVE-2023-30582
+      - GHSA-cwrj-j635-2m7w
     events:
       - timestamp: 2023-06-20T19:07:00Z
         type: fixed
@@ -228,29 +269,3 @@ advisories:
         type: fixed
         data:
           fixed-version: 20.5.1-r0
-
-  - id: CGA-c23x-7ppp-8vqm
-    aliases:
-      - CVE-2024-6923
-      - GHSA-87qc-q3w7-7m8w
-    events:
-      - timestamp: 2024-08-30T15:48:05Z
-        type: pending-upstream-fix
-        data:
-          note: |
-            This CVE relates to python 3.11, which is only included in the nodejs -dev image variant.
-            CVE remediation is awaiting core review then release on the 3.11 branch.
-            More information can be found here: https://github.com/python/cpython/pull/122608
-
-  - id: CGA-hjjp-j4vg-j855
-    aliases:
-      - CVE-2024-7592
-      - GHSA-7pwv-g7hj-39pr
-    events:
-      - timestamp: 2024-08-30T15:48:05Z
-        type: pending-upstream-fix
-        data:
-          note: |
-            This CVE relates to python 3.11, which is only included in the nodejs -dev image variant.
-            A fix has been proposed upstream but it has yet to be approved or merged.
-            More information can be found here: https://github.com/python/cpython/pull/123105'
