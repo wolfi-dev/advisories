@@ -4,6 +4,24 @@ package:
   name: crossplane-provider-gcp
 
 advisories:
+  - id: CGA-28q9-5hp5-98m5
+    aliases:
+      - CVE-2024-45339
+      - GHSA-6wxm-mpqj-6jpf
+    events:
+      - timestamp: 2025-01-29T08:17:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: crossplane-provider-gcp
+            componentID: 44f44d96b6fcd70a
+            componentName: github.com/golang/glog
+            componentVersion: v1.2.0
+            componentType: go-module
+            componentLocation: /usr/bin/provider
+            scanner: grype
+
   - id: CGA-338q-j96p-qrqp
     aliases:
       - CVE-2024-24789
