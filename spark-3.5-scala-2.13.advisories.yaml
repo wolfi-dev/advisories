@@ -232,6 +232,24 @@ advisories:
         data:
           note: The dependency responsible for this CVE is a transitive dependency where the version of said dependency is not explicitly defined in the project but rather brought in under the hadoop-client-runtime jar. This requires upstream maintainers to implement a fix.
 
+  - id: CGA-73f5-473w-r4pq
+    aliases:
+      - CVE-2024-23953
+      - GHSA-p953-3j66-hg45
+    events:
+      - timestamp: 2025-01-29T10:13:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: f5bd47cf3fdca4ff
+            componentName: hive-llap-common
+            componentVersion: 2.3.9
+            componentType: java-archive
+            componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/hive-llap-common-2.3.9.jar
+            scanner: grype
+
   - id: CGA-7mgp-57h7-566c
     aliases:
       - CVE-2024-29025
