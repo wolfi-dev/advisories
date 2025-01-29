@@ -736,6 +736,24 @@ advisories:
         data:
           note: Due to complexity of implementation required to upgrade the version of Zookeeper to a fix version, the upstream maintainers are planning on releasing it as a part of a major release. So we require upstream maintainers to implement this fix.
 
+  - id: CGA-jq56-xgwv-8j2p
+    aliases:
+      - CVE-2022-45693
+      - GHSA-grr4-wv38-f68w
+    events:
+      - timestamp: 2025-01-29T11:41:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: ea12ba05a0acddeb
+            componentName: jettison
+            componentVersion: "1.1"
+            componentType: java-archive
+            componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/jettison-1.1.jar
+            scanner: grype
+
   - id: CGA-mp9j-gvpf-q352
     aliases:
       - CVE-2024-9823
