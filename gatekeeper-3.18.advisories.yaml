@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: gatekeeper-3.18
+
+advisories:
+  - id: CGA-5fwp-f2rh-9xq3
+    aliases:
+      - CVE-2024-45339
+      - GHSA-6wxm-mpqj-6jpf
+    events:
+      - timestamp: 2025-01-29T10:07:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.18
+            componentID: 118c524c81c700a8
+            componentName: github.com/golang/glog
+            componentVersion: v1.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/gator
+            scanner: grype
