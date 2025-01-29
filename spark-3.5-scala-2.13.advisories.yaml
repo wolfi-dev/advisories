@@ -678,6 +678,24 @@ advisories:
         data:
           note: The dependency responsible for this CVE is a transitive dependency where the version of said dependency is not explicitly defined in the project but rather brought in under the hadoop-client-runtime jar. This requires upstream maintainers to implement a fix.
 
+  - id: CGA-hwxm-v4pp-624f
+    aliases:
+      - CVE-2022-40149
+      - GHSA-56h3-78gp-v83r
+    events:
+      - timestamp: 2025-01-29T11:41:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: ea12ba05a0acddeb
+            componentName: jettison
+            componentVersion: "1.1"
+            componentType: java-archive
+            componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/jettison-1.1.jar
+            scanner: grype
+
   - id: CGA-j948-p6wg-rq6h
     aliases:
       - CVE-2024-23944
