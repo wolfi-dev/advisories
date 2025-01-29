@@ -929,6 +929,24 @@ advisories:
             Spark has upgraded to a later version in main, but attempts to backport to this release of spark, result in build failures.
             Awaiting for fix / backport from upstream to address this issue.
 
+  - id: CGA-rm6r-5fmh-745c
+    aliases:
+      - CVE-2022-40150
+      - GHSA-x27m-9w8j-5vcw
+    events:
+      - timestamp: 2025-01-29T11:42:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: ea12ba05a0acddeb
+            componentName: jettison
+            componentVersion: "1.1"
+            componentType: java-archive
+            componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/jettison-1.1.jar
+            scanner: grype
+
   - id: CGA-v37r-crxx-4j4j
     aliases:
       - CVE-2023-1370
