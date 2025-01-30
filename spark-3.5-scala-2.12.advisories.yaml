@@ -660,6 +660,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/hive-llap-common-2.3.9.jar
             scanner: grype
+      - timestamp: 2025-01-30T05:21:34Z
+        type: pending-upstream-fix
+        data:
+          note: 'The version of hive-llap-common is not able to be upgraded from 2.3.9  to 4.0.0 due to version incompatibility with the parent dependency Hive, Spark-3.5 is only able to support Hive 2.3.9. To remediate this CVE would require Hive 4.0.0 which needs to be implemented by upstream maintainers. Upstream is targeting to remove this as part of the Spark-4.0.0 release as seen here: https://github.com/apache/spark/pull/49725'
 
   - id: CGA-x32f-h36r-79m2
     aliases:
