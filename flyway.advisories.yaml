@@ -4,6 +4,24 @@ package:
   name: flyway
 
 advisories:
+  - id: CGA-hj36-5gmg-h97m
+    aliases:
+      - CVE-2025-24789
+      - GHSA-7hpq-3g6w-pvhf
+    events:
+      - timestamp: 2025-01-31T07:16:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flyway
+            componentID: 5a96b9cd460b290a
+            componentName: snowflake-jdbc
+            componentVersion: 3.20.0
+            componentType: java-archive
+            componentLocation: /usr/share/java/flyway/drivers/snowflake-jdbc-3.20.0.jar
+            scanner: grype
+
   - id: CGA-jhcq-22wf-r4wv
     aliases:
       - CVE-2020-8908
