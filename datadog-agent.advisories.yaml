@@ -4,6 +4,24 @@ package:
   name: datadog-agent
 
 advisories:
+  - id: CGA-23qw-x9gx-qpx8
+    aliases:
+      - CVE-2025-24794
+      - GHSA-m4f6-vcj4-w5mx
+    events:
+      - timestamp: 2025-01-31T07:24:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: datadog-agent
+            componentID: 047bedb26e93213d
+            componentName: snowflake-connector-python
+            componentVersion: 3.12.1
+            componentType: python
+            componentLocation: /opt/datadog-agent/embedded/lib/python3.12/site-packages/snowflake_connector_python-3.12.1.dist-info/METADATA, /opt/datadog-agent/embedded/lib/python3.12/site-packages/snowflake_connector_python-3.12.1.dist-info/RECORD, /opt/datadog-agent/embedded/lib/python3.12/site-packages/snowflake_connector_python-3.12.1.dist-info/direct_url.json, /opt/datadog-agent/embedded/lib/python3.12/site-packages/snowflake_connector_python-3.12.1.dist-info/top_level.txt
+            scanner: grype
+
   - id: CGA-23wg-fhpm-qgvw
     aliases:
       - CVE-2024-21506
