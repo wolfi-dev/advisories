@@ -4,6 +4,24 @@ package:
   name: lvm-driver
 
 advisories:
+  - id: CGA-ph3v-45jw-5px3
+    aliases:
+      - CVE-2024-45336
+      - GHSA-7wrw-r4p8-38rx
+    events:
+      - timestamp: 2025-01-31T08:25:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: lvm-driver
+            componentID: ad7058744474dd58
+            componentName: stdlib
+            componentVersion: go1.23.4
+            componentType: go-module
+            componentLocation: /usr/bin/lvm-driver
+            scanner: grype
+
   - id: CGA-v2rm-qq2m-2974
     aliases:
       - CVE-2024-45338
