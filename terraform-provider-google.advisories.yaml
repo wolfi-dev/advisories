@@ -26,6 +26,27 @@ advisories:
         data:
           fixed-version: 6.14.1-r1
 
+  - id: CGA-48gv-gv5w-p5q9
+    aliases:
+      - GHSA-29qp-crvh-w22m
+    events:
+      - timestamp: 2025-01-31T12:40:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-google
+            componentID: 0a7f47466054b214
+            componentName: github.com/hashicorp/yamux
+            componentVersion: v0.1.1
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-google
+            scanner: grype
+      - timestamp: 2025-01-31T18:14:03Z
+        type: true-positive-determination
+        data:
+          note: "Awaiting release of fix by upstream dependency yamux: https://github.com/hashicorp/yamux/pull/143"
+
   - id: CGA-4h2x-2w78-p8p7
     aliases:
       - CVE-2024-34156

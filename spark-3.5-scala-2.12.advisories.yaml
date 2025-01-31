@@ -202,6 +202,24 @@ advisories:
         data:
           note: This logback-core dependency is brought in as a transitive dependency. These transitive dependencies from are not able to be upgraded to a higher version and require upstream maintainers to implement.
 
+  - id: CGA-c92w-p2vx-hj5v
+    aliases:
+      - CVE-2024-29869
+      - GHSA-c476-j253-5rgq
+    events:
+      - timestamp: 2025-01-31T09:39:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.12
+            componentID: c7e698d3f967ae47
+            componentName: hive-exec
+            componentVersion: 2.3.9
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hive-exec-2.3.9-core.jar
+            scanner: grype
+
   - id: CGA-chqv-p463-57p4
     aliases:
       - CVE-2019-10172
