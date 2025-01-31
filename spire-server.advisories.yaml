@@ -428,6 +428,27 @@ advisories:
         data:
           fixed-version: 1.11.1-r0
 
+  - id: CGA-vw5g-2wg8-hwwf
+    aliases:
+      - GHSA-29qp-crvh-w22m
+    events:
+      - timestamp: 2025-01-31T13:30:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spire-server
+            componentID: 0174753b5a058565
+            componentName: github.com/hashicorp/yamux
+            componentVersion: v0.1.1
+            componentType: go-module
+            componentLocation: /usr/bin/spire-agent
+            scanner: grype
+      - timestamp: 2025-01-31T18:14:03Z
+        type: true-positive-determination
+        data:
+          note: "Awaiting release of fix by upstream dependency yamux: https://github.com/hashicorp/yamux/pull/143"
+
   - id: CGA-w383-9wx6-9qwj
     aliases:
       - GHSA-9763-4f94-gfch

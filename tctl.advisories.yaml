@@ -120,6 +120,27 @@ advisories:
         data:
           fixed-version: 1.18.0-r1
 
+  - id: CGA-fpqr-6qp8-j4j2
+    aliases:
+      - GHSA-29qp-crvh-w22m
+    events:
+      - timestamp: 2025-01-31T17:25:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tctl
+            componentID: a510199210f15a79
+            componentName: github.com/hashicorp/yamux
+            componentVersion: v0.1.1
+            componentType: go-module
+            componentLocation: /usr/bin/tctl
+            scanner: grype
+      - timestamp: 2025-01-31T18:14:03Z
+        type: true-positive-determination
+        data:
+          note: "Awaiting release of fix by upstream dependency yamux: https://github.com/hashicorp/yamux/pull/143"
+
   - id: CGA-ghq4-4j4m-mc6j
     aliases:
       - CVE-2024-24785

@@ -4,6 +4,27 @@ package:
   name: gitlab-cng-17.8
 
 advisories:
+  - id: CGA-296f-45wr-hhhc
+    aliases:
+      - GHSA-29qp-crvh-w22m
+    events:
+      - timestamp: 2025-01-31T09:17:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-cng-17.8
+            componentID: cc784b90266fc983
+            componentName: github.com/hashicorp/yamux
+            componentVersion: v0.1.2-0.20220728231024-8f49b6f63f18
+            componentType: go-module
+            componentLocation: /srv/gitlab-shell/bin/gitlab-shell
+            scanner: grype
+      - timestamp: 2025-01-31T18:14:03Z
+        type: true-positive-determination
+        data:
+          note: "Awaiting release of fix by upstream dependency yamux: https://github.com/hashicorp/yamux/pull/143"
+
   - id: CGA-6ff6-rv25-c336
     aliases:
       - CVE-2024-45614
