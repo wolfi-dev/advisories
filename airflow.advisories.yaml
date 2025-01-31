@@ -451,6 +451,24 @@ advisories:
         data:
           note: Upgrading cryptography dependency in hatch_build.py to 42.0.4 causes a build failure
 
+  - id: CGA-f69p-9rg2-8gqj
+    aliases:
+      - CVE-2025-24794
+      - GHSA-m4f6-vcj4-w5mx
+    events:
+      - timestamp: 2025-01-31T07:05:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow
+            componentID: d96c529a2cf50985
+            componentName: snowflake-connector-python
+            componentVersion: 3.12.4
+            componentType: python
+            componentLocation: /opt/airflow/lib/python3.12/site-packages/snowflake_connector_python-3.12.4.dist-info/METADATA, /opt/airflow/lib/python3.12/site-packages/snowflake_connector_python-3.12.4.dist-info/RECORD, /opt/airflow/lib/python3.12/site-packages/snowflake_connector_python-3.12.4.dist-info/top_level.txt
+            scanner: grype
+
   - id: CGA-f7wq-crqm-v76f
     aliases:
       - CVE-2024-56326
