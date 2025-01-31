@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: gitlab-runner-17.8
+
+advisories:
+  - id: CGA-cvmg-h9fm-52mg
+    aliases:
+      - GHSA-29qp-crvh-w22m
+    events:
+      - timestamp: 2025-01-31T08:21:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-17.8
+            componentID: aebe8672a0f17f10
+            componentName: github.com/hashicorp/yamux
+            componentVersion: v0.1.2
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-runner
+            scanner: grype
