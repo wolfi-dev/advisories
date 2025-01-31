@@ -196,3 +196,21 @@ advisories:
         type: pending-upstream-fix
         data:
           note: 'Attempting to patch this CVE via updating the affected module leads to resolution errors with other modules, therefore a patch from upstream is required to remediate this CVE. '
+
+  - id: CGA-xfc5-jrg3-q4px
+    aliases:
+      - CVE-2025-23216
+      - GHSA-47g2-qmh2-749v
+    events:
+      - timestamp: 2025-01-31T07:02:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argocd-image-updater
+            componentID: 63dcc201d25d463a
+            componentName: github.com/argoproj/argo-cd/v2
+            componentVersion: v2.11.7
+            componentType: go-module
+            componentLocation: /usr/bin/argocd-image-updater
+            scanner: grype
