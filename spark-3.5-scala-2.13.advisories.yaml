@@ -656,6 +656,24 @@ advisories:
         data:
           note: This relates to protobuf-java v3.7.1 included by hadoop-client-runtime-3.3.4.jar. There are no newer versions of these shaded JARs available to fix the vulnerability.
 
+  - id: CGA-gj6v-4cqj-fjhj
+    aliases:
+      - CVE-2024-29869
+      - GHSA-c476-j253-5rgq
+    events:
+      - timestamp: 2025-01-31T07:20:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: 7b19aabf46f70d16
+            componentName: hive-exec
+            componentVersion: 2.3.9
+            componentType: java-archive
+            componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/hive-exec-2.3.9-core.jar
+            scanner: grype
+
   - id: CGA-gxvv-v998-c384
     aliases:
       - CVE-2022-46337
