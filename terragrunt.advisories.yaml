@@ -58,6 +58,27 @@ advisories:
         data:
           fixed-version: 0.55.14-r1
 
+  - id: CGA-67hf-7gf8-w54r
+    aliases:
+      - GHSA-29qp-crvh-w22m
+    events:
+      - timestamp: 2025-01-31T10:22:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terragrunt
+            componentID: d6a67a4751522723
+            componentName: github.com/hashicorp/yamux
+            componentVersion: v0.1.2
+            componentType: go-module
+            componentLocation: /usr/bin/terragrunt
+            scanner: grype
+      - timestamp: 2025-01-31T18:14:03Z
+        type: true-positive-determination
+        data:
+          note: "Awaiting release of fix by upstream dependency yamux: https://github.com/hashicorp/yamux/pull/143"
+
   - id: CGA-76gw-vx4w-rpmm
     aliases:
       - CVE-2024-0406

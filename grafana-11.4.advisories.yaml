@@ -68,6 +68,27 @@ advisories:
         data:
           fixed-version: 11.4.0-r1
 
+  - id: CGA-7cj6-j3v7-qgh6
+    aliases:
+      - GHSA-29qp-crvh-w22m
+    events:
+      - timestamp: 2025-01-31T08:16:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-11.4
+            componentID: 39e0a4247ab837b9
+            componentName: github.com/hashicorp/yamux
+            componentVersion: v0.1.1
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+      - timestamp: 2025-01-31T18:14:03Z
+        type: true-positive-determination
+        data:
+          note: "Awaiting release of fix by upstream dependency yamux: https://github.com/hashicorp/yamux/pull/143"
+
   - id: CGA-999j-724c-xf7v
     aliases:
       - CVE-2018-20676

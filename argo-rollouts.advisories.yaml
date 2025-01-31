@@ -26,6 +26,26 @@ advisories:
         data:
           fixed-version: 1.7.2-r1
 
+  - id: CGA-6mgv-3w46-mv3w
+    aliases:
+      - CVE-2024-45336
+      - GHSA-7wrw-r4p8-38rx
+    events:
+      - timestamp: 2025-01-31T07:08:08Z
+        type: fixed
+        data:
+          fixed-version: 1.7.2-r4
+
+  - id: CGA-f8h3-38xx-32ff
+    aliases:
+      - CVE-2024-45341
+      - GHSA-3f6r-qh9c-x6mm
+    events:
+      - timestamp: 2025-01-31T07:08:09Z
+        type: fixed
+        data:
+          fixed-version: 1.7.2-r4
+
   - id: CGA-m9rp-87wr-xj88
     aliases:
       - CVE-2024-45337
@@ -69,3 +89,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.7.2-r3
+
+  - id: CGA-vx3x-3442-f593
+    aliases:
+      - GHSA-29qp-crvh-w22m
+    events:
+      - timestamp: 2025-01-31T07:04:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-rollouts
+            componentID: ff7d645c95dff5e5
+            componentName: github.com/hashicorp/yamux
+            componentVersion: v0.1.1
+            componentType: go-module
+            componentLocation: /usr/bin/kubectl-argo-rollouts
+            scanner: grype
+      - timestamp: 2025-01-31T18:14:03Z
+        type: true-positive-determination
+        data:
+          note: "Awaiting release of fix by upstream dependency yamux: https://github.com/hashicorp/yamux/pull/143"

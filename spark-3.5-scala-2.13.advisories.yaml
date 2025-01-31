@@ -347,6 +347,10 @@ advisories:
         type: pending-upstream-fix
         data:
           note: This relates to jackson-mapper-asl, which is no longer maintained. Apache Spark has taken actions to remove their own dependency on the library, however a transitive dependency (ranger), still requires it. Waiting for upstream https://issues.apache.org/jira/browse/NIFI-11659.
+      - timestamp: 2025-01-31T18:29:56Z
+        type: fixed
+        data:
+          fixed-version: 3.5.4-r11
 
   - id: CGA-95rq-pqfg-9383
     aliases:
@@ -633,6 +637,10 @@ advisories:
         type: pending-upstream-fix
         data:
           note: This relates to jackson-mapper-asl, which is no longer maintained. Apache Spark has taken actions to remove their own dependency on the library, however a transitive dependency (ranger), still requires it. Waiting for upstream https://issues.apache.org/jira/browse/NIFI-11659.
+      - timestamp: 2025-01-31T18:29:57Z
+        type: fixed
+        data:
+          fixed-version: 3.5.4-r11
 
   - id: CGA-g9g9-hh8j-v9h4
     aliases:
@@ -655,6 +663,24 @@ advisories:
         type: pending-upstream-fix
         data:
           note: This relates to protobuf-java v3.7.1 included by hadoop-client-runtime-3.3.4.jar. There are no newer versions of these shaded JARs available to fix the vulnerability.
+
+  - id: CGA-gj6v-4cqj-fjhj
+    aliases:
+      - CVE-2024-29869
+      - GHSA-c476-j253-5rgq
+    events:
+      - timestamp: 2025-01-31T07:20:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: 7b19aabf46f70d16
+            componentName: hive-exec
+            componentVersion: 2.3.9
+            componentType: java-archive
+            componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/hive-exec-2.3.9-core.jar
+            scanner: grype
 
   - id: CGA-gxvv-v998-c384
     aliases:
