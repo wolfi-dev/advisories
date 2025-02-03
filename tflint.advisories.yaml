@@ -80,6 +80,27 @@ advisories:
         data:
           fixed-version: 0.51.0-r0
 
+  - id: CGA-7697-whh6-p24m
+    aliases:
+      - GHSA-29qp-crvh-w22m
+    events:
+      - timestamp: 2025-01-31T15:38:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tflint
+            componentID: 0af385199d66ad4f
+            componentName: github.com/hashicorp/yamux
+            componentVersion: v0.1.1
+            componentType: go-module
+            componentLocation: /usr/bin/tflint
+            scanner: grype
+      - timestamp: 2025-01-31T18:14:03Z
+        type: true-positive-determination
+        data:
+          note: 'Awaiting release of fix by upstream dependency yamux: https://github.com/hashicorp/yamux/pull/143'
+
   - id: CGA-8cqg-hxpj-x26r
     aliases:
       - CVE-2024-3817
@@ -89,6 +110,16 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.51.0-r0
+
+  - id: CGA-8j7w-qhjf-8pp4
+    aliases:
+      - CVE-2024-45341
+      - GHSA-3f6r-qh9c-x6mm
+    events:
+      - timestamp: 2025-02-01T06:22:05Z
+        type: fixed
+        data:
+          fixed-version: 0.55.0-r1
 
   - id: CGA-cfcg-7vp7-mc37
     aliases:
@@ -121,6 +152,16 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.51.2-r1
+
+  - id: CGA-fr28-x65p-j34x
+    aliases:
+      - CVE-2024-45336
+      - GHSA-7wrw-r4p8-38rx
+    events:
+      - timestamp: 2025-02-01T06:21:59Z
+        type: fixed
+        data:
+          fixed-version: 0.55.0-r1
 
   - id: CGA-jfvg-q68v-cp55
     aliases:
