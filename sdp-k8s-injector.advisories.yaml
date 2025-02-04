@@ -47,6 +47,24 @@ advisories:
         data:
           note: Manually updating the tls-listener crate to a fixed version (v0.10.0) causes a build failure. The update and the corresponding code changes need to be done upstream.
 
+  - id: CGA-x5fq-c89r-38wr
+    aliases:
+      - CVE-2025-24898
+      - GHSA-rpmj-rpgj-qmpm
+    events:
+      - timestamp: 2025-02-04T11:23:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sdp-k8s-injector
+            componentID: 62aed3f4f6f7fa9d
+            componentName: openssl
+            componentVersion: 0.10.66
+            componentType: rust-crate
+            componentLocation: /usr/bin/sdp-identity-service
+            scanner: grype
+
   - id: CGA-xj5v-v38v-3pmg
     aliases:
       - CVE-2024-12224
