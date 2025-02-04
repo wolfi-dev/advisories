@@ -4,6 +4,24 @@ package:
   name: lychee
 
 advisories:
+  - id: CGA-62x3-8329-q4mx
+    aliases:
+      - CVE-2025-24898
+      - GHSA-rpmj-rpgj-qmpm
+    events:
+      - timestamp: 2025-02-04T07:23:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: lychee
+            componentID: 0e2d35a345925f16
+            componentName: openssl
+            componentVersion: 0.10.68
+            componentType: rust-crate
+            componentLocation: /usr/bin/lychee
+            scanner: grype
+
   - id: CGA-9rq2-7hpq-g65f
     aliases:
       - GHSA-q445-7m23-qrmw
