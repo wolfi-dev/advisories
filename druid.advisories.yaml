@@ -856,6 +856,15 @@ advisories:
         data:
           note: This vulnerability relates to httpclient v4.5.2, a transitive dependency of the shaded JAR ambari-metrics-emitter used by Druid. No newer versions of this shaded JAR are available to fix the vulnerability.
 
+  - id: CGA-xq7p-6ffm-hpqf
+    aliases:
+      - GHSA-wmcc-9vch-jmx4
+    events:
+      - timestamp: 2025-02-06T10:16:39Z
+        type: pending-upstream-fix
+        data:
+          note: The fix version of the affected dependency cassandra-all (v3.0.31) is several major versions higher than what is currently included in druid (v1.0.8), upgrading to this version introduces breaking changes, must wait for upstream to implement a fix
+
   - id: CGA-xvvg-7x64-v7fj
     aliases:
       - CVE-2024-36114
