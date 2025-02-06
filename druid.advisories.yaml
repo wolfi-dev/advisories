@@ -773,6 +773,24 @@ advisories:
         data:
           note: com.netflix.astyanax:astyanax needs to be replaced with com.datastax.oss:java-driver-core in extensions-contrib/cassandra-storage by upstream maintainers
 
+  - id: CGA-wxxf-g4g4-cxhp
+    aliases:
+      - CVE-2025-23015
+      - GHSA-wmcc-9vch-jmx4
+    events:
+      - timestamp: 2025-02-06T11:15:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: druid
+            componentID: 2671f8230b9bb550
+            componentName: cassandra-all
+            componentVersion: 1.0.8
+            componentType: java-archive
+            componentLocation: /usr/share/java/druid/extensions/druid-cassandra-storage/cassandra-all-1.0.8.jar
+            scanner: grype
+
   - id: CGA-x4qp-2ggp-3xgp
     aliases:
       - CVE-2022-40152
