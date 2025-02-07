@@ -1763,6 +1763,24 @@ advisories:
         data:
           note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
 
+  - id: CGA-vh8w-8rfv-rhq9
+    aliases:
+      - CVE-2024-57699
+      - GHSA-pq2g-wx69-c263
+    events:
+      - timestamp: 2025-02-07T07:33:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 56b5154eb0272b81
+            componentName: json-smart
+            componentVersion: 2.5.0
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/nifi-current/lib/nifi-azure-nar-2.2.0.nar
+            scanner: grype
+
   - id: CGA-vp49-2674-66w8
     aliases:
       - CVE-2016-1000027
