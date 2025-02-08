@@ -4,6 +4,24 @@ package:
   name: nri-kubernetes
 
 advisories:
+  - id: CGA-574r-h962-gqf2
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T18:35:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-kubernetes
+            componentID: 858abd37357c8796
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/nri-kubernetes
+            scanner: grype
+
   - id: CGA-7r6g-9w32-8w2r
     aliases:
       - CVE-2024-24786
