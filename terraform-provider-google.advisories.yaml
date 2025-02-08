@@ -45,7 +45,7 @@ advisories:
       - timestamp: 2025-01-31T18:14:03Z
         type: true-positive-determination
         data:
-          note: "Awaiting release of fix by upstream dependency yamux: https://github.com/hashicorp/yamux/pull/143"
+          note: 'Awaiting release of fix by upstream dependency yamux: https://github.com/hashicorp/yamux/pull/143'
 
   - id: CGA-4h2x-2w78-p8p7
     aliases:
@@ -250,6 +250,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 5.32.0-r1
+
+  - id: CGA-mq32-9j6q-7vwf
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T19:24:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-google
+            componentID: f8086a1340ed3772
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-google
+            scanner: grype
 
   - id: CGA-wgm9-9jr2-vrj5
     aliases:
