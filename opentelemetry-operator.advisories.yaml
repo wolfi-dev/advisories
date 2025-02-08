@@ -4,6 +4,24 @@ package:
   name: opentelemetry-operator
 
 advisories:
+  - id: CGA-369w-wcgp-h829
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T12:36:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opentelemetry-operator
+            componentID: d5c7db7466c9b80f
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/main
+            scanner: grype
+
   - id: CGA-5hjx-695w-24c5
     aliases:
       - CVE-2024-45338
