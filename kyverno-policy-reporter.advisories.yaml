@@ -4,6 +4,24 @@ package:
   name: kyverno-policy-reporter
 
 advisories:
+  - id: CGA-424g-xg5h-qhrv
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T08:25:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-policy-reporter
+            componentID: d07210b2f35c7a50
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/policyreporter
+            scanner: grype
+
   - id: CGA-4v89-j3f2-6rmm
     aliases:
       - CVE-2023-45288
