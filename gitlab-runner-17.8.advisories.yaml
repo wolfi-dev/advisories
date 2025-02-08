@@ -4,6 +4,24 @@ package:
   name: gitlab-runner-17.8
 
 advisories:
+  - id: CGA-c8xq-486q-43r9
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T07:37:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-17.8
+            componentID: 238a50f40195b95c
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/docker-machine
+            scanner: grype
+
   - id: CGA-cvmg-h9fm-52mg
     aliases:
       - GHSA-29qp-crvh-w22m
@@ -23,4 +41,4 @@ advisories:
       - timestamp: 2025-01-31T18:14:03Z
         type: true-positive-determination
         data:
-          note: "Awaiting release of fix by upstream dependency yamux: https://github.com/hashicorp/yamux/pull/143"
+          note: 'Awaiting release of fix by upstream dependency yamux: https://github.com/hashicorp/yamux/pull/143'
