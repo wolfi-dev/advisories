@@ -109,6 +109,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-6f4c-f676-6q69
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T08:39:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cue
+            componentID: f473bb83e8477ee1
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/cue
+            scanner: grype
+
   - id: CGA-929j-r6rc-h875
     aliases:
       - CVE-2024-24784
