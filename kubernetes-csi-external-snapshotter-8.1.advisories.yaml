@@ -24,6 +24,24 @@ advisories:
         data:
           fixed-version: 8.1.1-r2
 
+  - id: CGA-wfv7-6w59-xg5q
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T08:39:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-snapshotter-8.1
+            componentID: 2976a62e19cb3778
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/snapshot-validation-webhook
+            scanner: grype
+
   - id: CGA-x85v-p824-h97p
     aliases:
       - CVE-2024-45338
