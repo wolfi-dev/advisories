@@ -79,6 +79,24 @@ advisories:
         data:
           fixed-version: 0.24.0-r4
 
+  - id: CGA-5658-rq7q-v75g
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T09:31:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-blackbox-exporter
+            componentID: 028ca2bb2dd8f305
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/blackbox_exporter
+            scanner: grype
+
   - id: CGA-5xrc-9mj5-8fh2
     aliases:
       - CVE-2024-24784
