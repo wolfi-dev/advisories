@@ -4,6 +4,24 @@ package:
   name: k9s
 
 advisories:
+  - id: CGA-5phh-6x24-4jr7
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T18:40:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k9s
+            componentID: ffefaf029e81c1b3
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/k9s
+            scanner: grype
+
   - id: CGA-5rc5-xj4h-cjrv
     aliases:
       - CVE-2024-0406
