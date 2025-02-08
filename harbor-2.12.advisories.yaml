@@ -48,6 +48,24 @@ advisories:
         data:
           fixed-version: 2.12.0-r1
 
+  - id: CGA-62c8-87v9-rp52
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T16:32:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-2.12
+            componentID: 41aa46fadc71d6c7
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-registryctl
+            scanner: grype
+
   - id: CGA-hj2q-98gh-8q5c
     aliases:
       - CVE-2024-55885
