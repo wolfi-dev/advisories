@@ -135,3 +135,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 6.0.4-r1
+
+  - id: CGA-x4gx-p5hj-3pv8
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T07:41:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: minio-operator
+            componentID: 53e0e057157a25d7
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/minio-operator-sidecar
+            scanner: grype
