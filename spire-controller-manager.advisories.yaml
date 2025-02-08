@@ -4,6 +4,24 @@ package:
   name: spire-controller-manager
 
 advisories:
+  - id: CGA-h5x3-2jxc-ghj5
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T23:38:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spire-controller-manager
+            componentID: 6dbd71a2e62f0513
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/spire-controller-manager
+            scanner: grype
+
   - id: CGA-h6v9-4rj4-92fj
     aliases:
       - CVE-2024-45341
