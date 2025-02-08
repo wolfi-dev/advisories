@@ -4,6 +4,24 @@ package:
   name: consul-k8s-1.6
 
 advisories:
+  - id: CGA-4fmc-w923-625p
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T08:21:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: consul-k8s-1.6
+            componentID: 6e116f6e9393e2f8
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/consul-cni
+            scanner: grype
+
   - id: CGA-h396-hhcj-2m5q
     aliases:
       - CVE-2024-45336
