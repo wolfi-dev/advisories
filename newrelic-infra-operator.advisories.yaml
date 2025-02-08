@@ -176,6 +176,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-x558-7q5q-v2wh
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T14:11:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: newrelic-infra-operator
+            componentID: 68242593ae3597f6
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/newrelic-infra-operator
+            scanner: grype
+
   - id: CGA-xhxj-f5cm-473q
     aliases:
       - CVE-2023-45290
