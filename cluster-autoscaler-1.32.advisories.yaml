@@ -36,6 +36,24 @@ advisories:
         data:
           fixed-version: 1.32.0-r2
 
+  - id: CGA-72hj-4947-7m4g
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T07:18:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-autoscaler-1.32
+            componentID: 67bf57b765e2ab95
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-autoscaler
+            scanner: grype
+
   - id: CGA-7fvv-qv68-g7xh
     aliases:
       - CVE-2024-45337
