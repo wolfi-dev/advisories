@@ -4,6 +4,24 @@ package:
   name: fluent-bit-plugin-loki
 
 advisories:
+  - id: CGA-49q6-8wcq-fpvj
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T20:30:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: fluent-bit-plugin-loki
+            componentID: fc0d01186a2f3f41
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /fluent-bit/bin/out_grafana_loki.so
+            scanner: grype
+
   - id: CGA-5pxr-gvw9-gq69
     aliases:
       - CVE-2024-45337
