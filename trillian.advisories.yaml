@@ -294,6 +294,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: The installed version of the prometheus library is ahead of the vulnerability fix version, but prometheus violates Go's rules for v2 module versioning.
 
+  - id: CGA-p9g6-8rqg-gphv
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T22:32:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trillian
+            componentID: 0f6b5977c0872974
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/trillian_log_server
+            scanner: grype
+
   - id: CGA-pcj9-fmcv-xxmv
     aliases:
       - CVE-2007-3305
