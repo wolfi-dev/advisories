@@ -23,3 +23,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.4.2-r1
+
+  - id: CGA-xx5w-37vw-68mj
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T07:38:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: linkerd2-proxy-init
+            componentID: 88dc1e501637a163
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/proxy-init
+            scanner: grype
