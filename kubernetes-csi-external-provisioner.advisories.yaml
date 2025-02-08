@@ -235,6 +235,24 @@ advisories:
         data:
           fixed-version: 4.0.0-r1
 
+  - id: CGA-p9p3-hrcp-f9qg
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T10:38:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-provisioner
+            componentID: 128f4c7345de5beb
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/csi-provisioner
+            scanner: grype
+
   - id: CGA-pqrq-xf5w-j3mv
     aliases:
       - CVE-2023-3978
