@@ -4,6 +4,24 @@ package:
   name: helm-operator
 
 advisories:
+  - id: CGA-2mcf-cgg5-65xq
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T21:34:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-operator
+            componentID: 29a263954633df17
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/helm-operator
+            scanner: grype
+
   - id: CGA-492j-37x4-cmcp
     aliases:
       - CVE-2023-45290
