@@ -4,6 +4,24 @@ package:
   name: spiffe-helper
 
 advisories:
+  - id: CGA-4xph-64c7-pv93
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T17:39:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spiffe-helper
+            componentID: 40cf146e15a0096a
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/spiffe-helper
+            scanner: grype
+
   - id: CGA-8g8x-7hx4-hpmv
     aliases:
       - CVE-2024-45336
