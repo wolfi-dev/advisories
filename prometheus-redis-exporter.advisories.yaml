@@ -137,6 +137,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-r746-jqc3-8xm7
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T15:32:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-redis-exporter
+            componentID: dfea1a7b796d77e7
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/redis_exporter
+            scanner: grype
+
   - id: CGA-vrmv-35p4-mvh7
     aliases:
       - CVE-2024-24791
