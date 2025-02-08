@@ -4,6 +4,24 @@ package:
   name: kubeadm-bootstrap-controller
 
 advisories:
+  - id: CGA-25hc-qc87-499q
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T17:44:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeadm-bootstrap-controller
+            componentID: 428531602e22db14
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/kubeadm-bootstrap-controller
+            scanner: grype
+
   - id: CGA-6q7x-g7vj-4mcv
     aliases:
       - CVE-2023-45289
