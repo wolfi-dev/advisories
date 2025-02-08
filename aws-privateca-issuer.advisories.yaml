@@ -4,6 +4,24 @@ package:
   name: aws-privateca-issuer
 
 advisories:
+  - id: CGA-2gwm-p8p6-4v95
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T13:01:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-privateca-issuer
+            componentID: 1a69b2ffc0b2e2ef
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-7cpp-3vpr-388r
     aliases:
       - CVE-2024-45338
