@@ -113,3 +113,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 24.0.6-r2
+
+  - id: CGA-xjp3-5m4h-fhp2
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T15:26:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-cli
+            componentID: bdaa6dc06b46852b
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/docker
+            scanner: grype
