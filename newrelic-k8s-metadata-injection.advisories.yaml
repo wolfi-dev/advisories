@@ -4,6 +4,24 @@ package:
   name: newrelic-k8s-metadata-injection
 
 advisories:
+  - id: CGA-2rqj-p348-w7wv
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T18:22:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: newrelic-k8s-metadata-injection
+            componentID: 0cca71b51dfe5fb4
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/k8s-metadata-injection
+            scanner: grype
+
   - id: CGA-vvp7-2fc7-xvw7
     aliases:
       - CVE-2024-45338
