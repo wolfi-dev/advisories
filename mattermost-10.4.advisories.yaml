@@ -234,6 +234,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability was remediated in mattermost v7.x, Specifically, in versions 7.1.4, 7.2.1, 7.3.1, and 7.4.0. For more information, please refer to https://mattermost.com/security-updates/ and search for the ID MMSA-2022-00118 in the server tab. '
 
+  - id: CGA-72p9-4x2m-9jg7
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T20:01:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-10.4
+            componentID: b7492de5c337ebd1
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/mattermost
+            scanner: grype
+
   - id: CGA-7wj6-444c-mpmw
     aliases:
       - CVE-2023-47858
@@ -334,7 +352,7 @@ advisories:
       - timestamp: 2025-01-31T18:14:03Z
         type: true-positive-determination
         data:
-          note: "Awaiting release of fix by upstream dependency yamux: https://github.com/hashicorp/yamux/pull/143"
+          note: 'Awaiting release of fix by upstream dependency yamux: https://github.com/hashicorp/yamux/pull/143'
 
   - id: CGA-97mf-vrj2-9cm9
     aliases:
