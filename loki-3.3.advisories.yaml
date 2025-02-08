@@ -89,3 +89,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.3.0-r1
+
+  - id: CGA-r98v-hgq8-8838
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T17:08:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: loki-3.3
+            componentID: c7ab1202c871d7c0
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/logcli
+            scanner: grype
