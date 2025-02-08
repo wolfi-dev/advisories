@@ -67,3 +67,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.24.2-r2
+
+  - id: CGA-wvq2-mpmr-c2hp
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T21:11:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-1.24
+            componentID: 52af6f4bceac49b1
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/istioctl
+            scanner: grype
