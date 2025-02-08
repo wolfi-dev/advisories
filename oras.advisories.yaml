@@ -15,6 +15,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-39h7-grh2-49qp
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T18:38:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: oras
+            componentID: 0812b72343c6b3d9
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/oras
+            scanner: grype
+
   - id: CGA-3gx9-pqj9-93rm
     aliases:
       - CVE-2024-24784
