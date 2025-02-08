@@ -58,6 +58,24 @@ advisories:
         data:
           fixed-version: 1.11.1-r1
 
+  - id: CGA-5c8r-5x84-gj8x
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T23:10:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: crossplane-provider-gcp
+            componentID: 2b99f7bc34043481
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/provider
+            scanner: grype
+
   - id: CGA-83p4-j7xg-58pg
     aliases:
       - CVE-2024-45337
@@ -205,7 +223,7 @@ advisories:
       - timestamp: 2025-01-31T18:14:03Z
         type: true-positive-determination
         data:
-          note: "Awaiting release of fix by upstream dependency yamux: https://github.com/hashicorp/yamux/pull/143"
+          note: 'Awaiting release of fix by upstream dependency yamux: https://github.com/hashicorp/yamux/pull/143'
 
   - id: CGA-x4jc-f4q4-w5gv
     aliases:
