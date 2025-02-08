@@ -4,6 +4,24 @@ package:
   name: openfga
 
 advisories:
+  - id: CGA-9jrc-8q4w-p498
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T09:08:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openfga
+            componentID: 054300275a7865b2
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/openfga
+            scanner: grype
+
   - id: CGA-g96h-pcvm-q42f
     aliases:
       - CVE-2024-45336
