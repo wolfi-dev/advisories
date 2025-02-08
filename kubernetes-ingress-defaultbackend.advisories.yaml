@@ -54,6 +54,24 @@ advisories:
         data:
           fixed-version: 1.29.1-r1
 
+  - id: CGA-7527-fwjj-rqg3
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T22:30:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-ingress-defaultbackend
+            componentID: 630d847dabca09f3
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/defaultbackend
+            scanner: grype
+
   - id: CGA-8xmq-qpmf-945c
     aliases:
       - CVE-2024-34158
