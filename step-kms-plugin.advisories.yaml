@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: step-kms-plugin
+
+advisories:
+  - id: CGA-jrmm-jq33-7m3x
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T22:19:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: step-kms-plugin
+            componentID: 65ef4ea0730702e9
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/step-kms-plugin
+            scanner: grype
