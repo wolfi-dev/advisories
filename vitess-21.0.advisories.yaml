@@ -42,6 +42,24 @@ advisories:
         data:
           note: The cross-spawn dependency causing this CVE is brought in by npm as a transitive dependency and will need to be updated by upstream maintainers
 
+  - id: CGA-883g-ph59-wjf4
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T15:08:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vitess-21.0
+            componentID: c9874d56b66aed38
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/astfmtgen
+            scanner: grype
+
   - id: CGA-892h-wqw6-wxg5
     aliases:
       - CVE-2024-45338
