@@ -4,6 +4,24 @@ package:
   name: kuberay-operator
 
 advisories:
+  - id: CGA-3f99-q462-m779
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T15:12:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kuberay-operator
+            componentID: 1a69b2ffc0b2e2ef
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-4xj9-hwf6-jqr3
     aliases:
       - CVE-2024-45336
