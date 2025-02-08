@@ -278,6 +278,24 @@ advisories:
         data:
           fixed-version: 0.15.0-r4
 
+  - id: CGA-vqpg-f726-33g2
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T19:38:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-postgres-exporter
+            componentID: 93d0ee10ad6808bb
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/postgres_exporter
+            scanner: grype
+
   - id: CGA-wv75-j9rx-27x5
     aliases:
       - CVE-2024-45336
