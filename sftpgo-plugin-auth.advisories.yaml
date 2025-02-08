@@ -4,6 +4,24 @@ package:
   name: sftpgo-plugin-auth
 
 advisories:
+  - id: CGA-5973-3jqf-7qq7
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T22:03:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sftpgo-plugin-auth
+            componentID: abe96f332c9fac5e
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/sftpgo-plugin-auth
+            scanner: grype
+
   - id: CGA-6h44-69mr-359m
     aliases:
       - CVE-2024-45337
