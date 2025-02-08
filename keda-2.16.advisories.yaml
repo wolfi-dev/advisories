@@ -4,6 +4,24 @@ package:
   name: keda-2.16
 
 advisories:
+  - id: CGA-46pm-gj6g-rxqv
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T13:32:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.16
+            componentID: 965ef71c1ed863bd
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/keda
+            scanner: grype
+
   - id: CGA-5m82-cxgx-fgfq
     aliases:
       - CVE-2024-45338
