@@ -312,6 +312,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-q6fm-7x9c-f9ww
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T10:38:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cri-tools
+            componentID: ca7119a97b8e0bf2
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/crictl
+            scanner: grype
+
   - id: CGA-qj9v-p3j2-f53r
     aliases:
       - CVE-2023-45283
