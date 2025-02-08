@@ -4,6 +4,24 @@ package:
   name: cadvisor
 
 advisories:
+  - id: CGA-37cv-6356-j6g7
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T07:12:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cadvisor
+            componentID: 24d20667b5cbdabb
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/cadvisor
+            scanner: grype
+
   - id: CGA-3ggw-7mg2-467m
     aliases:
       - CVE-2024-45336
