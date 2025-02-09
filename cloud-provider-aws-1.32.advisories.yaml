@@ -4,6 +4,24 @@ package:
   name: cloud-provider-aws-1.32
 
 advisories:
+  - id: CGA-3cr6-646x-w4rm
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-09T02:27:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-provider-aws-1.32
+            componentID: 11fc1468d45b8e9c
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/aws-cloud-controller-manager
+            scanner: grype
+
   - id: CGA-4q26-6mff-g926
     aliases:
       - CVE-2024-45338
