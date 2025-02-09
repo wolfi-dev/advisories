@@ -160,6 +160,24 @@ advisories:
         data:
           note: 'Affected Go 1.20.x version can not be updated to fix version due to upstream version pinning: https://github.com/newrelic/newrelic-fluent-bit-output/blob/5854a3f3cffc49f251c9ef15bec714e44e7969a8/go.mod#L3 which directs to the following conversation: https://github.com/golang/go/issues/62130#issuecomment-1687335898'
 
+  - id: CGA-8gp7-2w3f-4fh5
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-09T00:04:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: newrelic-fluent-bit-output
+            componentID: 2fcb1dbe758f4648
+            componentName: stdlib
+            componentVersion: go1.20.14
+            componentType: go-module
+            componentLocation: /fluent-bit/bin/out_newrelic.so
+            scanner: grype
+
   - id: CGA-8mpm-9pww-j36w
     aliases:
       - CVE-2024-24791
