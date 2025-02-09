@@ -4,6 +4,24 @@ package:
   name: prometheus-stackdriver-exporter
 
 advisories:
+  - id: CGA-227w-4c3j-9rq4
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-09T05:15:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-stackdriver-exporter
+            componentID: 0a2d629a7a1da196
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/stackdriver_exporter
+            scanner: grype
+
   - id: CGA-4wf5-cc6h-rcxw
     aliases:
       - CVE-2023-48795
