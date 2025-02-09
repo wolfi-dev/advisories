@@ -14,6 +14,24 @@ advisories:
         data:
           note: Pending upstream fix, this fix will require some code changes due to the usage of one year old Kubernetes dependencies (e.g. k8s.io/apiserver@v0.23.17). These dependencies need to be updated to upgrade the vulnerable otel dependencies. In addition, the latest stable release of the metrics-server project was triggered on June.
 
+  - id: CGA-2mmf-j7r7-238m
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-09T00:15:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: metrics-server
+            componentID: 53f06eeeedc15786
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/metrics-server
+            scanner: grype
+
   - id: CGA-3rpr-576q-hv55
     aliases:
       - CVE-2024-45336
