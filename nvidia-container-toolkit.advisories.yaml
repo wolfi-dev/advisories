@@ -26,6 +26,24 @@ advisories:
         data:
           fixed-version: 1.16.1-r1
 
+  - id: CGA-2gh4-qjw4-w5x7
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-09T01:03:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nvidia-container-toolkit
+            componentID: 2f2882d825b907c2
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/nvidia-cdi-hook
+            scanner: grype
+
   - id: CGA-339g-ggh5-56f4
     aliases:
       - CVE-2024-24789
@@ -61,8 +79,8 @@ advisories:
   - id: CGA-53v9-2356-4cwf
     aliases:
       - CVE-2024-0133
-      - GHSA-g4pj-mx9f-m2mh
       - GHSA-f748-7hpg-88ch
+      - GHSA-g4pj-mx9f-m2mh
     events:
       - timestamp: 2024-09-26T20:03:14Z
         type: detection
