@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: ingress-nginx-controller-1.12
+
+advisories:
+  - id: CGA-fg44-rfvp-pvmg
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-09T06:25:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ingress-nginx-controller-1.12
+            componentID: 5a7caa6d11b3c3c9
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/kube-webhook-certgen
+            scanner: grype
