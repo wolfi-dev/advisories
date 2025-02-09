@@ -45,3 +45,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.7.0-r2
+
+  - id: CGA-hf66-52hp-82hv
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-09T00:02:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-k8s-operator
+            componentID: 1a69b2ffc0b2e2ef
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
