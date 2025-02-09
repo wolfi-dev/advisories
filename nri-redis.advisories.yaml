@@ -15,6 +15,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-3vw7-hjc8-f5g5
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-09T09:29:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-redis
+            componentID: 99e6f10e51e0a291
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/nri-redis
+            scanner: grype
+
   - id: CGA-4wjv-wg44-vcv6
     aliases:
       - CVE-2024-34158
