@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: knative-serving-1.16
+
+advisories:
+  - id: CGA-mq54-9gqh-75h6
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-09T02:34:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: knative-serving-1.16
+            componentID: 862a1bb8d33e5e28
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/queue
+            scanner: grype
