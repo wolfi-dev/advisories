@@ -36,6 +36,24 @@ advisories:
         data:
           fixed-version: 2.11.0-r1
 
+  - id: CGA-963x-9j7f-72m9
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-09T02:23:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-replicator
+            componentID: 540e211f8b266da9
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/kubernetes-replicator
+            scanner: grype
+
   - id: CGA-f7pq-6653-756f
     aliases:
       - CVE-2024-45341
