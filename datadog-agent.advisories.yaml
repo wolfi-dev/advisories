@@ -323,6 +323,24 @@ advisories:
         data:
           note: 'While there are no blocking issues in the major version upgrade of the python cryptography dependency v42.0.8 to v43.0.0 and by extension v43.0.1 upstream in development, there are significant unreleased required code changes between the current release of 7.57.0 and upcoming implementations in 7.58.0-rc2 needed to incorporate this. '
 
+  - id: CGA-c79j-v3r8-p6rx
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-09T09:18:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: datadog-agent
+            componentID: 89279a283118b655
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/datadog-cluster-agent
+            scanner: grype
+
   - id: CGA-c8pv-52m7-2mhm
     aliases:
       - CVE-2024-36129
