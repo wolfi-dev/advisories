@@ -107,6 +107,24 @@ advisories:
         data:
           note: Updating jetty to a non-vulnerable version would require 3 major version bumps, which would be a very significant upgrade with multiple breaking changes, and should only be undertaken by the upstream maintainers.
 
+  - id: CGA-mmhh-v4mx-9jrm
+    aliases:
+      - CVE-2025-24970
+      - GHSA-4g8c-wm8x-jfhw
+    events:
+      - timestamp: 2025-02-11T08:30:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: akhq
+            componentID: 8b872854406aa5e2
+            componentName: netty-handler
+            componentVersion: 4.1.108.Final
+            componentType: java-archive
+            componentLocation: /usr/share/java/akhq/akhq.jar
+            scanner: grype
+
   - id: CGA-qp6f-2pwr-jwx7
     aliases:
       - CVE-2024-12798
