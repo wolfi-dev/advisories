@@ -26,6 +26,42 @@ advisories:
         data:
           note: Remediating this CVE requires dropping support for JDK11 which is why the changes are not being back ported from the main branch into version branches 3.8 and 3.9. This will be fixed in the kafka-4.0.0 release which is targeted in to land in late January 2025.
 
+  - id: CGA-3ff3-j2gh-ch6w
+    aliases:
+      - CVE-2025-24970
+      - GHSA-4g8c-wm8x-jfhw
+    events:
+      - timestamp: 2025-02-11T09:01:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kafka-3.9
+            componentID: d0b8e1b75d839748
+            componentName: netty-handler
+            componentVersion: 4.1.111.Final
+            componentType: java-archive
+            componentLocation: /usr/lib/kafka/libs/netty-handler-4.1.111.Final.jar
+            scanner: grype
+
+  - id: CGA-gq76-3fc5-9wwm
+    aliases:
+      - CVE-2025-25193
+      - GHSA-389x-839f-4rhx
+    events:
+      - timestamp: 2025-02-11T09:01:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kafka-3.9
+            componentID: 5cbddf064f77b84d
+            componentName: netty-common
+            componentVersion: 4.1.111.Final
+            componentType: java-archive
+            componentLocation: /usr/lib/kafka/libs/netty-common-4.1.111.Final.jar
+            scanner: grype
+
   - id: CGA-xpg8-pwc5-69x9
     aliases:
       - CVE-2024-47535
