@@ -920,6 +920,24 @@ advisories:
         data:
           note: The upstream project relies on a number of "shaded JARs", making it harder to update dependencies. The upstream project will need to migrate away from "alluxio-shaded-client-2.9.3.jar" for this vulnerability to be resolved.
 
+  - id: CGA-mq6v-9f3w-9wq9
+    aliases:
+      - CVE-2025-25193
+      - GHSA-389x-839f-4rhx
+    events:
+      - timestamp: 2025-02-11T11:10:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino
+            componentID: 1de51221687c81d2
+            componentName: netty-common
+            componentVersion: 4.1.116.Final
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/io.netty_netty-common-4.1.116.Final.jar
+            scanner: grype
+
   - id: CGA-mr3q-c88f-3c44
     aliases:
       - CVE-2022-3509
