@@ -527,6 +527,24 @@ advisories:
             Attempts to bump this have resulted in build failures. Additonally, there is an upstream dependabot PR to resolve, which is also failing:
              - https://github.com/apache/tez/pull/383
 
+  - id: CGA-r7g2-wcfj-rxhv
+    aliases:
+      - CVE-2025-25193
+      - GHSA-389x-839f-4rhx
+    events:
+      - timestamp: 2025-02-11T07:06:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tez
+            componentID: 750e63f7591d074b
+            componentName: netty-common
+            componentVersion: 4.1.100.Final
+            componentType: java-archive
+            componentLocation: /usr/share/java/tez/lib/netty-common-4.1.100.Final.jar
+            scanner: grype
+
   - id: CGA-x2r8-2m8h-66gj
     aliases:
       - CVE-2023-39410
