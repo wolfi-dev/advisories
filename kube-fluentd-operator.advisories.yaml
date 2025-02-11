@@ -260,6 +260,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-c2j7-h8rf-cr2q
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T20:17:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-fluentd-operator
+            componentID: f4be19c9a7527d69
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/config-reloader
+            scanner: grype
+      - timestamp: 2025-02-09T16:12:06Z
+        type: fixed
+        data:
+          fixed-version: 1.18.2-r22
+
   - id: CGA-fhw2-86gf-84wg
     aliases:
       - CVE-2024-26146
@@ -325,6 +347,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.18.2-r5
+
+  - id: CGA-grcw-f6v2-49pw
+    aliases:
+      - CVE-2025-25186
+      - GHSA-7fc5-f82f-cx69
+    events:
+      - timestamp: 2025-02-11T08:43:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-fluentd-operator
+            componentID: 33b1f22664b9533c
+            componentName: net-imap
+            componentVersion: 0.3.7
+            componentType: gem
+            componentLocation: /usr/lib/ruby/gems/3.2.0/ruby/3.2.0/specifications/net-imap-0.3.7.gemspec
+            scanner: grype
 
   - id: CGA-gvjv-4f2q-v69c
     aliases:
