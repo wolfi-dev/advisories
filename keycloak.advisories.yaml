@@ -132,6 +132,7 @@ advisories:
     aliases:
       - CVE-2024-8883
       - GHSA-vvf8-2h68-9475
+      - GHSA-w8gr-xwp4-r9f7
     events:
       - timestamp: 2024-09-22T08:45:23Z
         type: fixed
@@ -572,6 +573,23 @@ advisories:
         type: fixed
         data:
           fixed-version: 26.0.8-r0
+
+  - id: CGA-rp29-pprx-g77p
+    aliases:
+      - GHSA-389x-839f-4rhx
+    events:
+      - timestamp: 2025-02-11T16:30:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak
+            componentID: 2d38ac3e7c2c2743
+            componentName: netty-common
+            componentVersion: 4.1.115.Final
+            componentType: java-archive
+            componentLocation: /opt/bitnami/keycloak/lib/lib/main/io.netty.netty-common-4.1.115.Final.jar
+            scanner: grype
 
   - id: CGA-v4c7-87qg-mw2m
     aliases:
