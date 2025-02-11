@@ -22,6 +22,24 @@ advisories:
             componentLocation: /usr/share/logstash/vendor/bundle/jruby/3.1.0/gems/logstash-integration-kafka-11.5.1-java/vendor/jar-dependencies/org/apache/avro/avro/1.11.3/avro-1.11.3.jar
             scanner: grype
 
+  - id: CGA-2j47-7j2p-5mv6
+    aliases:
+      - CVE-2025-25186
+      - GHSA-7fc5-f82f-cx69
+    events:
+      - timestamp: 2025-02-11T08:06:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-8
+            componentID: 99e5a7c7a7797e28
+            componentName: net-imap
+            componentVersion: 0.5.5
+            componentType: gem
+            componentLocation: /opt/bitnami/logstash/vendor/bundle/jruby/3.1.0/specifications/net-imap-0.5.5.gemspec
+            scanner: grype
+
   - id: CGA-4grf-89pc-v7p3
     aliases:
       - CVE-2024-21510
@@ -114,6 +132,24 @@ advisories:
         data:
           fixed-version: 8.16.1-r1
 
+  - id: CGA-83p5-p2hp-xv5g
+    aliases:
+      - CVE-2025-24970
+      - GHSA-4g8c-wm8x-jfhw
+    events:
+      - timestamp: 2025-02-11T08:05:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-8
+            componentID: dbf15efd380afadc
+            componentName: netty-handler
+            componentVersion: 4.1.115.Final
+            componentType: java-archive
+            componentLocation: /opt/bitnami/logstash/vendor/bundle/jruby/3.1.0/gems/logstash-input-beats-6.9.1-java/vendor/jar-dependencies/io/netty/netty-handler/4.1.115.Final/netty-handler-4.1.115.Final.jar
+            scanner: grype
+
   - id: CGA-937h-9qvw-8r89
     aliases:
       - CVE-2024-47554
@@ -184,3 +220,21 @@ advisories:
         data:
           type: vulnerable-code-cannot-be-controlled-by-adversary
           note: Vulnerability affects only Windows systems.
+
+  - id: CGA-mhwq-rjrc-rv9h
+    aliases:
+      - CVE-2025-25193
+      - GHSA-389x-839f-4rhx
+    events:
+      - timestamp: 2025-02-11T08:05:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-8
+            componentID: af1152b1d13723b1
+            componentName: netty-common
+            componentVersion: 4.1.115.Final
+            componentType: java-archive
+            componentLocation: /opt/bitnami/logstash/vendor/bundle/jruby/3.1.0/gems/logstash-input-beats-6.9.1-java/vendor/jar-dependencies/io/netty/netty-common/4.1.115.Final/netty-common-4.1.115.Final.jar
+            scanner: grype
