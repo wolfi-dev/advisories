@@ -98,6 +98,24 @@ advisories:
         data:
           fixed-version: 2.0.0-r0
 
+  - id: CGA-2vcf-4382-jhfc
+    aliases:
+      - CVE-2025-24970
+      - GHSA-4g8c-wm8x-jfhw
+    events:
+      - timestamp: 2025-02-11T10:05:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: f3c1e954a55bc2b3
+            componentName: netty-handler
+            componentVersion: 4.1.117.Final
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/nifi-current/lib/nifi-distributed-cache-services-nar-2.2.0.nar
+            scanner: grype
+
   - id: CGA-2x43-4rcw-8pc3
     aliases:
       - CVE-2024-38809
