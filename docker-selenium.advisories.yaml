@@ -26,3 +26,21 @@ advisories:
         data:
           type: vulnerable-code-cannot-be-controlled-by-adversary
           note: Vulnerability affects only Windows systems.
+
+  - id: CGA-q3x9-8422-237p
+    aliases:
+      - CVE-2025-25193
+      - GHSA-389x-839f-4rhx
+    events:
+      - timestamp: 2025-02-11T07:30:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-selenium
+            componentID: 4a07bbca50bc5e2b
+            componentName: netty-common
+            componentVersion: 4.1.110.Final
+            componentType: java-archive
+            componentLocation: /external_jars/https/repo1.maven.org/maven2/io/netty/netty-common/4.1.110.Final/netty-common-4.1.110.Final.jar
+            scanner: grype
