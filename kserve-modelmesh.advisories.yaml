@@ -115,6 +115,24 @@ advisories:
           type: vulnerable-code-cannot-be-controlled-by-adversary
           note: Vulnerability affects only Windows systems.
 
+  - id: CGA-v2hv-cwjf-vh29
+    aliases:
+      - CVE-2025-24970
+      - GHSA-4g8c-wm8x-jfhw
+    events:
+      - timestamp: 2025-02-11T09:34:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kserve-modelmesh
+            componentID: c77f024666cba381
+            componentName: netty-handler
+            componentVersion: 4.1.115.Final
+            componentType: java-archive
+            componentLocation: /opt/kserve/mmesh/lib/netty-handler-4.1.115.Final.jar
+            scanner: grype
+
   - id: CGA-v3gv-5vpv-r7rp
     aliases:
       - CVE-2024-12801
