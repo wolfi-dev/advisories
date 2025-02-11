@@ -114,6 +114,24 @@ advisories:
         data:
           fixed-version: 8.16.1-r1
 
+  - id: CGA-83p5-p2hp-xv5g
+    aliases:
+      - CVE-2025-24970
+      - GHSA-4g8c-wm8x-jfhw
+    events:
+      - timestamp: 2025-02-11T08:05:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-8
+            componentID: dbf15efd380afadc
+            componentName: netty-handler
+            componentVersion: 4.1.115.Final
+            componentType: java-archive
+            componentLocation: /opt/bitnami/logstash/vendor/bundle/jruby/3.1.0/gems/logstash-input-beats-6.9.1-java/vendor/jar-dependencies/io/netty/netty-handler/4.1.115.Final/netty-handler-4.1.115.Final.jar
+            scanner: grype
+
   - id: CGA-937h-9qvw-8r89
     aliases:
       - CVE-2024-47554
