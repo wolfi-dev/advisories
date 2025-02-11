@@ -308,6 +308,24 @@ advisories:
             Separate attempts to update the maven-shade-plugin to a later version in parallel, did not resolve the issue.
             Awaiting for fix / backport from upstream to address this issue.
 
+  - id: CGA-8c62-7m56-h34v
+    aliases:
+      - CVE-2025-24970
+      - GHSA-4g8c-wm8x-jfhw
+    events:
+      - timestamp: 2025-02-11T08:41:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: 264999cf3ddf586c
+            componentName: netty-handler
+            componentVersion: 4.1.96.Final
+            componentType: java-archive
+            componentLocation: /usr/lib/python3.13/site-packages/pyspark/jars/netty-handler-4.1.96.Final.jar
+            scanner: grype
+
   - id: CGA-8cvj-6r7c-wj4r
     aliases:
       - CVE-2025-25193
