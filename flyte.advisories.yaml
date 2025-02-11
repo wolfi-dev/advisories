@@ -90,6 +90,28 @@ advisories:
         data:
           fixed-version: 1.11.0-r1
 
+  - id: CGA-f989-qpr4-crpr
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T18:34:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flyte
+            componentID: b244f7881978348d
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/flyte
+            scanner: grype
+      - timestamp: 2025-02-11T00:28:57Z
+        type: fixed
+        data:
+          fixed-version: 1.14.1-r4
+
   - id: CGA-g5v9-qvmp-57pf
     aliases:
       - CVE-2024-24788
@@ -213,6 +235,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/flyte
             scanner: grype
+      - timestamp: 2025-02-09T11:31:07Z
+        type: pending-upstream-fix
+        data:
+          note: There is no fix for dependency gopkg.in/square/go-jose.v2 and a fix for this CVE would need code changes to replace the affected dependendency.
 
   - id: CGA-vxwg-j3wc-wgh9
     aliases:
