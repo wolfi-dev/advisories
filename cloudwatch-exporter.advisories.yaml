@@ -4,6 +4,24 @@ package:
   name: cloudwatch-exporter
 
 advisories:
+  - id: CGA-4vhm-8vvc-xp32
+    aliases:
+      - CVE-2025-24970
+      - GHSA-4g8c-wm8x-jfhw
+    events:
+      - timestamp: 2025-02-11T07:34:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloudwatch-exporter
+            componentID: c8026eeb54b832f2
+            componentName: netty-handler
+            componentVersion: 4.1.112.Final
+            componentType: java-archive
+            componentLocation: /usr/share/java/cloudwatch_exporter/cloudwatch_exporter.jar
+            scanner: grype
+
   - id: CGA-662r-hr8g-368h
     aliases:
       - CVE-2024-47535
