@@ -378,3 +378,21 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Updating jetty to a non-vulnerable version would require 3 major version bumps, which would be a very significant upgrade with multiple breaking changes, and should only be undertaken by the upstream maintainers.
+
+  - id: CGA-xvj3-hqwc-49qg
+    aliases:
+      - CVE-2025-24970
+      - GHSA-4g8c-wm8x-jfhw
+    events:
+      - timestamp: 2025-02-11T10:36:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cassandra-reaper
+            componentID: 9ed7ea87240d0d9a
+            componentName: netty-handler
+            componentVersion: 4.1.115.Final
+            componentType: java-archive
+            componentLocation: /usr/local/lib/cassandra-reaper.jar
+            scanner: grype
