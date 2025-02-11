@@ -184,3 +184,21 @@ advisories:
         data:
           type: vulnerable-code-cannot-be-controlled-by-adversary
           note: Vulnerability affects only Windows systems.
+
+  - id: CGA-mhwq-rjrc-rv9h
+    aliases:
+      - CVE-2025-25193
+      - GHSA-389x-839f-4rhx
+    events:
+      - timestamp: 2025-02-11T08:05:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-8
+            componentID: af1152b1d13723b1
+            componentName: netty-common
+            componentVersion: 4.1.115.Final
+            componentType: java-archive
+            componentLocation: /opt/bitnami/logstash/vendor/bundle/jruby/3.1.0/gems/logstash-input-beats-6.9.1-java/vendor/jar-dependencies/io/netty/netty-common/4.1.115.Final/netty-common-4.1.115.Final.jar
+            scanner: grype
