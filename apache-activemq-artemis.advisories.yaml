@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: apache-activemq-artemis
+
+advisories:
+  - id: CGA-r643-vp3w-92j3
+    aliases:
+      - CVE-2025-25193
+      - GHSA-389x-839f-4rhx
+    events:
+      - timestamp: 2025-02-11T09:09:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-activemq-artemis
+            componentID: f3e98d110942f8e4
+            componentName: netty-common
+            componentVersion: 4.1.115.Final
+            componentType: java-archive
+            componentLocation: /opt/activemq-artemis/lib/netty-common-4.1.115.Final.jar
+            scanner: grype
