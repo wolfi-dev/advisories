@@ -33,6 +33,24 @@ advisories:
              - https://github.com/Apicurio/apicurio-registry/blob/779f0994a1de5ebd48f617f476f3e3b7c5a36e48/pom.xml#L147
              - https://github.com/quarkusio/quarkus-http/blob/314574122c3616e96d2e76edb15da2692036edc8/pom.xml#L67
 
+  - id: CGA-6xxq-cf3f-jrfr
+    aliases:
+      - CVE-2025-24970
+      - GHSA-4g8c-wm8x-jfhw
+    events:
+      - timestamp: 2025-02-11T09:14:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apicurio-registry
+            componentID: 2dd43f83df045348
+            componentName: netty-handler
+            componentVersion: 4.1.111.Final
+            componentType: java-archive
+            componentLocation: /usr/share/java/apicurio-registry/lib/io.netty.netty-handler-4.1.111.Final.jar
+            scanner: grype
+
   - id: CGA-83rw-p5wh-p5v5
     aliases:
       - CVE-2025-25193
