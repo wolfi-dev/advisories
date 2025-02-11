@@ -91,6 +91,27 @@ advisories:
         data:
           note: No patch is yet available, however work is underway to migrate to a fully constant-time implementation.
 
+  - id: CGA-jq28-2x6p-pmrv
+    aliases:
+      - GHSA-v7pc-74h8-xq2h
+    events:
+      - timestamp: 2025-02-11T10:30:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: deno
+            componentID: 6f4fb53e03599cd0
+            componentName: hickory-proto
+            componentVersion: 0.25.0-alpha.4
+            componentType: rust-crate
+            componentLocation: /usr/bin/deno
+            scanner: grype
+      - timestamp: 2025-02-11T13:04:47Z
+        type: fixed
+        data:
+          fixed-version: 2.1.9-r1
+
   - id: CGA-pq8g-535m-6422
     aliases:
       - CVE-2023-22499
