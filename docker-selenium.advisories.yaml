@@ -4,6 +4,24 @@ package:
   name: docker-selenium
 
 advisories:
+  - id: CGA-68qf-mr28-mmx7
+    aliases:
+      - CVE-2025-24970
+      - GHSA-4g8c-wm8x-jfhw
+    events:
+      - timestamp: 2025-02-11T07:30:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-selenium
+            componentID: c71db09885af12f5
+            componentName: netty-handler
+            componentVersion: 4.1.110.Final
+            componentType: java-archive
+            componentLocation: /external_jars/https/repo1.maven.org/maven2/io/netty/netty-handler/4.1.110.Final/netty-handler-4.1.110.Final.jar
+            scanner: grype
+
   - id: CGA-pfvc-73r9-g8ww
     aliases:
       - CVE-2024-47535
@@ -26,3 +44,21 @@ advisories:
         data:
           type: vulnerable-code-cannot-be-controlled-by-adversary
           note: Vulnerability affects only Windows systems.
+
+  - id: CGA-q3x9-8422-237p
+    aliases:
+      - CVE-2025-25193
+      - GHSA-389x-839f-4rhx
+    events:
+      - timestamp: 2025-02-11T07:30:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-selenium
+            componentID: 4a07bbca50bc5e2b
+            componentName: netty-common
+            componentVersion: 4.1.110.Final
+            componentType: java-archive
+            componentLocation: /external_jars/https/repo1.maven.org/maven2/io/netty/netty-common/4.1.110.Final/netty-common-4.1.110.Final.jar
+            scanner: grype
