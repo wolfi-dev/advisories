@@ -164,6 +164,13 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/vt
             scanner: grype
+      - timestamp: 2025-02-11T:03:39Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: |
+            This vulnerability relates to p256NegCond within the crypto/internal/fips140/nistec package, specifically affecting the ppc64le architecture.
+            We are not affected by this vulnerability as we do not build or support ppc64le.
 
   - id: CGA-pph2-458x-46jv
     aliases:
