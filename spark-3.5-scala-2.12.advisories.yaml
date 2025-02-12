@@ -424,6 +424,24 @@ advisories:
         data:
           note: This relates to guava v30.1.1-jre, which is included by the shaded JARs hadoop-shaded-guava-1.1.1.jar and hadoop-client-runtime-3.3.6.jar.
 
+  - id: CGA-hx35-7qf2-9gh5
+    aliases:
+      - CVE-2025-24970
+      - GHSA-4g8c-wm8x-jfhw
+    events:
+      - timestamp: 2025-02-12T12:45:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.12
+            componentID: 273780c46f834eed
+            componentName: netty-handler
+            componentVersion: 4.1.108.Final
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/netty-handler-4.1.108.Final.jar
+            scanner: grype
+
   - id: CGA-jgpv-2j8j-5mwv
     aliases:
       - CVE-2021-22569
@@ -598,6 +616,24 @@ advisories:
         type: fix-not-planned
         data:
           note: 'This relates to ''derby'',Spark-3.5 currently uses version 10.14.2.0, while the closest fixed version available in the Maven Central repository is 10.17.1.0. However, this version requires a minimum of Java 17 to build, whereas Spark-3.5 is built with Java 8 and 11 as well. Upgrading to 10.17.1.0 would cause a build break due to Java bytecode version incompatibility. At this time, we are not planning to upgrade the version of Derby in Spark-3.5. The upstream project has updated to version 10.16.1.1, which does not resolve the vulnerability. The upstream is currently waiting for a backport to Derby version 10.16.2.x which they have planed to fix in version spark-4 or later. For reference, see: https://github.com/apache/spark/pull/44174'
+
+  - id: CGA-pr38-fvcg-7fwf
+    aliases:
+      - CVE-2025-25193
+      - GHSA-389x-839f-4rhx
+    events:
+      - timestamp: 2025-02-12T12:45:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.12
+            componentID: 7e47c71c4a0bd25d
+            componentName: netty-common
+            componentVersion: 4.1.108.Final
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/netty-common-4.1.108.Final.jar
+            scanner: grype
 
   - id: CGA-r5px-mvhg-cw5m
     aliases:
