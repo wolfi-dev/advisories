@@ -73,6 +73,24 @@ advisories:
         data:
           note: 'Upstream has pinned version of python package cryptography as seen here: https://github.com/apache/superset/blob/f0971a850c12c69b5f09874ab50b25976788a6de/requirements/base.txt#L83 Changes in 42.x.x to 43.x.x require upstream changes.'
 
+  - id: CGA-6p47-pjqc-c2hg
+    aliases:
+      - CVE-2024-12797
+      - GHSA-79v4-65xg-pq4g
+    events:
+      - timestamp: 2025-02-12T07:44:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: superset
+            componentID: 205dedee3d365597
+            componentName: cryptography
+            componentVersion: 42.0.7
+            componentType: python
+            componentLocation: /usr/share/superset/venv/lib/python3.11/site-packages/cryptography-42.0.7.dist-info/METADATA, /usr/share/superset/venv/lib/python3.11/site-packages/cryptography-42.0.7.dist-info/RECORD, /usr/share/superset/venv/lib/python3.11/site-packages/cryptography-42.0.7.dist-info/top_level.txt
+            scanner: grype
+
   - id: CGA-6vr6-fpjg-j7qg
     aliases:
       - CVE-2024-49767
