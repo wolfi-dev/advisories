@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: grafana-oncall
+
+advisories:
+  - id: CGA-6fw6-fxv7-m2q7
+    aliases:
+      - CVE-2024-12797
+      - GHSA-79v4-65xg-pq4g
+    events:
+      - timestamp: 2025-02-12T08:44:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-oncall
+            componentID: 1f1deec72310d443
+            componentName: cryptography
+            componentVersion: 43.0.1
+            componentType: python
+            componentLocation: /usr/share/grafana-oncall/.venv/lib/python3.12/site-packages/cryptography-43.0.1.dist-info/METADATA, /usr/share/grafana-oncall/.venv/lib/python3.12/site-packages/cryptography-43.0.1.dist-info/RECORD
+            scanner: grype
