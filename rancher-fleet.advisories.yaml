@@ -4,6 +4,24 @@ package:
   name: rancher-fleet
 
 advisories:
+  - id: CGA-3mgf-5p4v-fxw2
+    aliases:
+      - CVE-2025-0426
+      - GHSA-jgfp-53c3-624w
+    events:
+      - timestamp: 2025-02-14T11:35:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-fleet
+            componentID: 3800bb7beade815b
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/fleetagent
+            scanner: grype
+
   - id: CGA-87c9-xjv8-6jg8
     aliases:
       - CVE-2024-34155
