@@ -84,6 +84,24 @@ advisories:
         data:
           fixed-version: 2.0.2-r2
 
+  - id: CGA-3r8j-cg39-f679
+    aliases:
+      - CVE-2025-0426
+      - GHSA-jgfp-53c3-624w
+    events:
+      - timestamp: 2025-02-14T08:34:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-operator
+            componentID: 621bba7029b94b2e
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.30.3
+            componentType: go-module
+            componentLocation: /usr/bin/sparkctl
+            scanner: grype
+
   - id: CGA-42q9-w6hw-f2jx
     aliases:
       - CVE-2024-34156
