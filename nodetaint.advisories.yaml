@@ -400,6 +400,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: 'This vulnerability affects kube-proxy on Windows and the affected code cannot be imported as part of the golang k8s.io/kubernetes library. The golang vulnerability database reports it as a false-positive: https://github.com/golang/vulndb/blob/47864735862dde2f809a19e4f6ffc1de8d6f3703/data/excluded/GO-2023-2159.yaml'
 
+  - id: CGA-hfw8-59qx-fj7f
+    aliases:
+      - CVE-2025-0426
+      - GHSA-jgfp-53c3-624w
+    events:
+      - timestamp: 2025-02-14T11:10:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nodetaint
+            componentID: 8bececc10149e2d5
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.28.15
+            componentType: go-module
+            componentLocation: /usr/bin/nodetaint
+            scanner: grype
+
   - id: CGA-j337-8mp6-28h9
     aliases:
       - CVE-2023-39325
