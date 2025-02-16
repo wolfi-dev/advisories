@@ -25,6 +25,24 @@ advisories:
         data:
           note: 'Awaiting release of fix by upstream dependency yamux: https://github.com/hashicorp/yamux/pull/143'
 
+  - id: CGA-q68c-m2gp-q6pc
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-09T03:02:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-11.5
+            componentID: 55f8ff712957abe3
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+
   - id: CGA-vw8v-gg4v-m9rg
     aliases:
       - CVE-2024-56323
