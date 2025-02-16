@@ -4,6 +4,24 @@ package:
   name: keycloak
 
 advisories:
+  - id: CGA-2c27-3g2r-3g2w
+    aliases:
+      - CVE-2025-25193
+      - GHSA-389x-839f-4rhx
+    events:
+      - timestamp: 2025-02-11T21:24:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak
+            componentID: 2d38ac3e7c2c2743
+            componentName: netty-common
+            componentVersion: 4.1.115.Final
+            componentType: java-archive
+            componentLocation: /opt/bitnami/keycloak/lib/lib/main/io.netty.netty-common-4.1.115.Final.jar
+            scanner: grype
+
   - id: CGA-2q5v-2cg8-99xh
     aliases:
       - CVE-2024-1597
@@ -132,6 +150,7 @@ advisories:
     aliases:
       - CVE-2024-8883
       - GHSA-vvf8-2h68-9475
+      - GHSA-w8gr-xwp4-r9f7
     events:
       - timestamp: 2024-09-22T08:45:23Z
         type: fixed
