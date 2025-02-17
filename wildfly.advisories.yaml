@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: wildfly
+
+advisories:
+  - id: CGA-3vm3-626v-4449
+    aliases:
+      - CVE-2025-25193
+      - GHSA-389x-839f-4rhx
+    events:
+      - timestamp: 2025-02-17T22:25:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wildfly
+            componentID: 712ef0cf7e107357
+            componentName: netty-common
+            componentVersion: 4.1.116.Final
+            componentType: java-archive
+            componentLocation: /usr/share/wildfly/bin/client/jboss-client.jar
+            scanner: grype
