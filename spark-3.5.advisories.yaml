@@ -433,6 +433,24 @@ advisories:
         data:
           note: This relates to guava v30.1.1-jre, which is included by the shaded JARs hadoop-shaded-guava-1.1.1.jar and hadoop-client-runtime-3.3.6.jar.
 
+  - id: CGA-g5xr-qw5v-2c74
+    aliases:
+      - CVE-2024-12798
+      - GHSA-pr98-23f8-jwxv
+    events:
+      - timestamp: 2025-02-19T23:26:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5
+            componentID: 1dd01eef607e8100
+            componentName: logback-core
+            componentVersion: 1.2.13
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/logback-core-1.2.13.jar
+            scanner: grype
+
   - id: CGA-g6j7-ffvj-3wqj
     aliases:
       - CVE-2024-12801
