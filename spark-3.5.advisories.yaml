@@ -799,6 +799,23 @@ advisories:
         data:
           note: Updating jetty to a non-vulnerable version would require 3 major version bumps, which would be a very significant upgrade with multiple breaking changes, and should only be undertaken by the upstream maintainers.
 
+  - id: CGA-vphp-g8f3-4x68
+    aliases:
+      - GHSA-58qw-p7qm-5rvh
+    events:
+      - timestamp: 2025-02-19T23:26:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5
+            componentID: 29f21deab0c9c9ed
+            componentName: jetty-xml
+            componentVersion: 9.4.43.v20210629
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.4.jar
+            scanner: grype
+
   - id: CGA-w968-x9p4-fhjf
     aliases:
       - CVE-2024-29133
