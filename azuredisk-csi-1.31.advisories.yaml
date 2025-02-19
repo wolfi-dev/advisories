@@ -68,6 +68,38 @@ advisories:
         data:
           fixed-version: 1.31.2-r1
 
+  - id: CGA-m3xj-72mw-5r55
+    aliases:
+      - CVE-2025-0426
+      - GHSA-jgfp-53c3-624w
+    events:
+      - timestamp: 2025-02-14T10:24:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: azuredisk-csi-1.31
+            componentID: 124f3ac14eb5ac1c
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.31.2
+            componentType: go-module
+            componentLocation: /usr/bin/azurediskplugin
+            scanner: grype
+      - timestamp: 2025-02-14T11:17:50Z
+        type: fixed
+        data:
+          fixed-version: 1.31.3-r1
+
+  - id: CGA-p8w9-w8gq-xjp4
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T07:26:59Z
+        type: fixed
+        data:
+          fixed-version: 1.31.3-r0
+
   - id: CGA-w5qq-94m2-qmh9
     aliases:
       - CVE-2024-45337

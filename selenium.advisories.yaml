@@ -27,6 +27,29 @@ advisories:
           type: vulnerable-code-cannot-be-controlled-by-adversary
           note: Vulnerability affects only Windows systems.
 
+  - id: CGA-6jq8-jqr6-vf9p
+    aliases:
+      - CVE-2025-25193
+      - GHSA-389x-839f-4rhx
+    events:
+      - timestamp: 2025-02-11T09:32:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: selenium
+            componentID: 15e126c39aa613d9
+            componentName: netty-common
+            componentVersion: 4.1.117.Final
+            componentType: java-archive
+            componentLocation: /usr/share/java/selenium/bin/selenium_server_deploy.jar
+            scanner: grype
+      - timestamp: 2025-02-13T19:44:26Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-cannot-be-controlled-by-adversary
+          note: Vulnerability affects only Windows systems.
+
   - id: CGA-c95w-hpgw-m6fm
     aliases:
       - CVE-2024-29025
@@ -36,3 +59,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 4.19.0-r0
+
+  - id: CGA-j8xg-6jx2-4hqr
+    aliases:
+      - CVE-2025-24970
+      - GHSA-4g8c-wm8x-jfhw
+    events:
+      - timestamp: 2025-02-11T09:33:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: selenium
+            componentID: f8ac0dc5cee5eb2c
+            componentName: netty-handler
+            componentVersion: 4.1.117.Final
+            componentType: java-archive
+            componentLocation: /usr/share/java/selenium/bin/selenium_server_deploy.jar
+            scanner: grype

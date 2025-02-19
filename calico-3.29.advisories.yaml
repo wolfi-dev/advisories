@@ -4,6 +4,24 @@ package:
   name: calico-3.29
 
 advisories:
+  - id: CGA-6gp2-gcmj-pjpf
+    aliases:
+      - CVE-2025-0426
+      - GHSA-jgfp-53c3-624w
+    events:
+      - timestamp: 2025-02-14T08:30:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: calico-3.29
+            componentID: 958543230d2edb9b
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.30.9
+            componentType: go-module
+            componentLocation: /bin/calico-node
+            scanner: grype
+
   - id: CGA-fhcp-8jp5-pcrj
     aliases:
       - CVE-2024-45341
@@ -13,6 +31,16 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.29.1-r4
+
+  - id: CGA-j268-jww5-frf7
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T07:22:31Z
+        type: fixed
+        data:
+          fixed-version: 3.29.2-r0
 
   - id: CGA-q5mr-jvrm-h5x8
     aliases:

@@ -62,6 +62,28 @@ advisories:
             componentLocation: /.PKGINFO
             scanner: grype
 
+  - id: CGA-52qq-32xp-43jq
+    aliases:
+      - CVE-2025-0426
+      - GHSA-jgfp-53c3-624w
+    events:
+      - timestamp: 2025-02-14T10:26:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-1.32
+            componentID: 6a26c80baab08ac3
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.32.1
+            componentType: go-module
+            componentLocation: /usr/bin/kubectl-1.32
+            scanner: grype
+      - timestamp: 2025-02-18T22:08:38Z
+        type: fixed
+        data:
+          fixed-version: 1.32.2-r0
+
   - id: CGA-847w-hfp3-fpwq
     aliases:
       - CVE-2024-45337
@@ -163,6 +185,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.32.0-r3
+
+  - id: CGA-m8rx-cx3w-7xm3
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-09T06:04:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-1.32
+            componentID: 1dc43c95a0c2c392
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/kube-controller-manager-1.32
+            scanner: grype
+      - timestamp: 2025-02-11T15:32:44Z
+        type: fixed
+        data:
+          fixed-version: 1.32.1-r3
 
   - id: CGA-qrg7-3ww8-2p9g
     aliases:

@@ -137,6 +137,10 @@ advisories:
         type: pending-upstream-fix
         data:
           note: 'This CVE is caused by esbuild which is a transitive dependency brought in under esbuild-loader. The fix exists upstream in main but has not been cut as part of a release as can be seen the the following PRs here: https://github.com/evanw/esbuild/issues/4056 and here: https://github.com/evanw/esbuild/pull/4057  Due to the transitive nature of esbuild, we must wait for upstream maintainers to cut a release of esbuild with the fix which will then be consumed by esbuild-loader.'
+      - timestamp: 2025-02-11T04:01:05Z
+        type: fixed
+        data:
+          fixed-version: 3.6.3-r1
 
   - id: CGA-5grw-9wv6-r624
     aliases:
@@ -618,6 +622,28 @@ advisories:
             componentLocation: /usr/lib/argo-workflows-ui/ui/node_modules/@esbuild/linux-x64/bin/esbuild
             scanner: grype
 
+  - id: CGA-f6q3-hvwg-5mmw
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T11:04:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-workflows
+            componentID: fed68d7eb9a2018e
+            componentName: stdlib
+            componentVersion: go1.23.1
+            componentType: go-module
+            componentLocation: /usr/lib/argo-workflows-ui/ui/node_modules/@esbuild/linux-x64/bin/esbuild
+            scanner: grype
+      - timestamp: 2025-02-11T04:01:07Z
+        type: fixed
+        data:
+          fixed-version: 3.6.3-r1
+
   - id: CGA-g8hr-2vg2-m8rq
     aliases:
       - CVE-2024-24783
@@ -940,6 +966,27 @@ advisories:
         data:
           fixed-version: 3.5.5-r2
 
+  - id: CGA-rjff-7jch-vw6j
+    aliases:
+      - GHSA-67mh-4wv8-2f99
+    events:
+      - timestamp: 2025-02-12T08:17:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-workflows
+            componentID: 1a763eefe08830a9
+            componentName: esbuild
+            componentVersion: 0.24.2
+            componentType: npm
+            componentLocation: /usr/lib/argo-workflows-ui/ui/node_modules/esbuild/package.json
+            scanner: grype
+      - timestamp: 2025-02-12T21:20:25Z
+        type: fixed
+        data:
+          fixed-version: 3.6.4-r0
+
   - id: CGA-rpcj-5wrr-mwjr
     aliases:
       - CVE-2023-46402
@@ -993,6 +1040,10 @@ advisories:
         type: pending-upstream-fix
         data:
           note: 'This CVE is caused by esbuild which is a transitive dependency brought in under esbuild-loader. The fix exists upstream in main but has not been cut as part of a release as can be seen the the following PRs here: https://github.com/evanw/esbuild/issues/4056 and here: https://github.com/evanw/esbuild/pull/4057  Due to the transitive nature of esbuild, we must wait for upstream maintainers to cut a release of esbuild with the fix which will then be consumed by esbuild-loader.'
+      - timestamp: 2025-02-11T04:01:06Z
+        type: fixed
+        data:
+          fixed-version: 3.6.3-r1
 
   - id: CGA-v62h-vh59-3hf9
     aliases:

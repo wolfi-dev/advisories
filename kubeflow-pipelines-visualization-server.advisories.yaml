@@ -115,6 +115,10 @@ advisories:
         type: pending-upstream-fix
         data:
           note: 'Bumping the dependency to 3.0.3 is not possible, the application fails with the error: ImportError: cannot import name ''soft_unicode'' from ''markupsafe'''
+      - timestamp: 2025-02-19T08:42:57Z
+        type: fixed
+        data:
+          fixed-version: 2.4.0-r0
 
   - id: CGA-4r2r-wrg9-g9qq
     aliases:
@@ -415,6 +419,10 @@ advisories:
         type: pending-upstream-fix
         data:
           note: 'Bumping the dependency to 3.0.3 is not possible, the application fails with the error: ImportError: cannot import name ''contextfilter'' from ''jinja2'''
+      - timestamp: 2025-02-19T08:42:57Z
+        type: fixed
+        data:
+          fixed-version: 2.4.0-r0
 
   - id: CGA-gfgp-4jrg-x8xh
     aliases:
@@ -568,6 +576,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.3.0-r1
+
+  - id: CGA-mg66-6pj9-rvcq
+    aliases:
+      - CVE-2024-12797
+      - GHSA-79v4-65xg-pq4g
+    events:
+      - timestamp: 2025-02-12T09:02:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-visualization-server
+            componentID: b169be510c555aeb
+            componentName: cryptography
+            componentVersion: 44.0.0
+            componentType: python
+            componentLocation: /usr/lib/python3.11/site-packages/cryptography-44.0.0.dist-info/METADATA, /usr/lib/python3.11/site-packages/cryptography-44.0.0.dist-info/RECORD
+            scanner: grype
 
   - id: CGA-p5f2-4rj7-w47h
     aliases:

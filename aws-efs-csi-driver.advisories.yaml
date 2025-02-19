@@ -447,3 +447,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.7.6-r1
+
+  - id: CGA-xc77-9rx9-7f3g
+    aliases:
+      - CVE-2025-0426
+      - GHSA-jgfp-53c3-624w
+    events:
+      - timestamp: 2025-02-14T07:19:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-efs-csi-driver
+            componentID: 7b1721e440332d5e
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.28.15
+            componentType: go-module
+            componentLocation: /usr/bin/aws-efs-csi-driver
+            scanner: grype

@@ -48,6 +48,28 @@ advisories:
         data:
           fixed-version: 2.10.1-r0
 
+  - id: CGA-67h2-fv76-6wjc
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-09T00:31:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-agent-2.10
+            componentID: ecffb5a3e880927e
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/agent
+            scanner: grype
+      - timestamp: 2025-02-09T22:18:51Z
+        type: fixed
+        data:
+          fixed-version: 2.10.2-r1
+
   - id: CGA-7hqw-pw3h-mpxx
     aliases:
       - CVE-2024-51744
@@ -160,3 +182,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.10.0-r1
+
+  - id: CGA-wwv4-h9m2-923w
+    aliases:
+      - CVE-2025-0426
+      - GHSA-jgfp-53c3-624w
+    events:
+      - timestamp: 2025-02-14T07:08:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-agent-2.10
+            componentID: 16e39a8df495a687
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.31.1
+            componentType: go-module
+            componentLocation: /usr/bin/agent
+            scanner: grype
+      - timestamp: 2025-02-14T13:24:53Z
+        type: fixed
+        data:
+          fixed-version: 2.10.2-r2

@@ -36,6 +36,28 @@ advisories:
         data:
           fixed-version: 1.7.2-r4
 
+  - id: CGA-cwwf-5q56-9hrg
+    aliases:
+      - CVE-2025-0426
+      - GHSA-jgfp-53c3-624w
+    events:
+      - timestamp: 2025-02-14T07:14:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-rollouts
+            componentID: cd4a15041b9c8ebf
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.29.7
+            componentType: go-module
+            componentLocation: /usr/bin/rollouts-controller
+            scanner: grype
+      - timestamp: 2025-02-17T13:19:31Z
+        type: fixed
+        data:
+          fixed-version: 1.8.0-r2
+
   - id: CGA-f8h3-38xx-32ff
     aliases:
       - CVE-2024-45341
@@ -114,3 +136,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.8.0-r0
+
+  - id: CGA-vx45-986h-vq8v
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T10:08:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-rollouts
+            componentID: 6d7592f3bfe6bab4
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/rollouts-controller
+            scanner: grype
+      - timestamp: 2025-02-09T17:42:05Z
+        type: fixed
+        data:
+          fixed-version: 1.8.0-r1

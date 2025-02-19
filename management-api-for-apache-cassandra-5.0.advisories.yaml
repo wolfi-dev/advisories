@@ -63,6 +63,10 @@ advisories:
             componentType: java-archive
             componentLocation: /opt/management-api/datastax-mgmtapi-server-0.1.0-SNAPSHOT.jar
             scanner: grype
+      - timestamp: 2025-02-19T07:32:40Z
+        type: fixed
+        data:
+          fixed-version: 0.1.96-r1
 
   - id: CGA-5jp4-3j6v-xcj7
     aliases:
@@ -165,6 +169,24 @@ advisories:
         data:
           fixed-version: 0.1.89-r0
 
+  - id: CGA-92vf-fmhh-m858
+    aliases:
+      - CVE-2025-24970
+      - GHSA-4g8c-wm8x-jfhw
+    events:
+      - timestamp: 2025-02-11T11:27:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: management-api-for-apache-cassandra-5.0
+            componentID: f3527e51a42b2b28
+            componentName: netty-handler
+            componentVersion: 4.1.108.Final
+            componentType: java-archive
+            componentLocation: /opt/management-api/datastax-mgmtapi-agent-5.0.x-0.1.0-SNAPSHOT.jar
+            scanner: grype
+
   - id: CGA-9gmq-c996-778j
     aliases:
       - CVE-2022-42003
@@ -217,6 +239,29 @@ advisories:
         data:
           fixed-version: 0.1.89-r0
 
+  - id: CGA-fc8h-784r-h553
+    aliases:
+      - CVE-2025-25193
+      - GHSA-389x-839f-4rhx
+    events:
+      - timestamp: 2025-02-11T11:27:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: management-api-for-apache-cassandra-5.0
+            componentID: 07731e87e9f6a78c
+            componentName: netty-common
+            componentVersion: 4.1.108.Final
+            componentType: java-archive
+            componentLocation: /opt/management-api/datastax-mgmtapi-agent-5.0.x-0.1.0-SNAPSHOT.jar
+            scanner: grype
+      - timestamp: 2025-02-13T19:43:42Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-cannot-be-controlled-by-adversary
+          note: Vulnerability affects only Windows systems.
+
   - id: CGA-fr6x-qvxr-5vpr
     aliases:
       - CVE-2024-12798
@@ -250,6 +295,10 @@ advisories:
             componentType: java-archive
             componentLocation: /opt/management-api/datastax-mgmtapi-server-0.1.0-SNAPSHOT.jar
             scanner: grype
+      - timestamp: 2025-02-19T07:32:39Z
+        type: fixed
+        data:
+          fixed-version: 0.1.96-r1
 
   - id: CGA-hrp6-hg6x-533q
     aliases:
