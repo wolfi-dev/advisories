@@ -608,6 +608,24 @@ advisories:
         data:
           note: This relates to json-smart v1.3.2 included by the shaded JAR hadoop-client-runtime-3.3.6.jar. There are no newer versions of this shaded JAR available to fix the vulnerability.
 
+  - id: CGA-m3hw-g7jc-jh5r
+    aliases:
+      - CVE-2023-40167
+      - GHSA-hmr7-m48g-48f6
+    events:
+      - timestamp: 2025-02-19T23:28:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5
+            componentID: b73f9e107a5da116
+            componentName: jetty-http
+            componentVersion: 9.4.43.v20210629
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.4.jar
+            scanner: grype
+
   - id: CGA-p777-ph7j-fc24
     aliases:
       - CVE-2024-29869
