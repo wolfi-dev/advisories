@@ -795,6 +795,24 @@ advisories:
         data:
           note: This relates to nimbus-jose-jwt v9.8.1 included by the shaded JAR hadoop-client-runtime-3.3.6.jar. Spark is planning an upgrade to Hadoop 3.4.0 for Spark 4.0.0, but as of today, the shaded JAR for Hadoop 3.4.0 still includes this vulnerability.
 
+  - id: CGA-rg8r-2868-3qm2
+    aliases:
+      - CVE-2021-37533
+      - GHSA-cgp8-4m63-fhh5
+    events:
+      - timestamp: 2025-02-19T23:27:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5
+            componentID: fb795a89eac44583
+            componentName: commons-net
+            componentVersion: "3.6"
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.4.jar
+            scanner: grype
+
   - id: CGA-rr5c-hcff-7v96
     aliases:
       - CVE-2024-6763
