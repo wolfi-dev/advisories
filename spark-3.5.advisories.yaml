@@ -288,6 +288,24 @@ advisories:
         data:
           note: The commons-io dependency that exists in the spark-3.5 package and related subpackages is brought in as transitive from hadoop-client-runtime-3.3.6.jar. This dependency is not able to be upgraded to a higher version and requires upstream maintainers to implement.
 
+  - id: CGA-8227-j5w2-328r
+    aliases:
+      - CVE-2025-25193
+      - GHSA-389x-839f-4rhx
+    events:
+      - timestamp: 2025-02-19T23:25:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5
+            componentID: 7e47c71c4a0bd25d
+            componentName: netty-common
+            componentVersion: 4.1.108.Final
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/netty-common-4.1.108.Final.jar
+            scanner: grype
+
   - id: CGA-c7jc-pc4g-5wpx
     aliases:
       - CVE-2024-8184
