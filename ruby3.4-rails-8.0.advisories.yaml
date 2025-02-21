@@ -4,6 +4,27 @@ package:
   name: ruby3.4-rails-8.0
 
 advisories:
+  - id: CGA-3p76-fcc4-4xg2
+    aliases:
+      - GHSA-vvfq-8hwr-qm4m
+    events:
+      - timestamp: 2025-02-19T12:27:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ruby3.4-rails-8.0
+            componentID: 4dc18e41e5186d1a
+            componentName: nokogiri
+            componentVersion: 1.18.2
+            componentType: gem
+            componentLocation: /usr/share/ruby/gems/3.4/specifications/nokogiri-1.18.2-x86_64-linux-gnu.gemspec
+            scanner: grype
+      - timestamp: 2025-02-19T15:07:27Z
+        type: fixed
+        data:
+          fixed-version: 8.0.1-r2
+
   - id: CGA-q2x2-m392-rfph
     aliases:
       - CVE-2025-25186
@@ -21,6 +42,10 @@ advisories:
             componentType: gem
             componentLocation: /usr/share/ruby/gems/3.4/specifications/net-imap-0.5.5.gemspec
             scanner: grype
+      - timestamp: 2025-02-19T15:07:28Z
+        type: fixed
+        data:
+          fixed-version: 8.0.1-r2
 
   - id: CGA-rphv-9cxv-v6c3
     aliases:
@@ -39,3 +64,7 @@ advisories:
             componentType: gem
             componentLocation: /usr/share/ruby/gems/3.4/specifications/rack-3.1.8.gemspec
             scanner: grype
+      - timestamp: 2025-02-19T15:07:29Z
+        type: fixed
+        data:
+          fixed-version: 8.0.1-r2
