@@ -1,0 +1,611 @@
+schema-version: 2.0.2
+
+package:
+  name: mattermost-10.5
+
+advisories:
+  - id: CGA-26gv-6x58-qf4p
+    aliases:
+      - CVE-2023-48369
+      - GHSA-3487-3j7c-7gwj
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability relates to v8.1.x of mattermost, which is several releases old.
+            The componentVersion is also being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
+            See: https://github.com/anchore/syft/issues/2980.
+
+  - id: CGA-2chr-2w27-9rx5
+    aliases:
+      - CVE-2023-36308
+      - GHSA-q7pp-wcgr-pffx
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: pending-upstream-fix
+        data:
+          note: The issue regarding disintegration/imaging v1.6.2 where the index of the scan function in scanner.go can go out of bounds has an open PR https://github.com/disintegration/imaging/issues/165 but no implemented fix yet
+      - timestamp: 2025-02-20T22:12:33Z
+        type: fixed
+        data:
+          fixed-version: 10.5.1-r0
+
+  - id: CGA-2mhj-2mfm-5rcw
+    aliases:
+      - CVE-2024-10241
+      - GHSA-6mvp-gh77-7vwh
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability relates to v8.1.x of mattermost, which is several releases old.
+            The componentVersion is also being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
+            See: https://github.com/anchore/syft/issues/2980.
+
+  - id: CGA-2r24-4wx9-vrgf
+    aliases:
+      - CVE-2022-4045
+      - GHSA-v42f-hq78-8c5m
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: 'This vulnerability relates to versions of mattermost prior to v7.4.0, which is several releases old. This is caused by an overly broad CPE configuration on the NVD record, it has no version constraints, causing all versions of mattermost to become flagged. '
+
+  - id: CGA-32jx-hcvr-c9v2
+    aliases:
+      - CVE-2023-6458
+      - GHSA-7664-hcp7-f497
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability relates to v8.1.x of mattermost, which is several releases old.
+            The componentVersion is also being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
+            See: https://github.com/anchore/syft/issues/2980.
+
+  - id: CGA-4ffq-33jp-crj6
+    aliases:
+      - CVE-2025-20621
+      - GHSA-w6xh-c82w-h997
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability was fixed in v10.1.4 and later.  The componentVersion is being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue:
+            - https://github.com/anchore/syft/issues/2980
+            - https://mattermost.com/security-updates/
+
+  - id: CGA-4hq6-298h-wg9j
+    aliases:
+      - CVE-2024-47401
+      - GHSA-762v-rq7q-ff97
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability relates to v8.1.x of mattermost, which is several releases old.
+            The componentVersion is also being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
+            See: https://github.com/anchore/syft/issues/2980.
+
+  - id: CGA-5h25-479c-8566
+    aliases:
+      - CVE-2024-21848
+      - GHSA-xp9j-8p68-9q93
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability relates to v8.1.x of mattermost, which is several releases old.
+            The componentVersion is also being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
+            See: https://github.com/anchore/syft/issues/2980.
+
+  - id: CGA-5qx9-mhj7-2x2m
+    aliases:
+      - CVE-2024-1949
+      - GHSA-3g35-v53r-gpxc
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability relates to v8.1.x of mattermost, which is several releases old.
+            The componentVersion is also being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
+            See: https://github.com/anchore/syft/issues/2980.
+
+  - id: CGA-6qr5-qh87-fr52
+    aliases:
+      - CVE-2024-1942
+      - GHSA-hwjf-4667-gqwx
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability relates to v8.1.x of mattermost, which is several releases old.
+            The componentVersion is also being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
+            See: https://github.com/anchore/syft/issues/2980.
+
+  - id: CGA-75f8-f6v4-9p9j
+    aliases:
+      - CVE-2023-47858
+      - GHSA-w88v-pjr8-cmv2
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability relates to v8.1.x of mattermost, which is several releases old.
+            The componentVersion is also being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
+            See: https://github.com/anchore/syft/issues/2980.
+
+  - id: CGA-8ffw-2c8r-wqv7
+    aliases:
+      - CVE-2024-50052
+      - GHSA-g376-m3h3-mj4r
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability relates to v8.1.x of mattermost, which is several releases old.
+            The componentVersion is also being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
+            See: https://github.com/anchore/syft/issues/2980.
+
+  - id: CGA-8rhx-797w-c47m
+    aliases:
+      - CVE-2023-48268
+      - GHSA-j4c3-3h73-74m9
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability relates to v8.1.x of mattermost, which is several releases old.
+            The componentVersion is also being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
+            See: https://github.com/anchore/syft/issues/2980.
+
+  - id: CGA-8rp5-8mcg-m96h
+    aliases:
+      - CVE-2023-50333
+      - GHSA-9w97-9rqx-8v4j
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability relates to v8.1.x of mattermost, which is several releases old.
+            The componentVersion is also being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
+            See: https://github.com/anchore/syft/issues/2980.
+
+  - id: CGA-9p96-2j49-qh57
+    aliases:
+      - CVE-2024-1402
+      - GHSA-32h7-7j94-8fc2
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability relates to v8.1.x of mattermost, which is several releases old.
+            The componentVersion is also being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
+            See: https://github.com/anchore/syft/issues/2980.
+
+  - id: CGA-9xm5-8qfv-jc5h
+    aliases:
+      - CVE-2023-47168
+      - GHSA-4ghx-8jw8-p76q
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability relates to v8.1.x of mattermost, which is several releases old.
+            The componentVersion is also being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
+            See: https://github.com/anchore/syft/issues/2980.
+
+  - id: CGA-f27x-6rjg-fj3h
+    aliases:
+      - GHSA-29qp-crvh-w22m
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: true-positive-determination
+        data:
+          note: 'Awaiting release of fix by upstream dependency yamux: https://github.com/hashicorp/yamux/pull/143'
+
+  - id: CGA-g5ph-9j8j-27f3
+    aliases:
+      - CVE-2023-7113
+      - GHSA-h3gq-j7p9-x3p4
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability relates to v8.1.x of mattermost, which is several releases old.
+            The componentVersion is also being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
+            See: https://github.com/anchore/syft/issues/2980.
+
+  - id: CGA-g7c7-x4jm-f9qq
+    aliases:
+      - CVE-2022-4019
+      - GHSA-hqqj-g6mv-rw46
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: 'This vulnerability was remediated in mattermost v7.x, Specifically, in versions 7.1.4, 7.2.1, 7.3.1, and 7.4.0. For more information, please refer to https://mattermost.com/security-updates/ and search for the ID MMSA-2022-00118 in the server tab. '
+
+  - id: CGA-h598-9mvg-jmw9
+    aliases:
+      - CVE-2024-1887
+      - GHSA-fx48-xv6q-6gp3
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability relates to v8.1.x of mattermost, which is several releases old.
+            The componentVersion is also being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
+            See: https://github.com/anchore/syft/issues/2980.
+
+  - id: CGA-hm7v-jc53-48f6
+    aliases:
+      - CVE-2025-21088
+      - GHSA-8j3q-gc9x-7972
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability was only present in versions prior to 10.3 (this release). v10.3.0 was the first to remediate.
+            The componentVersion is being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue:
+            - https://github.com/anchore/syft/issues/2980
+            - https://mattermost.com/security-updates/
+
+  - id: CGA-hwjm-28xq-4j9c
+    aliases:
+      - CVE-2023-6459
+      - GHSA-63cv-4pc2-4fcf
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability relates to v8.1.x of mattermost, which is several releases old.
+            The componentVersion is also being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
+            See: https://github.com/anchore/syft/issues/2980.
+
+  - id: CGA-jfxp-3ggw-f3qc
+    aliases:
+      - CVE-2025-20088
+      - GHSA-45v9-w9fh-33j6
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability was only present in versions prior to 10.3 (this release). v10.3.0 was the first to remediate.
+            The componentVersion is being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue:
+            - https://github.com/anchore/syft/issues/2980
+            - https://mattermost.com/security-updates/
+
+  - id: CGA-jp9m-fgw2-2m63
+    aliases:
+      - CVE-2023-47865
+      - GHSA-jj46-9cgh-qmfx
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability relates to v8.1.x of mattermost, which is several releases old.
+            The componentVersion is also being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
+            See: https://github.com/anchore/syft/issues/2980.
+
+  - id: CGA-mh2m-486m-2hpq
+    aliases:
+      - CVE-2025-20086
+      - GHSA-5m7j-6gc4-ff5g
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability was only present in versions prior to 10.3 (this release). v10.3.0 was the first to remediate.
+            The componentVersion is being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue:
+            - https://github.com/anchore/syft/issues/2980
+            - https://mattermost.com/security-updates/
+
+  - id: CGA-mw4r-w69x-qgj4
+    aliases:
+      - CVE-2024-23488
+      - GHSA-xgxj-j98c-59rv
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability relates to v8.1.x of mattermost, which is several releases old.
+            The componentVersion is also being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
+            See: https://github.com/anchore/syft/issues/2980.
+
+  - id: CGA-p8wp-pgj2-36xj
+    aliases:
+      - CVE-2025-22445
+      - GHSA-7rgp-4j56-fm79
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability was fixed in mattermost v10.3.0, and is not present in v10.3.1 or later.
+            The componentVersion is being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue:
+            - https://github.com/anchore/syft/issues/2980
+            - https://mattermost.com/security-updates/
+
+  - id: CGA-pwr7-vrvm-2f34
+    aliases:
+      - CVE-2023-35075
+      - GHSA-jcgv-3pfq-j4hr
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability relates to v8.1.x of mattermost, which is several releases old.
+            The componentVersion is also being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
+            See: https://github.com/anchore/syft/issues/2980.
+
+  - id: CGA-qqmf-3f7j-x9hp
+    aliases:
+      - CVE-2023-48732
+      - GHSA-q7rx-w656-fwmv
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability relates to v8.1.x of mattermost, which is several releases old.
+            The componentVersion is also being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
+            See: https://github.com/anchore/syft/issues/2980.
+
+  - id: CGA-qv24-8p2g-g5cm
+    aliases:
+      - CVE-2023-40703
+      - GHSA-c37r-v8jx-7cv2
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability relates to v8.1.x of mattermost, which is several releases old.
+            The componentVersion is also being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
+            See: https://github.com/anchore/syft/issues/2980.
+
+  - id: CGA-rhx9-3cpq-g35c
+    aliases:
+      - CVE-2024-10214
+      - GHSA-hm57-h27x-599c
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability relates to v8.1.x of mattermost, which is several releases old.
+            The componentVersion is also being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
+            See: https://github.com/anchore/syft/issues/2980.
+
+  - id: CGA-rpc5-q5mv-3rf2
+    aliases:
+      - CVE-2023-43754
+      - GHSA-jjr7-372r-cx7x
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability relates to v8.1.x of mattermost, which is several releases old.
+            The componentVersion is also being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
+            See: https://github.com/anchore/syft/issues/2980.
+
+  - id: CGA-rw8c-59wv-4crx
+    aliases:
+      - CVE-2024-46872
+      - GHSA-762g-9p7f-mrww
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability relates to v8.1.x of mattermost, which is several releases old.
+            The componentVersion is also being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
+            See: https://github.com/anchore/syft/issues/2980.
+
+  - id: CGA-v73j-4hrc-hp6v
+    aliases:
+      - CVE-2024-47003
+      - GHSA-59hf-mpf8-pqjh
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability relates to v8.1.x of mattermost, which is several releases old.
+            The componentVersion is also being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
+            See: https://github.com/anchore/syft/issues/2980.
+
+  - id: CGA-v8mq-rx3w-5mqp
+    aliases:
+      - CVE-2025-22449
+      - GHSA-q8fg-cp3q-5jwm
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability was fixed in mattermost v9.11.16, and is not present in v10.
+            The componentVersion is being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue:
+            - https://github.com/anchore/syft/issues/2980
+            - https://mattermost.com/security-updates/
+
+  - id: CGA-vg35-rm9f-4h9j
+    aliases:
+      - CVE-2023-45223
+      - GHSA-p5pr-vm3j-jxxf
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability relates to v8.1.x of mattermost, which is several releases old.
+            The componentVersion is also being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
+            See: https://github.com/anchore/syft/issues/2980.
+
+  - id: CGA-vrp5-fm6f-m24g
+    aliases:
+      - CVE-2025-20033
+      - GHSA-2549-xh72-qrpm
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability was fixed in mattermost v10.0.4, and is not present in v10.3.
+            The componentVersion is being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue:
+            - https://github.com/anchore/syft/issues/2980
+            - https://mattermost.com/security-updates/
+
+  - id: CGA-w8r2-gqff-xqvg
+    aliases:
+      - CVE-2024-24776
+      - GHSA-r833-w756-h5p2
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability relates to v8.1.x of mattermost, which is several releases old.
+            The componentVersion is also being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
+            See: https://github.com/anchore/syft/issues/2980.
+
+  - id: CGA-wcf2-h4gh-3q6v
+    aliases:
+      - CVE-2024-1888
+      - GHSA-pfw6-5rx3-xh3c
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability relates to v8.1.x of mattermost, which is several releases old.
+            The componentVersion is also being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
+            See: https://github.com/anchore/syft/issues/2980.
+
+  - id: CGA-x5fv-9622-7fc2
+    aliases:
+      - CVE-2023-6202
+      - GHSA-85jj-c9jr-9jhx
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability relates to v8.1.x of mattermost, which is several releases old.
+            The componentVersion is also being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
+            See: https://github.com/anchore/syft/issues/2980.
+
+  - id: CGA-x7wq-jm64-g832
+    aliases:
+      - CVE-2024-1953
+      - GHSA-vm9m-57jr-4pxh
+    events:
+      - timestamp: 2025-02-11T16:13:08Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |-
+            This vulnerability relates to v8.1.x of mattermost, which is several releases old.
+            The componentVersion is also being flagged incorrectly here by some scanners.
+            A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
+            See: https://github.com/anchore/syft/issues/2980.

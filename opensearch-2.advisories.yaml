@@ -121,6 +121,22 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/opensearch/plugins/opensearch-ml/api-0.28.0.jar
             scanner: grype
+      - timestamp: 2025-02-19T11:29:12Z
+        type: fixed
+        data:
+          fixed-version: 2.18.0-r1
+      - timestamp: 2025-02-20T13:06:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-2
+            componentID: 22a086be6c38d263
+            componentName: api
+            componentVersion: 0.28.0
+            componentType: java-archive
+            componentLocation: /usr/share/opensearch/plugins/opensearch-ml/api-0.28.0.jar
+            scanner: grype
 
   - id: CGA-877w-8xxp-xv6m
     aliases:
@@ -175,6 +191,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.11.1-r1
+
+  - id: CGA-fqjm-6q25-rq8p
+    aliases:
+      - CVE-2025-24970
+      - GHSA-4g8c-wm8x-jfhw
+    events:
+      - timestamp: 2025-02-12T08:36:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-2
+            componentID: 72fbc87268955526
+            componentName: netty-handler
+            componentVersion: 4.1.114.Final
+            componentType: java-archive
+            componentLocation: /usr/share/opensearch/plugins/opensearch-repository-azure/netty-handler-4.1.114.Final.jar
+            scanner: grype
 
   - id: CGA-gf8j-3f7c-2f6p
     aliases:
@@ -263,6 +297,33 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/opensearch/plugins/opensearch-repository-azure/json-smart-2.5.1.jar
             scanner: grype
+      - timestamp: 2025-02-12T15:36:33Z
+        type: pending-upstream-fix
+        data:
+          note: 'The dependency causing this CVE, json-smart, is a transitive dependency which has not released a fix version. Due to its transitive nature, a fix requires a release version to be cut and published to the maven repository. '
+
+  - id: CGA-qv2v-jxhc-34v4
+    aliases:
+      - CVE-2025-25193
+      - GHSA-389x-839f-4rhx
+    events:
+      - timestamp: 2025-02-12T08:36:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-2
+            componentID: f0295b408e6f1757
+            componentName: netty-common
+            componentVersion: 4.1.114.Final
+            componentType: java-archive
+            componentLocation: /usr/share/opensearch/plugins/opensearch-repository-azure/netty-common-4.1.114.Final.jar
+            scanner: grype
+      - timestamp: 2025-02-13T19:44:07Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-cannot-be-controlled-by-adversary
+          note: Vulnerability affects only Windows systems.
 
   - id: CGA-rfg9-4wqj-36v6
     aliases:

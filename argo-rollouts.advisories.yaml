@@ -36,6 +36,28 @@ advisories:
         data:
           fixed-version: 1.7.2-r4
 
+  - id: CGA-cwwf-5q56-9hrg
+    aliases:
+      - CVE-2025-0426
+      - GHSA-jgfp-53c3-624w
+    events:
+      - timestamp: 2025-02-14T07:14:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-rollouts
+            componentID: cd4a15041b9c8ebf
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.29.7
+            componentType: go-module
+            componentLocation: /usr/bin/rollouts-controller
+            scanner: grype
+      - timestamp: 2025-02-17T13:19:31Z
+        type: fixed
+        data:
+          fixed-version: 1.8.0-r2
+
   - id: CGA-f8h3-38xx-32ff
     aliases:
       - CVE-2024-45341
