@@ -108,6 +108,24 @@ advisories:
           type: component-vulnerability-mismatch
           note: Our 'temporal' package is actually the temporal CLI, not the temporal server itself. (The found CPE is a related component.)
 
+  - id: CGA-5j6v-5pg9-3c43
+    aliases:
+      - CVE-2025-1243
+      - GHSA-q9w6-cwj4-gf4p
+    events:
+      - timestamp: 2025-02-13T09:27:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: temporal
+            componentID: 2bb54c7fa238795a
+            componentName: go.temporal.io/api
+            componentVersion: v1.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/temporal
+            scanner: grype
+
   - id: CGA-6754-mjh7-cr7v
     aliases:
       - GHSA-xr7q-jx4m-x55m
@@ -369,6 +387,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.13.1-r1
+
+  - id: CGA-p92x-j248-cjgv
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T19:15:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: temporal
+            componentID: 577093127219adff
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/temporal
+            scanner: grype
+      - timestamp: 2025-02-09T13:13:37Z
+        type: fixed
+        data:
+          fixed-version: 1.2.0-r2
 
   - id: CGA-qw4f-5m8f-q3w8
     aliases:
