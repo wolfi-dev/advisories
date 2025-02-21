@@ -4,6 +4,28 @@ package:
   name: argo-cd-2.14
 
 advisories:
+  - id: CGA-5w62-q492-qf55
+    aliases:
+      - CVE-2025-0426
+      - GHSA-jgfp-53c3-624w
+    events:
+      - timestamp: 2025-02-14T07:32:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.14
+            componentID: 5e6eba417d0e7afd
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/local/bin/argocd
+            scanner: grype
+      - timestamp: 2025-02-14T15:30:35Z
+        type: fixed
+        data:
+          fixed-version: 2.14.2-r1
+
   - id: CGA-cq4x-q73v-g9pw
     aliases:
       - GHSA-274v-mgcv-cm8j
