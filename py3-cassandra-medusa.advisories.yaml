@@ -223,6 +223,28 @@ advisories:
         data:
           fixed-version: 0.19.1-r1
 
+  - id: CGA-79g8-vmqh-8jm9
+    aliases:
+      - CVE-2024-12797
+      - GHSA-79v4-65xg-pq4g
+    events:
+      - timestamp: 2025-02-12T12:03:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3-cassandra-medusa
+            componentID: 2509afc931ad40e5
+            componentName: cryptography
+            componentVersion: 43.0.3
+            componentType: python
+            componentLocation: /home/cassandra/.venv/lib/python3.11/site-packages/cryptography-43.0.3.dist-info/METADATA, /home/cassandra/.venv/lib/python3.11/site-packages/cryptography-43.0.3.dist-info/RECORD
+            scanner: grype
+      - timestamp: 2025-02-21T18:46:26Z
+        type: fixed
+        data:
+          fixed-version: 0.23.0-r2
+
   - id: CGA-79xc-r2gv-hwvh
     aliases:
       - CVE-2023-50782

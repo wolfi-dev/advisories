@@ -170,6 +170,24 @@ advisories:
         data:
           fixed-version: 0.26.0-r2
 
+  - id: CGA-9hwh-6w85-qmf7
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-09T08:33:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-statsd-exporter
+            componentID: 047ff0485d4552f0
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/statsd_exporter
+            scanner: grype
+
   - id: CGA-c7v4-vx49-frpp
     aliases:
       - CVE-2023-45283
