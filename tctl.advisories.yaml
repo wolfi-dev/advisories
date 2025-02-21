@@ -56,6 +56,24 @@ advisories:
         data:
           fixed-version: 1.18.0-r12
 
+  - id: CGA-5w58-c5hf-2f8q
+    aliases:
+      - CVE-2025-1243
+      - GHSA-q9w6-cwj4-gf4p
+    events:
+      - timestamp: 2025-02-13T10:15:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tctl
+            componentID: cb17b51676c8c752
+            componentName: go.temporal.io/api
+            componentVersion: v1.18.1
+            componentType: go-module
+            componentLocation: /usr/bin/tctl
+            scanner: grype
+
   - id: CGA-5xmc-rg65-hg5f
     aliases:
       - CVE-2023-45283
@@ -335,3 +353,7 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/tctl
             scanner: grype
+      - timestamp: 2025-02-09T09:37:16Z
+        type: fixed
+        data:
+          fixed-version: 1.18.1-r7

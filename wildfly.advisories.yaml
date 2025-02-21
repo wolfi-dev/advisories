@@ -1,0 +1,87 @@
+schema-version: 2.0.2
+
+package:
+  name: wildfly
+
+advisories:
+  - id: CGA-3vm3-626v-4449
+    aliases:
+      - CVE-2025-25193
+      - GHSA-389x-839f-4rhx
+    events:
+      - timestamp: 2025-02-17T22:25:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wildfly
+            componentID: 712ef0cf7e107357
+            componentName: netty-common
+            componentVersion: 4.1.116.Final
+            componentType: java-archive
+            componentLocation: /usr/share/wildfly/bin/client/jboss-client.jar
+            scanner: grype
+      - timestamp: 2025-02-20T20:25:00Z
+        type: fixed
+        data:
+          fixed-version: 35.0.1-r12
+
+  - id: CGA-j9w9-457f-3v67
+    aliases:
+      - CVE-2024-47554
+      - GHSA-78wr-2p64-hpwj
+    events:
+      - timestamp: 2025-02-17T22:25:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wildfly
+            componentID: ce0226bad5d3c7b5
+            componentName: commons-io
+            componentVersion: 2.8.0
+            componentType: java-archive
+            componentLocation: /usr/share/wildfly/modules/system/layers/base/org/apache/velocity/main/velocity-engine-core-2.3.jar
+            scanner: grype
+      - timestamp: 2025-02-20T20:25:00Z
+        type: fixed
+        data:
+          fixed-version: 35.0.1-r12
+
+  - id: CGA-vpqx-mv83-m9q3
+    aliases:
+      - CVE-2025-24970
+      - GHSA-4g8c-wm8x-jfhw
+    events:
+      - timestamp: 2025-02-17T22:25:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wildfly
+            componentID: aed2b90a158fbf5a
+            componentName: netty-handler
+            componentVersion: 4.1.116.Final
+            componentType: java-archive
+            componentLocation: /usr/share/wildfly/bin/client/jboss-client.jar
+            scanner: grype
+      - timestamp: 2025-02-19T11:39:12Z
+        type: fixed
+        data:
+          fixed-version: 35.0.1-r11
+      - timestamp: 2025-02-20T14:14:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wildfly
+            componentID: aed2b90a158fbf5a
+            componentName: netty-handler
+            componentVersion: 4.1.116.Final
+            componentType: java-archive
+            componentLocation: /usr/share/wildfly/bin/client/jboss-client.jar
+            scanner: grype
+      - timestamp: 2025-02-20T20:24:59Z
+        type: fixed
+        data:
+          fixed-version: 35.0.1-r12

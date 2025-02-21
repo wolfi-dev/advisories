@@ -162,6 +162,28 @@ advisories:
         data:
           fixed-version: 2.7.0-r5
 
+  - id: CGA-f7cq-9237-3544
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-09T08:10:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: local-static-provisioner
+            componentID: d5c7db7466c9b80f
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/main
+            scanner: grype
+      - timestamp: 2025-02-11T00:42:00Z
+        type: fixed
+        data:
+          fixed-version: 2.7.0-r12
+
   - id: CGA-fchm-hpfr-rw79
     aliases:
       - CVE-2024-24790
@@ -255,3 +277,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.7.0-r4
+
+  - id: CGA-rgq9-j75g-23rp
+    aliases:
+      - CVE-2025-0426
+      - GHSA-jgfp-53c3-624w
+    events:
+      - timestamp: 2025-02-14T09:39:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: local-static-provisioner
+            componentID: 65b5427190a53245
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.28.15
+            componentType: go-module
+            componentLocation: /usr/bin/main
+            scanner: grype

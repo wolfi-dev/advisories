@@ -233,6 +233,30 @@ advisories:
         data:
           fixed-version: 25.1.0.102122-r0
 
+  - id: CGA-f7pm-cgc7-6h8v
+    aliases:
+      - CVE-2025-24970
+      - GHSA-4g8c-wm8x-jfhw
+    events:
+      - timestamp: 2025-02-11T09:35:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube-10
+            componentID: 60827dec65084bb6
+            componentName: netty-handler
+            componentVersion: 4.1.115.Final
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/elasticsearch/modules/transport-netty4/netty-handler-4.1.115.Final.jar
+            scanner: grype
+      - timestamp: 2025-02-13T17:40:14Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            This is a compiled jar that is brought in as a transitive dependency of elasticsearch dependency.
+            Elasticsearch has been updated to the most recent version and so this requires a fix from upstream maintainers.
+
   - id: CGA-g9h5-gx89-c9v8
     aliases:
       - CVE-2024-29857
@@ -276,6 +300,29 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/sonarqube/elasticsearch/lib/tools/security-cli/bcprov-jdk18on-1.76.jar
             scanner: grype
+
+  - id: CGA-pv4v-pp6h-6rfh
+    aliases:
+      - CVE-2025-25193
+      - GHSA-389x-839f-4rhx
+    events:
+      - timestamp: 2025-02-11T09:34:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube-10
+            componentID: 4b055aceb3952adc
+            componentName: netty-common
+            componentVersion: 4.1.115.Final
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/elasticsearch/modules/transport-netty4/netty-common-4.1.115.Final.jar
+            scanner: grype
+      - timestamp: 2025-02-13T19:44:55Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-cannot-be-controlled-by-adversary
+          note: Vulnerability affects only Windows systems.
 
   - id: CGA-q64j-qccg-v8v2
     aliases:
@@ -352,6 +399,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/sonarqube/elasticsearch/modules/x-pack-security/json-smart-2.5.1.jar
             scanner: grype
+      - timestamp: 2025-02-12T15:37:11Z
+        type: pending-upstream-fix
+        data:
+          note: 'The dependency causing this CVE, json-smart, is a transitive dependency which has not released a fix version. Due to its transitive nature, a fix requires a release version to be cut and published to the maven repository. '
 
   - id: CGA-xg3g-4h7j-5c3r
     aliases:
