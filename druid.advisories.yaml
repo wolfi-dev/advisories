@@ -297,6 +297,22 @@ advisories:
             A fix is available, but requires upgrading 'derby' to 'v10.17.1.0'. Attempting to upgrade druid to this version results in build failures.
             derby v10.17.1.0 requires Java 21. Apache druid does not support currently support Java 21.
             Ref: https://github.com/apache/druid/blob/druid-31.0.0/docs/operations/java.md and https://db.apache.org/derby/releases/release-10_17_1_0.cgi.
+      - timestamp: 2025-02-19T08:36:08Z
+        type: fixed
+        data:
+          fixed-version: 32.0.0-r0
+      - timestamp: 2025-02-20T11:39:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: druid
+            componentID: a2da94957723bfa6
+            componentName: derby
+            componentVersion: 10.14.2.0
+            componentType: java-archive
+            componentLocation: /usr/share/java/druid/lib/derby-10.14.2.0.jar
+            scanner: grype
 
   - id: CGA-c5fg-gm82-jrmq
     aliases:
@@ -831,7 +847,7 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/java/druid/extensions/druid-cassandra-storage/cassandra-all-1.0.8.jar
             scanner: grype
-      - timestamp: 2025-02-06T10:16:39Z
+      - timestamp: 2025-02-06T12:16:39Z
         type: pending-upstream-fix
         data:
           note: The fix version of the affected dependency cassandra-all (v3.0.31) is several major versions higher than what is currently included in druid (v1.0.8), upgrading to this version introduces breaking changes, must wait for upstream to implement a fix
