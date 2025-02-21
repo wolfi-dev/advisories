@@ -396,6 +396,14 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/trino/lib/net.minidev_json-smart-2.5.1.jar
             scanner: grype
+      - timestamp: 2025-02-12T15:29:38Z
+        type: pending-upstream-fix
+        data:
+          note: 'json-smart needs to publish v2.5.2 to maven repository. upstream maintainer has addressed cve in latest code. reference: https://github.com/netplex/json-smart-v2/issues/232'
+      - timestamp: 2025-02-21T16:18:25Z
+        type: fixed
+        data:
+          fixed-version: 471-r0
 
   - id: CGA-7g86-w24x-hwm7
     aliases:
@@ -832,6 +840,24 @@ advisories:
             componentLocation: /usr/lib/trino/lib/avro-1.11.3.jar
             scanner: grype
 
+  - id: CGA-j9v6-fcpf-fhrq
+    aliases:
+      - CVE-2024-52577
+      - GHSA-8355-xj3p-hv6q
+    events:
+      - timestamp: 2025-02-16T11:30:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino
+            componentID: abc5cdb94bed82b2
+            componentName: ignite-core
+            componentVersion: 2.16.0
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/org.apache.ignite_ignite-core-2.16.0.jar
+            scanner: grype
+
   - id: CGA-jwcm-r7hw-56j9
     aliases:
       - CVE-2022-3171
@@ -937,6 +963,11 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/trino/lib/io.netty_netty-common-4.1.116.Final.jar
             scanner: grype
+      - timestamp: 2025-02-13T19:46:17Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-cannot-be-controlled-by-adversary
+          note: Vulnerability affects only Windows systems.
 
   - id: CGA-mr3q-c88f-3c44
     aliases:
@@ -1043,6 +1074,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/trino/lib/io.netty_netty-handler-4.1.117.Final.jar
             scanner: grype
+      - timestamp: 2025-02-16T12:04:32Z
+        type: fixed
+        data:
+          fixed-version: 470-r3
 
   - id: CGA-qf58-m5px-mqw3
     aliases:
