@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: ruby3.2-net-imap
+
+advisories:
+  - id: CGA-j8cx-jf9m-mw3m
+    aliases:
+      - CVE-2025-25186
+      - GHSA-7fc5-f82f-cx69
+    events:
+      - timestamp: 2025-02-11T13:06:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ruby3.2-net-imap
+            componentID: 8a1378c114865806
+            componentName: net-imap
+            componentVersion: 0.5.5
+            componentType: gem
+            componentLocation: /usr/lib/ruby/gems/3.2.0/specifications/net-imap-0.5.5.gemspec
+            scanner: grype
+      - timestamp: 2025-02-11T18:01:06Z
+        type: fixed
+        data:
+          fixed-version: 0.5.6-r0

@@ -48,6 +48,24 @@ advisories:
         data:
           fixed-version: 3.9.1-r8
 
+  - id: CGA-5ggg-jvf3-xr5v
+    aliases:
+      - CVE-2025-0426
+      - GHSA-jgfp-53c3-624w
+    events:
+      - timestamp: 2025-02-14T10:20:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: emissary
+            componentID: 87f83f7816bb0551
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.28.12
+            componentType: go-module
+            componentLocation: /usr/bin/busyambassador
+            scanner: grype
+
   - id: CGA-6x5x-2jv3-mxqp
     aliases:
       - CVE-2024-56326
@@ -145,6 +163,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/busyambassador
             scanner: grype
+      - timestamp: 2025-02-10T06:37:44Z
+        type: fixed
+        data:
+          fixed-version: 3.9.1-r10
 
   - id: CGA-w8pf-44x7-5v82
     aliases:

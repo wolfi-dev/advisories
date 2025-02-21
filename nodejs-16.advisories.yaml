@@ -150,6 +150,24 @@ advisories:
         data:
           note: 'Nodejs-16 is no longer receiving support, latest version release of 16.x branch was in August of 2023: https://nodejs.org/download/release/v16.20.2/ and LTS ended in September of 2023: https://endoflife.date/nodejs To remediate this CVE upgrade node to 22.x version stream (latest) in order to receive longest support that also incorporates these fixes.'
 
+  - id: CGA-f2p3-j7gv-qp4v
+    aliases:
+      - CVE-2025-23085
+      - GHSA-qv9x-c8c9-rpr8
+    events:
+      - timestamp: 2025-02-11T12:39:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nodejs-16
+            componentID: af69b284636f1561
+            componentName: nodejs-16
+            componentVersion: 16.20.2-r9
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-fr56-qrc9-jmw9
     aliases:
       - CVE-2024-24806
@@ -301,7 +319,7 @@ advisories:
         type: false-positive-determination
         data:
           type: vulnerability-record-analysis-contested
-          note: 'The CVE has been issued to inform users that the software is EOL. This is not an indication of an active vulnerability.'
+          note: The CVE has been issued to inform users that the software is EOL. This is not an indication of an active vulnerability.
 
   - id: CGA-mhrf-mm82-69mm
     aliases:
