@@ -178,6 +178,42 @@ advisories:
         data:
           note: Spark v3.5.0 is incompatible with higher versions of libthrift. https://github.com/apache/spark/pull/34878
 
+  - id: CGA-3mf2-wq2m-j35r
+    aliases:
+      - CVE-2022-2047
+      - GHSA-cj7v-27pg-wf7q
+    events:
+      - timestamp: 2025-02-19T23:27:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5
+            componentID: b73f9e107a5da116
+            componentName: jetty-http
+            componentVersion: 9.4.43.v20210629
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.4.jar
+            scanner: grype
+
+  - id: CGA-3v5v-xvv5-rpgh
+    aliases:
+      - CVE-2022-42004
+      - GHSA-rgv9-q543-rqg4
+    events:
+      - timestamp: 2025-02-19T23:29:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5
+            componentID: e5d91dbdb59fe0ec
+            componentName: jackson-databind
+            componentVersion: 2.12.7
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.4.jar
+            scanner: grype
+
   - id: CGA-5hff-fh2h-5q22
     aliases:
       - CVE-2024-47554
@@ -288,6 +324,78 @@ advisories:
         data:
           note: The commons-io dependency that exists in the spark-3.5 package and related subpackages is brought in as transitive from hadoop-client-runtime-3.3.6.jar. This dependency is not able to be upgraded to a higher version and requires upstream maintainers to implement.
 
+  - id: CGA-8227-j5w2-328r
+    aliases:
+      - CVE-2025-25193
+      - GHSA-389x-839f-4rhx
+    events:
+      - timestamp: 2025-02-19T23:25:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5
+            componentID: 7e47c71c4a0bd25d
+            componentName: netty-common
+            componentVersion: 4.1.108.Final
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/netty-common-4.1.108.Final.jar
+            scanner: grype
+
+  - id: CGA-8cq8-4rmm-qgxh
+    aliases:
+      - CVE-2018-10237
+      - GHSA-mvr2-9pj6-7w5j
+    events:
+      - timestamp: 2025-02-19T23:29:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5
+            componentID: de967967561f1a31
+            componentName: guava
+            componentVersion: 14.0.1
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/guava-14.0.1.jar
+            scanner: grype
+
+  - id: CGA-9g2h-qr63-777g
+    aliases:
+      - CVE-2025-24970
+      - GHSA-4g8c-wm8x-jfhw
+    events:
+      - timestamp: 2025-02-19T23:25:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5
+            componentID: 273780c46f834eed
+            componentName: netty-handler
+            componentVersion: 4.1.108.Final
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/netty-handler-4.1.108.Final.jar
+            scanner: grype
+
+  - id: CGA-9rch-7gwj-fh3r
+    aliases:
+      - CVE-2024-9823
+      - GHSA-j26w-f9rq-mr2q
+    events:
+      - timestamp: 2025-02-19T23:28:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5
+            componentID: 52b0df664d74e106
+            componentName: jetty-servlets
+            componentVersion: 9.4.52.v20230823
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/spark-core_2.13-3.5.4.jar
+            scanner: grype
+
   - id: CGA-c7jc-pc4g-5wpx
     aliases:
       - CVE-2024-8184
@@ -309,6 +417,18 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.5.3-r4
+      - timestamp: 2025-02-19T23:27:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5
+            componentID: 5206d0cd47448299
+            componentName: jetty-server
+            componentVersion: 9.4.52.v20230823
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/spark-core_2.13-3.5.4.jar
+            scanner: grype
 
   - id: CGA-cch5-m8vc-66rh
     aliases:
@@ -396,6 +516,42 @@ advisories:
         type: fix-not-planned
         data:
           note: This relates to guava v30.1.1-jre, which is included by the shaded JARs hadoop-shaded-guava-1.1.1.jar and hadoop-client-runtime-3.3.6.jar.
+
+  - id: CGA-g5xr-qw5v-2c74
+    aliases:
+      - CVE-2024-12798
+      - GHSA-pr98-23f8-jwxv
+    events:
+      - timestamp: 2025-02-19T23:26:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5
+            componentID: 1dd01eef607e8100
+            componentName: logback-core
+            componentVersion: 1.2.13
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/logback-core-1.2.13.jar
+            scanner: grype
+
+  - id: CGA-g6j7-ffvj-3wqj
+    aliases:
+      - CVE-2024-12801
+      - GHSA-6v67-2wr5-gvf4
+    events:
+      - timestamp: 2025-02-19T23:26:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5
+            componentID: 1dd01eef607e8100
+            componentName: logback-core
+            componentVersion: 1.2.13
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/logback-core-1.2.13.jar
+            scanner: grype
 
   - id: CGA-j24g-j55r-c494
     aliases:
@@ -505,6 +661,42 @@ advisories:
         type: pending-upstream-fix
         data:
           note: This relates to json-smart v1.3.2 included by the shaded JAR hadoop-client-runtime-3.3.6.jar. There are no newer versions of this shaded JAR available to fix the vulnerability.
+
+  - id: CGA-m3hw-g7jc-jh5r
+    aliases:
+      - CVE-2023-40167
+      - GHSA-hmr7-m48g-48f6
+    events:
+      - timestamp: 2025-02-19T23:28:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5
+            componentID: b73f9e107a5da116
+            componentName: jetty-http
+            componentVersion: 9.4.43.v20210629
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.4.jar
+            scanner: grype
+
+  - id: CGA-p777-ph7j-fc24
+    aliases:
+      - CVE-2024-29869
+      - GHSA-c476-j253-5rgq
+    events:
+      - timestamp: 2025-02-19T23:27:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5
+            componentID: c7e698d3f967ae47
+            componentName: hive-exec
+            componentVersion: 2.3.9
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hive-exec-2.3.9-core.jar
+            scanner: grype
 
   - id: CGA-p95r-64v8-ggg8
     aliases:
@@ -705,6 +897,24 @@ advisories:
         data:
           note: This relates to nimbus-jose-jwt v9.8.1 included by the shaded JAR hadoop-client-runtime-3.3.6.jar. Spark is planning an upgrade to Hadoop 3.4.0 for Spark 4.0.0, but as of today, the shaded JAR for Hadoop 3.4.0 still includes this vulnerability.
 
+  - id: CGA-rg8r-2868-3qm2
+    aliases:
+      - CVE-2021-37533
+      - GHSA-cgp8-4m63-fhh5
+    events:
+      - timestamp: 2025-02-19T23:27:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5
+            componentID: fb795a89eac44583
+            componentName: commons-net
+            componentVersion: "3.6"
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.4.jar
+            scanner: grype
+
   - id: CGA-rr5c-hcff-7v96
     aliases:
       - CVE-2024-6763
@@ -726,6 +936,41 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Updating jetty to a non-vulnerable version would require 3 major version bumps, which would be a very significant upgrade with multiple breaking changes, and should only be undertaken by the upstream maintainers.
+
+  - id: CGA-vphp-g8f3-4x68
+    aliases:
+      - GHSA-58qw-p7qm-5rvh
+    events:
+      - timestamp: 2025-02-19T23:26:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5
+            componentID: 29f21deab0c9c9ed
+            componentName: jetty-xml
+            componentVersion: 9.4.43.v20210629
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.4.jar
+            scanner: grype
+
+  - id: CGA-vv2g-43f3-39wj
+    aliases:
+      - CVE-2022-42003
+      - GHSA-jjjh-jjxp-wpff
+    events:
+      - timestamp: 2025-02-19T23:28:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5
+            componentID: e5d91dbdb59fe0ec
+            componentName: jackson-databind
+            componentVersion: 2.12.7
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.4.jar
+            scanner: grype
 
   - id: CGA-w968-x9p4-fhjf
     aliases:
@@ -759,6 +1004,24 @@ advisories:
         data:
           fixed-version: 3.5.1-r3
 
+  - id: CGA-wqwx-jjxp-xxqf
+    aliases:
+      - CVE-2022-40152
+      - GHSA-3f7h-mf4q-vrm4
+    events:
+      - timestamp: 2025-02-19T23:26:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5
+            componentID: 83a604c3effdf025
+            componentName: woodstox-core
+            componentVersion: 5.3.0
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.4.jar
+            scanner: grype
+
   - id: CGA-wvcw-6w45-h72m
     aliases:
       - CVE-2024-23944
@@ -780,3 +1043,15 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.5.1-r3
+      - timestamp: 2025-02-19T23:29:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5
+            componentID: 443de83060a0cff6
+            componentName: zookeeper
+            componentVersion: 3.7.2
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/zookeeper-3.7.2.jar
+            scanner: grype

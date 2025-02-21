@@ -4,6 +4,28 @@ package:
   name: strimzi-kafka-operator
 
 advisories:
+  - id: CGA-4fc4-gx3h-pr85
+    aliases:
+      - CVE-2025-24970
+      - GHSA-4g8c-wm8x-jfhw
+    events:
+      - timestamp: 2025-02-11T08:34:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: strimzi-kafka-operator
+            componentID: c03cf240f9c16cff
+            componentName: netty-handler
+            componentVersion: 4.1.115.Final
+            componentType: java-archive
+            componentLocation: /opt/strimzi/lib/io.netty.netty-handler-4.1.115.Final.jar
+            scanner: grype
+      - timestamp: 2025-02-11T11:13:14Z
+        type: fixed
+        data:
+          fixed-version: 0.45.0-r1
+
   - id: CGA-4x6r-cwfp-wvmh
     aliases:
       - CVE-2024-8184
@@ -48,6 +70,29 @@ advisories:
         data:
           fixed-version: 0.44.0-r2
 
+  - id: CGA-6g8g-8fh2-h9jp
+    aliases:
+      - CVE-2025-25193
+      - GHSA-389x-839f-4rhx
+    events:
+      - timestamp: 2025-02-11T08:34:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: strimzi-kafka-operator
+            componentID: 8eab9c6683702f3a
+            componentName: netty-common
+            componentVersion: 4.1.115.Final
+            componentType: java-archive
+            componentLocation: /opt/strimzi/lib/io.netty.netty-common-4.1.115.Final.jar
+            scanner: grype
+      - timestamp: 2025-02-13T19:45:37Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-cannot-be-controlled-by-adversary
+          note: Vulnerability affects only Windows systems.
+
   - id: CGA-r3cg-jww5-c45m
     aliases:
       - CVE-2024-57699
@@ -65,6 +110,12 @@ advisories:
             componentType: java-archive
             componentLocation: /opt/strimzi/lib/net.minidev.json-smart-2.5.0.jar
             scanner: grype
+      - timestamp: 2025-02-11T15:11:19Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            This vulnerability relates to the 'kafka-agent' component, specifically, 'json-smart'.
+            The project exposes this as 'json-smart.version', but there is currently no fixed version for this CVE, v2.5.1 is the latest at the time of this event.
 
   - id: CGA-rpgv-63f6-9wq8
     aliases:

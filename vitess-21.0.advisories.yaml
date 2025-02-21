@@ -42,6 +42,28 @@ advisories:
         data:
           note: The cross-spawn dependency causing this CVE is brought in by npm as a transitive dependency and will need to be updated by upstream maintainers
 
+  - id: CGA-883g-ph59-wjf4
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-02-08T15:08:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vitess-21.0
+            componentID: c9874d56b66aed38
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/astfmtgen
+            scanner: grype
+      - timestamp: 2025-02-09T03:32:25Z
+        type: fixed
+        data:
+          fixed-version: 21.0.2-r1
+
   - id: CGA-892h-wqw6-wxg5
     aliases:
       - CVE-2024-45338
@@ -117,6 +139,23 @@ advisories:
         data:
           type: component-vulnerability-mismatch
           note: The vitess package builds the vtadmin from the web/vtadmin directory as part of the vitess source. The vulnerability GHSA-f46q-gmg5-36hm references a dependency present/removed from NPM remote repos. This vulnerable code is not present in vitess source code itself.
+
+  - id: CGA-m983-9xr3-349j
+    aliases:
+      - GHSA-67mh-4wv8-2f99
+    events:
+      - timestamp: 2025-02-11T08:14:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vitess-21.0
+            componentID: c69fa41c20485cde
+            componentName: esbuild
+            componentVersion: 0.18.20
+            componentType: npm
+            componentLocation: /vt/web/vtadmin/node_modules/esbuild/package.json
+            scanner: grype
 
   - id: CGA-q88h-6v29-7gm5
     aliases:
