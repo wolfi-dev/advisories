@@ -76,6 +76,24 @@ advisories:
         data:
           fixed-version: 2.16.0-r0
 
+  - id: CGA-62f7-r46p-jjcw
+    aliases:
+      - CVE-2025-26791
+      - GHSA-vhxf-7vqr-mrjg
+    events:
+      - timestamp: 2025-02-15T11:16:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-dashboards-2
+            componentID: 4d36bb4bbc31c251
+            componentName: dompurify
+            componentVersion: 2.5.6
+            componentType: npm
+            componentLocation: /usr/share/opensearch-dashboards/plugins/reportsDashboards/node_modules/jspdf/node_modules/dompurify/package.json
+            scanner: grype
+
   - id: CGA-68hx-wwxr-v9h5
     aliases:
       - CVE-2024-47764
@@ -270,6 +288,10 @@ advisories:
             componentType: npm
             componentLocation: /usr/share/opensearch-dashboards/node_modules/serialize-javascript/package.json
             scanner: grype
+      - timestamp: 2025-02-21T03:14:29Z
+        type: pending-upstream-fix
+        data:
+          note: 'To remediate this CVE would require a bump of two major versions from v4.x.x to v6.0.2 where breaking changes related to handling of sparse arrays (v5.0.0) and passing of URL object values (v6.0.0) need to be addressed by upstream maintainers. There is a PR open upstream regarding this CVE: https://github.com/opensearch-project/OpenSearch-Dashboards/issues/9375'
 
   - id: CGA-w95g-rrw2-66h4
     aliases:
