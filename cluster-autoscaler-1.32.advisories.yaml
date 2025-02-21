@@ -53,6 +53,13 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/cluster-autoscaler
             scanner: grype
+      - timestamp: 2025-02-11T03:39:00Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: |
+            This vulnerability relates to p256NegCond within the crypto/internal/fips140/nistec package, specifically affecting the ppc64le architecture.
+            We are not affected by this vulnerability as we do not build or support ppc64le.
 
   - id: CGA-7fvv-qv68-g7xh
     aliases:
@@ -75,6 +82,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.32.0-r1
+
+  - id: CGA-9vg3-cxmq-8vhr
+    aliases:
+      - CVE-2025-0426
+      - GHSA-jgfp-53c3-624w
+    events:
+      - timestamp: 2025-02-14T08:12:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-autoscaler-1.32
+            componentID: 59bc542f04985350
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-autoscaler
+            scanner: grype
+      - timestamp: 2025-02-17T21:02:13Z
+        type: fixed
+        data:
+          fixed-version: 1.32.0-r3
 
   - id: CGA-f2x8-r4wq-228f
     aliases:

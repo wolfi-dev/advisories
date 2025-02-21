@@ -340,6 +340,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/datadog-cluster-agent
             scanner: grype
+      - timestamp: 2025-02-11T17:38:29Z
+        type: fixed
+        data:
+          fixed-version: 7.60.1-r4
 
   - id: CGA-c8pv-52m7-2mhm
     aliases:
@@ -426,6 +430,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 7.56.2-r1
+
+  - id: CGA-cr4f-v3hm-6vx3
+    aliases:
+      - CVE-2024-12797
+      - GHSA-79v4-65xg-pq4g
+    events:
+      - timestamp: 2025-02-12T08:05:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: datadog-agent
+            componentID: a8aa2c2515d2cba3
+            componentName: cryptography
+            componentVersion: 43.0.1
+            componentType: python
+            componentLocation: /opt/datadog-agent/embedded/lib/python3.12/site-packages/cryptography-43.0.1.dist-info/METADATA, /opt/datadog-agent/embedded/lib/python3.12/site-packages/cryptography-43.0.1.dist-info/RECORD, /opt/datadog-agent/embedded/lib/python3.12/site-packages/cryptography-43.0.1.dist-info/direct_url.json
+            scanner: grype
 
   - id: CGA-f494-jr6m-jmhx
     aliases:
