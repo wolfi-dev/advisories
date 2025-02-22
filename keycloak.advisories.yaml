@@ -4,6 +4,24 @@ package:
   name: keycloak
 
 advisories:
+  - id: CGA-2f9g-458q-m574
+    aliases:
+      - CVE-2025-1247
+      - GHSA-phg3-gv66-q38x
+    events:
+      - timestamp: 2025-02-22T23:33:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak
+            componentID: ba770b1621209aa1
+            componentName: quarkus-rest
+            componentVersion: 3.15.3
+            componentType: java-archive
+            componentLocation: /opt/bitnami/keycloak/lib/lib/main/io.quarkus.quarkus-rest-3.15.3.jar
+            scanner: grype
+
   - id: CGA-2q5v-2cg8-99xh
     aliases:
       - CVE-2024-1597
