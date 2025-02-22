@@ -70,6 +70,24 @@ advisories:
           type: component-vulnerability-mismatch
           note: CVE is being considered by the community a false positive. See https://github.com/keycloak/keycloak/issues/20226
 
+  - id: CGA-2vpq-f6xg-q5x7
+    aliases:
+      - CVE-2025-25193
+      - GHSA-389x-839f-4rhx
+    events:
+      - timestamp: 2025-02-22T15:16:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak
+            componentID: 2d38ac3e7c2c2743
+            componentName: netty-common
+            componentVersion: 4.1.115.Final
+            componentType: java-archive
+            componentLocation: /opt/bitnami/keycloak/lib/lib/main/io.netty.netty-common-4.1.115.Final.jar
+            scanner: grype
+
   - id: CGA-35hf-7pgf-4h7w
     aliases:
       - CVE-2024-10270
