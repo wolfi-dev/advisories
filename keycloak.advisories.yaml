@@ -221,6 +221,23 @@ advisories:
             netty-handler is a dependency of Quarkus, which is used by Keycloak. For more detail:
             https://github.com/netty/netty/issues/8537
 
+  - id: CGA-7wm8-x3q5-36c6
+    aliases:
+      - GHSA-phg3-gv66-q38x
+    events:
+      - timestamp: 2025-02-22T18:33:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak
+            componentID: ba770b1621209aa1
+            componentName: quarkus-rest
+            componentVersion: 3.15.3
+            componentType: java-archive
+            componentLocation: /opt/bitnami/keycloak/lib/lib/main/io.quarkus.quarkus-rest-3.15.3.jar
+            scanner: grype
+
   - id: CGA-7xcf-rqw8-qr59
     aliases:
       - CVE-2023-2976
