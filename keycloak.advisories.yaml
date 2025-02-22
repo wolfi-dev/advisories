@@ -128,6 +128,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: The CVE was fixed in a version of keycloak prior to our packaging
 
+  - id: CGA-52mf-c9jq-57gg
+    aliases:
+      - CVE-2025-24970
+      - GHSA-4g8c-wm8x-jfhw
+    events:
+      - timestamp: 2025-02-22T00:01:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak
+            componentID: 1d8a23015c643715
+            componentName: netty-handler
+            componentVersion: 4.1.115.Final
+            componentType: java-archive
+            componentLocation: /opt/bitnami/keycloak/lib/lib/main/io.netty.netty-handler-4.1.115.Final.jar
+            scanner: grype
+
   - id: CGA-5755-9qm9-xvmg
     aliases:
       - CVE-2024-8883
