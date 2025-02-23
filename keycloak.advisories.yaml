@@ -4,6 +4,24 @@ package:
   name: keycloak
 
 advisories:
+  - id: CGA-27xh-75vm-cfc6
+    aliases:
+      - CVE-2025-24970
+      - GHSA-4g8c-wm8x-jfhw
+    events:
+      - timestamp: 2025-02-23T02:43:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak
+            componentID: 1d8a23015c643715
+            componentName: netty-handler
+            componentVersion: 4.1.115.Final
+            componentType: java-archive
+            componentLocation: /opt/bitnami/keycloak/lib/lib/main/io.netty.netty-handler-4.1.115.Final.jar
+            scanner: grype
+
   - id: CGA-2q5v-2cg8-99xh
     aliases:
       - CVE-2024-1597
