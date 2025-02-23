@@ -132,6 +132,7 @@ advisories:
     aliases:
       - CVE-2024-8883
       - GHSA-vvf8-2h68-9475
+      - GHSA-w8gr-xwp4-r9f7
     events:
       - timestamp: 2024-09-22T08:45:23Z
         type: fixed
@@ -233,6 +234,23 @@ advisories:
             Scanner is correctly detecting guava v32.0.0 is installed, but is incorrectly
             reporting that it is vulnerable to this CVE. v32.0.0 contains the fix.
             See https://github.com/google/guava/releases/tag/v32.0.0 and https://github.com/keycloak/keycloak/pull/21544
+
+  - id: CGA-8mvg-qr8m-j2m4
+    aliases:
+      - GHSA-q4xq-445g-g6ch
+    events:
+      - timestamp: 2025-02-23T00:44:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak
+            componentID: b0d5cf91d6e34e17
+            componentName: keycloak-core
+            componentVersion: 26.1.2
+            componentType: java-archive
+            componentLocation: /opt/bitnami/keycloak/lib/lib/main/org.keycloak.keycloak-core-26.1.2.jar
+            scanner: grype
 
   - id: CGA-9237-g4v6-qq44
     aliases:
