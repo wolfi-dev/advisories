@@ -132,6 +132,7 @@ advisories:
     aliases:
       - CVE-2024-8883
       - GHSA-vvf8-2h68-9475
+      - GHSA-w8gr-xwp4-r9f7
     events:
       - timestamp: 2024-09-22T08:45:23Z
         type: fixed
@@ -387,6 +388,23 @@ advisories:
         data:
           type: component-vulnerability-mismatch
           note: CVE is being considered by the community a false positive. See https://github.com/keycloak/keycloak/issues/20228
+
+  - id: CGA-m9hf-fgv8-fpj4
+    aliases:
+      - GHSA-q4xq-445g-g6ch
+    events:
+      - timestamp: 2025-02-23T20:33:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak
+            componentID: 582308b5c74a41da
+            componentName: keycloak-core
+            componentVersion: 26.1.2
+            componentType: java-archive
+            componentLocation: /usr/share/java/keycloak-26.1.2/lib/lib/main/org.keycloak.keycloak-core-26.1.2.jar
+            scanner: grype
 
   - id: CGA-mcc2-jcp7-fh6p
     aliases:
