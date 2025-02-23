@@ -91,6 +91,24 @@ advisories:
           type: component-vulnerability-mismatch
           note: CVE is being considered by the community a false positive. See https://github.com/anchore/grype/issues/1139
 
+  - id: CGA-42x5-j4j2-3rmm
+    aliases:
+      - CVE-2025-24970
+      - GHSA-4g8c-wm8x-jfhw
+    events:
+      - timestamp: 2025-02-23T16:32:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak
+            componentID: 1d8a23015c643715
+            componentName: netty-handler
+            componentVersion: 4.1.115.Final
+            componentType: java-archive
+            componentLocation: /opt/bitnami/keycloak/lib/lib/main/io.netty.netty-handler-4.1.115.Final.jar
+            scanner: grype
+
   - id: CGA-448v-pf2r-j83m
     aliases:
       - CVE-2024-29857
