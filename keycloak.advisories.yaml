@@ -675,6 +675,23 @@ advisories:
             Scanner is incorrectly matching vulnerabilities for apache:james-server against james.apache-mime4 (installed).
             Both are different applications. See https://github.com/anchore/grype/issues/1138
 
+  - id: CGA-vprv-m6qw-633w
+    aliases:
+      - GHSA-phg3-gv66-q38x
+    events:
+      - timestamp: 2025-02-23T20:33:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak
+            componentID: 07fd72589c651857
+            componentName: quarkus-rest
+            componentVersion: 3.15.3
+            componentType: java-archive
+            componentLocation: /usr/share/java/keycloak-26.1.2/lib/lib/main/io.quarkus.quarkus-rest-3.15.3.jar
+            scanner: grype
+
   - id: CGA-vrqx-gvvc-7hch
     aliases:
       - CVE-2024-1249
