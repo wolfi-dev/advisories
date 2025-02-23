@@ -395,6 +395,23 @@ advisories:
           type: component-vulnerability-mismatch
           note: CVE is being considered by the community a false positive. See https://github.com/anchore/grype/issues/1068
 
+  - id: CGA-m4f9-72wf-ff49
+    aliases:
+      - GHSA-389x-839f-4rhx
+    events:
+      - timestamp: 2025-02-23T16:32:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak
+            componentID: 2d38ac3e7c2c2743
+            componentName: netty-common
+            componentVersion: 4.1.115.Final
+            componentType: java-archive
+            componentLocation: /opt/bitnami/keycloak/lib/lib/main/io.netty.netty-common-4.1.115.Final.jar
+            scanner: grype
+
   - id: CGA-m894-hrqw-q27v
     aliases:
       - CVE-2021-38542
