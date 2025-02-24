@@ -200,6 +200,7 @@ advisories:
 
   - id: CGA-75hc-h3fm-76g3
     aliases:
+      - CVE-2025-24970
       - GHSA-4g8c-wm8x-jfhw
     events:
       - timestamp: 2025-02-11T16:30:37Z
@@ -298,6 +299,7 @@ advisories:
 
   - id: CGA-cqm9-hqq3-3jwq
     aliases:
+      - CVE-2025-1247
       - GHSA-phg3-gv66-q38x
     events:
       - timestamp: 2025-02-17T14:13:02Z
@@ -402,6 +404,23 @@ advisories:
         data:
           type: component-vulnerability-mismatch
           note: CVE is being considered by the community a false positive. See https://github.com/anchore/grype/issues/1068
+
+  - id: CGA-jjph-78w6-xjr8
+    aliases:
+      - GHSA-q4xq-445g-g6ch
+    events:
+      - timestamp: 2025-02-22T00:01:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak
+            componentID: b0d5cf91d6e34e17
+            componentName: keycloak-core
+            componentVersion: 26.1.2
+            componentType: java-archive
+            componentLocation: /opt/bitnami/keycloak/lib/lib/main/org.keycloak.keycloak-core-26.1.2.jar
+            scanner: grype
 
   - id: CGA-m894-hrqw-q27v
     aliases:
