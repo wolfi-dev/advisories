@@ -230,6 +230,23 @@ advisories:
             netty-handler is a dependency of Quarkus, which is used by Keycloak. For more detail:
             https://github.com/netty/netty/issues/8537
 
+  - id: CGA-7wqp-q49j-9688
+    aliases:
+      - GHSA-q4xq-445g-g6ch
+    events:
+      - timestamp: 2025-02-23T22:31:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak
+            componentID: b0d5cf91d6e34e17
+            componentName: keycloak-core
+            componentVersion: 26.1.2
+            componentType: java-archive
+            componentLocation: /opt/bitnami/keycloak/lib/lib/main/org.keycloak.keycloak-core-26.1.2.jar
+            scanner: grype
+
   - id: CGA-7xcf-rqw8-qr59
     aliases:
       - CVE-2023-2976
@@ -243,6 +260,23 @@ advisories:
             Scanner is correctly detecting guava v32.0.0 is installed, but is incorrectly
             reporting that it is vulnerable to this CVE. v32.0.0 contains the fix.
             See https://github.com/google/guava/releases/tag/v32.0.0 and https://github.com/keycloak/keycloak/pull/21544
+
+  - id: CGA-8f94-rrvf-jh5c
+    aliases:
+      - GHSA-389x-839f-4rhx
+    events:
+      - timestamp: 2025-02-23T22:32:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak
+            componentID: 2d38ac3e7c2c2743
+            componentName: netty-common
+            componentVersion: 4.1.115.Final
+            componentType: java-archive
+            componentLocation: /opt/bitnami/keycloak/lib/lib/main/io.netty.netty-common-4.1.115.Final.jar
+            scanner: grype
 
   - id: CGA-9237-g4v6-qq44
     aliases:
@@ -393,6 +427,23 @@ advisories:
         data:
           type: component-vulnerability-mismatch
           note: CVE is being considered by the community a false positive. See https://github.com/anchore/grype/issues/1068
+
+  - id: CGA-j23p-x9fw-282f
+    aliases:
+      - GHSA-4g8c-wm8x-jfhw
+    events:
+      - timestamp: 2025-02-23T22:32:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak
+            componentID: 1d8a23015c643715
+            componentName: netty-handler
+            componentVersion: 4.1.115.Final
+            componentType: java-archive
+            componentLocation: /opt/bitnami/keycloak/lib/lib/main/io.netty.netty-handler-4.1.115.Final.jar
+            scanner: grype
 
   - id: CGA-jfwc-r5wf-xxhp
     aliases:
@@ -710,6 +761,23 @@ advisories:
         type: fixed
         data:
           fixed-version: 24.0.3-r0
+
+  - id: CGA-vx8q-gpg2-vww5
+    aliases:
+      - GHSA-phg3-gv66-q38x
+    events:
+      - timestamp: 2025-02-23T22:32:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak
+            componentID: ba770b1621209aa1
+            componentName: quarkus-rest
+            componentVersion: 3.15.3
+            componentType: java-archive
+            componentLocation: /opt/bitnami/keycloak/lib/lib/main/io.quarkus.quarkus-rest-3.15.3.jar
+            scanner: grype
 
   - id: CGA-w4j4-4g7w-vm2x
     aliases:
