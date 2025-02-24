@@ -293,6 +293,24 @@ advisories:
         data:
           note: 'To remediate this CVE would require a bump of two major versions from v4.x.x to v6.0.2 where breaking changes related to handling of sparse arrays (v5.0.0) and passing of URL object values (v6.0.0) need to be addressed by upstream maintainers. There is a PR open upstream regarding this CVE: https://github.com/opensearch-project/OpenSearch-Dashboards/issues/9375'
 
+  - id: CGA-rw88-hxpr-jw8v
+    aliases:
+      - CVE-2023-28155
+      - GHSA-p8p7-x288-28g6
+    events:
+      - timestamp: 2025-02-21T22:37:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-dashboards-2
+            componentID: ec7dd7958c576c54
+            componentName: '@cypress/request'
+            componentVersion: 2.88.12
+            componentType: npm
+            componentLocation: /usr/share/opensearch-dashboards/plugins/securityDashboards/node_modules/@cypress/request/package.json
+            scanner: grype
+
   - id: CGA-w95g-rrw2-66h4
     aliases:
       - CVE-2024-4068
