@@ -217,6 +217,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.4.jar
             scanner: grype
+      - timestamp: 2025-02-24T09:46:42Z
+        type: pending-upstream-fix
+        data:
+          note: The dependency responsible for this CVE is a transitive dependency where the version of said dependency is not explicitly defined in the project but rather brought in under the hadoop-client-runtime jar. This requires upstream maintainers to implement a fix
 
   - id: CGA-5hff-fh2h-5q22
     aliases:
@@ -345,6 +349,11 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/netty-common-4.1.108.Final.jar
             scanner: grype
+      - timestamp: 2025-02-24T09:43:59Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-cannot-be-controlled-by-adversary
+          note: Vulnerability affects only Windows systems.
 
   - id: CGA-8cq8-4rmm-qgxh
     aliases:
@@ -363,6 +372,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/guava-14.0.1.jar
             scanner: grype
+      - timestamp: 2025-02-24T09:47:07Z
+        type: pending-upstream-fix
+        data:
+          note: 'This vulnerability relates to ''guava'', one of spark''s dependencies.  Remediating this requires upgrading guava to v24.1.1 or higher, which is a significant version upgrade. Spark has already upgraded to a fixed version in the main branch, but this is yet to be backported to the spark v3.5 release. Attempting to upgrade guava results in build issues. For more information, see: https://issues.apache.org/jira/browse/SPARK-38262 https://github.com/apache/spark/pull/36231'
 
   - id: CGA-9g2h-qr63-777g
     aliases:
@@ -399,6 +412,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/spark-core_2.13-3.5.4.jar
             scanner: grype
+      - timestamp: 2025-02-24T09:43:25Z
+        type: pending-upstream-fix
+        data:
+          note: This jetty-servlets dependency is brought in as a transitive dependency via spark-core_2.13-3.5.4.jar. These transitive dependencies from spark-core_2.13-3.5.4.jar are not able to be upgraded to a higher version and require upstream maintainers to implement.
 
   - id: CGA-c7jc-pc4g-5wpx
     aliases:
@@ -433,6 +450,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/spark-core_2.13-3.5.4.jar
             scanner: grype
+      - timestamp: 2025-02-24T09:46:10Z
+        type: pending-upstream-fix
+        data:
+          note: This jetty-servlets dependency is brought in as a transitive dependency via spark-core_2.13-3.5.4.jar. These transitive dependencies from spark-core_2.13-3.5.4.jar are not able to be upgraded to a higher version and require upstream maintainers to implement.
 
   - id: CGA-cch5-m8vc-66rh
     aliases:
@@ -542,6 +563,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/logback-core-1.2.13.jar
             scanner: grype
+      - timestamp: 2025-02-24T09:41:36Z
+        type: pending-upstream-fix
+        data:
+          note: This logback-core dependency is brought in as a transitive dependency. These transitive dependencies from are not able to be upgraded to a higher version and require upstream maintainers to implement.
 
   - id: CGA-g6j7-ffvj-3wqj
     aliases:
@@ -560,6 +585,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/logback-core-1.2.13.jar
             scanner: grype
+      - timestamp: 2025-02-24T09:47:40Z
+        type: pending-upstream-fix
+        data:
+          note: This logback-core dependency is brought in as a transitive dependency. These transitive dependencies from are not able to be upgraded to a higher version and require upstream maintainers to implement.
 
   - id: CGA-j24g-j55r-c494
     aliases:
@@ -687,6 +716,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.4.jar
             scanner: grype
+      - timestamp: 2025-02-24T09:45:44Z
+        type: pending-upstream-fix
+        data:
+          note: The dependency responsible for this CVE is a transitive dependency where the version of said dependency is not explicitly defined in the project but rather brought in under the hadoop-client-runtime jar. This requires upstream maintainers to implement a fix.
 
   - id: CGA-p777-ph7j-fc24
     aliases:
@@ -705,6 +738,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/hive-exec-2.3.9-core.jar
             scanner: grype
+      - timestamp: 2025-02-24T09:48:01Z
+        type: pending-upstream-fix
+        data:
+          note: 'Spark-3.5 only supports Hive 2.3.9. An initiative to upgrade Hive to a newer major version exists and is targeting the spark 4.0.0 release. This can be seen in the following PR: https://issues.apache.org/jira/browse/SPARK-44114'
 
   - id: CGA-p95r-64v8-ggg8
     aliases:
@@ -922,6 +959,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.4.jar
             scanner: grype
+      - timestamp: 2025-02-24T09:45:15Z
+        type: pending-upstream-fix
+        data:
+          note: The dependency responsible for this CVE is a transitive dependency where the version of said dependency is not explicitly defined in the project but rather brought in under the hadoop-client-runtime jar. This requires upstream maintainers to implement a fix.
 
   - id: CGA-rr5c-hcff-7v96
     aliases:
@@ -961,6 +1002,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.4.jar
             scanner: grype
+      - timestamp: 2025-02-24T09:42:53Z
+        type: pending-upstream-fix
+        data:
+          note: The dependency responsible for this CVE is a transitive dependency where the version of said dependency is not explicitly defined in the project but rather brought in under the hadoop-client-runtime jar. This requires upstream maintainers to implement a fix.
 
   - id: CGA-vv2g-43f3-39wj
     aliases:
@@ -1029,6 +1074,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.4.jar
             scanner: grype
+      - timestamp: 2025-02-24T09:42:25Z
+        type: pending-upstream-fix
+        data:
+          note: The dependency responsible for this CVE is a transitive dependency where the version of said dependency is not explicitly defined in the project but rather brought in under the hadoop-client-runtime jar. This requires upstream maintainers to implement a fix.
 
   - id: CGA-wvcw-6w45-h72m
     aliases:
