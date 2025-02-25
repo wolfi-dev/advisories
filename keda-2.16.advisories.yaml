@@ -29,6 +29,24 @@ advisories:
             This vulnerability relates to p256NegCond within the crypto/internal/fips140/nistec package, specifically affecting the ppc64le architecture.
             We are not affected by this vulnerability as we do not build or support ppc64le.
 
+  - id: CGA-4cwr-jh4g-vrxj
+    aliases:
+      - CVE-2025-27144
+      - GHSA-c6gw-w398-hv78
+    events:
+      - timestamp: 2025-02-25T12:33:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.16
+            componentID: 179c16990216e75c
+            componentName: github.com/go-jose/go-jose/v4
+            componentVersion: v4.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/keda
+            scanner: grype
+
   - id: CGA-5m82-cxgx-fgfq
     aliases:
       - CVE-2024-45338
