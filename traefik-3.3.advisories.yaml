@@ -4,6 +4,24 @@ package:
   name: traefik-3.3
 
 advisories:
+  - id: CGA-3j92-f7g3-jc9q
+    aliases:
+      - CVE-2025-27144
+      - GHSA-c6gw-w398-hv78
+    events:
+      - timestamp: 2025-02-25T15:24:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: traefik-3.3
+            componentID: 28d416ad90c68f9e
+            componentName: github.com/go-jose/go-jose/v4
+            componentVersion: v4.0.4
+            componentType: go-module
+            componentLocation: /usr/bin/traefik
+            scanner: grype
+
   - id: CGA-cgqm-p5gm-9xxj
     aliases:
       - CVE-2025-22866
