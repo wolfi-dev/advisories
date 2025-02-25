@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: cilium-1.17
+
+advisories:
+  - id: CGA-wprr-hmrm-cp2w
+    aliases:
+      - CVE-2025-27144
+      - GHSA-c6gw-w398-hv78
+    events:
+      - timestamp: 2025-02-25T14:17:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.17
+            componentID: 5d276e2197b230ac
+            componentName: github.com/go-jose/go-jose/v4
+            componentVersion: v4.0.4
+            componentType: go-module
+            componentLocation: /usr/bin/cilium-operator-aws
+            scanner: grype
