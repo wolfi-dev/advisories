@@ -77,7 +77,7 @@ advisories:
       - timestamp: 2025-01-31T18:14:03Z
         type: true-positive-determination
         data:
-          note: "Awaiting release of fix by upstream dependency yamux: https://github.com/hashicorp/yamux/pull/143"
+          note: 'Awaiting release of fix by upstream dependency yamux: https://github.com/hashicorp/yamux/pull/143'
 
   - id: CGA-76gw-vx4w-rpmm
     aliases:
@@ -302,6 +302,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.55.14-r1
+
+  - id: CGA-ww78-qprc-qr9h
+    aliases:
+      - CVE-2025-27144
+      - GHSA-c6gw-w398-hv78
+    events:
+      - timestamp: 2025-02-25T15:21:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terragrunt
+            componentID: e4a099826f3f7429
+            componentName: github.com/go-jose/go-jose/v4
+            componentVersion: v4.0.4
+            componentType: go-module
+            componentLocation: /usr/bin/terragrunt
+            scanner: grype
 
   - id: CGA-x7wq-rj7h-725v
     aliases:
