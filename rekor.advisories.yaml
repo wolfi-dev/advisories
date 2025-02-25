@@ -93,6 +93,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'Module "github.com/sigstore/rekor" at "/usr/bin/rekor-server": the commit of the fixed version (0c1914e5e955cb9f514e32b222cf61a13e91ab08) is an ancestor of installed commit (a6788566cd62facb0fb0450e9d2c2867f551e37c), which means the installed version was misidentified by the scanner and the vulnerability has actually been fixed.'
 
+  - id: CGA-89rv-fgm7-33vw
+    aliases:
+      - CVE-2025-27144
+      - GHSA-c6gw-w398-hv78
+    events:
+      - timestamp: 2025-02-25T15:19:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rekor
+            componentID: 68a475bcb9b3f624
+            componentName: github.com/go-jose/go-jose/v4
+            componentVersion: v4.0.2
+            componentType: go-module
+            componentLocation: /usr/bin/rekor-server
+            scanner: grype
+
   - id: CGA-8xqf-2j7q-9gjw
     aliases:
       - CVE-2024-35255
