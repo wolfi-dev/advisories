@@ -69,6 +69,10 @@ advisories:
             componentType: npm
             componentLocation: /usr/src/app/node_modules/@octokit/plugin-paginate-rest/package.json
             scanner: grype
+      - timestamp: 2025-02-26T18:50:59Z
+        type: pending-upstream-fix
+        data:
+          note: 'This CVE is a multi layered transitive dependency ultimately caused by the dependency @maplibre/maplibre-gl-native which tileserver-gl is on the latest version of. Further, the most recent version of the intermediary dependency node-pre-gyp-github, which @octokit/plugin-paginate-rest is a direct dependency of, also contains these old versions major versions (v2.x.x) the fix versions of this dependency are several major versions higher (v9.2.2 or v11.4.1) and will require upstream maintainers to implement. '
 
   - id: CGA-cq9h-6cjg-vw9m
     aliases:
@@ -87,6 +91,10 @@ advisories:
             componentType: npm
             componentLocation: /usr/src/app/node_modules/@octokit/request/package.json
             scanner: grype
+      - timestamp: 2025-02-26T18:52:36Z
+        type: pending-upstream-fix
+        data:
+          note: 'This CVE is a multi layered transitive dependency ultimately caused by the dependency express 5.0.1 which tileserver-gl is on the latest version of. Further, the most recent version of the intermediary dependency Once 1.4.0 which @octokit/request is a direct dependency of, also contains these old major versions (v5.x.x) the fix versions of this dependency are several major versions higher (8.4.1 or v9.2.1) and will require upstream maintainers to implement. '
 
   - id: CGA-wm64-q84f-2hhv
     aliases:
@@ -105,3 +113,7 @@ advisories:
             componentType: npm
             componentLocation: /usr/src/app/node_modules/@octokit/request-error/package.json
             scanner: grype
+      - timestamp: 2025-02-26T18:52:08Z
+        type: pending-upstream-fix
+        data:
+          note: 'This CVE is a multi layered transitive dependency ultimately caused by the dependency @maplibre/maplibre-gl-native which tileserver-gl is on the latest version of. Further, the most recent version of the intermediary dependency node-pre-gyp-github, which @octokit/request-error is a direct dependency of, also contains these old versions major versions (v2.x.x) the fix versions of this dependency are several major versions higher (v5.1.1 or v6.1.7) and will require upstream maintainers to implement. '
