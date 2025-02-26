@@ -215,6 +215,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.4.jar
             scanner: grype
+      - timestamp: 2025-02-26T19:25:44Z
+        type: pending-upstream-fix
+        data:
+          note: The dependency responsible for this CVE is a transitive dependency where the version of said dependency is not explicitly defined in the project but rather brought in under the hadoop-client-runtime jar. This requires upstream maintainers to implement a fix.
 
   - id: CGA-3v5v-xvv5-rpgh
     aliases:
@@ -410,6 +414,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/netty-handler-4.1.108.Final.jar
             scanner: grype
+      - timestamp: 2025-02-26T19:24:06Z
+        type: pending-upstream-fix
+        data:
+          note: 'This CVE is caused by netty-handler, updating this dependency to the fix version (v4.1.118) causes build failures do to changes that have been introduced since the version defined in the project (v4.1.96). Upstream maintainers will need to backport changes slated for the spark v4.0.0 release in order to remediate this. More information on this change can be seen here: https://issues.apache.org/jira/browse/SPARK-51193'
 
   - id: CGA-9rch-7gwj-fh3r
     aliases:
@@ -1056,6 +1064,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.4.jar
             scanner: grype
+      - timestamp: 2025-02-26T19:24:46Z
+        type: pending-upstream-fix
+        data:
+          note: The dependency responsible for this CVE is a transitive dependency where the version of said dependency is not explicitly defined in the project but rather brought in under the hadoop-client-runtime jar. This requires upstream maintainers to implement a fix.
 
   - id: CGA-w968-x9p4-fhjf
     aliases:
