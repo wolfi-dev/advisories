@@ -4,6 +4,24 @@ package:
   name: apicurio-registry
 
 advisories:
+  - id: CGA-3qmv-j289-r7c5
+    aliases:
+      - CVE-2025-1634
+      - GHSA-4fwr-mh5q-hchh
+    events:
+      - timestamp: 2025-02-27T07:08:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apicurio-registry
+            componentID: 1db8ad5db6e9418c
+            componentName: quarkus-resteasy
+            componentVersion: 3.15.1
+            componentType: java-archive
+            componentLocation: /usr/share/java/apicurio-registry/lib/modified-io.quarkus.quarkus-resteasy-3.15.1.jar
+            scanner: grype
+
   - id: CGA-5hr5-g6v2-4w72
     aliases:
       - CVE-2024-47535
@@ -174,3 +192,15 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.0.6-r1
+      - timestamp: 2025-02-27T07:08:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apicurio-registry
+            componentID: 3e0a7c38a5aed36d
+            componentName: commons-httpclient
+            componentVersion: "3.1"
+            componentType: java-archive
+            componentLocation: /usr/share/java/apicurio-registry/lib/commons-httpclient.commons-httpclient-3.1.jar
+            scanner: grype

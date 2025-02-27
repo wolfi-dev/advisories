@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: gitlab-runner-17.9
+
+advisories:
+  - id: CGA-96qp-63gq-cqfx
+    aliases:
+      - CVE-2025-27144
+      - GHSA-c6gw-w398-hv78
+    events:
+      - timestamp: 2025-02-27T09:09:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-17.9
+            componentID: accfd3ffe5290cea
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.3
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-runner-helper
+            scanner: grype
+      - timestamp: 2025-02-27T11:19:33Z
+        type: fixed
+        data:
+          fixed-version: 17.9.0-r1

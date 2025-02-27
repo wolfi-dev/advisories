@@ -4,6 +4,28 @@ package:
   name: step-kms-plugin
 
 advisories:
+  - id: CGA-f4mv-vc4f-mx64
+    aliases:
+      - CVE-2025-27144
+      - GHSA-c6gw-w398-hv78
+    events:
+      - timestamp: 2025-02-27T12:08:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: step-kms-plugin
+            componentID: b904422dc97496b5
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.3
+            componentType: go-module
+            componentLocation: /usr/bin/step-kms-plugin
+            scanner: grype
+      - timestamp: 2025-02-27T20:03:52Z
+        type: fixed
+        data:
+          fixed-version: 0.12.1-r1
+
   - id: CGA-jrmm-jq33-7m3x
     aliases:
       - CVE-2025-22866
