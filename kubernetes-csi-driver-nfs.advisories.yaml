@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: kubernetes-csi-driver-nfs
+
+advisories:
+  - id: CGA-fqqv-v8jh-f4c9
+    aliases:
+      - CVE-2025-0426
+      - GHSA-jgfp-53c3-624w
+    events:
+      - timestamp: 2025-02-27T12:11:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-driver-nfs
+            componentID: 2cad738a79dd857d
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.28.12
+            componentType: go-module
+            componentLocation: /usr/bin/nfsplugin
+            scanner: grype
