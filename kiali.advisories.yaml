@@ -4,6 +4,24 @@ package:
   name: kiali
 
 advisories:
+  - id: CGA-2qfr-xj7j-c7q2
+    aliases:
+      - CVE-2025-27144
+      - GHSA-c6gw-w398-hv78
+    events:
+      - timestamp: 2025-02-27T08:36:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kiali
+            componentID: b460abc1612dd136
+            componentName: github.com/go-jose/go-jose
+            componentVersion: v2.6.3+incompatible
+            componentType: go-module
+            componentLocation: /opt/kiali/kiali
+            scanner: grype
+
   - id: CGA-4rvm-jh29-m8c2
     aliases:
       - CVE-2024-45338
