@@ -21,3 +21,8 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2025-03-03T14:11:29Z
+        type: false-positive-determination
+        data:
+          type: inline-mitigations-exist
+          note: This vulnerability exploits the _sha3 module to carry out a buffer overflow attack. Upstream has applied a patch, however scanners still detect the vulnerability. The attack is mitigated by the use of openssl greater than 1.1.1 in the package.
