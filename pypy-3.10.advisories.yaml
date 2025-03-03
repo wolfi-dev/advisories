@@ -25,4 +25,4 @@ advisories:
         type: false-positive-determination
         data:
           type: inline-mitigations-exist
-          note: This vulnerability exploits the _sha3 module to carry out a buffer overflow attack. Upstream has applied a patch, however scanners still detect the vulnerability. The attack is mitigated by the use of openssl greater than 1.1.1 in the package.
+          note: Upstream patched _sha3 module with the XKCP fix for CVE-2022-37454, reference: https://github.com/python/cpython/pull/98519. Additionally, if linking Python 3.10 against OpenSSL 1.1.1 or later, the OpenSSL provided sha3 implementation will be used instead of the vulnerable bundled _sha3 XKCP module code. Reference: https://github.com/python/cpython/issues/98517#issuecomment-1287317496
