@@ -4,6 +4,24 @@ package:
   name: external-snapshotter
 
 advisories:
+  - id: CGA-5g6w-m894-cjhv
+    aliases:
+      - CVE-2023-3978
+      - GHSA-2wrh-6pvc-2jm9
+    events:
+      - timestamp: 2025-03-04T19:08:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: external-snapshotter
+            componentID: 991df692cd151fd4
+            componentName: golang.org/x/net
+            componentVersion: v0.4.0
+            componentType: go-module
+            componentLocation: /usr/bin/csi-snapshotter
+            scanner: grype
+
   - id: CGA-cgp7-fc79-552g
     aliases:
       - CVE-2023-39325
