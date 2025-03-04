@@ -206,6 +206,24 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
 
+  - id: CGA-rqw8-7pj8-wq9g
+    aliases:
+      - CVE-2024-36623
+      - GHSA-gh5c-3h97-2f3q
+    events:
+      - timestamp: 2025-03-04T18:17:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-discovery-1.18
+            componentID: 8c8456e749059fbf
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.7+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-discovery
+            scanner: grype
+
   - id: CGA-w2rx-2f9x-vhqx
     aliases:
       - CVE-2023-45283
