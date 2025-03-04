@@ -4,6 +4,138 @@ package:
   name: cert-manager-1.13
 
 advisories:
+  - id: CGA-6933-x86j-v4cp
+    aliases:
+      - GHSA-2c7c-3mj9-8fqh
+    events:
+      - timestamp: 2023-11-23T08:31:08Z
+        type: fixed
+        data:
+          fixed-version: 1.13.2-r2
+
+  - id: CGA-8rq6-52v7-wgv4
+    aliases:
+      - CVE-2024-25620
+      - GHSA-v53g-5gjp-272r
+    events:
+      - timestamp: 2024-02-16T07:13:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cmctl-1.13
+            componentID: e7ddd3c5ccbddf71
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.12.3
+            componentType: go-module
+            componentLocation: /usr/bin/cmctl
+            scanner: grype
+      - timestamp: 2024-02-22T17:45:29Z
+        type: fixed
+        data:
+          fixed-version: 1.13.3-r3
+
+  - id: CGA-cp9r-4fc8-vxc7
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2025-03-04T23:08:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-manager-1.13
+            componentID: 31ca79bf7f16dc99
+            componentName: golang.org/x/net
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/acmesolver-linux-amd64
+            scanner: grype
+
+  - id: CGA-cpxm-w9x4-52vg
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:24:06Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-crc8-wfgr-263v
+    aliases:
+      - CVE-2024-26147
+      - GHSA-r53h-jv2g-vpx6
+    events:
+      - timestamp: 2024-02-23T07:17:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cmctl-1.13
+            componentID: 3012c3d7648f7741
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.1
+            componentType: go-module
+            componentLocation: /usr/bin/cmctl
+            scanner: grype
+      - timestamp: 2024-02-23T17:49:42Z
+        type: fixed
+        data:
+          fixed-version: 1.13.4-r0
+
+  - id: CGA-hh2r-78q9-94gw
+    aliases:
+      - GHSA-7ww5-4wqc-m92c
+    events:
+      - timestamp: 2024-01-11T07:17:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cmctl-1.13
+            componentID: 88e1fd4d413b10c6
+            componentName: github.com/containerd/containerd
+            componentVersion: v1.7.6
+            componentType: go-module
+            componentLocation: /usr/bin/cmctl
+            scanner: grype
+      - timestamp: 2024-01-25T07:03:55Z
+        type: fixed
+        data:
+          fixed-version: 1.13.3-r2
+
+  - id: CGA-pcmg-5p64-vqhv
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2023-12-19T16:58:38Z
+        type: fixed
+        data:
+          fixed-version: 1.13.3-r1
+
+  - id: CGA-q338-c2wq-w785
+    aliases:
+      - GHSA-jq35-85cj-fj4p
+    events:
+      - timestamp: 2023-11-16T14:21:46Z
+        type: fixed
+        data:
+          fixed-version: 1.13.2-r1
+
+  - id: CGA-qgxj-cvp8-qv6q
+    aliases:
+      - CVE-2023-45142
+      - GHSA-rcjv-mgp8-qvmr
+    events:
+      - timestamp: 2023-10-19T12:35:15Z
+        type: fixed
+        data:
+          fixed-version: 1.13.1-r4
+
   - id: CGA-rp7w-g86x-hpg4
     aliases:
       - CVE-2019-25210
@@ -38,15 +170,15 @@ advisories:
         data:
           fixed-version: 1.13.2-r0
 
-  - id: CGA-qgxj-cvp8-qv6q
+  - id: CGA-wm75-8mm3-grrc
     aliases:
-      - CVE-2023-45142
-      - GHSA-rcjv-mgp8-qvmr
+      - CVE-2023-47108
+      - GHSA-8pgv-569h-w5rw
     events:
-      - timestamp: 2023-10-19T12:35:15Z
+      - timestamp: 2023-11-16T14:22:49Z
         type: fixed
         data:
-          fixed-version: 1.13.1-r4
+          fixed-version: 1.13.2-r1
 
   - id: CGA-wp6w-c785-mh6v
     aliases:
@@ -58,117 +190,3 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
-
-  - id: CGA-cpxm-w9x4-52vg
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:24:06Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-wm75-8mm3-grrc
-    aliases:
-      - CVE-2023-47108
-      - GHSA-8pgv-569h-w5rw
-    events:
-      - timestamp: 2023-11-16T14:22:49Z
-        type: fixed
-        data:
-          fixed-version: 1.13.2-r1
-
-  - id: CGA-pcmg-5p64-vqhv
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2023-12-19T16:58:38Z
-        type: fixed
-        data:
-          fixed-version: 1.13.3-r1
-
-  - id: CGA-8rq6-52v7-wgv4
-    aliases:
-      - CVE-2024-25620
-      - GHSA-v53g-5gjp-272r
-    events:
-      - timestamp: 2024-02-16T07:13:46Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: cmctl-1.13
-            componentID: e7ddd3c5ccbddf71
-            componentName: helm.sh/helm/v3
-            componentVersion: v3.12.3
-            componentType: go-module
-            componentLocation: /usr/bin/cmctl
-            scanner: grype
-      - timestamp: 2024-02-22T17:45:29Z
-        type: fixed
-        data:
-          fixed-version: 1.13.3-r3
-
-  - id: CGA-crc8-wfgr-263v
-    aliases:
-      - CVE-2024-26147
-      - GHSA-r53h-jv2g-vpx6
-    events:
-      - timestamp: 2024-02-23T07:17:24Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: cmctl-1.13
-            componentID: 3012c3d7648f7741
-            componentName: helm.sh/helm/v3
-            componentVersion: v3.14.1
-            componentType: go-module
-            componentLocation: /usr/bin/cmctl
-            scanner: grype
-      - timestamp: 2024-02-23T17:49:42Z
-        type: fixed
-        data:
-          fixed-version: 1.13.4-r0
-
-  - id: CGA-6933-x86j-v4cp
-    aliases:
-      - GHSA-2c7c-3mj9-8fqh
-    events:
-      - timestamp: 2023-11-23T08:31:08Z
-        type: fixed
-        data:
-          fixed-version: 1.13.2-r2
-
-  - id: CGA-hh2r-78q9-94gw
-    aliases:
-      - GHSA-7ww5-4wqc-m92c
-    events:
-      - timestamp: 2024-01-11T07:17:36Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: cmctl-1.13
-            componentID: 88e1fd4d413b10c6
-            componentName: github.com/containerd/containerd
-            componentVersion: v1.7.6
-            componentType: go-module
-            componentLocation: /usr/bin/cmctl
-            scanner: grype
-      - timestamp: 2024-01-25T07:03:55Z
-        type: fixed
-        data:
-          fixed-version: 1.13.3-r2
-
-  - id: CGA-q338-c2wq-w785
-    aliases:
-      - GHSA-jq35-85cj-fj4p
-    events:
-      - timestamp: 2023-11-16T14:21:46Z
-        type: fixed
-        data:
-          fixed-version: 1.13.2-r1
