@@ -57,6 +57,24 @@ advisories:
             componentLocation: /usr/bin/consul-cni
             scanner: grype
 
+  - id: CGA-qhm7-7fw5-4fvj
+    aliases:
+      - CVE-2025-27144
+      - GHSA-c6gw-w398-hv78
+    events:
+      - timestamp: 2025-03-04T17:41:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: consul-k8s
+            componentID: 42ff972c77867d30
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.3
+            componentType: go-module
+            componentLocation: /usr/bin/consul-k8s-control-plane
+            scanner: grype
+
   - id: CGA-wf24-f277-m746
     aliases:
       - CVE-2025-22868
