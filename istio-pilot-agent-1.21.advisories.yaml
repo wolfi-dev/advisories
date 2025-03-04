@@ -108,6 +108,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability was matched to the module "istio.io/istio" at the following location(s): /usr/bin/pilot-agent. In all cases, the installed version of the module (git commit ed90e14d3473bc3fe54f98298eb16664002d14d1) corresponds to a version tag (1.21.2) that is later than the fixed version (1.9.8).'
 
+  - id: CGA-hr7x-6j4g-8w6r
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-04T18:34:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-agent-1.21
+            componentID: 7b1c7c17bb076702
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-agent
+            scanner: grype
+
   - id: CGA-jgqr-3fv2-fwp5
     aliases:
       - CVE-2022-23635
