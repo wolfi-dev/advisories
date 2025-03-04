@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: gatekeeper-3.15
+
+advisories:
+  - id: CGA-4xj2-736h-qf94
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-04T20:19:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.15
+            componentID: 81081313b5721c55
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
