@@ -4,6 +4,75 @@ package:
   name: prometheus-2.45
 
 advisories:
+  - id: CGA-4h3r-gqc3-2cgc
+    aliases:
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T09:21:33Z
+        type: fixed
+        data:
+          fixed-version: 2.45.3-r3
+
+  - id: CGA-4m5m-75g3-j9v8
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T09:21:35Z
+        type: fixed
+        data:
+          fixed-version: 2.45.3-r3
+
+  - id: CGA-5vwm-rfjv-g8cm
+    aliases:
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T09:21:32Z
+        type: fixed
+        data:
+          fixed-version: 2.45.3-r3
+
+  - id: CGA-93rw-ph67-6489
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-08T08:49:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.45
+            componentID: 6d9068b24fb0468e
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus
+            scanner: grype
+
+  - id: CGA-j5r3-6xc9-3r89
+    aliases:
+      - GHSA-jq35-85cj-fj4p
+    events:
+      - timestamp: 2024-03-02T08:06:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.45-bitnami-compat
+            componentID: cf0b0f7160c2250e
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.2+incompatible
+            componentType: go-module
+            componentLocation: /opt/bitnami/prometheus/bin/prometheus
+            scanner: grype
+      - timestamp: 2024-03-04T17:24:05Z
+        type: fixed
+        data:
+          fixed-version: 2.45.3-r2
+
   - id: CGA-jm99-fpwg-pwq5
     aliases:
       - CVE-2023-40577
@@ -26,43 +95,23 @@ advisories:
         data:
           fixed-version: 2.45.3-r2
 
-  - id: CGA-93rw-ph67-6489
+  - id: CGA-px2j-xgg4-p4fm
     aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
+      - CVE-2024-36621
+      - GHSA-2mj3-vfvx-fc43
     events:
-      - timestamp: 2024-04-08T08:49:15Z
+      - timestamp: 2025-03-04T15:26:00Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: prometheus-2.45
-            componentID: 6d9068b24fb0468e
-            componentName: stdlib
-            componentVersion: go1.22.1
+            componentID: cffc1980a9db8ca7
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.7+incompatible
             componentType: go-module
             componentLocation: /usr/bin/prometheus
             scanner: grype
-
-  - id: CGA-5vwm-rfjv-g8cm
-    aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
-    events:
-      - timestamp: 2024-03-12T09:21:32Z
-        type: fixed
-        data:
-          fixed-version: 2.45.3-r3
-
-  - id: CGA-r98x-24q2-r8p6
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-12T09:21:33Z
-        type: fixed
-        data:
-          fixed-version: 2.45.3-r3
 
   - id: CGA-qr77-9hwx-9635
     aliases:
@@ -82,30 +131,10 @@ advisories:
             componentLocation: /opt/bitnami/prometheus/bin/prometheus
             scanner: grype
 
-  - id: CGA-x4xh-fjm8-2h9j
+  - id: CGA-r98x-24q2-r8p6
     aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
-    events:
-      - timestamp: 2024-03-12T09:21:34Z
-        type: fixed
-        data:
-          fixed-version: 2.45.3-r3
-
-  - id: CGA-4m5m-75g3-j9v8
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-12T09:21:35Z
-        type: fixed
-        data:
-          fixed-version: 2.45.3-r3
-
-  - id: CGA-4h3r-gqc3-2cgc
-    aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
     events:
       - timestamp: 2024-03-12T09:21:33Z
         type: fixed
@@ -130,23 +159,12 @@ advisories:
             componentLocation: /opt/bitnami/prometheus/bin/prometheus
             scanner: grype
 
-  - id: CGA-j5r3-6xc9-3r89
+  - id: CGA-x4xh-fjm8-2h9j
     aliases:
-      - GHSA-jq35-85cj-fj4p
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
     events:
-      - timestamp: 2024-03-02T08:06:11Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: prometheus-2.45-bitnami-compat
-            componentID: cf0b0f7160c2250e
-            componentName: github.com/docker/docker
-            componentVersion: v24.0.2+incompatible
-            componentType: go-module
-            componentLocation: /opt/bitnami/prometheus/bin/prometheus
-            scanner: grype
-      - timestamp: 2024-03-04T17:24:05Z
+      - timestamp: 2024-03-12T09:21:34Z
         type: fixed
         data:
-          fixed-version: 2.45.3-r2
+          fixed-version: 2.45.3-r3
