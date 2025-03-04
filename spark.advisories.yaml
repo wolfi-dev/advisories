@@ -581,6 +581,24 @@ advisories:
         data:
           note: This relates to guava v30.1.1-jre, which is included by the shaded JARs hadoop-shaded-guava-1.1.1.jar and hadoop-client-runtime-3.3.6.jar.
 
+  - id: CGA-wg5m-7wg5-29w2
+    aliases:
+      - CVE-2024-8184
+      - GHSA-g8m5-722r-8whq
+    events:
+      - timestamp: 2025-03-04T16:02:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark
+            componentID: 728e627daeb81330
+            componentName: jetty-server
+            componentVersion: 9.4.52.v20230823
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/spark-core_2.12-3.5.1.jar
+            scanner: grype
+
   - id: CGA-xcgx-m9fg-xrp3
     aliases:
       - CVE-2024-29133
