@@ -4,6 +4,24 @@ package:
   name: gatekeeper-3.16
 
 advisories:
+  - id: CGA-229v-8vh8-64x3
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-04T20:35:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.16
+            componentID: 4f9fd766a9994eb0
+            componentName: golang.org/x/crypto
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-22h9-6954-c6rw
     aliases:
       - CVE-2024-34158
