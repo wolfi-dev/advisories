@@ -4,6 +4,24 @@ package:
   name: cilium-operator-aws
 
 advisories:
+  - id: CGA-3hm5-gp4j-cwjj
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2025-03-04T19:06:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-operator-aws
+            componentID: b704170cde07f607
+            componentName: stdlib
+            componentVersion: go1.22.6
+            componentType: go-module
+            componentLocation: /usr/bin/cilium-operator-aws
+            scanner: grype
+
   - id: CGA-5xjg-9475-6967
     aliases:
       - CVE-2024-42486
