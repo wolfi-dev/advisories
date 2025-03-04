@@ -4,26 +4,23 @@ package:
   name: thanos-0.31
 
 advisories:
-  - id: CGA-m945-rhv2-82cw
+  - id: CGA-2f87-h79p-gqxh
     aliases:
-      - CVE-2019-3826
-      - GHSA-3m87-5598-2v4f
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
     events:
-      - timestamp: 2023-08-30T21:45:02Z
-        type: false-positive-determination
+      - timestamp: 2024-03-12T08:04:03Z
+        type: detection
         data:
-          type: component-vulnerability-mismatch
-          note: This only impacts the prometheus UI JS code and not the Go module. See https://github.com/prometheus/prometheus/issues/12403
-
-  - id: CGA-69j3-429w-q49f
-    aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
-    events:
-      - timestamp: 2023-10-13T23:18:43Z
-        type: fixed
-        data:
-          fixed-version: 0.31.0-r5
+          type: scan/v1
+          data:
+            subpackageName: thanos-0.31
+            componentID: 7fe824ba690e397b
+            componentName: stdlib
+            componentVersion: go1.21.6
+            componentType: go-module
+            componentLocation: /usr/bin/thanos
+            scanner: grype
 
   - id: CGA-3ff2-v5jg-6g72
     aliases:
@@ -34,60 +31,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.31.0-r5
-
-  - id: CGA-fm97-7fqm-gp74
-    aliases:
-      - CVE-2023-40577
-      - GHSA-v86x-5fm3-5p7j
-    events:
-      - timestamp: 2023-08-30T20:54:21Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-in-execution-path
-          note: This vulnerability is an XSS flaw affecting alertmanager as a server, not when imported as a library.
-
-  - id: CGA-jm66-m52h-37p8
-    aliases:
-      - CVE-2023-44487
-      - GHSA-m425-mq94-257g
-      - GHSA-qppj-fm5r-hxr3
-    events:
-      - timestamp: 2023-11-03T09:43:05Z
-        type: fixed
-        data:
-          fixed-version: 0.31.0-r7
-
-  - id: CGA-7cpw-vrvp-9cjq
-    aliases:
-      - CVE-2023-45142
-      - GHSA-rcjv-mgp8-qvmr
-    events:
-      - timestamp: 2023-10-19T02:06:21Z
-        type: fixed
-        data:
-          fixed-version: 0.31.0-r6
-
-  - id: CGA-cvf6-5fw7-jv5x
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:39:24Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-j97q-fwrj-28f8
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:39:26Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
 
   - id: CGA-3hx8-grx6-pj92
     aliases:
@@ -107,12 +50,32 @@ advisories:
             componentLocation: /usr/bin/thanos
             scanner: grype
 
-  - id: CGA-hxp2-684w-rj7f
+  - id: CGA-69j3-429w-q49f
     aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
     events:
-      - timestamp: 2024-03-12T08:03:58Z
+      - timestamp: 2023-10-13T23:18:43Z
+        type: fixed
+        data:
+          fixed-version: 0.31.0-r5
+
+  - id: CGA-7cpw-vrvp-9cjq
+    aliases:
+      - CVE-2023-45142
+      - GHSA-rcjv-mgp8-qvmr
+    events:
+      - timestamp: 2023-10-19T02:06:21Z
+        type: fixed
+        data:
+          fixed-version: 0.31.0-r6
+
+  - id: CGA-8226-9p2r-2g82
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T08:04:00Z
         type: detection
         data:
           type: scan/v1
@@ -125,22 +88,34 @@ advisories:
             componentLocation: /usr/bin/thanos
             scanner: grype
 
-  - id: CGA-vpmm-xhgv-4v6r
+  - id: CGA-cvf6-5fw7-jv5x
     aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
     events:
-      - timestamp: 2023-12-20T05:29:04Z
-        type: fixed
+      - timestamp: 2023-11-07T19:39:24Z
+        type: false-positive-determination
         data:
-          fixed-version: 0.31.0-r10
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
 
-  - id: CGA-8226-9p2r-2g82
+  - id: CGA-fm97-7fqm-gp74
     aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
+      - CVE-2023-40577
+      - GHSA-v86x-5fm3-5p7j
     events:
-      - timestamp: 2024-03-12T08:04:00Z
+      - timestamp: 2023-08-30T20:54:21Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: This vulnerability is an XSS flaw affecting alertmanager as a server, not when imported as a library.
+
+  - id: CGA-hxp2-684w-rj7f
+    aliases:
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T08:03:58Z
         type: detection
         data:
           type: scan/v1
@@ -171,20 +146,50 @@ advisories:
             componentLocation: /usr/bin/thanos
             scanner: grype
 
-  - id: CGA-2f87-h79p-gqxh
+  - id: CGA-j97q-fwrj-28f8
     aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
     events:
-      - timestamp: 2024-03-12T08:04:03Z
-        type: detection
+      - timestamp: 2023-11-07T19:39:26Z
+        type: false-positive-determination
         data:
-          type: scan/v1
-          data:
-            subpackageName: thanos-0.31
-            componentID: 7fe824ba690e397b
-            componentName: stdlib
-            componentVersion: go1.21.6
-            componentType: go-module
-            componentLocation: /usr/bin/thanos
-            scanner: grype
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-jm66-m52h-37p8
+    aliases:
+      - CVE-2023-44487
+      - GHSA-m425-mq94-257g
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2023-11-03T09:43:05Z
+        type: fixed
+        data:
+          fixed-version: 0.31.0-r7
+
+  - id: CGA-m945-rhv2-82cw
+    aliases:
+      - CVE-2019-3826
+      - GHSA-3m87-5598-2v4f
+    events:
+      - timestamp: 2023-08-30T21:45:02Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: This only impacts the prometheus UI JS code and not the Go module. See https://github.com/prometheus/prometheus/issues/12403
+      - timestamp: 2025-03-04T18:03:05Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: Prometheus ships a Go (Golang) library with a versioning scheme that follows the 0.x format. However, the Prometheus application itself uses a versioning scheme based on 1.x, 2.x, etc. The vulnerability identified in CVE-2019-3826 is specifically associated with the Prometheus application, not the Golang library.
+
+  - id: CGA-vpmm-xhgv-4v6r
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2023-12-20T05:29:04Z
+        type: fixed
+        data:
+          fixed-version: 0.31.0-r10

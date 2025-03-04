@@ -4,28 +4,6 @@ package:
   name: grafana
 
 advisories:
-  - id: CGA-hw2w-w5j9-96vf
-    aliases:
-      - CVE-2019-3826
-      - GHSA-3m87-5598-2v4f
-    events:
-      - timestamp: 2023-12-14T10:32:41Z
-        type: false-positive-determination
-        data:
-          type: component-vulnerability-mismatch
-          note: Go modules are not identifiying the version correctly. Example, v1.8.2-0.20211011171444-354d8d2ecfac is not v1.8.2, using the date and commit sha we can see that this is v2.31.0-rc.0~39 which contains the fix.
-
-  - id: CGA-jxr3-5j3m-vxx8
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:28:37Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
   - id: CGA-5f4j-2xph-wmq2
     aliases:
       - CVE-2023-45284
@@ -55,15 +33,15 @@ advisories:
             componentLocation: /usr/bin/grafana
             scanner: grype
 
-  - id: CGA-h437-rw82-45c8
+  - id: CGA-85wh-38wf-qwmf
     aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
+      - CVE-2024-1442
+      - GHSA-5mxf-42f5-j782
     events:
-      - timestamp: 2023-12-19T20:58:19Z
+      - timestamp: 2024-03-08T07:18:33Z
         type: fixed
         data:
-          fixed-version: 10.2.3-r1
+          fixed-version: 10.4.0-r0
 
   - id: CGA-89jf-47wm-w9rp
     aliases:
@@ -87,16 +65,6 @@ advisories:
         data:
           fixed-version: 10.3.3-r0
 
-  - id: CGA-85wh-38wf-qwmf
-    aliases:
-      - CVE-2024-1442
-      - GHSA-5mxf-42f5-j782
-    events:
-      - timestamp: 2024-03-08T07:18:33Z
-        type: fixed
-        data:
-          fixed-version: 10.4.0-r0
-
   - id: CGA-9hh3-5qwj-hh48
     aliases:
       - CVE-2024-24786
@@ -118,6 +86,86 @@ advisories:
         type: fixed
         data:
           fixed-version: 10.4.0-r3
+
+  - id: CGA-h437-rw82-45c8
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2023-12-19T20:58:19Z
+        type: fixed
+        data:
+          fixed-version: 10.2.3-r1
+
+  - id: CGA-hw2w-w5j9-96vf
+    aliases:
+      - CVE-2019-3826
+      - GHSA-3m87-5598-2v4f
+    events:
+      - timestamp: 2023-12-14T10:32:41Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: Go modules are not identifiying the version correctly. Example, v1.8.2-0.20211011171444-354d8d2ecfac is not v1.8.2, using the date and commit sha we can see that this is v2.31.0-rc.0~39 which contains the fix.
+      - timestamp: 2025-03-04T17:59:07Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: Prometheus ships a Go (Golang) library with a versioning scheme that follows the 0.x format. However, the Prometheus application itself uses a versioning scheme based on 1.x, 2.x, etc. The vulnerability identified in CVE-2019-3826 is specifically associated with the Prometheus application, not the Golang library.
+
+  - id: CGA-jxr3-5j3m-vxx8
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:28:37Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-p7pg-p7jj-xh8g
+    aliases:
+      - GHSA-9763-4f94-gfch
+    events:
+      - timestamp: 2024-01-11T07:19:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana
+            componentID: 3e3db7e99fc61bc6
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.3.3
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+      - timestamp: 2024-01-23T17:32:11Z
+        type: fixed
+        data:
+          fixed-version: 10.3.1-r0
+
+  - id: CGA-vr5c-cpcm-xcwc
+    aliases:
+      - CVE-2024-28180
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:18:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana
+            componentID: c3916d13aa91e911
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+      - timestamp: 2024-03-08T07:50:30Z
+        type: fixed
+        data:
+          fixed-version: 10.4.0-r1
 
   - id: CGA-xcf7-p2w4-pv5r
     aliases:
@@ -154,46 +202,3 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/grafana-server
             scanner: grype
-
-  - id: CGA-vr5c-cpcm-xcwc
-    aliases:
-      - CVE-2024-28180
-      - GHSA-c5q2-7r4c-mv6g
-    events:
-      - timestamp: 2024-03-08T07:18:33Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: grafana
-            componentID: c3916d13aa91e911
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.1
-            componentType: go-module
-            componentLocation: /usr/bin/grafana
-            scanner: grype
-      - timestamp: 2024-03-08T07:50:30Z
-        type: fixed
-        data:
-          fixed-version: 10.4.0-r1
-
-  - id: CGA-p7pg-p7jj-xh8g
-    aliases:
-      - GHSA-9763-4f94-gfch
-    events:
-      - timestamp: 2024-01-11T07:19:14Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: grafana
-            componentID: 3e3db7e99fc61bc6
-            componentName: github.com/cloudflare/circl
-            componentVersion: v1.3.3
-            componentType: go-module
-            componentLocation: /usr/bin/grafana
-            scanner: grype
-      - timestamp: 2024-01-23T17:32:11Z
-        type: fixed
-        data:
-          fixed-version: 10.3.1-r0

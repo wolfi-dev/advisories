@@ -4,55 +4,14 @@ package:
   name: loki
 
 advisories:
-  - id: CGA-8mfm-3rwc-952x
+  - id: CGA-38p4-6wmw-9v8j
     aliases:
-      - CVE-2019-3826
-      - GHSA-3m87-5598-2v4f
+      - GHSA-jq35-85cj-fj4p
     events:
-      - timestamp: 2023-09-02T01:06:18Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-in-execution-path
-          note: This CVE affects the Prometheus UI (Javascript) and not the Go code
-
-  - id: CGA-vmv7-r228-chvf
-    aliases:
-      - CVE-2020-8559
-      - GHSA-33c5-9fx5-fvjm
-    events:
-      - timestamp: 2024-04-25T14:10:17Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: loki
-            componentID: 6431bf3399f259eb
-            componentName: k8s.io/apimachinery
-            componentVersion: v0.29.2
-            componentType: go-module
-            componentLocation: /usr/bin/loki
-            scanner: grype
-
-  - id: CGA-8xwx-h3q4-g46x
-    aliases:
-      - CVE-2023-40577
-      - GHSA-v86x-5fm3-5p7j
-    events:
-      - timestamp: 2023-09-02T01:06:18Z
+      - timestamp: 2023-12-22T10:47:09Z
         type: fixed
         data:
-          fixed-version: 2.8.4-r5
-
-  - id: CGA-c5wm-8j7m-6w79
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:32:51Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          fixed-version: 2.9.3-r1
 
   - id: CGA-4h39-vcmr-gjfv
     aliases:
@@ -64,86 +23,6 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
-
-  - id: CGA-q3qf-fhh8-464x
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-20T14:56:01Z
-        type: fixed
-        data:
-          fixed-version: 3.0.0-r2
-
-  - id: CGA-5m4r-qjfp-j8fv
-    aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
-    events:
-      - timestamp: 2024-03-12T08:05:23Z
-        type: fixed
-        data:
-          fixed-version: 2.9.5-r1
-
-  - id: CGA-gm4h-mphm-5q59
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-12T08:05:24Z
-        type: fixed
-        data:
-          fixed-version: 2.9.5-r1
-
-  - id: CGA-xv2r-75ch-26f4
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2023-12-22T10:47:16Z
-        type: fixed
-        data:
-          fixed-version: 2.9.3-r1
-
-  - id: CGA-hr6p-h36h-g26r
-    aliases:
-      - CVE-2024-24557
-      - GHSA-xw73-rw38-6vjc
-    events:
-      - timestamp: 2024-03-21T11:42:22Z
-        type: fixed
-        data:
-          fixed-version: 2.9.5-r3
-
-  - id: CGA-gh97-6fqx-r4rr
-    aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
-    events:
-      - timestamp: 2024-03-12T08:05:25Z
-        type: fixed
-        data:
-          fixed-version: 2.9.5-r1
-
-  - id: CGA-xm92-f5mw-vxq3
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-12T08:05:21Z
-        type: fixed
-        data:
-          fixed-version: 2.9.5-r1
-
-  - id: CGA-9crp-w39g-vr3j
-    aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
-    events:
-      - timestamp: 2024-03-12T08:05:22Z
-        type: fixed
-        data:
-          fixed-version: 2.9.5-r1
 
   - id: CGA-4qp2-cm83-776p
     aliases:
@@ -167,6 +46,38 @@ advisories:
         data:
           fixed-version: 2.9.5-r2
 
+  - id: CGA-56rm-w32c-546x
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2024-05-14T07:24:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: loki
+            componentID: 6a57ca19145f2048
+            componentName: stdlib
+            componentVersion: go1.22.2
+            componentType: go-module
+            componentLocation: /usr/bin/loki
+            scanner: grype
+      - timestamp: 2024-05-22T09:13:18Z
+        type: fixed
+        data:
+          fixed-version: 3.0.0-r3
+
+  - id: CGA-5m4r-qjfp-j8fv
+    aliases:
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T08:05:23Z
+        type: fixed
+        data:
+          fixed-version: 2.9.5-r1
+
   - id: CGA-846h-2r7r-7xg8
     aliases:
       - CVE-2024-24787
@@ -189,27 +100,72 @@ advisories:
         data:
           fixed-version: 3.0.0-r3
 
-  - id: CGA-56rm-w32c-546x
+  - id: CGA-8mfm-3rwc-952x
     aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
+      - CVE-2019-3826
+      - GHSA-3m87-5598-2v4f
     events:
-      - timestamp: 2024-05-14T07:24:25Z
-        type: detection
+      - timestamp: 2023-09-02T01:06:18Z
+        type: false-positive-determination
         data:
-          type: scan/v1
-          data:
-            subpackageName: loki
-            componentID: 6a57ca19145f2048
-            componentName: stdlib
-            componentVersion: go1.22.2
-            componentType: go-module
-            componentLocation: /usr/bin/loki
-            scanner: grype
-      - timestamp: 2024-05-22T09:13:18Z
+          type: vulnerable-code-not-in-execution-path
+          note: This CVE affects the Prometheus UI (Javascript) and not the Go code
+      - timestamp: 2025-03-04T18:00:50Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: Prometheus ships a Go (Golang) library with a versioning scheme that follows the 0.x format. However, the Prometheus application itself uses a versioning scheme based on 1.x, 2.x, etc. The vulnerability identified in CVE-2019-3826 is specifically associated with the Prometheus application, not the Golang library.
+
+  - id: CGA-8xwx-h3q4-g46x
+    aliases:
+      - CVE-2023-40577
+      - GHSA-v86x-5fm3-5p7j
+    events:
+      - timestamp: 2023-09-02T01:06:18Z
         type: fixed
         data:
-          fixed-version: 3.0.0-r3
+          fixed-version: 2.8.4-r5
+
+  - id: CGA-9crp-w39g-vr3j
+    aliases:
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T08:05:22Z
+        type: fixed
+        data:
+          fixed-version: 2.9.5-r1
+
+  - id: CGA-c5wm-8j7m-6w79
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:32:51Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-gh97-6fqx-r4rr
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T08:05:25Z
+        type: fixed
+        data:
+          fixed-version: 2.9.5-r1
+
+  - id: CGA-gm4h-mphm-5q59
+    aliases:
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T08:05:24Z
+        type: fixed
+        data:
+          fixed-version: 2.9.5-r1
 
   - id: CGA-hjgc-8pv6-g89x
     aliases:
@@ -233,11 +189,60 @@ advisories:
         data:
           fixed-version: 3.0.0-r1
 
-  - id: CGA-38p4-6wmw-9v8j
+  - id: CGA-hr6p-h36h-g26r
     aliases:
-      - GHSA-jq35-85cj-fj4p
+      - CVE-2024-24557
+      - GHSA-xw73-rw38-6vjc
     events:
-      - timestamp: 2023-12-22T10:47:09Z
+      - timestamp: 2024-03-21T11:42:22Z
+        type: fixed
+        data:
+          fixed-version: 2.9.5-r3
+
+  - id: CGA-q3qf-fhh8-464x
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-20T14:56:01Z
+        type: fixed
+        data:
+          fixed-version: 3.0.0-r2
+
+  - id: CGA-vmv7-r228-chvf
+    aliases:
+      - CVE-2020-8559
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2024-04-25T14:10:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: loki
+            componentID: 6431bf3399f259eb
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.29.2
+            componentType: go-module
+            componentLocation: /usr/bin/loki
+            scanner: grype
+
+  - id: CGA-xm92-f5mw-vxq3
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T08:05:21Z
+        type: fixed
+        data:
+          fixed-version: 2.9.5-r1
+
+  - id: CGA-xv2r-75ch-26f4
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2023-12-22T10:47:16Z
         type: fixed
         data:
           fixed-version: 2.9.3-r1

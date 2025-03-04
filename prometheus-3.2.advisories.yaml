@@ -1,0 +1,28 @@
+schema-version: 2.0.2
+
+package:
+  name: prometheus-3.2
+
+advisories:
+  - id: CGA-hm8x-pwmm-6ghx
+    aliases:
+      - CVE-2019-3826
+      - GHSA-3m87-5598-2v4f
+    events:
+      - timestamp: 2025-03-04T09:09:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-3.2
+            componentID: d566686d8ad24a3d
+            componentName: github.com/prometheus/prometheus
+            componentVersion: v0.302.1+dirty
+            componentType: go-module
+            componentLocation: /opt/bitnami/prometheus/bin/prometheus
+            scanner: grype
+      - timestamp: 2025-03-04T18:01:53Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: Prometheus ships a Go (Golang) library with a versioning scheme that follows the 0.x format. However, the Prometheus application itself uses a versioning scheme based on 1.x, 2.x, etc. The vulnerability identified in CVE-2019-3826 is specifically associated with the Prometheus application, not the Golang library.

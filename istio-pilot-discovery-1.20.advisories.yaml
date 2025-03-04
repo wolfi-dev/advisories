@@ -4,55 +4,6 @@ package:
   name: istio-pilot-discovery-1.20
 
 advisories:
-  - id: CGA-fh5w-8wfj-vcvr
-    aliases:
-      - CVE-2019-3826
-      - GHSA-3m87-5598-2v4f
-    events:
-      - timestamp: 2023-12-17T17:36:05Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-version-not-used
-          note: This vulnerability has been fixed in version v2.7.1 which corresponds to the Go library version v0.7.1 and this package includes a later version.
-
-  - id: CGA-h737-234h-86cr
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-09T11:29:42Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: istio-pilot-discovery-1.20
-            componentID: 49cc7b3b9f03b4d4
-            componentName: stdlib
-            componentVersion: go1.22.1
-            componentType: go-module
-            componentLocation: /usr/bin/pilot-discovery
-            scanner: grype
-
-  - id: CGA-78x5-43hv-2jgx
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2023-12-20T13:03:19Z
-        type: fixed
-        data:
-          fixed-version: 1.20.1-r2
-
-  - id: CGA-gv2p-4qmm-v36r
-    aliases:
-      - CVE-2023-49290
-      - GHSA-7f9x-gw85-8grf
-    events:
-      - timestamp: 2024-01-24T17:13:08Z
-        type: fixed
-        data:
-          fixed-version: 1.20.2-r2
-
   - id: CGA-5f62-fvxx-5fvh
     aliases:
       - CVE-2024-21664
@@ -74,46 +25,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.20.2-r3
-
-  - id: CGA-64hv-qqx4-c4f3
-    aliases:
-      - CVE-2024-24557
-      - GHSA-xw73-rw38-6vjc
-    events:
-      - timestamp: 2024-03-23T08:01:43Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: istio-pilot-discovery-1.20
-            componentID: 121f21f662b2e868
-            componentName: github.com/docker/docker
-            componentVersion: v24.0.7+incompatible
-            componentType: go-module
-            componentLocation: /usr/bin/pilot-discovery
-            scanner: grype
-
-  - id: CGA-wq3c-26pv-h85m
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T17:57:46Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: istio-pilot-discovery-1.20
-            componentID: 871d778ad1266207
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.31.0
-            componentType: go-module
-            componentLocation: /usr/bin/pilot-discovery
-            scanner: grype
-      - timestamp: 2024-03-14T19:27:01Z
-        type: fixed
-        data:
-          fixed-version: 1.20.4-r1
 
   - id: CGA-5f79-cv7f-rh64
     aliases:
@@ -137,6 +48,34 @@ advisories:
         data:
           fixed-version: 1.20.3-r2
 
+  - id: CGA-64hv-qqx4-c4f3
+    aliases:
+      - CVE-2024-24557
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-23T08:01:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-discovery-1.20
+            componentID: 121f21f662b2e868
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.7+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-discovery
+            scanner: grype
+
+  - id: CGA-78x5-43hv-2jgx
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2023-12-20T13:03:19Z
+        type: fixed
+        data:
+          fixed-version: 1.20.1-r2
+
   - id: CGA-c6wr-q2gj-mmg7
     aliases:
       - CVE-2024-28180
@@ -159,6 +98,50 @@ advisories:
         data:
           fixed-version: 1.20.3-r2
 
+  - id: CGA-fh5w-8wfj-vcvr
+    aliases:
+      - CVE-2019-3826
+      - GHSA-3m87-5598-2v4f
+    events:
+      - timestamp: 2023-12-17T17:36:05Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: This vulnerability has been fixed in version v2.7.1 which corresponds to the Go library version v0.7.1 and this package includes a later version.
+      - timestamp: 2025-03-04T18:00:10Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: Prometheus ships a Go (Golang) library with a versioning scheme that follows the 0.x format. However, the Prometheus application itself uses a versioning scheme based on 1.x, 2.x, etc. The vulnerability identified in CVE-2019-3826 is specifically associated with the Prometheus application, not the Golang library.
+
+  - id: CGA-gv2p-4qmm-v36r
+    aliases:
+      - CVE-2023-49290
+      - GHSA-7f9x-gw85-8grf
+    events:
+      - timestamp: 2024-01-24T17:13:08Z
+        type: fixed
+        data:
+          fixed-version: 1.20.2-r2
+
+  - id: CGA-h737-234h-86cr
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-09T11:29:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-discovery-1.20
+            componentID: 49cc7b3b9f03b4d4
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-discovery
+            scanner: grype
+
   - id: CGA-vmcx-qmfx-qf2h
     aliases:
       - GHSA-2c7c-3mj9-8fqh
@@ -167,3 +150,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.20.0-r2
+
+  - id: CGA-wq3c-26pv-h85m
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T17:57:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-discovery-1.20
+            componentID: 871d778ad1266207
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-discovery
+            scanner: grype
+      - timestamp: 2024-03-14T19:27:01Z
+        type: fixed
+        data:
+          fixed-version: 1.20.4-r1

@@ -4,6 +4,37 @@ package:
   name: istio-operator-1.19
 
 advisories:
+  - id: CGA-23rr-97f7-mxmw
+    aliases:
+      - GHSA-jq35-85cj-fj4p
+    events:
+      - timestamp: 2023-10-31T20:03:50Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability is in the container runtime itself, not clients of the container runtime.
+
+  - id: CGA-24w2-65f6-7j2q
+    aliases:
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2023-10-12T22:19:15Z
+        type: fixed
+        data:
+          fixed-version: 1.19.3-r0
+
+  - id: CGA-385m-22vr-r2p8
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:29:44Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
   - id: CGA-4w9g-ffhm-3ppm
     aliases:
       - CVE-2019-25210
@@ -27,69 +58,6 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
 
-  - id: CGA-fqxp-3f84-p2m9
-    aliases:
-      - CVE-2019-3826
-      - GHSA-3m87-5598-2v4f
-    events:
-      - timestamp: 2023-09-25T20:27:23Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-version-not-used
-          note: Prometheus version 0.45 is actually 2.45 which is newer than the fixed version 2.7.1
-
-  - id: CGA-24w2-65f6-7j2q
-    aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
-    events:
-      - timestamp: 2023-10-12T22:19:15Z
-        type: fixed
-        data:
-          fixed-version: 1.19.3-r0
-
-  - id: CGA-xgxx-84wg-g98c
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:29:42Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-385m-22vr-r2p8
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:29:44Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-j54h-h9g9-4f32
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2023-12-20T13:01:03Z
-        type: fixed
-        data:
-          fixed-version: 1.19.5-r2
-
-  - id: CGA-98fp-p2m3-rmx5
-    aliases:
-      - CVE-2023-49290
-      - GHSA-7f9x-gw85-8grf
-    events:
-      - timestamp: 2024-01-24T17:13:01Z
-        type: fixed
-        data:
-          fixed-version: 1.19.6-r1
-
   - id: CGA-57v2-mmmr-jq8g
     aliases:
       - CVE-2024-21664
@@ -112,27 +80,15 @@ advisories:
         data:
           fixed-version: 1.19.6-r2
 
-  - id: CGA-vj2x-r92w-wrxm
+  - id: CGA-98fp-p2m3-rmx5
     aliases:
-      - CVE-2024-25620
-      - GHSA-v53g-5gjp-272r
+      - CVE-2023-49290
+      - GHSA-7f9x-gw85-8grf
     events:
-      - timestamp: 2024-02-16T07:38:59Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: istio-operator-1.19
-            componentID: d9aa68be3258c586
-            componentName: helm.sh/helm/v3
-            componentVersion: v3.12.2
-            componentType: go-module
-            componentLocation: /usr/bin/operator
-            scanner: grype
-      - timestamp: 2024-02-24T17:03:16Z
+      - timestamp: 2024-01-24T17:13:01Z
         type: fixed
         data:
-          fixed-version: 1.19.7-r1
+          fixed-version: 1.19.6-r1
 
   - id: CGA-cffv-prrf-jc52
     aliases:
@@ -155,6 +111,22 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.19.7-r1
+
+  - id: CGA-fqxp-3f84-p2m9
+    aliases:
+      - CVE-2019-3826
+      - GHSA-3m87-5598-2v4f
+    events:
+      - timestamp: 2023-09-25T20:27:23Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: Prometheus version 0.45 is actually 2.45 which is newer than the fixed version 2.7.1
+      - timestamp: 2025-03-04T17:59:23Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: Prometheus ships a Go (Golang) library with a versioning scheme that follows the 0.x format. However, the Prometheus application itself uses a versioning scheme based on 1.x, 2.x, etc. The vulnerability identified in CVE-2019-3826 is specifically associated with the Prometheus application, not the Golang library.
 
   - id: CGA-fxch-3g4r-m82f
     aliases:
@@ -183,12 +155,45 @@ advisories:
             componentLocation: /usr/bin/operator
             scanner: grype
 
-  - id: CGA-23rr-97f7-mxmw
+  - id: CGA-j54h-h9g9-4f32
     aliases:
-      - GHSA-jq35-85cj-fj4p
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
     events:
-      - timestamp: 2023-10-31T20:03:50Z
+      - timestamp: 2023-12-20T13:01:03Z
+        type: fixed
+        data:
+          fixed-version: 1.19.5-r2
+
+  - id: CGA-vj2x-r92w-wrxm
+    aliases:
+      - CVE-2024-25620
+      - GHSA-v53g-5gjp-272r
+    events:
+      - timestamp: 2024-02-16T07:38:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.19
+            componentID: d9aa68be3258c586
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.12.2
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+      - timestamp: 2024-02-24T17:03:16Z
+        type: fixed
+        data:
+          fixed-version: 1.19.7-r1
+
+  - id: CGA-xgxx-84wg-g98c
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:29:42Z
         type: false-positive-determination
         data:
           type: vulnerable-code-not-included-in-package
-          note: This vulnerability is in the container runtime itself, not clients of the container runtime.
+          note: Only affects Windows

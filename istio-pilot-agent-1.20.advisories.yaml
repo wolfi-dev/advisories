@@ -4,55 +4,6 @@ package:
   name: istio-pilot-agent-1.20
 
 advisories:
-  - id: CGA-99q8-f3qr-gjq7
-    aliases:
-      - CVE-2019-3826
-      - GHSA-3m87-5598-2v4f
-    events:
-      - timestamp: 2023-12-17T17:35:59Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-version-not-used
-          note: This vulnerability has been fixed in version v2.7.1 which corresponds to the Go library version v0.7.1 and this package includes a later version.
-
-  - id: CGA-w3w6-9mvq-h2qc
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-10T10:53:46Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: istio-pilot-agent-1.20
-            componentID: 4489cadd67fd8e1e
-            componentName: stdlib
-            componentVersion: go1.22.1
-            componentType: go-module
-            componentLocation: /usr/bin/pilot-agent
-            scanner: grype
-
-  - id: CGA-qxcp-8jmf-cc9w
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2023-12-20T13:02:31Z
-        type: fixed
-        data:
-          fixed-version: 1.20.1-r2
-
-  - id: CGA-f79m-wwxv-m882
-    aliases:
-      - CVE-2023-49290
-      - GHSA-7f9x-gw85-8grf
-    events:
-      - timestamp: 2024-01-24T17:13:08Z
-        type: fixed
-        data:
-          fixed-version: 1.20.2-r2
-
   - id: CGA-3hmh-6hmr-cg6g
     aliases:
       - CVE-2024-21664
@@ -74,46 +25,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.20.2-r3
-
-  - id: CGA-wfq3-vpc9-838r
-    aliases:
-      - CVE-2024-24557
-      - GHSA-xw73-rw38-6vjc
-    events:
-      - timestamp: 2024-04-10T10:49:57Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: istio-pilot-agent-1.20
-            componentID: 490fa75eebdd4904
-            componentName: github.com/docker/docker
-            componentVersion: v24.0.7+incompatible
-            componentType: go-module
-            componentLocation: /usr/bin/pilot-agent
-            scanner: grype
-
-  - id: CGA-p855-qj8h-pprc
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T07:07:38Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: istio-pilot-agent-1.20
-            componentID: 5b2c245bcb2957a3
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.31.0
-            componentType: go-module
-            componentLocation: /usr/bin/pilot-agent
-            scanner: grype
-      - timestamp: 2024-03-14T19:12:57Z
-        type: fixed
-        data:
-          fixed-version: 1.20.4-r0
 
   - id: CGA-6pm8-p738-rrw3
     aliases:
@@ -137,6 +48,82 @@ advisories:
         data:
           fixed-version: 1.20.3-r3
 
+  - id: CGA-99q8-f3qr-gjq7
+    aliases:
+      - CVE-2019-3826
+      - GHSA-3m87-5598-2v4f
+    events:
+      - timestamp: 2023-12-17T17:35:59Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: This vulnerability has been fixed in version v2.7.1 which corresponds to the Go library version v0.7.1 and this package includes a later version.
+      - timestamp: 2025-03-04T17:59:55Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: Prometheus ships a Go (Golang) library with a versioning scheme that follows the 0.x format. However, the Prometheus application itself uses a versioning scheme based on 1.x, 2.x, etc. The vulnerability identified in CVE-2019-3826 is specifically associated with the Prometheus application, not the Golang library.
+
+  - id: CGA-f79m-wwxv-m882
+    aliases:
+      - CVE-2023-49290
+      - GHSA-7f9x-gw85-8grf
+    events:
+      - timestamp: 2024-01-24T17:13:08Z
+        type: fixed
+        data:
+          fixed-version: 1.20.2-r2
+
+  - id: CGA-p855-qj8h-pprc
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:07:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-agent-1.20
+            componentID: 5b2c245bcb2957a3
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-agent
+            scanner: grype
+      - timestamp: 2024-03-14T19:12:57Z
+        type: fixed
+        data:
+          fixed-version: 1.20.4-r0
+
+  - id: CGA-qxcp-8jmf-cc9w
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2023-12-20T13:02:31Z
+        type: fixed
+        data:
+          fixed-version: 1.20.1-r2
+
+  - id: CGA-w3w6-9mvq-h2qc
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-10T10:53:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-agent-1.20
+            componentID: 4489cadd67fd8e1e
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-agent
+            scanner: grype
+
   - id: CGA-w9c2-fqpv-4hvg
     aliases:
       - CVE-2024-28180
@@ -158,3 +145,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.20.3-r2
+
+  - id: CGA-wfq3-vpc9-838r
+    aliases:
+      - CVE-2024-24557
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-04-10T10:49:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-agent-1.20
+            componentID: 490fa75eebdd4904
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.7+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-agent
+            scanner: grype

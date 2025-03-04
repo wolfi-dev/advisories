@@ -293,6 +293,11 @@ advisories:
         data:
           type: vulnerable-code-version-not-used
           note: The installed version of the prometheus library is ahead of the vulnerability fix version, but prometheus violates Go's rules for v2 module versioning.
+      - timestamp: 2025-03-04T18:03:29Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: Prometheus ships a Go (Golang) library with a versioning scheme that follows the 0.x format. However, the Prometheus application itself uses a versioning scheme based on 1.x, 2.x, etc. The vulnerability identified in CVE-2019-3826 is specifically associated with the Prometheus application, not the Golang library.
 
   - id: CGA-p9g6-8rqg-gphv
     aliases:
