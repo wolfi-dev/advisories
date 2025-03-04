@@ -352,6 +352,24 @@ advisories:
         data:
           note: Argo CD 2.7 is longer supported. Security Support ended on 2024-02-05.
 
+  - id: CGA-q54m-4h74-5fvx
+    aliases:
+      - CVE-2024-5321
+      - GHSA-82m2-cv7p-4m75
+    events:
+      - timestamp: 2025-03-04T18:03:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.7
+            componentID: 3236935c8a384429
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.24.17
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
   - id: CGA-qjj2-3547-4cg5
     aliases:
       - CVE-2023-50726
