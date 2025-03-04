@@ -4,163 +4,6 @@ package:
   name: argo-cd-2.7
 
 advisories:
-  - id: CGA-hh36-8gcc-wcq3
-    aliases:
-      - CVE-2020-8552
-      - GHSA-82hx-w2r5-c2wq
-    events:
-      - timestamp: 2023-09-19T16:38:22Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Go vulndb has marked this code NOT_IMPORTABLE.
-
-  - id: CGA-fv69-jpmq-6cc2
-    aliases:
-      - CVE-2021-25743
-      - GHSA-f9jg-8p32-2f55
-    events:
-      - timestamp: 2023-10-03T20:05:42Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: The vulnerable code is specific to kubectl.
-
-  - id: CGA-r228-g3wr-v93x
-    aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
-    events:
-      - timestamp: 2023-10-13T12:38:59Z
-        type: fixed
-        data:
-          fixed-version: 2.7.14-r5
-
-  - id: CGA-xh7c-m4vq-qg86
-    aliases:
-      - CVE-2023-3955
-      - GHSA-q78c-gwqw-jcmc
-    events:
-      - timestamp: 2023-11-02T13:04:05Z
-        type: fixed
-        data:
-          fixed-version: 2.7.14-r8
-
-  - id: CGA-9v4w-mxqx-qjc6
-    aliases:
-      - CVE-2023-3978
-      - GHSA-2wrh-6pvc-2jm9
-    events:
-      - timestamp: 2023-10-13T12:38:13Z
-        type: fixed
-        data:
-          fixed-version: 2.7.14-r5
-
-  - id: CGA-jfxc-mh76-f83w
-    aliases:
-      - CVE-2023-44487
-      - GHSA-m425-mq94-257g
-      - GHSA-qppj-fm5r-hxr3
-    events:
-      - timestamp: 2023-10-30T10:59:43Z
-        type: fixed
-        data:
-          fixed-version: 2.7.14-r7
-
-  - id: CGA-gfpx-r7p8-xhq3
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:23:02Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-99pw-rcrv-26vp
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:23:04Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-rf3j-869x-h6xf
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-13T07:40:08Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: argo-cd-2.7
-            componentID: 2fbccdc8507aadf0
-            componentName: stdlib
-            componentVersion: go1.22.1
-            componentType: go-module
-            componentLocation: /usr/bin/argocd
-            scanner: grype
-      - timestamp: 2024-04-13T22:10:52Z
-        type: fix-not-planned
-        data:
-          note: Argo CD 2.7 is longer supported. Security Support ended on 2024-02-05.
-
-  - id: CGA-94ww-2h5x-vcp5
-    aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
-    events:
-      - timestamp: 2024-03-12T07:06:47Z
-        type: fixed
-        data:
-          fixed-version: 2.7.17-r1
-
-  - id: CGA-j546-7ccp-93jq
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-12T07:06:51Z
-        type: fixed
-        data:
-          fixed-version: 2.7.17-r1
-
-  - id: CGA-p57p-9876-69wf
-    aliases:
-      - CVE-2023-46402
-      - GHSA-3f2q-6294-fmq5
-    events:
-      - timestamp: 2023-12-03T14:31:09Z
-        type: fixed
-        data:
-          fixed-version: 2.7.15-r2
-
-  - id: CGA-9p5f-vr5c-fg78
-    aliases:
-      - CVE-2023-47108
-      - GHSA-8pgv-569h-w5rw
-    events:
-      - timestamp: 2023-11-17T08:05:25Z
-        type: fixed
-        data:
-          fixed-version: 2.7.15-r0
-
-  - id: CGA-hqqq-gf45-qwqq
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2023-12-19T18:22:31Z
-        type: fixed
-        data:
-          fixed-version: 2.7.15-r6
-
   - id: CGA-54g8-jwm3-m68x
     aliases:
       - CVE-2023-49568
@@ -170,61 +13,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.7.15-r7
-
-  - id: CGA-qjj2-3547-4cg5
-    aliases:
-      - CVE-2023-50726
-      - GHSA-g623-jcgg-mhmm
-    events:
-      - timestamp: 2024-03-16T07:04:51Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: argo-cd-2.7
-            componentID: 017ef98c4182ad84
-            componentName: github.com/argoproj/argo-cd/v2
-            componentVersion: v2.7.17
-            componentType: go-module
-            componentLocation: /usr/bin/argocd
-            scanner: grype
-      - timestamp: 2024-03-30T16:47:59Z
-        type: fix-not-planned
-        data:
-          note: Argo CD 2.7 is longer supported. Security Support ended on 2024-02-05.
-
-  - id: CGA-j8wx-9mhc-2r24
-    aliases:
-      - CVE-2023-5528
-      - GHSA-hq6q-c2x6-hmch
-    events:
-      - timestamp: 2023-11-17T08:24:23Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: This vulnerability affects the Kubernetes application, not the golang k8s.io/kubernetes library. Kubernetes clusters are only affected if they are using an in-tree storage plugin for Windows nodes.
-
-  - id: CGA-hjfv-3464-gw5w
-    aliases:
-      - CVE-2024-21652
-      - GHSA-x32m-mvfj-52xv
-    events:
-      - timestamp: 2024-03-19T07:07:24Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: argo-cd-2.7-compat
-            componentID: 68fa0dc01d78a74b
-            componentName: github.com/argoproj/argo-cd/v2
-            componentVersion: v2.7.17
-            componentType: go-module
-            componentLocation: /usr/local/bin/argocd
-            scanner: grype
-      - timestamp: 2024-03-30T16:47:59Z
-        type: fix-not-planned
-        data:
-          note: Argo CD 2.7 is longer supported. Security Support ended on 2024-02-05.
 
   - id: CGA-64vj-898p-rfv3
     aliases:
@@ -248,22 +36,12 @@ advisories:
         data:
           note: Argo CD 2.7 is longer supported. Security Support ended on 2024-02-05.
 
-  - id: CGA-w6wg-63f3-6vq2
+  - id: CGA-94ww-2h5x-vcp5
     aliases:
-      - CVE-2024-22424
-      - GHSA-92mw-q256-5vwg
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
     events:
-      - timestamp: 2024-01-24T07:04:41Z
-        type: fixed
-        data:
-          fixed-version: 2.7.16-r0
-
-  - id: CGA-9wp2-8p2h-gc4w
-    aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
-    events:
-      - timestamp: 2024-03-12T07:06:53Z
+      - timestamp: 2024-03-12T07:06:47Z
         type: fixed
         data:
           fixed-version: 2.7.17-r1
@@ -277,6 +55,164 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.7.17-r1
+
+  - id: CGA-99pw-rcrv-26vp
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:23:04Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-9p5f-vr5c-fg78
+    aliases:
+      - CVE-2023-47108
+      - GHSA-8pgv-569h-w5rw
+    events:
+      - timestamp: 2023-11-17T08:05:25Z
+        type: fixed
+        data:
+          fixed-version: 2.7.15-r0
+
+  - id: CGA-9v4w-mxqx-qjc6
+    aliases:
+      - CVE-2023-3978
+      - GHSA-2wrh-6pvc-2jm9
+    events:
+      - timestamp: 2023-10-13T12:38:13Z
+        type: fixed
+        data:
+          fixed-version: 2.7.14-r5
+
+  - id: CGA-9wp2-8p2h-gc4w
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T07:06:53Z
+        type: fixed
+        data:
+          fixed-version: 2.7.17-r1
+
+  - id: CGA-fv69-jpmq-6cc2
+    aliases:
+      - CVE-2021-25743
+      - GHSA-f9jg-8p32-2f55
+    events:
+      - timestamp: 2023-10-03T20:05:42Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: The vulnerable code is specific to kubectl.
+
+  - id: CGA-gfpx-r7p8-xhq3
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:23:02Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-gv75-8j9w-mv6f
+    aliases:
+      - CVE-2024-31990
+      - GHSA-2gvw-w6fj-7m3c
+    events:
+      - timestamp: 2024-04-16T09:51:28Z
+        type: fix-not-planned
+        data:
+          note: Argo-CD 2.7 is no longer supported upstream.
+
+  - id: CGA-hh36-8gcc-wcq3
+    aliases:
+      - CVE-2020-8552
+      - GHSA-82hx-w2r5-c2wq
+    events:
+      - timestamp: 2023-09-19T16:38:22Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Go vulndb has marked this code NOT_IMPORTABLE.
+
+  - id: CGA-hjfv-3464-gw5w
+    aliases:
+      - CVE-2024-21652
+      - GHSA-x32m-mvfj-52xv
+    events:
+      - timestamp: 2024-03-19T07:07:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.7-compat
+            componentID: 68fa0dc01d78a74b
+            componentName: github.com/argoproj/argo-cd/v2
+            componentVersion: v2.7.17
+            componentType: go-module
+            componentLocation: /usr/local/bin/argocd
+            scanner: grype
+      - timestamp: 2024-03-30T16:47:59Z
+        type: fix-not-planned
+        data:
+          note: Argo CD 2.7 is longer supported. Security Support ended on 2024-02-05.
+
+  - id: CGA-hqqq-gf45-qwqq
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2023-12-19T18:22:31Z
+        type: fixed
+        data:
+          fixed-version: 2.7.15-r6
+
+  - id: CGA-j546-7ccp-93jq
+    aliases:
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T07:06:51Z
+        type: fixed
+        data:
+          fixed-version: 2.7.17-r1
+
+  - id: CGA-j8wx-9mhc-2r24
+    aliases:
+      - CVE-2023-5528
+      - GHSA-hq6q-c2x6-hmch
+    events:
+      - timestamp: 2023-11-17T08:24:23Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability affects the Kubernetes application, not the golang k8s.io/kubernetes library. Kubernetes clusters are only affected if they are using an in-tree storage plugin for Windows nodes.
+
+  - id: CGA-jfxc-mh76-f83w
+    aliases:
+      - CVE-2023-44487
+      - GHSA-m425-mq94-257g
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2023-10-30T10:59:43Z
+        type: fixed
+        data:
+          fixed-version: 2.7.14-r7
+
+  - id: CGA-p57p-9876-69wf
+    aliases:
+      - CVE-2023-46402
+      - GHSA-3f2q-6294-fmq5
+    events:
+      - timestamp: 2023-12-03T14:31:09Z
+        type: fixed
+        data:
+          fixed-version: 2.7.15-r2
 
   - id: CGA-pqrv-vw66-3c9h
     aliases:
@@ -310,12 +246,12 @@ advisories:
         data:
           note: Argo CD 2.7 is longer supported. Security Support ended on 2024-02-05.
 
-  - id: CGA-vgg7-98fq-pghc
+  - id: CGA-qjj2-3547-4cg5
     aliases:
-      - CVE-2024-28175
-      - GHSA-jwv5-8mqv-g387
+      - CVE-2023-50726
+      - GHSA-g623-jcgg-mhmm
     events:
-      - timestamp: 2024-03-16T07:04:54Z
+      - timestamp: 2024-03-16T07:04:51Z
         type: detection
         data:
           type: scan/v1
@@ -354,15 +290,59 @@ advisories:
         data:
           note: Argo-CD 2.7 is no longer supported upstream.
 
-  - id: CGA-gv75-8j9w-mv6f
+  - id: CGA-r228-g3wr-v93x
     aliases:
-      - CVE-2024-31990
-      - GHSA-2gvw-w6fj-7m3c
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
     events:
-      - timestamp: 2024-04-16T09:51:28Z
+      - timestamp: 2023-10-13T12:38:59Z
+        type: fixed
+        data:
+          fixed-version: 2.7.14-r5
+
+  - id: CGA-rf3j-869x-h6xf
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:40:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.7
+            componentID: 2fbccdc8507aadf0
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+      - timestamp: 2024-04-13T22:10:52Z
         type: fix-not-planned
         data:
-          note: Argo-CD 2.7 is no longer supported upstream.
+          note: Argo CD 2.7 is longer supported. Security Support ended on 2024-02-05.
+
+  - id: CGA-vgg7-98fq-pghc
+    aliases:
+      - CVE-2024-28175
+      - GHSA-jwv5-8mqv-g387
+    events:
+      - timestamp: 2024-03-16T07:04:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.7
+            componentID: 017ef98c4182ad84
+            componentName: github.com/argoproj/argo-cd/v2
+            componentVersion: v2.7.17
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+      - timestamp: 2024-03-30T16:47:59Z
+        type: fix-not-planned
+        data:
+          note: Argo CD 2.7 is longer supported. Security Support ended on 2024-02-05.
 
   - id: CGA-vx57-gmr4-gfqv
     aliases:
@@ -373,3 +353,41 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability is only present on Windows.
+
+  - id: CGA-w437-p79w-vf46
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-04T18:01:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.7
+            componentID: 65f0040b48c58391
+            componentName: golang.org/x/crypto
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-w6wg-63f3-6vq2
+    aliases:
+      - CVE-2024-22424
+      - GHSA-92mw-q256-5vwg
+    events:
+      - timestamp: 2024-01-24T07:04:41Z
+        type: fixed
+        data:
+          fixed-version: 2.7.16-r0
+
+  - id: CGA-xh7c-m4vq-qg86
+    aliases:
+      - CVE-2023-3955
+      - GHSA-q78c-gwqw-jcmc
+    events:
+      - timestamp: 2023-11-02T13:04:05Z
+        type: fixed
+        data:
+          fixed-version: 2.7.14-r8
