@@ -4,6 +4,16 @@ package:
   name: argo-cd-2.10
 
 advisories:
+  - id: CGA-266g-996x-r5hq
+    aliases:
+      - CVE-2024-21652
+      - GHSA-x32m-mvfj-52xv
+    events:
+      - timestamp: 2024-03-19T10:19:27Z
+        type: fixed
+        data:
+          fixed-version: 2.10.4-r0
+
   - id: CGA-2j44-w39x-mfj4
     aliases:
       - CVE-2023-45288
@@ -26,38 +36,6 @@ advisories:
         data:
           fixed-version: 2.10.7-r1
 
-  - id: CGA-266g-996x-r5hq
-    aliases:
-      - CVE-2024-21652
-      - GHSA-x32m-mvfj-52xv
-    events:
-      - timestamp: 2024-03-19T10:19:27Z
-        type: fixed
-        data:
-          fixed-version: 2.10.4-r0
-
-  - id: CGA-5c7f-x484-w4h7
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T07:20:15Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: argo-cd-2.10
-            componentID: 70948ddb718ad7e5
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.31.0
-            componentType: go-module
-            componentLocation: /usr/bin/argocd
-            scanner: grype
-      - timestamp: 2024-03-15T00:35:37Z
-        type: fixed
-        data:
-          fixed-version: 2.10.3-r1
-
   - id: CGA-33gc-vj8r-9xwx
     aliases:
       - CVE-2024-28180
@@ -79,28 +57,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.10.2-r2
-
-  - id: CGA-vj6q-q3x6-mqrw
-    aliases:
-      - CVE-2024-3177
-      - GHSA-pxhw-596r-rwq5
-    events:
-      - timestamp: 2024-04-25T08:18:34Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: argo-cd-2.10
-            componentID: 9ace5b3ed7ffe696
-            componentName: k8s.io/kubernetes
-            componentVersion: v1.26.11
-            componentType: go-module
-            componentLocation: /usr/bin/argocd
-            scanner: grype
-      - timestamp: 2024-05-06T08:51:24Z
-        type: pending-upstream-fix
-        data:
-          note: Any upgrade on the Kubernetes dependencies causes conflicts due to a strict dependency on github.com/argoproj/gitops-engine which supports Kubernetes v1.23 while the non-vulnerable code is on Kubernetes v1.27.13.
 
   - id: CGA-3j7f-7v4g-h2v9
     aliases:
@@ -130,6 +86,28 @@ advisories:
         data:
           fixed-version: 2.10.7-r0
 
+  - id: CGA-5c7f-x484-w4h7
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:20:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.10
+            componentID: 70948ddb718ad7e5
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+      - timestamp: 2024-03-15T00:35:37Z
+        type: fixed
+        data:
+          fixed-version: 2.10.3-r1
+
   - id: CGA-5ggg-3mq8-5pfr
     aliases:
       - CVE-2024-32476
@@ -139,3 +117,43 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.10.8-r0
+
+  - id: CGA-7rp9-pw33-2m3x
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-04T17:17:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.10
+            componentID: 3a14de43afeb8c87
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-vj6q-q3x6-mqrw
+    aliases:
+      - CVE-2024-3177
+      - GHSA-pxhw-596r-rwq5
+    events:
+      - timestamp: 2024-04-25T08:18:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.10
+            componentID: 9ace5b3ed7ffe696
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.26.11
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+      - timestamp: 2024-05-06T08:51:24Z
+        type: pending-upstream-fix
+        data:
+          note: Any upgrade on the Kubernetes dependencies causes conflicts due to a strict dependency on github.com/argoproj/gitops-engine which supports Kubernetes v1.23 while the non-vulnerable code is on Kubernetes v1.27.13.
