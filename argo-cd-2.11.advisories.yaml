@@ -68,6 +68,24 @@ advisories:
         data:
           fixed-version: 2.11.3-r1
 
+  - id: CGA-f8r2-qvp7-gmx7
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-04T17:24:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.11
+            componentID: 52cde81a87abb9bf
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
   - id: CGA-gh74-cvjm-rgxp
     aliases:
       - CVE-2024-3177
