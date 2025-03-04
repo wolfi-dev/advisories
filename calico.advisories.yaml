@@ -27,6 +27,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This vulnerbility affects versions 3.14.0 and below, but the installed commit corresponds to version 3.28.0.
 
+  - id: CGA-33xf-mvpq-ww83
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2025-03-04T17:39:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: calico
+            componentID: 898616cdc92bc7b0
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/calico-apiserver
+            scanner: grype
+
   - id: CGA-35qx-c4ph-xfm9
     aliases:
       - CVE-2023-5528
