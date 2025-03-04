@@ -4,6 +4,24 @@ package:
   name: amazon-cloudwatch-agent-operator
 
 advisories:
+  - id: CGA-4p7p-8qq5-7q7c
+    aliases:
+      - CVE-2024-36623
+      - GHSA-gh5c-3h97-2f3q
+    events:
+      - timestamp: 2025-03-04T07:18:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: amazon-cloudwatch-agent-operator
+            componentID: 5fca93d7c506e0ef
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.6+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-6p3c-mp25-jx5w
     aliases:
       - CVE-2019-3826
