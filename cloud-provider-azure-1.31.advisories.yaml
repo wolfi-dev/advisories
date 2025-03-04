@@ -84,6 +84,23 @@ advisories:
         data:
           fixed-version: 1.31.1-r1
 
+  - id: CGA-c2fg-xx8p-mm22
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-04T18:29:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-provider-azure-1.31
+            componentID: 5fd3d10460b9c6c6
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/cloud-controller-manager
+            scanner: grype
+
   - id: CGA-gxmq-j562-xw22
     aliases:
       - CVE-2024-45341
