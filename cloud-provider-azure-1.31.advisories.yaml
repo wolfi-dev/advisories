@@ -62,6 +62,23 @@ advisories:
         data:
           fixed-version: 1.31.1-r2
 
+  - id: CGA-76w5-2jjg-qwmr
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T18:29:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-provider-azure-1.31
+            componentID: f902cad95f5d2ae2
+            componentName: golang.org/x/crypto
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/cloud-controller-manager
+            scanner: grype
+
   - id: CGA-9297-6mmc-xw82
     aliases:
       - CVE-2024-45337
