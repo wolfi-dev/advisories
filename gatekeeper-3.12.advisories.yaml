@@ -4,6 +4,16 @@ package:
   name: gatekeeper-3.12
 
 advisories:
+  - id: CGA-4jxp-pqx7-2wh9
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2023-12-20T05:10:32Z
+        type: fixed
+        data:
+          fixed-version: 3.12.0-r10
+
   - id: CGA-7m2j-34vv-259p
     aliases:
       - CVE-2019-3826
@@ -14,6 +24,11 @@ advisories:
         data:
           type: vulnerable-code-not-in-execution-path
           note: This CVE affects the Prometheus UI (Javascript) and not the Go code
+      - timestamp: 2025-03-04T17:58:20Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: Prometheus ships a Go (Golang) library with a versioning scheme that follows the 0.x format. However, the Prometheus application itself uses a versioning scheme based on 1.x, 2.x, etc. The vulnerability identified in CVE-2019-3826 is specifically associated with the Prometheus application, not the Golang library.
 
   - id: CGA-9fj5-95wq-fvv4
     aliases:
@@ -26,50 +41,27 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Go vulndb has marked this code NOT_IMPORTABLE.
 
-  - id: CGA-rh73-qrqq-h4h3
+  - id: CGA-fwxr-pj95-qhp7
     aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
     events:
-      - timestamp: 2023-10-16T21:02:05Z
+      - timestamp: 2024-03-12T07:05:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.12
+            componentID: 6485a559e6ed1f9a
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2024-03-12T07:06:11Z
         type: fixed
         data:
-          fixed-version: 3.12.0-r6
-
-  - id: CGA-qvpc-m8j7-qwg7
-    aliases:
-      - CVE-2023-3978
-      - GHSA-2wrh-6pvc-2jm9
-    events:
-      - timestamp: 2023-10-16T21:02:23Z
-        type: fixed
-        data:
-          fixed-version: 3.12.0-r6
-
-  - id: CGA-qj23-2j5c-346p
-    aliases:
-      - CVE-2023-44487
-      - GHSA-m425-mq94-257g
-      - GHSA-qppj-fm5r-hxr3
-    events:
-      - timestamp: 2023-10-16T21:02:44Z
-        type: fixed
-        data:
-          fixed-version: 3.12.0-r6
-      - timestamp: 2023-11-06T22:59:34Z
-        type: fixed
-        data:
-          fixed-version: 3.12.0-r8
-
-  - id: CGA-rqx3-9jjw-vx9v
-    aliases:
-      - CVE-2023-45142
-      - GHSA-rcjv-mgp8-qvmr
-    events:
-      - timestamp: 2023-10-23T12:04:06Z
-        type: fixed
-        data:
-          fixed-version: 3.12.0-r7
+          fixed-version: 3.12.0-r11
 
   - id: CGA-g39q-97qm-89qh
     aliases:
@@ -81,89 +73,6 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
-
-  - id: CGA-hxj7-v8pc-h734
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:27:29Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-qx3h-7mxx-r8xv
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-12T08:28:09Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: gatekeeper-3.12
-            componentID: 40dd04d6db52e064
-            componentName: stdlib
-            componentVersion: go1.22.1
-            componentType: go-module
-            componentLocation: /usr/bin/manager
-            scanner: grype
-
-  - id: CGA-hfmv-9hhp-5pwg
-    aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
-    events:
-      - timestamp: 2024-03-12T07:05:09Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: gatekeeper-3.12
-            componentID: 6485a559e6ed1f9a
-            componentName: stdlib
-            componentVersion: go1.21.5
-            componentType: go-module
-            componentLocation: /usr/bin/manager
-            scanner: grype
-      - timestamp: 2024-03-12T07:06:12Z
-        type: fixed
-        data:
-          fixed-version: 3.12.0-r11
-
-  - id: CGA-p562-3cfw-rv2w
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-12T07:05:11Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: gatekeeper-3.12
-            componentID: 6485a559e6ed1f9a
-            componentName: stdlib
-            componentVersion: go1.21.5
-            componentType: go-module
-            componentLocation: /usr/bin/manager
-            scanner: grype
-      - timestamp: 2024-03-12T07:06:07Z
-        type: fixed
-        data:
-          fixed-version: 3.12.0-r11
-
-  - id: CGA-4jxp-pqx7-2wh9
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2023-12-20T05:10:32Z
-        type: fixed
-        data:
-          fixed-version: 3.12.0-r10
 
   - id: CGA-h77j-hj9f-qhvg
     aliases:
@@ -187,6 +96,104 @@ advisories:
         data:
           fixed-version: 3.12.0-r11
 
+  - id: CGA-hfmv-9hhp-5pwg
+    aliases:
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-12T07:05:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.12
+            componentID: 6485a559e6ed1f9a
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2024-03-12T07:06:12Z
+        type: fixed
+        data:
+          fixed-version: 3.12.0-r11
+
+  - id: CGA-hxj7-v8pc-h734
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:27:29Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-p562-3cfw-rv2w
+    aliases:
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-12T07:05:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.12
+            componentID: 6485a559e6ed1f9a
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2024-03-12T07:06:07Z
+        type: fixed
+        data:
+          fixed-version: 3.12.0-r11
+
+  - id: CGA-qj23-2j5c-346p
+    aliases:
+      - CVE-2023-44487
+      - GHSA-m425-mq94-257g
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2023-10-16T21:02:44Z
+        type: fixed
+        data:
+          fixed-version: 3.12.0-r6
+      - timestamp: 2023-11-06T22:59:34Z
+        type: fixed
+        data:
+          fixed-version: 3.12.0-r8
+
+  - id: CGA-qvpc-m8j7-qwg7
+    aliases:
+      - CVE-2023-3978
+      - GHSA-2wrh-6pvc-2jm9
+    events:
+      - timestamp: 2023-10-16T21:02:23Z
+        type: fixed
+        data:
+          fixed-version: 3.12.0-r6
+
+  - id: CGA-qx3h-7mxx-r8xv
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-12T08:28:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.12
+            componentID: 40dd04d6db52e064
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-r57q-67xj-c662
     aliases:
       - CVE-2024-24784
@@ -209,27 +216,25 @@ advisories:
         data:
           fixed-version: 3.12.0-r11
 
-  - id: CGA-fwxr-pj95-qhp7
+  - id: CGA-rh73-qrqq-h4h3
     aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
     events:
-      - timestamp: 2024-03-12T07:05:16Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: gatekeeper-3.12
-            componentID: 6485a559e6ed1f9a
-            componentName: stdlib
-            componentVersion: go1.21.5
-            componentType: go-module
-            componentLocation: /usr/bin/manager
-            scanner: grype
-      - timestamp: 2024-03-12T07:06:11Z
+      - timestamp: 2023-10-16T21:02:05Z
         type: fixed
         data:
-          fixed-version: 3.12.0-r11
+          fixed-version: 3.12.0-r6
+
+  - id: CGA-rqx3-9jjw-vx9v
+    aliases:
+      - CVE-2023-45142
+      - GHSA-rcjv-mgp8-qvmr
+    events:
+      - timestamp: 2023-10-23T12:04:06Z
+        type: fixed
+        data:
+          fixed-version: 3.12.0-r7
 
   - id: CGA-x6jx-p3g9-w3j8
     aliases:
