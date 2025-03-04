@@ -312,3 +312,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.25.3-r4
+
+  - id: CGA-wfq7-7866-gvpq
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-04T18:21:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-autoscaler-1.25
+            componentID: 26d10927255fca57
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-autoscaler
+            scanner: grype
