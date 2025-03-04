@@ -345,3 +345,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.11.4-r2
+
+  - id: CGA-wxjc-chxv-c5wf
+    aliases:
+      - CVE-2025-21613
+      - GHSA-v725-9546-7q7m
+    events:
+      - timestamp: 2025-03-04T17:24:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.11
+            componentID: 68bc89317f7af327
+            componentName: github.com/go-git/go-git/v5
+            componentVersion: v5.11.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
