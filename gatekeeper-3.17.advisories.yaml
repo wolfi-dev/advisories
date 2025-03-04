@@ -4,6 +4,24 @@ package:
   name: gatekeeper-3.17
 
 advisories:
+  - id: CGA-2w85-9986-f48w
+    aliases:
+      - CVE-2024-45341
+      - GHSA-3f6r-qh9c-x6mm
+    events:
+      - timestamp: 2025-03-04T16:37:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.17
+            componentID: 7187d35a6f03c75f
+            componentName: stdlib
+            componentVersion: go1.23.4
+            componentType: go-module
+            componentLocation: /usr/bin/gator
+            scanner: grype
+
   - id: CGA-8xfg-4hw5-vjcj
     aliases:
       - CVE-2024-8260
