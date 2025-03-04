@@ -44,6 +44,24 @@ advisories:
         data:
           fixed-version: 2.0.1-r1
 
+  - id: CGA-m2x6-5mrx-5rc5
+    aliases:
+      - CVE-2024-36620
+      - GHSA-q59j-vv4j-v33c
+    events:
+      - timestamp: 2025-03-04T07:18:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: amazon-cloudwatch-agent-operator
+            componentID: 5fca93d7c506e0ef
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.6+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-v2mf-56pw-3fx4
     aliases:
       - CVE-2025-22866
