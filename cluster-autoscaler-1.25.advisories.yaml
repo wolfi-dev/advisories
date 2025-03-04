@@ -243,6 +243,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-cqpj-2p6f-jvmw
+    aliases:
+      - CVE-2025-0426
+      - GHSA-jgfp-53c3-624w
+    events:
+      - timestamp: 2025-03-04T18:22:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-autoscaler-1.25
+            componentID: b6c1928bf249d3c9
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.25.12
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-autoscaler
+            scanner: grype
+
   - id: CGA-fx26-hv46-8gj6
     aliases:
       - CVE-2023-45290
