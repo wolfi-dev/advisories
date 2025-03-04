@@ -4,6 +4,24 @@ package:
   name: gitlab-pages-17.2
 
 advisories:
+  - id: CGA-27rf-x64c-h38j
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-03-04T23:02:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-pages-17.2
+            componentID: 58de1db1b3a52aa3
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-pages
+            scanner: grype
+
   - id: CGA-2g2m-c99p-hcch
     aliases:
       - CVE-2024-11828
