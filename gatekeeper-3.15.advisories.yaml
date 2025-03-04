@@ -4,6 +4,24 @@ package:
   name: gatekeeper-3.15
 
 advisories:
+  - id: CGA-3pxm-fwhg-cfw2
+    aliases:
+      - CVE-2024-45339
+      - GHSA-6wxm-mpqj-6jpf
+    events:
+      - timestamp: 2025-03-04T20:19:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.15
+            componentID: 04e5340c31b3a1a3
+            componentName: github.com/golang/glog
+            componentVersion: v1.1.2
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-4xj2-736h-qf94
     aliases:
       - CVE-2024-45337
