@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: cluster-autoscaler
+
+advisories:
+  - id: CGA-3v4x-73vr-8rv9
+    aliases:
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2025-03-04T18:41:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-autoscaler
+            componentID: d15242480de0e074
+            componentName: golang.org/x/net
+            componentVersion: v0.13.0
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-autoscaler
+            scanner: grype
