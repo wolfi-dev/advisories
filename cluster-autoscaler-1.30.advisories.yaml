@@ -4,6 +4,24 @@ package:
   name: cluster-autoscaler-1.30
 
 advisories:
+  - id: CGA-2hcf-h735-r86j
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-03-04T19:02:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-autoscaler-1.30
+            componentID: c69a641562adf4ef
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-autoscaler
+            scanner: grype
+
   - id: CGA-6237-g3cc-r4hf
     aliases:
       - CVE-2024-34158
