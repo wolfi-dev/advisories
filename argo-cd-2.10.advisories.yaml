@@ -210,3 +210,20 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Any upgrade on the Kubernetes dependencies causes conflicts due to a strict dependency on github.com/argoproj/gitops-engine which supports Kubernetes v1.23 while the non-vulnerable code is on Kubernetes v1.27.13.
+
+  - id: CGA-wp7q-97gq-qchv
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T17:17:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.10
+            componentID: 3a14de43afeb8c87
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
