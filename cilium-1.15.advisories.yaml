@@ -50,6 +50,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability was matched to the module "github.com/cilium/cilium" at the following location(s): /opt/cni/bin/cilium-cni, /usr/bin/cilium-agent, /usr/bin/cilium-bugtool, /usr/bin/cilium-dbg, /usr/bin/cilium-health, /usr/bin/cilium-health-responder, /usr/bin/cilium-mount, /usr/bin/cilium-sysctlfix. In all cases, the installed version of the module (git commit 9b3f9a8c0d71bf70bc0fd3fbc256bacc67fe6c32) corresponds to a version tag (1.15.4) that is later than the fixed version (1.11.15).'
 
+  - id: CGA-3pmp-xqj9-p7ww
+    aliases:
+      - CVE-2025-23047
+      - GHSA-h78m-j95m-5356
+    events:
+      - timestamp: 2025-03-04T19:20:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.15
+            componentID: b5bf56488c8263a2
+            componentName: cilium-1.15
+            componentVersion: 1.15.6-r2
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-3wq2-gh42-69pw
     aliases:
       - CVE-2024-25630
