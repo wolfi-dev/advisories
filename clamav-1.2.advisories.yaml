@@ -26,3 +26,21 @@ advisories:
         data:
           type: component-vulnerability-mismatch
           note: 'Vulnerable code has been patched in every version of ClamAV since version 0.99: https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160531-wsa-esa'
+
+  - id: CGA-vx58-fvwf-5hgh
+    aliases:
+      - CVE-2024-20505
+      - GHSA-6qcx-p3rr-pfwf
+    events:
+      - timestamp: 2025-03-04T19:31:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: clamav-1.2
+            componentID: e21ed6f882b1d715
+            componentName: clamav-1.2
+            componentVersion: 1.2.3-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
