@@ -55,6 +55,24 @@ advisories:
         data:
           fixed-version: 1.7.16-r1
 
+  - id: CGA-8vx2-vfqf-74q2
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-03-04T18:33:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: containerd
+            componentID: 8cebca2154fc19cd
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/containerd-shim-runc-v2
+            scanner: grype
+
   - id: CGA-9qvx-96xc-2cc2
     aliases:
       - CVE-2023-45284
