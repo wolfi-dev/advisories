@@ -36,6 +36,24 @@ advisories:
         data:
           note: Argo CD 2.7 is longer supported. Security Support ended on 2024-02-05.
 
+  - id: CGA-69mx-7x2j-r9mf
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2025-03-04T18:01:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.7
+            componentID: b6367e21547938df
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
   - id: CGA-94ww-2h5x-vcp5
     aliases:
       - CVE-2023-45289
