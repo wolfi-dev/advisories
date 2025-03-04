@@ -65,3 +65,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.31.1-r1
+
+  - id: CGA-gxmq-j562-xw22
+    aliases:
+      - CVE-2024-45341
+      - GHSA-3f6r-qh9c-x6mm
+    events:
+      - timestamp: 2025-03-04T18:29:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-provider-azure-1.31
+            componentID: b029f2e78b91cce7
+            componentName: stdlib
+            componentVersion: go1.23.4
+            componentType: go-module
+            componentLocation: /usr/bin/cloud-controller-manager
+            scanner: grype
