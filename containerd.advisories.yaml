@@ -62,6 +62,24 @@ advisories:
         data:
           fixed-version: 1.7.16-r1
 
+  - id: CGA-7gqm-x43w-8gmr
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-03-04T18:33:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: containerd
+            componentID: e5c418a59a773199
+            componentName: stdlib
+            componentVersion: go1.23.3
+            componentType: go-module
+            componentLocation: /usr/bin/containerd-shim-runc-v2
+            scanner: grype
+
   - id: CGA-8r35-6h26-fg83
     aliases:
       - CVE-2024-24787
