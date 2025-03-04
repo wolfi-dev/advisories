@@ -782,6 +782,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: The vulnerable code is specific to kubectl.
 
+  - id: CGA-wvc6-8m83-2423
+    aliases:
+      - CVE-2024-45336
+      - GHSA-7wrw-r4p8-38rx
+    events:
+      - timestamp: 2025-03-04T17:31:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 4114e0bc16861d13
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
   - id: CGA-xx3f-xj6j-9rqj
     aliases:
       - GHSA-274v-mgcv-cm8j
