@@ -90,6 +90,24 @@ advisories:
         data:
           fixed-version: 3.3.2-r2
 
+  - id: CGA-9v5x-xxw3-9h6h
+    aliases:
+      - CVE-2019-3826
+      - GHSA-3m87-5598-2v4f
+    events:
+      - timestamp: 2025-03-04T07:30:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: fluent-bit-plugin-loki
+            componentID: 84b0b9e39914a3fc
+            componentName: github.com/prometheus/prometheus
+            componentVersion: v0.55.0
+            componentType: go-module
+            componentLocation: /fluent-bit/bin/out_grafana_loki.so
+            scanner: grype
+
   - id: CGA-c5rp-h7pq-pjj8
     aliases:
       - CVE-2024-34158
