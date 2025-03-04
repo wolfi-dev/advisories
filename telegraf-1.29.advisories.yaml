@@ -4,26 +4,23 @@ package:
   name: telegraf-1.29
 
 advisories:
-  - id: CGA-xx9p-8cr5-gj5v
+  - id: CGA-7cj8-vpgh-c5jv
     aliases:
-      - CVE-2019-3826
-      - GHSA-3m87-5598-2v4f
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
     events:
-      - timestamp: 2023-12-17T17:36:20Z
-        type: false-positive-determination
+      - timestamp: 2025-03-04T18:36:45Z
+        type: detection
         data:
-          type: vulnerable-code-version-not-used
-          note: This vulnerability has been fixed in version v2.7.1 which corresponds to the Go library version v0.7.1 and this package includes a later version.
-
-  - id: CGA-ww4v-5qh8-jvpx
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2023-12-21T17:15:28Z
-        type: fixed
-        data:
-          fixed-version: 1.29.1-r1
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.29
+            componentID: 9479618afa07cbbb
+            componentName: golang.org/x/net
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
 
   - id: CGA-9qcx-7wg3-7mxg
     aliases:
@@ -42,6 +39,24 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/telegraf
             scanner: grype
+
+  - id: CGA-fq98-568c-76gh
+    aliases:
+      - GHSA-mhpq-9638-x6pw
+    events:
+      - timestamp: 2023-12-21T17:16:18Z
+        type: fixed
+        data:
+          fixed-version: 1.29.1-r1
+
+  - id: CGA-h67j-h787-j66q
+    aliases:
+      - GHSA-7ww5-4wqc-m92c
+    events:
+      - timestamp: 2023-12-21T17:16:05Z
+        type: fixed
+        data:
+          fixed-version: 1.29.1-r1
 
   - id: CGA-hm7v-mrf7-g6w4
     aliases:
@@ -65,20 +80,23 @@ advisories:
         data:
           fixed-version: 1.29.5-r2
 
-  - id: CGA-h67j-h787-j66q
+  - id: CGA-ww4v-5qh8-jvpx
     aliases:
-      - GHSA-7ww5-4wqc-m92c
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
     events:
-      - timestamp: 2023-12-21T17:16:05Z
+      - timestamp: 2023-12-21T17:15:28Z
         type: fixed
         data:
           fixed-version: 1.29.1-r1
 
-  - id: CGA-fq98-568c-76gh
+  - id: CGA-xx9p-8cr5-gj5v
     aliases:
-      - GHSA-mhpq-9638-x6pw
+      - CVE-2019-3826
+      - GHSA-3m87-5598-2v4f
     events:
-      - timestamp: 2023-12-21T17:16:18Z
-        type: fixed
+      - timestamp: 2023-12-17T17:36:20Z
+        type: false-positive-determination
         data:
-          fixed-version: 1.29.1-r1
+          type: vulnerable-code-version-not-used
+          note: This vulnerability has been fixed in version v2.7.1 which corresponds to the Go library version v0.7.1 and this package includes a later version.
