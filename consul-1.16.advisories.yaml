@@ -409,6 +409,23 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability was matched to the module "github.com/hashicorp/consul" at the following location(s): /bin/consul. In all cases, the fixed version of the module (git commit ea5210a30e154f4da9a4c8e729b45b8ce7b9b92c) is an ancestor of the installed version commit (cb00a73e9db283bb1ee286e957bb01def6a17f1a).'
 
+  - id: CGA-pw4r-5jrq-w9pg
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-04T18:31:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: consul-1.16
+            componentID: d9e7606d7b16c6c1
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.16.0
+            componentType: go-module
+            componentLocation: /bin/consul
+            scanner: grype
+
   - id: CGA-q8x7-9g2j-xvj5
     aliases:
       - CVE-2021-36213
