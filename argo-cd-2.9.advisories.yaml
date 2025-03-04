@@ -82,6 +82,24 @@ advisories:
         data:
           fixed-version: 2.9.7-r2
 
+  - id: CGA-7f8q-f7j3-cfh3
+    aliases:
+      - CVE-2025-27144
+      - GHSA-c6gw-w398-hv78
+    events:
+      - timestamp: 2025-03-04T17:27:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: cdca26cc98c4c78d
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.3
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
   - id: CGA-7g7c-22jg-fj99
     aliases:
       - GHSA-2c7c-3mj9-8fqh
