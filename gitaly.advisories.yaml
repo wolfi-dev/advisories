@@ -4,6 +4,24 @@ package:
   name: gitaly
 
 advisories:
+  - id: CGA-4g9m-rcr4-g94q
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2025-03-04T21:12:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitaly
+            componentID: b61e90c18d07395a
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/gitaly
+            scanner: grype
+
   - id: CGA-59w3-x282-7893
     aliases:
       - CVE-2025-21614
