@@ -4,6 +4,24 @@ package:
   name: amazon-cloudwatch-agent
 
 advisories:
+  - id: CGA-5w3f-rxj7-hxfm
+    aliases:
+      - CVE-2019-3826
+      - GHSA-3m87-5598-2v4f
+    events:
+      - timestamp: 2025-03-04T07:05:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: amazon-cloudwatch-agent
+            componentID: 3bfeef576760f228
+            componentName: github.com/prometheus/prometheus
+            componentVersion: v0.54.1
+            componentType: go-module
+            componentLocation: /usr/bin/config-translator
+            scanner: grype
+
   - id: CGA-9gxf-mw59-grhv
     aliases:
       - CVE-2025-22866
