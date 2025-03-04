@@ -4,6 +4,24 @@ package:
   name: external-attacher
 
 advisories:
+  - id: CGA-79q3-hwfg-h3wf
+    aliases:
+      - CVE-2023-3978
+      - GHSA-2wrh-6pvc-2jm9
+    events:
+      - timestamp: 2025-03-04T20:28:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: external-attacher
+            componentID: e933a40c2857331b
+            componentName: golang.org/x/net
+            componentVersion: v0.8.0
+            componentType: go-module
+            componentLocation: /usr/bin/csi-attacher
+            scanner: grype
+
   - id: CGA-pv3m-52v7-xwc5
     aliases:
       - CVE-2023-39325
