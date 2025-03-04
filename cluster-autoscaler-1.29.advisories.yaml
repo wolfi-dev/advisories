@@ -78,6 +78,24 @@ advisories:
         data:
           fixed-version: 1.29.0-r3
 
+  - id: CGA-7cvj-gw5c-6jf8
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2025-03-04T18:26:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-autoscaler-1.29
+            componentID: 4f52aa59490cb996
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-autoscaler
+            scanner: grype
+
   - id: CGA-85gq-32fc-2x7p
     aliases:
       - CVE-2024-45338
