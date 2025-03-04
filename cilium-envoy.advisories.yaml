@@ -4,6 +4,24 @@ package:
   name: cilium-envoy
 
 advisories:
+  - id: CGA-347f-29v7-2h6w
+    aliases:
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
+    events:
+      - timestamp: 2025-03-04T16:15:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-envoy
+            componentID: ea567feca76ce545
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/lib/libcilium.so
+            scanner: grype
+
   - id: CGA-37wx-qjwv-2jm3
     aliases:
       - CVE-2023-45285
