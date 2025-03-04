@@ -4,6 +4,24 @@ package:
   name: cert-manager-1.15
 
 advisories:
+  - id: CGA-297h-7gqj-cp67
+    aliases:
+      - CVE-2024-45341
+      - GHSA-3f6r-qh9c-x6mm
+    events:
+      - timestamp: 2025-03-04T19:01:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-manager-1.15
+            componentID: ae49c35936c740ee
+            componentName: stdlib
+            componentVersion: go1.23.1
+            componentType: go-module
+            componentLocation: /usr/bin/acmesolver-linux-amd64
+            scanner: grype
+
   - id: CGA-2rc5-mq6x-q647
     aliases:
       - CVE-2024-45336
