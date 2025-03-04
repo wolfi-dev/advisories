@@ -4,68 +4,60 @@ package:
   name: goreleaser-1.18
 
 advisories:
-  - id: CGA-rv8m-h567-95cr
+  - id: CGA-23v3-5v44-4jpv
     aliases:
-      - CVE-2023-2253
-      - GHSA-hqxw-f8mx-cpmw
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
     events:
-      - timestamp: 2024-02-14T12:26:40Z
+      - timestamp: 2025-03-04T20:25:19Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: goreleaser-1.18
-            componentID: ad22e6555709828a
-            componentName: github.com/docker/distribution
-            componentVersion: v2.8.1+incompatible
+            componentID: 3822b55c8c2a9550
+            componentName: stdlib
+            componentVersion: go1.22.3
             componentType: go-module
             componentLocation: /usr/bin/goreleaser
             scanner: grype
-      - timestamp: 2024-05-21T21:00:36Z
-        type: fixed
-        data:
-          fixed-version: 1.18.2-r12
 
-  - id: CGA-fw5x-x4p6-39wr
+  - id: CGA-26v9-p59c-27f6
     aliases:
-      - CVE-2023-32698
-      - GHSA-w7jw-q4fg-qc4c
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
     events:
-      - timestamp: 2024-02-14T12:26:48Z
+      - timestamp: 2025-03-04T20:23:52Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: goreleaser-1.18
-            componentID: 022e5943c74c5e1e
-            componentName: github.com/goreleaser/nfpm/v2
-            componentVersion: v2.28.0
+            componentID: 29e8ce7baea2a53e
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
             componentType: go-module
             componentLocation: /usr/bin/goreleaser
             scanner: grype
-      - timestamp: 2024-05-21T21:00:38Z
-        type: fixed
-        data:
-          fixed-version: 1.18.2-r12
 
-  - id: CGA-r29p-gwwh-wcmg
+  - id: CGA-2qwx-p2mj-2vg9
     aliases:
-      - CVE-2023-33199
-      - GHSA-frqx-jfcm-6jjr
+      - CVE-2023-44487
+      - GHSA-qppj-fm5r-hxr3
     events:
-      - timestamp: 2024-02-14T12:26:39Z
+      - timestamp: 2024-02-14T12:26:45Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: goreleaser-1.18
-            componentID: 6b3f943830cb3236
-            componentName: github.com/sigstore/rekor
-            componentVersion: v1.1.1
+            componentID: 41ff2efb5a893fd6
+            componentName: golang.org/x/net
+            componentVersion: v0.9.0
             componentType: go-module
             componentLocation: /usr/bin/goreleaser
             scanner: grype
-      - timestamp: 2024-05-21T21:00:40Z
+      - timestamp: 2024-05-21T21:00:42Z
         type: fixed
         data:
           fixed-version: 1.18.2-r12
@@ -92,174 +84,102 @@ advisories:
         data:
           fixed-version: 1.18.2-r12
 
-  - id: CGA-x7jx-6vjg-gjgh
+  - id: CGA-44rg-8c5h-mxm3
     aliases:
-      - CVE-2023-39326
-      - GHSA-9f76-wg39-x86h
+      - GHSA-m425-mq94-257g
     events:
-      - timestamp: 2024-02-16T07:16:58Z
-        type: fixed
-        data:
-          fixed-version: 1.18.2-r5
-
-  - id: CGA-6xw6-ccwv-6pjj
-    aliases:
-      - CVE-2023-3978
-      - GHSA-2wrh-6pvc-2jm9
-    events:
-      - timestamp: 2024-02-14T12:26:36Z
+      - timestamp: 2024-02-14T12:26:42Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: goreleaser-1.18
-            componentID: 41ff2efb5a893fd6
-            componentName: golang.org/x/net
-            componentVersion: v0.9.0
+            componentID: 07a60b8b6a8b582e
+            componentName: google.golang.org/grpc
+            componentVersion: v1.54.0
             componentType: go-module
             componentLocation: /usr/bin/goreleaser
             scanner: grype
-      - timestamp: 2024-05-21T21:00:35Z
+      - timestamp: 2024-05-21T21:00:40Z
         type: fixed
         data:
           fixed-version: 1.18.2-r12
 
-  - id: CGA-2qwx-p2mj-2vg9
+  - id: CGA-4gr4-vrh8-g5pj
     aliases:
-      - CVE-2023-44487
-      - GHSA-qppj-fm5r-hxr3
+      - CVE-2025-22869
     events:
-      - timestamp: 2024-02-14T12:26:45Z
+      - timestamp: 2025-03-04T20:24:23Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: goreleaser-1.18
-            componentID: 41ff2efb5a893fd6
-            componentName: golang.org/x/net
-            componentVersion: v0.9.0
-            componentType: go-module
-            componentLocation: /usr/bin/goreleaser
-            scanner: grype
-      - timestamp: 2024-05-21T21:00:42Z
-        type: fixed
-        data:
-          fixed-version: 1.18.2-r12
-
-  - id: CGA-qh8v-mx34-p97p
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:28:26Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-9wx2-f5jv-26c7
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:28:28Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-vm9w-2wpf-w2gg
-    aliases:
-      - CVE-2023-45285
-      - GHSA-5f94-vhjq-rpg8
-    events:
-      - timestamp: 2024-02-16T07:16:56Z
-        type: fixed
-        data:
-          fixed-version: 1.18.2-r5
-
-  - id: CGA-h28r-68pf-6hh4
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-26T10:11:35Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: goreleaser-1.18
-            componentID: af9d28fc51f2ba8d
-            componentName: golang.org/x/net
-            componentVersion: v0.9.0
-            componentType: go-module
-            componentLocation: /usr/bin/goreleaser
-            scanner: grype
-      - timestamp: 2024-05-21T21:00:37Z
-        type: fixed
-        data:
-          fixed-version: 1.18.2-r12
-
-  - id: CGA-rf4x-f6c2-pj79
-    aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
-    events:
-      - timestamp: 2024-03-13T11:11:29Z
-        type: fixed
-        data:
-          fixed-version: 1.18.2-r6
-
-  - id: CGA-crr3-qhgx-jrqx
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-13T11:11:32Z
-        type: fixed
-        data:
-          fixed-version: 1.18.2-r6
-
-  - id: CGA-746r-4q69-qq97
-    aliases:
-      - CVE-2023-46737
-      - GHSA-vfp6-jrw2-99g9
-    events:
-      - timestamp: 2024-02-14T12:26:46Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: goreleaser-1.18
-            componentID: a938abf1dad295e6
-            componentName: github.com/sigstore/cosign/v2
-            componentVersion: v2.0.0
-            componentType: go-module
-            componentLocation: /usr/bin/goreleaser
-            scanner: grype
-      - timestamp: 2024-05-21T21:00:33Z
-        type: fixed
-        data:
-          fixed-version: 1.18.2-r12
-
-  - id: CGA-9q59-3437-wcxg
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2024-02-14T12:26:38Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: goreleaser-1.18
-            componentID: e2de61f774bc6623
+            componentID: 58186b17cb1fafd9
             componentName: golang.org/x/crypto
-            componentVersion: v0.8.0
+            componentVersion: v0.22.0
             componentType: go-module
             componentLocation: /usr/bin/goreleaser
             scanner: grype
-      - timestamp: 2024-05-21T21:00:34Z
+
+  - id: CGA-56vp-xw2h-3cpw
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:06:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser-1.18
+            componentID: d6b747a7c7a0ec33
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+      - timestamp: 2024-05-21T21:00:41Z
+        type: fixed
+        data:
+          fixed-version: 1.18.2-r12
+
+  - id: CGA-64v2-mx5h-9fpw
+    aliases:
+      - CVE-2024-35255
+      - GHSA-m5vv-6r4h-3vj9
+    events:
+      - timestamp: 2025-03-04T20:24:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser-1.18
+            componentID: bd530fb4419fc1ee
+            componentName: github.com/Azure/azure-sdk-for-go/sdk/azidentity
+            componentVersion: v1.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+
+  - id: CGA-6rf6-v9w8-54jr
+    aliases:
+      - CVE-2024-29018
+      - GHSA-mq39-4gv4-mvpx
+    events:
+      - timestamp: 2024-04-16T07:29:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser-1.18
+            componentID: 3f53a3016facbea7
+            componentName: github.com/docker/docker
+            componentVersion: v23.0.3+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+      - timestamp: 2024-05-21T21:00:39Z
         type: fixed
         data:
           fixed-version: 1.18.2-r12
@@ -286,10 +206,144 @@ advisories:
         data:
           fixed-version: 1.18.2-r12
 
-  - id: CGA-hv74-jj3q-g3wr
+  - id: CGA-6xw6-ccwv-6pjj
     aliases:
-      - CVE-2023-49569
-      - GHSA-449p-3h89-pw88
+      - CVE-2023-3978
+      - GHSA-2wrh-6pvc-2jm9
+    events:
+      - timestamp: 2024-02-14T12:26:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser-1.18
+            componentID: 41ff2efb5a893fd6
+            componentName: golang.org/x/net
+            componentVersion: v0.9.0
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+      - timestamp: 2024-05-21T21:00:35Z
+        type: fixed
+        data:
+          fixed-version: 1.18.2-r12
+
+  - id: CGA-746r-4q69-qq97
+    aliases:
+      - CVE-2023-46737
+      - GHSA-vfp6-jrw2-99g9
+    events:
+      - timestamp: 2024-02-14T12:26:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser-1.18
+            componentID: a938abf1dad295e6
+            componentName: github.com/sigstore/cosign/v2
+            componentVersion: v2.0.0
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+      - timestamp: 2024-05-21T21:00:33Z
+        type: fixed
+        data:
+          fixed-version: 1.18.2-r12
+
+  - id: CGA-75g5-qqm5-gp95
+    aliases:
+      - CVE-2024-36623
+      - GHSA-gh5c-3h97-2f3q
+    events:
+      - timestamp: 2025-03-04T20:23:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser-1.18
+            componentID: 7a18fd24bf51b0ab
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.9+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+
+  - id: CGA-7w7g-wq78-mx4p
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2025-03-04T20:24:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser-1.18
+            componentID: 737d45e152f28579
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+
+  - id: CGA-8g32-vmfm-4p9w
+    aliases:
+      - CVE-2025-21614
+      - GHSA-r9px-m959-cxf4
+    events:
+      - timestamp: 2025-03-04T20:24:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser-1.18
+            componentID: 8449bc4e227b71bd
+            componentName: github.com/go-git/go-git/v5
+            componentVersion: v5.11.0
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+
+  - id: CGA-98cj-8jp8-8x63
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2025-03-04T20:26:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser-1.18
+            componentID: 3822b55c8c2a9550
+            componentName: stdlib
+            componentVersion: go1.22.3
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+
+  - id: CGA-9mxm-77j2-gf95
+    aliases:
+      - CVE-2024-36621
+      - GHSA-2mj3-vfvx-fc43
+    events:
+      - timestamp: 2025-03-04T20:23:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser-1.18
+            componentID: 7a18fd24bf51b0ab
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.9+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+
+  - id: CGA-9q59-3437-wcxg
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
     events:
       - timestamp: 2024-02-14T12:26:38Z
         type: detection
@@ -297,13 +351,142 @@ advisories:
           type: scan/v1
           data:
             subpackageName: goreleaser-1.18
-            componentID: 2a4df6787f016a18
-            componentName: github.com/go-git/go-git/v5
-            componentVersion: v5.4.2
+            componentID: e2de61f774bc6623
+            componentName: golang.org/x/crypto
+            componentVersion: v0.8.0
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+      - timestamp: 2024-05-21T21:00:34Z
+        type: fixed
+        data:
+          fixed-version: 1.18.2-r12
+
+  - id: CGA-9wx2-f5jv-26c7
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:28:28Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-cc89-hv2p-83qm
+    aliases:
+      - CVE-2024-24791
+      - GHSA-hw49-2p59-3mhj
+    events:
+      - timestamp: 2025-03-04T20:25:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser-1.18
+            componentID: 3822b55c8c2a9550
+            componentName: stdlib
+            componentVersion: go1.22.3
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+
+  - id: CGA-cpvh-566h-mwhw
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-04T20:23:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser-1.18
+            componentID: 58186b17cb1fafd9
+            componentName: golang.org/x/crypto
+            componentVersion: v0.22.0
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+
+  - id: CGA-crr3-qhgx-jrqx
+    aliases:
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
+    events:
+      - timestamp: 2024-03-13T11:11:32Z
+        type: fixed
+        data:
+          fixed-version: 1.18.2-r6
+
+  - id: CGA-cxxp-vh6r-vpw2
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2025-03-04T20:24:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser-1.18
+            componentID: e62087dea82d22c5
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.5
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+
+  - id: CGA-fw5x-x4p6-39wr
+    aliases:
+      - CVE-2023-32698
+      - GHSA-w7jw-q4fg-qc4c
+    events:
+      - timestamp: 2024-02-14T12:26:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser-1.18
+            componentID: 022e5943c74c5e1e
+            componentName: github.com/goreleaser/nfpm/v2
+            componentVersion: v2.28.0
             componentType: go-module
             componentLocation: /usr/bin/goreleaser
             scanner: grype
       - timestamp: 2024-05-21T21:00:38Z
+        type: fixed
+        data:
+          fixed-version: 1.18.2-r12
+
+  - id: CGA-g477-vw9j-3jwm
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-13T11:11:27Z
+        type: fixed
+        data:
+          fixed-version: 1.18.2-r6
+
+  - id: CGA-h28r-68pf-6hh4
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-26T10:11:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser-1.18
+            componentID: af9d28fc51f2ba8d
+            componentName: golang.org/x/net
+            componentVersion: v0.9.0
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+      - timestamp: 2024-05-21T21:00:37Z
         type: fixed
         data:
           fixed-version: 1.18.2-r12
@@ -330,6 +513,140 @@ advisories:
         data:
           fixed-version: 1.18.2-r12
 
+  - id: CGA-hp7f-287q-8wg2
+    aliases:
+      - CVE-2024-29903
+      - GHSA-95pr-fxf5-86gv
+    events:
+      - timestamp: 2024-04-16T07:29:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser-1.18
+            componentID: 31294c2d8309069d
+            componentName: github.com/sigstore/cosign/v2
+            componentVersion: v2.0.0
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+      - timestamp: 2024-05-21T21:00:41Z
+        type: fixed
+        data:
+          fixed-version: 1.18.2-r12
+
+  - id: CGA-hv74-jj3q-g3wr
+    aliases:
+      - CVE-2023-49569
+      - GHSA-449p-3h89-pw88
+    events:
+      - timestamp: 2024-02-14T12:26:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser-1.18
+            componentID: 2a4df6787f016a18
+            componentName: github.com/go-git/go-git/v5
+            componentVersion: v5.4.2
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+      - timestamp: 2024-05-21T21:00:38Z
+        type: fixed
+        data:
+          fixed-version: 1.18.2-r12
+
+  - id: CGA-j8rp-hmx2-9m5p
+    aliases:
+      - CVE-2025-21613
+      - GHSA-v725-9546-7q7m
+    events:
+      - timestamp: 2025-03-04T20:25:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser-1.18
+            componentID: 8449bc4e227b71bd
+            componentName: github.com/go-git/go-git/v5
+            componentVersion: v5.11.0
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+
+  - id: CGA-jcmv-x5cp-4gc9
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2025-03-04T20:26:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser-1.18
+            componentID: 3822b55c8c2a9550
+            componentName: stdlib
+            componentVersion: go1.22.3
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+
+  - id: CGA-jqxx-4ff2-jm5h
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2025-03-04T20:25:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser-1.18
+            componentID: 3822b55c8c2a9550
+            componentName: stdlib
+            componentVersion: go1.22.3
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+
+  - id: CGA-m6v7-446g-v7qx
+    aliases:
+      - CVE-2024-41110
+      - GHSA-v23v-6jw2-98fq
+    events:
+      - timestamp: 2025-03-04T20:23:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser-1.18
+            componentID: 7a18fd24bf51b0ab
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.9+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+
+  - id: CGA-m6x8-p27v-h9v5
+    aliases:
+      - CVE-2024-45341
+      - GHSA-3f6r-qh9c-x6mm
+    events:
+      - timestamp: 2025-03-04T20:26:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser-1.18
+            componentID: 3822b55c8c2a9550
+            componentName: stdlib
+            componentVersion: go1.22.3
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+
   - id: CGA-mc3x-j7r3-m6v2
     aliases:
       - CVE-2024-24783
@@ -340,66 +657,76 @@ advisories:
         data:
           fixed-version: 1.18.2-r6
 
-  - id: CGA-g477-vw9j-3jwm
+  - id: CGA-mqqx-5mp5-7xpf
     aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
     events:
-      - timestamp: 2024-03-13T11:11:27Z
-        type: fixed
-        data:
-          fixed-version: 1.18.2-r6
-
-  - id: CGA-rg6c-gxr9-q7jp
-    aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
-    events:
-      - timestamp: 2024-03-13T11:11:24Z
-        type: fixed
-        data:
-          fixed-version: 1.18.2-r6
-
-  - id: CGA-56vp-xw2h-3cpw
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T07:06:42Z
+      - timestamp: 2025-03-04T20:25:31Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: goreleaser-1.18
-            componentID: d6b747a7c7a0ec33
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.30.0
+            componentID: 3822b55c8c2a9550
+            componentName: stdlib
+            componentVersion: go1.22.3
             componentType: go-module
             componentLocation: /usr/bin/goreleaser
             scanner: grype
-      - timestamp: 2024-05-21T21:00:41Z
-        type: fixed
-        data:
-          fixed-version: 1.18.2-r12
 
-  - id: CGA-6rf6-v9w8-54jr
+  - id: CGA-mr87-jc5g-p5gp
     aliases:
-      - CVE-2024-29018
-      - GHSA-mq39-4gv4-mvpx
+      - CVE-2025-22868
     events:
-      - timestamp: 2024-04-16T07:29:50Z
+      - timestamp: 2025-03-04T20:24:12Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: goreleaser-1.18
-            componentID: 3f53a3016facbea7
+            componentID: 98818728f22147ba
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.19.0
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+
+  - id: CGA-phrj-9p3c-gwjg
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-03-04T20:27:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser-1.18
+            componentID: 3822b55c8c2a9550
+            componentName: stdlib
+            componentVersion: go1.22.3
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+
+  - id: CGA-q266-2h3q-jw8g
+    aliases:
+      - GHSA-jq35-85cj-fj4p
+    events:
+      - timestamp: 2024-02-14T12:26:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser-1.18
+            componentID: 05963ba11f016ebe
             componentName: github.com/docker/docker
             componentVersion: v23.0.3+incompatible
             componentType: go-module
             componentLocation: /usr/bin/goreleaser
             scanner: grype
-      - timestamp: 2024-05-21T21:00:39Z
+      - timestamp: 2024-05-21T21:00:35Z
         type: fixed
         data:
           fixed-version: 1.18.2-r12
@@ -426,62 +753,31 @@ advisories:
         data:
           fixed-version: 1.18.2-r12
 
-  - id: CGA-hp7f-287q-8wg2
+  - id: CGA-qh8v-mx34-p97p
     aliases:
-      - CVE-2024-29903
-      - GHSA-95pr-fxf5-86gv
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
     events:
-      - timestamp: 2024-04-16T07:29:47Z
-        type: detection
+      - timestamp: 2023-11-07T19:28:26Z
+        type: false-positive-determination
         data:
-          type: scan/v1
-          data:
-            subpackageName: goreleaser-1.18
-            componentID: 31294c2d8309069d
-            componentName: github.com/sigstore/cosign/v2
-            componentVersion: v2.0.0
-            componentType: go-module
-            componentLocation: /usr/bin/goreleaser
-            scanner: grype
-      - timestamp: 2024-05-21T21:00:41Z
-        type: fixed
-        data:
-          fixed-version: 1.18.2-r12
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
 
-  - id: CGA-q266-2h3q-jw8g
+  - id: CGA-r29p-gwwh-wcmg
     aliases:
-      - GHSA-jq35-85cj-fj4p
+      - CVE-2023-33199
+      - GHSA-frqx-jfcm-6jjr
     events:
-      - timestamp: 2024-02-14T12:26:41Z
+      - timestamp: 2024-02-14T12:26:39Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: goreleaser-1.18
-            componentID: 05963ba11f016ebe
-            componentName: github.com/docker/docker
-            componentVersion: v23.0.3+incompatible
-            componentType: go-module
-            componentLocation: /usr/bin/goreleaser
-            scanner: grype
-      - timestamp: 2024-05-21T21:00:35Z
-        type: fixed
-        data:
-          fixed-version: 1.18.2-r12
-
-  - id: CGA-44rg-8c5h-mxm3
-    aliases:
-      - GHSA-m425-mq94-257g
-    events:
-      - timestamp: 2024-02-14T12:26:42Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: goreleaser-1.18
-            componentID: 07a60b8b6a8b582e
-            componentName: google.golang.org/grpc
-            componentVersion: v1.54.0
+            componentID: 6b3f943830cb3236
+            componentName: github.com/sigstore/rekor
+            componentVersion: v1.1.1
             componentType: go-module
             componentLocation: /usr/bin/goreleaser
             scanner: grype
@@ -489,3 +785,83 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.18.2-r12
+
+  - id: CGA-rf4x-f6c2-pj79
+    aliases:
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
+    events:
+      - timestamp: 2024-03-13T11:11:29Z
+        type: fixed
+        data:
+          fixed-version: 1.18.2-r6
+
+  - id: CGA-rg6c-gxr9-q7jp
+    aliases:
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-13T11:11:24Z
+        type: fixed
+        data:
+          fixed-version: 1.18.2-r6
+
+  - id: CGA-rv8m-h567-95cr
+    aliases:
+      - CVE-2023-2253
+      - GHSA-hqxw-f8mx-cpmw
+    events:
+      - timestamp: 2024-02-14T12:26:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser-1.18
+            componentID: ad22e6555709828a
+            componentName: github.com/docker/distribution
+            componentVersion: v2.8.1+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+      - timestamp: 2024-05-21T21:00:36Z
+        type: fixed
+        data:
+          fixed-version: 1.18.2-r12
+
+  - id: CGA-vm9w-2wpf-w2gg
+    aliases:
+      - CVE-2023-45285
+      - GHSA-5f94-vhjq-rpg8
+    events:
+      - timestamp: 2024-02-16T07:16:56Z
+        type: fixed
+        data:
+          fixed-version: 1.18.2-r5
+
+  - id: CGA-w69j-96pr-9xxp
+    aliases:
+      - CVE-2024-45336
+      - GHSA-7wrw-r4p8-38rx
+    events:
+      - timestamp: 2025-03-04T20:26:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser-1.18
+            componentID: 3822b55c8c2a9550
+            componentName: stdlib
+            componentVersion: go1.22.3
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+
+  - id: CGA-x7jx-6vjg-gjgh
+    aliases:
+      - CVE-2023-39326
+      - GHSA-9f76-wg39-x86h
+    events:
+      - timestamp: 2024-02-16T07:16:58Z
+        type: fixed
+        data:
+          fixed-version: 1.18.2-r5
