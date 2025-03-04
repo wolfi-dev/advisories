@@ -289,6 +289,24 @@ advisories:
             componentLocation: /usr/lib/spark/yarn/spark-3.5.1-yarn-shuffle.jar
             scanner: grype
 
+  - id: CGA-96mg-x373-h4rm
+    aliases:
+      - CVE-2024-9823
+      - GHSA-j26w-f9rq-mr2q
+    events:
+      - timestamp: 2025-03-04T16:02:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark
+            componentID: 07bb998c54ba8153
+            componentName: jetty-servlets
+            componentVersion: 9.4.52.v20230823
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/spark-core_2.12-3.5.1.jar
+            scanner: grype
+
   - id: CGA-9p9j-cx7m-ggvg
     aliases:
       - CVE-2021-31684
