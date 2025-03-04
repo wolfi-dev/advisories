@@ -4,28 +4,27 @@ package:
   name: istio-operator-1.20
 
 advisories:
-  - id: CGA-r776-6mc7-f8cc
+  - id: CGA-2mhf-548x-p4qh
     aliases:
-      - CVE-2019-25210
-      - GHSA-jw44-4f3j-q396
+      - CVE-2024-28180
+      - GHSA-c5q2-7r4c-mv6g
     events:
-      - timestamp: 2024-03-06T07:13:26Z
+      - timestamp: 2024-03-08T07:12:10Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: istio-operator-1.20
-            componentID: 3f9e5ce749ddac88
-            componentName: helm.sh/helm/v3
-            componentVersion: v3.14.2
+            componentID: 0bdfc2b42062fc77
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
             componentType: go-module
             componentLocation: /usr/bin/operator
             scanner: grype
-      - timestamp: 2024-03-15T00:01:21Z
-        type: false-positive-determination
+      - timestamp: 2024-03-11T00:36:33Z
+        type: fixed
         data:
-          type: vulnerability-record-analysis-contested
-          note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
+          fixed-version: 1.20.3-r4
 
   - id: CGA-3hw4-84cc-cxfx
     aliases:
@@ -37,78 +36,11 @@ advisories:
         data:
           type: vulnerable-code-version-not-used
           note: This vulnerability has been fixed in version v2.7.1 which corresponds to the Go library version v0.7.1 and this package includes a later version.
-
-  - id: CGA-7hqf-rjrv-wf33
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-09T10:50:44Z
-        type: detection
+      - timestamp: 2025-03-04T17:59:31Z
+        type: false-positive-determination
         data:
-          type: scan/v1
-          data:
-            subpackageName: istio-operator-1.20
-            componentID: 14cf3549a3369b6c
-            componentName: stdlib
-            componentVersion: go1.22.1
-            componentType: go-module
-            componentLocation: /usr/bin/operator
-            scanner: grype
-
-  - id: CGA-6v8q-9jxr-669v
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2023-12-20T13:01:28Z
-        type: fixed
-        data:
-          fixed-version: 1.20.1-r2
-
-  - id: CGA-hj9h-6h2x-49ph
-    aliases:
-      - CVE-2023-49290
-      - GHSA-7f9x-gw85-8grf
-    events:
-      - timestamp: 2024-01-24T07:11:51Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: istio-operator-1.20
-            componentID: 66e705f1026a41b9
-            componentName: github.com/lestrrat-go/jwx
-            componentVersion: v1.2.26
-            componentType: go-module
-            componentLocation: /usr/bin/operator
-            scanner: grype
-      - timestamp: 2024-01-24T17:13:06Z
-        type: fixed
-        data:
-          fixed-version: 1.20.2-r1
-
-  - id: CGA-rjc7-4vhw-626h
-    aliases:
-      - CVE-2024-21664
-      - GHSA-pvcr-v8j8-j5q3
-    events:
-      - timestamp: 2024-01-24T07:11:52Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: istio-operator-1.20
-            componentID: 66e705f1026a41b9
-            componentName: github.com/lestrrat-go/jwx
-            componentVersion: v1.2.26
-            componentType: go-module
-            componentLocation: /usr/bin/operator
-            scanner: grype
-      - timestamp: 2024-01-26T08:34:14Z
-        type: fixed
-        data:
-          fixed-version: 1.20.2-r2
+          type: component-vulnerability-mismatch
+          note: Prometheus ships a Go (Golang) library with a versioning scheme that follows the 0.x format. However, the Prometheus application itself uses a versioning scheme based on 1.x, 2.x, etc. The vulnerability identified in CVE-2019-3826 is specifically associated with the Prometheus application, not the Golang library.
 
   - id: CGA-62hc-f7cq-6cq5
     aliases:
@@ -127,50 +59,6 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/operator
             scanner: grype
-
-  - id: CGA-wh8p-rp2w-p5mj
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T08:18:55Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: istio-operator-1.20
-            componentID: 2390df842be342eb
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.31.0
-            componentType: go-module
-            componentLocation: /usr/bin/operator
-            scanner: grype
-      - timestamp: 2024-03-14T18:49:07Z
-        type: fixed
-        data:
-          fixed-version: 1.20.4-r1
-
-  - id: CGA-cj83-4cc6-2j6c
-    aliases:
-      - CVE-2024-25620
-      - GHSA-v53g-5gjp-272r
-    events:
-      - timestamp: 2024-02-16T07:19:04Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: istio-operator-1.20
-            componentID: 46b8774dd70cb68d
-            componentName: helm.sh/helm/v3
-            componentVersion: v3.12.3
-            componentType: go-module
-            componentLocation: /usr/bin/operator
-            scanner: grype
-      - timestamp: 2024-02-18T13:37:16Z
-        type: fixed
-        data:
-          fixed-version: 1.20.3-r1
 
   - id: CGA-6qr5-2pq4-4j8h
     aliases:
@@ -194,6 +82,123 @@ advisories:
         data:
           fixed-version: 1.20.3-r2
 
+  - id: CGA-6v8q-9jxr-669v
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2023-12-20T13:01:28Z
+        type: fixed
+        data:
+          fixed-version: 1.20.1-r2
+
+  - id: CGA-7hqf-rjrv-wf33
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-09T10:50:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.20
+            componentID: 14cf3549a3369b6c
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
+  - id: CGA-cj83-4cc6-2j6c
+    aliases:
+      - CVE-2024-25620
+      - GHSA-v53g-5gjp-272r
+    events:
+      - timestamp: 2024-02-16T07:19:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.20
+            componentID: 46b8774dd70cb68d
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.12.3
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+      - timestamp: 2024-02-18T13:37:16Z
+        type: fixed
+        data:
+          fixed-version: 1.20.3-r1
+
+  - id: CGA-hj9h-6h2x-49ph
+    aliases:
+      - CVE-2023-49290
+      - GHSA-7f9x-gw85-8grf
+    events:
+      - timestamp: 2024-01-24T07:11:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.20
+            componentID: 66e705f1026a41b9
+            componentName: github.com/lestrrat-go/jwx
+            componentVersion: v1.2.26
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+      - timestamp: 2024-01-24T17:13:06Z
+        type: fixed
+        data:
+          fixed-version: 1.20.2-r1
+
+  - id: CGA-r776-6mc7-f8cc
+    aliases:
+      - CVE-2019-25210
+      - GHSA-jw44-4f3j-q396
+    events:
+      - timestamp: 2024-03-06T07:13:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.20
+            componentID: 3f9e5ce749ddac88
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.2
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+      - timestamp: 2024-03-15T00:01:21Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
+
+  - id: CGA-rjc7-4vhw-626h
+    aliases:
+      - CVE-2024-21664
+      - GHSA-pvcr-v8j8-j5q3
+    events:
+      - timestamp: 2024-01-24T07:11:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.20
+            componentID: 66e705f1026a41b9
+            componentName: github.com/lestrrat-go/jwx
+            componentVersion: v1.2.26
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+      - timestamp: 2024-01-26T08:34:14Z
+        type: fixed
+        data:
+          fixed-version: 1.20.2-r2
+
   - id: CGA-rq48-3v9w-f6gr
     aliases:
       - CVE-2024-28122
@@ -216,24 +221,24 @@ advisories:
         data:
           fixed-version: 1.20.3-r4
 
-  - id: CGA-2mhf-548x-p4qh
+  - id: CGA-wh8p-rp2w-p5mj
     aliases:
-      - CVE-2024-28180
-      - GHSA-c5q2-7r4c-mv6g
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
     events:
-      - timestamp: 2024-03-08T07:12:10Z
+      - timestamp: 2024-03-14T08:18:55Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: istio-operator-1.20
-            componentID: 0bdfc2b42062fc77
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.1
+            componentID: 2390df842be342eb
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
             componentType: go-module
             componentLocation: /usr/bin/operator
             scanner: grype
-      - timestamp: 2024-03-11T00:36:33Z
+      - timestamp: 2024-03-14T18:49:07Z
         type: fixed
         data:
-          fixed-version: 1.20.3-r4
+          fixed-version: 1.20.4-r1

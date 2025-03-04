@@ -4,27 +4,6 @@ package:
   name: telegraf-1.29
 
 advisories:
-  - id: CGA-xx9p-8cr5-gj5v
-    aliases:
-      - CVE-2019-3826
-      - GHSA-3m87-5598-2v4f
-    events:
-      - timestamp: 2023-12-17T17:36:20Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-version-not-used
-          note: This vulnerability has been fixed in version v2.7.1 which corresponds to the Go library version v0.7.1 and this package includes a later version.
-
-  - id: CGA-ww4v-5qh8-jvpx
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2023-12-21T17:15:28Z
-        type: fixed
-        data:
-          fixed-version: 1.29.1-r1
-
   - id: CGA-9qcx-7wg3-7mxg
     aliases:
       - CVE-2024-27289
@@ -42,6 +21,24 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/telegraf
             scanner: grype
+
+  - id: CGA-fq98-568c-76gh
+    aliases:
+      - GHSA-mhpq-9638-x6pw
+    events:
+      - timestamp: 2023-12-21T17:16:18Z
+        type: fixed
+        data:
+          fixed-version: 1.29.1-r1
+
+  - id: CGA-h67j-h787-j66q
+    aliases:
+      - GHSA-7ww5-4wqc-m92c
+    events:
+      - timestamp: 2023-12-21T17:16:05Z
+        type: fixed
+        data:
+          fixed-version: 1.29.1-r1
 
   - id: CGA-hm7v-mrf7-g6w4
     aliases:
@@ -65,20 +62,28 @@ advisories:
         data:
           fixed-version: 1.29.5-r2
 
-  - id: CGA-h67j-h787-j66q
+  - id: CGA-ww4v-5qh8-jvpx
     aliases:
-      - GHSA-7ww5-4wqc-m92c
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
     events:
-      - timestamp: 2023-12-21T17:16:05Z
+      - timestamp: 2023-12-21T17:15:28Z
         type: fixed
         data:
           fixed-version: 1.29.1-r1
 
-  - id: CGA-fq98-568c-76gh
+  - id: CGA-xx9p-8cr5-gj5v
     aliases:
-      - GHSA-mhpq-9638-x6pw
+      - CVE-2019-3826
+      - GHSA-3m87-5598-2v4f
     events:
-      - timestamp: 2023-12-21T17:16:18Z
-        type: fixed
+      - timestamp: 2023-12-17T17:36:20Z
+        type: false-positive-determination
         data:
-          fixed-version: 1.29.1-r1
+          type: vulnerable-code-version-not-used
+          note: This vulnerability has been fixed in version v2.7.1 which corresponds to the Go library version v0.7.1 and this package includes a later version.
+      - timestamp: 2025-03-04T18:02:41Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: Prometheus ships a Go (Golang) library with a versioning scheme that follows the 0.x format. However, the Prometheus application itself uses a versioning scheme based on 1.x, 2.x, etc. The vulnerability identified in CVE-2019-3826 is specifically associated with the Prometheus application, not the Golang library.
