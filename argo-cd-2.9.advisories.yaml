@@ -4,17 +4,6 @@ package:
   name: argo-cd-2.9
 
 advisories:
-  - id: CGA-w344-7qr4-66mr
-    aliases:
-      - CVE-2021-25743
-      - GHSA-f9jg-8p32-2f55
-    events:
-      - timestamp: 2023-11-28T13:21:30Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: The vulnerable code is specific to kubectl.
-
   - id: CGA-27rm-q66p-qvmc
     aliases:
       - CVE-2023-46402
@@ -25,25 +14,23 @@ advisories:
         data:
           fixed-version: 2.9.3-r1
 
-  - id: CGA-p9gj-9f4f-q6m5
+  - id: CGA-2r2v-rxfv-cg32
     aliases:
-      - CVE-2023-47108
-      - GHSA-8pgv-569h-w5rw
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
     events:
-      - timestamp: 2023-11-28T13:20:25Z
-        type: fixed
+      - timestamp: 2025-03-04T17:31:02Z
+        type: detection
         data:
-          fixed-version: 2.9.2-r1
-
-  - id: CGA-v7gm-gqfj-8cc7
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2023-12-19T18:23:00Z
-        type: fixed
-        data:
-          fixed-version: 2.9.3-r4
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 4114e0bc16861d13
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
 
   - id: CGA-3649-h3j9-rvx6
     aliases:
@@ -55,16 +42,189 @@ advisories:
         data:
           fixed-version: 2.9.3-r5
 
-  - id: CGA-vx54-68rp-7838
+  - id: CGA-4vvr-m5gg-4xvv
     aliases:
-      - CVE-2023-5528
-      - GHSA-hq6q-c2x6-hmch
+      - CVE-2024-10220
+      - GHSA-27wf-5967-98gx
     events:
-      - timestamp: 2023-11-28T13:20:36Z
-        type: false-positive-determination
+      - timestamp: 2025-03-04T17:26:46Z
+        type: detection
         data:
-          type: vulnerable-code-not-included-in-package
-          note: This vulnerability affects the Kubernetes application, not the golang k8s.io/kubernetes library. Kubernetes clusters are only affected if they are using an in-tree storage plugin for Windows nodes.
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 3236935c8a384429
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.24.17
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-52rv-v89v-p3w9
+    aliases:
+      - CVE-2024-41666
+      - GHSA-v8wx-v5jq-qhhw
+    events:
+      - timestamp: 2025-03-04T17:29:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 38de374c04dc86f3
+            componentName: github.com/argoproj/argo-cd/v2
+            componentVersion: v2.9.7
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-5h57-vg58-6jqr
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-03-04T17:32:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 4114e0bc16861d13
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-5mr8-wv2g-m5jw
+    aliases:
+      - CVE-2025-0426
+      - GHSA-jgfp-53c3-624w
+    events:
+      - timestamp: 2025-03-04T17:28:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 3236935c8a384429
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.24.17
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-6f4r-6m9g-p9jc
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2025-03-04T17:30:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 4114e0bc16861d13
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-6g96-2787-9864
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2025-03-04T17:30:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 4114e0bc16861d13
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-6gqf-424v-hjmx
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2025-03-04T17:26:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: fceaac64b013306e
+            componentName: golang.org/x/net
+            componentVersion: v0.19.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-6h26-89fc-gprm
+    aliases:
+      - CVE-2024-21652
+      - GHSA-x32m-mvfj-52xv
+    events:
+      - timestamp: 2025-03-04T17:29:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 38de374c04dc86f3
+            componentName: github.com/argoproj/argo-cd/v2
+            componentVersion: v2.9.7
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-77r3-vmhh-vf5x
+    aliases:
+      - CVE-2024-28180
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:08:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9-compat
+            componentID: 3400637b92540817
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/local/bin/argocd
+            scanner: grype
+      - timestamp: 2024-03-08T10:56:42Z
+        type: fixed
+        data:
+          fixed-version: 2.9.7-r2
+
+  - id: CGA-7f8q-f7j3-cfh3
+    aliases:
+      - CVE-2025-27144
+      - GHSA-c6gw-w398-hv78
+    events:
+      - timestamp: 2025-03-04T17:27:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: cdca26cc98c4c78d
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.3
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
 
   - id: CGA-7g7c-22jg-fj99
     aliases:
@@ -74,6 +234,185 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.9.2-r1
+
+  - id: CGA-7rc2-4wch-62rx
+    aliases:
+      - CVE-2024-3177
+      - GHSA-pxhw-596r-rwq5
+    events:
+      - timestamp: 2025-03-04T17:28:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 3236935c8a384429
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.24.17
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-8777-8php-rxr2
+    aliases:
+      - CVE-2024-40634
+      - GHSA-jmvp-698c-4x3w
+    events:
+      - timestamp: 2025-03-04T17:28:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 38de374c04dc86f3
+            componentName: github.com/argoproj/argo-cd/v2
+            componentVersion: v2.9.7
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-887q-c4hx-q6m8
+    aliases:
+      - CVE-2024-21662
+      - GHSA-2vgg-9h6w-m454
+    events:
+      - timestamp: 2025-03-04T17:26:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 38de374c04dc86f3
+            componentName: github.com/argoproj/argo-cd/v2
+            componentVersion: v2.9.7
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-89v2-w62x-q6rv
+    aliases:
+      - CVE-2024-5321
+      - GHSA-82m2-cv7p-4m75
+    events:
+      - timestamp: 2025-03-04T17:27:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 3236935c8a384429
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.24.17
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-8v45-5qf4-gxc9
+    aliases:
+      - CVE-2024-32476
+      - GHSA-9m6p-x4h2-6frq
+    events:
+      - timestamp: 2025-03-04T17:27:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 38de374c04dc86f3
+            componentName: github.com/argoproj/argo-cd/v2
+            componentVersion: v2.9.7
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-93vg-cphr-6c4x
+    aliases:
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
+    events:
+      - timestamp: 2025-03-04T17:29:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 4114e0bc16861d13
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-9v39-vpj3-q7mj
+    aliases:
+      - CVE-2024-21661
+      - GHSA-6v85-wr92-q4p7
+    events:
+      - timestamp: 2025-03-04T17:27:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 38de374c04dc86f3
+            componentName: github.com/argoproj/argo-cd/v2
+            componentVersion: v2.9.7
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-c4g9-7943-4p8c
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-04T17:26:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: c8616bbc9665a853
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.11.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-cfqp-cf2h-34fh
+    aliases:
+      - CVE-2023-50726
+      - GHSA-g623-jcgg-mhmm
+    events:
+      - timestamp: 2025-03-04T17:27:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 38de374c04dc86f3
+            componentName: github.com/argoproj/argo-cd/v2
+            componentVersion: v2.9.7
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-cgvc-4hw4-8x4g
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-04T17:26:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: ebfd8a27a357128b
+            componentName: golang.org/x/crypto
+            componentVersion: v0.19.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
 
   - id: CGA-ch79-8wjv-h735
     aliases:
@@ -96,23 +435,420 @@ advisories:
         data:
           fixed-version: 2.9.4-r0
 
-  - id: CGA-77r3-vmhh-vf5x
+  - id: CGA-fw39-6c92-vg73
     aliases:
-      - GHSA-c5q2-7r4c-mv6g
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
     events:
-      - timestamp: 2024-03-08T07:08:06Z
+      - timestamp: 2025-03-04T17:26:50Z
         type: detection
         data:
           type: scan/v1
           data:
-            subpackageName: argo-cd-2.9-compat
-            componentID: 3400637b92540817
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.1
+            subpackageName: argo-cd-2.9
+            componentID: 4551e311b1abe762
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
             componentType: go-module
-            componentLocation: /usr/local/bin/argocd
+            componentLocation: /usr/bin/argocd
             scanner: grype
-      - timestamp: 2024-03-08T10:56:42Z
+
+  - id: CGA-ghvw-6frr-9r67
+    aliases:
+      - CVE-2024-29893
+      - GHSA-jhwx-mhww-rgc3
+    events:
+      - timestamp: 2025-03-04T17:28:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 38de374c04dc86f3
+            componentName: github.com/argoproj/argo-cd/v2
+            componentVersion: v2.9.7
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-gv2f-qh62-r97p
+    aliases:
+      - CVE-2025-21614
+      - GHSA-r9px-m959-cxf4
+    events:
+      - timestamp: 2025-03-04T17:29:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 7eb528cfa6e393c6
+            componentName: github.com/go-git/go-git/v5
+            componentVersion: v5.11.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-h82r-qvhg-4x6g
+    aliases:
+      - CVE-2024-24791
+      - GHSA-hw49-2p59-3mhj
+    events:
+      - timestamp: 2025-03-04T17:30:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 4114e0bc16861d13
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-hggx-wvqr-rgxh
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2025-03-04T17:30:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 4114e0bc16861d13
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-hrj7-4qh3-xfwg
+    aliases:
+      - CVE-2024-28175
+      - GHSA-jwv5-8mqv-g387
+    events:
+      - timestamp: 2025-03-04T17:28:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 38de374c04dc86f3
+            componentName: github.com/argoproj/argo-cd/v2
+            componentVersion: v2.9.7
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-j3xx-w5h6-45vh
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-03-04T17:26:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: fceaac64b013306e
+            componentName: golang.org/x/net
+            componentVersion: v0.19.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-jm9v-hw2c-f5g9
+    aliases:
+      - CVE-2025-21613
+      - GHSA-v725-9546-7q7m
+    events:
+      - timestamp: 2025-03-04T17:29:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 7eb528cfa6e393c6
+            componentName: github.com/go-git/go-git/v5
+            componentVersion: v5.11.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-jrw7-g2h8-83mw
+    aliases:
+      - CVE-2024-31990
+      - GHSA-2gvw-w6fj-7m3c
+    events:
+      - timestamp: 2025-03-04T17:26:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 38de374c04dc86f3
+            componentName: github.com/argoproj/argo-cd/v2
+            componentVersion: v2.9.7
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-m2x2-p5pj-5pq9
+    aliases:
+      - CVE-2024-45341
+      - GHSA-3f6r-qh9c-x6mm
+    events:
+      - timestamp: 2025-03-04T17:31:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 4114e0bc16861d13
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-m3rq-qv67-38wc
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2025-03-04T17:27:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 938efc8e769cd5d3
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-p9gj-9f4f-q6m5
+    aliases:
+      - CVE-2023-47108
+      - GHSA-8pgv-569h-w5rw
+    events:
+      - timestamp: 2023-11-28T13:20:25Z
         type: fixed
         data:
-          fixed-version: 2.9.7-r2
+          fixed-version: 2.9.2-r1
+
+  - id: CGA-pg5w-72qw-f878
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2025-03-04T17:31:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 4114e0bc16861d13
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-ppcr-x859-xmc2
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2025-03-04T17:29:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 4114e0bc16861d13
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-qjcq-gqc4-p43f
+    aliases:
+      - CVE-2024-35255
+      - GHSA-m5vv-6r4h-3vj9
+    events:
+      - timestamp: 2025-03-04T17:28:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: d614528c7c17f53d
+            componentName: github.com/Azure/azure-sdk-for-go/sdk/azidentity
+            componentVersion: v1.1.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-qv78-2rrm-2637
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T17:26:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: ebfd8a27a357128b
+            componentName: golang.org/x/crypto
+            componentVersion: v0.19.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-rpcf-h7vv-wj5v
+    aliases:
+      - CVE-2025-23216
+      - GHSA-47g2-qmh2-749v
+    events:
+      - timestamp: 2025-03-04T17:27:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 38de374c04dc86f3
+            componentName: github.com/argoproj/argo-cd/v2
+            componentVersion: v2.9.7
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-v24h-px7p-wgc9
+    aliases:
+      - CVE-2024-31989
+      - GHSA-9766-5277-j5hr
+    events:
+      - timestamp: 2025-03-04T17:27:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 38de374c04dc86f3
+            componentName: github.com/argoproj/argo-cd/v2
+            componentVersion: v2.9.7
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-v4m6-cpcv-c4m4
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2025-03-04T17:26:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 3019c03abf996427
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.4
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-v7gm-gqfj-8cc7
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2023-12-19T18:23:00Z
+        type: fixed
+        data:
+          fixed-version: 2.9.3-r4
+
+  - id: CGA-vw4q-qgrg-97fv
+    aliases:
+      - CVE-2024-0793
+      - GHSA-h7wq-jj8r-qm7p
+    events:
+      - timestamp: 2025-03-04T17:27:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 3236935c8a384429
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.24.17
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-vx54-68rp-7838
+    aliases:
+      - CVE-2023-5528
+      - GHSA-hq6q-c2x6-hmch
+    events:
+      - timestamp: 2023-11-28T13:20:36Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability affects the Kubernetes application, not the golang k8s.io/kubernetes library. Kubernetes clusters are only affected if they are using an in-tree storage plugin for Windows nodes.
+
+  - id: CGA-w344-7qr4-66mr
+    aliases:
+      - CVE-2021-25743
+      - GHSA-f9jg-8p32-2f55
+    events:
+      - timestamp: 2023-11-28T13:21:30Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: The vulnerable code is specific to kubectl.
+
+  - id: CGA-wvc6-8m83-2423
+    aliases:
+      - CVE-2024-45336
+      - GHSA-7wrw-r4p8-38rx
+    events:
+      - timestamp: 2025-03-04T17:31:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 4114e0bc16861d13
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-xx3f-xj6j-9rqj
+    aliases:
+      - GHSA-274v-mgcv-cm8j
+    events:
+      - timestamp: 2025-03-04T17:26:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 45b3894291a006a7
+            componentName: github.com/argoproj/gitops-engine
+            componentVersion: v0.7.1-0.20230906152414-b0fffe419a0f
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
