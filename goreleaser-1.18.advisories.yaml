@@ -4,6 +4,24 @@ package:
   name: goreleaser-1.18
 
 advisories:
+  - id: CGA-23v3-5v44-4jpv
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2025-03-04T20:25:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser-1.18
+            componentID: 3822b55c8c2a9550
+            componentName: stdlib
+            componentVersion: go1.22.3
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+
   - id: CGA-26v9-p59c-27f6
     aliases:
       - CVE-2024-45338
