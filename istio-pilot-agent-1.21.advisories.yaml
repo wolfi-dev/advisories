@@ -113,6 +113,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability was matched to the module "istio.io/istio" at the following location(s): /usr/bin/pilot-agent. In all cases, the installed version of the module (git commit ed90e14d3473bc3fe54f98298eb16664002d14d1) corresponds to a version tag (1.21.2) that is later than the fixed version (1.11.7).'
 
+  - id: CGA-m92v-ggvw-j7f6
+    aliases:
+      - CVE-2024-36623
+      - GHSA-gh5c-3h97-2f3q
+    events:
+      - timestamp: 2025-03-04T18:34:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-agent-1.21
+            componentID: 7824f372bd0fe4fb
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.9+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-agent
+            scanner: grype
+
   - id: CGA-mw8m-gh87-r7f9
     aliases:
       - CVE-2019-14993
