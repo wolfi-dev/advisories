@@ -149,6 +149,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Go vulndb has marked this code NOT_IMPORTABLE.
 
+  - id: CGA-97rq-vmvh-25g7
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T17:39:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: calico
+            componentID: 4779057191578f4e
+            componentName: golang.org/x/crypto
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/calico
+            scanner: grype
+
   - id: CGA-9c58-fhmc-cvq5
     aliases:
       - CVE-2023-45288
