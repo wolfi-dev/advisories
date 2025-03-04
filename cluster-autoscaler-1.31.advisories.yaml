@@ -4,6 +4,23 @@ package:
   name: cluster-autoscaler-1.31
 
 advisories:
+  - id: CGA-73qp-3w8c-6xv3
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T19:17:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-autoscaler-1.31
+            componentID: 18eb42c9f0cd38b1
+            componentName: golang.org/x/crypto
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-autoscaler
+            scanner: grype
+
   - id: CGA-8cpm-qwxp-hxgr
     aliases:
       - CVE-2024-45310
