@@ -4,6 +4,49 @@ package:
   name: keda-2.13
 
 advisories:
+  - id: CGA-4gqp-pr89-w8g6
+    aliases:
+      - GHSA-7jwh-3vrq-q3m8
+    events:
+      - timestamp: 2024-03-15T10:47:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.13
+            componentID: d0893074795c06a4
+            componentName: github.com/jackc/pgx/v5
+            componentVersion: v5.5.2
+            componentType: go-module
+            componentLocation: /usr/bin/keda
+            scanner: grype
+      - timestamp: 2024-03-16T11:01:45Z
+        type: fixed
+        data:
+          fixed-version: 2.13.1-r2
+
+  - id: CGA-4pf6-2r5m-jg84
+    aliases:
+      - CVE-2024-27304
+      - GHSA-mrww-27vc-gghv
+    events:
+      - timestamp: 2024-03-15T10:47:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.13
+            componentID: d0893074795c06a4
+            componentName: github.com/jackc/pgx/v5
+            componentVersion: v5.5.2
+            componentType: go-module
+            componentLocation: /usr/bin/keda
+            scanner: grype
+      - timestamp: 2024-03-16T11:01:46Z
+        type: fixed
+        data:
+          fixed-version: 2.13.1-r2
+
   - id: CGA-gq5x-wcwp-8792
     aliases:
       - CVE-2023-45288
@@ -36,45 +79,20 @@ advisories:
         data:
           fixed-version: 2.13.1-r1
 
-  - id: CGA-4pf6-2r5m-jg84
+  - id: CGA-xxg3-gr57-446w
     aliases:
-      - CVE-2024-27304
-      - GHSA-mrww-27vc-gghv
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
     events:
-      - timestamp: 2024-03-15T10:47:31Z
+      - timestamp: 2025-03-04T15:04:34Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: keda-2.13
-            componentID: d0893074795c06a4
-            componentName: github.com/jackc/pgx/v5
-            componentVersion: v5.5.2
+            componentID: ae170114f748c160
+            componentName: golang.org/x/crypto
+            componentVersion: v0.17.0
             componentType: go-module
             componentLocation: /usr/bin/keda
             scanner: grype
-      - timestamp: 2024-03-16T11:01:46Z
-        type: fixed
-        data:
-          fixed-version: 2.13.1-r2
-
-  - id: CGA-4gqp-pr89-w8g6
-    aliases:
-      - GHSA-7jwh-3vrq-q3m8
-    events:
-      - timestamp: 2024-03-15T10:47:27Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: keda-2.13
-            componentID: d0893074795c06a4
-            componentName: github.com/jackc/pgx/v5
-            componentVersion: v5.5.2
-            componentType: go-module
-            componentLocation: /usr/bin/keda
-            scanner: grype
-      - timestamp: 2024-03-16T11:01:45Z
-        type: fixed
-        data:
-          fixed-version: 2.13.1-r2
