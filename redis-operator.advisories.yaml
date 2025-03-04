@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: redis-operator
+
+advisories:
+  - id: CGA-7jpx-535q-66cc
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-04T05:29:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: redis-operator
+            componentID: f00a8d796efde03b
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.18.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
