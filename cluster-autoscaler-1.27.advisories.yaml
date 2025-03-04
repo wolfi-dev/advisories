@@ -4,6 +4,24 @@ package:
   name: cluster-autoscaler-1.27
 
 advisories:
+  - id: CGA-7529-wxgw-cf9p
+    aliases:
+      - CVE-2025-0426
+      - GHSA-jgfp-53c3-624w
+    events:
+      - timestamp: 2025-03-04T19:27:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-autoscaler-1.27
+            componentID: c8644878cccd9be3
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.27.8
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-autoscaler
+            scanner: grype
+
   - id: CGA-7r2x-m33m-fq7w
     aliases:
       - CVE-2024-45337
