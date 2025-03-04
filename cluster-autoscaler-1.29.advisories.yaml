@@ -197,3 +197,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.29.0-r2
+
+  - id: CGA-x7xq-466h-65qx
+    aliases:
+      - CVE-2024-10220
+      - GHSA-27wf-5967-98gx
+    events:
+      - timestamp: 2025-03-04T18:26:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-autoscaler-1.29
+            componentID: 5de1ab30d8deb146
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.29.5
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-autoscaler
+            scanner: grype
