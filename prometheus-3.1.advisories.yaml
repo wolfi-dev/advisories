@@ -63,6 +63,23 @@ advisories:
         data:
           fixed-version: 3.1.0-r2
 
+  - id: CGA-whfx-v93f-6fmr
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T22:01:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-3.1
+            componentID: 358a8e23daa210a8
+            componentName: golang.org/x/crypto
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /opt/bitnami/prometheus/bin/prometheus
+            scanner: grype
+
   - id: CGA-wr96-44x7-393g
     aliases:
       - CVE-2025-22866
