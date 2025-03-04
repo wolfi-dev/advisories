@@ -4,6 +4,24 @@ package:
   name: cert-manager
 
 advisories:
+  - id: CGA-23r4-x7gh-736f
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-04T23:14:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-manager
+            componentID: 864e428aa2986705
+            componentName: golang.org/x/crypto
+            componentVersion: v0.6.0
+            componentType: go-module
+            componentLocation: /usr/bin/controller-linux-amd64
+            scanner: grype
+
   - id: CGA-2696-7w6j-jvg7
     aliases:
       - CVE-2024-24785
