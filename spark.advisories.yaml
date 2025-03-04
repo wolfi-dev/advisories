@@ -433,6 +433,24 @@ advisories:
         data:
           note: This relates to 'derby'. Various fixes where commmitted to main branch in Dec 2023 but we are waiting for a release to be created with these changes. https://github.com/apache/spark/pull/44174
 
+  - id: CGA-mp27-f49x-vf4q
+    aliases:
+      - CVE-2025-24970
+      - GHSA-4g8c-wm8x-jfhw
+    events:
+      - timestamp: 2025-03-04T16:01:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark
+            componentID: ca51bb189ed3f441
+            componentName: netty-handler
+            componentVersion: 4.1.107.Final
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/netty-handler-4.1.107.Final.jar
+            scanner: grype
+
   - id: CGA-qf4j-9whq-5g23
     aliases:
       - CVE-2023-52428
