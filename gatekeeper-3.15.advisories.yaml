@@ -4,6 +4,24 @@ package:
   name: gatekeeper-3.15
 
 advisories:
+  - id: CGA-228f-5w5j-qpp9
+    aliases:
+      - CVE-2024-45336
+      - GHSA-7wrw-r4p8-38rx
+    events:
+      - timestamp: 2025-03-04T20:20:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.15
+            componentID: 23d036c6a1b6110a
+            componentName: stdlib
+            componentVersion: go1.22.3
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-2693-m6xw-xcg7
     aliases:
       - CVE-2024-24791
