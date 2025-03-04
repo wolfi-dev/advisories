@@ -196,3 +196,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.13.2-r1
+
+  - id: CGA-vvmr-x98r-rxj7
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-04T17:21:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.13
+            componentID: caacd68eda51434a
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
