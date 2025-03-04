@@ -46,6 +46,23 @@ advisories:
         data:
           fixed-version: 1.16.3-r1
 
+  - id: CGA-fjjr-9756-ggrc
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-04T19:13:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-manager-1.16
+            componentID: 5b20bfdf85715376
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/controller
+            scanner: grype
+
   - id: CGA-g827-x32f-rc39
     aliases:
       - CVE-2024-45338
