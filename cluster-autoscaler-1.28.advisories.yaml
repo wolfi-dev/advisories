@@ -4,6 +4,24 @@ package:
   name: cluster-autoscaler-1.28
 
 advisories:
+  - id: CGA-2hcg-j7vv-vq74
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2025-03-04T19:04:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-autoscaler-1.28
+            componentID: 67dd9e92f1b880ab
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-autoscaler
+            scanner: grype
+
   - id: CGA-7x2h-3hc5-jx43
     aliases:
       - CVE-2025-22869
