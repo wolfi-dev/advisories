@@ -75,6 +75,24 @@ advisories:
             componentLocation: /usr/bin/consul-k8s-control-plane
             scanner: grype
 
+  - id: CGA-rhjj-84cr-w6rq
+    aliases:
+      - CVE-2024-45336
+      - GHSA-7wrw-r4p8-38rx
+    events:
+      - timestamp: 2025-03-04T17:41:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: consul-k8s
+            componentID: 0b9e28f7ec5cc342
+            componentName: stdlib
+            componentVersion: go1.23.1
+            componentType: go-module
+            componentLocation: /usr/bin/consul-cni
+            scanner: grype
+
   - id: CGA-wf24-f277-m746
     aliases:
       - CVE-2025-22868
