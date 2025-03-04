@@ -133,6 +133,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability was matched to the module "github.com/hashicorp/consul" at the following location(s): /bin/consul. In all cases, the installed version of the module (git commit cb00a73e9db283bb1ee286e957bb01def6a17f1a) corresponds to a version tag (v1.16.7) that is later than the fixed version (1.8.15).'
 
+  - id: CGA-8pvh-f8rv-jc9h
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-03-04T18:30:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: consul-1.16
+            componentID: 471197034dc75a3f
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /bin/consul
+            scanner: grype
+
   - id: CGA-c5pc-cw7j-7ppw
     aliases:
       - CVE-2024-0874
