@@ -4,6 +4,24 @@ package:
   name: telegraf-1.29
 
 advisories:
+  - id: CGA-2c8m-qcqh-wv28
+    aliases:
+      - CVE-2024-35255
+      - GHSA-m5vv-6r4h-3vj9
+    events:
+      - timestamp: 2025-03-04T18:37:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.29
+            componentID: 2df20612a0a6e081
+            componentName: github.com/Azure/azure-sdk-for-go/sdk/azidentity
+            componentVersion: v1.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
+
   - id: CGA-533c-pr8v-7frp
     aliases:
       - CVE-2024-24786
