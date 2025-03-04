@@ -4,6 +4,24 @@ package:
   name: consul-k8s-1.5
 
 advisories:
+  - id: CGA-3mjq-4xvj-rpmr
+    aliases:
+      - CVE-2024-45341
+      - GHSA-3f6r-qh9c-x6mm
+    events:
+      - timestamp: 2025-03-04T19:25:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: consul-k8s-1.5
+            componentID: 3ff13b0a77cd2162
+            componentName: stdlib
+            componentVersion: go1.23.2
+            componentType: go-module
+            componentLocation: /usr/bin/consul-cni
+            scanner: grype
+
   - id: CGA-4f7q-4r3g-977g
     aliases:
       - CVE-2024-45337
