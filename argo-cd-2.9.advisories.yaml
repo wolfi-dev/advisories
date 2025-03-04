@@ -127,6 +127,24 @@ advisories:
         data:
           fixed-version: 2.9.2-r1
 
+  - id: CGA-7rc2-4wch-62rx
+    aliases:
+      - CVE-2024-3177
+      - GHSA-pxhw-596r-rwq5
+    events:
+      - timestamp: 2025-03-04T17:28:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: 3236935c8a384429
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.24.17
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
   - id: CGA-8777-8php-rxr2
     aliases:
       - CVE-2024-40634
