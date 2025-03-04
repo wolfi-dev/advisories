@@ -117,6 +117,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-q5f5-9v8p-8p33
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2025-03-04T16:16:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-envoy
+            componentID: ea567feca76ce545
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/lib/libcilium.so
+            scanner: grype
+
   - id: CGA-v3mf-xqp9-mchp
     aliases:
       - CVE-2023-39326
