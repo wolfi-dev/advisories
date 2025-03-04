@@ -113,6 +113,24 @@ advisories:
         data:
           fixed-version: 1.25.3-r10
 
+  - id: CGA-6fqv-vcv2-xhhf
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-03-04T18:21:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-autoscaler-1.25
+            componentID: e1409d061554bcfb
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-autoscaler
+            scanner: grype
+
   - id: CGA-7v6w-28ff-cf45
     aliases:
       - CVE-2023-48795
