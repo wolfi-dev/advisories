@@ -109,6 +109,24 @@ advisories:
         data:
           fixed-version: 1.25_git20231010-r6
 
+  - id: CGA-w3ph-67qm-v62g
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2025-03-04T16:15:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-envoy
+            componentID: ea567feca76ce545
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/lib/libcilium.so
+            scanner: grype
+
   - id: CGA-w93r-jjhq-mrfj
     aliases:
       - CVE-2023-44487
