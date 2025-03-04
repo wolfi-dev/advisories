@@ -4,6 +4,24 @@ package:
   name: prometheus-3.0
 
 advisories:
+  - id: CGA-38ww-pvmw-pchc
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-03-04T15:18:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-3.0
+            componentID: 9f6ef6abee3f5e60
+            componentName: stdlib
+            componentVersion: go1.23.4
+            componentType: go-module
+            componentLocation: /opt/bitnami/prometheus/bin/prometheus
+            scanner: grype
+
   - id: CGA-7rmc-pm47-jp6q
     aliases:
       - CVE-2025-22869
