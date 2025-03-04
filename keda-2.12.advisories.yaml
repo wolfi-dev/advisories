@@ -4,6 +4,24 @@ package:
   name: keda-2.12
 
 advisories:
+  - id: CGA-3fmw-6ghf-jh8v
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2025-03-04T20:21:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.12
+            componentID: 29908e5f84e699ba
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/keda
+            scanner: grype
+
   - id: CGA-3gr9-j53w-4p6r
     aliases:
       - GHSA-fqpg-rq76-99pq
