@@ -4,17 +4,6 @@ package:
   name: argo-cd-2.9
 
 advisories:
-  - id: CGA-w344-7qr4-66mr
-    aliases:
-      - CVE-2021-25743
-      - GHSA-f9jg-8p32-2f55
-    events:
-      - timestamp: 2023-11-28T13:21:30Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: The vulnerable code is specific to kubectl.
-
   - id: CGA-27rm-q66p-qvmc
     aliases:
       - CVE-2023-46402
@@ -24,26 +13,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.9.3-r1
-
-  - id: CGA-p9gj-9f4f-q6m5
-    aliases:
-      - CVE-2023-47108
-      - GHSA-8pgv-569h-w5rw
-    events:
-      - timestamp: 2023-11-28T13:20:25Z
-        type: fixed
-        data:
-          fixed-version: 2.9.2-r1
-
-  - id: CGA-v7gm-gqfj-8cc7
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2023-12-19T18:23:00Z
-        type: fixed
-        data:
-          fixed-version: 2.9.3-r4
 
   - id: CGA-3649-h3j9-rvx6
     aliases:
@@ -55,16 +24,45 @@ advisories:
         data:
           fixed-version: 2.9.3-r5
 
-  - id: CGA-vx54-68rp-7838
+  - id: CGA-6gqf-424v-hjmx
     aliases:
-      - CVE-2023-5528
-      - GHSA-hq6q-c2x6-hmch
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
     events:
-      - timestamp: 2023-11-28T13:20:36Z
-        type: false-positive-determination
+      - timestamp: 2025-03-04T17:26:22Z
+        type: detection
         data:
-          type: vulnerable-code-not-included-in-package
-          note: This vulnerability affects the Kubernetes application, not the golang k8s.io/kubernetes library. Kubernetes clusters are only affected if they are using an in-tree storage plugin for Windows nodes.
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9
+            componentID: fceaac64b013306e
+            componentName: golang.org/x/net
+            componentVersion: v0.19.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
+  - id: CGA-77r3-vmhh-vf5x
+    aliases:
+      - CVE-2024-28180
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:08:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.9-compat
+            componentID: 3400637b92540817
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/local/bin/argocd
+            scanner: grype
+      - timestamp: 2024-03-08T10:56:42Z
+        type: fixed
+        data:
+          fixed-version: 2.9.7-r2
 
   - id: CGA-7g7c-22jg-fj99
     aliases:
@@ -96,23 +94,44 @@ advisories:
         data:
           fixed-version: 2.9.4-r0
 
-  - id: CGA-77r3-vmhh-vf5x
+  - id: CGA-p9gj-9f4f-q6m5
     aliases:
-      - GHSA-c5q2-7r4c-mv6g
+      - CVE-2023-47108
+      - GHSA-8pgv-569h-w5rw
     events:
-      - timestamp: 2024-03-08T07:08:06Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: argo-cd-2.9-compat
-            componentID: 3400637b92540817
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.1
-            componentType: go-module
-            componentLocation: /usr/local/bin/argocd
-            scanner: grype
-      - timestamp: 2024-03-08T10:56:42Z
+      - timestamp: 2023-11-28T13:20:25Z
         type: fixed
         data:
-          fixed-version: 2.9.7-r2
+          fixed-version: 2.9.2-r1
+
+  - id: CGA-v7gm-gqfj-8cc7
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2023-12-19T18:23:00Z
+        type: fixed
+        data:
+          fixed-version: 2.9.3-r4
+
+  - id: CGA-vx54-68rp-7838
+    aliases:
+      - CVE-2023-5528
+      - GHSA-hq6q-c2x6-hmch
+    events:
+      - timestamp: 2023-11-28T13:20:36Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability affects the Kubernetes application, not the golang k8s.io/kubernetes library. Kubernetes clusters are only affected if they are using an in-tree storage plugin for Windows nodes.
+
+  - id: CGA-w344-7qr4-66mr
+    aliases:
+      - CVE-2021-25743
+      - GHSA-f9jg-8p32-2f55
+    events:
+      - timestamp: 2023-11-28T13:21:30Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: The vulnerable code is specific to kubectl.
