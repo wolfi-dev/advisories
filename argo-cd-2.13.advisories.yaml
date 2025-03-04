@@ -103,6 +103,23 @@ advisories:
             componentLocation: /usr/local/bin/argocd
             scanner: grype
 
+  - id: CGA-9pr9-rch5-9r4f
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T17:21:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.13
+            componentID: 4e55e0435719923e
+            componentName: golang.org/x/crypto
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
   - id: CGA-cmxr-vpfg-2hfg
     aliases:
       - CVE-2025-27144
