@@ -1,4 +1,4 @@
-schema-version: "2"
+schema-version: 2.0.2
 
 package:
   name: binutils
@@ -13,6 +13,20 @@ advisories:
         type: false-positive-determination
         data:
           type: vulnerable-code-version-not-used
+
+  - id: CGA-2g36-84g3-35r2
+    aliases:
+      - CVE-2023-1972
+      - GHSA-gxpx-hfgx-m75g
+    events:
+      - timestamp: 2023-05-27T12:32:23Z
+        type: detection
+        data:
+          type: manual
+      - timestamp: 2023-05-27T12:46:17Z
+        type: fixed
+        data:
+          fixed-version: 2.40-r3
 
   - id: CGA-966m-f429-q5jc
     aliases:
@@ -34,6 +48,24 @@ advisories:
         data:
           fixed-version: 2.39-r2
 
+  - id: CGA-gxcj-jj66-mxg7
+    aliases:
+      - CVE-2025-1153
+      - GHSA-3frg-24qp-xxv2
+    events:
+      - timestamp: 2025-03-04T07:04:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: binutils
+            componentID: acd04e3b0bbe8455
+            componentName: binutils-gold
+            componentVersion: 2.44-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-x8jg-r778-x54g
     aliases:
       - CVE-2023-1579
@@ -47,17 +79,3 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.40-r0
-
-  - id: CGA-2g36-84g3-35r2
-    aliases:
-      - CVE-2023-1972
-      - GHSA-gxpx-hfgx-m75g
-    events:
-      - timestamp: 2023-05-27T12:32:23Z
-        type: detection
-        data:
-          type: manual
-      - timestamp: 2023-05-27T12:46:17Z
-        type: fixed
-        data:
-          fixed-version: 2.40-r3
