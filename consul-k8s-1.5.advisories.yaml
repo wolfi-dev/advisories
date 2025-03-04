@@ -56,3 +56,20 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/consul-cni
             scanner: grype
+
+  - id: CGA-xj42-c8p7-x92v
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T19:25:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: consul-k8s-1.5
+            componentID: 1d1c6e10f7c3b09d
+            componentName: golang.org/x/crypto
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/consul-k8s-control-plane
+            scanner: grype
