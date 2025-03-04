@@ -4,28 +4,45 @@ package:
   name: istio-pilot-agent-1.21
 
 advisories:
-  - id: CGA-mw8m-gh87-r7f9
+  - id: CGA-3c62-x3p4-mhxr
     aliases:
-      - CVE-2019-14993
-      - GHSA-qcvw-82hh-gq38
+      - CVE-2024-36621
+      - GHSA-2mj3-vfvx-fc43
     events:
-      - timestamp: 2024-04-26T09:24:20Z
+      - timestamp: 2025-03-04T18:34:35Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: istio-pilot-agent-1.21
-            componentID: 00f6149c3cb9a48b
-            componentName: istio.io/istio
-            componentVersion: v0.0.0-20240418224740-ed90e14d3473
+            componentID: 7824f372bd0fe4fb
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.9+incompatible
             componentType: go-module
             componentLocation: /usr/bin/pilot-agent
             scanner: grype
-      - timestamp: 2024-05-06T00:49:53Z
-        type: false-positive-determination
+
+  - id: CGA-3wfj-hp57-539m
+    aliases:
+      - CVE-2024-24557
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-31T10:10:24Z
+        type: detection
         data:
-          type: vulnerable-code-version-not-used
-          note: 'This vulnerability was matched to the module "istio.io/istio" at the following location(s): /usr/bin/pilot-agent. In all cases, the installed version of the module (git commit ed90e14d3473bc3fe54f98298eb16664002d14d1) corresponds to a version tag (1.21.2) that is later than the fixed version (1.1.13).'
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-agent-1.21
+            componentID: 21e7ddeeeaa969bd
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.7+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-agent
+            scanner: grype
+      - timestamp: 2024-04-07T18:15:26Z
+        type: fixed
+        data:
+          fixed-version: 1.21.0-r3
 
   - id: CGA-4j4r-92ff-x9vx
     aliases:
@@ -96,6 +113,39 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability was matched to the module "istio.io/istio" at the following location(s): /usr/bin/pilot-agent. In all cases, the installed version of the module (git commit ed90e14d3473bc3fe54f98298eb16664002d14d1) corresponds to a version tag (1.21.2) that is later than the fixed version (1.11.7).'
 
+  - id: CGA-mw8m-gh87-r7f9
+    aliases:
+      - CVE-2019-14993
+      - GHSA-qcvw-82hh-gq38
+    events:
+      - timestamp: 2024-04-26T09:24:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-agent-1.21
+            componentID: 00f6149c3cb9a48b
+            componentName: istio.io/istio
+            componentVersion: v0.0.0-20240418224740-ed90e14d3473
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-agent
+            scanner: grype
+      - timestamp: 2024-05-06T00:49:53Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: 'This vulnerability was matched to the module "istio.io/istio" at the following location(s): /usr/bin/pilot-agent. In all cases, the installed version of the module (git commit ed90e14d3473bc3fe54f98298eb16664002d14d1) corresponds to a version tag (1.21.2) that is later than the fixed version (1.1.13).'
+
+  - id: CGA-p4vr-2hfq-mqhx
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-20T07:08:06Z
+        type: fixed
+        data:
+          fixed-version: 1.21.1-r0
+
   - id: CGA-v698-rgj5-hg68
     aliases:
       - CVE-2022-31045
@@ -118,35 +168,3 @@ advisories:
         data:
           type: vulnerable-code-version-not-used
           note: This vulnerability affects versions < 1.14.1, but the installed commit corresponds to version 1.21.2.
-
-  - id: CGA-p4vr-2hfq-mqhx
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-20T07:08:06Z
-        type: fixed
-        data:
-          fixed-version: 1.21.1-r0
-
-  - id: CGA-3wfj-hp57-539m
-    aliases:
-      - CVE-2024-24557
-      - GHSA-xw73-rw38-6vjc
-    events:
-      - timestamp: 2024-03-31T10:10:24Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: istio-pilot-agent-1.21
-            componentID: 21e7ddeeeaa969bd
-            componentName: github.com/docker/docker
-            componentVersion: v24.0.7+incompatible
-            componentType: go-module
-            componentLocation: /usr/bin/pilot-agent
-            scanner: grype
-      - timestamp: 2024-04-07T18:15:26Z
-        type: fixed
-        data:
-          fixed-version: 1.21.0-r3
