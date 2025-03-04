@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: loki-3.4
+
+advisories:
+  - id: CGA-vh2q-hpm8-jv59
+    aliases:
+      - CVE-2019-3826
+      - GHSA-3m87-5598-2v4f
+    events:
+      - timestamp: 2025-03-04T08:38:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: loki-3.4
+            componentID: 6dd5d6fff6870f1d
+            componentName: github.com/prometheus/prometheus
+            componentVersion: v0.55.0
+            componentType: go-module
+            componentLocation: /usr/bin/logcli
+            scanner: grype
