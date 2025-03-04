@@ -270,6 +270,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-qmxx-fxf4-4m5m
+    aliases:
+      - CVE-2024-10220
+      - GHSA-27wf-5967-98gx
+    events:
+      - timestamp: 2025-03-04T17:38:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: calico
+            componentID: 418bd39f929e54aa
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.28.9
+            componentType: go-module
+            componentLocation: /usr/bin/calico-apiserver
+            scanner: grype
+
   - id: CGA-v7vw-h5w2-c4qw
     aliases:
       - CVE-2024-3177
