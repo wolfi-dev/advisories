@@ -314,6 +314,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/minio
             scanner: grype
+      - timestamp: 2025-03-04T18:01:13Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: Prometheus ships a Go (Golang) library with a versioning scheme that follows the 0.x format. However, the Prometheus application itself uses a versioning scheme based on 1.x, 2.x, etc. The vulnerability identified in CVE-2019-3826 is specifically associated with the Prometheus application, not the Golang library.
 
   - id: CGA-q6h3-c3c6-jjjr
     aliases:

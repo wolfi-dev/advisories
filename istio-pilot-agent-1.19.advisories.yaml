@@ -4,38 +4,6 @@ package:
   name: istio-pilot-agent-1.19
 
 advisories:
-  - id: CGA-98jm-8phc-prpw
-    aliases:
-      - CVE-2019-3826
-      - GHSA-3m87-5598-2v4f
-    events:
-      - timestamp: 2023-10-01T16:44:14Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-version-not-used
-          note: The installed version of the prometheus library is ahead of the vulnerability fix version, but prometheus violates Go's rules for v2 module versioning.
-
-  - id: CGA-w8g6-j3qf-72vw
-    aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
-    events:
-      - timestamp: 2023-10-12T22:19:40Z
-        type: fixed
-        data:
-          fixed-version: 1.19.3-r0
-
-  - id: CGA-w469-w5wj-qmx9
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:29:49Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
   - id: CGA-5ch7-3ghx-h33q
     aliases:
       - CVE-2023-45284
@@ -47,15 +15,38 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
-  - id: CGA-qwfc-cqw5-v6qr
+  - id: CGA-847w-p38c-mmxh
     aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
+      - GHSA-c5q2-7r4c-mv6g
     events:
-      - timestamp: 2023-12-20T13:02:13Z
-        type: fixed
+      - timestamp: 2024-03-08T07:09:36Z
+        type: detection
         data:
-          fixed-version: 1.19.5-r2
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-agent-1.19
+            componentID: c298b501a620f07b
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-agent
+            scanner: grype
+
+  - id: CGA-98jm-8phc-prpw
+    aliases:
+      - CVE-2019-3826
+      - GHSA-3m87-5598-2v4f
+    events:
+      - timestamp: 2023-10-01T16:44:14Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: The installed version of the prometheus library is ahead of the vulnerability fix version, but prometheus violates Go's rules for v2 module versioning.
+      - timestamp: 2025-03-04T17:59:47Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: Prometheus ships a Go (Golang) library with a versioning scheme that follows the 0.x format. However, the Prometheus application itself uses a versioning scheme based on 1.x, 2.x, etc. The vulnerability identified in CVE-2019-3826 is specifically associated with the Prometheus application, not the Golang library.
 
   - id: CGA-f8xg-cj47-c8gw
     aliases:
@@ -101,22 +92,36 @@ advisories:
         data:
           fixed-version: 1.19.6-r2
 
-  - id: CGA-847w-p38c-mmxh
+  - id: CGA-qwfc-cqw5-v6qr
     aliases:
-      - GHSA-c5q2-7r4c-mv6g
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
     events:
-      - timestamp: 2024-03-08T07:09:36Z
-        type: detection
+      - timestamp: 2023-12-20T13:02:13Z
+        type: fixed
         data:
-          type: scan/v1
-          data:
-            subpackageName: istio-pilot-agent-1.19
-            componentID: c298b501a620f07b
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.1
-            componentType: go-module
-            componentLocation: /usr/bin/pilot-agent
-            scanner: grype
+          fixed-version: 1.19.5-r2
+
+  - id: CGA-w469-w5wj-qmx9
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:29:49Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-w8g6-j3qf-72vw
+    aliases:
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2023-10-12T22:19:40Z
+        type: fixed
+        data:
+          fixed-version: 1.19.3-r0
 
   - id: CGA-wmqr-f578-hpfw
     aliases:

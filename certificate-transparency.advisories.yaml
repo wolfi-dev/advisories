@@ -203,6 +203,11 @@ advisories:
         data:
           type: vulnerable-code-version-not-used
           note: This vulnerability has been fixed in version v2.7.1 which corresponds to the Go library version v0.7.1 and this package includes a later version.
+      - timestamp: 2025-03-04T17:57:49Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: Prometheus ships a Go (Golang) library with a versioning scheme that follows the 0.x format. However, the Prometheus application itself uses a versioning scheme based on 1.x, 2.x, etc. The vulnerability identified in CVE-2019-3826 is specifically associated with the Prometheus application, not the Golang library.
 
   - id: CGA-pj9h-x4rj-mvm4
     aliases:

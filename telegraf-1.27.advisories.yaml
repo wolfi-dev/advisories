@@ -4,92 +4,46 @@ package:
   name: telegraf-1.27
 
 advisories:
-  - id: CGA-xg67-xwcm-pq72
+  - id: CGA-33qr-pq47-pvvv
     aliases:
-      - CVE-2019-3826
-      - GHSA-3m87-5598-2v4f
+      - GHSA-7jwh-3vrq-q3m8
     events:
-      - timestamp: 2023-08-25T22:09:52Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: This vulnerability is an XSS flaw in the Prometheus server and is not affecting this package which uses the library code.
-
-  - id: CGA-gmq6-783h-6r2h
-    aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
-    events:
-      - timestamp: 2023-10-14T14:57:30Z
-        type: fixed
-        data:
-          fixed-version: 1.27.4-r4
-
-  - id: CGA-qg4w-crjp-pm66
-    aliases:
-      - CVE-2023-44487
-      - GHSA-m425-mq94-257g
-      - GHSA-qppj-fm5r-hxr3
-    events:
-      - timestamp: 2023-10-14T14:57:42Z
-        type: fixed
-        data:
-          fixed-version: 1.27.4-r4
-      - timestamp: 2023-11-06T23:26:35Z
-        type: fixed
-        data:
-          fixed-version: 1.27.4-r6
-
-  - id: CGA-wqvr-wpfq-2jgq
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:38:57Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-w2vq-8gch-p9m9
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:38:59Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-p5m3-2623-p72j
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-10T10:38:30Z
+      - timestamp: 2024-04-10T10:32:32Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: telegraf-1.27
-            componentID: 79b2de744b8768a9
-            componentName: stdlib
-            componentVersion: go1.22.1
+            componentID: 46e1b455915fe73d
+            componentName: github.com/jackc/pgproto3/v2
+            componentVersion: v2.3.2
             componentType: go-module
             componentLocation: /usr/bin/telegraf
             scanner: grype
-      - timestamp: 2024-04-15T11:24:07Z
-        type: fix-not-planned
-        data:
-          note: Telegraf 1.27 is no longer supported upstream.
 
-  - id: CGA-5qh6-5gfh-j93p
+  - id: CGA-49x2-mjgm-f2j6
     aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
+      - CVE-2024-27289
+      - GHSA-m7wr-2xf7-cm9p
     events:
-      - timestamp: 2023-12-21T15:57:34Z
+      - timestamp: 2024-03-13T10:13:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.27
+            componentID: d38bb9ff8ef0b888
+            componentName: github.com/jackc/pgx/v4
+            componentVersion: v4.18.1
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
+
+  - id: CGA-4jhx-mx3j-qr7f
+    aliases:
+      - GHSA-mhpq-9638-x6pw
+    events:
+      - timestamp: 2023-12-21T15:58:08Z
         type: fixed
         data:
           fixed-version: 1.27.4-r9
@@ -116,99 +70,15 @@ advisories:
         data:
           fixed-version: 1.27.4-r11
 
-  - id: CGA-pxxm-rf97-h5g3
+  - id: CGA-5qh6-5gfh-j93p
     aliases:
-      - CVE-2024-21626
-      - GHSA-xr7r-f8xq-vfvv
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
     events:
-      - timestamp: 2024-02-10T07:20:16Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: telegraf-1.27
-            componentID: 35b42b25badb286a
-            componentName: github.com/opencontainers/runc
-            componentVersion: v1.1.5
-            componentType: go-module
-            componentLocation: /usr/bin/telegraf
-            scanner: grype
-      - timestamp: 2024-02-10T07:25:14Z
+      - timestamp: 2023-12-21T15:57:34Z
         type: fixed
         data:
-          fixed-version: 1.27.4-r10
-
-  - id: CGA-g5m9-wv89-v43q
-    aliases:
-      - CVE-2024-24557
-      - GHSA-xw73-rw38-6vjc
-    events:
-      - timestamp: 2024-04-10T10:37:00Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: telegraf-1.27
-            componentID: 8cc8ea0bebf5b4b9
-            componentName: github.com/docker/docker
-            componentVersion: v24.0.7+incompatible
-            componentType: go-module
-            componentLocation: /usr/bin/telegraf
-            scanner: grype
-
-  - id: CGA-mmmm-j592-9952
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-04-10T10:34:15Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: telegraf-1.27
-            componentID: 1072173f6a441cb6
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.31.0
-            componentType: go-module
-            componentLocation: /usr/bin/telegraf
-            scanner: grype
-
-  - id: CGA-49x2-mjgm-f2j6
-    aliases:
-      - CVE-2024-27289
-      - GHSA-m7wr-2xf7-cm9p
-    events:
-      - timestamp: 2024-03-13T10:13:39Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: telegraf-1.27
-            componentID: d38bb9ff8ef0b888
-            componentName: github.com/jackc/pgx/v4
-            componentVersion: v4.18.1
-            componentType: go-module
-            componentLocation: /usr/bin/telegraf
-            scanner: grype
-
-  - id: CGA-f7w9-92mx-84gv
-    aliases:
-      - CVE-2024-27304
-      - GHSA-mrww-27vc-gghv
-    events:
-      - timestamp: 2024-04-10T10:35:35Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: telegraf-1.27
-            componentID: 46e1b455915fe73d
-            componentName: github.com/jackc/pgproto3/v2
-            componentVersion: v2.3.2
-            componentType: go-module
-            componentLocation: /usr/bin/telegraf
-            scanner: grype
+          fixed-version: 1.27.4-r9
 
   - id: CGA-8m28-xmv8-j65x
     aliases:
@@ -232,23 +102,6 @@ advisories:
         data:
           fixed-version: 1.27.4-r13
 
-  - id: CGA-33qr-pq47-pvvv
-    aliases:
-      - GHSA-7jwh-3vrq-q3m8
-    events:
-      - timestamp: 2024-04-10T10:32:32Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: telegraf-1.27
-            componentID: 46e1b455915fe73d
-            componentName: github.com/jackc/pgproto3/v2
-            componentVersion: v2.3.2
-            componentType: go-module
-            componentLocation: /usr/bin/telegraf
-            scanner: grype
-
   - id: CGA-8vw4-75vj-9xhv
     aliases:
       - GHSA-7ww5-4wqc-m92c
@@ -268,11 +121,163 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability is in the container runtime itself, not clients of the container runtime.
 
-  - id: CGA-4jhx-mx3j-qr7f
+  - id: CGA-f7w9-92mx-84gv
     aliases:
-      - GHSA-mhpq-9638-x6pw
+      - CVE-2024-27304
+      - GHSA-mrww-27vc-gghv
     events:
-      - timestamp: 2023-12-21T15:58:08Z
+      - timestamp: 2024-04-10T10:35:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.27
+            componentID: 46e1b455915fe73d
+            componentName: github.com/jackc/pgproto3/v2
+            componentVersion: v2.3.2
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
+
+  - id: CGA-g5m9-wv89-v43q
+    aliases:
+      - CVE-2024-24557
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-04-10T10:37:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.27
+            componentID: 8cc8ea0bebf5b4b9
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.7+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
+
+  - id: CGA-gmq6-783h-6r2h
+    aliases:
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2023-10-14T14:57:30Z
         type: fixed
         data:
-          fixed-version: 1.27.4-r9
+          fixed-version: 1.27.4-r4
+
+  - id: CGA-mmmm-j592-9952
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-04-10T10:34:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.27
+            componentID: 1072173f6a441cb6
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
+
+  - id: CGA-p5m3-2623-p72j
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-10T10:38:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.27
+            componentID: 79b2de744b8768a9
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
+      - timestamp: 2024-04-15T11:24:07Z
+        type: fix-not-planned
+        data:
+          note: Telegraf 1.27 is no longer supported upstream.
+
+  - id: CGA-pxxm-rf97-h5g3
+    aliases:
+      - CVE-2024-21626
+      - GHSA-xr7r-f8xq-vfvv
+    events:
+      - timestamp: 2024-02-10T07:20:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.27
+            componentID: 35b42b25badb286a
+            componentName: github.com/opencontainers/runc
+            componentVersion: v1.1.5
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
+      - timestamp: 2024-02-10T07:25:14Z
+        type: fixed
+        data:
+          fixed-version: 1.27.4-r10
+
+  - id: CGA-qg4w-crjp-pm66
+    aliases:
+      - CVE-2023-44487
+      - GHSA-m425-mq94-257g
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2023-10-14T14:57:42Z
+        type: fixed
+        data:
+          fixed-version: 1.27.4-r4
+      - timestamp: 2023-11-06T23:26:35Z
+        type: fixed
+        data:
+          fixed-version: 1.27.4-r6
+
+  - id: CGA-w2vq-8gch-p9m9
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:38:59Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-wqvr-wpfq-2jgq
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:38:57Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-xg67-xwcm-pq72
+    aliases:
+      - CVE-2019-3826
+      - GHSA-3m87-5598-2v4f
+    events:
+      - timestamp: 2023-08-25T22:09:52Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability is an XSS flaw in the Prometheus server and is not affecting this package which uses the library code.
+      - timestamp: 2025-03-04T18:02:33Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: Prometheus ships a Go (Golang) library with a versioning scheme that follows the 0.x format. However, the Prometheus application itself uses a versioning scheme based on 1.x, 2.x, etc. The vulnerability identified in CVE-2019-3826 is specifically associated with the Prometheus application, not the Golang library.
