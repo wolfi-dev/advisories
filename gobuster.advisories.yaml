@@ -111,6 +111,16 @@ advisories:
         data:
           fixed-version: 3.6.0-r5
 
+  - id: CGA-8xvj-87j7-j59f
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T18:00:23Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'gobuster version 3.6.0-r18: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-9635-37wp-864v
     aliases:
       - CVE-2024-24791

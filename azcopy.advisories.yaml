@@ -157,3 +157,13 @@ advisories:
         type: fixed
         data:
           fixed-version: 10.26.0-r1
+
+  - id: CGA-x3hc-526x-f9pp
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T17:48:42Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'azcopy version 10.28.0-r1: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'

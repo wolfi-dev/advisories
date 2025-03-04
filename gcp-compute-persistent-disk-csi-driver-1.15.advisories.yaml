@@ -58,6 +58,16 @@ advisories:
         data:
           fixed-version: 1.15.4-r2
 
+  - id: CGA-j847-7v42-wggc
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T18:00:44Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'gcp-compute-persistent-disk-csi-driver-1.15 version 1.15.4-r2: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-qg94-hcf4-g52x
     aliases:
       - CVE-2024-45336

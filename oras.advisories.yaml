@@ -266,6 +266,16 @@ advisories:
         data:
           fixed-version: 1.2.2-r1
 
+  - id: CGA-qc9c-w269-39wq
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T18:17:10Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'oras version 1.2.2-r2: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-w6j7-f6vv-q39f
     aliases:
       - CVE-2024-24788

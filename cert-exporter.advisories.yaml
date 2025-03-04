@@ -36,6 +36,16 @@ advisories:
         data:
           fixed-version: 2.12.0-r2
 
+  - id: CGA-3hfv-24gf-4mvw
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T17:50:28Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'cert-exporter version 2.14.0-r6: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-48gv-xf63-v6jh
     aliases:
       - CVE-2020-8559

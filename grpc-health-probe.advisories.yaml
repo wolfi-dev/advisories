@@ -57,6 +57,16 @@ advisories:
         data:
           fixed-version: 0.4.26-r3
 
+  - id: CGA-5r2h-289v-8wc7
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T18:01:42Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'grpc-health-probe version 0.4.37-r3: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-99xp-4fc7-m3mv
     aliases:
       - CVE-2024-45336

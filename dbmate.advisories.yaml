@@ -79,6 +79,16 @@ advisories:
         data:
           fixed-version: 2.18.0-r1
 
+  - id: CGA-hxr2-w53q-h6rw
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T17:54:07Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'dbmate version 2.26.0-r0: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-jw9c-qf82-cx4v
     aliases:
       - CVE-2024-45337

@@ -24,6 +24,16 @@ advisories:
         data:
           fixed-version: 1.4.1-r2
 
+  - id: CGA-3w8v-jv9x-4qrf
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T19:33:08Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'vault-k8s version 1.6.2-r0: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-4g3v-pf2c-wf84
     aliases:
       - CVE-2024-34156

@@ -70,6 +70,16 @@ advisories:
         data:
           fixed-version: 0.8.17-r0
 
+  - id: CGA-6g6c-xfq8-76w9
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T18:15:20Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'node-problem-detector-0.8 version 0.8.20-r6: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-7m4g-cwm3-8cx2
     aliases:
       - CVE-2024-24786

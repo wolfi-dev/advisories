@@ -267,6 +267,16 @@ advisories:
         data:
           fixed-version: 2.9.0-r1
 
+  - id: CGA-vxgc-wrr6-w7qr
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T17:50:48Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'cloud-sql-proxy version 2.15.1-r0: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-wf3m-w7qx-mv9x
     aliases:
       - CVE-2024-34156

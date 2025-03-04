@@ -152,6 +152,16 @@ advisories:
         data:
           fixed-version: 1.7-r11
 
+  - id: CGA-fxp8-p49c-4954
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T18:17:31Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'kubernetes-event-exporter version 1.7-r16: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-g857-c4f2-c6qj
     aliases:
       - CVE-2024-34155

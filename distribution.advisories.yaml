@@ -177,3 +177,13 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.0.0-r2
+
+  - id: CGA-wrq7-j9m2-p4hv
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T17:53:07Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'distribution version 3.0.0-r7: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'

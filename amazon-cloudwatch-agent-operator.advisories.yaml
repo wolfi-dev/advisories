@@ -40,6 +40,16 @@ advisories:
             componentLocation: /usr/bin/manager
             scanner: grype
 
+  - id: CGA-fq5p-gcqj-gx95
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T17:45:24Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'amazon-cloudwatch-agent-operator version 2.1.0-r1: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-hx53-29r5-p52v
     aliases:
       - CVE-2024-45338

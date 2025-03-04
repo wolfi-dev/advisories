@@ -102,6 +102,16 @@ advisories:
             This vulnerability relates to p256NegCond within the crypto/internal/fips140/nistec package, specifically affecting the ppc64le architecture.
             We are not affected by this vulnerability as we do not build or support ppc64le.
 
+  - id: CGA-7hv8-ppvh-fg5j
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T17:56:40Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'ferretdb version 1.24.0-r6: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-c9mp-7g38-q4j4
     aliases:
       - CVE-2024-45338

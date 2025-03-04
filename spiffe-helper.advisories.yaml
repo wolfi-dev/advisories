@@ -46,6 +46,21 @@ advisories:
         data:
           fixed-version: 0.9.0-r3
 
+  - id: CGA-gv78-m6r3-cmg7
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T18:23:42Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'spiffe-helper version 0.9.1-r2: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+      - timestamp: 2025-03-04T18:31:27Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'spiffe-helper version 0.9.1-r2: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-j8vc-j8rx-pvp9
     aliases:
       - CVE-2024-45337

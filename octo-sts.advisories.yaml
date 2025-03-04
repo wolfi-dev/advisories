@@ -224,6 +224,16 @@ advisories:
         data:
           fixed-version: 0.4.2-r1
 
+  - id: CGA-vr74-7p59-7chr
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T18:16:39Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'octo-sts version 0.4.2-r6: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-xr68-v2mj-jq6f
     aliases:
       - CVE-2024-45341

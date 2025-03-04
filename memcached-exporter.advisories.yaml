@@ -24,6 +24,16 @@ advisories:
         data:
           fixed-version: 0.14.2-r2
 
+  - id: CGA-3mfc-67mq-hc4x
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T18:11:20Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'memcached-exporter version 0.15.1-r0: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-3pjq-fc88-c3pv
     aliases:
       - CVE-2024-24783

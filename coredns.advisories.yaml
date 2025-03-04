@@ -172,6 +172,16 @@ advisories:
         data:
           fixed-version: 1.11.1-r9
 
+  - id: CGA-7q22-jr4h-75p5
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T17:51:28Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'coredns version 1.12.0-r6: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-8xxc-59x5-4784
     aliases:
       - CVE-2024-34155
