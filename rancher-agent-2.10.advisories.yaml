@@ -115,6 +115,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: govulncheck analysis shows that the github.com/docker/docker golang package is not used by the rancher-agent binary as there are no symbols referenced for the vulnerable code.
 
+  - id: CGA-9wpw-xj7f-cpx9
+    aliases:
+      - CVE-2024-36621
+      - GHSA-2mj3-vfvx-fc43
+    events:
+      - timestamp: 2025-03-04T09:39:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-agent-2.10
+            componentID: d19a6588ec5a89c2
+            componentName: github.com/docker/docker
+            componentVersion: v20.10.27+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/agent
+            scanner: grype
+
   - id: CGA-pf54-6gfp-hr83
     aliases:
       - CVE-2025-27144
