@@ -4,6 +4,24 @@ package:
   name: argo-cd-2.11
 
 advisories:
+  - id: CGA-2hrq-vh74-6f64
+    aliases:
+      - CVE-2024-10220
+      - GHSA-27wf-5967-98gx
+    events:
+      - timestamp: 2025-03-04T17:24:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.11
+            componentID: 3226efae9ba98fa4
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.26.11
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
   - id: CGA-3p4m-43fq-9wcj
     aliases:
       - CVE-2024-31989
