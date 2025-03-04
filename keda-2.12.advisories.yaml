@@ -4,6 +4,23 @@ package:
   name: keda-2.12
 
 advisories:
+  - id: CGA-882r-pxmw-2jpw
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T20:21:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.12
+            componentID: 12b7d2aac94a91bc
+            componentName: golang.org/x/crypto
+            componentVersion: v0.19.0
+            componentType: go-module
+            componentLocation: /usr/bin/keda
+            scanner: grype
+
   - id: CGA-c4c2-fhv6-56hf
     aliases:
       - GHSA-7jwh-3vrq-q3m8
