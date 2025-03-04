@@ -4,6 +4,24 @@ package:
   name: aws-k8s-cni
 
 advisories:
+  - id: CGA-49mj-mrmj-5c3x
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-03-04T17:35:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-k8s-cni
+            componentID: 9a812f3c1ffdbbbc
+            componentName: stdlib
+            componentVersion: go1.23.1
+            componentType: go-module
+            componentLocation: /usr/bin/aws-cni
+            scanner: grype
+
   - id: CGA-8vwf-hpxm-4jx4
     aliases:
       - CVE-2025-22868
