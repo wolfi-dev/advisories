@@ -326,6 +326,24 @@ advisories:
         data:
           note: Any upgrade on the Kubernetes dependencies causes conflicts due to a strict dependency on github.com/argoproj/gitops-engine which supports Kubernetes v1.23 while the non-vulnerable code is on Kubernetes v1.27.16.
 
+  - id: CGA-phfc-fm2m-39f6
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2025-03-04T17:25:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.11
+            componentID: 90424fd1025b4a67
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
   - id: CGA-q62f-7qg5-r28q
     aliases:
       - CVE-2024-51744
