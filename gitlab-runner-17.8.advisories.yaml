@@ -68,3 +68,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 17.8.3-r4
+
+  - id: CGA-vvq7-gv9f-c3x4
+    aliases:
+      - CVE-2024-36620
+      - GHSA-q59j-vv4j-v33c
+    events:
+      - timestamp: 2025-03-04T08:25:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-17.8
+            componentID: f5d4a66e1abe69dd
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.6+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-runner-helper
+            scanner: grype
