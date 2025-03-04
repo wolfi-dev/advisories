@@ -36,6 +36,23 @@ advisories:
         data:
           note: Argo CD 2.7 is longer supported. Security Support ended on 2024-02-05.
 
+  - id: CGA-66p5-fmrc-483r
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-04T18:01:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.7
+            componentID: c8616bbc9665a853
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.11.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+
   - id: CGA-69mx-7x2j-r9mf
     aliases:
       - CVE-2024-6104
