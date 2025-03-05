@@ -74,3 +74,21 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/nginx-ingress-controller
             scanner: grype
+
+  - id: CGA-vmx2-6vj6-p7rj
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2025-03-05T19:28:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ingress-nginx-controller-1.10
+            componentID: 8bbe4067655b3255
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/nginx-dbg
+            scanner: grype
