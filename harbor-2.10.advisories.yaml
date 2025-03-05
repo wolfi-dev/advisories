@@ -4,6 +4,24 @@ package:
   name: harbor-2.10
 
 advisories:
+  - id: CGA-2qg6-m4fr-8hv4
+    aliases:
+      - CVE-2024-55885
+      - GHSA-9j3m-fr7q-jxfw
+    events:
+      - timestamp: 2025-03-05T19:31:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-2.10
+            componentID: 600f84bc86977eb6
+            componentName: github.com/beego/beego/v2
+            componentVersion: v2.0.6
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-core
+            scanner: grype
+
   - id: CGA-5jc9-xvfv-qmmv
     aliases:
       - CVE-2024-24790
