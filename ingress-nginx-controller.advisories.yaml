@@ -465,6 +465,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-qrv8-gv4f-gpg8
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2025-03-05T21:10:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ingress-nginx-controller
+            componentID: 8bbe4067655b3255
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/nginx-dbg
+            scanner: grype
+
   - id: CGA-v6r9-c329-jw85
     aliases:
       - CVE-2024-24783
