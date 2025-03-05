@@ -45,6 +45,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability was matched to the module "istio.io/istio" at the following location(s): /usr/bin/istio-cni. In all cases, the installed version of the module (git commit ed90e14d3473bc3fe54f98298eb16664002d14d1) corresponds to a version tag (1.21.2) that is later than the fixed version (1.9.8).'
 
+  - id: CGA-7hhh-hqv7-7c7f
+    aliases:
+      - CVE-2024-45336
+      - GHSA-7wrw-r4p8-38rx
+    events:
+      - timestamp: 2025-03-05T19:25:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.21
+            componentID: ade751f28d0b7162
+            componentName: stdlib
+            componentVersion: go1.22.3
+            componentType: go-module
+            componentLocation: /usr/bin/install-cni
+            scanner: grype
+
   - id: CGA-7w3g-hh88-rvqr
     aliases:
       - CVE-2023-45288
