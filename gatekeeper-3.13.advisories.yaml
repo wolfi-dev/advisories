@@ -4,6 +4,24 @@ package:
   name: gatekeeper-3.13
 
 advisories:
+  - id: CGA-2hmw-pc9f-3j94
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-03-05T17:01:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.13
+            componentID: b761f443324249fb
+            componentName: golang.org/x/net
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-8cw3-86j9-wp6g
     aliases:
       - CVE-2023-45142
