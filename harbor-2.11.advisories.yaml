@@ -44,6 +44,24 @@ advisories:
             componentLocation: /usr/bin/harbor-core
             scanner: grype
 
+  - id: CGA-27p4-q7c2-qqv8
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-03-05T21:38:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-2.11
+            componentID: fd62ecddfe72e8e7
+            componentName: stdlib
+            componentVersion: go1.23.2
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-jobservice
+            scanner: grype
+
   - id: CGA-2rfh-f76g-2qr8
     aliases:
       - CVE-2024-40464
