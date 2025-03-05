@@ -119,3 +119,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 11.1.0-r2
+
+  - id: CGA-rfg6-fjq7-85c5
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-05T17:38:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-11.1
+            componentID: 64e9e9648ee31449
+            componentName: golang.org/x/crypto
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
