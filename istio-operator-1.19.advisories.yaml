@@ -98,6 +98,24 @@ advisories:
         data:
           fixed-version: 1.19.6-r2
 
+  - id: CGA-5q6g-c92g-j63p
+    aliases:
+      - CVE-2024-36621
+      - GHSA-2mj3-vfvx-fc43
+    events:
+      - timestamp: 2025-03-05T19:35:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.19
+            componentID: 9e8222501acb96ed
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.7+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
   - id: CGA-98fp-p2m3-rmx5
     aliases:
       - CVE-2023-49290
