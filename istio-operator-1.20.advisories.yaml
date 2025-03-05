@@ -4,6 +4,23 @@ package:
   name: istio-operator-1.20
 
 advisories:
+  - id: CGA-2c6m-f8cf-cvr2
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-05T20:03:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.20
+            componentID: e3c902e4799ec228
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
   - id: CGA-2mhf-548x-p4qh
     aliases:
       - CVE-2024-28180
