@@ -4,6 +4,24 @@ package:
   name: kubernetes-csi-node-driver-registrar
 
 advisories:
+  - id: CGA-23fw-38jv-62hg
+    aliases:
+      - CVE-2023-47108
+      - GHSA-8pgv-569h-w5rw
+    events:
+      - timestamp: 2025-03-05T23:15:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-node-driver-registrar
+            componentID: 5dcedad55a06ea35
+            componentName: go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc
+            componentVersion: v0.41.0
+            componentType: go-module
+            componentLocation: /usr/bin/csi-node-driver-registrar
+            scanner: grype
+
   - id: CGA-2c6m-6pc6-ff53
     aliases:
       - CVE-2023-39325
