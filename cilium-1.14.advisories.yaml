@@ -4,22 +4,22 @@ package:
   name: cilium-1.14
 
 advisories:
-  - id: CGA-9766-6jqx-pppv
+  - id: CGA-35q9-85v6-2cf3
     aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
+      - CVE-2024-37307
+      - GHSA-wh78-7948-358j
     events:
-      - timestamp: 2024-04-08T07:26:54Z
+      - timestamp: 2025-03-05T17:27:52Z
         type: detection
         data:
           type: scan/v1
           data:
-            subpackageName: cilium-1.14-hubble-relay
-            componentID: 78cbc5be036eec84
-            componentName: stdlib
-            componentVersion: go1.22.1
-            componentType: go-module
-            componentLocation: /usr/bin/hubble-relay
+            subpackageName: cilium-1.14
+            componentID: 178c0bed83112da8
+            componentName: cilium-1.14
+            componentVersion: 1.14.7-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
             scanner: grype
 
   - id: CGA-4vgr-mmm6-6x25
@@ -40,32 +40,66 @@ advisories:
             componentLocation: /usr/bin/cilium-operator-generic
             scanner: grype
 
+  - id: CGA-8g9q-vv6r-333f
+    aliases:
+      - CVE-2024-28860
+      - GHSA-pwqm-x5x6-5586
+    events:
+      - timestamp: 2024-04-16T07:22:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.14
+            componentID: 1810fb8fac7342e0
+            componentName: cilium-1.14
+            componentVersion: 1.14.7-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
+  - id: CGA-9766-6jqx-pppv
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-08T07:26:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.14-hubble-relay
+            componentID: 78cbc5be036eec84
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/hubble-relay
+            scanner: grype
+
+  - id: CGA-g8vf-hf8m-gfvm
+    aliases:
+      - CVE-2024-28249
+      - GHSA-j89h-qrvr-xc36
+    events:
+      - timestamp: 2024-03-20T10:04:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.14
+            componentID: 1810fb8fac7342e0
+            componentName: cilium-1.14
+            componentVersion: 1.14.7-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-p2vx-q57p-pjpr
     aliases:
       - CVE-2024-25630
       - GHSA-7496-fgv9-xw82
     events:
       - timestamp: 2024-04-13T07:08:14Z
-        type: fixed
-        data:
-          fixed-version: 1.14.7-r0
-
-  - id: CGA-xhc3-f6fr-cjx4
-    aliases:
-      - CVE-2024-25631
-      - GHSA-x989-52fc-4vr4
-    events:
-      - timestamp: 2024-04-13T07:08:12Z
-        type: fixed
-        data:
-          fixed-version: 1.14.7-r0
-
-  - id: CGA-w43f-q5g2-8v9j
-    aliases:
-      - CVE-2024-28180
-      - GHSA-c5q2-7r4c-mv6g
-    events:
-      - timestamp: 2024-03-08T07:14:57Z
         type: fixed
         data:
           fixed-version: 1.14.7-r0
@@ -88,23 +122,25 @@ advisories:
             componentLocation: /.PKGINFO
             scanner: grype
 
-  - id: CGA-g8vf-hf8m-gfvm
+  - id: CGA-w43f-q5g2-8v9j
     aliases:
-      - CVE-2024-28249
-      - GHSA-j89h-qrvr-xc36
+      - CVE-2024-28180
+      - GHSA-c5q2-7r4c-mv6g
     events:
-      - timestamp: 2024-03-20T10:04:10Z
-        type: detection
+      - timestamp: 2024-03-08T07:14:57Z
+        type: fixed
         data:
-          type: scan/v1
-          data:
-            subpackageName: cilium-1.14
-            componentID: 1810fb8fac7342e0
-            componentName: cilium-1.14
-            componentVersion: 1.14.7-r0
-            componentType: apk
-            componentLocation: /.PKGINFO
-            scanner: grype
+          fixed-version: 1.14.7-r0
+
+  - id: CGA-xhc3-f6fr-cjx4
+    aliases:
+      - CVE-2024-25631
+      - GHSA-x989-52fc-4vr4
+    events:
+      - timestamp: 2024-04-13T07:08:12Z
+        type: fixed
+        data:
+          fixed-version: 1.14.7-r0
 
   - id: CGA-xvq7-f84j-c43c
     aliases:
@@ -112,24 +148,6 @@ advisories:
       - GHSA-v6q2-4qr3-5cw6
     events:
       - timestamp: 2024-03-20T10:04:10Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: cilium-1.14
-            componentID: 1810fb8fac7342e0
-            componentName: cilium-1.14
-            componentVersion: 1.14.7-r0
-            componentType: apk
-            componentLocation: /.PKGINFO
-            scanner: grype
-
-  - id: CGA-8g9q-vv6r-333f
-    aliases:
-      - CVE-2024-28860
-      - GHSA-pwqm-x5x6-5586
-    events:
-      - timestamp: 2024-04-16T07:22:54Z
         type: detection
         data:
           type: scan/v1
