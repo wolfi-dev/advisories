@@ -267,3 +267,21 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+
+  - id: CGA-xvcm-fw8x-vw66
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-05T17:14:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-kas-17.3
+            componentID: fa1d8efa494ed639
+            componentName: golang.org/x/crypto
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/agentk
+            scanner: grype
