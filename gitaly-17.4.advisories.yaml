@@ -4,6 +4,24 @@ package:
   name: gitaly-17.4
 
 advisories:
+  - id: CGA-28xp-c9gx-7q6f
+    aliases:
+      - CVE-2019-3826
+      - GHSA-3m87-5598-2v4f
+    events:
+      - timestamp: 2025-03-05T13:10:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitaly-17.4
+            componentID: 5c181a00351f45c3
+            componentName: github.com/prometheus/prometheus
+            componentVersion: v0.54.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitaly
+            scanner: grype
+
   - id: CGA-c765-ffhf-hpgr
     aliases:
       - CVE-2024-45337
