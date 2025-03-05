@@ -352,6 +352,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This CVE only affects Windows users
 
+  - id: CGA-gcv8-6f8v-6x9v
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2025-03-05T19:36:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.19
+            componentID: 2bd4eb54171e18d7
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
   - id: CGA-hfjp-rhf9-23h2
     aliases:
       - CVE-2024-28180
