@@ -118,6 +118,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This vulnerability affects versions < 1.14.1, but the installed commit corresponds to version 1.21.2.
 
+  - id: CGA-gvx9-53v8-77vp
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2025-03-05T19:25:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.21
+            componentID: ade751f28d0b7162
+            componentName: stdlib
+            componentVersion: go1.22.3
+            componentType: go-module
+            componentLocation: /usr/bin/install-cni
+            scanner: grype
+
   - id: CGA-mw7h-2mpq-wrvp
     aliases:
       - CVE-2021-39155
