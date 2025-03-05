@@ -4,110 +4,6 @@ package:
   name: cert-manager-1.12
 
 advisories:
-  - id: CGA-5h54-6x82-6mj7
-    aliases:
-      - CVE-2019-25210
-      - GHSA-jw44-4f3j-q396
-    events:
-      - timestamp: 2024-03-06T07:14:02Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: cmctl-1.12
-            componentID: 9e52fb76e7c198d1
-            componentName: helm.sh/helm/v3
-            componentVersion: v3.14.2
-            componentType: go-module
-            componentLocation: /usr/bin/cmctl
-            scanner: grype
-      - timestamp: 2024-03-26T16:35:18Z
-        type: false-positive-determination
-        data:
-          type: vulnerability-record-analysis-contested
-          note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
-
-  - id: CGA-qm67-j97v-fvqx
-    aliases:
-      - CVE-2020-8552
-      - GHSA-82hx-w2r5-c2wq
-    events:
-      - timestamp: 2023-09-19T16:40:58Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Go vulndb has marked this code NOT_IMPORTABLE.
-
-  - id: CGA-87wr-9fmh-h4hg
-    aliases:
-      - CVE-2023-45142
-      - GHSA-rcjv-mgp8-qvmr
-    events:
-      - timestamp: 2023-10-19T12:35:06Z
-        type: fixed
-        data:
-          fixed-version: 1.12.5-r4
-
-  - id: CGA-h27f-7f4m-7v88
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:24:01Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-x283-rw98-4f66
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:24:02Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-qjrx-4h87-c8p7
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-09T08:57:27Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: cert-manager-1.12-acmesolver
-            componentID: d0eea287d673747d
-            componentName: stdlib
-            componentVersion: go1.22.1
-            componentType: go-module
-            componentLocation: /usr/bin/acmesolver
-            scanner: grype
-
-  - id: CGA-p6p3-r9mx-g3mv
-    aliases:
-      - CVE-2023-47108
-      - GHSA-8pgv-569h-w5rw
-    events:
-      - timestamp: 2023-11-17T11:20:51Z
-        type: fixed
-        data:
-          fixed-version: 1.12.6-r1
-
-  - id: CGA-5w92-m5wm-c7vw
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2023-12-19T16:58:13Z
-        type: fixed
-        data:
-          fixed-version: 1.12.7-r2
-
   - id: CGA-46f8-x55x-fpjg
     aliases:
       - CVE-2024-24557
@@ -125,16 +21,6 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/cmctl
             scanner: grype
-
-  - id: CGA-rrjc-vjqv-cppv
-    aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
-    events:
-      - timestamp: 2024-03-14T07:04:01Z
-        type: fixed
-        data:
-          fixed-version: 1.12.9-r0
 
   - id: CGA-54qq-j4rx-cwfm
     aliases:
@@ -158,27 +44,57 @@ advisories:
         data:
           fixed-version: 1.12.7-r4
 
-  - id: CGA-gwcx-28j8-h2f5
+  - id: CGA-5h54-6x82-6mj7
     aliases:
-      - CVE-2024-26147
-      - GHSA-r53h-jv2g-vpx6
+      - CVE-2019-25210
+      - GHSA-jw44-4f3j-q396
     events:
-      - timestamp: 2024-02-23T07:21:17Z
+      - timestamp: 2024-03-06T07:14:02Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: cmctl-1.12
-            componentID: 3012c3d7648f7741
+            componentID: 9e52fb76e7c198d1
             componentName: helm.sh/helm/v3
-            componentVersion: v3.14.1
+            componentVersion: v3.14.2
             componentType: go-module
             componentLocation: /usr/bin/cmctl
             scanner: grype
-      - timestamp: 2024-02-23T17:49:46Z
+      - timestamp: 2024-03-26T16:35:18Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
+
+  - id: CGA-5w92-m5wm-c7vw
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2023-12-19T16:58:13Z
         type: fixed
         data:
-          fixed-version: 1.12.8-r0
+          fixed-version: 1.12.7-r2
+
+  - id: CGA-7gxw-mvg5-p388
+    aliases:
+      - GHSA-jq35-85cj-fj4p
+    events:
+      - timestamp: 2023-11-17T11:21:48Z
+        type: fixed
+        data:
+          fixed-version: 1.12.6-r1
+
+  - id: CGA-87wr-9fmh-h4hg
+    aliases:
+      - CVE-2023-45142
+      - GHSA-rcjv-mgp8-qvmr
+    events:
+      - timestamp: 2023-10-19T12:35:06Z
+        type: fixed
+        data:
+          fixed-version: 1.12.5-r4
 
   - id: CGA-9663-q9hm-6xrw
     aliases:
@@ -201,11 +117,113 @@ advisories:
         data:
           fixed-version: 1.12.7-r3
 
-  - id: CGA-7gxw-mvg5-p388
+  - id: CGA-gwcx-28j8-h2f5
     aliases:
-      - GHSA-jq35-85cj-fj4p
+      - CVE-2024-26147
+      - GHSA-r53h-jv2g-vpx6
     events:
-      - timestamp: 2023-11-17T11:21:48Z
+      - timestamp: 2024-02-23T07:21:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cmctl-1.12
+            componentID: 3012c3d7648f7741
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.1
+            componentType: go-module
+            componentLocation: /usr/bin/cmctl
+            scanner: grype
+      - timestamp: 2024-02-23T17:49:46Z
+        type: fixed
+        data:
+          fixed-version: 1.12.8-r0
+
+  - id: CGA-h27f-7f4m-7v88
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:24:01Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-p6p3-r9mx-g3mv
+    aliases:
+      - CVE-2023-47108
+      - GHSA-8pgv-569h-w5rw
+    events:
+      - timestamp: 2023-11-17T11:20:51Z
         type: fixed
         data:
           fixed-version: 1.12.6-r1
+
+  - id: CGA-qjrx-4h87-c8p7
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-09T08:57:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-manager-1.12-acmesolver
+            componentID: d0eea287d673747d
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/acmesolver
+            scanner: grype
+
+  - id: CGA-qm67-j97v-fvqx
+    aliases:
+      - CVE-2020-8552
+      - GHSA-82hx-w2r5-c2wq
+    events:
+      - timestamp: 2023-09-19T16:40:58Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Go vulndb has marked this code NOT_IMPORTABLE.
+
+  - id: CGA-rrjc-vjqv-cppv
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:04:01Z
+        type: fixed
+        data:
+          fixed-version: 1.12.9-r0
+
+  - id: CGA-x283-rw98-4f66
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:24:02Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-x967-9rcr-rrmg
+    aliases:
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
+    events:
+      - timestamp: 2025-03-05T13:07:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-manager-1.12
+            componentID: bbefb753091bf3d4
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/acmesolver-linux-amd64
+            scanner: grype
