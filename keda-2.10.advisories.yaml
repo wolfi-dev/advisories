@@ -261,6 +261,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Go vulndb has marked this code NOT_IMPORTABLE.
 
+  - id: CGA-rmm2-x7xq-vc35
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2025-03-05T21:05:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.10
+            componentID: 3d53707914405070
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.2
+            componentType: go-module
+            componentLocation: /usr/bin/keda
+            scanner: grype
+
   - id: CGA-x4q6-33cc-j5c6
     aliases:
       - CVE-2023-45284
