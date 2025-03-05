@@ -83,3 +83,20 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/gitaly-backup
             scanner: grype
+
+  - id: CGA-pgx7-rm24-gch7
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-05T15:38:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitaly-17.6
+            componentID: 0b669574b156daae
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitaly
+            scanner: grype
