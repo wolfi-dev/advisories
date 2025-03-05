@@ -58,6 +58,23 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
 
+  - id: CGA-54wj-8gp7-37vq
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-05T19:36:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.19
+            componentID: 20e2064fda94c3f5
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.11.0
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
   - id: CGA-56jm-w3qr-cjcg
     aliases:
       - CVE-2023-45288
