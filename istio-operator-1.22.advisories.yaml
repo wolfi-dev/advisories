@@ -56,6 +56,24 @@ advisories:
         data:
           fixed-version: 1.22.0-r2
 
+  - id: CGA-8vhx-gc74-35wq
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-05T18:41:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.22
+            componentID: b9888226086988db
+            componentName: golang.org/x/crypto
+            componentVersion: v0.22.0
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
   - id: CGA-gv7h-2qwr-chmc
     aliases:
       - CVE-2019-14993
