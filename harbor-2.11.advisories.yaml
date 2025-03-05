@@ -52,6 +52,24 @@ advisories:
         data:
           note: This vulnerability can not be remediated by upgrading beego without making additional changes to Harbor. Upstream has merged a fix on main, but this hasn't been backported to released versions of Harbor.
 
+  - id: CGA-4rfp-5r6h-ggwh
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-03-05T21:38:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-2.11
+            componentID: c3982dfaabad63cb
+            componentName: golang.org/x/net
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-jobservice
+            scanner: grype
+
   - id: CGA-4wfp-cpjm-549m
     aliases:
       - CVE-2024-41110
