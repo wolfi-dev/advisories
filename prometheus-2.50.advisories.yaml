@@ -4,12 +4,66 @@ package:
   name: prometheus-2.50
 
 advisories:
-  - id: CGA-vc7m-2w9v-v339
+  - id: CGA-27mc-f28c-mr8f
     aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
+      - CVE-2024-45336
+      - GHSA-7wrw-r4p8-38rx
     events:
-      - timestamp: 2024-04-09T09:11:08Z
+      - timestamp: 2025-03-05T07:02:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.50
+            componentID: 0eaf0d213f3dd20b
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /opt/bitnami/prometheus/bin/prometheus
+            scanner: grype
+
+  - id: CGA-3j9m-wpqq-cf4h
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2025-03-05T07:02:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.50
+            componentID: 0eaf0d213f3dd20b
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /opt/bitnami/prometheus/bin/prometheus
+            scanner: grype
+
+  - id: CGA-4pv8-pp2q-46rv
+    aliases:
+      - CVE-2024-36623
+      - GHSA-gh5c-3h97-2f3q
+    events:
+      - timestamp: 2025-03-05T07:01:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.50
+            componentID: deda0d3dbd6ca3bd
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.0+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus
+            scanner: grype
+
+  - id: CGA-4r29-g5cw-2w78
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2024-05-14T09:03:44Z
         type: detection
         data:
           type: scan/v1
@@ -22,22 +76,22 @@ advisories:
             componentLocation: /usr/bin/prometheus
             scanner: grype
 
-  - id: CGA-gphx-m9j3-6759
+  - id: CGA-6m95-9329-p6rx
     aliases:
-      - CVE-2024-24557
-      - GHSA-xw73-rw38-6vjc
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
     events:
-      - timestamp: 2024-03-22T13:18:26Z
+      - timestamp: 2025-03-05T07:01:42Z
         type: detection
         data:
           type: scan/v1
           data:
-            subpackageName: prometheus-2.50-bitnami-compat
-            componentID: c38a4ddb2ec79614
-            componentName: github.com/docker/docker
-            componentVersion: v25.0.0+incompatible
+            subpackageName: prometheus-2.50
+            componentID: 1f02c30b51105157
+            componentName: golang.org/x/net
+            componentVersion: v0.20.0
             componentType: go-module
-            componentLocation: /opt/bitnami/prometheus/bin/prometheus
+            componentLocation: /usr/bin/prometheus
             scanner: grype
 
   - id: CGA-757w-qrmq-vg7c
@@ -62,38 +116,20 @@ advisories:
         data:
           fixed-version: 2.50.1-r2
 
-  - id: CGA-7vjr-crj9-xmp6
+  - id: CGA-7fmr-g5wj-x54w
     aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
     events:
-      - timestamp: 2024-05-14T09:03:43Z
+      - timestamp: 2025-03-05T07:01:46Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: prometheus-2.50
-            componentID: b1b40d02ae289a8e
-            componentName: stdlib
-            componentVersion: go1.22.1
-            componentType: go-module
-            componentLocation: /usr/bin/prometheus
-            scanner: grype
-
-  - id: CGA-4r29-g5cw-2w78
-    aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
-    events:
-      - timestamp: 2024-05-14T09:03:44Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: prometheus-2.50
-            componentID: b1b40d02ae289a8e
-            componentName: stdlib
-            componentVersion: go1.22.1
+            componentID: c1e89ae496a69e99
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.4
             componentType: go-module
             componentLocation: /usr/bin/prometheus
             scanner: grype
@@ -112,6 +148,310 @@ advisories:
             componentID: c38a4ddb2ec79614
             componentName: github.com/docker/docker
             componentVersion: v25.0.0+incompatible
+            componentType: go-module
+            componentLocation: /opt/bitnami/prometheus/bin/prometheus
+            scanner: grype
+
+  - id: CGA-7vjr-crj9-xmp6
+    aliases:
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
+    events:
+      - timestamp: 2024-05-14T09:03:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.50
+            componentID: b1b40d02ae289a8e
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus
+            scanner: grype
+
+  - id: CGA-89wf-mprp-54fx
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-05T07:01:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.50
+            componentID: b835b33753e7ecc8
+            componentName: golang.org/x/crypto
+            componentVersion: v0.18.0
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus
+            scanner: grype
+
+  - id: CGA-8g98-x8qq-qx37
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2025-03-05T07:02:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.50
+            componentID: 0eaf0d213f3dd20b
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /opt/bitnami/prometheus/bin/prometheus
+            scanner: grype
+
+  - id: CGA-8hw4-g3fh-5xjm
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-05T07:01:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.50
+            componentID: b835b33753e7ecc8
+            componentName: golang.org/x/crypto
+            componentVersion: v0.18.0
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus
+            scanner: grype
+
+  - id: CGA-f26h-3hxx-4j2j
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-05T07:01:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.50
+            componentID: 2787065167ff5fc2
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.16.0
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus
+            scanner: grype
+
+  - id: CGA-g6pv-wjr4-rcj6
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2025-03-05T07:02:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.50
+            componentID: 0eaf0d213f3dd20b
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /opt/bitnami/prometheus/bin/prometheus
+            scanner: grype
+
+  - id: CGA-g8w4-fvc8-6h94
+    aliases:
+      - CVE-2024-36621
+      - GHSA-2mj3-vfvx-fc43
+    events:
+      - timestamp: 2025-03-05T07:01:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.50
+            componentID: deda0d3dbd6ca3bd
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.0+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus
+            scanner: grype
+
+  - id: CGA-gphx-m9j3-6759
+    aliases:
+      - CVE-2024-24557
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-22T13:18:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.50-bitnami-compat
+            componentID: c38a4ddb2ec79614
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.0+incompatible
+            componentType: go-module
+            componentLocation: /opt/bitnami/prometheus/bin/prometheus
+            scanner: grype
+
+  - id: CGA-j5f6-5mxv-m728
+    aliases:
+      - CVE-2024-41110
+      - GHSA-v23v-6jw2-98fq
+    events:
+      - timestamp: 2025-03-05T07:01:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.50
+            componentID: deda0d3dbd6ca3bd
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.0+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus
+            scanner: grype
+
+  - id: CGA-m42f-wv75-48f3
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2025-03-05T07:02:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.50
+            componentID: 0eaf0d213f3dd20b
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /opt/bitnami/prometheus/bin/prometheus
+            scanner: grype
+
+  - id: CGA-mxxm-fwmf-8cfh
+    aliases:
+      - CVE-2024-45341
+      - GHSA-3f6r-qh9c-x6mm
+    events:
+      - timestamp: 2025-03-05T07:02:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.50
+            componentID: 0eaf0d213f3dd20b
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /opt/bitnami/prometheus/bin/prometheus
+            scanner: grype
+
+  - id: CGA-pw6p-xrwx-mv3f
+    aliases:
+      - CVE-2024-36620
+      - GHSA-q59j-vv4j-v33c
+    events:
+      - timestamp: 2025-03-05T07:01:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.50
+            componentID: deda0d3dbd6ca3bd
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.0+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus
+            scanner: grype
+
+  - id: CGA-qhm7-6m7v-5639
+    aliases:
+      - CVE-2024-35255
+      - GHSA-m5vv-6r4h-3vj9
+    events:
+      - timestamp: 2025-03-05T07:01:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.50
+            componentID: 686440e2abb71ab1
+            componentName: github.com/Azure/azure-sdk-for-go/sdk/azidentity
+            componentVersion: v1.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus
+            scanner: grype
+
+  - id: CGA-rf2g-3vpq-67vq
+    aliases:
+      - CVE-2024-24791
+      - GHSA-hw49-2p59-3mhj
+    events:
+      - timestamp: 2025-03-05T07:02:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.50
+            componentID: 0eaf0d213f3dd20b
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /opt/bitnami/prometheus/bin/prometheus
+            scanner: grype
+
+  - id: CGA-vc7m-2w9v-v339
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-09T09:11:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.50
+            componentID: b1b40d02ae289a8e
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus
+            scanner: grype
+
+  - id: CGA-wpwq-49cr-h9c8
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-03-05T07:02:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.50
+            componentID: 0eaf0d213f3dd20b
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /opt/bitnami/prometheus/bin/prometheus
+            scanner: grype
+
+  - id: CGA-x933-c4jc-mmg9
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2025-03-05T07:02:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.50
+            componentID: 0eaf0d213f3dd20b
+            componentName: stdlib
+            componentVersion: go1.22.1
             componentType: go-module
             componentLocation: /opt/bitnami/prometheus/bin/prometheus
             scanner: grype
