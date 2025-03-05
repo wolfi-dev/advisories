@@ -4,12 +4,12 @@ package:
   name: istio-operator-1.21
 
 advisories:
-  - id: CGA-rp5h-rg64-qvfh
+  - id: CGA-2884-6w65-v8q9
     aliases:
-      - CVE-2019-14993
-      - GHSA-qcvw-82hh-gq38
+      - CVE-2022-31045
+      - GHSA-xwx5-5c9g-x68x
     events:
-      - timestamp: 2024-04-26T10:29:50Z
+      - timestamp: 2024-04-26T10:29:51Z
         type: detection
         data:
           type: scan/v1
@@ -21,11 +21,52 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/operator
             scanner: grype
-      - timestamp: 2024-05-06T00:48:49Z
+      - timestamp: 2024-05-16T16:30:11Z
         type: false-positive-determination
         data:
           type: vulnerable-code-version-not-used
-          note: 'This vulnerability was matched to the module "istio.io/istio" at the following location(s): /usr/bin/operator. In all cases, the installed version of the module (git commit ed90e14d3473bc3fe54f98298eb16664002d14d1) corresponds to a version tag (1.21.2) that is later than the fixed version (1.1.13).'
+          note: This vulnerability affects versions < 1.14.1, but the installed commit corresponds to version 1.21.2.
+
+  - id: CGA-4q5h-x58m-347w
+    aliases:
+      - CVE-2019-3826
+      - GHSA-3m87-5598-2v4f
+    events:
+      - timestamp: 2025-03-05T19:39:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.21
+            componentID: 066625ae32821b9d
+            componentName: github.com/prometheus/prometheus
+            componentVersion: v0.48.1
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
+  - id: CGA-52j6-m82r-96vh
+    aliases:
+      - CVE-2022-23635
+      - GHSA-856q-xv3c-7f2f
+    events:
+      - timestamp: 2024-04-26T10:29:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.21
+            componentID: b3c1877d6420f951
+            componentName: istio.io/istio
+            componentVersion: v0.0.0-20240418224740-ed90e14d3473
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+      - timestamp: 2024-05-06T00:48:48Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: 'This vulnerability was matched to the module "istio.io/istio" at the following location(s): /usr/bin/operator. In all cases, the installed version of the module (git commit ed90e14d3473bc3fe54f98298eb16664002d14d1) corresponds to a version tag (1.21.2) that is later than the fixed version (1.11.7).'
 
   - id: CGA-c3vw-phcc-7vhv
     aliases:
@@ -49,6 +90,36 @@ advisories:
         data:
           type: vulnerability-record-analysis-contested
           note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
+
+  - id: CGA-c63f-fx7m-wxr8
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2024-05-14T09:00:40Z
+        type: fixed
+        data:
+          fixed-version: 1.21.2-r1
+
+  - id: CGA-cpj2-xr27-28fc
+    aliases:
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
+    events:
+      - timestamp: 2024-05-14T09:00:38Z
+        type: fixed
+        data:
+          fixed-version: 1.21.2-r1
+
+  - id: CGA-hv87-fg78-wjh7
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-09T02:00:03Z
+        type: fixed
+        data:
+          fixed-version: 1.21.1-r0
 
   - id: CGA-j5wv-rm4c-3f3v
     aliases:
@@ -91,6 +162,29 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability was matched to the module "istio.io/istio" at the following location(s): /usr/bin/operator. In all cases, the installed version of the module (git commit ed90e14d3473bc3fe54f98298eb16664002d14d1) corresponds to a version tag (1.21.2) that is later than the fixed version (1.9.8).'
 
+  - id: CGA-rp5h-rg64-qvfh
+    aliases:
+      - CVE-2019-14993
+      - GHSA-qcvw-82hh-gq38
+    events:
+      - timestamp: 2024-04-26T10:29:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.21
+            componentID: b3c1877d6420f951
+            componentName: istio.io/istio
+            componentVersion: v0.0.0-20240418224740-ed90e14d3473
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+      - timestamp: 2024-05-06T00:48:49Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: 'This vulnerability was matched to the module "istio.io/istio" at the following location(s): /usr/bin/operator. In all cases, the installed version of the module (git commit ed90e14d3473bc3fe54f98298eb16664002d14d1) corresponds to a version tag (1.21.2) that is later than the fixed version (1.1.13).'
+
   - id: CGA-vw2f-g95m-3cpr
     aliases:
       - CVE-2021-39156
@@ -113,79 +207,3 @@ advisories:
         data:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability was matched to the module "istio.io/istio" at the following location(s): /usr/bin/operator. In all cases, the installed version of the module (git commit ed90e14d3473bc3fe54f98298eb16664002d14d1) corresponds to a version tag (1.21.2) that is later than the fixed version (1.9.8).'
-
-  - id: CGA-52j6-m82r-96vh
-    aliases:
-      - CVE-2022-23635
-      - GHSA-856q-xv3c-7f2f
-    events:
-      - timestamp: 2024-04-26T10:29:48Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: istio-operator-1.21
-            componentID: b3c1877d6420f951
-            componentName: istio.io/istio
-            componentVersion: v0.0.0-20240418224740-ed90e14d3473
-            componentType: go-module
-            componentLocation: /usr/bin/operator
-            scanner: grype
-      - timestamp: 2024-05-06T00:48:48Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-version-not-used
-          note: 'This vulnerability was matched to the module "istio.io/istio" at the following location(s): /usr/bin/operator. In all cases, the installed version of the module (git commit ed90e14d3473bc3fe54f98298eb16664002d14d1) corresponds to a version tag (1.21.2) that is later than the fixed version (1.11.7).'
-
-  - id: CGA-2884-6w65-v8q9
-    aliases:
-      - CVE-2022-31045
-      - GHSA-xwx5-5c9g-x68x
-    events:
-      - timestamp: 2024-04-26T10:29:51Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: istio-operator-1.21
-            componentID: b3c1877d6420f951
-            componentName: istio.io/istio
-            componentVersion: v0.0.0-20240418224740-ed90e14d3473
-            componentType: go-module
-            componentLocation: /usr/bin/operator
-            scanner: grype
-      - timestamp: 2024-05-16T16:30:11Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-version-not-used
-          note: This vulnerability affects versions < 1.14.1, but the installed commit corresponds to version 1.21.2.
-
-  - id: CGA-hv87-fg78-wjh7
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-09T02:00:03Z
-        type: fixed
-        data:
-          fixed-version: 1.21.1-r0
-
-  - id: CGA-cpj2-xr27-28fc
-    aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
-    events:
-      - timestamp: 2024-05-14T09:00:38Z
-        type: fixed
-        data:
-          fixed-version: 1.21.2-r1
-
-  - id: CGA-c63f-fx7m-wxr8
-    aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
-    events:
-      - timestamp: 2024-05-14T09:00:40Z
-        type: fixed
-        data:
-          fixed-version: 1.21.2-r1
