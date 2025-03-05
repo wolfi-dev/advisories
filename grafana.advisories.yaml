@@ -122,6 +122,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-6mjh-6wxc-78rm
+    aliases:
+      - CVE-2024-43788
+      - GHSA-4vvj-4cpr-p986
+    events:
+      - timestamp: 2025-03-05T18:34:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana
+            componentID: 18e358a69bf431a7
+            componentName: webpack
+            componentVersion: 5.76.0
+            componentType: npm
+            componentLocation: /usr/share/grafana/plugins-bundled/internal/input-datasource/node_modules/webpack/package.json
+            scanner: grype
+
   - id: CGA-6rpw-48fg-6hvc
     aliases:
       - CVE-2023-45288
