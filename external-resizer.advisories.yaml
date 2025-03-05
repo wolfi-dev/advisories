@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: external-resizer
+
+advisories:
+  - id: CGA-pfc2-w8c5-q4xg
+    aliases:
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2025-03-05T13:03:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: external-resizer
+            componentID: e978dfc912fd4194
+            componentName: golang.org/x/net
+            componentVersion: v0.8.0
+            componentType: go-module
+            componentLocation: /usr/bin/csi-resizer
+            scanner: grype
