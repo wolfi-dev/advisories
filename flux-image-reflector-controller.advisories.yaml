@@ -100,6 +100,16 @@ advisories:
         data:
           fixed-version: 0.31.2-r2
 
+  - id: CGA-62rq-w554-ggpj
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T18:01:19Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'flux-image-reflector-controller version 0.34.0-r0: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-63h7-fx9m-6w96
     aliases:
       - CVE-2024-24790

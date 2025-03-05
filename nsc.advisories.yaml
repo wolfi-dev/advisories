@@ -218,6 +218,16 @@ advisories:
         data:
           fixed-version: 2.8.9-r0
 
+  - id: CGA-m6v7-4x6v-wvch
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T18:15:41Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'nsc version 2.10.2-r2: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-pfjm-42x4-fg2j
     aliases:
       - CVE-2024-34158

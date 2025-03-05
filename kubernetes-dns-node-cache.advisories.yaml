@@ -124,6 +124,16 @@ advisories:
         data:
           fixed-version: 1.23.1-r4
 
+  - id: CGA-92fw-rv96-3297
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T18:07:52Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'kubernetes-dns-node-cache version 1.25.0-r2: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-9435-7j5v-5j5x
     aliases:
       - CVE-2024-24789

@@ -100,6 +100,16 @@ advisories:
         data:
           fixed-version: 2.5.1-r8
 
+  - id: CGA-c69m-72h2-fw3w
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T17:47:23Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'cert-manager-webhook-pdns version 2.5.2-r0: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-crx2-mhj6-m6r4
     aliases:
       - CVE-2024-24788

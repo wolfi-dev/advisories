@@ -194,6 +194,16 @@ advisories:
         data:
           fixed-version: 0.0.20230223-r19
 
+  - id: CGA-g4rq-r3q7-5f38
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T19:33:42Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'wireguard-go version 0.0.20230223-r20: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-hrv4-73j5-p2vm
     aliases:
       - CVE-2024-24788

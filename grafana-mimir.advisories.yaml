@@ -58,6 +58,16 @@ advisories:
         data:
           fixed-version: 2.12.0-r1
 
+  - id: CGA-72cx-rrcm-pjx7
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T18:02:35Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'grafana-mimir version 2.15.0-r6: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-752q-23cr-gcqw
     aliases:
       - CVE-2024-24791

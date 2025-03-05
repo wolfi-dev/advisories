@@ -4,6 +4,16 @@ package:
   name: terraform-provider-google
 
 advisories:
+  - id: CGA-2f8w-rqjf-4525
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T19:32:15Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'terraform-provider-google version 6.24.0-r0: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-3j7v-jxcq-4f62
     aliases:
       - CVE-2024-45338

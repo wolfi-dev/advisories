@@ -70,6 +70,16 @@ advisories:
         data:
           fixed-version: 1.13.1-r1
 
+  - id: CGA-64rr-6gv8-jm7x
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T18:00:03Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'flyte version 1.15.0-r1: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-77hx-x9cc-8vc9
     aliases:
       - CVE-2025-27144

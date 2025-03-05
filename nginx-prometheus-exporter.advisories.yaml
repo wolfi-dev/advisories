@@ -4,6 +4,16 @@ package:
   name: nginx-prometheus-exporter
 
 advisories:
+  - id: CGA-6755-c4hx-pmrh
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T18:13:09Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'nginx-prometheus-exporter version 1.4.1-r2: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-7rwq-hhh8-jx92
     aliases:
       - CVE-2025-22866

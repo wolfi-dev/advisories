@@ -162,6 +162,21 @@ advisories:
         data:
           fixed-version: 1.60.1-r1
 
+  - id: CGA-pp4c-6wrr-ffp9
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T18:32:50Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'tailscale version 1.80.2-r0: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+      - timestamp: 2025-03-04T19:30:09Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'tailscale version 1.80.2-r0: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-qff3-cvv8-7mgj
     aliases:
       - CVE-2024-34158

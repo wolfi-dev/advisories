@@ -4,6 +4,16 @@ package:
   name: kubernetes-dashboard-web
 
 advisories:
+  - id: CGA-6x6c-8xwh-w2pj
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T18:11:06Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'kubernetes-dashboard-web version 1.6.2-r0: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-8vp7-82p5-wm4c
     aliases:
       - CVE-2025-22866

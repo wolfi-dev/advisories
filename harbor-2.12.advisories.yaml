@@ -155,3 +155,13 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.12.0-r2
+
+  - id: CGA-vghr-r5p3-9hxq
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T18:02:54Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'harbor-2.12 version 2.12.2-r4: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'

@@ -90,6 +90,16 @@ advisories:
         data:
           fixed-version: 0.31.0-r0
 
+  - id: CGA-jp9m-3w34-g65x
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T17:52:08Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'descheduler version 0.32.2-r1: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-m84m-m98j-q5rx
     aliases:
       - CVE-2024-45336

@@ -331,6 +331,16 @@ advisories:
         data:
           fixed-version: 0.27.0-r10
 
+  - id: CGA-pv28-j5vq-fm5w
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T18:20:51Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'prometheus-alertmanager version 0.28.0-r2: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-qwhp-882g-xv83
     aliases:
       - CVE-2023-45290

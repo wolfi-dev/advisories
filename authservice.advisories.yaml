@@ -78,6 +78,16 @@ advisories:
         data:
           fixed-version: 1.0.4-r1
 
+  - id: CGA-q429-3jf6-cf2w
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T17:46:54Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'authservice version 1.0.4-r1: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-qmwf-fvx7-hmgc
     aliases:
       - CVE-2024-34155

@@ -140,6 +140,16 @@ advisories:
         data:
           fixed-version: 1.6.5-r5
 
+  - id: CGA-9q5p-4gpw-r7pq
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T17:45:53Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'cfssl version 1.6.5-r15: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-c92w-w4vw-3m8f
     aliases:
       - CVE-2024-24784

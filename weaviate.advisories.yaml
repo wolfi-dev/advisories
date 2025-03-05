@@ -270,6 +270,16 @@ advisories:
         data:
           fixed-version: 1.28.4-r1
 
+  - id: CGA-vg99-hxvx-fc65
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T19:34:40Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'weaviate version 1.29.0-r1: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-vx3g-m66f-4mm3
     aliases:
       - CVE-2023-48795

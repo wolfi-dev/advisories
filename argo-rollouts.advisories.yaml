@@ -68,6 +68,16 @@ advisories:
         data:
           fixed-version: 1.7.2-r4
 
+  - id: CGA-g84r-6853-86c5
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T17:47:08Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'argo-rollouts version 1.8.0-r2: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-m9rp-87wr-xj88
     aliases:
       - CVE-2024-45337

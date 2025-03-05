@@ -46,6 +46,16 @@ advisories:
         data:
           fixed-version: 1.5.0-r1
 
+  - id: CGA-37rv-gmq2-32c7
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-04T17:55:13Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: 'extism version 1.6.2-r2: using govulncheck and identifying the symbols present in the package binary we determined that either the symbol path did not match the golang.org/x/crypto path OR govulncheck determined the binary was not vulnerable to this CVE. Marking as False Positive Determination'
+
   - id: CGA-3fpx-x749-22m3
     aliases:
       - CVE-2024-34155
