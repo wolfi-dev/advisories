@@ -4,6 +4,24 @@ package:
   name: istio-cni-1.19
 
 advisories:
+  - id: CGA-36jx-hwh4-m59j
+    aliases:
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
+    events:
+      - timestamp: 2025-03-05T23:18:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.19
+            componentID: 4c1df2f3afde9477
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/istio-cni
+            scanner: grype
+
   - id: CGA-389x-6gjc-fjpr
     aliases:
       - CVE-2023-45283
