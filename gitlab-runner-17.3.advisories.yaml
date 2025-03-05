@@ -4,6 +4,23 @@ package:
   name: gitlab-runner-17.3
 
 advisories:
+  - id: CGA-2276-mw66-xp24
+    aliases:
+      - CVE-2024-8641
+    events:
+      - timestamp: 2025-03-05T16:05:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-17.3
+            componentID: 55507b9a8d73096c
+            componentName: gitlab-docker-machine-17.3
+            componentVersion: 17.3.1-r1
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-22rq-vp8q-7rhp
     aliases:
       - CVE-2024-12379
