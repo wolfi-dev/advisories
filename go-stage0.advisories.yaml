@@ -4,6 +4,24 @@ package:
   name: go-stage0
 
 advisories:
+  - id: CGA-4h3g-359v-vm65
+    aliases:
+      - CVE-2023-24531
+      - GHSA-cwpg-qgc6-jxvq
+    events:
+      - timestamp: 2025-03-05T21:12:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: go-stage0
+            componentID: 2d6e0aae0f7c1ca5
+            componentName: stdlib
+            componentVersion: go1.19.1
+            componentType: go-module
+            componentLocation: /usr/lib/go/pkg/tool/linux_amd64/addr2line
+            scanner: grype
+
   - id: CGA-6g26-8mmw-g9vv
     aliases:
       - CVE-2022-41715
