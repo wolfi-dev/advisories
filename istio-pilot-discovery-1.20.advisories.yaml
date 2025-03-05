@@ -4,6 +4,24 @@ package:
   name: istio-pilot-discovery-1.20
 
 advisories:
+  - id: CGA-4xw7-25pq-vrh4
+    aliases:
+      - CVE-2024-36621
+      - GHSA-2mj3-vfvx-fc43
+    events:
+      - timestamp: 2025-03-05T19:32:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-discovery-1.20
+            componentID: 7134e7f00c9f1d01
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.7+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-discovery
+            scanner: grype
+
   - id: CGA-5f62-fvxx-5fvh
     aliases:
       - CVE-2024-21664
