@@ -856,3 +856,21 @@ advisories:
         data:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability was matched to the module "github.com/kyverno/kyverno" at the following location(s): /usr/bin/kyverno. In all cases, the installed version of the module (git commit 84fba8e2448df1ee306d33379f4fb831e8f1381e) corresponds to a version tag (v1.12.1) that is later than the fixed version (1.9.5).'
+
+  - id: CGA-xwp2-v52h-fg33
+    aliases:
+      - CVE-2024-45336
+      - GHSA-7wrw-r4p8-38rx
+    events:
+      - timestamp: 2025-03-05T22:43:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno
+            componentID: 2ddebd89c2ffeb62
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/kyverno
+            scanner: grype
