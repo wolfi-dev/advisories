@@ -220,6 +220,24 @@ advisories:
         data:
           fixed-version: 8.0.1-r1
 
+  - id: CGA-qv63-gc7w-v344
+    aliases:
+      - CVE-2024-45336
+      - GHSA-7wrw-r4p8-38rx
+    events:
+      - timestamp: 2025-03-05T22:38:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-snapshotter
+            componentID: c60846d231b16065
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/snapshot-controller
+            scanner: grype
+
   - id: CGA-r3j6-wgq2-3929
     aliases:
       - GHSA-xr7q-jx4m-x55m
