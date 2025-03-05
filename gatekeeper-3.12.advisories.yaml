@@ -4,6 +4,24 @@ package:
   name: gatekeeper-3.12
 
 advisories:
+  - id: CGA-4fqj-jrf6-p976
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2025-03-05T17:25:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.12
+            componentID: 194788560c3e062f
+            componentName: stdlib
+            componentVersion: go1.22.2
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-4jxp-pqx7-2wh9
     aliases:
       - CVE-2023-48795
@@ -13,6 +31,95 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.12.0-r10
+
+  - id: CGA-4xgc-2f37-56r6
+    aliases:
+      - CVE-2024-8260
+      - GHSA-c77r-fh37-x2px
+    events:
+      - timestamp: 2025-03-05T17:25:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.12
+            componentID: b1be0de8705bfaf3
+            componentName: github.com/open-policy-agent/opa
+            componentVersion: v0.49.2
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
+  - id: CGA-54r9-52gf-vrw3
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-05T17:25:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.12
+            componentID: d19b6f6ba8792ae4
+            componentName: golang.org/x/crypto
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
+  - id: CGA-724g-pc2g-cq2r
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-05T17:25:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.12
+            componentID: d19b6f6ba8792ae4
+            componentName: golang.org/x/crypto
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
+  - id: CGA-729q-mp8v-26v6
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2025-03-05T17:26:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.12
+            componentID: 194788560c3e062f
+            componentName: stdlib
+            componentVersion: go1.22.2
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
+  - id: CGA-77ph-j2ph-fpgm
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2025-03-05T17:26:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.12
+            componentID: 194788560c3e062f
+            componentName: stdlib
+            componentVersion: go1.22.2
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
 
   - id: CGA-7m2j-34vv-259p
     aliases:
@@ -30,6 +137,60 @@ advisories:
           type: component-vulnerability-mismatch
           note: Prometheus ships a Go (Golang) library with a versioning scheme that follows the 0.x format. However, the Prometheus application itself uses a versioning scheme based on 1.x, 2.x, etc. The vulnerability identified in CVE-2019-3826 is specifically associated with the Prometheus application, not the Golang library.
 
+  - id: CGA-7w27-g28j-w6qc
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2025-03-05T17:25:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.12
+            componentID: 194788560c3e062f
+            componentName: stdlib
+            componentVersion: go1.22.2
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
+  - id: CGA-84q6-xjgx-f7jm
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-03-05T17:26:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.12
+            componentID: 194788560c3e062f
+            componentName: stdlib
+            componentVersion: go1.22.2
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
+  - id: CGA-8qf7-54x3-jr9x
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-03-05T17:25:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.12
+            componentID: 4c740bc9281358a7
+            componentName: golang.org/x/net
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-9fj5-95wq-fvv4
     aliases:
       - CVE-2020-8552
@@ -40,6 +201,42 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Go vulndb has marked this code NOT_IMPORTABLE.
+
+  - id: CGA-c8rj-m3rg-cgw4
+    aliases:
+      - CVE-2024-45339
+      - GHSA-6wxm-mpqj-6jpf
+    events:
+      - timestamp: 2025-03-05T17:25:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.12
+            componentID: 2a34ab83fe67a090
+            componentName: github.com/golang/glog
+            componentVersion: v1.1.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
+  - id: CGA-f343-pm78-jm6j
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2025-03-05T17:25:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.12
+            componentID: 194788560c3e062f
+            componentName: stdlib
+            componentVersion: go1.22.2
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
 
   - id: CGA-fwxr-pj95-qhp7
     aliases:
@@ -73,6 +270,23 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CGA-g3cj-whfq-g57m
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-05T17:25:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.12
+            componentID: 8d4d72ce07b193f2
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.10.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
 
   - id: CGA-h77j-hj9f-qhvg
     aliases:
@@ -129,6 +343,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-jphx-m26g-484p
+    aliases:
+      - CVE-2024-45341
+      - GHSA-3f6r-qh9c-x6mm
+    events:
+      - timestamp: 2025-03-05T17:26:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.12
+            componentID: 194788560c3e062f
+            componentName: stdlib
+            componentVersion: go1.22.2
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-p562-3cfw-rv2w
     aliases:
       - CVE-2023-45290
@@ -150,6 +382,42 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.12.0-r11
+
+  - id: CGA-pqfv-ggjh-8mhw
+    aliases:
+      - CVE-2024-24791
+      - GHSA-hw49-2p59-3mhj
+    events:
+      - timestamp: 2025-03-05T17:26:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.12
+            componentID: 194788560c3e062f
+            componentName: stdlib
+            componentVersion: go1.22.2
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
+  - id: CGA-qcr4-5265-r89c
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2025-03-05T17:26:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.12
+            componentID: 194788560c3e062f
+            componentName: stdlib
+            componentVersion: go1.22.2
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
 
   - id: CGA-qj23-2j5c-346p
     aliases:
@@ -235,6 +503,42 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.12.0-r7
+
+  - id: CGA-vfqf-9pjx-73mh
+    aliases:
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
+    events:
+      - timestamp: 2025-03-05T17:25:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.12
+            componentID: 194788560c3e062f
+            componentName: stdlib
+            componentVersion: go1.22.2
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
+  - id: CGA-vwq2-r6c4-f638
+    aliases:
+      - CVE-2024-45336
+      - GHSA-7wrw-r4p8-38rx
+    events:
+      - timestamp: 2025-03-05T17:26:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.12
+            componentID: 194788560c3e062f
+            componentName: stdlib
+            componentVersion: go1.22.2
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
 
   - id: CGA-x6jx-p3g9-w3j8
     aliases:
