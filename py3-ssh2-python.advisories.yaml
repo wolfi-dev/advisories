@@ -4,6 +4,24 @@ package:
   name: py3-ssh2-python
 
 advisories:
+  - id: CGA-p2wp-h53c-fp7c
+    aliases:
+      - CVE-2024-39689
+      - GHSA-248v-346w-9cwc
+    events:
+      - timestamp: 2025-03-05T17:03:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3-ssh2-python
+            componentID: 2bc6d5c8215a4531
+            componentName: certifi
+            componentVersion: 2023.7.22
+            componentType: python
+            componentLocation: /usr/share/py3-ssh2/.venv/lib/python3.11/site-packages/pip/_vendor/vendor.txt
+            scanner: grype
+
   - id: CGA-xqv8-76xx-gxwp
     aliases:
       - CVE-2024-6345
