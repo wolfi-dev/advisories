@@ -841,3 +841,21 @@ advisories:
             componentType: go-module
             componentLocation: /srv/gitlab-shell/bin/gitlab-sshd
             scanner: grype
+
+  - id: CGA-wgr5-pc6x-r7m4
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-03-05T20:40:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-cng-17.5
+            componentID: 4d4a06e5e612775d
+            componentName: stdlib
+            componentVersion: go1.23.4
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-logger
+            scanner: grype
