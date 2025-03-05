@@ -4,6 +4,24 @@ package:
   name: grafana-11.2
 
 advisories:
+  - id: CGA-2h39-c6gx-6343
+    aliases:
+      - CVE-2024-45341
+      - GHSA-3f6r-qh9c-x6mm
+    events:
+      - timestamp: 2025-03-05T18:40:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-11.2
+            componentID: 59131d4bdabc388c
+            componentName: stdlib
+            componentVersion: go1.22.8
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+
   - id: CGA-5wvr-722m-vvwg
     aliases:
       - CVE-2024-34158
