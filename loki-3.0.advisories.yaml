@@ -38,6 +38,7 @@ advisories:
 
   - id: CGA-p8qw-wf3h-jccx
     aliases:
+      - CVE-2024-45338
       - GHSA-w32m-9786-jp63
     events:
       - timestamp: 2025-01-04T18:38:14Z
@@ -45,8 +46,27 @@ advisories:
         data:
           note: This package is no longer supported upstream and has reached its end of life on '2024-07-02'.
 
+  - id: CGA-p9jc-h952-jcv6
+    aliases:
+      - CVE-2019-3826
+      - GHSA-3m87-5598-2v4f
+    events:
+      - timestamp: 2025-03-05T17:23:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: loki-3.0
+            componentID: 0e18850166b620c1
+            componentName: github.com/prometheus/prometheus
+            componentVersion: v0.51.0
+            componentType: go-module
+            componentLocation: /usr/bin/loki
+            scanner: grype
+
   - id: CGA-pv9r-pwg2-xm8g
     aliases:
+      - CVE-2024-45337
       - GHSA-v778-237x-gjrc
     events:
       - timestamp: 2025-01-04T18:38:14Z
