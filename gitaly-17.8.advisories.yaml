@@ -4,6 +4,23 @@ package:
   name: gitaly-17.8
 
 advisories:
+  - id: CGA-4272-97c3-c9r5
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-05T16:22:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitaly-17.8
+            componentID: 0c797b3fa0fe6f03
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitaly-backup
+            scanner: grype
+
   - id: CGA-cjqm-2g79-wmwg
     aliases:
       - CVE-2025-21613
