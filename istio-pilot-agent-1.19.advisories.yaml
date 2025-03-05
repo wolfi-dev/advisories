@@ -4,6 +4,23 @@ package:
   name: istio-pilot-agent-1.19
 
 advisories:
+  - id: CGA-23ch-m4jq-49xm
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-05T23:11:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-agent-1.19
+            componentID: 031d0aa4472a6469
+            componentName: golang.org/x/crypto
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-agent
+            scanner: grype
+
   - id: CGA-5ch7-3ghx-h33q
     aliases:
       - CVE-2023-45284
