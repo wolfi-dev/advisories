@@ -170,3 +170,21 @@ advisories:
         data:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability was matched to the module "istio.io/istio" at the following location(s): /usr/bin/pilot-discovery. In all cases, the installed version of the module (git commit ed90e14d3473bc3fe54f98298eb16664002d14d1) corresponds to a version tag (1.21.2) that is later than the fixed version (1.9.8).'
+
+  - id: CGA-xp6x-p5m5-rvm8
+    aliases:
+      - CVE-2019-3826
+      - GHSA-3m87-5598-2v4f
+    events:
+      - timestamp: 2025-03-05T22:35:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-discovery-1.22
+            componentID: 928708c2bdecc0a9
+            componentName: github.com/prometheus/prometheus
+            componentVersion: v0.51.1
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-discovery
+            scanner: grype
