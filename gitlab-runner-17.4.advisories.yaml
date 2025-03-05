@@ -255,3 +255,21 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+
+  - id: CGA-wqxr-5536-5hw2
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-05T15:15:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-17.4
+            componentID: 6584dc397b440ba9
+            componentName: golang.org/x/crypto
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-runner-helper
+            scanner: grype
