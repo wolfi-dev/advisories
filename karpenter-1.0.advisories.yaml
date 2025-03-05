@@ -25,3 +25,38 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.0.8-r1
+
+  - id: CGA-fpc3-p26p-6f6p
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-03-05T18:12:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: karpenter-1.0
+            componentID: 73d4885027c56f84
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/controller
+            scanner: grype
+
+  - id: CGA-m36v-gmhg-99gx
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-05T18:12:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: karpenter-1.0
+            componentID: dd0951283a668243
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.18.0
+            componentType: go-module
+            componentLocation: /usr/bin/controller
+            scanner: grype
