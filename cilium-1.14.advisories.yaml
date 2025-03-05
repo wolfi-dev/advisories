@@ -4,22 +4,40 @@ package:
   name: cilium-1.14
 
 advisories:
-  - id: CGA-9766-6jqx-pppv
+  - id: CGA-35q9-85v6-2cf3
     aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
+      - CVE-2024-37307
+      - GHSA-wh78-7948-358j
     events:
-      - timestamp: 2024-04-08T07:26:54Z
+      - timestamp: 2025-03-05T17:27:52Z
         type: detection
         data:
           type: scan/v1
           data:
-            subpackageName: cilium-1.14-hubble-relay
-            componentID: 78cbc5be036eec84
+            subpackageName: cilium-1.14
+            componentID: 178c0bed83112da8
+            componentName: cilium-1.14
+            componentVersion: 1.14.7-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
+  - id: CGA-3rmx-xp3f-v3x4
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2025-03-05T17:28:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.14
+            componentID: 5671a2852f7c87a6
             componentName: stdlib
             componentVersion: go1.22.1
             componentType: go-module
-            componentLocation: /usr/bin/hubble-relay
+            componentLocation: /opt/cni/bin/cilium-cni
             scanner: grype
 
   - id: CGA-4vgr-mmm6-6x25
@@ -40,42 +58,66 @@ advisories:
             componentLocation: /usr/bin/cilium-operator-generic
             scanner: grype
 
-  - id: CGA-p2vx-q57p-pjpr
+  - id: CGA-5v25-7w3c-9h3x
     aliases:
-      - CVE-2024-25630
-      - GHSA-7496-fgv9-xw82
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
     events:
-      - timestamp: 2024-04-13T07:08:14Z
-        type: fixed
+      - timestamp: 2025-03-05T17:28:46Z
+        type: detection
         data:
-          fixed-version: 1.14.7-r0
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.14
+            componentID: 5671a2852f7c87a6
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /opt/cni/bin/cilium-cni
+            scanner: grype
 
-  - id: CGA-xhc3-f6fr-cjx4
+  - id: CGA-6j67-pc3x-24vw
     aliases:
-      - CVE-2024-25631
-      - GHSA-x989-52fc-4vr4
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
     events:
-      - timestamp: 2024-04-13T07:08:12Z
-        type: fixed
+      - timestamp: 2025-03-05T17:29:05Z
+        type: detection
         data:
-          fixed-version: 1.14.7-r0
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.14
+            componentID: 5671a2852f7c87a6
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /opt/cni/bin/cilium-cni
+            scanner: grype
 
-  - id: CGA-w43f-q5g2-8v9j
+  - id: CGA-8g5f-h5fp-cvg3
     aliases:
-      - CVE-2024-28180
-      - GHSA-c5q2-7r4c-mv6g
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
     events:
-      - timestamp: 2024-03-08T07:14:57Z
-        type: fixed
+      - timestamp: 2025-03-05T17:27:58Z
+        type: detection
         data:
-          fixed-version: 1.14.7-r0
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.14
+            componentID: 1f8c502ce191bb3f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/cilium
+            scanner: grype
 
-  - id: CGA-r4g9-mxvx-cpgj
+  - id: CGA-8g9q-vv6r-333f
     aliases:
-      - CVE-2024-28248
-      - GHSA-68mj-9pjq-mc85
+      - CVE-2024-28860
+      - GHSA-pwqm-x5x6-5586
     events:
-      - timestamp: 2024-03-20T10:04:09Z
+      - timestamp: 2024-04-16T07:22:54Z
         type: detection
         data:
           type: scan/v1
@@ -86,6 +128,77 @@ advisories:
             componentVersion: 1.14.7-r0
             componentType: apk
             componentLocation: /.PKGINFO
+            scanner: grype
+
+  - id: CGA-9429-w2c7-g68x
+    aliases:
+      - CVE-2025-23047
+      - GHSA-h78m-j95m-5356
+    events:
+      - timestamp: 2025-03-05T17:28:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.14
+            componentID: 178c0bed83112da8
+            componentName: cilium-1.14
+            componentVersion: 1.14.7-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
+  - id: CGA-95fp-9cw4-h5xh
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-05T17:28:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.14
+            componentID: 1f8c502ce191bb3f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/cilium
+            scanner: grype
+
+  - id: CGA-9766-6jqx-pppv
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-08T07:26:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.14-hubble-relay
+            componentID: 78cbc5be036eec84
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/hubble-relay
+            scanner: grype
+
+  - id: CGA-c8wg-pwpm-6m99
+    aliases:
+      - CVE-2024-45341
+      - GHSA-3f6r-qh9c-x6mm
+    events:
+      - timestamp: 2025-03-05T17:29:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.14
+            componentID: 5671a2852f7c87a6
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /opt/cni/bin/cilium-cni
             scanner: grype
 
   - id: CGA-g8vf-hf8m-gfvm
@@ -106,12 +219,201 @@ advisories:
             componentLocation: /.PKGINFO
             scanner: grype
 
-  - id: CGA-xvq7-f84j-c43c
+  - id: CGA-g9fg-j8m6-8jr2
     aliases:
-      - CVE-2024-28250
-      - GHSA-v6q2-4qr3-5cw6
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
     events:
-      - timestamp: 2024-03-20T10:04:10Z
+      - timestamp: 2025-03-05T17:29:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.14
+            componentID: 5671a2852f7c87a6
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /opt/cni/bin/cilium-cni
+            scanner: grype
+
+  - id: CGA-hqfp-8cm3-cfc4
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2025-03-05T17:29:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.14
+            componentID: 5671a2852f7c87a6
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /opt/cni/bin/cilium-cni
+            scanner: grype
+
+  - id: CGA-mpj4-36wm-7mvx
+    aliases:
+      - CVE-2025-27144
+      - GHSA-c6gw-w398-hv78
+    events:
+      - timestamp: 2025-03-05T17:28:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.14
+            componentID: ec45674106710763
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/cilium-operator-generic
+            scanner: grype
+
+  - id: CGA-mrf8-q2gg-73rr
+    aliases:
+      - CVE-2024-47825
+      - GHSA-3wwx-63fv-pfq6
+    events:
+      - timestamp: 2025-03-05T17:28:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.14
+            componentID: 178c0bed83112da8
+            componentName: cilium-1.14
+            componentVersion: 1.14.7-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
+  - id: CGA-p2vx-q57p-pjpr
+    aliases:
+      - CVE-2024-25630
+      - GHSA-7496-fgv9-xw82
+    events:
+      - timestamp: 2024-04-13T07:08:14Z
+        type: fixed
+        data:
+          fixed-version: 1.14.7-r0
+
+  - id: CGA-q39g-657v-5hcf
+    aliases:
+      - CVE-2024-24791
+      - GHSA-hw49-2p59-3mhj
+    events:
+      - timestamp: 2025-03-05T17:29:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.14
+            componentID: 5671a2852f7c87a6
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /opt/cni/bin/cilium-cni
+            scanner: grype
+
+  - id: CGA-q58g-cmc7-hgmh
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-03-05T17:29:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.14
+            componentID: 5671a2852f7c87a6
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /opt/cni/bin/cilium-cni
+            scanner: grype
+
+  - id: CGA-q7hx-j4vv-qj25
+    aliases:
+      - CVE-2025-23028
+      - GHSA-9m5p-c77c-f9j7
+    events:
+      - timestamp: 2025-03-05T17:28:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.14
+            componentID: 178c0bed83112da8
+            componentName: cilium-1.14
+            componentVersion: 1.14.7-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
+  - id: CGA-qmmh-r8v4-fg44
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-05T17:28:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.14
+            componentID: 52ac9f7561e62468
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.11.0
+            componentType: go-module
+            componentLocation: /opt/cni/bin/cilium-cni
+            scanner: grype
+
+  - id: CGA-qrmh-4fmj-7rhg
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-03-05T17:28:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.14
+            componentID: 08dc5fcde09060e1
+            componentName: golang.org/x/net
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /opt/cni/bin/cilium-cni
+            scanner: grype
+
+  - id: CGA-r44x-23mc-3j5w
+    aliases:
+      - CVE-2024-42488
+      - GHSA-q7w8-72mr-vpgw
+    events:
+      - timestamp: 2025-03-05T17:27:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.14
+            componentID: 178c0bed83112da8
+            componentName: cilium-1.14
+            componentVersion: 1.14.7-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
+  - id: CGA-r4g9-mxvx-cpgj
+    aliases:
+      - CVE-2024-28248
+      - GHSA-68mj-9pjq-mc85
+    events:
+      - timestamp: 2024-03-20T10:04:09Z
         type: detection
         data:
           type: scan/v1
@@ -124,12 +426,116 @@ advisories:
             componentLocation: /.PKGINFO
             scanner: grype
 
-  - id: CGA-8g9q-vv6r-333f
+  - id: CGA-v3f6-48w9-q7fh
     aliases:
-      - CVE-2024-28860
-      - GHSA-pwqm-x5x6-5586
+      - CVE-2024-45336
+      - GHSA-7wrw-r4p8-38rx
     events:
-      - timestamp: 2024-04-16T07:22:54Z
+      - timestamp: 2025-03-05T17:29:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.14
+            componentID: 5671a2852f7c87a6
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /opt/cni/bin/cilium-cni
+            scanner: grype
+
+  - id: CGA-v63g-jw9f-7v26
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2025-03-05T17:29:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.14
+            componentID: 5671a2852f7c87a6
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /opt/cni/bin/cilium-cni
+            scanner: grype
+
+  - id: CGA-vgfv-65pq-gqp7
+    aliases:
+      - CVE-2023-46565
+      - GHSA-6rqv-5cg7-m4x3
+    events:
+      - timestamp: 2025-03-05T17:28:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.14
+            componentID: 9c77a523adac6bcc
+            componentName: github.com/osrg/gobgp/v3
+            componentVersion: v3.15.1-0.20230612211909-79d301f75b42
+            componentType: go-module
+            componentLocation: /usr/bin/cilium
+            scanner: grype
+
+  - id: CGA-w43f-q5g2-8v9j
+    aliases:
+      - CVE-2024-28180
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:14:57Z
+        type: fixed
+        data:
+          fixed-version: 1.14.7-r0
+      - timestamp: 2025-03-05T17:28:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.14
+            componentID: ec45674106710763
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/cilium-operator-generic
+            scanner: grype
+
+  - id: CGA-xhc3-f6fr-cjx4
+    aliases:
+      - CVE-2024-25631
+      - GHSA-x989-52fc-4vr4
+    events:
+      - timestamp: 2024-04-13T07:08:12Z
+        type: fixed
+        data:
+          fixed-version: 1.14.7-r0
+
+  - id: CGA-xqfr-3mg4-5fq3
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2025-03-05T17:28:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.14
+            componentID: 5671a2852f7c87a6
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /opt/cni/bin/cilium-cni
+            scanner: grype
+
+  - id: CGA-xvq7-f84j-c43c
+    aliases:
+      - CVE-2024-28250
+      - GHSA-v6q2-4qr3-5cw6
+    events:
+      - timestamp: 2024-03-20T10:04:10Z
         type: detection
         data:
           type: scan/v1
