@@ -4,6 +4,24 @@ package:
   name: gitlab-runner-17.4
 
 advisories:
+  - id: CGA-6p2c-fqrw-jp3m
+    aliases:
+      - CVE-2024-11274
+      - GHSA-fr8h-r296-xggf
+    events:
+      - timestamp: 2025-03-05T15:14:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-17.4
+            componentID: e3b9dce47bc353f4
+            componentName: gitlab-runner-helper-17.4
+            componentVersion: 17.4.0-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-8cpx-cqf6-ghch
     aliases:
       - CVE-2023-5117
