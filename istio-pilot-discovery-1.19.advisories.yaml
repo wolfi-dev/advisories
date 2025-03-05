@@ -225,6 +225,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability is in the container runtime itself, not clients of the container runtime.
 
+  - id: CGA-gr2x-22x8-x4fw
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2025-03-05T20:19:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-discovery-1.19
+            componentID: be5e6d6160ebfe57
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-discovery
+            scanner: grype
+
   - id: CGA-grhh-5rp4-vqq7
     aliases:
       - CVE-2019-3826
