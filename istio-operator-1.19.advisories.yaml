@@ -58,6 +58,24 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
 
+  - id: CGA-56jm-w3qr-cjcg
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2025-03-05T19:35:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.19
+            componentID: 1b4ba96e6ce593e4
+            componentName: golang.org/x/net
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
   - id: CGA-57v2-mmmr-jq8g
     aliases:
       - CVE-2024-21664
@@ -140,6 +158,7 @@ advisories:
 
   - id: CGA-hfjp-rhf9-23h2
     aliases:
+      - CVE-2024-28180
       - GHSA-c5q2-7r4c-mv6g
     events:
       - timestamp: 2024-03-08T07:17:00Z
