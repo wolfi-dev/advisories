@@ -4,35 +4,23 @@ package:
   name: keda-2.11
 
 advisories:
-  - id: CGA-xxjv-wg3q-wqfp
+  - id: CGA-2w53-753h-27pg
     aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
     events:
-      - timestamp: 2023-10-20T22:35:15Z
-        type: fixed
+      - timestamp: 2025-03-05T21:44:12Z
+        type: detection
         data:
-          fixed-version: 2.11.2-r7
-
-  - id: CGA-57hq-4j2w-2955
-    aliases:
-      - CVE-2023-3978
-      - GHSA-2wrh-6pvc-2jm9
-    events:
-      - timestamp: 2023-10-20T22:37:29Z
-        type: fixed
-        data:
-          fixed-version: 2.11.2-r7
-
-  - id: CGA-98pg-rvgm-vq7w
-    aliases:
-      - CVE-2023-44487
-      - GHSA-qppj-fm5r-hxr3
-    events:
-      - timestamp: 2023-10-20T22:34:37Z
-        type: fixed
-        data:
-          fixed-version: 2.11.2-r7
+          type: scan/v1
+          data:
+            subpackageName: keda-2.11
+            componentID: edcda029d247c25a
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/keda-adapter
+            scanner: grype
 
   - id: CGA-3r26-rcj2-h66r
     aliases:
@@ -55,51 +43,40 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
-  - id: CGA-6ffm-xw25-qfv3
+  - id: CGA-4c83-ff9m-26mq
     aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
+      - CVE-2025-27144
+      - GHSA-c6gw-w398-hv78
     events:
-      - timestamp: 2023-11-07T19:30:30Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-r8h4-749w-r28f
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-06T07:09:10Z
+      - timestamp: 2025-03-05T21:42:25Z
         type: detection
         data:
           type: scan/v1
           data:
-            subpackageName: keda-2.11-adapter
-            componentID: 786af578b7b38f2e
-            componentName: stdlib
-            componentVersion: go1.22.1
+            subpackageName: keda-2.11
+            componentID: 6bdf4bf32b0a9b47
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.3
             componentType: go-module
-            componentLocation: /usr/bin/keda-adapter
+            componentLocation: /usr/bin/keda
             scanner: grype
 
-  - id: CGA-jxx7-3494-2w9h
+  - id: CGA-4xwf-pr4r-g8vr
     aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
     events:
-      - timestamp: 2024-03-12T07:06:23Z
+      - timestamp: 2025-03-05T21:42:17Z
         type: detection
         data:
           type: scan/v1
           data:
-            subpackageName: keda-2.11-adapter
-            componentID: 364e95a245985cf2
-            componentName: stdlib
-            componentVersion: go1.21.6
+            subpackageName: keda-2.11
+            componentID: 7e1405a4ab6355b5
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
             componentType: go-module
-            componentLocation: /usr/bin/keda-adapter
+            componentLocation: /usr/bin/keda
             scanner: grype
 
   - id: CGA-57fr-j2j3-57wh
@@ -120,15 +97,90 @@ advisories:
             componentLocation: /usr/bin/keda-adapter
             scanner: grype
 
-  - id: CGA-xxvv-x9hc-cprv
+  - id: CGA-57hq-4j2w-2955
     aliases:
-      - CVE-2023-47108
-      - GHSA-8pgv-569h-w5rw
+      - CVE-2023-3978
+      - GHSA-2wrh-6pvc-2jm9
     events:
-      - timestamp: 2023-11-19T21:46:38Z
+      - timestamp: 2023-10-20T22:37:29Z
         type: fixed
         data:
-          fixed-version: 2.11.2-r8
+          fixed-version: 2.11.2-r7
+
+  - id: CGA-588r-573g-m892
+    aliases:
+      - CVE-2024-28180
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:06:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.11
+            componentID: 298e04a3a221941a
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.0
+            componentType: go-module
+            componentLocation: /usr/bin/keda
+            scanner: grype
+      - timestamp: 2024-03-11T19:11:16Z
+        type: fixed
+        data:
+          fixed-version: 2.11.2-r13
+
+  - id: CGA-59m8-w4hr-q5v7
+    aliases:
+      - GHSA-9763-4f94-gfch
+    events:
+      - timestamp: 2024-01-11T07:18:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.11-adapter
+            componentID: 7327a34abf04650c
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.3.3
+            componentType: go-module
+            componentLocation: /usr/bin/keda-adapter
+            scanner: grype
+      - timestamp: 2024-01-26T07:11:36Z
+        type: fixed
+        data:
+          fixed-version: 2.11.2-r12
+
+  - id: CGA-6ffm-xw25-qfv3
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:30:30Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-6j54-9gxf-4r4g
+    aliases:
+      - GHSA-2c7c-3mj9-8fqh
+    events:
+      - timestamp: 2024-01-11T07:18:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.11-adapter
+            componentID: fbc06e0ffd1948be
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.0
+            componentType: go-module
+            componentLocation: /usr/bin/keda-adapter
+            scanner: grype
+      - timestamp: 2024-01-26T07:11:35Z
+        type: fixed
+        data:
+          fixed-version: 2.11.2-r12
 
   - id: CGA-6m5j-8mhp-wx44
     aliases:
@@ -136,42 +188,6 @@ advisories:
       - GHSA-3q2c-pvp5-3cqp
     events:
       - timestamp: 2024-03-12T07:06:26Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: keda-2.11-adapter
-            componentID: 364e95a245985cf2
-            componentName: stdlib
-            componentVersion: go1.21.6
-            componentType: go-module
-            componentLocation: /usr/bin/keda-adapter
-            scanner: grype
-
-  - id: CGA-9x4p-j8pw-jm34
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-12T07:06:28Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: keda-2.11-adapter
-            componentID: 364e95a245985cf2
-            componentName: stdlib
-            componentVersion: go1.21.6
-            componentType: go-module
-            componentLocation: /usr/bin/keda-adapter
-            scanner: grype
-
-  - id: CGA-r67v-2xf7-vfhm
-    aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
-    events:
-      - timestamp: 2024-03-12T07:06:29Z
         type: detection
         data:
           type: scan/v1
@@ -206,6 +222,103 @@ advisories:
         data:
           fixed-version: 2.11.2-r14
 
+  - id: CGA-73r7-9f89-3f6m
+    aliases:
+      - CVE-2024-45341
+      - GHSA-3f6r-qh9c-x6mm
+    events:
+      - timestamp: 2025-03-05T21:43:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.11
+            componentID: edcda029d247c25a
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/keda-adapter
+            scanner: grype
+
+  - id: CGA-8m6c-pfgm-7chg
+    aliases:
+      - GHSA-7jwh-3vrq-q3m8
+    events:
+      - timestamp: 2024-03-15T07:45:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.11
+            componentID: 2932602cb6260d06
+            componentName: github.com/jackc/pgx/v5
+            componentVersion: v5.4.1
+            componentType: go-module
+            componentLocation: /usr/bin/keda
+            scanner: grype
+
+  - id: CGA-8v2p-pg3r-f627
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-05T21:42:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.11
+            componentID: 604717ab6e9afa28
+            componentName: golang.org/x/crypto
+            componentVersion: v0.19.0
+            componentType: go-module
+            componentLocation: /usr/bin/keda
+            scanner: grype
+
+  - id: CGA-98pg-rvgm-vq7w
+    aliases:
+      - CVE-2023-44487
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2023-10-20T22:34:37Z
+        type: fixed
+        data:
+          fixed-version: 2.11.2-r7
+
+  - id: CGA-9x4p-j8pw-jm34
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T07:06:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.11-adapter
+            componentID: 364e95a245985cf2
+            componentName: stdlib
+            componentVersion: go1.21.6
+            componentType: go-module
+            componentLocation: /usr/bin/keda-adapter
+            scanner: grype
+
+  - id: CGA-c3xx-xj38-5qg2
+    aliases:
+      - GHSA-fqpg-rq76-99pq
+    events:
+      - timestamp: 2025-03-05T21:42:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.11
+            componentID: 3e86fc142caa354c
+            componentName: github.com/jackc/pgx/v5
+            componentVersion: v5.4.1
+            componentType: go-module
+            componentLocation: /usr/bin/keda
+            scanner: grype
+
   - id: CGA-cx33-963r-2wh8
     aliases:
       - CVE-2024-24787
@@ -224,22 +337,22 @@ advisories:
             componentLocation: /usr/bin/keda
             scanner: grype
 
-  - id: CGA-qmrr-ffqx-xmq5
+  - id: CGA-fpcm-j9h8-wc8r
     aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
     events:
-      - timestamp: 2024-05-14T07:16:55Z
+      - timestamp: 2025-03-05T21:43:27Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: keda-2.11
-            componentID: 5d58f037ff05fae1
+            componentID: edcda029d247c25a
             componentName: stdlib
             componentVersion: go1.22.1
             componentType: go-module
-            componentLocation: /usr/bin/keda
+            componentLocation: /usr/bin/keda-adapter
             scanner: grype
 
   - id: CGA-hxpm-mx4q-pfv4
@@ -260,83 +373,291 @@ advisories:
             componentLocation: /usr/bin/keda
             scanner: grype
 
-  - id: CGA-588r-573g-m892
+  - id: CGA-j93x-v9jx-xfw4
     aliases:
-      - CVE-2024-28180
-      - GHSA-c5q2-7r4c-mv6g
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
     events:
-      - timestamp: 2024-03-08T07:06:35Z
+      - timestamp: 2025-03-05T21:43:37Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: keda-2.11
-            componentID: 298e04a3a221941a
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.0
-            componentType: go-module
-            componentLocation: /usr/bin/keda
-            scanner: grype
-      - timestamp: 2024-03-11T19:11:16Z
-        type: fixed
-        data:
-          fixed-version: 2.11.2-r13
-
-  - id: CGA-6j54-9gxf-4r4g
-    aliases:
-      - GHSA-2c7c-3mj9-8fqh
-    events:
-      - timestamp: 2024-01-11T07:18:29Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: keda-2.11-adapter
-            componentID: fbc06e0ffd1948be
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.0
+            componentID: edcda029d247c25a
+            componentName: stdlib
+            componentVersion: go1.22.1
             componentType: go-module
             componentLocation: /usr/bin/keda-adapter
             scanner: grype
-      - timestamp: 2024-01-26T07:11:35Z
-        type: fixed
-        data:
-          fixed-version: 2.11.2-r12
 
-  - id: CGA-8m6c-pfgm-7chg
+  - id: CGA-jvp9-fxm2-j8m5
     aliases:
-      - GHSA-7jwh-3vrq-q3m8
+      - CVE-2024-45336
+      - GHSA-7wrw-r4p8-38rx
     events:
-      - timestamp: 2024-03-15T07:45:52Z
+      - timestamp: 2025-03-05T21:43:47Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: keda-2.11
-            componentID: 2932602cb6260d06
-            componentName: github.com/jackc/pgx/v5
-            componentVersion: v5.4.1
+            componentID: edcda029d247c25a
+            componentName: stdlib
+            componentVersion: go1.22.1
             componentType: go-module
-            componentLocation: /usr/bin/keda
+            componentLocation: /usr/bin/keda-adapter
             scanner: grype
 
-  - id: CGA-59m8-w4hr-q5v7
+  - id: CGA-jxx7-3494-2w9h
     aliases:
-      - GHSA-9763-4f94-gfch
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
     events:
-      - timestamp: 2024-01-11T07:18:30Z
+      - timestamp: 2024-03-12T07:06:23Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: keda-2.11-adapter
-            componentID: 7327a34abf04650c
-            componentName: github.com/cloudflare/circl
-            componentVersion: v1.3.3
+            componentID: 364e95a245985cf2
+            componentName: stdlib
+            componentVersion: go1.21.6
             componentType: go-module
             componentLocation: /usr/bin/keda-adapter
             scanner: grype
-      - timestamp: 2024-01-26T07:11:36Z
+
+  - id: CGA-m66j-5rcr-vjmw
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2025-03-05T21:42:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.11
+            componentID: edcda029d247c25a
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/keda-adapter
+            scanner: grype
+
+  - id: CGA-mg9w-8p5c-92m8
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-05T21:42:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.11
+            componentID: 30bad0f550c6a539
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.11.0
+            componentType: go-module
+            componentLocation: /usr/bin/keda
+            scanner: grype
+
+  - id: CGA-p45m-wwjv-gfvp
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-03-05T21:41:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.11
+            componentID: 4c142b08898f16d0
+            componentName: golang.org/x/net
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/keda
+            scanner: grype
+
+  - id: CGA-pq29-j24g-vf29
+    aliases:
+      - CVE-2024-24791
+      - GHSA-hw49-2p59-3mhj
+    events:
+      - timestamp: 2025-03-05T21:43:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.11
+            componentID: edcda029d247c25a
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/keda-adapter
+            scanner: grype
+
+  - id: CGA-qmrr-ffqx-xmq5
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2024-05-14T07:16:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.11
+            componentID: 5d58f037ff05fae1
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/keda
+            scanner: grype
+
+  - id: CGA-r67v-2xf7-vfhm
+    aliases:
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T07:06:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.11-adapter
+            componentID: 364e95a245985cf2
+            componentName: stdlib
+            componentVersion: go1.21.6
+            componentType: go-module
+            componentLocation: /usr/bin/keda-adapter
+            scanner: grype
+
+  - id: CGA-r8h4-749w-r28f
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-06T07:09:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.11-adapter
+            componentID: 786af578b7b38f2e
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/keda-adapter
+            scanner: grype
+
+  - id: CGA-rmgx-g8cf-8x98
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2025-03-05T21:43:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.11
+            componentID: edcda029d247c25a
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/keda-adapter
+            scanner: grype
+
+  - id: CGA-vhhj-g4gv-c5h9
+    aliases:
+      - CVE-2024-35255
+      - GHSA-m5vv-6r4h-3vj9
+    events:
+      - timestamp: 2025-03-05T21:42:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.11
+            componentID: 94dcd37efb8d8168
+            componentName: github.com/Azure/azure-sdk-for-go/sdk/azidentity
+            componentVersion: v1.3.0
+            componentType: go-module
+            componentLocation: /usr/bin/keda
+            scanner: grype
+
+  - id: CGA-w7r4-pf25-6c2w
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2025-03-05T21:42:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.11
+            componentID: edcda029d247c25a
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/keda-adapter
+            scanner: grype
+
+  - id: CGA-w7w5-355f-vh4r
+    aliases:
+      - CVE-2024-6104
+      - GHSA-v6v8-xj6m-xwqh
+    events:
+      - timestamp: 2025-03-05T21:41:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.11
+            componentID: 86e52d7a25274e44
+            componentName: github.com/hashicorp/go-retryablehttp
+            componentVersion: v0.7.2
+            componentType: go-module
+            componentLocation: /usr/bin/keda
+            scanner: grype
+
+  - id: CGA-wm4r-59px-hmhm
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-05T21:41:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.11
+            componentID: 604717ab6e9afa28
+            componentName: golang.org/x/crypto
+            componentVersion: v0.19.0
+            componentType: go-module
+            componentLocation: /usr/bin/keda
+            scanner: grype
+
+  - id: CGA-xxjv-wg3q-wqfp
+    aliases:
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2023-10-20T22:35:15Z
         type: fixed
         data:
-          fixed-version: 2.11.2-r12
+          fixed-version: 2.11.2-r7
+
+  - id: CGA-xxvv-x9hc-cprv
+    aliases:
+      - CVE-2023-47108
+      - GHSA-8pgv-569h-w5rw
+    events:
+      - timestamp: 2023-11-19T21:46:38Z
+        type: fixed
+        data:
+          fixed-version: 2.11.2-r8
