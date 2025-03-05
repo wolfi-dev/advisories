@@ -56,6 +56,24 @@ advisories:
         data:
           fixed-version: 2.10.2-r4
 
+  - id: CGA-pf2r-57fv-7jpg
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-03-05T19:30:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-2.10
+            componentID: 0477db95cb37e73b
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-core
+            scanner: grype
+
   - id: CGA-pxfh-mmfx-99gh
     aliases:
       - CVE-2024-24788
