@@ -146,6 +146,24 @@ advisories:
         data:
           note: 'This vulnerability relates to a GitLab gem dependency. GitLab advises that maintainers should NOT upgrade dependency versions manually, as their automation would have already applied this in cases of simple version increments. If a dependency version has not yet been upgraded, there is usually a good reason. Additionally, past attempts to upgrade GitLab dependencies ahead of the upstream release have resulted in build issues. Deferring to upstream (GitLab) to address this CVE in a subsequent update. See: https://docs.gitlab.com/ee/development/dependencies.html.'
 
+  - id: CGA-w627-pgfq-535g
+    aliases:
+      - CVE-2024-11931
+      - GHSA-rppq-5vq8-crrp
+    events:
+      - timestamp: 2025-03-05T22:23:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-cng-17.6
+            componentID: f0ca6ff736a31077
+            componentName: gitlab-container-registry-scripts-17.6
+            componentVersion: 17.6.0-r3
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-wwj6-h6q4-r3f7
     aliases:
       - CVE-2024-11669
