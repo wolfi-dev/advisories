@@ -255,3 +255,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 4.4.4-r4
+
+  - id: CGA-x5c6-5v66-xfj4
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-03-05T22:37:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-attacher-4.4
+            componentID: a80c14fe0d3644af
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/csi-attacher
+            scanner: grype
