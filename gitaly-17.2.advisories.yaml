@@ -4,6 +4,24 @@ package:
   name: gitaly-17.2
 
 advisories:
+  - id: CGA-2786-w9c5-9845
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2025-03-05T13:12:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitaly-17.2
+            componentID: 6586a5768a38bf2c
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitaly
+            scanner: grype
+
   - id: CGA-2xf4-2967-58wv
     aliases:
       - CVE-2019-3826
