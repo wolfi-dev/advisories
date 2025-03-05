@@ -15,6 +15,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-78vg-x3qx-6g27
+    aliases:
+      - CVE-2024-28122
+      - GHSA-hj3v-m684-v259
+    events:
+      - timestamp: 2025-03-05T23:10:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-agent-1.19
+            componentID: 3f5fdd7acafac470
+            componentName: github.com/lestrrat-go/jwx
+            componentVersion: v1.2.28
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-agent
+            scanner: grype
+
   - id: CGA-847w-p38c-mmxh
     aliases:
       - CVE-2024-28180
