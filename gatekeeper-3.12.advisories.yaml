@@ -128,6 +128,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-g3cj-whfq-g57m
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-05T17:25:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.12
+            componentID: 8d4d72ce07b193f2
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.10.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-h77j-hj9f-qhvg
     aliases:
       - CVE-2024-24783
