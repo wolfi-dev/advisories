@@ -4,6 +4,24 @@ package:
   name: kyverno
 
 advisories:
+  - id: CGA-36g4-c8mv-jq9q
+    aliases:
+      - CVE-2024-45339
+      - GHSA-6wxm-mpqj-6jpf
+    events:
+      - timestamp: 2025-03-05T22:40:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno
+            componentID: 5e26e3d1dea78703
+            componentName: github.com/golang/glog
+            componentVersion: v1.2.0
+            componentType: go-module
+            componentLocation: /usr/bin/kyverno
+            scanner: grype
+
   - id: CGA-383h-9f4p-x3xf
     aliases:
       - CVE-2024-24791
