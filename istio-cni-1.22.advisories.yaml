@@ -4,6 +4,24 @@ package:
   name: istio-cni-1.22
 
 advisories:
+  - id: CGA-43ff-g8mq-29px
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2025-03-05T20:06:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.22
+            componentID: 8d0493e39756dfb2
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/istio-cni
+            scanner: grype
+
   - id: CGA-55rm-hr69-g5jx
     aliases:
       - CVE-2021-39155
