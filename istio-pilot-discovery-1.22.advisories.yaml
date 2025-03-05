@@ -138,6 +138,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability was matched to the module "istio.io/istio" at the following location(s): /usr/bin/pilot-discovery. In all cases, the installed version of the module (git commit ed90e14d3473bc3fe54f98298eb16664002d14d1) corresponds to a version tag (1.21.2) that is later than the fixed version (1.1.13).'
 
+  - id: CGA-9m33-rfcv-v889
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-03-05T22:36:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-discovery-1.22
+            componentID: 15af0bc211a8487c
+            componentName: stdlib
+            componentVersion: go1.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-discovery
+            scanner: grype
+
   - id: CGA-9wc7-f5rx-2j4v
     aliases:
       - CVE-2024-24790
