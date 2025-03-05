@@ -314,6 +314,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This vulnerability was reported to be fixed in 1.8.0, which was the first version shipped by Wolfi. https://www.openwall.com/lists/oss-security/2023/10/25/5
 
+  - id: CGA-9rvp-2m7p-64g6
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-03-05T21:11:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ingress-nginx-controller
+            componentID: 8bbe4067655b3255
+            componentName: stdlib
+            componentVersion: go1.22.5
+            componentType: go-module
+            componentLocation: /usr/bin/nginx-dbg
+            scanner: grype
+
   - id: CGA-ccx3-v5fh-7h28
     aliases:
       - CVE-2024-35200
