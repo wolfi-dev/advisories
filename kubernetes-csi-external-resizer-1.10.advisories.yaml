@@ -4,6 +4,23 @@ package:
   name: kubernetes-csi-external-resizer-1.10
 
 advisories:
+  - id: CGA-3fxq-xh2h-3m2j
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-05T21:37:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-resizer-1.10
+            componentID: ae027090f1a1a419
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.13.0
+            componentType: go-module
+            componentLocation: /usr/bin/csi-resizer
+            scanner: grype
+
   - id: CGA-4883-hj55-3cw8
     aliases:
       - CVE-2024-24787
