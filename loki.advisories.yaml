@@ -165,6 +165,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-f4qp-rj3q-9gmx
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-05T23:35:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: loki
+            componentID: 3e47ef380a628ba1
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/loki
+            scanner: grype
+
   - id: CGA-gh97-6fqx-r4rr
     aliases:
       - CVE-2024-24783
