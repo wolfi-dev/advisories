@@ -26,6 +26,23 @@ advisories:
         data:
           fixed-version: 8.0.1-r3
 
+  - id: CGA-744g-wjv8-f662
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-05T23:29:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-snapshotter-8.0
+            componentID: 0ee74638805d7895
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.20.0
+            componentType: go-module
+            componentLocation: /usr/bin/snapshot-controller
+            scanner: grype
+
   - id: CGA-cvm9-f6cw-6p7g
     aliases:
       - CVE-2024-45338
