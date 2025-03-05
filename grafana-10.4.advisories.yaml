@@ -4,6 +4,24 @@ package:
   name: grafana-10.4
 
 advisories:
+  - id: CGA-4jqg-6xp6-5r8r
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-05T17:35:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-10.4
+            componentID: 2e928bb58a7b131b
+            componentName: golang.org/x/crypto
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+
   - id: CGA-5rff-j25q-2647
     aliases:
       - CVE-2024-10452
