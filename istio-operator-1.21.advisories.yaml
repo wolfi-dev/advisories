@@ -68,6 +68,23 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability was matched to the module "istio.io/istio" at the following location(s): /usr/bin/operator. In all cases, the installed version of the module (git commit ed90e14d3473bc3fe54f98298eb16664002d14d1) corresponds to a version tag (1.21.2) that is later than the fixed version (1.11.7).'
 
+  - id: CGA-54cc-w8fr-f7h6
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-05T19:39:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.21
+            componentID: 45b0f087dc143716
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.16.0
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
   - id: CGA-c3vw-phcc-7vhv
     aliases:
       - CVE-2019-25210
