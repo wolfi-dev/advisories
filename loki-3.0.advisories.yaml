@@ -4,6 +4,24 @@ package:
   name: loki-3.0
 
 advisories:
+  - id: CGA-2548-hjp9-82mh
+    aliases:
+      - CVE-2024-36620
+      - GHSA-q59j-vv4j-v33c
+    events:
+      - timestamp: 2025-03-05T17:23:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: loki-3.0
+            componentID: a1dab9ea115ab3cf
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.5+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/promtail
+            scanner: grype
+
   - id: CGA-39h7-pjpf-5q9x
     aliases:
       - CVE-2025-22869
