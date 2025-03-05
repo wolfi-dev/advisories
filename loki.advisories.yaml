@@ -406,3 +406,21 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/loki
             scanner: grype
+
+  - id: CGA-xx6r-97rr-qvjr
+    aliases:
+      - CVE-2024-24791
+      - GHSA-hw49-2p59-3mhj
+    events:
+      - timestamp: 2025-03-05T23:36:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: loki
+            componentID: 2d23ed70f5ee2532
+            componentName: stdlib
+            componentVersion: go1.22.3
+            componentType: go-module
+            componentLocation: /usr/bin/promtail
+            scanner: grype
