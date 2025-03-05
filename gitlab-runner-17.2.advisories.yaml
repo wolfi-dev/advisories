@@ -4,6 +4,24 @@ package:
   name: gitlab-runner-17.2
 
 advisories:
+  - id: CGA-327x-pww4-whxv
+    aliases:
+      - CVE-2024-36621
+      - GHSA-2mj3-vfvx-fc43
+    events:
+      - timestamp: 2025-03-05T16:25:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-17.2
+            componentID: 612e39b706fd5160
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.9+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/docker-machine
+            scanner: grype
+
   - id: CGA-4g3h-hcff-f69c
     aliases:
       - CVE-2024-41110
