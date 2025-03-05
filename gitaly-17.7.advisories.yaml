@@ -48,6 +48,40 @@ advisories:
         data:
           fixed-version: 17.7.0-r2
 
+  - id: CGA-5whp-xp38-r7p8
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-05T15:37:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitaly-17.7
+            componentID: a9ec2a58abb15107
+            componentName: golang.org/x/crypto
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitaly
+            scanner: grype
+
+  - id: CGA-7mhv-35w4-m5v5
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-05T15:37:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitaly-17.7
+            componentID: eeb764feae620d18
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitaly
+            scanner: grype
+
   - id: CGA-7q4h-pcmq-797h
     aliases:
       - CVE-2024-45337
@@ -91,3 +125,57 @@ advisories:
         type: fixed
         data:
           fixed-version: 17.7.0-r2
+
+  - id: CGA-j6pm-q9jx-27m5
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-03-05T15:37:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitaly-17.7
+            componentID: 44473ef57322d5ca
+            componentName: stdlib
+            componentVersion: go1.23.5
+            componentType: go-module
+            componentLocation: /usr/bin/gitaly
+            scanner: grype
+
+  - id: CGA-p8xw-478c-xhf3
+    aliases:
+      - CVE-2024-45339
+      - GHSA-6wxm-mpqj-6jpf
+    events:
+      - timestamp: 2025-03-05T15:37:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitaly-17.7
+            componentID: aed6b0d0f30a0307
+            componentName: github.com/golang/glog
+            componentVersion: v1.2.2
+            componentType: go-module
+            componentLocation: /usr/bin/gitaly
+            scanner: grype
+
+  - id: CGA-w4rp-pvh6-56rp
+    aliases:
+      - CVE-2019-3826
+      - GHSA-3m87-5598-2v4f
+    events:
+      - timestamp: 2025-03-05T15:37:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitaly-17.7
+            componentID: b1d362229d81ec6c
+            componentName: github.com/prometheus/prometheus
+            componentVersion: v0.54.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitaly
+            scanner: grype
