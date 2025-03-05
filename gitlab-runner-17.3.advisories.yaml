@@ -4,6 +4,24 @@ package:
   name: gitlab-runner-17.3
 
 advisories:
+  - id: CGA-26gg-p2gp-48w8
+    aliases:
+      - CVE-2023-5117
+      - GHSA-pwvw-rggj-f74r
+    events:
+      - timestamp: 2025-03-05T16:01:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-17.3
+            componentID: 55507b9a8d73096c
+            componentName: gitlab-docker-machine-17.3
+            componentVersion: 17.3.1-r1
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-44p9-wvcg-3x6h
     aliases:
       - CVE-2024-34155
