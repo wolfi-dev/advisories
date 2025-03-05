@@ -49,3 +49,21 @@ advisories:
         data:
           type: vulnerable-code-version-not-used
           note: 'The fix for this vulnerability has been backported to versions 2.0+. Versions 2.8+ are not affected since they were released after this vulnerability was fixed. Reference: https://github.com/haproxy/haproxy/issues/1972'
+
+  - id: CGA-x86r-7h24-9xm8
+    aliases:
+      - CVE-2024-45506
+      - GHSA-gmvf-rv8w-2hrh
+    events:
+      - timestamp: 2025-03-05T21:19:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: haproxy-2.9
+            componentID: f9c9658cad6f34f8
+            componentName: haproxy-2.9
+            componentVersion: 2.9.9-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
