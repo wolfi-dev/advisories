@@ -226,6 +226,24 @@ advisories:
         data:
           note: 'This vulnerability relates to the GitLab dependency: [gem] puma @ 5.6.8  GitLab advises that maintainers should NOT upgrade dependency versions manually, as their automation would have already applied this in cases of simple version increments. If a dependency version has not yet been upgraded, there is usually a good reason. Additionally, past attempts to upgrade GitLab dependencies ahead of the upstream release have resulted in build issues.  deferring to upstream (GitLab) to address this CVE in a subsequent update. See: https://docs.gitlab.com/ee/development/dependencies.html.'
 
+  - id: CGA-wqvv-p43f-cwhw
+    aliases:
+      - CVE-2025-25184
+      - GHSA-7g2v-jj9q-g3rg
+    events:
+      - timestamp: 2025-03-05T19:26:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-cng-17.7
+            componentID: aa3cfd46952976f8
+            componentName: rack
+            componentVersion: 2.2.10
+            componentType: gem
+            componentLocation: /usr/lib/ruby/gems/3.2.0/specifications/rack-2.2.10.gemspec
+            scanner: grype
+
   - id: CGA-x2q9-5h8p-hgwm
     aliases:
       - CVE-2025-22866
