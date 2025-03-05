@@ -27,35 +27,30 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability was matched to the module "istio.io/istio" at the following location(s): /usr/bin/pilot-discovery. In all cases, the installed version of the module (git commit ed90e14d3473bc3fe54f98298eb16664002d14d1) corresponds to a version tag (1.21.2) that is later than the fixed version (1.1.13).'
 
+  - id: CGA-4qg2-vvc3-wmqf
+    aliases:
+      - CVE-2019-3826
+      - GHSA-3m87-5598-2v4f
+    events:
+      - timestamp: 2025-03-05T21:21:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-discovery-1.21
+            componentID: 1a21fa582f385b2d
+            componentName: github.com/prometheus/prometheus
+            componentVersion: v0.48.1
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-discovery
+            scanner: grype
+
   - id: CGA-54fh-6xgf-j8m3
     aliases:
       - CVE-2021-39155
       - GHSA-7774-7vr3-cc8j
     events:
       - timestamp: 2024-04-26T10:28:03Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: istio-pilot-discovery-1.21
-            componentID: 2ea3abad673a0a65
-            componentName: istio.io/istio
-            componentVersion: v0.0.0-20240418224740-ed90e14d3473
-            componentType: go-module
-            componentLocation: /usr/bin/pilot-discovery
-            scanner: grype
-      - timestamp: 2024-05-06T00:50:28Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-version-not-used
-          note: 'This vulnerability was matched to the module "istio.io/istio" at the following location(s): /usr/bin/pilot-discovery. In all cases, the installed version of the module (git commit ed90e14d3473bc3fe54f98298eb16664002d14d1) corresponds to a version tag (1.21.2) that is later than the fixed version (1.9.8).'
-
-  - id: CGA-x25g-gp3c-5phc
-    aliases:
-      - CVE-2021-39156
-      - GHSA-hqxw-mm44-gc4r
-    events:
-      - timestamp: 2024-04-26T10:28:06Z
         type: detection
         data:
           type: scan/v1
@@ -138,3 +133,26 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.21.0-r2
+
+  - id: CGA-x25g-gp3c-5phc
+    aliases:
+      - CVE-2021-39156
+      - GHSA-hqxw-mm44-gc4r
+    events:
+      - timestamp: 2024-04-26T10:28:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-discovery-1.21
+            componentID: 2ea3abad673a0a65
+            componentName: istio.io/istio
+            componentVersion: v0.0.0-20240418224740-ed90e14d3473
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-discovery
+            scanner: grype
+      - timestamp: 2024-05-06T00:50:28Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: 'This vulnerability was matched to the module "istio.io/istio" at the following location(s): /usr/bin/pilot-discovery. In all cases, the installed version of the module (git commit ed90e14d3473bc3fe54f98298eb16664002d14d1) corresponds to a version tag (1.21.2) that is later than the fixed version (1.9.8).'
