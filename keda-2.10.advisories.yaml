@@ -4,78 +4,45 @@ package:
   name: keda-2.10
 
 advisories:
-  - id: CGA-r64g-vfx4-p762
+  - id: CGA-22fr-4cwg-p429
     aliases:
-      - CVE-2020-8552
-      - GHSA-82hx-w2r5-c2wq
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
     events:
-      - timestamp: 2023-09-19T16:55:25Z
-        type: false-positive-determination
+      - timestamp: 2024-03-12T07:10:26Z
+        type: detection
         data:
-          type: vulnerable-code-not-included-in-package
-          note: Go vulndb has marked this code NOT_IMPORTABLE.
+          type: scan/v1
+          data:
+            subpackageName: keda-2.10-adapter
+            componentID: 1eb119d86d282d6e
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/bin/keda-adapter
+            scanner: grype
+      - timestamp: 2024-03-30T16:09:26Z
+        type: fix-not-planned
+        data:
+          note: Keda 2.10 is longer supported. Security Support ended on 2023-09-28.
 
-  - id: CGA-3g22-q7cq-636x
+  - id: CGA-272v-qhx9-rmp5
     aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
     events:
-      - timestamp: 2023-10-20T22:35:15Z
-        type: fixed
+      - timestamp: 2024-05-14T07:18:01Z
+        type: detection
         data:
-          fixed-version: 2.10.1-r4
-
-  - id: CGA-j67g-h348-4xmp
-    aliases:
-      - CVE-2023-3978
-      - GHSA-2wrh-6pvc-2jm9
-    events:
-      - timestamp: 2023-10-20T22:37:29Z
-        type: fixed
-        data:
-          fixed-version: 2.10.1-r4
-
-  - id: CGA-6ggm-gwjp-2q55
-    aliases:
-      - CVE-2023-44487
-      - GHSA-qppj-fm5r-hxr3
-    events:
-      - timestamp: 2023-10-20T22:34:37Z
-        type: fixed
-        data:
-          fixed-version: 2.10.1-r4
-
-  - id: CGA-5gwj-wwvf-4vcm
-    aliases:
-      - CVE-2023-45142
-      - GHSA-rcjv-mgp8-qvmr
-    events:
-      - timestamp: 2023-10-20T22:35:30Z
-        type: fixed
-        data:
-          fixed-version: 2.10.1-r4
-
-  - id: CGA-xgvp-4j5m-6ggp
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:30:24Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-x4q6-33cc-j5c6
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:30:26Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          type: scan/v1
+          data:
+            subpackageName: keda-2.10
+            componentID: 0cad97979590e8d2
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/bin/keda
+            scanner: grype
 
   - id: CGA-2jh4-3c2r-3ppv
     aliases:
@@ -99,27 +66,15 @@ advisories:
         data:
           note: Keda 2.10 is no longer supported upstream since 2023-09-28.
 
-  - id: CGA-cp9c-h47x-r8v6
+  - id: CGA-3g22-q7cq-636x
     aliases:
-      - CVE-2023-45289
-      - GHSA-32ch-6x54-q4h9
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
     events:
-      - timestamp: 2024-03-12T07:10:24Z
-        type: detection
+      - timestamp: 2023-10-20T22:35:15Z
+        type: fixed
         data:
-          type: scan/v1
-          data:
-            subpackageName: keda-2.10-adapter
-            componentID: 1eb119d86d282d6e
-            componentName: stdlib
-            componentVersion: go1.21.5
-            componentType: go-module
-            componentLocation: /usr/bin/keda-adapter
-            scanner: grype
-      - timestamp: 2024-03-30T16:09:26Z
-        type: fix-not-planned
-        data:
-          note: Keda 2.10 is longer supported. Security Support ended on 2023-09-28.
+          fixed-version: 2.10.1-r4
 
   - id: CGA-5682-qv7x-732r
     aliases:
@@ -143,37 +98,43 @@ advisories:
         data:
           note: Keda 2.10 is longer supported. Security Support ended on 2023-09-28.
 
-  - id: CGA-jxx8-chxx-qf74
+  - id: CGA-5gwj-wwvf-4vcm
     aliases:
-      - CVE-2023-47108
-      - GHSA-8pgv-569h-w5rw
+      - CVE-2023-45142
+      - GHSA-rcjv-mgp8-qvmr
     events:
-      - timestamp: 2023-11-22T13:59:47Z
+      - timestamp: 2023-10-20T22:35:30Z
         type: fixed
         data:
-          fixed-version: 2.10.1-r6
+          fixed-version: 2.10.1-r4
 
-  - id: CGA-22fr-4cwg-p429
+  - id: CGA-5rr7-g7qp-8483
     aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
     events:
-      - timestamp: 2024-03-12T07:10:26Z
+      - timestamp: 2025-03-05T21:05:00Z
         type: detection
         data:
           type: scan/v1
           data:
-            subpackageName: keda-2.10-adapter
-            componentID: 1eb119d86d282d6e
-            componentName: stdlib
-            componentVersion: go1.21.5
+            subpackageName: keda-2.10
+            componentID: bb1be5c59fc659d1
+            componentName: golang.org/x/crypto
+            componentVersion: v0.17.0
             componentType: go-module
-            componentLocation: /usr/bin/keda-adapter
+            componentLocation: /usr/bin/keda
             scanner: grype
-      - timestamp: 2024-03-30T16:09:26Z
-        type: fix-not-planned
+
+  - id: CGA-6ggm-gwjp-2q55
+    aliases:
+      - CVE-2023-44487
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2023-10-20T22:34:37Z
+        type: fixed
         data:
-          note: Keda 2.10 is longer supported. Security Support ended on 2023-09-28.
+          fixed-version: 2.10.1-r4
 
   - id: CGA-8jmp-88rf-mj8h
     aliases:
@@ -197,12 +158,12 @@ advisories:
         data:
           note: Keda 2.10 is longer supported. Security Support ended on 2023-09-28.
 
-  - id: CGA-q793-3342-9226
+  - id: CGA-cp9c-h47x-r8v6
     aliases:
-      - CVE-2024-24785
-      - GHSA-j6m3-gc37-6r6q
+      - CVE-2023-45289
+      - GHSA-32ch-6x54-q4h9
     events:
-      - timestamp: 2024-03-12T07:10:30Z
+      - timestamp: 2024-03-12T07:10:24Z
         type: detection
         data:
           type: scan/v1
@@ -229,20 +190,77 @@ advisories:
         data:
           note: Keda 2.10 is longer supported. Security Support ended on 2023-09-28.
 
-  - id: CGA-272v-qhx9-rmp5
+  - id: CGA-j67g-h348-4xmp
     aliases:
-      - CVE-2024-24787
-      - GHSA-5fq7-4mxc-535h
+      - CVE-2023-3978
+      - GHSA-2wrh-6pvc-2jm9
     events:
-      - timestamp: 2024-05-14T07:18:01Z
+      - timestamp: 2023-10-20T22:37:29Z
+        type: fixed
+        data:
+          fixed-version: 2.10.1-r4
+
+  - id: CGA-jxx8-chxx-qf74
+    aliases:
+      - CVE-2023-47108
+      - GHSA-8pgv-569h-w5rw
+    events:
+      - timestamp: 2023-11-22T13:59:47Z
+        type: fixed
+        data:
+          fixed-version: 2.10.1-r6
+
+  - id: CGA-q793-3342-9226
+    aliases:
+      - CVE-2024-24785
+      - GHSA-j6m3-gc37-6r6q
+    events:
+      - timestamp: 2024-03-12T07:10:30Z
         type: detection
         data:
           type: scan/v1
           data:
-            subpackageName: keda-2.10
-            componentID: 0cad97979590e8d2
+            subpackageName: keda-2.10-adapter
+            componentID: 1eb119d86d282d6e
             componentName: stdlib
             componentVersion: go1.21.5
             componentType: go-module
-            componentLocation: /usr/bin/keda
+            componentLocation: /usr/bin/keda-adapter
             scanner: grype
+      - timestamp: 2024-03-30T16:09:26Z
+        type: fix-not-planned
+        data:
+          note: Keda 2.10 is longer supported. Security Support ended on 2023-09-28.
+
+  - id: CGA-r64g-vfx4-p762
+    aliases:
+      - CVE-2020-8552
+      - GHSA-82hx-w2r5-c2wq
+    events:
+      - timestamp: 2023-09-19T16:55:25Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Go vulndb has marked this code NOT_IMPORTABLE.
+
+  - id: CGA-x4q6-33cc-j5c6
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:30:26Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-xgvp-4j5m-6ggp
+    aliases:
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
+    events:
+      - timestamp: 2023-11-07T19:30:24Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
