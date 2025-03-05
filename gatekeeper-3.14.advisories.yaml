@@ -140,6 +140,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-gqrp-89cm-9w63
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-05T17:11:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.14
+            componentID: f372fe83b672e29b
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-hwwr-mv64-fq5w
     aliases:
       - CVE-2024-24784
