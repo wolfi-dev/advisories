@@ -44,6 +44,24 @@ advisories:
         data:
           note: Due to the affected Gem version being defined inside a Gemfile.lock file, we are unable to determine in the build pipeline a different version for this dependency and must wait for upstream implementation.
 
+  - id: CGA-mf79-wm7w-4g5g
+    aliases:
+      - CVE-2024-11274
+      - GHSA-fr8h-r296-xggf
+    events:
+      - timestamp: 2025-03-05T18:02:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-cng-17.4
+            componentID: b967d5d8f58680d3
+            componentName: gitlab-mailroom-scripts-17.4
+            componentVersion: 17.4.0-r2
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-vx6c-rrp7-mjvr
     aliases:
       - CVE-2023-5117
