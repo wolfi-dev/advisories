@@ -150,6 +150,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This vulnerability affects versions < 1.14.1, but the installed commit corresponds to version 1.21.2.
 
+  - id: CGA-f8vx-cpf5-w89x
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-05T21:21:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-discovery-1.21
+            componentID: ba97e76937db0e2e
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-discovery
+            scanner: grype
+
   - id: CGA-fw9c-2c8q-5gg3
     aliases:
       - CVE-2024-36623
