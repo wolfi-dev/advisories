@@ -4,6 +4,24 @@ package:
   name: tigera-operator
 
 advisories:
+  - id: CGA-2jw6-w7m8-f7pm
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-03-05T17:09:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tigera-operator
+            componentID: 70e43a70e6151d60
+            componentName: golang.org/x/net
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
   - id: CGA-36r5-6vj2-9ccr
     aliases:
       - CVE-2023-45288
