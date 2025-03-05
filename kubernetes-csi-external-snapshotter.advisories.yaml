@@ -77,6 +77,24 @@ advisories:
         data:
           fixed-version: 8.0.1-r1
 
+  - id: CGA-7f4q-wvrc-4rj9
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-03-05T22:38:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-snapshotter
+            componentID: 09d3db6dab7a200a
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/snapshot-controller
+            scanner: grype
+
   - id: CGA-8wg9-w5pp-r6g7
     aliases:
       - CVE-2024-24785
