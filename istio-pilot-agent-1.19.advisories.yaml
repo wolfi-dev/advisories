@@ -120,6 +120,24 @@ advisories:
           type: component-vulnerability-mismatch
           note: Prometheus ships a Go (Golang) library with a versioning scheme that follows the 0.x format. However, the Prometheus application itself uses a versioning scheme based on 1.x, 2.x, etc. The vulnerability identified in CVE-2019-3826 is specifically associated with the Prometheus application, not the Golang library.
 
+  - id: CGA-c37w-prjg-c7mr
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2025-03-05T23:12:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-agent-1.19
+            componentID: 3f5772855e079065
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-agent
+            scanner: grype
+
   - id: CGA-f8xg-cj47-c8gw
     aliases:
       - CVE-2023-49290
