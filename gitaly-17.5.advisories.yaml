@@ -4,6 +4,24 @@ package:
   name: gitaly-17.5
 
 advisories:
+  - id: CGA-93v9-6vj8-w7pj
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-05T16:23:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitaly-17.5
+            componentID: 6b43a6c19929fadc
+            componentName: golang.org/x/crypto
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitaly
+            scanner: grype
+
   - id: CGA-c9mp-92ff-m3w3
     aliases:
       - CVE-2019-3826
