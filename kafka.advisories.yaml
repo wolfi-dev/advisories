@@ -4,26 +4,6 @@ package:
   name: kafka
 
 advisories:
-  - id: CGA-q672-cgj3-7q4g
-    aliases:
-      - CVE-2023-26048
-      - GHSA-qw69-rqj8-6qw8
-    events:
-      - timestamp: 2023-05-02T12:42:50Z
-        type: fixed
-        data:
-          fixed-version: 3.4.0-r2
-
-  - id: CGA-6jj8-gqq9-qj3c
-    aliases:
-      - CVE-2023-26049
-      - GHSA-p26g-97m4-6q7c
-    events:
-      - timestamp: 2023-05-02T12:43:01Z
-        type: fixed
-        data:
-          fixed-version: 3.4.0-r2
-
   - id: CGA-28gf-48c7-25hv
     aliases:
       - CVE-2023-35116
@@ -35,15 +15,43 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: CVE disputed by upstream developers, nothing specific to this application.
 
-  - id: CGA-xx36-6xhx-6c36
+  - id: CGA-4w96-m3m7-fmjm
     aliases:
-      - CVE-2023-36479
-      - GHSA-3gh6-v5v9-6v9j
+      - CVE-2025-25193
+      - GHSA-389x-839f-4rhx
     events:
-      - timestamp: 2023-09-22T20:13:33Z
+      - timestamp: 2025-03-05T21:40:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kafka
+            componentID: cd54ddee5e7d7025
+            componentName: netty-common
+            componentVersion: 4.1.110.Final
+            componentType: java-archive
+            componentLocation: /usr/lib/kafka/libs/netty-common-4.1.110.Final.jar
+            scanner: grype
+
+  - id: CGA-6jj8-gqq9-qj3c
+    aliases:
+      - CVE-2023-26049
+      - GHSA-p26g-97m4-6q7c
+    events:
+      - timestamp: 2023-05-02T12:43:01Z
         type: fixed
         data:
-          fixed-version: 3.5.1-r2
+          fixed-version: 3.4.0-r2
+
+  - id: CGA-hp96-wjrq-9f66
+    aliases:
+      - CVE-2023-43642
+      - GHSA-55g7-9cwv-5qfv
+    events:
+      - timestamp: 2023-09-29T20:39:54Z
+        type: fixed
+        data:
+          fixed-version: 3.5.1-r3
 
   - id: CGA-j3h8-74jw-2w8w
     aliases:
@@ -64,26 +72,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.5.1-r2
-
-  - id: CGA-hp96-wjrq-9f66
-    aliases:
-      - CVE-2023-43642
-      - GHSA-55g7-9cwv-5qfv
-    events:
-      - timestamp: 2023-09-29T20:39:54Z
-        type: fixed
-        data:
-          fixed-version: 3.5.1-r3
-
-  - id: CGA-r4gp-jw3v-m8j8
-    aliases:
-      - CVE-2023-44981
-      - GHSA-7286-pgfv-vxvh
-    events:
-      - timestamp: 2023-10-19T18:14:08Z
-        type: fixed
-        data:
-          fixed-version: 3.6.0-r4
 
   - id: CGA-mrr6-55fr-72mh
     aliases:
@@ -106,3 +94,33 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.7.0-r2
+
+  - id: CGA-q672-cgj3-7q4g
+    aliases:
+      - CVE-2023-26048
+      - GHSA-qw69-rqj8-6qw8
+    events:
+      - timestamp: 2023-05-02T12:42:50Z
+        type: fixed
+        data:
+          fixed-version: 3.4.0-r2
+
+  - id: CGA-r4gp-jw3v-m8j8
+    aliases:
+      - CVE-2023-44981
+      - GHSA-7286-pgfv-vxvh
+    events:
+      - timestamp: 2023-10-19T18:14:08Z
+        type: fixed
+        data:
+          fixed-version: 3.6.0-r4
+
+  - id: CGA-xx36-6xhx-6c36
+    aliases:
+      - CVE-2023-36479
+      - GHSA-3gh6-v5v9-6v9j
+    events:
+      - timestamp: 2023-09-22T20:13:33Z
+        type: fixed
+        data:
+          fixed-version: 3.5.1-r2
