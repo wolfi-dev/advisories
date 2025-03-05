@@ -74,6 +74,24 @@ advisories:
         data:
           fixed-version: 1.20.2-r2
 
+  - id: CGA-j3xm-6jmx-52rh
+    aliases:
+      - CVE-2024-36621
+      - GHSA-2mj3-vfvx-fc43
+    events:
+      - timestamp: 2025-03-05T23:27:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-agent-1.20
+            componentID: 96cacca781510aa1
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.7+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-agent
+            scanner: grype
+
   - id: CGA-p855-qj8h-pprc
     aliases:
       - CVE-2024-24786
