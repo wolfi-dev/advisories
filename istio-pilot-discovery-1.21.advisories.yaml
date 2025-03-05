@@ -132,6 +132,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This vulnerability affects versions < 1.14.1, but the installed commit corresponds to version 1.21.2.
 
+  - id: CGA-fw9c-2c8q-5gg3
+    aliases:
+      - CVE-2024-36623
+      - GHSA-gh5c-3h97-2f3q
+    events:
+      - timestamp: 2025-03-05T21:21:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-discovery-1.21
+            componentID: 7aad577223f90679
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.9+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-discovery
+            scanner: grype
+
   - id: CGA-h363-2hvx-9cj5
     aliases:
       - CVE-2023-45288
