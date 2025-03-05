@@ -4,6 +4,24 @@ package:
   name: prometheus-2.50
 
 advisories:
+  - id: CGA-27mc-f28c-mr8f
+    aliases:
+      - CVE-2024-45336
+      - GHSA-7wrw-r4p8-38rx
+    events:
+      - timestamp: 2025-03-05T07:02:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.50
+            componentID: 0eaf0d213f3dd20b
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /opt/bitnami/prometheus/bin/prometheus
+            scanner: grype
+
   - id: CGA-3j9m-wpqq-cf4h
     aliases:
       - CVE-2024-34155
