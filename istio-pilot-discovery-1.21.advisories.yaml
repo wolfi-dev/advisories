@@ -4,6 +4,23 @@ package:
   name: istio-pilot-discovery-1.21
 
 advisories:
+  - id: CGA-37c3-vg62-r2mp
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-05T21:21:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-discovery-1.21
+            componentID: ba97e76937db0e2e
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-discovery
+            scanner: grype
+
   - id: CGA-45q3-jg33-pf8p
     aliases:
       - CVE-2019-14993
