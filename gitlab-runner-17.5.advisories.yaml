@@ -4,6 +4,24 @@ package:
   name: gitlab-runner-17.5
 
 advisories:
+  - id: CGA-3mcv-wj5c-gj7v
+    aliases:
+      - CVE-2024-12431
+      - GHSA-hjr5-q2v6-7chx
+    events:
+      - timestamp: 2025-03-05T16:17:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-17.5
+            componentID: 1eea37f6f6c6e1ac
+            componentName: gitlab-runner-helper-oci-entrypoint-17.5
+            componentVersion: 17.5.3-r1
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-9grw-2h78-6xh2
     aliases:
       - CVE-2024-11274
