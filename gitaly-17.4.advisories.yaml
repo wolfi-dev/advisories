@@ -4,6 +4,24 @@ package:
   name: gitaly-17.4
 
 advisories:
+  - id: CGA-g3gm-v235-fm2w
+    aliases:
+      - CVE-2024-45339
+      - GHSA-6wxm-mpqj-6jpf
+    events:
+      - timestamp: 2025-03-05T13:10:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitaly-17.4
+            componentID: 3f694f4758905deb
+            componentName: github.com/golang/glog
+            componentVersion: v1.2.2
+            componentType: go-module
+            componentLocation: /usr/bin/gitaly-backup
+            scanner: grype
+
   - id: CGA-mhwm-ghm8-5h2v
     aliases:
       - CVE-2024-45338
