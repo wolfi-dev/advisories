@@ -180,6 +180,24 @@ advisories:
           type: component-vulnerability-mismatch
           note: Prometheus ships a Go (Golang) library with a versioning scheme that follows the 0.x format. However, the Prometheus application itself uses a versioning scheme based on 1.x, 2.x, etc. The vulnerability identified in CVE-2019-3826 is specifically associated with the Prometheus application, not the Golang library.
 
+  - id: CGA-rf5h-2r7g-9p95
+    aliases:
+      - CVE-2024-8260
+      - GHSA-c77r-fh37-x2px
+    events:
+      - timestamp: 2025-03-05T17:01:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.13
+            componentID: afd12ab5df3e8b8d
+            componentName: github.com/open-policy-agent/opa
+            componentVersion: v0.54.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-v6wq-wfrv-c3qf
     aliases:
       - CVE-2024-24786
