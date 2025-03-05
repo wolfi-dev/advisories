@@ -4,6 +4,42 @@ package:
   name: grafana-11.2
 
 advisories:
+  - id: CGA-2h39-c6gx-6343
+    aliases:
+      - CVE-2024-45341
+      - GHSA-3f6r-qh9c-x6mm
+    events:
+      - timestamp: 2025-03-05T18:40:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-11.2
+            componentID: 59131d4bdabc388c
+            componentName: stdlib
+            componentVersion: go1.22.8
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+
+  - id: CGA-3846-jf43-gv2w
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-03-05T18:40:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-11.2
+            componentID: 59131d4bdabc388c
+            componentName: stdlib
+            componentVersion: go1.22.8
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+
   - id: CGA-5wvr-722m-vvwg
     aliases:
       - CVE-2024-34158
@@ -25,6 +61,41 @@ advisories:
         type: fixed
         data:
           fixed-version: 11.2.0-r2
+
+  - id: CGA-64mg-44j8-2gp3
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-05T18:39:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-11.2
+            componentID: 2926b17443cd8dd4
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+
+  - id: CGA-6fw7-qgfv-7642
+    aliases:
+      - CVE-2024-45336
+      - GHSA-7wrw-r4p8-38rx
+    events:
+      - timestamp: 2025-03-05T18:40:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-11.2
+            componentID: 59131d4bdabc388c
+            componentName: stdlib
+            componentVersion: go1.22.8
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
 
   - id: CGA-7j69-4c5m-2mg2
     aliases:
@@ -55,6 +126,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: The vulnerability applies to build scripts in the grafana-go-sdk, not the library itself. Further, we don't pass sensitive information in our git clone urls so our builds of grafana would not be affected anyway.
 
+  - id: CGA-7m4p-rg2v-mfmc
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-05T18:39:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-11.2
+            componentID: 35508ccbd73c9054
+            componentName: golang.org/x/crypto
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+
   - id: CGA-893x-8wh7-jvw3
     aliases:
       - CVE-2024-34156
@@ -77,6 +165,167 @@ advisories:
         data:
           fixed-version: 11.2.0-r2
 
+  - id: CGA-cw8v-52gv-qj55
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2025-03-05T18:40:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-11.2
+            componentID: c40bda9a28cbf763
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+
+  - id: CGA-g33p-2h2x-559v
+    aliases:
+      - CVE-2024-11741
+      - GHSA-wxcc-2f3q-4h58
+    events:
+      - timestamp: 2025-03-05T18:39:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-11.2
+            componentID: 2ceee4d7fbeb4dc4
+            componentName: github.com/grafana/grafana
+            componentVersion: v11.2.3
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+
+  - id: CGA-hg37-jfvp-cwr9
+    aliases:
+      - CVE-2025-25196
+      - GHSA-g4v5-6f5p-m38j
+    events:
+      - timestamp: 2025-03-05T18:39:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-11.2
+            componentID: 8c7e222d84c7e372
+            componentName: github.com/openfga/openfga
+            componentVersion: v1.5.4
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+
+  - id: CGA-mmwv-g72w-rghx
+    aliases:
+      - CVE-2019-3826
+      - GHSA-3m87-5598-2v4f
+    events:
+      - timestamp: 2025-03-05T18:39:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-11.2
+            componentID: 2075ce0c17258f28
+            componentName: github.com/prometheus/prometheus
+            componentVersion: v0.52.0
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+
+  - id: CGA-p6c6-64m2-cwpf
+    aliases:
+      - CVE-2024-56323
+      - GHSA-32q6-rr98-cjqv
+    events:
+      - timestamp: 2025-03-05T18:39:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-11.2
+            componentID: 8c7e222d84c7e372
+            componentName: github.com/openfga/openfga
+            componentVersion: v1.5.4
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+
+  - id: CGA-pcv2-7cc2-f248
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-03-05T18:39:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-11.2
+            componentID: 905098411610592a
+            componentName: golang.org/x/net
+            componentVersion: v0.28.0
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+
+  - id: CGA-pxpm-j9w2-258v
+    aliases:
+      - GHSA-32gq-x56h-299c
+    events:
+      - timestamp: 2025-03-05T18:40:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-11.2
+            componentID: 2072aa1a555e0ab6
+            componentName: filippo.io/age
+            componentVersion: v1.1.1
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+
+  - id: CGA-q69h-2p6m-g2cv
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-05T18:39:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-11.2
+            componentID: 35508ccbd73c9054
+            componentName: golang.org/x/crypto
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+
+  - id: CGA-qvh6-274q-c5q7
+    aliases:
+      - CVE-2025-27144
+      - GHSA-c6gw-w398-hv78
+    events:
+      - timestamp: 2025-03-05T18:40:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-11.2
+            componentID: f574d3eadcaf2ae5
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.3
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+
   - id: CGA-r973-vm6p-58ff
     aliases:
       - CVE-2024-34155
@@ -98,3 +347,39 @@ advisories:
         type: fixed
         data:
           fixed-version: 11.2.0-r2
+
+  - id: CGA-w326-6hmm-rf3m
+    aliases:
+      - CVE-2024-45339
+      - GHSA-6wxm-mpqj-6jpf
+    events:
+      - timestamp: 2025-03-05T18:39:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-11.2
+            componentID: 0e0f925e12e33a4a
+            componentName: github.com/golang/glog
+            componentVersion: v1.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+
+  - id: CGA-w38j-9584-jwg6
+    aliases:
+      - CVE-2024-10452
+      - GHSA-66c4-2g2v-54qw
+    events:
+      - timestamp: 2025-03-05T18:39:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-11.2
+            componentID: 2ceee4d7fbeb4dc4
+            componentName: github.com/grafana/grafana
+            componentVersion: v11.2.3
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
