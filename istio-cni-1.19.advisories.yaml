@@ -4,16 +4,6 @@ package:
   name: istio-cni-1.19
 
 advisories:
-  - id: CGA-ppg8-82x8-9827
-    aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
-    events:
-      - timestamp: 2023-10-12T22:18:13Z
-        type: fixed
-        data:
-          fixed-version: 1.19.3-r0
-
   - id: CGA-389x-6gjc-fjpr
     aliases:
       - CVE-2023-45283
@@ -24,6 +14,34 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CGA-3cjp-3jgw-xjrm
+    aliases:
+      - CVE-2024-28180
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2024-03-08T07:04:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-install-cni-1.19
+            componentID: 6020ade94a63de2e
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/install-cni
+            scanner: grype
+
+  - id: CGA-4ppm-vqvr-m6q7
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2023-12-20T12:59:23Z
+        type: fixed
+        data:
+          fixed-version: 1.19.5-r2
 
   - id: CGA-9pj3-crjr-v46m
     aliases:
@@ -36,15 +54,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
-  - id: CGA-4ppm-vqvr-m6q7
+  - id: CGA-fmj2-97f6-h5x6
     aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
     events:
-      - timestamp: 2023-12-20T12:59:23Z
-        type: fixed
+      - timestamp: 2025-03-05T23:18:06Z
+        type: detection
         data:
-          fixed-version: 1.19.5-r2
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.19
+            componentID: 6d8fda88b6698caf
+            componentName: golang.org/x/net
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/istio-cni
+            scanner: grype
 
   - id: CGA-gqhq-q5q9-m575
     aliases:
@@ -108,20 +134,12 @@ advisories:
             componentLocation: /usr/bin/istio-cni
             scanner: grype
 
-  - id: CGA-3cjp-3jgw-xjrm
+  - id: CGA-ppg8-82x8-9827
     aliases:
-      - CVE-2024-28180
-      - GHSA-c5q2-7r4c-mv6g
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
     events:
-      - timestamp: 2024-03-08T07:04:25Z
-        type: detection
+      - timestamp: 2023-10-12T22:18:13Z
+        type: fixed
         data:
-          type: scan/v1
-          data:
-            subpackageName: istio-install-cni-1.19
-            componentID: 6020ade94a63de2e
-            componentName: github.com/go-jose/go-jose/v3
-            componentVersion: v3.0.1
-            componentType: go-module
-            componentLocation: /usr/bin/install-cni
-            scanner: grype
+          fixed-version: 1.19.3-r0
