@@ -4,6 +4,24 @@ package:
   name: kafka-3.8
 
 advisories:
+  - id: CGA-8992-v98m-vvx9
+    aliases:
+      - CVE-2025-25193
+      - GHSA-389x-839f-4rhx
+    events:
+      - timestamp: 2025-03-05T21:39:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kafka-3.8
+            componentID: cd54ddee5e7d7025
+            componentName: netty-common
+            componentVersion: 4.1.110.Final
+            componentType: java-archive
+            componentLocation: /usr/lib/kafka/libs/netty-common-4.1.110.Final.jar
+            scanner: grype
+
   - id: CGA-9rwq-q6m2-g373
     aliases:
       - CVE-2024-47554
