@@ -4,6 +4,24 @@ package:
   name: ingress-nginx-controller-1.11
 
 advisories:
+  - id: CGA-2h56-mhmc-533v
+    aliases:
+      - CVE-2024-45336
+      - GHSA-7wrw-r4p8-38rx
+    events:
+      - timestamp: 2025-03-05T19:44:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ingress-nginx-controller-1.11
+            componentID: a4db9ffa77212488
+            componentName: stdlib
+            componentVersion: go1.23.4
+            componentType: go-module
+            componentLocation: /usr/bin/nginx-dbg
+            scanner: grype
+
   - id: CGA-4j5v-c3p3-fvcw
     aliases:
       - CVE-2024-34155
@@ -25,6 +43,41 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.11.2-r2
+
+  - id: CGA-4x9q-jc75-wjww
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-03-05T19:44:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ingress-nginx-controller-1.11
+            componentID: a4db9ffa77212488
+            componentName: stdlib
+            componentVersion: go1.23.4
+            componentType: go-module
+            componentLocation: /usr/bin/nginx-dbg
+            scanner: grype
+
+  - id: CGA-9ggg-m25m-fqqr
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-05T19:43:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ingress-nginx-controller-1.11
+            componentID: fa3884e7d7468bc8
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/nginx-ingress-controller
+            scanner: grype
 
   - id: CGA-9x9g-r37m-x5f4
     aliases:
@@ -91,6 +144,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.11.2-r1
+
+  - id: CGA-vqxx-pp7f-h5qh
+    aliases:
+      - CVE-2024-45341
+      - GHSA-3f6r-qh9c-x6mm
+    events:
+      - timestamp: 2025-03-05T19:44:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ingress-nginx-controller-1.11
+            componentID: a4db9ffa77212488
+            componentName: stdlib
+            componentVersion: go1.23.4
+            componentType: go-module
+            componentLocation: /usr/bin/nginx-dbg
+            scanner: grype
 
   - id: CGA-xj6v-rg47-rj9f
     aliases:
