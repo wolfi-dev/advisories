@@ -91,6 +91,23 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This vulnerability affects versions < 1.14.1, but the installed commit corresponds to version 1.21.2.
 
+  - id: CGA-9m7v-mchq-j7f5
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-05T20:06:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.22
+            componentID: ae1b249bf64d5b10
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.19.0
+            componentType: go-module
+            componentLocation: /usr/bin/istio-cni
+            scanner: grype
+
   - id: CGA-c2f3-pv49-vw65
     aliases:
       - CVE-2024-24790
