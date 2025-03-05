@@ -4,6 +4,24 @@ package:
   name: cert-manager-1.12
 
 advisories:
+  - id: CGA-38v9-8hqj-73gv
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2025-03-05T13:07:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-manager-1.12
+            componentID: bbefb753091bf3d4
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/acmesolver-linux-amd64
+            scanner: grype
+
   - id: CGA-46f8-x55x-fpjg
     aliases:
       - CVE-2024-24557
