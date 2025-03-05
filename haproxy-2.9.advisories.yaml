@@ -27,6 +27,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: 'tripleo-image-elements is not included in this package and has been deprecated upstream: https://github.com/openstack-archive/tripleo-image-elements'
 
+  - id: CGA-c573-pxf4-h68g
+    aliases:
+      - CVE-2024-49214
+      - GHSA-8jgf-8r3g-hxh8
+    events:
+      - timestamp: 2025-03-05T21:19:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: haproxy-2.9
+            componentID: f9c9658cad6f34f8
+            componentName: haproxy-2.9
+            componentVersion: 2.9.9-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-rfx4-3rwx-39jc
     aliases:
       - CVE-2023-0056
