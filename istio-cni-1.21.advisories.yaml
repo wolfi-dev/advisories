@@ -4,51 +4,23 @@ package:
   name: istio-cni-1.21
 
 advisories:
-  - id: CGA-cwqj-m7mv-wrjv
+  - id: CGA-6rcq-6vjp-jm64
     aliases:
-      - CVE-2019-14993
-      - GHSA-qcvw-82hh-gq38
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
     events:
-      - timestamp: 2024-04-26T10:25:52Z
+      - timestamp: 2025-03-05T19:24:53Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: istio-cni-1.21
-            componentID: 4f9be0d40b93e10f
-            componentName: istio.io/istio
-            componentVersion: v0.0.0-20240418224740-ed90e14d3473
+            componentID: 458628f0df5b7863
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
             componentType: go-module
             componentLocation: /usr/bin/istio-cni
             scanner: grype
-      - timestamp: 2024-05-06T00:43:42Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-version-not-used
-          note: 'This vulnerability was matched to the module "istio.io/istio" at the following location(s): /usr/bin/istio-cni. In all cases, the installed version of the module (git commit ed90e14d3473bc3fe54f98298eb16664002d14d1) corresponds to a version tag (1.21.2) that is later than the fixed version (1.1.13).'
-
-  - id: CGA-mw7h-2mpq-wrvp
-    aliases:
-      - CVE-2021-39155
-      - GHSA-7774-7vr3-cc8j
-    events:
-      - timestamp: 2024-04-26T10:25:49Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: istio-cni-1.21
-            componentID: 4f9be0d40b93e10f
-            componentName: istio.io/istio
-            componentVersion: v0.0.0-20240418224740-ed90e14d3473
-            componentType: go-module
-            componentLocation: /usr/bin/istio-cni
-            scanner: grype
-      - timestamp: 2024-05-06T00:43:42Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-version-not-used
-          note: 'This vulnerability was matched to the module "istio.io/istio" at the following location(s): /usr/bin/istio-cni. In all cases, the installed version of the module (git commit ed90e14d3473bc3fe54f98298eb16664002d14d1) corresponds to a version tag (1.21.2) that is later than the fixed version (1.9.8).'
 
   - id: CGA-6vwp-43hr-5gcj
     aliases:
@@ -73,12 +45,93 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability was matched to the module "istio.io/istio" at the following location(s): /usr/bin/istio-cni. In all cases, the installed version of the module (git commit ed90e14d3473bc3fe54f98298eb16664002d14d1) corresponds to a version tag (1.21.2) that is later than the fixed version (1.9.8).'
 
-  - id: CGA-r2mp-7vjh-r9fp
+  - id: CGA-7hhh-hqv7-7c7f
     aliases:
-      - CVE-2022-23635
-      - GHSA-856q-xv3c-7f2f
+      - CVE-2024-45336
+      - GHSA-7wrw-r4p8-38rx
     events:
-      - timestamp: 2024-04-26T10:25:50Z
+      - timestamp: 2025-03-05T19:25:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.21
+            componentID: ade751f28d0b7162
+            componentName: stdlib
+            componentVersion: go1.22.3
+            componentType: go-module
+            componentLocation: /usr/bin/install-cni
+            scanner: grype
+
+  - id: CGA-7w3g-hh88-rvqr
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-21T07:19:52Z
+        type: fixed
+        data:
+          fixed-version: 1.21.1-r0
+
+  - id: CGA-85f5-jwhm-7v4f
+    aliases:
+      - CVE-2024-24791
+      - GHSA-hw49-2p59-3mhj
+    events:
+      - timestamp: 2025-03-05T19:25:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.21
+            componentID: ade751f28d0b7162
+            componentName: stdlib
+            componentVersion: go1.22.3
+            componentType: go-module
+            componentLocation: /usr/bin/install-cni
+            scanner: grype
+
+  - id: CGA-9jww-8p8w-grcm
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-03-05T19:25:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.21
+            componentID: ade751f28d0b7162
+            componentName: stdlib
+            componentVersion: go1.22.3
+            componentType: go-module
+            componentLocation: /usr/bin/install-cni
+            scanner: grype
+
+  - id: CGA-cq4q-7xv6-vh4c
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-05T19:24:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.21
+            componentID: 6244437f8d480f54
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.16.0
+            componentType: go-module
+            componentLocation: /usr/bin/istio-cni
+            scanner: grype
+
+  - id: CGA-cwqj-m7mv-wrjv
+    aliases:
+      - CVE-2019-14993
+      - GHSA-qcvw-82hh-gq38
+    events:
+      - timestamp: 2024-04-26T10:25:52Z
         type: detection
         data:
           type: scan/v1
@@ -94,7 +147,25 @@ advisories:
         type: false-positive-determination
         data:
           type: vulnerable-code-version-not-used
-          note: 'This vulnerability was matched to the module "istio.io/istio" at the following location(s): /usr/bin/istio-cni. In all cases, the installed version of the module (git commit ed90e14d3473bc3fe54f98298eb16664002d14d1) corresponds to a version tag (1.21.2) that is later than the fixed version (1.11.7).'
+          note: 'This vulnerability was matched to the module "istio.io/istio" at the following location(s): /usr/bin/istio-cni. In all cases, the installed version of the module (git commit ed90e14d3473bc3fe54f98298eb16664002d14d1) corresponds to a version tag (1.21.2) that is later than the fixed version (1.1.13).'
+
+  - id: CGA-ff9f-72gg-g253
+    aliases:
+      - CVE-2024-45341
+      - GHSA-3f6r-qh9c-x6mm
+    events:
+      - timestamp: 2025-03-05T19:25:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.21
+            componentID: ade751f28d0b7162
+            componentName: stdlib
+            componentVersion: go1.22.3
+            componentType: go-module
+            componentLocation: /usr/bin/install-cni
+            scanner: grype
 
   - id: CGA-fpjx-c7v3-wjfj
     aliases:
@@ -119,12 +190,191 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This vulnerability affects versions < 1.14.1, but the installed commit corresponds to version 1.21.2.
 
-  - id: CGA-7w3g-hh88-rvqr
+  - id: CGA-g7j8-4ccm-g9vx
     aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
+      - CVE-2025-27144
+      - GHSA-c6gw-w398-hv78
     events:
-      - timestamp: 2024-04-21T07:19:52Z
-        type: fixed
+      - timestamp: 2025-03-05T19:25:40Z
+        type: detection
         data:
-          fixed-version: 1.21.1-r0
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.21
+            componentID: e9be97381276b883
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.3
+            componentType: go-module
+            componentLocation: /usr/bin/install-cni
+            scanner: grype
+
+  - id: CGA-gvx9-53v8-77vp
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2025-03-05T19:25:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.21
+            componentID: ade751f28d0b7162
+            componentName: stdlib
+            componentVersion: go1.22.3
+            componentType: go-module
+            componentLocation: /usr/bin/install-cni
+            scanner: grype
+
+  - id: CGA-jv48-99gv-f82m
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2025-03-05T19:25:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.21
+            componentID: ade751f28d0b7162
+            componentName: stdlib
+            componentVersion: go1.22.3
+            componentType: go-module
+            componentLocation: /usr/bin/install-cni
+            scanner: grype
+
+  - id: CGA-mw7h-2mpq-wrvp
+    aliases:
+      - CVE-2021-39155
+      - GHSA-7774-7vr3-cc8j
+    events:
+      - timestamp: 2024-04-26T10:25:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.21
+            componentID: 4f9be0d40b93e10f
+            componentName: istio.io/istio
+            componentVersion: v0.0.0-20240418224740-ed90e14d3473
+            componentType: go-module
+            componentLocation: /usr/bin/istio-cni
+            scanner: grype
+      - timestamp: 2024-05-06T00:43:42Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: 'This vulnerability was matched to the module "istio.io/istio" at the following location(s): /usr/bin/istio-cni. In all cases, the installed version of the module (git commit ed90e14d3473bc3fe54f98298eb16664002d14d1) corresponds to a version tag (1.21.2) that is later than the fixed version (1.9.8).'
+
+  - id: CGA-p9w3-pxxg-825g
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2025-03-05T19:25:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.21
+            componentID: ade751f28d0b7162
+            componentName: stdlib
+            componentVersion: go1.22.3
+            componentType: go-module
+            componentLocation: /usr/bin/install-cni
+            scanner: grype
+
+  - id: CGA-q25j-r842-r6j4
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-05T19:25:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.21
+            componentID: 458628f0df5b7863
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/istio-cni
+            scanner: grype
+
+  - id: CGA-r2mp-7vjh-r9fp
+    aliases:
+      - CVE-2022-23635
+      - GHSA-856q-xv3c-7f2f
+    events:
+      - timestamp: 2024-04-26T10:25:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.21
+            componentID: 4f9be0d40b93e10f
+            componentName: istio.io/istio
+            componentVersion: v0.0.0-20240418224740-ed90e14d3473
+            componentType: go-module
+            componentLocation: /usr/bin/istio-cni
+            scanner: grype
+      - timestamp: 2024-05-06T00:43:42Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: 'This vulnerability was matched to the module "istio.io/istio" at the following location(s): /usr/bin/istio-cni. In all cases, the installed version of the module (git commit ed90e14d3473bc3fe54f98298eb16664002d14d1) corresponds to a version tag (1.21.2) that is later than the fixed version (1.11.7).'
+
+  - id: CGA-rfc4-q9fx-f85f
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-03-05T19:24:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.21
+            componentID: df7940ba8ccc40e0
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/istio-cni
+            scanner: grype
+
+  - id: CGA-rqp3-24xx-qr45
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2025-03-05T19:25:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.21
+            componentID: ade751f28d0b7162
+            componentName: stdlib
+            componentVersion: go1.22.3
+            componentType: go-module
+            componentLocation: /usr/bin/install-cni
+            scanner: grype
+
+  - id: CGA-vww7-pv2j-rm4j
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2025-03-05T19:25:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.21
+            componentID: ade751f28d0b7162
+            componentName: stdlib
+            componentVersion: go1.22.3
+            componentType: go-module
+            componentLocation: /usr/bin/install-cni
+            scanner: grype
