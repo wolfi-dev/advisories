@@ -4,6 +4,24 @@ package:
   name: ingress-nginx-controller-1.11
 
 advisories:
+  - id: CGA-2h56-mhmc-533v
+    aliases:
+      - CVE-2024-45336
+      - GHSA-7wrw-r4p8-38rx
+    events:
+      - timestamp: 2025-03-05T19:44:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ingress-nginx-controller-1.11
+            componentID: a4db9ffa77212488
+            componentName: stdlib
+            componentVersion: go1.23.4
+            componentType: go-module
+            componentLocation: /usr/bin/nginx-dbg
+            scanner: grype
+
   - id: CGA-4j5v-c3p3-fvcw
     aliases:
       - CVE-2024-34155
