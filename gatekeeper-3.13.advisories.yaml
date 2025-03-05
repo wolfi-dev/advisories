@@ -122,6 +122,24 @@ advisories:
         data:
           fixed-version: 3.13.3-r1
 
+  - id: CGA-9gcp-637f-4484
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-03-05T17:03:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.13
+            componentID: 194788560c3e062f
+            componentName: stdlib
+            componentVersion: go1.22.2
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-9r8w-vph3-6vcf
     aliases:
       - CVE-2024-24784
