@@ -4,6 +4,24 @@ package:
   name: istio-1.23
 
 advisories:
+  - id: CGA-2mpf-3vc9-48xf
+    aliases:
+      - CVE-2019-3826
+      - GHSA-3m87-5598-2v4f
+    events:
+      - timestamp: 2025-03-05T21:35:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-1.23
+            componentID: fb7e0cd8fbef6b68
+            componentName: github.com/prometheus/prometheus
+            componentVersion: v0.52.1
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-discovery
+            scanner: grype
+
   - id: CGA-f258-88f4-g7wp
     aliases:
       - CVE-2024-34158
