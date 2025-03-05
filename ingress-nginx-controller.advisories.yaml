@@ -211,6 +211,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-89qq-fvwv-3pxx
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-05T21:10:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ingress-nginx-controller
+            componentID: e80cc1ad1fe528d8
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/nginx-ingress-controller
+            scanner: grype
+
   - id: CGA-99q2-4xh8-42h8
     aliases:
       - CVE-2023-45288
