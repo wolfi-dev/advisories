@@ -84,6 +84,24 @@ advisories:
         data:
           note: Keda 2.10 is no longer supported upstream since 2023-09-28.
 
+  - id: CGA-2vp9-4h5q-92mc
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2025-03-05T21:05:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.10
+            componentID: 35715d858dc40b53
+            componentName: stdlib
+            componentVersion: go1.21.5
+            componentType: go-module
+            componentLocation: /usr/bin/keda-adapter
+            scanner: grype
+
   - id: CGA-3g22-q7cq-636x
     aliases:
       - CVE-2023-39325
