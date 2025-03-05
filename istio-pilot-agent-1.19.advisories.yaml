@@ -17,6 +17,7 @@ advisories:
 
   - id: CGA-847w-p38c-mmxh
     aliases:
+      - CVE-2024-28180
       - GHSA-c5q2-7r4c-mv6g
     events:
       - timestamp: 2024-03-08T07:09:36Z
@@ -91,6 +92,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.19.6-r2
+
+  - id: CGA-g599-96f2-5g7m
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2025-03-05T23:10:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-agent-1.19
+            componentID: 025bba7e2111d3a4
+            componentName: golang.org/x/net
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-agent
+            scanner: grype
 
   - id: CGA-qwfc-cqw5-v6qr
     aliases:
