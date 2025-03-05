@@ -84,6 +84,24 @@ advisories:
         data:
           note: 'GitLab advises that maintainers should NOT upgrade dependency versions manually, as their automation would have already applied this in cases of simple version increments. If a dependency version has not yet been upgraded, there is usually a good reason. Additionally, past attempts to upgrade GitLab dependencies ahead of the upstream release have resulted in build issues. '
 
+  - id: CGA-p697-56fv-m7m7
+    aliases:
+      - CVE-2024-11669
+      - GHSA-v84c-53c6-xmmp
+    events:
+      - timestamp: 2025-03-05T20:34:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-cng-17.5
+            componentID: c30b835d3dab135e
+            componentName: gitlab-webservice-scripts-17.5
+            componentVersion: 17.5.1-r2
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-r4h8-j59m-23wm
     aliases:
       - CVE-2023-5117
