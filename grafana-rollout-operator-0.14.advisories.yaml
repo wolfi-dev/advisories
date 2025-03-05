@@ -119,3 +119,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.14.0-r1
+
+  - id: CGA-x7cg-8rpc-8wj9
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-03-05T18:36:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-rollout-operator-0.14
+            componentID: ae0e3e50c2943028
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/rollout-operator
+            scanner: grype
