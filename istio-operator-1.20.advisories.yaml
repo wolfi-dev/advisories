@@ -4,6 +4,41 @@ package:
   name: istio-operator-1.20
 
 advisories:
+  - id: CGA-2295-3j73-jwg4
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2025-03-05T20:04:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.20
+            componentID: 2bd4eb54171e18d7
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
+  - id: CGA-2c6m-f8cf-cvr2
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-05T20:03:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.20
+            componentID: e3c902e4799ec228
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
   - id: CGA-2mhf-548x-p4qh
     aliases:
       - CVE-2024-28180
@@ -26,6 +61,24 @@ advisories:
         data:
           fixed-version: 1.20.3-r4
 
+  - id: CGA-35v6-m97h-49rh
+    aliases:
+      - CVE-2025-27144
+      - GHSA-c6gw-w398-hv78
+    events:
+      - timestamp: 2025-03-05T20:03:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.20
+            componentID: 32c5eb2c82a8c7cb
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.3
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
   - id: CGA-3hw4-84cc-cxfx
     aliases:
       - CVE-2019-3826
@@ -41,6 +94,42 @@ advisories:
         data:
           type: component-vulnerability-mismatch
           note: Prometheus ships a Go (Golang) library with a versioning scheme that follows the 0.x format. However, the Prometheus application itself uses a versioning scheme based on 1.x, 2.x, etc. The vulnerability identified in CVE-2019-3826 is specifically associated with the Prometheus application, not the Golang library.
+
+  - id: CGA-49v7-jc7h-69xq
+    aliases:
+      - CVE-2024-36621
+      - GHSA-2mj3-vfvx-fc43
+    events:
+      - timestamp: 2025-03-05T20:03:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.20
+            componentID: 9e8222501acb96ed
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.7+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
+  - id: CGA-5hx5-hgjg-h6j9
+    aliases:
+      - CVE-2024-36623
+      - GHSA-gh5c-3h97-2f3q
+    events:
+      - timestamp: 2025-03-05T20:03:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.20
+            componentID: 9e8222501acb96ed
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.7+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
 
   - id: CGA-62hc-f7cq-6cq5
     aliases:
@@ -92,6 +181,24 @@ advisories:
         data:
           fixed-version: 1.20.1-r2
 
+  - id: CGA-6xv8-2x3v-9gq4
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-03-05T20:03:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.20
+            componentID: 219f61e87b36f5d0
+            componentName: golang.org/x/net
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
   - id: CGA-7hqf-rjrv-wf33
     aliases:
       - CVE-2023-45288
@@ -104,6 +211,24 @@ advisories:
           data:
             subpackageName: istio-operator-1.20
             componentID: 14cf3549a3369b6c
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
+  - id: CGA-966j-7x67-xr4g
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-03-05T20:05:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.20
+            componentID: 2bd4eb54171e18d7
             componentName: stdlib
             componentVersion: go1.22.1
             componentType: go-module
@@ -132,6 +257,23 @@ advisories:
         data:
           fixed-version: 1.20.3-r1
 
+  - id: CGA-h98g-566h-qxrf
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-05T20:03:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.20
+            componentID: 4741c07da08a9efc
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.13.0
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
   - id: CGA-hj9h-6h2x-49ph
     aliases:
       - CVE-2023-49290
@@ -153,6 +295,96 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.20.2-r1
+
+  - id: CGA-m329-w8gm-jpvm
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2025-03-05T20:04:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.20
+            componentID: 2bd4eb54171e18d7
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
+  - id: CGA-p595-cxw4-wxgp
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2025-03-05T20:04:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.20
+            componentID: 2bd4eb54171e18d7
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
+  - id: CGA-p642-5jf8-jxv2
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-05T20:03:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.20
+            componentID: e3c902e4799ec228
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
+  - id: CGA-pcpj-244f-8xjj
+    aliases:
+      - CVE-2024-24791
+      - GHSA-hw49-2p59-3mhj
+    events:
+      - timestamp: 2025-03-05T20:04:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.20
+            componentID: 2bd4eb54171e18d7
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
+  - id: CGA-qg58-43rf-frw3
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2025-03-05T20:04:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.20
+            componentID: 2bd4eb54171e18d7
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
 
   - id: CGA-r776-6mc7-f8cc
     aliases:
@@ -221,6 +453,78 @@ advisories:
         data:
           fixed-version: 1.20.3-r4
 
+  - id: CGA-rvxh-wmxw-8jp5
+    aliases:
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
+    events:
+      - timestamp: 2025-03-05T20:03:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.20
+            componentID: 2bd4eb54171e18d7
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
+  - id: CGA-vg2f-r452-8x5q
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2025-03-05T20:04:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.20
+            componentID: 2bd4eb54171e18d7
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
+  - id: CGA-vrrq-r67m-43cj
+    aliases:
+      - CVE-2024-45336
+      - GHSA-7wrw-r4p8-38rx
+    events:
+      - timestamp: 2025-03-05T20:04:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.20
+            componentID: 2bd4eb54171e18d7
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
+  - id: CGA-vwjc-w8j7-xmr9
+    aliases:
+      - CVE-2024-41110
+      - GHSA-v23v-6jw2-98fq
+    events:
+      - timestamp: 2025-03-05T20:03:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.20
+            componentID: 9e8222501acb96ed
+            componentName: github.com/docker/docker
+            componentVersion: v24.0.7+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
   - id: CGA-wh8p-rp2w-p5mj
     aliases:
       - CVE-2024-24786
@@ -242,3 +546,39 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.20.4-r1
+
+  - id: CGA-wqm4-hmfg-fcjx
+    aliases:
+      - CVE-2024-45341
+      - GHSA-3f6r-qh9c-x6mm
+    events:
+      - timestamp: 2025-03-05T20:05:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.20
+            componentID: 2bd4eb54171e18d7
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
+  - id: CGA-x4cr-x432-mh78
+    aliases:
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
+    events:
+      - timestamp: 2025-03-05T20:04:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-operator-1.20
+            componentID: 2bd4eb54171e18d7
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
