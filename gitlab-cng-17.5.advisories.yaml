@@ -480,6 +480,24 @@ advisories:
         data:
           note: 'GitLab advises that maintainers should NOT upgrade dependency versions manually, as their automation would have already applied this in cases of simple version increments. If a dependency version has not yet been upgraded, there is usually a good reason. Additionally, past attempts to upgrade GitLab dependencies ahead of the upstream release have resulted in build issues. '
 
+  - id: CGA-hqg5-86gh-f654
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-03-05T20:39:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-cng-17.5
+            componentID: 674bacfcf3610fd0
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /srv/gitlab-shell/bin/gitlab-shell
+            scanner: grype
+
   - id: CGA-hr3q-3qpx-p48x
     aliases:
       - CVE-2024-8237
