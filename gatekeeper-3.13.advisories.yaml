@@ -45,6 +45,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Go vulndb has marked this code NOT_IMPORTABLE.
 
+  - id: CGA-hjp2-349c-v7gf
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-05T17:01:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.13
+            componentID: c63076b1e8d5c7c0
+            componentName: golang.org/x/crypto
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-p43x-hxp2-cpfr
     aliases:
       - CVE-2023-45290
