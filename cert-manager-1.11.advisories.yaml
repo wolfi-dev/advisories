@@ -15,6 +15,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-2wj7-9f84-cj8w
+    aliases:
+      - CVE-2024-28180
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2025-03-05T15:04:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-manager-1.11
+            componentID: 7eae3327c4cf5ec5
+            componentName: gopkg.in/square/go-jose.v2
+            componentVersion: v2.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/controller-linux-amd64
+            scanner: grype
+
   - id: CGA-3q6c-v74g-f6p5
     aliases:
       - CVE-2024-45341
