@@ -26,6 +26,24 @@ advisories:
         data:
           note: 'This vulnerability relates to the GitLab dependency: sinatra, which appears to not yet have a fix version  GitLab advises that maintainers should NOT upgrade dependency versions manually, as their automation would have already applied this in cases of simple version increments. If a dependency version has not yet been upgraded, there is usually a good reason. Additionally, past attempts to upgrade GitLab dependencies ahead of the upstream release have resulted in build issues.  deferring to upstream (GitLab) to address this CVE in a subsequent update. See: https://docs.gitlab.com/ee/development/dependencies.html.'
 
+  - id: CGA-397w-x9vc-c6x6
+    aliases:
+      - CVE-2024-8179
+      - GHSA-239w-f2px-h2wv
+    events:
+      - timestamp: 2025-03-05T20:35:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-cng-17.5
+            componentID: c30b835d3dab135e
+            componentName: gitlab-webservice-scripts-17.5
+            componentVersion: 17.5.1-r2
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-4mg7-5fq2-v8w3
     aliases:
       - CVE-2024-11931
