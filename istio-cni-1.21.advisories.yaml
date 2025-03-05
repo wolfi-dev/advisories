@@ -216,3 +216,21 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/istio-cni
             scanner: grype
+
+  - id: CGA-rqp3-24xx-qr45
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2025-03-05T19:25:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.21
+            componentID: ade751f28d0b7162
+            componentName: stdlib
+            componentVersion: go1.22.3
+            componentType: go-module
+            componentLocation: /usr/bin/install-cni
+            scanner: grype
