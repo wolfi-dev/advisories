@@ -4,6 +4,23 @@ package:
   name: step-ca
 
 advisories:
+  - id: CGA-42hq-m3pw-535x
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T20:21:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: step-ca
+            componentID: c03cb1d615565f67
+            componentName: golang.org/x/crypto
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/step-ca
+            scanner: grype
+
   - id: CGA-49gw-xcf3-mc2q
     aliases:
       - CVE-2024-24787
