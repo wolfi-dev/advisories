@@ -22,15 +22,23 @@ advisories:
             componentLocation: /usr/bin/prometheus
             scanner: grype
 
-  - id: CGA-xgc8-q9r4-ff8v
+  - id: CGA-6644-pfwr-qfqp
     aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
+      - CVE-2024-36620
+      - GHSA-q59j-vv4j-v33c
     events:
-      - timestamp: 2024-04-13T07:29:28Z
-        type: fixed
+      - timestamp: 2025-03-06T03:22:47Z
+        type: detection
         data:
-          fixed-version: 2.51.1-r1
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.51
+            componentID: 3543ac7c41cd0c2f
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.5+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus
+            scanner: grype
 
   - id: CGA-phhv-vgmv-xgjg
     aliases:
@@ -41,3 +49,13 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.51.0-r1
+
+  - id: CGA-xgc8-q9r4-ff8v
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T07:29:28Z
+        type: fixed
+        data:
+          fixed-version: 2.51.1-r1
