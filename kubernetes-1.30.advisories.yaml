@@ -181,3 +181,21 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+
+  - id: CGA-xcrc-h8ph-6838
+    aliases:
+      - CVE-2025-0426
+      - GHSA-jgfp-53c3-624w
+    events:
+      - timestamp: 2025-03-06T00:43:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-1.30
+            componentID: 6062b9e7b0e49a0f
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.30.3
+            componentType: go-module
+            componentLocation: /usr/bin/kube-apiserver-1.30
+            scanner: grype
