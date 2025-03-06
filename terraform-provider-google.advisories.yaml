@@ -4,6 +4,23 @@ package:
   name: terraform-provider-google
 
 advisories:
+  - id: CGA-2rvv-7c9j-427q
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T17:18:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-google
+            componentID: d2a0dcf54b43b49d
+            componentName: golang.org/x/crypto
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-google
+            scanner: grype
+
   - id: CGA-3j7v-jxcq-4f62
     aliases:
       - CVE-2024-45338
