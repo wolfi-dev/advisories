@@ -94,6 +94,24 @@ advisories:
             componentLocation: /usr/bin/kube-apiserver-1.31
             scanner: grype
 
+  - id: CGA-6rwx-jrxx-pgcf
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-03-06T00:25:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-1.31
+            componentID: 55dc1a26d84a1d67
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/kubectl-1.31
+            scanner: grype
+
   - id: CGA-7fgg-f9w2-xrf2
     aliases:
       - CVE-2024-34156
