@@ -277,6 +277,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-mrfw-9642-m7w9
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T16:24:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dex
+            componentID: 18dc470a700b6444
+            componentName: golang.org/x/crypto
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/dex
+            scanner: grype
+
   - id: CGA-p728-m84f-8q2v
     aliases:
       - CVE-2025-22868
