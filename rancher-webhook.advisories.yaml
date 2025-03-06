@@ -4,6 +4,24 @@ package:
   name: rancher-webhook
 
 advisories:
+  - id: CGA-hrp3-mr9p-p92w
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-06T03:41:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-webhook
+            componentID: db3244a1909dd263
+            componentName: golang.org/x/crypto
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/webhook
+            scanner: grype
+
   - id: CGA-x34h-jj45-42v2
     aliases:
       - CVE-2024-5321
@@ -24,4 +42,4 @@ advisories:
       - timestamp: 2024-07-24T08:31:36Z
         type: pending-upstream-fix
         data:
-          note: "This vulnerability exists, but upgrading k8s.io/kubernetes causes it not to compile due to `undefined: genericfeatures.StrictCostEnforcementForVAP` error. Upstream maintainers should mitigate this CVE."
+          note: 'This vulnerability exists, but upgrading k8s.io/kubernetes causes it not to compile due to `undefined: genericfeatures.StrictCostEnforcementForVAP` error. Upstream maintainers should mitigate this CVE.'
