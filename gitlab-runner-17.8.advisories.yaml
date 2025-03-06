@@ -4,6 +4,23 @@ package:
   name: gitlab-runner-17.8
 
 advisories:
+  - id: CGA-27p6-p7p6-3vc6
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T08:19:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-17.8
+            componentID: 219421ab59ff7f45
+            componentName: golang.org/x/crypto
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-runner-helper
+            scanner: grype
+
   - id: CGA-4vf2-rwqm-99vq
     aliases:
       - CVE-2024-36623
