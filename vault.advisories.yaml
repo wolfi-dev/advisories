@@ -4,6 +4,24 @@ package:
   name: vault
 
 advisories:
+  - id: CGA-55xm-567h-6rf8
+    aliases:
+      - CVE-2023-44487
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2025-03-06T04:36:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault
+            componentID: 3c152919c2713ffb
+            componentName: golang.org/x/net
+            componentVersion: v0.10.0
+            componentType: go-module
+            componentLocation: /usr/bin/vault
+            scanner: grype
+
   - id: CGA-8jp5-jg9p-w2g5
     aliases:
       - CVE-2023-3978
