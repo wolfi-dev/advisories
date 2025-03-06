@@ -4,6 +4,24 @@ package:
   name: telegraf
 
 advisories:
+  - id: CGA-2hr7-3g57-cr36
+    aliases:
+      - CVE-2023-39321
+      - GHSA-9v7r-x7cv-v437
+    events:
+      - timestamp: 2025-03-06T05:22:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf
+            componentID: 91d2484609bdf2cc
+            componentName: stdlib
+            componentVersion: go1.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
+
   - id: CGA-534q-63mc-px59
     aliases:
       - CVE-2019-3826
