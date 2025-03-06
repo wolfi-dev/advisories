@@ -4,6 +4,24 @@ package:
   name: telegraf-1.32
 
 advisories:
+  - id: CGA-277f-hcxh-9c83
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-03-06T04:31:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.32
+            componentID: 1495e2eb3439abc4
+            componentName: stdlib
+            componentVersion: go1.23.3
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
+
   - id: CGA-2f44-765w-5x4g
     aliases:
       - CVE-2025-22868
