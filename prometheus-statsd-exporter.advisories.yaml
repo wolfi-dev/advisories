@@ -98,6 +98,23 @@ advisories:
         data:
           fixed-version: 0.26.1-r5
 
+  - id: CGA-78f9-hc9m-whxf
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T03:05:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-statsd-exporter
+            componentID: 2dac6d56e21b770a
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/statsd_exporter
+            scanner: grype
+
   - id: CGA-8fww-7wxj-4j6x
     aliases:
       - CVE-2024-24789
