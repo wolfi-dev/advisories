@@ -240,6 +240,23 @@ advisories:
         data:
           note: 'Attempting to patch this CVE via updating the affected module leads to resolution errors with other modules, therefore a patch from upstream is required to remediate this CVE. '
 
+  - id: CGA-r75w-886h-wmv4
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T06:35:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argocd-image-updater
+            componentID: f74ea55d4cb538bc
+            componentName: golang.org/x/crypto
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd-image-updater
+            scanner: grype
+
   - id: CGA-v8g2-44h4-3cqw
     aliases:
       - CVE-2025-27144
