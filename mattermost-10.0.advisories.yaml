@@ -347,6 +347,23 @@ advisories:
             A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
             See: https://github.com/anchore/syft/issues/2980.
 
+  - id: CGA-chxf-c595-ghgw
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T00:26:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-10.0
+            componentID: 09c47e47f9fbac91
+            componentName: golang.org/x/crypto
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/mattermost
+            scanner: grype
+
   - id: CGA-fcmm-87qm-6j9x
     aliases:
       - CVE-2024-1942
