@@ -43,6 +43,23 @@ advisories:
         data:
           fixed-version: 0.16.0-r2
 
+  - id: CGA-3gqq-32rv-5rwr
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T10:30:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-katib
+            componentID: 0ace8742905b9fa0
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.18.0
+            componentType: go-module
+            componentLocation: /usr/bin/katib-controller
+            scanner: grype
+
   - id: CGA-587g-vmpg-rmrv
     aliases:
       - CVE-2024-24557
@@ -137,6 +154,23 @@ advisories:
             componentVersion: 2.31.0
             componentType: python
             componentLocation: /opt/katib/cmd/earlystopping/medianstop/v1beta1/lib/python3.10/site-packages/pip/_vendor/vendor.txt
+            scanner: grype
+
+  - id: CGA-9cxh-9fw3-736j
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T10:30:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-katib
+            componentID: db526cdbd00dc249
+            componentName: golang.org/x/crypto
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/katib-controller
             scanner: grype
 
   - id: CGA-c4jh-pgw7-5chh
