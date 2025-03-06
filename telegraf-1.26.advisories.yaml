@@ -521,6 +521,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability is in the container runtime itself, not clients of the container runtime.
 
+  - id: CGA-rqxw-4j7r-vvhp
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2025-03-06T05:04:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.26
+            componentID: 11158e2ec31a75c6
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
+
   - id: CGA-v4xv-g87p-w8w2
     aliases:
       - CVE-2023-34231
