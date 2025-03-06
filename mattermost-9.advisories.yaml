@@ -238,6 +238,24 @@ advisories:
           type: component-vulnerability-mismatch
           note: 'This vulnerability affects versions for v8.1.x. Since we are building v9.x, we suspect this is a false positive attributed to this Syft bug: https://github.com/anchore/syft/issues/2980'
 
+  - id: CGA-95mx-x9w8-wghf
+    aliases:
+      - CVE-2024-10214
+      - GHSA-hm57-h27x-599c
+    events:
+      - timestamp: 2025-03-06T01:25:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-9
+            componentID: 5ac87807e49f4988
+            componentName: mattermost-9
+            componentVersion: 9.11.1-r1
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-9vvr-j7wh-frmg
     aliases:
       - CVE-2024-0406
