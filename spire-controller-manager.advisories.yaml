@@ -4,6 +4,23 @@ package:
   name: spire-controller-manager
 
 advisories:
+  - id: CGA-ggch-cf28-c4mg
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T08:17:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spire-controller-manager
+            componentID: 8a51bf3a71803d72
+            componentName: golang.org/x/crypto
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/spire-controller-manager
+            scanner: grype
+
   - id: CGA-h5x3-2jxc-ghj5
     aliases:
       - CVE-2025-22866
@@ -35,6 +52,23 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.6.0-r1
+
+  - id: CGA-j89x-6985-rjh2
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T08:17:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spire-controller-manager
+            componentID: 781a556a218b7283
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/spire-controller-manager
+            scanner: grype
 
   - id: CGA-rg54-q49x-qvfv
     aliases:
