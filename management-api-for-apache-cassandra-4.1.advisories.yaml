@@ -325,3 +325,21 @@ advisories:
             componentType: java-archive
             componentLocation: /opt/management-api/datastax-mgmtapi-server-0.1.0-SNAPSHOT.jar
             scanner: grype
+
+  - id: CGA-xjqv-76w7-rmm9
+    aliases:
+      - CVE-2025-24970
+      - GHSA-4g8c-wm8x-jfhw
+    events:
+      - timestamp: 2025-03-06T01:04:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: management-api-for-apache-cassandra-4.1
+            componentID: f3527e51a42b2b28
+            componentName: netty-handler
+            componentVersion: 4.1.108.Final
+            componentType: java-archive
+            componentLocation: /opt/management-api/datastax-mgmtapi-agent-5.0.x-0.1.0-SNAPSHOT.jar
+            scanner: grype
