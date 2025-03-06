@@ -154,6 +154,23 @@ advisories:
           type: component-vulnerability-mismatch
           note: 'This vulnerability affects versions for v8.1.x. Since we are building v9.x, we suspect this is a false positive attributed to this Syft bug: https://github.com/anchore/syft/issues/2980'
 
+  - id: CGA-5mc7-3wr7-vm9c
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T01:26:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-9
+            componentID: fa664eb510473b04
+            componentName: golang.org/x/crypto
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/mattermost
+            scanner: grype
+
   - id: CGA-5vx8-cjjv-2m22
     aliases:
       - CVE-2023-35075
