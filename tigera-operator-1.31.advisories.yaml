@@ -71,3 +71,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.31.2-r5
+
+  - id: CGA-w923-4vc3-qjqp
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-03-06T04:32:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tigera-operator-1.31
+            componentID: 10a5a69003c95fd4
+            componentName: golang.org/x/net
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
