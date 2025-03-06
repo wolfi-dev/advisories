@@ -4,6 +4,24 @@ package:
   name: tomcat
 
 advisories:
+  - id: CGA-2928-vr6j-6fph
+    aliases:
+      - CVE-2023-44487
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2025-03-06T04:16:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tomcat
+            componentID: e6fa84537264c6e6
+            componentName: tomcat-coyote
+            componentVersion: 10.1.13
+            componentType: java-archive
+            componentLocation: /usr/share/tomcat/lib/tomcat-coyote.jar
+            scanner: grype
+
   - id: CGA-56gj-fx9c-7x7q
     aliases:
       - CVE-2024-24549
