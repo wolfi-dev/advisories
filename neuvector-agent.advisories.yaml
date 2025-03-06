@@ -4,6 +4,24 @@ package:
   name: neuvector-agent
 
 advisories:
+  - id: CGA-327x-2f44-qg99
+    aliases:
+      - CVE-2024-45341
+      - GHSA-3f6r-qh9c-x6mm
+    events:
+      - timestamp: 2025-03-06T01:17:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: neuvector-agent
+            componentID: 49b43853fc8b07db
+            componentName: stdlib
+            componentVersion: go1.22.4
+            componentType: go-module
+            componentLocation: /usr/local/bin/agent
+            scanner: grype
+
   - id: CGA-4xg7-qmpx-p262
     aliases:
       - CVE-2024-24789
