@@ -1,9 +1,37 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: tigera-operator-1.30
 
 advisories:
+  - id: CGA-2wg2-ppgh-h7f6
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2025-03-06T04:19:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tigera-operator-1.30
+            componentID: 10a5a69003c95fd4
+            componentName: golang.org/x/net
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
+  - id: CGA-58ff-m6f8-rwxw
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2023-12-20T05:29:46Z
+        type: fixed
+        data:
+          fixed-version: 1.30.9-r2
+
   - id: CGA-58xf-x8x5-6mqm
     aliases:
       - CVE-2023-45283
@@ -25,13 +53,3 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
-
-  - id: CGA-58ff-m6f8-rwxw
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2023-12-20T05:29:46Z
-        type: fixed
-        data:
-          fixed-version: 1.30.9-r2
