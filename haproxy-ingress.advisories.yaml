@@ -4,6 +4,23 @@ package:
   name: haproxy-ingress
 
 advisories:
+  - id: CGA-3g47-gp6x-97c6
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T07:07:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: haproxy-ingress
+            componentID: fffbe6fa2e85c0a3
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.12.0
+            componentType: go-module
+            componentLocation: /usr/bin/haproxy-ingress-controller
+            scanner: grype
+
   - id: CGA-3h9j-rhxp-mwx8
     aliases:
       - CVE-2023-48795
