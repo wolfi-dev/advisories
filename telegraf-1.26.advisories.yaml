@@ -4,6 +4,24 @@ package:
   name: telegraf-1.26
 
 advisories:
+  - id: CGA-2vj4-84g4-xrrj
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-03-06T05:03:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.26
+            componentID: 02bc9fcb44083cd3
+            componentName: golang.org/x/net
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
+
   - id: CGA-3chj-825f-95rr
     aliases:
       - CVE-2024-24783
