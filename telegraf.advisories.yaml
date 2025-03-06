@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: telegraf
+
+advisories:
+  - id: CGA-534q-63mc-px59
+    aliases:
+      - CVE-2019-3826
+      - GHSA-3m87-5598-2v4f
+    events:
+      - timestamp: 2025-03-06T05:19:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf
+            componentID: 0544e5906b9e1958
+            componentName: github.com/prometheus/prometheus
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
