@@ -4,6 +4,23 @@ package:
   name: velero
 
 advisories:
+  - id: CGA-2m8f-2rgw-qj4v
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T10:14:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: velero
+            componentID: 8b419afe6b52369c
+            componentName: golang.org/x/crypto
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/velero
+            scanner: grype
+
   - id: CGA-35x3-qm7j-c4x7
     aliases:
       - CVE-2024-45338
@@ -235,6 +252,23 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.15.0-r1
+
+  - id: CGA-g4jp-9g5f-cf4j
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T10:14:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: velero
+            componentID: 2e86abfe268ebc32
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.19.0
+            componentType: go-module
+            componentLocation: /usr/bin/velero
+            scanner: grype
 
   - id: CGA-hcp5-xcfp-2vq8
     aliases:
