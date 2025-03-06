@@ -4,6 +4,24 @@ package:
   name: keda-2.14
 
 advisories:
+  - id: CGA-7f35-wqjc-xqvp
+    aliases:
+      - CVE-2025-27144
+      - GHSA-c6gw-w398-hv78
+    events:
+      - timestamp: 2025-03-06T00:01:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.14
+            componentID: c8dd8569bbd95a99
+            componentName: github.com/go-jose/go-jose/v4
+            componentVersion: v4.0.1
+            componentType: go-module
+            componentLocation: /usr/bin/keda
+            scanner: grype
+
   - id: CGA-8c25-fcrg-jwfx
     aliases:
       - CVE-2025-22868
