@@ -222,6 +222,23 @@ advisories:
         data:
           fixed-version: 2.11.0-r1
 
+  - id: CGA-mxc7-jpvf-c38f
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T14:44:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-state-metrics
+            componentID: 8ab34b008bfceba8
+            componentName: golang.org/x/crypto
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-state-metrics
+            scanner: grype
+
   - id: CGA-p2pq-jvx4-66hw
     aliases:
       - CVE-2023-45284
@@ -232,6 +249,23 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CGA-p6w5-vc8v-j243
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T14:44:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-state-metrics
+            componentID: aa8c7f6651f2ebd0
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-state-metrics
+            scanner: grype
 
   - id: CGA-p99g-x738-8vr9
     aliases:
