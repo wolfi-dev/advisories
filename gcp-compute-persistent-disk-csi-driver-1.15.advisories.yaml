@@ -4,6 +4,23 @@ package:
   name: gcp-compute-persistent-disk-csi-driver-1.15
 
 advisories:
+  - id: CGA-3p8m-cjq7-24cg
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T12:46:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gcp-compute-persistent-disk-csi-driver-1.15
+            componentID: a6fda6a0050bc458
+            componentName: golang.org/x/crypto
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/gce-pd-csi-driver
+            scanner: grype
+
   - id: CGA-43h8-mp93-c45h
     aliases:
       - CVE-2024-45341
