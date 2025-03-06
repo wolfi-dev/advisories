@@ -188,6 +188,23 @@ advisories:
         data:
           note: https://github.com/square/go-jose is deprecated, replaced with https://github.com/go-jose/go-jose. This dependency cannot be easily replaced without upstream changes due to interface requirements.
 
+  - id: CGA-j89w-2mvj-f2h4
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T00:25:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-1.31
+            componentID: e11085f4f06ebbf4
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/kubectl-1.31
+            scanner: grype
+
   - id: CGA-jcxv-jc3v-2wf7
     aliases:
       - CVE-2016-7075
