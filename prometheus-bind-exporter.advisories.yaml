@@ -4,6 +4,23 @@ package:
   name: prometheus-bind-exporter
 
 advisories:
+  - id: CGA-26w7-crrx-39c3
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T02:34:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-bind-exporter
+            componentID: 1a1fcd272721e888
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/bind_exporter
+            scanner: grype
+
   - id: CGA-2c54-93g6-r6gp
     aliases:
       - CVE-2023-39326
@@ -228,6 +245,23 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.8.0-r4
+
+  - id: CGA-fhpf-pg55-4jg7
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T02:34:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-bind-exporter
+            componentID: c922e8a954b9aaa5
+            componentName: golang.org/x/crypto
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/bind_exporter
+            scanner: grype
 
   - id: CGA-gppp-m374-7ww7
     aliases:
