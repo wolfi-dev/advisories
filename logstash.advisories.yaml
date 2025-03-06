@@ -350,6 +350,24 @@ advisories:
         data:
           note: 'To fix the CVE we need to update derby to 10.17.1.0 which requires requires logstash to be built with JDK 21: https://github.com/logstash-plugins/logstash-integration-jdbc/issues/147'
 
+  - id: CGA-9x8q-6xvc-v5xr
+    aliases:
+      - CVE-2024-45336
+      - GHSA-7wrw-r4p8-38rx
+    events:
+      - timestamp: 2025-03-06T01:06:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash
+            componentID: a0009e0ce07fae13
+            componentName: stdlib
+            componentVersion: go1.23.2
+            componentType: go-module
+            componentLocation: /usr/bin/env2yaml
+            scanner: grype
+
   - id: CGA-f648-gph5-wch6
     aliases:
       - CVE-2024-24789
