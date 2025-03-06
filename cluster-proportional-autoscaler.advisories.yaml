@@ -4,6 +4,23 @@ package:
   name: cluster-proportional-autoscaler
 
 advisories:
+  - id: CGA-2jx3-6c66-fq4p
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T06:40:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-proportional-autoscaler
+            componentID: 81479cef8e09e20a
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-proportional-autoscaler
+            scanner: grype
+
   - id: CGA-4m9p-vfjh-jcvq
     aliases:
       - CVE-2024-34155
