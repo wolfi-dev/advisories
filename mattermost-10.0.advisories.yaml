@@ -347,6 +347,24 @@ advisories:
         data:
           note: 'The issue regarding disintegration/imaging v1.6.2 where the index of the scan function in scanner.go can go out of bounds has an open PR https://github.com/disintegration/imaging/issues/165 but no implanted fix yet '
 
+  - id: CGA-9vjp-4p63-pcjq
+    aliases:
+      - CVE-2024-10214
+      - GHSA-hm57-h27x-599c
+    events:
+      - timestamp: 2025-03-06T00:29:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-10.0
+            componentID: 3585affc62e3eba9
+            componentName: github.com/mattermost/mattermost/server/v8
+            componentVersion: v3.46.0
+            componentType: go-module
+            componentLocation: /usr/bin/mattermost
+            scanner: grype
+
   - id: CGA-9w3m-rfmp-84vv
     aliases:
       - CVE-2023-6459
