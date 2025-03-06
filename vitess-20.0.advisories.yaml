@@ -22,6 +22,40 @@ advisories:
             componentLocation: /usr/bin/authztestgen
             scanner: grype
 
+  - id: CGA-3hr7-84w7-m9q3
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T05:27:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vitess-20.0
+            componentID: 9f96644aefe69e4e
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.20.0
+            componentType: go-module
+            componentLocation: /usr/bin/docgen
+            scanner: grype
+
+  - id: CGA-3xh6-4569-9975
+    aliases:
+      - GHSA-67mh-4wv8-2f99
+    events:
+      - timestamp: 2025-03-06T05:28:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vitess-20.0
+            componentID: c69fa41c20485cde
+            componentName: esbuild
+            componentVersion: 0.18.20
+            componentType: npm
+            componentLocation: /vt/web/vtadmin/node_modules/esbuild/package.json
+            scanner: grype
+
   - id: CGA-cp9r-hc7f-8gr9
     aliases:
       - CVE-2024-45296
@@ -47,6 +81,23 @@ advisories:
         type: fixed
         data:
           fixed-version: 20.0.3-r0
+
+  - id: CGA-f3pr-2f6h-wgh7
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T05:27:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vitess-20.0
+            componentID: 9893d3c8b361a3a2
+            componentName: golang.org/x/crypto
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/docgen
+            scanner: grype
 
   - id: CGA-f4h3-pqfc-gpwp
     aliases:
@@ -90,6 +141,24 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Even on the upstream main branch, the vtadmin version is set to 0.1.0 in the packages.json under web/vtadmin.
+
+  - id: CGA-p4ch-9w3f-f3m7
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-03-06T05:27:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vitess-20.0
+            componentID: ec02a5880b18b757
+            componentName: stdlib
+            componentVersion: go1.22.11
+            componentType: go-module
+            componentLocation: /usr/bin/astfmtgen
+            scanner: grype
 
   - id: CGA-q99g-63m8-c4r8
     aliases:
@@ -164,6 +233,24 @@ advisories:
         data:
           note: The cross-spawn dependency causing this CVE is brought in by npm as a transitive dependency and will need to be updated by upstream maintainers
 
+  - id: CGA-rf39-r5hr-xqf2
+    aliases:
+      - CVE-2024-45339
+      - GHSA-6wxm-mpqj-6jpf
+    events:
+      - timestamp: 2025-03-06T05:27:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vitess-20.0
+            componentID: cb6dddf8d55e6344
+            componentName: github.com/golang/glog
+            componentVersion: v1.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/authztestgen
+            scanner: grype
+
   - id: CGA-rvgq-23g5-3qh3
     aliases:
       - CVE-2024-47764
@@ -211,3 +298,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 20.0.2-r2
+
+  - id: CGA-x72m-gvw6-2jmm
+    aliases:
+      - CVE-2025-24010
+      - GHSA-vg6x-rcgg-rjx6
+    events:
+      - timestamp: 2025-03-06T05:28:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vitess-20.0
+            componentID: 5d2e423c53306b35
+            componentName: vite
+            componentVersion: 4.5.5
+            componentType: npm
+            componentLocation: /vt/web/vtadmin/node_modules/vite/package.json
+            scanner: grype
