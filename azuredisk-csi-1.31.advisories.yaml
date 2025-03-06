@@ -26,6 +26,23 @@ advisories:
         data:
           fixed-version: 1.31.1-r2
 
+  - id: CGA-6xv9-w497-mrrr
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T08:40:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: azuredisk-csi-1.31
+            componentID: 43bf0e724a7da8b3
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/azurediskplugin
+            scanner: grype
+
   - id: CGA-7pp9-w933-vxgj
     aliases:
       - CVE-2024-51744
