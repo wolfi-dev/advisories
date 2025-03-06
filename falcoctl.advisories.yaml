@@ -4,6 +4,23 @@ package:
   name: falcoctl
 
 advisories:
+  - id: CGA-249r-p536-73q7
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T17:39:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: falcoctl
+            componentID: 557215355cddebc6
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/falcoctl
+            scanner: grype
+
   - id: CGA-25h7-2r26-hw4v
     aliases:
       - CVE-2024-29903
