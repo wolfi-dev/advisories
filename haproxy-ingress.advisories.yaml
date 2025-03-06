@@ -222,6 +222,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-p972-8wwx-h3wq
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T07:07:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: haproxy-ingress
+            componentID: ed02a9d6c554506a
+            componentName: golang.org/x/crypto
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/haproxy-ingress-controller
+            scanner: grype
+
   - id: CGA-pcv9-5h8h-jvgh
     aliases:
       - CVE-2024-34155
