@@ -15,6 +15,24 @@ advisories:
           type: component-vulnerability-mismatch
           note: This CVE appears to impact only Debian/Ubuntu.
 
+  - id: CGA-283r-j3hm-p82p
+    aliases:
+      - CVE-2024-10979
+      - GHSA-2r9h-x757-8j9q
+    events:
+      - timestamp: 2025-03-06T03:27:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: postgresql-11
+            componentID: a67d3ce4b62bfaea
+            componentName: postgresql-11
+            componentVersion: 11.22-r7
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-6274-6q2c-57g9
     aliases:
       - CVE-2023-5868
