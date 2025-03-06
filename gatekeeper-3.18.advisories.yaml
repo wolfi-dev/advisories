@@ -47,3 +47,37 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.18.2-r5
+
+  - id: CGA-qh7h-76rf-3mcg
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T10:31:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.18
+            componentID: 0db20f4760084083
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/gator
+            scanner: grype
+
+  - id: CGA-r5jm-464w-x2m6
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T10:31:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.18
+            componentID: 5bd8c7f077d0e129
+            componentName: golang.org/x/crypto
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
