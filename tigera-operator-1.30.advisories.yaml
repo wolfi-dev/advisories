@@ -90,6 +90,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-j6hp-3pjm-xqjw
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T04:19:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tigera-operator-1.30
+            componentID: 06d53f7856391c0f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
   - id: CGA-xh7m-ccx2-v3rh
     aliases:
       - CVE-2025-22868
