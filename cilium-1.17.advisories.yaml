@@ -21,6 +21,23 @@ advisories:
             componentLocation: /opt/cni/bin/cilium-cni
             scanner: grype
 
+  - id: CGA-vmr8-c9c9-67h7
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T06:43:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.17
+            componentID: 9f86e015d05bd6b7
+            componentName: golang.org/x/crypto
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/cilium-agent
+            scanner: grype
+
   - id: CGA-wprr-hmrm-cp2w
     aliases:
       - CVE-2025-27144
