@@ -4,6 +4,24 @@ package:
   name: telegraf-1.27
 
 advisories:
+  - id: CGA-2hw3-jfmv-8q39
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-06T02:08:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.27
+            componentID: 7028295786943dc8
+            componentName: golang.org/x/crypto
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
+
   - id: CGA-33qr-pq47-pvvv
     aliases:
       - GHSA-7jwh-3vrq-q3m8
