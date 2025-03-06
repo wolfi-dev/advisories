@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: vault-1.14
+
+advisories:
+  - id: CGA-vwwh-6chq-q5gr
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-06T05:29:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-1.14
+            componentID: dca6c817d13175be
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/vault
+            scanner: grype
