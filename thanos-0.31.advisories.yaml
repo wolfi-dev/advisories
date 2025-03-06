@@ -281,3 +281,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.31.0-r10
+
+  - id: CGA-w53f-65cj-vrp3
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2025-03-06T04:01:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: thanos-0.31
+            componentID: c95ccece2f589420
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.4.3
+            componentType: go-module
+            componentLocation: /usr/bin/thanos
+            scanner: grype
