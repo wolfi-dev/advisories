@@ -4,6 +4,24 @@ package:
   name: vault-1.14
 
 advisories:
+  - id: CGA-rrgc-g27c-j8hg
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-03-06T05:29:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-1.14
+            componentID: 296aec8ad10b6fa2
+            componentName: golang.org/x/net
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/vault
+            scanner: grype
+
   - id: CGA-vwwh-6chq-q5gr
     aliases:
       - CVE-2024-45337
