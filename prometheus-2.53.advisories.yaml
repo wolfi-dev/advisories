@@ -4,6 +4,23 @@ package:
   name: prometheus-2.53
 
 advisories:
+  - id: CGA-2226-xp9v-hr6r
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T03:02:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.53
+            componentID: 06bd781c04495fa9
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus
+            scanner: grype
+
   - id: CGA-2r4p-9jq9-gc3r
     aliases:
       - CVE-2024-41110
