@@ -4,16 +4,22 @@ package:
   name: redis-7.2
 
 advisories:
-  - id: CGA-7mxg-8xgv-7f8g
+  - id: CGA-4v9w-j73q-gphq
     aliases:
-      - CVE-2022-0543
-      - GHSA-9wpj-h5jq-88p9
+      - CVE-2024-31227
     events:
-      - timestamp: 2023-10-15T16:17:15Z
-        type: false-positive-determination
+      - timestamp: 2025-03-06T03:35:36Z
+        type: detection
         data:
-          type: component-vulnerability-mismatch
-          note: This is a Debian-specific issue and does not affect Wolfi.
+          type: scan/v1
+          data:
+            subpackageName: redis-7.2
+            componentID: 0a30e231fbde694d
+            componentName: redis-7.2
+            componentVersion: 7.2.5-r4
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
 
   - id: CGA-72rr-38mg-g5vj
     aliases:
@@ -32,6 +38,68 @@ advisories:
         data:
           type: vulnerability-record-analysis-contested
           note: The vulnerability is disputed upstream, indicating that this is expected behavior.
+
+  - id: CGA-72wg-pc87-64j4
+    aliases:
+      - CVE-2024-31449
+    events:
+      - timestamp: 2025-03-06T03:35:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: redis-7.2
+            componentID: 0a30e231fbde694d
+            componentName: redis-7.2
+            componentVersion: 7.2.5-r4
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
+  - id: CGA-7mxg-8xgv-7f8g
+    aliases:
+      - CVE-2022-0543
+      - GHSA-9wpj-h5jq-88p9
+    events:
+      - timestamp: 2023-10-15T16:17:15Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: This is a Debian-specific issue and does not affect Wolfi.
+
+  - id: CGA-h4x5-x2gh-47q9
+    aliases:
+      - CVE-2024-51741
+    events:
+      - timestamp: 2025-03-06T03:35:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: redis-7.2
+            componentID: 0a30e231fbde694d
+            componentName: redis-7.2
+            componentVersion: 7.2.5-r4
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
+  - id: CGA-r46p-hj9h-fpph
+    aliases:
+      - CVE-2024-31228
+    events:
+      - timestamp: 2025-03-06T03:35:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: redis-7.2
+            componentID: 0a30e231fbde694d
+            componentName: redis-7.2
+            componentVersion: 7.2.5-r4
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
 
   - id: CGA-rgfw-ccj6-fcxh
     aliases:
@@ -52,3 +120,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 7.2.4-r0
+
+  - id: CGA-xm4x-hc48-9vq4
+    aliases:
+      - CVE-2024-46981
+    events:
+      - timestamp: 2025-03-06T03:35:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: redis-7.2
+            componentID: 0a30e231fbde694d
+            componentName: redis-7.2
+            componentVersion: 7.2.5-r4
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
