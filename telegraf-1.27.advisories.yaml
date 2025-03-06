@@ -193,6 +193,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability is in the container runtime itself, not clients of the container runtime.
 
+  - id: CGA-f4rf-wc42-vwvq
+    aliases:
+      - CVE-2024-35255
+      - GHSA-m5vv-6r4h-3vj9
+    events:
+      - timestamp: 2025-03-06T02:09:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.27
+            componentID: 6ef6501a419acb07
+            componentName: github.com/Azure/azure-sdk-for-go/sdk/azidentity
+            componentVersion: v1.3.0
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
+
   - id: CGA-f7w9-92mx-84gv
     aliases:
       - CVE-2024-27304
