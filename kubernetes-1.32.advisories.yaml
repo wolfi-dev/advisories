@@ -266,6 +266,23 @@ advisories:
           type: component-vulnerability-mismatch
           note: Vulnerability only impacts OpenShift
 
+  - id: CGA-qx85-q6xg-2q66
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T12:20:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-1.32
+            componentID: aa817ba093749122
+            componentName: golang.org/x/crypto
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/kubeadm-1.32
+            scanner: grype
+
   - id: CGA-v9vp-wxmj-7r69
     aliases:
       - CVE-2015-7561
