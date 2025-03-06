@@ -4,6 +4,23 @@ package:
   name: newrelic-infrastructure-agent
 
 advisories:
+  - id: CGA-2qg4-3cvw-gx86
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T10:01:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: newrelic-infrastructure-agent
+            componentID: 33b3a3f1e00f6b9e
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.20.0
+            componentType: go-module
+            componentLocation: /usr/bin/newrelic-infra
+            scanner: grype
+
   - id: CGA-3jf9-cjcr-57m8
     aliases:
       - GHSA-jq35-85cj-fj4p
