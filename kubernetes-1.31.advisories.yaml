@@ -206,6 +206,24 @@ advisories:
         data:
           note: https://github.com/square/go-jose is deprecated, replaced with https://github.com/go-jose/go-jose. This dependency cannot be easily replaced without upstream changes due to interface requirements.
 
+  - id: CGA-ggr3-8f7m-gj8w
+    aliases:
+      - CVE-2024-45336
+      - GHSA-7wrw-r4p8-38rx
+    events:
+      - timestamp: 2025-03-06T00:25:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-1.31
+            componentID: 15eb0a9f57c388af
+            componentName: stdlib
+            componentVersion: go1.23.4
+            componentType: go-module
+            componentLocation: /usr/bin/kubectl-1.31
+            scanner: grype
+
   - id: CGA-j89w-2mvj-f2h4
     aliases:
       - CVE-2025-22868
