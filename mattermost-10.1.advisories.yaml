@@ -247,6 +247,24 @@ advisories:
             A bug has been filed upstream against Syft, and the maintainers have confirmed it's a scanner issue.
             See: https://github.com/anchore/syft/issues/2980.
 
+  - id: CGA-7fh8-qqf6-8cj3
+    aliases:
+      - CVE-2025-24526
+      - GHSA-q8p2-2hwc-jw64
+    events:
+      - timestamp: 2025-03-06T01:22:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-10.1
+            componentID: e9b0c2c5dd0096a4
+            componentName: github.com/mattermost/mattermost/server/v8
+            componentVersion: v3.46.0
+            componentType: go-module
+            componentLocation: /usr/bin/mattermost
+            scanner: grype
+
   - id: CGA-836r-vfwr-qgmc
     aliases:
       - CVE-2024-47003
