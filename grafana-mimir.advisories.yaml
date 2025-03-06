@@ -4,6 +4,23 @@ package:
   name: grafana-mimir
 
 advisories:
+  - id: CGA-24r3-qmp7-447c
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T09:04:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-mimir
+            componentID: ecb39e7f6e4ac6a3
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/metaconvert
+            scanner: grype
+
   - id: CGA-2xvx-2chr-r3h7
     aliases:
       - CVE-2024-45338
@@ -25,6 +42,23 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.14.2-r2
+
+  - id: CGA-4ff8-f82g-crpj
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T09:04:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-mimir
+            componentID: cb745e23ecdf40f7
+            componentName: golang.org/x/crypto
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/metaconvert
+            scanner: grype
 
   - id: CGA-6j8x-q78q-cpp3
     aliases:
