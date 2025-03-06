@@ -4,6 +4,24 @@ package:
   name: vault-1.13
 
 advisories:
+  - id: CGA-3hjc-fhhc-f285
+    aliases:
+      - CVE-2025-0377
+      - GHSA-wpfp-cm49-9m9q
+    events:
+      - timestamp: 2025-03-06T05:10:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-1.13
+            componentID: 4661a68274d07cf7
+            componentName: github.com/hashicorp/go-slug
+            componentVersion: v0.7.0
+            componentType: go-module
+            componentLocation: /usr/bin/vault
+            scanner: grype
+
   - id: CGA-5hhp-8rvv-2278
     aliases:
       - CVE-2023-45288
