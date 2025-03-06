@@ -226,6 +226,24 @@ advisories:
         data:
           note: This vulnerability requires upstream changes. The non-vulnerable version >= v24.0.9 does not contain a module 'github.com/docker/docker/pkg/term' that exists in older version such as v20.10.27.
 
+  - id: CGA-r4qh-943j-8frh
+    aliases:
+      - CVE-2025-0426
+      - GHSA-jgfp-53c3-624w
+    events:
+      - timestamp: 2025-03-06T03:37:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-agent-2.9
+            componentID: 83ebaf59e7299aeb
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.30.3
+            componentType: go-module
+            componentLocation: /usr/bin/agent
+            scanner: grype
+
   - id: CGA-rc75-38x9-gv44
     aliases:
       - CVE-2024-45337
