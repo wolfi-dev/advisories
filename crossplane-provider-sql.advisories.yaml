@@ -4,6 +4,23 @@ package:
   name: crossplane-provider-sql
 
 advisories:
+  - id: CGA-4qcm-h63x-cwrw
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T07:21:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: crossplane-provider-sql
+            componentID: d03c2220e3c834c3
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.15.0
+            componentType: go-module
+            componentLocation: /usr/bin/crossplane-sql-provider
+            scanner: grype
+
   - id: CGA-625m-wmqm-jmq9
     aliases:
       - CVE-2024-45336
