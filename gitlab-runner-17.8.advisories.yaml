@@ -83,6 +83,23 @@ advisories:
         data:
           note: 'Awaiting release of fix by upstream dependency yamux: https://github.com/hashicorp/yamux/pull/143'
 
+  - id: CGA-pf89-2hxj-wfjg
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T08:19:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-17.8
+            componentID: 9d1cca44b5137209
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-runner-helper
+            scanner: grype
+
   - id: CGA-prjg-862h-92r3
     aliases:
       - CVE-2025-27144
