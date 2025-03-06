@@ -235,6 +235,24 @@ advisories:
           type: vulnerable-code-not-in-execution-path
           note: This vulnerability is an XSS flaw affecting alertmanager as a server, not when imported as a library.
 
+  - id: CGA-g4g9-qmm6-6fq9
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2025-03-06T04:02:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: thanos-0.31
+            componentID: 721dd1dcd6078285
+            componentName: stdlib
+            componentVersion: go1.21.6
+            componentType: go-module
+            componentLocation: /usr/bin/thanos
+            scanner: grype
+
   - id: CGA-grg8-3p6j-hfcq
     aliases:
       - CVE-2025-22869
