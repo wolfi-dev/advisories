@@ -4,6 +4,23 @@ package:
   name: tempo
 
 advisories:
+  - id: CGA-2g56-w3w2-qfg5
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T08:39:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tempo
+            componentID: 20c0dab3b800aab7
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/tempo-cli
+            scanner: grype
+
   - id: CGA-46f3-ghc4-83hj
     aliases:
       - CVE-2019-3826
@@ -314,6 +331,23 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.7.0-r2
+
+  - id: CGA-vqf5-f83p-2h6c
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T08:39:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tempo
+            componentID: 43b8711233d4472e
+            componentName: golang.org/x/crypto
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/tempo-cli
+            scanner: grype
 
   - id: CGA-xfxc-mcmr-m27q
     aliases:
