@@ -4,6 +4,23 @@ package:
   name: gitlab-runner-17.8
 
 advisories:
+  - id: CGA-27p6-p7p6-3vc6
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T08:19:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-17.8
+            componentID: 219421ab59ff7f45
+            componentName: golang.org/x/crypto
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-runner-helper
+            scanner: grype
+
   - id: CGA-4vf2-rwqm-99vq
     aliases:
       - CVE-2024-36623
@@ -20,6 +37,24 @@ advisories:
             componentVersion: v25.0.6+incompatible
             componentType: go-module
             componentLocation: /usr/bin/gitlab-runner-helper
+            scanner: grype
+
+  - id: CGA-6w22-rr6c-m25r
+    aliases:
+      - CVE-2025-0475
+      - GHSA-wpxf-3mm2-76f8
+    events:
+      - timestamp: 2025-03-06T08:19:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-17.8
+            componentID: 0e0126a7ce022841
+            componentName: gitlab-runner-oci-entrypoint-17.8
+            componentVersion: 17.8.3-r4
+            componentType: apk
+            componentLocation: /.PKGINFO
             scanner: grype
 
   - id: CGA-c8xq-486q-43r9
@@ -65,6 +100,23 @@ advisories:
         data:
           note: 'Awaiting release of fix by upstream dependency yamux: https://github.com/hashicorp/yamux/pull/143'
 
+  - id: CGA-pf89-2hxj-wfjg
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T08:19:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-17.8
+            componentID: 9d1cca44b5137209
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-runner-helper
+            scanner: grype
+
   - id: CGA-prjg-862h-92r3
     aliases:
       - CVE-2025-27144
@@ -86,6 +138,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 17.8.3-r4
+
+  - id: CGA-rfvm-rfv2-pcph
+    aliases:
+      - CVE-2024-8186
+      - GHSA-g5qp-3jx2-p69r
+    events:
+      - timestamp: 2025-03-06T08:19:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-17.8
+            componentID: 0e0126a7ce022841
+            componentName: gitlab-runner-oci-entrypoint-17.8
+            componentVersion: 17.8.3-r4
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
 
   - id: CGA-vvq7-gv9f-c3x4
     aliases:
