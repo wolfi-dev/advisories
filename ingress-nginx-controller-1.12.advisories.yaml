@@ -4,6 +4,23 @@ package:
   name: ingress-nginx-controller-1.12
 
 advisories:
+  - id: CGA-6grf-wfxw-vjq4
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T14:04:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ingress-nginx-controller-1.12
+            componentID: 2efe0515e16fdb0e
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/nginx-ingress-controller
+            scanner: grype
+
   - id: CGA-fg44-rfvp-pvmg
     aliases:
       - CVE-2025-22866
