@@ -763,6 +763,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Go vulndb has marked this code NOT_IMPORTABLE.
 
+  - id: CGA-jvc2-2m5j-4m98
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T14:27:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines
+            componentID: 631f558a45349e71
+            componentName: golang.org/x/crypto
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/apiserver
+            scanner: grype
+
   - id: CGA-jwhq-mjhp-pxxf
     aliases:
       - CVE-2024-24785
@@ -849,6 +866,23 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Require possible code change, but just bumping the dependency causes some conflicts with other dependencies.
+
+  - id: CGA-pgv3-xx25-cm25
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T14:26:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines
+            componentID: 92b90b831aa94dbf
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.16.0
+            componentType: go-module
+            componentLocation: /usr/bin/apiserver
+            scanner: grype
 
   - id: CGA-pmrp-qvp9-4ggv
     aliases:
