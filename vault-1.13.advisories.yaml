@@ -4,15 +4,15 @@ package:
   name: vault-1.13
 
 advisories:
-  - id: CGA-f3cf-mgc2-xx5r
+  - id: CGA-5hhp-8rvv-2278
     aliases:
-      - CVE-2023-3462
-      - GHSA-9v3w-w2jh-4hff
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
     events:
-      - timestamp: 2023-08-30T20:17:02Z
-        type: fixed
+      - timestamp: 2024-04-11T21:09:50Z
+        type: fix-not-planned
         data:
-          fixed-version: 1.13.6-r0
+          note: Vault 1.13 is not longer supported upstream. Security support ended on 2024-03-25.
 
   - id: CGA-679j-9cq7-3c8j
     aliases:
@@ -24,111 +24,14 @@ advisories:
         data:
           fixed-version: 1.13.8-r3
 
-  - id: CGA-ccwg-hh29-88j6
+  - id: CGA-9qpj-f8jw-96g7
     aliases:
-      - CVE-2023-3978
-      - GHSA-2wrh-6pvc-2jm9
+      - GHSA-mhpq-9638-x6pw
     events:
-      - timestamp: 2023-10-13T23:35:30Z
-        type: fixed
-        data:
-          fixed-version: 1.13.8-r3
-
-  - id: CGA-grcv-765j-q6hp
-    aliases:
-      - CVE-2023-45283
-      - GHSA-vvjp-q62m-2vph
-    events:
-      - timestamp: 2023-11-07T19:40:05Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-x9j5-6pw2-6jrg
-    aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
-    events:
-      - timestamp: 2023-11-07T19:40:07Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
-
-  - id: CGA-5hhp-8rvv-2278
-    aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
-    events:
-      - timestamp: 2024-04-11T21:09:50Z
-        type: fix-not-planned
-        data:
-          note: Vault 1.13 is not longer supported upstream. Security support ended on 2024-03-25.
-
-  - id: CGA-hhgm-mv22-ff57
-    aliases:
-      - CVE-2023-4680
-      - GHSA-v84f-6r39-cpfc
-    events:
-      - timestamp: 2023-09-18T16:56:53Z
-        type: fixed
-        data:
-          fixed-version: 1.13.7-r0
-
-  - id: CGA-rf79-q5vw-cj4r
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2023-12-21T13:44:10Z
+      - timestamp: 2023-12-21T13:44:36Z
         type: fixed
         data:
           fixed-version: 1.13.12-r1
-
-  - id: CGA-wx3v-q66m-r5r5
-    aliases:
-      - CVE-2024-0406
-      - GHSA-rhh4-rh7c-7r5v
-    events:
-      - timestamp: 2024-04-13T09:22:49Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: vault-1.13
-            componentID: 59671433db0227e5
-            componentName: github.com/mholt/archiver/v3
-            componentVersion: v3.5.1
-            componentType: go-module
-            componentLocation: /usr/bin/vault
-            scanner: grype
-      - timestamp: 2024-04-22T14:17:20Z
-        type: fix-not-planned
-        data:
-          note: Upgrade vault-1.13 to a higher version. HashiCorp Vault is not publishing a fix for this vulnerability for version 1.13
-
-  - id: CGA-qf2c-gw3j-4hwg
-    aliases:
-      - CVE-2024-2048
-      - GHSA-r3w7-mfpm-c2vw
-    events:
-      - timestamp: 2024-03-08T07:35:06Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: vault-1.13
-            componentID: 9de59d75473ba45c
-            componentName: github.com/hashicorp/vault
-            componentVersion: v1.13.13
-            componentType: go-module
-            componentLocation: /usr/bin/vault
-            scanner: grype
-      - timestamp: 2024-03-15T23:41:05Z
-        type: fix-not-planned
-        data:
-          note: 'HashiCorp Vault is not publishing a fix for this vulnerability for version 1.13. To fix this vulnerability, upgrade to version 1.14+. Learn more: https://discuss.hashicorp.com/t/hcsec-2024-05-vault-cert-auth-method-did-not-correctly-validate-non-ca-certificates/63382'
 
   - id: CGA-9vq4-4632-2r89
     aliases:
@@ -152,71 +55,46 @@ advisories:
         data:
           fixed-version: 1.13.13-r4
 
-  - id: CGA-xq3r-qmxq-gfqq
+  - id: CGA-ccwg-hh29-88j6
     aliases:
-      - CVE-2024-2660
-      - GHSA-j2rp-gmqv-frhv
+      - CVE-2023-3978
+      - GHSA-2wrh-6pvc-2jm9
     events:
-      - timestamp: 2024-04-13T09:22:47Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: vault-1.13
-            componentID: 60e0bdb5a7483527
-            componentName: github.com/hashicorp/vault
-            componentVersion: v1.13.13
-            componentType: go-module
-            componentLocation: /usr/bin/vault
-            scanner: grype
-      - timestamp: 2024-04-22T14:17:20Z
-        type: fix-not-planned
-        data:
-          note: Upgrade vault-1.13 to a higher version. HashiCorp Vault is not publishing a fix for this vulnerability for version 1.13
-
-  - id: CGA-wfqp-8x3q-4gwj
-    aliases:
-      - CVE-2024-27289
-      - GHSA-m7wr-2xf7-cm9p
-    events:
-      - timestamp: 2024-03-06T01:41:20Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: vault-1.13
-            componentID: ad5c3ba04918569e
-            componentName: github.com/jackc/pgx
-            componentVersion: v3.3.0+incompatible
-            componentType: go-module
-            componentLocation: /usr/bin/vault
-            scanner: grype
-      - timestamp: 2024-03-06T21:42:20Z
+      - timestamp: 2023-10-13T23:35:30Z
         type: fixed
         data:
-          fixed-version: 1.13.13-r2
+          fixed-version: 1.13.8-r3
 
-  - id: CGA-xvpj-wwc8-c4r5
+  - id: CGA-f3cf-mgc2-xx5r
     aliases:
-      - CVE-2024-27304
-      - GHSA-mrww-27vc-gghv
+      - CVE-2023-3462
+      - GHSA-9v3w-w2jh-4hff
     events:
-      - timestamp: 2024-03-06T01:41:33Z
+      - timestamp: 2023-08-30T20:17:02Z
+        type: fixed
+        data:
+          fixed-version: 1.13.6-r0
+
+  - id: CGA-f93r-w2pc-gpmq
+    aliases:
+      - GHSA-5x4g-q5rc-36jp
+    events:
+      - timestamp: 2024-02-05T07:13:17Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: vault-1.13
-            componentID: ad5c3ba04918569e
-            componentName: github.com/jackc/pgx
-            componentVersion: v3.3.0+incompatible
+            componentID: 9dd408a1138c010a
+            componentName: go.etcd.io/etcd/client/pkg/v3
+            componentVersion: v3.0.0-20210928084031-3df272774672
             componentType: go-module
             componentLocation: /usr/bin/vault
             scanner: grype
-      - timestamp: 2024-03-06T21:42:20Z
+      - timestamp: 2024-02-05T16:03:43Z
         type: fixed
         data:
-          fixed-version: 1.13.13-r2
+          fixed-version: 1.13.12-r3
 
   - id: CGA-gj6x-r54v-p953
     aliases:
@@ -240,35 +118,26 @@ advisories:
         data:
           fixed-version: 1.13.13-r3
 
-  - id: CGA-q7xw-32f3-28m2
+  - id: CGA-grcv-765j-q6hp
     aliases:
-      - GHSA-2c7c-3mj9-8fqh
+      - CVE-2023-45283
+      - GHSA-vvjp-q62m-2vph
     events:
-      - timestamp: 2023-11-23T11:47:57Z
-        type: fixed
+      - timestamp: 2023-11-07T19:40:05Z
+        type: false-positive-determination
         data:
-          fixed-version: 1.13.10-r1
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
 
-  - id: CGA-f93r-w2pc-gpmq
+  - id: CGA-hhgm-mv22-ff57
     aliases:
-      - GHSA-5x4g-q5rc-36jp
+      - CVE-2023-4680
+      - GHSA-v84f-6r39-cpfc
     events:
-      - timestamp: 2024-02-05T07:13:17Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: vault-1.13
-            componentID: 9dd408a1138c010a
-            componentName: go.etcd.io/etcd/client/pkg/v3
-            componentVersion: v3.0.0-20210928084031-3df272774672
-            componentType: go-module
-            componentLocation: /usr/bin/vault
-            scanner: grype
-      - timestamp: 2024-02-05T16:03:43Z
+      - timestamp: 2023-09-18T16:56:53Z
         type: fixed
         data:
-          fixed-version: 1.13.12-r3
+          fixed-version: 1.13.7-r0
 
   - id: CGA-pp94-xv39-pxjw
     aliases:
@@ -291,11 +160,160 @@ advisories:
         data:
           fixed-version: 1.13.12-r2
 
-  - id: CGA-9qpj-f8jw-96g7
+  - id: CGA-q7xw-32f3-28m2
     aliases:
-      - GHSA-mhpq-9638-x6pw
+      - GHSA-2c7c-3mj9-8fqh
     events:
-      - timestamp: 2023-12-21T13:44:36Z
+      - timestamp: 2023-11-23T11:47:57Z
+        type: fixed
+        data:
+          fixed-version: 1.13.10-r1
+
+  - id: CGA-qf2c-gw3j-4hwg
+    aliases:
+      - CVE-2024-2048
+      - GHSA-r3w7-mfpm-c2vw
+    events:
+      - timestamp: 2024-03-08T07:35:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-1.13
+            componentID: 9de59d75473ba45c
+            componentName: github.com/hashicorp/vault
+            componentVersion: v1.13.13
+            componentType: go-module
+            componentLocation: /usr/bin/vault
+            scanner: grype
+      - timestamp: 2024-03-15T23:41:05Z
+        type: fix-not-planned
+        data:
+          note: 'HashiCorp Vault is not publishing a fix for this vulnerability for version 1.13. To fix this vulnerability, upgrade to version 1.14+. Learn more: https://discuss.hashicorp.com/t/hcsec-2024-05-vault-cert-auth-method-did-not-correctly-validate-non-ca-certificates/63382'
+
+  - id: CGA-rf79-q5vw-cj4r
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2023-12-21T13:44:10Z
         type: fixed
         data:
           fixed-version: 1.13.12-r1
+
+  - id: CGA-wfqp-8x3q-4gwj
+    aliases:
+      - CVE-2024-27289
+      - GHSA-m7wr-2xf7-cm9p
+    events:
+      - timestamp: 2024-03-06T01:41:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-1.13
+            componentID: ad5c3ba04918569e
+            componentName: github.com/jackc/pgx
+            componentVersion: v3.3.0+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/vault
+            scanner: grype
+      - timestamp: 2024-03-06T21:42:20Z
+        type: fixed
+        data:
+          fixed-version: 1.13.13-r2
+
+  - id: CGA-wx3v-q66m-r5r5
+    aliases:
+      - CVE-2024-0406
+      - GHSA-rhh4-rh7c-7r5v
+    events:
+      - timestamp: 2024-04-13T09:22:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-1.13
+            componentID: 59671433db0227e5
+            componentName: github.com/mholt/archiver/v3
+            componentVersion: v3.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/vault
+            scanner: grype
+      - timestamp: 2024-04-22T14:17:20Z
+        type: fix-not-planned
+        data:
+          note: Upgrade vault-1.13 to a higher version. HashiCorp Vault is not publishing a fix for this vulnerability for version 1.13
+
+  - id: CGA-x98f-c7wc-2h3x
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-06T05:09:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-1.13
+            componentID: ff4db4df3d1d176e
+            componentName: golang.org/x/crypto
+            componentVersion: v0.20.0
+            componentType: go-module
+            componentLocation: /usr/bin/vault
+            scanner: grype
+
+  - id: CGA-x9j5-6pw2-6jrg
+    aliases:
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
+    events:
+      - timestamp: 2023-11-07T19:40:07Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
+
+  - id: CGA-xq3r-qmxq-gfqq
+    aliases:
+      - CVE-2024-2660
+      - GHSA-j2rp-gmqv-frhv
+    events:
+      - timestamp: 2024-04-13T09:22:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-1.13
+            componentID: 60e0bdb5a7483527
+            componentName: github.com/hashicorp/vault
+            componentVersion: v1.13.13
+            componentType: go-module
+            componentLocation: /usr/bin/vault
+            scanner: grype
+      - timestamp: 2024-04-22T14:17:20Z
+        type: fix-not-planned
+        data:
+          note: Upgrade vault-1.13 to a higher version. HashiCorp Vault is not publishing a fix for this vulnerability for version 1.13
+
+  - id: CGA-xvpj-wwc8-c4r5
+    aliases:
+      - CVE-2024-27304
+      - GHSA-mrww-27vc-gghv
+    events:
+      - timestamp: 2024-03-06T01:41:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-1.13
+            componentID: ad5c3ba04918569e
+            componentName: github.com/jackc/pgx
+            componentVersion: v3.3.0+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/vault
+            scanner: grype
+      - timestamp: 2024-03-06T21:42:20Z
+        type: fixed
+        data:
+          fixed-version: 1.13.13-r2
