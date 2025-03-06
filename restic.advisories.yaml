@@ -4,6 +4,23 @@ package:
   name: restic
 
 advisories:
+  - id: CGA-2vxq-32pg-8g3w
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T12:10:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: restic
+            componentID: c55918d8c5b45cfd
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/restic
+            scanner: grype
+
   - id: CGA-58v7-qcwm-wg2h
     aliases:
       - CVE-2023-45284
@@ -226,6 +243,23 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.16.4-r10
+
+  - id: CGA-q326-qx7h-whc9
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T12:10:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: restic
+            componentID: 0456dbea3e7f2ef5
+            componentName: golang.org/x/crypto
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/restic
+            scanner: grype
 
   - id: CGA-q6c6-rcxj-5fmh
     aliases:
