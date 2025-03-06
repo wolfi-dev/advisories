@@ -80,6 +80,23 @@ advisories:
         data:
           fixed-version: 1.14.0-r1
 
+  - id: CGA-mv7m-67f8-j7jx
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T03:01:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-podman-exporter
+            componentID: 1d042cd520f1a16b
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/podman_exporter
+            scanner: grype
+
   - id: CGA-wfcf-wqfj-vg9w
     aliases:
       - CVE-2024-9675
