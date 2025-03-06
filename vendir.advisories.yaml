@@ -4,6 +4,23 @@ package:
   name: vendir
 
 advisories:
+  - id: CGA-5px7-wvp9-v4h6
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T21:01:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vendir
+            componentID: e67467a59b8a9915
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.8.0
+            componentType: go-module
+            componentLocation: /usr/bin/vendir
+            scanner: grype
+
   - id: CGA-87vp-vvwg-7fg5
     aliases:
       - CVE-2025-22866
@@ -67,3 +84,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.43.0-r0
+
+  - id: CGA-v65w-w8vg-66vc
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T21:01:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vendir
+            componentID: 2ab5f54fb4931fd9
+            componentName: golang.org/x/crypto
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/vendir
+            scanner: grype
