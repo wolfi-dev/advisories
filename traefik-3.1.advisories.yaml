@@ -159,6 +159,24 @@ advisories:
         data:
           note: There is no fix for dependency gopkg.in/square/go-jose.v2 as it is unmaintained, and to fix this vulnerability would require non-trivial upstream code changes to replace the affected dependency.
 
+  - id: CGA-8jfg-2qgp-rhm5
+    aliases:
+      - CVE-2024-45336
+      - GHSA-7wrw-r4p8-38rx
+    events:
+      - timestamp: 2025-03-06T04:25:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: traefik-3.1
+            componentID: 2e0a62075c4872f2
+            componentName: stdlib
+            componentVersion: go1.23.2
+            componentType: go-module
+            componentLocation: /usr/bin/traefik
+            scanner: grype
+
   - id: CGA-952v-x2mh-mj4p
     aliases:
       - CVE-2025-22869
