@@ -46,6 +46,23 @@ advisories:
         data:
           fixed-version: 1.19.2-r1
 
+  - id: CGA-g7xf-wvpp-j8mj
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T08:07:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: amazon-k8s-cni
+            componentID: c571048a9a1f7a9e
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/aws-k8s-agent
+            scanner: grype
+
   - id: CGA-xprw-wxg7-cwh6
     aliases:
       - CVE-2024-45338
