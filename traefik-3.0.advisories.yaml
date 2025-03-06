@@ -4,6 +4,23 @@ package:
   name: traefik-3.0
 
 advisories:
+  - id: CGA-2829-frw9-w37j
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T04:14:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: traefik-3.0
+            componentID: 514b6df5684f76d6
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/traefik
+            scanner: grype
+
   - id: CGA-2xwg-h5m9-hvjx
     aliases:
       - CVE-2024-52003
