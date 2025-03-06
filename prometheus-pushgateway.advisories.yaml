@@ -109,6 +109,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-8p2q-m92v-4267
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T22:20:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-pushgateway
+            componentID: fad52b49fe8215ed
+            componentName: golang.org/x/crypto
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/pushgateway
+            scanner: grype
+
   - id: CGA-8v98-5p23-45w6
     aliases:
       - CVE-2024-24786
@@ -280,6 +297,23 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.11.0-r2
+
+  - id: CGA-jvjr-jmj9-p9qf
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T22:20:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-pushgateway
+            componentID: 849816e2383c97f9
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/pushgateway
+            scanner: grype
 
   - id: CGA-m76q-7f94-8xx8
     aliases:
