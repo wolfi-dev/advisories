@@ -4,16 +4,6 @@ package:
   name: prometheus
 
 advisories:
-  - id: CGA-976x-2p6v-qfjv
-    aliases:
-      - CVE-2023-39325
-      - GHSA-4374-p667-p6c8
-    events:
-      - timestamp: 2023-10-13T17:54:43Z
-        type: fixed
-        data:
-          fixed-version: 2.47.1-r3
-
   - id: CGA-33cg-45hr-7pw9
     aliases:
       - CVE-2023-3978
@@ -23,17 +13,6 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.47.1-r3
-
-  - id: CGA-gjg2-34xh-wgjg
-    aliases:
-      - CVE-2023-40577
-      - GHSA-v86x-5fm3-5p7j
-    events:
-      - timestamp: 2023-08-25T20:46:25Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: This vulnerability is an XSS flaw affecting alertmanager as a server not the library.
 
   - id: CGA-4779-25p4-j7h2
     aliases:
@@ -46,15 +25,43 @@ advisories:
         data:
           fixed-version: 2.47.2-r4
 
-  - id: CGA-h69m-qjx3-5gmc
+  - id: CGA-477f-48qm-vgqp
     aliases:
-      - CVE-2023-45142
-      - GHSA-rcjv-mgp8-qvmr
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
     events:
-      - timestamp: 2023-10-19T19:56:49Z
+      - timestamp: 2023-12-21T16:28:49Z
         type: fixed
         data:
-          fixed-version: 2.47.2-r3
+          fixed-version: 2.48.1-r1
+
+  - id: CGA-49fj-8gpq-hwx6
+    aliases:
+      - GHSA-jq35-85cj-fj4p
+    events:
+      - timestamp: 2023-10-31T20:04:00Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability is in the container runtime itself, not clients of the container runtime.
+
+  - id: CGA-5549-fmv8-7936
+    aliases:
+      - CVE-2024-36620
+      - GHSA-q59j-vv4j-v33c
+    events:
+      - timestamp: 2025-03-06T03:14:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus
+            componentID: 348c33dfd67cc167
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.5+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus
+            scanner: grype
 
   - id: CGA-7jrh-xxwm-48qf
     aliases:
@@ -67,16 +74,66 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
-  - id: CGA-ppjm-pvxc-3x8p
+  - id: CGA-8c8j-vpr7-fqh5
     aliases:
-      - CVE-2023-45284
-      - GHSA-rq3x-83w4-p28c
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
     events:
-      - timestamp: 2023-11-07T19:36:30Z
+      - timestamp: 2024-03-14T11:16:31Z
+        type: fixed
+        data:
+          fixed-version: 2.50.1-r3
+
+  - id: CGA-976x-2p6v-qfjv
+    aliases:
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2023-10-13T17:54:43Z
+        type: fixed
+        data:
+          fixed-version: 2.47.1-r3
+
+  - id: CGA-fcqr-m7p6-rpf8
+    aliases:
+      - CVE-2024-24783
+      - GHSA-3q2c-pvp5-3cqp
+    events:
+      - timestamp: 2024-03-12T08:01:18Z
+        type: fixed
+        data:
+          fixed-version: 2.50.1-r2
+
+  - id: CGA-gjg2-34xh-wgjg
+    aliases:
+      - CVE-2023-40577
+      - GHSA-v86x-5fm3-5p7j
+    events:
+      - timestamp: 2023-08-25T20:46:25Z
         type: false-positive-determination
         data:
           type: vulnerable-code-not-included-in-package
-          note: Only affects Windows
+          note: This vulnerability is an XSS flaw affecting alertmanager as a server not the library.
+
+  - id: CGA-gwh5-7c96-858h
+    aliases:
+      - CVE-2024-24557
+      - GHSA-xw73-rw38-6vjc
+    events:
+      - timestamp: 2024-03-21T11:42:58Z
+        type: fixed
+        data:
+          fixed-version: 2.51.0-r1
+
+  - id: CGA-h69m-qjx3-5gmc
+    aliases:
+      - CVE-2023-45142
+      - GHSA-rcjv-mgp8-qvmr
+    events:
+      - timestamp: 2023-10-19T19:56:49Z
+        type: fixed
+        data:
+          fixed-version: 2.47.2-r3
 
   - id: CGA-hjc2-c83q-gg6w
     aliases:
@@ -96,12 +153,22 @@ advisories:
             componentLocation: /usr/bin/prometheus
             scanner: grype
 
-  - id: CGA-wj8v-rv4x-3vmg
+  - id: CGA-mm3w-55r9-24v7
     aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
+      - CVE-2024-29018
+      - GHSA-mq39-4gv4-mvpx
     events:
-      - timestamp: 2024-04-13T09:38:04Z
+      - timestamp: 2024-03-21T11:43:15Z
+        type: fixed
+        data:
+          fixed-version: 2.51.0-r1
+
+  - id: CGA-mphr-2gwc-5phr
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2024-05-14T07:19:59Z
         type: detection
         data:
           type: scan/v1
@@ -124,56 +191,6 @@ advisories:
         data:
           fixed-version: 2.50.1-r2
 
-  - id: CGA-v2j4-gj83-82fg
-    aliases:
-      - CVE-2023-45290
-      - GHSA-rr6r-cfgf-gc6h
-    events:
-      - timestamp: 2024-03-12T08:01:17Z
-        type: fixed
-        data:
-          fixed-version: 2.50.1-r2
-
-  - id: CGA-477f-48qm-vgqp
-    aliases:
-      - CVE-2023-48795
-      - GHSA-45x7-px36-x8w8
-    events:
-      - timestamp: 2023-12-21T16:28:49Z
-        type: fixed
-        data:
-          fixed-version: 2.48.1-r1
-
-  - id: CGA-gwh5-7c96-858h
-    aliases:
-      - CVE-2024-24557
-      - GHSA-xw73-rw38-6vjc
-    events:
-      - timestamp: 2024-03-21T11:42:58Z
-        type: fixed
-        data:
-          fixed-version: 2.51.0-r1
-
-  - id: CGA-fcqr-m7p6-rpf8
-    aliases:
-      - CVE-2024-24783
-      - GHSA-3q2c-pvp5-3cqp
-    events:
-      - timestamp: 2024-03-12T08:01:18Z
-        type: fixed
-        data:
-          fixed-version: 2.50.1-r2
-
-  - id: CGA-vqj9-xjqh-3jh4
-    aliases:
-      - CVE-2024-24784
-      - GHSA-fgq5-q76c-gx78
-    events:
-      - timestamp: 2024-03-12T08:01:16Z
-        type: fixed
-        data:
-          fixed-version: 2.50.1-r2
-
   - id: CGA-p7r8-xvgp-86f7
     aliases:
       - CVE-2024-24785
@@ -184,15 +201,16 @@ advisories:
         data:
           fixed-version: 2.50.1-r2
 
-  - id: CGA-8c8j-vpr7-fqh5
+  - id: CGA-ppjm-pvxc-3x8p
     aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
+      - CVE-2023-45284
+      - GHSA-rq3x-83w4-p28c
     events:
-      - timestamp: 2024-03-14T11:16:31Z
-        type: fixed
+      - timestamp: 2023-11-07T19:36:30Z
+        type: false-positive-determination
         data:
-          fixed-version: 2.50.1-r3
+          type: vulnerable-code-not-included-in-package
+          note: Only affects Windows
 
   - id: CGA-r7gg-wfw2-95w7
     aliases:
@@ -212,12 +230,32 @@ advisories:
             componentLocation: /usr/bin/prometheus
             scanner: grype
 
-  - id: CGA-mphr-2gwc-5phr
+  - id: CGA-v2j4-gj83-82fg
     aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
+      - CVE-2023-45290
+      - GHSA-rr6r-cfgf-gc6h
     events:
-      - timestamp: 2024-05-14T07:19:59Z
+      - timestamp: 2024-03-12T08:01:17Z
+        type: fixed
+        data:
+          fixed-version: 2.50.1-r2
+
+  - id: CGA-vqj9-xjqh-3jh4
+    aliases:
+      - CVE-2024-24784
+      - GHSA-fgq5-q76c-gx78
+    events:
+      - timestamp: 2024-03-12T08:01:16Z
+        type: fixed
+        data:
+          fixed-version: 2.50.1-r2
+
+  - id: CGA-wj8v-rv4x-3vmg
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-13T09:38:04Z
         type: detection
         data:
           type: scan/v1
@@ -229,23 +267,3 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/prometheus
             scanner: grype
-
-  - id: CGA-mm3w-55r9-24v7
-    aliases:
-      - CVE-2024-29018
-      - GHSA-mq39-4gv4-mvpx
-    events:
-      - timestamp: 2024-03-21T11:43:15Z
-        type: fixed
-        data:
-          fixed-version: 2.51.0-r1
-
-  - id: CGA-49fj-8gpq-hwx6
-    aliases:
-      - GHSA-jq35-85cj-fj4p
-    events:
-      - timestamp: 2023-10-31T20:04:00Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: This vulnerability is in the container runtime itself, not clients of the container runtime.
