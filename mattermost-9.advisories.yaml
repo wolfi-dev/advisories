@@ -594,6 +594,24 @@ advisories:
           type: component-vulnerability-mismatch
           note: 'This vulnerability affects versions for v8.1.x. Since we are building v9.x, we suspect this is a false positive attributed to this Syft bug: https://github.com/anchore/syft/issues/2980'
 
+  - id: CGA-ghrm-3vr4-wrvf
+    aliases:
+      - CVE-2024-45341
+      - GHSA-3f6r-qh9c-x6mm
+    events:
+      - timestamp: 2025-03-06T01:32:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-9
+            componentID: 9f26608b6292c17c
+            componentName: stdlib
+            componentVersion: go1.23.1
+            componentType: go-module
+            componentLocation: /usr/bin/mattermost
+            scanner: grype
+
   - id: CGA-ghrp-j9wv-h896
     aliases:
       - CVE-2024-24792
