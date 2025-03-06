@@ -80,6 +80,23 @@ advisories:
         data:
           fixed-version: 3.0.0-r2
 
+  - id: CGA-8474-538v-h3xv
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T12:14:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: fluent-bit-plugin-loki
+            componentID: 3149d23e1ba443e6
+            componentName: golang.org/x/crypto
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /fluent-bit/bin/out_grafana_loki.so
+            scanner: grype
+
   - id: CGA-88v3-675v-fq7v
     aliases:
       - CVE-2024-45336
