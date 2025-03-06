@@ -4,6 +4,24 @@ package:
   name: zookeeper
 
 advisories:
+  - id: CGA-62hp-gvx6-xv67
+    aliases:
+      - CVE-2025-24970
+      - GHSA-4g8c-wm8x-jfhw
+    events:
+      - timestamp: 2025-03-06T03:43:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zookeeper
+            componentID: 7c17883b13d14e82
+            componentName: netty-handler
+            componentVersion: 4.1.100.Final
+            componentType: java-archive
+            componentLocation: /usr/share/java/zookeeper/lib/netty-handler-4.1.100.Final.jar
+            scanner: grype
+
   - id: CGA-7rpm-cj7j-8c6p
     aliases:
       - CVE-2025-25193
