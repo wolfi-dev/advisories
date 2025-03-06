@@ -82,6 +82,24 @@ advisories:
         data:
           fixed-version: 0.5.0-r1
 
+  - id: CGA-gc79-f872-v48p
+    aliases:
+      - CVE-2025-0426
+      - GHSA-jgfp-53c3-624w
+    events:
+      - timestamp: 2025-03-06T03:44:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-webhook-0.5
+            componentID: 462f8ab500b3c6c1
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.30.3
+            componentType: go-module
+            componentLocation: /usr/bin/webhook
+            scanner: grype
+
   - id: CGA-qjw7-pv7h-82w6
     aliases:
       - CVE-2024-45337
