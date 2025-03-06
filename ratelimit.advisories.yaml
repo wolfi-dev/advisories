@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: ratelimit
+
+advisories:
+  - id: CGA-r935-gjg6-m93j
+    aliases:
+      - CVE-2022-41723
+      - GHSA-vvpx-j8f3-3w6h
+    events:
+      - timestamp: 2025-03-06T03:28:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ratelimit
+            componentID: 01bc953e2eae126c
+            componentName: golang.org/x/net
+            componentVersion: v0.4.0
+            componentType: go-module
+            componentLocation: /usr/bin/ratelimit
+            scanner: grype
