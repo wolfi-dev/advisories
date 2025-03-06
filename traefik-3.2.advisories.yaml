@@ -4,6 +4,23 @@ package:
   name: traefik-3.2
 
 advisories:
+  - id: CGA-2q9x-85m9-2mg6
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T01:05:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: traefik-3.2
+            componentID: f5cab29bc1b770c7
+            componentName: golang.org/x/crypto
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/traefik
+            scanner: grype
+
   - id: CGA-42fq-cf7c-9r5v
     aliases:
       - CVE-2024-45338
