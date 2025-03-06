@@ -4,6 +4,23 @@ package:
   name: dagger
 
 advisories:
+  - id: CGA-2wh4-53mc-5f6p
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T06:38:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dagger
+            componentID: 6c5c3318eefa0db3
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/dagger
+            scanner: grype
+
   - id: CGA-3hvm-gq5m-pc4m
     aliases:
       - CVE-2024-24789
@@ -55,6 +72,23 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.15.0-r1
+
+  - id: CGA-6237-vrx6-px95
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T06:38:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dagger
+            componentID: 6955995d6d418349
+            componentName: golang.org/x/crypto
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/dagger
+            scanner: grype
 
   - id: CGA-625c-86pg-xxp5
     aliases:
