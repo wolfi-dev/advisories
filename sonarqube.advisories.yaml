@@ -26,6 +26,24 @@ advisories:
         data:
           note: The ElasticSearch dependency within SonarQube must be bumped in the upstream for fixing this CVE
 
+  - id: CGA-7c3h-fr9p-6vxc
+    aliases:
+      - CVE-2024-47554
+      - GHSA-78wr-2p64-hpwj
+    events:
+      - timestamp: 2025-03-06T04:30:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube
+            componentID: 26082401c8d315be
+            componentName: commons-io
+            componentVersion: 2.11.0
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/lib/extensions/sonar-javascript-plugin-10.14.0.26080-multi.jar
+            scanner: grype
+
   - id: CGA-8cqr-hq52-89q2
     aliases:
       - CVE-2024-34447
