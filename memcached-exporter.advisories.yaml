@@ -44,6 +44,23 @@ advisories:
         data:
           fixed-version: 0.15.0-r4
 
+  - id: CGA-5w8c-2wpf-cq8v
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T01:13:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: memcached-exporter
+            componentID: fe5ec48f1aa94c5a
+            componentName: golang.org/x/crypto
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/memcached_exporter
+            scanner: grype
+
   - id: CGA-63gm-q29r-m8c8
     aliases:
       - CVE-2023-45283
