@@ -4,6 +4,24 @@ package:
   name: rancher-agent-2.9
 
 advisories:
+  - id: CGA-73jx-434j-3h6j
+    aliases:
+      - CVE-2024-36621
+      - GHSA-2mj3-vfvx-fc43
+    events:
+      - timestamp: 2025-03-06T03:36:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-agent-2.9
+            componentID: 9b589d520e9743ea
+            componentName: github.com/docker/docker
+            componentVersion: v20.10.27+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/agent
+            scanner: grype
+
   - id: CGA-gp62-q3qg-j99w
     aliases:
       - CVE-2024-51744
