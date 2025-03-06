@@ -210,3 +210,37 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.3.12-r2
+
+  - id: CGA-rph5-54rc-xw82
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T17:10:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kafka-proxy
+            componentID: 04796ec93e2c057f
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/kafka-proxy
+            scanner: grype
+
+  - id: CGA-xfq6-m732-h5cj
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T17:10:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kafka-proxy
+            componentID: a96e0bff46b0daec
+            componentName: golang.org/x/crypto
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/kafka-proxy
+            scanner: grype
