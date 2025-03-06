@@ -4,6 +4,23 @@ package:
   name: cilium-1.17
 
 advisories:
+  - id: CGA-69vr-r628-gq85
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T06:43:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.17
+            componentID: 31e171e9da7a5a79
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /opt/cni/bin/cilium-cni
+            scanner: grype
+
   - id: CGA-wprr-hmrm-cp2w
     aliases:
       - CVE-2025-27144
