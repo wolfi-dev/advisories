@@ -542,6 +542,23 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'Module "github.com/docker/docker" at "/usr/bin/dockerd": the fixed version tagged v1.3.3 is an ancestor of installed version tagged v26.1.3 commit (8e96db1c328d0467b015768e42a62c0f834970bb), which means the installed version was misidentified by the scanner and the vulnerability has actually been fixed.'
 
+  - id: CGA-mp9q-ffq9-8h2q
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T18:29:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker
+            componentID: 8ba2031c8356ca88
+            componentName: golang.org/x/crypto
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/dockerd
+            scanner: grype
+
   - id: CGA-q27g-v8hj-vf2j
     aliases:
       - CVE-2024-29018
