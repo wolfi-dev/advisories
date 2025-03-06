@@ -74,3 +74,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.36.5-r0
+
+  - id: CGA-xqm8-3427-6x95
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T04:23:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tigera-operator-1.36
+            componentID: fbb8339682e04785
+            componentName: golang.org/x/crypto
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
