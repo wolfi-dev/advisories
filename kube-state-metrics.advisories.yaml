@@ -233,6 +233,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-p6w5-vc8v-j243
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T14:44:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-state-metrics
+            componentID: aa8c7f6651f2ebd0
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-state-metrics
+            scanner: grype
+
   - id: CGA-p99g-x738-8vr9
     aliases:
       - CVE-2024-34158
