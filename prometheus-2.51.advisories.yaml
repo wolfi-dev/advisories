@@ -95,3 +95,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.51.1-r1
+
+  - id: CGA-xjj8-5x78-c849
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-06T03:22:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.51
+            componentID: 1c952e6f3b3f174f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus
+            scanner: grype
