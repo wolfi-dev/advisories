@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: openai
+
+advisories:
+  - id: CGA-7vqp-mrwf-g7x9
+    aliases:
+      - CVE-2024-23334
+      - GHSA-5h86-8mv2-jq9f
+    events:
+      - timestamp: 2025-03-06T01:10:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openai
+            componentID: e81e6780575ce412
+            componentName: aiohttp
+            componentVersion: 3.8.5
+            componentType: python
+            componentLocation: /usr/lib/python3.11/site-packages/aiohttp-3.8.5.dist-info/METADATA, /usr/lib/python3.11/site-packages/aiohttp-3.8.5.dist-info/RECORD, /usr/lib/python3.11/site-packages/aiohttp-3.8.5.dist-info/top_level.txt
+            scanner: grype
