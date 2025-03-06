@@ -4,6 +4,24 @@ package:
   name: zookeeper
 
 advisories:
+  - id: CGA-3gwv-pprw-vhr7
+    aliases:
+      - CVE-2024-47554
+      - GHSA-78wr-2p64-hpwj
+    events:
+      - timestamp: 2025-03-06T03:43:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zookeeper
+            componentID: 20b65219f6fbcd97
+            componentName: commons-io
+            componentVersion: 2.11.0
+            componentType: java-archive
+            componentLocation: /usr/share/java/zookeeper/lib/commons-io-2.11.0.jar
+            scanner: grype
+
   - id: CGA-62hp-gvx6-xv67
     aliases:
       - CVE-2025-24970
