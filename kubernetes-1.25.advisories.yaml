@@ -22,6 +22,24 @@ advisories:
             componentLocation: /.PKGINFO
             scanner: grype
 
+  - id: CGA-3h4p-p79m-p4cq
+    aliases:
+      - CVE-2023-45142
+      - GHSA-rcjv-mgp8-qvmr
+    events:
+      - timestamp: 2025-03-06T02:25:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-1.25
+            componentID: 49db07a8849df806
+            componentName: go.opentelemetry.io/contrib/instrumentation/github.com/emicklei/go-restful/otelrestful
+            componentVersion: v0.20.0
+            componentType: go-module
+            componentLocation: /usr/bin/kubelet
+            scanner: grype
+
   - id: CGA-55ph-47cm-23m8
     aliases:
       - CVE-2021-25740
