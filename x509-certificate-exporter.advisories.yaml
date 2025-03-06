@@ -4,6 +4,23 @@ package:
   name: x509-certificate-exporter
 
 advisories:
+  - id: CGA-2cm4-994r-j67v
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T13:24:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: x509-certificate-exporter
+            componentID: bc929e20c8d0f46d
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/x509-certificate-exporter
+            scanner: grype
+
   - id: CGA-7cv5-p2pw-5r6g
     aliases:
       - CVE-2024-45338
