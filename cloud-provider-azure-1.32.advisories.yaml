@@ -26,6 +26,40 @@ advisories:
         data:
           fixed-version: 1.32.0-r2
 
+  - id: CGA-36x2-j5rv-m48f
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T06:18:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-provider-azure-1.32
+            componentID: fe9dfc9b6f72eef4
+            componentName: golang.org/x/crypto
+            componentVersion: v0.34.0
+            componentType: go-module
+            componentLocation: /usr/bin/cloud-controller-manager
+            scanner: grype
+
+  - id: CGA-ggx4-6fmj-43pv
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T06:18:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-provider-azure-1.32
+            componentID: 10f6fbce15eaa467
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/cloud-controller-manager
+            scanner: grype
+
   - id: CGA-hqp8-92f8-68rr
     aliases:
       - CVE-2024-45341
