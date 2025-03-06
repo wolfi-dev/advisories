@@ -227,6 +227,23 @@ advisories:
           type: component-vulnerability-mismatch
           note: Prometheus ships a Go (Golang) library with a versioning scheme that follows the 0.x format. However, the Prometheus application itself uses a versioning scheme based on 1.x, 2.x, etc. The vulnerability identified in CVE-2019-3826 is specifically associated with the Prometheus application, not the Golang library.
 
+  - id: CGA-rvcc-v4gq-g7mm
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T04:27:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: thanos-0.32
+            componentID: b3c03fb8b6606b5a
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.11.0
+            componentType: go-module
+            componentLocation: /usr/bin/thanos
+            scanner: grype
+
   - id: CGA-w8w4-2885-pj8c
     aliases:
       - CVE-2023-44487
