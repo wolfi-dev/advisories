@@ -4,6 +4,23 @@ package:
   name: telegraf-1.32
 
 advisories:
+  - id: CGA-2f44-765w-5x4g
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T04:31:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.32
+            componentID: 3c8ee6f16814b467
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
+
   - id: CGA-6r6j-cc7h-2jmr
     aliases:
       - CVE-2019-3826
