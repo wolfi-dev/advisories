@@ -110,3 +110,21 @@ advisories:
         type: pending-upstream-fix
         data:
           note: There is no fix for dependency gopkg.in/square/go-jose.v2 and to fix that need code changes to replace the affected dependency.
+
+  - id: CGA-x93h-h62h-g5g3
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-06T04:14:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: traefik-3.0
+            componentID: e44e289f0580ded6
+            componentName: golang.org/x/crypto
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/traefik
+            scanner: grype
