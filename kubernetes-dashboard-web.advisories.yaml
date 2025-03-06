@@ -4,6 +4,23 @@ package:
   name: kubernetes-dashboard-web
 
 advisories:
+  - id: CGA-3w79-rg56-v774
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T06:24:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dashboard-web
+            componentID: 1f573a647f60739a
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/dashboard-web
+            scanner: grype
+
   - id: CGA-8vp7-82p5-wm4c
     aliases:
       - CVE-2025-22866
