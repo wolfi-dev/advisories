@@ -4,6 +4,23 @@ package:
   name: grafana-11.5
 
 advisories:
+  - id: CGA-4m48-6f52-43q8
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T12:23:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-11.5
+            componentID: c19006f04f03f78e
+            componentName: golang.org/x/crypto
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+
   - id: CGA-4rg5-v2rg-c6wm
     aliases:
       - CVE-2025-22868
