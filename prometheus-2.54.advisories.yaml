@@ -4,6 +4,23 @@ package:
   name: prometheus-2.54
 
 advisories:
+  - id: CGA-7xmj-6426-54h9
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T03:06:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.54
+            componentID: 24ce9dc662a6729c
+            componentName: golang.org/x/crypto
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus
+            scanner: grype
+
   - id: CGA-8q2m-w6v7-qx6j
     aliases:
       - CVE-2024-34158
