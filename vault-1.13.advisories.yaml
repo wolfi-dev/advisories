@@ -191,6 +191,24 @@ advisories:
         data:
           note: 'HashiCorp Vault is not publishing a fix for this vulnerability for version 1.13. To fix this vulnerability, upgrade to version 1.14+. Learn more: https://discuss.hashicorp.com/t/hcsec-2024-05-vault-cert-auth-method-did-not-correctly-validate-non-ca-certificates/63382'
 
+  - id: CGA-r588-vq65-463f
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-03-06T05:09:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-1.13
+            componentID: 7983d8dd2c227de6
+            componentName: golang.org/x/net
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/vault
+            scanner: grype
+
   - id: CGA-rf79-q5vw-cj4r
     aliases:
       - CVE-2023-48795
