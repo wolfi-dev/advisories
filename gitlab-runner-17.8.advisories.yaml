@@ -22,6 +22,24 @@ advisories:
             componentLocation: /usr/bin/gitlab-runner-helper
             scanner: grype
 
+  - id: CGA-6w22-rr6c-m25r
+    aliases:
+      - CVE-2025-0475
+      - GHSA-wpxf-3mm2-76f8
+    events:
+      - timestamp: 2025-03-06T08:19:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-17.8
+            componentID: 0e0126a7ce022841
+            componentName: gitlab-runner-oci-entrypoint-17.8
+            componentVersion: 17.8.3-r4
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-c8xq-486q-43r9
     aliases:
       - CVE-2025-22866
