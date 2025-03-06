@@ -125,6 +125,24 @@ advisories:
         data:
           note: Even on the upstream main branch, the vtadmin version is set to 0.1.0 in the packages.json under web/vtadmin.
 
+  - id: CGA-p4ch-9w3f-f3m7
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-03-06T05:27:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vitess-20.0
+            componentID: ec02a5880b18b757
+            componentName: stdlib
+            componentVersion: go1.22.11
+            componentType: go-module
+            componentLocation: /usr/bin/astfmtgen
+            scanner: grype
+
   - id: CGA-q99g-63m8-c4r8
     aliases:
       - CVE-2024-55565
