@@ -4,6 +4,24 @@ package:
   name: telegraf-1.30
 
 advisories:
+  - id: CGA-3fw5-m5v9-6cfc
+    aliases:
+      - CVE-2024-36623
+      - GHSA-gh5c-3h97-2f3q
+    events:
+      - timestamp: 2025-03-06T03:39:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.30
+            componentID: d0a9f0e02cf67fce
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.5+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
+
   - id: CGA-55qc-cgh7-q47w
     aliases:
       - CVE-2024-24790
