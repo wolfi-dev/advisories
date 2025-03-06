@@ -156,6 +156,23 @@ advisories:
             componentLocation: /opt/katib/cmd/earlystopping/medianstop/v1beta1/lib/python3.10/site-packages/pip/_vendor/vendor.txt
             scanner: grype
 
+  - id: CGA-9cxh-9fw3-736j
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T10:30:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-katib
+            componentID: db526cdbd00dc249
+            componentName: golang.org/x/crypto
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/katib-controller
+            scanner: grype
+
   - id: CGA-c4jh-pgw7-5chh
     aliases:
       - CVE-2024-41110
