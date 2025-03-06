@@ -26,6 +26,24 @@ advisories:
         data:
           fixed-version: 2.54.1-r1
 
+  - id: CGA-9r48-r866-vfpf
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-03-06T03:06:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-2.54
+            componentID: 0d00fb1d53faa8f2
+            componentName: golang.org/x/net
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus
+            scanner: grype
+
   - id: CGA-cqmv-c2wf-h52r
     aliases:
       - CVE-2024-34156
