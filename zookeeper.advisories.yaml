@@ -4,6 +4,24 @@ package:
   name: zookeeper
 
 advisories:
+  - id: CGA-344m-f4g2-prq8
+    aliases:
+      - CVE-2024-6763
+      - GHSA-qh8g-58pp-2wxh
+    events:
+      - timestamp: 2025-03-06T03:43:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zookeeper
+            componentID: c96a1eb4c88d4bc9
+            componentName: jetty-http
+            componentVersion: 9.4.52.v20230823
+            componentType: java-archive
+            componentLocation: /usr/share/java/zookeeper/lib/jetty-http-9.4.52.v20230823.jar
+            scanner: grype
+
   - id: CGA-3gwv-pprw-vhr7
     aliases:
       - CVE-2024-47554
