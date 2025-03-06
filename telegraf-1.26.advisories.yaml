@@ -388,3 +388,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.26.3-r6
+
+  - id: CGA-w73c-w2qp-gwjr
+    aliases:
+      - CVE-2024-41110
+      - GHSA-v23v-6jw2-98fq
+    events:
+      - timestamp: 2025-03-06T05:02:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.26
+            componentID: f3acff6696cba775
+            componentName: github.com/docker/docker
+            componentVersion: v23.0.4+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
