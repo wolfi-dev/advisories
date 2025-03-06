@@ -26,6 +26,59 @@ advisories:
         data:
           note: 'gitlab-runner 17.9.0 uses Docker 25.0.6, as seen here: https://gitlab.com/gitlab-org/gitlab-runner/-/blob/v17.9.0/go.mod?ref_type=tags#L31 The fixed version to remediate this CVE is 26.1.0; however, breaking changes between these major versions require upstream maintainers to implement compatibility.'
 
+  - id: CGA-4vpp-gm8c-xv6f
+    aliases:
+      - CVE-2025-0475
+      - GHSA-wpxf-3mm2-76f8
+    events:
+      - timestamp: 2025-03-06T19:08:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-17.9
+            componentID: 935134b775ee2fcb
+            componentName: gitlab-runner-helper-compat-17.9
+            componentVersion: 17.9.0-r1
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
+  - id: CGA-6c2c-x9jq-h6mf
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T19:08:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-17.9
+            componentID: 9d1cca44b5137209
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-runner-helper
+            scanner: grype
+
+  - id: CGA-8vh8-v7ch-g4j9
+    aliases:
+      - CVE-2024-8186
+      - GHSA-g5qp-3jx2-p69r
+    events:
+      - timestamp: 2025-03-06T19:08:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-17.9
+            componentID: 935134b775ee2fcb
+            componentName: gitlab-runner-helper-compat-17.9
+            componentVersion: 17.9.0-r1
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-96qp-63gq-cqfx
     aliases:
       - CVE-2025-27144
@@ -62,6 +115,23 @@ advisories:
             componentID: f5d4a66e1abe69dd
             componentName: github.com/docker/docker
             componentVersion: v25.0.6+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-runner-helper
+            scanner: grype
+
+  - id: CGA-w558-6939-qm69
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T19:08:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-17.9
+            componentID: 219421ab59ff7f45
+            componentName: golang.org/x/crypto
+            componentVersion: v0.31.0
             componentType: go-module
             componentLocation: /usr/bin/gitlab-runner-helper
             scanner: grype
