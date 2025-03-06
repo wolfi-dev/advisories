@@ -150,6 +150,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Go vulndb has marked this code NOT_IMPORTABLE.
 
+  - id: CGA-jm2w-8m8h-hjjx
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T18:37:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-resizer
+            componentID: fccaf846d0712de4
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/csi-resizer
+            scanner: grype
+
   - id: CGA-jmwc-2p9c-hj83
     aliases:
       - CVE-2023-45288
