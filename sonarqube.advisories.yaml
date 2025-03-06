@@ -70,6 +70,24 @@ advisories:
         data:
           note: Transitive dependency of OneLogin's SAML Java toolkit included in shaded JAR
 
+  - id: CGA-c99q-gw84-m9vq
+    aliases:
+      - CVE-2024-12801
+      - GHSA-6v67-2wr5-gvf4
+    events:
+      - timestamp: 2025-03-06T04:30:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube
+            componentID: 01ff127653343c42
+            componentName: logback-core
+            componentVersion: 1.5.3
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/lib/scanner/sonar-scanner-engine-shaded-10.6.0.92116-all.jar
+            scanner: grype
+
   - id: CGA-cm5r-p42v-5pxm
     aliases:
       - CVE-2024-37280
