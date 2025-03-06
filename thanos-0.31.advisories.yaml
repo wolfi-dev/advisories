@@ -135,6 +135,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-f6v8-v3c9-5mhq
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T04:01:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: thanos-0.31
+            componentID: b7dd8f4a1bfe6d35
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.10.0
+            componentType: go-module
+            componentLocation: /usr/bin/thanos
+            scanner: grype
+
   - id: CGA-fm97-7fqm-gp74
     aliases:
       - CVE-2023-40577
