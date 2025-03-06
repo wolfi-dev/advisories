@@ -22,6 +22,24 @@ advisories:
             componentLocation: /usr/bin/nfd-topology-updater
             scanner: grype
 
+  - id: CGA-528x-fc7f-9g88
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-06T02:21:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: node-feature-discovery-0.15
+            componentID: 7b8f161f7d0f4797
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/nfd-master
+            scanner: grype
+
   - id: CGA-5xrh-q838-pqwm
     aliases:
       - CVE-2023-45288
@@ -38,16 +56,6 @@ advisories:
       - GHSA-5fq7-4mxc-535h
     events:
       - timestamp: 2024-05-14T09:03:10Z
-        type: fixed
-        data:
-          fixed-version: 0.15.4-r3
-
-  - id: CGA-xmv4-47qq-v56j
-    aliases:
-      - CVE-2024-24788
-      - GHSA-2jwv-jmq4-4j3r
-    events:
-      - timestamp: 2024-05-14T09:03:09Z
         type: fixed
         data:
           fixed-version: 0.15.4-r3
@@ -92,3 +100,13 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.15.4-r2
+
+  - id: CGA-xmv4-47qq-v56j
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2024-05-14T09:03:09Z
+        type: fixed
+        data:
+          fixed-version: 0.15.4-r3
