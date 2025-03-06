@@ -4,6 +4,23 @@ package:
   name: tigera-operator-1.31
 
 advisories:
+  - id: CGA-4788-q493-5jwp
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T04:32:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tigera-operator-1.31
+            componentID: 06d53f7856391c0f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
   - id: CGA-5wv9-q2hm-rmrr
     aliases:
       - CVE-2025-22868
