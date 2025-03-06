@@ -4,45 +4,40 @@ package:
   name: istio-cni-1.20
 
 advisories:
-  - id: CGA-x98r-4mgw-jr4j
+  - id: CGA-2395-mx64-pp22
     aliases:
-      - CVE-2023-45288
-      - GHSA-4v7x-pqxf-cx7m
+      - CVE-2025-22869
     events:
-      - timestamp: 2024-04-06T09:36:02Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: istio-install-cni-1.20
-            componentID: e6c5a98e0b16d049
-            componentName: stdlib
-            componentVersion: go1.22.1
-            componentType: go-module
-            componentLocation: /usr/bin/install-cni
-            scanner: grype
-
-  - id: CGA-cmq8-ww5p-7r6j
-    aliases:
-      - CVE-2023-49290
-      - GHSA-7f9x-gw85-8grf
-    events:
-      - timestamp: 2024-01-24T07:11:11Z
+      - timestamp: 2025-03-06T01:15:13Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: istio-cni-1.20
-            componentID: 4fbac0db4e796d5c
-            componentName: github.com/lestrrat-go/jwx
-            componentVersion: v1.2.26
+            componentID: a7ca75d97ad0d97c
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
             componentType: go-module
             componentLocation: /usr/bin/istio-cni
             scanner: grype
-      - timestamp: 2024-01-24T17:12:59Z
-        type: fixed
+
+  - id: CGA-2r5j-98f8-c939
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-06T01:15:05Z
+        type: detection
         data:
-          fixed-version: 1.20.2-r1
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.20
+            componentID: a7ca75d97ad0d97c
+            componentName: golang.org/x/crypto
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/istio-cni
+            scanner: grype
 
   - id: CGA-4h4f-7c26-wph6
     aliases:
@@ -66,27 +61,59 @@ advisories:
         data:
           fixed-version: 1.20.2-r2
 
-  - id: CGA-qhf5-r96r-fqwx
+  - id: CGA-5m96-whp7-gfp3
     aliases:
-      - CVE-2024-24786
-      - GHSA-8r3f-844c-mc37
+      - CVE-2024-34156
+      - GHSA-crqm-pwhx-j97f
     events:
-      - timestamp: 2024-03-14T07:04:59Z
+      - timestamp: 2025-03-06T01:15:42Z
         type: detection
         data:
           type: scan/v1
           data:
-            subpackageName: istio-install-cni-1.20
-            componentID: d53fdd81f2ecb3b1
-            componentName: google.golang.org/protobuf
-            componentVersion: v1.31.0
+            subpackageName: istio-cni-1.20
+            componentID: 4c1df2f3afde9477
+            componentName: stdlib
+            componentVersion: go1.22.1
             componentType: go-module
-            componentLocation: /usr/bin/install-cni
+            componentLocation: /usr/bin/istio-cni
             scanner: grype
-      - timestamp: 2024-03-14T15:19:16Z
-        type: fixed
+
+  - id: CGA-6r82-gw23-7m4x
+    aliases:
+      - CVE-2024-24788
+      - GHSA-2jwv-jmq4-4j3r
+    events:
+      - timestamp: 2025-03-06T01:15:22Z
+        type: detection
         data:
-          fixed-version: 1.20.3-r4
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.20
+            componentID: 4c1df2f3afde9477
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/istio-cni
+            scanner: grype
+
+  - id: CGA-74wf-mm2f-32fx
+    aliases:
+      - CVE-2024-34158
+      - GHSA-j7vj-rw65-4v26
+    events:
+      - timestamp: 2025-03-06T01:15:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.20
+            componentID: 4c1df2f3afde9477
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/istio-cni
+            scanner: grype
 
   - id: CGA-8v47-gjqh-4qx4
     aliases:
@@ -110,6 +137,211 @@ advisories:
         data:
           fixed-version: 1.20.3-r3
 
+  - id: CGA-cmq8-ww5p-7r6j
+    aliases:
+      - CVE-2023-49290
+      - GHSA-7f9x-gw85-8grf
+    events:
+      - timestamp: 2024-01-24T07:11:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.20
+            componentID: 4fbac0db4e796d5c
+            componentName: github.com/lestrrat-go/jwx
+            componentVersion: v1.2.26
+            componentType: go-module
+            componentLocation: /usr/bin/istio-cni
+            scanner: grype
+      - timestamp: 2024-01-24T17:12:59Z
+        type: fixed
+        data:
+          fixed-version: 1.20.2-r1
+
+  - id: CGA-g54m-94jh-rrpv
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T01:15:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.20
+            componentID: fddcdd7f7069a05d
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.13.0
+            componentType: go-module
+            componentLocation: /usr/bin/istio-cni
+            scanner: grype
+
+  - id: CGA-gxcg-22gm-wfpq
+    aliases:
+      - CVE-2024-45336
+      - GHSA-7wrw-r4p8-38rx
+    events:
+      - timestamp: 2025-03-06T01:15:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.20
+            componentID: 4c1df2f3afde9477
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/istio-cni
+            scanner: grype
+
+  - id: CGA-j8jh-2q3f-c89h
+    aliases:
+      - CVE-2024-24790
+      - GHSA-49gw-vxvf-fc2g
+    events:
+      - timestamp: 2025-03-06T01:15:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.20
+            componentID: 4c1df2f3afde9477
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/istio-cni
+            scanner: grype
+
+  - id: CGA-mmv9-j687-j4jp
+    aliases:
+      - CVE-2025-27144
+      - GHSA-c6gw-w398-hv78
+    events:
+      - timestamp: 2025-03-06T01:15:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.20
+            componentID: f12d7d87fba7d750
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.3
+            componentType: go-module
+            componentLocation: /usr/bin/install-cni
+            scanner: grype
+
+  - id: CGA-pxvh-gpxc-69cr
+    aliases:
+      - CVE-2024-24789
+      - GHSA-236w-p7wf-5ph8
+    events:
+      - timestamp: 2025-03-06T01:15:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.20
+            componentID: 4c1df2f3afde9477
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/istio-cni
+            scanner: grype
+
+  - id: CGA-q2f6-j2p6-fpc3
+    aliases:
+      - CVE-2024-34155
+      - GHSA-8xfx-rj4p-23jm
+    events:
+      - timestamp: 2025-03-06T01:15:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.20
+            componentID: 4c1df2f3afde9477
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/istio-cni
+            scanner: grype
+
+  - id: CGA-qhf5-r96r-fqwx
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2024-03-14T07:04:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-install-cni-1.20
+            componentID: d53fdd81f2ecb3b1
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/install-cni
+            scanner: grype
+      - timestamp: 2024-03-14T15:19:16Z
+        type: fixed
+        data:
+          fixed-version: 1.20.3-r4
+
+  - id: CGA-w8v8-6w8p-xr36
+    aliases:
+      - CVE-2025-22866
+      - GHSA-3whm-j4xm-rv8x
+    events:
+      - timestamp: 2025-03-06T01:16:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.20
+            componentID: 4c1df2f3afde9477
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/istio-cni
+            scanner: grype
+
+  - id: CGA-wr3c-p4v9-9crg
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-03-06T01:15:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.20
+            componentID: 892a22e0d9bc27e4
+            componentName: golang.org/x/net
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/istio-cni
+            scanner: grype
+
+  - id: CGA-x4mq-wv38-958x
+    aliases:
+      - CVE-2024-45341
+      - GHSA-3f6r-qh9c-x6mm
+    events:
+      - timestamp: 2025-03-06T01:15:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.20
+            componentID: 4c1df2f3afde9477
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/istio-cni
+            scanner: grype
+
   - id: CGA-x5g5-6hwq-854j
     aliases:
       - CVE-2024-28180
@@ -131,3 +363,57 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.20.3-r3
+
+  - id: CGA-x98r-4mgw-jr4j
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2024-04-06T09:36:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-install-cni-1.20
+            componentID: e6c5a98e0b16d049
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/install-cni
+            scanner: grype
+
+  - id: CGA-x9cg-2g6c-r5r3
+    aliases:
+      - CVE-2024-24791
+      - GHSA-hw49-2p59-3mhj
+    events:
+      - timestamp: 2025-03-06T01:15:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.20
+            componentID: 4c1df2f3afde9477
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/istio-cni
+            scanner: grype
+
+  - id: CGA-xcx3-2jf4-3hrh
+    aliases:
+      - CVE-2024-24787
+      - GHSA-5fq7-4mxc-535h
+    events:
+      - timestamp: 2025-03-06T01:15:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-cni-1.20
+            componentID: 4c1df2f3afde9477
+            componentName: stdlib
+            componentVersion: go1.22.1
+            componentType: go-module
+            componentLocation: /usr/bin/istio-cni
+            scanner: grype
