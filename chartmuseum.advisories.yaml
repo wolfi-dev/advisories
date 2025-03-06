@@ -49,6 +49,23 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
 
+  - id: CGA-4g9p-w9pw-rqx4
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T13:13:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: chartmuseum
+            componentID: ff6bfc829184cf4a
+            componentName: golang.org/x/crypto
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/chartmuseum
+            scanner: grype
+
   - id: CGA-4v62-mgwp-fff2
     aliases:
       - CVE-2024-26147
@@ -277,6 +294,23 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.16.1-r4
+
+  - id: CGA-j2w6-c9cq-fhr4
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T13:13:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: chartmuseum
+            componentID: 9b73681f23ef763c
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.16.0
+            componentType: go-module
+            componentLocation: /usr/bin/chartmuseum
+            scanner: grype
 
   - id: CGA-j4mq-q8m9-2qw7
     aliases:
