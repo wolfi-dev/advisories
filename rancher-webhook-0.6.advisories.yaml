@@ -4,6 +4,23 @@ package:
   name: rancher-webhook-0.6
 
 advisories:
+  - id: CGA-4j7v-v584-8jr3
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T06:13:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-webhook-0.6
+            componentID: ce2992fbed16aa7c
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/webhook
+            scanner: grype
+
   - id: CGA-68hh-x7cv-x52c
     aliases:
       - CVE-2025-0426
