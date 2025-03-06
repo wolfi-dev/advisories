@@ -91,3 +91,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.15.1-r1
+
+  - id: CGA-wfxc-grc2-494h
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-03-06T00:22:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.15
+            componentID: 2d2bc8f242bd6398
+            componentName: golang.org/x/crypto
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/keda-adapter
+            scanner: grype
