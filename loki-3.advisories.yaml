@@ -4,6 +4,24 @@ package:
   name: loki-3
 
 advisories:
+  - id: CGA-4pxx-2gf7-h2cg
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-03-06T00:23:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: loki-3
+            componentID: 470485bf5e4cf48e
+            componentName: golang.org/x/net
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/loki
+            scanner: grype
+
   - id: CGA-7392-5gf6-9v29
     aliases:
       - CVE-2019-3826
