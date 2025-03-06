@@ -26,6 +26,23 @@ advisories:
         data:
           fixed-version: 4.8.0-r2
 
+  - id: CGA-6c3g-393v-xr44
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T19:31:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-attacher
+            componentID: 15cb31e862930f2d
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/csi-attacher
+            scanner: grype
+
   - id: CGA-8qw3-cxgp-w8v8
     aliases:
       - CVE-2024-45341
