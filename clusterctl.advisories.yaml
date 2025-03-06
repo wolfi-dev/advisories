@@ -4,6 +4,23 @@ package:
   name: clusterctl
 
 advisories:
+  - id: CGA-2xm4-33cv-m7jx
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T06:05:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: clusterctl
+            componentID: 687032544b89020f
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/clusterctl
+            scanner: grype
+
   - id: CGA-3wf2-h4j8-87p8
     aliases:
       - CVE-2024-24789
