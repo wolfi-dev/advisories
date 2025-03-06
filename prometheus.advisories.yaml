@@ -4,6 +4,24 @@ package:
   name: prometheus
 
 advisories:
+  - id: CGA-2xx4-4h9p-822w
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-03-06T03:14:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus
+            componentID: cca77d461472ce05
+            componentName: golang.org/x/net
+            componentVersion: v0.22.0
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus
+            scanner: grype
+
   - id: CGA-33cg-45hr-7pw9
     aliases:
       - CVE-2023-3978
