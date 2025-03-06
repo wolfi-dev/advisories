@@ -4,6 +4,23 @@ package:
   name: podman
 
 advisories:
+  - id: CGA-2224-cfxc-99mh
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T14:28:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: podman
+            componentID: 67427133bbd66826
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/podman
+            scanner: grype
+
   - id: CGA-3644-8cwr-wm6w
     aliases:
       - CVE-2024-45337
