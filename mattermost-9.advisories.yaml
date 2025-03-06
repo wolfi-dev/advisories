@@ -731,6 +731,24 @@ advisories:
           type: component-vulnerability-mismatch
           note: 'This vulnerability affects versions for v8.1.x. Since we are building v9.x, we suspect this is a false positive attributed to this Syft bug: https://github.com/anchore/syft/issues/2980'
 
+  - id: CGA-jxwx-vh35-36x7
+    aliases:
+      - CVE-2025-22449
+      - GHSA-q8fg-cp3q-5jwm
+    events:
+      - timestamp: 2025-03-06T01:29:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-9
+            componentID: 567f2598a5fab76e
+            componentName: github.com/mattermost/mattermost/server/v8
+            componentVersion: v3.45.1
+            componentType: go-module
+            componentLocation: /usr/bin/mattermost
+            scanner: grype
+
   - id: CGA-p9fc-592h-mvfm
     aliases:
       - CVE-2023-40703
