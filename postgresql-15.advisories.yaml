@@ -4,16 +4,25 @@ package:
   name: postgresql-15
 
 advisories:
-  - id: CGA-w3xm-hcx3-9hq2
+  - id: CGA-594m-vvvv-5jhv
     aliases:
-      - CVE-2017-8806
-      - GHSA-xg92-g8h7-v7r4
+      - CVE-2024-0985
+      - GHSA-4828-5p9m-g4ff
     events:
-      - timestamp: 2022-11-03T12:41:55Z
-        type: false-positive-determination
+      - timestamp: 2024-02-16T07:37:14Z
+        type: fixed
         data:
-          type: component-vulnerability-mismatch
-          note: This CVE appears to impact only Debian/Ubuntu.
+          fixed-version: 15.6-r0
+
+  - id: CGA-8cjm-q8wg-j3g8
+    aliases:
+      - CVE-2023-5869
+      - GHSA-9625-p7pg-3cxg
+    events:
+      - timestamp: 2023-11-09T14:59:03Z
+        type: fixed
+        data:
+          fixed-version: 15.5-r0
 
   - id: CGA-97hx-cgcp-cf39
     aliases:
@@ -35,16 +44,6 @@ advisories:
         data:
           fixed-version: 15.5-r0
 
-  - id: CGA-8cjm-q8wg-j3g8
-    aliases:
-      - CVE-2023-5869
-      - GHSA-9625-p7pg-3cxg
-    events:
-      - timestamp: 2023-11-09T14:59:03Z
-        type: fixed
-        data:
-          fixed-version: 15.5-r0
-
   - id: CGA-q85p-gq7g-p269
     aliases:
       - CVE-2023-5870
@@ -55,12 +54,31 @@ advisories:
         data:
           fixed-version: 15.5-r0
 
-  - id: CGA-594m-vvvv-5jhv
+  - id: CGA-w3xm-hcx3-9hq2
     aliases:
-      - CVE-2024-0985
-      - GHSA-4828-5p9m-g4ff
+      - CVE-2017-8806
+      - GHSA-xg92-g8h7-v7r4
     events:
-      - timestamp: 2024-02-16T07:37:14Z
-        type: fixed
+      - timestamp: 2022-11-03T12:41:55Z
+        type: false-positive-determination
         data:
-          fixed-version: 15.6-r0
+          type: component-vulnerability-mismatch
+          note: This CVE appears to impact only Debian/Ubuntu.
+
+  - id: CGA-xf6p-3j53-4x53
+    aliases:
+      - CVE-2024-10976
+      - GHSA-9cv8-8vgq-fg45
+    events:
+      - timestamp: 2025-03-06T03:26:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: postgresql-15
+            componentID: c72e431157686c36
+            componentName: postgresql-15
+            componentVersion: 15.6-r5
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
