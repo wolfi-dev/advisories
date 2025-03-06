@@ -230,6 +230,24 @@ advisories:
         data:
           note: This vulnerability has recently updated the list of affected packages. Unfortunately the new affected package 'gopkg.in/square/go-jose.v2' is currently used by many indirect dependencies to this package which makes impossible to fix it without upstream code changes.
 
+  - id: CGA-c2mg-8rf3-wr5p
+    aliases:
+      - CVE-2024-45341
+      - GHSA-3f6r-qh9c-x6mm
+    events:
+      - timestamp: 2025-03-06T04:12:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: traefik
+            componentID: a426d962ad8ded4b
+            componentName: stdlib
+            componentVersion: go1.22.4
+            componentType: go-module
+            componentLocation: /usr/bin/traefik
+            scanner: grype
+
   - id: CGA-fj5h-2qwj-2xpj
     aliases:
       - CVE-2024-24789
