@@ -157,6 +157,23 @@ advisories:
         data:
           note: Attempting to patch this CVE via updating the affected module leads to resolution errors with other modules, therefore a patch from upstream is required to remediate this CVE.
 
+  - id: CGA-fh8w-q8mm-chgc
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T06:35:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argocd-image-updater
+            componentID: 23cf27524ff74272
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.22.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd-image-updater
+            scanner: grype
+
   - id: CGA-hrx6-hvq8-xj45
     aliases:
       - CVE-2024-3177
