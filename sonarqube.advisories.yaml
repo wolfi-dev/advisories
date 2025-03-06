@@ -136,6 +136,24 @@ advisories:
         data:
           note: This is a transitive dependency of ElasticSearch and must be fixed in the upstream project
 
+  - id: CGA-rmgj-x5xj-3c37
+    aliases:
+      - CVE-2025-24970
+      - GHSA-4g8c-wm8x-jfhw
+    events:
+      - timestamp: 2025-03-06T04:30:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube
+            componentID: 328b0da3768b8c47
+            componentName: netty-handler
+            componentVersion: 4.1.94.Final
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/elasticsearch/modules/transport-netty4/netty-handler-4.1.94.Final.jar
+            scanner: grype
+
   - id: CGA-v2f3-7fgr-fwvw
     aliases:
       - CVE-2023-44483
