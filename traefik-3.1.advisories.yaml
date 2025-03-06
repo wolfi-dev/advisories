@@ -4,6 +4,24 @@ package:
   name: traefik-3.1
 
 advisories:
+  - id: CGA-25ff-548g-m242
+    aliases:
+      - CVE-2024-51744
+      - GHSA-29wx-vh33-7x7r
+    events:
+      - timestamp: 2025-03-06T04:24:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: traefik-3.1
+            componentID: 18620a0c8e001111
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.0
+            componentType: go-module
+            componentLocation: /usr/bin/traefik
+            scanner: grype
+
   - id: CGA-28fw-5w49-gvr3
     aliases:
       - CVE-2024-34158
