@@ -27,6 +27,24 @@ advisories:
           type: component-vulnerability-mismatch
           note: This CVE appears to impact only Debian/Ubuntu.
 
+  - id: CGA-6952-cv3q-qp88
+    aliases:
+      - CVE-2024-10977
+      - GHSA-62q4-hc79-94qj
+    events:
+      - timestamp: 2025-03-06T03:19:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: postgresql-13
+            componentID: 834191991243e47b
+            componentName: postgresql-13
+            componentVersion: 13.14-r5
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-95rp-7jph-c847
     aliases:
       - CVE-2023-5868
