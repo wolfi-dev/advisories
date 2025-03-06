@@ -508,6 +508,23 @@ advisories:
         data:
           fixed-version: 0.38.1-r0
 
+  - id: CGA-vjg8-26m3-q853
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-06T10:10:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tkn
+            componentID: 832939c358c43639
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/tkn
+            scanner: grype
+
   - id: CGA-w239-vgg5-rp8q
     aliases:
       - CVE-2024-45338
@@ -540,3 +557,20 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: The libraries this CVE impacts are not used by the Tekton project
+
+  - id: CGA-xqjv-whwv-xh4q
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-06T10:10:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tkn
+            componentID: 9525dff7513c912a
+            componentName: golang.org/x/crypto
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/tkn
+            scanner: grype
