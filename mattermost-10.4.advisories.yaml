@@ -574,6 +574,24 @@ advisories:
             - https://github.com/anchore/syft/issues/2980
             - https://mattermost.com/security-updates/
 
+  - id: CGA-f9jx-2255-2hxj
+    aliases:
+      - CVE-2025-20051
+      - GHSA-v469-7wp6-7cvp
+    events:
+      - timestamp: 2025-03-06T01:41:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-10.4
+            componentID: beb96670d4c987d2
+            componentName: github.com/mattermost/mattermost/server/v8
+            componentVersion: v3.46.0
+            componentType: go-module
+            componentLocation: /usr/bin/mmctl
+            scanner: grype
+
   - id: CGA-fgpq-vwmm-rj42
     aliases:
       - CVE-2023-43754
