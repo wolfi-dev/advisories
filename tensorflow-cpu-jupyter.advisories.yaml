@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: tensorflow-cpu-jupyter
+
+advisories:
+  - id: CGA-ch38-hm3p-vqfx
+    aliases:
+      - CVE-2025-27516
+      - GHSA-cpwx-vrp4-4pq7
+    events:
+      - timestamp: 2025-03-07T19:04:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tensorflow-cpu-jupyter
+            componentID: 7bd5a3c42b98c17f
+            componentName: jinja2
+            componentVersion: 3.1.5
+            componentType: python
+            componentLocation: /usr/share/tensorflow/lib/python3.11/site-packages/jinja2-3.1.5.dist-info/METADATA, /usr/share/tensorflow/lib/python3.11/site-packages/jinja2-3.1.5.dist-info/RECORD
+            scanner: grype
