@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: jupyter-base-notebook
+
+advisories:
+  - id: CGA-3whm-xmcr-46qf
+    aliases:
+      - CVE-2025-27516
+      - GHSA-cpwx-vrp4-4pq7
+    events:
+      - timestamp: 2025-03-07T19:33:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jupyter-base-notebook
+            componentID: 5091d167b99ca8e5
+            componentName: jinja2
+            componentVersion: 3.1.5
+            componentType: python
+            componentLocation: /usr/lib/python3.12/site-packages/jinja2-3.1.5.dist-info/METADATA, /usr/lib/python3.12/site-packages/jinja2-3.1.5.dist-info/RECORD
+            scanner: grype
