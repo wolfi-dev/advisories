@@ -4,6 +4,24 @@ package:
   name: grafana-oncall
 
 advisories:
+  - id: CGA-2h34-36gr-7wjw
+    aliases:
+      - CVE-2025-27516
+      - GHSA-cpwx-vrp4-4pq7
+    events:
+      - timestamp: 2025-03-07T16:42:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-oncall
+            componentID: 2e702674a5bc08f0
+            componentName: jinja2
+            componentVersion: 3.1.5
+            componentType: python
+            componentLocation: /usr/share/grafana-oncall/.venv/lib/python3.12/site-packages/jinja2-3.1.5.dist-info/METADATA, /usr/share/grafana-oncall/.venv/lib/python3.12/site-packages/jinja2-3.1.5.dist-info/RECORD
+            scanner: grype
+
   - id: CGA-6fw6-fxv7-m2q7
     aliases:
       - CVE-2024-12797
