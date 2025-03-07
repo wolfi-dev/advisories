@@ -1,0 +1,39 @@
+schema-version: 2.0.2
+
+package:
+  name: tigera-operator-1.37
+
+advisories:
+  - id: CGA-f9vv-j6g9-rxr6
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-07T20:21:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tigera-operator-1.37
+            componentID: 0a9a23dd9466fc4d
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
+  - id: CGA-gvcx-xmwf-c63h
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-07T20:21:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tigera-operator-1.37
+            componentID: b485af3cef538299
+            componentName: golang.org/x/crypto
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
