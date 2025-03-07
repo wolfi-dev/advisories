@@ -26,6 +26,23 @@ advisories:
         data:
           fixed-version: 2.12.0-r3
 
+  - id: CGA-3cr8-w253-p92g
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-07T17:45:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-2.12
+            componentID: 49920d9dc27aa437
+            componentName: golang.org/x/crypto
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-jobservice
+            scanner: grype
+
   - id: CGA-3j6v-fq99-qchj
     aliases:
       - CVE-2024-51744
@@ -91,6 +108,23 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.12.2-r4
+
+  - id: CGA-9mx6-7gc6-742m
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-07T17:45:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-2.12
+            componentID: 994303c82366dac5
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-core
+            scanner: grype
 
   - id: CGA-hj2q-98gh-8q5c
     aliases:
