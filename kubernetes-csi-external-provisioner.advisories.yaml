@@ -151,6 +151,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-c4gw-fr4p-hr7r
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-08T02:07:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-provisioner
+            componentID: a6d3afb72d70f0f9
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/csi-provisioner
+            scanner: grype
+
   - id: CGA-cj9j-pw6j-xxh5
     aliases:
       - CVE-2024-34155
