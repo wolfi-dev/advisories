@@ -92,6 +92,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'The version of shell-quote included in this package, version 1.7.3, is above the patched version (1.6.1) that resolves the vulnerability described in CVE GHSA-qg8p-v9q4-gh34. '
 
+  - id: CGA-cw47-g5xg-vcxc
+    aliases:
+      - CVE-2025-27152
+      - GHSA-jr5f-v2jv-69x6
+    events:
+      - timestamp: 2025-03-08T14:27:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jitsucom-jitsu
+            componentID: 6f1dd0a6b2a03a5e
+            componentName: axios
+            componentVersion: 1.7.7
+            componentType: npm
+            componentLocation: /app/node_modules/.pnpm/axios@1.7.7/node_modules/axios/package.json
+            scanner: grype
+
   - id: CGA-fggr-qmgm-5v3m
     aliases:
       - CVE-2022-37601
