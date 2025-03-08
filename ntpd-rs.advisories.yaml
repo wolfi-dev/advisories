@@ -4,6 +4,23 @@ package:
   name: ntpd-rs
 
 advisories:
+  - id: CGA-77hv-73ff-6p3m
+    aliases:
+      - GHSA-4p46-pwfr-66x6
+    events:
+      - timestamp: 2025-03-08T14:28:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ntpd-rs
+            componentID: f5b85bee718132ee
+            componentName: ring
+            componentVersion: 0.17.11
+            componentType: rust-crate
+            componentLocation: /usr/bin/ntp-ctl
+            scanner: grype
+
   - id: CGA-83gq-p3h6-jqfm
     aliases:
       - GHSA-qg5g-gv98-5ffh
