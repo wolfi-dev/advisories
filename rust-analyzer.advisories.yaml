@@ -29,3 +29,20 @@ advisories:
             Attempts to upgrade 'idna' have failed, as there are other dependencies requiring different versions of `idna`.
             For example, the 'url' requires idna v0.5.0. Upgrading 'url' to a newer version, results in further compatibility issues with the 'ide' package.
             Pending fix from upstream.
+
+  - id: CGA-qgrh-q29w-549w
+    aliases:
+      - GHSA-2gh3-rmm4-6rq5
+    events:
+      - timestamp: 2025-03-08T17:16:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rust-analyzer
+            componentID: be969f0c254667ef
+            componentName: protobuf
+            componentVersion: 3.2.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/rust-analyzer
+            scanner: grype
