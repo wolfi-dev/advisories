@@ -4,6 +4,24 @@ package:
   name: tigera-operator-1.37
 
 advisories:
+  - id: CGA-5qfx-x25r-xc9m
+    aliases:
+      - CVE-2025-25294
+      - GHSA-mf24-chxh-hmvj
+    events:
+      - timestamp: 2025-03-08T11:59:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tigera-operator-1.37
+            componentID: 2b3dffefe28e2fe5
+            componentName: github.com/envoyproxy/gateway
+            componentVersion: v1.2.6
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
   - id: CGA-f9vv-j6g9-rxr6
     aliases:
       - CVE-2025-22868
