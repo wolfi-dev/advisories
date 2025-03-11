@@ -1,0 +1,75 @@
+schema-version: 2.0.2
+
+package:
+  name: istio-1.25
+
+advisories:
+  - id: CGA-547w-6r7c-34f4
+    aliases:
+      - CVE-2025-27144
+      - GHSA-c6gw-w398-hv78
+    events:
+      - timestamp: 2025-03-11T21:08:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-1.25
+            componentID: 0f3caca372203ff4
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.3
+            componentType: go-module
+            componentLocation: /usr/bin/install-cni
+            scanner: grype
+
+  - id: CGA-hp4m-8pmw-cpgj
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-11T21:08:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-1.25
+            componentID: 1100ab262f3be8e6
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/istio-cni
+            scanner: grype
+
+  - id: CGA-p4fx-jxh9-4mch
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-11T21:08:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-1.25
+            componentID: f0230a6b1bb4c42e
+            componentName: golang.org/x/crypto
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/istio-cni
+            scanner: grype
+
+  - id: CGA-vghj-q654-8ww2
+    aliases:
+      - CVE-2019-3826
+      - GHSA-3m87-5598-2v4f
+    events:
+      - timestamp: 2025-03-11T21:08:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-1.25
+            componentID: 05680d67edf97f79
+            componentName: github.com/prometheus/prometheus
+            componentVersion: v0.301.0
+            componentType: go-module
+            componentLocation: /usr/bin/pilot-discovery
+            scanner: grype
