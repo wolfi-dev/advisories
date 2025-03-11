@@ -4,6 +4,23 @@ package:
   name: flannel
 
 advisories:
+  - id: CGA-3pmj-84j6-2887
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-11T16:09:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flannel
+            componentID: aa8cda67dcc9e3a3
+            componentName: golang.org/x/crypto
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/flanneld
+            scanner: grype
+
   - id: CGA-4r3q-3x2g-3mqj
     aliases:
       - CVE-2024-45337
@@ -201,6 +218,23 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.25.4-r1
+
+  - id: CGA-rr2x-9hvg-qf25
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-11T16:09:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flannel
+            componentID: 6ca7782026bc8b54
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.22.0
+            componentType: go-module
+            componentLocation: /usr/bin/flanneld
+            scanner: grype
 
   - id: CGA-vq6p-4p2p-g4wj
     aliases:
