@@ -43,6 +43,23 @@ advisories:
         data:
           note: 'This vulnerability relates to the GitLab dependency: [gem] sinatra @ 2.2.4, GitLab advises that maintainers should NOT upgrade dependency versions manually, as their automation would have already applied this in cases of simple version increments. If a dependency version has not yet been upgraded, there is usually a good reason. Additionally, past attempts to upgrade GitLab dependencies ahead of the upstream release have resulted in build issues.  deferring to upstream (GitLab) to address this CVE in a subsequent update. See: https://docs.gitlab.com/ee/development/dependencies.html.'
 
+  - id: CGA-j8r7-gpvj-x4xv
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-11T19:24:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-cng-17.9
+            componentID: 31031141072adf7f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/registry
+            scanner: grype
+
   - id: CGA-mqvc-f3cv-h249
     aliases:
       - CVE-2024-45614
