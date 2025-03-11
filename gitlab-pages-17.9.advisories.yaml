@@ -1,0 +1,39 @@
+schema-version: 2.0.2
+
+package:
+  name: gitlab-pages-17.9
+
+advisories:
+  - id: CGA-2wq3-943g-924w
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-11T14:42:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-pages-17.9
+            componentID: dedd7781d5fc143d
+            componentName: golang.org/x/crypto
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-pages
+            scanner: grype
+
+  - id: CGA-8jpw-qv9g-mjmc
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-11T14:42:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-pages-17.9
+            componentID: 1d0bee2c4f244528
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-pages
+            scanner: grype

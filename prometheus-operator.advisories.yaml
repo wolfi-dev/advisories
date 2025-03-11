@@ -289,6 +289,40 @@ advisories:
             componentLocation: /usr/bin/admission-webhook
             scanner: grype
 
+  - id: CGA-p89g-55q3-r3r8
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-11T15:01:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-operator
+            componentID: acc38c5ef138bddc
+            componentName: golang.org/x/crypto
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus-config-reloader
+            scanner: grype
+
+  - id: CGA-p9mx-qhcq-pcfr
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-11T15:01:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-operator
+            componentID: a6a9801f96dcd003
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus-config-reloader
+            scanner: grype
+
   - id: CGA-qwjx-9h4v-57mw
     aliases:
       - CVE-2024-34155
