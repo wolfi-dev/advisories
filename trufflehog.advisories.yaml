@@ -4,6 +4,23 @@ package:
   name: trufflehog
 
 advisories:
+  - id: CGA-22gx-fx43-vm29
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-11T23:24:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trufflehog
+            componentID: b6b9190ea3803253
+            componentName: golang.org/x/crypto
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/trufflehog
+            scanner: grype
+
   - id: CGA-f37v-m3vv-pqgv
     aliases:
       - CVE-2025-27144
@@ -25,3 +42,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.88.12-r1
+
+  - id: CGA-h24x-5xj7-rjg9
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-11T23:24:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trufflehog
+            componentID: ecde6f0ad898fa8f
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/trufflehog
+            scanner: grype
