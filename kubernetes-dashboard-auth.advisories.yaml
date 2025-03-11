@@ -4,6 +4,23 @@ package:
   name: kubernetes-dashboard-auth
 
 advisories:
+  - id: CGA-2phw-hq9m-r5hf
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-11T14:33:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dashboard-auth
+            componentID: 4c823a96c9ed0c7e
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/dashboard-auth
+            scanner: grype
+
   - id: CGA-7c4p-7pfv-xp5r
     aliases:
       - CVE-2024-51744
