@@ -312,6 +312,24 @@ advisories:
           type: vulnerable-code-cannot-be-controlled-by-adversary
           note: Vulnerability affects only Windows systems.
 
+  - id: CGA-hpqc-9w2r-rfj6
+    aliases:
+      - CVE-2025-27610
+      - GHSA-7wqh-767x-r66v
+    events:
+      - timestamp: 2025-03-11T22:15:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-8
+            componentID: 2f011af19fb12e0f
+            componentName: rack
+            componentVersion: 3.1.11
+            componentType: gem
+            componentLocation: /opt/bitnami/logstash/vendor/bundle/jruby/3.1.0/specifications/rack-3.1.11.gemspec
+            scanner: grype
+
   - id: CGA-mhwq-rjrc-rv9h
     aliases:
       - CVE-2025-25193
