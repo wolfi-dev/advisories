@@ -4,6 +4,24 @@ package:
   name: istio-1.25
 
 advisories:
+  - id: CGA-547w-6r7c-34f4
+    aliases:
+      - CVE-2025-27144
+      - GHSA-c6gw-w398-hv78
+    events:
+      - timestamp: 2025-03-11T21:08:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-1.25
+            componentID: 0f3caca372203ff4
+            componentName: github.com/go-jose/go-jose/v3
+            componentVersion: v3.0.3
+            componentType: go-module
+            componentLocation: /usr/bin/install-cni
+            scanner: grype
+
   - id: CGA-hp4m-8pmw-cpgj
     aliases:
       - CVE-2025-22868
