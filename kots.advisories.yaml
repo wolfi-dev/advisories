@@ -552,6 +552,23 @@ advisories:
         data:
           note: This vulnerability has recently updated the list of affected packages. Unfortunately the new affected package 'gopkg.in/square/go-jose.v2' is currently used by many indirect dependencies to this package which makes impossible to fix it without upstream code changes.
 
+  - id: CGA-r743-f224-6cjc
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-11T22:07:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kots
+            componentID: 4665250b42fd7e5b
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/kots
+            scanner: grype
+
   - id: CGA-rc88-wr3h-gfrc
     aliases:
       - CVE-2024-34158
@@ -603,6 +620,23 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.108.1-r0
+
+  - id: CGA-vghg-p446-4754
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-11T22:07:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kots
+            componentID: 6981e6727d4c1c44
+            componentName: golang.org/x/crypto
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/kots
+            scanner: grype
 
   - id: CGA-vh93-9cfw-92qq
     aliases:
