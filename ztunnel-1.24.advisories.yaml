@@ -151,6 +151,12 @@ advisories:
             componentType: rust-crate
             componentLocation: /usr/bin/ztunnel
             scanner: grype
+      - timestamp: 2025-03-10T19:22:02Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            While there is a fix for rust-protobuf v3, v2 claims "only most critical bugfixes will be applied to 2.x version, otherwise it
+            won't be maintained". It remains to be seen if the fix will be backported to the v2 line, or if ztunnel's maintainers will update to v3. Either way, Chainguard is unable to mitigate this CVE.
 
   - id: CGA-ww5r-3x7r-r6p7
     aliases:

@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: aws-s3-controller
+
+advisories:
+  - id: CGA-9xgw-xcx2-8pgv
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-11T15:45:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-s3-controller
+            componentID: 375656c00939af8f
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/controller
+            scanner: grype
