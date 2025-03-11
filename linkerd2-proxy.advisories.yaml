@@ -4,6 +4,23 @@ package:
   name: linkerd2-proxy
 
 advisories:
+  - id: CGA-4vpr-q7q8-45rq
+    aliases:
+      - GHSA-4p46-pwfr-66x6
+    events:
+      - timestamp: 2025-03-11T16:04:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: linkerd2-proxy
+            componentID: 6c42c801bc0ca7f7
+            componentName: ring
+            componentVersion: 0.17.11
+            componentType: rust-crate
+            componentLocation: /usr/lib/linkerd/linkerd2-proxy
+            scanner: grype
+
   - id: CGA-87x9-9pxx-92vc
     aliases:
       - CVE-2024-47609
