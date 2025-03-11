@@ -4,6 +4,23 @@ package:
   name: kafka_exporter
 
 advisories:
+  - id: CGA-256w-vwhc-8cw9
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-11T14:43:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kafka_exporter
+            componentID: 24a15cc3b86a4736
+            componentName: golang.org/x/crypto
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/kafka_exporter
+            scanner: grype
+
   - id: CGA-26vg-pmr5-vm93
     aliases:
       - CVE-2025-22866
