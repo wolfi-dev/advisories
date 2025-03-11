@@ -4,6 +4,41 @@ package:
   name: gitlab-cng-17.9
 
 advisories:
+  - id: CGA-3vj5-hvg9-9g6h
+    aliases:
+      - CVE-2025-27610
+      - GHSA-7wqh-767x-r66v
+    events:
+      - timestamp: 2025-03-11T19:24:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-cng-17.9
+            componentID: 6119533dfd951653
+            componentName: rack
+            componentVersion: 2.2.12
+            componentType: gem
+            componentLocation: /usr/lib/ruby/gems/3.2.0/specifications/rack-2.2.12.gemspec
+            scanner: grype
+
+  - id: CGA-c8hf-jq5p-8fwx
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-11T19:24:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-cng-17.9
+            componentID: 1f9161403eef3f60
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/registry
+            scanner: grype
+
   - id: CGA-fc7r-w8x2-v29r
     aliases:
       - CVE-2024-21510
@@ -25,6 +60,23 @@ advisories:
         type: pending-upstream-fix
         data:
           note: 'This vulnerability relates to the GitLab dependency: [gem] sinatra @ 2.2.4, GitLab advises that maintainers should NOT upgrade dependency versions manually, as their automation would have already applied this in cases of simple version increments. If a dependency version has not yet been upgraded, there is usually a good reason. Additionally, past attempts to upgrade GitLab dependencies ahead of the upstream release have resulted in build issues.  deferring to upstream (GitLab) to address this CVE in a subsequent update. See: https://docs.gitlab.com/ee/development/dependencies.html.'
+
+  - id: CGA-j8r7-gpvj-x4xv
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-11T19:24:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-cng-17.9
+            componentID: 31031141072adf7f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/registry
+            scanner: grype
 
   - id: CGA-mqvc-f3cv-h249
     aliases:
