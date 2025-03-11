@@ -4,6 +4,40 @@ package:
   name: openbao
 
 advisories:
+  - id: CGA-2wvm-8rvp-gxv6
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-11T15:44:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openbao
+            componentID: 551fc3ab3baa9fca
+            componentName: golang.org/x/crypto
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/bao
+            scanner: grype
+
+  - id: CGA-55mr-2g3h-7xgp
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-11T15:44:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openbao
+            componentID: fb3ce60455e13b33
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/bao
+            scanner: grype
+
   - id: CGA-68v5-6464-cfm6
     aliases:
       - CVE-2024-51744
