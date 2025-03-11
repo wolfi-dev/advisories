@@ -116,3 +116,20 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.29.1-r4
+
+  - id: CGA-xff7-3m28-2xqf
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-11T19:14:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: calico-3.29
+            componentID: e16a0018ebcb67f5
+            componentName: golang.org/x/crypto
+            componentVersion: v0.32.0
+            componentType: go-module
+            componentLocation: /usr/bin/calico-node
+            scanner: grype
