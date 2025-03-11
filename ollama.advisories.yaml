@@ -4,6 +4,23 @@ package:
   name: ollama
 
 advisories:
+  - id: CGA-2354-rw6p-rvh5
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-11T14:22:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ollama
+            componentID: 23e1fac7f024eb03
+            componentName: golang.org/x/crypto
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/ollama
+            scanner: grype
+
   - id: CGA-3693-2xw8-592x
     aliases:
       - CVE-2023-45284
