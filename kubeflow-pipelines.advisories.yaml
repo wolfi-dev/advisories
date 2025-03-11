@@ -752,6 +752,24 @@ advisories:
         data:
           note: The project uses an older version of 'k8s.io/kubernetes (v1.11.1)' package. To fix the CVE, we have to upgrade that to '1.24.17' or later. However, the project is not ready to upgrade the package yet since it will require a lot of changes in the codebase.
 
+  - id: CGA-j9cp-p46h-5p44
+    aliases:
+      - CVE-2017-16137
+      - GHSA-gxpj-cx7g-858c
+    events:
+      - timestamp: 2025-03-11T16:06:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines
+            componentID: baae4fd965f91434
+            componentName: debug
+            componentVersion: 3.2.6
+            componentType: npm
+            componentLocation: /server/node_modules/debug/package.json
+            scanner: grype
+
   - id: CGA-jgr3-p9cq-fqjh
     aliases:
       - CVE-2024-43799
