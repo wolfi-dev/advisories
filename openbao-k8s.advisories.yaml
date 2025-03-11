@@ -4,6 +4,23 @@ package:
   name: openbao-k8s
 
 advisories:
+  - id: CGA-3766-w485-fp8g
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-11T14:37:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openbao-k8s
+            componentID: c1a194312c4238e6
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.16.0
+            componentType: go-module
+            componentLocation: /usr/bin/openbao-k8s
+            scanner: grype
+
   - id: CGA-4737-x7w2-f75x
     aliases:
       - CVE-2024-45336
