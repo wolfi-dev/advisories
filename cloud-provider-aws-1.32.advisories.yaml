@@ -80,6 +80,23 @@ advisories:
         data:
           fixed-version: 1.32.0-r1
 
+  - id: CGA-q328-64jx-54m4
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-11T15:40:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-provider-aws-1.32
+            componentID: 1bdf859af004e4b9
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/aws-cloud-controller-manager
+            scanner: grype
+
   - id: CGA-vxch-5w5f-9fg2
     aliases:
       - CVE-2024-45336
