@@ -236,6 +236,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability was matched to the module "https://github.com/hashicorp/terraform" at the following location(s): /usr/bin/teraform. In all cases, the installed version of the module (git commit ee58ac1851c8a433005df9863ed47796a9f6b5e7) corresponds to a version tag (v1.5.7) that is later than the fixed version (v0.12.17).'
 
+  - id: CGA-7vw3-2f9q-8rcw
+    aliases:
+      - CVE-2021-36230
+      - GHSA-6cgg-f8v8-8rxw
+    events:
+      - timestamp: 2025-03-11T16:35:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform
+            componentID: 495fedc21f9c42f7
+            componentName: github.com/hashicorp/terraform
+            componentVersion: v1.5.7+dirty
+            componentType: go-module
+            componentLocation: /usr/bin/terraform
+            scanner: grype
+
   - id: CGA-c6jc-gjgh-r235
     aliases:
       - CVE-2024-45338
