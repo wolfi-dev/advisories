@@ -4,6 +4,24 @@ package:
   name: kubeflow-pipelines-visualization-server
 
 advisories:
+  - id: CGA-2458-6gmp-vh99
+    aliases:
+      - CVE-2025-1550
+      - GHSA-48g7-3x6r-xfhp
+    events:
+      - timestamp: 2025-03-12T07:17:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-visualization-server
+            componentID: af668c007d2c21d0
+            componentName: keras
+            componentVersion: 3.8.0
+            componentType: python
+            componentLocation: /usr/lib/python3.11/site-packages/keras-3.8.0.dist-info/METADATA, /usr/lib/python3.11/site-packages/keras-3.8.0.dist-info/RECORD, /usr/lib/python3.11/site-packages/keras-3.8.0.dist-info/top_level.txt
+            scanner: grype
+
   - id: CGA-2m39-42qr-f536
     aliases:
       - CVE-2024-55459
