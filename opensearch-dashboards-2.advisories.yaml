@@ -337,6 +337,24 @@ advisories:
         data:
           note: 'To remediate this CVE would require a bump of two major versions from v4.x.x to v6.0.2 where breaking changes related to handling of sparse arrays (v5.0.0) and passing of URL object values (v6.0.0) need to be addressed by upstream maintainers. There is a PR open upstream regarding this CVE: https://github.com/opensearch-project/OpenSearch-Dashboards/issues/9375'
 
+  - id: CGA-rh34-93h2-vxqh
+    aliases:
+      - CVE-2025-27789
+      - GHSA-968p-4wvh-cqc8
+    events:
+      - timestamp: 2025-03-12T13:21:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-dashboards-2
+            componentID: df9f95562836b981
+            componentName: '@babel/runtime'
+            componentVersion: 7.22.6
+            componentType: npm
+            componentLocation: /usr/share/opensearch-dashboards/plugins/anomalyDetectionDashboards/node_modules/@babel/runtime/package.json
+            scanner: grype
+
   - id: CGA-rw88-hxpr-jw8v
     aliases:
       - CVE-2023-28155
