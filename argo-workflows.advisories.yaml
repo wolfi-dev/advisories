@@ -1000,6 +1000,24 @@ advisories:
             componentLocation: /usr/lib/argo-workflows-ui/ui/node_modules/@esbuild/linux-x64/bin/esbuild
             scanner: grype
 
+  - id: CGA-qqrc-x4gc-w883
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-13T23:29:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-workflows
+            componentID: 3b7fc847f27414ab
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/workflow-controller
+            scanner: grype
+
   - id: CGA-rhp4-5hg6-3mph
     aliases:
       - CVE-2024-28180
