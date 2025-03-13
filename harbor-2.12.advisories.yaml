@@ -134,6 +134,24 @@ advisories:
         data:
           fixed-version: 2.12.2-r5
 
+  - id: CGA-g2hq-q953-x7vq
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-13T21:37:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-2.12
+            componentID: 2cb8d2c0b33c6e85
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-jobservice
+            scanner: grype
+
   - id: CGA-hj2q-98gh-8q5c
     aliases:
       - CVE-2024-55885
