@@ -79,6 +79,24 @@ advisories:
         data:
           fixed-version: 1.6.0-r1
 
+  - id: CGA-jvqh-9jpm-4pcx
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-13T15:38:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dashboard-web
+            componentID: 2110e57caab115fb
+            componentName: golang.org/x/net
+            componentVersion: v0.35.0
+            componentType: go-module
+            componentLocation: /usr/bin/dashboard-web
+            scanner: grype
+
   - id: CGA-ppxg-h398-pvvx
     aliases:
       - CVE-2024-45338
