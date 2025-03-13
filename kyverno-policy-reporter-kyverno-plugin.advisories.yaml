@@ -78,6 +78,24 @@ advisories:
         data:
           fixed-version: 1.6.3-r1
 
+  - id: CGA-4pmr-v4jm-62xx
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-13T08:01:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-policy-reporter-kyverno-plugin
+            componentID: 221dff24e2e947df
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/kyverno-plugin
+            scanner: grype
+
   - id: CGA-63mw-7mq5-mg3g
     aliases:
       - CVE-2024-24785
