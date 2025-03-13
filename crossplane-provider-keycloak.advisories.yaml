@@ -4,6 +4,24 @@ package:
   name: crossplane-provider-keycloak
 
 advisories:
+  - id: CGA-3933-jj4q-48j4
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-13T09:36:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: crossplane-provider-keycloak
+            componentID: 05bb424ecfa4de55
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/crossplane-keycloak-provider
+            scanner: grype
+
   - id: CGA-4q9h-fxxj-rr9w
     aliases:
       - CVE-2025-22866
