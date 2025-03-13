@@ -4,6 +4,24 @@ package:
   name: jaeger-operator
 
 advisories:
+  - id: CGA-7mp6-fhmj-778w
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-13T20:17:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jaeger-operator
+            componentID: 10890f91996704e5
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/jaeger-operator
+            scanner: grype
+
   - id: CGA-9m7p-gcqp-m957
     aliases:
       - CVE-2025-22868
