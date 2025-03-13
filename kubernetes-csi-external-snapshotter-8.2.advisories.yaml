@@ -4,6 +4,24 @@ package:
   name: kubernetes-csi-external-snapshotter-8.2
 
 advisories:
+  - id: CGA-68hh-hm62-j57x
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-13T23:22:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-snapshotter-8.2
+            componentID: f61aa6800e38487b
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/snapshot-controller
+            scanner: grype
+
   - id: CGA-mgfm-3rmp-p433
     aliases:
       - CVE-2024-45338
