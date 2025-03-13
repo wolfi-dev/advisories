@@ -133,6 +133,24 @@ advisories:
         data:
           fixed-version: 1.20.1-r0
 
+  - id: CGA-7xgj-c952-crc5
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-13T16:30:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kaniko
+            componentID: 1ab3fc3d00410823
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/executor
+            scanner: grype
+
   - id: CGA-86cp-ph7f-gvcm
     aliases:
       - CVE-2024-41110
