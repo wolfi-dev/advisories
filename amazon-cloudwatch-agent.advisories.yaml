@@ -43,6 +43,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/config-downloader
             scanner: grype
+      - timestamp: 2025-03-13T11:35:11Z
+        type: fixed
+        data:
+          fixed-version: 1.300053.0-r7
 
   - id: CGA-9gxf-mw59-grhv
     aliases:
@@ -81,6 +85,24 @@ advisories:
             componentVersion: v0.31.0
             componentType: go-module
             componentLocation: /usr/bin/config-translator
+            scanner: grype
+
+  - id: CGA-jj8p-qgp7-mrrc
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-13T11:37:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: amazon-cloudwatch-agent
+            componentID: 40cd017507933780
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/amazon-cloudwatch-agent-config-wizard
             scanner: grype
 
   - id: CGA-qhhp-9rmp-vcgm
