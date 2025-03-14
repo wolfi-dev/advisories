@@ -1454,6 +1454,24 @@ advisories:
         data:
           note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
 
+  - id: CGA-jpfc-8c65-c98p
+    aliases:
+      - CVE-2020-36843
+      - GHSA-p53j-g8pw-4w5f
+    events:
+      - timestamp: 2025-03-14T15:03:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: bc3880bed7100fe3
+            componentName: eddsa
+            componentVersion: 0.3.0
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/nifi-current/lib/nifi-standard-nar-2.3.0.nar
+            scanner: grype
+
   - id: CGA-jvwv-m346-267w
     aliases:
       - CVE-2024-31141
