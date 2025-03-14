@@ -26,6 +26,24 @@ advisories:
         data:
           fixed-version: 1.11.0-r1
 
+  - id: CGA-2xhp-4qj8-c4cj
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T10:15:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mountpoint-s3-csi-driver
+            componentID: c8773ca3b2c9cd97
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/aws-s3-csi-driver
+            scanner: grype
+
   - id: CGA-mp5m-jxj9-h232
     aliases:
       - CVE-2025-22866
@@ -64,3 +82,7 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/aws-s3-csi-driver
             scanner: grype
+      - timestamp: 2025-03-14T09:22:33Z
+        type: fixed
+        data:
+          fixed-version: 1.13.0-r1
