@@ -24,3 +24,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.0.27-r31
+
+  - id: CGA-xwpw-fpfr-35q5
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T06:36:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-s3-controller
+            componentID: 1171c549fe23adaf
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/controller
+            scanner: grype
