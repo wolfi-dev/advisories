@@ -4,6 +4,24 @@ package:
   name: sql_exporter
 
 advisories:
+  - id: CGA-9425-q8hj-p35p
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T22:20:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sql_exporter
+            componentID: f01c5ba377fb6105
+            componentName: golang.org/x/net
+            componentVersion: v0.35.0
+            componentType: go-module
+            componentLocation: /usr/bin/sql_exporter
+            scanner: grype
+
   - id: CGA-gv9w-ph38-wp7x
     aliases:
       - CVE-2024-45336
