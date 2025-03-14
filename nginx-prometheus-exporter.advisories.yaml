@@ -4,6 +4,24 @@ package:
   name: nginx-prometheus-exporter
 
 advisories:
+  - id: CGA-5hxx-f2fc-v86g
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T08:03:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nginx-prometheus-exporter
+            componentID: 1b8cec5c42ddd219
+            componentName: golang.org/x/net
+            componentVersion: v0.34.0
+            componentType: go-module
+            componentLocation: /usr/bin/nginx-prometheus-exporter
+            scanner: grype
+
   - id: CGA-66vh-4j23-pfgm
     aliases:
       - CVE-2025-22869
