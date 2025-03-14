@@ -4,6 +4,24 @@ package:
   name: opentelemetry-operator
 
 advisories:
+  - id: CGA-22fj-jmfc-fhcc
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T20:05:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opentelemetry-operator
+            componentID: 64a61596df4b33d5
+            componentName: golang.org/x/net
+            componentVersion: v0.34.0
+            componentType: go-module
+            componentLocation: /usr/bin/main
+            scanner: grype
+
   - id: CGA-369w-wcgp-h829
     aliases:
       - CVE-2025-22866
