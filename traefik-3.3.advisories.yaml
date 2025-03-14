@@ -89,3 +89,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.3.4-r2
+
+  - id: CGA-x25v-4vv7-fmjh
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T07:40:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: traefik-3.3
+            componentID: 53e591eb775b0ffb
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/traefik
+            scanner: grype

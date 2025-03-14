@@ -4,6 +4,24 @@ package:
   name: minio-operator
 
 advisories:
+  - id: CGA-64v6-qqqf-9894
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T03:04:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: minio-operator
+            componentID: 2eca651ccb9c7f4c
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/minio-operator-sidecar
+            scanner: grype
+
   - id: CGA-68x8-h2gx-fhv4
     aliases:
       - CVE-2024-34155

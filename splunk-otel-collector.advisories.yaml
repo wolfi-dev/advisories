@@ -57,6 +57,24 @@ advisories:
         data:
           fixed-version: 0.114.0-r1
 
+  - id: CGA-8f79-wvg6-8jg8
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T01:18:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: splunk-otel-collector
+            componentID: cecbf35daea0aadc
+            componentName: golang.org/x/net
+            componentVersion: v0.35.0
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol
+            scanner: grype
+
   - id: CGA-9xrq-qj2f-xf4v
     aliases:
       - CVE-2025-22866
@@ -140,6 +158,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/otelcol
             scanner: grype
+      - timestamp: 2025-03-14T00:15:19Z
+        type: fixed
+        data:
+          fixed-version: 0.120.0-r3
 
   - id: CGA-v69g-6284-r2qx
     aliases:

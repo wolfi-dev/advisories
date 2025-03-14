@@ -4,6 +4,24 @@ package:
   name: kubernetes-csi-livenessprobe
 
 advisories:
+  - id: CGA-2cm5-vx2p-g6v5
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T00:01:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-livenessprobe
+            componentID: 04f22f7c232c9afb
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/livenessprobe
+            scanner: grype
+
   - id: CGA-32jv-6hq2-2865
     aliases:
       - CVE-2024-24784

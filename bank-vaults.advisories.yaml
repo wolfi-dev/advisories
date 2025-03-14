@@ -4,6 +4,28 @@ package:
   name: bank-vaults
 
 advisories:
+  - id: CGA-2vhc-m92c-gxqg
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T00:16:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: bank-vaults
+            componentID: f943b9636f18be4d
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/template
+            scanner: grype
+      - timestamp: 2025-03-14T11:42:01Z
+        type: fixed
+        data:
+          fixed-version: 1.20.4-r27
+
   - id: CGA-3f54-v7wq-px99
     aliases:
       - CVE-2023-48795

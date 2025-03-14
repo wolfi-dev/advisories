@@ -191,3 +191,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.8.0-r3
+
+  - id: CGA-x22g-pxhf-26qm
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T01:03:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-vip
+            componentID: 75e3d077f3dd0477
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-vip
+            scanner: grype
