@@ -20,6 +20,10 @@ advisories:
             componentType: rust-crate
             componentLocation: /usr/bin/parseable
             scanner: grype
+      - timestamp: 2025-03-14T13:41:59Z
+        type: pending-upstream-fix
+        data:
+          note: parseable depends on the prometheus crate whose latest version depends on protobuf 2.x. Once https://github.com/tikv/rust-prometheus/issues/538 is addressed then the chain of dependencies will need releases to make it available.
 
   - id: CGA-3993-pvwh-4q44
     aliases:
