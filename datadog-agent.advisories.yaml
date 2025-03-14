@@ -103,6 +103,24 @@ advisories:
         data:
           note: The tuf non-vulnerable version is not available among the list of hosted datadog dependencies. Datadog needs to upgrade the available tuf dependency to use the non-vulnerable version.
 
+  - id: CGA-2xqp-q2pq-qgwp
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T03:08:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: datadog-agent
+            componentID: a0e3b3be111d822a
+            componentName: golang.org/x/net
+            componentVersion: v0.34.0
+            componentType: go-module
+            componentLocation: /usr/bin/datadog-cluster-agent
+            scanner: grype
+
   - id: CGA-59q6-6hwx-3gcf
     aliases:
       - CVE-2024-8260
