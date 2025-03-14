@@ -4,6 +4,24 @@ package:
   name: envoy-gateway
 
 advisories:
+  - id: CGA-6p5r-j8p3-5pmf
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T05:42:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: envoy-gateway
+            componentID: 69a0e714ba6d0658
+            componentName: golang.org/x/net
+            componentVersion: v0.35.0
+            componentType: go-module
+            componentLocation: /usr/bin/envoy-gateway
+            scanner: grype
+
   - id: CGA-9gr2-cmw7-cmq2
     aliases:
       - CVE-2024-45337
