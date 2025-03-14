@@ -26,6 +26,24 @@ advisories:
         data:
           fixed-version: 1.32.1-r1
 
+  - id: CGA-3m32-5f46-3ccv
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T13:45:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-provider-aws-1.32
+            componentID: 9c3ad883b924e620
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/aws-cloud-controller-manager
+            scanner: grype
+
   - id: CGA-4q26-6mff-g926
     aliases:
       - CVE-2024-45338
