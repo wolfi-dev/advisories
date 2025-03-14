@@ -26,6 +26,24 @@ advisories:
         data:
           fixed-version: 1.2.1-r1
 
+  - id: CGA-86gq-jf5x-rjfw
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T08:30:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: karpenter-1.2
+            componentID: 0700fd7807a9b49c
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/controller
+            scanner: grype
+
   - id: CGA-x9q6-v82p-p895
     aliases:
       - CVE-2025-22868
