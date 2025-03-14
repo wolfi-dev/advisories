@@ -46,6 +46,24 @@ advisories:
         data:
           fixed-version: 0.8.7-r2
 
+  - id: CGA-rmv2-923w-5mhx
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T08:01:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: falco-exporter
+            componentID: 045169546e8503e8
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/falco-exporter
+            scanner: grype
+
   - id: CGA-vxv6-696j-rmj3
     aliases:
       - CVE-2024-45338
