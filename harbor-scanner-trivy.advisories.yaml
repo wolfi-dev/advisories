@@ -228,6 +228,24 @@ advisories:
         data:
           fixed-version: 0.32.3-r3
 
+  - id: CGA-qq8r-j6p4-m924
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T07:45:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-scanner-trivy
+            componentID: 3617528ada35261a
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/scanner-trivy
+            scanner: grype
+
   - id: CGA-v7fr-mcr9-jwcq
     aliases:
       - CVE-2024-37298
