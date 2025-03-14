@@ -48,6 +48,24 @@ advisories:
         data:
           note: This CVE is caused by a 'go replace' block in the go.mod file pulling in the dependency, despite the package using the latest version as defined elsewhere in the go.mod file. An upstream patch has been submitted and merged which will remove this old dependency in future versions. See https://github.com/argoproj-labs/argocd-image-updater/pull/969
 
+  - id: CGA-74w6-9rf4-9jcv
+    aliases:
+      - CVE-2024-9042
+      - GHSA-vv39-3w5q-974q
+    events:
+      - timestamp: 2025-03-14T18:19:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argocd-image-updater
+            componentID: ce0ace030aa44c43
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.26.11
+            componentType: go-module
+            componentLocation: /usr/bin/argocd-image-updater
+            scanner: grype
+
   - id: CGA-7f5p-rw78-6c4h
     aliases:
       - CVE-2025-22870
