@@ -172,6 +172,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-f2fr-2ggv-ww49
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T10:34:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mongo-tools
+            componentID: f5cc557f9475ff72
+            componentName: golang.org/x/net
+            componentVersion: v0.34.0
+            componentType: go-module
+            componentLocation: /usr/bin/bsondump
+            scanner: grype
+
   - id: CGA-fg4c-qw97-8mcj
     aliases:
       - CVE-2025-22866
