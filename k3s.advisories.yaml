@@ -232,6 +232,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/containerd-shim-runc-v2
             scanner: grype
+      - timestamp: 2025-03-14T17:50:18Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability requires an upgrade in a separate project 'https://github.com/k3s-io/containerd' on which the vulnerable dependency still uses an affected version.
 
   - id: CGA-7jcp-vfhv-643j
     aliases:
@@ -424,7 +428,7 @@ advisories:
       - timestamp: 2025-03-14T17:16:45Z
         type: pending-upstream-fix
         data:
-          note: 'k3s 1.32.2.1 uses Docker 25.0.6 (see https://github.com/k3s-io/k3s/blob/v1.32.3-rc1%2Bk3s1/go.mod#L15), but its go.mod requires Docker 27.1.1+incompatible. cri-docker is not compatible with that version, so upstream must address it.'
+          note: k3s 1.32.2.1 uses Docker 25.0.6 (see https://github.com/k3s-io/k3s/blob/v1.32.3-rc1%2Bk3s1/go.mod#L15), but its go.mod requires Docker 27.1.1+incompatible. cri-docker is not compatible with that version, so upstream must address it.
 
   - id: CGA-hh86-4p27-6vwp
     aliases:
