@@ -4,15 +4,27 @@ package:
   name: gradle-8
 
 advisories:
-  - id: CGA-gpmg-5xqr-j8wx
+  - id: CGA-38cm-jrfp-jgjm
     aliases:
-      - CVE-2020-8908
-      - GHSA-5mg8-w23w-74h3
+      - CVE-2024-30171
+      - GHSA-v435-xc8x-wvr9
     events:
-      - timestamp: 2023-08-10T22:12:46Z
+      - timestamp: 2024-05-15T08:05:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gradle-8
+            componentID: 91d9271324b05462
+            componentName: bcprov-jdk18on
+            componentVersion: "1.74"
+            componentType: java-archive
+            componentLocation: /usr/share/java/gradle/lib/plugins/bcprov-jdk18on-1.74.jar
+            scanner: grype
+      - timestamp: 2024-05-27T10:24:18Z
         type: fixed
         data:
-          fixed-version: 8.2.1-r1
+          fixed-version: 8.7.0-r4
 
   - id: CGA-49p2-pm86-w99m
     aliases:
@@ -25,6 +37,46 @@ advisories:
           type: vulnerable-code-not-in-execution-path
           note: 'Gradle is not vulnerable because it does not leverage the Apache Ivy dependency cache: https://github.com/gradle/gradle/issues/24795#issuecomment-1623594418'
 
+  - id: CGA-56jx-vjfm-mq57
+    aliases:
+      - CVE-2020-36843
+      - GHSA-p53j-g8pw-4w5f
+    events:
+      - timestamp: 2025-03-14T17:04:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gradle-8
+            componentID: 1ebd60d6b3faf45b
+            componentName: eddsa
+            componentVersion: 0.3.0
+            componentType: java-archive
+            componentLocation: /usr/share/java/gradle/lib/plugins/eddsa-0.3.0.jar
+            scanner: grype
+
+  - id: CGA-5hp5-r4pg-f3p7
+    aliases:
+      - CVE-2024-29857
+      - GHSA-8xfc-gm6g-vgpv
+    events:
+      - timestamp: 2024-05-15T08:05:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gradle-8
+            componentID: 91d9271324b05462
+            componentName: bcprov-jdk18on
+            componentVersion: "1.74"
+            componentType: java-archive
+            componentLocation: /usr/share/java/gradle/lib/plugins/bcprov-jdk18on-1.74.jar
+            scanner: grype
+      - timestamp: 2024-05-27T10:24:17Z
+        type: fixed
+        data:
+          fixed-version: 8.7.0-r4
+
   - id: CGA-9fwp-8875-56p6
     aliases:
       - CVE-2022-45868
@@ -35,6 +87,145 @@ advisories:
         data:
           type: vulnerable-code-not-in-execution-path
           note: 'CVE is disputed. It relates to exposed passwords when using h2 via command-line. h2 is in use by Gradle as a library, and there is no reference of the CVE-related CLI argument being used in the codebase. Project maintainer''s position: https://github.com/gradle/gradle/issues/24708#issuecomment-1508321833'
+
+  - id: CGA-f3hc-jjwc-wwjp
+    aliases:
+      - CVE-2023-4759
+      - GHSA-3p86-9955-h393
+    events:
+      - timestamp: 2023-09-24T13:16:58Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability is only present on case-insensitive filesystems, like Windows or Mac. Our containers only run on Linux.
+
+  - id: CGA-gmqh-qfr2-ph66
+    aliases:
+      - CVE-2024-30172
+      - GHSA-m44j-cfrm-g8qc
+    events:
+      - timestamp: 2024-05-15T08:05:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gradle-8
+            componentID: 91d9271324b05462
+            componentName: bcprov-jdk18on
+            componentVersion: "1.74"
+            componentType: java-archive
+            componentLocation: /usr/share/java/gradle/lib/plugins/bcprov-jdk18on-1.74.jar
+            scanner: grype
+      - timestamp: 2024-05-27T10:24:17Z
+        type: fixed
+        data:
+          fixed-version: 8.7.0-r4
+
+  - id: CGA-gp4f-pvwr-2rc6
+    aliases:
+      - CVE-2024-26308
+      - GHSA-4265-ccf5-phj5
+    events:
+      - timestamp: 2024-02-21T07:09:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gradle-8
+            componentID: a6bde751ffd40cf6
+            componentName: commons-compress
+            componentVersion: "1.21"
+            componentType: java-archive
+            componentLocation: /usr/share/java/gradle/lib/commons-compress-1.21.jar
+            scanner: grype
+      - timestamp: 2024-03-05T18:09:46Z
+        type: pending-upstream-fix
+        data:
+          note: 'The upstream project is planning a fix (https://github.com/gradle/gradle/pull/27666/files#diff-46a9cba02b57c005bb1da344ce6c71d7611894853c2a72272e4681c3158c202e). Chainguard won''t provide a fix ahead of upstream due to the following notice: "This change may affect the checksums of the produced jars, zips, and other archive types because the metadata of the produced artifacts may differ."'
+      - timestamp: 2024-03-31T01:38:56Z
+        type: fixed
+        data:
+          fixed-version: 8.7.0-r1
+
+  - id: CGA-gpmg-5xqr-j8wx
+    aliases:
+      - CVE-2020-8908
+      - GHSA-5mg8-w23w-74h3
+    events:
+      - timestamp: 2023-08-10T22:12:46Z
+        type: fixed
+        data:
+          fixed-version: 8.2.1-r1
+
+  - id: CGA-gr35-gp4q-q78f
+    aliases:
+      - CVE-2024-25710
+      - GHSA-4g9r-vxhx-9pgx
+    events:
+      - timestamp: 2024-03-01T07:23:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gradle-8
+            componentID: a6bde751ffd40cf6
+            componentName: commons-compress
+            componentVersion: "1.21"
+            componentType: java-archive
+            componentLocation: /usr/share/java/gradle/lib/commons-compress-1.21.jar
+            scanner: grype
+      - timestamp: 2024-03-05T18:09:46Z
+        type: pending-upstream-fix
+        data:
+          note: 'The upstream project is planning a fix (https://github.com/gradle/gradle/pull/27666/files#diff-46a9cba02b57c005bb1da344ce6c71d7611894853c2a72272e4681c3158c202e). Chainguard won''t provide a fix ahead of upstream due to the following notice: "This change may affect the checksums of the produced jars, zips, and other archive types because the metadata of the produced artifacts may differ."'
+      - timestamp: 2024-03-31T01:38:59Z
+        type: fixed
+        data:
+          fixed-version: 8.7.0-r1
+
+  - id: CGA-hq55-qp37-gwm6
+    aliases:
+      - CVE-2023-33202
+      - GHSA-wjxj-5m7g-mg7q
+    events:
+      - timestamp: 2024-03-15T11:48:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gradle-8
+            componentID: 26b0dd49432bc719
+            componentName: bcprov-jdk15on
+            componentVersion: "1.68"
+            componentType: java-archive
+            componentLocation: /usr/share/java/gradle/lib/plugins/bcprov-jdk15on-1.68.jar
+            scanner: grype
+      - timestamp: 2024-03-31T01:38:54Z
+        type: fixed
+        data:
+          fixed-version: 8.7.0-r1
+
+  - id: CGA-j6q8-vx5q-hw34
+    aliases:
+      - CVE-2024-34447
+      - GHSA-4h8f-2wvx-gg5w
+    events:
+      - timestamp: 2024-05-04T07:18:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gradle-8
+            componentID: 91d9271324b05462
+            componentName: bcprov-jdk18on
+            componentVersion: "1.74"
+            componentType: java-archive
+            componentLocation: /usr/share/java/gradle/lib/plugins/bcprov-jdk18on-1.74.jar
+            scanner: grype
+      - timestamp: 2024-05-27T10:24:18Z
+        type: fixed
+        data:
+          fixed-version: 8.7.0-r4
 
   - id: CGA-mx26-rvg4-wrjv
     aliases:
@@ -68,6 +259,17 @@ advisories:
         data:
           fixed-version: 8.2.1-r1
 
+  - id: CGA-v69m-f9vr-c862
+    aliases:
+      - CVE-2023-35116
+      - GHSA-gx6w-fqg7-mc3p
+    events:
+      - timestamp: 2023-08-11T15:36:11Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: CVE is being considered by the community a false positive. See https://github.com/FasterXML/jackson-databind/issues/3972 and https://github.com/anchore/grype/issues/1386
+
   - id: CGA-w3f3-pcfm-c69g
     aliases:
       - CVE-2023-33201
@@ -85,187 +287,3 @@ advisories:
         type: fixed
         data:
           fixed-version: 8.7.0-r1
-
-  - id: CGA-hq55-qp37-gwm6
-    aliases:
-      - CVE-2023-33202
-      - GHSA-wjxj-5m7g-mg7q
-    events:
-      - timestamp: 2024-03-15T11:48:06Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: gradle-8
-            componentID: 26b0dd49432bc719
-            componentName: bcprov-jdk15on
-            componentVersion: "1.68"
-            componentType: java-archive
-            componentLocation: /usr/share/java/gradle/lib/plugins/bcprov-jdk15on-1.68.jar
-            scanner: grype
-      - timestamp: 2024-03-31T01:38:54Z
-        type: fixed
-        data:
-          fixed-version: 8.7.0-r1
-
-  - id: CGA-v69m-f9vr-c862
-    aliases:
-      - CVE-2023-35116
-      - GHSA-gx6w-fqg7-mc3p
-    events:
-      - timestamp: 2023-08-11T15:36:11Z
-        type: false-positive-determination
-        data:
-          type: vulnerability-record-analysis-contested
-          note: CVE is being considered by the community a false positive. See https://github.com/FasterXML/jackson-databind/issues/3972 and https://github.com/anchore/grype/issues/1386
-
-  - id: CGA-f3hc-jjwc-wwjp
-    aliases:
-      - CVE-2023-4759
-      - GHSA-3p86-9955-h393
-    events:
-      - timestamp: 2023-09-24T13:16:58Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: This vulnerability is only present on case-insensitive filesystems, like Windows or Mac. Our containers only run on Linux.
-
-  - id: CGA-gr35-gp4q-q78f
-    aliases:
-      - CVE-2024-25710
-      - GHSA-4g9r-vxhx-9pgx
-    events:
-      - timestamp: 2024-03-01T07:23:57Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: gradle-8
-            componentID: a6bde751ffd40cf6
-            componentName: commons-compress
-            componentVersion: "1.21"
-            componentType: java-archive
-            componentLocation: /usr/share/java/gradle/lib/commons-compress-1.21.jar
-            scanner: grype
-      - timestamp: 2024-03-05T18:09:46Z
-        type: pending-upstream-fix
-        data:
-          note: 'The upstream project is planning a fix (https://github.com/gradle/gradle/pull/27666/files#diff-46a9cba02b57c005bb1da344ce6c71d7611894853c2a72272e4681c3158c202e). Chainguard won''t provide a fix ahead of upstream due to the following notice: "This change may affect the checksums of the produced jars, zips, and other archive types because the metadata of the produced artifacts may differ."'
-      - timestamp: 2024-03-31T01:38:59Z
-        type: fixed
-        data:
-          fixed-version: 8.7.0-r1
-
-  - id: CGA-gp4f-pvwr-2rc6
-    aliases:
-      - CVE-2024-26308
-      - GHSA-4265-ccf5-phj5
-    events:
-      - timestamp: 2024-02-21T07:09:31Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: gradle-8
-            componentID: a6bde751ffd40cf6
-            componentName: commons-compress
-            componentVersion: "1.21"
-            componentType: java-archive
-            componentLocation: /usr/share/java/gradle/lib/commons-compress-1.21.jar
-            scanner: grype
-      - timestamp: 2024-03-05T18:09:46Z
-        type: pending-upstream-fix
-        data:
-          note: 'The upstream project is planning a fix (https://github.com/gradle/gradle/pull/27666/files#diff-46a9cba02b57c005bb1da344ce6c71d7611894853c2a72272e4681c3158c202e). Chainguard won''t provide a fix ahead of upstream due to the following notice: "This change may affect the checksums of the produced jars, zips, and other archive types because the metadata of the produced artifacts may differ."'
-      - timestamp: 2024-03-31T01:38:56Z
-        type: fixed
-        data:
-          fixed-version: 8.7.0-r1
-
-  - id: CGA-5hp5-r4pg-f3p7
-    aliases:
-      - CVE-2024-29857
-      - GHSA-8xfc-gm6g-vgpv
-    events:
-      - timestamp: 2024-05-15T08:05:14Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: gradle-8
-            componentID: 91d9271324b05462
-            componentName: bcprov-jdk18on
-            componentVersion: "1.74"
-            componentType: java-archive
-            componentLocation: /usr/share/java/gradle/lib/plugins/bcprov-jdk18on-1.74.jar
-            scanner: grype
-      - timestamp: 2024-05-27T10:24:17Z
-        type: fixed
-        data:
-          fixed-version: 8.7.0-r4
-
-  - id: CGA-38cm-jrfp-jgjm
-    aliases:
-      - CVE-2024-30171
-      - GHSA-v435-xc8x-wvr9
-    events:
-      - timestamp: 2024-05-15T08:05:18Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: gradle-8
-            componentID: 91d9271324b05462
-            componentName: bcprov-jdk18on
-            componentVersion: "1.74"
-            componentType: java-archive
-            componentLocation: /usr/share/java/gradle/lib/plugins/bcprov-jdk18on-1.74.jar
-            scanner: grype
-      - timestamp: 2024-05-27T10:24:18Z
-        type: fixed
-        data:
-          fixed-version: 8.7.0-r4
-
-  - id: CGA-gmqh-qfr2-ph66
-    aliases:
-      - CVE-2024-30172
-      - GHSA-m44j-cfrm-g8qc
-    events:
-      - timestamp: 2024-05-15T08:05:16Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: gradle-8
-            componentID: 91d9271324b05462
-            componentName: bcprov-jdk18on
-            componentVersion: "1.74"
-            componentType: java-archive
-            componentLocation: /usr/share/java/gradle/lib/plugins/bcprov-jdk18on-1.74.jar
-            scanner: grype
-      - timestamp: 2024-05-27T10:24:17Z
-        type: fixed
-        data:
-          fixed-version: 8.7.0-r4
-
-  - id: CGA-j6q8-vx5q-hw34
-    aliases:
-      - CVE-2024-34447
-      - GHSA-4h8f-2wvx-gg5w
-    events:
-      - timestamp: 2024-05-04T07:18:05Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: gradle-8
-            componentID: 91d9271324b05462
-            componentName: bcprov-jdk18on
-            componentVersion: "1.74"
-            componentType: java-archive
-            componentLocation: /usr/share/java/gradle/lib/plugins/bcprov-jdk18on-1.74.jar
-            scanner: grype
-      - timestamp: 2024-05-27T10:24:18Z
-        type: fixed
-        data:
-          fixed-version: 8.7.0-r4
