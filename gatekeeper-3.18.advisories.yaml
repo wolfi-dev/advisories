@@ -48,6 +48,24 @@ advisories:
         data:
           fixed-version: 3.18.2-r5
 
+  - id: CGA-jwhc-jmxf-xfwh
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T07:25:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.18
+            componentID: 5393181ffaaf897c
+            componentName: golang.org/x/net
+            componentVersion: v0.34.0
+            componentType: go-module
+            componentLocation: /usr/bin/gator
+            scanner: grype
+
   - id: CGA-qh7h-76rf-3mcg
     aliases:
       - CVE-2025-22868
@@ -64,6 +82,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/gator
             scanner: grype
+      - timestamp: 2025-03-14T06:26:58Z
+        type: fixed
+        data:
+          fixed-version: 3.18.2-r7
 
   - id: CGA-r5jm-464w-x2m6
     aliases:

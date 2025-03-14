@@ -4,6 +4,24 @@ package:
   name: newrelic-nri-kube-events
 
 advisories:
+  - id: CGA-2qxj-xmhp-38jx
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T06:25:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: newrelic-nri-kube-events
+            componentID: c43acf38779984e8
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/nri-kube-events
+            scanner: grype
+
   - id: CGA-3rxp-994x-7pgm
     aliases:
       - CVE-2024-24791

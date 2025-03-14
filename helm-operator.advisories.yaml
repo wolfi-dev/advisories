@@ -470,3 +470,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.34.1-r5
+
+  - id: CGA-xg7m-wcqf-jwjm
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T08:13:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-operator
+            componentID: bafbc1c0cc2448ff
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/helm-operator
+            scanner: grype

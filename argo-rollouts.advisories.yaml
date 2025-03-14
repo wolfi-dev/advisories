@@ -200,3 +200,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.8.0-r32
+
+  - id: CGA-xm67-85wp-mq2j
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T06:28:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-rollouts
+            componentID: 5d49bdc16c3711a0
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/rollouts-controller
+            scanner: grype

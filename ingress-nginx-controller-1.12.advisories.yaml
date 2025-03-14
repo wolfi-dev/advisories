@@ -21,6 +21,24 @@ advisories:
             componentLocation: /usr/bin/nginx-ingress-controller
             scanner: grype
 
+  - id: CGA-f56q-99jf-3jj7
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T07:44:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ingress-nginx-controller-1.12
+            componentID: 51146430ce73fd9b
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-webhook-certgen
+            scanner: grype
+
   - id: CGA-fg44-rfvp-pvmg
     aliases:
       - CVE-2025-22866
