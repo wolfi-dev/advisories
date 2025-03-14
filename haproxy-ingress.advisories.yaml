@@ -127,6 +127,24 @@ advisories:
         data:
           fixed-version: 0.14.7-r3
 
+  - id: CGA-ccm7-fhf8-5v3v
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T04:37:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: haproxy-ingress
+            componentID: 6df8b29092714926
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/haproxy-ingress-controller
+            scanner: grype
+
   - id: CGA-cm8q-jxpm-pcpm
     aliases:
       - CVE-2024-24789
@@ -242,6 +260,18 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.14.7-r10
+      - timestamp: 2025-03-14T04:37:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: haproxy-ingress
+            componentID: 7f4e545c415750f7
+            componentName: golang.org/x/crypto
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/haproxy-ingress-controller
+            scanner: grype
 
   - id: CGA-pcv9-5h8h-jvgh
     aliases:
