@@ -4,6 +4,24 @@ package:
   name: containerd-1
 
 advisories:
+  - id: CGA-3x36-7r3p-v5fw
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T01:17:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: containerd-1
+            componentID: bc7435b2d6161402
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/containerd-shim-runc-v2
+            scanner: grype
+
   - id: CGA-42w7-f384-xqw4
     aliases:
       - CVE-2024-45336
