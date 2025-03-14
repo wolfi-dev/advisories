@@ -129,6 +129,24 @@ advisories:
         data:
           fixed-version: 1.9.5-r1
 
+  - id: CGA-9j67-9x5w-jwr3
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T14:15:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeadm-controlplane-controller
+            componentID: f33deb616e8c1064
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/kubeadm-controlplane-controller
+            scanner: grype
+
   - id: CGA-h4x4-r344-ww22
     aliases:
       - CVE-2024-34156
