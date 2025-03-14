@@ -4,6 +4,24 @@ package:
   name: cass-operator
 
 advisories:
+  - id: CGA-22fx-4prj-8hc3
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T00:27:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cass-operator
+            componentID: bee7a1b9db97ea53
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-32mr-xxg7-9r37
     aliases:
       - CVE-2024-24789
