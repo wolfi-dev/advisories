@@ -78,6 +78,24 @@ advisories:
         data:
           fixed-version: 1.22.6-r1
 
+  - id: CGA-442q-9hv6-cppc
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T20:34:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: temporal-server
+            componentID: 4b5c4a5c2c84aea5
+            componentName: golang.org/x/net
+            componentVersion: v0.35.0
+            componentType: go-module
+            componentLocation: /usr/bin/temporal-cassandra-tool
+            scanner: grype
+
   - id: CGA-5453-hx7c-3f9r
     aliases:
       - CVE-2025-1243
