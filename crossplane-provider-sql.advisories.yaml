@@ -127,3 +127,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.11.0-r1
+
+  - id: CGA-x9f5-4gx9-fprx
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T08:44:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: crossplane-provider-sql
+            componentID: b620909e9b731919
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/crossplane-sql-provider
+            scanner: grype

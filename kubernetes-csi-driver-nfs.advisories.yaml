@@ -4,6 +4,24 @@ package:
   name: kubernetes-csi-driver-nfs
 
 advisories:
+  - id: CGA-4p95-9527-r9vw
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T09:09:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-driver-nfs
+            componentID: 454f8e38ea999886
+            componentName: golang.org/x/net
+            componentVersion: v0.34.0
+            componentType: go-module
+            componentLocation: /usr/bin/nfsplugin
+            scanner: grype
+
   - id: CGA-fqqv-v8jh-f4c9
     aliases:
       - CVE-2025-0426
@@ -42,3 +60,7 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/nfsplugin
             scanner: grype
+      - timestamp: 2025-03-14T08:26:00Z
+        type: fixed
+        data:
+          fixed-version: 4.10.0-r2

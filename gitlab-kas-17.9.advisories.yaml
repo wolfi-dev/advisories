@@ -4,6 +4,24 @@ package:
   name: gitlab-kas-17.9
 
 advisories:
+  - id: CGA-665f-9grq-c7v7
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T07:33:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-kas-17.9
+            componentID: 5427d3b4acf98900
+            componentName: golang.org/x/net
+            componentVersion: v0.34.0
+            componentType: go-module
+            componentLocation: /usr/bin/agentk
+            scanner: grype
+
   - id: CGA-hg2m-p3r7-cwwf
     aliases:
       - CVE-2025-22869

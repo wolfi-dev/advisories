@@ -4,6 +4,24 @@ package:
   name: doppler-kubernetes-operator
 
 advisories:
+  - id: CGA-3fv2-23mf-cpm6
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T06:34:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: doppler-kubernetes-operator
+            componentID: bf81acce433a43b3
+            componentName: golang.org/x/net
+            componentVersion: v0.34.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-3j7m-8qjh-82x4
     aliases:
       - CVE-2024-24785

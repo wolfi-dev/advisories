@@ -4,6 +4,24 @@ package:
   name: knative-serving-1.17
 
 advisories:
+  - id: CGA-6rq9-9xhm-8q2q
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T05:11:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: knative-serving-1.17
+            componentID: 7605b943f8c7965c
+            componentName: golang.org/x/net
+            componentVersion: v0.34.0
+            componentType: go-module
+            componentLocation: /usr/bin/queue
+            scanner: grype
+
   - id: CGA-9798-6g5r-f6v9
     aliases:
       - CVE-2025-22868

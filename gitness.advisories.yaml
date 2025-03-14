@@ -180,6 +180,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/gitness
             scanner: grype
+      - timestamp: 2025-03-14T04:29:41Z
+        type: fixed
+        data:
+          fixed-version: 3.1.1-r4
 
   - id: CGA-9469-468m-w5f4
     aliases:
@@ -509,3 +513,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.0.0_beta6-r0
+
+  - id: CGA-xfpr-vg98-j4m8
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T06:08:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitness
+            componentID: aca42a9bdd34e6f8
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitness
+            scanner: grype

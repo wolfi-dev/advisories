@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: otel-cli
+
+advisories:
+  - id: CGA-35m8-xwxj-4p44
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-14T09:13:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: otel-cli
+            componentID: e245ccd0af27fd15
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/otel-cli
+            scanner: grype
