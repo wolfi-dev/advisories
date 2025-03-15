@@ -218,6 +218,24 @@ advisories:
         data:
           fixed-version: 0.15.2-r7
 
+  - id: CGA-fwr5-m8r5-xwrq
+    aliases:
+      - CVE-2025-1767
+      - GHSA-3wgm-2gw2-vh5m
+    events:
+      - timestamp: 2025-03-15T07:03:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argocd-image-updater
+            componentID: ce0ace030aa44c43
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.26.11
+            componentType: go-module
+            componentLocation: /usr/bin/argocd-image-updater
+            scanner: grype
+
   - id: CGA-hrx6-hvq8-xj45
     aliases:
       - CVE-2024-3177
