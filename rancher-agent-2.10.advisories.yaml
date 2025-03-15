@@ -4,6 +4,24 @@ package:
   name: rancher-agent-2.10
 
 advisories:
+  - id: CGA-29cr-69qq-p3rp
+    aliases:
+      - CVE-2025-1767
+      - GHSA-3wgm-2gw2-vh5m
+    events:
+      - timestamp: 2025-03-15T07:32:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-agent-2.10
+            componentID: dd58af46a158d2dc
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.31.6
+            componentType: go-module
+            componentLocation: /usr/bin/agent
+            scanner: grype
+
   - id: CGA-325m-78cw-f6q3
     aliases:
       - CVE-2024-28180
