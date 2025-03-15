@@ -106,6 +106,24 @@ advisories:
           type: component-vulnerability-mismatch
           note: Vulnerability only impacts OpenShift
 
+  - id: CGA-4gmf-xjfr-9f2g
+    aliases:
+      - CVE-2025-1767
+      - GHSA-3wgm-2gw2-vh5m
+    events:
+      - timestamp: 2025-03-15T10:01:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-1.32
+            componentID: e32386c4ed6abbb6
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.32.3+dirty
+            componentType: go-module
+            componentLocation: /usr/bin/kubectl-1.32
+            scanner: grype
+
   - id: CGA-52qq-32xp-43jq
     aliases:
       - CVE-2025-0426
