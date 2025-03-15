@@ -4,6 +4,24 @@ package:
   name: argo-rollouts
 
 advisories:
+  - id: CGA-2j53-2h34-29mr
+    aliases:
+      - CVE-2025-1767
+      - GHSA-3wgm-2gw2-vh5m
+    events:
+      - timestamp: 2025-03-15T08:41:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-rollouts
+            componentID: 1b1ff84eefc656ff
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.29.14
+            componentType: go-module
+            componentLocation: /usr/bin/kubectl-argo-rollouts
+            scanner: grype
+
   - id: CGA-4x3w-pm5j-g8x7
     aliases:
       - CVE-2024-51744
