@@ -26,6 +26,24 @@ advisories:
         data:
           fixed-version: 0.11.3-r3
 
+  - id: CGA-4hrw-jc9c-g948
+    aliases:
+      - CVE-2025-1767
+      - GHSA-3wgm-2gw2-vh5m
+    events:
+      - timestamp: 2025-03-15T11:32:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-fleet
+            componentID: e9afe40fdd9450bc
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.31.6
+            componentType: go-module
+            componentLocation: /usr/bin/fleetagent
+            scanner: grype
+
   - id: CGA-6792-qph2-q47p
     aliases:
       - CVE-2025-22868
