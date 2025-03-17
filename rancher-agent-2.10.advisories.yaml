@@ -21,6 +21,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/agent
             scanner: grype
+      - timestamp: 2025-03-17T16:45:00Z
+        type: pending-upstream-fix
+        data:
+          note: CVE-2025-1767 requires k8s.io/kubernetes to be updated to >= 1.32.3, which requires upstream changes to support.
 
   - id: CGA-325m-78cw-f6q3
     aliases:
@@ -188,6 +192,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/agent
             scanner: grype
+      - timestamp: 2025-03-17T16:39:12Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: govulncheck analysis shows that the github.com/docker/docker golang package is not used by the rancher-agent binary as there are no symbols referenced for the vulnerable code.
 
   - id: CGA-m78q-grgx-w8g4
     aliases:
@@ -206,6 +215,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/agent
             scanner: grype
+      - timestamp: 2025-03-17T16:38:55Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: govulncheck analysis shows that the github.com/docker/docker golang package is not used by the rancher-agent binary as there are no symbols referenced for the vulnerable code.
 
   - id: CGA-p53g-g8rh-wmm6
     aliases:
