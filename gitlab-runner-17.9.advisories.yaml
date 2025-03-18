@@ -148,6 +148,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/gitlab-runner-helper
             scanner: grype
+      - timestamp: 2025-03-18T10:04:08Z
+        type: pending-upstream-fix
+        data:
+          note: 'gitlab-runner-17.9.1 uses Docker 25.0.6, as seen here: https://gitlab.com/gitlab-org/gitlab-runner/-/blob/v17.9.1/go.mod?ref_type=tags#L31 The fixed version to remediate this CVE is 26.0.0; however, breaking changes between these major versions require upstream maintainers to implement compatibility.'
 
   - id: CGA-w558-6939-qm69
     aliases:
