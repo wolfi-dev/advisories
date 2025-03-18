@@ -129,6 +129,24 @@ advisories:
         data:
           fixed-version: 1.28.2-r2
 
+  - id: CGA-56ff-9jp6-6jw4
+    aliases:
+      - CVE-2024-40635
+      - GHSA-265r-hfxg-fhmg
+    events:
+      - timestamp: 2025-03-18T10:40:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s
+            componentID: 760a0c83919d2022
+            componentName: github.com/containerd/containerd/v2
+            componentVersion: v2.0.2-k3s2
+            componentType: go-module
+            componentLocation: /usr/bin/containerd-shim-runc-v2
+            scanner: grype
+
   - id: CGA-652c-45w3-f3qx
     aliases:
       - CVE-2024-34158
