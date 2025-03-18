@@ -4,6 +4,24 @@ package:
   name: nushell
 
 advisories:
+  - id: CGA-53wm-6fvr-fcf9
+    aliases:
+      - CVE-2025-29787
+      - GHSA-94vh-gphv-8pm8
+    events:
+      - timestamp: 2025-03-18T13:07:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nushell
+            componentID: a069695c3c776e9c
+            componentName: zip
+            componentVersion: 2.2.1
+            componentType: rust-crate
+            componentLocation: /usr/bin/nu
+            scanner: grype
+
   - id: CGA-5cm5-4m43-px2j
     aliases:
       - GHSA-2326-pfpj-vx3h

@@ -121,6 +121,24 @@ advisories:
             componentLocation: /usr/bin/datadog-cluster-agent
             scanner: grype
 
+  - id: CGA-4cr4-p4pw-xqm5
+    aliases:
+      - CVE-2024-40635
+      - GHSA-265r-hfxg-fhmg
+    events:
+      - timestamp: 2025-03-18T12:21:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: datadog-agent
+            componentID: a883354a434cf0bf
+            componentName: github.com/containerd/containerd
+            componentVersion: v1.7.25-0.20250106131559-142e855138e3
+            componentType: go-module
+            componentLocation: /opt/datadog-agent/bin/agent/agent
+            scanner: grype
+
   - id: CGA-59q6-6hwx-3gcf
     aliases:
       - CVE-2024-8260
