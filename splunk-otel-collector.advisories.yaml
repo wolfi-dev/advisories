@@ -124,6 +124,24 @@ advisories:
           type: component-vulnerability-mismatch
           note: Prometheus ships a Go (Golang) library with a versioning scheme that follows the 0.x format. However, the Prometheus application itself uses a versioning scheme based on 1.x, 2.x, etc. The vulnerability identified in CVE-2019-3826 is specifically associated with the Prometheus application, not the Golang library.
 
+  - id: CGA-g6j5-q5q5-wpr4
+    aliases:
+      - CVE-2025-29786
+      - GHSA-93mq-9ffx-83m2
+    events:
+      - timestamp: 2025-03-19T08:25:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: splunk-otel-collector
+            componentID: 318da17d50a18ad5
+            componentName: github.com/expr-lang/expr
+            componentVersion: v1.16.9
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol
+            scanner: grype
+
   - id: CGA-g9w6-g4x6-6jc9
     aliases:
       - CVE-2024-45338
