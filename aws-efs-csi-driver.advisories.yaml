@@ -442,6 +442,11 @@ advisories:
             To remediate this CVE the code requires upgrading Kubernetes dependencies to v1.29.13 or later, but doing that the build fails due to
             missing feature flags (genericfeatures.StructuredAuthorizationConfiguration and genericfeatures.ZeroLimitedNominalConcurrencyShares) that were removed in later versions.
             The package currently depends on k8s.io/kubernetes v1.28.15. This requires upstream changes to support newer Kubernetes API versions and feature gates.
+      - timestamp: 2025-03-19T14:09:59Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-cannot-be-controlled-by-adversary
+          note: This vulnerability affects versions <= v1.29.12. This vulnerability is limited to Windows hosts.
 
   - id: CGA-qv9r-w22w-39xx
     aliases:
