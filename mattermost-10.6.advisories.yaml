@@ -21,6 +21,11 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2025-03-21T16:26:36Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: This vulnerability relates to versions of mattermost prior to v7.4.0, which is several releases old. This is caused by an overly broad CPE configuration on the NVD record, it has no version constraints, causing all versions of mattermost to become flagged.
 
   - id: CGA-wmww-vw75-c39m
     aliases:
@@ -57,3 +62,8 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2025-03-21T16:27:36Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: This vulnerability was remediated in mattermost v7.x, Specifically, in versions 7.1.4, 7.2.1, 7.3.1, and 7.4.0. For more information, please refer to https://mattermost.com/security-updates/ and search for the ID MMSA-2022-00118 in the server tab.
