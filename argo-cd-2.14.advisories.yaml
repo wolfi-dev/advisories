@@ -95,6 +95,24 @@ advisories:
             released in
             https://github.com/argoproj/argo-cd/commit/d59c85c5eb55d5ccba3ef5ce6624306a1113ce00
 
+  - id: CGA-fg67-32xc-38q6
+    aliases:
+      - CVE-2025-29923
+      - GHSA-92cp-5422-2mw7
+    events:
+      - timestamp: 2025-03-21T07:10:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.14
+            componentID: 8c1692d7f9f27558
+            componentName: github.com/redis/go-redis/v9
+            componentVersion: v9.7.1
+            componentType: go-module
+            componentLocation: /usr/local/bin/argocd
+            scanner: grype
+
   - id: CGA-gvgx-gw4w-qjpv
     aliases:
       - CVE-2025-27144
