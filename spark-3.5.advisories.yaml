@@ -694,6 +694,24 @@ advisories:
         data:
           note: This logback-core dependency is brought in as a transitive dependency. These transitive dependencies from are not able to be upgraded to a higher version and require upstream maintainers to implement.
 
+  - id: CGA-hrgc-6996-3x9q
+    aliases:
+      - CVE-2022-36944
+      - GHSA-8qv5-68g4-248j
+    events:
+      - timestamp: 2025-03-21T23:39:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5
+            componentID: dcbb85c456ec3242
+            componentName: scala-library
+            componentVersion: 2.13.8
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/scala-library-2.13.8.jar
+            scanner: grype
+
   - id: CGA-j24g-j55r-c494
     aliases:
       - CVE-2020-8908
