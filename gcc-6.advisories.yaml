@@ -1,22 +1,26 @@
-schema-version: "2"
+schema-version: 2.0.2
 
 package:
   name: gcc-6
 
 advisories:
-  - id: CGA-f6v5-6cg3-6m8h
+  - id: CGA-6285-g9qw-vhcr
     aliases:
-      - CVE-2018-12886
-      - GHSA-5mwp-7q9c-cgg2
+      - CVE-2023-4039
     events:
-      - timestamp: 2023-04-28T18:46:17Z
+      - timestamp: 2023-09-30T19:00:34Z
         type: detection
         data:
-          type: manual
-      - timestamp: 2023-04-28T19:03:15Z
+          type: nvdapi
+          data:
+            cpeSearched: cpe:2.3:a:*:gcc:*:*:*:*:*:*:*:*
+            cpeFound: cpe:2.3:a:gnu:gcc:*:*:*:*:*:*:arm64:*
+      - timestamp: 2023-09-30T23:32:34Z
         type: true-positive-determination
+      - timestamp: 2025-03-21T22:41:28Z
+        type: fixed
         data:
-          note: We are affected.
+          fixed-version: 6.5.0-r5
 
   - id: CGA-6c8g-h69q-q553
     aliases:
@@ -33,6 +37,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: We don't support POWER.
 
+  - id: CGA-f6v5-6cg3-6m8h
+    aliases:
+      - CVE-2018-12886
+      - GHSA-5mwp-7q9c-cgg2
+    events:
+      - timestamp: 2023-04-28T18:46:17Z
+        type: detection
+        data:
+          type: manual
+      - timestamp: 2023-04-28T19:03:15Z
+        type: true-positive-determination
+        data:
+          note: We are affected.
+      - timestamp: 2025-03-21T22:41:27Z
+        type: fixed
+        data:
+          fixed-version: 6.5.0-r5
+
   - id: CGA-m8cj-mcrg-m8p3
     aliases:
       - CVE-2021-37322
@@ -47,17 +69,3 @@ advisories:
         data:
           type: vulnerable-code-not-in-execution-path
           note: GCC doesn't use the vulnerable code path in libiberty.
-
-  - id: CGA-6285-g9qw-vhcr
-    aliases:
-      - CVE-2023-4039
-    events:
-      - timestamp: 2023-09-30T19:00:34Z
-        type: detection
-        data:
-          type: nvdapi
-          data:
-            cpeSearched: cpe:2.3:a:*:gcc:*:*:*:*:*:*:*:*
-            cpeFound: cpe:2.3:a:gnu:gcc:*:*:*:*:*:*:arm64:*
-      - timestamp: 2023-09-30T23:32:34Z
-        type: true-positive-determination
