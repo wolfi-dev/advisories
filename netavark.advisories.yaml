@@ -21,3 +21,7 @@ advisories:
             componentType: rust-crate
             componentLocation: /usr/libexec/podman/netavark
             scanner: grype
+      - timestamp: 2025-03-21T09:23:55Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability is related to the 'mozim' dependency, which is currently at its latest version, though is requiring an older version of dhcproto, which is in turn requiring an older version of trust-dns-proto which is requiring idna 0.2.3 (still vulnerable). Indeed the newest version of trust-dns-proto is requiring idna 0.4.0 (also vulnerable) Waiting on upstream (mozim, dhcproto, and trust-dns-proto) to update requirements to using non-vulnerable idna
