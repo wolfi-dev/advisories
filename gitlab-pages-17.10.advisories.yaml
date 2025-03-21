@@ -4,6 +4,24 @@ package:
   name: gitlab-pages-17.10
 
 advisories:
+  - id: CGA-48q8-9hx9-x7h5
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-21T18:12:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-pages-17.10
+            componentID: f6c1964d2be15733
+            componentName: golang.org/x/net
+            componentVersion: v0.35.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-pages
+            scanner: grype
+
   - id: CGA-6ghh-hj4p-3v8p
     aliases:
       - CVE-2025-22868
