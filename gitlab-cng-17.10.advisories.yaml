@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: gitlab-cng-17.10
+
+advisories:
+  - id: CGA-5f4x-3g84-v6v4
+    aliases:
+      - CVE-2025-29923
+      - GHSA-92cp-5422-2mw7
+    events:
+      - timestamp: 2025-03-21T18:20:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-cng-17.10
+            componentID: 971e71c295525517
+            componentName: github.com/redis/go-redis/v9
+            componentVersion: v9.7.1
+            componentType: go-module
+            componentLocation: /usr/bin/registry
+            scanner: grype
