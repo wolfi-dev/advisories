@@ -438,6 +438,24 @@ advisories:
           type: vulnerable-code-cannot-be-controlled-by-adversary
           note: Vulnerability affects only Windows systems.
 
+  - id: CGA-h3r6-34hg-c5pr
+    aliases:
+      - CVE-2025-22228
+      - GHSA-mg83-c7gq-rv5c
+    events:
+      - timestamp: 2025-03-21T08:38:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: thingsboard
+            componentID: 8557472e6ec2b1c4
+            componentName: spring-security-crypto
+            componentVersion: 6.2.8
+            componentType: java-archive
+            componentLocation: /usr/share/thingsboard/bin/thingsboard.jar
+            scanner: grype
+
   - id: CGA-hm4c-chhm-rg2x
     aliases:
       - CVE-2020-36843
@@ -463,6 +481,18 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.9.1-r2
+      - timestamp: 2025-03-21T08:38:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: thingsboard
+            componentID: d4c6dbae817d5b97
+            componentName: eddsa
+            componentVersion: 0.3.0
+            componentType: java-archive
+            componentLocation: /usr/share/thingsboard/bin/thingsboard.jar
+            scanner: grype
 
   - id: CGA-mqq6-jcf2-j7wq
     aliases:
