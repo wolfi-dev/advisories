@@ -121,3 +121,21 @@ advisories:
         type: pending-upstream-fix
         data:
           note: 'This vulnerability relates to the GitLab dependency: [gem] puma @ 5.6.8  GitLab advises that maintainers should NOT upgrade dependency versions manually, as their automation would have already applied this in cases of simple version increments. If a dependency version has not yet been upgraded, there is usually a good reason. Additionally, past attempts to upgrade GitLab dependencies ahead of the upstream release have resulted in build issues.  deferring to upstream (GitLab) to address this CVE in a subsequent update. See: https://docs.gitlab.com/ee/development/dependencies.html.'
+
+  - id: CGA-wmhx-ff35-x23p
+    aliases:
+      - CVE-2025-29923
+      - GHSA-92cp-5422-2mw7
+    events:
+      - timestamp: 2025-03-21T09:11:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-cng-17.9
+            componentID: fd6a371f232ae54e
+            componentName: github.com/redis/go-redis/v9
+            componentVersion: v9.7.0
+            componentType: go-module
+            componentLocation: /usr/bin/registry
+            scanner: grype

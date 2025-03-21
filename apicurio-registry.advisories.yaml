@@ -25,6 +25,10 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Upstream maintainers will have to upgrade quarkus-resteasy to 3.15.3.1 or later due to breaking build changes.
+      - timestamp: 2025-03-19T18:39:31Z
+        type: fixed
+        data:
+          fixed-version: 3.0.6-r2
 
   - id: CGA-5hr5-g6v2-4w72
     aliases:
@@ -154,6 +158,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/java/apicurio-registry/lib/io.smallrye.smallrye-fault-tolerance-core-6.4.0.jar
             scanner: grype
+      - timestamp: 2025-03-19T18:39:32Z
+        type: fixed
+        data:
+          fixed-version: 3.0.6-r2
 
   - id: CGA-fr9m-mrh7-gwv4
     aliases:
@@ -176,6 +184,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.0.6-r1
+
+  - id: CGA-p3w3-hrxv-jqqf
+    aliases:
+      - CVE-2024-58103
+      - GHSA-pwf9-q62p-v7wc
+    events:
+      - timestamp: 2025-03-19T11:44:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apicurio-registry
+            componentID: 8c3584a0eed9cc5d
+            componentName: wire-runtime
+            componentVersion: 4.9.9
+            componentType: java-archive
+            componentLocation: /usr/share/java/apicurio-registry/lib/com.squareup.wire.wire-runtime-4.9.9.jar
+            scanner: grype
+      - timestamp: 2025-03-19T17:41:07Z
+        type: pending-upstream-fix
+        data:
+          note: 'Bumping com.squareup.wire from 4.9.9 to the fixed 5.2.0 resulted in build failures: apicurio-registry upstream will need to handle the dependency upgrade and release a new version.'
 
   - id: CGA-x2pj-p6gm-xpqp
     aliases:

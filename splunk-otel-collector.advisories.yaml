@@ -124,6 +124,28 @@ advisories:
           type: component-vulnerability-mismatch
           note: Prometheus ships a Go (Golang) library with a versioning scheme that follows the 0.x format. However, the Prometheus application itself uses a versioning scheme based on 1.x, 2.x, etc. The vulnerability identified in CVE-2019-3826 is specifically associated with the Prometheus application, not the Golang library.
 
+  - id: CGA-g6j5-q5q5-wpr4
+    aliases:
+      - CVE-2025-29786
+      - GHSA-93mq-9ffx-83m2
+    events:
+      - timestamp: 2025-03-19T08:25:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: splunk-otel-collector
+            componentID: 318da17d50a18ad5
+            componentName: github.com/expr-lang/expr
+            componentVersion: v1.16.9
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol
+            scanner: grype
+      - timestamp: 2025-03-19T17:32:24Z
+        type: fixed
+        data:
+          fixed-version: 0.121.0-r1
+
   - id: CGA-g9w6-g4x6-6jc9
     aliases:
       - CVE-2024-45338
@@ -145,6 +167,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.115.0-r1
+
+  - id: CGA-jr6h-pq36-654c
+    aliases:
+      - CVE-2025-29923
+      - GHSA-92cp-5422-2mw7
+    events:
+      - timestamp: 2025-03-21T09:37:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: splunk-otel-collector
+            componentID: e432a1a4495b06de
+            componentName: github.com/redis/go-redis/v9
+            componentVersion: v9.7.1
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol
+            scanner: grype
+      - timestamp: 2025-03-21T11:16:25Z
+        type: fixed
+        data:
+          fixed-version: 0.121.0-r2
 
   - id: CGA-mvjq-r23f-m7vg
     aliases:
@@ -187,6 +231,10 @@ advisories:
         type: true-positive-determination
         data:
           note: 'Awaiting release of fix by upstream dependency yamux: https://github.com/hashicorp/yamux/pull/143'
+      - timestamp: 2025-03-21T11:16:26Z
+        type: fixed
+        data:
+          fixed-version: 0.121.0-r2
 
   - id: CGA-vx9w-ggjx-qww9
     aliases:

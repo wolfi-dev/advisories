@@ -90,6 +90,11 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Upstream will have to update to a newer version of kubernetes go package. Attempted to update to 1.29.14 fails due to signature changes
+      - timestamp: 2025-03-19T14:10:17Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-cannot-be-controlled-by-adversary
+          note: This vulnerability affects versions <= v1.29.12. This vulnerability is limited to Windows hosts.
 
   - id: CGA-w288-56vg-qc63
     aliases:
@@ -108,3 +113,7 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/nfsplugin
             scanner: grype
+      - timestamp: 2025-03-20T23:59:11Z
+        type: pending-upstream-fix
+        data:
+          note: 'The k8s.io CVE affecting this package is still under upstream triage. See the related PR at https://github.com/kubernetes/kubernetes/issues/130786. The current upstream build remains on kubernetes@v1.31.x to retain support for k8s.io/kubelet/pkg/apis/dra/v1beta1, which was removed in v1.32.x.'

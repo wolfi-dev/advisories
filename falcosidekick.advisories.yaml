@@ -121,6 +121,24 @@ advisories:
         data:
           fixed-version: 2.30.0-r1
 
+  - id: CGA-94pf-hhrg-v4x4
+    aliases:
+      - CVE-2025-29923
+      - GHSA-92cp-5422-2mw7
+    events:
+      - timestamp: 2025-03-21T07:13:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: falcosidekick
+            componentID: 28da043ff0acbb30
+            componentName: github.com/redis/go-redis/v9
+            componentVersion: v9.7.0
+            componentType: go-module
+            componentLocation: /usr/bin/falcosidekick
+            scanner: grype
+
   - id: CGA-9hwx-2qcc-2rhw
     aliases:
       - CVE-2025-22869
@@ -169,6 +187,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/falcosidekick
             scanner: grype
+      - timestamp: 2025-03-21T07:26:34Z
+        type: fixed
+        data:
+          fixed-version: 2.31.1-r4
 
   - id: CGA-fhp5-x4p8-9cmf
     aliases:
