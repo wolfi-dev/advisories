@@ -578,6 +578,24 @@ advisories:
         data:
           note: This vulnerability has recently updated the list of affected packages. Unfortunately the new affected package 'gopkg.in/square/go-jose.v2' is currently used by many indirect dependencies to this package which makes impossible to fix it without upstream code changes.
 
+  - id: CGA-r52j-f5q9-6vxq
+    aliases:
+      - CVE-2025-29923
+      - GHSA-92cp-5422-2mw7
+    events:
+      - timestamp: 2025-03-22T07:25:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kots
+            componentID: da3890ec024b1d7c
+            componentName: github.com/redis/go-redis/v9
+            componentVersion: v9.7.0
+            componentType: go-module
+            componentLocation: /usr/bin/kots
+            scanner: grype
+
   - id: CGA-r743-f224-6cjc
     aliases:
       - CVE-2025-22868
