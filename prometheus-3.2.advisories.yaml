@@ -4,6 +4,24 @@ package:
   name: prometheus-3.2
 
 advisories:
+  - id: CGA-2j5v-4vvc-hrch
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T09:17:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-3.2
+            componentID: d3fdc2eaa6e4aa74
+            componentName: github.com/golang-jwt/jwt/v5
+            componentVersion: v5.2.1
+            componentType: go-module
+            componentLocation: /opt/bitnami/prometheus/bin/prometheus
+            scanner: grype
+
   - id: CGA-cgfv-4p4j-vpfq
     aliases:
       - CVE-2025-22870
