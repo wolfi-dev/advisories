@@ -89,3 +89,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.34.0-r1
+
+  - id: CGA-wc92-mvm5-4ccp
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T08:32:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.34
+            componentID: 84eff82501020b5e
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
