@@ -4,6 +4,24 @@ package:
   name: gitlab-runner-17.9
 
 advisories:
+  - id: CGA-2mhh-2g3r-jhmp
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T17:18:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-17.9
+            componentID: 4a462aab1c14c6b4
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/docker-machine
+            scanner: grype
+
   - id: CGA-34m4-9v4g-h3gp
     aliases:
       - CVE-2024-36620
