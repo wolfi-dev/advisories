@@ -1,19 +1,9 @@
-schema-version: "2"
+schema-version: 2.0.2
 
 package:
   name: systemd
 
 advisories:
-  - id: CGA-5cpj-mmg6-5h3v
-    aliases:
-      - CVE-2023-31437
-      - GHSA-9mv8-4v9g-hm48
-    events:
-      - timestamp: 2023-06-26T10:31:26Z
-        type: detection
-        data:
-          type: manual
-
   - id: CGA-5c4g-h87q-qf2x
     aliases:
       - CVE-2023-31438
@@ -28,6 +18,20 @@ advisories:
         data:
           type: vulnerability-record-analysis-contested
           note: This has been disputed by upstream and is not considered a security issue.
+
+  - id: CGA-5cpj-mmg6-5h3v
+    aliases:
+      - CVE-2023-31437
+      - GHSA-9mv8-4v9g-hm48
+    events:
+      - timestamp: 2023-06-26T10:31:26Z
+        type: detection
+        data:
+          type: manual
+      - timestamp: 2025-03-22T03:54:03Z
+        type: fixed
+        data:
+          fixed-version: 257.4-r0
 
   - id: CGA-mhjv-hvjp-g2g6
     aliases:
