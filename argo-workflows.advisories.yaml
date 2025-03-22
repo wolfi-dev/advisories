@@ -4,6 +4,24 @@ package:
   name: argo-workflows
 
 advisories:
+  - id: CGA-2536-qhmw-qf4r
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T07:36:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-workflows
+            componentID: 230321ccf046a26a
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/workflow-controller
+            scanner: grype
+
   - id: CGA-2whx-vfg8-vmvq
     aliases:
       - CVE-2024-45296
