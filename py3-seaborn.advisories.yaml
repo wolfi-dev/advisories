@@ -4,6 +4,28 @@ package:
   name: py3-seaborn
 
 advisories:
+  - id: CGA-wvc6-3w4x-f53q
+    aliases:
+      - CVE-2024-28219
+      - GHSA-44wm-f244-xhp3
+    events:
+      - timestamp: 2024-04-05T07:45:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3-seaborn
+            componentID: 073ec782b0906bc1
+            componentName: pillow
+            componentVersion: 10.2.0
+            componentType: python
+            componentLocation: /usr/lib/python3.12/site-packages/pillow-10.2.0.dist-info/METADATA, /usr/lib/python3.12/site-packages/pillow-10.2.0.dist-info/RECORD, /usr/lib/python3.12/site-packages/pillow-10.2.0.dist-info/top_level.txt
+            scanner: grype
+      - timestamp: 2025-03-22T02:23:34Z
+        type: fixed
+        data:
+          fixed-version: 0.13.2-r3
+
   - id: CGA-xqwq-8jqj-g28p
     aliases:
       - CVE-2023-50447
@@ -25,21 +47,3 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.13.2-r0
-
-  - id: CGA-wvc6-3w4x-f53q
-    aliases:
-      - CVE-2024-28219
-      - GHSA-44wm-f244-xhp3
-    events:
-      - timestamp: 2024-04-05T07:45:42Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: py3-seaborn
-            componentID: 073ec782b0906bc1
-            componentName: pillow
-            componentVersion: 10.2.0
-            componentType: python
-            componentLocation: /usr/lib/python3.12/site-packages/pillow-10.2.0.dist-info/METADATA, /usr/lib/python3.12/site-packages/pillow-10.2.0.dist-info/RECORD, /usr/lib/python3.12/site-packages/pillow-10.2.0.dist-info/top_level.txt
-            scanner: grype
