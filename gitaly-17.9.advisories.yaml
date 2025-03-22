@@ -25,6 +25,24 @@ advisories:
         data:
           fixed-version: 17.9.1-r1
 
+  - id: CGA-3hxq-9jr8-xxrx
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T11:40:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitaly-17.9
+            componentID: 0a8cc3f167280bf1
+            componentName: github.com/golang-jwt/jwt/v5
+            componentVersion: v5.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/gitaly-backup
+            scanner: grype
+
   - id: CGA-5h9m-r5vj-ghwr
     aliases:
       - CVE-2025-22870
