@@ -4,6 +4,24 @@ package:
   name: hydra
 
 advisories:
+  - id: CGA-2vgc-xp75-p9r4
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T10:30:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: hydra
+            componentID: 7bbcb988615bca52
+            componentName: github.com/golang-jwt/jwt/v5
+            componentVersion: v5.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/hydra
+            scanner: grype
+
   - id: CGA-45pg-gv9v-4245
     aliases:
       - CVE-2025-27144
