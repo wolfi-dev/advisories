@@ -156,6 +156,28 @@ advisories:
         data:
           fixed-version: 3.1.1-r1
 
+  - id: CGA-cmv2-rhg3-xj4g
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T14:06:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: fluent-bit-plugin-loki
+            componentID: cd8e85445bec1ace
+            componentName: github.com/golang-jwt/jwt/v5
+            componentVersion: v5.2.1
+            componentType: go-module
+            componentLocation: /fluent-bit/bin/out_grafana_loki.so
+            scanner: grype
+      - timestamp: 2025-03-23T01:23:32Z
+        type: fixed
+        data:
+          fixed-version: 3.4.2-r5
+
   - id: CGA-fmm7-cwr8-5qf3
     aliases:
       - CVE-2025-22870
@@ -248,6 +270,10 @@ advisories:
             componentType: go-module
             componentLocation: /fluent-bit/bin/out_grafana_loki.so
             scanner: grype
+      - timestamp: 2025-03-23T01:23:32Z
+        type: fixed
+        data:
+          fixed-version: 3.4.2-r5
 
   - id: CGA-v5q4-v5w8-4rgf
     aliases:

@@ -48,6 +48,28 @@ advisories:
         data:
           fixed-version: 0.18.1-r2
 
+  - id: CGA-3pwm-f94p-fppg
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T08:14:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buildkitd
+            componentID: 105f85fb59ff2581
+            componentName: github.com/golang-jwt/jwt/v5
+            componentVersion: v5.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/buildkitd
+            scanner: grype
+      - timestamp: 2025-03-22T12:19:36Z
+        type: fixed
+        data:
+          fixed-version: 0.20.1-r4
+
   - id: CGA-4823-c588-79x4
     aliases:
       - CVE-2024-34156
@@ -581,6 +603,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/buildctl
             scanner: grype
+      - timestamp: 2025-03-22T05:19:35Z
+        type: fixed
+        data:
+          fixed-version: 0.20.1-r3
 
   - id: CGA-pvj9-jfx8-wmx9
     aliases:

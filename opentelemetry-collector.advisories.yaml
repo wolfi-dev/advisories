@@ -28,6 +28,24 @@ advisories:
         data:
           note: Due to the runtime building process of this project, there are dependencies included at build time. Consequently, this vulnerability requires upstream changes in a new release.
 
+  - id: CGA-3pvc-jwwq-vc33
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T08:12:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opentelemetry-collector
+            componentID: d81a78be87338c93
+            componentName: github.com/golang-jwt/jwt/v5
+            componentVersion: v5.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol
+            scanner: grype
+
   - id: CGA-597r-5hc6-jm26
     aliases:
       - CVE-2025-22866

@@ -195,6 +195,28 @@ advisories:
         data:
           fixed-version: 0.9.3-r4
 
+  - id: CGA-f54w-2fr9-56h8
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T07:13:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: actions-runner-controller
+            componentID: 1664651b4f5070e7
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/actions-metrics-server
+            scanner: grype
+      - timestamp: 2025-03-22T10:27:35Z
+        type: fixed
+        data:
+          fixed-version: 0.10.1-r7
+
   - id: CGA-g678-2gjg-65j8
     aliases:
       - CVE-2024-45336

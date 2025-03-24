@@ -48,6 +48,28 @@ advisories:
         data:
           fixed-version: 1.0.14-r1
 
+  - id: CGA-8pq5-8vmr-j7pg
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T20:35:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sftpgo-plugin-kms
+            componentID: df0eede40ec0a936
+            componentName: github.com/golang-jwt/jwt/v5
+            componentVersion: v5.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/sftpgo-plugin-kms
+            scanner: grype
+      - timestamp: 2025-03-23T14:17:41Z
+        type: fixed
+        data:
+          fixed-version: 1.0.15-r3
+
   - id: CGA-8w9g-4337-7w2r
     aliases:
       - GHSA-29qp-crvh-w22m

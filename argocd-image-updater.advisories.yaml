@@ -227,6 +227,28 @@ advisories:
         data:
           fixed-version: 0.15.2-r7
 
+  - id: CGA-fq6v-35jw-2v79
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T07:09:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argocd-image-updater
+            componentID: c50fc6809e086766
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/argocd-image-updater
+            scanner: grype
+      - timestamp: 2025-03-22T10:26:24Z
+        type: fixed
+        data:
+          fixed-version: 0.15.2-r9
+
   - id: CGA-fwr5-m8r5-xwrq
     aliases:
       - CVE-2025-1767
@@ -331,6 +353,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/argocd-image-updater
             scanner: grype
+      - timestamp: 2025-03-22T05:02:54Z
+        type: fixed
+        data:
+          fixed-version: 0.15.2-r8
 
   - id: CGA-v8g2-44h4-3cqw
     aliases:

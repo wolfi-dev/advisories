@@ -325,3 +325,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.12.0-r1
+
+  - id: CGA-xp49-8p5w-gjg6
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T16:35:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-mimir
+            componentID: 5748849c656bcebb
+            componentName: github.com/golang-jwt/jwt/v5
+            componentVersion: v5.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/metaconvert
+            scanner: grype
+      - timestamp: 2025-03-23T06:20:58Z
+        type: fixed
+        data:
+          fixed-version: 2.15.1-r1

@@ -25,6 +25,28 @@ advisories:
         data:
           fixed-version: 0.10.8-r1
 
+  - id: CGA-9836-6hqp-7php
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T23:17:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: xeol
+            componentID: 5fee80274695aef3
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/xeol
+            scanner: grype
+      - timestamp: 2025-03-23T17:17:00Z
+        type: fixed
+        data:
+          fixed-version: 0.10.8-r5
+
   - id: CGA-gfg2-c9gq-5j4x
     aliases:
       - CVE-2025-22870

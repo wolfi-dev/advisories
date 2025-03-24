@@ -617,3 +617,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.19.0-r6
+
+  - id: CGA-x5v8-qp46-5pm7
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T15:05:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tekton-chains
+            componentID: f78e95f12c4ab47d
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/tekton-chains
+            scanner: grype
+      - timestamp: 2025-03-24T09:24:17Z
+        type: fixed
+        data:
+          fixed-version: 0.24.0-r6

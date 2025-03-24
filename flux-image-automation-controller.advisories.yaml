@@ -419,6 +419,28 @@ advisories:
         data:
           fixed-version: 0.39.0-r2
 
+  - id: CGA-v8r6-7jpv-r5cv
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T18:08:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-image-automation-controller
+            componentID: c637d59879f301b1
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/image-automation-controller
+            scanner: grype
+      - timestamp: 2025-03-24T09:23:21Z
+        type: fixed
+        data:
+          fixed-version: 0.40.0-r4
+
   - id: CGA-vhw2-wp46-rw4g
     aliases:
       - CVE-2024-24783

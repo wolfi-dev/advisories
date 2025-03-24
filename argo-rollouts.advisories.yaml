@@ -202,6 +202,28 @@ advisories:
         data:
           fixed-version: 1.8.0-r1
 
+  - id: CGA-x47x-j946-782j
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T07:04:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-rollouts
+            componentID: 716b2104dd0a94f0
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/kubectl-argo-rollouts
+            scanner: grype
+      - timestamp: 2025-03-24T07:54:22Z
+        type: fixed
+        data:
+          fixed-version: 1.8.2-r0
+
   - id: CGA-x5vg-wx9v-2vc8
     aliases:
       - CVE-2025-22868

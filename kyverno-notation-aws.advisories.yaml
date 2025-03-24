@@ -155,6 +155,28 @@ advisories:
         data:
           fixed-version: 1.1-r1
 
+  - id: CGA-vjj2-7qxr-jr85
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T11:34:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-notation-aws
+            componentID: 06f6961608a803ba
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/kyverno-notation-aws
+            scanner: grype
+      - timestamp: 2025-03-22T22:18:11Z
+        type: fixed
+        data:
+          fixed-version: 1.1-r10
+
   - id: CGA-vx83-6689-hgjj
     aliases:
       - CVE-2025-22868

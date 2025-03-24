@@ -68,6 +68,28 @@ advisories:
         data:
           fixed-version: 11.5.2-r1
 
+  - id: CGA-7cqw-j829-8g8m
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T07:29:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-11.5
+            componentID: 4c31dd849537068a
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+      - timestamp: 2025-03-24T14:34:37Z
+        type: fixed
+        data:
+          fixed-version: 11.5.2-r7
+
   - id: CGA-89hw-x2ph-wj6c
     aliases:
       - CVE-2025-27144

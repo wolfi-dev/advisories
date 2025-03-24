@@ -143,6 +143,28 @@ advisories:
         data:
           fixed-version: 0.3.42-r1
 
+  - id: CGA-5xjc-j2fj-q83p
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T07:08:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k8sgpt
+            componentID: f80402b98b5e4e30
+            componentName: github.com/golang-jwt/jwt/v5
+            componentVersion: v5.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/k8sgpt
+            scanner: grype
+      - timestamp: 2025-03-24T13:35:38Z
+        type: fixed
+        data:
+          fixed-version: 0.4.1-r2
+
   - id: CGA-6fhm-qph5-fvrj
     aliases:
       - CVE-2024-26147
