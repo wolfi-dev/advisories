@@ -25,6 +25,28 @@ advisories:
         data:
           fixed-version: 3.88.16-r1
 
+  - id: CGA-885c-5xfg-7q62
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T07:34:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trufflehog
+            componentID: eb7bfc1b8c98d14a
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/trufflehog
+            scanner: grype
+      - timestamp: 2025-03-22T08:10:14Z
+        type: fixed
+        data:
+          fixed-version: 3.88.18-r0
+
   - id: CGA-f37v-m3vv-pqgv
     aliases:
       - CVE-2025-27144
@@ -63,3 +85,7 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/trufflehog
             scanner: grype
+      - timestamp: 2025-03-22T08:10:14Z
+        type: fixed
+        data:
+          fixed-version: 3.88.18-r0

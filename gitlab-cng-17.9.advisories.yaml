@@ -134,6 +134,28 @@ advisories:
         data:
           note: 'This vulnerability relates to the GitLab dependency: [gem] puma @ 5.6.8  GitLab advises that maintainers should NOT upgrade dependency versions manually, as their automation would have already applied this in cases of simple version increments. If a dependency version has not yet been upgraded, there is usually a good reason. Additionally, past attempts to upgrade GitLab dependencies ahead of the upstream release have resulted in build issues.  deferring to upstream (GitLab) to address this CVE in a subsequent update. See: https://docs.gitlab.com/ee/development/dependencies.html.'
 
+  - id: CGA-p2cv-r52q-q7jp
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T13:36:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-cng-17.9
+            componentID: aee439b9b6d7b2c9
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/registry
+            scanner: grype
+      - timestamp: 2025-03-24T10:46:36Z
+        type: fixed
+        data:
+          fixed-version: 17.9.2-r3
+
   - id: CGA-wmhx-ff35-x23p
     aliases:
       - CVE-2025-29923

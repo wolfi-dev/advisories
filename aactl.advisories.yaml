@@ -161,6 +161,28 @@ advisories:
         data:
           fixed-version: 0.4.12-r7
 
+  - id: CGA-63h7-5pwq-3xg4
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T07:02:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aactl
+            componentID: 2c2e369a34476691
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/aactl
+            scanner: grype
+      - timestamp: 2025-03-22T10:25:06Z
+        type: fixed
+        data:
+          fixed-version: 0.4.12-r29
+
   - id: CGA-689m-wqx7-xqw9
     aliases:
       - CVE-2024-41110

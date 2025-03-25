@@ -394,6 +394,28 @@ advisories:
         data:
           fixed-version: 3.11.7-r1
 
+  - id: CGA-hm3q-gf3g-9rh6
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T13:17:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gomplate
+            componentID: 9a822afde2894951
+            componentName: github.com/golang-jwt/jwt/v5
+            componentVersion: v5.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/gomplate
+            scanner: grype
+      - timestamp: 2025-03-23T00:40:49Z
+        type: fixed
+        data:
+          fixed-version: 4.3.1-r1
+
   - id: CGA-hrcq-hc3q-2p9c
     aliases:
       - CVE-2024-24786

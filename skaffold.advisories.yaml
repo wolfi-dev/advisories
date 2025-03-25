@@ -232,6 +232,28 @@ advisories:
         data:
           fixed-version: 2.10.1-r1
 
+  - id: CGA-9hjh-7ccm-r7cv
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T14:30:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: skaffold
+            componentID: 4df943943907ef1d
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/skaffold
+            scanner: grype
+      - timestamp: 2025-03-23T02:26:53Z
+        type: fixed
+        data:
+          fixed-version: 2.14.2-r1
+
   - id: CGA-9rhv-6x5x-p3wh
     aliases:
       - CVE-2024-23652

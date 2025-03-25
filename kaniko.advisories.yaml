@@ -4,6 +4,28 @@ package:
   name: kaniko
 
 advisories:
+  - id: CGA-38f4-44m7-vmx4
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T19:02:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kaniko
+            componentID: a476c52f0158dd78
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/warmer
+            scanner: grype
+      - timestamp: 2025-03-23T12:22:17Z
+        type: fixed
+        data:
+          fixed-version: 1.23.2-r15
+
   - id: CGA-3wq7-m5q2-fjfm
     aliases:
       - CVE-2025-22869

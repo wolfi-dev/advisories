@@ -640,6 +640,28 @@ advisories:
         data:
           fixed-version: 1.32.2.1-r31
 
+  - id: CGA-q86f-94j3-qm78
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T07:15:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s
+            componentID: 58880d1faea31ce1
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/k3s
+            scanner: grype
+      - timestamp: 2025-03-22T09:15:56Z
+        type: fixed
+        data:
+          fixed-version: 1.32.2.1-r34
+
   - id: CGA-qfhr-78m7-prm9
     aliases:
       - GHSA-jq35-85cj-fj4p

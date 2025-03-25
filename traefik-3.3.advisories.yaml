@@ -69,6 +69,28 @@ advisories:
         data:
           fixed-version: 3.3.4-r1
 
+  - id: CGA-vpp3-hgr9-xc7c
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T10:39:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: traefik-3.3
+            componentID: 3724253806b8eb0b
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/traefik
+            scanner: grype
+      - timestamp: 2025-03-24T09:10:02Z
+        type: fixed
+        data:
+          fixed-version: 3.3.4-r4
+
   - id: CGA-w7vh-vvmw-4xxr
     aliases:
       - CVE-2025-22868

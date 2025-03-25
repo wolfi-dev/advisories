@@ -230,6 +230,28 @@ advisories:
         data:
           fixed-version: 0.26.2-r3
 
+  - id: CGA-g2v7-5h6v-cp45
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T19:14:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: step-ca
+            componentID: 25d43b6dca412461
+            componentName: github.com/golang-jwt/jwt/v5
+            componentVersion: v5.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/step-ca
+            scanner: grype
+      - timestamp: 2025-03-23T12:20:37Z
+        type: fixed
+        data:
+          fixed-version: 0.28.3-r1
+
   - id: CGA-g8gw-qc8q-32ch
     aliases:
       - CVE-2023-45283

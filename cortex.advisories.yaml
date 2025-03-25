@@ -78,6 +78,28 @@ advisories:
         data:
           fixed-version: 1.16.0-r2
 
+  - id: CGA-57pq-623p-6qf4
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T12:13:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cortex
+            componentID: 75fb2b5439eb4210
+            componentName: github.com/golang-jwt/jwt/v5
+            componentVersion: v5.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/cortex
+            scanner: grype
+      - timestamp: 2025-03-22T23:16:29Z
+        type: fixed
+        data:
+          fixed-version: 1.19.0-r4
+
   - id: CGA-6qfv-j785-93cc
     aliases:
       - CVE-2025-22870

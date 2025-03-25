@@ -207,6 +207,28 @@ advisories:
         data:
           fixed-version: 0.190.0-r1
 
+  - id: CGA-cr3f-x75h-rxvx
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T07:35:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: eksctl
+            componentID: 7b2c3f0b01ed2a68
+            componentName: github.com/golang-jwt/jwt/v5
+            componentVersion: v5.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/eksctl
+            scanner: grype
+      - timestamp: 2025-03-22T09:42:17Z
+        type: fixed
+        data:
+          fixed-version: 0.205.0-r5
+
   - id: CGA-cx3v-7wqj-4x9c
     aliases:
       - CVE-2025-22866

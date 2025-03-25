@@ -92,6 +92,28 @@ advisories:
         data:
           fixed-version: 1.15.0-r1
 
+  - id: CGA-78cr-hrm6-q982
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T08:21:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flyte
+            componentID: a7b7ecc1c0fb82ab
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/flyte
+            scanner: grype
+      - timestamp: 2025-03-24T14:47:30Z
+        type: pending-upstream-fix
+        data:
+          note: gopkg.in/square/go-jose.v2 does not have a version that fixes the vulnerability. Thus upstream needs to move away from gopkg.in/square/go-jose.v2 for this to be fixed.
+
   - id: CGA-c2pp-59hg-v5q9
     aliases:
       - CVE-2024-24789

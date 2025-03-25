@@ -206,6 +206,28 @@ advisories:
         data:
           fixed-version: 2.0.1-r3
 
+  - id: CGA-9hpj-w453-mh3g
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T18:40:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser
+            componentID: 9ab78392e257d342
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+      - timestamp: 2025-03-24T09:17:44Z
+        type: fixed
+        data:
+          fixed-version: 2.8.1-r1
+
   - id: CGA-9j6c-fxv2-wc33
     aliases:
       - CVE-2025-21613
