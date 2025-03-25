@@ -207,6 +207,28 @@ advisories:
         data:
           fixed-version: 4.13.1-r1
 
+  - id: CGA-f6hc-66gp-wpfc
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T09:27:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: scorecard
+            componentID: 17aa44d31c11a296
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/scorecard
+            scanner: grype
+      - timestamp: 2025-03-22T16:12:13Z
+        type: fixed
+        data:
+          fixed-version: 5.1.1-r4
+
   - id: CGA-fj8m-454h-mf2r
     aliases:
       - CVE-2024-24784

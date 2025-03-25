@@ -197,6 +197,28 @@ advisories:
         data:
           fixed-version: 1.46.1-r0
 
+  - id: CGA-f27f-c3cp-9v6g
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T11:37:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: glab
+            componentID: 03f36b661c821dd2
+            componentName: github.com/golang-jwt/jwt/v5
+            componentVersion: v5.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/glab
+            scanner: grype
+      - timestamp: 2025-03-22T22:16:19Z
+        type: fixed
+        data:
+          fixed-version: 1.54.0-r1
+
   - id: CGA-fv5p-ghmf-p93r
     aliases:
       - CVE-2024-45338

@@ -148,6 +148,28 @@ advisories:
         data:
           fixed-version: 1.25.2-r2
 
+  - id: CGA-6455-ppqr-v7wm
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T20:03:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: temporal-server
+            componentID: 9b52c40ffc16775b
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/temporal-server
+            scanner: grype
+      - timestamp: 2025-03-23T13:23:34Z
+        type: fixed
+        data:
+          fixed-version: 1.27.1-r4
+
   - id: CGA-6qjq-38jq-6vc6
     aliases:
       - CVE-2024-24786

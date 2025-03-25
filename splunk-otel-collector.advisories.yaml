@@ -168,6 +168,28 @@ advisories:
         data:
           fixed-version: 0.115.0-r1
 
+  - id: CGA-hj7w-m46w-956q
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T16:44:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: splunk-otel-collector
+            componentID: e4963c64d67b2c10
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol
+            scanner: grype
+      - timestamp: 2025-03-24T09:19:37Z
+        type: fixed
+        data:
+          fixed-version: 0.121.0-r3
+
   - id: CGA-jr6h-pq36-654c
     aliases:
       - CVE-2025-29923

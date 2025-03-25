@@ -258,6 +258,28 @@ advisories:
         data:
           fixed-version: 17.2.1-r1
 
+  - id: CGA-qcp9-vc7m-qvq3
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T22:13:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: teleport
+            componentID: dd7108c7a46457c2
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/local/bin/tbot
+            scanner: grype
+      - timestamp: 2025-03-24T09:18:40Z
+        type: fixed
+        data:
+          fixed-version: 17.3.4-r1
+
   - id: CGA-rfcp-rmc3-pq6w
     aliases:
       - CVE-2024-40635

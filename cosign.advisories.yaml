@@ -154,6 +154,28 @@ advisories:
         data:
           fixed-version: 2.2.4-r5
 
+  - id: CGA-5pq8-h52r-68vf
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T07:23:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cosign
+            componentID: e2f2592476c38c25
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/cosign
+            scanner: grype
+      - timestamp: 2025-03-24T07:49:35Z
+        type: fixed
+        data:
+          fixed-version: 2.4.3-r6
+
   - id: CGA-5w77-wm4v-wjrc
     aliases:
       - CVE-2025-22866

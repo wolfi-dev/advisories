@@ -215,6 +215,28 @@ advisories:
         data:
           fixed-version: 0.14.0-r4
 
+  - id: CGA-83mf-phfr-w792
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T07:30:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: external-dns
+            componentID: 4add3e6e2dfe986a
+            componentName: github.com/golang-jwt/jwt/v5
+            componentVersion: v5.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/external-dns
+            scanner: grype
+      - timestamp: 2025-03-22T10:18:12Z
+        type: fixed
+        data:
+          fixed-version: 0.16.1-r1
+
   - id: CGA-9x8q-88xg-877p
     aliases:
       - CVE-2024-34156
