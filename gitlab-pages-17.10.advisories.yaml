@@ -4,6 +4,28 @@ package:
   name: gitlab-pages-17.10
 
 advisories:
+  - id: CGA-29jc-rm69-x4pp
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T11:26:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-pages-17.10
+            componentID: 5c3c80e4a24f1b97
+            componentName: github.com/golang-jwt/jwt/v5
+            componentVersion: v5.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-pages
+            scanner: grype
+      - timestamp: 2025-03-22T21:10:18Z
+        type: fixed
+        data:
+          fixed-version: 17.10.0-r2
+
   - id: CGA-48q8-9hx9-x7h5
     aliases:
       - CVE-2025-22870

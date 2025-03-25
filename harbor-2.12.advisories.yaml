@@ -219,3 +219,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.12.0-r2
+
+  - id: CGA-xq3f-gm87-vp84
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T14:44:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-2.12
+            componentID: 994caca37c2a9724
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-registryctl
+            scanner: grype
+      - timestamp: 2025-03-24T09:32:32Z
+        type: fixed
+        data:
+          fixed-version: 2.12.2-r8

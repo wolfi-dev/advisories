@@ -175,3 +175,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.2.3-r1
+
+  - id: CGA-qx65-xg92-24j6
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T11:35:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dashboard-auth
+            componentID: 045f33c8440cd474
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/dashboard-auth
+            scanner: grype
+      - timestamp: 2025-03-22T22:17:15Z
+        type: fixed
+        data:
+          fixed-version: 1.2.4-r4

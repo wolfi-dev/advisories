@@ -573,3 +573,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.9.1-r0
+
+  - id: CGA-xhrf-55pw-5qf6
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T10:32:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: falcoctl
+            componentID: 3afe7ddce18a0414
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/falcoctl
+            scanner: grype
+      - timestamp: 2025-03-24T09:03:28Z
+        type: fixed
+        data:
+          fixed-version: 0.11.0-r7

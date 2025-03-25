@@ -353,6 +353,28 @@ advisories:
         data:
           fixed-version: 0.35.1-r1
 
+  - id: CGA-v58f-v8fh-8g33
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T11:29:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: thanos
+            componentID: edb0aeb4de92d711
+            componentName: github.com/golang-jwt/jwt/v5
+            componentVersion: v5.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/thanos
+            scanner: grype
+      - timestamp: 2025-03-22T21:17:04Z
+        type: fixed
+        data:
+          fixed-version: 0.37.2-r8
+
   - id: CGA-xg7g-vg3x-768g
     aliases:
       - CVE-2025-22866

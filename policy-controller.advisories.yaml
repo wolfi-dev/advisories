@@ -347,6 +347,28 @@ advisories:
         data:
           fixed-version: 0.8.4-r4
 
+  - id: CGA-gf8c-w6rm-7r7p
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T20:28:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: policy-controller
+            componentID: 074db4c697f7d36b
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/policy-tester
+            scanner: grype
+      - timestamp: 2025-03-24T09:28:06Z
+        type: fixed
+        data:
+          fixed-version: 0.12.0-r8
+
   - id: CGA-hgrh-w9wg-43hv
     aliases:
       - CVE-2024-45336

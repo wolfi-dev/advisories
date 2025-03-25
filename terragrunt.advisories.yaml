@@ -223,6 +223,28 @@ advisories:
         data:
           fixed-version: 0.59.5-r1
 
+  - id: CGA-hhxh-5mcf-m5vg
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T12:04:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terragrunt
+            componentID: 63f8ac0ef74e022e
+            componentName: github.com/golang-jwt/jwt/v5
+            componentVersion: v5.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/terragrunt
+            scanner: grype
+      - timestamp: 2025-03-24T06:53:06Z
+        type: fixed
+        data:
+          fixed-version: 0.76.5-r1
+
   - id: CGA-m752-fvv7-555x
     aliases:
       - CVE-2024-24790

@@ -15,6 +15,28 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'The lowest version of jsonwebtoken used in the jitsucom-jitsu-console is 9.0.0 and the fix version outlined in the CVE GHSA-c7hr-j4mj-j2w6 is 4.2.2 '
 
+  - id: CGA-89c9-9j8h-469g
+    aliases:
+      - CVE-2025-29927
+      - GHSA-f82v-jwr5-mffw
+    events:
+      - timestamp: 2025-03-22T11:16:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jitsucom-jitsu
+            componentID: 606dd3c0a23b2fc6
+            componentName: next
+            componentVersion: 15.2.2
+            componentType: npm
+            componentLocation: /app/node_modules/.pnpm/next@15.2.2_@babel+core@7.26.0_@opentelemetry+api@1.9.0_@playwright+test@1.39.0_react-d_c8b6b6b18580168f90944711fa7fdb1f/node_modules/next/package.json
+            scanner: grype
+      - timestamp: 2025-03-24T17:21:31Z
+        type: fixed
+        data:
+          fixed-version: 2.9.0-r0
+
   - id: CGA-8c38-5wj2-q369
     aliases:
       - CVE-2024-55565

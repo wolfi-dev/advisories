@@ -383,6 +383,28 @@ advisories:
         data:
           fixed-version: 0.58.0-r2
 
+  - id: CGA-hq9g-qfg8-f3r6
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T15:33:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tekton-pipelines
+            componentID: 0b78ef3b61e8eb2e
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/tekton-pipelines-entrypoint
+            scanner: grype
+      - timestamp: 2025-03-24T09:29:04Z
+        type: fixed
+        data:
+          fixed-version: 0.69.1-r1
+
   - id: CGA-j3wx-fwjr-mcvv
     aliases:
       - CVE-2023-48795

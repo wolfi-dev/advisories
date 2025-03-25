@@ -152,6 +152,28 @@ advisories:
         data:
           fixed-version: 2.1.0-r0
 
+  - id: CGA-435c-543w-xw5q
+    aliases:
+      - CVE-2024-58103
+      - GHSA-pwf9-q62p-v7wc
+    events:
+      - timestamp: 2025-03-24T21:02:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: ce73a60f32f78056
+            componentName: wire-runtime
+            componentVersion: 4.3.0
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/nifi-current/lib/nifi-aws-nar-2.3.0.nar
+            scanner: grype
+      - timestamp: 2025-03-24T22:03:23Z
+        type: fixed
+        data:
+          fixed-version: 2.3.0-r2
+
   - id: CGA-439m-2c4m-j5r4
     aliases:
       - CVE-2024-38808

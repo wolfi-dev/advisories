@@ -53,6 +53,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/terraform-provider-azurerm
             scanner: grype
+      - timestamp: 2025-03-22T08:41:22Z
+        type: fixed
+        data:
+          fixed-version: 4.24.0-r0
 
   - id: CGA-85pf-gj63-5xcv
     aliases:
@@ -83,6 +87,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 4.1.0-r0
+
+  - id: CGA-cf3x-q5rv-rhv7
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T15:21:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-azurerm
+            componentID: c4485e6e3cf32573
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-azurerm
+            scanner: grype
+      - timestamp: 2025-03-23T04:44:55Z
+        type: fixed
+        data:
+          fixed-version: 4.24.0-r1
 
   - id: CGA-f6vc-qv26-qj27
     aliases:
@@ -252,6 +278,10 @@ advisories:
         type: true-positive-determination
         data:
           note: 'Awaiting release of fix by upstream dependency yamux: https://github.com/hashicorp/yamux/pull/143'
+      - timestamp: 2025-03-22T08:41:23Z
+        type: fixed
+        data:
+          fixed-version: 4.24.0-r0
 
   - id: CGA-v8m6-hgvj-q9jx
     aliases:
