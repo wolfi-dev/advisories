@@ -4,6 +4,24 @@ package:
   name: kyverno-1.13
 
 advisories:
+  - id: CGA-245p-73v4-7w85
+    aliases:
+      - CVE-2025-29778
+      - GHSA-46mp-8w32-6g94
+    events:
+      - timestamp: 2025-03-25T10:27:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-1.13
+            componentID: db1b9698d0f1e610
+            componentName: github.com/kyverno/kyverno
+            componentVersion: v1.13.4+dirty
+            componentType: go-module
+            componentLocation: /usr/bin/kyvernopre
+            scanner: grype
+
   - id: CGA-39hj-9mfr-82c9
     aliases:
       - CVE-2025-21614
