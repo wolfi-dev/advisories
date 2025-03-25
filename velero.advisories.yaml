@@ -97,6 +97,10 @@ advisories:
         type: true-positive-determination
         data:
           note: 'Awaiting release of fix by upstream dependency yamux: https://github.com/hashicorp/yamux/pull/143'
+      - timestamp: 2025-03-22T07:16:28Z
+        type: fixed
+        data:
+          fixed-version: 1.15.2-r5
 
   - id: CGA-636q-rqwg-5r5v
     aliases:
@@ -234,6 +238,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.13.0-r1
+
+  - id: CGA-ccqw-866p-554j
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T10:45:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: velero
+            componentID: a800971fe96c6507
+            componentName: github.com/golang-jwt/jwt/v5
+            componentVersion: v5.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/velero
+            scanner: grype
+      - timestamp: 2025-03-22T20:18:42Z
+        type: fixed
+        data:
+          fixed-version: 1.15.2-r6
 
   - id: CGA-f244-x97j-93mq
     aliases:

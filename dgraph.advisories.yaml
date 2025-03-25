@@ -465,6 +465,28 @@ advisories:
         data:
           fixed-version: 23.1.0-r6
 
+  - id: CGA-p7g7-p93r-54f6
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T20:32:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dgraph
+            componentID: 1e8081da7249b2b0
+            componentName: github.com/golang-jwt/jwt/v5
+            componentVersion: v5.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/dgraph
+            scanner: grype
+      - timestamp: 2025-03-23T14:20:25Z
+        type: fixed
+        data:
+          fixed-version: 24.1.1-r1
+
   - id: CGA-p859-w7vm-4p7h
     aliases:
       - CVE-2024-45339

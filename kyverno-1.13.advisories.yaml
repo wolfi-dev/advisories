@@ -4,6 +4,24 @@ package:
   name: kyverno-1.13
 
 advisories:
+  - id: CGA-245p-73v4-7w85
+    aliases:
+      - CVE-2025-29778
+      - GHSA-46mp-8w32-6g94
+    events:
+      - timestamp: 2025-03-25T10:27:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-1.13
+            componentID: db1b9698d0f1e610
+            componentName: github.com/kyverno/kyverno
+            componentVersion: v1.13.4+dirty
+            componentType: go-module
+            componentLocation: /usr/bin/kyvernopre
+            scanner: grype
+
   - id: CGA-39hj-9mfr-82c9
     aliases:
       - CVE-2025-21614
@@ -225,6 +243,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.13.0-r1
+
+  - id: CGA-p6f4-h924-5cwg
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T08:37:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-1.13
+            componentID: 53eaac19f4406f41
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/kyvernopre
+            scanner: grype
+      - timestamp: 2025-03-24T09:31:35Z
+        type: fixed
+        data:
+          fixed-version: 1.13.4-r7
 
   - id: CGA-rrm5-9358-m9fg
     aliases:

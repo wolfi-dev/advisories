@@ -178,3 +178,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.300051.0-r1
+
+  - id: CGA-rm34-7545-94rw
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T07:18:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: amazon-cloudwatch-agent
+            componentID: 2549aa356711a839
+            componentName: github.com/golang-jwt/jwt/v5
+            componentVersion: v5.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/config-translator
+            scanner: grype
+      - timestamp: 2025-03-22T09:06:48Z
+        type: fixed
+        data:
+          fixed-version: 1.300054.0-r2

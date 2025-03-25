@@ -432,6 +432,28 @@ advisories:
         data:
           fixed-version: 3.110.0-r1
 
+  - id: CGA-jw52-xfjj-gr9c
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T10:36:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pulumi
+            componentID: f9a6a18c439dc78d
+            componentName: github.com/golang-jwt/jwt/v5
+            componentVersion: v5.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/pulumi
+            scanner: grype
+      - timestamp: 2025-03-22T19:20:36Z
+        type: fixed
+        data:
+          fixed-version: 3.157.0-r1
+
   - id: CGA-mjwq-f94x-wpxq
     aliases:
       - CVE-2023-45288

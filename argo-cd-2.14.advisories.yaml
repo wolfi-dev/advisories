@@ -26,6 +26,28 @@ advisories:
         data:
           note: 'The k8s.io CVE affecting this package is currently in the triage stage upstream, PR on the issue can be found here: https://github.com/kubernetes/kubernetes/issues/130786'
 
+  - id: CGA-3fhp-pq8h-x539
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T07:17:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.14
+            componentID: c9c82225ed7a3004
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/local/bin/argocd
+            scanner: grype
+      - timestamp: 2025-03-24T08:11:48Z
+        type: fixed
+        data:
+          fixed-version: 2.14.7-r1
+
   - id: CGA-5w62-q492-qf55
     aliases:
       - CVE-2025-0426
@@ -116,6 +138,22 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.14.7-r0
+      - timestamp: 2025-03-23T07:29:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.14
+            componentID: 8c1692d7f9f27558
+            componentName: github.com/redis/go-redis/v9
+            componentVersion: v9.7.1
+            componentType: go-module
+            componentLocation: /usr/local/bin/argocd
+            scanner: grype
+      - timestamp: 2025-03-24T08:11:49Z
+        type: fixed
+        data:
+          fixed-version: 2.14.7-r1
 
   - id: CGA-gvgx-gw4w-qjpv
     aliases:

@@ -35,6 +35,28 @@ advisories:
         data:
           fixed-version: 3.0.0-r32
 
+  - id: CGA-6x54-rc68-pw8w
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T07:26:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: distribution
+            componentID: e65cd643ccc326c7
+            componentName: github.com/golang-jwt/jwt/v5
+            componentVersion: v5.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/registry
+            scanner: grype
+      - timestamp: 2025-03-22T09:33:05Z
+        type: fixed
+        data:
+          fixed-version: 3.0.0-r34
+
   - id: CGA-9c28-vjp2-25m4
     aliases:
       - CVE-2024-45336

@@ -388,6 +388,28 @@ advisories:
         data:
           fixed-version: 0.14.0-r2
 
+  - id: CGA-xcfx-8wp8-64rw
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T08:03:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: boring-registry
+            componentID: 69af0ba1b16cef34
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/boring-registry
+            scanner: grype
+      - timestamp: 2025-03-24T07:51:03Z
+        type: fixed
+        data:
+          fixed-version: 0.16.3-r2
+
   - id: CGA-xh5c-4r65-6986
     aliases:
       - CVE-2023-45284

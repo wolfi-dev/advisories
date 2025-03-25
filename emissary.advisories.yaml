@@ -102,6 +102,28 @@ advisories:
         data:
           fixed-version: 3.9.1-r9
 
+  - id: CGA-fhhp-j2f9-98rf
+    aliases:
+      - CVE-2024-6827
+      - GHSA-hc5x-x2vx-497g
+    events:
+      - timestamp: 2025-03-23T15:22:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: emissary
+            componentID: 8e158108284922f1
+            componentName: gunicorn
+            componentVersion: 22.0.0
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/gunicorn-22.0.0.dist-info/METADATA, /usr/lib/python3.10/site-packages/gunicorn-22.0.0.dist-info/RECORD, /usr/lib/python3.10/site-packages/gunicorn-22.0.0.dist-info/top_level.txt
+            scanner: grype
+      - timestamp: 2025-03-24T19:09:51Z
+        type: fixed
+        data:
+          fixed-version: 3.9.1-r14
+
   - id: CGA-g5rx-c8gw-42qf
     aliases:
       - CVE-2025-22868

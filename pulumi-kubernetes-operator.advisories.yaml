@@ -56,6 +56,28 @@ advisories:
         data:
           fixed-version: 1.15.0-r4
 
+  - id: CGA-54hh-xmj2-2839
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T17:12:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pulumi-kubernetes-operator
+            componentID: 9062b869ad39bd23
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/pulumi-kubernetes-operator
+            scanner: grype
+      - timestamp: 2025-03-23T07:16:09Z
+        type: fixed
+        data:
+          fixed-version: 1.16.0-r14
+
   - id: CGA-7qqm-mmxc-rj9j
     aliases:
       - CVE-2024-24785

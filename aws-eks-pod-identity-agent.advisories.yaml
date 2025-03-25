@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: aws-eks-pod-identity-agent
+
+advisories:
+  - id: CGA-c5rp-xqmf-wcp6
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-03-22T08:43:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-eks-pod-identity-agent
+            componentID: 98a7d8ceee851947
+            componentName: github.com/golang-jwt/jwt/v5
+            componentVersion: v5.2.0
+            componentType: go-module
+            componentLocation: /usr/bin/eks-pod-identity-agent
+            scanner: grype
+      - timestamp: 2025-03-22T14:18:26Z
+        type: fixed
+        data:
+          fixed-version: 0.1.23-r1
