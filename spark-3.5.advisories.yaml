@@ -45,70 +45,6 @@ advisories:
         type: fix-not-planned
         data:
           note: 'This issue concerns codehaus jackson-mapper-asl, which is no longer maintained. Spark has a transitive dependency on this library due to Hive 2.3, which requires it to initialize the FunctionRegistry. Hive 3.x, planned for Spark 4.x, should remove the dependency on codehaus-jackson. However, even if the vulnerability is fixed in Spark 4.x, it won''t be possible to backport the fix to Spark 3.5.x due to its dependency on Hive 2.3. For more details: https://issues.apache.org/jira/browse/SPARK-44114, https://github.com/apache/spark/pull/40893, https://issues.apache.org/jira/browse/SPARK-30466'
-      - timestamp: 2025-02-22T18:07:00Z
-        type: fixed
-        data:
-          fixed-version: 3.5.4-r3
-      - timestamp: 2025-02-24T11:22:13Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: spark-3.5
-            componentID: 5dd330a31e13299a
-            componentName: jackson-mapper-asl
-            componentVersion: 1.9.13
-            componentType: java-archive
-            componentLocation: /usr/lib/spark/jars/jackson-mapper-asl-1.9.13.jar
-            scanner: grype
-      - timestamp: 2025-02-25T16:02:05Z
-        type: fixed
-        data:
-          fixed-version: 3.5.4-r5
-      - timestamp: 2025-02-27T11:15:26Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: spark-3.5
-            componentID: 5dd330a31e13299a
-            componentName: jackson-mapper-asl
-            componentVersion: 1.9.13
-            componentType: java-archive
-            componentLocation: /usr/lib/spark/jars/jackson-mapper-asl-1.9.13.jar
-            scanner: grype
-      - timestamp: 2025-03-01T12:33:21Z
-        type: fixed
-        data:
-          fixed-version: 3.5.5-r0
-      - timestamp: 2025-03-03T10:25:45Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: spark-3.5
-            componentID: 5dd330a31e13299a
-            componentName: jackson-mapper-asl
-            componentVersion: 1.9.13
-            componentType: java-archive
-            componentLocation: /usr/lib/spark/jars/jackson-mapper-asl-1.9.13.jar
-            scanner: grype
-      - timestamp: 2025-03-21T21:19:24Z
-        type: fixed
-        data:
-          fixed-version: 3.5.5-r6
-      - timestamp: 2025-03-23T14:31:29Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: spark-3.5
-            componentID: 5dd330a31e13299a
-            componentName: jackson-mapper-asl
-            componentVersion: 1.9.13
-            componentType: java-archive
-            componentLocation: /usr/lib/spark/jars/jackson-mapper-asl-1.9.13.jar
-            scanner: grype
 
   - id: CGA-2c2c-g9hq-66c4
     aliases:
@@ -565,70 +501,6 @@ advisories:
         data:
           note: |
             This relates to 'derby',Spark-3.5 currently uses version 10.14.2.0, while the closest fixed version available in the Maven Central repository is 10.17.1.0. However, this version requires a minimum of Java 17 to build, whereas Spark-3.5 is built with Java 8 and 11 as well. Upgrading to 10.17.1.0 would cause a build break due to Java bytecode version incompatibility. At this time, we are not planning to upgrade the version of Derby in Spark-3.5. The upstream project has updated to version 10.16.1.1, which does not resolve the vulnerability. The upstream is currently waiting for a backport to Derby version 10.16.2.x which they have planed to fix in version spark-4 or later. For reference, see: https://github.com/apache/spark/pull/44174
-      - timestamp: 2025-02-22T18:06:59Z
-        type: fixed
-        data:
-          fixed-version: 3.5.4-r3
-      - timestamp: 2025-02-24T11:22:31Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: spark-3.5
-            componentID: 4059c3ac557e290c
-            componentName: derby
-            componentVersion: 10.14.2.0
-            componentType: java-archive
-            componentLocation: /usr/lib/spark/jars/derby-10.14.2.0.jar
-            scanner: grype
-      - timestamp: 2025-02-25T16:02:04Z
-        type: fixed
-        data:
-          fixed-version: 3.5.4-r5
-      - timestamp: 2025-02-27T11:15:44Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: spark-3.5
-            componentID: 4059c3ac557e290c
-            componentName: derby
-            componentVersion: 10.14.2.0
-            componentType: java-archive
-            componentLocation: /usr/lib/spark/jars/derby-10.14.2.0.jar
-            scanner: grype
-      - timestamp: 2025-03-01T12:33:20Z
-        type: fixed
-        data:
-          fixed-version: 3.5.5-r0
-      - timestamp: 2025-03-03T10:26:01Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: spark-3.5
-            componentID: 4059c3ac557e290c
-            componentName: derby
-            componentVersion: 10.14.2.0
-            componentType: java-archive
-            componentLocation: /usr/lib/spark/jars/derby-10.14.2.0.jar
-            scanner: grype
-      - timestamp: 2025-03-21T21:19:25Z
-        type: fixed
-        data:
-          fixed-version: 3.5.5-r6
-      - timestamp: 2025-03-23T14:32:06Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: spark-3.5
-            componentID: 4059c3ac557e290c
-            componentName: derby
-            componentVersion: 10.14.2.0
-            componentType: java-archive
-            componentLocation: /usr/lib/spark/jars/derby-10.14.2.0.jar
-            scanner: grype
 
   - id: CGA-cwcv-4cmx-49fj
     aliases:
@@ -724,22 +596,6 @@ advisories:
       - GHSA-8qv5-68g4-248j
     events:
       - timestamp: 2025-03-21T23:39:15Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: spark-3.5
-            componentID: dcbb85c456ec3242
-            componentName: scala-library
-            componentVersion: 2.13.8
-            componentType: java-archive
-            componentLocation: /usr/lib/spark/jars/scala-library-2.13.8.jar
-            scanner: grype
-      - timestamp: 2025-03-23T08:26:32Z
-        type: fixed
-        data:
-          fixed-version: 3.5.5-r7
-      - timestamp: 2025-03-24T10:11:33Z
         type: detection
         data:
           type: scan/v1
