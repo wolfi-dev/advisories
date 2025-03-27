@@ -4,52 +4,6 @@ package:
   name: xorg-server
 
 advisories:
-  - id: CGA-257w-x7p3-q74x
-    aliases:
-      - CVE-2011-4613
-      - GHSA-59qr-5c97-267m
-    events:
-      - timestamp: 2023-12-29T00:51:19Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: xorg-server
-            componentID: 3c031471af1a50e3
-            componentName: xorg-server
-            componentVersion: 21.1.10-r1
-            componentType: apk
-            componentLocation: /.PKGINFO
-            scanner: grype
-      - timestamp: 2024-02-09T02:26:53Z
-        type: false-positive-determination
-        data:
-          type: component-vulnerability-mismatch
-          note: This vulnerability is specific to Debian and Ubuntu.
-
-  - id: CGA-c2x3-cvrp-c65c
-    aliases:
-      - CVE-2020-25697
-      - GHSA-qrj9-jg63-p8hg
-    events:
-      - timestamp: 2023-12-29T00:51:19Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: xorg-server
-            componentID: 3c031471af1a50e3
-            componentName: xorg-server
-            componentVersion: 21.1.10-r1
-            componentType: apk
-            componentLocation: /.PKGINFO
-            scanner: grype
-      - timestamp: 2024-02-09T02:34:18Z
-        type: false-positive-determination
-        data:
-          type: vulnerability-record-analysis-contested
-          note: Upstream maintainers say "this is outside the bounds of the securitymodel envisioned by the original designers of X11" and appear to have intentionally not implemented a fix. See https://www.openwall.com/lists/oss-security/2020/11/11/1.
-
   - id: CGA-23mx-m92j-g772
     aliases:
       - CVE-2022-3553
@@ -73,6 +27,49 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This was fixed upstream in version 21.1.4, prior to Wolfi packaging.
 
+  - id: CGA-23qj-m79w-9r27
+    aliases:
+      - CVE-2024-0229
+      - GHSA-49wx-9h9f-8c9g
+    events:
+      - timestamp: 2024-03-13T10:42:43Z
+        type: fixed
+        data:
+          fixed-version: 21.1.11-r0
+
+  - id: CGA-257w-x7p3-q74x
+    aliases:
+      - CVE-2011-4613
+      - GHSA-59qr-5c97-267m
+    events:
+      - timestamp: 2023-12-29T00:51:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: xorg-server
+            componentID: 3c031471af1a50e3
+            componentName: xorg-server
+            componentVersion: 21.1.10-r1
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2024-02-09T02:26:53Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: This vulnerability is specific to Debian and Ubuntu.
+
+  - id: CGA-43f4-43gg-7r3g
+    aliases:
+      - CVE-2024-31081
+      - GHSA-3fpg-j8cw-vcjq
+    events:
+      - timestamp: 2024-04-13T07:28:03Z
+        type: fixed
+        data:
+          fixed-version: 21.1.12-r0
+
   - id: CGA-4fv4-jmjw-2m5q
     aliases:
       - CVE-2023-5574
@@ -95,37 +92,25 @@ advisories:
         data:
           note: 'There''s a merge request open upstream to fix this: https://gitlab.freedesktop.org/xorg/xserver/-/merge_requests/1189.'
 
-  - id: CGA-jfwv-9247-m3jf
+  - id: CGA-556j-hxrf-vr48
     aliases:
-      - CVE-2023-6816
-      - GHSA-pcjv-393q-rqf2
+      - CVE-2024-31083
+      - GHSA-q6w6-rjjj-5p52
     events:
-      - timestamp: 2024-02-01T12:17:49Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: xorg-server
-            componentID: 49f5116fc48fa9b9
-            componentName: xorg-server
-            componentVersion: 21.1.10-r2
-            componentType: apk
-            componentLocation: /.PKGINFO
-            scanner: grype
-      - timestamp: 2024-02-09T03:58:01Z
+      - timestamp: 2024-04-13T07:28:01Z
         type: fixed
         data:
-          fixed-version: 21.1.10-r5
+          fixed-version: 21.1.12-r0
 
-  - id: CGA-23qj-m79w-9r27
+  - id: CGA-57wc-chvq-j95h
     aliases:
-      - CVE-2024-0229
-      - GHSA-49wx-9h9f-8c9g
+      - CVE-2024-31080
+      - GHSA-mqqf-4p7r-rf89
     events:
-      - timestamp: 2024-03-13T10:42:43Z
+      - timestamp: 2024-04-13T07:27:57Z
         type: fixed
         data:
-          fixed-version: 21.1.11-r0
+          fixed-version: 21.1.12-r0
 
   - id: CGA-596p-jg5c-725m
     aliases:
@@ -171,45 +156,68 @@ advisories:
         data:
           fixed-version: 21.1.10-r5
 
-  - id: CGA-rxp5-26h3-72r4
+  - id: CGA-c2x3-cvrp-c65c
     aliases:
-      - CVE-2024-21885
-      - GHSA-2x93-8973-5mgq
+      - CVE-2020-25697
+      - GHSA-qrj9-jg63-p8hg
     events:
-      - timestamp: 2024-03-13T10:42:44Z
-        type: fixed
+      - timestamp: 2023-12-29T00:51:19Z
+        type: detection
         data:
-          fixed-version: 21.1.11-r0
+          type: scan/v1
+          data:
+            subpackageName: xorg-server
+            componentID: 3c031471af1a50e3
+            componentName: xorg-server
+            componentVersion: 21.1.10-r1
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2024-02-09T02:34:18Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: Upstream maintainers say "this is outside the bounds of the securitymodel envisioned by the original designers of X11" and appear to have intentionally not implemented a fix. See https://www.openwall.com/lists/oss-security/2020/11/11/1.
 
-  - id: CGA-q773-qqrq-gj54
+  - id: CGA-h6xq-gq7v-pfcx
     aliases:
-      - CVE-2024-21886
-      - GHSA-vx3h-cj8w-2h2c
+      - CVE-2022-49737
+      - GHSA-3f26-j6r7-9q8v
     events:
-      - timestamp: 2024-03-13T10:42:45Z
-        type: fixed
+      - timestamp: 2025-03-27T07:20:44Z
+        type: detection
         data:
-          fixed-version: 21.1.11-r0
+          type: scan/v1
+          data:
+            subpackageName: xorg-server
+            componentID: e3dffe65646275e0
+            componentName: xorg-server
+            componentVersion: 21.1.16-r2
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
 
-  - id: CGA-57wc-chvq-j95h
+  - id: CGA-jfwv-9247-m3jf
     aliases:
-      - CVE-2024-31080
-      - GHSA-mqqf-4p7r-rf89
+      - CVE-2023-6816
+      - GHSA-pcjv-393q-rqf2
     events:
-      - timestamp: 2024-04-13T07:27:57Z
+      - timestamp: 2024-02-01T12:17:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: xorg-server
+            componentID: 49f5116fc48fa9b9
+            componentName: xorg-server
+            componentVersion: 21.1.10-r2
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2024-02-09T03:58:01Z
         type: fixed
         data:
-          fixed-version: 21.1.12-r0
-
-  - id: CGA-43f4-43gg-7r3g
-    aliases:
-      - CVE-2024-31081
-      - GHSA-3fpg-j8cw-vcjq
-    events:
-      - timestamp: 2024-04-13T07:28:03Z
-        type: fixed
-        data:
-          fixed-version: 21.1.12-r0
+          fixed-version: 21.1.10-r5
 
   - id: CGA-q763-6vv3-j2h3
     aliases:
@@ -221,12 +229,22 @@ advisories:
         data:
           fixed-version: 21.1.12-r0
 
-  - id: CGA-556j-hxrf-vr48
+  - id: CGA-q773-qqrq-gj54
     aliases:
-      - CVE-2024-31083
-      - GHSA-q6w6-rjjj-5p52
+      - CVE-2024-21886
+      - GHSA-vx3h-cj8w-2h2c
     events:
-      - timestamp: 2024-04-13T07:28:01Z
+      - timestamp: 2024-03-13T10:42:45Z
         type: fixed
         data:
-          fixed-version: 21.1.12-r0
+          fixed-version: 21.1.11-r0
+
+  - id: CGA-rxp5-26h3-72r4
+    aliases:
+      - CVE-2024-21885
+      - GHSA-2x93-8973-5mgq
+    events:
+      - timestamp: 2024-03-13T10:42:44Z
+        type: fixed
+        data:
+          fixed-version: 21.1.11-r0
