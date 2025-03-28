@@ -1,0 +1,57 @@
+schema-version: 2.0.2
+
+package:
+  name: terraform-provider-azuread
+
+advisories:
+  - id: CGA-j8rh-89c8-pvfv
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-28T21:11:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-azuread
+            componentID: a634cc034495ab25
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-azuread
+            scanner: grype
+
+  - id: CGA-p7xf-qxfx-jxcg
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-28T21:11:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-azuread
+            componentID: 484b296b84859e19
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-azuread
+            scanner: grype
+
+  - id: CGA-pfqm-f655-xf3f
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-28T21:11:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-azuread
+            componentID: 50a84c1a5ee00228
+            componentName: golang.org/x/crypto
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-azuread
+            scanner: grype
