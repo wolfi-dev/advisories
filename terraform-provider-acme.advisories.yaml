@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: terraform-provider-acme
+
+advisories:
+  - id: CGA-q4g5-mvx2-mgj2
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-28T20:42:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-acme
+            componentID: b704bf582e996ffc
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-acme
+            scanner: grype
