@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: terraform-provider-pagerduty
+
+advisories:
+  - id: CGA-cq44-fjpg-48c9
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2025-03-28T21:14:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-pagerduty
+            componentID: db84d12cbd9097db
+            componentName: golang.org/x/net
+            componentVersion: v0.22.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-pagerduty
+            scanner: grype
