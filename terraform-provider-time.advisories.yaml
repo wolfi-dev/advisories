@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: terraform-provider-time
+
+advisories:
+  - id: CGA-x9gr-7r29-24qp
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-28T20:41:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-time
+            componentID: 6962fbb1f2cf7393
+            componentName: golang.org/x/net
+            componentVersion: v0.34.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-time
+            scanner: grype
