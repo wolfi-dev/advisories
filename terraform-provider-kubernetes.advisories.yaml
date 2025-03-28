@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: terraform-provider-kubernetes
+
+advisories:
+  - id: CGA-wmh6-q2wx-mgjf
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-03-28T20:46:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-kubernetes
+            componentID: 6ce4254c68780a83
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.23.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-kubernetes
+            scanner: grype
