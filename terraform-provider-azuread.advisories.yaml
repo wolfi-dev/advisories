@@ -4,6 +4,24 @@ package:
   name: terraform-provider-azuread
 
 advisories:
+  - id: CGA-j8rh-89c8-pvfv
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-28T21:11:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-azuread
+            componentID: a634cc034495ab25
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-azuread
+            scanner: grype
+
   - id: CGA-p7xf-qxfx-jxcg
     aliases:
       - CVE-2025-22868
