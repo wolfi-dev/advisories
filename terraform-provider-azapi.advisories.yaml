@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: terraform-provider-azapi
+
+advisories:
+  - id: CGA-xx92-w583-393p
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-28T21:02:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-azapi
+            componentID: 5afea304abd8c8e9
+            componentName: golang.org/x/net
+            componentVersion: v0.35.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-azapi
+            scanner: grype
