@@ -4,6 +4,23 @@ package:
   name: terraform-provider-pagerduty
 
 advisories:
+  - id: CGA-8cc9-gg3c-j9w9
+    aliases:
+      - CVE-2025-22869
+    events:
+      - timestamp: 2025-03-28T21:14:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-pagerduty
+            componentID: 8bb2a297d3d4779a
+            componentName: golang.org/x/crypto
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-pagerduty
+            scanner: grype
+
   - id: CGA-cq44-fjpg-48c9
     aliases:
       - CVE-2023-45288
