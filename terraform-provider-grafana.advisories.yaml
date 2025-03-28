@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: terraform-provider-grafana
+
+advisories:
+  - id: CGA-xhxm-j3mj-2676
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-03-28T20:47:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-grafana
+            componentID: 881c82d3ce4721e9
+            componentName: golang.org/x/net
+            componentVersion: v0.35.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-grafana
+            scanner: grype
