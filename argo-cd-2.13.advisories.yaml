@@ -48,24 +48,6 @@ advisories:
         data:
           fixed-version: 2.13.2-r2
 
-  - id: CGA-8f4w-75h2-4pv6
-    aliases:
-      - CVE-2025-0426
-      - GHSA-jgfp-53c3-624w
-    events:
-      - timestamp: 2025-03-04T17:21:38Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: argo-cd-2.13
-            componentID: 5e6eba417d0e7afd
-            componentName: k8s.io/kubernetes
-            componentVersion: v1.31.0
-            componentType: go-module
-            componentLocation: /usr/local/bin/argocd
-            scanner: grype
-
   - id: CGA-8q29-mfm7-2fhm
     aliases:
       - GHSA-274v-mgcv-cm8j
@@ -99,41 +81,6 @@ advisories:
             componentID: 5f9db2db2d22516e
             componentName: github.com/argoproj/gitops-engine
             componentVersion: v0.7.1-0.20250129155113-4c6e03c46314
-            componentType: go-module
-            componentLocation: /usr/local/bin/argocd
-            scanner: grype
-
-  - id: CGA-9pr9-rch5-9r4f
-    aliases:
-      - CVE-2025-22869
-    events:
-      - timestamp: 2025-03-04T17:21:44Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: argo-cd-2.13
-            componentID: 4e55e0435719923e
-            componentName: golang.org/x/crypto
-            componentVersion: v0.31.0
-            componentType: go-module
-            componentLocation: /usr/bin/argocd
-            scanner: grype
-
-  - id: CGA-cmxr-vpfg-2hfg
-    aliases:
-      - CVE-2025-27144
-      - GHSA-c6gw-w398-hv78
-    events:
-      - timestamp: 2025-03-04T17:21:36Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: argo-cd-2.13
-            componentID: 155e99e938ff8e9f
-            componentName: github.com/go-jose/go-jose/v4
-            componentVersion: v4.0.2
             componentType: go-module
             componentLocation: /usr/local/bin/argocd
             scanner: grype
@@ -213,20 +160,3 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.13.2-r1
-
-  - id: CGA-vvmr-x98r-rxj7
-    aliases:
-      - CVE-2025-22868
-    events:
-      - timestamp: 2025-03-04T17:21:41Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: argo-cd-2.13
-            componentID: caacd68eda51434a
-            componentName: golang.org/x/oauth2
-            componentVersion: v0.23.0
-            componentType: go-module
-            componentLocation: /usr/bin/argocd
-            scanner: grype
