@@ -4,51 +4,10 @@ package:
   name: cassandra-4.1
 
 advisories:
-  - id: CGA-334h-ff83-4pcg
+  - id: CGA-f85c-8jfc-2g85
     aliases:
-      - CVE-2023-6378
-      - GHSA-vmq6-5m68-f53m
-    events:
-      - timestamp: 2024-02-27T07:15:10Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: cassandra-4.1
-            componentID: 98c4965ba337dd57
-            componentName: logback-classic
-            componentVersion: 1.2.9
-            componentType: java-archive
-            componentLocation: /usr/share/java/cassandra/lib/logback-classic-1.2.9.jar
-            scanner: grype
-      - timestamp: 2024-02-27T07:17:10Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-version-not-used
-          note: 'CVE considered a false positive by the maintainers since Cassandra doesn''t ship logback in a remote configuration: https://issues.apache.org/jira/browse/CASSANDRA-19142'
-
-  - id: CGA-4c23-wq8x-6jp3
-    aliases:
-      - CVE-2024-12801
-      - GHSA-6v67-2wr5-gvf4
-    events:
-      - timestamp: 2025-03-04T18:28:52Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: cassandra-4.1
-            componentID: 323fea64988dd390
-            componentName: logback-core
-            componentVersion: 1.2.9
-            componentType: java-archive
-            componentLocation: /usr/share/java/cassandra/lib/logback-core-1.2.9.jar
-            scanner: grype
-
-  - id: CGA-6p73-mwqp-2hp8
-    aliases:
-      - CVE-2023-2976
-      - GHSA-7g45-4rm6-3mm3
+      - CVE-2020-8908
+      - GHSA-5mg8-w23w-74h3
     events:
       - timestamp: 2024-02-27T07:15:09Z
         type: detection
@@ -62,7 +21,7 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/java/cassandra/lib/guava-27.0-jre.jar
             scanner: grype
-      - timestamp: 2024-02-27T07:17:10Z
+      - timestamp: 2024-02-27T07:17:09Z
         type: false-positive-determination
         data:
           type: vulnerability-record-analysis-contested
@@ -91,21 +50,10 @@ advisories:
           type: vulnerable-code-cannot-be-controlled-by-adversary
           note: 'CVE considered a false positive by the maintainers: https://github.com/apache/cassandra/blob/cassandra-4.1/.build/dependency-check-suppressions.xml'
 
-  - id: CGA-c2qf-hfph-rrp7
+  - id: CGA-6p73-mwqp-2hp8
     aliases:
-      - CVE-2020-13946
-      - GHSA-24ww-mc5x-xc43
-    events:
-      - timestamp: 2024-02-27T07:17:09Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-version-not-used
-          note: Vulnerable cocode was fixed in Cassandra 2.1.22, 2.2.18, 3.0.22, 3.11.8 and 4.0-beta2. Earliest Wolfi package is 4.1.3
-
-  - id: CGA-f85c-8jfc-2g85
-    aliases:
-      - CVE-2020-8908
-      - GHSA-5mg8-w23w-74h3
+      - CVE-2023-2976
+      - GHSA-7g45-4rm6-3mm3
     events:
       - timestamp: 2024-02-27T07:15:09Z
         type: detection
@@ -119,26 +67,42 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/java/cassandra/lib/guava-27.0-jre.jar
             scanner: grype
-      - timestamp: 2024-02-27T07:17:09Z
+      - timestamp: 2024-02-27T07:17:10Z
         type: false-positive-determination
         data:
           type: vulnerability-record-analysis-contested
           note: 'CVE considered a false positive by the maintainers: https://github.com/apache/cassandra/blob/cassandra-4.1/.build/dependency-check-suppressions.xml'
 
-  - id: CGA-mr25-gp63-63ff
+  - id: CGA-334h-ff83-4pcg
     aliases:
-      - CVE-2024-12798
-      - GHSA-pr98-23f8-jwxv
+      - CVE-2023-6378
+      - GHSA-vmq6-5m68-f53m
     events:
-      - timestamp: 2025-03-04T18:28:55Z
+      - timestamp: 2024-02-27T07:15:10Z
         type: detection
         data:
           type: scan/v1
           data:
             subpackageName: cassandra-4.1
-            componentID: 323fea64988dd390
-            componentName: logback-core
+            componentID: 98c4965ba337dd57
+            componentName: logback-classic
             componentVersion: 1.2.9
             componentType: java-archive
-            componentLocation: /usr/share/java/cassandra/lib/logback-core-1.2.9.jar
+            componentLocation: /usr/share/java/cassandra/lib/logback-classic-1.2.9.jar
             scanner: grype
+      - timestamp: 2024-02-27T07:17:10Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: 'CVE considered a false positive by the maintainers since Cassandra doesn''t ship logback in a remote configuration: https://issues.apache.org/jira/browse/CASSANDRA-19142'
+
+  - id: CGA-c2qf-hfph-rrp7
+    aliases:
+      - CVE-2020-13946
+      - GHSA-24ww-mc5x-xc43
+    events:
+      - timestamp: 2024-02-27T07:17:09Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: Vulnerable cocode was fixed in Cassandra 2.1.22, 2.2.18, 3.0.22, 3.11.8 and 4.0-beta2. Earliest Wolfi package is 4.1.3
