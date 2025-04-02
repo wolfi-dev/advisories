@@ -4,6 +4,24 @@ package:
   name: rancher-machine
 
 advisories:
+  - id: CGA-9m42-hjqr-hcrh
+    aliases:
+      - CVE-2022-24769
+      - GHSA-2mm7-x5h6-5pvq
+    events:
+      - timestamp: 2025-04-02T17:08:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-machine
+            componentID: a30fdfc00e5f322d
+            componentName: github.com/moby/moby
+            componentVersion: v1.4.2-0.20170731201646-1009e6a40b29
+            componentType: go-module
+            componentLocation: /usr/bin/rancher-machine
+            scanner: grype
+
   - id: CGA-vx4c-qq47-4r28
     aliases:
       - CVE-2024-36621
