@@ -396,6 +396,24 @@ advisories:
         data:
           note: com.netflix.astyanax:astyanax needs to be replaced with com.datastax.oss:java-driver-core in extensions-contrib/cassandra-storage by upstream maintainers
 
+  - id: CGA-cg56-pxjh-wp3m
+    aliases:
+      - CVE-2025-30065
+      - GHSA-2c59-37c4-qrx5
+    events:
+      - timestamp: 2025-04-02T07:25:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: druid
+            componentID: 4df7621cecf37377
+            componentName: parquet-avro
+            componentVersion: 1.13.0
+            componentType: java-archive
+            componentLocation: /usr/share/java/druid/extensions/druid-parquet-extensions/parquet-avro-1.13.0.jar
+            scanner: grype
+
   - id: CGA-cm4q-39fx-m36q
     aliases:
       - CVE-2024-47535
