@@ -26,6 +26,19 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This package uses a newer version v2.10.14 when the vulnerable code affects an older version.
 
+  - id: CGA-3gq8-gw2r-w388
+    aliases:
+      - CVE-2025-30215
+    events:
+      - timestamp: 2025-04-03T10:11:02Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            Upstream has acknowledged the vulnerability (CVE-2025-30215) and published a **binary-only** release that includes a fix binary. However, this binary appears to have been hand-crafted outside of their usual CI process and does not correspond to any visible source code changes or official versioned release in the repository.
+            Since Chainguard builds all packages from source, and no corresponding code changes have been published or tagged, we are unable to apply the remediation at this time.
+            Although the upstream has recommended temporarily using their pre-built binary for workflows that depend on the fix, this does not satisfy our security and reproducibility standards.
+            Therefore, we are marking this CVE as **pending-upstream-fix** until an official source-based release with the necessary patches is available
+
   - id: CGA-47cc-r2mp-w98x
     aliases:
       - CVE-2024-24783
