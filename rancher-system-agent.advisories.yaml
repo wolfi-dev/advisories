@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: rancher-system-agent
+
+advisories:
+  - id: CGA-9qj3-f4gh-6gqq
+    aliases:
+      - CVE-2025-1767
+      - GHSA-3wgm-2gw2-vh5m
+    events:
+      - timestamp: 2025-04-03T10:38:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-system-agent
+            componentID: 06e14a330fb66ca6
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.32.2
+            componentType: go-module
+            componentLocation: /usr/bin/rancher-system-agent
+            scanner: grype
