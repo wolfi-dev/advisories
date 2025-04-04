@@ -233,6 +233,11 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Updating jetty to a non-vulnerable version would require 3 major version bumps, which would be a very significant upgrade with multiple breaking changes, and should only be undertaken by the upstream maintainers.
+      - timestamp: 2025-04-04T10:00:51Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: 'Upstream reviewed this issue and concluded that it does not impact Druid because it does not directly use the HttpURI class. Ref: https://github.com/apache/druid/issues/17492'
 
   - id: CGA-8jjf-fchm-77wg
     aliases:
