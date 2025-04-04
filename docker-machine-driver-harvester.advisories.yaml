@@ -4,6 +4,24 @@ package:
   name: docker-machine-driver-harvester
 
 advisories:
+  - id: CGA-5c8h-9m53-6x9c
+    aliases:
+      - CVE-2022-24769
+      - GHSA-2mm7-x5h6-5pvq
+    events:
+      - timestamp: 2025-04-04T22:18:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-machine-driver-harvester
+            componentID: 9f49fb5ffc9c87a5
+            componentName: github.com/moby/moby
+            componentVersion: v1.4.2-0.20170731201646-1009e6a40b29
+            componentType: go-module
+            componentLocation: /usr/bin/docker-machine-driver-harvester
+            scanner: grype
+
   - id: CGA-w634-mr5c-5558
     aliases:
       - CVE-2024-36621
