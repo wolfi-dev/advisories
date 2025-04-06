@@ -116,4 +116,9 @@ advisories:
       - timestamp: 2025-03-20T23:59:11Z
         type: pending-upstream-fix
         data:
-          note: 'The k8s.io CVE affecting this package is still under upstream triage. See the related PR at https://github.com/kubernetes/kubernetes/issues/130786. The current upstream build remains on kubernetes@v1.31.x to retain support for k8s.io/kubelet/pkg/apis/dra/v1beta1, which was removed in v1.32.x.'
+          note: The k8s.io CVE affecting this package is still under upstream triage. See the related PR at https://github.com/kubernetes/kubernetes/issues/130786. The current upstream build remains on kubernetes@v1.31.x to retain support for k8s.io/kubelet/pkg/apis/dra/v1beta1, which was removed in v1.32.x.
+      - timestamp: 2025-04-06T22:31:26Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability applies to the git-repo volume provisioner, not the k8s client itself.
