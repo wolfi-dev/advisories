@@ -47,6 +47,11 @@ advisories:
         type: pending-upstream-fix
         data:
           note: This CVE only affects Kubernetes clusters that utilize the in-tree gitRepo volume to clone git repositories from other pods within the same node and there is no fixed version available yet.
+      - timestamp: 2025-04-06T22:32:17Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability applies to the git-repo volume provisioner, not the k8s client itself.
 
   - id: CGA-6792-qph2-q47p
     aliases:
