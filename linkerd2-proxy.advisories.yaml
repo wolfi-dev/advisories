@@ -50,6 +50,23 @@ advisories:
             However, upgrading this causes issues with other dependencies, namely linkerd-app-core, which is not compatible with this version.
             Pending upstream fix.
 
+  - id: CGA-8g88-6gm5-vwmr
+    aliases:
+      - GHSA-rr8g-9fpq-6wmg
+    events:
+      - timestamp: 2025-04-08T07:18:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: linkerd2-proxy
+            componentID: 6b8ea310dbc83470
+            componentName: tokio
+            componentVersion: 1.44.1
+            componentType: rust-crate
+            componentLocation: /usr/lib/linkerd/linkerd2-proxy
+            scanner: grype
+
   - id: CGA-9cv3-3ghw-2w28
     aliases:
       - CVE-2024-12224
