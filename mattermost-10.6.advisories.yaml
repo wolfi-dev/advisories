@@ -93,3 +93,21 @@ advisories:
         data:
           type: vulnerable-code-version-not-used
           note: This vulnerability was remediated in mattermost v7.x, Specifically, in versions 7.1.4, 7.2.1, 7.3.1, and 7.4.0. For more information, please refer to https://mattermost.com/security-updates/ and search for the ID MMSA-2022-00118 in the server tab.
+
+  - id: CGA-xmvq-rmvh-689x
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T15:11:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-10.6
+            componentID: 3b942ca90ea7e666
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/mattermost
+            scanner: grype
