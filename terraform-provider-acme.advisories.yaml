@@ -4,6 +4,24 @@ package:
   name: terraform-provider-acme
 
 advisories:
+  - id: CGA-4wcm-q6r2-wqrj
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T07:56:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-acme
+            componentID: b40f568d7dac3cca
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-acme
+            scanner: grype
+
   - id: CGA-q4g5-mvx2-mgj2
     aliases:
       - CVE-2025-22868
