@@ -4,6 +4,24 @@ package:
   name: keda-2.16
 
 advisories:
+  - id: CGA-3362-x8wm-pf3f
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T13:40:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.16
+            componentID: 7e241f04217196df
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/keda-adapter
+            scanner: grype
+
   - id: CGA-46pm-gj6g-rxqv
     aliases:
       - CVE-2025-22866
