@@ -24,6 +24,28 @@ advisories:
         data:
           fixed-version: 2.11-r9
 
+  - id: CGA-42p7-8592-fg25
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T11:18:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: petname
+            componentID: 090b82ab4be12ea2
+            componentName: stdlib
+            componentVersion: go1.23.6
+            componentType: go-module
+            componentLocation: /usr/bin/petname
+            scanner: grype
+      - timestamp: 2025-04-11T01:35:11Z
+        type: fixed
+        data:
+          fixed-version: 2.11-r13
+
   - id: CGA-47m9-8mxg-37x3
     aliases:
       - CVE-2023-39326
