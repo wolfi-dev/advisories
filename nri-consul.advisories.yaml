@@ -4,6 +4,24 @@ package:
   name: nri-consul
 
 advisories:
+  - id: CGA-437c-6ppp-h3r2
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-11T01:54:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-consul
+            componentID: 6cc74b8a59cd6c9c
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/nri-consul
+            scanner: grype
+
   - id: CGA-7jgm-w52r-8pj9
     aliases:
       - CVE-2023-45284
