@@ -357,6 +357,28 @@ advisories:
         data:
           fixed-version: 2.0.3-r5
 
+  - id: CGA-vmcx-hcm6-xx2r
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T10:22:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nerdctl
+            componentID: 4c3a87c07663ae5e
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/nerdctl
+            scanner: grype
+      - timestamp: 2025-04-10T21:21:36Z
+        type: fixed
+        data:
+          fixed-version: 2.0.4-r1
+
   - id: CGA-vqmj-97w8-99gr
     aliases:
       - CVE-2024-45337

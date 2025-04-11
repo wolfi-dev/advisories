@@ -4,6 +4,28 @@ package:
   name: kyverno-policy-reporter-ui
 
 advisories:
+  - id: CGA-489w-rvvg-jvvh
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T16:41:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-policy-reporter-ui
+            componentID: 5a8a8f8103d1a9bc
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/policyreporter-ui
+            scanner: grype
+      - timestamp: 2025-04-10T21:26:35Z
+        type: fixed
+        data:
+          fixed-version: 2.3.4-r0
+
   - id: CGA-5rh3-hj9x-w925
     aliases:
       - CVE-2024-24791
