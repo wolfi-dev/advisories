@@ -4,6 +4,28 @@ package:
   name: tigera-operator-1.37
 
 advisories:
+  - id: CGA-26wp-mprh-3666
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T09:36:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tigera-operator-1.37
+            componentID: b47a1596497ea210
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+      - timestamp: 2025-04-10T20:18:14Z
+        type: fixed
+        data:
+          fixed-version: 1.37.1-r4
+
   - id: CGA-5qfx-x25r-xc9m
     aliases:
       - CVE-2025-25294

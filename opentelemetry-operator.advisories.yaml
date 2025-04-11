@@ -26,6 +26,28 @@ advisories:
         data:
           fixed-version: 0.120.0-r3
 
+  - id: CGA-2hvr-g78c-pjrj
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T09:31:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opentelemetry-operator
+            componentID: 6c007217535d778f
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/main
+            scanner: grype
+      - timestamp: 2025-04-10T19:21:54Z
+        type: fixed
+        data:
+          fixed-version: 0.121.0-r1
+
   - id: CGA-369w-wcgp-h829
     aliases:
       - CVE-2025-22866

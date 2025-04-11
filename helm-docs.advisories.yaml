@@ -121,6 +121,28 @@ advisories:
         data:
           fixed-version: 1.14.2-r5
 
+  - id: CGA-f6h5-m6qv-4wp5
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T09:10:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-docs
+            componentID: ccb83ace66c19af7
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/helm-docs
+            scanner: grype
+      - timestamp: 2025-04-10T17:17:52Z
+        type: fixed
+        data:
+          fixed-version: 1.14.2-r7
+
   - id: CGA-mf9j-98jm-76v2
     aliases:
       - CVE-2024-34156

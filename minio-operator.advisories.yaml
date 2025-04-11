@@ -92,6 +92,28 @@ advisories:
         data:
           fixed-version: 6.0.3-r1
 
+  - id: CGA-7w68-wgh8-3m58
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T09:23:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: minio-operator
+            componentID: 3e812f0deccb3ed8
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/minio-operator
+            scanner: grype
+      - timestamp: 2025-04-10T19:19:56Z
+        type: fixed
+        data:
+          fixed-version: 7.0.1-r2
+
   - id: CGA-g5xx-cpvp-7cw7
     aliases:
       - CVE-2025-22868

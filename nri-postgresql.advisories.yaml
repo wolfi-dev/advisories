@@ -112,6 +112,28 @@ advisories:
         data:
           fixed-version: 2.13.7-r1
 
+  - id: CGA-jfhm-rrrf-8qmm
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T11:17:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-postgresql
+            componentID: 73b23a7dd91e0fcb
+            componentName: stdlib
+            componentVersion: go1.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/nri-postgresql
+            scanner: grype
+      - timestamp: 2025-04-11T01:37:44Z
+        type: fixed
+        data:
+          fixed-version: 2.17.1-r1
+
   - id: CGA-mfc3-cq9q-528v
     aliases:
       - CVE-2024-24789

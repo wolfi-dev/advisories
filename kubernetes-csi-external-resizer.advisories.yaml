@@ -225,6 +225,28 @@ advisories:
         data:
           fixed-version: 1.10.0-r2
 
+  - id: CGA-mgj7-wg3v-h7pc
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T10:30:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-resizer
+            componentID: 4fbcf02fcc247c25
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/csi-resizer
+            scanner: grype
+      - timestamp: 2025-04-10T23:27:15Z
+        type: fixed
+        data:
+          fixed-version: 1.13.2-r3
+
   - id: CGA-ph43-vmfj-3h4v
     aliases:
       - CVE-2025-22866

@@ -155,6 +155,28 @@ advisories:
         data:
           fixed-version: 1.6.2-r1
 
+  - id: CGA-rrgp-rw5m-4663
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T09:12:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: consul-k8s-1.6
+            componentID: 1bff346c6c7fc5f6
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/consul-k8s
+            scanner: grype
+      - timestamp: 2025-04-10T17:20:14Z
+        type: fixed
+        data:
+          fixed-version: 1.6.3-r1
+
   - id: CGA-v6r4-5xm9-c78m
     aliases:
       - CVE-2025-22868
