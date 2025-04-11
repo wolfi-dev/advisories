@@ -161,6 +161,28 @@ advisories:
         data:
           fixed-version: 2.8.1-r5
 
+  - id: CGA-m32c-8vjm-wwq4
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T10:20:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-mongodb
+            componentID: ed07cddb3d6a58cb
+            componentName: stdlib
+            componentVersion: go1.23.6
+            componentType: go-module
+            componentLocation: /usr/bin/nri-mongodb
+            scanner: grype
+      - timestamp: 2025-04-10T21:25:35Z
+        type: fixed
+        data:
+          fixed-version: 2.9.2-r2
+
   - id: CGA-rr7g-84ww-rf2j
     aliases:
       - CVE-2023-45284

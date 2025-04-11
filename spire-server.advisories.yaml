@@ -268,6 +268,28 @@ advisories:
         data:
           fixed-version: 1.8.4-r1
 
+  - id: CGA-cx3w-5hg3-5wqf
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T15:34:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spire-server
+            componentID: 8b22b7d1827c3a8d
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/spire-agent
+            scanner: grype
+      - timestamp: 2025-04-11T14:24:56Z
+        type: fixed
+        data:
+          fixed-version: 1.12.0-r1
+
   - id: CGA-f2fg-3pf2-h332
     aliases:
       - CVE-2024-34158

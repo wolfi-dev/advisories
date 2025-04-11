@@ -79,6 +79,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-fqc2-w8q3-xxw2
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T07:51:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-jmx
+            componentID: 563dccb6a270ac91
+            componentName: stdlib
+            componentVersion: go1.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/nri-jmx
+            scanner: grype
+      - timestamp: 2025-04-10T13:27:16Z
+        type: fixed
+        data:
+          fixed-version: 3.8.1-r1
+
   - id: CGA-gp9p-chjm-rvv9
     aliases:
       - CVE-2024-34156

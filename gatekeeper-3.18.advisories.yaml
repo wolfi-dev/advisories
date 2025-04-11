@@ -70,6 +70,28 @@ advisories:
         data:
           fixed-version: 3.18.2-r8
 
+  - id: CGA-ppqf-5qr9-qp2g
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T10:39:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.18
+            componentID: 640604e6987aee27
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/gator
+            scanner: grype
+      - timestamp: 2025-04-10T23:29:14Z
+        type: fixed
+        data:
+          fixed-version: 3.18.2-r10
+
   - id: CGA-qh7h-76rf-3mcg
     aliases:
       - CVE-2025-22868

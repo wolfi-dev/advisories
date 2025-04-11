@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: gotestsum
+
+advisories:
+  - id: CGA-5h9q-gvx2-h9m8
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T10:53:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gotestsum
+            componentID: 2c8c8f4e6b4ffacd
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/gotestsum
+            scanner: grype
+      - timestamp: 2025-04-10T14:18:36Z
+        type: fixed
+        data:
+          fixed-version: 1.12.1-r1

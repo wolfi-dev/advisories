@@ -25,3 +25,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.17.2-r0
+
+  - id: CGA-7m66-2jgf-grvj
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T10:23:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-envoy-1.17
+            componentID: 0e224b62bda88c7e
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/lib/libcilium.so
+            scanner: grype
+      - timestamp: 2025-04-10T23:56:06Z
+        type: fixed
+        data:
+          fixed-version: 1.17.2-r1

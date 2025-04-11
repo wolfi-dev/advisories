@@ -150,6 +150,28 @@ advisories:
         data:
           fixed-version: 0.39.0-r6
 
+  - id: CGA-f7h5-3fxc-cw5j
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T07:43:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-image-automation-controller
+            componentID: 3abd6a313ee9775a
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/image-automation-controller
+            scanner: grype
+      - timestamp: 2025-04-10T12:27:18Z
+        type: fixed
+        data:
+          fixed-version: 0.40.0-r5
+
   - id: CGA-fqjp-gqgv-chrp
     aliases:
       - CVE-2025-21614
