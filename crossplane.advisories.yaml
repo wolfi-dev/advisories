@@ -478,6 +478,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability was matched to the module "github.com/crossplane/crossplane" at the following location(s): /usr/bin/crossplane. In all cases, the installed version of the module (git commit 432e1637f677bf46e3fa5b84211bc903141409bb) corresponds to a version tag (v1.15.2) that is later than the fixed version (1.9.2).'
 
+  - id: CGA-pjpj-xxhg-wq7h
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-11T04:55:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: crossplane
+            componentID: ddeaea9194922e3b
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/crank
+            scanner: grype
+
   - id: CGA-pwm2-2f7w-fc9v
     aliases:
       - CVE-2024-41110
