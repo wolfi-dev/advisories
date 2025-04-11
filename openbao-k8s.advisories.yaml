@@ -66,6 +66,28 @@ advisories:
         data:
           fixed-version: 1.4.0-r3
 
+  - id: CGA-j3j7-f4rf-w38m
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T16:06:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openbao-k8s
+            componentID: 77a171b0c0307f77
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/openbao-k8s
+            scanner: grype
+      - timestamp: 2025-04-11T15:16:29Z
+        type: fixed
+        data:
+          fixed-version: 1.4.0-r35
+
   - id: CGA-pr8h-jfj5-3vp3
     aliases:
       - CVE-2025-22870

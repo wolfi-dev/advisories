@@ -46,6 +46,28 @@ advisories:
         data:
           fixed-version: 1.1.0-r5
 
+  - id: CGA-7hw8-r3vp-j7rf
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T08:36:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-application-networking-k8s
+            componentID: 18d140c00045afa0
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-04-10T14:21:16Z
+        type: fixed
+        data:
+          fixed-version: 1.1.0-r6
+
   - id: CGA-j32h-28jw-9m9v
     aliases:
       - CVE-2025-22866

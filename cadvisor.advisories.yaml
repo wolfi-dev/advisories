@@ -323,6 +323,28 @@ advisories:
         data:
           fixed-version: 0.51.0-r1
 
+  - id: CGA-gf44-8rxj-3w3x
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T08:37:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cadvisor
+            componentID: ed718fda124f79df
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/cadvisor
+            scanner: grype
+      - timestamp: 2025-04-10T14:22:30Z
+        type: fixed
+        data:
+          fixed-version: 0.52.1-r4
+
   - id: CGA-ghx7-prpg-9w59
     aliases:
       - CVE-2025-22868

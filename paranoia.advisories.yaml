@@ -216,6 +216,28 @@ advisories:
         data:
           fixed-version: 0.2.1-r11
 
+  - id: CGA-php3-484j-rxfc
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T09:18:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: paranoia
+            componentID: bca5d75cf20109ed
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/paranoia
+            scanner: grype
+      - timestamp: 2025-04-10T18:22:28Z
+        type: fixed
+        data:
+          fixed-version: 0.3.0-r1
+
   - id: CGA-r4v8-29f2-6w9r
     aliases:
       - CVE-2024-24788

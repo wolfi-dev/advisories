@@ -89,6 +89,28 @@ advisories:
         data:
           fixed-version: 5.2.3-r1
 
+  - id: CGA-f8f8-5322-5h5g
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T09:34:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-elasticsearch
+            componentID: 7b281dce92c62671
+            componentName: stdlib
+            componentVersion: go1.23.6
+            componentType: go-module
+            componentLocation: /usr/bin/nri-elasticsearch
+            scanner: grype
+      - timestamp: 2025-04-10T19:20:55Z
+        type: fixed
+        data:
+          fixed-version: 5.4.0-r2
+
   - id: CGA-g4pm-v8xc-5pfx
     aliases:
       - CVE-2023-45290
