@@ -834,6 +834,24 @@ advisories:
             componentLocation: /usr/lib/trino/lib/com.clickhouse_clickhouse-jdbc-0.7.1-patch1-all.jar
             scanner: grype
 
+  - id: CGA-gv8v-2g2j-rx9x
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-11T03:38:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino
+            componentID: 86000ef7f2c7819b
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/lib/trino/bin/darwin-amd64/launcher
+            scanner: grype
+
   - id: CGA-j4wj-mh37-jf86
     aliases:
       - CVE-2024-47561
