@@ -277,6 +277,24 @@ advisories:
         data:
           fixed-version: 0.66.0-r1
 
+  - id: CGA-f22h-8933-p9xj
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T19:30:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tekton-pipelines
+            componentID: e8befd453683d747
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/tekton-pipelines-entrypoint
+            scanner: grype
+
   - id: CGA-f69f-9576-qmxm
     aliases:
       - CVE-2023-49568

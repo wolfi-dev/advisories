@@ -4,6 +4,24 @@ package:
   name: opensearch-k8s-operator
 
 advisories:
+  - id: CGA-3mfq-r8rc-pj6r
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T19:11:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-k8s-operator
+            componentID: 18d140c00045afa0
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-97cw-8c45-mj6q
     aliases:
       - CVE-2024-45338
