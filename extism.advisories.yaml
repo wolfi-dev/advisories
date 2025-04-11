@@ -204,3 +204,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.5.2-r2
+
+  - id: CGA-qx6c-mqm3-w3m9
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T10:25:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: extism
+            componentID: 633a39a3625a1942
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/extism
+            scanner: grype
+      - timestamp: 2025-04-10T22:17:13Z
+        type: fixed
+        data:
+          fixed-version: 1.6.2-r4

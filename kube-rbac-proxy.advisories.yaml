@@ -254,6 +254,28 @@ advisories:
         data:
           fixed-version: 0.18.2-r3
 
+  - id: CGA-j639-cq4h-xj9m
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T10:18:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-rbac-proxy
+            componentID: 34211c19ba7bab91
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/kube-rbac-proxy
+            scanner: grype
+      - timestamp: 2025-04-10T21:19:37Z
+        type: fixed
+        data:
+          fixed-version: 0.19.0-r4
+
   - id: CGA-m5m2-7c7q-vw35
     aliases:
       - GHSA-xr7q-jx4m-x55m

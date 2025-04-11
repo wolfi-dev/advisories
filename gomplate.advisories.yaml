@@ -529,3 +529,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.11.5-r6
+
+  - id: CGA-xgx5-c8vx-8xmj
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T10:13:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gomplate
+            componentID: d77c8008af339d65
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/gomplate
+            scanner: grype
+      - timestamp: 2025-04-10T21:27:35Z
+        type: fixed
+        data:
+          fixed-version: 4.3.1-r2

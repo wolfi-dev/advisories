@@ -4,6 +4,24 @@ package:
   name: linkerd2-proxy-init
 
 advisories:
+  - id: CGA-946x-xh8r-xpx9
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T12:19:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: linkerd2-proxy-init
+            componentID: 09f98804c0769b49
+            componentName: stdlib
+            componentVersion: go1.23.6
+            componentType: go-module
+            componentLocation: /usr/bin/proxy-init
+            scanner: grype
+
   - id: CGA-9r62-hcw6-g3gh
     aliases:
       - CVE-2024-45341

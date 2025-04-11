@@ -175,6 +175,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-fw39-cp2q-24r7
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-11T01:51:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: restic
+            componentID: 5d4e9eb43b3e4a4a
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/restic
+            scanner: grype
+
   - id: CGA-grqg-g6f8-w2r8
     aliases:
       - CVE-2024-45338

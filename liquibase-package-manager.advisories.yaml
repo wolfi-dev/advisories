@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: liquibase-package-manager
+
+advisories:
+  - id: CGA-9cv2-5pw9-pm9h
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T13:56:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: liquibase-package-manager
+            componentID: 2de5d3c36512b56b
+            componentName: stdlib
+            componentVersion: go1.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/lpm
+            scanner: grype

@@ -466,3 +466,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.15.1-r3
+
+  - id: CGA-xqvq-rm3w-c4pq
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T10:26:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: external-dns
+            componentID: 15da94e9774037df
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/external-dns
+            scanner: grype
+      - timestamp: 2025-04-10T22:20:59Z
+        type: fixed
+        data:
+          fixed-version: 0.16.1-r3

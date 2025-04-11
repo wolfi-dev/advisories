@@ -153,6 +153,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-fmg5-2vwg-323j
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T10:27:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gobuster
+            componentID: 36941e6e647cd0df
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/gobuster
+            scanner: grype
+      - timestamp: 2025-04-10T22:18:10Z
+        type: fixed
+        data:
+          fixed-version: 3.6.0-r21
+
   - id: CGA-g6xg-qpj9-xh23
     aliases:
       - CVE-2024-34155

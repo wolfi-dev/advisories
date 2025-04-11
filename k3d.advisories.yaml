@@ -324,6 +324,28 @@ advisories:
         data:
           fixed-version: 5.6.0-r7
 
+  - id: CGA-685v-f4mr-gcpg
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T10:32:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3d
+            componentID: 54c82a3bbc0df217
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/k3d-tools
+            scanner: grype
+      - timestamp: 2025-04-10T23:28:15Z
+        type: fixed
+        data:
+          fixed-version: 5.8.3-r11
+
   - id: CGA-6874-g337-m4xh
     aliases:
       - CVE-2019-9512

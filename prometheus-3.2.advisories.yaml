@@ -48,6 +48,28 @@ advisories:
         data:
           fixed-version: 3.2.1-r3
 
+  - id: CGA-cpx4-7grj-vm2j
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T10:31:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-3.2
+            componentID: 86ce940cbd7c4e74
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus
+            scanner: grype
+      - timestamp: 2025-04-11T00:18:15Z
+        type: fixed
+        data:
+          fixed-version: 3.2.1-r41
+
   - id: CGA-hm8x-pwmm-6ghx
     aliases:
       - CVE-2019-3826

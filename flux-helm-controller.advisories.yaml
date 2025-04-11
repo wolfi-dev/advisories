@@ -580,6 +580,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-xp6m-qrv5-fgfx
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T10:33:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-helm-controller
+            componentID: 589ad908a9f3de98
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/helm-controller
+            scanner: grype
+      - timestamp: 2025-04-10T20:20:12Z
+        type: fixed
+        data:
+          fixed-version: 1.2.0-r6
+
   - id: CGA-xxqw-g729-7p3v
     aliases:
       - CVE-2023-3978

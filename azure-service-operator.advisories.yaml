@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: azure-service-operator
+
+advisories:
+  - id: CGA-gqm6-gxf6-vxpv
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T08:47:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: azure-service-operator
+            componentID: 141568069216c1f9
+            componentName: stdlib
+            componentVersion: go1.24.1
+            componentType: go-module
+            componentLocation: /usr/bin/azure-service-operator
+            scanner: grype
+      - timestamp: 2025-04-10T15:21:21Z
+        type: fixed
+        data:
+          fixed-version: 2.12.0-r2
