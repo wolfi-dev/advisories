@@ -26,6 +26,24 @@ advisories:
         data:
           note: 'This package is pinned to use an old go version v1.20.7. See upstream issue: https://github.com/newrelic/newrelic-fluent-bit-output/pull/144'
 
+  - id: CGA-25cq-rp6x-m4h6
+    aliases:
+      - CVE-2025-22871
+      - GHSA-g9pc-8g42-g6vq
+    events:
+      - timestamp: 2025-04-10T19:36:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: newrelic-fluent-bit-output
+            componentID: 2fcb1dbe758f4648
+            componentName: stdlib
+            componentVersion: go1.20.14
+            componentType: go-module
+            componentLocation: /fluent-bit/bin/out_newrelic.so
+            scanner: grype
+
   - id: CGA-348r-36vh-527w
     aliases:
       - CVE-2024-45341
