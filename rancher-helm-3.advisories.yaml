@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: rancher-helm-3
+
+advisories:
+  - id: CGA-hhjm-xw7g-52g6
+    aliases:
+      - CVE-2025-32386
+      - GHSA-4hfp-h4cw-hj8p
+    events:
+      - timestamp: 2025-04-12T10:49:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-helm-3
+            componentID: 342a6bf3e202b62a
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/rancher-helm
+            scanner: grype
