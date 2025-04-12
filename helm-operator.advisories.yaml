@@ -273,6 +273,24 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
 
+  - id: CGA-hm4g-p24h-4r6f
+    aliases:
+      - CVE-2025-32386
+      - GHSA-4hfp-h4cw-hj8p
+    events:
+      - timestamp: 2025-04-12T08:09:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-operator
+            componentID: b0aa2c6d5780e56c
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.16.3
+            componentType: go-module
+            componentLocation: /usr/bin/helm-operator
+            scanner: grype
+
   - id: CGA-hvrc-2qcw-mx93
     aliases:
       - CVE-2024-24790
