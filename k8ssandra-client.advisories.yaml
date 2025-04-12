@@ -58,6 +58,24 @@ advisories:
         data:
           fixed-version: 0.6.0-r3
 
+  - id: CGA-8phv-885w-h3qw
+    aliases:
+      - CVE-2025-32386
+      - GHSA-4hfp-h4cw-hj8p
+    events:
+      - timestamp: 2025-04-12T07:30:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k8ssandra-client
+            componentID: b58d140aa343c940
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.4
+            componentType: go-module
+            componentLocation: /usr/bin/kubectl-k8ssandra
+            scanner: grype
+
   - id: CGA-93jw-pr5g-5vjc
     aliases:
       - CVE-2025-1767
