@@ -26,6 +26,24 @@ advisories:
         data:
           fixed-version: 2.7.6-r4
 
+  - id: CGA-463m-j7gq-p72f
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-04-12T09:05:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: influxd
+            componentID: f53da378cb590553
+            componentName: github.com/golang-jwt/jwt
+            componentVersion: v3.2.1+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/influxd
+            scanner: grype
+
   - id: CGA-4678-r632-m94c
     aliases:
       - CVE-2025-22869
