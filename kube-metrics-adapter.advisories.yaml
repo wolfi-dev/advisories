@@ -4,6 +4,24 @@ package:
   name: kube-metrics-adapter
 
 advisories:
+  - id: CGA-2xr5-96xw-28fc
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-04-12T09:55:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-metrics-adapter
+            componentID: 10849a7e190d0c53
+            componentName: github.com/golang-jwt/jwt
+            componentVersion: v3.2.2+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/kube-metrics-adapter
+            scanner: grype
+
   - id: CGA-56xx-qh5q-gw66
     aliases:
       - CVE-2024-34158
