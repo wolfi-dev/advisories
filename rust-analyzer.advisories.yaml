@@ -30,6 +30,23 @@ advisories:
             For example, the 'url' requires idna v0.5.0. Upgrading 'url' to a newer version, results in further compatibility issues with the 'ide' package.
             Pending fix from upstream.
 
+  - id: CGA-5888-7qr3-88f7
+    aliases:
+      - GHSA-pg9f-39pc-qf8g
+    events:
+      - timestamp: 2025-04-12T09:25:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rust-analyzer
+            componentID: d8fcd8c1175b13f7
+            componentName: crossbeam-channel
+            componentVersion: 0.5.13
+            componentType: rust-crate
+            componentLocation: /usr/bin/rust-analyzer
+            scanner: grype
+
   - id: CGA-qgrh-q29w-549w
     aliases:
       - GHSA-2gh3-rmm4-6rq5
