@@ -176,6 +176,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: We build 15.3.6 version of Teleport but the vulnerability is associated with 8.3.17, so this is a false-positive determination
 
+  - id: CGA-g84m-x82q-h24m
+    aliases:
+      - CVE-2025-32386
+      - GHSA-4hfp-h4cw-hj8p
+    events:
+      - timestamp: 2025-04-12T09:20:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: teleport
+            componentID: c7ea90a015ad2acd
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.16.1
+            componentType: go-module
+            componentLocation: /usr/local/bin/teleport
+            scanner: grype
+
   - id: CGA-hhqj-22f5-5p5j
     aliases:
       - CVE-2025-27144
