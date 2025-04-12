@@ -115,6 +115,24 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
 
+  - id: CGA-38f4-8p5f-7fgv
+    aliases:
+      - CVE-2025-32386
+      - GHSA-4hfp-h4cw-hj8p
+    events:
+      - timestamp: 2025-04-12T11:12:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zot
+            componentID: c0962d7ec831e98c
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.16.3
+            componentType: go-module
+            componentLocation: /usr/bin/zot
+            scanner: grype
+
   - id: CGA-3gqx-6995-5c5j
     aliases:
       - CVE-2023-39325
