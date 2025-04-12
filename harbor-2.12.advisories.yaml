@@ -200,6 +200,24 @@ advisories:
         data:
           note: This vulnerability requires a new release of the Harbor. Harbor 2.12.0 is not compatible with the github.com/beego/beego/v2@v2.3.4 yet.
 
+  - id: CGA-j7mc-r43w-rwwh
+    aliases:
+      - CVE-2025-32387
+      - GHSA-5xqw-8hwv-wg92
+    events:
+      - timestamp: 2025-04-12T10:45:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-2.12
+            componentID: 748e195cccaa9ff2
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.16.2
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-jobservice
+            scanner: grype
+
   - id: CGA-m794-2p6q-cmgr
     aliases:
       - CVE-2024-45341
