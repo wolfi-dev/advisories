@@ -4,6 +4,24 @@ package:
   name: teleport
 
 advisories:
+  - id: CGA-2j7r-x93g-xhrg
+    aliases:
+      - CVE-2025-1386
+      - GHSA-m454-3xv7-qj85
+    events:
+      - timestamp: 2025-04-13T07:04:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: teleport
+            componentID: cd616e5d8c33b22b
+            componentName: github.com/ClickHouse/ch-go
+            componentVersion: v0.62.0
+            componentType: go-module
+            componentLocation: /usr/local/bin/teleport
+            scanner: grype
+
   - id: CGA-35qq-v4x7-g8hr
     aliases:
       - CVE-2024-35255
