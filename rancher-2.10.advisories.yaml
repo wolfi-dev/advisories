@@ -4,6 +4,24 @@ package:
   name: rancher-2.10
 
 advisories:
+  - id: CGA-jcmm-722v-3658
+    aliases:
+      - CVE-2024-36621
+      - GHSA-2mj3-vfvx-fc43
+    events:
+      - timestamp: 2025-04-13T01:44:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-2.10
+            componentID: b3cc0223b5d893c9
+            componentName: github.com/docker/docker
+            componentVersion: v20.10.27+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/rancher
+            scanner: grype
+
   - id: CGA-rvgq-2cqp-3v8j
     aliases:
       - CVE-2024-29018
