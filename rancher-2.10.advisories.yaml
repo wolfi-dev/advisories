@@ -21,6 +21,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/rancher
             scanner: grype
+      - timestamp: 2025-04-14T10:34:08Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability requires upstream changes. The non-vulnerable version >= v24.0.9 does not contain a module 'github.com/docker/docker/pkg/term' that exists in older version such as v20.10.27.
 
   - id: CGA-2v98-c4m7-xwv6
     aliases:
@@ -39,6 +43,15 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/rancher
             scanner: grype
+      - timestamp: 2025-04-14T10:22:02Z
+        type: pending-upstream-fix
+        data:
+          note: "The k8s.io CVE affecting this package is currently in the triage stage upstream, PR on the issue can be found here: https://github.com/kubernetes/kubernetes/issues/130786"
+      - timestamp: 2025-04-14T10:23:18Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability applies to the git-repo volume provisioner, not the k8s client itself.
 
   - id: CGA-5vc4-3v94-h5xh
     aliases:
@@ -57,6 +70,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/rancher
             scanner: grype
+      - timestamp: 2025-04-14T10:39:57Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: govulncheck analysis shows that the github.com/docker/docker golang package is not used by the rancher-agent binary as there are no symbols referenced for the vulnerable code.
 
   - id: CGA-jcmm-722v-3658
     aliases:
@@ -75,6 +93,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/rancher
             scanner: grype
+      - timestamp: 2025-04-14T10:35:46Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: govulncheck analysis shows that the github.com/docker/docker golang package is not used by the rancher-agent binary as there are no symbols referenced for the vulnerable code.
 
   - id: CGA-mq8f-wmm6-3p79
     aliases:
@@ -93,6 +116,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/rancher
             scanner: grype
+      - timestamp: 2025-04-14T10:21:03Z
+        type: fix-not-planned
+        data:
+          note: v3 is not supported any longer (the last commit on https://github.com/golang-jwt/jwt/tree/v3 was 4 years ago), so it won't be fixed.
 
   - id: CGA-qv5m-j96p-6hcg
     aliases:
@@ -111,6 +138,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/rancher
             scanner: grype
+      - timestamp: 2025-04-14T10:35:29Z
+        type: pending-upstream-fix
+        data:
+          note: v1.4.2 version of moby/moby dependency does not contain WriteProgress() func in the streamformatter.go file.
 
   - id: CGA-rvgq-2cqp-3v8j
     aliases:
@@ -129,6 +160,15 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/rancher
             scanner: grype
+      - timestamp: 2025-04-14T10:34:49Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability requires upstream changes. The non-vulnerable version >= v24.0.9 does not contain a module 'github.com/docker/docker/pkg/term' that exists in older version such as v20.10.27.
+      - timestamp: 2025-04-14T10:39:42Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: govulncheck analysis shows that the github.com/docker/docker golang package is not used by the rancher-agent binary as there are no symbols referenced for the vulnerable code.
 
   - id: CGA-vvm7-4pq3-3qhj
     aliases:
@@ -147,3 +187,7 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/rancher
             scanner: grype
+      - timestamp: 2025-04-14T10:28:04Z
+        type: pending-upstream-fix
+        data:
+          note: Upstream particularly replaces containerd with the containerd@v1.6.27 for compatibilty with docker 20.10.x.
