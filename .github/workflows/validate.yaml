@@ -1,15 +1,13 @@
+# Copyright 2025 Chainguard, Inc.
+# SPDX-License-Identifier: Apache-2.0
 name: Validate
 
 on:
   pull_request:
     branches:
-      - 'main'
-  push:
-    branches:
-      - gh-readonly-queue/main/**
-
-permissions:
-  contents: read
+      - main
+  merge_group:
+    types: [checks_requested]
 
 jobs:
   lint:
@@ -25,7 +23,8 @@ jobs:
       with:
         egress-policy: audit
 
-    - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+    - name: 'Clone advisorites repository'
+      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       with:
         fetch-depth: 0
         path: './wolfi-advisories'
@@ -38,18 +37,25 @@ jobs:
         path: './wolfi-packages'
         ref: 'main'
 
-    - name: get fork point
-      id: fork-point
+    - name: 'Get wolfi-advisories HEAD for comparison'
+      id: base-commit
       working-directory: ./wolfi-advisories
       run: |
-        fork_point=$(git merge-base --fork-point refs/remotes/origin/${{ github.base_ref }} HEAD || git rev-parse HEAD)
-        echo "fork point will be $fork_point"
-        echo "fork_point=$fork_point" >> $GITHUB_OUTPUT
+        # NOTE(shimmerjs): This currently works because of actions/checkout
+        # fetching everything by default. It would be better to do this with a
+        # refspec.
+        # NOTE(shimmerjs): We don't use fancy github.foo variables here because
+        # they are different in inconsistent ways for the multiple types of
+        # events that we want to trigger this WF: 
+        # https://github.com/orgs/community/discussions/40277 
+        commit=$(git rev-parse refs/remotes/origin/main)
+        echo "Will validate PR against ${commit}"
+        echo "base-commit=$commit" >> $GITHUB_OUTPUT
 
       # this need to point to main to always get the latest action
     - uses: wolfi-dev/actions/advisories-validate@main # main
       with:
-        fork_point: ${{ steps.fork-point.outputs.fork_point }}
+        fork_point: ${{ steps.base-commit.outputs.base-commit }}
         advisories-directory: './wolfi-advisories'
         packages-directory: './wolfi-packages'
         repository: ${{ github.repository }}
