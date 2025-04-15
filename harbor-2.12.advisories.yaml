@@ -113,6 +113,24 @@ advisories:
         data:
           fixed-version: 2.12.2-r4
 
+  - id: CGA-8963-ch6h-3cr6
+    aliases:
+      - CVE-2025-24358
+      - GHSA-rq77-p4h8-4crw
+    events:
+      - timestamp: 2025-04-15T07:43:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-2.12
+            componentID: 29d396e55d1ec2d3
+            componentName: github.com/gorilla/csrf
+            componentVersion: v1.7.2
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-core
+            scanner: grype
+
   - id: CGA-9mx6-7gc6-742m
     aliases:
       - CVE-2025-22868
