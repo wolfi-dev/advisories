@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: azure-workload-identity-webhook
+
+advisories:
+  - id: CGA-r26g-xcv5-qx9v
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-04-16T11:33:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: azure-workload-identity-webhook
+            componentID: 59881cb575d4336d
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
