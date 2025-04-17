@@ -26,6 +26,24 @@ advisories:
         data:
           fixed-version: 1.31.1-r1
 
+  - id: CGA-prc3-w35x-4fw3
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-17T09:18:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: newrelic-k8s-metadata-injection
+            componentID: d8d15fb1379f10d1
+            componentName: golang.org/x/net
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/k8s-metadata-injection
+            scanner: grype
+
   - id: CGA-vvp7-2fc7-xvw7
     aliases:
       - CVE-2024-45338
