@@ -4,6 +4,24 @@ package:
   name: terraform-provider-azapi
 
 advisories:
+  - id: CGA-5xg6-439f-rg6h
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-17T13:08:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-azapi
+            componentID: 8c062bb44801226a
+            componentName: golang.org/x/net
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-azapi
+            scanner: grype
+
   - id: CGA-j2q3-8228-v63p
     aliases:
       - CVE-2025-30204
