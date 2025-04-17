@@ -4,6 +4,24 @@ package:
   name: tailscale
 
 advisories:
+  - id: CGA-2p4g-f6xv-r87f
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-17T16:02:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tailscale
+            componentID: 95ecb6a05324f91b
+            componentName: golang.org/x/net
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/containerboot
+            scanner: grype
+
   - id: CGA-2pmf-vfpj-cq67
     aliases:
       - CVE-2025-22868
