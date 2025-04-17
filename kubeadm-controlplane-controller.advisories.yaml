@@ -4,6 +4,24 @@ package:
   name: kubeadm-controlplane-controller
 
 advisories:
+  - id: CGA-29rf-36w9-xh8j
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-17T11:22:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeadm-controlplane-controller
+            componentID: f2a1f4c0577b087f
+            componentName: golang.org/x/net
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/kubeadm-controlplane-controller
+            scanner: grype
+
   - id: CGA-4pg6-q9fr-fvh3
     aliases:
       - CVE-2025-22866

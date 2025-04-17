@@ -1,0 +1,58 @@
+schema-version: 2.0.2
+
+package:
+  name: azurefile-csi-1.32
+
+advisories:
+  - id: CGA-5f4w-f9m2-hxrh
+    aliases:
+      - CVE-2025-1767
+      - GHSA-3wgm-2gw2-vh5m
+    events:
+      - timestamp: 2025-04-17T15:23:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: azurefile-csi-1.32
+            componentID: b102a17feac988b3
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.32.2
+            componentType: go-module
+            componentLocation: /usr/bin/azurefileplugin
+            scanner: grype
+
+  - id: CGA-6f9h-2v49-xjgq
+    aliases:
+      - CVE-2025-22868
+    events:
+      - timestamp: 2025-04-17T15:23:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: azurefile-csi-1.32
+            componentID: 5d8a92ed18d539bc
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/azurefileplugin
+            scanner: grype
+
+  - id: CGA-7hv6-7xpv-v6pj
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-17T15:23:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: azurefile-csi-1.32
+            componentID: b08c49f501bb1cf2
+            componentName: golang.org/x/net
+            componentVersion: v0.37.0
+            componentType: go-module
+            componentLocation: /usr/bin/azurefileplugin
+            scanner: grype

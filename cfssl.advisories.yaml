@@ -4,6 +4,24 @@ package:
   name: cfssl
 
 advisories:
+  - id: CGA-25c9-xpf2-7867
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-17T11:06:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cfssl
+            componentID: 39f91ddf01999df7
+            componentName: golang.org/x/net
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/cfssl-bundle
+            scanner: grype
+
   - id: CGA-274q-mh7q-wr42
     aliases:
       - CVE-2023-45289
