@@ -48,6 +48,24 @@ advisories:
         data:
           fixed-version: 3.0.0_alpha1-r24
 
+  - id: CGA-2x96-6mp2-mq22
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-17T10:19:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-registry
+            componentID: 1db27c348c6f4145
+            componentName: golang.org/x/net
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-registry
+            scanner: grype
+
   - id: CGA-538f-2px2-5wm9
     aliases:
       - CVE-2024-24791
