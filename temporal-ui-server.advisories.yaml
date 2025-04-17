@@ -67,6 +67,24 @@ advisories:
         data:
           fixed-version: 2.27.2-r1
 
+  - id: CGA-5xxc-pwqm-6wmv
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-17T14:07:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: temporal-ui-server
+            componentID: 1bb36edca93421e1
+            componentName: golang.org/x/net
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/ui-server
+            scanner: grype
+
   - id: CGA-643h-38mf-j2cm
     aliases:
       - CVE-2024-45337
@@ -332,6 +350,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/ui-server
             scanner: grype
+      - timestamp: 2025-04-16T12:40:05Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: The Function `parse.ParseUnverified` which is the vulnerable function for this CVE, is not used in any of the temporal-ui-server code.
 
   - id: CGA-qjh2-8m68-grrw
     aliases:

@@ -87,6 +87,24 @@ advisories:
         data:
           fixed-version: 2.7.11-r2
 
+  - id: CGA-6492-2fhp-hg38
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-17T12:39:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: influxd
+            componentID: 2459c0734a484cd5
+            componentName: golang.org/x/net
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/influxd
+            scanner: grype
+
   - id: CGA-65rg-48gm-x8c9
     aliases:
       - CVE-2023-45283
