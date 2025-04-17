@@ -48,6 +48,28 @@ advisories:
         data:
           fixed-version: 2.2.0-r3
 
+  - id: CGA-5gqw-wg3g-v562
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-17T07:19:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: amazon-cloudwatch-agent-operator
+            componentID: be6a59fa72b4be2e
+            componentName: golang.org/x/net
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-04-17T09:28:23Z
+        type: fixed
+        data:
+          fixed-version: 2.2.0-r4
+
   - id: CGA-6p3c-mp25-jx5w
     aliases:
       - CVE-2019-3826

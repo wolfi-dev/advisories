@@ -4,6 +4,24 @@ package:
   name: azure-workload-identity-webhook
 
 advisories:
+  - id: CGA-5h32-9jgf-22c5
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-17T08:47:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: azure-workload-identity-webhook
+            componentID: f4748af6a2502149
+            componentName: golang.org/x/net
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-r26g-xcv5-qx9v
     aliases:
       - CVE-2025-22868

@@ -113,6 +113,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-574r-6c98-vwh4
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-17T07:17:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-notification-controller
+            componentID: 3be33af2ada00d88
+            componentName: golang.org/x/net
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/notification-controller
+            scanner: grype
+
   - id: CGA-5m85-p444-v7xh
     aliases:
       - CVE-2023-45288
