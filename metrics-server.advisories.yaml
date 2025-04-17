@@ -271,6 +271,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck confirms that the affected code is not actually present in the compiled binary.
 
+  - id: CGA-gxhx-jgrw-g3wc
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-17T13:05:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: metrics-server
+            componentID: 914e57b194c6c72a
+            componentName: golang.org/x/net
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/metrics-server
+            scanner: grype
+
   - id: CGA-h3q9-hr2x-w3hj
     aliases:
       - CVE-2023-39321

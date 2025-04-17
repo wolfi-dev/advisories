@@ -118,6 +118,24 @@ advisories:
           type: vulnerable-code-cannot-be-controlled-by-adversary
           note: This vulnerability affects versions <= v1.29.12. This vulnerability is limited to Windows hosts.
 
+  - id: CGA-j799-476f-3j6p
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-17T12:03:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-driver-nfs
+            componentID: 0e220b055d5ec4c0
+            componentName: golang.org/x/net
+            componentVersion: v0.37.0
+            componentType: go-module
+            componentLocation: /usr/bin/nfsplugin
+            scanner: grype
+
   - id: CGA-w288-56vg-qc63
     aliases:
       - CVE-2025-1767

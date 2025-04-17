@@ -78,6 +78,28 @@ advisories:
         data:
           fixed-version: 2.27.0-r1
 
+  - id: CGA-7c57-4qgw-qv9c
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-17T13:50:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-compose
+            componentID: 92c8d351b3bf26bb
+            componentName: golang.org/x/net
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/docker-compose
+            scanner: grype
+      - timestamp: 2025-04-17T15:19:09Z
+        type: fixed
+        data:
+          fixed-version: 2.35.1-r0
+
   - id: CGA-7xh6-4vjw-xjqc
     aliases:
       - CVE-2024-41110
