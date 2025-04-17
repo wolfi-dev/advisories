@@ -394,3 +394,21 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CGA-xf48-xxph-rgcc
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-17T21:38:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonobuoy
+            componentID: de0ecdfc4961d924
+            componentName: golang.org/x/net
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/sonobuoy
+            scanner: grype
