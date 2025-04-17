@@ -4,6 +4,24 @@ package:
   name: openbao
 
 advisories:
+  - id: CGA-2j74-m9rf-h526
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-17T16:08:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openbao
+            componentID: b5280dc65a556f5b
+            componentName: golang.org/x/net
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/bao
+            scanner: grype
+
   - id: CGA-2wvm-8rvp-gxv6
     aliases:
       - CVE-2025-22869
