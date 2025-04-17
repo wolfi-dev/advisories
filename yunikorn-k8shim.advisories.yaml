@@ -4,6 +4,24 @@ package:
   name: yunikorn-k8shim
 
 advisories:
+  - id: CGA-557c-pg2q-c9v2
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-17T17:52:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: yunikorn-k8shim
+            componentID: 4eaf037758b1c6eb
+            componentName: golang.org/x/net
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/yunikorn-scheduler
+            scanner: grype
+
   - id: CGA-5p6c-p47w-m9g2
     aliases:
       - CVE-2024-45338
