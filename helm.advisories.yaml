@@ -476,6 +476,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability is only present on Windows.
 
+  - id: CGA-v8fw-9h35-g9fm
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-17T19:47:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm
+            componentID: 61d5a4208404a196
+            componentName: golang.org/x/net
+            componentVersion: v0.37.0
+            componentType: go-module
+            componentLocation: /usr/bin/helm
+            scanner: grype
+
   - id: CGA-vhg5-32fg-cj3j
     aliases:
       - CVE-2024-24788
