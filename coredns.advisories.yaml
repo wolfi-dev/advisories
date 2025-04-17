@@ -148,6 +148,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This vulnerability affects versions < 1.9.3, but the installed commit corresponds to version 1.11.3.
 
+  - id: CGA-6fqj-r5mg-f5pm
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-17T10:44:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: coredns
+            componentID: 5f6f0833d64f2a5d
+            componentName: golang.org/x/net
+            componentVersion: v0.37.0
+            componentType: go-module
+            componentLocation: /usr/bin/coredns
+            scanner: grype
+
   - id: CGA-6fxv-h652-6rh8
     aliases:
       - CVE-2023-45289
