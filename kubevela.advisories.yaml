@@ -65,6 +65,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/manager
             scanner: grype
+      - timestamp: 2025-04-17T12:17:13Z
+        type: pending-upstream-fix
+        data:
+          note: Kubevela 1.10.2 depends on Helm v3.14.4 https://github.com/kubevela/kubevela/blob/424e433963551eac070b4369829c4c674fce7ff1/go.mod\#L79 - Upgrading to Helm v3.17.3, which addresses this vulnerability, causes build failures due to API incompatibilities. Upstream changes are required to ensure compatibility with the newer Helm version.
 
   - id: CGA-3hc3-qg7v-phrh
     aliases:
