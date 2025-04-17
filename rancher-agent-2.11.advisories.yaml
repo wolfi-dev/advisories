@@ -4,6 +4,24 @@ package:
   name: rancher-agent-2.11
 
 advisories:
+  - id: CGA-36ff-mhq9-cmxc
+    aliases:
+      - CVE-2024-40635
+      - GHSA-265r-hfxg-fhmg
+    events:
+      - timestamp: 2025-04-17T20:53:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-agent-2.11
+            componentID: fbbd887b63b7b3e2
+            componentName: github.com/containerd/containerd
+            componentVersion: v1.6.32
+            componentType: go-module
+            componentLocation: /usr/bin/agent
+            scanner: grype
+
   - id: CGA-3m9h-c3x8-p864
     aliases:
       - CVE-2024-36621
