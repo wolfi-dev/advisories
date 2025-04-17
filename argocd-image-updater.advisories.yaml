@@ -97,6 +97,24 @@ advisories:
         data:
           fixed-version: 0.15.2-r8
 
+  - id: CGA-7q65-c6rc-w43m
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-17T07:08:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argocd-image-updater
+            componentID: e128abf8e57d472d
+            componentName: golang.org/x/net
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd-image-updater
+            scanner: grype
+
   - id: CGA-8f2g-mfp5-w93h
     aliases:
       - CVE-2024-45338
