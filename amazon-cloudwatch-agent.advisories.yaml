@@ -4,6 +4,24 @@ package:
   name: amazon-cloudwatch-agent
 
 advisories:
+  - id: CGA-4j83-p7p9-w794
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-17T07:52:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: amazon-cloudwatch-agent
+            componentID: 6102d2fb793edb70
+            componentName: golang.org/x/net
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/amazon-cloudwatch-agent-config-wizard
+            scanner: grype
+
   - id: CGA-5f9f-j38c-wq3r
     aliases:
       - CVE-2025-29786

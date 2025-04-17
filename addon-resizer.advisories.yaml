@@ -4,6 +4,24 @@ package:
   name: addon-resizer
 
 advisories:
+  - id: CGA-323v-263g-rjhc
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-17T07:18:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: addon-resizer
+            componentID: 032b047e80f32c74
+            componentName: golang.org/x/net
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/pod_nanny
+            scanner: grype
+
   - id: CGA-474w-x2w8-938x
     aliases:
       - CVE-2024-45338

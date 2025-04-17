@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: docker-machine-driver-linode
+
+advisories:
+  - id: CGA-fcvm-8f2q-xvw3
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-17T14:15:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-machine-driver-linode
+            componentID: 26101d8a39308312
+            componentName: golang.org/x/net
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/docker-machine-driver-linode
+            scanner: grype

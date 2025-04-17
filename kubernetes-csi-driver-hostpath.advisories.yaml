@@ -380,3 +380,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.15.0-r4
+
+  - id: CGA-xr82-7mvp-pqqm
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-17T09:04:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-driver-hostpath
+            componentID: 0b828b39bfcaa8f3
+            componentName: golang.org/x/net
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/hostpathplugin
+            scanner: grype

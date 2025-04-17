@@ -322,6 +322,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-h5q7-p5j3-548f
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-17T09:16:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-kustomize-controller
+            componentID: 7b70f758bf706486
+            componentName: golang.org/x/net
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/kustomize-controller
+            scanner: grype
+
   - id: CGA-hgqv-6q84-p92p
     aliases:
       - CVE-2024-45336
