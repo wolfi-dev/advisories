@@ -4,6 +4,24 @@ package:
   name: terraform-provider-random
 
 advisories:
+  - id: CGA-3cr5-qrgf-mm4v
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-17T14:47:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-random
+            componentID: c69ce72d96864bdc
+            componentName: golang.org/x/net
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-random
+            scanner: grype
+
   - id: CGA-jfpp-gcxf-ww59
     aliases:
       - CVE-2025-22871
