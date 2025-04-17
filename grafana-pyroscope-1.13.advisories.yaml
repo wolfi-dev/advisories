@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: grafana-pyroscope-1.13
+
+advisories:
+  - id: CGA-ccqq-v98r-p677
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-17T14:28:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-pyroscope-1.13
+            componentID: 427584a78457b3ab
+            componentName: golang.org/x/net
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/profilecli
+            scanner: grype
