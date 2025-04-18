@@ -25,3 +25,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.17.5-r2
+
+  - id: CGA-c38j-f6g9-j5pf
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-17T18:12:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: knative-operator-1.17
+            componentID: 217bff8012a37ee5
+            componentName: golang.org/x/net
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/webhook
+            scanner: grype

@@ -4,6 +4,24 @@ package:
   name: consul-k8s-1.6
 
 advisories:
+  - id: CGA-3j8p-9xf3-4p3p
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-17T22:53:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: consul-k8s-1.6
+            componentID: 002ee1756d5c39a9
+            componentName: golang.org/x/net
+            componentVersion: v0.37.0
+            componentType: go-module
+            componentLocation: /usr/bin/consul-k8s
+            scanner: grype
+
   - id: CGA-4f7h-5phq-2666
     aliases:
       - CVE-2025-22870

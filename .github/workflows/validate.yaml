@@ -38,7 +38,7 @@ jobs:
         ref: 'main'
 
     - name: 'Get wolfi-advisories HEAD for comparison'
-      id: fork-point
+      id: merge-base
       working-directory: ./wolfi-advisories
       run: |
         # NOTE(shimmerjs): This currently works because of actions/checkout
@@ -48,14 +48,14 @@ jobs:
         # they are different in inconsistent ways for the multiple types of
         # events that we want to trigger this WF: 
         # https://github.com/orgs/community/discussions/40277 
-        commit=$(git merge-base --fork-point refs/remotes/origin/main)
+        commit=$(git merge-base refs/remotes/origin/main HEAD)
         echo "Will validate PR against ${commit}"
-        echo "fork-point=$commit" >> $GITHUB_OUTPUT
+        echo "merge-base=$commit" >> $GITHUB_OUTPUT
 
       # this need to point to main to always get the latest action
     - uses: wolfi-dev/actions/advisories-validate@main # main
       with:
-        fork_point: ${{ steps.fork-point.outputs.fork-point }}
+        fork_point: ${{ steps.merge-base.outputs.merge-base }}
         advisories-directory: './wolfi-advisories'
         packages-directory: './wolfi-packages'
         repository: ${{ github.repository }}

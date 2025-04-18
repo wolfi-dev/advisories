@@ -121,6 +121,24 @@ advisories:
         data:
           fixed-version: 1.12.0-r7
 
+  - id: CGA-w79p-gvg6-mg65
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-17T20:24:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ingress-nginx-controller-1.12
+            componentID: 8d5cf2460e637f48
+            componentName: golang.org/x/net
+            componentVersion: v0.37.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-webhook-certgen
+            scanner: grype
+
   - id: CGA-w7mg-ppwv-wc8g
     aliases:
       - CVE-2025-24513
