@@ -518,6 +518,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability is only present on Windows.
 
+  - id: CGA-mmq7-ggqx-q9c3
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-18T00:32:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubevela
+            componentID: 87ab2079c362efa4
+            componentName: golang.org/x/net
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-p74p-5f53-p34c
     aliases:
       - CVE-2025-21614
