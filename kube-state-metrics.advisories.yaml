@@ -130,6 +130,24 @@ advisories:
         data:
           fixed-version: 2.11.0-r0
 
+  - id: CGA-9wfc-cgmg-rmq2
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-18T04:03:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-state-metrics
+            componentID: ba76c966b3056c30
+            componentName: golang.org/x/net
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-state-metrics
+            scanner: grype
+
   - id: CGA-f9r2-9437-mv79
     aliases:
       - CVE-2024-24791
