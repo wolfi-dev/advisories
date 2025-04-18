@@ -111,3 +111,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.13.0-r6
+
+  - id: CGA-xh32-96wg-r4c7
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-18T06:54:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-node-driver-registrar-2.13
+            componentID: 6ab1f3d92ada7138
+            componentName: golang.org/x/net
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/csi-node-driver-registrar
+            scanner: grype
