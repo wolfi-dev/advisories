@@ -46,7 +46,7 @@ advisories:
       - timestamp: 2025-04-14T10:22:02Z
         type: pending-upstream-fix
         data:
-          note: "The k8s.io CVE affecting this package is currently in the triage stage upstream, PR on the issue can be found here: https://github.com/kubernetes/kubernetes/issues/130786"
+          note: 'The k8s.io CVE affecting this package is currently in the triage stage upstream, PR on the issue can be found here: https://github.com/kubernetes/kubernetes/issues/130786'
       - timestamp: 2025-04-14T10:23:18Z
         type: false-positive-determination
         data:
@@ -120,6 +120,24 @@ advisories:
         type: fix-not-planned
         data:
           note: v3 is not supported any longer (the last commit on https://github.com/golang-jwt/jwt/tree/v3 was 4 years ago), so it won't be fixed.
+
+  - id: CGA-pmjj-27gh-mv3f
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-18T01:14:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-2.10
+            componentID: 429e534552cd4f17
+            componentName: golang.org/x/net
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/rancher
+            scanner: grype
 
   - id: CGA-qv5m-j96p-6hcg
     aliases:
