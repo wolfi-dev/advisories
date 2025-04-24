@@ -594,6 +594,11 @@ advisories:
         type: pending-upstream-fix
         data:
           note: This vulnerability relates to protobuf-java 3.7.1, included by the shaded JAR hadoop-client-runtime-3.3.6.jar.
+      - timestamp: 2025-04-23T10:58:41Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: Upstream note that this is a false positive as it does not affect clients. See https://github.com/apache/druid/pull/13590
 
   - id: CGA-hg68-rm6h-6m37
     aliases:
@@ -1004,6 +1009,11 @@ advisories:
         type: pending-upstream-fix
         data:
           note: This vulnerability is related to hadoop-client-runtime 3.3.4 included in druid-deltalake-extensions, requiring code changes by the upstream maintainers to remediate
+      - timestamp: 2025-04-23T10:53:52Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: Upstream suppressed this match, noting that it does not affect clients. See https://github.com/apache/druid/pull/13590
 
   - id: CGA-x4rr-rgp6-pm43
     aliases:
