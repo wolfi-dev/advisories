@@ -1,45 +1,9 @@
-schema-version: 2.0.1
+schema-version: 2.0.2
 
 package:
   name: busybox
 
 advisories:
-  - id: CGA-c95q-245j-h3hq
-    aliases:
-      - CVE-2022-28391
-      - GHSA-h8c3-8522-vxc6
-    events:
-      - timestamp: 2022-10-11T20:37:21Z
-        type: fixed
-        data:
-          fixed-version: 1.35.0-r3
-
-  - id: CGA-mv94-rqj7-28m3
-    aliases:
-      - CVE-2022-30065
-      - GHSA-gq73-rh3m-3php
-    events:
-      - timestamp: 2022-10-11T20:37:21Z
-        type: fixed
-        data:
-          fixed-version: 1.35.0-r3
-
-  - id: CGA-hvw2-h6f5-9mc9
-    aliases:
-      - CVE-2023-42363
-      - GHSA-wm78-9prw-c5h4
-    events:
-      - timestamp: 2023-12-03T21:21:00Z
-        type: false-positive-determination
-        data:
-          type: inline-mitigations-exist
-          note: This vulnerability is a use-after-free that requires a specific Busybox configuration flag "CONFIG_FEATURE_CLEAN_UP" set to trigger. We don't use that configuration flag, so the free logic isn't called.
-      - timestamp: 2023-12-04T23:49:28Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-in-execution-path
-          note: This vulnerability is a use-after-free that requires a specific Busybox configuration flag "CONFIG_FEATURE_CLEAN_UP" set to trigger. We don't use that configuration flag, so the free logic isn't called
-
   - id: CGA-9hx4-xv8g-ff86
     aliases:
       - CVE-2023-42364
@@ -55,6 +19,16 @@ advisories:
         data:
           type: vulnerable-code-not-in-execution-path
           note: This vulnerability is a use-after-free that requires a specific Busybox configuration flag "CONFIG_FEATURE_CLEAN_UP" set to trigger. We don't use that configuration flag, so the free logic isn't called
+
+  - id: CGA-c95q-245j-h3hq
+    aliases:
+      - CVE-2022-28391
+      - GHSA-h8c3-8522-vxc6
+    events:
+      - timestamp: 2022-10-11T20:37:21Z
+        type: fixed
+        data:
+          fixed-version: 1.35.0-r3
 
   - id: CGA-g7mm-g5xj-h3mq
     aliases:
@@ -82,3 +56,65 @@ advisories:
         data:
           type: vulnerable-code-not-in-execution-path
           note: This vulnerability is a use-after-free that requires a specific Busybox configuration flag "CONFIG_FEATURE_CLEAN_UP" set to trigger. We don't use that configuration flag, so the free logic isn't called
+
+  - id: CGA-hvw2-h6f5-9mc9
+    aliases:
+      - CVE-2023-42363
+      - GHSA-wm78-9prw-c5h4
+    events:
+      - timestamp: 2023-12-03T21:21:00Z
+        type: false-positive-determination
+        data:
+          type: inline-mitigations-exist
+          note: This vulnerability is a use-after-free that requires a specific Busybox configuration flag "CONFIG_FEATURE_CLEAN_UP" set to trigger. We don't use that configuration flag, so the free logic isn't called.
+      - timestamp: 2023-12-04T23:49:28Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: This vulnerability is a use-after-free that requires a specific Busybox configuration flag "CONFIG_FEATURE_CLEAN_UP" set to trigger. We don't use that configuration flag, so the free logic isn't called
+
+  - id: CGA-jrx7-26c9-jxcv
+    aliases:
+      - CVE-2025-46394
+      - GHSA-wp4q-9jq4-gv74
+    events:
+      - timestamp: 2025-04-25T07:25:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: busybox
+            componentID: acc2eb45b925acae
+            componentName: busybox-full
+            componentVersion: 1.37.0-r40
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
+  - id: CGA-mv94-rqj7-28m3
+    aliases:
+      - CVE-2022-30065
+      - GHSA-gq73-rh3m-3php
+    events:
+      - timestamp: 2022-10-11T20:37:21Z
+        type: fixed
+        data:
+          fixed-version: 1.35.0-r3
+
+  - id: CGA-w865-m7p5-hhrm
+    aliases:
+      - CVE-2024-58251
+      - GHSA-rrv5-483w-xmr9
+    events:
+      - timestamp: 2025-04-25T07:25:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: busybox
+            componentID: acc2eb45b925acae
+            componentName: busybox-full
+            componentVersion: 1.37.0-r40
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
