@@ -73,6 +73,24 @@ advisories:
           type: vulnerable-code-not-in-execution-path
           note: This vulnerability is a use-after-free that requires a specific Busybox configuration flag "CONFIG_FEATURE_CLEAN_UP" set to trigger. We don't use that configuration flag, so the free logic isn't called
 
+  - id: CGA-jrx7-26c9-jxcv
+    aliases:
+      - CVE-2025-46394
+      - GHSA-wp4q-9jq4-gv74
+    events:
+      - timestamp: 2025-04-25T07:25:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: busybox
+            componentID: acc2eb45b925acae
+            componentName: busybox-full
+            componentVersion: 1.37.0-r40
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-mv94-rqj7-28m3
     aliases:
       - CVE-2022-30065
