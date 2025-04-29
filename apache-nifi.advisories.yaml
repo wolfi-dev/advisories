@@ -1857,6 +1857,24 @@ advisories:
         data:
           note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
 
+  - id: CGA-vch6-pv5r-6gjw
+    aliases:
+      - CVE-2025-22235
+      - GHSA-rc42-6c7j-7h5r
+    events:
+      - timestamp: 2025-04-29T11:42:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: c43e1f77f41c16aa
+            componentName: spring-boot
+            componentVersion: 3.4.3
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/nifi-current/lib/nifi-standard-content-viewer-nar-2.3.0.nar
+            scanner: grype
+
   - id: CGA-vh8w-8rfv-rhq9
     aliases:
       - CVE-2024-57699
