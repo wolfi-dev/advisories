@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: kubernetes-1.33
+
+advisories:
+  - id: CGA-x999-vvrc-24w5
+    aliases:
+      - CVE-2023-45142
+      - GHSA-rcjv-mgp8-qvmr
+    events:
+      - timestamp: 2025-04-30T22:07:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-1.33
+            componentID: 542e5da630a70de4
+            componentName: go.opentelemetry.io/contrib/instrumentation/github.com/emicklei/go-restful/otelrestful
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/kubelet-1.33
+            scanner: grype
