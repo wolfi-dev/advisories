@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: blob-csi-1.26
+
+advisories:
+  - id: CGA-3394-78x8-v7wv
+    aliases:
+      - CVE-2025-22868
+      - GHSA-3wqc-mwfx-672p
+    events:
+      - timestamp: 2025-04-30T20:49:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: blob-csi-1.26
+            componentID: 844409ef95e97744
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/blobfuse-proxy
+            scanner: grype
