@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: prometheus-3.3
+
+advisories:
+  - id: CGA-rgxq-w398-3877
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-04-30T21:49:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-3.3
+            componentID: a1d1da031e93fed1
+            componentName: golang.org/x/net
+            componentVersion: v0.35.0
+            componentType: go-module
+            componentLocation: /opt/bitnami/prometheus/bin/prometheus
+            scanner: grype
