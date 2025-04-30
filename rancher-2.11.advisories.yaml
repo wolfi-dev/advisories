@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: rancher-2.11
+
+advisories:
+  - id: CGA-x55r-rv2f-94w4
+    aliases:
+      - CVE-2024-29018
+      - GHSA-mq39-4gv4-mvpx
+    events:
+      - timestamp: 2025-04-30T21:28:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-2.11
+            componentID: b3cc0223b5d893c9
+            componentName: github.com/docker/docker
+            componentVersion: v20.10.27+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/rancher
+            scanner: grype
