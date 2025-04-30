@@ -4,6 +4,24 @@ package:
   name: prometheus-3.3
 
 advisories:
+  - id: CGA-2895-ppv8-35hj
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-04-30T21:49:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-3.3
+            componentID: a1d1da031e93fed1
+            componentName: golang.org/x/net
+            componentVersion: v0.35.0
+            componentType: go-module
+            componentLocation: /opt/bitnami/prometheus/bin/prometheus
+            scanner: grype
+
   - id: CGA-rgxq-w398-3877
     aliases:
       - CVE-2025-22870
