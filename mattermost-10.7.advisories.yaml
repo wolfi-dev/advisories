@@ -4,6 +4,24 @@ package:
   name: mattermost-10.7
 
 advisories:
+  - id: CGA-5qj3-7m44-5c8v
+    aliases:
+      - CVE-2025-3445
+      - GHSA-7vpp-9cxj-q8gv
+    events:
+      - timestamp: 2025-05-01T01:11:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-10.7
+            componentID: 2e7bd9b5006d9186
+            componentName: github.com/mholt/archiver/v3
+            componentVersion: v3.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/mattermost
+            scanner: grype
+
   - id: CGA-pgmx-ghwf-f7q6
     aliases:
       - CVE-2022-4045
