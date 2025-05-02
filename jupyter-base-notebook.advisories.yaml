@@ -26,6 +26,24 @@ advisories:
         data:
           fixed-version: 7.3.2-r2
 
+  - id: CGA-45ph-9p23-qjcx
+    aliases:
+      - CVE-2023-39663
+      - GHSA-v638-q856-grg8
+    events:
+      - timestamp: 2025-04-30T19:28:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jupyter-base-notebook
+            componentID: a7988d317a5b65c9
+            componentName: mathjax
+            componentVersion: 2.7.9
+            componentType: npm
+            componentLocation: /usr/lib/python3.12/site-packages/nbclassic/static/components/MathJax/package.json
+            scanner: grype
+
   - id: CGA-4gc2-jvqg-rhhf
     aliases:
       - CVE-2025-43859
@@ -47,3 +65,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 7.4.1-r1
+
+  - id: CGA-qr2v-xcc7-rpjm
+    aliases:
+      - CVE-2024-6484
+      - GHSA-9mvj-f7w8-pvh2
+    events:
+      - timestamp: 2025-04-30T19:28:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jupyter-base-notebook
+            componentID: 863fec529de4b3c8
+            componentName: bootstrap
+            componentVersion: 3.4.1
+            componentType: npm
+            componentLocation: /usr/lib/python3.12/site-packages/nbclassic/static/components/bootstrap/package.json
+            scanner: grype
