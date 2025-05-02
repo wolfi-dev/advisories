@@ -1,0 +1,26 @@
+schema-version: 2.0.2
+
+package:
+  name: sqlx
+
+advisories:
+  - id: CGA-64cj-ghg5-3439
+    aliases:
+      - GHSA-4p46-pwfr-66x6
+    events:
+      - timestamp: 2025-05-01T00:55:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sqlx
+            componentID: 92a7a232a622d926
+            componentName: ring
+            componentVersion: 0.17.8
+            componentType: rust-crate
+            componentLocation: /usr/bin/sqlx
+            scanner: grype
+      - timestamp: 2025-05-02T09:07:12Z
+        type: fixed
+        data:
+          fixed-version: 0.8.5-r2
