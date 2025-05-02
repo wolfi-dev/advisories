@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: kyverno-1.14
+
+advisories:
+  - id: CGA-wxm8-mhxc-hx28
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-05-02T14:50:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-1.14
+            componentID: 985a968d972e8153
+            componentName: golang.org/x/net
+            componentVersion: v0.37.0
+            componentType: go-module
+            componentLocation: /usr/bin/kyvernopre
+            scanner: grype
