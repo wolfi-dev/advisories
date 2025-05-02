@@ -4,6 +4,24 @@ package:
   name: kyverno-1.14
 
 advisories:
+  - id: CGA-933x-h582-mc49
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-05-02T14:50:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-1.14
+            componentID: 9b2cab89991e2277
+            componentName: github.com/golang-jwt/jwt/v5
+            componentVersion: v5.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/kyvernopre
+            scanner: grype
+
   - id: CGA-wxm8-mhxc-hx28
     aliases:
       - CVE-2025-22872
