@@ -4,6 +4,24 @@ package:
   name: splunk-otel-collector
 
 advisories:
+  - id: CGA-225r-h6wp-m6gm
+    aliases:
+      - CVE-2025-4166
+      - GHSA-gcqf-f89c-68hv
+    events:
+      - timestamp: 2025-05-04T07:21:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: splunk-otel-collector
+            componentID: efa0cde867f37412
+            componentName: github.com/hashicorp/vault
+            componentVersion: v1.19.2
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol
+            scanner: grype
+
   - id: CGA-3r47-f62c-9q3g
     aliases:
       - CVE-2024-45336
