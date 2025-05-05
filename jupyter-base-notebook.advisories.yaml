@@ -43,6 +43,11 @@ advisories:
             componentType: npm
             componentLocation: /usr/lib/python3.12/site-packages/nbclassic/static/components/MathJax/package.json
             scanner: grype
+      - timestamp: 2025-05-05T18:38:46Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: 'The vendor disputes this because the regular expressions are not applied to user input; thus, there is no risk. This can be seen here: https://github.com/mathjax/MathJax/issues/3074'
 
   - id: CGA-4gc2-jvqg-rhhf
     aliases:
@@ -83,3 +88,7 @@ advisories:
             componentType: npm
             componentLocation: /usr/lib/python3.12/site-packages/nbclassic/static/components/bootstrap/package.json
             scanner: grype
+      - timestamp: 2025-05-05T18:34:08Z
+        type: pending-upstream-fix
+        data:
+          note: This CVE is fixed in bootstrap versions > 3.4.1. The next fix version is bootstrap 4.0, which introduces breaking changes. Upstream will need to adapt the code to use a newer version of bootstrap.
