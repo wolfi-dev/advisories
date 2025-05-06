@@ -4,6 +4,24 @@ package:
   name: wal-g
 
 advisories:
+  - id: CGA-3m99-p2qf-m99p
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-05-06T18:12:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wal-g-pg
+            componentID: e3112faaaab010be
+            componentName: golang.org/x/net
+            componentVersion: v0.27.0
+            componentType: go-module
+            componentLocation: /usr/bin/wal-g
+            scanner: grype
+
   - id: CGA-h365-2f5c-ghx2
     aliases:
       - CVE-2025-22869
