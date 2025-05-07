@@ -292,6 +292,24 @@ advisories:
         data:
           note: 'A fix exists in the 3.0 branch for this CVE as can be seen here: https://github.com/opensearch-project/OpenSearch/commit/dc4efa821904cc2d7ea7ef61c0f577d3fc0d8be9. A backport of this fix has been attempted upstream but failed: https://github.com/opensearch-project/OpenSearch/pull/18152#issuecomment-2840499533 This will require upstream maintainers to correctly implement.'
 
+  - id: CGA-p79p-rw85-cv7p
+    aliases:
+      - CVE-2025-31672
+      - GHSA-gmg8-593g-7mv3
+    events:
+      - timestamp: 2025-05-07T08:54:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-2-ingest-attachment
+            componentID: 8cad6a3ef5feb4cd
+            componentName: poi-ooxml
+            componentVersion: 5.2.5
+            componentType: java-archive
+            componentLocation: /usr/share/opensearch/plugins/opensearch-ingest-attachment/poi-ooxml-5.2.5.jar
+            scanner: grype
+
   - id: CGA-q576-4g28-x6p5
     aliases:
       - CVE-2024-29025
