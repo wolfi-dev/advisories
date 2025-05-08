@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: influxd-2.7
+
+advisories:
+  - id: CGA-p9cq-5cm2-j29f
+    aliases:
+      - CVE-2024-28180
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2025-05-08T13:56:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: influxd-2.7
+            componentID: 27df5f2a3904c536
+            componentName: gopkg.in/square/go-jose.v2
+            componentVersion: v2.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/influxd
+            scanner: grype
