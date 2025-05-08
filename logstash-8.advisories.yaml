@@ -135,6 +135,24 @@ advisories:
         data:
           fixed-version: 8.17.2-r1
 
+  - id: CGA-643g-cr7v-2vc2
+    aliases:
+      - CVE-2025-46551
+      - GHSA-72qj-48g4-5xgx
+    events:
+      - timestamp: 2025-05-08T07:48:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-8
+            componentID: 17a0687b64c1af06
+            componentName: jruby-openssl
+            componentVersion: 0.15.0
+            componentType: java-archive
+            componentLocation: /opt/bitnami/logstash/vendor/jruby/lib/ruby/stdlib/jopenssl.jar
+            scanner: grype
+
   - id: CGA-665j-29x9-vgrf
     aliases:
       - CVE-2020-16971
@@ -269,7 +287,7 @@ advisories:
       - timestamp: 2025-05-02T15:53:39Z
         type: pending-upstream-fix
         data:
-          note: 'Versions 0.2.3 and 0.5.6 of net-imap gem are included as a default gem in JRuby’s standard library. Because it’s part of JRuby itself rather than a separately managed gem, an updated JRuby release is required to incorporate the remediated version of net-map.'
+          note: Versions 0.2.3 and 0.5.6 of net-imap gem are included as a default gem in JRuby’s standard library. Because it’s part of JRuby itself rather than a separately managed gem, an updated JRuby release is required to incorporate the remediated version of net-map.
 
   - id: CGA-937h-9qvw-8r89
     aliases:
