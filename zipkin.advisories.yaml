@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: zipkin
+
+advisories:
+  - id: CGA-7h42-x664-53j9
+    aliases:
+      - CVE-2025-27533
+      - GHSA-whxr-3p84-rf3c
+    events:
+      - timestamp: 2025-05-08T07:51:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zipkin
+            componentID: e55ac23709b9dfee
+            componentName: activemq-client
+            componentVersion: 5.18.5
+            componentType: java-archive
+            componentLocation: /zipkin/BOOT-INF/lib/activemq-client-5.18.5.jar
+            scanner: grype
