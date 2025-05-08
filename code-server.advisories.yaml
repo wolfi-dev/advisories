@@ -4,6 +4,24 @@ package:
   name: code-server
 
 advisories:
+  - id: CGA-5wq6-37wv-p529
+    aliases:
+      - CVE-2022-0436
+      - GHSA-j383-35pm-c5h4
+    events:
+      - timestamp: 2025-05-08T07:11:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: code-server
+            componentID: d42618aafbb89573
+            componentName: grunt
+            componentVersion: 1.0.0
+            componentType: npm
+            componentLocation: /usr/lib/code-server/lib/vscode/extensions/grunt/package.json
+            scanner: grype
+
   - id: CGA-84m4-j477-f86m
     aliases:
       - CVE-2021-23369
