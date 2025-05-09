@@ -4,6 +4,24 @@ package:
   name: gitea
 
 advisories:
+  - id: CGA-5h6h-5hmf-gpv2
+    aliases:
+      - CVE-2022-31022
+      - GHSA-9w9f-6mg8-jp7w
+    events:
+      - timestamp: 2025-05-09T09:55:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitea
+            componentID: 288e72034a57c668
+            componentName: github.com/blevesearch/bleve/v2
+            componentVersion: v2.4.2
+            componentType: go-module
+            componentLocation: /usr/bin/gitea
+            scanner: grype
+
   - id: CGA-6hg5-97j4-xw5p
     aliases:
       - CVE-2024-45341
