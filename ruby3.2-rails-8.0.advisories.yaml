@@ -4,6 +4,24 @@ package:
   name: ruby3.2-rails-8.0
 
 advisories:
+  - id: CGA-2794-p8f9-5ggh
+    aliases:
+      - CVE-2025-46336
+      - GHSA-9j94-67jr-4cqj
+    events:
+      - timestamp: 2025-05-09T11:22:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ruby3.2-rails-8.0
+            componentID: 5044a9edae6eff74
+            componentName: rack-session
+            componentVersion: 2.1.0
+            componentType: gem
+            componentLocation: /usr/share/ruby/gems/3.2/specifications/rack-session-2.1.0.gemspec
+            scanner: grype
+
   - id: CGA-6rq7-wj4c-xcj3
     aliases:
       - CVE-2025-25184
@@ -133,3 +151,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 8.0.1-r2
+
+  - id: CGA-wfw7-wfqw-fw8h
+    aliases:
+      - CVE-2025-46727
+      - GHSA-gjh7-p2fx-99vx
+    events:
+      - timestamp: 2025-05-09T11:22:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ruby3.2-rails-8.0
+            componentID: 56520fd6e12bab85
+            componentName: rack
+            componentVersion: 3.1.13
+            componentType: gem
+            componentLocation: /usr/share/ruby/gems/3.2/specifications/rack-3.1.13.gemspec
+            scanner: grype
