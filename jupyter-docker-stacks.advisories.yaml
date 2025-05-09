@@ -4,6 +4,24 @@ package:
   name: jupyter-docker-stacks
 
 advisories:
+  - id: CGA-7qc8-f9pg-xpc3
+    aliases:
+      - CVE-2025-43859
+      - GHSA-vqfr-h8mv-ghfj
+    events:
+      - timestamp: 2025-05-07T07:53:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jupyter-docker-stacks-base-notebook
+            componentID: 23a82e42d85f846c
+            componentName: h11
+            componentVersion: 0.14.0
+            componentType: python
+            componentLocation: /usr/lib/python3.12/site-packages/h11-0.14.0.dist-info/METADATA, /usr/lib/python3.12/site-packages/h11-0.14.0.dist-info/RECORD, /usr/lib/python3.12/site-packages/h11-0.14.0.dist-info/top_level.txt
+            scanner: grype
+
   - id: CGA-hjcf-2c45-rx8q
     aliases:
       - CVE-2025-27516

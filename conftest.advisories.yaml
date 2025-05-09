@@ -193,6 +193,28 @@ advisories:
         data:
           fixed-version: 0.56.0-r3
 
+  - id: CGA-9p6q-pm3f-74qh
+    aliases:
+      - CVE-2025-46569
+      - GHSA-6m8w-jc87-6cr7
+    events:
+      - timestamp: 2025-05-06T07:49:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: conftest
+            componentID: 3af91cea9bb341ea
+            componentName: github.com/open-policy-agent/opa
+            componentVersion: v1.3.0
+            componentType: go-module
+            componentLocation: /usr/bin/conftest
+            scanner: grype
+      - timestamp: 2025-05-06T09:50:00Z
+        type: fixed
+        data:
+          fixed-version: 0.59.0-r1
+
   - id: CGA-cggv-43vj-53r9
     aliases:
       - CVE-2024-24790

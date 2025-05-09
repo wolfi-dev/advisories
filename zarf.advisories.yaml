@@ -195,6 +195,29 @@ advisories:
             Pending fix from upstream, which will involve removing their dependency on the depreciated version.
             Related information: https://github.com/github/advisory-database/pull/4893.
 
+  - id: CGA-5g42-x2p5-87qw
+    aliases:
+      - CVE-2025-46569
+      - GHSA-6m8w-jc87-6cr7
+    events:
+      - timestamp: 2025-05-06T07:19:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zarf
+            componentID: a145dbd470ff9a91
+            componentName: github.com/open-policy-agent/opa
+            componentVersion: v0.68.0
+            componentType: go-module
+            componentLocation: /usr/bin/zarf
+            scanner: grype
+      - timestamp: 2025-05-08T07:33:22Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: Per the advisory, users are only affected if "OPA is deployed as a standalone server (rather than being used as a Go library)
+
   - id: CGA-5qpw-rjrw-58hm
     aliases:
       - CVE-2024-45338

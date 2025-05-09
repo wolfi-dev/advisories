@@ -542,6 +542,10 @@ advisories:
         type: pending-upstream-fix
         data:
           note: This vulnerability relates to snappy-java v1.1.8.2, included by the shaded JARs hadoop-client-api-3.3.6.jar. Upgrading to version 3.4.0 will fix the vulnerability, but it requires code changes by the upstream maintainers.
+      - timestamp: 2025-05-08T09:34:02Z
+        type: fixed
+        data:
+          fixed-version: 33.0.0-r1
 
   - id: CGA-gmp3-7m33-2h3v
     aliases:
@@ -689,6 +693,10 @@ advisories:
         type: pending-upstream-fix
         data:
           note: This vulnerability relates to snappy-java v1.1.8.2, included by the shaded JARs hadoop-client-api-3.3.6.jar. Upgrading to version 3.4.0 will fix the vulnerability, but it requires code changes by the upstream maintainers.
+      - timestamp: 2025-05-08T09:35:29Z
+        type: fixed
+        data:
+          fixed-version: 33.0.0-r1
 
   - id: CGA-m35f-vgjj-4rrc
     aliases:
@@ -730,6 +738,28 @@ advisories:
         type: pending-upstream-fix
         data:
           note: This vulnerability relates to Netty 3.10.6, a transitive dependency of the shaded JAR ambari-metrics-emitter used by Druid. No newer versions of this shaded JAR are available to fix the vulnerability.
+
+  - id: CGA-mhpf-x2cx-q99q
+    aliases:
+      - CVE-2025-46762
+      - GHSA-53wx-pr6q-m3j5
+    events:
+      - timestamp: 2025-05-07T07:48:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: druid
+            componentID: 8a8a74dbeac81434
+            componentName: parquet-avro
+            componentVersion: 1.15.1
+            componentType: java-archive
+            componentLocation: /usr/share/java/druid/extensions/druid-parquet-extensions/parquet-avro-1.15.1.jar
+            scanner: grype
+      - timestamp: 2025-05-07T13:00:25Z
+        type: pending-upstream-fix
+        data:
+          note: parquet-avro 1.15.2 introduced a requirement to explicitly list which packages are trusted. As such, code changes are required in order to be able to successfully build the project with the latest version of parquet-avro.
 
   - id: CGA-mq7j-q5j2-r64c
     aliases:

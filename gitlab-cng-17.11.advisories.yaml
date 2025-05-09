@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: gitlab-cng-17.11
+
+advisories:
+  - id: CGA-m6wp-8p58-q66q
+    aliases:
+      - CVE-2024-21510
+      - GHSA-hxx2-7vcw-mqr3
+    events:
+      - timestamp: 2025-05-07T08:40:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-exporter-17.11
+            componentID: 77233ea61077972c
+            componentName: sinatra
+            componentVersion: 2.2.4
+            componentType: gem
+            componentLocation: /usr/lib/ruby/gems/3.2.0/specifications/sinatra-2.2.4.gemspec
+            scanner: grype
+      - timestamp: 2025-05-08T18:02:45Z
+        type: pending-upstream-fix
+        data:
+          note: 'This vulnerability relates to the GitLab dependency: [gem] sinatra @ 2.2.4, GitLab advises that maintainers should NOT upgrade dependency versions manually, as their automation would have already applied this in cases of simple version increments. If a dependency version has not yet been upgraded, there is usually a good reason. Additionally, past attempts to upgrade GitLab dependencies ahead of the upstream release have resulted in build issues.  deferring to upstream (GitLab) to address this CVE in a subsequent update. See: https://docs.gitlab.com/ee/development/dependencies.html.'
+
+  - id: CGA-pfp5-vvxp-gx58
+    aliases:
+      - CVE-2024-45614
+      - GHSA-9hf4-67fc-4vf4
+    events:
+      - timestamp: 2025-05-07T08:40:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-exporter-17.11
+            componentID: a1828d3537c9f344
+            componentName: puma
+            componentVersion: 5.6.8
+            componentType: gem
+            componentLocation: /usr/lib/ruby/gems/3.2.0/specifications/puma-5.6.8.gemspec
+            scanner: grype
+      - timestamp: 2025-05-08T18:02:45Z
+        type: pending-upstream-fix
+        data:
+          note: 'This vulnerability relates to the GitLab dependency: [gem] puma @ 5.6.8  GitLab advises that maintainers should NOT upgrade dependency versions manually, as their automation would have already applied this in cases of simple version increments. If a dependency version has not yet been upgraded, there is usually a good reason. Additionally, past attempts to upgrade GitLab dependencies ahead of the upstream release have resulted in build issues.  deferring to upstream (GitLab) to address this CVE in a subsequent update. See: https://docs.gitlab.com/ee/development/dependencies.html.'

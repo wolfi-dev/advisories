@@ -21,6 +21,28 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/grafana
             scanner: grype
+      - timestamp: 2025-05-02T18:56:36Z
+        type: pending-upstream-fix
+        data:
+          note: This package has many others that depend on it, and attempting to bump the version has lead to build failures. Upstream will need to take action to remediate this CVE.
+
+  - id: CGA-8f85-854h-xc7h
+    aliases:
+      - CVE-2022-31022
+      - GHSA-9w9f-6mg8-jp7w
+    events:
+      - timestamp: 2025-05-09T09:57:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-11.6
+            componentID: 227e770b69cbf709
+            componentName: github.com/blevesearch/bleve/v2
+            componentVersion: v2.4.4-0.20250319135056-b82baf10b205
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
 
   - id: CGA-ccqh-hf6p-6jjj
     aliases:

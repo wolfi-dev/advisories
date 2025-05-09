@@ -135,6 +135,28 @@ advisories:
         data:
           fixed-version: 3.18.2-r7
 
+  - id: CGA-qpx4-428r-h443
+    aliases:
+      - CVE-2025-46569
+      - GHSA-6m8w-jc87-6cr7
+    events:
+      - timestamp: 2025-05-06T07:34:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.18
+            componentID: 87876b58b790bbd7
+            componentName: github.com/open-policy-agent/opa
+            componentVersion: v0.68.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-05-06T09:17:47Z
+        type: fixed
+        data:
+          fixed-version: 3.18.3-r1
+
   - id: CGA-r5jm-464w-x2m6
     aliases:
       - CVE-2025-22869

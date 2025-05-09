@@ -79,6 +79,29 @@ advisories:
         data:
           fixed-version: 1.1293.1-r0
 
+  - id: CGA-7gwp-r564-hj8w
+    aliases:
+      - CVE-2025-46569
+      - GHSA-6m8w-jc87-6cr7
+    events:
+      - timestamp: 2025-05-06T08:34:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: snyk-cli
+            componentID: 13585bce47b55955
+            componentName: github.com/open-policy-agent/opa
+            componentVersion: v0.69.0
+            componentType: go-module
+            componentLocation: /usr/bin/snyk
+            scanner: grype
+      - timestamp: 2025-05-08T07:38:36Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: Per the advisory, users are only affected if "OPA is deployed as a standalone server (rather than being used as a Go library)
+
   - id: CGA-7qw8-m998-w9qx
     aliases:
       - CVE-2024-34156

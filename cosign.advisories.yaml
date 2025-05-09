@@ -100,6 +100,28 @@ advisories:
         data:
           fixed-version: 2.3.0-r1
 
+  - id: CGA-38w8-446f-5hj8
+    aliases:
+      - CVE-2025-46569
+      - GHSA-6m8w-jc87-6cr7
+    events:
+      - timestamp: 2025-05-06T07:31:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cosign
+            componentID: 61b5f6a42ed594e0
+            componentName: github.com/open-policy-agent/opa
+            componentVersion: v1.1.0
+            componentType: go-module
+            componentLocation: /usr/bin/cosign
+            scanner: grype
+      - timestamp: 2025-05-06T09:04:09Z
+        type: fixed
+        data:
+          fixed-version: 2.5.0-r1
+
   - id: CGA-3mhv-c47p-7mf2
     aliases:
       - CVE-2024-34155

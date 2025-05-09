@@ -69,6 +69,28 @@ advisories:
         data:
           fixed-version: 1.1-r3
 
+  - id: CGA-559j-wf84-9gqx
+    aliases:
+      - CVE-2025-46569
+      - GHSA-6m8w-jc87-6cr7
+    events:
+      - timestamp: 2025-05-06T08:08:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-notation-aws
+            componentID: c876049d72b4ae68
+            componentName: github.com/open-policy-agent/opa
+            componentVersion: v1.1.0
+            componentType: go-module
+            componentLocation: /usr/bin/kyverno-notation-aws
+            scanner: grype
+      - timestamp: 2025-05-06T15:38:06Z
+        type: fixed
+        data:
+          fixed-version: 1.1-r15
+
   - id: CGA-74q8-62p3-mrxx
     aliases:
       - CVE-2025-22870

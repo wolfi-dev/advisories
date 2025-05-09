@@ -997,6 +997,29 @@ advisories:
         data:
           fixed-version: 3.0.32-r1
 
+  - id: CGA-pjcg-ggv3-qw78
+    aliases:
+      - CVE-2025-46569
+      - GHSA-6m8w-jc87-6cr7
+    events:
+      - timestamp: 2025-05-06T08:56:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubescape
+            componentID: 60d1948b9818d3bc
+            componentName: github.com/open-policy-agent/opa
+            componentVersion: v0.68.0
+            componentType: go-module
+            componentLocation: /usr/bin/kubescape
+            scanner: grype
+      - timestamp: 2025-05-08T07:38:36Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: Per the advisory, users are only affected if "OPA is deployed as a standalone server (rather than being used as a Go library)
+
   - id: CGA-qjjx-7rr6-52h2
     aliases:
       - CVE-2024-47534
