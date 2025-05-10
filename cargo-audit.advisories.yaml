@@ -70,6 +70,24 @@ advisories:
         data:
           note: Rustsec-admin currently has the gix dependency locked at version 0.70.0, any attempt to update it will cause a breaking change. Upstream maintainers will have to provide a fix by bumping gix to 0.71.0.
 
+  - id: CGA-3vxh-8h2h-945c
+    aliases:
+      - CVE-2025-4432
+      - GHSA-c86p-w88r-qvqr
+    events:
+      - timestamp: 2025-05-10T07:50:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cargo-audit
+            componentID: f62085ad355ab937
+            componentName: ring
+            componentVersion: 0.17.12
+            componentType: rust-crate
+            componentLocation: /usr/bin/cargo-audit
+            scanner: grype
+
   - id: CGA-467g-5xq8-cmgr
     aliases:
       - GHSA-cx7h-h87r-jpgr
