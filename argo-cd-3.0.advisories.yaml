@@ -4,6 +4,24 @@ package:
   name: argo-cd-3.0
 
 advisories:
+  - id: CGA-4gpj-334g-vx7h
+    aliases:
+      - CVE-2025-29923
+      - GHSA-92cp-5422-2mw7
+    events:
+      - timestamp: 2025-05-10T06:14:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-3.0
+            componentID: bc8f670e81919c31
+            componentName: github.com/redis/go-redis/v9
+            componentVersion: v9.7.1
+            componentType: go-module
+            componentLocation: /usr/local/bin/argocd
+            scanner: grype
+
   - id: CGA-fmmm-q55g-qcqq
     aliases:
       - CVE-2025-22872
