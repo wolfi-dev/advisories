@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: grafana-12.0
+
+advisories:
+  - id: CGA-vv69-q7vj-phr8
+    aliases:
+      - CVE-2025-46331
+      - GHSA-w222-m46c-mgh6
+    events:
+      - timestamp: 2025-05-12T18:37:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-12.0
+            componentID: 8fdd4caa59f1eec7
+            componentName: github.com/openfga/openfga
+            componentVersion: v1.8.6
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
