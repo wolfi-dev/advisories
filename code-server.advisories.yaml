@@ -113,6 +113,11 @@ advisories:
             componentType: npm
             componentLocation: /usr/lib/code-server/lib/vscode/package.json
             scanner: grype
+      - timestamp: 2025-05-12T12:11:33Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: The version listed is the version of vscode, not of code-server. Due to how the code-server application structures the vscode dependency, the scanner confuses the code-server version with the vscode version.
 
   - id: CGA-9gm6-p8hg-p42v
     aliases:
