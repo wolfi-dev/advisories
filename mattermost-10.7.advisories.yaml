@@ -121,6 +121,24 @@ advisories:
           type: component-vulnerability-mismatch
           note: 'This vulnerability was remediated in mattermost v7.4.0 and later. For more information, please refer to: https://www.clouddefense.ai/cve/2022/CVE-2022-4045'
 
+  - id: CGA-qfcm-5p32-77r4
+    aliases:
+      - CVE-2025-32024
+      - GHSA-q7rw-w4cq-2j6w
+    events:
+      - timestamp: 2025-05-12T14:30:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-10.7
+            componentID: 85d3201c06c691a1
+            componentName: github.com/bep/imagemeta
+            componentVersion: v0.8.4
+            componentType: go-module
+            componentLocation: /usr/bin/mattermost
+            scanner: grype
+
   - id: CGA-wj3p-r52p-cwrx
     aliases:
       - CVE-2022-4019
