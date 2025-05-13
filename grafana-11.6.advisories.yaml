@@ -43,6 +43,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/grafana
             scanner: grype
+      - timestamp: 2025-05-13T08:05:26Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: 'As per the CVE, it states that '' The http package is purely intended to be used for demonstration purposes.''. We have also confirmed that upstream does not make use of the affected code as can be confirmed by them here: https://github.com/grafana/grafana/issues/97439#issuecomment-2665515974'
 
   - id: CGA-ccqh-hf6p-6jjj
     aliases:
