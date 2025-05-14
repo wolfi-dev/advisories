@@ -4,6 +4,24 @@ package:
   name: grafana-12.0
 
 advisories:
+  - id: CGA-2jfh-m9v3-55ww
+    aliases:
+      - CVE-2025-27144
+      - GHSA-c6gw-w398-hv78
+    events:
+      - timestamp: 2025-05-14T20:17:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-12.0
+            componentID: cbb968df7dfec6de
+            componentName: github.com/go-jose/go-jose/v4
+            componentVersion: v4.0.4
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+
   - id: CGA-vv69-q7vj-phr8
     aliases:
       - CVE-2025-46331
