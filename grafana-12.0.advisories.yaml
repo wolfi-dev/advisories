@@ -4,6 +4,29 @@ package:
   name: grafana-12.0
 
 advisories:
+  - id: CGA-2jfh-m9v3-55ww
+    aliases:
+      - CVE-2025-27144
+      - GHSA-c6gw-w398-hv78
+    events:
+      - timestamp: 2025-05-14T20:17:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-12.0
+            componentID: cbb968df7dfec6de
+            componentName: github.com/go-jose/go-jose/v4
+            componentVersion: v4.0.4
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+      - timestamp: 2025-05-15T07:35:26Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-vv69-q7vj-phr8
     aliases:
       - CVE-2025-46331
@@ -21,3 +44,7 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/grafana
             scanner: grype
+      - timestamp: 2025-05-14T07:39:04Z
+        type: true-positive-determination
+        data:
+          note: Unable to use govulncheck to triage this advisory because the vulnerability was not found in the Go vuln DB. Treating as a true positive since we can't confirm this is a false positive.

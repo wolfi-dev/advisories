@@ -21,6 +21,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/influxd
             scanner: grype
+      - timestamp: 2025-05-14T03:55:07Z
+        type: pending-upstream-fix
+        data:
+          note: The dependency causing this CVE, golang-jwt/jwt v3.2.1, is brought in via the project's main go.mod. Due to functional changes required to move away from v3 to v4/v5, upstream maintainers are required to implement.
 
   - id: CGA-p9cq-5cm2-j29f
     aliases:
@@ -39,3 +43,7 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/influxd
             scanner: grype
+      - timestamp: 2025-05-14T03:54:38Z
+        type: pending-upstream-fix
+        data:
+          note: There is no fix for dependency gopkg.in/square/go-jose.v2 as it is unmaintained, and to fix this vulnerability would require non-trivial upstream code changes to replace the affected dependency.

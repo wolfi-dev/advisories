@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: dotnet-bootstrap-8
+
+advisories:
+  - id: CGA-6vpm-52q6-4246
+    aliases:
+      - CVE-2025-26646
+      - GHSA-h4j7-5rxr-p4wc
+    events:
+      - timestamp: 2025-05-14T07:15:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dotnet-bootstrap-8
+            componentID: 00425c892f53a0ad
+            componentName: Microsoft.Build.Tasks.Core
+            componentVersion: 17.7.0
+            componentType: dotnet
+            componentLocation: /usr/share/dotnet-bootstrap-8/dotnet/sdk/8.0.114/FSharp/fsc.deps.json, /usr/share/dotnet-bootstrap-8/dotnet/sdk/8.0.114/FSharp/Microsoft.Build.Tasks.Core.dll
+            scanner: grype

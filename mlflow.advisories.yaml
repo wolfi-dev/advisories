@@ -56,6 +56,28 @@ advisories:
         data:
           note: 'The latest versions have been recognized as affected. The upstream project has been alerted: https://github.com/mlflow/mlflow/issues/12256'
 
+  - id: CGA-3m65-86cq-89r9
+    aliases:
+      - CVE-2025-47278
+      - GHSA-4grg-w6v8-c28g
+    events:
+      - timestamp: 2025-05-14T07:54:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mlflow
+            componentID: d0e85a5eb75295d2
+            componentName: flask
+            componentVersion: 3.1.0
+            componentType: python
+            componentLocation: /usr/share/mlflow/lib/python3.13/site-packages/flask-3.1.0.dist-info/METADATA, /usr/share/mlflow/lib/python3.13/site-packages/flask-3.1.0.dist-info/RECORD
+            scanner: grype
+      - timestamp: 2025-05-15T11:04:22Z
+        type: fixed
+        data:
+          fixed-version: 2.22.0-r2
+
   - id: CGA-5qqw-78qf-xfwg
     aliases:
       - CVE-2024-49767
