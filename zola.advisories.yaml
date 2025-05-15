@@ -100,6 +100,10 @@ advisories:
             componentType: rust-crate
             componentLocation: /usr/bin/zola
             scanner: grype
+      - timestamp: 2025-05-14T22:40:10Z
+        type: pending-upstream-fix
+        data:
+          note: 'atty package is no longer maintained as std.io.IsTerminal was introduced in Rust 1.70.0 and is the encouraged replacement for the atty package. Zola upstream will need to update code to remove atty to fix CVE. Reference: https://github.com/softprops/atty'
 
   - id: CGA-jw4q-hg7w-rpqq
     aliases:
