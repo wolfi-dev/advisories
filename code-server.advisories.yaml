@@ -392,6 +392,24 @@ advisories:
           type: component-vulnerability-mismatch
           note: The version listed is the version of vscode, not of code-server. Due to how the code-server application structures the vscode dependency, the scanner confuses the code-server version with the vscode version.
 
+  - id: CGA-gf48-w429-582m
+    aliases:
+      - CVE-2025-47279
+      - GHSA-cxrh-j4jr-qwg3
+    events:
+      - timestamp: 2025-05-16T07:12:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: code-server
+            componentID: 5d3c1c68866956e1
+            componentName: undici
+            componentVersion: 7.3.0
+            componentType: npm
+            componentLocation: /usr/lib/code-server/lib/vscode/node_modules/undici/package.json
+            scanner: grype
+
   - id: CGA-gmqj-wgvm-r2jx
     aliases:
       - CVE-2013-4116
