@@ -55,3 +55,17 @@ advisories:
         type: fixed
         data:
           fixed-version: 9.0.2-r0
+
+  - id: CGA-xr48-wrc7-9wmf
+    aliases:
+      - CVE-2025-26646
+      - GHSA-h4j7-5rxr-p4wc
+    events:
+      - timestamp: 2025-05-16T16:46:43Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: |
+            Currently the scanners are detecting that the package has version of Microsoft.Build.Tasks.Core '17.3.4' installed.
+            The scanners are currently not reporting the dll version installed which is the code that gets executed as per: https://github.com/dotnet/msbuild/issues/11846\#issuecomment-2883242143
+            Currently /usr/share/dotnet/sdk/9.0.106/Microsoft.Build.Tasks.Core.dll is at version 17.12.35 which is not a vulnerable version as per the CVE advisory.
