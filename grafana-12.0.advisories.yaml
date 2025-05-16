@@ -27,6 +27,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-7m4q-7233-p368
+    aliases:
+      - CVE-2025-30153
+      - GHSA-wq9g-9vfc-cfq9
+    events:
+      - timestamp: 2025-05-16T08:39:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-12.0
+            componentID: 01254ff7e2ad6e83
+            componentName: github.com/getkin/kin-openapi
+            componentVersion: v0.126.0
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+
   - id: CGA-vv69-q7vj-phr8
     aliases:
       - CVE-2025-46331
