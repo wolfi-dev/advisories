@@ -4,6 +4,24 @@ package:
   name: tensorflow-cpu-jupyter
 
 advisories:
+  - id: CGA-7x5v-v62c-qg8g
+    aliases:
+      - CVE-2025-47287
+      - GHSA-7cx3-6m66-7c5m
+    events:
+      - timestamp: 2025-05-17T08:33:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tensorflow-cpu-jupyter
+            componentID: 6c6d791712b41c5b
+            componentName: tornado
+            componentVersion: 6.4.2
+            componentType: python
+            componentLocation: /usr/share/tensorflow/lib/python3.11/site-packages/tornado-6.4.2.dist-info/METADATA, /usr/share/tensorflow/lib/python3.11/site-packages/tornado-6.4.2.dist-info/RECORD, /usr/share/tensorflow/lib/python3.11/site-packages/tornado-6.4.2.dist-info/top_level.txt
+            scanner: grype
+
   - id: CGA-ch38-hm3p-vqfx
     aliases:
       - CVE-2025-27516
