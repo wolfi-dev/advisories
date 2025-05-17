@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: dask-kubernetes
+
+advisories:
+  - id: CGA-6qhf-xpv9-p6xw
+    aliases:
+      - CVE-2025-47287
+      - GHSA-7cx3-6m66-7c5m
+    events:
+      - timestamp: 2025-05-17T07:23:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dask-kubernetes
+            componentID: 9844ae348d71d6f9
+            componentName: tornado
+            componentVersion: 6.4.2
+            componentType: python
+            componentLocation: /usr/share/dask-kubernetes/lib/python3.10/site-packages/tornado-6.4.2.dist-info/METADATA, /usr/share/dask-kubernetes/lib/python3.10/site-packages/tornado-6.4.2.dist-info/RECORD, /usr/share/dask-kubernetes/lib/python3.10/site-packages/tornado-6.4.2.dist-info/top_level.txt
+            scanner: grype
