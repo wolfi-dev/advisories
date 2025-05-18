@@ -58,6 +58,24 @@ advisories:
         data:
           fixed-version: 1.10.0-r2
 
+  - id: CGA-3299-hg3m-2hr7
+    aliases:
+      - CVE-2024-6866
+      - GHSA-43qf-4rqw-9q2g
+    events:
+      - timestamp: 2025-05-18T07:43:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-jupyter-web-app
+            componentID: 9fa3bb4b564f56ec
+            componentName: flask-cors
+            componentVersion: 5.0.1
+            componentType: python
+            componentLocation: /usr/lib/python3.13/site-packages/flask_cors-5.0.1.dist-info/METADATA, /usr/lib/python3.13/site-packages/flask_cors-5.0.1.dist-info/RECORD, /usr/lib/python3.13/site-packages/flask_cors-5.0.1.dist-info/top_level.txt
+            scanner: grype
+
   - id: CGA-32mf-hm7c-cqmg
     aliases:
       - CVE-2024-37891
