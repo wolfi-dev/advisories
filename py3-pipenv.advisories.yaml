@@ -4,6 +4,24 @@ package:
   name: py3-pipenv
 
 advisories:
+  - id: CGA-38gx-r79g-vggc
+    aliases:
+      - CVE-2025-47273
+      - GHSA-5rjg-fvgr-3xxf
+    events:
+      - timestamp: 2025-05-20T08:24:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3.13-pipenv
+            componentID: f7a1b529fc0eaa76
+            componentName: setuptools
+            componentVersion: 70.3.0
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/pipenv/patched/pip/_vendor/vendor.txt
+            scanner: grype
+
   - id: CGA-5j79-5g3g-jm38
     aliases:
       - CVE-2024-6345
