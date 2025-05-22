@@ -25,3 +25,8 @@ advisories:
         type: true-positive-determination
         data:
           note: Unable to use govulncheck to triage this advisory because the vulnerability was not found in the Go vuln DB. Treating as a true positive since we can't confirm this is a false positive.
+      - timestamp: 2025-05-22T12:31:21Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: This vulnerability affects github.com/docker/docker versions up to 25.0.4. The version in use is 25.0.6, with the detection believed to be occurring due to a mismatch in version parsing.
