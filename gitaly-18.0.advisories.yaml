@@ -1,0 +1,28 @@
+schema-version: 2.0.2
+
+package:
+  name: gitaly-18.0
+
+advisories:
+  - id: CGA-fx72-cmfx-m59v
+    aliases:
+      - CVE-2025-22868
+      - GHSA-3wqc-mwfx-672p
+    events:
+      - timestamp: 2025-05-20T13:30:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitaly-18.0
+            componentID: f5b79228efc19bfe
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitaly-backup
+            scanner: grype
+      - timestamp: 2025-05-21T07:30:22Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
