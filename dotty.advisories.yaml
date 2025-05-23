@@ -268,6 +268,24 @@ advisories:
         data:
           note: CVE is present in /usr/share/scala/bin/scala-cli.jar which is downloaded during build from https://github.com/VirtusLab/scala-cli/releases. It is not a direct dependency so we must wait for both github.com/VirtusLab/scala-cli to update and release and then github.com/scala/scala3 to consume this new scala-cli release.
 
+  - id: CGA-vrv8-wgp7-xh99
+    aliases:
+      - CVE-2025-4949
+      - GHSA-vrpq-qp53-qv56
+    events:
+      - timestamp: 2025-05-23T07:45:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dotty
+            componentID: a1cbc267d92bc679
+            componentName: org.eclipse.jgit
+            componentVersion: 6.8.0.202311291450-r
+            componentType: java-archive
+            componentLocation: /usr/share/scala/libexec/scala-cli.jar
+            scanner: grype
+
   - id: CGA-whvj-j3x7-6cwh
     aliases:
       - CVE-2022-36033
