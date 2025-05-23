@@ -26,6 +26,28 @@ advisories:
         data:
           fixed-version: 35.0.1-r12
 
+  - id: CGA-8gmx-rgcc-9gc5
+    aliases:
+      - CVE-2025-4949
+      - GHSA-vrpq-qp53-qv56
+    events:
+      - timestamp: 2025-05-23T08:26:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wildfly-openjdk-21
+            componentID: 12c7c0847cdebce0
+            componentName: org.eclipse.jgit
+            componentVersion: 6.10.0.202406032230-r
+            componentType: java-archive
+            componentLocation: /usr/share/wildfly/modules/system/layers/base/org/eclipse/jgit/main/org.eclipse.jgit-6.10.0.202406032230-r.jar
+            scanner: grype
+      - timestamp: 2025-05-23T10:50:10Z
+        type: fixed
+        data:
+          fixed-version: 36.0.1-r1
+
   - id: CGA-hf6h-4wjh-fpvq
     aliases:
       - CVE-2024-12369

@@ -355,6 +355,28 @@ advisories:
         data:
           fixed-version: 0.14.1-r0
 
+  - id: CGA-q8mv-6q3j-j7vw
+    aliases:
+      - CVE-2025-47291
+      - GHSA-cxfp-7pvr-95ff
+    events:
+      - timestamp: 2025-05-22T07:45:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wolfictl
+            componentID: c3ca5958e398563e
+            componentName: github.com/containerd/containerd/v2
+            componentVersion: v2.0.4
+            componentType: go-module
+            componentLocation: /usr/bin/wolfictl
+            scanner: grype
+      - timestamp: 2025-05-23T09:39:39Z
+        type: fixed
+        data:
+          fixed-version: 0.37.1-r1
+
   - id: CGA-q9fm-pxp4-j86g
     aliases:
       - CVE-2024-29902

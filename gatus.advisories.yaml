@@ -4,6 +4,32 @@ package:
   name: gatus
 
 advisories:
+  - id: CGA-5p55-h7qf-gjjc
+    aliases:
+      - CVE-2025-48075
+      - GHSA-hg3g-gphw-5hhm
+    events:
+      - timestamp: 2025-05-23T07:52:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatus
+            componentID: bf3e5cf2480eb3fa
+            componentName: github.com/gofiber/fiber/v2
+            componentVersion: v2.52.6
+            componentType: go-module
+            componentLocation: /usr/bin/gatus
+            scanner: grype
+      - timestamp: 2025-05-23T09:28:54Z
+        type: true-positive-determination
+        data:
+          note: Unable to use govulncheck to triage this advisory because the vulnerability was not found in the Go vuln DB. Treating as a true positive since we can't confirm this is a false positive.
+      - timestamp: 2025-05-23T09:57:00Z
+        type: fixed
+        data:
+          fixed-version: 5.17.0-r3
+
   - id: CGA-64hc-9px9-g757
     aliases:
       - CVE-2025-22872
