@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: apache-nifi-registry
+
+advisories:
+  - id: CGA-jwwh-vrxx-rwpw
+    aliases:
+      - CVE-2025-4949
+      - GHSA-vrpq-qp53-qv56
+    events:
+      - timestamp: 2025-05-23T07:38:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi-registry
+            componentID: 93036eaf2b3e7898
+            componentName: org.eclipse.jgit
+            componentVersion: 7.2.0.202503040940-r
+            componentType: java-archive
+            componentLocation: /opt/nifi-registry/nifi-toolkit-registry-2.4.0/nifi-registry-toolkit-2.4.0/lib/org.eclipse.jgit-7.2.0.202503040940-r.jar
+            scanner: grype
