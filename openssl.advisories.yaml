@@ -194,6 +194,24 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: This was a case of documentation not matching function behavior. The upstream maintainers decided to update the documentation rather than change the behavior. See https://www.openssl.org/news/secadv/20230328.txt
 
+  - id: CGA-fqw9-gfmm-4p7p
+    aliases:
+      - CVE-2025-4575
+      - GHSA-v8qh-5c5w-48pp
+    events:
+      - timestamp: 2025-05-24T08:23:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openssl
+            componentID: a312bffee4a41b3d
+            componentName: openssl-doc
+            componentVersion: 3.5.0-r1
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-gmc7-prpg-3wrh
     aliases:
       - CVE-2023-6129
