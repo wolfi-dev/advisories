@@ -21,6 +21,14 @@ advisories:
             componentType: python
             componentLocation: /usr/lib/pypy3.10/site-packages/pip/_vendor/vendor.txt
             scanner: grype
+      - timestamp: 2025-05-26T15:21:42Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: |-
+            GHSA-5rjg-fvgr-3xxf is detected because pip vendors setuptools (v70.3.0), but only includes pkg_resources, making it non-vulnerable.
+            More information can be found here: https://github.com/pypa/pip/tree/30807c4d9e62e0ba65ad80d441dba55e76ddf5e4/src/pip/_vendor#modifications
+            We've upgraded setuptools to 78.1.1 in pypy to remediate the CVE.
 
   - id: CGA-h22x-vf2g-j99v
     aliases:
