@@ -648,6 +648,14 @@ advisories:
             componentType: python
             componentLocation: /opt/katib/cmd/earlystopping/medianstop/v1beta1/lib/python3.11/site-packages/pip/_vendor/vendor.txt
             scanner: grype
+      - timestamp: 2025-05-27T06:55:03Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: |-
+            GHSA-5rjg-fvgr-3xxf is detected because pip vendors setuptools (v70.3.0), but only includes pkg_resources, making it non-vulnerable.
+            More information can be found here: https://github.com/pypa/pip/tree/30807c4d9e62e0ba65ad80d441dba55e76ddf5e4/src/pip/_vendor#modifications
+            We've upgraded setuptools to 78.1.1 in kubeflow-katib to remediate the CVE.
 
   - id: CGA-w7c7-p69g-xmfw
     aliases:
