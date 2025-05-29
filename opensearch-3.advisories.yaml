@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: opensearch-3
+
+advisories:
+  - id: CGA-6pxf-3xx2-cjr3
+    aliases:
+      - CVE-2025-48734
+      - GHSA-wxr5-93ph-8wr9
+    events:
+      - timestamp: 2025-05-29T08:09:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-3-ml-commons
+            componentID: bc439c1652a05e45
+            componentName: commons-beanutils
+            componentVersion: 1.9.4
+            componentType: java-archive
+            componentLocation: /usr/share/opensearch/plugins/opensearch-identity-shiro/commons-beanutils-1.9.4.jar
+            scanner: grype
