@@ -4,6 +4,24 @@ package:
   name: jenkins-2
 
 advisories:
+  - id: CGA-6294-j3wv-p997
+    aliases:
+      - CVE-2025-48734
+      - GHSA-wxr5-93ph-8wr9
+    events:
+      - timestamp: 2025-05-29T07:27:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jenkins-2
+            componentID: e0ed53e7eedd5cc1
+            componentName: commons-beanutils
+            componentVersion: 1.10.1
+            componentType: java-archive
+            componentLocation: /usr/share/java/jenkins/jenkins.war
+            scanner: grype
+
   - id: CGA-7x3v-rvfp-24jx
     aliases:
       - CVE-2024-52046
