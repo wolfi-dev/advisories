@@ -48,6 +48,24 @@ advisories:
         data:
           note: hadoop-runtime-client 3.4.1 is the latest version; jetty-http is a dependency
 
+  - id: CGA-8xcv-pq3f-p4mp
+    aliases:
+      - CVE-2025-48734
+      - GHSA-wxr5-93ph-8wr9
+    events:
+      - timestamp: 2025-05-29T07:10:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: celeborn-0.5
+            componentID: 484faed10758cc34
+            componentName: commons-beanutils
+            componentVersion: 1.9.4
+            componentType: java-archive
+            componentLocation: /usr/share/java/celeborn/jars/hadoop-client-runtime-3.4.1.jar
+            scanner: grype
+
   - id: CGA-95f5-f357-578h
     aliases:
       - CVE-2023-39410
