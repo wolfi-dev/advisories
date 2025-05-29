@@ -129,6 +129,24 @@ advisories:
           type: vulnerable-code-not-in-execution-path
           note: druid does not use HttpPostRequestDecoder or HttpPostMultiPartRequestDecoder which uses vulnerable AbstractDiskHttpData - https://github.com/advisories/GHSA-5mcr-gq6c-3hq2
 
+  - id: CGA-4pfg-wqw9-fqff
+    aliases:
+      - CVE-2025-48734
+      - GHSA-wxr5-93ph-8wr9
+    events:
+      - timestamp: 2025-05-29T07:28:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: druid
+            componentID: 0b1e687672ff6529
+            componentName: commons-beanutils
+            componentVersion: 1.9.4
+            componentType: java-archive
+            componentLocation: /usr/share/java/druid/extensions/druid-deltalake-extensions/hadoop-client-runtime-3.3.4.jar
+            scanner: grype
+
   - id: CGA-53rj-39m2-53xg
     aliases:
       - CVE-2022-42004
