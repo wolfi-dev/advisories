@@ -26,6 +26,24 @@ advisories:
         data:
           fixed-version: 8.0.0.29-r0
 
+  - id: CGA-63wg-xhqf-vcm7
+    aliases:
+      - CVE-2025-48734
+      - GHSA-wxr5-93ph-8wr9
+    events:
+      - timestamp: 2025-05-29T07:08:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: confluent-kafka
+            componentID: bae494f0eb81374c
+            componentName: commons-beanutils
+            componentVersion: 1.9.4
+            componentType: java-archive
+            componentLocation: /usr/lib/kafka/libs/commons-beanutils-1.9.4.jar
+            scanner: grype
+
   - id: CGA-c87c-r7j2-6c2f
     aliases:
       - CVE-2024-7254
