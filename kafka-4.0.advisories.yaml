@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: kafka-4.0
+
+advisories:
+  - id: CGA-833r-vwc8-62f8
+    aliases:
+      - CVE-2025-48734
+      - GHSA-wxr5-93ph-8wr9
+    events:
+      - timestamp: 2025-05-29T08:30:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kafka-4.0
+            componentID: 47ed80260259c87e
+            componentName: commons-beanutils
+            componentVersion: 1.9.4
+            componentType: java-archive
+            componentLocation: /usr/lib/kafka/libs/commons-beanutils-1.9.4.jar
+            scanner: grype
