@@ -26,6 +26,24 @@ advisories:
         data:
           note: To be able to fix this CVE, we need to upgrade the "org.apache.cassandra:cassandra-all" dependency version from `2.2.12` which is the version project is currently using to at least `4.0.10` which is the version we should bump to to fix the CVEs but we can't because the build was failed due to compilation errors.
 
+  - id: CGA-44wh-mrp3-9r73
+    aliases:
+      - CVE-2025-48734
+      - GHSA-wxr5-93ph-8wr9
+    events:
+      - timestamp: 2025-05-29T07:06:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cassandra-reaper
+            componentID: 2a93773e35f1c611
+            componentName: commons-beanutils
+            componentVersion: 1.9.4
+            componentType: java-archive
+            componentLocation: /usr/local/lib/cassandra-reaper.jar
+            scanner: grype
+
   - id: CGA-45cx-7c8c-j882
     aliases:
       - CVE-2024-13009
