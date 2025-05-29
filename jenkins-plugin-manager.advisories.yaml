@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: jenkins-plugin-manager
+
+advisories:
+  - id: CGA-j5h6-pqm4-cmmj
+    aliases:
+      - CVE-2025-48734
+      - GHSA-wxr5-93ph-8wr9
+    events:
+      - timestamp: 2025-05-29T07:13:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jenkins-plugin-manager
+            componentID: 642ba375c0001351
+            componentName: commons-beanutils
+            componentVersion: 1.9.4
+            componentType: java-archive
+            componentLocation: /usr/share/java/jenkins-plugin-manager/jenkins-plugin-manager.jar
+            scanner: grype
