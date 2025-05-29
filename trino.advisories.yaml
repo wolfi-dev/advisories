@@ -4,6 +4,24 @@ package:
   name: trino
 
 advisories:
+  - id: CGA-2g8v-879r-gcr3
+    aliases:
+      - CVE-2025-48734
+      - GHSA-wxr5-93ph-8wr9
+    events:
+      - timestamp: 2025-05-29T08:43:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino-plugin-redis
+            componentID: a47bd423793994ce
+            componentName: commons-beanutils
+            componentVersion: 1.10.0
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/commons-beanutils_commons-beanutils-1.10.0.jar
+            scanner: grype
+
   - id: CGA-2jc3-3rhh-rc7v
     aliases:
       - CVE-2024-1597
