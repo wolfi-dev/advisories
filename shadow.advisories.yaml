@@ -1,0 +1,18 @@
+schema-version: 2.0.2
+
+package:
+  name: shadow
+
+advisories:
+  - id: CGA-9hhf-fv89-f4vc
+    aliases:
+      - CVE-2024-56433
+      - GHSA-7683-vm2j-m4cc
+    events:
+      - timestamp: 2025-06-03T06:29:21Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: |-
+            This current vulnerability is related to the default config shipped with the shadow package.
+            Currently in Wolfi we do not ship the default /etc/subuid in upstream and are not affected by this issue.
