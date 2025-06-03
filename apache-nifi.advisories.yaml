@@ -448,6 +448,24 @@ advisories:
         data:
           note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
 
+  - id: CGA-6593-35fw-774p
+    aliases:
+      - CVE-2025-22233
+      - GHSA-4wp7-92pw-q264
+    events:
+      - timestamp: 2025-06-03T07:32:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 1afb2eb106c4a45f
+            componentName: spring-context
+            componentVersion: 6.2.6
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/nifi-current/lib/nifi-email-nar-2.4.0.nar
+            scanner: grype
+
   - id: CGA-69xr-35vw-ch6p
     aliases:
       - CVE-2024-52046
