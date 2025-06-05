@@ -4,6 +4,24 @@ package:
   name: tensorflow-cpu-jupyter
 
 advisories:
+  - id: CGA-54r8-8878-mhm5
+    aliases:
+      - CVE-2025-30167
+      - GHSA-33p9-3p43-82vq
+    events:
+      - timestamp: 2025-06-05T07:44:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tensorflow-cpu-jupyter
+            componentID: 312c18f1d1b67ddc
+            componentName: jupyter-core
+            componentVersion: 5.7.2
+            componentType: python
+            componentLocation: /usr/share/tensorflow/lib/python3.11/site-packages/jupyter_core-5.7.2.dist-info/METADATA, /usr/share/tensorflow/lib/python3.11/site-packages/jupyter_core-5.7.2.dist-info/RECORD
+            scanner: grype
+
   - id: CGA-7x5v-v62c-qg8g
     aliases:
       - CVE-2025-47287
