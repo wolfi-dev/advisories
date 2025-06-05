@@ -708,3 +708,21 @@ advisories:
         data:
           type: component-vulnerability-mismatch
           note: The finding is part of a VS Code extension definition, not an actual runtime dependency of code-server. The vulnerable package is not installed or used by the application.
+
+  - id: CGA-xhg7-mxhr-f279
+    aliases:
+      - CVE-2025-48387
+      - GHSA-8cj5-5rvv-wf4v
+    events:
+      - timestamp: 2025-06-05T07:08:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: code-server
+            componentID: a066fb671d321aa7
+            componentName: tar-fs
+            componentVersion: 2.1.2
+            componentType: npm
+            componentLocation: /usr/lib/code-server/lib/vscode/node_modules/tar-fs/package.json
+            scanner: grype
