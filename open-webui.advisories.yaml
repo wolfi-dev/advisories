@@ -1,0 +1,41 @@
+schema-version: 2.0.2
+
+package:
+  name: open-webui
+
+advisories:
+  - id: CGA-58hf-6gh8-hg4q
+    aliases:
+      - CVE-2024-28219
+      - GHSA-44wm-f244-xhp3
+    events:
+      - timestamp: 2025-06-06T21:56:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: open-webui
+            componentID: 9187ee8f59028814
+            componentName: pillow
+            componentVersion: 10.2.0
+            componentType: python
+            componentLocation: /usr/share/open-webui/lib/python3.11/site-packages/open_webui/frontend/pyodide/pillow-10.2.0-cp312-cp312-pyodide_2024_0_wasm32.whl
+            scanner: grype
+
+  - id: CGA-vp8f-xf9w-8jwj
+    aliases:
+      - CVE-2024-35195
+      - GHSA-9wx4-h78v-vm56
+    events:
+      - timestamp: 2025-06-06T21:56:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: open-webui
+            componentID: 0a2d12076aae5772
+            componentName: requests
+            componentVersion: 2.31.0
+            componentType: python
+            componentLocation: /usr/share/open-webui/lib/python3.11/site-packages/open_webui/frontend/pyodide/requests-2.31.0-py3-none-any.whl
+            scanner: grype
