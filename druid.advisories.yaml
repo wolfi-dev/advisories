@@ -108,6 +108,24 @@ advisories:
         data:
           note: This vulnerability relates to Netty 3.10.5, a transitive dependency of the shaded JAR ambari-metrics-emitter used by Druid. No newer versions of this shaded JAR are available to fix the vulnerability.
 
+  - id: CGA-3jh5-53mq-vgx2
+    aliases:
+      - CVE-2025-49128
+      - GHSA-wf8f-6423-gfxg
+    events:
+      - timestamp: 2025-06-07T07:09:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: druid
+            componentID: 440b48ec2395d1f8
+            componentName: jackson-core
+            componentVersion: 2.12.7
+            componentType: java-archive
+            componentLocation: /usr/share/java/druid/extensions/druid-deltalake-extensions/hadoop-client-runtime-3.3.4.jar
+            scanner: grype
+
   - id: CGA-48pw-w48m-hrfg
     aliases:
       - CVE-2021-37533
