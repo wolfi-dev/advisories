@@ -373,6 +373,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-p5qm-hr59-m2mh
+    aliases:
+      - CVE-2024-47081
+      - GHSA-9hjg-9r4m-mvj7
+    events:
+      - timestamp: 2025-06-10T08:06:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dask-gateway
+            componentID: 38381bef2203cbe0
+            componentName: requests
+            componentVersion: 2.32.3
+            componentType: python
+            componentLocation: /usr/share/dask-gateway-server/.venv/lib/python3.13/site-packages/pip/_vendor/vendor.txt
+            scanner: grype
+
   - id: CGA-q4wf-4rwg-334h
     aliases:
       - CVE-2024-3651
