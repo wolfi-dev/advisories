@@ -4,6 +4,28 @@ package:
   name: zipkin
 
 advisories:
+  - id: CGA-2mmf-pgv2-355p
+    aliases:
+      - CVE-2025-27817
+      - GHSA-vgq5-3255-v292
+    events:
+      - timestamp: 2025-06-11T09:21:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zipkin
+            componentID: 554bf08caecf6864
+            componentName: kafka-clients
+            componentVersion: 3.9.0
+            componentType: java-archive
+            componentLocation: /zipkin/BOOT-INF/lib/kafka-clients-3.9.0.jar
+            scanner: grype
+      - timestamp: 2025-06-11T11:45:49Z
+        type: fixed
+        data:
+          fixed-version: 3.5.1-r2
+
   - id: CGA-77mr-8qc4-4j53
     aliases:
       - CVE-2025-22233

@@ -317,6 +317,31 @@ advisories:
         data:
           fixed-version: 0.19.2-r14
 
+  - id: CGA-gww9-r5mf-4cxq
+    aliases:
+      - GHSA-2x5j-vhc8-9cwm
+    events:
+      - timestamp: 2025-06-11T09:13:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: q
+            componentID: 300651c34c446f1b
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.3.7
+            componentType: go-module
+            componentLocation: /usr/bin/q
+            scanner: grype
+      - timestamp: 2025-06-11T11:33:32Z
+        type: true-positive-determination
+        data:
+          note: Unable to use govulncheck to triage this advisory because the vulnerability was not found in the Go vuln DB. Treating as a true positive since we can't confirm this is a false positive.
+      - timestamp: 2025-06-11T11:39:18Z
+        type: fixed
+        data:
+          fixed-version: 0.19.2-r18
+
   - id: CGA-hcxc-wc5h-j5fg
     aliases:
       - CVE-2023-45289
