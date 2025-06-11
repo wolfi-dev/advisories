@@ -856,3 +856,21 @@ advisories:
         type: pending-upstream-fix
         data:
           note: This was able to be bumped prior to thingsboard 3.8, however when this is bumped now runtime issues occur in thingsboard-tb-node.
+
+  - id: CGA-xvmp-j7qc-j5pw
+    aliases:
+      - CVE-2025-27817
+      - GHSA-vgq5-3255-v292
+    events:
+      - timestamp: 2025-06-11T11:53:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: thingsboard-tb-node
+            componentID: 3e1e09aa9add810c
+            componentName: kafka-clients
+            componentVersion: 3.7.1
+            componentType: java-archive
+            componentLocation: /usr/share/tb-mqtt-transport/bin/tb-mqtt-transport.jar
+            scanner: grype
