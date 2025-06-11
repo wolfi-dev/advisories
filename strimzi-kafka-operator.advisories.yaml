@@ -4,6 +4,28 @@ package:
   name: strimzi-kafka-operator
 
 advisories:
+  - id: CGA-352g-32m7-c37f
+    aliases:
+      - CVE-2025-27817
+      - GHSA-vgq5-3255-v292
+    events:
+      - timestamp: 2025-06-11T09:09:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: strimzi-kafka-operator-kafka-thirdparty-libs-cc
+            componentID: 38f394c45932a103
+            componentName: kafka-clients
+            componentVersion: 3.8.0
+            componentType: java-archive
+            componentLocation: /opt/cruise-control/libs/kafka-clients-3.8.0.jar
+            scanner: grype
+      - timestamp: 2025-06-11T11:54:45Z
+        type: fixed
+        data:
+          fixed-version: 0.46.0-r6
+
   - id: CGA-4329-v87w-cxx5
     aliases:
       - CVE-2025-48734
