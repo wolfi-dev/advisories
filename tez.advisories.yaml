@@ -1009,3 +1009,7 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/java/tez/lib/jackson-core-2.12.7.jar
             scanner: grype
+      - timestamp: 2025-06-11T07:35:52Z
+        type: pending-upstream-fix
+        data:
+          note: The jackson-core dependency is brought in by the Hadoop transient dependency, upstream will have to release a version of Hadoop with a more recent version of jackson-core and tez will have to update it's Hadoop dependency in order to pull in a fixed version of jackson-core.
