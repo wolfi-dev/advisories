@@ -131,6 +131,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/java/celeborn/jars/hadoop-client-runtime-3.4.1.jar
             scanner: grype
+      - timestamp: 2025-06-11T10:47:00Z
+        type: pending-upstream-fix
+        data:
+          note: The jackson-core dependency is brought in by the Hadoop transient dependency, upstream will have to release a version of Hadoop with a more recent version of jackson-core and celeborn will have to update it's Hadoop dependency in order to pull in a fixed version of jackson-core.
 
   - id: CGA-xvv2-g55w-6g8w
     aliases:
