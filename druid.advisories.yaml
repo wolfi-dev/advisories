@@ -226,6 +226,24 @@ advisories:
         data:
           note: This relates to nimbus-jose-jwt v9.8.1 included by the shaded JAR hadoop-client-runtime-3.3.6.jar
 
+  - id: CGA-5p25-cm25-fwhq
+    aliases:
+      - CVE-2025-27817
+      - GHSA-vgq5-3255-v292
+    events:
+      - timestamp: 2025-06-11T07:17:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: druid
+            componentID: af2c410565b096da
+            componentName: kafka-clients
+            componentVersion: 3.7.1
+            componentType: java-archive
+            componentLocation: /usr/share/java/druid/extensions/druid-avro-extensions/kafka-clients-3.7.1.jar
+            scanner: grype
+
   - id: CGA-5vjh-7w5c-x799
     aliases:
       - CVE-2024-29131
