@@ -102,6 +102,31 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability was matched to the module "github.com/crossplane/crossplane" at the following location(s): /usr/bin/crossplane. In all cases, the installed version of the module (git commit 432e1637f677bf46e3fa5b84211bc903141409bb) corresponds to a version tag (v1.15.2) that is later than the fixed version (1.11.5).'
 
+  - id: CGA-4m6r-4hpf-839r
+    aliases:
+      - GHSA-2x5j-vhc8-9cwm
+    events:
+      - timestamp: 2025-06-11T07:16:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: crossplane-crank
+            componentID: f29b7b20c52d7b3b
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.3.7
+            componentType: go-module
+            componentLocation: /usr/bin/crank
+            scanner: grype
+      - timestamp: 2025-06-11T08:36:57Z
+        type: true-positive-determination
+        data:
+          note: Unable to use govulncheck to triage this advisory because the vulnerability was not found in the Go vuln DB. Treating as a true positive since we can't confirm this is a false positive.
+      - timestamp: 2025-06-11T08:55:20Z
+        type: fixed
+        data:
+          fixed-version: 1.20.0-r1
+
   - id: CGA-4r88-2r25-7m4q
     aliases:
       - CVE-2023-45284

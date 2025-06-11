@@ -4,6 +4,60 @@ package:
   name: glibc
 
 advisories:
+  - id: CGA-49g3-q5cv-7m6g
+    aliases:
+      - CVE-2023-4527
+      - GHSA-hmf7-f8gf-8f4p
+    events:
+      - timestamp: 2023-09-22T14:14:01Z
+        type: fixed
+        data:
+          fixed-version: 2.38-r2
+
+  - id: CGA-573p-mg38-75fh
+    aliases:
+      - CVE-2019-1010024
+      - GHSA-3q29-89cr-qgvj
+    events:
+      - timestamp: 2023-03-06T13:22:06Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: The CVE itself is disputed and should not be considered a security vulnerability.
+
+  - id: CGA-57wh-hj4x-5342
+    aliases:
+      - CVE-2023-4911
+      - GHSA-m77w-6vjw-wh2f
+    events:
+      - timestamp: 2023-10-03T22:58:32Z
+        type: fixed
+        data:
+          fixed-version: 2.38-r5
+
+  - id: CGA-58j2-jj4p-m5w6
+    aliases:
+      - CVE-2025-5702
+      - GHSA-hqwp-qwfv-mhrx
+    events:
+      - timestamp: 2025-06-10T11:11:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: glibc
+            componentID: 318a4397b571b4e4
+            componentName: glibc
+            componentVersion: 2.41-r4
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2025-06-10T18:38:37Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability is specific to the Power10 processor architecture (powerpc64le). It does not affect the x86_64 or aarch64 architectures used in Wolfi OS.
+
   - id: CGA-5vfg-gqch-hcj5
     aliases:
       - CVE-2010-4756
@@ -15,32 +69,56 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: Not a vulnerability. POSIX does not guarantee memory safety; resource limits should be appropriately set on applications which use untrusted inputs to glob. BSD GLOB_LIMIT extension is unreliable and was rejected by the GNU project.
 
-  - id: CGA-v7x3-922x-m2jv
+  - id: CGA-7fr2-v9gg-pg28
     aliases:
-      - CVE-2019-1010022
-      - GHSA-hqfh-jh33-mj7r
+      - CVE-2024-33600
+      - GHSA-jv3g-6pg3-v9j8
     events:
-      - timestamp: 2023-03-06T13:22:06Z
-        type: false-positive-determination
+      - timestamp: 2024-05-14T11:00:51Z
+        type: detection
         data:
-          type: vulnerability-record-analysis-contested
-          note: The CVE itself is disputed and should not be considered a security vulnerability.
+          type: scan/v1
+          data:
+            subpackageName: glibc
+            componentID: c13ad111a58c96f0
+            componentName: glibc
+            componentVersion: 2.39-r3
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2024-05-15T04:40:16Z
+        type: fixed
+        data:
+          fixed-version: 2.39-r5
+
+  - id: CGA-7gh9-w86h-98jh
+    aliases:
+      - CVE-2025-0395
+      - GHSA-4xpw-6594-8f5m
+    events:
+      - timestamp: 2025-01-23T11:45:30Z
+        type: detection
+        data:
+          type: manual
+      - timestamp: 2025-01-23T15:56:39Z
+        type: fixed
+        data:
+          fixed-version: 2.40-r6
+
+  - id: CGA-7vjg-q9w3-hgcc
+    aliases:
+      - CVE-2022-39046
+      - GHSA-f6rj-qrpf-jc34
+    events:
+      - timestamp: 2022-10-11T20:29:19Z
+        type: fixed
+        data:
+          fixed-version: 2.36-r1
 
   - id: CGA-893x-vpf5-pj8r
     aliases:
       - CVE-2019-1010023
       - GHSA-x8wp-c333-hv92
-    events:
-      - timestamp: 2023-03-06T13:22:06Z
-        type: false-positive-determination
-        data:
-          type: vulnerability-record-analysis-contested
-          note: The CVE itself is disputed and should not be considered a security vulnerability.
-
-  - id: CGA-573p-mg38-75fh
-    aliases:
-      - CVE-2019-1010024
-      - GHSA-3q29-89cr-qgvj
     events:
       - timestamp: 2023-03-06T13:22:06Z
         type: false-positive-determination
@@ -59,16 +137,6 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: The CVE itself is disputed and should not be considered a security vulnerability.
 
-  - id: CGA-7vjg-q9w3-hgcc
-    aliases:
-      - CVE-2022-39046
-      - GHSA-f6rj-qrpf-jc34
-    events:
-      - timestamp: 2022-10-11T20:29:19Z
-        type: fixed
-        data:
-          fixed-version: 2.36-r1
-
   - id: CGA-g33m-r5qg-fwrw
     aliases:
       - CVE-2023-0687
@@ -80,46 +148,6 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: The CVE itself is disputed and should not be considered a security vulnerability.
 
-  - id: CGA-g57x-cmmm-894q
-    aliases:
-      - CVE-2023-25139
-      - GHSA-2g67-jw5m-244m
-    events:
-      - timestamp: 2023-02-23T12:02:55Z
-        type: fixed
-        data:
-          fixed-version: 2.37-r1
-
-  - id: CGA-49g3-q5cv-7m6g
-    aliases:
-      - CVE-2023-4527
-      - GHSA-hmf7-f8gf-8f4p
-    events:
-      - timestamp: 2023-09-22T14:14:01Z
-        type: fixed
-        data:
-          fixed-version: 2.38-r2
-
-  - id: CGA-57wh-hj4x-5342
-    aliases:
-      - CVE-2023-4911
-      - GHSA-m77w-6vjw-wh2f
-    events:
-      - timestamp: 2023-10-03T22:58:32Z
-        type: fixed
-        data:
-          fixed-version: 2.38-r5
-
-  - id: CGA-vg2w-38fx-mjjj
-    aliases:
-      - CVE-2023-5156
-      - GHSA-m7p3-g2hx-xfc3
-    events:
-      - timestamp: 2023-09-27T12:40:16Z
-        type: fixed
-        data:
-          fixed-version: 2.38-r3
-
   - id: CGA-g3q2-5hfm-3xh3
     aliases:
       - CVE-2023-6246
@@ -130,25 +158,15 @@ advisories:
         data:
           fixed-version: 2.38-r11
 
-  - id: CGA-wqq4-865p-c7q6
+  - id: CGA-g57x-cmmm-894q
     aliases:
-      - CVE-2023-6779
-      - GHSA-p5vr-h433-qhqr
+      - CVE-2023-25139
+      - GHSA-2g67-jw5m-244m
     events:
-      - timestamp: 2024-01-31T13:43:45Z
+      - timestamp: 2023-02-23T12:02:55Z
         type: fixed
         data:
-          fixed-version: 2.38-r11
-
-  - id: CGA-q3h7-jh38-v77w
-    aliases:
-      - CVE-2023-6780
-      - GHSA-jjr8-97p7-vmmg
-    events:
-      - timestamp: 2024-01-31T13:44:33Z
-        type: fixed
-        data:
-          fixed-version: 2.38-r11
+          fixed-version: 2.37-r1
 
   - id: CGA-ggg2-x536-4h5p
     aliases:
@@ -159,6 +177,29 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.39-r2
+
+  - id: CGA-jv59-4qfv-m6g5
+    aliases:
+      - CVE-2025-5745
+      - GHSA-7qrf-49g7-25m2
+    events:
+      - timestamp: 2025-06-10T11:11:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: glibc
+            componentID: 318a4397b571b4e4
+            componentName: glibc
+            componentVersion: 2.41-r4
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2025-06-10T18:39:44Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This vulnerability only affects the strncmp implementation optimized for Power10 processors (powerpc64le architecture). It does not affect the x86_64 or aarch64 architectures used in Wolfi OS.
 
   - id: CGA-pjj8-8gh5-2qwh
     aliases:
@@ -182,27 +223,36 @@ advisories:
         data:
           fixed-version: 2.39-r5
 
-  - id: CGA-7fr2-v9gg-pg28
+  - id: CGA-q3h7-jh38-v77w
     aliases:
-      - CVE-2024-33600
-      - GHSA-jv3g-6pg3-v9j8
+      - CVE-2023-6780
+      - GHSA-jjr8-97p7-vmmg
     events:
-      - timestamp: 2024-05-14T11:00:51Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: glibc
-            componentID: c13ad111a58c96f0
-            componentName: glibc
-            componentVersion: 2.39-r3
-            componentType: apk
-            componentLocation: /.PKGINFO
-            scanner: grype
-      - timestamp: 2024-05-15T04:40:16Z
+      - timestamp: 2024-01-31T13:44:33Z
         type: fixed
         data:
-          fixed-version: 2.39-r5
+          fixed-version: 2.38-r11
+
+  - id: CGA-v7x3-922x-m2jv
+    aliases:
+      - CVE-2019-1010022
+      - GHSA-hqfh-jh33-mj7r
+    events:
+      - timestamp: 2023-03-06T13:22:06Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: The CVE itself is disputed and should not be considered a security vulnerability.
+
+  - id: CGA-vg2w-38fx-mjjj
+    aliases:
+      - CVE-2023-5156
+      - GHSA-m7p3-g2hx-xfc3
+    events:
+      - timestamp: 2023-09-27T12:40:16Z
+        type: fixed
+        data:
+          fixed-version: 2.38-r3
 
   - id: CGA-vjpp-g2r4-c8gc
     aliases:
@@ -248,16 +298,12 @@ advisories:
         data:
           fixed-version: 2.39-r5
 
-  - id: CGA-7gh9-w86h-98jh
+  - id: CGA-wqq4-865p-c7q6
     aliases:
-      - CVE-2025-0395
-      - GHSA-4xpw-6594-8f5m
+      - CVE-2023-6779
+      - GHSA-p5vr-h433-qhqr
     events:
-      - timestamp: 2025-01-23T11:45:30Z
-        type: detection
-        data:
-          type: manual
-      - timestamp: 2025-01-23T15:56:39Z
+      - timestamp: 2024-01-31T13:43:45Z
         type: fixed
         data:
-          fixed-version: 2.40-r6
+          fixed-version: 2.38-r11

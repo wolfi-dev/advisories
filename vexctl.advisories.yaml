@@ -551,6 +551,31 @@ advisories:
         data:
           fixed-version: 0.3.0-r4
 
+  - id: CGA-v64g-vjm8-68mg
+    aliases:
+      - GHSA-2x5j-vhc8-9cwm
+    events:
+      - timestamp: 2025-06-11T09:22:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vexctl
+            componentID: d791b281756efb89
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.3.7
+            componentType: go-module
+            componentLocation: /usr/bin/vexctl
+            scanner: grype
+      - timestamp: 2025-06-11T11:32:26Z
+        type: true-positive-determination
+        data:
+          note: Unable to use govulncheck to triage this advisory because the vulnerability was not found in the Go vuln DB. Treating as a true positive since we can't confirm this is a false positive.
+      - timestamp: 2025-06-11T11:34:12Z
+        type: fixed
+        data:
+          fixed-version: 0.3.0-r14
+
   - id: CGA-v668-vm2q-rh5j
     aliases:
       - GHSA-2c7c-3mj9-8fqh

@@ -4,6 +4,31 @@ package:
   name: crossplane-provider-gcp
 
 advisories:
+  - id: CGA-27v6-pj6v-c55x
+    aliases:
+      - GHSA-2x5j-vhc8-9cwm
+    events:
+      - timestamp: 2025-06-11T07:35:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: crossplane-provider-gcp
+            componentID: 72aa291ed194abf2
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.3.7
+            componentType: go-module
+            componentLocation: /usr/bin/provider
+            scanner: grype
+      - timestamp: 2025-06-11T09:38:57Z
+        type: true-positive-determination
+        data:
+          note: Unable to use govulncheck to triage this advisory because the vulnerability was not found in the Go vuln DB. Treating as a true positive since we can't confirm this is a false positive.
+      - timestamp: 2025-06-11T09:42:23Z
+        type: fixed
+        data:
+          fixed-version: 1.14.0-r1
+
   - id: CGA-28q9-5hp5-98m5
     aliases:
       - CVE-2024-45339

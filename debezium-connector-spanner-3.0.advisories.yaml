@@ -51,3 +51,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.0.4-r2
+
+  - id: CGA-m9cg-v9ch-86qx
+    aliases:
+      - CVE-2025-27817
+      - GHSA-vgq5-3255-v292
+    events:
+      - timestamp: 2025-06-11T09:14:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: debezium-connector-spanner-3.0
+            componentID: 9415f87452ea25c8
+            componentName: kafka-clients
+            componentVersion: 3.9.0
+            componentType: java-archive
+            componentLocation: /usr/share/java/debezium/debezium-connector-spanner/kafka-clients-3.9.0.jar
+            scanner: grype
+      - timestamp: 2025-06-11T11:35:17Z
+        type: fixed
+        data:
+          fixed-version: 3.0.8-r5
