@@ -21,6 +21,11 @@ advisories:
             componentType: python
             componentLocation: /usr/lib/python3.12/site-packages/pip/_vendor/vendor.txt
             scanner: grype
+      - timestamp: 2025-06-11T22:18:53Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: CVE-2024-47081 is patched via py3-pip/fix-CVE-2024-47081.patch. The scanner detects requests 2.32.3 in vendor.txt, but the actual vulnerability (using ri.netloc instead of ri.hostname) has been fixed. The patched code uses ri.hostname for netrc lookups, preventing credential leakage.
 
   - id: CGA-p6wh-jxvc-2c6c
     aliases:
