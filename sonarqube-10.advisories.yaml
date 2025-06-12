@@ -494,6 +494,24 @@ advisories:
         data:
           note: 'The dependency causing this CVE, json-smart, is a transitive dependency which has not released a fix version. Due to its transitive nature, a fix requires a release version to be cut and published to the maven repository. '
 
+  - id: CGA-x53x-hgvw-5m8w
+    aliases:
+      - CVE-2025-49146
+      - GHSA-hq9p-pm7w-8p54
+    events:
+      - timestamp: 2025-06-12T07:30:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube-10
+            componentID: 52e0c283c4181c96
+            componentName: postgresql
+            componentVersion: 42.7.5
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/lib/jdbc/postgresql/postgresql-42.7.5.jar
+            scanner: grype
+
   - id: CGA-xg3g-4h7j-5c3r
     aliases:
       - CVE-2022-40152
