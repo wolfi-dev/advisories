@@ -139,3 +139,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.10.8-r0
+
+  - id: CGA-j4vp-7w5c-jqrq
+    aliases:
+      - CVE-2025-23216
+      - GHSA-47g2-qmh2-749v
+    events:
+      - timestamp: 2025-01-31T11:17:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-2.10
+            componentID: 15f0291443c3d907
+            componentName: github.com/argoproj/argo-cd/v2
+            componentVersion: v2.10.18
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+      - timestamp: 2025-02-03T21:13:28Z
+        type: fix-not-planned
+        data:
+          note: This package is no longer supported upstream and has reached its end of life. Due to the fix for this CVE requiring functional changes that will not be backported to the 2.10 branch, recommend customer upgrade to supported version of argo-cd if possible.
