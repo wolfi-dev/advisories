@@ -139,6 +139,24 @@ advisories:
         data:
           note: v3 is not supported any longer (the last commit on https://github.com/golang-jwt/jwt/tree/v3 was 4 years ago), so it won't be fixed.
 
+  - id: CGA-q34j-c3m9-m32j
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T22:26:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-2.11
+            componentID: 0bd77c70cbbced19
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/rancher
+            scanner: grype
+
   - id: CGA-q44m-qm2g-r7v4
     aliases:
       - CVE-2025-22872
@@ -210,3 +228,21 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: govulncheck analysis shows that the github.com/docker/docker golang package is not used by the rancher-agent binary as there are no symbols referenced for the vulnerable code.
+
+  - id: CGA-x9vp-79vg-7h67
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T22:26:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-2.11
+            componentID: 0bd77c70cbbced19
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/rancher
+            scanner: grype
