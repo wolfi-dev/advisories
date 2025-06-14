@@ -4,6 +4,24 @@ package:
   name: nats-server
 
 advisories:
+  - id: CGA-3267-hq9r-3hw9
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T15:25:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nats-server
+            componentID: b5131402a6023048
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/nats-server
+            scanner: grype
+
   - id: CGA-3fcc-pq38-h3gr
     aliases:
       - GHSA-2c64-vj8g-vwrq
