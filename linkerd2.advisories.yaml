@@ -4,6 +4,24 @@ package:
   name: linkerd2
 
 advisories:
+  - id: CGA-368f-xc7v-hg2r
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T17:35:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: linkerd2-proxy-identity
+            componentID: 60a61a319ae3511e
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /web
+            scanner: grype
+
   - id: CGA-8x9g-jq2w-cp2w
     aliases:
       - CVE-2024-12224
