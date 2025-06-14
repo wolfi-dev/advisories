@@ -4,6 +4,24 @@ package:
   name: azure-workload-identity-webhook
 
 advisories:
+  - id: CGA-4jpc-hghj-jmqq
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T08:37:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: azure-workload-identity-webhook
+            componentID: 1644ae0bcf13e9e8
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-5h32-9jgf-22c5
     aliases:
       - CVE-2025-22872
@@ -46,3 +64,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.5.0-r1
+
+  - id: CGA-v3vf-c8h4-9qvq
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T08:37:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: azure-workload-identity-webhook
+            componentID: 1644ae0bcf13e9e8
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
