@@ -4,6 +4,24 @@ package:
   name: kubernetes-release
 
 advisories:
+  - id: CGA-69g3-3jf6-h9fr
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T09:32:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-release-go-runner
+            componentID: e771fc6060439df0
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/go-runner
+            scanner: grype
+
   - id: CGA-7w7m-qhfc-97cr
     aliases:
       - CVE-2024-45336
