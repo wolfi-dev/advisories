@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: keda-2.17
+
+advisories:
+  - id: CGA-8gvc-hjj2-6337
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T23:14:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.17
+            componentID: e93a46eca7d38f03
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/keda-adapter
+            scanner: grype
