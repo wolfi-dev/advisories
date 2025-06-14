@@ -4,6 +4,24 @@ package:
   name: docker-cli-buildx
 
 advisories:
+  - id: CGA-6xgv-5xqf-rxvw
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T07:33:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-cli-buildx
+            componentID: d59498c3e0ab6dc9
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/libexec/docker/cli-plugins/docker-buildx
+            scanner: grype
+
   - id: CGA-7qh2-hpw9-f3pc
     aliases:
       - CVE-2025-22871
@@ -90,6 +108,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.21.3-r1
+
+  - id: CGA-h7w9-5h4r-m4jh
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T07:33:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-cli-buildx
+            componentID: d59498c3e0ab6dc9
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/libexec/docker/cli-plugins/docker-buildx
+            scanner: grype
 
   - id: CGA-m5pq-6xxj-mh57
     aliases:
