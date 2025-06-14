@@ -677,6 +677,24 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: 'This vulnerability from 2009 affects old Firefox versions and their DNS prefetching implementation. Modern Firefox (132.0.1) uses a completely different DNS prefetching system. Additionally, Mozilla disputed the significance of this issue even in 2009. More info in the following links: https://bugzilla.mozilla.org/show_bug.cgi?id=492196 https://bugzilla.mozilla.org/show_bug.cgi?id=453403 '
 
+  - id: CGA-6j63-444w-fvwh
+    aliases:
+      - CVE-2025-49710
+      - GHSA-64mp-f6ff-c8jm
+    events:
+      - timestamp: 2025-06-14T10:33:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: firefox
+            componentID: dc5244cdce46c1b7
+            componentName: firefox
+            componentVersion: 139.0.1-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-6p23-542h-cf7x
     aliases:
       - CVE-2024-8389
