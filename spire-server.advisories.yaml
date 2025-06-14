@@ -121,6 +121,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-5933-4mfv-5m7r
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T21:19:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spire-server
+            componentID: 7ae5ff990b2baa89
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/spire-agent
+            scanner: grype
+
   - id: CGA-5v2p-jc6w-xrc4
     aliases:
       - CVE-2024-29902
