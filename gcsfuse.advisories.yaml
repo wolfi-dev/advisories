@@ -410,3 +410,21 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CGA-x4g7-2cj7-mvqr
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T23:50:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gcsfuse
+            componentID: 9c303f0148d6c88f
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/gcsfuse
+            scanner: grype
