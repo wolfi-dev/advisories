@@ -112,6 +112,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-9ppr-44xc-3w79
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T10:10:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flannel
+            componentID: bdff9d7d836a8014
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/flanneld
+            scanner: grype
+
   - id: CGA-c5pq-jmcp-jpfc
     aliases:
       - CVE-2024-24786
