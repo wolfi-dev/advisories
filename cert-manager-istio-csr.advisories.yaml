@@ -4,6 +4,24 @@ package:
   name: cert-manager-istio-csr
 
 advisories:
+  - id: CGA-47qx-8685-rqgw
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T07:13:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-manager-istio-csr
+            componentID: acc90888334cb48e
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/cmd
+            scanner: grype
+
   - id: CGA-5c45-prq2-g25c
     aliases:
       - GHSA-r4pg-vg54-wxx4
