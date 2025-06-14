@@ -26,6 +26,24 @@ advisories:
         data:
           fixed-version: 1.9.4-r13
 
+  - id: CGA-2prp-ffgg-647p
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T07:37:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-flb-cloudwatch
+            componentID: bd76af22bf525d83
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/cloudwatch.so
+            scanner: grype
+
   - id: CGA-3r4x-29m7-9pf8
     aliases:
       - CVE-2023-39326
