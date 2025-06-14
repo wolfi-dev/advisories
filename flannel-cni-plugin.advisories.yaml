@@ -204,6 +204,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-q4gr-39v5-8m23
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T18:32:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flannel-cni-plugin
+            componentID: e61d7e4c7c85a44b
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/flannel
+            scanner: grype
+
   - id: CGA-q75g-wr36-93q9
     aliases:
       - CVE-2024-24785
