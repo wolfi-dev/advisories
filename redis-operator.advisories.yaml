@@ -4,6 +4,24 @@ package:
   name: redis-operator
 
 advisories:
+  - id: CGA-288v-j6xw-6m43
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T18:07:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: redis-operator
+            componentID: 3ac0edf09f1e08f5
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
   - id: CGA-7jpx-535q-66cc
     aliases:
       - CVE-2025-22868
