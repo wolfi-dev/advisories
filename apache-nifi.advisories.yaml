@@ -2104,6 +2104,24 @@ advisories:
           type: vulnerable-code-cannot-be-controlled-by-adversary
           note: Vulnerability affects only Windows systems.
 
+  - id: CGA-wxf9-pvpc-h9mf
+    aliases:
+      - CVE-2025-41234
+      - GHSA-6r3c-xf4w-jxjm
+    events:
+      - timestamp: 2025-06-14T08:55:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 2b4d8d44b1387475
+            componentName: spring-web
+            componentVersion: 6.2.7
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/nifi-current/lib/nifi-framework-nar-2.4.0.nar
+            scanner: grype
+
   - id: CGA-x9cj-c42r-f4mr
     aliases:
       - CVE-2024-29857
