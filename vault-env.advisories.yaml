@@ -4,6 +4,24 @@ package:
   name: vault-env
 
 advisories:
+  - id: CGA-62wm-6mxq-mq68
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T23:17:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-env
+            componentID: 47b76af328a59edd
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/vault-env
+            scanner: grype
+
   - id: CGA-q8f5-jq46-h79f
     aliases:
       - CVE-2025-22872
