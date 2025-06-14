@@ -25,3 +25,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.1.23-r1
+
+  - id: CGA-m75v-5j69-9g69
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T08:42:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-eks-pod-identity-agent
+            componentID: d98d5b399b45ea5e
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/eks-pod-identity-agent
+            scanner: grype
