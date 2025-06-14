@@ -721,6 +721,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This vulnerability affects a package version older than v24.0.7 while the current package is using v26.1.2.
 
+  - id: CGA-r6h5-fw79-g5q9
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T12:28:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker
+            componentID: 53ceca475dec05b4
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/docker-proxy
+            scanner: grype
+
   - id: CGA-rg3m-9vm8-g3g4
     aliases:
       - CVE-2024-24789
