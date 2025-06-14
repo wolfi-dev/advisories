@@ -185,3 +185,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.2.6-r0
+
+  - id: CGA-w98q-8v63-6wg8
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T19:57:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: envoy-gateway
+            componentID: 28d15b19d94c0504
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/egctl
+            scanner: grype
