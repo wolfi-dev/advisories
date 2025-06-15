@@ -4,6 +4,24 @@ package:
   name: steampipe
 
 advisories:
+  - id: CGA-8mf2-r3jq-j9cp
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-15T03:47:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: steampipe
+            componentID: d00d5ce24a09eb94
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/steampipe
+            scanner: grype
+
   - id: CGA-8wg8-c63f-rm8j
     aliases:
       - CVE-2025-22872
