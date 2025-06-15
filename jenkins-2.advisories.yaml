@@ -69,3 +69,21 @@ advisories:
         type: pending-upstream-fix
         data:
           note: The Jenkins CLI depends directly on net.i2p.crypto.eddsa 0.3.0.  Jenkins upstream will need to change to depend on net.i2p 0.9.39 or later, and include that change in a new release.
+
+  - id: CGA-gwxv-9j8x-jg7p
+    aliases:
+      - CVE-2025-41234
+      - GHSA-6r3c-xf4w-jxjm
+    events:
+      - timestamp: 2025-06-15T03:26:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jenkins-2
+            componentID: 8676600947649de0
+            componentName: spring-web
+            componentVersion: 6.2.7
+            componentType: java-archive
+            componentLocation: /usr/share/java/jenkins/jenkins.war
+            scanner: grype
