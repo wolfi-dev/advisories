@@ -4,6 +4,24 @@ package:
   name: istio-1.26
 
 advisories:
+  - id: CGA-8h4q-j8g7-gpxw
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-15T02:44:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-install-cni-1.26
+            componentID: 7f03742283df7de1
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/istio-cni
+            scanner: grype
+
   - id: CGA-gpf4-wg8x-4hqj
     aliases:
       - CVE-2025-22874
