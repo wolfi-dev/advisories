@@ -90,3 +90,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.7.1-r1
+
+  - id: CGA-pwrc-96cm-2g92
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-15T05:41:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-random
+            componentID: eb203c2598860765
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-random
+            scanner: grype
