@@ -25,6 +25,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-7q96-925g-r6c4
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-15T00:25:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-elasticsearch
+            componentID: 88a63d69ec076670
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/nri-elasticsearch
+            scanner: grype
+
   - id: CGA-9xmf-wxx7-xg4j
     aliases:
       - CVE-2024-24784
