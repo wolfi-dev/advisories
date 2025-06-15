@@ -4,6 +4,24 @@ package:
   name: verticadb-operator
 
 advisories:
+  - id: CGA-8g62-ccpx-w46x
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-15T03:46:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: verticadb-operator
+            componentID: 1644ae0bcf13e9e8
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-cx7j-p8h9-488f
     aliases:
       - CVE-2025-22872
@@ -25,3 +43,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 25.2.0-r1
+
+  - id: CGA-pw46-7g9m-6p42
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-15T03:46:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: verticadb-operator
+            componentID: 1644ae0bcf13e9e8
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
