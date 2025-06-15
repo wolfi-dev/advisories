@@ -4,6 +4,24 @@ package:
   name: percona-server-mongodb-operator
 
 advisories:
+  - id: CGA-g8q2-6qf7-8g76
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-15T06:22:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: percona-server-mongodb-operator
+            componentID: fa08a8bc1d3ca53a
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/percona-server-mongodb-operator
+            scanner: grype
+
   - id: CGA-mvwc-87h4-9w27
     aliases:
       - CVE-2025-22874
