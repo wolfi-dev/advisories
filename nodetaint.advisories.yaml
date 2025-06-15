@@ -274,6 +274,24 @@ advisories:
           type: component-vulnerability-mismatch
           note: This is a Kubernetes API flaw, but we don't include an API server in this package.
 
+  - id: CGA-cvm7-p962-v7hc
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-15T04:30:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nodetaint
+            componentID: f7ca62f92413b813
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/nodetaint
+            scanner: grype
+
   - id: CGA-f62p-p24v-cf65
     aliases:
       - CVE-2024-45336
