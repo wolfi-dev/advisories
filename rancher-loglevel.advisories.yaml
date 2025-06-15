@@ -4,6 +4,24 @@ package:
   name: rancher-loglevel
 
 advisories:
+  - id: CGA-f7jj-fppm-r7rp
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-15T00:17:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-loglevel
+            componentID: 3258c926b26e63ee
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/loglevel
+            scanner: grype
+
   - id: CGA-hfm3-p4fr-p2r6
     aliases:
       - CVE-2025-22871
