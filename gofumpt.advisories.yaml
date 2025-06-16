@@ -1,0 +1,50 @@
+schema-version: 2.0.2
+
+package:
+  name: gofumpt
+
+advisories:
+  - id: CGA-5v55-x7ph-j2v6
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-15T05:31:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gofumpt
+            componentID: c7db84905455ff00
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/gofumpt
+            scanner: grype
+      - timestamp: 2025-06-15T09:20:51Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
+  - id: CGA-fpr7-v594-5wgw
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-15T05:31:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gofumpt
+            componentID: c7db84905455ff00
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/gofumpt
+            scanner: grype
+      - timestamp: 2025-06-15T16:40:23Z
+        type: fixed
+        data:
+          fixed-version: 0.8.0-r2

@@ -70,6 +70,28 @@ advisories:
         data:
           fixed-version: 1.26.1-r1
 
+  - id: CGA-cvpx-m598-wh5q
+    aliases:
+      - CVE-2024-47081
+      - GHSA-9hjg-9r4m-mvj7
+    events:
+      - timestamp: 2025-06-10T08:36:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k8s-sidecar
+            componentID: ff375dbdcd5e4076
+            componentName: requests
+            componentVersion: 2.32.3
+            componentType: python
+            componentLocation: /usr/lib/python3.13/site-packages/requests-2.32.3.dist-info/METADATA, /usr/lib/python3.13/site-packages/requests-2.32.3.dist-info/RECORD, /usr/lib/python3.13/site-packages/requests-2.32.3.dist-info/top_level.txt
+            scanner: grype
+      - timestamp: 2025-06-12T23:12:43Z
+        type: fixed
+        data:
+          fixed-version: 1.30.3-r1
+
   - id: CGA-h89x-4j9m-pw85
     aliases:
       - CVE-2023-43804

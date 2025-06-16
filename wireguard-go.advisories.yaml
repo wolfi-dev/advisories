@@ -100,6 +100,29 @@ advisories:
         data:
           fixed-version: 0.0.20230223-r8
 
+  - id: CGA-6xq2-v2fm-cj85
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-15T03:37:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wireguard-go
+            componentID: 5ecec526c603380c
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/wireguard-go
+            scanner: grype
+      - timestamp: 2025-06-15T12:03:23Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-75vv-c4vg-vqcq
     aliases:
       - CVE-2025-22872
@@ -352,6 +375,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.0.20230223-r7
+
+  - id: CGA-qjmm-hp62-69gf
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-15T03:37:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wireguard-go
+            componentID: 5ecec526c603380c
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/wireguard-go
+            scanner: grype
+      - timestamp: 2025-06-15T16:13:20Z
+        type: fixed
+        data:
+          fixed-version: 0.0.20250522-r1
 
   - id: CGA-qmjr-xf9h-gwg2
     aliases:

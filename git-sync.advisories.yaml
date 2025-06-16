@@ -68,6 +68,54 @@ advisories:
         data:
           fixed-version: 4.4.0-r4
 
+  - id: CGA-96xw-gphp-xhqx
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T23:11:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: git-sync
+            componentID: f9ab876fec2e118e
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/git-sync
+            scanner: grype
+      - timestamp: 2025-06-15T07:41:54Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in git-sync-4.4.1-r0.apk, at usr/bin/git-sync, usr/bin/git-sync.'
+      - timestamp: 2025-06-15T10:41:33Z
+        type: fixed
+        data:
+          fixed-version: 4.4.1-r1
+
+  - id: CGA-hhfv-79fh-v7vp
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T23:11:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: git-sync
+            componentID: f9ab876fec2e118e
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/git-sync
+            scanner: grype
+      - timestamp: 2025-06-15T10:41:34Z
+        type: fixed
+        data:
+          fixed-version: 4.4.1-r1
+
   - id: CGA-v99c-6rpf-8g9m
     aliases:
       - CVE-2025-30204

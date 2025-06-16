@@ -4,6 +4,32 @@ package:
   name: k8ssandra-client
 
 advisories:
+  - id: CGA-5c88-rhcv-gv7v
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T23:48:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k8ssandra-client
+            componentID: a6695dc50a09637b
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/kubectl-k8ssandra
+            scanner: grype
+      - timestamp: 2025-06-15T10:03:13Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in k8ssandra-client-0.8.0-r0.apk, at usr/bin/kubectl-k8ssandra, usr/bin/kubectl-k8ssandra.'
+      - timestamp: 2025-06-15T11:17:15Z
+        type: fixed
+        data:
+          fixed-version: 0.8.0-r1
+
   - id: CGA-5mhf-qx86-2j3f
     aliases:
       - CVE-2025-32387
@@ -291,6 +317,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.6.4-r1
+
+  - id: CGA-w67f-fvmq-5x7m
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T23:48:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k8ssandra-client
+            componentID: a6695dc50a09637b
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/kubectl-k8ssandra
+            scanner: grype
+      - timestamp: 2025-06-15T11:17:16Z
+        type: fixed
+        data:
+          fixed-version: 0.8.0-r1
 
   - id: CGA-xcmw-3423-hr48
     aliases:

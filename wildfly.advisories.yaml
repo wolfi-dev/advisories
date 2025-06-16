@@ -26,6 +26,28 @@ advisories:
         data:
           fixed-version: 35.0.1-r12
 
+  - id: CGA-8cmp-36fq-9hjp
+    aliases:
+      - CVE-2025-27817
+      - GHSA-vgq5-3255-v292
+    events:
+      - timestamp: 2025-06-11T08:41:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wildfly-openjdk-21
+            componentID: 8c0d5d475729dc91
+            componentName: kafka-clients
+            componentVersion: 3.9.0
+            componentType: java-archive
+            componentLocation: /usr/share/wildfly/modules/system/layers/base/org/apache/kafka/client/main/kafka-clients-3.9.0.jar
+            scanner: grype
+      - timestamp: 2025-06-12T15:41:12Z
+        type: fixed
+        data:
+          fixed-version: 36.0.1-r5
+
   - id: CGA-8gmx-rgcc-9gc5
     aliases:
       - CVE-2025-4949

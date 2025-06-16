@@ -136,6 +136,28 @@ advisories:
         data:
           fixed-version: 7.5.0-r1
 
+  - id: CGA-68hq-38fr-mv52
+    aliases:
+      - CVE-2025-5889
+      - GHSA-v6h2-p8h4-qcjw
+    events:
+      - timestamp: 2025-06-11T08:38:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sqlpad
+            componentID: 479a7f710acc1328
+            componentName: brace-expansion
+            componentVersion: 2.0.1
+            componentType: npm
+            componentLocation: /usr/bin/sqlpad-server/node_modules/brace-expansion/package.json
+            scanner: grype
+      - timestamp: 2025-06-13T17:37:37Z
+        type: fixed
+        data:
+          fixed-version: 7.5.4-r0
+
   - id: CGA-6rgj-3726-jmf6
     aliases:
       - CVE-2024-22363
@@ -485,3 +507,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 7.4.1-r3
+
+  - id: CGA-xh6r-mq5h-82fj
+    aliases:
+      - CVE-2025-48387
+      - GHSA-8cj5-5rvv-wf4v
+    events:
+      - timestamp: 2025-06-05T07:46:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sqlpad
+            componentID: 175ed10ec77e0082
+            componentName: tar-fs
+            componentVersion: 2.1.2
+            componentType: npm
+            componentLocation: /usr/bin/sqlpad-server/node_modules/tar-fs/package.json
+            scanner: grype
+      - timestamp: 2025-06-06T21:57:04Z
+        type: fixed
+        data:
+          fixed-version: 7.5.3-r2

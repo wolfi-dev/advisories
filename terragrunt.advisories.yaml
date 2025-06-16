@@ -245,6 +245,35 @@ advisories:
         data:
           fixed-version: 0.76.5-r1
 
+  - id: CGA-j5j8-j83j-gw39
+    aliases:
+      - GHSA-2x5j-vhc8-9cwm
+    events:
+      - timestamp: 2025-06-11T08:03:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terragrunt
+            componentID: 3f0d4f4540b223ff
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.6.0
+            componentType: go-module
+            componentLocation: /usr/bin/terragrunt
+            scanner: grype
+      - timestamp: 2025-06-11T09:35:44Z
+        type: true-positive-determination
+        data:
+          note: Unable to use govulncheck to triage this advisory because the vulnerability was not found in the Go vuln DB. Treating as a true positive since we can't confirm this is a false positive.
+      - timestamp: 2025-06-11T09:36:14Z
+        type: fixed
+        data:
+          fixed-version: 0.81.3-r1
+      - timestamp: 2025-06-11T16:32:03Z
+        type: fixed
+        data:
+          fixed-version: 0.81.4-r0
+
   - id: CGA-m752-fvv7-555x
     aliases:
       - CVE-2024-24790

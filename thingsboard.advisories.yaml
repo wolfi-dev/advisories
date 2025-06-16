@@ -4,6 +4,28 @@ package:
   name: thingsboard
 
 advisories:
+  - id: CGA-2297-9w98-w672
+    aliases:
+      - CVE-2025-41234
+      - GHSA-6r3c-xf4w-jxjm
+    events:
+      - timestamp: 2025-06-14T19:51:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: thingsboard-tb-node
+            componentID: 428946cd7cc9ee39
+            componentName: spring-web
+            componentVersion: 6.1.15
+            componentType: java-archive
+            componentLocation: /usr/share/tb-mqtt-transport/bin/tb-mqtt-transport.jar
+            scanner: grype
+      - timestamp: 2025-06-15T05:50:44Z
+        type: fixed
+        data:
+          fixed-version: 4.0.1-r7
+
   - id: CGA-2c95-vj5f-q7g6
     aliases:
       - CVE-2024-12801
@@ -856,3 +878,25 @@ advisories:
         type: pending-upstream-fix
         data:
           note: This was able to be bumped prior to thingsboard 3.8, however when this is bumped now runtime issues occur in thingsboard-tb-node.
+
+  - id: CGA-xvmp-j7qc-j5pw
+    aliases:
+      - CVE-2025-27817
+      - GHSA-vgq5-3255-v292
+    events:
+      - timestamp: 2025-06-11T11:53:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: thingsboard-tb-node
+            componentID: 3e1e09aa9add810c
+            componentName: kafka-clients
+            componentVersion: 3.7.1
+            componentType: java-archive
+            componentLocation: /usr/share/tb-mqtt-transport/bin/tb-mqtt-transport.jar
+            scanner: grype
+      - timestamp: 2025-06-12T07:13:05Z
+        type: fixed
+        data:
+          fixed-version: 4.0.1-r6

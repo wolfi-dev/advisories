@@ -68,6 +68,28 @@ advisories:
         data:
           fixed-version: 1.1.0-r6
 
+  - id: CGA-j2rf-x868-q57q
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T07:06:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-application-networking-k8s
+            componentID: d6fa4363d59cbcd5
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-06-15T07:07:32Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in aws-application-networking-k8s-1.2.0-r0.apk, at usr/bin/manager, usr/bin/manager.'
+
   - id: CGA-j32h-28jw-9m9v
     aliases:
       - CVE-2025-22866
@@ -154,3 +176,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.1.0-r4
+
+  - id: CGA-v7xp-p482-w6v3
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T07:06:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-application-networking-k8s
+            componentID: d6fa4363d59cbcd5
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype

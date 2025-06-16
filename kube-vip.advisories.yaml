@@ -4,6 +4,28 @@ package:
   name: kube-vip
 
 advisories:
+  - id: CGA-23j5-6jhh-69xf
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T08:53:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-vip
+            componentID: 971ea613cac0740e
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/kube-vip
+            scanner: grype
+      - timestamp: 2025-06-14T13:21:09Z
+        type: fixed
+        data:
+          fixed-version: 0.9.1-r1
+
   - id: CGA-4xpw-4r3f-2jwj
     aliases:
       - CVE-2024-45337
@@ -35,6 +57,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.8.9-r1
+
+  - id: CGA-7m47-2xr7-x725
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T08:53:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-vip
+            componentID: 971ea613cac0740e
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/kube-vip
+            scanner: grype
+      - timestamp: 2025-06-14T13:21:09Z
+        type: fixed
+        data:
+          fixed-version: 0.9.1-r1
 
   - id: CGA-7x98-92fj-pqx7
     aliases:

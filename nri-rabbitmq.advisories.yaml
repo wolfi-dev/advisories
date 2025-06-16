@@ -99,6 +99,32 @@ advisories:
         data:
           fixed-version: 2.13.3-r1
 
+  - id: CGA-gfmq-p285-p2hw
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-15T03:21:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-rabbitmq
+            componentID: 1ce2da73067ffe12
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/nri-rabbitmq
+            scanner: grype
+      - timestamp: 2025-06-15T08:15:16Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in nri-rabbitmq-2.15.0-r1.apk, at usr/bin/nri-rabbitmq, usr/bin/nri-rabbitmq.'
+      - timestamp: 2025-06-15T14:49:51Z
+        type: fixed
+        data:
+          fixed-version: 2.15.0-r2
+
   - id: CGA-h7vg-9x2h-3gfr
     aliases:
       - CVE-2024-45341
@@ -128,6 +154,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.13.6-r1
+
+  - id: CGA-hvx9-4p47-7v4g
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-15T03:21:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-rabbitmq
+            componentID: 1ce2da73067ffe12
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/nri-rabbitmq
+            scanner: grype
+      - timestamp: 2025-06-15T14:49:52Z
+        type: fixed
+        data:
+          fixed-version: 2.15.0-r2
 
   - id: CGA-jjvm-c2pg-w5x7
     aliases:

@@ -4,6 +4,28 @@ package:
   name: rancher-agent-2.11
 
 advisories:
+  - id: CGA-2rh4-933h-m5v6
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T13:09:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-agent-2.11
+            componentID: 138497258d937e4b
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/agent
+            scanner: grype
+      - timestamp: 2025-06-15T12:36:37Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in rancher-agent-2.11-2.11.2-r0.apk, at usr/bin/agent, usr/bin/agent.'
+
   - id: CGA-36ff-mhq9-cmxc
     aliases:
       - CVE-2024-40635
@@ -184,6 +206,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.11.0-r1
+
+  - id: CGA-rvxr-mrgg-fg9m
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T13:09:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-agent-2.11
+            componentID: 138497258d937e4b
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/agent
+            scanner: grype
 
   - id: CGA-v6hr-wmvw-v4wj
     aliases:

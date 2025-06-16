@@ -4,6 +4,28 @@ package:
   name: linkerd2
 
 advisories:
+  - id: CGA-368f-xc7v-hg2r
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T17:35:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: linkerd2-proxy-identity
+            componentID: 60a61a319ae3511e
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /web
+            scanner: grype
+      - timestamp: 2025-06-15T07:33:11Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in linkerd2-cli-25.6.1-r0.apk, at usr/bin/linkerd, usr/bin/linkerd; in linkerd2-controller-25.6.1-r0.apk, at usr/bin/controller, usr/bin/controller; in linkerd2-metrics-api-25.6.1-r0.apk, at usr/bin/metrics-api, usr/bin/metrics-api; in linkerd2-tap-25.6.1-r0.apk, at usr/bin/tap, usr/bin/tap; in linkerd2-web-25.6.1-r0.apk, at web, web.'
+
   - id: CGA-8x9g-jq2w-cp2w
     aliases:
       - CVE-2024-12224
@@ -47,6 +69,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 25.1.2-r2
+
+  - id: CGA-fcvq-78w6-35hj
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T17:35:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: linkerd2-proxy-identity
+            componentID: 60a61a319ae3511e
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /web
+            scanner: grype
 
   - id: CGA-m25p-vxc9-4g24
     aliases:

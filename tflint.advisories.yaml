@@ -253,6 +253,32 @@ advisories:
         data:
           fixed-version: 0.55.1-r4
 
+  - id: CGA-hwrg-hxcc-gqp3
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-15T03:04:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tflint
+            componentID: 8d5fb823360a0338
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/tflint
+            scanner: grype
+      - timestamp: 2025-06-15T08:18:40Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in tflint-0.58.0-r0.apk, at usr/bin/tflint, usr/bin/tflint.'
+      - timestamp: 2025-06-15T14:41:28Z
+        type: fixed
+        data:
+          fixed-version: 0.58.0-r1
+
   - id: CGA-jfvg-q68v-cp55
     aliases:
       - CVE-2024-34155
@@ -316,6 +342,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.50.3-r1
+
+  - id: CGA-p45q-wxmq-x9xv
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-15T03:04:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tflint
+            componentID: 8d5fb823360a0338
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/tflint
+            scanner: grype
+      - timestamp: 2025-06-15T14:41:29Z
+        type: fixed
+        data:
+          fixed-version: 0.58.0-r1
 
   - id: CGA-q835-q4xj-4v67
     aliases:

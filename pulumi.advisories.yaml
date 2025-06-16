@@ -145,6 +145,28 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: This vulnerability is disputed, and the consensus in the security community is that this is intended behavior, not a security flaw.
 
+  - id: CGA-5489-g42r-jj95
+    aliases:
+      - CVE-2025-5889
+      - GHSA-v6h2-p8h4-qcjw
+    events:
+      - timestamp: 2025-06-11T10:47:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pulumi
+            componentID: 6459d1e4ef948d4a
+            componentName: brace-expansion
+            componentVersion: 2.0.1
+            componentType: npm
+            componentLocation: /usr/lib/node_modules/@pulumi/pulumi/node_modules/brace-expansion/package.json
+            scanner: grype
+      - timestamp: 2025-06-12T15:20:54Z
+        type: fixed
+        data:
+          fixed-version: 3.176.0-r0
+
   - id: CGA-57qj-m42w-x8vm
     aliases:
       - CVE-2025-27144
@@ -596,6 +618,27 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.91.1-r1
+
+  - id: CGA-wgp4-7r22-8wpr
+    aliases:
+      - GHSA-2x5j-vhc8-9cwm
+    events:
+      - timestamp: 2025-06-11T10:47:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pulumi
+            componentID: 59d819c24c271d8b
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.3.7
+            componentType: go-module
+            componentLocation: /usr/bin/pulumi-language-go
+            scanner: grype
+      - timestamp: 2025-06-12T15:20:55Z
+        type: fixed
+        data:
+          fixed-version: 3.176.0-r0
 
   - id: CGA-xcg6-jg76-p7wq
     aliases:

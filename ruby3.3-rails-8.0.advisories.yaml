@@ -4,6 +4,28 @@ package:
   name: ruby3.3-rails-8.0
 
 advisories:
+  - id: CGA-2jpg-99jw-7rqg
+    aliases:
+      - CVE-2025-49007
+      - GHSA-47m2-26rw-j2jw
+    events:
+      - timestamp: 2025-06-06T07:36:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ruby3.3-rails-8.0
+            componentID: 07f962dfab48c1fd
+            componentName: rack
+            componentVersion: 3.1.14
+            componentType: gem
+            componentLocation: /usr/share/ruby/gems/3.3/specifications/rack-3.1.14.gemspec
+            scanner: grype
+      - timestamp: 2025-06-10T03:50:59Z
+        type: fixed
+        data:
+          fixed-version: 8.0.2-r5
+
   - id: CGA-7p9g-jv74-wgj8
     aliases:
       - CVE-2025-25186

@@ -222,6 +222,28 @@ advisories:
         data:
           note: The dependency responsible for this CVE is a transitive dependency where the version of said dependency is not explicitly defined in the project but rather brought in under the hadoop-client-runtime jar. This requires upstream maintainers to implement a fix
 
+  - id: CGA-4x4r-856c-p644
+    aliases:
+      - CVE-2025-49128
+      - GHSA-wf8f-6423-gfxg
+    events:
+      - timestamp: 2025-06-07T07:53:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: 2545da1ce0ac8e44
+            componentName: jackson-core
+            componentVersion: 2.12.7
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.6.jar
+            scanner: grype
+      - timestamp: 2025-06-11T22:29:39Z
+        type: pending-upstream-fix
+        data:
+          note: jackson-core upgrade to 2.13.0+ requires incompatible Hadoop infrastructure changes including DynConstructors utility class. Waiting for Apache Spark and Hadoop to officially support jackson-core 2.13.0+ in future releases.
+
   - id: CGA-5hff-fh2h-5q22
     aliases:
       - CVE-2024-47554

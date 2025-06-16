@@ -309,6 +309,28 @@ advisories:
         data:
           fixed-version: 2.10.1-r1
 
+  - id: CGA-cm33-rq4p-v976
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T10:22:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: skaffold
+            componentID: 36bcb6df0b6e994a
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/skaffold
+            scanner: grype
+      - timestamp: 2025-06-15T11:40:10Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in skaffold-2.16.0-r1.apk, at usr/bin/skaffold, usr/bin/skaffold.'
+
   - id: CGA-cr4r-m482-5mmx
     aliases:
       - CVE-2025-27144
@@ -519,6 +541,24 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CGA-mjg9-h2jr-fqrq
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T10:22:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: skaffold
+            componentID: 36bcb6df0b6e994a
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/skaffold
+            scanner: grype
 
   - id: CGA-mph8-pj2w-hg4g
     aliases:

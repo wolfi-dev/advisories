@@ -25,3 +25,51 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.6.0-r1
+
+  - id: CGA-62mg-gjpj-c63g
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-15T03:27:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: maru
+            componentID: 7b091e56fc07733a
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/maru
+            scanner: grype
+      - timestamp: 2025-06-15T09:24:49Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in maru-0.6.0-r1.apk, at usr/bin/maru, usr/bin/maru.'
+      - timestamp: 2025-06-15T15:04:45Z
+        type: fixed
+        data:
+          fixed-version: 0.6.0-r2
+
+  - id: CGA-qxjr-wpc5-w5vv
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-15T03:27:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: maru
+            componentID: 7b091e56fc07733a
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/maru
+            scanner: grype
+      - timestamp: 2025-06-15T15:05:16Z
+        type: fixed
+        data:
+          fixed-version: 0.6.0-r2

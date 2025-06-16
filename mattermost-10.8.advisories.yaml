@@ -133,6 +133,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-rxm9-rwg9-gvwp
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T13:32:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-10.8
+            componentID: 3215dec05395de8c
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/mattermost
+            scanner: grype
+      - timestamp: 2025-06-14T22:02:03Z
+        type: fixed
+        data:
+          fixed-version: 10.8.2-r2
+
   - id: CGA-vfj7-4g4f-fh76
     aliases:
       - CVE-2024-0406
@@ -154,6 +176,28 @@ advisories:
         type: pending-upstream-fix
         data:
           note: The github.com/mholt/archiver/v3 package is an archived project that has been replaced by https://github.com/mholt/archives. Upstream maintainers need to upgrade package.
+
+  - id: CGA-vqg2-9fqc-gvwh
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T13:32:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-10.8
+            componentID: 3215dec05395de8c
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/mattermost
+            scanner: grype
+      - timestamp: 2025-06-14T22:02:04Z
+        type: fixed
+        data:
+          fixed-version: 10.8.2-r2
 
   - id: CGA-w4vg-j7h6-cg25
     aliases:

@@ -804,6 +804,49 @@ advisories:
         data:
           fixed-version: 3.6.3-r1
 
+  - id: CGA-f737-pfh8-87g2
+    aliases:
+      - GHSA-2x5j-vhc8-9cwm
+    events:
+      - timestamp: 2025-06-11T07:26:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-workflows
+            componentID: fe30085bbaaef7df
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.6.0
+            componentType: go-module
+            componentLocation: /usr/bin/argoexec
+            scanner: grype
+      - timestamp: 2025-06-11T20:24:26Z
+        type: true-positive-determination
+        data:
+          note: Unable to use govulncheck to triage this advisory because the vulnerability was not found in the Go vuln DB. Treating as a true positive since we can't confirm this is a false positive.
+      - timestamp: 2025-06-11T20:24:27Z
+        type: fixed
+        data:
+          fixed-version: 3.6.10-r1
+
+  - id: CGA-fp54-4m8r-v3f7
+    aliases:
+      - CVE-2025-30360
+      - GHSA-9jgg-88mc-972h
+    events:
+      - timestamp: 2025-06-05T07:13:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-workflows-ui
+            componentID: f492f556ffff9ef6
+            componentName: webpack-dev-server
+            componentVersion: 4.15.2
+            componentType: npm
+            componentLocation: /usr/lib/argo-workflows-ui/ui/node_modules/webpack-dev-server/package.json
+            scanner: grype
+
   - id: CGA-g8hr-2vg2-m8rq
     aliases:
       - CVE-2024-24783
@@ -927,6 +970,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.6.5-r2
+
+  - id: CGA-hhqq-8pw8-gwx5
+    aliases:
+      - CVE-2025-5889
+      - GHSA-v6h2-p8h4-qcjw
+    events:
+      - timestamp: 2025-06-11T07:26:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-workflows
+            componentID: 550eb3e51eb00fb4
+            componentName: brace-expansion
+            componentVersion: 2.0.1
+            componentType: npm
+            componentLocation: /usr/lib/argo-workflows-ui/ui/node_modules/@typescript-eslint/typescript-estree/node_modules/brace-expansion/package.json
+            scanner: grype
+      - timestamp: 2025-06-12T08:48:49Z
+        type: fixed
+        data:
+          fixed-version: 3.6.10-r1
 
   - id: CGA-j5h4-hq5v-v7c8
     aliases:
@@ -1063,6 +1128,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.6.5-r2
+
+  - id: CGA-pvg9-4jpf-83wx
+    aliases:
+      - CVE-2025-30359
+      - GHSA-4v9v-hfq4-rm2v
+    events:
+      - timestamp: 2025-06-05T07:13:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-workflows-ui
+            componentID: f492f556ffff9ef6
+            componentName: webpack-dev-server
+            componentVersion: 4.15.2
+            componentType: npm
+            componentLocation: /usr/lib/argo-workflows-ui/ui/node_modules/webpack-dev-server/package.json
+            scanner: grype
 
   - id: CGA-pxvv-gwc6-mm84
     aliases:

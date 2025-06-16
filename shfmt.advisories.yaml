@@ -78,6 +78,29 @@ advisories:
         data:
           fixed-version: 3.9.0-r1
 
+  - id: CGA-663q-cw2f-v634
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-15T03:36:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: shfmt
+            componentID: 91a94a91271a5681
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/shfmt
+            scanner: grype
+      - timestamp: 2025-06-15T09:28:10Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-66qx-vwmx-jq7r
     aliases:
       - CVE-2024-24783
@@ -233,6 +256,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.8.0-r2
+
+  - id: CGA-wr9v-f6p2-x2cw
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-15T03:36:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: shfmt
+            componentID: 91a94a91271a5681
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/shfmt
+            scanner: grype
+      - timestamp: 2025-06-15T14:48:43Z
+        type: fixed
+        data:
+          fixed-version: 3.11.0-r2
 
   - id: CGA-xrxq-r75f-pg4h
     aliases:

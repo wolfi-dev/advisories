@@ -397,6 +397,31 @@ advisories:
         data:
           fixed-version: 3.71.0-r1
 
+  - id: CGA-wcqp-c222-2274
+    aliases:
+      - GHSA-2x5j-vhc8-9cwm
+    events:
+      - timestamp: 2025-06-11T09:35:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pulumi-language-dotnet
+            componentID: 266531daf4287a74
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.3.8
+            componentType: go-module
+            componentLocation: /usr/bin/pulumi-language-dotnet
+            scanner: grype
+      - timestamp: 2025-06-11T12:34:50Z
+        type: true-positive-determination
+        data:
+          note: Unable to use govulncheck to triage this advisory because the vulnerability was not found in the Go vuln DB. Treating as a true positive since we can't confirm this is a false positive.
+      - timestamp: 2025-06-11T12:36:44Z
+        type: fixed
+        data:
+          fixed-version: 3.82.1-r1
+
   - id: CGA-xgf8-prq5-vrvj
     aliases:
       - CVE-2024-24789

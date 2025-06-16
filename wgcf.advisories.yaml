@@ -36,6 +36,32 @@ advisories:
         data:
           fixed-version: 2.2.22-r2
 
+  - id: CGA-578f-3p79-49vw
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-15T02:50:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wgcf
+            componentID: 4e51255fcacd35a4
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/wgcf
+            scanner: grype
+      - timestamp: 2025-06-15T09:03:09Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in wgcf-2.2.26-r0.apk, at usr/bin/wgcf, usr/bin/wgcf.'
+      - timestamp: 2025-06-15T13:25:28Z
+        type: fixed
+        data:
+          fixed-version: 2.2.26-r1
+
   - id: CGA-6qxg-xwv8-m858
     aliases:
       - CVE-2024-24790
@@ -182,6 +208,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.2.25-r2
+
+  - id: CGA-m23g-qr5f-3mpg
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-15T02:50:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wgcf
+            componentID: 4e51255fcacd35a4
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/wgcf
+            scanner: grype
+      - timestamp: 2025-06-15T13:25:29Z
+        type: fixed
+        data:
+          fixed-version: 2.2.26-r1
 
   - id: CGA-p79v-mpx7-89hw
     aliases:

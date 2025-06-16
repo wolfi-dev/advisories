@@ -1,0 +1,53 @@
+schema-version: 2.0.2
+
+package:
+  name: harbor-2.13
+
+advisories:
+  - id: CGA-348f-38q9-4hcv
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-15T06:30:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-2.13
+            componentID: 0876b477c018dcae
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-jobservice
+            scanner: grype
+      - timestamp: 2025-06-15T12:22:09Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in harbor-2.13-2.13.1-r1.apk, at usr/bin/harbor-core, usr/bin/harbor-core; in harbor-2.13-jobservice-2.13.1-r1.apk, at usr/bin/harbor-jobservice, usr/bin/harbor-jobservice; in harbor-2.13-registryctl-2.13.1-r1.apk, at usr/bin/harbor-registryctl, usr/bin/harbor-registryctl.'
+      - timestamp: 2025-06-15T19:14:47Z
+        type: fixed
+        data:
+          fixed-version: 2.13.1-r2
+
+  - id: CGA-cfwx-wc3r-x7p4
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-15T06:30:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-2.13
+            componentID: 0876b477c018dcae
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-jobservice
+            scanner: grype
+      - timestamp: 2025-06-15T19:14:48Z
+        type: fixed
+        data:
+          fixed-version: 2.13.1-r2

@@ -125,6 +125,28 @@ advisories:
         data:
           fixed-version: 1.15.0-r3
 
+  - id: CGA-jvg6-9v88-pp2v
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T12:27:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nvidia-container-toolkit-nvidia-ctk
+            componentID: 8b721999d04dcee2
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/nvidia-cdi-hook
+            scanner: grype
+      - timestamp: 2025-06-14T19:46:05Z
+        type: fixed
+        data:
+          fixed-version: 1.17.8-r1
+
   - id: CGA-q7w3-7g49-4prv
     aliases:
       - CVE-2024-0134
@@ -197,3 +219,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.16.1-r1
+
+  - id: CGA-wrgc-8cjg-phfv
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T12:27:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nvidia-container-toolkit-nvidia-ctk
+            componentID: 8b721999d04dcee2
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/nvidia-cdi-hook
+            scanner: grype
+      - timestamp: 2025-06-14T19:46:06Z
+        type: fixed
+        data:
+          fixed-version: 1.17.8-r1

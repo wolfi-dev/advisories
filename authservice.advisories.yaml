@@ -4,6 +4,28 @@ package:
   name: authservice
 
 advisories:
+  - id: CGA-5xq6-2w6x-vm43
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T07:26:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: authservice
+            componentID: 5f887e5087a3c56c
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/authservice
+            scanner: grype
+      - timestamp: 2025-06-14T09:36:53Z
+        type: fixed
+        data:
+          fixed-version: 1.0.4-r8
+
   - id: CGA-687p-p8gp-f28f
     aliases:
       - CVE-2024-34158
@@ -66,6 +88,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.0.3-r3
+
+  - id: CGA-chx7-mmjp-v339
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T07:26:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: authservice
+            componentID: 5f887e5087a3c56c
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/authservice
+            scanner: grype
+      - timestamp: 2025-06-14T09:36:53Z
+        type: fixed
+        data:
+          fixed-version: 1.0.4-r8
 
   - id: CGA-cjp7-6pfh-pjq4
     aliases:

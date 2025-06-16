@@ -26,6 +26,29 @@ advisories:
         data:
           fixed-version: 2.5.1-r7
 
+  - id: CGA-287j-65fq-2mqf
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T23:25:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: overmind
+            componentID: b007f8dd3259d272
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/overmind
+            scanner: grype
+      - timestamp: 2025-06-15T09:35:51Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-48mj-x92p-5x89
     aliases:
       - CVE-2024-34158
@@ -183,3 +206,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.5.1-r4
+
+  - id: CGA-wxpv-43q8-jqp2
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T23:25:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: overmind
+            componentID: b007f8dd3259d272
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/overmind
+            scanner: grype
+      - timestamp: 2025-06-15T11:14:57Z
+        type: fixed
+        data:
+          fixed-version: 2.5.1-r9

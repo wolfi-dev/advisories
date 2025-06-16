@@ -4,6 +4,54 @@ package:
   name: rancher-system-agent
 
 advisories:
+  - id: CGA-5jcx-f7x2-jf85
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T08:36:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-system-agent
+            componentID: 6d1eddb27a1028e9
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/rancher-system-agent
+            scanner: grype
+      - timestamp: 2025-06-15T08:20:54Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in rancher-system-agent-0.3.12-r1.apk, at usr/bin/rancher-system-agent, usr/bin/rancher-system-agent.'
+      - timestamp: 2025-06-15T20:39:38Z
+        type: fixed
+        data:
+          fixed-version: 0.3.12-r2
+
+  - id: CGA-9m7w-226x-j7gq
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T08:36:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-system-agent
+            componentID: 6d1eddb27a1028e9
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/rancher-system-agent
+            scanner: grype
+      - timestamp: 2025-06-15T20:39:39Z
+        type: fixed
+        data:
+          fixed-version: 0.3.12-r2
+
   - id: CGA-9qj3-f4gh-6gqq
     aliases:
       - CVE-2025-1767

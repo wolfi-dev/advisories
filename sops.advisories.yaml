@@ -113,6 +113,27 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-722p-5xcf-rmf3
+    aliases:
+      - GHSA-2x5j-vhc8-9cwm
+    events:
+      - timestamp: 2025-06-11T07:29:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sops
+            componentID: 4b04f34b916e0967
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.6.0
+            componentType: go-module
+            componentLocation: /usr/bin/sops
+            scanner: grype
+      - timestamp: 2025-06-12T15:16:15Z
+        type: fixed
+        data:
+          fixed-version: 3.10.2-r1
+
   - id: CGA-8jjp-j4mr-2p5f
     aliases:
       - CVE-2025-22869

@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: karpenter-1.5
+
+advisories:
+  - id: CGA-75hx-46x8-x76m
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T09:49:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: karpenter-1.5
+            componentID: b5bdc0c0dee10668
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/controller
+            scanner: grype
+      - timestamp: 2025-06-14T15:39:38Z
+        type: fixed
+        data:
+          fixed-version: 1.5.0-r1
+
+  - id: CGA-x55j-cg9q-w64x
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T09:49:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: karpenter-1.5
+            componentID: b5bdc0c0dee10668
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/controller
+            scanner: grype
+      - timestamp: 2025-06-14T15:39:39Z
+        type: fixed
+        data:
+          fixed-version: 1.5.0-r1

@@ -93,6 +93,51 @@ advisories:
         data:
           fixed-version: 1.0.20-r1
 
+  - id: CGA-fhr7-x2c5-jc7p
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-15T01:16:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sftpgo-plugin-eventsearch
+            componentID: f61bc0ed7e579e1f
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/sftpgo-plugin-eventsearch
+            scanner: grype
+      - timestamp: 2025-06-15T09:19:29Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
+  - id: CGA-h2x3-48jc-4ghw
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-15T01:16:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sftpgo-plugin-eventsearch
+            componentID: f61bc0ed7e579e1f
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/sftpgo-plugin-eventsearch
+            scanner: grype
+      - timestamp: 2025-06-15T12:52:49Z
+        type: fixed
+        data:
+          fixed-version: 1.0.20-r4
+
   - id: CGA-j2c2-42f5-hr9r
     aliases:
       - CVE-2025-22872

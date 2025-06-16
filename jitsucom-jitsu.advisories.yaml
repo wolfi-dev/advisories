@@ -238,6 +238,28 @@ advisories:
         data:
           fixed-version: 2.8.4-r0
 
+  - id: CGA-pf8m-56wg-hmgj
+    aliases:
+      - CVE-2025-48387
+      - GHSA-8cj5-5rvv-wf4v
+    events:
+      - timestamp: 2025-06-05T07:51:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jitsucom-jitsu-rotor
+            componentID: 9733c9c0de41178e
+            componentName: tar-fs
+            componentVersion: 2.1.2
+            componentType: npm
+            componentLocation: /app/node_modules/tar-fs/package.json
+            scanner: grype
+      - timestamp: 2025-06-10T14:10:14Z
+        type: fixed
+        data:
+          fixed-version: 2.10.0-r0
+
   - id: CGA-qgr4-9ff9-9j58
     aliases:
       - CVE-2025-27789

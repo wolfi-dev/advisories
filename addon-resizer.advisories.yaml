@@ -4,6 +4,28 @@ package:
   name: addon-resizer
 
 advisories:
+  - id: CGA-2fhg-pfmx-43mm
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T07:17:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: addon-resizer
+            componentID: 346913f9c109f028
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/pod_nanny
+            scanner: grype
+      - timestamp: 2025-06-14T08:52:44Z
+        type: fixed
+        data:
+          fixed-version: 1.8.23-r6
+
   - id: CGA-323v-263g-rjhc
     aliases:
       - CVE-2025-22872
@@ -47,6 +69,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.8.22-r4
+
+  - id: CGA-4p8j-53p6-gqv2
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T07:17:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: addon-resizer
+            componentID: 346913f9c109f028
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/pod_nanny
+            scanner: grype
+      - timestamp: 2025-06-14T08:52:45Z
+        type: fixed
+        data:
+          fixed-version: 1.8.23-r6
 
   - id: CGA-5659-fjq5-5p8r
     aliases:

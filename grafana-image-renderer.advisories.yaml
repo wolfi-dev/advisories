@@ -91,3 +91,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.12.6-r0
+
+  - id: CGA-xf8q-pmvv-qfff
+    aliases:
+      - CVE-2025-48997
+      - GHSA-g5hg-p3ph-g8qg
+    events:
+      - timestamp: 2025-06-05T07:25:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-image-renderer
+            componentID: 1badd52c41da2b16
+            componentName: multer
+            componentVersion: 2.0.0
+            componentType: npm
+            componentLocation: /usr/src/app/node_modules/multer/package.json
+            scanner: grype
+      - timestamp: 2025-06-11T15:12:49Z
+        type: fixed
+        data:
+          fixed-version: 3.12.6-r1

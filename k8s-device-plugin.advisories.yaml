@@ -14,6 +14,28 @@ advisories:
         data:
           fixed-version: 0.17.0-r4
 
+  - id: CGA-6359-r9h5-fpc4
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T09:19:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nvidia-device-plugin
+            componentID: 182cca1a454eb214
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/gpu-feature-discovery
+            scanner: grype
+      - timestamp: 2025-06-14T14:48:32Z
+        type: fixed
+        data:
+          fixed-version: 0.17.2-r1
+
   - id: CGA-78mj-xhv6-hw89
     aliases:
       - CVE-2025-22866
@@ -110,3 +132,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.17.0-r4
+
+  - id: CGA-w43f-89rg-pwcw
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T09:19:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nvidia-device-plugin
+            componentID: 182cca1a454eb214
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/gpu-feature-discovery
+            scanner: grype
+      - timestamp: 2025-06-14T14:48:33Z
+        type: fixed
+        data:
+          fixed-version: 0.17.2-r1

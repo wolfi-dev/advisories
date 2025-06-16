@@ -220,6 +220,28 @@ advisories:
         data:
           fixed-version: 1.10.0-r2
 
+  - id: CGA-f4rp-xqp9-8fgg
+    aliases:
+      - CVE-2024-47081
+      - GHSA-9hjg-9r4m-mvj7
+    events:
+      - timestamp: 2025-06-10T08:16:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-volumes-web-app
+            componentID: 6057b37e6f517221
+            componentName: requests
+            componentVersion: 2.32.3
+            componentType: python
+            componentLocation: /usr/lib/python3.13/site-packages/requests-2.32.3.dist-info/METADATA, /usr/lib/python3.13/site-packages/requests-2.32.3.dist-info/RECORD, /usr/lib/python3.13/site-packages/requests-2.32.3.dist-info/top_level.txt
+            scanner: grype
+      - timestamp: 2025-06-12T22:06:12Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r3
+
   - id: CGA-f5h2-p64r-hgpf
     aliases:
       - CVE-2024-39689

@@ -4,6 +4,32 @@ package:
   name: docker-machine-driver-linode
 
 advisories:
+  - id: CGA-f2ch-9j58-f4mx
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T23:06:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-machine-driver-linode
+            componentID: a859cc3b785debed
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/docker-machine-driver-linode
+            scanner: grype
+      - timestamp: 2025-06-15T07:08:46Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in docker-machine-driver-linode-0.1.15-r2.apk, at usr/bin/docker-machine-driver-linode, usr/bin/docker-machine-driver-linode.'
+      - timestamp: 2025-06-15T09:51:19Z
+        type: fixed
+        data:
+          fixed-version: 0.1.15-r3
+
   - id: CGA-fcvm-8f2q-xvw3
     aliases:
       - CVE-2025-22872
@@ -25,3 +51,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.1.15-r2
+
+  - id: CGA-g2w8-2wgp-97cr
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T23:06:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-machine-driver-linode
+            componentID: a859cc3b785debed
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/docker-machine-driver-linode
+            scanner: grype
+      - timestamp: 2025-06-15T09:51:21Z
+        type: fixed
+        data:
+          fixed-version: 0.1.15-r3

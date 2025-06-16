@@ -924,6 +924,28 @@ advisories:
         data:
           fixed-version: 2.0.5-r4
 
+  - id: CGA-m5h5-p9f5-mqj5
+    aliases:
+      - CVE-2025-5889
+      - GHSA-v6h2-p8h4-qcjw
+    events:
+      - timestamp: 2025-06-12T08:12:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-frontend
+            componentID: 60eb1ff7770c1b79
+            componentName: brace-expansion
+            componentVersion: 1.1.11
+            componentType: npm
+            componentLocation: /server/node_modules/brace-expansion/package.json
+            scanner: grype
+      - timestamp: 2025-06-13T15:56:15Z
+        type: fixed
+        data:
+          fixed-version: 2.5.0-r3
+
   - id: CGA-mg3f-vw2w-8r3r
     aliases:
       - CVE-2023-45284
@@ -1362,6 +1384,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.4.0-r9
+
+  - id: CGA-x9xw-8x44-cpgq
+    aliases:
+      - CVE-2024-47081
+      - GHSA-9hjg-9r4m-mvj7
+    events:
+      - timestamp: 2025-06-10T07:19:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-apiserver
+            componentID: 384eb03a9a4f50dd
+            componentName: requests
+            componentVersion: 2.32.0
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/requests-2.32.0.dist-info/METADATA, /usr/lib/python3.10/site-packages/requests-2.32.0.dist-info/RECORD, /usr/lib/python3.10/site-packages/requests-2.32.0.dist-info/top_level.txt
+            scanner: grype
 
   - id: CGA-xh7w-622r-w594
     aliases:

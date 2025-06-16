@@ -248,6 +248,31 @@ advisories:
         data:
           fixed-version: 2.1.1-r1
 
+  - id: CGA-pfhj-gx2m-vpg6
+    aliases:
+      - GHSA-2x5j-vhc8-9cwm
+    events:
+      - timestamp: 2025-06-11T09:16:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openbao
+            componentID: d1ea0daf4732b0fb
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.3.7
+            componentType: go-module
+            componentLocation: /usr/bin/bao
+            scanner: grype
+      - timestamp: 2025-06-11T11:37:12Z
+        type: true-positive-determination
+        data:
+          note: Unable to use govulncheck to triage this advisory because the vulnerability was not found in the Go vuln DB. Treating as a true positive since we can't confirm this is a false positive.
+      - timestamp: 2025-06-11T11:43:20Z
+        type: fixed
+        data:
+          fixed-version: 2.2.2-r1
+
   - id: CGA-x4c9-8x9h-9882
     aliases:
       - CVE-2024-45337

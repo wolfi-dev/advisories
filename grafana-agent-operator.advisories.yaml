@@ -134,6 +134,28 @@ advisories:
         data:
           fixed-version: 0.43.0-r0
 
+  - id: CGA-795w-j5w8-fmg3
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T22:47:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-agent-operator
+            componentID: a527b088985a62af
+            componentName: stdlib
+            componentVersion: go1.22.12
+            componentType: go-module
+            componentLocation: /usr/bin/grafana-agent-operator
+            scanner: grype
+      - timestamp: 2025-06-15T13:44:56Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in grafana-agent-operator-0.44.2-r37.apk, at usr/bin/grafana-agent-operator, usr/bin/grafana-agent-operator.'
+
   - id: CGA-7cq7-w454-vc9w
     aliases:
       - CVE-2025-22866
@@ -155,6 +177,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.44.2-r1
+
+  - id: CGA-7hg9-gqm8-j3fj
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T22:47:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-agent-operator
+            componentID: a527b088985a62af
+            componentName: stdlib
+            componentVersion: go1.22.12
+            componentType: go-module
+            componentLocation: /usr/bin/grafana-agent-operator
+            scanner: grype
 
   - id: CGA-8x4h-m585-6pxf
     aliases:
@@ -281,7 +321,7 @@ advisories:
       - timestamp: 2025-04-21T14:30:01Z
         type: pending-upstream-fix
         data:
-          note: 'attempted upgrades of golang.org/x/net to version v0.38.0 or higher result in a runtime error in binary as well as breaking upstream tests. Upstream will need to make functional changes.'
+          note: attempted upgrades of golang.org/x/net to version v0.38.0 or higher result in a runtime error in binary as well as breaking upstream tests. Upstream will need to make functional changes.
 
   - id: CGA-vv8p-38h9-qp26
     aliases:

@@ -25,3 +25,25 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Upstream will need to make code changes when updating commons-beanutils 1.9.4 to 1.11.0 or newer. Attempts to address the CVE by updating to 1.11.0 result in build failures.
+
+  - id: CGA-vcxg-7qch-xpr4
+    aliases:
+      - CVE-2025-27817
+      - GHSA-vgq5-3255-v292
+    events:
+      - timestamp: 2025-06-11T09:54:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-3-security
+            componentID: 98e2d6d47ad2cd02
+            componentName: kafka-clients
+            componentVersion: 3.7.1
+            componentType: java-archive
+            componentLocation: /usr/share/opensearch/plugins/opensearch-security/kafka-clients-3.7.1.jar
+            scanner: grype
+      - timestamp: 2025-06-13T17:21:24Z
+        type: fixed
+        data:
+          fixed-version: 3.0.0-r2

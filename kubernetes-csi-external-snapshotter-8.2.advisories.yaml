@@ -4,6 +4,32 @@ package:
   name: kubernetes-csi-external-snapshotter-8.2
 
 advisories:
+  - id: CGA-4x7h-3j65-24v4
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-15T05:11:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-snapshotter-8.2
+            componentID: 6116882cca1f887d
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/snapshot-controller
+            scanner: grype
+      - timestamp: 2025-06-15T07:28:58Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in kubernetes-csi-external-snapshot-controller-8.2-8.2.1-r5.apk, at usr/bin/snapshot-controller, usr/bin/snapshot-controller; in kubernetes-csi-external-snapshotter-8.2-8.2.1-r5.apk, at usr/bin/csi-snapshotter, usr/bin/csi-snapshotter.'
+      - timestamp: 2025-06-15T19:44:54Z
+        type: fixed
+        data:
+          fixed-version: 8.2.1-r6
+
   - id: CGA-68hh-hm62-j57x
     aliases:
       - CVE-2025-22870
@@ -47,6 +73,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 8.2.1-r3
+
+  - id: CGA-m8f8-fv42-jhg3
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-15T05:11:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-snapshotter-8.2
+            componentID: 6116882cca1f887d
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/snapshot-controller
+            scanner: grype
+      - timestamp: 2025-06-15T19:44:55Z
+        type: fixed
+        data:
+          fixed-version: 8.2.1-r6
 
   - id: CGA-mgfm-3rmp-p433
     aliases:

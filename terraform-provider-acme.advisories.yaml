@@ -26,6 +26,28 @@ advisories:
         data:
           fixed-version: 2.31.0-r2
 
+  - id: CGA-6fpf-8wmm-4m6v
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T11:31:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-acme
+            componentID: 53356e678bf011a2
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-acme
+            scanner: grype
+      - timestamp: 2025-06-15T08:40:56Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in terraform-provider-acme-2.32.0-r0.apk, at usr/bin/terraform-provider-acme, usr/bin/terraform-provider-acme.'
+
   - id: CGA-8m5c-595x-3r3g
     aliases:
       - CVE-2025-22872
@@ -47,6 +69,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.32.0-r0
+
+  - id: CGA-9v42-cfx2-mrv5
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T11:31:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-acme
+            componentID: 53356e678bf011a2
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-acme
+            scanner: grype
 
   - id: CGA-q4g5-mvx2-mgj2
     aliases:

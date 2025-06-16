@@ -134,6 +134,31 @@ advisories:
         data:
           fixed-version: 3.2.9-r2
 
+  - id: CGA-32pf-9cpf-q3j3
+    aliases:
+      - GHSA-2x5j-vhc8-9cwm
+    events:
+      - timestamp: 2025-06-11T08:27:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nuclei
+            componentID: 40f18ab6f235c15e
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.5.0
+            componentType: go-module
+            componentLocation: /usr/bin/nuclei
+            scanner: grype
+      - timestamp: 2025-06-11T10:32:20Z
+        type: true-positive-determination
+        data:
+          note: Unable to use govulncheck to triage this advisory because the vulnerability was not found in the Go vuln DB. Treating as a true positive since we can't confirm this is a false positive.
+      - timestamp: 2025-06-11T10:32:52Z
+        type: fixed
+        data:
+          fixed-version: 3.4.4-r1
+
   - id: CGA-3hgf-rqcf-jgwj
     aliases:
       - CVE-2023-45283

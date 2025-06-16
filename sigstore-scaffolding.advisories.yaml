@@ -252,6 +252,32 @@ advisories:
         data:
           fixed-version: 0.6.17-r1
 
+  - id: CGA-f6pc-2hjh-397v
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-15T06:37:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sigstore-scaffolding-trillian-updatetree
+            componentID: 6afc6118b001401e
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/ctlog-verifyfulcio
+            scanner: grype
+      - timestamp: 2025-06-15T13:30:03Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in sigstore-scaffolding-ctlog-createctconfig-0.7.23-r1.apk, at usr/bin/ctlog-createctconfig, usr/bin/ctlog-createctconfig; in sigstore-scaffolding-ctlog-managectroots-0.7.23-r1.apk, at usr/bin/ctlog-managectroots, usr/bin/ctlog-managectroots; in sigstore-scaffolding-ctlog-verifyfulcio-0.7.23-r1.apk, at usr/bin/ctlog-verifyfulcio, usr/bin/ctlog-verifyfulcio; in sigstore-scaffolding-fulcio-createcerts-0.7.23-r1.apk, at usr/bin/fulcio-createcerts, usr/bin/fulcio-createcerts; in sigstore-scaffolding-getoidctoken-0.7.23-r1.apk, at usr/bin/getoidctoken, usr/bin/getoidctoken; in sigstore-scaffolding-rekor-createsecret-0.7.23-r1.apk, at usr/bin/rekor-createsecret, usr/bin/rekor-createsecret; in sigstore-scaffolding-trillian-createdb-0.7.23-r1.apk, at usr/bin/trillian-createdb, usr/bin/trillian-createdb; in sigstore-scaffolding-trillian-createtree-0.7.23-r1.apk, at usr/bin/trillian-createtree, usr/bin/trillian-createtree; in sigstore-scaffolding-trillian-updatetree-0.7.23-r1.apk, at usr/bin/trillian-updatetree, usr/bin/trillian-updatetree; in sigstore-scaffolding-tsa-createcertchain-0.7.23-r1.apk, at usr/bin/tsa-createcertchain, usr/bin/tsa-createcertchain; in sigstore-scaffolding-tuf-createsecret-0.7.23-r1.apk, at usr/bin/tuf-createsecret, usr/bin/tuf-createsecret; in sigstore-scaffolding-tuf-server-0.7.23-r1.apk, at usr/bin/tuf-server, usr/bin/tuf-server.'
+      - timestamp: 2025-06-15T19:04:23Z
+        type: fixed
+        data:
+          fixed-version: 0.7.23-r2
+
   - id: CGA-fchr-jc3j-8323
     aliases:
       - CVE-2023-45288
@@ -423,6 +449,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.7.2-r0
+
+  - id: CGA-p2jh-r37c-g647
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-15T06:37:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sigstore-scaffolding-trillian-updatetree
+            componentID: 6afc6118b001401e
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/ctlog-verifyfulcio
+            scanner: grype
+      - timestamp: 2025-06-15T19:04:23Z
+        type: fixed
+        data:
+          fixed-version: 0.7.23-r2
 
   - id: CGA-vqg8-r9jc-m353
     aliases:

@@ -4,6 +4,28 @@ package:
   name: docker-cli
 
 advisories:
+  - id: CGA-23fw-2whw-3f6p
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T20:57:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-cli
+            componentID: 10a9e6027a9deb8d
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/docker
+            scanner: grype
+      - timestamp: 2025-06-15T05:49:40Z
+        type: fixed
+        data:
+          fixed-version: 28.2.2-r1
+
   - id: CGA-3p92-rwjg-cp8q
     aliases:
       - CVE-2023-45288
@@ -105,6 +127,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 24.0.6-r2
+
+  - id: CGA-g72f-9pf3-3v82
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T20:57:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-cli
+            componentID: 10a9e6027a9deb8d
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/docker
+            scanner: grype
+      - timestamp: 2025-06-15T05:49:41Z
+        type: fixed
+        data:
+          fixed-version: 28.2.2-r1
 
   - id: CGA-h8cf-v85j-mv92
     aliases:

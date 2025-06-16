@@ -4,6 +4,28 @@ package:
   name: speedtest-go
 
 advisories:
+  - id: CGA-2266-g476-pg56
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T11:30:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: speedtest-go
+            componentID: 8ff99767ddc18895
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/speedtest-go
+            scanner: grype
+      - timestamp: 2025-06-14T18:38:47Z
+        type: fixed
+        data:
+          fixed-version: 1.7.10-r4
+
   - id: CGA-282x-6j5x-7mw8
     aliases:
       - CVE-2023-45289
@@ -33,6 +55,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.6.10-r1
+
+  - id: CGA-54w8-5cxp-7f43
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T11:30:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: speedtest-go
+            componentID: 8ff99767ddc18895
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/speedtest-go
+            scanner: grype
+      - timestamp: 2025-06-14T18:38:48Z
+        type: fixed
+        data:
+          fixed-version: 1.7.10-r4
 
   - id: CGA-6fjc-jx9r-fcr2
     aliases:

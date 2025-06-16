@@ -4,6 +4,32 @@ package:
   name: terraform-provider-time
 
 advisories:
+  - id: CGA-438r-84qx-xvch
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-15T01:09:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-time
+            componentID: 9770d8eb01058859
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-time
+            scanner: grype
+      - timestamp: 2025-06-15T09:18:56Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in terraform-provider-time-0.13.1-r0.apk, at usr/bin/terraform-provider-time, usr/bin/terraform-provider-time.'
+      - timestamp: 2025-06-15T11:50:31Z
+        type: fixed
+        data:
+          fixed-version: 0.13.1-r1
+
   - id: CGA-84wg-wvvh-qj6r
     aliases:
       - CVE-2025-22871
@@ -47,6 +73,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.13.0-r3
+
+  - id: CGA-g7f9-rxc3-x38r
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-15T01:09:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-time
+            componentID: 9770d8eb01058859
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-time
+            scanner: grype
+      - timestamp: 2025-06-15T11:50:32Z
+        type: fixed
+        data:
+          fixed-version: 0.13.1-r1
 
   - id: CGA-x9gr-7r29-24qp
     aliases:

@@ -23,3 +23,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 9.15.0-r0
+
+  - id: CGA-xc8g-m7h6-2rp6
+    aliases:
+      - CVE-2025-5889
+      - GHSA-v6h2-p8h4-qcjw
+    events:
+      - timestamp: 2025-06-12T07:51:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: eslint
+            componentID: 7a4d1bfbc46f20e6
+            componentName: brace-expansion
+            componentVersion: 1.1.11
+            componentType: npm
+            componentLocation: /usr/lib/node_modules/eslint/node_modules/brace-expansion/package.json
+            scanner: grype
+      - timestamp: 2025-06-13T19:28:22Z
+        type: fixed
+        data:
+          fixed-version: 9.29.0-r0

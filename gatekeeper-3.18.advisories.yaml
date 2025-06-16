@@ -92,6 +92,28 @@ advisories:
         data:
           fixed-version: 3.18.2-r8
 
+  - id: CGA-m6jc-76qc-px2c
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T17:12:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.18
+            componentID: 4174a68853f715fc
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/gator
+            scanner: grype
+      - timestamp: 2025-06-15T07:34:41Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in gatekeeper-3.18-3.18.3-r2.apk, at usr/bin/manager, usr/bin/manager; in gatekeeper-3.18-gator-3.18.3-r2.apk, at usr/bin/gator, usr/bin/gator.'
+
   - id: CGA-ppqf-5qr9-qp2g
     aliases:
       - CVE-2025-22871
@@ -156,6 +178,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.18.3-r1
+
+  - id: CGA-r4qm-5mhw-q39h
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T17:12:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.18
+            componentID: 4174a68853f715fc
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/gator
+            scanner: grype
 
   - id: CGA-r5jm-464w-x2m6
     aliases:

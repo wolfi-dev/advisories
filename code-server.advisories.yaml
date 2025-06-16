@@ -708,3 +708,43 @@ advisories:
         data:
           type: component-vulnerability-mismatch
           note: The finding is part of a VS Code extension definition, not an actual runtime dependency of code-server. The vulnerable package is not installed or used by the application.
+
+  - id: CGA-x49c-f2g9-2gqg
+    aliases:
+      - CVE-2025-5889
+      - GHSA-v6h2-p8h4-qcjw
+    events:
+      - timestamp: 2025-06-12T07:11:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: code-server
+            componentID: 53a846459b986f53
+            componentName: brace-expansion
+            componentVersion: 1.1.11
+            componentType: npm
+            componentLocation: /usr/lib/code-server/node_modules/brace-expansion/package.json
+            scanner: grype
+
+  - id: CGA-xhg7-mxhr-f279
+    aliases:
+      - CVE-2025-48387
+      - GHSA-8cj5-5rvv-wf4v
+    events:
+      - timestamp: 2025-06-05T07:08:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: code-server
+            componentID: a066fb671d321aa7
+            componentName: tar-fs
+            componentVersion: 2.1.2
+            componentType: npm
+            componentLocation: /usr/lib/code-server/lib/vscode/node_modules/tar-fs/package.json
+            scanner: grype
+      - timestamp: 2025-06-10T00:05:29Z
+        type: pending-upstream-fix
+        data:
+          note: The dependency tar-fs is a transitive dependency that is brought in via vscode, a release of vscode containing the fix version is required.

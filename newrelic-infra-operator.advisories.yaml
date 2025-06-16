@@ -15,6 +15,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-63qj-7g57-rr5w
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T18:27:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: newrelic-infra-operator
+            componentID: d2ccdd481c2cfbd7
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/newrelic-infra-operator
+            scanner: grype
+      - timestamp: 2025-06-15T03:31:25Z
+        type: fixed
+        data:
+          fixed-version: 0.22.1-r1
+
   - id: CGA-7pwx-34q6-rfh5
     aliases:
       - CVE-2024-24787
@@ -130,6 +152,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.18.0-r1
+
+  - id: CGA-gxh2-9qpg-7rpf
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T18:27:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: newrelic-infra-operator
+            componentID: d2ccdd481c2cfbd7
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/newrelic-infra-operator
+            scanner: grype
+      - timestamp: 2025-06-15T03:31:26Z
+        type: fixed
+        data:
+          fixed-version: 0.22.1-r1
 
   - id: CGA-hpqv-jpqf-m35g
     aliases:

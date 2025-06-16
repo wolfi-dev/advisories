@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: loki-3.5
+
+advisories:
+  - id: CGA-jr4p-4c73-8wp4
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T13:21:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: loki-3.5
+            componentID: 9f10b9fe51a89750
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/logcli
+            scanner: grype
+      - timestamp: 2025-06-14T21:34:52Z
+        type: fixed
+        data:
+          fixed-version: 3.5.1-r1
+
+  - id: CGA-rmmw-9g6p-33xf
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T13:21:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: loki-3.5
+            componentID: 9f10b9fe51a89750
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/logcli
+            scanner: grype
+      - timestamp: 2025-06-14T21:34:53Z
+        type: fixed
+        data:
+          fixed-version: 3.5.1-r1

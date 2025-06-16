@@ -238,6 +238,27 @@ advisories:
         data:
           fixed-version: 3.0.0_beta5-r1
 
+  - id: CGA-c46f-pmv3-mph9
+    aliases:
+      - GHSA-2x5j-vhc8-9cwm
+    events:
+      - timestamp: 2025-06-11T07:36:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitness
+            componentID: 637b5493a934bef7
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.6.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitness
+            scanner: grype
+      - timestamp: 2025-06-13T10:54:31Z
+        type: fixed
+        data:
+          fixed-version: 3.2.0-r1
+
   - id: CGA-g29m-4qpr-8r75
     aliases:
       - CVE-2024-45336
@@ -586,6 +607,10 @@ advisories:
         type: pending-upstream-fix
         data:
           note: The dependency causing this CVE, golang-jwt/jwt v3.2.2, is brought in via the project's main go.mod. Due to functional changes required to move away from v3 to v4/v5, upstream maintainers are required to implement.
+      - timestamp: 2025-06-13T10:13:41Z
+        type: pending-upstream-fix
+        data:
+          note: gitness directly depends on github.com/golang-jwt/jwt v3, upstream needs to migrate to v4 or v5
 
   - id: CGA-w6c7-ch77-gcrc
     aliases:

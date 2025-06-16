@@ -451,6 +451,24 @@ advisories:
         data:
           fixed-version: 8.17.3-r2
 
+  - id: CGA-j3jx-4877-wjv2
+    aliases:
+      - CVE-2025-27817
+      - GHSA-vgq5-3255-v292
+    events:
+      - timestamp: 2025-06-11T08:37:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-8
+            componentID: 2d6fbb4ca60d6ee0
+            componentName: kafka-clients
+            componentVersion: 3.8.1
+            componentType: java-archive
+            componentLocation: /opt/bitnami/logstash/vendor/bundle/jruby/3.1.0/gems/logstash-integration-kafka-11.6.0-java/vendor/jar-dependencies/org/apache/kafka/kafka-clients/3.8.1/kafka-clients-3.8.1.jar
+            scanner: grype
+
   - id: CGA-mhwq-rjrc-rv9h
     aliases:
       - CVE-2025-25193
@@ -516,6 +534,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 8.17.2-r1
+
+  - id: CGA-vgx3-jm67-mmpv
+    aliases:
+      - CVE-2025-49007
+      - GHSA-47m2-26rw-j2jw
+    events:
+      - timestamp: 2025-06-06T08:03:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-8
+            componentID: ba6aab2155920826
+            componentName: rack
+            componentVersion: 3.1.14
+            componentType: gem
+            componentLocation: /opt/bitnami/logstash/vendor/bundle/jruby/3.1.0/specifications/rack-3.1.14.gemspec
+            scanner: grype
+      - timestamp: 2025-06-11T18:03:19Z
+        type: fixed
+        data:
+          fixed-version: 8.18.2-r1
 
   - id: CGA-wq37-vqpf-p8j4
     aliases:

@@ -70,6 +70,28 @@ advisories:
         data:
           note: 'Affected Go 1.20.x version can not be updated to fix version due to upstream version pinning: https://github.com/newrelic/newrelic-fluent-bit-output/blob/5854a3f3cffc49f251c9ef15bec714e44e7969a8/go.mod#L3 which directs to the following conversation: https://github.com/golang/go/issues/62130#issuecomment-1687335898'
 
+  - id: CGA-36cp-6mv9-crxq
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T11:18:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: newrelic-fluent-bit-output
+            componentID: 2fcb1dbe758f4648
+            componentName: stdlib
+            componentVersion: go1.20.14
+            componentType: go-module
+            componentLocation: /fluent-bit/bin/out_newrelic.so
+            scanner: grype
+      - timestamp: 2025-06-15T07:10:49Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in newrelic-fluent-bit-output-2.4.0-r0.apk, at fluent-bit/bin/out_newrelic.so, fluent-bit/bin/out_newrelic.so.'
+
   - id: CGA-3fw9-g448-cq83
     aliases:
       - CVE-2023-45289
@@ -384,6 +406,24 @@ advisories:
         type: pending-upstream-fix
         data:
           note: 'See upstream issue: https://github.com/newrelic/newrelic-fluent-bit-output/pull/144'
+
+  - id: CGA-prcq-q2j6-gv57
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T11:18:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: newrelic-fluent-bit-output
+            componentID: 2fcb1dbe758f4648
+            componentName: stdlib
+            componentVersion: go1.20.14
+            componentType: go-module
+            componentLocation: /fluent-bit/bin/out_newrelic.so
+            scanner: grype
 
   - id: CGA-wgjf-hp76-8hxw
     aliases:

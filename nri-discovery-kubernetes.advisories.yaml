@@ -47,6 +47,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-5x6x-rwpr-fw3j
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T10:19:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-discovery-kubernetes
+            componentID: 54875c77ac3a2808
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/nri-discovery-kubernetes
+            scanner: grype
+      - timestamp: 2025-06-14T16:32:57Z
+        type: fixed
+        data:
+          fixed-version: 1.11.2-r2
+
   - id: CGA-673p-254x-vv9g
     aliases:
       - CVE-2024-24786
@@ -343,6 +365,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.7.2-r2
+
+  - id: CGA-vjp3-f5cm-jmmw
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T10:19:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-discovery-kubernetes
+            componentID: 54875c77ac3a2808
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/nri-discovery-kubernetes
+            scanner: grype
+      - timestamp: 2025-06-14T16:32:58Z
+        type: fixed
+        data:
+          fixed-version: 1.11.2-r2
 
   - id: CGA-wp77-m5q6-c8jr
     aliases:

@@ -4,6 +4,28 @@ package:
   name: cilium-cli
 
 advisories:
+  - id: CGA-35fv-m4hj-j9xx
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T08:05:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-cli
+            componentID: d927771ee2d6eefc
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/cilium
+            scanner: grype
+      - timestamp: 2025-06-14T10:38:59Z
+        type: fixed
+        data:
+          fixed-version: 0.18.4-r1
+
   - id: CGA-3m2p-jhhw-4c89
     aliases:
       - CVE-2024-42486
@@ -138,6 +160,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.16.9-r1
+
+  - id: CGA-9xxg-46rw-77wx
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T08:05:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-cli
+            componentID: d927771ee2d6eefc
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/cilium
+            scanner: grype
+      - timestamp: 2025-06-14T10:39:00Z
+        type: fixed
+        data:
+          fixed-version: 0.18.4-r1
 
   - id: CGA-c7cq-qgm3-3r6q
     aliases:

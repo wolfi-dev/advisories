@@ -25,3 +25,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 2025.4.3-r1
+
+  - id: CGA-jgvj-g2p4-w9wq
+    aliases:
+      - CVE-2024-47081
+      - GHSA-9hjg-9r4m-mvj7
+    events:
+      - timestamp: 2025-06-10T08:52:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dask-kubernetes
+            componentID: 7e0eeae7920d8379
+            componentName: requests
+            componentVersion: 2.32.3
+            componentType: python
+            componentLocation: /usr/share/dask-kubernetes/lib/python3.10/site-packages/requests-2.32.3.dist-info/METADATA, /usr/share/dask-kubernetes/lib/python3.10/site-packages/requests-2.32.3.dist-info/RECORD, /usr/share/dask-kubernetes/lib/python3.10/site-packages/requests-2.32.3.dist-info/top_level.txt
+            scanner: grype
+      - timestamp: 2025-06-12T23:13:49Z
+        type: fixed
+        data:
+          fixed-version: 2025.4.3-r2

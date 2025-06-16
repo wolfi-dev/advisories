@@ -63,6 +63,28 @@ advisories:
         data:
           fixed-version: 3.0.6-r1
 
+  - id: CGA-6xmr-f935-3957
+    aliases:
+      - CVE-2025-27817
+      - GHSA-vgq5-3255-v292
+    events:
+      - timestamp: 2025-06-11T07:03:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apicurio-registry
+            componentID: e4ccc1b8dacb84d6
+            componentName: kafka-clients
+            componentVersion: 3.7.1
+            componentType: java-archive
+            componentLocation: /usr/share/java/apicurio-registry/lib/modified-org.apache.kafka.kafka-clients-3.7.1.jar
+            scanner: grype
+      - timestamp: 2025-06-11T08:57:28Z
+        type: fixed
+        data:
+          fixed-version: 3.0.9-r1
+
   - id: CGA-6xxq-cf3f-jrfr
     aliases:
       - CVE-2025-24970
@@ -336,3 +358,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.0.6-r2
+
+  - id: CGA-xfr2-3vw3-m45x
+    aliases:
+      - CVE-2025-49146
+      - GHSA-hq9p-pm7w-8p54
+    events:
+      - timestamp: 2025-06-12T07:14:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apicurio-registry
+            componentID: 4880bb8967296ca3
+            componentName: postgresql
+            componentVersion: 42.7.4
+            componentType: java-archive
+            componentLocation: /usr/share/java/apicurio-registry/lib/org.postgresql.postgresql-42.7.4.jar
+            scanner: grype
+      - timestamp: 2025-06-13T09:16:02Z
+        type: fixed
+        data:
+          fixed-version: 3.0.9-r2

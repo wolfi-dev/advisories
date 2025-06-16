@@ -78,6 +78,28 @@ advisories:
         data:
           fixed-version: 2.22.0-r2
 
+  - id: CGA-4754-mrr3-695h
+    aliases:
+      - CVE-2024-47081
+      - GHSA-9hjg-9r4m-mvj7
+    events:
+      - timestamp: 2025-06-10T08:24:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mlflow
+            componentID: 538440fd4caa868e
+            componentName: requests
+            componentVersion: 2.32.3
+            componentType: python
+            componentLocation: /usr/share/mlflow/lib/python3.13/site-packages/requests-2.32.3.dist-info/METADATA, /usr/share/mlflow/lib/python3.13/site-packages/requests-2.32.3.dist-info/RECORD, /usr/share/mlflow/lib/python3.13/site-packages/requests-2.32.3.dist-info/top_level.txt
+            scanner: grype
+      - timestamp: 2025-06-13T02:03:03Z
+        type: fixed
+        data:
+          fixed-version: 3.1.0-r0
+
   - id: CGA-5qqw-78qf-xfwg
     aliases:
       - CVE-2024-49767

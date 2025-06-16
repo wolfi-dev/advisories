@@ -680,6 +680,28 @@ advisories:
         data:
           fixed-version: 26.0.8-r0
 
+  - id: CGA-rg96-8wqp-hjqc
+    aliases:
+      - CVE-2025-49146
+      - GHSA-hq9p-pm7w-8p54
+    events:
+      - timestamp: 2025-06-12T07:12:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak
+            componentID: 2872641fcf490096
+            componentName: postgresql
+            componentVersion: 42.7.5
+            componentType: java-archive
+            componentLocation: /opt/bitnami/keycloak/lib/lib/main/org.postgresql.postgresql-42.7.5.jar
+            scanner: grype
+      - timestamp: 2025-06-13T09:17:13Z
+        type: fixed
+        data:
+          fixed-version: 26.2.5-r2
+
   - id: CGA-rp29-pprx-g77p
     aliases:
       - GHSA-389x-839f-4rhx

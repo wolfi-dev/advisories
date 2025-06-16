@@ -75,6 +75,28 @@ advisories:
         data:
           fixed-version: 9.6.15-r1
 
+  - id: CGA-5c7r-f48m-qfq7
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T10:25:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: croc
+            componentID: c2446774daaf45c9
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/croc
+            scanner: grype
+      - timestamp: 2025-06-15T07:17:58Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in croc-10.2.2-r2.apk, at usr/bin/croc, usr/bin/croc.'
+
   - id: CGA-5xg2-vfpw-9qpv
     aliases:
       - CVE-2024-34158
@@ -146,6 +168,24 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CGA-9823-2524-hh6p
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T10:25:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: croc
+            componentID: c2446774daaf45c9
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/croc
+            scanner: grype
 
   - id: CGA-9wqq-5wpg-xm6h
     aliases:

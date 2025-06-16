@@ -84,6 +84,24 @@ advisories:
         data:
           fixed-version: 1.14.4-r1
 
+  - id: CGA-j39c-3qw9-r4xw
+    aliases:
+      - CVE-2025-48432
+      - GHSA-7xr5-9hcq-chf9
+    events:
+      - timestamp: 2025-06-07T07:12:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-oncall
+            componentID: 7059f9a6dcb30f28
+            componentName: django
+            componentVersion: 4.2.21
+            componentType: python
+            componentLocation: /usr/share/grafana-oncall/.venv/lib/python3.12/site-packages/django-4.2.21.dist-info/METADATA, /usr/share/grafana-oncall/.venv/lib/python3.12/site-packages/django-4.2.21.dist-info/RECORD, /usr/share/grafana-oncall/.venv/lib/python3.12/site-packages/django-4.2.21.dist-info/top_level.txt
+            scanner: grype
+
   - id: CGA-rprf-m72h-pcfg
     aliases:
       - CVE-2025-32873
@@ -105,3 +123,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.16.1-r0
+
+  - id: CGA-vmhc-65h4-42pm
+    aliases:
+      - CVE-2024-47081
+      - GHSA-9hjg-9r4m-mvj7
+    events:
+      - timestamp: 2025-06-10T07:31:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-oncall
+            componentID: 8e034f53f97d72b3
+            componentName: requests
+            componentVersion: 2.32.3
+            componentType: python
+            componentLocation: /usr/share/grafana-oncall/.venv/lib/python3.12/site-packages/pip/_vendor/vendor.txt
+            scanner: grype

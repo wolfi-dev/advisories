@@ -14,6 +14,28 @@ advisories:
         data:
           fixed-version: 1.5.1-r1
 
+  - id: CGA-2p2f-427c-6hmm
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T18:32:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flannel-cni-plugin
+            componentID: e61d7e4c7c85a44b
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/flannel
+            scanner: grype
+      - timestamp: 2025-06-15T03:44:38Z
+        type: fixed
+        data:
+          fixed-version: 1.7.1-r1
+
   - id: CGA-433g-6943-hcqm
     aliases:
       - CVE-2023-45288
@@ -203,6 +225,28 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CGA-q4gr-39v5-8m23
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T18:32:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flannel-cni-plugin
+            componentID: e61d7e4c7c85a44b
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/flannel
+            scanner: grype
+      - timestamp: 2025-06-15T03:44:39Z
+        type: fixed
+        data:
+          fixed-version: 1.7.1-r1
 
   - id: CGA-q75g-wr36-93q9
     aliases:

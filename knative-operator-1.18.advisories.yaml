@@ -1,0 +1,31 @@
+schema-version: 2.0.2
+
+package:
+  name: knative-operator-1.18
+
+advisories:
+  - id: CGA-9x3p-xm8q-hmvx
+    aliases:
+      - CVE-2025-22868
+      - GHSA-3wqc-mwfx-672p
+    events:
+      - timestamp: 2025-06-12T01:03:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: knative-operator-1.18
+            componentID: caf8d678941bf056
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.26.0
+            componentType: go-module
+            componentLocation: /usr/bin/webhook
+            scanner: grype
+      - timestamp: 2025-06-12T02:28:03Z
+        type: fixed
+        data:
+          fixed-version: 1.18.1-r1
+      - timestamp: 2025-06-12T03:42:24Z
+        type: fixed
+        data:
+          fixed-version: 1.18.1-r2

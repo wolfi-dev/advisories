@@ -4,6 +4,28 @@ package:
   name: cert-manager-istio-csr
 
 advisories:
+  - id: CGA-47qx-8685-rqgw
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T07:13:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-manager-istio-csr
+            componentID: acc90888334cb48e
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/cmd
+            scanner: grype
+      - timestamp: 2025-06-14T08:55:57Z
+        type: fixed
+        data:
+          fixed-version: 0.14.1-r1
+
   - id: CGA-5c45-prq2-g25c
     aliases:
       - GHSA-r4pg-vg54-wxx4
@@ -246,6 +268,28 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: 'The upstream project ignored the vulnerability since they import non-tagged versions in go.mod, for more information see: https://github.com/cert-manager/istio-csr/pull/344/files.'
+
+  - id: CGA-q88m-89v5-hj4w
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T07:13:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-manager-istio-csr
+            componentID: acc90888334cb48e
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/cmd
+            scanner: grype
+      - timestamp: 2025-06-14T08:55:57Z
+        type: fixed
+        data:
+          fixed-version: 0.14.1-r1
 
   - id: CGA-qhh9-4xcv-c4rh
     aliases:

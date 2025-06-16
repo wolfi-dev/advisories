@@ -98,6 +98,28 @@ advisories:
         data:
           fixed-version: 5.1.0-r1
 
+  - id: CGA-6x4v-h259-m83x
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T08:34:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-provisioner
+            componentID: 932aa3e246c9ae96
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/csi-provisioner
+            scanner: grype
+      - timestamp: 2025-06-15T07:07:00Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in kubernetes-csi-external-provisioner-5.3.0-r0.apk, at usr/bin/csi-provisioner, usr/bin/csi-provisioner.'
+
   - id: CGA-785f-6j8q-pxm4
     aliases:
       - CVE-2024-24788
@@ -107,6 +129,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 4.0.1-r2
+
+  - id: CGA-7rp4-fgqf-gqhh
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T08:34:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-provisioner
+            componentID: 932aa3e246c9ae96
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/csi-provisioner
+            scanner: grype
 
   - id: CGA-8h7f-wfwc-5g39
     aliases:

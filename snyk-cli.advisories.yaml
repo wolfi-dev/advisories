@@ -47,6 +47,27 @@ advisories:
         data:
           fixed-version: 1.1291.1-r2
 
+  - id: CGA-3p6f-m863-c758
+    aliases:
+      - GHSA-2x5j-vhc8-9cwm
+    events:
+      - timestamp: 2025-06-11T09:49:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: snyk-cli
+            componentID: 199583594c5292f3
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.6.0
+            componentType: go-module
+            componentLocation: /usr/bin/snyk
+            scanner: grype
+      - timestamp: 2025-06-13T09:14:26Z
+        type: fixed
+        data:
+          fixed-version: 1.1297.1-r1
+
   - id: CGA-463c-6ppm-cjf8
     aliases:
       - CVE-2024-24791
@@ -336,6 +357,10 @@ advisories:
         type: true-positive-determination
         data:
           note: Unable to use govulncheck to triage this advisory because the vulnerability was not found in the Go vuln DB. Treating as a true positive since we can't confirm this is a false positive.
+      - timestamp: 2025-06-13T09:14:27Z
+        type: fixed
+        data:
+          fixed-version: 1.1297.1-r1
 
   - id: CGA-qqrg-mw25-v2v5
     aliases:

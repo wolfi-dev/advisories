@@ -4,6 +4,28 @@ package:
   name: apache-nifi-registry
 
 advisories:
+  - id: CGA-4m66-858p-cx2p
+    aliases:
+      - CVE-2025-41234
+      - GHSA-6r3c-xf4w-jxjm
+    events:
+      - timestamp: 2025-06-14T08:49:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi-registry
+            componentID: aa330053b48f94ea
+            componentName: spring-web
+            componentVersion: 6.2.6
+            componentType: java-archive
+            componentLocation: /opt/nifi-registry/nifi-toolkit-registry-2.4.0/nifi-registry-toolkit-2.4.0/lib/spring-web-6.2.6.jar
+            scanner: grype
+      - timestamp: 2025-06-14T13:22:10Z
+        type: fixed
+        data:
+          fixed-version: 2.4.0-r3
+
   - id: CGA-cwq3-w8fh-cpjm
     aliases:
       - CVE-2025-22233

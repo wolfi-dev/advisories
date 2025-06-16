@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: py3-requests
+
+advisories:
+  - id: CGA-892p-h54v-f7fc
+    aliases:
+      - CVE-2024-47081
+      - GHSA-9hjg-9r4m-mvj7
+    events:
+      - timestamp: 2025-06-10T09:04:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3.13-requests
+            componentID: d5399d4e042ddb76
+            componentName: requests
+            componentVersion: 2.32.3
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/requests-2.32.3.dist-info/METADATA, /usr/lib/python3.10/site-packages/requests-2.32.3.dist-info/RECORD, /usr/lib/python3.10/site-packages/requests-2.32.3.dist-info/direct_url.json, /usr/lib/python3.10/site-packages/requests-2.32.3.dist-info/top_level.txt
+            scanner: grype
+      - timestamp: 2025-06-10T21:12:00Z
+        type: fixed
+        data:
+          fixed-version: 2.32.4-r0

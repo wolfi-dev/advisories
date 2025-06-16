@@ -36,6 +36,31 @@ advisories:
         data:
           fixed-version: 3.96.0-r0
 
+  - id: CGA-3prq-2gpr-2hv8
+    aliases:
+      - GHSA-2x5j-vhc8-9cwm
+    events:
+      - timestamp: 2025-06-11T08:44:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-azurerm
+            componentID: 20b9739611adb280
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.3.7
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-azurerm
+            scanner: grype
+      - timestamp: 2025-06-11T10:36:28Z
+        type: true-positive-determination
+        data:
+          note: Unable to use govulncheck to triage this advisory because the vulnerability was not found in the Go vuln DB. Treating as a true positive since we can't confirm this is a false positive.
+      - timestamp: 2025-06-11T10:42:43Z
+        type: fixed
+        data:
+          fixed-version: 4.32.0-r1
+
   - id: CGA-67x2-5g2x-9pvm
     aliases:
       - CVE-2024-45337

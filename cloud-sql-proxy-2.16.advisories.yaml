@@ -1,0 +1,45 @@
+schema-version: 2.0.2
+
+package:
+  name: cloud-sql-proxy-2.16
+
+advisories:
+  - id: CGA-8p8v-3jqx-3v32
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T08:20:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-sql-proxy-2.16
+            componentID: eda5f7e3dd6e6a9a
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/cloud-sql-proxy
+            scanner: grype
+      - timestamp: 2025-06-15T07:10:18Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in cloud-sql-proxy-2.16-2.16.0-r2.apk, at usr/bin/cloud-sql-proxy, usr/bin/cloud-sql-proxy.'
+
+  - id: CGA-p7h5-85gv-22mr
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T08:20:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-sql-proxy-2.16
+            componentID: eda5f7e3dd6e6a9a
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/cloud-sql-proxy
+            scanner: grype

@@ -238,6 +238,32 @@ advisories:
         data:
           fixed-version: 0.14.9-r8
 
+  - id: CGA-mjxf-8mwh-cw2j
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-15T04:26:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: metallb
+            componentID: 51c52ff5e01bd01c
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /frr-metrics
+            scanner: grype
+      - timestamp: 2025-06-15T08:03:11Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in metallb-0.15.2-r0.apk, at usr/bin/metallb-controller, usr/bin/metallb-controller, usr/bin/metallb-frr-metrics, usr/bin/metallb-frr-metrics, usr/bin/metallb-speaker, usr/bin/metallb-speaker; in metallb-controller-0.15.2-r0.apk, at usr/bin/metallb-controller, usr/bin/metallb-controller; in metallb-frr-0.15.2-r0.apk, at usr/bin/metallb-frr-metrics, usr/bin/metallb-frr-metrics; in metallb-frr-compat-0.15.2-r0.apk, at frr-metrics, frr-metrics; in metallb-speaker-0.15.2-r0.apk, at usr/bin/metallb-speaker, usr/bin/metallb-speaker.'
+      - timestamp: 2025-06-15T16:02:54Z
+        type: fixed
+        data:
+          fixed-version: 0.15.2-r1
+
   - id: CGA-mmm9-j55x-mfwq
     aliases:
       - CVE-2024-34155
@@ -312,6 +338,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.14.9-r3
+
+  - id: CGA-w2w3-444r-fwfm
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-15T04:26:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: metallb
+            componentID: 51c52ff5e01bd01c
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /frr-metrics
+            scanner: grype
+      - timestamp: 2025-06-15T16:02:55Z
+        type: fixed
+        data:
+          fixed-version: 0.15.2-r1
 
   - id: CGA-wpg9-xcwr-2c5g
     aliases:

@@ -121,3 +121,25 @@ advisories:
         type: pending-upstream-fix
         data:
           note: 'octokit/plugin-paginate-rest @ 6.1.2 is a direct dependency of prism, the fix versions of this dependency are several major versions higher (v9.2.2 or v11.4.1) and will require upstream maintainers to implement. '
+
+  - id: CGA-xmhx-7mp3-8m9g
+    aliases:
+      - CVE-2025-5889
+      - GHSA-v6h2-p8h4-qcjw
+    events:
+      - timestamp: 2025-06-11T07:23:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prism
+            componentID: 6f884ba61caa1a49
+            componentName: brace-expansion
+            componentVersion: 2.0.1
+            componentType: npm
+            componentLocation: /usr/src/prism/node_modules/brace-expansion/package.json
+            scanner: grype
+      - timestamp: 2025-06-13T18:57:28Z
+        type: fixed
+        data:
+          fixed-version: 5.14.2-r2

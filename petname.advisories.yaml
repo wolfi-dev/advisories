@@ -255,6 +255,28 @@ advisories:
         data:
           fixed-version: 2.11-r10
 
+  - id: CGA-rhr9-g78f-j4cg
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T21:27:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: petname
+            componentID: dbbdb45a0888af8e
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/petname
+            scanner: grype
+      - timestamp: 2025-06-15T06:49:59Z
+        type: fixed
+        data:
+          fixed-version: 2.11-r14
+
   - id: CGA-v4p7-42q4-5jj8
     aliases:
       - CVE-2023-45288
@@ -285,3 +307,25 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CGA-ww36-pmgc-9hmm
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T21:27:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: petname
+            componentID: dbbdb45a0888af8e
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/petname
+            scanner: grype
+      - timestamp: 2025-06-15T06:50:00Z
+        type: fixed
+        data:
+          fixed-version: 2.11-r14

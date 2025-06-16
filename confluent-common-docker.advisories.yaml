@@ -98,6 +98,28 @@ advisories:
         data:
           note: The commons-io dependency is a transitive dependency that is being brought in under docker-utils-jar-with-dependencies.jar and this must be updated by upstream maintainers.
 
+  - id: CGA-g5fj-8vv2-vjwj
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T08:16:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: confluent-common-docker-ub
+            componentID: f51ff11dbad5ae26
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/ub
+            scanner: grype
+      - timestamp: 2025-06-14T11:42:50Z
+        type: fixed
+        data:
+          fixed-version: 7.6.0-r14
+
   - id: CGA-gw4m-4mj9-6g69
     aliases:
       - CVE-2024-23944
@@ -119,6 +141,28 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Confluent should publish the latest version of common package to their maven repository. They do not have any jars/poms past 7.6.x but they have 7.7.x tags in their GitHub repository.
+
+  - id: CGA-gxxm-vg6h-vr8g
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T08:16:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: confluent-common-docker-ub
+            componentID: f51ff11dbad5ae26
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/ub
+            scanner: grype
+      - timestamp: 2025-06-14T11:42:50Z
+        type: fixed
+        data:
+          fixed-version: 7.6.0-r14
 
   - id: CGA-hvjq-2w6x-w9vx
     aliases:
