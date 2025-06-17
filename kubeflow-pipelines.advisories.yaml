@@ -498,6 +498,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-c739-mjf2-g6c3
+    aliases:
+      - CVE-2025-4565
+      - GHSA-8qvm-5x2c-j2w7
+    events:
+      - timestamp: 2025-06-17T07:18:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-apiserver
+            componentID: 068c29c2e8b9dc6d
+            componentName: protobuf
+            componentVersion: 3.20.3
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/protobuf-3.20.3.dist-info/METADATA, /usr/lib/python3.10/site-packages/protobuf-3.20.3.dist-info/RECORD, /usr/lib/python3.10/site-packages/protobuf-3.20.3.dist-info/top_level.txt
+            scanner: grype
+
   - id: CGA-cfp4-m4j7-wpm6
     aliases:
       - CVE-2025-32996
@@ -1402,6 +1420,11 @@ advisories:
             componentType: python
             componentLocation: /usr/lib/python3.10/site-packages/requests-2.32.0.dist-info/METADATA, /usr/lib/python3.10/site-packages/requests-2.32.0.dist-info/RECORD, /usr/lib/python3.10/site-packages/requests-2.32.0.dist-info/top_level.txt
             scanner: grype
+      - timestamp: 2025-06-13T01:02:08Z
+        type: false-positive-determination
+        data:
+          type: inline-mitigations-exist
+          note: py3-pip installs a patched version of 2.32.3 requests.py which contains the upstream fix for CVE-2024-47081, reference https://github.com/wolfi-dev/os/pull/55998/files. The version referenced in the vendor.txt is not vulnerable
 
   - id: CGA-xh7w-622r-w594
     aliases:
