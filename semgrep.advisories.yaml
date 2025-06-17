@@ -25,3 +25,8 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.125.0-r0
+      - timestamp: 2025-06-13T01:02:08Z
+        type: false-positive-determination
+        data:
+          type: inline-mitigations-exist
+          note: py3-pip installs a patched version of 2.32.3 requests.py which contains the upstream fix for CVE-2024-47081, reference https://github.com/wolfi-dev/os/pull/55998/files. The version referenced in the vendor.txt is not vulnerable

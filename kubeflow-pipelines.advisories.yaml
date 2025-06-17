@@ -1420,6 +1420,11 @@ advisories:
             componentType: python
             componentLocation: /usr/lib/python3.10/site-packages/requests-2.32.0.dist-info/METADATA, /usr/lib/python3.10/site-packages/requests-2.32.0.dist-info/RECORD, /usr/lib/python3.10/site-packages/requests-2.32.0.dist-info/top_level.txt
             scanner: grype
+      - timestamp: 2025-06-13T01:02:08Z
+        type: false-positive-determination
+        data:
+          type: inline-mitigations-exist
+          note: py3-pip installs a patched version of 2.32.3 requests.py which contains the upstream fix for CVE-2024-47081, reference https://github.com/wolfi-dev/os/pull/55998/files. The version referenced in the vendor.txt is not vulnerable
 
   - id: CGA-xh7w-622r-w594
     aliases:
