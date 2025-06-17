@@ -25,6 +25,10 @@ advisories:
         type: true-positive-determination
         data:
           note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in pgpool2_exporter-1.2.2-r2.apk, at usr/bin/pgpool2_exporter, usr/bin/pgpool2_exporter.'
+      - timestamp: 2025-06-17T13:14:37Z
+        type: fixed
+        data:
+          fixed-version: 1.2.2-r3
 
   - id: CGA-7243-xvmm-95x8
     aliases:
@@ -65,3 +69,8 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/pgpool2_exporter
             scanner: grype
+      - timestamp: 2025-06-16T08:13:06Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.

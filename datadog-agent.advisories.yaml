@@ -319,6 +319,24 @@ advisories:
         data:
           fixed-version: 7.56.0-r0
 
+  - id: CGA-7wrx-mqfg-266q
+    aliases:
+      - CVE-2025-4565
+      - GHSA-8qvm-5x2c-j2w7
+    events:
+      - timestamp: 2025-06-17T07:08:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: datadog-agent-core-integrations
+            componentID: 816c90730cc0a338
+            componentName: protobuf
+            componentVersion: 5.29.3
+            componentType: python
+            componentLocation: /opt/datadog-agent/embedded/lib/python3.12/site-packages/protobuf-5.29.3.dist-info/METADATA, /opt/datadog-agent/embedded/lib/python3.12/site-packages/protobuf-5.29.3.dist-info/RECORD, /opt/datadog-agent/embedded/lib/python3.12/site-packages/protobuf-5.29.3.dist-info/direct_url.json
+            scanner: grype
+
   - id: CGA-94j3-xw25-m3v3
     aliases:
       - CVE-2024-24785
@@ -454,6 +472,10 @@ advisories:
             componentType: go-module
             componentLocation: /opt/datadog-agent/bin/agent/agent
             scanner: grype
+      - timestamp: 2025-06-16T15:51:12Z
+        type: fixed
+        data:
+          fixed-version: 7.66.1-r3
 
   - id: CGA-ccwr-5f2w-9q24
     aliases:
@@ -877,6 +899,15 @@ advisories:
             componentType: python
             componentLocation: /opt/datadog-agent/embedded/lib/python3.12/site-packages/pip/_vendor/vendor.txt
             scanner: grype
+      - timestamp: 2025-06-16T14:44:59Z
+        type: fixed
+        data:
+          fixed-version: 7.66.1-r3
+      - timestamp: 2025-06-13T01:02:08Z
+        type: false-positive-determination
+        data:
+          type: inline-mitigations-exist
+          note: py3-pip installs a patched version of 2.32.3 requests.py which contains the upstream fix for CVE-2024-47081, reference https://github.com/wolfi-dev/os/pull/55998/files. The version referenced in the vendor.txt is not vulnerable
 
   - id: CGA-pxm7-cgj3-254p
     aliases:
