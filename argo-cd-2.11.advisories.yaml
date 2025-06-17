@@ -90,6 +90,23 @@ advisories:
         data:
           note: Any upgrade on the Kubernetes dependencies causes conflicts due to a strict dependency on github.com/argoproj/gitops-engine which supports Kubernetes v1.23 while the non-vulnerable code is on Kubernetes v1.27.13.
 
+  - id: CGA-gqvr-24w7-965x
+    aliases:
+      - CVE-2025-23216
+      - GHSA-47g2-qmh2-749v
+    events:
+      - timestamp: 2025-06-16T21:39:40Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: |-
+            Argoproject has fixed CVE-2025-23216 in the GitOps Engine repository with commit https://github.com/argoproj/gitops-engine/commit/faf5a4e5c37d22fedaa2726b430af5b5ae9e567a.
+            However, a new version tag was never generated and versions of ArgoCD were updated with the specific hash but through "go get github.com/argoproj/gitops-engine@faf5a4e5c37d22fedaa2726b430af5b5ae9e567a" which
+            appends the date + hash on-top of the current version tag, in this case updated v0.7.1-0.20240714153147-adb68bcaab73 to v0.7.1-0.20250129155113-faf5a4e5c37d, which both versions still state v0.7.1 as vulnerable. This is due to
+            a limitation in scanners which utilize the semantic version to determine which versions are vulnerable and fixed. Chainguard has submitted a change request to Github tracking the vulnerablity information https://github.com/github/advisory-database/pull/5689
+            Also have submitted multiple issues with upstream Argoproject/Argo-CD: https://github.com/argoproj/gitops-engine/issues/736 and https://github.com/argoproj/gitops-engine/issues/729 so the Argoproject can address the issue.
+            Argo-CD version 2.11 contains the fix for this CVE as referenced by this version v0.7.1-0.20250129155113-faf5a4e5c37d or later
+
   - id: CGA-mjhh-6qj8-p5gj
     aliases:
       - CVE-2024-5321
