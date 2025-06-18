@@ -908,6 +908,18 @@ advisories:
         data:
           type: inline-mitigations-exist
           note: py3-pip installs a patched version of 2.32.3 requests.py which contains the upstream fix for CVE-2024-47081, reference https://github.com/wolfi-dev/os/pull/55998/files. The version referenced in the vendor.txt is not vulnerable
+      - timestamp: 2025-06-18T07:48:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: datadog-agent-core-integrations
+            componentID: ef20b47ab5cede4c
+            componentName: requests
+            componentVersion: 2.32.3
+            componentType: python
+            componentLocation: /opt/datadog-agent/embedded/lib/python3.12/site-packages/pip/_vendor/vendor.txt
+            scanner: grype
 
   - id: CGA-pxm7-cgj3-254p
     aliases:
