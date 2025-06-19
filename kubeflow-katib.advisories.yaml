@@ -768,3 +768,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.17.0-r6
+
+  - id: CGA-xq4f-8cc2-g52h
+    aliases:
+      - CVE-2025-50182
+      - GHSA-48p4-8xcf-vxj5
+    events:
+      - timestamp: 2025-06-19T07:32:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: katib-suggestion-optuna-enas
+            componentID: e5c95463ace24147
+            componentName: urllib3
+            componentVersion: 1.26.20
+            componentType: python
+            componentLocation: /opt/katib/cmd/earlystopping/medianstop/v1beta1/lib/python3.11/site-packages/pip/_vendor/vendor.txt
+            scanner: grype
