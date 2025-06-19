@@ -253,6 +253,24 @@ advisories:
         data:
           fixed-version: 4.0.2-r2
 
+  - id: CGA-hqgf-934c-m753
+    aliases:
+      - CVE-2025-50182
+      - GHSA-48p4-8xcf-vxj5
+    events:
+      - timestamp: 2025-06-19T08:53:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: superset
+            componentID: a703b0f37edc428c
+            componentName: urllib3
+            componentVersion: 1.26.19
+            componentType: python
+            componentLocation: /usr/share/superset/venv/lib/python3.11/site-packages/urllib3-1.26.19.dist-info/METADATA, /usr/share/superset/venv/lib/python3.11/site-packages/urllib3-1.26.19.dist-info/RECORD, /usr/share/superset/venv/lib/python3.11/site-packages/urllib3-1.26.19.dist-info/top_level.txt
+            scanner: grype
+
   - id: CGA-mggq-f9v6-2jcv
     aliases:
       - CVE-2025-32962
@@ -389,6 +407,24 @@ advisories:
         data:
           type: inline-mitigations-exist
           note: py3-pip installs a patched version of 2.32.3 requests.py which contains the upstream fix for CVE-2024-47081, reference https://github.com/wolfi-dev/os/pull/55998/files. The version referenced in the vendor.txt is not vulnerable
+
+  - id: CGA-xjwc-3hcr-x828
+    aliases:
+      - CVE-2025-50181
+      - GHSA-pq67-6m6q-mj2v
+    events:
+      - timestamp: 2025-06-19T08:53:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: superset
+            componentID: a703b0f37edc428c
+            componentName: urllib3
+            componentVersion: 1.26.19
+            componentType: python
+            componentLocation: /usr/share/superset/venv/lib/python3.11/site-packages/urllib3-1.26.19.dist-info/METADATA, /usr/share/superset/venv/lib/python3.11/site-packages/urllib3-1.26.19.dist-info/RECORD, /usr/share/superset/venv/lib/python3.11/site-packages/urllib3-1.26.19.dist-info/top_level.txt
+            scanner: grype
 
   - id: CGA-xrq9-4hfh-g5jh
     aliases:
