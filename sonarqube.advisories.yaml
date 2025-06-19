@@ -65,6 +65,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/sonarqube/elasticsearch/modules/x-pack-security/json-smart-2.5.1.jar
             scanner: grype
+      - timestamp: 2025-06-19T06:05:06Z
+        type: pending-upstream-fix
+        data:
+          note: 'The dependency causing this CVE, json-smart, is a transitive dependency which has not released a fix version. Due to its transitive nature, a fix requires a release version to be cut and published to the maven repository. '
 
   - id: CGA-7c3h-fr9p-6vxc
     aliases:
@@ -215,6 +219,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/sonarqube/lib/extensions/sonar-iac-plugin-1.47.0.15287.jar
             scanner: grype
+      - timestamp: 2025-06-19T06:05:06Z
+        type: pending-upstream-fix
+        data:
+          note: The commons-beanutil dependency that exists in the sonarqube-10 package is brought in as a transitive dependency from sonar-iac-plugin-1.46.0.15097.jar, sonar-php-plugin-3.45.0.12991.jar, sonar-scanner-engine-shaded-25.5.0.107428-all.jar, and sonar-application-25.5.0.107428.jar . This dependency is not able to be upgraded to a higher version and requires upstream maintainers to implement.
 
   - id: CGA-m2mq-55fc-rm8h
     aliases:
@@ -277,6 +285,12 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/sonarqube/elasticsearch/modules/transport-netty4/netty-handler-4.1.94.Final.jar
             scanner: grype
+      - timestamp: 2025-06-19T06:05:06Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            This is a compiled jar that is brought in as a transitive dependency of elasticsearch dependency.
+            Elasticsearch has been updated to the most recent version and so this requires a fix from upstream maintainers.
 
   - id: CGA-v2f3-7fgr-fwvw
     aliases:
@@ -361,6 +375,11 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/sonarqube/elasticsearch/modules/transport-netty4/netty-common-4.1.94.Final.jar
             scanner: grype
+      - timestamp: 2025-06-19T06:05:06Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-cannot-be-controlled-by-adversary
+          note: Vulnerability affects only Windows systems.
 
   - id: CGA-wp52-8p82-hhcp
     aliases:
