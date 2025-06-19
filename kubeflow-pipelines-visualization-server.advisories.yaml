@@ -52,6 +52,24 @@ advisories:
         data:
           fixed-version: 2.3.0-r5
 
+  - id: CGA-2pj6-88rm-3q3x
+    aliases:
+      - CVE-2025-50181
+      - GHSA-pq67-6m6q-mj2v
+    events:
+      - timestamp: 2025-06-19T08:23:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-visualization-server
+            componentID: 02630fc4e05154b6
+            componentName: urllib3
+            componentVersion: 2.4.0
+            componentType: python
+            componentLocation: /usr/lib/python3.11/site-packages/urllib3-2.4.0.dist-info/METADATA, /usr/lib/python3.11/site-packages/urllib3-2.4.0.dist-info/RECORD
+            scanner: grype
+
   - id: CGA-2pv2-w6q3-fxxh
     aliases:
       - CVE-2023-29483
