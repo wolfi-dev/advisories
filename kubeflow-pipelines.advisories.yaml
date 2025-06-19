@@ -263,6 +263,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability is specific to the k8s server, not the Golang library. This vulnerability is marked as a false positive by the Go team.
 
+  - id: CGA-54xh-6ccp-w8r6
+    aliases:
+      - CVE-2025-50181
+      - GHSA-pq67-6m6q-mj2v
+    events:
+      - timestamp: 2025-06-19T08:09:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-apiserver
+            componentID: c7a49d38a9563e1b
+            componentName: urllib3
+            componentVersion: 1.26.19
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/urllib3-1.26.19.dist-info/METADATA, /usr/lib/python3.10/site-packages/urllib3-1.26.19.dist-info/RECORD, /usr/lib/python3.10/site-packages/urllib3-1.26.19.dist-info/top_level.txt
+            scanner: grype
+
   - id: CGA-56gq-37gw-r4c8
     aliases:
       - CVE-2023-45288
