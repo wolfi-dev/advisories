@@ -27,6 +27,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: CVE-2024-47081 is patched via py3-pip/fix-CVE-2024-47081.patch. The scanner detects requests 2.32.3 in vendor.txt, but the actual vulnerability (using ri.netloc instead of ri.hostname) has been fixed. The patched code uses ri.hostname for netrc lookups, preventing credential leakage.
 
+  - id: CGA-74r6-hcwc-qv43
+    aliases:
+      - CVE-2025-50182
+      - GHSA-48p4-8xcf-vxj5
+    events:
+      - timestamp: 2025-06-19T08:46:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3.13-pip-base
+            componentID: 3944d0b111341e15
+            componentName: urllib3
+            componentVersion: 1.26.20
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/pip/_vendor/vendor.txt
+            scanner: grype
+
   - id: CGA-p6wh-jxvc-2c6c
     aliases:
       - CVE-2025-47273
