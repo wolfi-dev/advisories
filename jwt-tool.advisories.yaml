@@ -4,6 +4,24 @@ package:
   name: jwt-tool
 
 advisories:
+  - id: CGA-4286-5p72-ccc8
+    aliases:
+      - CVE-2025-50182
+      - GHSA-48p4-8xcf-vxj5
+    events:
+      - timestamp: 2025-06-19T08:29:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jwt-tool
+            componentID: 4cdf63a8b6729cf3
+            componentName: urllib3
+            componentVersion: 2.4.0
+            componentType: python
+            componentLocation: /usr/share/app/jwt-tool/.venv/lib/python3.13/site-packages/urllib3-2.4.0.dist-info/METADATA, /usr/share/app/jwt-tool/.venv/lib/python3.13/site-packages/urllib3-2.4.0.dist-info/RECORD
+            scanner: grype
+
   - id: CGA-5f7v-h34j-fh9f
     aliases:
       - CVE-2023-5752
