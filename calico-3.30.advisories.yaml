@@ -4,6 +4,24 @@ package:
   name: calico-3.30
 
 advisories:
+  - id: CGA-6h7c-72xp-2wmw
+    aliases:
+      - CVE-2025-4563
+      - GHSA-hj2p-8wj8-pfq4
+    events:
+      - timestamp: 2025-06-24T08:36:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: calico-goldmane-3.30
+            componentID: a33db3cbd985df8a
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.32.5
+            componentType: go-module
+            componentLocation: /usr/bin/calico-node
+            scanner: grype
+
   - id: CGA-m5gw-hhp6-f3x3
     aliases:
       - CVE-2025-22874
