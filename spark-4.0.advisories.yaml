@@ -4,6 +4,24 @@ package:
   name: spark-4.0
 
 advisories:
+  - id: CGA-9h2q-jvgf-3h42
+    aliases:
+      - CVE-2024-6763
+      - GHSA-qh8g-58pp-2wxh
+    events:
+      - timestamp: 2025-06-25T08:54:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-4.0-scala-2.13
+            componentID: 896bfb5153c14c46
+            componentName: jetty-http
+            componentVersion: 11.0.24
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/spark-core_2.13-4.0.0.jar
+            scanner: grype
+
   - id: CGA-q4vv-qgcf-g8h6
     aliases:
       - CVE-2024-29869
