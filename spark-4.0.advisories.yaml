@@ -4,6 +4,24 @@ package:
   name: spark-4.0
 
 advisories:
+  - id: CGA-57mq-pmr4-4pfr
+    aliases:
+      - CVE-2023-39410
+      - GHSA-rhrv-645h-fjfh
+    events:
+      - timestamp: 2025-06-25T08:54:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-4.0-scala-2.13
+            componentID: 892d79c24385e327
+            componentName: avro
+            componentVersion: 1.9.2
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.4.1.jar
+            scanner: grype
+
   - id: CGA-9h2q-jvgf-3h42
     aliases:
       - CVE-2024-6763
