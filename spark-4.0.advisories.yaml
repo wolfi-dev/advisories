@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: spark-4.0
+
+advisories:
+  - id: CGA-q4vv-qgcf-g8h6
+    aliases:
+      - CVE-2024-29869
+      - GHSA-c476-j253-5rgq
+    events:
+      - timestamp: 2025-06-25T08:54:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-4.0-scala-2.13
+            componentID: e61a3017b2bd22d2
+            componentName: hive-exec
+            componentVersion: 2.3.10
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hive-exec-2.3.10-core.jar
+            scanner: grype
