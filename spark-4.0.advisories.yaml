@@ -4,6 +4,24 @@ package:
   name: spark-4.0
 
 advisories:
+  - id: CGA-53qq-qh98-q7jv
+    aliases:
+      - CVE-2025-49128
+      - GHSA-wf8f-6423-gfxg
+    events:
+      - timestamp: 2025-06-25T08:54:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-4.0-scala-2.13
+            componentID: 670135809f216c07
+            componentName: jackson-core
+            componentVersion: 2.12.7
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.4.1.jar
+            scanner: grype
+
   - id: CGA-57mq-pmr4-4pfr
     aliases:
       - CVE-2023-39410
