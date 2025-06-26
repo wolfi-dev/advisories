@@ -551,6 +551,10 @@ advisories:
             componentType: python
             componentLocation: /usr/lib/python3.10/site-packages/protobuf-3.20.3.dist-info/METADATA, /usr/lib/python3.10/site-packages/protobuf-3.20.3.dist-info/RECORD, /usr/lib/python3.10/site-packages/protobuf-3.20.3.dist-info/top_level.txt
             scanner: grype
+      - timestamp: 2025-06-26T20:56:30Z
+        type: pending-upstream-fix
+        data:
+          note: This CVE affects protobuf 3.20.3 used in kubeflow-pipelines metadata_writer component. The fix requires upgrading to protobuf 4.25.8+, which is a major version upgrade (3.x → 4.x) that upstream kubeflow-pipelines has not implemented yet. The upstream project still uses protobuf 3.20.3 in their main branch as of June 2025. We are waiting for upstream maintainers to implement this CVE fix to avoid breaking changes.
 
   - id: CGA-cfp4-m4j7-wpm6
     aliases:
