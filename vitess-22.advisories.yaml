@@ -20,6 +20,11 @@ advisories:
             componentType: npm
             componentLocation: /vt/web/vtadmin/package.json
             scanner: grype
+      - timestamp: 2025-06-26T19:21:55Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: GHSA-f46q-gmg5-36hm relates to v0.1.0 of vtadmin in NPM containing malware. However, this package does not pull from NPM and builds vtadmin directly from source - it, therefore, is not affected.
 
   - id: CGA-pmhx-ph8c-28gj
     aliases:
