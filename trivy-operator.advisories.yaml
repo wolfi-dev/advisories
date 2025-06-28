@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: trivy-operator
+
+advisories:
+  - id: CGA-94q2-9cxp-84xm
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T12:43:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trivy-operator
+            componentID: 6f7404f2513f2399
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/trivy-operator
+            scanner: grype
