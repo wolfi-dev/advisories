@@ -136,6 +136,24 @@ advisories:
         data:
           note: The jackson-core dependency is brought in by the Hadoop transient dependency, upstream will have to release a version of Hadoop with a more recent version of jackson-core and celeborn will have to update it's Hadoop dependency in order to pull in a fixed version of jackson-core.
 
+  - id: CGA-rc57-hr6c-69f6
+    aliases:
+      - CVE-2025-52999
+      - GHSA-h46c-h94j-95f3
+    events:
+      - timestamp: 2025-06-28T08:32:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: celeborn-0.5
+            componentID: 2652a8657bcade67
+            componentName: jackson-core
+            componentVersion: 2.12.7
+            componentType: java-archive
+            componentLocation: /usr/share/java/celeborn/jars/hadoop-client-runtime-3.4.1.jar
+            scanner: grype
+
   - id: CGA-xvv2-g55w-6g8w
     aliases:
       - CVE-2024-47561
