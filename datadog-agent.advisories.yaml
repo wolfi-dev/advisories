@@ -931,6 +931,23 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: While pip's vendor.txt correctly shows setuptools==70.3.0 (which contains the vulnerability in its full form), pip's vendoring process explicitly drops all components containing the vulnerable code. The PackageIndex.download() vulnerability exists in the setuptools package and easy_install.py, both of which are removed during pip's vendoring process. Only pkg_resources is kept, which does not contain download functionality or the vulnerable code path.
 
+  - id: CGA-p83v-h8hm-9pp6
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T08:36:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: datadog-agent
+            componentID: 4b090eb953ee48de
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /opt/datadog-agent/bin/agent/agent
+            scanner: grype
+
   - id: CGA-p9r8-3fcm-ppmp
     aliases:
       - CVE-2025-22869
