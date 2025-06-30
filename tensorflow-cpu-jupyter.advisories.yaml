@@ -21,6 +21,10 @@ advisories:
             componentType: python
             componentLocation: /usr/share/tensorflow/lib/python3.11/site-packages/pip/_vendor/vendor.txt
             scanner: grype
+      - timestamp: 2025-06-30T14:09:24Z
+        type: pending-upstream-fix
+        data:
+          note: urllib3 vuln event is detected due to its presence in python 3.11 vendor path. Python 3.11 vendored that urllib3 1.26.20 version and upstream uses Python 3.11 to build the package, therefore we need to wait that upstream will update Python to a version that brings a fixed urllib3 version. Once possible we will patch it.
 
   - id: CGA-54r8-8878-mhm5
     aliases:
@@ -168,3 +172,7 @@ advisories:
             componentType: python
             componentLocation: /usr/share/tensorflow/lib/python3.11/site-packages/pip/_vendor/vendor.txt
             scanner: grype
+      - timestamp: 2025-06-30T14:09:24Z
+        type: pending-upstream-fix
+        data:
+          note: urllib3 vuln event is detected due to its presence in python 3.11 vendor path. Python 3.11 vendored that urllib3 1.26.20 version and upstream uses Python 3.11 to build the package, therefore we need to wait that upstream will update Python to a version that brings a fixed urllib3 version. Once possible we will patch it.
