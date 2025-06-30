@@ -869,6 +869,16 @@ advisories:
             componentType: java-archive
             componentLocation: /opt/bitnami/keycloak/lib/lib/main/io.quarkus.quarkus-vertx-3.20.1.jar
             scanner: grype
+      - timestamp: 2025-06-30T13:16:23Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            This vulnerability relates to the quarkus-vertx component used by Keycloack. A fixed version of quarkus-vertx already
+            exists (3.20.4) but Keycloack upstream has not yet upgraded to this fixed version in the main branch.
+            Attempting to upgrade this dependency in Keycloack by hand results in build failures, specifically related to
+            interdependencies with the hibernate package. Upstream seems aware of the need to upgrade, and have a public
+            ticket open about it: https://github.com/keycloak/keycloak/issues/40736
+            Awaiting for fix / backport from upstream to address this issue.
 
   - id: CGA-x364-25j3-gjfx
     aliases:
