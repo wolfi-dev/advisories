@@ -1,0 +1,15 @@
+schema-version: 2.0.2
+
+package:
+  name: apisix-ingress-controller
+
+advisories:
+  - id: CGA-qmcp-6vf5-995f
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2025-07-01T08:22:12Z
+        type: pending-upstream-fix
+        data:
+          note: 'The apisix-ingress-controller cannot be rebuilt with the latest protobuf due to usage of deprecated symbols from `github.com/golang/protobuf`. Upstream needs to migrate to `google.golang.org/protobuf` and regenerate `.pb.go` files to unblock CVE fixes via dependency updates.'
