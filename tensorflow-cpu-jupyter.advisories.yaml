@@ -4,6 +4,24 @@ package:
   name: tensorflow-cpu-jupyter
 
 advisories:
+  - id: CGA-2p6w-p9m6-c9pg
+    aliases:
+      - CVE-2025-48379
+      - GHSA-xg8h-j46f-w952
+    events:
+      - timestamp: 2025-07-02T08:23:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tensorflow-cpu-jupyter
+            componentID: 91ce259c134d0c17
+            componentName: pillow
+            componentVersion: 11.2.1
+            componentType: python
+            componentLocation: /usr/share/tensorflow/lib/python3.11/site-packages/pillow-11.2.1.dist-info/METADATA, /usr/share/tensorflow/lib/python3.11/site-packages/pillow-11.2.1.dist-info/RECORD, /usr/share/tensorflow/lib/python3.11/site-packages/pillow-11.2.1.dist-info/top_level.txt
+            scanner: grype
+
   - id: CGA-36h3-8f5r-8rff
     aliases:
       - CVE-2025-50181
