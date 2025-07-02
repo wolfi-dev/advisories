@@ -4,6 +4,24 @@ package:
   name: kubeflow
 
 advisories:
+  - id: CGA-fqgc-jrwm-g4gf
+    aliases:
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2025-07-02T10:09:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-tensorboard-controller
+            componentID: b321cfdfdfeec86f
+            componentName: golang.org/x/net
+            componentVersion: v0.0.0-20220127200216-cd36cc0744dd
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-jpj5-xrhc-c5g8
     aliases:
       - CVE-2022-32149
