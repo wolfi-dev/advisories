@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: kubeflow
+
+advisories:
+  - id: CGA-jpj5-xrhc-c5g8
+    aliases:
+      - CVE-2022-32149
+      - GHSA-69ch-w2m2-3vjp
+    events:
+      - timestamp: 2025-07-02T10:09:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-tensorboard-controller
+            componentID: a2e8beab720daf4e
+            componentName: golang.org/x/text
+            componentVersion: v0.3.7
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
