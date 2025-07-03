@@ -141,6 +141,24 @@ advisories:
           type: vulnerable-code-cannot-be-controlled-by-adversary
           note: Vulnerability affects only Windows systems.
 
+  - id: CGA-hmmx-hfqq-35fm
+    aliases:
+      - CVE-2024-56128
+      - GHSA-p7c9-8xx8-h74f
+    events:
+      - timestamp: 2025-07-03T08:36:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: strimzi-kafka-operator-kafka-thirdparty-libs-cc
+            componentID: a43fdb8a0efb5c38
+            componentName: kafka_2.13
+            componentVersion: 3.8.0
+            componentType: java-archive
+            componentLocation: /opt/cruise-control/libs/kafka_2.13-3.8.0.jar
+            scanner: grype
+
   - id: CGA-r3cg-jww5-c45m
     aliases:
       - CVE-2024-57699
