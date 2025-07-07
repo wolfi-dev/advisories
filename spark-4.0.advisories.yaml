@@ -141,6 +141,12 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.4.1.jar
             scanner: grype
+      - timestamp: 2025-07-02T18:30:00Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            Upstream maintainers must cut a Hadoop release with Avro 1.11.4+ to resolve this CVE. The vulnerability is in jackson-core 2.12.7 bundled within hadoop-client-runtime-3.4.1.jar. Spark PR #40933 (SPARK-43263) attempted to upgrade Jackson to 2.15.0 but encountered dependency conflicts with Avro 1.11.1 which still pulls Jackson 2.12.7. The PR discussion confirmed that Avro must be upgraded first, which requires a new Hadoop release. CVE-2025-52999 is fixed in Jackson 2.15.0+.
+            Reference: https://github.com/apache/spark/pull/40933#issuecomment-1536432927
 
   - id: CGA-q4vv-qgcf-g8h6
     aliases:
