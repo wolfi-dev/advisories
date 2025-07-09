@@ -47,3 +47,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.7.1-r1
+
+  - id: CGA-qw3c-grf7-hr39
+    aliases:
+      - CVE-2025-53547
+      - GHSA-557j-xg8c-q2mm
+    events:
+      - timestamp: 2025-07-09T11:04:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: consul-k8s-1.7-cli
+            componentID: 3e11665daec02361
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.17.3
+            componentType: go-module
+            componentLocation: /usr/bin/consul-k8s
+            scanner: grype
