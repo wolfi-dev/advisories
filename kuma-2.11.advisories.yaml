@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: kuma-2.11
+
+advisories:
+  - id: CGA-2h33-vp6w-h352
+    aliases:
+      - CVE-2025-53547
+      - GHSA-557j-xg8c-q2mm
+    events:
+      - timestamp: 2025-07-09T11:15:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kumactl-2.11
+            componentID: 9dfba6c84a46f029
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.18.0
+            componentType: go-module
+            componentLocation: /usr/bin/kumactl
+            scanner: grype

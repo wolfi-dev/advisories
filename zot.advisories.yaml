@@ -917,6 +917,28 @@ advisories:
         data:
           fixed-version: 2.1.1-r3
 
+  - id: CGA-hc3x-gvrm-j2fc
+    aliases:
+      - CVE-2025-53547
+      - GHSA-557j-xg8c-q2mm
+    events:
+      - timestamp: 2025-07-09T10:38:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zot
+            componentID: 09f730ecb924dcc9
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.17.3
+            componentType: go-module
+            componentLocation: /usr/bin/zot
+            scanner: grype
+      - timestamp: 2025-07-09T16:37:29Z
+        type: fixed
+        data:
+          fixed-version: 2.1.5-r1
+
   - id: CGA-hf37-mxjw-6v76
     aliases:
       - CVE-2024-6257
