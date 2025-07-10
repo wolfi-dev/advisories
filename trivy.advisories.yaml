@@ -462,6 +462,28 @@ advisories:
         data:
           fixed-version: 0.50.1-r1
 
+  - id: CGA-f2xj-2hhx-97wj
+    aliases:
+      - CVE-2025-53547
+      - GHSA-557j-xg8c-q2mm
+    events:
+      - timestamp: 2025-07-09T09:46:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trivy
+            componentID: 67a5ecf3d08b7f0f
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.18.3
+            componentType: go-module
+            componentLocation: /usr/bin/trivy
+            scanner: grype
+      - timestamp: 2025-07-09T11:03:21Z
+        type: fixed
+        data:
+          fixed-version: 0.64.1-r1
+
   - id: CGA-f588-jf2v-rpg6
     aliases:
       - CVE-2024-40635

@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: teleport-17
+
+advisories:
+  - id: CGA-fr27-9xq4-vm22
+    aliases:
+      - CVE-2025-53547
+      - GHSA-557j-xg8c-q2mm
+    events:
+      - timestamp: 2025-07-09T09:28:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: teleport-17
+            componentID: d42eb919e6406514
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.17.3
+            componentType: go-module
+            componentLocation: /usr/local/bin/teleport
+            scanner: grype

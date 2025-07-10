@@ -51,3 +51,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.26.1-r1
+
+  - id: CGA-mmcv-8q8h-jrmr
+    aliases:
+      - CVE-2025-53547
+      - GHSA-557j-xg8c-q2mm
+    events:
+      - timestamp: 2025-07-09T08:57:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istioctl-1.26
+            componentID: b30642ff9a3e6ee1
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.17.3
+            componentType: go-module
+            componentLocation: /usr/bin/istioctl
+            scanner: grype
+      - timestamp: 2025-07-09T15:28:17Z
+        type: fixed
+        data:
+          fixed-version: 1.26.2-r1

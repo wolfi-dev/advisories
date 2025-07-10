@@ -309,6 +309,28 @@ advisories:
         data:
           fixed-version: 0.4.4-r2
 
+  - id: CGA-gxq7-p3p3-mxh4
+    aliases:
+      - CVE-2025-53547
+      - GHSA-557j-xg8c-q2mm
+    events:
+      - timestamp: 2025-07-09T11:12:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kargo
+            componentID: 9e92dae831e1bdbb
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.18.3
+            componentType: go-module
+            componentLocation: /usr/bin/kargo
+            scanner: grype
+      - timestamp: 2025-07-09T12:56:24Z
+        type: fixed
+        data:
+          fixed-version: 1.6.0-r1
+
   - id: CGA-h3qc-g22c-5wrc
     aliases:
       - CVE-2023-45284
