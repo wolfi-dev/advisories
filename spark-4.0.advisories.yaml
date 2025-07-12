@@ -52,6 +52,24 @@ advisories:
             Upstream maintainers must cut a Hadoop release with Avro 1.11.4 to resolve these CVEs. PR #7615 (HADOOP-19315) has been merged on 2025-04-15 which upgrades Avro from 1.9.2 to 1.11.4. This addresses both CVE-2024-47561 (critical severity) and CVE-2023-39410 (high severity) in the avro 1.9.2 dependency bundled within hadoop-client-runtime-3.4.1.jar. The PR notes this change is not backwards compatible due to Avro's requirement for setter/getter methods and serializable package declarations.
             Reference: https://github.com/apache/hadoop/pull/7615
 
+  - id: CGA-5r69-5643-cjc8
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2025-07-12T09:46:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-4.0-scala-2.13
+            componentID: e905a1812e8796ab
+            componentName: commons-lang
+            componentVersion: "2.6"
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/commons-lang-2.6.jar
+            scanner: grype
+
   - id: CGA-9h2q-jvgf-3h42
     aliases:
       - CVE-2024-6763
