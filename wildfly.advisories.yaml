@@ -4,6 +4,24 @@ package:
   name: wildfly
 
 advisories:
+  - id: CGA-2f5p-cqpg-v8x3
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2025-07-12T08:46:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wildfly-openjdk-21
+            componentID: 47c8d647f56bd4fe
+            componentName: commons-lang3
+            componentVersion: 3.17.0
+            componentType: java-archive
+            componentLocation: /usr/share/wildfly/modules/system/layers/base/org/apache/commons/lang3/main/commons-lang3-3.17.0.jar
+            scanner: grype
+
   - id: CGA-3vm3-626v-4449
     aliases:
       - CVE-2025-25193
