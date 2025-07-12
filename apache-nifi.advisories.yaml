@@ -830,6 +830,24 @@ advisories:
         data:
           note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
 
+  - id: CGA-8gr5-54h9-6g76
+    aliases:
+      - CVE-2025-53864
+      - GHSA-xwmg-2g98-w7v9
+    events:
+      - timestamp: 2025-07-12T07:13:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 7fc75492ed33bf6d
+            componentName: nimbus-jose-jwt
+            componentVersion: "9.48"
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/nifi-current/lib/nifi-azure-nar-2.4.0.nar
+            scanner: grype
+
   - id: CGA-8rr9-ww3c-5c97
     aliases:
       - CVE-2024-37389
