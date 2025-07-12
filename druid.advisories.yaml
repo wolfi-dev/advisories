@@ -305,6 +305,42 @@ advisories:
           type: vulnerable-code-not-in-execution-path
           note: 'Upstream reviewed this issue and concluded that it does not impact Druid because it does not directly use the HttpURI class. Ref: https://github.com/apache/druid/issues/17492'
 
+  - id: CGA-85pc-v6qx-wx5p
+    aliases:
+      - CVE-2025-53864
+      - GHSA-xwmg-2g98-w7v9
+    events:
+      - timestamp: 2025-07-12T07:30:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: druid
+            componentID: ea2754c0b3ecb192
+            componentName: nimbus-jose-jwt
+            componentVersion: 9.37.3
+            componentType: java-archive
+            componentLocation: /usr/share/java/druid/extensions/druid-azure-extensions/nimbus-jose-jwt-9.37.3.jar
+            scanner: grype
+
+  - id: CGA-88hh-v336-49h5
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2025-07-12T07:30:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: druid
+            componentID: b5b72e87d3004bbe
+            componentName: commons-lang
+            componentVersion: "2.5"
+            componentType: java-archive
+            componentLocation: /usr/share/java/druid/extensions/ambari-metrics-emitter/ambari-metrics-common-2.7.0.0.0.jar
+            scanner: grype
+
   - id: CGA-8jjf-fchm-77wg
     aliases:
       - CVE-2024-25638
