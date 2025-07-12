@@ -87,3 +87,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.4.0-r1
+
+  - id: CGA-mpwh-pghw-hw5x
+    aliases:
+      - CVE-2025-53864
+      - GHSA-xwmg-2g98-w7v9
+    events:
+      - timestamp: 2025-07-12T08:06:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi-registry
+            componentID: c1a16c7a0267b6f9
+            componentName: nimbus-jose-jwt
+            componentVersion: "9.48"
+            componentType: java-archive
+            componentLocation: /opt/nifi-registry/nifi-registry-2.4.0/lib/nifi-registry-web-api-2.4.0.war
+            scanner: grype
