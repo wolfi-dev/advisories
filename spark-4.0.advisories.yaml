@@ -4,6 +4,24 @@ package:
   name: spark-4.0
 
 advisories:
+  - id: CGA-3492-82f5-v4c9
+    aliases:
+      - CVE-2025-53864
+      - GHSA-xwmg-2g98-w7v9
+    events:
+      - timestamp: 2025-07-12T09:46:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-4.0-scala-2.13
+            componentID: d39b6bbc5730c6e9
+            componentName: nimbus-jose-jwt
+            componentVersion: 9.37.2
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.4.1.jar
+            scanner: grype
+
   - id: CGA-53qq-qh98-q7jv
     aliases:
       - CVE-2025-49128
