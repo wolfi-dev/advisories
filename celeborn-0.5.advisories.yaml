@@ -176,6 +176,24 @@ advisories:
         data:
           note: The vuln comes from the Hadoop dependency. Jackson-core is pinned at 2.12.7 in Hadoop 3.4.1. Once Hadoop updates it and also upstream update Hadoop to the fixed version, we can update and fix the package too.
 
+  - id: CGA-wxhf-63m3-2r4h
+    aliases:
+      - CVE-2025-53864
+      - GHSA-xwmg-2g98-w7v9
+    events:
+      - timestamp: 2025-07-12T07:34:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: celeborn-0.5
+            componentID: 96c86c10f93d93eb
+            componentName: nimbus-jose-jwt
+            componentVersion: 9.37.2
+            componentType: java-archive
+            componentLocation: /usr/share/java/celeborn/jars/hadoop-client-runtime-3.4.1.jar
+            scanner: grype
+
   - id: CGA-xvv2-g55w-6g8w
     aliases:
       - CVE-2024-47561
