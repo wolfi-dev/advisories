@@ -340,6 +340,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/java/druid/extensions/ambari-metrics-emitter/ambari-metrics-common-2.7.0.0.0.jar
             scanner: grype
+      - timestamp: 2025-07-14T15:11:19Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists in ambari-metrics-common-2.7.0.0.0 which is bundled/shaded inside ambari-metrics-emitter extension. As a pre-built binary artifact, the embedded dependencies cannot be updated independently. This requires a new upstream release of Apache Metrics Emitter with updated bundled dependencies.
 
   - id: CGA-8jjf-fchm-77wg
     aliases:
