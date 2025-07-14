@@ -43,6 +43,10 @@ advisories:
             componentType: java-archive
             componentLocation: /opt/airflow/lib/python3.12/site-packages/ray/jars/ray_dist.jar
             scanner: grype
+      - timestamp: 2025-07-14T06:26:17Z
+        type: pending-upstream-fix
+        data:
+          note: The org.apache.commons:commons-lang3 is pulled through a transient dependency of a python package named 'ray' version 2.47.1 which is the latest. We will have to wait for 'ray' to push a more recent version of commons-lang3 and airflow to push a new release with the new 'ray' dependency updated.
 
   - id: CGA-5x99-mqvf-h8cx
     aliases:
