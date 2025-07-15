@@ -1195,11 +1195,15 @@ advisories:
           data:
             subpackageName: apache-nifi
             componentID: d2a88cf89ff8c058
-            componentName: commons-lang3
-            componentVersion: 3.17.0
+            componentName: commons-lang
+            componentVersion: "2.4"
             componentType: java-archive
-            componentLocation: /usr/share/nifi/nifi-current/lib/nifi-update-attribute-nar-2.4.0.nar
+            componentLocation: /usr/share/nifi/nifi-current/lib/nifi-standard-nar-2.4.0.nar
             scanner: grype
+      - timestamp: 2025-07-15T12:15:09Z
+        type: pending-upstream-fix
+        data:
+          note: 'As per the advisory commons-lang has no patched version and as per the description, upstream package maintainers of commons-lang recommend to upgrade to commons-lang3 version 3.18.0 or greater. Apache-nifi has to upgrade their dependency in order to fixe this CVE. More information on the advisory: https://github.com/advisories/GHSA-j288-q9x7-2f5v'
 
   - id: CGA-fv62-wffg-c9q4
     aliases:
