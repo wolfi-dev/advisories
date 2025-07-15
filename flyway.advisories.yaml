@@ -109,11 +109,15 @@ advisories:
           data:
             subpackageName: flyway
             componentID: 8c96260c375fac2b
-            componentName: commons-lang3
-            componentVersion: 3.15.0
+            componentName: commons-lang
+            componentVersion: "2.6"
             componentType: java-archive
-            componentLocation: /usr/share/java/flyway/drivers/cassandra/commons-lang3-3.15.0.jar
+            componentLocation: /usr/share/java/flyway/drivers/databricks-jdbc-2.6.40.jar
             scanner: grype
+      - timestamp: 2025-07-15T16:34:25Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists in databricks-jdbc-2.6.40 which is bundled/shaded inside flyway drivers. As a pre-built binary artifact, the embedded dependencies cannot be updated independently. This requires a new upstream release of databricks-jdbc driver with updated bundled dependencies.
 
   - id: CGA-p3gx-2p4q-w594
     aliases:
