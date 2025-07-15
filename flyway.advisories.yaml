@@ -154,6 +154,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/java/flyway/drivers/databricks-jdbc-2.6.40.jar
             scanner: grype
+      - timestamp: 2025-07-15T11:33:29Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists in databricks-jdbc-2.6.40 which is bundled/shaded inside flyway drivers. As a pre-built binary artifact, the embedded dependencies cannot be updated independently. This requires a new upstream release of databricks-jdbc driver with updated bundled dependencies.
 
   - id: CGA-pvmc-36v5-xpxp
     aliases:
