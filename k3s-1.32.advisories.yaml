@@ -4,6 +4,24 @@ package:
   name: k3s-1.32
 
 advisories:
+  - id: CGA-2f7p-4whp-hxc7
+    aliases:
+      - CVE-2025-22868
+      - GHSA-3wqc-mwfx-672p
+    events:
+      - timestamp: 2025-07-16T22:24:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s-1.32
+            componentID: cc3a83b884895549
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/k3s
+            scanner: grype
+
   - id: CGA-3gf3-whq4-385m
     aliases:
       - CVE-2025-30204
