@@ -455,7 +455,7 @@ advisories:
       - timestamp: 2025-06-27T09:35:05Z
         type: pending-upstream-fix
         data:
-          note: 'This CVE is part of a locked dependency, and we are unable to unlock it without disrupting the build. Upstream will need to make changes to facilitate this dependency bump.'
+          note: This CVE is part of a locked dependency, and we are unable to unlock it without disrupting the build. Upstream will need to make changes to facilitate this dependency bump.
 
   - id: CGA-fp53-8jf5-gj7f
     aliases:
@@ -581,6 +581,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.19.1-r1
+
+  - id: CGA-mqw7-jwx7-849x
+    aliases:
+      - CVE-2025-53643
+      - GHSA-9548-qrrj-x5pj
+    events:
+      - timestamp: 2025-07-16T07:23:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3-cassandra-medusa
+            componentID: 8e8ecae6283edc21
+            componentName: aiohttp
+            componentVersion: 3.12.11
+            componentType: python
+            componentLocation: /home/cassandra/.venv/lib/python3.11/site-packages/aiohttp-3.12.11.dist-info/METADATA
+            scanner: grype
 
   - id: CGA-q4gv-w22p-3hmg
     aliases:
