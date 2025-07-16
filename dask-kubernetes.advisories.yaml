@@ -75,6 +75,24 @@ advisories:
           type: inline-mitigations-exist
           note: py3-pip installs a patched version of 2.32.3 requests.py which contains the upstream fix for CVE-2024-47081, reference https://github.com/wolfi-dev/os/pull/55998/files. The version referenced in the vendor.txt is not vulnerable
 
+  - id: CGA-w2fp-6749-5q82
+    aliases:
+      - CVE-2025-53643
+      - GHSA-9548-qrrj-x5pj
+    events:
+      - timestamp: 2025-07-16T07:16:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dask-kubernetes
+            componentID: 7d27e7464ff60c2f
+            componentName: aiohttp
+            componentVersion: 3.12.13
+            componentType: python
+            componentLocation: /usr/share/dask-kubernetes/lib/python3.10/site-packages/aiohttp-3.12.13.dist-info/METADATA
+            scanner: grype
+
   - id: CGA-xg36-3jm9-q638
     aliases:
       - CVE-2025-50181
