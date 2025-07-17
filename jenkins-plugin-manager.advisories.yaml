@@ -4,6 +4,28 @@ package:
   name: jenkins-plugin-manager
 
 advisories:
+  - id: CGA-8w2x-v747-c9c7
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2025-07-12T10:05:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jenkins-plugin-manager
+            componentID: d487410b85e80e04
+            componentName: commons-lang3
+            componentVersion: 3.17.0
+            componentType: java-archive
+            componentLocation: /usr/share/java/jenkins-plugin-manager/jenkins-plugin-manager.jar
+            scanner: grype
+      - timestamp: 2025-07-16T15:15:12Z
+        type: fixed
+        data:
+          fixed-version: 2.13.2-r1
+
   - id: CGA-j5h6-pqm4-cmmj
     aliases:
       - CVE-2025-48734

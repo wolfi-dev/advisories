@@ -26,6 +26,28 @@ advisories:
         data:
           fixed-version: 4.0.1-r1
 
+  - id: CGA-fwwv-f55r-xf36
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2025-07-12T07:32:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-pulsar
+            componentID: 5e0b3101a42cbe7e
+            componentName: commons-lang
+            componentVersion: "2.6"
+            componentType: java-archive
+            componentLocation: /usr/share/java/pulsar/lib/commons-lang-commons-lang-2.6.jar
+            scanner: grype
+      - timestamp: 2025-07-17T00:14:54Z
+        type: pending-upstream-fix
+        data:
+          note: upstream needs to remove commons-lang 2.6 to address CVE-2025-48924
+
   - id: CGA-g9f5-gvgx-jg3v
     aliases:
       - CVE-2025-24970
@@ -65,6 +87,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/java/pulsar/lib/commons-configuration-commons-configuration-1.10.jar
             scanner: grype
+      - timestamp: 2025-07-17T00:19:15Z
+        type: pending-upstream-fix
+        data:
+          note: upstream needs to either upgrade commons-configuration to 2.x version or remove 1.x version to fix CVE.
 
   - id: CGA-mxg5-5rwg-w4hr
     aliases:

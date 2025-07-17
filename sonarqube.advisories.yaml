@@ -202,6 +202,24 @@ advisories:
         data:
           note: The ElasticSearch dependency within SonarQube must be bumped in the upstream for fixing this CVE
 
+  - id: CGA-gfrm-rq8w-hqr3
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2025-07-12T07:51:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube
+            componentID: 1e88c6f2799c5d5d
+            componentName: commons-lang3
+            componentVersion: 3.14.0
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/lib/extensions/sonar-iac-plugin-1.47.0.15287.jar
+            scanner: grype
+
   - id: CGA-jg27-23w9-m7hp
     aliases:
       - CVE-2025-48734
@@ -267,6 +285,24 @@ advisories:
         type: pending-upstream-fix
         data:
           note: This is a transitive dependency of ElasticSearch and must be fixed in the upstream project
+
+  - id: CGA-r3xx-5g2c-66xp
+    aliases:
+      - CVE-2025-53864
+      - GHSA-xwmg-2g98-w7v9
+    events:
+      - timestamp: 2025-07-12T07:51:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube
+            componentID: 87fe69b8629af61e
+            componentName: nimbus-jose-jwt
+            componentVersion: 9.37.3
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/elasticsearch/modules/x-pack-security/nimbus-jose-jwt-modified-8.16.3.jar
+            scanner: grype
 
   - id: CGA-rmgj-x5xj-3c37
     aliases:

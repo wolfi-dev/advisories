@@ -26,6 +26,28 @@ advisories:
         data:
           fixed-version: 3.0.4-r2
 
+  - id: CGA-cr9r-v879-g4w9
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2025-07-12T08:45:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: debezium-connector-spanner-3.0
+            componentID: 19b50273fe6775e1
+            componentName: commons-lang3
+            componentVersion: 3.12.0
+            componentType: java-archive
+            componentLocation: /usr/share/java/debezium/debezium-connector-spanner/commons-lang3-3.12.0.jar
+            scanner: grype
+      - timestamp: 2025-07-12T10:37:56Z
+        type: fixed
+        data:
+          fixed-version: 3.0.8-r7
+
   - id: CGA-cwxg-jg7f-p246
     aliases:
       - CVE-2023-2976

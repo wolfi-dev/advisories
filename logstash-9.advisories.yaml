@@ -48,6 +48,28 @@ advisories:
         data:
           note: The jruby-openssl component at version 0.15.0 is bundled within JRuby's standard library as jopenssl.jar. Because it's part of JRuby itself rather than a separately managed dependency, an updated JRuby release is required to incorporate the remediated version of jruby-openssl (0.15.4+).
 
+  - id: CGA-64gr-237x-6hmf
+    aliases:
+      - CVE-2025-53864
+      - GHSA-xwmg-2g98-w7v9
+    events:
+      - timestamp: 2025-07-12T07:47:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-9
+            componentID: 4ba30a9d7b8c525a
+            componentName: nimbus-jose-jwt
+            componentVersion: 9.37.2
+            componentType: java-archive
+            componentLocation: /opt/bitnami/logstash/vendor/bundle/jruby/3.1.0/gems/logstash-input-azure_event_hubs-1.5.1/vendor/jar-dependencies/com/nimbusds/nimbus-jose-jwt/9.37.2/nimbus-jose-jwt-9.37.2.jar
+            scanner: grype
+      - timestamp: 2025-07-16T20:33:05Z
+        type: pending-upstream-fix
+        data:
+          note: nimbus-jose-jwt is a transitive dependency brought in by vendored jruby logstash-input-azure_event_hubs-1.5.1 package. Upstream maintiners will need to update to the latest version of logstash-input-azure_event-hubs-1.5.1
+
   - id: CGA-hrf8-h5p2-f5r9
     aliases:
       - CVE-2025-27221

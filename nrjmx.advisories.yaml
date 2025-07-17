@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: nrjmx
+
+advisories:
+  - id: CGA-rc28-932p-89cv
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2025-07-12T07:37:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nrjmx
+            componentID: 4febe447f8757cc4
+            componentName: commons-lang3
+            componentVersion: 3.12.0
+            componentType: java-archive
+            componentLocation: /usr/share/java/nrjmx/bin/nrjmx.jar
+            scanner: grype
+      - timestamp: 2025-07-16T16:16:53Z
+        type: fixed
+        data:
+          fixed-version: 2.7.0-r3

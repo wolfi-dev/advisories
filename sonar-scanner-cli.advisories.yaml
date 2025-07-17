@@ -26,6 +26,28 @@ advisories:
         data:
           fixed-version: 6.2.1.4610-r1
 
+  - id: CGA-mhg4-342v-w7xq
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2025-07-12T10:27:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonar-scanner-cli
+            componentID: f680765e94d2bc72
+            componentName: commons-lang3
+            componentVersion: 3.17.0
+            componentType: java-archive
+            componentLocation: /usr/bin/sonarqube/sonarscanner-cli.jar
+            scanner: grype
+      - timestamp: 2025-07-12T12:35:22Z
+        type: fixed
+        data:
+          fixed-version: 7.1.0.4889-r2
+
   - id: CGA-pj9w-3rqw-cv58
     aliases:
       - CVE-2024-12798
