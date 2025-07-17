@@ -83,10 +83,14 @@ advisories:
             subpackageName: airflow-3
             componentID: 6ee394a83731d2a5
             componentName: aiohttp
-            componentVersion: 3.12.13
+            componentVersion: 3.12.12
             componentType: python
-            componentLocation: /opt/airflow/lib/python3.12/site-packages/aiohttp-3.12.13.dist-info/METADATA
+            componentLocation: /opt/airflow/lib/python3.12/site-packages/ray/_private/runtime_env/agent/thirdparty_files/aiohttp-3.12.12.dist-info/METADATA
             scanner: grype
+      - timestamp: 2025-07-17T13:03:51Z
+        type: pending-upstream-fix
+        data:
+          note: The vulnerability in aiohttp is introduced via a transitive dependency from the ray package (v2.47.1, latest). Remediation is pending upstream updates from ray and a subsequent airflow release that includes the updated ray version. In the interim, we have proactively updated aiohttp to v3.12.14 wherever feasible.
 
   - id: CGA-c62x-7p7g-hqvm
     aliases:
