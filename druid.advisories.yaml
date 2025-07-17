@@ -1097,6 +1097,24 @@ advisories:
         data:
           note: This is related to hadoop-client-runtime 3.3.6 and requires code changes by the upstream maintainers to remediate
 
+  - id: CGA-r9fm-w5hp-2crg
+    aliases:
+      - CVE-2025-22227
+      - GHSA-4q2v-9p7v-3v22
+    events:
+      - timestamp: 2025-07-17T07:11:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: druid
+            componentID: 83591f0af420911a
+            componentName: reactor-netty-http
+            componentVersion: 1.0.48
+            componentType: java-archive
+            componentLocation: /usr/share/java/druid/extensions/druid-azure-extensions/reactor-netty-http-1.0.48.jar
+            scanner: grype
+
   - id: CGA-rxwj-44rv-6h93
     aliases:
       - CVE-2021-22569
