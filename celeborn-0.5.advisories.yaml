@@ -47,6 +47,10 @@ advisories:
         type: pending-upstream-fix
         data:
           note: hadoop-runtime-client 3.4.1 is the latest version; jetty-http is a dependency
+      - timestamp: 2025-07-17T17:59:52Z
+        type: pending-upstream-fix
+        data:
+          note: 'The jetty-http vulnerability is present in two locations: bundled inside hadoop-client-runtime-3.4.1.jar (version 9.4.53.v20231009) and as a direct dependency (version 9.4.57.v20241219). Both require jetty-http 12.0.12+ to fix. Since this is a major version jump (9.x to 12.x), it requires upstream changes in both Hadoop and Celeborn.'
 
   - id: CGA-8xcv-pq3f-p4mp
     aliases:
