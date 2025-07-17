@@ -4,6 +4,24 @@ package:
   name: opensearch-3
 
 advisories:
+  - id: CGA-5hqf-6hh7-c6j6
+    aliases:
+      - CVE-2025-22227
+      - GHSA-4q2v-9p7v-3v22
+    events:
+      - timestamp: 2025-07-17T07:56:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-3-repository-azure
+            componentID: ec06511ba3b868b0
+            componentName: reactor-netty-http
+            componentVersion: 1.2.5
+            componentType: java-archive
+            componentLocation: /usr/share/opensearch/plugins/opensearch-repository-azure/reactor-netty-http-1.2.5.jar
+            scanner: grype
+
   - id: CGA-6pxf-3xx2-cjr3
     aliases:
       - CVE-2025-48734
