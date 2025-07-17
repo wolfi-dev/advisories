@@ -322,6 +322,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/java/druid/extensions/druid-azure-extensions/nimbus-jose-jwt-9.37.3.jar
             scanner: grype
+      - timestamp: 2025-07-17T22:21:14Z
+        type: pending-upstream-fix
+        data:
+          note: The nimbus-jose-jwt @ 9.8.1 vulnerability exists in bundled/shaded JARs within hadoop-client-runtime-3.3.6.jar that cannot be updated through Maven dependency management alone. Upstream Druid must upgrade to hadoop-client 3.4+ which includes nimbus-jose-jwt 9.31+, but this is blocked pending AWS SDK v2 dependency migration work. Hadoop has already fixed this in their 3.4.0 release (commit ad49ddda0e) but Druid cannot adopt it yet due to the AWS SDK incompatibility.
 
   - id: CGA-88hh-v336-49h5
     aliases:
