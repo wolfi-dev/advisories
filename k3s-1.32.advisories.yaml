@@ -65,6 +65,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/k3s
             scanner: grype
+      - timestamp: 2025-07-21T17:35:56Z
+        type: pending-upstream-fix
+        data:
+          note: Upstream maintainers need to upgrade gopkg.in/square/go-jose.v2 to the maintained go-jose/go-jose package.
 
   - id: CGA-55fv-m3qp-xh5q
     aliases:
@@ -149,6 +153,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/containerd-shim-runc-v2
             scanner: grype
+      - timestamp: 2025-07-21T15:57:55Z
+        type: pending-upstream-fix
+        data:
+          note: k3s static brings in an embedded containerd-shim-runc-v2 version during it's build process. Upstream maintainers will need to fix the issue in the embedded version to address CVE
 
   - id: CGA-w6pg-rm3m-j9gx
     aliases:
@@ -189,3 +197,8 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/k3s
             scanner: grype
+      - timestamp: 2025-07-21T17:29:22Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: Vulnerability was patched in version 25.0.x 2024.03.01, this includes go packages with +incompatible. See https://github.com/moby/moby/commit/8e3bcf19748838b30e34d612832d1dc9d90363b8
