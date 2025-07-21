@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: gitlab-runner-18.2
+
+advisories:
+  - id: CGA-gvg9-wv66-5xgp
+    aliases:
+      - CVE-2024-36623
+      - GHSA-gh5c-3h97-2f3q
+    events:
+      - timestamp: 2025-07-21T19:30:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-docker-machine-18.2
+            componentID: ad7ffceddec4073b
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.6+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/docker-machine
+            scanner: grype
