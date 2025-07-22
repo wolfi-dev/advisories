@@ -15,6 +15,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'The lowest version of jsonwebtoken used in the jitsucom-jitsu-console is 9.0.0 and the fix version outlined in the CVE GHSA-c7hr-j4mj-j2w6 is 4.2.2 '
 
+  - id: CGA-573v-r77h-q9g9
+    aliases:
+      - CVE-2025-7783
+      - GHSA-fjxv-7rqg-78g4
+    events:
+      - timestamp: 2025-07-22T07:10:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jitsucom-jitsu-console
+            componentID: d4f12cea540a3570
+            componentName: form-data
+            componentVersion: 4.0.1
+            componentType: npm
+            componentLocation: /app/node_modules/.pnpm/form-data@4.0.1/node_modules/form-data/package.json
+            scanner: grype
+
   - id: CGA-89c9-9j8h-469g
     aliases:
       - CVE-2025-29927
