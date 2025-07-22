@@ -70,6 +70,24 @@ advisories:
         data:
           note: Any attempts to upgrade pillow to >=11.3.0 result in a build failure, we will need to wait for upstream to update their code and bump the pillow dependency in order to resolve the CVE.
 
+  - id: CGA-j22w-9fw9-v4vm
+    aliases:
+      - CVE-2025-54121
+      - GHSA-2c2j-9gv5-cj73
+    events:
+      - timestamp: 2025-07-22T08:44:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: open-webui
+            componentID: 683e0b4867d23643
+            componentName: starlette
+            componentVersion: 0.45.3
+            componentType: python
+            componentLocation: /usr/share/open-webui/lib/python3.11/site-packages/starlette-0.45.3.dist-info/METADATA
+            scanner: grype
+
   - id: CGA-mmqg-f57g-9jcp
     aliases:
       - CVE-2025-3730
