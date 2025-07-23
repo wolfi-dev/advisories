@@ -26,6 +26,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: GHSA-f46q-gmg5-36hm relates to v0.1.0 of vtadmin in NPM containing malware. However, this package does not pull from NPM and builds vtadmin directly from source - it, therefore, is not affected.
 
+  - id: CGA-33jw-22px-525h
+    aliases:
+      - CVE-2025-7783
+      - GHSA-fjxv-7rqg-78g4
+    events:
+      - timestamp: 2025-07-22T08:14:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vitess-22
+            componentID: 3e584097688aec4e
+            componentName: form-data
+            componentVersion: 4.0.1
+            componentType: npm
+            componentLocation: /vt/web/vtadmin/node_modules/form-data/package.json
+            scanner: grype
+
   - id: CGA-74w6-mp7h-g4vg
     aliases:
       - CVE-2025-7339
@@ -43,6 +61,10 @@ advisories:
             componentType: npm
             componentLocation: /vt/web/vtadmin/node_modules/on-headers/package.json
             scanner: grype
+      - timestamp: 2025-07-22T22:28:21Z
+        type: pending-upstream-fix
+        data:
+          note: Upstream maintainers will need to patch on-headers@1.0.2 to a patched version; attempted patches have been applied
 
   - id: CGA-pmhx-ph8c-28gj
     aliases:

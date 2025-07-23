@@ -1,0 +1,58 @@
+schema-version: 2.0.2
+
+package:
+  name: mattermost-10.10
+
+advisories:
+  - id: CGA-q396-crfg-qq8r
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-07-23T16:22:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-10.10
+            componentID: 1aa2f77a1baaf265
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/mmctl
+            scanner: grype
+
+  - id: CGA-q428-hvh3-33qw
+    aliases:
+      - CVE-2022-4019
+      - GHSA-hqqj-g6mv-rw46
+    events:
+      - timestamp: 2025-07-23T16:22:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-10.10
+            componentID: e79f419cf2ade2d1
+            componentName: mattermost-10.10
+            componentVersion: 10.10.1-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
+  - id: CGA-xv4x-hp2c-xr68
+    aliases:
+      - CVE-2022-4045
+      - GHSA-v42f-hq78-8c5m
+    events:
+      - timestamp: 2025-07-23T16:22:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-10.10
+            componentID: e79f419cf2ade2d1
+            componentName: mattermost-10.10
+            componentVersion: 10.10.1-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype

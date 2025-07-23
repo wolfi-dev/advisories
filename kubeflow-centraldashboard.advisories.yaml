@@ -282,6 +282,28 @@ advisories:
         data:
           fixed-version: 1.9.0-r4
 
+  - id: CGA-h29v-2v3h-gh3p
+    aliases:
+      - CVE-2025-7783
+      - GHSA-fjxv-7rqg-78g4
+    events:
+      - timestamp: 2025-07-22T07:33:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-centraldashboard
+            componentID: a7fbd6e943c43132
+            componentName: form-data
+            componentVersion: 2.3.3
+            componentType: npm
+            componentLocation: /app/node_modules/form-data/package.json
+            scanner: grype
+      - timestamp: 2025-07-23T14:08:51Z
+        type: pending-upstream-fix
+        data:
+          note: The vulnerability originates from a Node.js module. Upstream must properly upgrade the affected module, taking into account its integration with related dependencies. Once addressed, we can proceed with updating and remediating the vulnerability.
+
   - id: CGA-h46m-gpr2-3pf5
     aliases:
       - CVE-2025-7339
@@ -299,6 +321,10 @@ advisories:
             componentType: npm
             componentLocation: /app/node_modules/on-headers/package.json
             scanner: grype
+      - timestamp: 2025-07-22T22:53:18Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r3
 
   - id: CGA-h52f-rm4v-7p8p
     aliases:
