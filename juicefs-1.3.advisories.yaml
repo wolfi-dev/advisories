@@ -4,6 +4,24 @@ package:
   name: juicefs-1.3
 
 advisories:
+  - id: CGA-2vgx-6rf9-m9h7
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-07-23T07:22:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: juicefs-1.3
+            componentID: c2dedcf9829fdfd3
+            componentName: github.com/golang-jwt/jwt
+            componentVersion: v3.2.1+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/juicefs
+            scanner: grype
+
   - id: CGA-5mh8-6mhm-c4m4
     aliases:
       - GHSA-gv9j-4w24-q7vx
