@@ -393,6 +393,28 @@ advisories:
         data:
           fixed-version: 2.14.1-r0
 
+  - id: CGA-mc24-3hrc-2hgg
+    aliases:
+      - CVE-2025-54121
+      - GHSA-2c2j-9gv5-cj73
+    events:
+      - timestamp: 2025-07-22T08:46:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mlflow
+            componentID: 2e222123787360b7
+            componentName: starlette
+            componentVersion: 0.47.1
+            componentType: python
+            componentLocation: /usr/share/mlflow/lib/python3.13/site-packages/starlette-0.47.1.dist-info/METADATA
+            scanner: grype
+      - timestamp: 2025-07-23T15:32:33Z
+        type: fixed
+        data:
+          fixed-version: 3.1.4-r0
+
   - id: CGA-p6jj-p5p6-w8x6
     aliases:
       - CVE-2024-37057

@@ -41,6 +41,28 @@ advisories:
         data:
           note: All versions of ollama package are susceptible to CVE-2025-1975; k8sgpt package will need to update once ollama package has fixed CVE
 
+  - id: CGA-3f5p-2g24-hrf5
+    aliases:
+      - CVE-2025-51471
+      - GHSA-x9hg-5q6g-q3jr
+    events:
+      - timestamp: 2025-07-23T07:34:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k8sgpt
+            componentID: 78ec6a8b5babbed5
+            componentName: github.com/ollama/ollama
+            componentVersion: v0.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/k8sgpt
+            scanner: grype
+      - timestamp: 2025-07-24T17:04:35Z
+        type: pending-upstream-fix
+        data:
+          note: 'ollama upstream needs to patch GHSA-x9hg-5q6g-q3jr before k8sgpt can consume fixed version of ollama. Pending PR has been generated but waiting for Ollama upstream review: https://github.com/ollama/ollama/pull/10750'
+
   - id: CGA-3fwc-6xjr-gfh5
     aliases:
       - CVE-2024-45341
@@ -843,7 +865,7 @@ advisories:
       - timestamp: 2025-07-11T17:41:21Z
         type: pending-upstream-fix
         data:
-          note: 'The fix for CVE-2025-53547 must come from the upstream maintainers. Current attempts to update fail to build due to additional dependency updates being required.'
+          note: The fix for CVE-2025-53547 must come from the upstream maintainers. Current attempts to update fail to build due to additional dependency updates being required.
 
   - id: CGA-ww5x-4qrx-fw7r
     aliases:

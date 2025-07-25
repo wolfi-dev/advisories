@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: neo4j-2025.06
+
+advisories:
+  - id: CGA-vxhq-8vpg-mr2p
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2025-07-22T21:26:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: neo4j-2025.06
+            componentID: 2eefbe246dd13fb5
+            componentName: commons-lang3
+            componentVersion: 3.17.0
+            componentType: java-archive
+            componentLocation: /var/lib/neo4j/lib/commons-lang3-3.17.0.jar
+            scanner: grype
+      - timestamp: 2025-07-24T08:18:38Z
+        type: fixed
+        data:
+          fixed-version: 2025.06.2-r1

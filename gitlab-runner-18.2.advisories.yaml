@@ -21,3 +21,8 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/docker-machine
             scanner: grype
+      - timestamp: 2025-07-22T14:51:58Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: 'This vulnerability affects github.com/docker/docker (also known as github.com/moby/moby) versions up to v25.0.4. The version currently in use is v25.0.6, which already includes the patch: https://github.com/moby/moby/commit/8e3bcf19748838b30e34d612832d1dc9d90363b8. However, the CVE detection appears to be incorrectly triggered due to a version parsing mismatch — likely because the module version includes a +incompatible suffix.'

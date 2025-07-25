@@ -112,6 +112,28 @@ advisories:
         data:
           fixed-version: 0.6.5-r1
 
+  - id: CGA-7h4r-c7r6-j3qj
+    aliases:
+      - CVE-2025-51471
+      - GHSA-x9hg-5q6g-q3jr
+    events:
+      - timestamp: 2025-07-23T08:03:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ollama
+            componentID: afc21441297900c9
+            componentName: github.com/ollama/ollama
+            componentVersion: v0.9.6+dirty
+            componentType: go-module
+            componentLocation: /usr/bin/ollama
+            scanner: grype
+      - timestamp: 2025-07-24T17:08:51Z
+        type: pending-upstream-fix
+        data:
+          note: 'ollama upstream needs to patch code to fix GHSA-x9hg-5q6g-q3jr. Pending PR has been generated but waiting for Ollama upstream review: https://github.com/ollama/ollama/pull/10750'
+
   - id: CGA-8jf4-8pjj-cmmw
     aliases:
       - CVE-2024-45337
