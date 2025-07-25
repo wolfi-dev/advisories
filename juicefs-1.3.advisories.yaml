@@ -138,6 +138,12 @@ advisories:
         type: pending-upstream-fix
         data:
           note: This package must be removed from upstream dependencies. Upstream already consumes the fixed version, and trying to bump the vulnerable version will cause build failures due to duplication.
+      - timestamp: 2025-07-25T13:40:11Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: JuiceFS only uses etcd client libraries (go.etcd.io/etcd/client/v3) for connecting to external etcd clusters. This vulnerability affects etcd server components, which are not present in JuiceFS. Static analysis confirms no etcd server symbols exist in the binary, and govulncheck produces no findings. This CVE does not apply to JuiceFS client-only usage.
+        type: vulnerable-code-not-in-execution-path
 
   - id: CGA-qj22-3gm9-5w4p
     aliases:
