@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: cluster-api-helm-controller
+
+advisories:
+  - id: CGA-f5j3-h8gp-7p7h
+    aliases:
+      - CVE-2024-40635
+      - GHSA-265r-hfxg-fhmg
+    events:
+      - timestamp: 2025-07-30T11:50:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-api-helm-controller
+            componentID: 20d6620f3f086358
+            componentName: github.com/containerd/containerd
+            componentVersion: v1.7.23
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-api-helm-controller
+            scanner: grype
