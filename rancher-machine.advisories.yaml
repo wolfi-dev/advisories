@@ -4,6 +4,24 @@ package:
   name: rancher-machine
 
 advisories:
+  - id: CGA-7wxh-8whr-mq4m
+    aliases:
+      - CVE-2025-54410
+      - GHSA-4vq8-7jfc-9cvp
+    events:
+      - timestamp: 2025-07-30T10:18:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-machine
+            componentID: 27873f569d351fe1
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.8+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/rancher-machine
+            scanner: grype
+
   - id: CGA-8vh4-qc29-cxjw
     aliases:
       - CVE-2020-27534
