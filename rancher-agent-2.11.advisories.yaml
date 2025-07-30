@@ -289,6 +289,24 @@ advisories:
         data:
           fixed-version: 2.11.2-r2
 
+  - id: CGA-x333-q3cx-fw69
+    aliases:
+      - CVE-2025-54410
+      - GHSA-4vq8-7jfc-9cvp
+    events:
+      - timestamp: 2025-07-30T10:22:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-agent-2.11
+            componentID: c0765dd156882cbc
+            componentName: github.com/docker/docker
+            componentVersion: v20.10.27+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/agent
+            scanner: grype
+
   - id: CGA-x56q-ffg8-vvxv
     aliases:
       - CVE-2024-24557
