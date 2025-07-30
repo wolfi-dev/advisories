@@ -723,6 +723,24 @@ advisories:
             Pending fix from upstream, which will involve removing their dependency on the depreciated version.
             Related information: https://github.com/github/advisory-database/pull/4893.
 
+  - id: CGA-p9xj-r442-p45w
+    aliases:
+      - CVE-2025-54388
+      - GHSA-x4rx-4gw3-53p4
+    events:
+      - timestamp: 2025-07-30T10:35:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spire-agent
+            componentID: a68404f66bfa2951
+            componentName: github.com/docker/docker
+            componentVersion: v28.2.2+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/spire-agent
+            scanner: grype
+
   - id: CGA-v452-6jxf-3ccc
     aliases:
       - CVE-2024-45337
