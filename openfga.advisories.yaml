@@ -122,6 +122,24 @@ advisories:
         data:
           fixed-version: 1.8.7-r1
 
+  - id: CGA-mfx4-4243-8pcm
+    aliases:
+      - CVE-2025-54388
+      - GHSA-x4rx-4gw3-53p4
+    events:
+      - timestamp: 2025-07-30T08:41:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openfga
+            componentID: d912a58c03fc0f93
+            componentName: github.com/docker/docker
+            componentVersion: v28.2.2+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/openfga
+            scanner: grype
+
   - id: CGA-rgc2-w87p-v33x
     aliases:
       - CVE-2024-45341
