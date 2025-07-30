@@ -4,6 +4,24 @@ package:
   name: cluster-api-helm-controller
 
 advisories:
+  - id: CGA-8r46-4g7q-w5w7
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-07-30T11:50:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-api-helm-controller
+            componentID: d88bcde16af4db5d
+            componentName: golang.org/x/net
+            componentVersion: v0.37.0
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-api-helm-controller
+            scanner: grype
+
   - id: CGA-f5j3-h8gp-7p7h
     aliases:
       - CVE-2024-40635
