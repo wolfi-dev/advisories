@@ -4,6 +4,24 @@ package:
   name: gitlab-runner-18.2
 
 advisories:
+  - id: CGA-2x7h-v5h5-8492
+    aliases:
+      - CVE-2025-54410
+      - GHSA-4vq8-7jfc-9cvp
+    events:
+      - timestamp: 2025-07-30T07:47:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-docker-machine-18.2
+            componentID: ad7ffceddec4073b
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.6+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/docker-machine
+            scanner: grype
+
   - id: CGA-gvg9-wv66-5xgp
     aliases:
       - CVE-2024-36623
