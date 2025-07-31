@@ -4,6 +4,16 @@ package:
   name: gitlab-runner-18.2
 
 advisories:
+  - id: CGA-8w4p-43rg-gr3p
+    aliases:
+      - CVE-2025-54410
+      - GHSA-4vq8-7jfc-9cvp
+    events:
+      - timestamp: 2025-07-31T22:47:45Z
+        type: pending-upstream-fix
+        data:
+          note: 'This vulnerability affects Docker Engine (Moby) versions <= 25.0.12 where firewalld reload removes Docker''s iptables rules that isolate containers in different bridge networks. Upstream maintainers must cut a release with the fix. References: 25.x backport PR: https://github.com/moby/moby/pull/50445 28.x backport PR: https://github.com/moby/moby/pull/50506'
+
   - id: CGA-gvg9-wv66-5xgp
     aliases:
       - CVE-2024-36623

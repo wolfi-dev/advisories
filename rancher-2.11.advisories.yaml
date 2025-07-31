@@ -71,6 +71,16 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: govulncheck analysis shows that the github.com/docker/docker golang package is not used by the rancher-agent binary as there are no symbols referenced for the vulnerable code.
 
+  - id: CGA-7c26-xw66-x936
+    aliases:
+      - CVE-2025-54410
+      - GHSA-4vq8-7jfc-9cvp
+    events:
+      - timestamp: 2025-07-31T22:43:25Z
+        type: pending-upstream-fix
+        data:
+          note: 'This vulnerability affects Docker Engine (Moby) versions <= 25.0.12 where firewalld reload removes Docker''s iptables rules that isolate containers in different bridge networks. Upstream maintainers must cut a release with the fix. References: 25.x backport PR: https://github.com/moby/moby/pull/50445 28.x backport PR: https://github.com/moby/moby/pull/50506'
+
   - id: CGA-f5mh-f7cm-gph9
     aliases:
       - CVE-2024-36621
