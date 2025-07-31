@@ -136,6 +136,24 @@ advisories:
         data:
           note: Bumping aiohttp to 3.12.14+ causes build failures. No upstream PRs currently address this incompatibility. Upstream maintainers must implement changes to accommodate aiohttp 3.12.14+ before this CVE can be resolved.
 
+  - id: CGA-pxpq-4523-7gg6
+    aliases:
+      - CVE-2024-23342
+      - GHSA-wj6h-64fc-37mp
+    events:
+      - timestamp: 2025-07-31T07:24:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: open-webui
+            componentID: 6478fe7a6ca273b0
+            componentName: ecdsa
+            componentVersion: 0.19.1
+            componentType: python
+            componentLocation: /usr/share/open-webui/lib/python3.11/site-packages/ecdsa-0.19.1.dist-info/METADATA
+            scanner: grype
+
   - id: CGA-qg34-qp8g-rhvg
     aliases:
       - CVE-2025-50182
