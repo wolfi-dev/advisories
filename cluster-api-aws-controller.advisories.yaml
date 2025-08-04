@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: cluster-api-aws-controller
+
+advisories:
+  - id: CGA-46wx-h8gm-9f9h
+    aliases:
+      - CVE-2022-1706
+      - GHSA-hj57-j5cw-2mwp
+    events:
+      - timestamp: 2025-08-04T14:14:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-api-aws-controller
+            componentID: 33b9a75a76b6b6ed
+            componentName: github.com/coreos/ignition
+            componentVersion: v0.35.0
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-api-aws-controller
+            scanner: grype
