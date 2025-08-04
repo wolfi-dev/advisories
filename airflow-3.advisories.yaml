@@ -307,6 +307,10 @@ advisories:
             componentType: python
             componentLocation: /opt/airflow/lib/python3.12/site-packages/ecdsa-0.19.1.dist-info/METADATA
             scanner: grype
+      - timestamp: 2025-08-04T17:37:14Z
+        type: fix-not-planned
+        data:
+          note: "The python-ecdsa library is vulnerable to a Minerva timing attack on the P-256 curve through the ecdsa.SigningKey.sign_digest() API. The vulnerability affects ECDSA signatures, key generation, and ECDH operations, potentially allowing attackers to leak internal nonces and discover private keys through timing analysis. The upstream python-ecdsa project explicitly considers side-channel attacks out of scope and has stated there is no planned fix for this vulnerability."
 
   - id: CGA-vx49-fm46-cjjp
     aliases:
