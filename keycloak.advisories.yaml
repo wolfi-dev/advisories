@@ -4,6 +4,24 @@ package:
   name: keycloak
 
 advisories:
+  - id: CGA-28mx-p7j5-mc2w
+    aliases:
+      - CVE-2025-8419
+      - GHSA-qj5r-2r5p-phc7
+    events:
+      - timestamp: 2025-08-08T07:44:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak
+            componentID: 4964c7750ffef760
+            componentName: keycloak-services
+            componentVersion: 26.3.2
+            componentType: java-archive
+            componentLocation: /opt/bitnami/keycloak/lib/lib/main/org.keycloak.keycloak-services-26.3.2.jar
+            scanner: grype
+
   - id: CGA-2q5v-2cg8-99xh
     aliases:
       - CVE-2024-1597
