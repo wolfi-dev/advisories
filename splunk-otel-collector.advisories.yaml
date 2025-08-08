@@ -379,6 +379,16 @@ advisories:
         data:
           fixed-version: 0.115.0-r1
 
+  - id: CGA-h5vq-8mjh-ghm7
+    aliases:
+      - CVE-2025-6013
+      - GHSA-7rx2-769v-hrwf
+    events:
+      - timestamp: 2025-08-08T08:49:00Z
+        type: pending-upstream-fix
+        data:
+          note: 'The vulnerability originates from the Vault dependency. Upgrading Vault breaks the build due to a transitive conflict with k8s.io/client-go, which introduces incompatibility with Prometheus libraries. Once Prometheus addresses this (see issue #16767 and PR #16768) and the upstream resolves the issue, we’ll be able to upgrade and remediate the vulnerability.'
+
   - id: CGA-hj7w-m46w-956q
     aliases:
       - CVE-2025-30204
