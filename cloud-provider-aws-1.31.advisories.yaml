@@ -132,6 +132,24 @@ advisories:
         data:
           fixed-version: 1.31.5-r32
 
+  - id: CGA-mgph-cp5g-jxrv
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T18:45:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-provider-aws-1.31-cloud-controller-manager
+            componentID: d34feab859e2b842
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/ecr-credential-provider
+            scanner: grype
+
   - id: CGA-mh8w-7qff-wm98
     aliases:
       - CVE-2025-22874
