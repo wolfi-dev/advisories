@@ -4,6 +4,24 @@ package:
   name: knative-serving-1.18
 
 advisories:
+  - id: CGA-32pf-c7h9-gfqf
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T19:21:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: knative-serving-1.18-autoscaler
+            componentID: 6ab9c2c704464c10
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/activator
+            scanner: grype
+
   - id: CGA-97x2-qj48-728p
     aliases:
       - CVE-2025-22868
