@@ -48,6 +48,24 @@ advisories:
         data:
           fixed-version: 0.18.0-r2
 
+  - id: CGA-75hm-996w-wf49
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T19:42:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-release-go-runner
+            componentID: 7de0744df3799cda
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/go-runner
+            scanner: grype
+
   - id: CGA-7w7m-qhfc-97cr
     aliases:
       - CVE-2024-45336
