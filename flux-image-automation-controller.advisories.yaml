@@ -14,6 +14,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability is only present on Windows.
 
+  - id: CGA-2j58-j763-vrfg
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T11:33:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-image-automation-controller
+            componentID: 738e68572f35425c
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/image-automation-controller
+            scanner: grype
+
   - id: CGA-2j84-g6rm-957w
     aliases:
       - CVE-2024-34158
