@@ -4,6 +4,24 @@ package:
   name: tekton-chains
 
 advisories:
+  - id: CGA-2449-m858-9xhq
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T22:15:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tekton-chains
+            componentID: 65cc027d48d0a506
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/tekton-chains
+            scanner: grype
+
   - id: CGA-2gvp-7fvh-33gr
     aliases:
       - GHSA-jq35-85cj-fj4p
