@@ -26,6 +26,24 @@ advisories:
         data:
           note: Upstream uses ignition v0.35.0 and ignition v2. The v0.35.0 is for backwards compatibility. Upstream will deprecate this in the future but this is currently required until that time.
 
+  - id: CGA-63vx-8hpw-64p9
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T09:41:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-api-aws-controller
+            componentID: 432672d91f651573
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-api-aws-controller
+            scanner: grype
+
   - id: CGA-8c53-425r-xjx7
     aliases:
       - CVE-2025-22872
