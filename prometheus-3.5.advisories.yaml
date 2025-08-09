@@ -4,6 +4,24 @@ package:
   name: prometheus-3.5
 
 advisories:
+  - id: CGA-cx29-58pp-hxjm
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T20:23:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-3.5
+            componentID: 101bfb8e41eb1227
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /opt/bitnami/prometheus/bin/prometheus
+            scanner: grype
+
   - id: CGA-p769-wcv6-r8pm
     aliases:
       - CVE-2025-54388
