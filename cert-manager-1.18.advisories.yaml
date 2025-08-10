@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: cert-manager-1.18
+
+advisories:
+  - id: CGA-x6jq-c7cp-43cp
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T18:29:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-manager-1.18
+            componentID: 5199ff85fa69f615
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/acmesolver-linux-amd64
+            scanner: grype
