@@ -4,6 +4,24 @@ package:
   name: liquibase-package-manager
 
 advisories:
+  - id: CGA-54r5-fgqv-frph
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T15:26:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: liquibase-package-manager
+            componentID: c7974df9b847a4ac
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/lpm
+            scanner: grype
+
   - id: CGA-9cv2-5pw9-pm9h
     aliases:
       - CVE-2025-22871
