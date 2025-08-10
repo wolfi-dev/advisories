@@ -24,3 +24,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.10.3-r1
+
+  - id: CGA-hrqp-9xrv-3wvh
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T20:03:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-api-1.10-capd-manager
+            componentID: 44c4e28b955f5bd3
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/clusterctl
+            scanner: grype
