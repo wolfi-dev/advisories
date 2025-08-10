@@ -4,6 +4,24 @@ package:
   name: gitlab-cng-18.2
 
 advisories:
+  - id: CGA-73qc-c2mr-56j6
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T03:51:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-container-registry-18.2
+            componentID: 96af37e832f3f317
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-logger
+            scanner: grype
+
   - id: CGA-79wr-rprv-jq4h
     aliases:
       - CVE-2024-21510
