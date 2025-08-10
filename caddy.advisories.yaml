@@ -161,6 +161,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'Module "github.com/caddyserver/caddy/v2" at "/usr/bin/caddy": the commit of the fixed version (c7d6c4cbb951f7db87fc5aebf8382aeeca6c9f1d) is an ancestor of installed commit (6d9a83376b5e19b3c0368541ee46044ab284038b), which means the installed version was misidentified by the scanner and the vulnerability has actually been fixed.'
 
+  - id: CGA-88wc-2498-356w
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T05:10:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: caddy
+            componentID: 8c18787c7dc0db02
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/caddy
+            scanner: grype
+
   - id: CGA-9838-754r-wv93
     aliases:
       - CVE-2025-22866
