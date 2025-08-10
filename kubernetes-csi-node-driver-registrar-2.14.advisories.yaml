@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: kubernetes-csi-node-driver-registrar-2.14
+
+advisories:
+  - id: CGA-xqrf-wvj3-3h4c
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T19:46:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-node-driver-registrar-2.14
+            componentID: ce564589bf0153b7
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/csi-node-driver-registrar
+            scanner: grype
