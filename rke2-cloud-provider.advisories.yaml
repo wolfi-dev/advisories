@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: rke2-cloud-provider
+
+advisories:
+  - id: CGA-p684-543m-wf2g
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T14:22:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rke2-cloud-provider
+            componentID: 075dc5d067094103
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/cloud-controller-manager
+            scanner: grype
