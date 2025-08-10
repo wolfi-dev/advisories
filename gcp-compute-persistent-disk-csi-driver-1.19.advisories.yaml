@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: gcp-compute-persistent-disk-csi-driver-1.19
+
+advisories:
+  - id: CGA-f8r6-8rjw-36q8
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T12:30:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gcp-compute-persistent-disk-csi-driver-1.19
+            componentID: 593a78314ca4c26c
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/gce-pd-csi-driver
+            scanner: grype
