@@ -25,3 +25,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.11.2-r0
+
+  - id: CGA-4w86-c322-3xg6
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T02:34:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kuma-install-cni-2.11
+            componentID: 5c0e5dd6d093c704
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/kuma-cp
+            scanner: grype
