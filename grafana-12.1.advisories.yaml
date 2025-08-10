@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: grafana-12.1
+
+advisories:
+  - id: CGA-w98c-p4mm-4jf6
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T19:31:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-12.1
+            componentID: dec83e95ca891472
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
