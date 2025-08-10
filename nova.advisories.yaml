@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: nova
+
+advisories:
+  - id: CGA-c33v-2qc2-4353
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T20:28:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nova
+            componentID: d29e5e071f5fd4d9
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/nova
+            scanner: grype
