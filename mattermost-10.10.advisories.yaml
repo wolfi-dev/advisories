@@ -4,6 +4,24 @@ package:
   name: mattermost-10.10
 
 advisories:
+  - id: CGA-cm6m-xvw6-fm7x
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T05:17:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-10.10
+            componentID: 64647eac1348204d
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/mattermost
+            scanner: grype
+
   - id: CGA-q396-crfg-qq8r
     aliases:
       - GHSA-fv92-fjc5-jj9h
