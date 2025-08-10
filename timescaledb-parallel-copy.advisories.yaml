@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: timescaledb-parallel-copy
+
+advisories:
+  - id: CGA-46rf-9p53-x7cg
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T10:30:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: timescaledb-parallel-copy
+            componentID: 69fd9e1d1c9109d1
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/timescaledb-parallel-copy
+            scanner: grype
