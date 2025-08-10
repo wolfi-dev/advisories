@@ -25,6 +25,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-335c-3vv3-37c8
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T10:29:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: golangci-lint
+            componentID: 1f2a470d0c99064a
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/golangci-lint
+            scanner: grype
+
   - id: CGA-3hmr-c5mj-wc4w
     aliases:
       - CVE-2024-34156
