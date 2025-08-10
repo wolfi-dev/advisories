@@ -4,6 +4,24 @@ package:
   name: aws-otel-collector
 
 advisories:
+  - id: CGA-fghp-ch77-pm59
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T04:28:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-otel-collector
+            componentID: 16c4c1df53c7ef7e
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/awscollector
+            scanner: grype
+
   - id: CGA-w86r-pffm-55cc
     aliases:
       - GHSA-fv92-fjc5-jj9h
