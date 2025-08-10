@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: iptables-wrappers
+
+advisories:
+  - id: CGA-g7p7-5ch5-235g
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T04:14:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: iptables-wrappers
+            componentID: 82a02c367e345856
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/iptables-wrapper
+            scanner: grype
