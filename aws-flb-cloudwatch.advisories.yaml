@@ -258,6 +258,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-qv85-8rrv-52hh
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T02:21:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-flb-cloudwatch
+            componentID: a692d72414fe3c52
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/cloudwatch.so
+            scanner: grype
+
   - id: CGA-v4p2-8cwj-wmrc
     aliases:
       - CVE-2024-24785
