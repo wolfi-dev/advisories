@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: flux-operator
+
+advisories:
+  - id: CGA-hgw8-3qwh-qx4m
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T16:14:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-operator
+            componentID: 4fd278b5f87ff949
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/flux-operator-mcp
+            scanner: grype
