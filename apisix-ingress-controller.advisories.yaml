@@ -4,6 +4,24 @@ package:
   name: apisix-ingress-controller
 
 advisories:
+  - id: CGA-hv92-35q8-f3cj
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T05:51:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apisix-ingress-controller
+            componentID: a3d0357fcfddf7c1
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/apisix-ingress-controller
+            scanner: grype
+
   - id: CGA-j3w5-9495-j48j
     aliases:
       - CVE-2024-24786
@@ -29,4 +47,4 @@ advisories:
       - timestamp: 2025-07-07T10:51:27Z
         type: pending-upstream-fix
         data:
-          note: 'The apisix-ingress-controller cannot be rebuilt with the latest protobuf due to usage of deprecated symbols from `github.com/golang/protobuf`. Upstream needs to migrate to `google.golang.org/protobuf` and regenerate `.pb.go` files to unblock CVE fixes via dependency updates.'
+          note: The apisix-ingress-controller cannot be rebuilt with the latest protobuf due to usage of deprecated symbols from `github.com/golang/protobuf`. Upstream needs to migrate to `google.golang.org/protobuf` and regenerate `.pb.go` files to unblock CVE fixes via dependency updates.
