@@ -159,6 +159,24 @@ advisories:
         data:
           note: 'amazon-cloudwatch-agent-operator 2.1.0 uses Docker 25.0.6, as seen here: https://github.com/aws/amazon-cloudwatch-agent-operator/blob/v2.1.0/go.mod#L75 The fixed version to remediate this CVE is 26.1.0; however, breaking changes between these major versions require upstream maintainers to implement compatibility.'
 
+  - id: CGA-q8r6-mrg7-vhpg
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T04:38:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: amazon-cloudwatch-agent-operator
+            componentID: b2ffe19995a5e2bf
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-qjqg-fhg2-frxg
     aliases:
       - CVE-2025-22870
