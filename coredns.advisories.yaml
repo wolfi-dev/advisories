@@ -396,6 +396,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability was matched to the module "github.com/coredns/coredns" at the following location(s): /usr/bin/coredns. In all cases, the fixed version of the module (git commit 6a7a75e0cc14159177e604d0157836cc32add343) is an ancestor of the installed version commit (a7ed346585e30b99317d36e4d007b7b19a228ea5).'
 
+  - id: CGA-ch36-jggh-w45c
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T14:34:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: coredns
+            componentID: 336423354bc73884
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/coredns
+            scanner: grype
+
   - id: CGA-cvx6-gcmr-689q
     aliases:
       - CVE-2024-24783
