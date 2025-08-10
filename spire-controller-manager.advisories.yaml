@@ -4,6 +4,24 @@ package:
   name: spire-controller-manager
 
 advisories:
+  - id: CGA-7f8f-7x58-jcx7
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T08:54:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spire-controller-manager
+            componentID: de7309c9663e2e11
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/spire-controller-manager
+            scanner: grype
+
   - id: CGA-fqcf-fvqw-g5vv
     aliases:
       - CVE-2025-22872
