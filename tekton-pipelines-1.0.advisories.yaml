@@ -26,6 +26,28 @@ advisories:
         data:
           fixed-version: 1.0.0-r5
 
+  - id: CGA-cm97-w597-5578
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T17:22:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tekton-pipelines-sidecarlogresults-1.0
+            componentID: 99f5e741471ef49b
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/controller
+            scanner: grype
+      - timestamp: 2025-08-11T10:28:00Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in tekton-pipelines-resolvers-1.0-1.0.0-r6.apk, at usr/bin/resolvers, usr/bin/resolvers.'
+
   - id: CGA-g49p-jf54-cq7p
     aliases:
       - CVE-2025-4673

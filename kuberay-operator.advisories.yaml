@@ -4,6 +4,29 @@ package:
   name: kuberay-operator
 
 advisories:
+  - id: CGA-2xcv-f2h3-qg5q
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T23:45:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kuberay-operator
+            componentID: b2ffe19995a5e2bf
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-08-11T10:21:17Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-3f99-q462-m779
     aliases:
       - CVE-2025-22866
