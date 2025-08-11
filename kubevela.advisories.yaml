@@ -394,6 +394,32 @@ advisories:
         data:
           fixed-version: 1.10.2-r1
 
+  - id: CGA-92fm-x8p5-8fgg
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-11T03:26:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubevela-vela-core
+            componentID: abd1dbf14ebe4cdf
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/vela
+            scanner: grype
+      - timestamp: 2025-08-11T09:16:09Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in kubevela-vela-cli-1.10.3-r8.apk, at usr/bin/vela, usr/bin/vela; in kubevela-vela-core-1.10.3-r8.apk, at usr/bin/manager, usr/bin/manager.'
+      - timestamp: 2025-08-11T10:37:24Z
+        type: fixed
+        data:
+          fixed-version: 1.10.3-r9
+
   - id: CGA-95gm-8fcj-r7xv
     aliases:
       - CVE-2025-22869
