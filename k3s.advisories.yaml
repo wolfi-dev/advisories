@@ -259,6 +259,24 @@ advisories:
         data:
           note: This vulnerability requires an upgrade in a separate project 'https://github.com/k3s-io/containerd' on which the vulnerable dependency still uses an affected version.
 
+  - id: CGA-7hx2-3r2c-8hpq
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-11T04:09:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s
+            componentID: 2a5b80f0de0cf526
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/containerd-shim-runc-v2
+            scanner: grype
+
   - id: CGA-7jcp-vfhv-643j
     aliases:
       - CVE-2023-46129

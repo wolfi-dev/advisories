@@ -92,6 +92,28 @@ advisories:
         data:
           fixed-version: 1.17.4-r1
 
+  - id: CGA-qvr4-ggm6-jrxr
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T19:05:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-envoy-1.17
+            componentID: 93ef769e9e18a23f
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/lib/libcilium.so
+            scanner: grype
+      - timestamp: 2025-08-11T07:43:03Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in cilium-envoy-1.17-1.17.6-r0.apk, at usr/lib/libcilium.so, usr/lib/libcilium.so.'
+
   - id: CGA-vp34-9mhw-x7rh
     aliases:
       - CVE-2025-22872
