@@ -1,0 +1,28 @@
+schema-version: 2.0.2
+
+package:
+  name: metrics-agent
+
+advisories:
+  - id: CGA-w79v-9fvf-rw8j
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T03:33:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: metrics-agent
+            componentID: 0f3d6898e7a57a18
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/metrics-agent
+            scanner: grype
+      - timestamp: 2025-08-10T15:18:42Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.

@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: redpanda-25.1
+
+advisories:
+  - id: CGA-gj34-mf95-35pp
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T07:47:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rpk-25.2.1
+            componentID: f6a0c9a33d196f53
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/rpk
+            scanner: grype
+      - timestamp: 2025-08-11T08:34:56Z
+        type: fixed
+        data:
+          fixed-version: 25.2.1-r1

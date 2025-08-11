@@ -356,6 +356,29 @@ advisories:
         data:
           fixed-version: 1.6.3-r6
 
+  - id: CGA-r64x-pxc4-rxw5
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T04:10:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-policy-reporter-kyverno-plugin
+            componentID: a5844ea54cb3e38c
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/kyverno-plugin
+            scanner: grype
+      - timestamp: 2025-08-10T08:29:42Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-rf6w-g8f3-4p95
     aliases:
       - CVE-2024-24783

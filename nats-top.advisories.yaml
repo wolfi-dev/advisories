@@ -4,6 +4,29 @@ package:
   name: nats-top
 
 advisories:
+  - id: CGA-8v2h-93cc-v8xh
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-11T06:55:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nats-top
+            componentID: 21bd00c7cd0c3309
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/nats-top
+            scanner: grype
+      - timestamp: 2025-08-11T10:19:42Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-cp5h-jmjw-x8qp
     aliases:
       - CVE-2025-22869

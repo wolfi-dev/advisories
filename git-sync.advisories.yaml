@@ -68,6 +68,29 @@ advisories:
         data:
           fixed-version: 4.4.0-r4
 
+  - id: CGA-853x-v7gv-c387
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T11:16:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: git-sync
+            componentID: 806ac64a8afe02d6
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/git-sync
+            scanner: grype
+      - timestamp: 2025-08-11T07:43:47Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-96xw-gphp-xhqx
     aliases:
       - CVE-2025-4673

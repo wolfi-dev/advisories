@@ -71,6 +71,32 @@ advisories:
         data:
           fixed-version: 1.0.19-r3
 
+  - id: CGA-7868-h3vx-5r5x
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T05:13:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sftpgo-plugin-eventsearch
+            componentID: a1cf889adc192d65
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/sftpgo-plugin-eventsearch
+            scanner: grype
+      - timestamp: 2025-08-10T10:36:44Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in sftpgo-plugin-eventsearch-1.0.20-r5.apk, at usr/bin/sftpgo-plugin-eventsearch, usr/bin/sftpgo-plugin-eventsearch.'
+      - timestamp: 2025-08-10T23:32:18Z
+        type: fixed
+        data:
+          fixed-version: 1.0.20-r6
+
   - id: CGA-7hrr-xmj4-pcqf
     aliases:
       - CVE-2025-22870

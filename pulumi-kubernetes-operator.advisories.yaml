@@ -319,6 +319,29 @@ advisories:
         data:
           fixed-version: 1.16.0-r13
 
+  - id: CGA-f767-3jpx-7558
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T23:31:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pulumi-kubernetes-operator
+            componentID: d1d48b6298a320c9
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/pulumi-kubernetes-operator
+            scanner: grype
+      - timestamp: 2025-08-11T11:04:05Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-fffw-24jg-6h5f
     aliases:
       - GHSA-6xv5-86q9-7xr8
