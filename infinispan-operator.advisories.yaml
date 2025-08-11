@@ -1,0 +1,28 @@
+schema-version: 2.0.2
+
+package:
+  name: infinispan-operator
+
+advisories:
+  - id: CGA-925r-xp4g-39wr
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-11T02:17:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: infinispan-operator
+            componentID: fc8409975d5caecd
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/infinispan-operator
+            scanner: grype
+      - timestamp: 2025-08-11T08:25:10Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.

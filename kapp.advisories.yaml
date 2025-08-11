@@ -247,3 +247,26 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.64.0-r6
+
+  - id: CGA-xxf4-7r34-rq74
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T23:52:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kapp
+            componentID: d840afc3b49868e3
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/kapp
+            scanner: grype
+      - timestamp: 2025-08-11T10:20:47Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
