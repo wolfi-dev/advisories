@@ -43,6 +43,10 @@ advisories:
             componentType: npm
             componentLocation: /vt/web/vtadmin/node_modules/form-data/package.json
             scanner: grype
+      - timestamp: 2025-07-23T18:46:07Z
+        type: fixed
+        data:
+          fixed-version: 22.0.1-r3
 
   - id: CGA-74w6-mp7h-g4vg
     aliases:
@@ -61,6 +65,10 @@ advisories:
             componentType: npm
             componentLocation: /vt/web/vtadmin/node_modules/on-headers/package.json
             scanner: grype
+      - timestamp: 2025-07-22T22:28:21Z
+        type: pending-upstream-fix
+        data:
+          note: Upstream maintainers will need to patch on-headers@1.0.2 to a patched version; attempted patches have been applied
 
   - id: CGA-pmhx-ph8c-28gj
     aliases:
@@ -83,3 +91,25 @@ advisories:
         type: pending-upstream-fix
         data:
           note: An outdated braces-expansion is pulled in by a transitive dependency, upstream has to update the package to update braces-expansion to >= v2.0.2
+
+  - id: CGA-q3q6-f2rf-vw2f
+    aliases:
+      - CVE-2025-54798
+      - GHSA-52f5-9888-hmc6
+    events:
+      - timestamp: 2025-08-08T08:12:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vitess-22
+            componentID: cb7c750dc03abb38
+            componentName: tmp
+            componentVersion: 0.2.3
+            componentType: npm
+            componentLocation: /vt/web/vtadmin/node_modules/tmp/package.json
+            scanner: grype
+      - timestamp: 2025-08-08T14:06:07Z
+        type: fixed
+        data:
+          fixed-version: 22.0.1-r5

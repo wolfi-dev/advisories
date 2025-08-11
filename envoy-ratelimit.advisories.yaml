@@ -239,6 +239,29 @@ advisories:
         data:
           fixed-version: 0.0.0_git20250419-r1
 
+  - id: CGA-r979-gvj9-v278
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T15:47:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: envoy-ratelimit
+            componentID: 9576b96b8926000b
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/ratelimit
+            scanner: grype
+      - timestamp: 2025-08-10T09:39:54Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-rq5w-qg9v-6hcc
     aliases:
       - CVE-2024-24791

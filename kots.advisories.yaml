@@ -600,6 +600,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability is in the container runtime itself, not clients of the container runtime.
 
+  - id: CGA-jhwf-cjw2-v755
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T11:07:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kots
+            componentID: dcd05d3d34433adb
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/kots
+            scanner: grype
+      - timestamp: 2025-08-09T19:43:00Z
+        type: fixed
+        data:
+          fixed-version: 1.125.2-r1
+
   - id: CGA-m49h-gm74-j276
     aliases:
       - CVE-2023-3978

@@ -162,6 +162,28 @@ advisories:
         data:
           fixed-version: 1.6.3-r1
 
+  - id: CGA-qf7c-6346-2gf6
+    aliases:
+      - CVE-2025-4563
+      - GHSA-hj2p-8wj8-pfq4
+    events:
+      - timestamp: 2025-07-28T15:29:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: yunikorn-k8shim
+            componentID: 589de9957bf75115
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.32.2
+            componentType: go-module
+            componentLocation: /usr/bin/yunikorn-scheduler
+            scanner: grype
+      - timestamp: 2025-07-28T18:55:01Z
+        type: fixed
+        data:
+          fixed-version: 1.7.0-r1
+
   - id: CGA-rmrm-q4hp-g532
     aliases:
       - CVE-2025-4673
@@ -183,6 +205,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.6.3-r1
+
+  - id: CGA-vx6x-46fp-7c8x
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T07:43:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: yunikorn-k8shim
+            componentID: ed6b064967fc5965
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/yunikorn-scheduler
+            scanner: grype
+      - timestamp: 2025-08-09T10:54:50Z
+        type: fixed
+        data:
+          fixed-version: 1.7.0-r2
 
   - id: CGA-w844-m8c9-hq5q
     aliases:

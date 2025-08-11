@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: aws-nuke
+
+advisories:
+  - id: CGA-m9qj-rxjh-x579
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T09:30:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-nuke
+            componentID: b2e4466a4c71e7d2
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/aws-nuke
+            scanner: grype
+      - timestamp: 2025-08-09T12:40:27Z
+        type: fixed
+        data:
+          fixed-version: 3.56.2-r2

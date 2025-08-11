@@ -69,3 +69,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.12.2-r1
+
+  - id: CGA-hjh4-h8pg-7jhr
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T07:30:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gotestsum
+            componentID: d7fb303204c9ac62
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/gotestsum
+            scanner: grype
+      - timestamp: 2025-08-09T08:33:43Z
+        type: fixed
+        data:
+          fixed-version: 1.12.3-r2

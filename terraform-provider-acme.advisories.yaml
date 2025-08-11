@@ -121,6 +121,28 @@ advisories:
         data:
           fixed-version: 2.31.0-r1
 
+  - id: CGA-q59p-m734-55f4
+    aliases:
+      - CVE-2025-54799
+      - GHSA-q82r-2j7m-9rv4
+    events:
+      - timestamp: 2025-08-08T08:07:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-acme
+            componentID: 55c5d8ef98555bfd
+            componentName: github.com/go-acme/lego/v4
+            componentVersion: v4.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-acme
+            scanner: grype
+      - timestamp: 2025-08-08T09:31:14Z
+        type: fixed
+        data:
+          fixed-version: 2.35.0-r1
+
   - id: CGA-vp5q-g93r-42xp
     aliases:
       - GHSA-fv92-fjc5-jj9h

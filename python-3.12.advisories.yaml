@@ -261,6 +261,28 @@ advisories:
         data:
           fixed-version: 3.12.9-r0
 
+  - id: CGA-p3hf-3xq5-7c49
+    aliases:
+      - CVE-2025-8194
+      - GHSA-v594-44hm-2j7p
+    events:
+      - timestamp: 2025-07-30T10:38:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: python-3.12
+            componentID: 95b6836a3b399bac
+            componentName: python-3.12
+            componentVersion: 3.12.11-r4
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2025-08-01T00:31:45Z
+        type: pending-upstream-fix
+        data:
+          note: 'Upstream maintainers must release the backport PR for Python 3.12. The tarfile validation fix from gh-130577 is ready for 3.12 via PR #137171 but not yet merged and released. CVE-2025-8194 is fixed in Python 3.13.5+ but requires backporting to 3.12 branch. Reference: https://github.com/python/cpython/pull/137171'
+
   - id: CGA-q3qc-6cj9-jg33
     aliases:
       - CVE-2024-4030

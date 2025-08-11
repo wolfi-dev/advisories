@@ -26,6 +26,28 @@ advisories:
         data:
           fixed-version: 1.8.8-r0
 
+  - id: CGA-9c3x-4wq5-v74x
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T16:56:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openfga
+            componentID: 92540dcb8a7990ef
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/openfga
+            scanner: grype
+      - timestamp: 2025-08-10T07:57:01Z
+        type: fixed
+        data:
+          fixed-version: 1.9.2-r2
+
   - id: CGA-9jrc-8q4w-p498
     aliases:
       - CVE-2025-22866
@@ -121,6 +143,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.8.7-r1
+
+  - id: CGA-mfx4-4243-8pcm
+    aliases:
+      - CVE-2025-54388
+      - GHSA-x4rx-4gw3-53p4
+    events:
+      - timestamp: 2025-07-30T08:41:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openfga
+            componentID: d912a58c03fc0f93
+            componentName: github.com/docker/docker
+            componentVersion: v28.2.2+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/openfga
+            scanner: grype
+      - timestamp: 2025-07-30T10:37:19Z
+        type: fixed
+        data:
+          fixed-version: 1.9.2-r1
 
   - id: CGA-rgc2-w87p-v33x
     aliases:

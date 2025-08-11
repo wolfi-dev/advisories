@@ -87,6 +87,10 @@ advisories:
             componentType: python
             componentLocation: /usr/share/open-webui/lib/python3.11/site-packages/starlette-0.45.3.dist-info/METADATA
             scanner: grype
+      - timestamp: 2025-07-23T16:06:04Z
+        type: fixed
+        data:
+          fixed-version: 0.6.18-r1
 
   - id: CGA-mmqg-f57g-9jcp
     aliases:
@@ -131,6 +135,28 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Bumping aiohttp to 3.12.14+ causes build failures. No upstream PRs currently address this incompatibility. Upstream maintainers must implement changes to accommodate aiohttp 3.12.14+ before this CVE can be resolved.
+
+  - id: CGA-pxpq-4523-7gg6
+    aliases:
+      - CVE-2024-23342
+      - GHSA-wj6h-64fc-37mp
+    events:
+      - timestamp: 2025-07-31T07:24:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: open-webui
+            componentID: 6478fe7a6ca273b0
+            componentName: ecdsa
+            componentVersion: 0.19.1
+            componentType: python
+            componentLocation: /usr/share/open-webui/lib/python3.11/site-packages/ecdsa-0.19.1.dist-info/METADATA
+            scanner: grype
+      - timestamp: 2025-08-04T17:40:50Z
+        type: fix-not-planned
+        data:
+          note: "The python-ecdsa library is vulnerable to a Minerva timing attack on the P-256 curve through the ecdsa.SigningKey.sign_digest() API. The vulnerability affects ECDSA signatures, key generation, and ECDH operations, potentially allowing attackers to leak internal nonces and discover private keys through timing analysis. The upstream python-ecdsa project explicitly considers side-channel attacks out of scope and has stated there is no planned fix for this vulnerability."
 
   - id: CGA-qg34-qp8g-rhvg
     aliases:

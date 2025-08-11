@@ -301,6 +301,28 @@ advisories:
         data:
           fixed-version: 0.9.8-r2
 
+  - id: CGA-g2f9-hwq5-h87w
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T13:51:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pulumi-language-java
+            componentID: d994e230dc25fa01
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/pulumi-language-java
+            scanner: grype
+      - timestamp: 2025-08-09T23:37:39Z
+        type: fixed
+        data:
+          fixed-version: 1.16.1-r1
+
   - id: CGA-hmwp-m5cc-45p7
     aliases:
       - CVE-2023-3978

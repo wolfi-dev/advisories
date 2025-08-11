@@ -4,6 +4,29 @@ package:
   name: kserve-modelmesh-serving
 
 advisories:
+  - id: CGA-32mg-7gvg-2fj2
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T20:53:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kserve-modelmesh-serving
+            componentID: b2ffe19995a5e2bf
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-08-10T08:31:27Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-8gcf-5v2v-qrw8
     aliases:
       - CVE-2025-22872

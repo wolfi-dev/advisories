@@ -325,6 +325,28 @@ advisories:
         data:
           fixed-version: 0.34.0-r4
 
+  - id: CGA-fmj3-fm27-836v
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T11:03:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-image-reflector-controller
+            componentID: 79e303394e6074e1
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/image-reflector-controller
+            scanner: grype
+      - timestamp: 2025-08-09T19:51:47Z
+        type: fixed
+        data:
+          fixed-version: 0.35.2-r4
+
   - id: CGA-g3v7-6w5v-whr7
     aliases:
       - CVE-2025-22868

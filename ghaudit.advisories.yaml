@@ -24,6 +24,28 @@ advisories:
         data:
           fixed-version: 0.4.0-r3
 
+  - id: CGA-7jjq-mrfx-w25r
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T13:48:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ghaudit
+            componentID: b82b3385122fdad0
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/ghaudit
+            scanner: grype
+      - timestamp: 2025-08-10T06:39:43Z
+        type: fixed
+        data:
+          fixed-version: 0.4.0-r14
+
   - id: CGA-7m8v-qhwm-ch44
     aliases:
       - CVE-2024-24790

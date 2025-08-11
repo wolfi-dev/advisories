@@ -326,6 +326,28 @@ advisories:
         data:
           fixed-version: 1.8.11-r2
 
+  - id: CGA-m4m7-72wm-r4gp
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T10:28:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-proportional-autoscaler
+            componentID: 33900d010debfbfb
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-proportional-autoscaler
+            scanner: grype
+      - timestamp: 2025-08-09T17:29:36Z
+        type: fixed
+        data:
+          fixed-version: 1.10.2-r6
+
   - id: CGA-mr7q-vvxv-5p7v
     aliases:
       - CVE-2023-45283

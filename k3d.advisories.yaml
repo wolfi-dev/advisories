@@ -102,6 +102,28 @@ advisories:
         data:
           fixed-version: 5.6.0-r11
 
+  - id: CGA-397q-rpxj-j6fp
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T22:13:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3d
+            componentID: 7c91a57040657a5f
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/k3d-tools
+            scanner: grype
+      - timestamp: 2025-08-10T15:34:56Z
+        type: fixed
+        data:
+          fixed-version: 5.8.3-r15
+
   - id: CGA-3rh5-7fx9-w6cf
     aliases:
       - CVE-2023-5954

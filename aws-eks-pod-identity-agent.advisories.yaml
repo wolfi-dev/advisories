@@ -4,6 +4,28 @@ package:
   name: aws-eks-pod-identity-agent
 
 advisories:
+  - id: CGA-85j8-6fqj-7pwj
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T15:37:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-eks-pod-identity-agent
+            componentID: 78df7faf01841c54
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/eks-pod-identity-agent
+            scanner: grype
+      - timestamp: 2025-08-10T04:40:39Z
+        type: fixed
+        data:
+          fixed-version: 0.1.32-r2
+
   - id: CGA-8v23-2crj-hxp9
     aliases:
       - CVE-2025-4673

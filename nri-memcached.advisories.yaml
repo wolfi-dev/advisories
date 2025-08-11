@@ -120,6 +120,28 @@ advisories:
         data:
           fixed-version: 2.5.7-r1
 
+  - id: CGA-fhmc-6253-v2c8
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T07:31:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-memcached
+            componentID: 4716d21b077299d2
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/nri-memcached
+            scanner: grype
+      - timestamp: 2025-08-09T15:30:21Z
+        type: fixed
+        data:
+          fixed-version: 2.7.1-r2
+
   - id: CGA-g2jv-x7m2-w98v
     aliases:
       - CVE-2024-24784

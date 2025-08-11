@@ -36,6 +36,28 @@ advisories:
         data:
           fixed-version: 0.14.9-r3
 
+  - id: CGA-2rpq-2rv6-84rf
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T12:52:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: metallb
+            componentID: 6b71bb6670048848
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /frr-metrics
+            scanner: grype
+      - timestamp: 2025-08-09T21:33:37Z
+        type: fixed
+        data:
+          fixed-version: 0.15.2-r3
+
   - id: CGA-3w65-ffj5-r45w
     aliases:
       - CVE-2024-24789

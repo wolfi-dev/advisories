@@ -4,6 +4,28 @@ package:
   name: azuredisk-csi-1.33
 
 advisories:
+  - id: CGA-9pqc-662r-823q
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T09:50:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: azuredisk-csi-1.33
+            componentID: 6eddaa490ca23243
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/azurediskplugin
+            scanner: grype
+      - timestamp: 2025-08-09T14:40:53Z
+        type: fixed
+        data:
+          fixed-version: 1.33.3-r1
+
   - id: CGA-j3fh-w6px-892c
     aliases:
       - CVE-2025-4563

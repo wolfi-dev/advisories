@@ -21,7 +21,7 @@ jobs:
 
     steps:
     - name: Harden Runner
-      uses: step-security/harden-runner@6c439dc8bdf85cadbbce9ed30d1c7b959517bc49 # v2.12.2
+      uses: step-security/harden-runner@ec9f2d5744a09debf3a187a3f4f675c53b671911 # v2.13.0
       with:
         egress-policy: audit
 
@@ -42,13 +42,13 @@ jobs:
 
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@6c439dc8bdf85cadbbce9ed30d1c7b959517bc49 # v2.12.2
+        uses: step-security/harden-runner@ec9f2d5744a09debf3a187a3f4f675c53b671911 # v2.13.0
         with:
           egress-policy: audit
 
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
-      - uses: step-security/action-misspell@17aa5c7fafa08a9fac5e4f0363bb7ddbb728e2d7 # v1.26.4
+      - uses: step-security/action-misspell@0f3cc345708d2eac0af2296de392c2c7e7a01aba # v1.26.5
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           fail_on_error: true

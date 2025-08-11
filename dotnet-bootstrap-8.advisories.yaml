@@ -26,6 +26,16 @@ advisories:
         data:
           fixed-version: 8.0.18-r0
 
+  - id: CGA-3r3w-x7p3-pw2f
+    aliases:
+      - CVE-2024-38095
+      - GHSA-447r-wph3-92pm
+    events:
+      - timestamp: 2025-07-22T23:42:24Z
+        type: fixed
+        data:
+          fixed-version: 8.0.11-r0
+
   - id: CGA-6vpm-52q6-4246
     aliases:
       - CVE-2025-26646
@@ -43,3 +53,43 @@ advisories:
             componentType: dotnet
             componentLocation: /usr/share/dotnet-bootstrap-8/dotnet/sdk/8.0.114/FSharp/fsc.deps.json, /usr/share/dotnet-bootstrap-8/dotnet/sdk/8.0.114/FSharp/Microsoft.Build.Tasks.Core.dll
             scanner: grype
+      - timestamp: 2025-07-22T23:36:15Z
+        type: pending-upstream-fix
+        data:
+          note: |-
+            The dotnet-bootstrap-8 package contains multiple vulnerable versions of Microsoft.Build.Tasks.Core affected by CVE-2025-26646 (spoofing vulnerability in DownloadFile task). These versions are embedded in the upstream .NET 8.0.18 source tree and require coordinated upstream fixes across multiple repositories.
+
+            Vulnerable versions found:
+            - 17.7.0 in dependency metadata (.deps.json files) from SDK's minimumMSBuildVersion specification
+            - 17.3.4 in source-build reference packages used during compilation
+            - 17.8.27 in runtime DLLs from pre-built artifacts
+
+            Upstream sources requiring updates:
+            1. dotnet/sdk: Update src/Layout/redist/minimumMSBuildVersion from 17.7.0 to 17.8.29+
+            2. dotnet/source-build-reference-packages: Update Microsoft.Build.Tasks.Core reference from 17.3.4 to 17.8.29+
+            3. Microsoft build artifacts: Pre-built artifacts need MSBuild 17.8.29+ instead of 17.8.27
+
+            Fix version required: Microsoft.Build.Tasks.Core 17.8.29+ (per GitHub Advisory GHSA-h4j7-5rxr-p4wc)
+
+            This vulnerability affects the DownloadFile MSBuild task and requires coordinated updates across multiple .NET repositories. The fix cannot be applied through Wolfi package management alone since these versions are embedded in upstream .NET 8.0.18 source distribution and pre-built artifacts.
+      - timestamp: 2025-07-23T17:36:12Z
+        type: fixed
+        data:
+          fixed-version: 8.0.18-r0
+      - timestamp: 2025-07-25T07:13:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dotnet-bootstrap-8
+            componentID: b90774891e7bb228
+            componentName: Microsoft.Build.Tasks.Core
+            componentVersion: 17.7.0
+            componentType: dotnet
+            componentLocation: /usr/share/dotnet-bootstrap/dotnet/sdk/8.0.117/Containers/containerize/containerize.deps.json
+            scanner: grype
+      - timestamp: 2025-08-08T23:49:32Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: CVE-2025-26646 affects Microsoft.Build.Tasks.Core 17.3.4 and 17.7.0, but vulnerability scanners are flagging metadata references and non-existent file paths. Investigation reveals all actual executable Microsoft.Build.Tasks.Core DLL files in the dotnet-8 package use version 17.8.31.31313 (patched version). The CodeAnalysis deps.json files point to non-existent 17.3.4 packages that cannot be loaded at runtime. This is Stale dependency metadata that doesn't reflect actual built components. Runtime verification confirms Assembly.LoadFrom() successfully loads 17.8.31 while attempting to load 17.3.4 throws FileNotFoundException. All 15 Microsoft.Build.Tasks.Core DLL files in the container are version 17.8.31.31313 with the security fix.

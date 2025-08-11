@@ -70,6 +70,31 @@ advisories:
         data:
           fixed-version: 2.491-r2
 
+  - id: CGA-c9vj-24m3-55jc
+    aliases:
+      - CVE-2025-7962
+      - GHSA-9342-92gg-6v29
+    events:
+      - timestamp: 2025-08-07T16:46:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jenkins-2
+            componentID: 184ab5aacfc1d4a4
+            componentName: smtp
+            componentVersion: 2.0.3
+            componentType: java-archive
+            componentLocation: /usr/share/java/jenkins/jenkins.war
+            scanner: grype
+      - timestamp: 2025-08-08T13:33:33Z
+        type: pending-upstream-fix
+        data:
+          note: |-
+            The vulnerable org.eclipse.angus:smtp dependency is embedded within the jakarta-mail-api Jenkins plugin.
+            A fix is pending upstream merge in https://github.com/jenkinsci/jakarta-mail-api-plugin/pull/117 which updates angus-mail to version 2.0.4.
+            Once merged and released, Jenkins will need to update to the newer jakarta-mail-api plugin version to resolve this CVE.
+
   - id: CGA-f7mr-m3cm-35w5
     aliases:
       - CVE-2020-36843

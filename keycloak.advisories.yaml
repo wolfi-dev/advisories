@@ -4,6 +4,28 @@ package:
   name: keycloak
 
 advisories:
+  - id: CGA-28mx-p7j5-mc2w
+    aliases:
+      - CVE-2025-8419
+      - GHSA-qj5r-2r5p-phc7
+    events:
+      - timestamp: 2025-08-08T07:44:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak
+            componentID: 4964c7750ffef760
+            componentName: keycloak-services
+            componentVersion: 26.3.2
+            componentType: java-archive
+            componentLocation: /opt/bitnami/keycloak/lib/lib/main/org.keycloak.keycloak-services-26.3.2.jar
+            scanner: grype
+      - timestamp: 2025-08-08T19:20:40Z
+        type: pending-upstream-fix
+        data:
+          note: "This vulnerability affects the keycloak-services component version 26.3.2. The GitHub Advisory indicates no fix is currently available (firstPatchedVersion: null). This is a self-contained vulnerability in the Keycloak services JAR that requires upstream maintainers to develop and release a security fix. Unlike the EOL keycloak-21.1 package, this is an actively supported version that should receive security updates from upstream."
+
   - id: CGA-2q5v-2cg8-99xh
     aliases:
       - CVE-2024-1597
@@ -139,6 +161,24 @@ advisories:
         data:
           fixed-version: 25.0.6-r0
 
+  - id: CGA-633r-rj6v-hqhm
+    aliases:
+      - CVE-2025-7962
+      - GHSA-9342-92gg-6v29
+    events:
+      - timestamp: 2025-08-08T07:45:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak
+            componentID: 3bb7811fe457b8d3
+            componentName: smtp
+            componentVersion: 2.0.3
+            componentType: java-archive
+            componentLocation: /opt/bitnami/keycloak/lib/lib/main/org.eclipse.angus.angus-mail-2.0.3.jar
+            scanner: grype
+
   - id: CGA-66p9-3frq-6mmw
     aliases:
       - GHSA-c25h-c27q-5qpv
@@ -236,6 +276,14 @@ advisories:
             componentType: java-archive
             componentLocation: /opt/bitnami/keycloak/lib/lib/main/org.keycloak.keycloak-services-26.3.1.jar
             scanner: grype
+      - timestamp: 2025-07-24T17:29:12Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            Upstream are actively working on, and have a PR open regarding this issue.
+            Upstream maintainers will need to approve and merge the PR.
+            Tracking issue: https://github.com/keycloak/keycloak/issues/41137
+            Fix PR: https://github.com/keycloak/keycloak/pull/41168
 
   - id: CGA-78pc-x38c-7p9v
     aliases:

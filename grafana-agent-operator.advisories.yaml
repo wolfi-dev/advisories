@@ -209,6 +209,28 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: 'This vulnerability is part of the policy validation in crypto/x509 which was only introduced in 1.24, earlier golang versions are not affected by this CVE. More information can be found at: https://github.com/golang/go/issues/73612\#issuecomment-2977963004'
 
+  - id: CGA-8mp8-wmmq-j9j7
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T15:40:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-agent-operator
+            componentID: 55c22c31f1c3d9b7
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/grafana-agent-operator
+            scanner: grype
+      - timestamp: 2025-08-10T04:44:25Z
+        type: fixed
+        data:
+          fixed-version: 0.44.3-r3
+
   - id: CGA-8x4h-m585-6pxf
     aliases:
       - CVE-2024-24789

@@ -327,6 +327,28 @@ advisories:
         data:
           fixed-version: 1.16.1-r1
 
+  - id: CGA-ff94-j7vh-q7jj
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T13:07:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: velero
+            componentID: 4145ba6a35c8f598
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/velero-restore-helper
+            scanner: grype
+      - timestamp: 2025-08-09T22:34:09Z
+        type: fixed
+        data:
+          fixed-version: 1.16.2-r1
+
   - id: CGA-g4jp-9g5f-cf4j
     aliases:
       - CVE-2025-22868

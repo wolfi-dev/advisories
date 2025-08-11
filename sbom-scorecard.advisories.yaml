@@ -194,6 +194,28 @@ advisories:
         data:
           fixed-version: 0.0.7-r13
 
+  - id: CGA-p7gx-cfw9-fhfc
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T11:38:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sbom-scorecard
+            componentID: 9a970ece1b639a83
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/sbom-scorecard
+            scanner: grype
+      - timestamp: 2025-08-09T16:31:21Z
+        type: fixed
+        data:
+          fixed-version: 0.0.7-r23
+
   - id: CGA-r4xq-79w2-ghjm
     aliases:
       - CVE-2023-45290

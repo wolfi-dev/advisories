@@ -26,6 +26,28 @@ advisories:
         data:
           fixed-version: 1.9.0-r1
 
+  - id: CGA-6mqv-234v-c9vj
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T17:28:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: malcontent
+            componentID: 5ea96fde33c9a366
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/mal
+            scanner: grype
+      - timestamp: 2025-08-10T07:45:49Z
+        type: fixed
+        data:
+          fixed-version: 1.15.0-r1
+
   - id: CGA-j4v3-hrrj-xcr8
     aliases:
       - CVE-2025-22869

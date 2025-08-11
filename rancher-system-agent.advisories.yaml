@@ -97,6 +97,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability applies to the git-repo volume provisioner, not the k8s client itself.
 
+  - id: CGA-fpm9-vrx8-f4cg
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T15:32:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-system-agent
+            componentID: 176afff23c06831d
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/rancher-system-agent
+            scanner: grype
+      - timestamp: 2025-08-10T03:29:14Z
+        type: fixed
+        data:
+          fixed-version: 0.3.13-r1
+
   - id: CGA-j3qp-f8g4-q9gj
     aliases:
       - CVE-2025-22872

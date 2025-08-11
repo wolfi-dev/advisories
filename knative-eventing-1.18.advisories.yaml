@@ -1,0 +1,28 @@
+schema-version: 2.0.2
+
+package:
+  name: knative-eventing-1.18
+
+advisories:
+  - id: CGA-7wqm-mxc7-qwff
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T22:23:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: knative-eventing-1.18-webhook
+            componentID: b33cbd0190f9d1f4
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/filter
+            scanner: grype
+      - timestamp: 2025-08-10T11:44:48Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.

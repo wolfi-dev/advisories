@@ -151,6 +151,28 @@ advisories:
         data:
           fixed-version: 2.7.5-r5
 
+  - id: CGA-fr48-hc3h-wqfq
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T10:24:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: influx
+            componentID: 95112527c6047715
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/influx
+            scanner: grype
+      - timestamp: 2025-08-09T16:32:30Z
+        type: fixed
+        data:
+          fixed-version: 2.7.5-r10
+
   - id: CGA-fwch-5v6f-2583
     aliases:
       - CVE-2024-24786

@@ -533,6 +533,29 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This package uses a newer version v2.10.14 when the vulnerable code affects any version older than v2.2.0.
 
+  - id: CGA-x9j3-wwch-xmh5
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T14:24:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nats-server
+            componentID: 02d50a6c8c71dc7b
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/nats-server
+            scanner: grype
+      - timestamp: 2025-08-10T16:12:55Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-xvf5-h398-xxgj
     aliases:
       - CVE-2019-13126

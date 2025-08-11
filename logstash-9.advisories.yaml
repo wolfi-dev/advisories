@@ -86,6 +86,10 @@ advisories:
             componentType: gem
             componentLocation: /opt/iamguarded/logstash/vendor/bundle/jruby/3.1.0/specifications/nokogiri-1.18.8-java.gemspec
             scanner: grype
+      - timestamp: 2025-07-24T08:21:40Z
+        type: fixed
+        data:
+          fixed-version: 9.0.4-r0
 
   - id: CGA-hrf8-h5p2-f5r9
     aliases:
@@ -130,3 +134,21 @@ advisories:
         type: pending-upstream-fix
         data:
           note: The cgi gem at version 0.3.6 is included as a default gem in JRuby's standard library. Because it's part of JRuby itself rather than a separately managed gem, an updated JRuby release is required to incorporate the remediated version of cgi (0.3.7+).
+
+  - id: CGA-w345-pxmf-mrgc
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T09:17:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-9-env2yaml
+            componentID: 0b8ecf8f2180ece2
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/env2yaml
+            scanner: grype

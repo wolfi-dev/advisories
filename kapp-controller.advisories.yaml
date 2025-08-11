@@ -167,6 +167,28 @@ advisories:
         data:
           fixed-version: 0.55.1-r3
 
+  - id: CGA-rcjh-c4w7-323p
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T09:46:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kapp-controller
+            componentID: eefe879fb578df45
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/kapp-controller
+            scanner: grype
+      - timestamp: 2025-08-09T14:38:22Z
+        type: fixed
+        data:
+          fixed-version: 0.58.0-r3
+
   - id: CGA-v32x-f7q3-f3x8
     aliases:
       - CVE-2024-45341

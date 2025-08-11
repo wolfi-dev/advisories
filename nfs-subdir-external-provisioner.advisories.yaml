@@ -532,6 +532,28 @@ advisories:
         data:
           fixed-version: 4.0.18-r18
 
+  - id: CGA-wxhh-j5g9-ww8j
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T10:49:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nfs-subdir-external-provisioner
+            componentID: eeb6898dfc6dde25
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/nfs-subdir-external-provisioner
+            scanner: grype
+      - timestamp: 2025-08-09T19:46:09Z
+        type: fixed
+        data:
+          fixed-version: 4.0.18-r24
+
   - id: CGA-xh8x-vmg9-f2rg
     aliases:
       - CVE-2025-22866

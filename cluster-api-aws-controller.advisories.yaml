@@ -1,0 +1,137 @@
+schema-version: 2.0.2
+
+package:
+  name: cluster-api-aws-controller
+
+advisories:
+  - id: CGA-46wx-h8gm-9f9h
+    aliases:
+      - CVE-2022-1706
+      - GHSA-hj57-j5cw-2mwp
+    events:
+      - timestamp: 2025-08-04T14:14:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-api-aws-controller
+            componentID: 33b9a75a76b6b6ed
+            componentName: github.com/coreos/ignition
+            componentVersion: v0.35.0
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-api-aws-controller
+            scanner: grype
+      - timestamp: 2025-08-05T14:26:22Z
+        type: pending-upstream-fix
+        data:
+          note: Upstream uses ignition v0.35.0 and ignition v2. The v0.35.0 is for backwards compatibility. Upstream will deprecate this in the future but this is currently required until that time.
+
+  - id: CGA-63vx-8hpw-64p9
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T09:41:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-api-aws-controller
+            componentID: 432672d91f651573
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-api-aws-controller
+            scanner: grype
+      - timestamp: 2025-08-09T14:43:25Z
+        type: fixed
+        data:
+          fixed-version: 2.8.4-r3
+
+  - id: CGA-8c53-425r-xjx7
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-08-04T14:14:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-api-aws-controller
+            componentID: ed7eb90cf1445862
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-api-aws-controller
+            scanner: grype
+      - timestamp: 2025-08-05T10:10:21Z
+        type: fixed
+        data:
+          fixed-version: 2.8.4-r1
+
+  - id: CGA-h7xj-3pr5-qmp2
+    aliases:
+      - CVE-2025-22869
+      - GHSA-hcg3-q754-cr77
+    events:
+      - timestamp: 2025-08-04T14:14:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-api-aws-controller
+            componentID: e789f80eaf646161
+            componentName: golang.org/x/crypto
+            componentVersion: v0.31.0
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-api-aws-controller
+            scanner: grype
+      - timestamp: 2025-08-05T10:10:22Z
+        type: fixed
+        data:
+          fixed-version: 2.8.4-r1
+
+  - id: CGA-vcwr-7247-m88r
+    aliases:
+      - CVE-2025-22868
+      - GHSA-6v2p-p543-phr9
+    events:
+      - timestamp: 2025-08-04T14:14:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-api-aws-controller
+            componentID: 4d385c10eed16e92
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.24.0
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-api-aws-controller
+            scanner: grype
+      - timestamp: 2025-08-05T14:40:31Z
+        type: fixed
+        data:
+          fixed-version: 2.8.4-r2
+
+  - id: CGA-x439-jp8g-jh4q
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-08-04T14:14:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-api-aws-controller
+            componentID: ed7eb90cf1445862
+            componentName: golang.org/x/net
+            componentVersion: v0.33.0
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-api-aws-controller
+            scanner: grype
+      - timestamp: 2025-08-05T10:10:23Z
+        type: fixed
+        data:
+          fixed-version: 2.8.4-r1

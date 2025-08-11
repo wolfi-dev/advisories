@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: traefik-3.5
+
+advisories:
+  - id: CGA-pmxx-pv94-8cpv
+    aliases:
+      - CVE-2025-54799
+      - GHSA-q82r-2j7m-9rv4
+    events:
+      - timestamp: 2025-08-08T07:35:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: traefik-3.5
+            componentID: a19e5e037439076b
+            componentName: github.com/go-acme/lego/v4
+            componentVersion: v4.23.1
+            componentType: go-module
+            componentLocation: /usr/bin/traefik
+            scanner: grype
+      - timestamp: 2025-08-08T09:33:40Z
+        type: fixed
+        data:
+          fixed-version: 3.5.0-r1

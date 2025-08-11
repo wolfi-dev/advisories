@@ -4,6 +4,24 @@ package:
   name: langfuse
 
 advisories:
+  - id: CGA-7jv3-6jcq-47xr
+    aliases:
+      - CVE-2025-54798
+      - GHSA-52f5-9888-hmc6
+    events:
+      - timestamp: 2025-08-08T07:36:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: langfuse-worker
+            componentID: ce45ba8c1c616ecb
+            componentName: tmp
+            componentVersion: 0.0.33
+            componentType: npm
+            componentLocation: /app/node_modules/.pnpm/tmp@0.0.33/node_modules/tmp/package.json
+            scanner: grype
+
   - id: CGA-ffx2-8r2v-jj75
     aliases:
       - CVE-2025-7783
@@ -21,3 +39,30 @@ advisories:
             componentType: npm
             componentLocation: /app/node_modules/.pnpm/form-data@2.5.3/node_modules/form-data/package.json
             scanner: grype
+      - timestamp: 2025-07-24T22:07:37Z
+        type: fixed
+        data:
+          fixed-version: 3.85.1-r1
+
+  - id: CGA-vxwv-49j8-2qfc
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T15:39:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: langfuse
+            componentID: cbeef775d3f3f735
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /app/node_modules/.pnpm/@esbuild+linux-x64@0.25.7/node_modules/@esbuild/linux-x64/bin/esbuild
+            scanner: grype
+      - timestamp: 2025-08-10T08:32:43Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.

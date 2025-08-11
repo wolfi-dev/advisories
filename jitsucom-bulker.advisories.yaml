@@ -14,6 +14,28 @@ advisories:
         data:
           fixed-version: 2.8.1-r0
 
+  - id: CGA-4379-r3qq-v4w6
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T13:55:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jitsucom-bulker-ingmgr
+            componentID: b0b727d17488ec89
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/bulker
+            scanner: grype
+      - timestamp: 2025-08-09T23:40:49Z
+        type: fixed
+        data:
+          fixed-version: 2.10.0-r4
+
   - id: CGA-46cc-56jr-fx4p
     aliases:
       - CVE-2025-22868

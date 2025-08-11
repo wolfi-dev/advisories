@@ -4,6 +4,28 @@ package:
   name: consul-k8s-1.7
 
 advisories:
+  - id: CGA-5x2r-36j3-8w8j
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T15:05:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: consul-k8s-1.7
+            componentID: b87e314f3186dedd
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/consul-k8s
+            scanner: grype
+      - timestamp: 2025-08-10T02:12:01Z
+        type: fixed
+        data:
+          fixed-version: 1.7.3-r1
+
   - id: CGA-c4vr-2vpg-755g
     aliases:
       - CVE-2025-32386

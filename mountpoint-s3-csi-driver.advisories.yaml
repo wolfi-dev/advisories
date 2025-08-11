@@ -136,6 +136,29 @@ advisories:
         data:
           fixed-version: 1.14.1-r2
 
+  - id: CGA-v7pg-9qqf-p86r
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T04:06:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mountpoint-s3-csi-driver
+            componentID: fedef6b7bd477d17
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/aws-s3-csi-controller
+            scanner: grype
+      - timestamp: 2025-08-10T10:09:29Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-vg2p-5w56-43pv
     aliases:
       - CVE-2025-22868

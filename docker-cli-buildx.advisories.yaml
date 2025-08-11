@@ -69,6 +69,28 @@ advisories:
         data:
           fixed-version: 0.21.2-r2
 
+  - id: CGA-cv25-4pj8-3q47
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T13:43:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-cli-buildx
+            componentID: 39b72f62699ea6d6
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/libexec/docker/cli-plugins/docker-buildx
+            scanner: grype
+      - timestamp: 2025-08-09T22:30:46Z
+        type: fixed
+        data:
+          fixed-version: 0.26.1-r2
+
   - id: CGA-g5fw-3mg9-cvr9
     aliases:
       - CVE-2025-22870
@@ -242,3 +264,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.19.3-r1
+
+  - id: CGA-v47c-gvmr-9f8w
+    aliases:
+      - CVE-2025-54388
+      - GHSA-x4rx-4gw3-53p4
+    events:
+      - timestamp: 2025-07-30T07:25:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-cli-buildx
+            componentID: 4494a5277d6d8351
+            componentName: github.com/docker/docker
+            componentVersion: v28.3.2+incompatible
+            componentType: go-module
+            componentLocation: /usr/libexec/docker/cli-plugins/docker-buildx
+            scanner: grype
+      - timestamp: 2025-07-30T09:14:16Z
+        type: fixed
+        data:
+          fixed-version: 0.26.1-r1

@@ -494,6 +494,28 @@ advisories:
         data:
           fixed-version: 2.14.0-r0
 
+  - id: CGA-j6xj-4g75-2363
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T17:13:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: skaffold
+            componentID: 2ccb893208dc93c9
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/skaffold
+            scanner: grype
+      - timestamp: 2025-08-10T07:51:31Z
+        type: fixed
+        data:
+          fixed-version: 2.16.1-r2
+
   - id: CGA-jm2j-3vfm-fp5f
     aliases:
       - CVE-2024-24784

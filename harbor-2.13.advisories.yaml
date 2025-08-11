@@ -73,3 +73,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.13.1-r2
+
+  - id: CGA-cq99-7r9x-8mv5
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T16:14:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-2.13
+            componentID: cdb3baeb69cb1617
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-jobservice
+            scanner: grype
+      - timestamp: 2025-08-10T05:57:59Z
+        type: fixed
+        data:
+          fixed-version: 2.13.2-r3

@@ -26,6 +26,28 @@ advisories:
         data:
           note: The non-vulnerable version of com.mysql:mysql-connector-j is not available in maven central yet.
 
+  - id: CGA-4r9f-63gw-pv7x
+    aliases:
+      - CVE-2025-7962
+      - GHSA-9342-92gg-6v29
+    events:
+      - timestamp: 2025-08-07T20:08:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dependency-track
+            componentID: f576264b69353186
+            componentName: smtp
+            componentVersion: 2.0.3
+            componentType: java-archive
+            componentLocation: /usr/share/java/dependency-track/dependency-track-bundled.jar
+            scanner: grype
+      - timestamp: 2025-08-08T14:20:45Z
+        type: fixed
+        data:
+          fixed-version: 4.13.3-r1
+
   - id: CGA-65j2-8hv5-q3hr
     aliases:
       - CVE-2024-57699

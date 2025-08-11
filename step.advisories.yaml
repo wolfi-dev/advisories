@@ -536,6 +536,32 @@ advisories:
         data:
           fixed-version: 0.28.2-r7
 
+  - id: CGA-r78p-x2qj-6q5x
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T03:29:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: step
+            componentID: 9405c5032e8b24a1
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/step
+            scanner: grype
+      - timestamp: 2025-08-10T08:46:12Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in step-0.28.7-r2.apk, at usr/bin/step, usr/bin/step.'
+      - timestamp: 2025-08-10T20:39:37Z
+        type: fixed
+        data:
+          fixed-version: 0.28.7-r3
+
   - id: CGA-r9q5-cv79-qwxr
     aliases:
       - CVE-2025-27144

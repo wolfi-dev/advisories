@@ -323,6 +323,28 @@ advisories:
         data:
           fixed-version: 0.5.1-r3
 
+  - id: CGA-q29p-qxhc-2wvp
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T08:27:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: volume-modifier-for-k8s
+            componentID: 73b035b9e575ad82
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/volume-modifier-for-k8s
+            scanner: grype
+      - timestamp: 2025-08-09T10:51:44Z
+        type: fixed
+        data:
+          fixed-version: 0.7.0-r2
+
   - id: CGA-q2vp-j5xv-7976
     aliases:
       - CVE-2024-24786

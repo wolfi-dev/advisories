@@ -205,6 +205,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-pr37-5m44-xvm4
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T07:54:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vt-cli
+            componentID: 20533f499eb28f01
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/vt
+            scanner: grype
+      - timestamp: 2025-08-09T10:40:33Z
+        type: fixed
+        data:
+          fixed-version: 1.1.1-r2
+
   - id: CGA-pxcc-rgjj-84j5
     aliases:
       - CVE-2024-24784

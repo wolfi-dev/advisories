@@ -110,6 +110,29 @@ advisories:
         data:
           fixed-version: 0_git20240801-r5
 
+  - id: CGA-7p35-wm3m-qxhh
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T09:36:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: neuvector-sigstore-interface
+            componentID: a5c6eb6abcfd4580
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/local/bin/sigstore-interface
+            scanner: grype
+      - timestamp: 2025-08-10T12:14:53Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-885w-gv6p-cq6r
     aliases:
       - CVE-2024-45341

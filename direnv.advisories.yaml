@@ -196,6 +196,28 @@ advisories:
         data:
           fixed-version: 2.36.0-r0
 
+  - id: CGA-pcfq-9382-8mrh
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T09:20:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: direnv
+            componentID: 2d0ad700c6b39db8
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/direnv
+            scanner: grype
+      - timestamp: 2025-08-09T11:28:21Z
+        type: fixed
+        data:
+          fixed-version: 2.37.1-r1
+
   - id: CGA-q666-wx4g-j6jx
     aliases:
       - CVE-2024-24791

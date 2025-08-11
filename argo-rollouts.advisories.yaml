@@ -203,6 +203,29 @@ advisories:
         data:
           fixed-version: 1.7.2-r3
 
+  - id: CGA-vrjx-j774-6q53
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T00:08:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-rollouts
+            componentID: 559500172ab74c1a
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/rollouts-controller
+            scanner: grype
+      - timestamp: 2025-08-10T10:39:17Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-vx3x-3442-f593
     aliases:
       - GHSA-29qp-crvh-w22m

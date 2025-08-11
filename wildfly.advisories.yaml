@@ -4,6 +4,24 @@ package:
   name: wildfly
 
 advisories:
+  - id: CGA-23gq-pg4q-v3j8
+    aliases:
+      - CVE-2025-48913
+      - GHSA-g4px-6qhm-hqjm
+    events:
+      - timestamp: 2025-08-10T21:33:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wildfly-openjdk-21
+            componentID: 01da99698f7cc844
+            componentName: cxf-rt-transports-jms
+            componentVersion: 4.0.6
+            componentType: java-archive
+            componentLocation: /usr/share/wildfly/modules/system/layers/base/org/apache/cxf/impl/main/cxf-rt-transports-jms-4.0.6.jar
+            scanner: grype
+
   - id: CGA-2f5p-cqpg-v8x3
     aliases:
       - CVE-2025-48924
@@ -113,6 +131,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 36.0.1-r1
+
+  - id: CGA-9p3g-h7rf-w2f3
+    aliases:
+      - CVE-2025-7962
+      - GHSA-9342-92gg-6v29
+    events:
+      - timestamp: 2025-08-08T07:16:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wildfly-openjdk-21
+            componentID: 96c92b78afc69ece
+            componentName: smtp
+            componentVersion: 2.0.3
+            componentType: java-archive
+            componentLocation: /usr/share/wildfly/modules/system/layers/base/org/eclipse/angus/mail/main/angus-mail-2.0.3.jar
+            scanner: grype
 
   - id: CGA-hf6h-4wjh-fpvq
     aliases:

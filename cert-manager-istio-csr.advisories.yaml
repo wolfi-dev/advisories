@@ -291,6 +291,28 @@ advisories:
         data:
           fixed-version: 0.14.1-r1
 
+  - id: CGA-qghh-hjjm-62wg
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T09:25:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-manager-istio-csr
+            componentID: a9b6e98d32f49e3a
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/cmd
+            scanner: grype
+      - timestamp: 2025-08-09T12:45:52Z
+        type: fixed
+        data:
+          fixed-version: 0.14.2-r2
+
   - id: CGA-qhh9-4xcv-c4rh
     aliases:
       - CVE-2025-22871

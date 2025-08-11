@@ -287,3 +287,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.2.2-r1
+
+  - id: CGA-xw6m-65xv-76v9
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T21:50:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: s5cmd
+            componentID: 13a10cc7eaf7112e
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/s5cmd
+            scanner: grype
+      - timestamp: 2025-08-10T14:05:42Z
+        type: fixed
+        data:
+          fixed-version: 2.3.0-r6

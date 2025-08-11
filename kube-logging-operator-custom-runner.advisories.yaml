@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: kube-logging-operator-custom-runner
+
+advisories:
+  - id: CGA-vqgv-8wg2-2x95
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T17:07:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-logging-operator-custom-runner
+            componentID: 282ab1cd55c6380b
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/logging-operator-custom-runner
+            scanner: grype
+      - timestamp: 2025-08-10T07:55:17Z
+        type: fixed
+        data:
+          fixed-version: 0.13.0-r1

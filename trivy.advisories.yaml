@@ -462,6 +462,32 @@ advisories:
         data:
           fixed-version: 0.50.1-r1
 
+  - id: CGA-f22f-r5wj-j3cq
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T20:05:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trivy
+            componentID: 9ce6ce3ab0e8fdfb
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/trivy
+            scanner: grype
+      - timestamp: 2025-08-10T07:13:21Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in trivy-0.65.0-r0.apk, at usr/bin/trivy, usr/bin/trivy.'
+      - timestamp: 2025-08-10T10:43:04Z
+        type: fixed
+        data:
+          fixed-version: 0.65.0-r1
+
   - id: CGA-f2xj-2hhx-97wj
     aliases:
       - CVE-2025-53547
@@ -883,6 +909,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.60.0-r4
+
+  - id: CGA-v9vq-9g9h-fqhx
+    aliases:
+      - CVE-2025-54388
+      - GHSA-x4rx-4gw3-53p4
+    events:
+      - timestamp: 2025-07-30T09:22:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trivy
+            componentID: ce38d9ac41862824
+            componentName: github.com/docker/docker
+            componentVersion: v28.2.2+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/trivy
+            scanner: grype
+      - timestamp: 2025-07-30T20:55:56Z
+        type: fixed
+        data:
+          fixed-version: 0.64.1-r3
 
   - id: CGA-vw5v-7qhc-9gg5
     aliases:

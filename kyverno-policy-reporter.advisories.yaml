@@ -253,6 +253,28 @@ advisories:
         data:
           fixed-version: 2.18.1-r2
 
+  - id: CGA-gg36-qr7j-3jx7
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T10:08:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-policy-reporter
+            componentID: 608eeea9950bd65a
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/policyreporter
+            scanner: grype
+      - timestamp: 2025-08-09T15:34:19Z
+        type: fixed
+        data:
+          fixed-version: 3.3.2-r1
+
   - id: CGA-gqhm-vj5g-m538
     aliases:
       - CVE-2024-24783

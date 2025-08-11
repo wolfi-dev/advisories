@@ -48,6 +48,28 @@ advisories:
         data:
           fixed-version: 1.20.0-r3
 
+  - id: CGA-44pm-gg7c-86qh
+    aliases:
+      - CVE-2025-54388
+      - GHSA-x4rx-4gw3-53p4
+    events:
+      - timestamp: 2025-07-30T08:48:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: syft
+            componentID: 5cae668807cde772
+            componentName: github.com/docker/docker
+            componentVersion: v28.2.2+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/syft
+            scanner: grype
+      - timestamp: 2025-07-30T10:43:37Z
+        type: fixed
+        data:
+          fixed-version: 1.29.0-r1
+
   - id: CGA-48gg-g9x3-3fpx
     aliases:
       - CVE-2025-22871

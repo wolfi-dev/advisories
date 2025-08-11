@@ -251,6 +251,29 @@ advisories:
         data:
           fixed-version: 0.1.3-r1
 
+  - id: CGA-g49m-2f39-hhx8
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T21:37:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nats
+            componentID: 7b84f57a4b70e743
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/nats
+            scanner: grype
+      - timestamp: 2025-08-10T15:02:47Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-g7m7-xgj5-j29x
     aliases:
       - CVE-2023-39325

@@ -4,6 +4,50 @@ package:
   name: gitlab-runner-18.2
 
 advisories:
+  - id: CGA-2x7h-v5h5-8492
+    aliases:
+      - CVE-2025-54410
+      - GHSA-4vq8-7jfc-9cvp
+    events:
+      - timestamp: 2025-07-30T07:47:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-docker-machine-18.2
+            componentID: ad7ffceddec4073b
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.6+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/docker-machine
+            scanner: grype
+      - timestamp: 2025-07-31T23:00:49Z
+        type: pending-upstream-fix
+        data:
+          note: 'This vulnerability affects Docker Engine (Moby) versions <= 25.0.12 where firewalld reload removes Docker''s iptables rules that isolate containers in different bridge networks. Upstream maintainers must cut a release with the fix. References: 25.x backport PR: https://github.com/moby/moby/pull/50445 28.x backport PR: https://github.com/moby/moby/pull/50506'
+
+  - id: CGA-5f3r-q4wg-fh5h
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T09:11:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-18.2
+            componentID: 1547d5c1cd239e3f
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-runner-helper
+            scanner: grype
+      - timestamp: 2025-08-11T06:37:47Z
+        type: fixed
+        data:
+          fixed-version: 18.2.1-r1
+
   - id: CGA-gvg9-wv66-5xgp
     aliases:
       - CVE-2024-36623
@@ -21,3 +65,8 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/docker-machine
             scanner: grype
+      - timestamp: 2025-07-22T14:51:58Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: 'This vulnerability affects github.com/docker/docker (also known as github.com/moby/moby) versions up to v25.0.4. The version currently in use is v25.0.6, which already includes the patch: https://github.com/moby/moby/commit/8e3bcf19748838b30e34d612832d1dc9d90363b8. However, the CVE detection appears to be incorrectly triggered due to a version parsing mismatch — likely because the module version includes a +incompatible suffix.'

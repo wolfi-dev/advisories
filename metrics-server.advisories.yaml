@@ -175,6 +175,28 @@ advisories:
         data:
           fixed-version: 0.6.4-r1
 
+  - id: CGA-98p7-ff2c-5h53
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T16:02:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: metrics-server
+            componentID: 72716c73d66526ce
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/metrics-server
+            scanner: grype
+      - timestamp: 2025-08-10T04:45:39Z
+        type: fixed
+        data:
+          fixed-version: 0.8.0-r3
+
   - id: CGA-c587-gcjv-mr7g
     aliases:
       - CVE-2024-34158

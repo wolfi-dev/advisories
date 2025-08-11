@@ -163,6 +163,28 @@ advisories:
         data:
           fixed-version: 100.9.4-r2
 
+  - id: CGA-8qm3-fq3x-m7mx
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T21:26:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mongo-tools
+            componentID: 8532429ee0ffc851
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/bsondump
+            scanner: grype
+      - timestamp: 2025-08-10T14:09:02Z
+        type: fixed
+        data:
+          fixed-version: 100.12.2-r3
+
   - id: CGA-99w4-2m6c-572p
     aliases:
       - CVE-2024-24787

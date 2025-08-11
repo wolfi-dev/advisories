@@ -58,6 +58,29 @@ advisories:
         data:
           fixed-version: 3.9.0-r1
 
+  - id: CGA-8x8v-rvx2-4984
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T05:09:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sriov-network-device-plugin
+            componentID: 3bc0d6274cba8661
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/sriovdp
+            scanner: grype
+      - timestamp: 2025-08-10T09:13:59Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-c2wm-mg4v-wg67
     aliases:
       - CVE-2025-22868

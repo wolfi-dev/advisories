@@ -69,6 +69,28 @@ advisories:
         data:
           fixed-version: 0.9.1-r4
 
+  - id: CGA-5vv4-cvfc-j7rf
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T17:37:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spiffe-helper
+            componentID: bc12a236a05f1eb5
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/spiffe-helper
+            scanner: grype
+      - timestamp: 2025-08-10T08:42:36Z
+        type: fixed
+        data:
+          fixed-version: 0.10.1-r1
+
   - id: CGA-8g8x-7hx4-hpmv
     aliases:
       - CVE-2024-45336

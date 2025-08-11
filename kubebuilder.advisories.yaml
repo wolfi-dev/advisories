@@ -122,6 +122,28 @@ advisories:
         data:
           fixed-version: 4.5.0-r1
 
+  - id: CGA-gcf9-2m5c-wjh8
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T13:46:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubebuilder
+            componentID: 480d48771a47701d
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/kubebuilder
+            scanner: grype
+      - timestamp: 2025-08-09T23:33:55Z
+        type: fixed
+        data:
+          fixed-version: 4.7.1-r1
+
   - id: CGA-gvwp-rqh2-v3h9
     aliases:
       - CVE-2025-22874

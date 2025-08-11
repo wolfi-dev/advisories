@@ -140,6 +140,28 @@ advisories:
         data:
           fixed-version: 0.18.4-r2
 
+  - id: CGA-66vr-cxpr-6r5v
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T03:22:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-cli
+            componentID: 1948d420301b6b92
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/cilium
+            scanner: grype
+      - timestamp: 2025-08-10T20:35:50Z
+        type: fixed
+        data:
+          fixed-version: 0.18.6-r1
+
   - id: CGA-7m3f-65h8-pf37
     aliases:
       - CVE-2025-32387

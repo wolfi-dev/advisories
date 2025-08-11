@@ -301,6 +301,28 @@ advisories:
         data:
           fixed-version: 2.8.1-r2
 
+  - id: CGA-pmwr-w5jc-vm4m
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T15:36:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-load-balancer-controller
+            componentID: 99f5e741471ef49b
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/controller
+            scanner: grype
+      - timestamp: 2025-08-10T03:31:40Z
+        type: fixed
+        data:
+          fixed-version: 2.13.4-r1
+
   - id: CGA-pq38-5398-qchq
     aliases:
       - CVE-2025-22874

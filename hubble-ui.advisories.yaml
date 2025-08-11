@@ -334,6 +334,29 @@ advisories:
         data:
           fixed-version: 0.13.1-r5
 
+  - id: CGA-92jr-m9mh-m4j3
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T14:16:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: hubble-ui-backend
+            componentID: 889981b516384710
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/backend
+            scanner: grype
+      - timestamp: 2025-08-10T07:09:53Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-9983-whmm-q4gv
     aliases:
       - CVE-2024-28250

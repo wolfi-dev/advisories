@@ -4,6 +4,28 @@ package:
   name: argo-cd-3.0
 
 advisories:
+  - id: CGA-2c3h-xr4f-g3rp
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T17:21:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-3.0
+            componentID: d5c86f86af054e7a
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/local/bin/argocd
+            scanner: grype
+      - timestamp: 2025-08-10T08:04:18Z
+        type: fixed
+        data:
+          fixed-version: 3.0.12-r1
+
   - id: CGA-4gpj-334g-vx7h
     aliases:
       - CVE-2025-29923

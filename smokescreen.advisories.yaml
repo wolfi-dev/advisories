@@ -1,0 +1,28 @@
+schema-version: 2.0.2
+
+package:
+  name: smokescreen
+
+advisories:
+  - id: CGA-f9mw-vr25-gvj9
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T07:28:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: smokescreen
+            componentID: 3f3f06be61becd2f
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/smokescreen
+            scanner: grype
+      - timestamp: 2025-08-10T09:14:35Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.

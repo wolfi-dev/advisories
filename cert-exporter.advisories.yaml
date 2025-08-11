@@ -327,6 +327,28 @@ advisories:
         data:
           fixed-version: 2.13.0-r1
 
+  - id: CGA-jv3h-5h24-3m22
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T10:14:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-exporter
+            componentID: 4b9299edd964a394
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/cert-exporter
+            scanner: grype
+      - timestamp: 2025-08-09T16:38:57Z
+        type: fixed
+        data:
+          fixed-version: 2.16.0-r1
+
   - id: CGA-m8pc-8374-8h5q
     aliases:
       - CVE-2024-24787

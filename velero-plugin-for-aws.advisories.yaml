@@ -4,6 +4,29 @@ package:
   name: velero-plugin-for-aws
 
 advisories:
+  - id: CGA-29r2-c677-hv46
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T11:48:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: velero-plugin-for-aws
+            componentID: 92a98e53101cf59c
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /plugins/velero-plugin-for-aws
+            scanner: grype
+      - timestamp: 2025-08-10T14:06:44Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-2ffw-vgc9-2jgg
     aliases:
       - CVE-2024-45336

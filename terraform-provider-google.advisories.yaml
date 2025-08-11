@@ -168,6 +168,29 @@ advisories:
         data:
           fixed-version: 5.25.0-r0
 
+  - id: CGA-7mrq-7366-gg4g
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T20:51:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-google
+            componentID: b3d1829c91e22fa4
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-google
+            scanner: grype
+      - timestamp: 2025-08-11T07:22:05Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-9gmj-vv9g-26m3
     aliases:
       - CVE-2024-34158

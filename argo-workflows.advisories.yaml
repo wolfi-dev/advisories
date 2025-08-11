@@ -171,6 +171,28 @@ advisories:
         data:
           fixed-version: 3.6.5-r2
 
+  - id: CGA-5c4g-4jgc-499c
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T19:05:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-workflows
+            componentID: 7496c73033661054
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/workflow-controller
+            scanner: grype
+      - timestamp: 2025-08-10T09:45:02Z
+        type: fixed
+        data:
+          fixed-version: 3.7.0-r2
+
   - id: CGA-5f9c-j2r5-h8fm
     aliases:
       - CVE-2024-45336

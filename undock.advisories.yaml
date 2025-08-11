@@ -36,6 +36,32 @@ advisories:
         data:
           fixed-version: 0.9.0-r1
 
+  - id: CGA-653w-845r-g5fj
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T21:51:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: undock
+            componentID: 380d50f260e07810
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/undock
+            scanner: grype
+      - timestamp: 2025-08-10T11:11:12Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in undock-0.10.0-r2.apk, at usr/bin/undock, usr/bin/undock.'
+      - timestamp: 2025-08-10T14:03:10Z
+        type: fixed
+        data:
+          fixed-version: 0.10.0-r3
+
   - id: CGA-7h8q-x76g-8w6p
     aliases:
       - CVE-2025-22870

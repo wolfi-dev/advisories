@@ -48,6 +48,29 @@ advisories:
         data:
           fixed-version: 0.0.18-r1
 
+  - id: CGA-3xh5-wx6h-v77m
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T17:17:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tw
+            componentID: e79da7be433af83e
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/usrmerge-tool
+            scanner: grype
+      - timestamp: 2025-08-10T11:15:45Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-4vjh-3mj5-6xxr
     aliases:
       - CVE-2025-22869
@@ -133,6 +156,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.0.13-r0
+
+  - id: CGA-rqf7-wvx7-qf66
+    aliases:
+      - CVE-2025-54388
+      - GHSA-x4rx-4gw3-53p4
+    events:
+      - timestamp: 2025-07-30T10:40:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tw
+            componentID: d93d3572e511cab3
+            componentName: github.com/docker/docker
+            componentVersion: v28.3.2+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/tw
+            scanner: grype
+      - timestamp: 2025-07-30T11:52:22Z
+        type: fixed
+        data:
+          fixed-version: 0.0.23-r1
 
   - id: CGA-rw3m-5v9c-fh76
     aliases:

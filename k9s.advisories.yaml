@@ -4,6 +4,28 @@ package:
   name: k9s
 
 advisories:
+  - id: CGA-3hcj-f89g-4j48
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T19:48:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k9s
+            componentID: 350cd4b5184c5996
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/k9s
+            scanner: grype
+      - timestamp: 2025-08-10T09:28:14Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in k9s-0.50.9-r3.apk, at usr/bin/k9s, usr/bin/k9s.'
+
   - id: CGA-3rf5-jfgm-7qmv
     aliases:
       - CVE-2025-22868
@@ -421,6 +443,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.32.4-r5
+
+  - id: CGA-mcpf-9464-w9v7
+    aliases:
+      - CVE-2025-54388
+      - GHSA-x4rx-4gw3-53p4
+    events:
+      - timestamp: 2025-07-30T07:37:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k9s
+            componentID: 1b49a3df1ce2aacd
+            componentName: github.com/docker/docker
+            componentVersion: v28.3.2+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/k9s
+            scanner: grype
+      - timestamp: 2025-07-30T09:50:45Z
+        type: fixed
+        data:
+          fixed-version: 0.50.9-r3
 
   - id: CGA-mhm7-ffwg-x78m
     aliases:

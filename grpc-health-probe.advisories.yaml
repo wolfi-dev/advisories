@@ -163,6 +163,28 @@ advisories:
         data:
           fixed-version: 0.4.32-r1
 
+  - id: CGA-fvh9-r7r6-jvhj
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T14:36:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grpc-health-probe
+            componentID: 45c355551c869fd1
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/grpc-health-probe
+            scanner: grype
+      - timestamp: 2025-08-10T00:56:21Z
+        type: fixed
+        data:
+          fixed-version: 0.4.39-r3
+
   - id: CGA-h5xg-h26q-jrw8
     aliases:
       - CVE-2024-34158

@@ -236,6 +236,28 @@ advisories:
           type: component-vulnerability-mismatch
           note: docker/docker is already at version v25.0.6+incompatible; this vulnerablity was patched in v25.0.4 version including the +incompatible variant
 
+  - id: CGA-v947-f834-6h8w
+    aliases:
+      - CVE-2025-54410
+      - GHSA-4vq8-7jfc-9cvp
+    events:
+      - timestamp: 2025-07-30T07:15:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-2.11
+            componentID: b1116ece5e24a258
+            componentName: github.com/docker/docker
+            componentVersion: v20.10.27+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/rancher
+            scanner: grype
+      - timestamp: 2025-07-31T23:32:09Z
+        type: pending-upstream-fix
+        data:
+          note: 'This vulnerability affects Docker Engine (Moby) versions <= 25.0.12 where firewalld reload removes Docker''s iptables rules that isolate containers in different bridge networks. Upstream maintainers must cut a release with the fix. References: 25.x backport PR: https://github.com/moby/moby/pull/50445 28.x backport PR: https://github.com/moby/moby/pull/50506'
+
   - id: CGA-x55r-rv2f-94w4
     aliases:
       - CVE-2024-29018

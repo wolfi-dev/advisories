@@ -201,6 +201,29 @@ advisories:
         data:
           fixed-version: 0.19.2-r2
 
+  - id: CGA-rfx2-98h9-3qcq
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T20:28:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: crane
+            componentID: 9862bae0ca495764
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/crane
+            scanner: grype
+      - timestamp: 2025-08-10T10:06:01Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-rp65-rfpv-xrvv
     aliases:
       - CVE-2023-45288

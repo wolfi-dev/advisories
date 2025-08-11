@@ -196,6 +196,29 @@ advisories:
         data:
           fixed-version: 2.8.1-r0
 
+  - id: CGA-9526-h72h-jchc
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T22:05:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser
+            componentID: 9aec8e64e89d382a
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+      - timestamp: 2025-08-10T08:22:42Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-9g7r-xrvg-f3c6
     aliases:
       - CVE-2024-24791
@@ -609,6 +632,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.8.2-r2
+
+  - id: CGA-rh8h-j6r2-9g9j
+    aliases:
+      - CVE-2025-54388
+      - GHSA-x4rx-4gw3-53p4
+    events:
+      - timestamp: 2025-07-30T09:15:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser
+            componentID: 45fbd958b114c280
+            componentName: github.com/docker/docker
+            componentVersion: v28.2.2+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+      - timestamp: 2025-07-30T11:47:44Z
+        type: fixed
+        data:
+          fixed-version: 2.11.1-r1
 
   - id: CGA-vc67-wrc8-vw9j
     aliases:

@@ -48,6 +48,28 @@ advisories:
         data:
           fixed-version: 1.5.0-r2
 
+  - id: CGA-gmcw-6j62-3fx2
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T09:42:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: azure-workload-identity-webhook
+            componentID: b2ffe19995a5e2bf
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-08-09T19:49:20Z
+        type: fixed
+        data:
+          fixed-version: 1.5.1-r2
+
   - id: CGA-r26g-xcv5-qx9v
     aliases:
       - CVE-2025-22868

@@ -1,0 +1,28 @@
+schema-version: 2.0.2
+
+package:
+  name: custom-pod-autoscaler-operator
+
+advisories:
+  - id: CGA-295g-gqf5-3c2w
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T14:49:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: custom-pod-autoscaler-operator
+            componentID: ff92672deaaa0590
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/custom-pod-autoscaler-operator
+            scanner: grype
+      - timestamp: 2025-08-10T11:41:06Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.

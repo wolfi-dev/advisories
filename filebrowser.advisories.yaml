@@ -309,6 +309,22 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.36.0-r0
+      - timestamp: 2025-08-05T07:18:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: filebrowser
+            componentID: d0af62827779bd16
+            componentName: github.com/filebrowser/filebrowser/v2
+            componentVersion: v2.42.1
+            componentType: go-module
+            componentLocation: /usr/bin/filebrowser
+            scanner: grype
+      - timestamp: 2025-08-06T08:08:46Z
+        type: pending-upstream-fix
+        data:
+          note: 'No fix is currently available upstream. The vulnerability is being tracked at: https://github.com/filebrowser/filebrowser/issues/5239. It allows password-protected file shares to expose direct download links without enforcing access controls. Users should evaluate the risk of sensitive file exposure and consider disabling password-protected sharing until a patch is released. Once this is done, we will update the package and remediate the CVE.'
 
   - id: CGA-p6cp-g4vh-9345
     aliases:

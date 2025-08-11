@@ -69,3 +69,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.21.8-r2
+
+  - id: CGA-rh85-xxhj-hp8c
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T16:15:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-env
+            componentID: 5407297de7345162
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/vault-env
+            scanner: grype
+      - timestamp: 2025-08-10T05:56:48Z
+        type: fixed
+        data:
+          fixed-version: 1.22.0-r2

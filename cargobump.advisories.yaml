@@ -4,6 +4,28 @@ package:
   name: cargobump
 
 advisories:
+  - id: CGA-82fg-m766-qpfc
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T09:22:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cargobump
+            componentID: e63f7a68da8ea628
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/cargobump
+            scanner: grype
+      - timestamp: 2025-08-09T11:29:31Z
+        type: fixed
+        data:
+          fixed-version: 0.1.0-r6
+
   - id: CGA-h8xj-5qff-qq6x
     aliases:
       - CVE-2025-22874

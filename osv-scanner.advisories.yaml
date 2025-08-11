@@ -357,6 +357,28 @@ advisories:
         data:
           fixed-version: 1.9.2-r2
 
+  - id: CGA-vj5x-g835-345q
+    aliases:
+      - CVE-2025-54388
+      - GHSA-x4rx-4gw3-53p4
+    events:
+      - timestamp: 2025-07-30T07:12:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: osv-scanner
+            componentID: 5f7cceb843d50113
+            componentName: github.com/docker/docker
+            componentVersion: v28.2.2+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/osv-reporter
+            scanner: grype
+      - timestamp: 2025-07-30T09:11:03Z
+        type: fixed
+        data:
+          fixed-version: 2.1.0-r2
+
   - id: CGA-vm6v-3f7q-jg2p
     aliases:
       - CVE-2024-24786
