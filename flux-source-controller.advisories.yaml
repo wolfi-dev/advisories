@@ -293,6 +293,29 @@ advisories:
         data:
           fixed-version: 1.4.1-r6
 
+  - id: CGA-f6mj-573x-p78m
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-11T05:34:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-source-controller
+            componentID: ff963abb3680abd6
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/source-controller
+            scanner: grype
+      - timestamp: 2025-08-11T08:06:54Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-f76r-25m7-w73x
     aliases:
       - CVE-2024-25620

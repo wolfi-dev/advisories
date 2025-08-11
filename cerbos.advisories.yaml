@@ -25,3 +25,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.45.1-r1
+
+  - id: CGA-6287-mf8g-pxrp
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-11T04:23:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cerbos
+            componentID: d923c62c813b8d63
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/cerbosctl
+            scanner: grype
+      - timestamp: 2025-08-11T07:40:57Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in cerbos-0.46.0-r0.apk, at usr/bin/cerbos, usr/bin/cerbos; in cerbosctl-0.46.0-r0.apk, at usr/bin/cerbosctl, usr/bin/cerbosctl.'

@@ -26,6 +26,29 @@ advisories:
         data:
           fixed-version: 2.4.2-r2
 
+  - id: CGA-v25j-8xhx-pxwr
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T11:47:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: blobfuse2
+            componentID: 31a8bf6fe10f9cac
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/bfusemon
+            scanner: grype
+      - timestamp: 2025-08-11T07:08:29Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-x66h-xr9x-x2xc
     aliases:
       - CVE-2025-22874
