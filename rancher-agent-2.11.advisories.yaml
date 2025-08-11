@@ -267,6 +267,28 @@ advisories:
         data:
           note: 'rancher-agent pins the docker package version to v20.10.27+incompatible for compatibility with rancher-machine. '
 
+  - id: CGA-vchp-9jqf-qhm9
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-11T05:43:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-agent-2.11
+            componentID: e5d5e2006006ac5c
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/agent
+            scanner: grype
+      - timestamp: 2025-08-11T11:20:31Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in rancher-agent-2.11-2.11.4-r0.apk, at usr/bin/agent, usr/bin/agent.'
+
   - id: CGA-w8x6-qxx2-288h
     aliases:
       - CVE-2025-4563
