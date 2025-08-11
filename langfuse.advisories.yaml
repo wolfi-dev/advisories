@@ -21,6 +21,14 @@ advisories:
             componentType: npm
             componentLocation: /app/node_modules/.pnpm/tmp@0.0.33/node_modules/tmp/package.json
             scanner: grype
+      - timestamp: 2025-08-09T02:15:00Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            The tmp package version 0.0.33 cannot be directly upgraded to the fixed version 0.2.4 due to breaking changes.
+            Upgrading from 0.0.33 to 0.2.4 requires Node.js > 14 and includes API changes that may break compatibility.
+            The package has already been updated to use pnpm overrides for tmp@^0.2.4 which will fix instances of tmp@0.2.x,
+            but the 0.0.33 instances require upstream dependencies to update their requirements.
 
   - id: CGA-ffx2-8r2v-jj75
     aliases:
