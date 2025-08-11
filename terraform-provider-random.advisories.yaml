@@ -117,6 +117,29 @@ advisories:
         data:
           fixed-version: 3.7.2-r1
 
+  - id: CGA-r322-8gxc-4vcq
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T17:56:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-random
+            componentID: a9efd81e3fe79a7b
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-random
+            scanner: grype
+      - timestamp: 2025-08-11T09:37:52Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-w292-3v8p-2j9r
     aliases:
       - CVE-2025-4673

@@ -26,6 +26,29 @@ advisories:
         data:
           fixed-version: 1.0.9-r3
 
+  - id: CGA-64wr-wq7g-c82g
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T22:15:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sftpgo-plugin-geoipfilter
+            componentID: 63cc359cb31d45ae
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/sftpgo-plugin-geoipfilter
+            scanner: grype
+      - timestamp: 2025-08-11T08:22:09Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-cg7r-9qgx-cjq7
     aliases:
       - CVE-2025-22872

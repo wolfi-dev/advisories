@@ -52,6 +52,29 @@ advisories:
         data:
           fixed-version: 1.26.1-r1
 
+  - id: CGA-m67c-w724-p5rh
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T04:39:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-agent-1.26
+            componentID: 9a506c1b64df9b3f
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/istio-cni
+            scanner: grype
+      - timestamp: 2025-08-10T09:10:10Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-mmcv-8q8h-jrmr
     aliases:
       - CVE-2025-53547

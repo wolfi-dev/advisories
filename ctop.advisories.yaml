@@ -774,6 +774,29 @@ advisories:
         data:
           fixed-version: 0.7.7-r13
 
+  - id: CGA-qcm2-x9cp-97q6
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T09:07:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ctop
+            componentID: 7d3491640aebfb41
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/ctop
+            scanner: grype
+      - timestamp: 2025-08-10T12:17:18Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-qmh5-244x-9v4q
     aliases:
       - GHSA-7ww5-4wqc-m92c
