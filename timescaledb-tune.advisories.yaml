@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: timescaledb-tune
+
+advisories:
+  - id: CGA-w3vf-p2qq-4mr3
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-11T04:19:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: timescaledb-tune
+            componentID: a5cf83bd1231bbd0
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/timescaledb-tune
+            scanner: grype
