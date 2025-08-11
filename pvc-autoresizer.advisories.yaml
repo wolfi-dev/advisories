@@ -4,6 +4,29 @@ package:
   name: pvc-autoresizer
 
 advisories:
+  - id: CGA-479m-2p93-jjmp
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T10:31:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pvc-autoresizer
+            componentID: d3250c708bf32d74
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/pvc-autoresizer
+            scanner: grype
+      - timestamp: 2025-08-10T12:25:41Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-94r4-cmx2-q38p
     aliases:
       - CVE-2025-4673

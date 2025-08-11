@@ -155,6 +155,28 @@ advisories:
         data:
           fixed-version: 1.5.7-r16
 
+  - id: CGA-5hjg-57w7-6g7j
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T09:08:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform
+            componentID: 8eea225d3d181f8a
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/terraform
+            scanner: grype
+      - timestamp: 2025-08-11T07:05:47Z
+        type: fixed
+        data:
+          fixed-version: 1.5.7-r31
+
   - id: CGA-5p6f-3v3g-q75j
     aliases:
       - CVE-2024-24786

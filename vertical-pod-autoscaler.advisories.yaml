@@ -100,6 +100,29 @@ advisories:
         data:
           fixed-version: 1.2.1-r1
 
+  - id: CGA-4pcp-56hf-5xcc
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T07:13:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vertical-pod-autoscaler
+            componentID: 95a3f5523652128a
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/updater
+            scanner: grype
+      - timestamp: 2025-08-10T09:04:52Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-5gff-236g-cvc3
     aliases:
       - CVE-2025-22872
