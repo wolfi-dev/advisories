@@ -158,3 +158,21 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: '"Upstream QEMU is not affected by CVE-2023-2680 and is specific to qemu-kvm packages that are produced by Red Hat. See: https://bugzilla.redhat.com/show_bug.cgi?id=2203387"'
+
+  - id: CGA-wpx5-qp7h-hv34
+    aliases:
+      - CVE-2024-6519
+      - GHSA-v9pm-v9p5-h96x
+    events:
+      - timestamp: 2025-08-10T11:57:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: qemu
+            componentID: 9a93b0c67cc16e19
+            componentName: qemu-ipxe
+            componentVersion: 10.0.3-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype

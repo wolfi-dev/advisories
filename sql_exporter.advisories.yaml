@@ -189,6 +189,28 @@ advisories:
         data:
           fixed-version: 0.16.0-r1
 
+  - id: CGA-qr5j-9j8f-fjpf
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T18:33:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sql_exporter
+            componentID: f984f041356478a7
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/sql_exporter
+            scanner: grype
+      - timestamp: 2025-08-11T11:08:24Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in sql_exporter-0.18.1-r1.apk, at usr/bin/sql_exporter, usr/bin/sql_exporter.'
+
   - id: CGA-v9f6-38wp-2hq9
     aliases:
       - CVE-2024-45341
