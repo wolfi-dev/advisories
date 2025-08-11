@@ -14,6 +14,29 @@ advisories:
         data:
           fixed-version: 5.3.0-r2
 
+  - id: CGA-2p2g-6pp4-xhcj
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T04:57:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kustomize
+            componentID: 8312bc5abc8739bc
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/kustomize
+            scanner: grype
+      - timestamp: 2025-08-10T14:10:46Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-4g84-vx4j-h73w
     aliases:
       - CVE-2023-45289

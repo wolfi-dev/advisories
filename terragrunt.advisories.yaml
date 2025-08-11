@@ -380,6 +380,32 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-vh55-p447-6v9w
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T04:37:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terragrunt
+            componentID: d0bb06416c6cb20a
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/terragrunt
+            scanner: grype
+      - timestamp: 2025-08-10T08:45:36Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in terragrunt-0.84.1-r0.apk, at usr/bin/terragrunt, usr/bin/terragrunt.'
+      - timestamp: 2025-08-10T22:32:45Z
+        type: fixed
+        data:
+          fixed-version: 0.84.1-r1
+
   - id: CGA-vw43-2v89-mpf8
     aliases:
       - CVE-2025-22868

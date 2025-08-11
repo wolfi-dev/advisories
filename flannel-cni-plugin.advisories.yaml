@@ -120,6 +120,29 @@ advisories:
         data:
           fixed-version: 1.6.2-r1
 
+  - id: CGA-h36c-5wfc-pxg7
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T04:32:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flannel-cni-plugin
+            componentID: ab07a2da6ff2bf07
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/flannel
+            scanner: grype
+      - timestamp: 2025-08-10T14:46:37Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-h47q-cg2f-vqcv
     aliases:
       - CVE-2024-34155

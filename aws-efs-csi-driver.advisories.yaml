@@ -412,6 +412,29 @@ advisories:
         data:
           fixed-version: 1.7.7-r1
 
+  - id: CGA-hqgj-vvh8-5wv3
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T18:43:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-efs-csi-driver
+            componentID: e14b8c9f4bdec846
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/aws-efs-csi-driver
+            scanner: grype
+      - timestamp: 2025-08-11T07:03:07Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-jj3g-c2jf-6xfm
     aliases:
       - CVE-2025-22874

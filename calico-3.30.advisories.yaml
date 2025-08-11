@@ -4,6 +4,29 @@ package:
   name: calico-3.30
 
 advisories:
+  - id: CGA-63gp-72q2-g9x7
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T05:15:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: calico-whisker-backend-3.30
+            componentID: 82ed59a89703f4a0
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/calico-node
+            scanner: grype
+      - timestamp: 2025-08-10T09:20:31Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-6h7c-72xp-2wmw
     aliases:
       - CVE-2025-4563
