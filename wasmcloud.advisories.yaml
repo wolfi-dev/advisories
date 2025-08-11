@@ -90,6 +90,28 @@ advisories:
         data:
           fixed-version: 1.5.0-r0
 
+  - id: CGA-79h4-v239-x65f
+    aliases:
+      - CVE-2025-53901
+      - GHSA-fm79-3f68-h2fc
+    events:
+      - timestamp: 2025-07-19T07:07:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wasmcloud
+            componentID: efce2bb6f13ff1a8
+            componentName: wasmtime-wasi
+            componentVersion: 31.0.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/wasmcloud
+            scanner: grype
+      - timestamp: 2025-07-22T08:43:37Z
+        type: pending-upstream-fix
+        data:
+          note: The vulnerability is associated with wasmtime-wasi, which has tightly coupled dependencies pinned to version 26.0.1. To remediate, upstream must align and upgrade the entire wasmtime dependency set to version 33.0.2. Once this is addressed, we can proceed with patching the vulnerability.
+
   - id: CGA-9frw-2xq6-h6hp
     aliases:
       - CVE-2024-12224

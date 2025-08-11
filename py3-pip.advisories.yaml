@@ -27,6 +27,31 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: CVE-2024-47081 is patched via py3-pip/fix-CVE-2024-47081.patch. The scanner detects requests 2.32.3 in vendor.txt, but the actual vulnerability (using ri.netloc instead of ri.hostname) has been fixed. The patched code uses ri.hostname for netrc lookups, preventing credential leakage.
 
+  - id: CGA-74r6-hcwc-qv43
+    aliases:
+      - CVE-2025-50182
+      - GHSA-48p4-8xcf-vxj5
+    events:
+      - timestamp: 2025-06-19T08:46:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3.13-pip-base
+            componentID: 3944d0b111341e15
+            componentName: urllib3
+            componentVersion: 1.26.20
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/pip/_vendor/vendor.txt
+            scanner: grype
+      - timestamp: 2025-06-27T19:38:40Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            The outdated version of urllib3 (1.26.20) is included because it's a dependency of py3-pip. Updating it will require the main pip project to release an update.
+            However, the pip maintainers are holding off on that update until Python 3.9 reaches its end-of-life (EOL) at the end of 2025. Once that happens, pip can upgrade, and then kubeflow-katib will also need to update to align with the changes in pip.
+            For more details, see this GitHub issue: https://github.com/pypa/pip/issues/12857
+
   - id: CGA-p6wh-jxvc-2c6c
     aliases:
       - CVE-2025-47273
@@ -44,6 +69,35 @@ advisories:
             componentType: python
             componentLocation: /usr/lib/python3.10/site-packages/pip/_vendor/vendor.txt
             scanner: grype
+      - timestamp: 2025-06-27T19:37:32Z
+        type: pending-upstream-fix
+        data:
+          note: vendored setuptools is required by pip. This vendored version contains source code and will need to be upgraded by upstream due to major changes required in source
+
+  - id: CGA-pr7g-w725-mgf9
+    aliases:
+      - CVE-2025-50181
+      - GHSA-pq67-6m6q-mj2v
+    events:
+      - timestamp: 2025-06-19T08:46:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3.13-pip-base
+            componentID: 3944d0b111341e15
+            componentName: urllib3
+            componentVersion: 1.26.20
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/pip/_vendor/vendor.txt
+            scanner: grype
+      - timestamp: 2025-06-27T19:38:40Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            The outdated version of urllib3 (1.26.20) is included because it's a dependency of py3-pip. Updating it will require the main pip project to release an update.
+            However, the pip maintainers are holding off on that update until Python 3.9 reaches its end-of-life (EOL) at the end of 2025. Once that happens, pip can upgrade, and then kubeflow-katib will also need to update to align with the changes in pip.
+            For more details, see this GitHub issue: https://github.com/pypa/pip/issues/12857
 
   - id: CGA-qc45-xwrj-86w8
     aliases:

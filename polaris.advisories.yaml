@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: polaris
+
+advisories:
+  - id: CGA-q847-8gj6-wj6j
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T15:15:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: polaris
+            componentID: 178313352d58a427
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/polaris
+            scanner: grype
+      - timestamp: 2025-08-10T03:24:27Z
+        type: fixed
+        data:
+          fixed-version: 10.1.0-r1

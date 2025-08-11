@@ -416,6 +416,28 @@ advisories:
         data:
           fixed-version: 0.12.0-r8
 
+  - id: CGA-h8jr-9c52-q775
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T11:26:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: policy-controller
+            componentID: 6a23ae98e8b39562
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/policy-tester
+            scanner: grype
+      - timestamp: 2025-08-09T20:31:54Z
+        type: fixed
+        data:
+          fixed-version: 0.13.0-r2
+
   - id: CGA-hgrh-w9wg-43hv
     aliases:
       - CVE-2024-45336
@@ -520,6 +542,27 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.9.0-r0
+
+  - id: CGA-m22g-537h-9v7x
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T09:24:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: policy-controller
+            componentID: 1c35dfa0a5858ef6
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/policy-controller
+            scanner: grype
+      - timestamp: 2025-06-28T12:19:09Z
+        type: fixed
+        data:
+          fixed-version: 0.12.1-r3
 
   - id: CGA-p5x6-x242-h8r9
     aliases:

@@ -198,6 +198,28 @@ advisories:
         data:
           fixed-version: 1.7.24-r3
 
+  - id: CGA-rq7p-cx6m-782v
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T21:43:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: containerd-1
+            componentID: 2a5b80f0de0cf526
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/containerd-shim-runc-v2
+            scanner: grype
+      - timestamp: 2025-08-10T14:18:33Z
+        type: fixed
+        data:
+          fixed-version: 1.7.28-r1
+
   - id: CGA-rxm8-mwm9-3jfg
     aliases:
       - CVE-2025-22874

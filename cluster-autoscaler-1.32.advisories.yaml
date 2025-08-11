@@ -245,6 +245,28 @@ advisories:
         data:
           fixed-version: 1.32.0-r2
 
+  - id: CGA-jj8g-x2pc-959q
+    aliases:
+      - CVE-2025-4563
+      - GHSA-hj2p-8wj8-pfq4
+    events:
+      - timestamp: 2025-06-24T08:15:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-autoscaler-1.32
+            componentID: 25871a73e47cf16a
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.32.3
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-autoscaler
+            scanner: grype
+      - timestamp: 2025-06-24T09:44:12Z
+        type: fixed
+        data:
+          fixed-version: 1.32.1-r6
+
   - id: CGA-jp4w-rm8w-8gmm
     aliases:
       - CVE-2025-22872

@@ -187,6 +187,28 @@ advisories:
         data:
           fixed-version: 1.2.0-r1
 
+  - id: CGA-p2pp-q5x7-9cfp
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T16:25:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-network-policy-agent
+            componentID: e9a2595fb3c90f6f
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/aws-eks-na-cli
+            scanner: grype
+      - timestamp: 2025-08-10T05:50:41Z
+        type: fixed
+        data:
+          fixed-version: 1.2.3-r3
+
   - id: CGA-pwqw-cm23-5qgm
     aliases:
       - CVE-2025-22871

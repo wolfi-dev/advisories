@@ -4,16 +4,6 @@ package:
   name: dotnet-6
 
 advisories:
-  - id: CGA-x477-6cc3-862v
-    aliases:
-      - CVE-2023-44487
-      - GHSA-qppj-fm5r-hxr3
-    events:
-      - timestamp: 2023-10-13T00:29:47Z
-        type: fixed
-        data:
-          fixed-version: 6.0.123-r0
-
   - id: CGA-9f96-5r7p-2g48
     aliases:
       - CVE-2024-0057
@@ -35,3 +25,79 @@ advisories:
         type: fixed
         data:
           fixed-version: 6.0.127-r1
+
+  - id: CGA-g7hf-r8hj-rrh9
+    aliases:
+      - CVE-2025-26646
+      - GHSA-h4j7-5rxr-p4wc
+    events:
+      - timestamp: 2025-07-11T16:14:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dotnet-6-sdk
+            componentID: 56e4e073382d965c
+            componentName: Microsoft.Build.Tasks.Core
+            componentVersion: 17.0.4
+            componentType: dotnet
+            componentLocation: /usr/share/dotnet/sdk/6.0.136/FSharp/fsc.deps.json
+            scanner: grype
+      - timestamp: 2025-07-12T07:18:22Z
+        type: fix-not-planned
+        data:
+          note: This package is no longer supported upstream and has reached its end of life. A version upgrade is required to fix this vulnerability.
+
+  - id: CGA-m43r-f8hh-g6wg
+    aliases:
+      - CVE-2018-8292
+      - GHSA-7jgj-8wvc-jh57
+    events:
+      - timestamp: 2025-07-11T16:14:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dotnet-6-sdk
+            componentID: d574357e6e5e3c10
+            componentName: System.Net.Http
+            componentVersion: 4.3.0
+            componentType: dotnet
+            componentLocation: /usr/share/dotnet/sdk/6.0.136/DotnetTools/dotnet-format/dotnet-format.deps.json
+            scanner: grype
+      - timestamp: 2025-07-12T07:18:22Z
+        type: fix-not-planned
+        data:
+          note: This package is no longer supported upstream and has reached its end of life. A version upgrade is required to fix this vulnerability.
+
+  - id: CGA-q3mw-55g9-7xrf
+    aliases:
+      - CVE-2025-24070
+      - GHSA-2865-hh9g-w894
+    events:
+      - timestamp: 2025-07-11T16:14:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dotnet-6-sdk
+            componentID: 0502d24c1d4f1f08
+            componentName: Microsoft.AspNetCore.App.Runtime.linux-x64
+            componentVersion: 6.0.36
+            componentType: dotnet
+            componentLocation: /usr/share/dotnet/shared/Microsoft.AspNetCore.App/6.0.36/Microsoft.AspNetCore.App.deps.json
+            scanner: grype
+      - timestamp: 2025-07-12T07:18:22Z
+        type: fix-not-planned
+        data:
+          note: This package is no longer supported upstream and has reached its end of life. A version upgrade is required to fix this vulnerability.
+
+  - id: CGA-x477-6cc3-862v
+    aliases:
+      - CVE-2023-44487
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2023-10-13T00:29:47Z
+        type: fixed
+        data:
+          fixed-version: 6.0.123-r0

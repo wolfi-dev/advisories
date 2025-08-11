@@ -35,6 +35,10 @@ advisories:
         type: true-positive-determination
         data:
           note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in nsc-2.11.0-r1.apk, at usr/bin/nsc, usr/bin/nsc.'
+      - timestamp: 2025-06-17T18:03:13Z
+        type: fixed
+        data:
+          fixed-version: 2.11.0-r2
 
   - id: CGA-4h47-r8jx-m2xv
     aliases:
@@ -186,6 +190,29 @@ advisories:
         data:
           fixed-version: 2.10.2-r5
 
+  - id: CGA-gfr5-45ff-f96v
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T21:34:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nsc
+            componentID: 8fc1b57795d07d02
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/nsc
+            scanner: grype
+      - timestamp: 2025-08-10T12:24:02Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-grfr-w7rf-r55g
     aliases:
       - CVE-2024-24790
@@ -333,3 +360,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/nsc
             scanner: grype
+      - timestamp: 2025-06-16T07:40:28Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in nsc-2.11.0-r1.apk, at usr/bin/nsc, usr/bin/nsc.'
+      - timestamp: 2025-06-17T18:03:14Z
+        type: fixed
+        data:
+          fixed-version: 2.11.0-r2

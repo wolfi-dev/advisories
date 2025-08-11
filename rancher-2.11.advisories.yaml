@@ -26,6 +26,28 @@ advisories:
         data:
           note: This vulnerability requires upstream changes. The non-vulnerable version >= v24.0.9 does not contain a module 'github.com/docker/docker/pkg/term' that exists in older version such as v20.10.27.
 
+  - id: CGA-5fqx-pr25-fww4
+    aliases:
+      - CVE-2025-4563
+      - GHSA-hj2p-8wj8-pfq4
+    events:
+      - timestamp: 2025-06-24T07:49:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-2.11
+            componentID: 6c464634921b06d9
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.32.2
+            componentType: go-module
+            componentLocation: /usr/bin/rancher
+            scanner: grype
+      - timestamp: 2025-06-24T09:49:22Z
+        type: fixed
+        data:
+          fixed-version: 2.11.2-r2
+
   - id: CGA-5vxp-672r-48ff
     aliases:
       - CVE-2024-24557
@@ -138,6 +160,10 @@ advisories:
         type: fix-not-planned
         data:
           note: v3 is not supported any longer (the last commit on https://github.com/golang-jwt/jwt/tree/v3 was 4 years ago), so it won't be fixed.
+      - timestamp: 2025-07-08T12:09:28Z
+        type: pending-upstream-fix
+        data:
+          note: Upstream still relies on this outdated dependency. Since there's no jwt v3 fix for the CVE, upstream must update their code and dependencies to use a newer jwt version.
 
   - id: CGA-q34j-c3m9-m32j
     aliases:
@@ -209,6 +235,28 @@ advisories:
         data:
           type: component-vulnerability-mismatch
           note: docker/docker is already at version v25.0.6+incompatible; this vulnerablity was patched in v25.0.4 version including the +incompatible variant
+
+  - id: CGA-v947-f834-6h8w
+    aliases:
+      - CVE-2025-54410
+      - GHSA-4vq8-7jfc-9cvp
+    events:
+      - timestamp: 2025-07-30T07:15:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-2.11
+            componentID: b1116ece5e24a258
+            componentName: github.com/docker/docker
+            componentVersion: v20.10.27+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/rancher
+            scanner: grype
+      - timestamp: 2025-07-31T23:32:09Z
+        type: pending-upstream-fix
+        data:
+          note: 'This vulnerability affects Docker Engine (Moby) versions <= 25.0.12 where firewalld reload removes Docker''s iptables rules that isolate containers in different bridge networks. Upstream maintainers must cut a release with the fix. References: 25.x backport PR: https://github.com/moby/moby/pull/50445 28.x backport PR: https://github.com/moby/moby/pull/50506'
 
   - id: CGA-x55r-rv2f-94w4
     aliases:

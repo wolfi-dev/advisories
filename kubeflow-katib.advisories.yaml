@@ -205,6 +205,15 @@ advisories:
             componentType: python
             componentLocation: /opt/katib/cmd/earlystopping/medianstop/v1beta1/lib/python3.11/site-packages/pip/_vendor/vendor.txt
             scanner: grype
+      - timestamp: 2025-06-13T01:02:08Z
+        type: false-positive-determination
+        data:
+          type: inline-mitigations-exist
+          note: py3-pip installs a patched version of 2.32.3 requests.py which contains the upstream fix for CVE-2024-47081, reference https://github.com/wolfi-dev/os/pull/55998/files. The version referenced in the vendor.txt is not vulnerable
+      - timestamp: 2025-07-19T09:17:38Z
+        type: fixed
+        data:
+          fixed-version: 0.18.0-r6
 
   - id: CGA-9cxh-9fw3-736j
     aliases:
@@ -612,6 +621,31 @@ advisories:
         data:
           fixed-version: 0.17.0-r13
 
+  - id: CGA-q7q9-6x8v-5pjh
+    aliases:
+      - CVE-2025-50181
+      - GHSA-pq67-6m6q-mj2v
+    events:
+      - timestamp: 2025-06-19T07:33:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: katib-suggestion-optuna-enas
+            componentID: e5c95463ace24147
+            componentName: urllib3
+            componentVersion: 1.26.20
+            componentType: python
+            componentLocation: /opt/katib/cmd/earlystopping/medianstop/v1beta1/lib/python3.11/site-packages/pip/_vendor/vendor.txt
+            scanner: grype
+      - timestamp: 2025-06-27T16:07:32Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            The outdated version of urllib3 (1.26.20) is included because it's a dependency of py3-pip. Updating it will require the main pip project to release an update.
+            However, the pip maintainers are holding off on that update until Python 3.9 reaches its end-of-life (EOL) at the end of 2025. Once that happens, pip can upgrade, and then kubeflow-katib will also need to update to align with the changes in pip.
+            For more details, see this GitHub issue: https://github.com/pypa/pip/issues/12857
+
   - id: CGA-q8f4-cjcq-pvcw
     aliases:
       - CVE-2023-44487
@@ -691,6 +725,24 @@ advisories:
             More information can be found here: https://github.com/pypa/pip/tree/30807c4d9e62e0ba65ad80d441dba55e76ddf5e4/src/pip/_vendor#modifications
             We've upgraded setuptools to 78.1.1 in kubeflow-katib to remediate the CVE.
 
+  - id: CGA-rqq2-mvw9-ffrq
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T14:43:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: katib-controller
+            componentID: 8ebded2779e7dad1
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/katib-db-manager
+            scanner: grype
+
   - id: CGA-w7c7-p69g-xmfw
     aliases:
       - CVE-2024-5206
@@ -763,3 +815,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.17.0-r6
+
+  - id: CGA-xq4f-8cc2-g52h
+    aliases:
+      - CVE-2025-50182
+      - GHSA-48p4-8xcf-vxj5
+    events:
+      - timestamp: 2025-06-19T07:32:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: katib-suggestion-optuna-enas
+            componentID: e5c95463ace24147
+            componentName: urllib3
+            componentVersion: 1.26.20
+            componentType: python
+            componentLocation: /opt/katib/cmd/earlystopping/medianstop/v1beta1/lib/python3.11/site-packages/pip/_vendor/vendor.txt
+            scanner: grype
+      - timestamp: 2025-06-27T16:07:32Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            The outdated version of urllib3 (1.26.20) is included because it's a dependency of py3-pip. Updating it will require the main pip project to release an update.
+            However, the pip maintainers are holding off on that update until Python 3.9 reaches its end-of-life (EOL) at the end of 2025. Once that happens, pip can upgrade, and then kubeflow-katib will also need to update to align with the changes in pip.
+            For more details, see this GitHub issue: https://github.com/pypa/pip/issues/12857

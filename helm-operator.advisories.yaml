@@ -220,6 +220,24 @@ advisories:
         data:
           fixed-version: 1.39.1-r1
 
+  - id: CGA-f9c3-qm3m-fgw9
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T17:51:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-operator
+            componentID: 9ba405601eb65b7e
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/helm-operator
+            scanner: grype
+
   - id: CGA-fc3p-4ggv-6hrq
     aliases:
       - CVE-2024-24791
@@ -358,6 +376,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.36.0-r1
+
+  - id: CGA-q648-pmcm-8rc2
+    aliases:
+      - CVE-2025-53547
+      - GHSA-557j-xg8c-q2mm
+    events:
+      - timestamp: 2025-07-09T11:10:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-operator
+            componentID: 47bcb021cae21ce9
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.18.3
+            componentType: go-module
+            componentLocation: /usr/bin/helm-operator
+            scanner: grype
+      - timestamp: 2025-07-09T21:32:46Z
+        type: fixed
+        data:
+          fixed-version: 1.41.1-r0
 
   - id: CGA-qv72-h7wf-jmc6
     aliases:

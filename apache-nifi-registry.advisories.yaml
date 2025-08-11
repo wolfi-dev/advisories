@@ -4,6 +4,28 @@ package:
   name: apache-nifi-registry
 
 advisories:
+  - id: CGA-4fcv-jq36-r7hx
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2025-07-12T08:06:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi-registry
+            componentID: b346ec3119e55f19
+            componentName: commons-lang3
+            componentVersion: 3.17.0
+            componentType: java-archive
+            componentLocation: /opt/nifi-registry/nifi-toolkit-registry-2.4.0/nifi-registry-toolkit-2.4.0/lib/commons-lang3-3.17.0.jar
+            scanner: grype
+      - timestamp: 2025-07-15T07:28:59Z
+        type: fixed
+        data:
+          fixed-version: 2.4.0-r4
+
   - id: CGA-4m66-858p-cx2p
     aliases:
       - CVE-2025-41234
@@ -69,3 +91,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.4.0-r1
+
+  - id: CGA-mpwh-pghw-hw5x
+    aliases:
+      - CVE-2025-53864
+      - GHSA-xwmg-2g98-w7v9
+    events:
+      - timestamp: 2025-07-12T08:06:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi-registry
+            componentID: c1a16c7a0267b6f9
+            componentName: nimbus-jose-jwt
+            componentVersion: "9.48"
+            componentType: java-archive
+            componentLocation: /opt/nifi-registry/nifi-registry-2.4.0/lib/nifi-registry-web-api-2.4.0.war
+            scanner: grype
+      - timestamp: 2025-07-15T07:29:00Z
+        type: fixed
+        data:
+          fixed-version: 2.4.0-r4

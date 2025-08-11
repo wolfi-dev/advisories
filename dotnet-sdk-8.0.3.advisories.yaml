@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: dotnet-sdk-8.0.3
+
+advisories:
+  - id: CGA-qwf8-4rrg-989g
+    aliases:
+      - CVE-2025-26646
+      - GHSA-h4j7-5rxr-p4wc
+    events:
+      - timestamp: 2025-07-23T22:17:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dotnet-sdk-8.0.3
+            componentID: 443abe01c44e9b72
+            componentName: Microsoft.Build.Tasks.Core
+            componentVersion: 17.3.4
+            componentType: dotnet
+            componentLocation: /usr/share/dotnet/sdk/8.0.315/DotnetTools/dotnet-format/BuildHost-netcore/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.deps.json
+            scanner: grype

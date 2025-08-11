@@ -36,6 +36,29 @@ advisories:
         data:
           fixed-version: 3.40.1-r0
 
+  - id: CGA-28vf-5qp6-m66p
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T07:50:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: task
+            componentID: ea25335738ffe915
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/task
+            scanner: grype
+      - timestamp: 2025-08-10T15:06:35Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-2w93-hh36-8rwc
     aliases:
       - CVE-2024-24790

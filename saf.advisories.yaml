@@ -1,0 +1,44 @@
+schema-version: 2.0.2
+
+package:
+  name: saf
+
+advisories:
+  - id: CGA-6p3x-59vm-9fq8
+    aliases:
+      - CVE-2025-54798
+      - GHSA-52f5-9888-hmc6
+    events:
+      - timestamp: 2025-08-08T08:47:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: saf
+            componentID: 56fa3c193819f9a9
+            componentName: tmp
+            componentVersion: 0.0.33
+            componentType: npm
+            componentLocation: /usr/lib/node_modules/@mitre/saf/node_modules/tmp/package.json
+            scanner: grype
+
+  - id: CGA-7wc2-hgjx-9f23
+    aliases:
+      - GHSA-rm8p-cx58-hcvx
+    events:
+      - timestamp: 2025-07-24T07:46:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: saf
+            componentID: 0e316eba577c80a8
+            componentName: axios
+            componentVersion: 1.10.0
+            componentType: npm
+            componentLocation: /usr/lib/node_modules/@mitre/saf/node_modules/axios/package.json
+            scanner: grype
+      - timestamp: 2025-07-25T09:47:20Z
+        type: fixed
+        data:
+          fixed-version: 1.4.22-r1

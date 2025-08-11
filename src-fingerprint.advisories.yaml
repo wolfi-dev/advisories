@@ -140,6 +140,29 @@ advisories:
         data:
           fixed-version: 0.19.0-r17
 
+  - id: CGA-6w29-g963-7q34
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T00:06:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: src-fingerprint
+            componentID: 7304e91a36730f3d
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/src-fingerprint
+            scanner: grype
+      - timestamp: 2025-08-10T09:28:51Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-7866-mqjj-6wg3
     aliases:
       - CVE-2024-24789

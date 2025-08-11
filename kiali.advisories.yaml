@@ -26,6 +26,28 @@ advisories:
         data:
           note: This vulnerability requires upstream code changes that consists on renaming the current module github.com/go-jose/go-jose.v2 to use a v3 module.
 
+  - id: CGA-4635-cxhj-hv99
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T09:33:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kiali
+            componentID: ad37908af0a81f2f
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /opt/kiali/kiali
+            scanner: grype
+      - timestamp: 2025-08-09T13:25:34Z
+        type: fixed
+        data:
+          fixed-version: 2.13.0-r1
+
   - id: CGA-4rvm-jh29-m8c2
     aliases:
       - CVE-2024-45338

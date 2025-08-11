@@ -4,6 +4,28 @@ package:
   name: k8s-sidecar
 
 advisories:
+  - id: CGA-2hvc-g7jr-8j6v
+    aliases:
+      - CVE-2025-50181
+      - GHSA-pq67-6m6q-mj2v
+    events:
+      - timestamp: 2025-06-19T09:08:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k8s-sidecar
+            componentID: dee7c31bfc80d1da
+            componentName: urllib3
+            componentVersion: 2.4.0
+            componentType: python
+            componentLocation: /usr/lib/python3.13/site-packages/urllib3-2.4.0.dist-info/METADATA, /usr/lib/python3.13/site-packages/urllib3-2.4.0.dist-info/RECORD
+            scanner: grype
+      - timestamp: 2025-06-23T14:57:20Z
+        type: fixed
+        data:
+          fixed-version: 1.30.5-r0
+
   - id: CGA-3ggr-w55x-hf5j
     aliases:
       - CVE-2024-37891
@@ -69,6 +91,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.26.1-r1
+
+  - id: CGA-cf43-c442-xxf5
+    aliases:
+      - CVE-2025-50182
+      - GHSA-48p4-8xcf-vxj5
+    events:
+      - timestamp: 2025-06-19T09:08:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k8s-sidecar
+            componentID: dee7c31bfc80d1da
+            componentName: urllib3
+            componentVersion: 2.4.0
+            componentType: python
+            componentLocation: /usr/lib/python3.13/site-packages/urllib3-2.4.0.dist-info/METADATA, /usr/lib/python3.13/site-packages/urllib3-2.4.0.dist-info/RECORD
+            scanner: grype
+      - timestamp: 2025-06-23T14:57:21Z
+        type: fixed
+        data:
+          fixed-version: 1.30.5-r0
 
   - id: CGA-cvpx-m598-wh5q
     aliases:

@@ -4,6 +4,55 @@ package:
   name: grafana-pyroscope-1.13
 
 advisories:
+  - id: CGA-2xq9-j233-2gmr
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T14:10:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-pyroscope-1.13
+            componentID: da509a2995de8f8a
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/profilecli
+            scanner: grype
+      - timestamp: 2025-08-11T09:10:15Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
+  - id: CGA-8xrc-697j-x68f
+    aliases:
+      - CVE-2025-54576
+      - GHSA-7rh7-c77v-6434
+    events:
+      - timestamp: 2025-07-31T07:35:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-pyroscope-1.13
+            componentID: 9eb6f2b1cbdcd26d
+            componentName: github.com/oauth2-proxy/oauth2-proxy/v7
+            componentVersion: v7.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/pyroscope
+            scanner: grype
+      - timestamp: 2025-08-01T13:21:04Z
+        type: pending-upstream-fix
+        data:
+          note: 'The oauth2-proxy is a transient dependency and any attempts to bump result in build failure. We will have to wait for upstream to work on bumping their dependency tree. There is currently an issue open upstream to try to bump this dependency but it is still a work in progress: https://github.com/grafana/pyroscope/pull/4335'
+      - timestamp: 2025-08-05T07:14:15Z
+        type: fixed
+        data:
+          fixed-version: 1.13.5-r2
+
   - id: CGA-ccqq-v98r-p677
     aliases:
       - CVE-2025-22872

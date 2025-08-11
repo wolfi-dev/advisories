@@ -4,6 +4,28 @@ package:
   name: aws-signer-notation-plugin
 
 advisories:
+  - id: CGA-4v64-f99x-vv6f
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T09:21:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-signer-notation-plugin
+            componentID: 8cf1ba3f9b4ec6b4
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/notation-com.amazonaws.signer.notation.plugin
+            scanner: grype
+      - timestamp: 2025-08-09T12:33:18Z
+        type: fixed
+        data:
+          fixed-version: 1.0.2292-r2
+
   - id: CGA-8f75-jpcr-465g
     aliases:
       - CVE-2025-22866

@@ -131,6 +131,28 @@ advisories:
         data:
           fixed-version: 1.0.0_beta55-r5
 
+  - id: CGA-749g-9pp6-79m8
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T09:23:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kpt
+            componentID: 16eeff81844b11bb
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/kpt
+            scanner: grype
+      - timestamp: 2025-08-09T12:35:41Z
+        type: fixed
+        data:
+          fixed-version: 1.0.0_beta55-r10
+
   - id: CGA-7v7p-vwgg-5842
     aliases:
       - CVE-2025-4673

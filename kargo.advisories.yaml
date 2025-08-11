@@ -309,6 +309,28 @@ advisories:
         data:
           fixed-version: 0.4.4-r2
 
+  - id: CGA-gxq7-p3p3-mxh4
+    aliases:
+      - CVE-2025-53547
+      - GHSA-557j-xg8c-q2mm
+    events:
+      - timestamp: 2025-07-09T11:12:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kargo
+            componentID: 9e92dae831e1bdbb
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.18.3
+            componentType: go-module
+            componentLocation: /usr/bin/kargo
+            scanner: grype
+      - timestamp: 2025-07-09T12:56:24Z
+        type: fixed
+        data:
+          fixed-version: 1.6.0-r1
+
   - id: CGA-h3qc-g22c-5wrc
     aliases:
       - CVE-2023-45284
@@ -468,6 +490,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.4.2-r1
+
+  - id: CGA-vr6r-qw7m-qgp4
+    aliases:
+      - CVE-2025-54388
+      - GHSA-x4rx-4gw3-53p4
+    events:
+      - timestamp: 2025-07-30T07:13:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kargo
+            componentID: a749d71ac38ebb91
+            componentName: github.com/docker/docker
+            componentVersion: v28.2.2+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/kargo
+            scanner: grype
+      - timestamp: 2025-07-30T09:26:07Z
+        type: fixed
+        data:
+          fixed-version: 1.6.1-r2
 
   - id: CGA-vw8v-jp5f-5j9h
     aliases:

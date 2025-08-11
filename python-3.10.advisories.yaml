@@ -27,6 +27,28 @@ advisories:
           type: vulnerable-code-cannot-be-controlled-by-adversary
           note: Vulnerability affects only Windows systems.
 
+  - id: CGA-2r2x-6rq2-45h2
+    aliases:
+      - CVE-2025-8194
+      - GHSA-v594-44hm-2j7p
+    events:
+      - timestamp: 2025-07-30T09:20:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: python-3.10
+            componentID: def1059b4da5b25c
+            componentName: python-3.10
+            componentVersion: 3.10.18-r3
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2025-08-01T00:32:23Z
+        type: pending-upstream-fix
+        data:
+          note: 'Upstream maintainers must release the backport PR for Python 3.10. The tarfile validation fix from gh-130577 is ready for 3.10 via PR #137176 but not yet merged and released. CVE-2025-8194 is fixed in Python 3.13.5+ but requires backporting to 3.10 branch. Reference: https://github.com/python/cpython/pull/137176'
+
   - id: CGA-5pmm-mmg3-pfp3
     aliases:
       - CVE-2024-0450
@@ -302,6 +324,28 @@ advisories:
         data:
           type: vulnerable-code-version-not-used
 
+  - id: CGA-pfq7-4g5g-g2f5
+    aliases:
+      - CVE-2025-6069
+      - GHSA-j5cc-6rx8-ff96
+    events:
+      - timestamp: 2025-06-20T07:40:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: python-3.10
+            componentID: 2fc5be852c9cc962
+            componentName: python-3.10
+            componentVersion: 3.10.18-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2025-06-30T16:04:05Z
+        type: fixed
+        data:
+          fixed-version: 3.10.18-r1
+
   - id: CGA-qw6p-5649-8qqv
     aliases:
       - CVE-2023-27043
@@ -337,6 +381,10 @@ advisories:
         type: pending-upstream-fix
         data:
           note: 'A fix for this CVE exists upstream in the 3.12 and 3.11 branches. There is a PR open and ready for review to backport this fix to 3.10 which can be seen here: https://github.com/python/cpython/pull/129111'
+      - timestamp: 2025-07-29T12:58:00Z
+        type: fixed
+        data:
+          fixed-version: 3.10.17-r0
 
   - id: CGA-rh6v-8553-f92w
     aliases:

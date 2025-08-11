@@ -1,0 +1,233 @@
+schema-version: 2.0.2
+
+package:
+  name: juicefs-1.3
+
+advisories:
+  - id: CGA-2vgx-6rf9-m9h7
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-07-23T07:22:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: juicefs-1.3
+            componentID: c2dedcf9829fdfd3
+            componentName: github.com/golang-jwt/jwt
+            componentVersion: v3.2.1+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/juicefs
+            scanner: grype
+      - timestamp: 2025-07-23T22:24:38Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in juicefs-1.3-1.3.0-r1.apk, at usr/bin/juicefs, usr/bin/juicefs.'
+      - timestamp: 2025-07-24T14:21:09Z
+        type: pending-upstream-fix
+        data:
+          note: This dependency is brought in via a transient dependency. Any attempts to bump to a fixed version of this dependency result in a build failure, hence we will need upstream to update their dependencies in order to fix this issue.
+
+  - id: CGA-5mh8-6mhm-c4m4
+    aliases:
+      - GHSA-gv9j-4w24-q7vx
+    events:
+      - timestamp: 2025-07-23T07:22:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: juicefs-1.3
+            componentID: 0ac854e96dcb854e
+            componentName: github.com/coredns/coredns
+            componentVersion: v1.4.0
+            componentType: go-module
+            componentLocation: /usr/bin/juicefs
+            scanner: grype
+      - timestamp: 2025-07-25T09:25:37Z
+        type: fixed
+        data:
+          fixed-version: 1.3.0-r2
+
+  - id: CGA-7cgv-vwcp-qv5m
+    aliases:
+      - CVE-2022-2835
+      - GHSA-ch7v-37xg-75ph
+    events:
+      - timestamp: 2025-07-23T07:22:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: juicefs-1.3
+            componentID: 0ac854e96dcb854e
+            componentName: github.com/coredns/coredns
+            componentVersion: v1.4.0
+            componentType: go-module
+            componentLocation: /usr/bin/juicefs
+            scanner: grype
+      - timestamp: 2025-07-25T09:25:38Z
+        type: fixed
+        data:
+          fixed-version: 1.3.0-r2
+
+  - id: CGA-c96p-r383-6ph6
+    aliases:
+      - CVE-2024-0874
+      - GHSA-m9w6-wp3h-vq8g
+    events:
+      - timestamp: 2025-07-23T07:22:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: juicefs-1.3
+            componentID: 0ac854e96dcb854e
+            componentName: github.com/coredns/coredns
+            componentVersion: v1.4.0
+            componentType: go-module
+            componentLocation: /usr/bin/juicefs
+            scanner: grype
+      - timestamp: 2025-07-25T09:25:39Z
+        type: fixed
+        data:
+          fixed-version: 1.3.0-r2
+
+  - id: CGA-m43c-f372-wgmc
+    aliases:
+      - CVE-2023-30464
+      - GHSA-h92q-fgpp-qhrq
+    events:
+      - timestamp: 2025-07-23T07:22:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: juicefs-1.3
+            componentID: 0ac854e96dcb854e
+            componentName: github.com/coredns/coredns
+            componentVersion: v1.4.0
+            componentType: go-module
+            componentLocation: /usr/bin/juicefs
+            scanner: grype
+      - timestamp: 2025-07-25T09:25:39Z
+        type: fixed
+        data:
+          fixed-version: 1.3.0-r2
+
+  - id: CGA-mc3w-8j64-jf22
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T19:24:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: juicefs-1.3
+            componentID: 59b1f3b9c27ab1fb
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/juicefs
+            scanner: grype
+      - timestamp: 2025-08-10T07:40:20Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in juicefs-1.3-1.3.0-r2.apk, at usr/bin/juicefs, usr/bin/juicefs.'
+
+  - id: CGA-mvh3-v8v8-6jpj
+    aliases:
+      - CVE-2018-1099
+      - GHSA-wf43-55jj-vwq8
+    events:
+      - timestamp: 2025-07-23T07:22:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: juicefs-1.3
+            componentID: e6da207dfff3693c
+            componentName: go.etcd.io/etcd
+            componentVersion: v3.3.27+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/juicefs
+            scanner: grype
+      - timestamp: 2025-07-24T09:19:13Z
+        type: pending-upstream-fix
+        data:
+          note: This package must be removed from upstream dependencies. Upstream already consumes the fixed version, and trying to bump the vulnerable version will cause build failures due to duplication.
+      - timestamp: 2025-07-25T13:40:11Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: JuiceFS only uses etcd client libraries (go.etcd.io/etcd/client/v3) for connecting to external etcd clusters. This vulnerability affects etcd server components, which are not present in JuiceFS. Static analysis confirms no etcd server symbols exist in the binary, and govulncheck produces no findings. This CVE does not apply to JuiceFS client-only usage.
+
+  - id: CGA-qj22-3gm9-5w4p
+    aliases:
+      - CVE-2025-47950
+      - GHSA-cvx7-x8pj-x2gw
+    events:
+      - timestamp: 2025-07-23T07:22:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: juicefs-1.3
+            componentID: 0ac854e96dcb854e
+            componentName: github.com/coredns/coredns
+            componentVersion: v1.4.0
+            componentType: go-module
+            componentLocation: /usr/bin/juicefs
+            scanner: grype
+      - timestamp: 2025-07-25T09:25:40Z
+        type: fixed
+        data:
+          fixed-version: 1.3.0-r2
+
+  - id: CGA-r4xm-6697-xwjp
+    aliases:
+      - CVE-2023-28452
+      - GHSA-hfmw-7g3m-gj6q
+    events:
+      - timestamp: 2025-07-23T07:22:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: juicefs-1.3
+            componentID: 0ac854e96dcb854e
+            componentName: github.com/coredns/coredns
+            componentVersion: v1.4.0
+            componentType: go-module
+            componentLocation: /usr/bin/juicefs
+            scanner: grype
+      - timestamp: 2025-07-25T09:25:40Z
+        type: fixed
+        data:
+          fixed-version: 1.3.0-r2
+
+  - id: CGA-x4p4-pch3-pf7j
+    aliases:
+      - CVE-2022-2837
+      - GHSA-h828-v5pv-33qx
+    events:
+      - timestamp: 2025-07-23T07:22:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: juicefs-1.3
+            componentID: 0ac854e96dcb854e
+            componentName: github.com/coredns/coredns
+            componentVersion: v1.4.0
+            componentType: go-module
+            componentLocation: /usr/bin/juicefs
+            scanner: grype
+      - timestamp: 2025-07-25T09:25:41Z
+        type: fixed
+        data:
+          fixed-version: 1.3.0-r2

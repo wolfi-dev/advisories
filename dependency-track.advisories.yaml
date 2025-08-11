@@ -26,6 +26,28 @@ advisories:
         data:
           note: The non-vulnerable version of com.mysql:mysql-connector-j is not available in maven central yet.
 
+  - id: CGA-4r9f-63gw-pv7x
+    aliases:
+      - CVE-2025-7962
+      - GHSA-9342-92gg-6v29
+    events:
+      - timestamp: 2025-08-07T20:08:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dependency-track
+            componentID: f576264b69353186
+            componentName: smtp
+            componentVersion: 2.0.3
+            componentType: java-archive
+            componentLocation: /usr/share/java/dependency-track/dependency-track-bundled.jar
+            scanner: grype
+      - timestamp: 2025-08-08T14:20:45Z
+        type: fixed
+        data:
+          fixed-version: 4.13.3-r1
+
   - id: CGA-65j2-8hv5-q3hr
     aliases:
       - CVE-2024-57699
@@ -124,6 +146,28 @@ advisories:
         data:
           note: 'The upstream Pebble maintainer needs to sanitize input to mitigate CVE-2025-1686. For further details, refer to the upstream issue: https://github.com/PebbleTemplates/pebble/issues/688.'
 
+  - id: CGA-ff3x-mc4g-82q2
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2025-07-12T07:33:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dependency-track
+            componentID: 62d8257636aa7325
+            componentName: commons-lang3
+            componentVersion: 3.17.0
+            componentType: java-archive
+            componentLocation: /usr/share/java/dependency-track/dependency-track-bundled.jar
+            scanner: grype
+      - timestamp: 2025-07-16T22:35:16Z
+        type: fixed
+        data:
+          fixed-version: 4.13.2-r2
+
   - id: CGA-fjg5-9m84-p3v7
     aliases:
       - CVE-2024-1597
@@ -212,6 +256,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 4.10.1-r2
+
+  - id: CGA-q985-2vc3-8xfh
+    aliases:
+      - CVE-2025-53864
+      - GHSA-xwmg-2g98-w7v9
+    events:
+      - timestamp: 2025-07-12T07:33:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dependency-track
+            componentID: cb81a54b067dc679
+            componentName: nimbus-jose-jwt
+            componentVersion: 9.37.3
+            componentType: java-archive
+            componentLocation: /usr/share/java/dependency-track/dependency-track-bundled.jar
+            scanner: grype
+      - timestamp: 2025-07-16T10:57:50Z
+        type: pending-upstream-fix
+        data:
+          note: Upgrading nimbus-jose-jwt to a secure version currently results in build failures due to unresolved classpath and dependency conflicts. The upstream project must first reconcile and adjust its dependency tree to support this version correctly. Once upstream dependencies are aligned, we can proceed with the update to remediate the vulnerability and apply the necessary patch.
 
   - id: CGA-w8q8-p4r5-xxg9
     aliases:

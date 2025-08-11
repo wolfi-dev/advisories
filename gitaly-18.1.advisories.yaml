@@ -1,0 +1,26 @@
+schema-version: 2.0.2
+
+package:
+  name: gitaly-18.1
+
+advisories:
+  - id: CGA-gw8g-pcrx-m35x
+    aliases:
+      - GHSA-2x5j-vhc8-9cwm
+    events:
+      - timestamp: 2025-06-20T16:09:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitaly-18.1
+            componentID: bf24344fa684aa1c
+            componentName: github.com/cloudflare/circl
+            componentVersion: v1.3.7
+            componentType: go-module
+            componentLocation: /usr/bin/gitaly
+            scanner: grype
+      - timestamp: 2025-06-20T17:35:14Z
+        type: fixed
+        data:
+          fixed-version: 18.1.0-r1

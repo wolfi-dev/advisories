@@ -15,6 +15,28 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'The lowest version of jsonwebtoken used in the jitsucom-jitsu-console is 9.0.0 and the fix version outlined in the CVE GHSA-c7hr-j4mj-j2w6 is 4.2.2 '
 
+  - id: CGA-573v-r77h-q9g9
+    aliases:
+      - CVE-2025-7783
+      - GHSA-fjxv-7rqg-78g4
+    events:
+      - timestamp: 2025-07-22T07:10:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jitsucom-jitsu-console
+            componentID: d4f12cea540a3570
+            componentName: form-data
+            componentVersion: 4.0.1
+            componentType: npm
+            componentLocation: /app/node_modules/.pnpm/form-data@4.0.1/node_modules/form-data/package.json
+            scanner: grype
+      - timestamp: 2025-07-23T22:12:01Z
+        type: fixed
+        data:
+          fixed-version: 2.10.0-r4
+
   - id: CGA-89c9-9j8h-469g
     aliases:
       - CVE-2025-29927
@@ -259,6 +281,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.10.0-r0
+
+  - id: CGA-q2x4-55m7-x3q6
+    aliases:
+      - CVE-2025-49005
+      - GHSA-r2fc-ccr8-96c4
+    events:
+      - timestamp: 2025-07-04T08:46:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jitsucom-jitsu-console
+            componentID: 039d08cd47141f74
+            componentName: next
+            componentVersion: 15.3.0
+            componentType: npm
+            componentLocation: /app/node_modules/.pnpm/next@15.3.0_@babel+core@7.26.0_@opentelemetry+api@1.9.0_@playwright+test@1.39.0_react-d_9cd4c8b88ac45ee31c654befd6d28dde/node_modules/next/package.json
+            scanner: grype
+      - timestamp: 2025-07-08T14:32:17Z
+        type: fixed
+        data:
+          fixed-version: 2.10.0-r2
 
   - id: CGA-qgr4-9ff9-9j58
     aliases:

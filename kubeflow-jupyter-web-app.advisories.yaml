@@ -177,6 +177,11 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.10.0-r4
+      - timestamp: 2025-06-13T01:02:08Z
+        type: false-positive-determination
+        data:
+          type: inline-mitigations-exist
+          note: py3-pip installs a patched version of 2.32.3 requests.py which contains the upstream fix for CVE-2024-47081, reference https://github.com/wolfi-dev/os/pull/55998/files. The version referenced in the vendor.txt is not vulnerable
 
   - id: CGA-6445-8x27-cghw
     aliases:
@@ -209,6 +214,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.8.0-r7
+
+  - id: CGA-7m4w-697m-9ph3
+    aliases:
+      - CVE-2025-50181
+      - GHSA-pq67-6m6q-mj2v
+    events:
+      - timestamp: 2025-06-19T07:31:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-jupyter-web-app
+            componentID: 7815703ee51d4b64
+            componentName: urllib3
+            componentVersion: 2.2.2
+            componentType: python
+            componentLocation: /usr/lib/python3.13/site-packages/urllib3-2.2.2.dist-info/METADATA, /usr/lib/python3.13/site-packages/urllib3-2.2.2.dist-info/RECORD
+            scanner: grype
+      - timestamp: 2025-06-27T14:32:28Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r5
 
   - id: CGA-g5wx-fj7h-63f2
     aliases:
@@ -387,6 +414,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.9.2-r1
+
+  - id: CGA-w82m-ggv4-425q
+    aliases:
+      - CVE-2025-50182
+      - GHSA-48p4-8xcf-vxj5
+    events:
+      - timestamp: 2025-06-19T07:31:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-jupyter-web-app
+            componentID: 7815703ee51d4b64
+            componentName: urllib3
+            componentVersion: 2.2.2
+            componentType: python
+            componentLocation: /usr/lib/python3.13/site-packages/urllib3-2.2.2.dist-info/METADATA, /usr/lib/python3.13/site-packages/urllib3-2.2.2.dist-info/RECORD
+            scanner: grype
+      - timestamp: 2025-06-27T14:32:29Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r5
 
   - id: CGA-x5jq-g4gr-qxfg
     aliases:

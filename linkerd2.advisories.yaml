@@ -25,6 +25,10 @@ advisories:
         type: true-positive-determination
         data:
           note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in linkerd2-cli-25.6.1-r0.apk, at usr/bin/linkerd, usr/bin/linkerd; in linkerd2-controller-25.6.1-r0.apk, at usr/bin/controller, usr/bin/controller; in linkerd2-metrics-api-25.6.1-r0.apk, at usr/bin/metrics-api, usr/bin/metrics-api; in linkerd2-tap-25.6.1-r0.apk, at usr/bin/tap, usr/bin/tap; in linkerd2-web-25.6.1-r0.apk, at web, web.'
+      - timestamp: 2025-06-16T15:41:50Z
+        type: fixed
+        data:
+          fixed-version: 25.6.2-r0
 
   - id: CGA-8x9g-jq2w-cp2w
     aliases:
@@ -70,6 +74,28 @@ advisories:
         data:
           fixed-version: 25.1.2-r2
 
+  - id: CGA-94pq-rjwp-8f48
+    aliases:
+      - CVE-2025-53547
+      - GHSA-557j-xg8c-q2mm
+    events:
+      - timestamp: 2025-07-09T10:17:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: linkerd2-metrics-api
+            componentID: 8093d5e2717f742c
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.17.3
+            componentType: go-module
+            componentLocation: /web
+            scanner: grype
+      - timestamp: 2025-07-10T17:30:21Z
+        type: fixed
+        data:
+          fixed-version: 25.7.1-r1
+
   - id: CGA-fcvq-78w6-35hj
     aliases:
       - CVE-2025-4673
@@ -87,6 +113,14 @@ advisories:
             componentType: go-module
             componentLocation: /web
             scanner: grype
+      - timestamp: 2025-06-16T08:11:01Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in linkerd2-cli-25.6.1-r0.apk, at usr/bin/linkerd, usr/bin/linkerd; in linkerd2-controller-25.6.1-r0.apk, at usr/bin/controller, usr/bin/controller; in linkerd2-metrics-api-25.6.1-r0.apk, at usr/bin/metrics-api, usr/bin/metrics-api; in linkerd2-tap-25.6.1-r0.apk, at usr/bin/tap, usr/bin/tap; in linkerd2-web-25.6.1-r0.apk, at web, web.'
+      - timestamp: 2025-06-16T15:42:21Z
+        type: fixed
+        data:
+          fixed-version: 25.6.2-r0
 
   - id: CGA-m25p-vxc9-4g24
     aliases:

@@ -197,6 +197,10 @@ advisories:
         type: true-positive-determination
         data:
           note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in hubble-ui-backend-0.13.2-r6.apk, at usr/bin/backend, usr/bin/backend.'
+      - timestamp: 2025-06-17T10:42:32Z
+        type: fixed
+        data:
+          fixed-version: 0.13.2-r7
 
   - id: CGA-6fr7-jfph-3wjx
     aliases:
@@ -269,6 +273,14 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/backend
             scanner: grype
+      - timestamp: 2025-06-16T07:18:39Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in hubble-ui-backend-0.13.2-r6.apk, at usr/bin/backend, usr/bin/backend.'
+      - timestamp: 2025-06-17T10:42:34Z
+        type: fixed
+        data:
+          fixed-version: 0.13.2-r7
 
   - id: CGA-86m8-hvf5-v86r
     aliases:
@@ -321,6 +333,29 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.13.1-r5
+
+  - id: CGA-92jr-m9mh-m4j3
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T14:16:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: hubble-ui-backend
+            componentID: 889981b516384710
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/backend
+            scanner: grype
+      - timestamp: 2025-08-10T07:09:53Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
 
   - id: CGA-9983-whmm-q4gv
     aliases:

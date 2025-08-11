@@ -69,6 +69,22 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.45.0-r1
+      - timestamp: 2025-07-17T08:56:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: strimzi-kafka-operator-kafka-thirdparty-libs-cc
+            componentID: da4d9fb2855e9eab
+            componentName: netty-handler
+            componentVersion: 4.1.114.Final
+            componentType: java-archive
+            componentLocation: /opt/cruise-control/libs/netty-handler-4.1.114.Final.jar
+            scanner: grype
+      - timestamp: 2025-07-17T19:24:18Z
+        type: fixed
+        data:
+          fixed-version: 0.47.0-r1
 
   - id: CGA-4x6r-cwfp-wvmh
     aliases:
@@ -140,6 +156,50 @@ advisories:
         data:
           type: vulnerable-code-cannot-be-controlled-by-adversary
           note: Vulnerability affects only Windows systems.
+
+  - id: CGA-f2x3-p74f-cfrx
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2025-07-12T09:35:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: strimzi-kafka-operator-kafka-thirdparty-libs
+            componentID: 1053fc8bd7e49604
+            componentName: commons-lang3
+            componentVersion: "3.7"
+            componentType: java-archive
+            componentLocation: /opt/cruise-control/libs/commons-lang3-3.7.jar
+            scanner: grype
+      - timestamp: 2025-07-17T11:11:48Z
+        type: pending-upstream-fix
+        data:
+          note: The vulnerability arises from third-party dependencies resolved during the build phase. We have applied mitigations where feasible; however, complete remediation requires upstream to update the affected components. Upon upstream resolution, we will proceed with dependency upgrades and apply the necessary patch to address the CVE.
+
+  - id: CGA-hmmx-hfqq-35fm
+    aliases:
+      - CVE-2024-56128
+      - GHSA-p7c9-8xx8-h74f
+    events:
+      - timestamp: 2025-07-03T08:36:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: strimzi-kafka-operator-kafka-thirdparty-libs-cc
+            componentID: a43fdb8a0efb5c38
+            componentName: kafka_2.13
+            componentVersion: 3.8.0
+            componentType: java-archive
+            componentLocation: /opt/cruise-control/libs/kafka_2.13-3.8.0.jar
+            scanner: grype
+      - timestamp: 2025-07-07T14:48:12Z
+        type: fixed
+        data:
+          fixed-version: 0.46.1-r0
 
   - id: CGA-r3cg-jww5-c45m
     aliases:
@@ -235,3 +295,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.45.0-r2
+
+  - id: CGA-wg6x-f92m-wp34
+    aliases:
+      - CVE-2025-53864
+      - GHSA-xwmg-2g98-w7v9
+    events:
+      - timestamp: 2025-07-12T09:35:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: strimzi-kafka-operator-kafka-thirdparty-libs
+            componentID: 7c5174fdd16f28fb
+            componentName: nimbus-jose-jwt
+            componentVersion: 9.37.2
+            componentType: java-archive
+            componentLocation: /opt/strimzi/lib/com.nimbusds.nimbus-jose-jwt-9.37.2.jar
+            scanner: grype
+      - timestamp: 2025-07-17T11:12:28Z
+        type: pending-upstream-fix
+        data:
+          note: The vulnerability arises from third-party dependencies resolved during the build phase. We have applied mitigations where feasible; however, complete remediation requires upstream to update the affected components. Upon upstream resolution, we will proceed with dependency upgrades and apply the necessary patch to address the CVE.

@@ -47,3 +47,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.6.0-r1
+
+  - id: CGA-xwgx-vq57-2877
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T09:23:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: fixuid
+            componentID: 43a075a6766d2707
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/fixuid
+            scanner: grype
+      - timestamp: 2025-08-09T12:38:04Z
+        type: fixed
+        data:
+          fixed-version: 0.6.0-r3

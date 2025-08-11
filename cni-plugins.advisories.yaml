@@ -161,6 +161,29 @@ advisories:
         data:
           fixed-version: 1.7.1-r1
 
+  - id: CGA-929v-795p-4hgp
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T08:37:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cni-plugins
+            componentID: 5b25aec0300b21f1
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /init/bandwidth
+            scanner: grype
+      - timestamp: 2025-08-10T14:36:38Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-93pg-4qq8-g46h
     aliases:
       - CVE-2025-22866

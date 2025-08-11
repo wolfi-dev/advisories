@@ -1,0 +1,51 @@
+schema-version: 2.0.2
+
+package:
+  name: gcp-compute-persistent-disk-csi-driver-1.17
+
+advisories:
+  - id: CGA-r7r4-g5jq-mh2x
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T14:28:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gcp-compute-persistent-disk-csi-driver-1.17
+            componentID: 593a78314ca4c26c
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/gce-pd-csi-driver
+            scanner: grype
+      - timestamp: 2025-08-11T09:10:50Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
+  - id: CGA-ww4r-vqvg-f352
+    aliases:
+      - CVE-2025-22868
+      - GHSA-6v2p-p543-phr9
+    events:
+      - timestamp: 2025-07-30T11:38:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gcp-compute-persistent-disk-csi-driver-1.17
+            componentID: 8ad058f23b553610
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.21.0
+            componentType: go-module
+            componentLocation: /usr/bin/gce-pd-csi-driver
+            scanner: grype
+      - timestamp: 2025-07-31T07:15:54Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.

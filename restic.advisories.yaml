@@ -348,6 +348,28 @@ advisories:
         data:
           fixed-version: 0.16.4-r5
 
+  - id: CGA-p56f-5896-9rf2
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T07:10:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: restic
+            componentID: 5bc57261790cd9b0
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/restic
+            scanner: grype
+      - timestamp: 2025-08-09T19:50:34Z
+        type: fixed
+        data:
+          fixed-version: 0.18.0-r5
+
   - id: CGA-pw3h-xmrm-w5j6
     aliases:
       - CVE-2024-24789

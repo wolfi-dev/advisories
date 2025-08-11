@@ -163,6 +163,28 @@ advisories:
         data:
           fixed-version: 1.2.1-r1
 
+  - id: CGA-c3c5-27q5-gp49
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T10:09:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: certificate-transparency-trillian-ctserver
+            componentID: ac9da6cc9c2e4a14
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/trillian-ctserver
+            scanner: grype
+      - timestamp: 2025-08-09T13:23:03Z
+        type: fixed
+        data:
+          fixed-version: 1.3.2-r3
+
   - id: CGA-c4m6-rhj2-qh64
     aliases:
       - CVE-2024-34155

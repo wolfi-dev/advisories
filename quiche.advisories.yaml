@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: quiche
+
+advisories:
+  - id: CGA-vhjj-f4m9-pqqf
+    aliases:
+      - CVE-2025-7054
+      - GHSA-m3hh-f9gh-74c2
+    events:
+      - timestamp: 2025-08-08T08:23:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: quiche
+            componentID: 4a6d49eb5b06f167
+            componentName: quiche
+            componentVersion: 0.24.4
+            componentType: rust-crate
+            componentLocation: /usr/bin/quiche-client
+            scanner: grype
+      - timestamp: 2025-08-11T09:28:37Z
+        type: fixed
+        data:
+          fixed-version: 0.24.5-r0

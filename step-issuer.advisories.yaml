@@ -92,6 +92,27 @@ advisories:
         data:
           fixed-version: 0.9.7-r7
 
+  - id: CGA-5mgq-9865-p4p8
+    aliases:
+      - GHSA-vrw8-fxc6-2r93
+    events:
+      - timestamp: 2025-06-21T08:14:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: step-issuer
+            componentID: e1028e18bd8ae985
+            componentName: github.com/go-chi/chi/v5
+            componentVersion: v5.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/step-issuer
+            scanner: grype
+      - timestamp: 2025-06-21T09:36:00Z
+        type: fixed
+        data:
+          fixed-version: 0.9.8-r5
+
   - id: CGA-65jv-6f3g-c7h3
     aliases:
       - CVE-2025-27144
@@ -123,6 +144,32 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.9.1-r5
+
+  - id: CGA-73c5-p32g-m2cj
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T20:39:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: step-issuer
+            componentID: ecfaa0721761d37b
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/step-issuer
+            scanner: grype
+      - timestamp: 2025-08-10T08:05:02Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in step-issuer-0.9.9-r1.apk, at usr/bin/step-issuer, usr/bin/step-issuer.'
+      - timestamp: 2025-08-10T12:11:12Z
+        type: fixed
+        data:
+          fixed-version: 0.9.9-r2
 
   - id: CGA-946c-6crw-62v4
     aliases:

@@ -4,6 +4,27 @@ package:
   name: traefik-3.4
 
 advisories:
+  - id: CGA-2rfr-f3w5-32wg
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T11:52:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: traefik-3.4
+            componentID: e688440122820780
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/traefik
+            scanner: grype
+      - timestamp: 2025-06-28T15:41:20Z
+        type: fixed
+        data:
+          fixed-version: 3.4.3-r1
+
   - id: CGA-8m4r-jcr7-2v5w
     aliases:
       - CVE-2025-4673
@@ -47,3 +68,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.4.1-r1
+
+  - id: CGA-wv85-r9xj-8mrh
+    aliases:
+      - CVE-2025-54799
+      - GHSA-q82r-2j7m-9rv4
+    events:
+      - timestamp: 2025-08-08T07:42:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: traefik-3.4
+            componentID: a19e5e037439076b
+            componentName: github.com/go-acme/lego/v4
+            componentVersion: v4.23.1
+            componentType: go-module
+            componentLocation: /usr/bin/traefik
+            scanner: grype
+      - timestamp: 2025-08-08T09:32:28Z
+        type: fixed
+        data:
+          fixed-version: 3.4.5-r1

@@ -409,6 +409,28 @@ advisories:
         data:
           fixed-version: 0.0.2-r10
 
+  - id: CGA-qpx4-c546-m8x5
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T09:31:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gke-gcloud-auth-plugin
+            componentID: d2947da97ef73d9e
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/gke-gcloud-auth-plugin
+            scanner: grype
+      - timestamp: 2025-08-09T12:32:06Z
+        type: fixed
+        data:
+          fixed-version: 0.1.0-r9
+
   - id: CGA-r6f2-m2g5-vc23
     aliases:
       - CVE-2024-34155

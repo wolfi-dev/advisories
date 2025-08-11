@@ -192,6 +192,28 @@ advisories:
         data:
           fixed-version: 1.10.2-r14
 
+  - id: CGA-jg45-m95v-76wx
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T15:08:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-flb-kinesis
+            componentID: fdaee9655c452cf7
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/kinesis.so
+            scanner: grype
+      - timestamp: 2025-08-10T02:14:23Z
+        type: fixed
+        data:
+          fixed-version: 1.10.2-r20
+
   - id: CGA-mgxr-qh6m-7hph
     aliases:
       - CVE-2025-22871

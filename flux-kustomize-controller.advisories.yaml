@@ -26,6 +26,28 @@ advisories:
         data:
           fixed-version: 1.5.1-r3
 
+  - id: CGA-2wqf-7rh4-2grv
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T21:27:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-kustomize-controller
+            componentID: 7d65b4c60129d02b
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/kustomize-controller
+            scanner: grype
+      - timestamp: 2025-08-10T08:37:14Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in flux-kustomize-controller-1.6.1-r1.apk, at usr/bin/kustomize-controller, usr/bin/kustomize-controller.'
+
   - id: CGA-383f-p5v3-66vf
     aliases:
       - GHSA-2c7c-3mj9-8fqh
@@ -52,6 +74,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/kustomize-controller
             scanner: grype
+      - timestamp: 2025-06-16T08:12:12Z
+        type: fixed
+        data:
+          fixed-version: 1.6.0-r2
 
   - id: CGA-3jvx-c583-733j
     aliases:
@@ -200,6 +226,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/kustomize-controller
             scanner: grype
+      - timestamp: 2025-06-16T08:12:13Z
+        type: fixed
+        data:
+          fixed-version: 1.6.0-r2
 
   - id: CGA-8wv8-q5h8-7wvv
     aliases:

@@ -142,6 +142,29 @@ advisories:
         data:
           fixed-version: 1.9.5-r3
 
+  - id: CGA-5v9q-6349-7fx2
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T20:16:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-events
+            componentID: 5f96672f95ba14f0
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/argo-events
+            scanner: grype
+      - timestamp: 2025-08-10T08:03:34Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-87mm-7cv7-9jrw
     aliases:
       - CVE-2023-46402
@@ -320,6 +343,27 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.9.2-r1
+
+  - id: CGA-p478-57mq-j6q4
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T07:19:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-events
+            componentID: b654e710e97ec580
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/argo-events
+            scanner: grype
+      - timestamp: 2025-06-28T10:16:06Z
+        type: fixed
+        data:
+          fixed-version: 1.9.6-r4
 
   - id: CGA-pjf8-phcp-8c4r
     aliases:

@@ -4,6 +4,28 @@ package:
   name: op-geth
 
 advisories:
+  - id: CGA-2rxp-7j9r-cqjx
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T17:20:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: op-geth
+            componentID: 6e7e9d0e98ea6582
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/clef
+            scanner: grype
+      - timestamp: 2025-08-10T08:08:46Z
+        type: fixed
+        data:
+          fixed-version: 1.101511.1-r1
+
   - id: CGA-5wc6-xhv3-cwg3
     aliases:
       - CVE-2025-22870

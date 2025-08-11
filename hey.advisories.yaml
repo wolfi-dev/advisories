@@ -25,6 +25,50 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-43m8-q93x-fwgx
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T18:17:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: hey
+            componentID: 498e19b1a6602bb1
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/hey
+            scanner: grype
+      - timestamp: 2025-06-18T09:10:04Z
+        type: fixed
+        data:
+          fixed-version: 0.1.4-r24
+
+  - id: CGA-4c7j-4h9f-49w8
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T18:17:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: hey
+            componentID: 498e19b1a6602bb1
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/hey
+            scanner: grype
+      - timestamp: 2025-06-18T09:10:05Z
+        type: fixed
+        data:
+          fixed-version: 0.1.4-r24
+
   - id: CGA-4f7c-h9w2-cwvc
     aliases:
       - CVE-2022-41723
@@ -493,6 +537,29 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.1.4-r8
+
+  - id: CGA-wc9p-9m95-fxq4
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T03:26:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: hey
+            componentID: 33622f72442e09d2
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/hey
+            scanner: grype
+      - timestamp: 2025-08-10T11:04:40Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
 
   - id: CGA-wff4-cpr9-m58h
     aliases:

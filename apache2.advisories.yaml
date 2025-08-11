@@ -65,6 +65,11 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2025-07-14T13:18:42Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: False positive identified due to the scanners mismatching the version. The CVE in question has been fixed since apache 2.2.6, and the apache version where this is being detected is 2.4.64.
 
   - id: CGA-6wj6-q886-wv49
     aliases:
@@ -88,6 +93,29 @@ advisories:
         data:
           fixed-version: 2.4.63-r1
 
+  - id: CGA-c45p-c2mp-62r5
+    aliases:
+      - CVE-2025-23048
+      - GHSA-gh64-76r6-qhpc
+    events:
+      - timestamp: 2025-07-16T07:08:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache2
+            componentID: 0fd63b616eb08ab7
+            componentName: apache2
+            componentVersion: 2.4.64-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2025-07-17T13:25:52Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: False positive due to version mismatch. The CVE in question has been fixed in apache 2.4.64, see https://httpd.apache.org/security/vulnerabilities_24.html
+
   - id: CGA-c9vm-p3vv-7h96
     aliases:
       - CVE-2007-6422
@@ -105,6 +133,11 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2025-07-14T13:18:42Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: False positive identified due to the scanners mismatching the version. The CVE in question has been fixed since apache 2.2.6, and the apache version where this is being detected is 2.4.64.
 
   - id: CGA-gpfg-33rx-33jc
     aliases:
@@ -190,3 +223,8 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2025-07-14T13:18:42Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: False positive identified due to the scanners mismatching the version. The CVE in question has been fixed since apache 2.2.6, and the apache version where this is being detected is 2.4.64.

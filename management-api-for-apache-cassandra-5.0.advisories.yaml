@@ -382,6 +382,28 @@ advisories:
         data:
           fixed-version: 0.1.89-r0
 
+  - id: CGA-r94q-v37j-49wx
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2025-07-12T08:40:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: management-api-for-apache-cassandra-5.0
+            componentID: c35e0925df287032
+            componentName: commons-lang3
+            componentVersion: 3.17.0
+            componentType: java-archive
+            componentLocation: /opt/management-api/datastax-mgmtapi-server-0.1.0-SNAPSHOT.jar
+            scanner: grype
+      - timestamp: 2025-07-16T12:35:11Z
+        type: pending-upstream-fix
+        data:
+          note: Upstream will need to update commons-lang3 version to 3.18.0. Build time errors show conflicting transitive archives that will require some changes to source.
+
   - id: CGA-v95v-8w2m-8jvx
     aliases:
       - CVE-2021-46877

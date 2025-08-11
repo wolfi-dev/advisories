@@ -4,6 +4,28 @@ package:
   name: opensearch-dashboards-3
 
 advisories:
+  - id: CGA-hmpp-fxfw-xfhh
+    aliases:
+      - CVE-2025-54798
+      - GHSA-52f5-9888-hmc6
+    events:
+      - timestamp: 2025-08-08T08:25:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-dashboards-3-ml-commons-dashboards
+            componentID: d0a66e9e160a5431
+            componentName: tmp
+            componentVersion: 0.2.3
+            componentType: npm
+            componentLocation: /usr/share/opensearch-dashboards/plugins/alertingDashboards/node_modules/tmp/package.json
+            scanner: grype
+      - timestamp: 2025-08-08T14:40:49Z
+        type: pending-upstream-fix
+        data:
+          note: The vulnerability originates from a pinned dependency version that is also consumed by other libraries within the dependency graph. Upstream must update this dependency to a secure version and reconcile any resulting compatibility issues across the dependency tree. Once these changes are implemented upstream, the vulnerability can be remediated accordingly.
+
   - id: CGA-hvx5-j33w-wf72
     aliases:
       - CVE-2025-5889
@@ -21,3 +43,29 @@ advisories:
             componentType: npm
             componentLocation: /usr/share/opensearch-dashboards/plugins/reportsDashboards/node_modules/brace-expansion/package.json
             scanner: grype
+      - timestamp: 2025-06-16T14:36:08Z
+        type: fixed
+        data:
+          fixed-version: 3.0.0-r1
+
+  - id: CGA-xvgg-cqm9-vxh5
+    aliases:
+      - CVE-2025-7783
+      - GHSA-fjxv-7rqg-78g4
+    events:
+      - timestamp: 2025-07-22T08:10:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-dashboards-3
+            componentID: 97e31721edb1851a
+            componentName: form-data
+            componentVersion: 2.3.3
+            componentType: npm
+            componentLocation: /usr/share/opensearch-dashboards/plugins/alertingDashboards/node_modules/form-data/package.json
+            scanner: grype
+      - timestamp: 2025-07-24T22:25:25Z
+        type: fixed
+        data:
+          fixed-version: 3.1.0-r2

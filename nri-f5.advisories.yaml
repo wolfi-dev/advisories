@@ -34,6 +34,29 @@ advisories:
         data:
           fixed-version: 2.7.5-r2
 
+  - id: CGA-4v8g-hxg2-65mj
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T17:36:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-f5
+            componentID: cf6f28fad903043d
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/nri-f5
+            scanner: grype
+      - timestamp: 2025-08-10T10:05:16Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-5cc3-gx9j-9f8q
     aliases:
       - CVE-2023-45288

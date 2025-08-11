@@ -265,6 +265,29 @@ advisories:
         data:
           fixed-version: 1.8.20-r1
 
+  - id: CGA-rj64-wjc9-g6rh
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T22:49:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: addon-resizer
+            componentID: c2747916b88f5ca1
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/pod_nanny
+            scanner: grype
+      - timestamp: 2025-08-10T07:36:12Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-rww9-3384-v6g8
     aliases:
       - CVE-2024-24789

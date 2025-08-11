@@ -121,6 +121,10 @@ advisories:
         type: true-positive-determination
         data:
           note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in go-licenses-1.6.0-r26.apk, at usr/bin/go-licenses, usr/bin/go-licenses.'
+      - timestamp: 2025-06-17T14:17:52Z
+        type: fixed
+        data:
+          fixed-version: 1.6.0-r27
 
   - id: CGA-6x4p-h662-pw5r
     aliases:
@@ -182,6 +186,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/go-licenses
             scanner: grype
+      - timestamp: 2025-06-17T14:17:53Z
+        type: fixed
+        data:
+          fixed-version: 1.6.0-r27
 
   - id: CGA-8qhg-wpgp-chq3
     aliases:
@@ -244,6 +252,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/go-licenses
             scanner: grype
+      - timestamp: 2025-06-17T14:17:54Z
+        type: fixed
+        data:
+          fixed-version: 1.6.0-r27
 
   - id: CGA-cfxj-r3rx-6j2x
     aliases:
@@ -633,3 +645,26 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.6.0-r16
+
+  - id: CGA-xwr3-w8w5-w7mw
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-11T03:25:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: go-licenses
+            componentID: 62a888372048d52d
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/go-licenses
+            scanner: grype
+      - timestamp: 2025-08-11T09:08:58Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.

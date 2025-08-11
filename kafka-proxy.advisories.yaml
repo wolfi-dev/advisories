@@ -179,6 +179,29 @@ advisories:
         data:
           fixed-version: 0.3.11-r1
 
+  - id: CGA-mr23-hch5-9gmm
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T08:14:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kafka-proxy
+            componentID: 46695967b5f34d2e
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/kafka-proxy
+            scanner: grype
+      - timestamp: 2025-08-10T09:25:21Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-p83g-f6xr-6j6h
     aliases:
       - CVE-2024-24791
@@ -275,6 +298,50 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.4.1-r2
+
+  - id: CGA-vw55-gcxv-gfm8
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T16:17:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kafka-proxy
+            componentID: e8a7e857382aca73
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/kafka-proxy
+            scanner: grype
+      - timestamp: 2025-06-18T08:15:37Z
+        type: fixed
+        data:
+          fixed-version: 0.4.3-r1
+
+  - id: CGA-wh9m-gf7j-3wpf
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T16:17:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kafka-proxy
+            componentID: e8a7e857382aca73
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/kafka-proxy
+            scanner: grype
+      - timestamp: 2025-06-18T08:15:37Z
+        type: fixed
+        data:
+          fixed-version: 0.4.3-r1
 
   - id: CGA-xfq6-m732-h5cj
     aliases:

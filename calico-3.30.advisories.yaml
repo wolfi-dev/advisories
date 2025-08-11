@@ -4,6 +4,51 @@ package:
   name: calico-3.30
 
 advisories:
+  - id: CGA-63gp-72q2-g9x7
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T05:15:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: calico-whisker-backend-3.30
+            componentID: 82ed59a89703f4a0
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/calico-node
+            scanner: grype
+      - timestamp: 2025-08-10T09:20:31Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
+  - id: CGA-6h7c-72xp-2wmw
+    aliases:
+      - CVE-2025-4563
+      - GHSA-hj2p-8wj8-pfq4
+    events:
+      - timestamp: 2025-06-24T08:36:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: calico-goldmane-3.30
+            componentID: a33db3cbd985df8a
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.32.5
+            componentType: go-module
+            componentLocation: /usr/bin/calico-node
+            scanner: grype
+      - timestamp: 2025-06-24T10:51:28Z
+        type: fixed
+        data:
+          fixed-version: 3.30.2-r1
+
   - id: CGA-m5gw-hhp6-f3x3
     aliases:
       - CVE-2025-22874
@@ -25,6 +70,27 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.30.1-r1
+
+  - id: CGA-mx37-99r5-wq6h
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T09:04:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: calico-felix-3.30
+            componentID: 166ac98b0c82243f
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/calico-node
+            scanner: grype
+      - timestamp: 2025-06-28T11:46:57Z
+        type: fixed
+        data:
+          fixed-version: 3.30.2-r2
 
   - id: CGA-pfr8-pc24-54fv
     aliases:

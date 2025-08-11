@@ -472,6 +472,28 @@ advisories:
         data:
           fixed-version: 3.0.0-r3
 
+  - id: CGA-j98w-36m5-r5mm
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T10:44:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-registry
+            componentID: 19a3bd34a81f7697
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-registry
+            scanner: grype
+      - timestamp: 2025-08-09T17:32:01Z
+        type: fixed
+        data:
+          fixed-version: 3.0.0-r5
+
   - id: CGA-p35f-qv46-7jwr
     aliases:
       - CVE-2024-45337

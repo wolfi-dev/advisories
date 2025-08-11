@@ -47,6 +47,10 @@ advisories:
         type: true-positive-determination
         data:
           note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in jaeger-all-in-one-1.69.0-r0.apk, at usr/bin/all-in-one, usr/bin/all-in-one; in jaeger-collector-1.69.0-r0.apk, at usr/bin/collector, usr/bin/collector; in jaeger-es-index-cleaner-1.69.0-r0.apk, at usr/bin/es-index-cleaner, usr/bin/es-index-cleaner; in jaeger-es-rollover-1.69.0-r0.apk, at usr/bin/es-rollover, usr/bin/es-rollover; in jaeger-ingester-1.69.0-r0.apk, at usr/bin/ingester, usr/bin/ingester; in jaeger-query-1.69.0-r0.apk, at usr/bin/query, usr/bin/query; in jaeger-remote-storage-1.69.0-r0.apk, at usr/bin/remote-storage, usr/bin/remote-storage; in jaeger-tracegen-1.69.0-r0.apk, at usr/bin/tracegen, usr/bin/tracegen.'
+      - timestamp: 2025-06-17T16:47:45Z
+        type: fixed
+        data:
+          fixed-version: 1.70.0-r0
 
   - id: CGA-3372-qpjp-fj3c
     aliases:
@@ -65,6 +69,14 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/all-in-one
             scanner: grype
+      - timestamp: 2025-06-16T07:35:13Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in jaeger-all-in-one-1.69.0-r0.apk, at usr/bin/all-in-one, usr/bin/all-in-one; in jaeger-anonymizer-1.69.0-r0.apk, at usr/bin/anonymizer, usr/bin/anonymizer; in jaeger-collector-1.69.0-r0.apk, at usr/bin/collector, usr/bin/collector; in jaeger-es-index-cleaner-1.69.0-r0.apk, at usr/bin/es-index-cleaner, usr/bin/es-index-cleaner; in jaeger-es-rollover-1.69.0-r0.apk, at usr/bin/es-rollover, usr/bin/es-rollover; in jaeger-esmapping-generator-1.69.0-r0.apk, at usr/bin/esmapping-generator, usr/bin/esmapping-generator; in jaeger-ingester-1.69.0-r0.apk, at usr/bin/ingester, usr/bin/ingester; in jaeger-query-1.69.0-r0.apk, at usr/bin/query, usr/bin/query; in jaeger-remote-storage-1.69.0-r0.apk, at usr/bin/remote-storage, usr/bin/remote-storage; in jaeger-tracegen-1.69.0-r0.apk, at usr/bin/tracegen, usr/bin/tracegen.'
+      - timestamp: 2025-06-17T16:47:46Z
+        type: fixed
+        data:
+          fixed-version: 1.70.0-r0
 
   - id: CGA-cxp9-px7w-f7w6
     aliases:
@@ -117,3 +129,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.65.0-r0
+
+  - id: CGA-xrwp-jgqc-qjpm
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T10:05:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jaeger-remote-storage
+            componentID: dda7b8c2be9f222e
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/all-in-one
+            scanner: grype
+      - timestamp: 2025-06-28T13:29:11Z
+        type: fixed
+        data:
+          fixed-version: 1.70.0-r1

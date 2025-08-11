@@ -258,6 +258,32 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-qv85-8rrv-52hh
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T02:21:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-flb-cloudwatch
+            componentID: a692d72414fe3c52
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/cloudwatch.so
+            scanner: grype
+      - timestamp: 2025-08-10T08:34:30Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in aws-flb-cloudwatch-1.9.4-r18.apk, at usr/bin/cloudwatch.so, usr/bin/cloudwatch.so.'
+      - timestamp: 2025-08-10T18:31:55Z
+        type: fixed
+        data:
+          fixed-version: 1.9.4-r19
+
   - id: CGA-v4p2-8cwj-wmrc
     aliases:
       - CVE-2024-24785

@@ -4,6 +4,28 @@ package:
   name: nri-cassandra
 
 advisories:
+  - id: CGA-25vv-rg77-jcq6
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T11:15:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-cassandra
+            componentID: 63dbada51cae344d
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/nri-cassandra
+            scanner: grype
+      - timestamp: 2025-06-18T08:21:02Z
+        type: fixed
+        data:
+          fixed-version: 2.14.3-r2
+
   - id: CGA-3qcq-jm6f-f8w8
     aliases:
       - CVE-2024-34156
@@ -45,6 +67,50 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.13.6-r2
+
+  - id: CGA-4wfj-hqj6-393g
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T11:16:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-cassandra
+            componentID: 63dbada51cae344d
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/nri-cassandra
+            scanner: grype
+      - timestamp: 2025-06-18T08:21:03Z
+        type: fixed
+        data:
+          fixed-version: 2.14.3-r2
+
+  - id: CGA-5f8x-5xq5-g94g
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T15:38:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-cassandra
+            componentID: 3f9d1ed5697a3b11
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/nri-cassandra
+            scanner: grype
+      - timestamp: 2025-08-11T10:32:43Z
+        type: fixed
+        data:
+          fixed-version: 2.14.6-r1
 
   - id: CGA-6cf9-78r8-3j2c
     aliases:

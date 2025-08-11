@@ -1,0 +1,93 @@
+schema-version: 2.0.2
+
+package:
+  name: consul-k8s-1.7
+
+advisories:
+  - id: CGA-5x2r-36j3-8w8j
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T15:05:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: consul-k8s-1.7
+            componentID: b87e314f3186dedd
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/consul-k8s
+            scanner: grype
+      - timestamp: 2025-08-10T02:12:01Z
+        type: fixed
+        data:
+          fixed-version: 1.7.3-r1
+
+  - id: CGA-c4vr-2vpg-755g
+    aliases:
+      - CVE-2025-32386
+      - GHSA-4hfp-h4cw-hj8p
+    events:
+      - timestamp: 2025-06-23T03:49:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: consul-k8s-1.7-cli
+            componentID: 8a512cc9ec430fe9
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.4
+            componentType: go-module
+            componentLocation: /usr/bin/consul-k8s
+            scanner: grype
+      - timestamp: 2025-06-24T09:20:19Z
+        type: fixed
+        data:
+          fixed-version: 1.7.1-r1
+
+  - id: CGA-mc23-86hg-5p98
+    aliases:
+      - CVE-2025-32387
+      - GHSA-5xqw-8hwv-wg92
+    events:
+      - timestamp: 2025-06-23T03:49:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: consul-k8s-1.7-cli
+            componentID: 8a512cc9ec430fe9
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.14.4
+            componentType: go-module
+            componentLocation: /usr/bin/consul-k8s
+            scanner: grype
+      - timestamp: 2025-06-24T09:20:20Z
+        type: fixed
+        data:
+          fixed-version: 1.7.1-r1
+
+  - id: CGA-qw3c-grf7-hr39
+    aliases:
+      - CVE-2025-53547
+      - GHSA-557j-xg8c-q2mm
+    events:
+      - timestamp: 2025-07-09T11:04:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: consul-k8s-1.7-cli
+            componentID: 3e11665daec02361
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.17.3
+            componentType: go-module
+            componentLocation: /usr/bin/consul-k8s
+            scanner: grype
+      - timestamp: 2025-07-10T12:33:19Z
+        type: fixed
+        data:
+          fixed-version: 1.7.2-r1

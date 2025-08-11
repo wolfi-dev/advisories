@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: aws-sigv4-proxy
+
+advisories:
+  - id: CGA-c6j6-v735-hqmg
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T14:55:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-sigv4-proxy
+            componentID: 13a9a17596f55d55
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/aws-sigv4-proxy
+            scanner: grype
+      - timestamp: 2025-08-10T02:15:36Z
+        type: fixed
+        data:
+          fixed-version: 1.10-r2

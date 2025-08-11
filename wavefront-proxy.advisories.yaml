@@ -23,6 +23,28 @@ advisories:
         data:
           fixed-version: 13.3-r1
 
+  - id: CGA-6f4m-j3hr-5v7j
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2025-07-12T07:45:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wavefront-proxy
+            componentID: c872efa9c1439ade
+            componentName: commons-lang
+            componentVersion: "2.6"
+            componentType: java-archive
+            componentLocation: /usr/share/java/wavefront/wavefront-proxy/wavefront-proxy.jar
+            scanner: grype
+      - timestamp: 2025-07-17T15:50:24Z
+        type: pending-upstream-fix
+        data:
+          note: 'As per the advisory commons-lang has no patched version and as per the description, upstream package maintainers of commons-lang recommend to upgrade to commons-lang3 version 3.18.0 or greater. wavefront-proxy upstream has to upgrade their dependency in order to fixe this CVE. More information on the advisory: https://github.com/advisories/GHSA-j288-q9x7-2f5v'
+
   - id: CGA-6pm4-w9vr-cj5w
     aliases:
       - CVE-2024-47561

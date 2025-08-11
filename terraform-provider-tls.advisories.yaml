@@ -47,6 +47,29 @@ advisories:
         data:
           fixed-version: 4.0.6-r3
 
+  - id: CGA-7mw2-4539-2w7q
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T02:38:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-tls
+            componentID: aa575bf0990cb79b
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-tls
+            scanner: grype
+      - timestamp: 2025-08-10T11:19:14Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-9vv2-4r92-47q5
     aliases:
       - CVE-2024-45337

@@ -47,6 +47,10 @@ advisories:
         type: pending-upstream-fix
         data:
           note: hadoop-runtime-client 3.4.1 is the latest version; jetty-http is a dependency
+      - timestamp: 2025-07-17T17:59:52Z
+        type: pending-upstream-fix
+        data:
+          note: 'The jetty-http vulnerability is present in two locations: bundled inside hadoop-client-runtime-3.4.1.jar (version 9.4.53.v20231009) and as a direct dependency (version 9.4.57.v20241219). Both require jetty-http 12.0.12+ to fix. Since this is a major version jump (9.x to 12.x), it requires upstream changes in both Hadoop and Celeborn.'
 
   - id: CGA-8xcv-pq3f-p4mp
     aliases:
@@ -135,6 +139,72 @@ advisories:
         type: pending-upstream-fix
         data:
           note: The jackson-core dependency is brought in by the Hadoop transient dependency, upstream will have to release a version of Hadoop with a more recent version of jackson-core and celeborn will have to update it's Hadoop dependency in order to pull in a fixed version of jackson-core.
+
+  - id: CGA-p77w-9v75-gj5c
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2025-07-12T07:34:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: celeborn-0.5
+            componentID: 5af3e350d9878bb8
+            componentName: commons-lang3
+            componentVersion: 3.12.0
+            componentType: java-archive
+            componentLocation: /usr/share/java/celeborn/jars/commons-lang3-3.12.0.jar
+            scanner: grype
+      - timestamp: 2025-07-17T19:43:19Z
+        type: pending-upstream-fix
+        data:
+          note: Upstream needs to upgrade package to latest version. Attempts to update result in build failures and CVEs not being fixed
+
+  - id: CGA-rc57-hr6c-69f6
+    aliases:
+      - CVE-2025-52999
+      - GHSA-h46c-h94j-95f3
+    events:
+      - timestamp: 2025-06-28T08:32:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: celeborn-0.5
+            componentID: 2652a8657bcade67
+            componentName: jackson-core
+            componentVersion: 2.12.7
+            componentType: java-archive
+            componentLocation: /usr/share/java/celeborn/jars/hadoop-client-runtime-3.4.1.jar
+            scanner: grype
+      - timestamp: 2025-07-01T16:30:33Z
+        type: pending-upstream-fix
+        data:
+          note: The vuln comes from the Hadoop dependency. Jackson-core is pinned at 2.12.7 in Hadoop 3.4.1. Once Hadoop updates it and also upstream update Hadoop to the fixed version, we can update and fix the package too.
+
+  - id: CGA-wxhf-63m3-2r4h
+    aliases:
+      - CVE-2025-53864
+      - GHSA-xwmg-2g98-w7v9
+    events:
+      - timestamp: 2025-07-12T07:34:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: celeborn-0.5
+            componentID: 96c86c10f93d93eb
+            componentName: nimbus-jose-jwt
+            componentVersion: 9.37.2
+            componentType: java-archive
+            componentLocation: /usr/share/java/celeborn/jars/hadoop-client-runtime-3.4.1.jar
+            scanner: grype
+      - timestamp: 2025-07-17T19:43:19Z
+        type: pending-upstream-fix
+        data:
+          note: Upstream needs to upgrade package to latest version. Attempts to update result in build failures and CVEs not being fixed
 
   - id: CGA-xvv2-g55w-6g8w
     aliases:

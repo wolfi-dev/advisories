@@ -152,6 +152,24 @@ advisories:
         data:
           fixed-version: 2.1.0-r0
 
+  - id: CGA-3gg3-5jpq-qfwq
+    aliases:
+      - CVE-2025-7962
+      - GHSA-9342-92gg-6v29
+    events:
+      - timestamp: 2025-08-08T07:04:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 94a7f4702f0b26b2
+            componentName: smtp
+            componentVersion: 2.0.3
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/nifi-current/lib/nifi-email-nar-2.5.0.nar
+            scanner: grype
+
   - id: CGA-435c-543w-xw5q
     aliases:
       - CVE-2024-58103
@@ -492,6 +510,28 @@ advisories:
         data:
           fixed-version: 2.1.0-r1
 
+  - id: CGA-6gj3-jxj6-wjw9
+    aliases:
+      - CVE-2025-22227
+      - GHSA-4q2v-9p7v-3v22
+    events:
+      - timestamp: 2025-07-17T07:18:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 068fdf0fde36d093
+            componentName: reactor-netty-http
+            componentVersion: 1.0.48
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/nifi-current/lib/nifi-azure-nar-2.4.0.nar
+            scanner: grype
+      - timestamp: 2025-07-17T08:48:04Z
+        type: fixed
+        data:
+          fixed-version: 2.4.0-r7
+
   - id: CGA-6h6p-w435-25j2
     aliases:
       - CVE-2023-46120
@@ -830,6 +870,28 @@ advisories:
         data:
           note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
 
+  - id: CGA-8gr5-54h9-6g76
+    aliases:
+      - CVE-2025-53864
+      - GHSA-xwmg-2g98-w7v9
+    events:
+      - timestamp: 2025-07-12T07:13:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 7fc75492ed33bf6d
+            componentName: nimbus-jose-jwt
+            componentVersion: "9.48"
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/nifi-current/lib/nifi-azure-nar-2.4.0.nar
+            scanner: grype
+      - timestamp: 2025-07-14T22:30:56Z
+        type: fixed
+        data:
+          fixed-version: 2.4.0-r6
+
   - id: CGA-8rr9-ww3c-5c97
     aliases:
       - CVE-2024-37389
@@ -1160,6 +1222,28 @@ advisories:
         type: pending-upstream-fix
         data:
           note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
+
+  - id: CGA-fhrg-wvcw-v4p9
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2025-07-12T07:13:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: d2a88cf89ff8c058
+            componentName: commons-lang
+            componentVersion: "2.4"
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/nifi-current/lib/nifi-standard-nar-2.4.0.nar
+            scanner: grype
+      - timestamp: 2025-07-15T12:15:09Z
+        type: pending-upstream-fix
+        data:
+          note: 'As per the advisory commons-lang has no patched version and as per the description, upstream package maintainers of commons-lang recommend to upgrade to commons-lang3 version 3.18.0 or greater. Apache-nifi has to upgrade their dependency in order to fixe this CVE. More information on the advisory: https://github.com/advisories/GHSA-j288-q9x7-2f5v'
 
   - id: CGA-fv62-wffg-c9q4
     aliases:

@@ -47,6 +47,11 @@ advisories:
             componentType: python
             componentLocation: /home/cassandra/.venv/lib/python3.11/site-packages/pip/_vendor/vendor.txt
             scanner: grype
+      - timestamp: 2025-06-13T01:02:08Z
+        type: false-positive-determination
+        data:
+          type: inline-mitigations-exist
+          note: py3-pip installs a patched version of 2.32.3 requests.py which contains the upstream fix for CVE-2024-47081, reference https://github.com/wolfi-dev/os/pull/55998/files. The version referenced in the vendor.txt is not vulnerable
 
   - id: CGA-4pr8-qqxf-65pm
     aliases:
@@ -430,6 +435,28 @@ advisories:
         data:
           fixed-version: 0.23.0-r30
 
+  - id: CGA-cj5p-cp8p-r2vx
+    aliases:
+      - CVE-2025-4565
+      - GHSA-8qvm-5x2c-j2w7
+    events:
+      - timestamp: 2025-06-17T07:44:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3-cassandra-medusa
+            componentID: 57102e3d43559408
+            componentName: protobuf
+            componentVersion: 5.29.3
+            componentType: python
+            componentLocation: /home/cassandra/.venv/lib/python3.11/site-packages/protobuf-5.29.3.dist-info/METADATA, /home/cassandra/.venv/lib/python3.11/site-packages/protobuf-5.29.3.dist-info/RECORD
+            scanner: grype
+      - timestamp: 2025-06-27T09:35:05Z
+        type: pending-upstream-fix
+        data:
+          note: This CVE is part of a locked dependency, and we are unable to unlock it without disrupting the build. Upstream will need to make changes to facilitate this dependency bump.
+
   - id: CGA-fp53-8jf5-gj7f
     aliases:
       - CVE-2024-53899
@@ -554,6 +581,72 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.19.1-r1
+
+  - id: CGA-mqw7-jwx7-849x
+    aliases:
+      - CVE-2025-53643
+      - GHSA-9548-qrrj-x5pj
+    events:
+      - timestamp: 2025-07-16T07:23:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3-cassandra-medusa
+            componentID: 8e8ecae6283edc21
+            componentName: aiohttp
+            componentVersion: 3.12.11
+            componentType: python
+            componentLocation: /home/cassandra/.venv/lib/python3.11/site-packages/aiohttp-3.12.11.dist-info/METADATA
+            scanner: grype
+      - timestamp: 2025-07-17T17:04:36Z
+        type: fixed
+        data:
+          fixed-version: 0.24.1-r1
+
+  - id: CGA-q4gv-w22p-3hmg
+    aliases:
+      - CVE-2025-50181
+      - GHSA-pq67-6m6q-mj2v
+    events:
+      - timestamp: 2025-06-19T09:14:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3-cassandra-medusa
+            componentID: 0fb541afed8e4d83
+            componentName: urllib3
+            componentVersion: 1.26.20
+            componentType: python
+            componentLocation: /home/cassandra/.venv/lib/python3.11/site-packages/pip/_vendor/vendor.txt
+            scanner: grype
+      - timestamp: 2025-06-27T09:35:05Z
+        type: pending-upstream-fix
+        data:
+          note: 'This vulnerability is part of urllib, which is vendored into pip, and there are significant changes between the current version and the fixed version. As such, we cannot update or patch it, and will require upstream to produce a fix. See the following for more information: https://github.com/advisories/GHSA-pq67-6m6q-mj2v'
+
+  - id: CGA-r7j4-wjg3-h9r6
+    aliases:
+      - CVE-2025-50182
+      - GHSA-48p4-8xcf-vxj5
+    events:
+      - timestamp: 2025-06-19T09:14:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3-cassandra-medusa
+            componentID: 0fb541afed8e4d83
+            componentName: urllib3
+            componentVersion: 1.26.20
+            componentType: python
+            componentLocation: /home/cassandra/.venv/lib/python3.11/site-packages/pip/_vendor/vendor.txt
+            scanner: grype
+      - timestamp: 2025-06-27T09:35:05Z
+        type: pending-upstream-fix
+        data:
+          note: 'This vulnerability is part of urllib, which is vendored into pip, and there are significant changes between the current version and the fixed version. As such, we cannot update or patch it, and will require upstream to produce a fix. See the following for more information: https://github.com/advisories/GHSA-48p4-8xcf-vxj5'
 
   - id: CGA-r88q-7vqx-pch3
     aliases:

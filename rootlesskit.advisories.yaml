@@ -229,6 +229,29 @@ advisories:
         data:
           fixed-version: 2.3.4-r1
 
+  - id: CGA-m969-mf33-wjj2
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T04:13:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rootlesskit
+            componentID: eef29a2e351fdb63
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/rootlessctl
+            scanner: grype
+      - timestamp: 2025-08-10T16:43:33Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-p596-p2x8-hj4p
     aliases:
       - CVE-2025-22866

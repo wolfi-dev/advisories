@@ -298,6 +298,28 @@ advisories:
         data:
           fixed-version: 1.17-r2
 
+  - id: CGA-x372-hfwx-qc7h
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T15:53:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gosu
+            componentID: 894b0db52826c138
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/gosu
+            scanner: grype
+      - timestamp: 2025-08-10T05:43:20Z
+        type: fixed
+        data:
+          fixed-version: 1.17-r15
+
   - id: CGA-x6jw-rj64-9352
     aliases:
       - CVE-2023-45288

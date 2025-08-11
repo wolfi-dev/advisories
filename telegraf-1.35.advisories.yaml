@@ -1,0 +1,66 @@
+schema-version: 2.0.2
+
+package:
+  name: telegraf-1.35
+
+advisories:
+  - id: CGA-3w28-24fr-g85w
+    aliases:
+      - GHSA-vrw8-fxc6-2r93
+    events:
+      - timestamp: 2025-06-21T07:08:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.35
+            componentID: 855b2d1f793b6d89
+            componentName: github.com/go-chi/chi/v5
+            componentVersion: v5.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
+      - timestamp: 2025-06-21T08:49:52Z
+        type: fixed
+        data:
+          fixed-version: 1.35.0-r2
+
+  - id: CGA-cwcm-w9hq-7fm3
+    aliases:
+      - CVE-2025-54388
+      - GHSA-x4rx-4gw3-53p4
+    events:
+      - timestamp: 2025-07-30T09:54:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.35
+            componentID: 52ce0db5e06028aa
+            componentName: github.com/docker/docker
+            componentVersion: v28.3.2+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype
+      - timestamp: 2025-07-30T11:36:10Z
+        type: fixed
+        data:
+          fixed-version: 1.35.3-r1
+
+  - id: CGA-mg9x-hf5p-6r54
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T19:04:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: telegraf-1.35
+            componentID: 8ed618f2f80f0d1b
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/telegraf
+            scanner: grype

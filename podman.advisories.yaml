@@ -258,6 +258,28 @@ advisories:
             For evidence of the fix, please see the advisory, which lists v5.2.4 as the fixed version: https://github.com/advisories/GHSA-fhqq-8f65-5xfc.
             Additionally, see the podman release notes, which list v5.2.4 as the fixed version of for this CVE. The code diff also shows buildah being bumped to v1.37.4: https://github.com/containers/podman/releases/tag/v5.2.4.
 
+  - id: CGA-jm25-p8xp-f8qp
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T09:51:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: podman
+            componentID: 9dd66ab4a9640b90
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/podman
+            scanner: grype
+      - timestamp: 2025-08-09T14:37:07Z
+        type: fixed
+        data:
+          fixed-version: 5.5.2-r2
+
   - id: CGA-m8c3-3q32-vffq
     aliases:
       - CVE-2024-45338

@@ -113,6 +113,28 @@ advisories:
         data:
           fixed-version: 1.24.1-r2
 
+  - id: CGA-5r6m-pcfg-jw9q
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T09:54:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloudnative-pg
+            componentID: d1303b6d01f88636
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/manager_amd64
+            scanner: grype
+      - timestamp: 2025-08-09T13:21:49Z
+        type: fixed
+        data:
+          fixed-version: 1.26.1-r1
+
   - id: CGA-66c4-2f59-6jv5
     aliases:
       - CVE-2025-22872

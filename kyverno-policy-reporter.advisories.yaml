@@ -4,6 +4,27 @@ package:
   name: kyverno-policy-reporter
 
 advisories:
+  - id: CGA-3pfg-rfh3-vm8r
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T12:35:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-policy-reporter
+            componentID: 1005b8385b3be1a6
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/policyreporter
+            scanner: grype
+      - timestamp: 2025-06-28T16:52:46Z
+        type: fixed
+        data:
+          fixed-version: 3.1.4-r3
+
   - id: CGA-424g-xg5h-qhrv
     aliases:
       - CVE-2025-22866
@@ -112,6 +133,28 @@ advisories:
         data:
           fixed-version: 2.24.1-r1
 
+  - id: CGA-85jf-m4f8-47fw
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T14:16:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-policy-reporter
+            componentID: 7490a8cf965c65a4
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/policyreporter
+            scanner: grype
+      - timestamp: 2025-06-18T07:22:40Z
+        type: fixed
+        data:
+          fixed-version: 3.1.4-r2
+
   - id: CGA-86h4-pfv3-h2j2
     aliases:
       - CVE-2024-45337
@@ -143,6 +186,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.20.0-r1
+
+  - id: CGA-c7gg-rx6c-jjvc
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T14:16:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-policy-reporter
+            componentID: 7490a8cf965c65a4
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/policyreporter
+            scanner: grype
+      - timestamp: 2025-06-18T07:22:41Z
+        type: fixed
+        data:
+          fixed-version: 3.1.4-r2
 
   - id: CGA-f6f6-4f8g-ff6p
     aliases:
@@ -188,6 +253,28 @@ advisories:
         data:
           fixed-version: 2.18.1-r2
 
+  - id: CGA-gg36-qr7j-3jx7
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T10:08:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-policy-reporter
+            componentID: 608eeea9950bd65a
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/policyreporter
+            scanner: grype
+      - timestamp: 2025-08-09T15:34:19Z
+        type: fixed
+        data:
+          fixed-version: 3.3.2-r1
+
   - id: CGA-gqhm-vj5g-m538
     aliases:
       - CVE-2024-24783
@@ -208,6 +295,28 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CGA-m2j9-4xcx-7m82
+    aliases:
+      - CVE-2024-44906
+      - GHSA-h4h6-vccr-44h2
+    events:
+      - timestamp: 2025-06-19T07:49:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-policy-reporter
+            componentID: 7f3c448041a2cfdf
+            componentName: github.com/uptrace/bun
+            componentVersion: v1.2.11
+            componentType: go-module
+            componentLocation: /usr/bin/policyreporter
+            scanner: grype
+      - timestamp: 2025-06-26T18:56:49Z
+        type: pending-upstream-fix
+        data:
+          note: No fix is available in github.com/uptrace/bun at this time.
 
   - id: CGA-mxm7-9r6v-8m7j
     aliases:

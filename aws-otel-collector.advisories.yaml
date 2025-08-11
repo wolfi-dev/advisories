@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: aws-otel-collector
+
+advisories:
+  - id: CGA-fghp-ch77-pm59
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T04:28:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-otel-collector
+            componentID: 16c4c1df53c7ef7e
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/awscollector
+            scanner: grype
+      - timestamp: 2025-08-10T12:07:01Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
+  - id: CGA-w86r-pffm-55cc
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T07:42:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-otel-collector
+            componentID: a5404c3ec13b2238
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/awscollector
+            scanner: grype
+      - timestamp: 2025-06-28T12:32:52Z
+        type: fixed
+        data:
+          fixed-version: 0.43.3-r2

@@ -36,6 +36,32 @@ advisories:
         data:
           fixed-version: 1.6.0-r2
 
+  - id: CGA-2r3p-hwc4-wwxr
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T02:02:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trillian-logsigner
+            componentID: d126ec3b15da593e
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/trillian_log_server
+            scanner: grype
+      - timestamp: 2025-08-10T14:11:30Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in trillian-logserver-1.7.2-r3.apk, at usr/bin/trillian_log_server, usr/bin/trillian_log_server; in trillian-logsigner-1.7.2-r3.apk, at usr/bin/trillian_log_signer, usr/bin/trillian_log_signer.'
+      - timestamp: 2025-08-10T18:35:40Z
+        type: fixed
+        data:
+          fixed-version: 1.7.2-r4
+
   - id: CGA-345g-6ccm-fm5w
     aliases:
       - CVE-2025-22874

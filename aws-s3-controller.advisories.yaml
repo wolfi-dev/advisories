@@ -47,6 +47,29 @@ advisories:
         data:
           fixed-version: 1.0.27-r31
 
+  - id: CGA-m4j9-727x-82wg
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T22:10:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-s3-controller
+            componentID: 99f5e741471ef49b
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/controller
+            scanner: grype
+      - timestamp: 2025-08-10T07:31:12Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-xwpw-fpfr-35q5
     aliases:
       - CVE-2025-22870

@@ -600,6 +600,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability is in the container runtime itself, not clients of the container runtime.
 
+  - id: CGA-jhwf-cjw2-v755
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T11:07:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kots
+            componentID: dcd05d3d34433adb
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/kots
+            scanner: grype
+      - timestamp: 2025-08-09T19:43:00Z
+        type: fixed
+        data:
+          fixed-version: 1.125.2-r1
+
   - id: CGA-m49h-gm74-j276
     aliases:
       - CVE-2023-3978
@@ -634,6 +656,27 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.123.1-r0
+
+  - id: CGA-m8rx-957v-82qq
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T09:49:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kots
+            componentID: 529dd4d8e22856a2
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/kots
+            scanner: grype
+      - timestamp: 2025-06-28T12:44:21Z
+        type: fixed
+        data:
+          fixed-version: 1.124.18-r1
 
   - id: CGA-mjxx-8w33-jcx2
     aliases:
@@ -930,6 +973,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.117.2-r1
+
+  - id: CGA-wpg8-jqm9-jq8x
+    aliases:
+      - CVE-2025-53547
+      - GHSA-557j-xg8c-q2mm
+    events:
+      - timestamp: 2025-07-09T10:48:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kots
+            componentID: 8e700aa33f01cf58
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.17.3
+            componentType: go-module
+            componentLocation: /usr/bin/kots
+            scanner: grype
+      - timestamp: 2025-07-09T13:03:13Z
+        type: fixed
+        data:
+          fixed-version: 1.124.18-r2
 
   - id: CGA-x237-v27j-pwg7
     aliases:

@@ -1,0 +1,53 @@
+schema-version: 2.0.2
+
+package:
+  name: kuma-2.11
+
+advisories:
+  - id: CGA-2h33-vp6w-h352
+    aliases:
+      - CVE-2025-53547
+      - GHSA-557j-xg8c-q2mm
+    events:
+      - timestamp: 2025-07-09T11:15:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kumactl-2.11
+            componentID: 9dfba6c84a46f029
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.18.0
+            componentType: go-module
+            componentLocation: /usr/bin/kumactl
+            scanner: grype
+      - timestamp: 2025-07-10T08:18:08Z
+        type: fixed
+        data:
+          fixed-version: 2.11.2-r0
+
+  - id: CGA-4w86-c322-3xg6
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T02:34:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kuma-install-cni-2.11
+            componentID: 5c0e5dd6d093c704
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/kuma-cp
+            scanner: grype
+      - timestamp: 2025-08-10T11:10:36Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in kuma-cp-2.11-2.11.4-r0.apk, at usr/bin/kuma-cp, usr/bin/kuma-cp.'
+      - timestamp: 2025-08-10T20:34:26Z
+        type: fixed
+        data:
+          fixed-version: 2.11.4-r1

@@ -47,6 +47,28 @@ advisories:
         data:
           fixed-version: 1.113.0-r1
 
+  - id: CGA-4jh5-6qgx-7qm7
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T09:18:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: victoriametrics-vmselect-cluster
+            componentID: 6e267c65be107d09
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/vmagent
+            scanner: grype
+      - timestamp: 2025-08-09T12:36:53Z
+        type: fixed
+        data:
+          fixed-version: 1.123.0-r1
+
   - id: CGA-82m5-xpr2-85ch
     aliases:
       - CVE-2025-22870

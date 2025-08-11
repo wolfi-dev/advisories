@@ -299,6 +299,28 @@ advisories:
         data:
           fixed-version: 9.4.9.0-r0
 
+  - id: CGA-whfv-67g6-jq92
+    aliases:
+      - CVE-2025-24294
+      - GHSA-xh69-987w-hrp8
+    events:
+      - timestamp: 2025-07-16T07:27:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jruby-9.4
+            componentID: 1a9b837e55c00386
+            componentName: resolv
+            componentVersion: 0.6.0
+            componentType: gem
+            componentLocation: /usr/share/jruby/lib/ruby/gems/shared/specifications/resolv-0.6.0.gemspec
+            scanner: grype
+      - timestamp: 2025-07-18T00:18:45Z
+        type: fixed
+        data:
+          fixed-version: 9.4.13.0-r1
+
   - id: CGA-wxwx-mfr5-9j7c
     aliases:
       - CVE-2024-35176

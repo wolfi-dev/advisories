@@ -256,3 +256,47 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.13.2-r6
+
+  - id: CGA-rfj8-32r2-w2wm
+    aliases:
+      - CVE-2025-6069
+      - GHSA-j5cc-6rx8-ff96
+    events:
+      - timestamp: 2025-06-20T07:50:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: python-3.13
+            componentID: 7896361477fd4229
+            componentName: python-3.13
+            componentVersion: 3.13.5-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2025-06-27T15:25:56Z
+        type: fixed
+        data:
+          fixed-version: 3.13.5-r1
+
+  - id: CGA-vr9h-w849-v74m
+    aliases:
+      - CVE-2025-8194
+      - GHSA-v594-44hm-2j7p
+    events:
+      - timestamp: 2025-07-30T07:27:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: python-3.13
+            componentID: 6c59bb89c6ddf659
+            componentName: python-3.13
+            componentVersion: 3.13.5-r4
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2025-08-01T01:03:45Z
+        type: pending-upstream-fix
+        data:
+          note: The tarfile validation fix from gh-130577 has been cherry-picked from Python 3.13 main branch to our python-3.13 package. However, this remains a pending-upstream-fix until an official Python 3.13.6+ release includes this security fix. The cherry-pick provides immediate protection while waiting for the upstream release.

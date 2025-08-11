@@ -192,6 +192,14 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/fluent-watcher
             scanner: grype
+      - timestamp: 2025-06-15T07:16:59Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in fluent-operator-3.4.0-r0.apk, at usr/bin/manager, usr/bin/manager.'
+      - timestamp: 2025-06-17T10:25:22Z
+        type: fixed
+        data:
+          fixed-version: 3.4.0-r1
 
   - id: CGA-rqf7-3273-hw5j
     aliases:
@@ -264,6 +272,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/fluent-watcher
             scanner: grype
+      - timestamp: 2025-06-17T10:25:24Z
+        type: fixed
+        data:
+          fixed-version: 3.4.0-r1
 
   - id: CGA-x44f-2764-cqpx
     aliases:
@@ -286,3 +298,26 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.1.0-r1
+
+  - id: CGA-xwjj-cfv5-f7x8
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T23:19:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: fluent-operator
+            componentID: b2ffe19995a5e2bf
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-08-10T09:42:16Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.

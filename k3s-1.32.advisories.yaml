@@ -1,0 +1,272 @@
+schema-version: 2.0.2
+
+package:
+  name: k3s-1.32
+
+advisories:
+  - id: CGA-28qv-x565-7qvh
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T11:43:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s-1.32
+            componentID: 2a5b80f0de0cf526
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/containerd-shim-runc-v2
+            scanner: grype
+
+  - id: CGA-2f7p-4whp-hxc7
+    aliases:
+      - CVE-2025-22868
+      - GHSA-3wqc-mwfx-672p
+    events:
+      - timestamp: 2025-07-16T22:24:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s-1.32
+            componentID: cc3a83b884895549
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/k3s
+            scanner: grype
+      - timestamp: 2025-07-21T10:44:08Z
+        type: fixed
+        data:
+          fixed-version: 1.32.6.1-r0
+
+  - id: CGA-3gf3-whq4-385m
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-07-16T22:24:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s-1.32
+            componentID: 5415a9a88e16bea0
+            componentName: github.com/golang-jwt/jwt/v4
+            componentVersion: v4.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/k3s
+            scanner: grype
+      - timestamp: 2025-07-21T10:44:09Z
+        type: fixed
+        data:
+          fixed-version: 1.32.6.1-r0
+
+  - id: CGA-47cq-vw9x-r53v
+    aliases:
+      - CVE-2024-28180
+      - GHSA-c5q2-7r4c-mv6g
+    events:
+      - timestamp: 2025-07-16T22:24:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s-1.32
+            componentID: 734a982bf693bfe7
+            componentName: gopkg.in/square/go-jose.v2
+            componentVersion: v2.6.0
+            componentType: go-module
+            componentLocation: /usr/bin/k3s
+            scanner: grype
+      - timestamp: 2025-07-21T17:35:56Z
+        type: pending-upstream-fix
+        data:
+          note: Upstream maintainers need to upgrade gopkg.in/square/go-jose.v2 to the maintained go-jose/go-jose package.
+
+  - id: CGA-55fv-m3qp-xh5q
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-07-16T22:24:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s-1.32
+            componentID: 6ca6c6fc3737301b
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/containerd-shim-runc-v2
+            scanner: grype
+      - timestamp: 2025-07-21T10:44:09Z
+        type: fixed
+        data:
+          fixed-version: 1.32.6.1-r0
+      - timestamp: 2025-07-28T21:16:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s-1.32
+            componentID: d4cc50ad4efd92a1
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/k3s
+            scanner: grype
+      - timestamp: 2025-07-30T21:53:44Z
+        type: fixed
+        data:
+          fixed-version: 1.32.7.1-r1
+
+  - id: CGA-cj3v-3p6m-jf62
+    aliases:
+      - CVE-2025-54410
+      - GHSA-4vq8-7jfc-9cvp
+    events:
+      - timestamp: 2025-07-30T08:33:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s-1.32
+            componentID: 5c7d3b4c1764a6b7
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.8+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/k3s
+            scanner: grype
+
+  - id: CGA-pwmw-6q47-qc67
+    aliases:
+      - CVE-2025-27144
+      - GHSA-c6gw-w398-hv78
+    events:
+      - timestamp: 2025-07-16T22:24:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s-1.32
+            componentID: 47b4814a9855ab2d
+            componentName: github.com/go-jose/go-jose/v4
+            componentVersion: v4.0.4
+            componentType: go-module
+            componentLocation: /usr/bin/k3s
+            scanner: grype
+      - timestamp: 2025-07-21T10:44:10Z
+        type: fixed
+        data:
+          fixed-version: 1.32.6.1-r0
+
+  - id: CGA-qr27-5fgg-8h9q
+    aliases:
+      - CVE-2025-46599
+      - GHSA-864f-7xjm-2jp2
+    events:
+      - timestamp: 2025-07-16T22:24:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s-1.32
+            componentID: 393d29b995f3e71e
+            componentName: github.com/k3s-io/k3s
+            componentVersion: v1.32.2
+            componentType: go-module
+            componentLocation: /usr/bin/k3s
+            scanner: grype
+      - timestamp: 2025-07-21T10:44:11Z
+        type: fixed
+        data:
+          fixed-version: 1.32.6.1-r0
+
+  - id: CGA-vjcq-8cwx-cgrr
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-07-16T22:24:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s-1.32
+            componentID: 6ca6c6fc3737301b
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/containerd-shim-runc-v2
+            scanner: grype
+      - timestamp: 2025-07-21T15:57:55Z
+        type: pending-upstream-fix
+        data:
+          note: k3s static brings in an embedded containerd-shim-runc-v2 version during it's build process. Upstream maintainers will need to fix the issue in the embedded version to address CVE
+
+  - id: CGA-w6pg-rm3m-j9gx
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-07-16T22:24:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s-1.32
+            componentID: 6ca6c6fc3737301b
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/containerd-shim-runc-v2
+            scanner: grype
+      - timestamp: 2025-07-21T10:44:11Z
+        type: fixed
+        data:
+          fixed-version: 1.32.6.1-r0
+      - timestamp: 2025-07-28T21:16:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s-1.32
+            componentID: d4cc50ad4efd92a1
+            componentName: golang.org/x/net
+            componentVersion: v0.30.0
+            componentType: go-module
+            componentLocation: /usr/bin/k3s
+            scanner: grype
+      - timestamp: 2025-07-30T21:53:46Z
+        type: fixed
+        data:
+          fixed-version: 1.32.7.1-r1
+
+  - id: CGA-xwmw-9qmq-w6rc
+    aliases:
+      - CVE-2024-36623
+      - GHSA-gh5c-3h97-2f3q
+    events:
+      - timestamp: 2025-07-16T22:24:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s-1.32
+            componentID: 9cfa43a06f1412c4
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.6+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/k3s
+            scanner: grype
+      - timestamp: 2025-07-21T17:29:22Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: Vulnerability was patched in version 25.0.x 2024.03.01, this includes go packages with +incompatible. See https://github.com/moby/moby/commit/8e3bcf19748838b30e34d612832d1dc9d90363b8

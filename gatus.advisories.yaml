@@ -4,6 +4,28 @@ package:
   name: gatus
 
 advisories:
+  - id: CGA-38rj-m73v-9wpg
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T11:09:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatus
+            componentID: 11648e3e766c2168
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/gatus
+            scanner: grype
+      - timestamp: 2025-08-09T17:34:26Z
+        type: fixed
+        data:
+          fixed-version: 5.21.0-r2
+
   - id: CGA-5p55-h7qf-gjjc
     aliases:
       - CVE-2025-48075
@@ -51,6 +73,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 5.17.0-r2
+
+  - id: CGA-7p8g-79xh-c4wj
+    aliases:
+      - CVE-2025-54801
+      - GHSA-qx2q-88mx-vhg7
+    events:
+      - timestamp: 2025-08-06T07:52:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatus
+            componentID: 7a8b36dc48f0018b
+            componentName: github.com/gofiber/fiber/v2
+            componentVersion: v2.52.8
+            componentType: go-module
+            componentLocation: /usr/bin/gatus
+            scanner: grype
+      - timestamp: 2025-08-06T09:41:44Z
+        type: fixed
+        data:
+          fixed-version: 5.21.0-r1
 
   - id: CGA-87pp-4vwp-8342
     aliases:

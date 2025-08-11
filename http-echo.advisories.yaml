@@ -204,6 +204,28 @@ advisories:
         data:
           fixed-version: 1.0.0-r5
 
+  - id: CGA-mhqm-c2w2-j5vp
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T10:45:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: http-echo
+            componentID: 0590f36c101fa4b6
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/http-echo
+            scanner: grype
+      - timestamp: 2025-08-09T14:29:33Z
+        type: fixed
+        data:
+          fixed-version: 1.0.0-r17
+
   - id: CGA-phqf-9998-7x65
     aliases:
       - CVE-2024-24783

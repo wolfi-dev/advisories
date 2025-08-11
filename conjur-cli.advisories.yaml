@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: conjur-cli
+
+advisories:
+  - id: CGA-qh2g-9r7q-x3qx
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T07:18:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: conjur-cli
+            componentID: e40fb5a2bc00780a
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/conjur
+            scanner: grype
+      - timestamp: 2025-08-09T09:35:14Z
+        type: fixed
+        data:
+          fixed-version: 8.1.2-r1

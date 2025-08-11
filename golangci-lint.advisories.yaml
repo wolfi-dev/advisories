@@ -25,6 +25,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-335c-3vv3-37c8
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T10:29:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: golangci-lint
+            componentID: 1f2a470d0c99064a
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/golangci-lint
+            scanner: grype
+      - timestamp: 2025-08-11T08:39:36Z
+        type: fixed
+        data:
+          fixed-version: 2.3.1-r1
+
   - id: CGA-3hmr-c5mj-wc4w
     aliases:
       - CVE-2024-34156
@@ -263,6 +285,27 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.63.4-r2
+
+  - id: CGA-x6xm-4jp3-j76m
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T07:31:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: golangci-lint
+            componentID: 59b740d44ad55603
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/golangci-lint
+            scanner: grype
+      - timestamp: 2025-06-28T10:13:57Z
+        type: fixed
+        data:
+          fixed-version: 2.1.6-r2
 
   - id: CGA-x8gf-rfw6-8928
     aliases:

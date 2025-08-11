@@ -69,6 +69,28 @@ advisories:
         data:
           note: On windows, atty dereferences a potentially unaligned pointer.  In practice however, the pointer won't be unaligned unless a custom global allocator is used. However the atty package seems to be unmaintained.
 
+  - id: CGA-7fvw-g3m9-xrm5
+    aliases:
+      - CVE-2025-53901
+      - GHSA-fm79-3f68-h2fc
+    events:
+      - timestamp: 2025-07-19T07:30:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wizer
+            componentID: 3dfd3a2df1a552e8
+            componentName: wasmtime-wasi
+            componentVersion: 31.0.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/wizer
+            scanner: grype
+      - timestamp: 2025-07-22T09:07:09Z
+        type: pending-upstream-fix
+        data:
+          note: Any attempts to bump the wasmtime dependency to a fixed version result in build failures. Upstream will have to bump the wasmtime dependency and cut a new release with the fixed version.
+
   - id: CGA-82pj-77h5-rh52
     aliases:
       - CVE-2024-12224

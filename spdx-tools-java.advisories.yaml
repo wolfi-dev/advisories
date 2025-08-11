@@ -113,3 +113,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.1.8-r1
+
+  - id: CGA-w64r-m4ch-4jg3
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2025-07-12T09:16:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spdx-tools-java
+            componentID: cc3c86cee7cbaf62
+            componentName: commons-lang3
+            componentVersion: 3.16.0
+            componentType: java-archive
+            componentLocation: /usr/lib/java/spdx/tools-java-2.0.1-jar-with-dependencies.jar
+            scanner: grype
+      - timestamp: 2025-07-16T20:57:35Z
+        type: fixed
+        data:
+          fixed-version: 2.0.1-r5

@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: azure-ipam
+
+advisories:
+  - id: CGA-67gc-j8hj-cgfq
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T10:27:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: azure-ipam
+            componentID: 1182b1c1690b69a1
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/azure-ipam-dropgz
+            scanner: grype
+      - timestamp: 2025-08-09T17:39:14Z
+        type: fixed
+        data:
+          fixed-version: 0.4.0-r3

@@ -441,6 +441,56 @@ advisories:
         data:
           type: vulnerable-code-version-not-used
 
+  - id: CGA-jhr7-46j2-mg2c
+    aliases:
+      - CVE-2025-40777
+      - GHSA-4x4c-8qp9-8ggh
+    events:
+      - timestamp: 2025-07-22T07:35:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: bind
+            componentID: d2b909530e9d8fd7
+            componentName: bind-dnssec-root
+            componentVersion: 9.20.11-r1
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2025-07-23T18:27:00Z
+        type: fixed
+        data:
+          fixed-version: 9.20.11-r1
+      - timestamp: 2025-07-25T20:57:57Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: 'Bind version 9.20.11 contains the fix for vulnerablity, this is a version mismatch and this package is not vulnerable. Only versions 9.20.0 through 9.20.10. Reference: https://kb.isc.org/docs/cve-2025-40777'
+
+  - id: CGA-jpv5-vvg9-c274
+    aliases:
+      - CVE-2025-40776
+      - GHSA-2hm8-9847-q7gc
+    events:
+      - timestamp: 2025-07-22T07:35:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: bind
+            componentID: d2b909530e9d8fd7
+            componentName: bind-dnssec-root
+            componentVersion: 9.20.11-r1
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2025-07-23T18:26:44Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: CVE-2025-40776 affects only BIND Subscription Edition (-S) versions including 9.11.3-S1 through 9.16.50-S1, 9.18.11-S1 through 9.18.37-S1, and 9.20.9-S1 through 9.20.10-S1. The Wolfi bind package version 9.20.11-r1 is the open-source edition and is not affected by this vulnerability which specifically targets the commercial Subscription Edition with ECS (EDNS Client Subnet) configuration.
+
   - id: CGA-jvwh-8gmp-7w68
     aliases:
       - CVE-2022-0396

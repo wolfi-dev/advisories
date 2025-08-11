@@ -1,0 +1,154 @@
+schema-version: 2.0.2
+
+package:
+  name: logstash-9
+
+advisories:
+  - id: CGA-2462-p7hj-v4wh
+    aliases:
+      - CVE-2025-27220
+      - GHSA-mhwm-jh88-3gjf
+    events:
+      - timestamp: 2025-06-27T22:53:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-9
+            componentID: 14a6eec85f776f68
+            componentName: cgi
+            componentVersion: 0.3.6
+            componentType: gem
+            componentLocation: /opt/bitnami/logstash/vendor/jruby/lib/ruby/gems/shared/specifications/default/cgi-0.3.6-java.gemspec
+            scanner: grype
+      - timestamp: 2025-07-02T19:50:00Z
+        type: pending-upstream-fix
+        data:
+          note: The cgi gem at version 0.3.6 is included as a default gem in JRuby's standard library. Because it's part of JRuby itself rather than a separately managed gem, an updated JRuby release is required to incorporate the remediated version of cgi (0.3.7+).
+
+  - id: CGA-4wm4-mg4v-92rh
+    aliases:
+      - CVE-2025-46551
+      - GHSA-72qj-48g4-5xgx
+    events:
+      - timestamp: 2025-06-27T22:53:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-9
+            componentID: 34e4ba132ca29081
+            componentName: jruby-openssl
+            componentVersion: 0.15.0
+            componentType: java-archive
+            componentLocation: /opt/bitnami/logstash/vendor/jruby/lib/ruby/stdlib/jopenssl.jar
+            scanner: grype
+      - timestamp: 2025-07-02T19:50:00Z
+        type: pending-upstream-fix
+        data:
+          note: The jruby-openssl component at version 0.15.0 is bundled within JRuby's standard library as jopenssl.jar. Because it's part of JRuby itself rather than a separately managed dependency, an updated JRuby release is required to incorporate the remediated version of jruby-openssl (0.15.4+).
+
+  - id: CGA-64gr-237x-6hmf
+    aliases:
+      - CVE-2025-53864
+      - GHSA-xwmg-2g98-w7v9
+    events:
+      - timestamp: 2025-07-12T07:47:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-9
+            componentID: 4ba30a9d7b8c525a
+            componentName: nimbus-jose-jwt
+            componentVersion: 9.37.2
+            componentType: java-archive
+            componentLocation: /opt/bitnami/logstash/vendor/bundle/jruby/3.1.0/gems/logstash-input-azure_event_hubs-1.5.1/vendor/jar-dependencies/com/nimbusds/nimbus-jose-jwt/9.37.2/nimbus-jose-jwt-9.37.2.jar
+            scanner: grype
+      - timestamp: 2025-07-16T20:33:05Z
+        type: pending-upstream-fix
+        data:
+          note: nimbus-jose-jwt is a transitive dependency brought in by vendored jruby logstash-input-azure_event_hubs-1.5.1 package. Upstream maintiners will need to update to the latest version of logstash-input-azure_event-hubs-1.5.1
+
+  - id: CGA-hc2m-xw7c-3wr5
+    aliases:
+      - GHSA-353f-x4gh-cqq8
+    events:
+      - timestamp: 2025-07-22T08:49:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-9
+            componentID: 0b564ef5062dfe3f
+            componentName: nokogiri
+            componentVersion: 1.18.8
+            componentType: gem
+            componentLocation: /opt/iamguarded/logstash/vendor/bundle/jruby/3.1.0/specifications/nokogiri-1.18.8-java.gemspec
+            scanner: grype
+      - timestamp: 2025-07-24T08:21:40Z
+        type: fixed
+        data:
+          fixed-version: 9.0.4-r0
+
+  - id: CGA-hrf8-h5p2-f5r9
+    aliases:
+      - CVE-2025-27221
+      - GHSA-22h5-pq3x-2gf2
+    events:
+      - timestamp: 2025-06-27T22:53:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-9
+            componentID: c4bb7a633cc30616
+            componentName: uri
+            componentVersion: 0.12.2
+            componentType: gem
+            componentLocation: /opt/bitnami/logstash/vendor/jruby/lib/ruby/gems/shared/specifications/default/uri-0.12.2.gemspec
+            scanner: grype
+      - timestamp: 2025-07-02T19:50:00Z
+        type: pending-upstream-fix
+        data:
+          note: The uri gem at version 0.12.2 is included as a default gem in JRuby's standard library. Because it's part of JRuby itself rather than a separately managed gem, an updated JRuby release is required to incorporate the remediated version of uri (0.12.4+).
+
+  - id: CGA-v5rf-cjpm-q5f6
+    aliases:
+      - CVE-2025-27219
+      - GHSA-gh9q-2xrm-x6qv
+    events:
+      - timestamp: 2025-06-27T22:53:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-9
+            componentID: 14a6eec85f776f68
+            componentName: cgi
+            componentVersion: 0.3.6
+            componentType: gem
+            componentLocation: /opt/bitnami/logstash/vendor/jruby/lib/ruby/gems/shared/specifications/default/cgi-0.3.6-java.gemspec
+            scanner: grype
+      - timestamp: 2025-07-02T19:50:00Z
+        type: pending-upstream-fix
+        data:
+          note: The cgi gem at version 0.3.6 is included as a default gem in JRuby's standard library. Because it's part of JRuby itself rather than a separately managed gem, an updated JRuby release is required to incorporate the remediated version of cgi (0.3.7+).
+
+  - id: CGA-w345-pxmf-mrgc
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T09:17:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-9-env2yaml
+            componentID: 0b8ecf8f2180ece2
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/env2yaml
+            scanner: grype

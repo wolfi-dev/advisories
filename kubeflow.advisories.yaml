@@ -1,0 +1,711 @@
+schema-version: 2.0.2
+
+package:
+  name: kubeflow
+
+advisories:
+  - id: CGA-2x7r-259c-xjh3
+    aliases:
+      - CVE-2025-22868
+      - GHSA-3wqc-mwfx-672p
+    events:
+      - timestamp: 2025-07-02T10:09:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-tensorboard-controller
+            componentID: cdd7e06e82fa9969
+            componentName: golang.org/x/oauth2
+            componentVersion: v0.0.0-20211104180415-d3ed0bb246c8
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-07-03T07:23:41Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
+  - id: CGA-39gf-63qw-c2rq
+    aliases:
+      - CVE-2024-45339
+      - GHSA-6wxm-mpqj-6jpf
+    events:
+      - timestamp: 2025-07-02T10:09:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-tensorboard-controller
+            componentID: a500bb871684eff2
+            componentName: github.com/golang/glog
+            componentVersion: v0.0.0-20160126235308-23def4e6c14b
+            componentType: go-module
+            componentLocation: /usr/bin/access-management
+            scanner: grype
+      - timestamp: 2025-07-04T07:02:43Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in kubeflow-access-management-1.10.0-r1.apk, at usr/bin/access-management, usr/bin/access-management.'
+      - timestamp: 2025-07-04T14:03:42Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r3
+
+  - id: CGA-76h9-q8mp-8cjp
+    aliases:
+      - CVE-2025-22869
+      - GHSA-hcg3-q754-cr77
+    events:
+      - timestamp: 2025-07-02T10:09:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-tensorboard-controller
+            componentID: cd5206cf20acbe31
+            componentName: golang.org/x/crypto
+            componentVersion: v0.0.0-20220214200702-86341886e292
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-07-04T10:22:26Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
+  - id: CGA-7xxp-pvv9-xwf9
+    aliases:
+      - GHSA-m425-mq94-257g
+    events:
+      - timestamp: 2025-07-02T10:09:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-tensorboard-controller
+            componentID: aa19fd13027221e7
+            componentName: google.golang.org/grpc
+            componentVersion: v1.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-07-04T14:03:43Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r3
+
+  - id: CGA-842p-f9h5-98p3
+    aliases:
+      - CVE-2024-45337
+      - GHSA-v778-237x-gjrc
+    events:
+      - timestamp: 2025-07-02T10:09:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-tensorboard-controller
+            componentID: cd5206cf20acbe31
+            componentName: golang.org/x/crypto
+            componentVersion: v0.0.0-20220214200702-86341886e292
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-07-04T17:07:48Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r4
+
+  - id: CGA-cxwg-9fhm-p6ph
+    aliases:
+      - CVE-2021-43565
+      - GHSA-gwc9-m7rh-j2ww
+    events:
+      - timestamp: 2025-07-03T08:07:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-notebook-controller
+            componentID: 2d040d452fea9822
+            componentName: golang.org/x/crypto
+            componentVersion: v0.0.0-20210817164053-32db794688a5
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-07-04T17:07:49Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r4
+
+  - id: CGA-fc4w-m9gg-hq8m
+    aliases:
+      - GHSA-74fp-r6jw-h4mp
+    events:
+      - timestamp: 2025-07-02T10:09:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-tensorboard-controller
+            componentID: da0893ca984056f5
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.0.0-20190221084156-01f179d85dbc
+            componentType: go-module
+            componentLocation: /usr/bin/access-management
+            scanner: grype
+      - timestamp: 2025-07-04T17:07:49Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r4
+      - timestamp: 2025-07-06T08:07:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-access-management
+            componentID: da0893ca984056f5
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.0.0-20190221084156-01f179d85dbc
+            componentType: go-module
+            componentLocation: /usr/bin/access-management
+            scanner: grype
+      - timestamp: 2025-07-07T07:11:30Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in kubeflow-access-management-1.10.0-r4.apk, at usr/bin/access-management, usr/bin/access-management.'
+      - timestamp: 2025-07-07T12:35:02Z
+        type: pending-upstream-fix
+        data:
+          note: The CVE is related to k8s.io/apimachinery, a dependency of access-management subpackage. The dependency is pinned to a specific version and bumping the dependency breaks the built, therefore upstream needs to fix it properly. Once this is done, we can rebuilt the package in order to remediate the CVE.
+
+  - id: CGA-fqgc-jrwm-g4gf
+    aliases:
+      - CVE-2023-39325
+      - GHSA-4374-p667-p6c8
+    events:
+      - timestamp: 2025-07-02T10:09:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-tensorboard-controller
+            componentID: b321cfdfdfeec86f
+            componentName: golang.org/x/net
+            componentVersion: v0.0.0-20220127200216-cd36cc0744dd
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-07-04T17:07:50Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r4
+
+  - id: CGA-g2cw-w495-jw48
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T19:18:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-admission-webhook
+            componentID: 0d2b67b28ea310ef
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/access-management
+            scanner: grype
+
+  - id: CGA-g484-r9gf-4wm2
+    aliases:
+      - CVE-2022-29526
+      - GHSA-p782-xgp4-8hr8
+    events:
+      - timestamp: 2025-07-02T10:09:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-tensorboard-controller
+            componentID: 294f13bf478b0672
+            componentName: golang.org/x/sys
+            componentVersion: v0.0.0-20220209214540-3681064d5158
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-07-04T10:22:46Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r2
+
+  - id: CGA-g6ww-5vxc-xhp3
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-07-02T10:09:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-tensorboard-controller
+            componentID: b321cfdfdfeec86f
+            componentName: golang.org/x/net
+            componentVersion: v0.0.0-20220127200216-cd36cc0744dd
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-07-04T17:07:51Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r4
+
+  - id: CGA-gv4m-pvxv-7g7v
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-07-02T10:09:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-tensorboard-controller
+            componentID: b321cfdfdfeec86f
+            componentName: golang.org/x/net
+            componentVersion: v0.0.0-20220127200216-cd36cc0744dd
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-07-04T17:07:51Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r4
+
+  - id: CGA-h39r-p6hg-m9q6
+    aliases:
+      - CVE-2022-27191
+      - GHSA-8c26-wmh5-6g9v
+    events:
+      - timestamp: 2025-07-02T10:09:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-tensorboard-controller
+            componentID: cd5206cf20acbe31
+            componentName: golang.org/x/crypto
+            componentVersion: v0.0.0-20220214200702-86341886e292
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-07-04T17:07:52Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r4
+
+  - id: CGA-hf92-3j4c-q738
+    aliases:
+      - CVE-2019-11250
+      - GHSA-jmrx-5g74-6v2f
+    events:
+      - timestamp: 2025-07-02T10:09:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-tensorboard-controller
+            componentID: 99b32c5ed6cc5cf2
+            componentName: k8s.io/client-go
+            componentVersion: v0.0.0-20190528110200-4f3abb12cae2
+            componentType: go-module
+            componentLocation: /usr/bin/access-management
+            scanner: grype
+      - timestamp: 2025-07-04T17:07:53Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r4
+      - timestamp: 2025-07-06T08:07:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-access-management
+            componentID: 99b32c5ed6cc5cf2
+            componentName: k8s.io/client-go
+            componentVersion: v0.0.0-20190528110200-4f3abb12cae2
+            componentType: go-module
+            componentLocation: /usr/bin/access-management
+            scanner: grype
+      - timestamp: 2025-07-07T12:37:03Z
+        type: pending-upstream-fix
+        data:
+          note: The CVE is related to k8s.io/client-go, a dependency of access-management subpackage. The dependency is pinned to a specific version and bumping the dependency breaks the built, therefore upstream needs to fix it properly. Once this is done, we can rebuilt the package in order to remediate the CVE.
+
+  - id: CGA-jpj5-xrhc-c5g8
+    aliases:
+      - CVE-2022-32149
+      - GHSA-69ch-w2m2-3vjp
+    events:
+      - timestamp: 2025-07-02T10:09:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-tensorboard-controller
+            componentID: a2e8beab720daf4e
+            componentName: golang.org/x/text
+            componentVersion: v0.3.7
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-07-04T10:22:47Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r2
+
+  - id: CGA-mmq4-893v-9hr4
+    aliases:
+      - CVE-2023-3978
+      - GHSA-2wrh-6pvc-2jm9
+    events:
+      - timestamp: 2025-07-02T10:09:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-tensorboard-controller
+            componentID: b321cfdfdfeec86f
+            componentName: golang.org/x/net
+            componentVersion: v0.0.0-20220127200216-cd36cc0744dd
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-07-04T17:07:53Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r4
+
+  - id: CGA-mr6f-hwqr-jwr5
+    aliases:
+      - CVE-2024-24786
+      - GHSA-8r3f-844c-mc37
+    events:
+      - timestamp: 2025-07-02T10:09:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-tensorboard-controller
+            componentID: 2bb7758195f28841
+            componentName: google.golang.org/protobuf
+            componentVersion: v1.27.1
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-07-04T14:03:44Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r3
+
+  - id: CGA-mx36-rhm7-cj6m
+    aliases:
+      - CVE-2022-28948
+      - GHSA-hp87-p4gw-j4gq
+    events:
+      - timestamp: 2025-07-02T10:09:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-tensorboard-controller
+            componentID: 8f0324a0be5f7167
+            componentName: gopkg.in/yaml.v3
+            componentVersion: v3.0.0-20210107192922-496545a6307b
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-07-04T14:03:45Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r3
+
+  - id: CGA-p832-pfvm-ghh3
+    aliases:
+      - CVE-2020-8565
+      - GHSA-8cfg-vx93-jvxw
+    events:
+      - timestamp: 2025-07-02T10:09:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-tensorboard-controller
+            componentID: 99b32c5ed6cc5cf2
+            componentName: k8s.io/client-go
+            componentVersion: v0.0.0-20190528110200-4f3abb12cae2
+            componentType: go-module
+            componentLocation: /usr/bin/access-management
+            scanner: grype
+      - timestamp: 2025-07-04T17:07:54Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r4
+      - timestamp: 2025-07-06T08:07:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-access-management
+            componentID: 99b32c5ed6cc5cf2
+            componentName: k8s.io/client-go
+            componentVersion: v0.0.0-20190528110200-4f3abb12cae2
+            componentType: go-module
+            componentLocation: /usr/bin/access-management
+            scanner: grype
+      - timestamp: 2025-07-07T12:37:03Z
+        type: pending-upstream-fix
+        data:
+          note: The CVE is related to k8s.io/client-go, a dependency of access-management subpackage. The dependency is pinned to a specific version and bumping the dependency breaks the built, therefore upstream needs to fix it properly. Once this is done, we can rebuilt the package in order to remediate the CVE.
+
+  - id: CGA-pr36-r5p2-v87m
+    aliases:
+      - CVE-2022-27664
+      - GHSA-69cg-p879-7622
+    events:
+      - timestamp: 2025-07-02T10:09:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-tensorboard-controller
+            componentID: b321cfdfdfeec86f
+            componentName: golang.org/x/net
+            componentVersion: v0.0.0-20220127200216-cd36cc0744dd
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-07-04T17:07:55Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r4
+
+  - id: CGA-pwf8-5gcv-h5c9
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2025-07-02T10:09:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-tensorboard-controller
+            componentID: b321cfdfdfeec86f
+            componentName: golang.org/x/net
+            componentVersion: v0.0.0-20220127200216-cd36cc0744dd
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-07-04T17:07:56Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r4
+
+  - id: CGA-q2q4-6v9m-8jfx
+    aliases:
+      - CVE-2022-1996
+      - GHSA-r48q-9g5r-8q2h
+    events:
+      - timestamp: 2025-07-02T10:09:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-tensorboard-controller
+            componentID: 42175af1d9940b3a
+            componentName: github.com/emicklei/go-restful
+            componentVersion: v2.9.5+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-07-04T14:03:45Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r3
+
+  - id: CGA-qmqj-mhvq-w662
+    aliases:
+      - CVE-2021-3121
+      - GHSA-c3h9-896r-86jm
+    events:
+      - timestamp: 2025-07-02T10:09:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-tensorboard-controller
+            componentID: f6123d89ecead3b6
+            componentName: github.com/gogo/protobuf
+            componentVersion: v1.3.1
+            componentType: go-module
+            componentLocation: /usr/bin/access-management
+            scanner: grype
+      - timestamp: 2025-07-04T14:03:46Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r3
+
+  - id: CGA-r2h5-3p24-x9fw
+    aliases:
+      - CVE-2023-48795
+      - GHSA-45x7-px36-x8w8
+    events:
+      - timestamp: 2025-07-02T10:09:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-tensorboard-controller
+            componentID: cd5206cf20acbe31
+            componentName: golang.org/x/crypto
+            componentVersion: v0.0.0-20220214200702-86341886e292
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-07-04T17:07:56Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r4
+
+  - id: CGA-rq2p-h59j-r78g
+    aliases:
+      - CVE-2022-41723
+      - GHSA-vvpx-j8f3-3w6h
+    events:
+      - timestamp: 2025-07-02T10:09:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-tensorboard-controller
+            componentID: b321cfdfdfeec86f
+            componentName: golang.org/x/net
+            componentVersion: v0.0.0-20220127200216-cd36cc0744dd
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-07-04T17:07:57Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r4
+
+  - id: CGA-rwrf-422m-frvm
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-07-02T10:09:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-tensorboard-controller
+            componentID: b321cfdfdfeec86f
+            componentName: golang.org/x/net
+            componentVersion: v0.0.0-20220127200216-cd36cc0744dd
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-07-04T17:07:58Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r4
+
+  - id: CGA-w652-cm6g-7x8x
+    aliases:
+      - CVE-2020-8559
+      - GHSA-33c5-9fx5-fvjm
+    events:
+      - timestamp: 2025-07-02T10:09:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-tensorboard-controller
+            componentID: da0893ca984056f5
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.0.0-20190221084156-01f179d85dbc
+            componentType: go-module
+            componentLocation: /usr/bin/access-management
+            scanner: grype
+      - timestamp: 2025-07-04T17:07:58Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r4
+      - timestamp: 2025-07-06T08:07:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-access-management
+            componentID: da0893ca984056f5
+            componentName: k8s.io/apimachinery
+            componentVersion: v0.0.0-20190221084156-01f179d85dbc
+            componentType: go-module
+            componentLocation: /usr/bin/access-management
+            scanner: grype
+      - timestamp: 2025-07-07T12:35:02Z
+        type: pending-upstream-fix
+        data:
+          note: The CVE is related to k8s.io/apimachinery, a dependency of access-management subpackage. The dependency is pinned to a specific version and bumping the dependency breaks the built, therefore upstream needs to fix it properly. Once this is done, we can rebuilt the package in order to remediate the CVE.
+
+  - id: CGA-wfjc-f2gc-896v
+    aliases:
+      - CVE-2022-41717
+      - GHSA-xrjj-mj9h-534m
+    events:
+      - timestamp: 2025-07-02T10:09:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-tensorboard-controller
+            componentID: b321cfdfdfeec86f
+            componentName: golang.org/x/net
+            componentVersion: v0.0.0-20220127200216-cd36cc0744dd
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-07-04T17:07:59Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r4
+
+  - id: CGA-x88x-7h43-vrg8
+    aliases:
+      - CVE-2023-44487
+      - GHSA-qppj-fm5r-hxr3
+    events:
+      - timestamp: 2025-07-02T10:09:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-tensorboard-controller
+            componentID: b321cfdfdfeec86f
+            componentName: golang.org/x/net
+            componentVersion: v0.0.0-20220127200216-cd36cc0744dd
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-07-04T17:08:00Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r4

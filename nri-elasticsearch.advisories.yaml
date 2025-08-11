@@ -42,6 +42,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/nri-elasticsearch
             scanner: grype
+      - timestamp: 2025-06-15T11:52:50Z
+        type: fixed
+        data:
+          fixed-version: 5.4.0-r3
 
   - id: CGA-7q96-925g-r6c4
     aliases:
@@ -60,6 +64,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/nri-elasticsearch
             scanner: grype
+      - timestamp: 2025-06-15T11:52:51Z
+        type: fixed
+        data:
+          fixed-version: 5.4.0-r3
 
   - id: CGA-9xmf-wxx7-xg4j
     aliases:
@@ -241,6 +249,29 @@ advisories:
         type: fixed
         data:
           fixed-version: 5.2.6-r1
+
+  - id: CGA-v752-9vf6-mm44
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T06:46:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-elasticsearch
+            componentID: 7e7f17bbecf3fd4f
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/nri-elasticsearch
+            scanner: grype
+      - timestamp: 2025-08-10T11:24:41Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
 
   - id: CGA-w48m-992r-h2v5
     aliases:

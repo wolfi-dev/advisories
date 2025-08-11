@@ -57,6 +57,28 @@ advisories:
         data:
           fixed-version: 7.0.120-r1
 
+  - id: CGA-7v77-49hp-78c5
+    aliases:
+      - CVE-2025-26646
+      - GHSA-h4j7-5rxr-p4wc
+    events:
+      - timestamp: 2025-08-02T08:46:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dotnet-7-sdk
+            componentID: d55f46ccd9bbc6fa
+            componentName: Microsoft.Build.Tasks.Core
+            componentVersion: 17.4.8
+            componentType: dotnet
+            componentLocation: /usr/share/dotnet/sdk/7.0.120/FSharp/fsc.deps.json
+            scanner: grype
+      - timestamp: 2025-08-02T09:23:40Z
+        type: fix-not-planned
+        data:
+          note: This package is no longer supported upstream and has reached its end of life. A version upgrade is required to fix this vulnerability.
+
   - id: CGA-mrq2-xfrj-8xwg
     aliases:
       - CVE-2024-0057

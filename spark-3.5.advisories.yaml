@@ -612,6 +612,24 @@ advisories:
         data:
           note: This logback-core dependency is brought in as a transitive dependency. These transitive dependencies from are not able to be upgraded to a higher version and require upstream maintainers to implement.
 
+  - id: CGA-g656-3h76-qvmw
+    aliases:
+      - CVE-2025-52999
+      - GHSA-h46c-h94j-95f3
+    events:
+      - timestamp: 2025-06-28T13:18:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-3.5-scala-2.13
+            componentID: 2545da1ce0ac8e44
+            componentName: jackson-core
+            componentVersion: 2.12.7
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.3.6.jar
+            scanner: grype
+
   - id: CGA-g6j7-ffvj-3wqj
     aliases:
       - CVE-2024-12801

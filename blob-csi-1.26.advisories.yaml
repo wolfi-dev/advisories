@@ -48,6 +48,28 @@ advisories:
         data:
           fixed-version: 1.26.5-r1
 
+  - id: CGA-g552-hxf3-wv8p
+    aliases:
+      - CVE-2025-4563
+      - GHSA-hj2p-8wj8-pfq4
+    events:
+      - timestamp: 2025-06-24T07:35:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: blob-csi-1.26
+            componentID: ea5d215df6152db9
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.32.2
+            componentType: go-module
+            componentLocation: /usr/bin/blobfuse-proxy
+            scanner: grype
+      - timestamp: 2025-06-24T09:05:20Z
+        type: fixed
+        data:
+          fixed-version: 1.26.5-r51
+
   - id: CGA-jfhh-xfgg-v2pg
     aliases:
       - CVE-2025-22872
@@ -114,3 +136,25 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability applies to the git-repo volume provisioner, not the k8s client itself.
+
+  - id: CGA-pqqq-5r3f-rxc9
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T07:39:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: blob-csi-1.26
+            componentID: 36131619d207a724
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/blobfuse-proxy
+            scanner: grype
+      - timestamp: 2025-08-09T09:39:41Z
+        type: fixed
+        data:
+          fixed-version: 1.26.6-r3

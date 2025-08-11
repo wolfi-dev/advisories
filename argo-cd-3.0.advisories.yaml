@@ -4,6 +4,28 @@ package:
   name: argo-cd-3.0
 
 advisories:
+  - id: CGA-2c3h-xr4f-g3rp
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T17:21:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-3.0
+            componentID: d5c86f86af054e7a
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/local/bin/argocd
+            scanner: grype
+      - timestamp: 2025-08-10T08:04:18Z
+        type: fixed
+        data:
+          fixed-version: 3.0.12-r1
+
   - id: CGA-4gpj-334g-vx7h
     aliases:
       - CVE-2025-29923
@@ -92,6 +114,28 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability applies to the git-repo volume provisioner, not the k8s client itself.
+
+  - id: CGA-r9fv-v9h9-p5p5
+    aliases:
+      - CVE-2025-4563
+      - GHSA-hj2p-8wj8-pfq4
+    events:
+      - timestamp: 2025-06-24T08:08:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-3.0
+            componentID: 307de1d6c90a8db2
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.32.2
+            componentType: go-module
+            componentLocation: /usr/local/bin/argocd
+            scanner: grype
+      - timestamp: 2025-06-24T09:48:15Z
+        type: fixed
+        data:
+          fixed-version: 3.0.6-r2
 
   - id: CGA-w2xj-jv58-xrqm
     aliases:

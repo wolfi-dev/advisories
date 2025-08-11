@@ -269,6 +269,28 @@ advisories:
              - https://github.com/advisories/GHSA-c2f5-jxjv-2hh8
              - https://github.com/zellij-org/zellij/pull/3902#issuecomment-2565894058
 
+  - id: CGA-wv2m-wgf9-fcpj
+    aliases:
+      - CVE-2025-53901
+      - GHSA-fm79-3f68-h2fc
+    events:
+      - timestamp: 2025-07-20T08:17:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zellij
+            componentID: 36b81b4b8984ca79
+            componentName: wasmtime-wasi
+            componentVersion: 29.0.1
+            componentType: rust-crate
+            componentLocation: /usr/bin/zellij
+            scanner: grype
+      - timestamp: 2025-07-22T09:07:09Z
+        type: pending-upstream-fix
+        data:
+          note: Any attempts to bump the wasmtime dependency to a fixed version result in build failures. Upstream will have to bump the wasmtime dependency and cut a new release with the fixed version.
+
   - id: CGA-wwr7-2chc-98v2
     aliases:
       - CVE-2024-27308

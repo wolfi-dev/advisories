@@ -70,6 +70,28 @@ advisories:
         data:
           fixed-version: 0.4.5-r4
 
+  - id: CGA-9jp7-q8mf-6x85
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T14:42:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: otel-cli
+            componentID: d3bb5af51c043f64
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/otel-cli
+            scanner: grype
+      - timestamp: 2025-08-10T00:57:29Z
+        type: fixed
+        data:
+          fixed-version: 0.4.5-r6
+
   - id: CGA-j8j8-95wp-hc44
     aliases:
       - CVE-2025-22872

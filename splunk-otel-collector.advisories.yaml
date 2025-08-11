@@ -36,6 +36,27 @@ advisories:
         data:
           fixed-version: 0.117.0-r0
 
+  - id: CGA-4wh6-h9gj-89ww
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T11:48:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: splunk-otel-collector
+            componentID: a9b9e65e9ac9d2c3
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol
+            scanner: grype
+      - timestamp: 2025-07-02T10:47:25Z
+        type: fixed
+        data:
+          fixed-version: 0.127.0-r1
+
   - id: CGA-58jh-gh4q-wc8q
     aliases:
       - CVE-2025-22869
@@ -56,6 +77,50 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.120.0-r1
+
+  - id: CGA-59q3-xw5q-pxm4
+    aliases:
+      - CVE-2025-6004
+      - GHSA-qgj7-fmq2-6cc4
+    events:
+      - timestamp: 2025-08-02T08:36:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: splunk-otel-collector
+            componentID: 9e886bdb4a21af77
+            componentName: github.com/hashicorp/vault
+            componentVersion: v1.19.3
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol
+            scanner: grype
+      - timestamp: 2025-08-04T13:02:46Z
+        type: pending-upstream-fix
+        data:
+          note: 'The vulnerability originates from the Vault dependency. Upgrading Vault breaks the build due to a transitive conflict with k8s.io/client-go, which introduces incompatibility with Prometheus libraries. Once Prometheus addresses this (see issue #16767 and PR #16768) and the upstream resolves the issue, we’ll be able to upgrade and remediate the vulnerability.'
+
+  - id: CGA-5fjc-fxmq-vggm
+    aliases:
+      - CVE-2025-4656
+      - GHSA-fhc2-8qx8-6vj7
+    events:
+      - timestamp: 2025-06-28T11:48:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: splunk-otel-collector
+            componentID: fa384ee509444844
+            componentName: github.com/hashicorp/vault
+            componentVersion: v1.19.3
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol
+            scanner: grype
+      - timestamp: 2025-07-02T10:20:09Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability is fixed in vault Enterprise 1.19.6 (which isn't publicly available) and 1.20.0. Unfortunately, due to 1.20.0's updated dependencies, the application fails to build with this version of the vault module. The upstream maintainers will need to update the codebase to be able to work with vault 1.20.0 and it's dependencies
 
   - id: CGA-5gm8-wjgv-74c2
     aliases:
@@ -78,6 +143,50 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.126.0-r1
+
+  - id: CGA-7f4q-7gwf-75fm
+    aliases:
+      - CVE-2025-54388
+      - GHSA-x4rx-4gw3-53p4
+    events:
+      - timestamp: 2025-07-30T08:55:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: splunk-otel-collector
+            componentID: c7b02e0bc4ea45e4
+            componentName: github.com/docker/docker
+            componentVersion: v28.3.2+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol
+            scanner: grype
+      - timestamp: 2025-07-30T11:44:46Z
+        type: fixed
+        data:
+          fixed-version: 0.130.0-r1
+
+  - id: CGA-7p77-qrrp-gc76
+    aliases:
+      - CVE-2025-6014
+      - GHSA-qv3p-fmv3-9hww
+    events:
+      - timestamp: 2025-08-02T08:36:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: splunk-otel-collector
+            componentID: 9e886bdb4a21af77
+            componentName: github.com/hashicorp/vault
+            componentVersion: v1.19.3
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol
+            scanner: grype
+      - timestamp: 2025-08-04T13:02:46Z
+        type: pending-upstream-fix
+        data:
+          note: 'The vulnerability originates from the Vault dependency. Upgrading Vault breaks the build due to a transitive conflict with k8s.io/client-go, which introduces incompatibility with Prometheus libraries. Once Prometheus addresses this (see issue #16767 and PR #16768) and the upstream resolves the issue, we’ll be able to upgrade and remediate the vulnerability.'
 
   - id: CGA-8226-gq6c-h5h6
     aliases:
@@ -181,6 +290,28 @@ advisories:
         data:
           fixed-version: 0.124.0-r1
 
+  - id: CGA-cr3q-j62h-hhrh
+    aliases:
+      - CVE-2025-6037
+      - GHSA-6c5r-4wfc-3mcx
+    events:
+      - timestamp: 2025-08-02T08:36:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: splunk-otel-collector
+            componentID: 9e886bdb4a21af77
+            componentName: github.com/hashicorp/vault
+            componentVersion: v1.19.3
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol
+            scanner: grype
+      - timestamp: 2025-08-04T13:02:46Z
+        type: pending-upstream-fix
+        data:
+          note: 'The vulnerability originates from the Vault dependency. Upgrading Vault breaks the build due to a transitive conflict with k8s.io/client-go, which introduces incompatibility with Prometheus libraries. Once Prometheus addresses this (see issue #16767 and PR #16768) and the upstream resolves the issue, we’ll be able to upgrade and remediate the vulnerability.'
+
   - id: CGA-crqj-9642-5m2w
     aliases:
       - CVE-2019-3826
@@ -270,6 +401,46 @@ advisories:
         data:
           fixed-version: 0.121.0-r3
 
+  - id: CGA-hpvg-w5xf-q7q4
+    aliases:
+      - CVE-2025-6011
+      - GHSA-mwgr-84fv-3jh9
+    events:
+      - timestamp: 2025-08-02T08:36:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: splunk-otel-collector
+            componentID: 9e886bdb4a21af77
+            componentName: github.com/hashicorp/vault
+            componentVersion: v1.19.3
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol
+            scanner: grype
+      - timestamp: 2025-08-04T13:02:46Z
+        type: pending-upstream-fix
+        data:
+          note: 'The vulnerability originates from the Vault dependency. Upgrading Vault breaks the build due to a transitive conflict with k8s.io/client-go, which introduces incompatibility with Prometheus libraries. Once Prometheus addresses this (see issue #16767 and PR #16768) and the upstream resolves the issue, we’ll be able to upgrade and remediate the vulnerability.'
+
+  - id: CGA-jc3f-vrhx-7cp8
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T16:17:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: splunk-otel-collector
+            componentID: ba81e4c6983f8883
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/migratecheckpoint
+            scanner: grype
+
   - id: CGA-jr6h-pq36-654c
     aliases:
       - CVE-2025-29923
@@ -335,6 +506,28 @@ advisories:
         data:
           fixed-version: 0.126.0-r1
 
+  - id: CGA-rpph-38rm-xgx5
+    aliases:
+      - CVE-2025-6013
+      - GHSA-7rx2-769v-hrwf
+    events:
+      - timestamp: 2025-08-08T08:18:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: splunk-otel-collector
+            componentID: 9e886bdb4a21af77
+            componentName: github.com/hashicorp/vault
+            componentVersion: v1.19.3
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol
+            scanner: grype
+      - timestamp: 2025-08-08T09:02:40Z
+        type: pending-upstream-fix
+        data:
+          note: 'The vulnerability originates from the Vault dependency. Upgrading Vault breaks the build due to a transitive conflict with k8s.io/client-go, which introduces incompatibility with Prometheus libraries. Once Prometheus addresses this (see issue #16767 and PR #16768) and the upstream resolves the issue, we’ll be able to upgrade and remediate the vulnerability.'
+
   - id: CGA-rq5h-4h74-4xxm
     aliases:
       - CVE-2025-22872
@@ -356,6 +549,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.123.0-r0
+
+  - id: CGA-rr7r-6cgf-vjqc
+    aliases:
+      - CVE-2025-6000
+      - GHSA-mr4h-qf9j-f665
+    events:
+      - timestamp: 2025-08-02T08:36:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: splunk-otel-collector
+            componentID: 9e886bdb4a21af77
+            componentName: github.com/hashicorp/vault
+            componentVersion: v1.19.3
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol
+            scanner: grype
+      - timestamp: 2025-08-04T13:02:46Z
+        type: pending-upstream-fix
+        data:
+          note: 'The vulnerability originates from the Vault dependency. Upgrading Vault breaks the build due to a transitive conflict with k8s.io/client-go, which introduces incompatibility with Prometheus libraries. Once Prometheus addresses this (see issue #16767 and PR #16768) and the upstream resolves the issue, we’ll be able to upgrade and remediate the vulnerability.'
 
   - id: CGA-v69g-6284-r2qx
     aliases:
@@ -391,6 +606,50 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.117.0-r0
+
+  - id: CGA-w87q-x4rh-255p
+    aliases:
+      - CVE-2025-6015
+      - GHSA-v6r4-35f9-9rpw
+    events:
+      - timestamp: 2025-08-02T08:36:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: splunk-otel-collector
+            componentID: 9e886bdb4a21af77
+            componentName: github.com/hashicorp/vault
+            componentVersion: v1.19.3
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol
+            scanner: grype
+      - timestamp: 2025-08-04T13:02:46Z
+        type: pending-upstream-fix
+        data:
+          note: 'The vulnerability originates from the Vault dependency. Upgrading Vault breaks the build due to a transitive conflict with k8s.io/client-go, which introduces incompatibility with Prometheus libraries. Once Prometheus addresses this (see issue #16767 and PR #16768) and the upstream resolves the issue, we’ll be able to upgrade and remediate the vulnerability.'
+
+  - id: CGA-xgcq-m8cr-rf2h
+    aliases:
+      - CVE-2025-5999
+      - GHSA-6h4p-m86h-hhgh
+    events:
+      - timestamp: 2025-08-02T08:36:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: splunk-otel-collector
+            componentID: 9e886bdb4a21af77
+            componentName: github.com/hashicorp/vault
+            componentVersion: v1.19.3
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol
+            scanner: grype
+      - timestamp: 2025-08-04T13:02:46Z
+        type: pending-upstream-fix
+        data:
+          note: 'The vulnerability originates from the Vault dependency. Upgrading Vault breaks the build due to a transitive conflict with k8s.io/client-go, which introduces incompatibility with Prometheus libraries. Once Prometheus addresses this (see issue #16767 and PR #16768) and the upstream resolves the issue, we’ll be able to upgrade and remediate the vulnerability.'
 
   - id: CGA-xpgr-wj46-h3fx
     aliases:

@@ -164,6 +164,28 @@ advisories:
         data:
           fixed-version: 0.125.3-r0
 
+  - id: CGA-g4w7-7wc5-9rm3
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T14:40:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: hugo-extended
+            componentID: a42946d837edf8be
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/hugo
+            scanner: grype
+      - timestamp: 2025-08-10T00:55:12Z
+        type: fixed
+        data:
+          fixed-version: 0.148.2-r1
+
   - id: CGA-h69j-m658-9h7r
     aliases:
       - CVE-2024-24791

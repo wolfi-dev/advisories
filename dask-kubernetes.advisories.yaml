@@ -4,6 +4,28 @@ package:
   name: dask-kubernetes
 
 advisories:
+  - id: CGA-47mv-9275-x659
+    aliases:
+      - CVE-2025-50182
+      - GHSA-48p4-8xcf-vxj5
+    events:
+      - timestamp: 2025-06-19T07:18:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dask-kubernetes
+            componentID: 7f357d5b73f0fecd
+            componentName: urllib3
+            componentVersion: 2.4.0
+            componentType: python
+            componentLocation: /usr/share/dask-kubernetes/lib/python3.10/site-packages/urllib3-2.4.0.dist-info/METADATA, /usr/share/dask-kubernetes/lib/python3.10/site-packages/urllib3-2.4.0.dist-info/RECORD
+            scanner: grype
+      - timestamp: 2025-06-27T00:04:59Z
+        type: fixed
+        data:
+          fixed-version: 2025.4.3-r4
+
   - id: CGA-6qhf-xpv9-p6xw
     aliases:
       - CVE-2025-47287
@@ -47,3 +69,52 @@ advisories:
         type: fixed
         data:
           fixed-version: 2025.4.3-r2
+      - timestamp: 2025-06-13T01:02:08Z
+        type: false-positive-determination
+        data:
+          type: inline-mitigations-exist
+          note: py3-pip installs a patched version of 2.32.3 requests.py which contains the upstream fix for CVE-2024-47081, reference https://github.com/wolfi-dev/os/pull/55998/files. The version referenced in the vendor.txt is not vulnerable
+
+  - id: CGA-w2fp-6749-5q82
+    aliases:
+      - CVE-2025-53643
+      - GHSA-9548-qrrj-x5pj
+    events:
+      - timestamp: 2025-07-16T07:16:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dask-kubernetes
+            componentID: 7d27e7464ff60c2f
+            componentName: aiohttp
+            componentVersion: 3.12.13
+            componentType: python
+            componentLocation: /usr/share/dask-kubernetes/lib/python3.10/site-packages/aiohttp-3.12.13.dist-info/METADATA
+            scanner: grype
+      - timestamp: 2025-07-17T17:03:23Z
+        type: fixed
+        data:
+          fixed-version: 2025.7.0-r1
+
+  - id: CGA-xg36-3jm9-q638
+    aliases:
+      - CVE-2025-50181
+      - GHSA-pq67-6m6q-mj2v
+    events:
+      - timestamp: 2025-06-19T07:18:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dask-kubernetes
+            componentID: 7f357d5b73f0fecd
+            componentName: urllib3
+            componentVersion: 2.4.0
+            componentType: python
+            componentLocation: /usr/share/dask-kubernetes/lib/python3.10/site-packages/urllib3-2.4.0.dist-info/METADATA, /usr/share/dask-kubernetes/lib/python3.10/site-packages/urllib3-2.4.0.dist-info/RECORD
+            scanner: grype
+      - timestamp: 2025-06-27T00:05:00Z
+        type: fixed
+        data:
+          fixed-version: 2025.4.3-r4

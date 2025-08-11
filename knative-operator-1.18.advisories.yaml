@@ -4,6 +4,28 @@ package:
   name: knative-operator-1.18
 
 advisories:
+  - id: CGA-62r4-45p4-4f72
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T13:26:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: knative-operator-1.18
+            componentID: 6e06245650322c85
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/webhook
+            scanner: grype
+      - timestamp: 2025-08-09T22:32:57Z
+        type: fixed
+        data:
+          fixed-version: 1.18.1-r4
+
   - id: CGA-9x3p-xm8q-hmvx
     aliases:
       - CVE-2025-22868

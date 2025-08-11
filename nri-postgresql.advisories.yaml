@@ -112,6 +112,27 @@ advisories:
         data:
           fixed-version: 2.13.7-r1
 
+  - id: CGA-j82r-vhwp-q54j
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T09:07:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-postgresql
+            componentID: e3d3bee7d17c3ac9
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/nri-postgresql
+            scanner: grype
+      - timestamp: 2025-06-28T12:03:07Z
+        type: fixed
+        data:
+          fixed-version: 2.19.0-r1
+
   - id: CGA-jfhm-rrrf-8qmm
     aliases:
       - CVE-2025-22871
@@ -143,6 +164,32 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.13.5-r1
+
+  - id: CGA-mhr4-59x2-fh6c
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T19:38:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-postgresql
+            componentID: ea6fb7c745f066bc
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/nri-postgresql
+            scanner: grype
+      - timestamp: 2025-08-10T09:03:47Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in nri-postgresql-2.20.0-r0.apk, at usr/bin/nri-postgresql, usr/bin/nri-postgresql.'
+      - timestamp: 2025-08-10T10:32:50Z
+        type: fixed
+        data:
+          fixed-version: 2.20.0-r1
 
   - id: CGA-p2xh-gj3q-gv74
     aliases:

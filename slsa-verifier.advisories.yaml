@@ -503,6 +503,28 @@ advisories:
         data:
           fixed-version: 2.4.1-r2
 
+  - id: CGA-hfvv-cfhm-wmxf
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T10:51:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: slsa-verifier
+            componentID: 355c1c103bf66a7f
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/slsa-verifier
+            scanner: grype
+      - timestamp: 2025-08-09T18:36:26Z
+        type: fixed
+        data:
+          fixed-version: 2.7.1-r2
+
   - id: CGA-j79j-mmh8-xg6w
     aliases:
       - CVE-2024-45337

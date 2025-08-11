@@ -1,0 +1,93 @@
+schema-version: 2.0.2
+
+package:
+  name: terraform-mcp-server
+
+advisories:
+  - id: CGA-hgvw-r2c3-9f8m
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T21:17:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-mcp-server
+            componentID: 2cef4b5992cc2e99
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-mcp-server
+            scanner: grype
+      - timestamp: 2025-08-11T08:25:53Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
+  - id: CGA-mgmh-fx86-9gmw
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T12:04:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-mcp-server
+            componentID: 5dc1876857a3b0e6
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-mcp-server
+            scanner: grype
+      - timestamp: 2025-06-28T16:32:57Z
+        type: fixed
+        data:
+          fixed-version: 0.1.0-r2
+
+  - id: CGA-mvvp-4c29-wpjr
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T21:34:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-mcp-server
+            componentID: c4fdc354917c1486
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-mcp-server
+            scanner: grype
+      - timestamp: 2025-06-18T07:49:06Z
+        type: fixed
+        data:
+          fixed-version: 0.1.0-r1
+
+  - id: CGA-q354-fr6v-7vh2
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T21:34:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-mcp-server
+            componentID: c4fdc354917c1486
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-mcp-server
+            scanner: grype
+      - timestamp: 2025-06-18T07:49:07Z
+        type: fixed
+        data:
+          fixed-version: 0.1.0-r1

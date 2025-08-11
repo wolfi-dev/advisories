@@ -53,6 +53,29 @@ advisories:
         data:
           fixed-version: 8.1.30-r0
 
+  - id: CGA-55fq-mr4j-wr79
+    aliases:
+      - CVE-2007-4889
+      - GHSA-chpc-3cm4-f9gq
+    events:
+      - timestamp: 2025-07-09T09:23:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: php-8.1
+            componentID: 543fd8117ffa9ef6
+            componentName: php-8.1
+            componentVersion: 8.1.32-r44
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2025-07-16T14:31:06Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Only PHP versions 5.2.4 and earlier are affected, and the issue is specific to the MySQL extension. Versions in the 8.x series are not impacted.
+
   - id: CGA-568h-6xvh-f876
     aliases:
       - CVE-2015-3211

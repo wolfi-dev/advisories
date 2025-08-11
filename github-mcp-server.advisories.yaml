@@ -1,0 +1,26 @@
+schema-version: 2.0.2
+
+package:
+  name: github-mcp-server
+
+advisories:
+  - id: CGA-f284-vmpw-vjx3
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T08:04:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: github-mcp-server
+            componentID: 0b6b96d4db64a6d1
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/github-mcp-server
+            scanner: grype
+      - timestamp: 2025-06-28T09:31:58Z
+        type: fixed
+        data:
+          fixed-version: 0.5.0-r1

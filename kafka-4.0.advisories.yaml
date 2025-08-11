@@ -25,3 +25,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 4.0.0-r42
+
+  - id: CGA-9j28-2jv5-qv67
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2025-07-12T09:17:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kafka-4.0
+            componentID: 01e6005565ec6e7a
+            componentName: commons-lang3
+            componentVersion: 3.12.0
+            componentType: java-archive
+            componentLocation: /usr/lib/kafka/libs/commons-lang3-3.12.0.jar
+            scanner: grype
+      - timestamp: 2025-07-17T07:34:08Z
+        type: fixed
+        data:
+          fixed-version: 4.0.0-r44

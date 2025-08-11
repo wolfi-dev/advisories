@@ -1,0 +1,217 @@
+schema-version: 2.0.2
+
+package:
+  name: spark-4.0
+
+advisories:
+  - id: CGA-3492-82f5-v4c9
+    aliases:
+      - CVE-2025-53864
+      - GHSA-xwmg-2g98-w7v9
+    events:
+      - timestamp: 2025-07-12T09:46:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-4.0-scala-2.13
+            componentID: d39b6bbc5730c6e9
+            componentName: nimbus-jose-jwt
+            componentVersion: 9.37.2
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.4.1.jar
+            scanner: grype
+      - timestamp: 2025-07-17T18:19:18Z
+        type: pending-upstream-fix
+        data:
+          note: Upstream maintainers will need to update the nimbus-jose-jwt versions to newer ones, as there are several different version references that utilize shaded JARs. Attempts to rebuild with newer versions resulted in conflicts and build issues
+
+  - id: CGA-53qq-qh98-q7jv
+    aliases:
+      - CVE-2025-49128
+      - GHSA-wf8f-6423-gfxg
+    events:
+      - timestamp: 2025-06-25T08:54:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-4.0-scala-2.13
+            componentID: 670135809f216c07
+            componentName: jackson-core
+            componentVersion: 2.12.7
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.4.1.jar
+            scanner: grype
+      - timestamp: 2025-06-25T21:47:44Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            Upstream maintainers must cut a Hadoop release with Avro 1.11.4+ to resolve this CVE. The vulnerability is in jackson-core 2.12.7 bundled within hadoop-client-runtime-3.4.1.jar. Spark PR #40933 (SPARK-43263) attempted to upgrade Jackson to 2.15.0 but encountered dependency conflicts with Avro 1.11.1 which still pulls Jackson 2.12.7. The PR discussion confirmed that Avro must be upgraded first, which requires a new Hadoop release. CVE-2025-49128 is fixed in Jackson 2.13.0+.
+            Reference: https://github.com/apache/spark/pull/40933#issuecomment-1536432927
+
+  - id: CGA-57mq-pmr4-4pfr
+    aliases:
+      - CVE-2023-39410
+      - GHSA-rhrv-645h-fjfh
+    events:
+      - timestamp: 2025-06-25T08:54:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-4.0-scala-2.13
+            componentID: 892d79c24385e327
+            componentName: avro
+            componentVersion: 1.9.2
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.4.1.jar
+            scanner: grype
+      - timestamp: 2025-06-25T21:48:16Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            Upstream maintainers must cut a Hadoop release with Avro 1.11.4 to resolve these CVEs. PR #7615 (HADOOP-19315) has been merged on 2025-04-15 which upgrades Avro from 1.9.2 to 1.11.4. This addresses both CVE-2024-47561 (critical severity) and CVE-2023-39410 (high severity) in the avro 1.9.2 dependency bundled within hadoop-client-runtime-3.4.1.jar. The PR notes this change is not backwards compatible due to Avro's requirement for setter/getter methods and serializable package declarations.
+            Reference: https://github.com/apache/hadoop/pull/7615
+
+  - id: CGA-5r69-5643-cjc8
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2025-07-12T09:46:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-4.0-scala-2.13
+            componentID: e905a1812e8796ab
+            componentName: commons-lang
+            componentVersion: "2.6"
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/commons-lang-2.6.jar
+            scanner: grype
+      - timestamp: 2025-07-17T18:18:46Z
+        type: pending-upstream-fix
+        data:
+          note: 'As per the advisory commons-lang has no patched version and as per the description, upstream package maintainers of commons-lang recommend to upgrade to commons-lang3 version 3.18.0 or greater. Upstream has to upgrade their dependency in order to fix this CVE. More information on the advisory: https://github.com/advisories/GHSA-j288-q9x7-2f5v'
+
+  - id: CGA-9h2q-jvgf-3h42
+    aliases:
+      - CVE-2024-6763
+      - GHSA-qh8g-58pp-2wxh
+    events:
+      - timestamp: 2025-06-25T08:54:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-4.0-scala-2.13
+            componentID: 896bfb5153c14c46
+            componentName: jetty-http
+            componentVersion: 11.0.24
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/spark-core_2.13-4.0.0.jar
+            scanner: grype
+      - timestamp: 2025-06-25T21:47:27Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            Upstream maintainers must complete the migration from Jetty 11 to Jetty 12 to resolve this CVE. PR #45500 (SPARK-47086) was opened on 2024-03-13 but was closed without merging. The migration is complex as it requires updating all Jetty multiple dependency and API changes. Spark currently uses jetty-http 11.0.24 in spark-core_2.13-4.0.0.jar. CVE-2024-6763 is fixed in Jetty 12.0.12.
+            Reference: https://github.com/apache/spark/pull/45500
+
+  - id: CGA-fc3h-q37m-f2mr
+    aliases:
+      - CVE-2025-48734
+      - GHSA-wxr5-93ph-8wr9
+    events:
+      - timestamp: 2025-06-25T08:54:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-4.0-scala-2.13
+            componentID: 8dbf9f87c164e755
+            componentName: commons-beanutils
+            componentVersion: 1.9.4
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.4.1.jar
+            scanner: grype
+      - timestamp: 2025-06-25T21:47:11Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            Upstream maintainers must cut a Hadoop release with the following changes to resolve this CVE. The fix has already been merged in PR #7524 (HADOOP-18991) which removes the unused commons-beanutils dependency entirely from Hadoop 3. The PR was merged on 2025-03-20. Spark depends on hadoop-client-runtime-3.4.1.jar which bundles this vulnerable dependency.
+            Reference: https://github.com/apache/hadoop/pull/7524
+
+  - id: CGA-g97v-9xqj-c4w6
+    aliases:
+      - CVE-2024-47561
+      - GHSA-r7pg-v2c8-mfg3
+    events:
+      - timestamp: 2025-06-25T08:54:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-4.0-scala-2.13
+            componentID: 892d79c24385e327
+            componentName: avro
+            componentVersion: 1.9.2
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.4.1.jar
+            scanner: grype
+      - timestamp: 2025-06-25T21:48:16Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            Upstream maintainers must cut a Hadoop release with Avro 1.11.4 to resolve these CVEs. PR #7615 (HADOOP-19315) has been merged on 2025-04-15 which upgrades Avro from 1.9.2 to 1.11.4. This addresses both CVE-2024-47561 (critical severity) and CVE-2023-39410 (high severity) in the avro 1.9.2 dependency bundled within hadoop-client-runtime-3.4.1.jar. The PR notes this change is not backwards compatible due to Avro's requirement for setter/getter methods and serializable package declarations.
+            Reference: https://github.com/apache/hadoop/pull/7615
+
+  - id: CGA-j65h-5q2m-5f9r
+    aliases:
+      - CVE-2025-52999
+      - GHSA-h46c-h94j-95f3
+    events:
+      - timestamp: 2025-06-28T13:45:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-4.0-scala-2.13
+            componentID: 670135809f216c07
+            componentName: jackson-core
+            componentVersion: 2.12.7
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hadoop-client-runtime-3.4.1.jar
+            scanner: grype
+      - timestamp: 2025-07-02T18:30:00Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            Upstream maintainers must cut a Hadoop release with Avro 1.11.4+ to resolve this CVE. The vulnerability is in jackson-core 2.12.7 bundled within hadoop-client-runtime-3.4.1.jar. Spark PR #40933 (SPARK-43263) attempted to upgrade Jackson to 2.15.0 but encountered dependency conflicts with Avro 1.11.1 which still pulls Jackson 2.12.7. The PR discussion confirmed that Avro must be upgraded first, which requires a new Hadoop release. CVE-2025-52999 is fixed in Jackson 2.15.0+.
+            Reference: https://github.com/apache/spark/pull/40933#issuecomment-1536432927
+
+  - id: CGA-q4vv-qgcf-g8h6
+    aliases:
+      - CVE-2024-29869
+      - GHSA-c476-j253-5rgq
+    events:
+      - timestamp: 2025-06-25T08:54:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-4.0-scala-2.13
+            componentID: e61a3017b2bd22d2
+            componentName: hive-exec
+            componentVersion: 2.3.10
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hive-exec-2.3.10-core.jar
+            scanner: grype
+      - timestamp: 2025-06-25T21:48:01Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            Upstream maintainers must upgrade Hive from 2.3.10 to 4.0.1+ to resolve this CVE. JIRA ticket SPARK-52408 tracks this upgrade request. The vulnerability CVE-2024-29869 affects hive-exec 2.3.10 which is bundled in hive-exec-2.3.10-core.jar. This is a significant upgrade as Hive 4.x has major API changes compared to 2.x series.
+            Reference: https://issues.apache.org/jira/browse/SPARK-52408

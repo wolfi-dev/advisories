@@ -25,6 +25,28 @@ advisories:
         data:
           fixed-version: 1.17.1-r22
 
+  - id: CGA-6x69-gpvq-5cmp
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T13:27:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.17
+            componentID: 34fc017a5287ce45
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/cilium-operator-aws
+            scanner: grype
+      - timestamp: 2025-08-09T22:53:39Z
+        type: fixed
+        data:
+          fixed-version: 1.17.6-r2
+
   - id: CGA-73x7-gqq2-gjpg
     aliases:
       - CVE-2025-22871

@@ -1,0 +1,72 @@
+schema-version: 2.0.2
+
+package:
+  name: kube-vip-cloud-provider
+
+advisories:
+  - id: CGA-69xx-xf8r-5m92
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-15T04:03:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-vip-cloud-provider
+            componentID: c8255e8a2fa62dec
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/kube-vip-cloud-provider
+            scanner: grype
+      - timestamp: 2025-06-18T07:43:20Z
+        type: fixed
+        data:
+          fixed-version: 0.0.12-r2
+
+  - id: CGA-jhrp-6fpv-jv79
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-15T04:03:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-vip-cloud-provider
+            componentID: c8255e8a2fa62dec
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/kube-vip-cloud-provider
+            scanner: grype
+      - timestamp: 2025-06-18T07:43:21Z
+        type: fixed
+        data:
+          fixed-version: 0.0.12-r2
+
+  - id: CGA-m9q6-2rxx-84c4
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T03:50:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-vip-cloud-provider
+            componentID: 508bc0fab52c2769
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/kube-vip-cloud-provider
+            scanner: grype
+      - timestamp: 2025-08-10T14:30:18Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.

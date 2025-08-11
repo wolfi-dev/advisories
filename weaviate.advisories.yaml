@@ -25,6 +25,28 @@ advisories:
         data:
           fixed-version: 1.25.6-r1
 
+  - id: CGA-4gj7-xw35-6wfx
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T17:19:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: weaviate
+            componentID: 86191b412a540ed2
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/weaviate
+            scanner: grype
+      - timestamp: 2025-08-10T07:54:01Z
+        type: fixed
+        data:
+          fixed-version: 1.32.2-r1
+
   - id: CGA-583w-rv69-wmxv
     aliases:
       - CVE-2025-22868

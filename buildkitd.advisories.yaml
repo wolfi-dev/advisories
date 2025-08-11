@@ -210,6 +210,28 @@ advisories:
         data:
           fixed-version: 0.14.1-r1
 
+  - id: CGA-7h53-78f9-pqf2
+    aliases:
+      - CVE-2025-54388
+      - GHSA-x4rx-4gw3-53p4
+    events:
+      - timestamp: 2025-07-30T07:05:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buildkitd
+            componentID: e193718b6ac03b9f
+            componentName: github.com/docker/docker
+            componentVersion: v28.2.2+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/buildkitd
+            scanner: grype
+      - timestamp: 2025-07-30T08:50:01Z
+        type: fixed
+        data:
+          fixed-version: 0.23.2-r2
+
   - id: CGA-7x48-64j5-42pf
     aliases:
       - CVE-2024-34155
@@ -309,6 +331,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.13.2-r1
+
+  - id: CGA-c6fj-w86g-3vm8
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T09:48:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buildkitd
+            componentID: 482c081d4688efc3
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/buildctl
+            scanner: grype
+      - timestamp: 2025-08-09T13:20:35Z
+        type: fixed
+        data:
+          fixed-version: 0.23.2-r3
 
   - id: CGA-cffc-qx4h-898j
     aliases:

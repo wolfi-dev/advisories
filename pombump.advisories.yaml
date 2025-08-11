@@ -259,6 +259,28 @@ advisories:
         data:
           fixed-version: 0.0.11-r1
 
+  - id: CGA-prx9-c9h9-h2rv
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T16:46:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pombump
+            componentID: ffd46cd3047d76ee
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/pombump
+            scanner: grype
+      - timestamp: 2025-08-10T06:48:24Z
+        type: fixed
+        data:
+          fixed-version: 0.0.14-r3
+
   - id: CGA-qv7w-539h-4rr5
     aliases:
       - CVE-2025-22874

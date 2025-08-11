@@ -155,6 +155,10 @@ advisories:
         type: true-positive-determination
         data:
           note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in grafana-agent-operator-0.44.2-r37.apk, at usr/bin/grafana-agent-operator, usr/bin/grafana-agent-operator.'
+      - timestamp: 2025-06-18T08:42:45Z
+        type: pending-upstream-fix
+        data:
+          note: 'Currently grafana-agent-operator is dependent on golang 1.22. There is work upstream to bump the golang version to 1.24, and we are pending for upstream to cut a version with the new golang version in order to fix this CVE. More information can be found here: https://github.com/grafana/agent/commit/1d3100817f6c84454ee9155c7bdfe6008dd15ef8'
 
   - id: CGA-7cq7-w454-vc9w
     aliases:
@@ -195,6 +199,37 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/grafana-agent-operator
             scanner: grype
+      - timestamp: 2025-06-16T07:08:43Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in grafana-agent-operator-0.44.2-r37.apk, at usr/bin/grafana-agent-operator, usr/bin/grafana-agent-operator.'
+      - timestamp: 2025-06-18T08:37:15Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: 'This vulnerability is part of the policy validation in crypto/x509 which was only introduced in 1.24, earlier golang versions are not affected by this CVE. More information can be found at: https://github.com/golang/go/issues/73612\#issuecomment-2977963004'
+
+  - id: CGA-8mp8-wmmq-j9j7
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T15:40:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-agent-operator
+            componentID: 55c22c31f1c3d9b7
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/grafana-agent-operator
+            scanner: grype
+      - timestamp: 2025-08-10T04:44:25Z
+        type: fixed
+        data:
+          fixed-version: 0.44.3-r3
 
   - id: CGA-8x4h-m585-6pxf
     aliases:

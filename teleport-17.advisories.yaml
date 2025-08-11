@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: teleport-17
+
+advisories:
+  - id: CGA-fr27-9xq4-vm22
+    aliases:
+      - CVE-2025-53547
+      - GHSA-557j-xg8c-q2mm
+    events:
+      - timestamp: 2025-07-09T09:28:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: teleport-17
+            componentID: d42eb919e6406514
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.17.3
+            componentType: go-module
+            componentLocation: /usr/local/bin/teleport
+            scanner: grype
+      - timestamp: 2025-07-11T15:03:02Z
+        type: fixed
+        data:
+          fixed-version: 17.5.4-r1
+
+  - id: CGA-g8rp-pp59-v4x5
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T11:24:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: teleport-17
+            componentID: 17f3026f231537f1
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/local/bin/tbot
+            scanner: grype
+      - timestamp: 2025-08-10T16:22:41Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in teleport-17-17.7.1-r0.apk, at usr/local/bin/tctl, usr/local/bin/tctl, usr/local/bin/teleport, usr/local/bin/teleport.'

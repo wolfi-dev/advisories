@@ -25,6 +25,10 @@ advisories:
         type: true-positive-determination
         data:
           note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in rancher-helm-3-3.17.0-r1.apk, at usr/bin/rancher-helm, usr/bin/rancher-helm.'
+      - timestamp: 2025-06-17T14:03:45Z
+        type: fixed
+        data:
+          fixed-version: 3.17.0-r2
 
   - id: CGA-7v4m-qhf9-5577
     aliases:
@@ -48,6 +52,28 @@ advisories:
         data:
           fixed-version: 3.17.0-r1
 
+  - id: CGA-fmwh-qrr3-68wc
+    aliases:
+      - CVE-2025-53547
+      - GHSA-557j-xg8c-q2mm
+    events:
+      - timestamp: 2025-07-09T11:30:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-helm-3
+            componentID: 9007602dc6f513ef
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.18.3
+            componentType: go-module
+            componentLocation: /usr/bin/rancher-helm
+            scanner: grype
+      - timestamp: 2025-07-11T10:54:07Z
+        type: pending-upstream-fix
+        data:
+          note: Remediation of this vulnerability requires upstream to build, release, and publish a new tagged version incorporating Helm v3.18.4, which includes the necessary fix. Once upstream has completed this process, we will be able to update our package accordingly and fully address the associated CVE.
+
   - id: CGA-gcmq-85mj-w4m9
     aliases:
       - CVE-2025-4673
@@ -65,6 +91,14 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/rancher-helm
             scanner: grype
+      - timestamp: 2025-06-16T07:12:23Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in rancher-helm-3-3.17.0-r1.apk, at usr/bin/rancher-helm, usr/bin/rancher-helm.'
+      - timestamp: 2025-06-17T14:03:47Z
+        type: fixed
+        data:
+          fixed-version: 3.17.0-r2
 
   - id: CGA-hhjm-xw7g-52g6
     aliases:

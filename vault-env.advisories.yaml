@@ -4,6 +4,50 @@ package:
   name: vault-env
 
 advisories:
+  - id: CGA-62wm-6mxq-mq68
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T23:17:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-env
+            componentID: 47b76af328a59edd
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/vault-env
+            scanner: grype
+      - timestamp: 2025-06-18T08:40:03Z
+        type: fixed
+        data:
+          fixed-version: 1.21.9-r2
+
+  - id: CGA-89h3-749c-pfh5
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T23:17:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-env
+            componentID: 47b76af328a59edd
+            componentName: stdlib
+            componentVersion: go1.24.3
+            componentType: go-module
+            componentLocation: /usr/bin/vault-env
+            scanner: grype
+      - timestamp: 2025-06-18T08:40:04Z
+        type: fixed
+        data:
+          fixed-version: 1.21.9-r2
+
   - id: CGA-q8f5-jq46-h79f
     aliases:
       - CVE-2025-22872
@@ -25,3 +69,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.21.8-r2
+
+  - id: CGA-rh85-xxhj-hp8c
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T16:15:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-env
+            componentID: 5407297de7345162
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/vault-env
+            scanner: grype
+      - timestamp: 2025-08-10T05:56:48Z
+        type: fixed
+        data:
+          fixed-version: 1.22.0-r2

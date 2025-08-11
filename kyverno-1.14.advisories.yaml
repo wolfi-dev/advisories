@@ -4,6 +4,28 @@ package:
   name: kyverno-1.14
 
 advisories:
+  - id: CGA-8mrf-w76r-qwq9
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T22:43:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-1.14
+            componentID: 22f165daa64372f8
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/kyvernopre
+            scanner: grype
+      - timestamp: 2025-08-10T16:40:14Z
+        type: fixed
+        data:
+          fixed-version: 1.14.4-r4
+
   - id: CGA-933x-h582-mc49
     aliases:
       - CVE-2025-30204
@@ -72,6 +94,27 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.14.2-r1
+
+  - id: CGA-pmc7-82wx-fmvm
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T12:48:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-1.14
+            componentID: 6acf317c1e9358e4
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/kyvernopre
+            scanner: grype
+      - timestamp: 2025-07-02T11:19:44Z
+        type: fixed
+        data:
+          fixed-version: 1.14.4-r1
 
   - id: CGA-wxm8-mhxc-hx28
     aliases:

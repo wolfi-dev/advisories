@@ -4,6 +4,28 @@ package:
   name: argocd-image-updater
 
 advisories:
+  - id: CGA-3gr6-qqw3-rph3
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T10:31:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argocd-image-updater
+            componentID: f66e5c757fb83f1b
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/argocd-image-updater
+            scanner: grype
+      - timestamp: 2025-08-09T17:33:13Z
+        type: fixed
+        data:
+          fixed-version: 0.16.0-r6
+
   - id: CGA-4vxc-2qw8-5v4q
     aliases:
       - CVE-2025-21614

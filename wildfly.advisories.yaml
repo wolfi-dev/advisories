@@ -4,6 +4,46 @@ package:
   name: wildfly
 
 advisories:
+  - id: CGA-23gq-pg4q-v3j8
+    aliases:
+      - CVE-2025-48913
+      - GHSA-g4px-6qhm-hqjm
+    events:
+      - timestamp: 2025-08-10T21:33:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wildfly-openjdk-21
+            componentID: 01da99698f7cc844
+            componentName: cxf-rt-transports-jms
+            componentVersion: 4.0.6
+            componentType: java-archive
+            componentLocation: /usr/share/wildfly/modules/system/layers/base/org/apache/cxf/impl/main/cxf-rt-transports-jms-4.0.6.jar
+            scanner: grype
+
+  - id: CGA-2f5p-cqpg-v8x3
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2025-07-12T08:46:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wildfly-openjdk-21
+            componentID: 47c8d647f56bd4fe
+            componentName: commons-lang3
+            componentVersion: 3.17.0
+            componentType: java-archive
+            componentLocation: /usr/share/wildfly/modules/system/layers/base/org/apache/commons/lang3/main/commons-lang3-3.17.0.jar
+            scanner: grype
+      - timestamp: 2025-07-16T23:52:53Z
+        type: fixed
+        data:
+          fixed-version: 36.0.1-r6
+
   - id: CGA-3vm3-626v-4449
     aliases:
       - CVE-2025-25193
@@ -25,6 +65,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 35.0.1-r12
+
+  - id: CGA-6v9p-wm84-xhmx
+    aliases:
+      - CVE-2025-53864
+      - GHSA-xwmg-2g98-w7v9
+    events:
+      - timestamp: 2025-07-12T08:46:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wildfly-openjdk-21
+            componentID: 6ca7cc84755c11df
+            componentName: nimbus-jose-jwt
+            componentVersion: 9.37.3
+            componentType: java-archive
+            componentLocation: /usr/share/wildfly/modules/system/layers/base/com/nimbusds/nimbus-jose-jwt/main/nimbus-jose-jwt-9.37.3.jar
+            scanner: grype
+      - timestamp: 2025-07-16T23:52:54Z
+        type: fixed
+        data:
+          fixed-version: 36.0.1-r6
 
   - id: CGA-8cmp-36fq-9hjp
     aliases:
@@ -69,6 +131,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 36.0.1-r1
+
+  - id: CGA-9p3g-h7rf-w2f3
+    aliases:
+      - CVE-2025-7962
+      - GHSA-9342-92gg-6v29
+    events:
+      - timestamp: 2025-08-08T07:16:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wildfly-openjdk-21
+            componentID: 96c92b78afc69ece
+            componentName: smtp
+            componentVersion: 2.0.3
+            componentType: java-archive
+            componentLocation: /usr/share/wildfly/modules/system/layers/base/org/eclipse/angus/mail/main/angus-mail-2.0.3.jar
+            scanner: grype
 
   - id: CGA-hf6h-4wjh-fpvq
     aliases:
@@ -151,6 +231,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 35.0.1-r14
+
+  - id: CGA-r684-752m-6g5h
+    aliases:
+      - CVE-2025-48795
+      - GHSA-36wv-v2qp-v4g4
+    events:
+      - timestamp: 2025-07-17T07:39:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wildfly-openjdk-21
+            componentID: 07beafc194fb33be
+            componentName: cxf-core
+            componentVersion: 4.0.6
+            componentType: java-archive
+            componentLocation: /usr/share/wildfly/modules/system/layers/base/org/apache/cxf/main/cxf-core-4.0.6.jar
+            scanner: grype
+      - timestamp: 2025-07-21T09:50:38Z
+        type: fixed
+        data:
+          fixed-version: 36.0.1-r7
 
   - id: CGA-vpqx-mv83-m9q3
     aliases:

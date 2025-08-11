@@ -299,6 +299,28 @@ advisories:
         data:
           fixed-version: 2.68.1-r2
 
+  - id: CGA-hq9j-vfc9-w5w3
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T09:50:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gh
+            componentID: 04ebee719f2a47c2
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/gh
+            scanner: grype
+      - timestamp: 2025-08-11T07:07:09Z
+        type: fixed
+        data:
+          fixed-version: 2.76.2-r1
+
   - id: CGA-j38x-j245-m645
     aliases:
       - CVE-2024-24789
@@ -444,3 +466,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.56.0-r0
+
+  - id: CGA-xfh8-5m86-f927
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T09:10:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gh
+            componentID: 6e500e7f01bd53f7
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/gh
+            scanner: grype
+      - timestamp: 2025-06-28T12:17:56Z
+        type: fixed
+        data:
+          fixed-version: 2.74.2-r1

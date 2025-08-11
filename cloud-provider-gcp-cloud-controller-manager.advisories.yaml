@@ -1,0 +1,112 @@
+schema-version: 2.0.2
+
+package:
+  name: cloud-provider-gcp-cloud-controller-manager
+
+advisories:
+  - id: CGA-4q8h-mfrw-ch4p
+    aliases:
+      - CVE-2024-45338
+      - GHSA-w32m-9786-jp63
+    events:
+      - timestamp: 2025-08-06T09:52:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-provider-gcp-cloud-controller-manager
+            componentID: 95e6b7ee68de41f2
+            componentName: golang.org/x/net
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/cloud-controller-manager
+            scanner: grype
+      - timestamp: 2025-08-07T07:05:01Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
+  - id: CGA-p5j4-wj3f-cfhg
+    aliases:
+      - CVE-2025-4563
+      - GHSA-hj2p-8wj8-pfq4
+    events:
+      - timestamp: 2025-08-06T09:52:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-provider-gcp-cloud-controller-manager
+            componentID: 58b0acc34bb87c51
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.33.1
+            componentType: go-module
+            componentLocation: /usr/bin/cloud-controller-manager
+            scanner: grype
+
+  - id: CGA-q966-fpjv-v4wj
+    aliases:
+      - CVE-2025-22870
+      - GHSA-qxp5-gwg8-xv66
+    events:
+      - timestamp: 2025-08-06T09:52:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-provider-gcp-cloud-controller-manager
+            componentID: 95e6b7ee68de41f2
+            componentName: golang.org/x/net
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/cloud-controller-manager
+            scanner: grype
+      - timestamp: 2025-08-07T08:31:00Z
+        type: fixed
+        data:
+          fixed-version: 33.1.1-r1
+
+  - id: CGA-v6w9-7xwg-jwcj
+    aliases:
+      - CVE-2023-45288
+      - GHSA-4v7x-pqxf-cx7m
+    events:
+      - timestamp: 2025-08-06T09:52:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-provider-gcp-cloud-controller-manager
+            componentID: 95e6b7ee68de41f2
+            componentName: golang.org/x/net
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/cloud-controller-manager
+            scanner: grype
+      - timestamp: 2025-08-07T08:31:00Z
+        type: fixed
+        data:
+          fixed-version: 33.1.1-r1
+
+  - id: CGA-wp5x-fc34-x3mr
+    aliases:
+      - CVE-2025-22872
+      - GHSA-vvgc-356p-c3xw
+    events:
+      - timestamp: 2025-08-06T09:52:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-provider-gcp-cloud-controller-manager
+            componentID: 95e6b7ee68de41f2
+            componentName: golang.org/x/net
+            componentVersion: v0.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/cloud-controller-manager
+            scanner: grype
+      - timestamp: 2025-08-07T08:31:01Z
+        type: fixed
+        data:
+          fixed-version: 33.1.1-r1

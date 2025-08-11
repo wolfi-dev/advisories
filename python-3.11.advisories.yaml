@@ -167,6 +167,28 @@ advisories:
         data:
           fixed-version: 3.11.10-r4
 
+  - id: CGA-gp2p-f37q-cw35
+    aliases:
+      - CVE-2025-8194
+      - GHSA-v594-44hm-2j7p
+    events:
+      - timestamp: 2025-07-30T09:46:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: python-3.11
+            componentID: ab9d94cd6bbb0dc1
+            componentName: python-3.11
+            componentVersion: 3.11.13-r3
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2025-08-01T00:32:04Z
+        type: pending-upstream-fix
+        data:
+          note: 'Upstream maintainers must release the backport PR for Python 3.11. The tarfile validation fix from gh-130577 is ready for 3.11 via PR #137172 but not yet merged and released. CVE-2025-8194 is fixed in Python 3.13.5+ but requires backporting to 3.11 branch. Reference: https://github.com/python/cpython/pull/137172'
+
   - id: CGA-h6qq-2p9f-rrpx
     aliases:
       - CVE-2007-4559
@@ -263,6 +285,28 @@ advisories:
         data:
           type: vulnerability-record-analysis-contested
           note: The vendor's perspective is that this is neither a vulnerability nor a bug.
+
+  - id: CGA-qj9c-cjgm-6gm6
+    aliases:
+      - CVE-2025-6069
+      - GHSA-j5cc-6rx8-ff96
+    events:
+      - timestamp: 2025-06-20T07:29:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: python-3.11
+            componentID: 3f25177482bbba7d
+            componentName: python-3.11
+            componentVersion: 3.11.13-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2025-06-30T16:04:57Z
+        type: fixed
+        data:
+          fixed-version: 3.11.13-r1
 
   - id: CGA-r6r7-88xq-68xg
     aliases:

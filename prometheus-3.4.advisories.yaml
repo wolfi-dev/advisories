@@ -1,0 +1,26 @@
+schema-version: 2.0.2
+
+package:
+  name: prometheus-3.4
+
+advisories:
+  - id: CGA-vj3x-699g-q6jg
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T10:20:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-3.4
+            componentID: 094cdc986e424388
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus
+            scanner: grype
+      - timestamp: 2025-06-28T13:27:46Z
+        type: fixed
+        data:
+          fixed-version: 3.4.2-r1

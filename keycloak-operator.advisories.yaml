@@ -200,6 +200,28 @@ advisories:
         data:
           fixed-version: 24.0.4-r0
 
+  - id: CGA-ppmf-mh3g-w97j
+    aliases:
+      - CVE-2025-49574
+      - GHSA-9623-mj7j-p9v4
+    events:
+      - timestamp: 2025-06-24T07:50:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak-operator
+            componentID: 907b5832a30f0f79
+            componentName: quarkus-vertx
+            componentVersion: 3.20.1
+            componentType: java-archive
+            componentLocation: /usr/share/java/quarkus-app/lib/main/io.quarkus.quarkus-vertx-3.20.1.jar
+            scanner: grype
+      - timestamp: 2025-06-30T22:44:17Z
+        type: pending-upstream-fix
+        data:
+          note: Attempts to upgrade quarkus-vertx result in build failures. Upstream will need to upgrade package to address CVE fixes
+
   - id: CGA-qwx9-pqc4-38xv
     aliases:
       - CVE-2024-10039

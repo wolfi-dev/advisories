@@ -136,6 +136,28 @@ advisories:
         data:
           fixed-version: 1.300056.1-r1
 
+  - id: CGA-cwqj-p63v-6v8p
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T17:40:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: amazon-cloudwatch-agent
+            componentID: 5705a32c16bc64cc
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/start-amazon-cloudwatch-agent
+            scanner: grype
+      - timestamp: 2025-08-10T08:34:32Z
+        type: fixed
+        data:
+          fixed-version: 1.300058.1-r1
+
   - id: CGA-f2p4-6w58-4rv3
     aliases:
       - CVE-2025-22869
@@ -156,6 +178,27 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.300054.0-r1
+
+  - id: CGA-h55c-c278-qc6f
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T07:56:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: amazon-cloudwatch-agent
+            componentID: 72db89ea0eaa792e
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/config-translator
+            scanner: grype
+      - timestamp: 2025-06-28T11:19:41Z
+        type: fixed
+        data:
+          fixed-version: 1.300057.0-r3
 
   - id: CGA-j639-q6cw-pv97
     aliases:

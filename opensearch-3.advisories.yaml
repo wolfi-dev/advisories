@@ -4,6 +4,24 @@ package:
   name: opensearch-3
 
 advisories:
+  - id: CGA-5hqf-6hh7-c6j6
+    aliases:
+      - CVE-2025-22227
+      - GHSA-4q2v-9p7v-3v22
+    events:
+      - timestamp: 2025-07-17T07:56:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-3-repository-azure
+            componentID: ec06511ba3b868b0
+            componentName: reactor-netty-http
+            componentVersion: 1.2.5
+            componentType: java-archive
+            componentLocation: /usr/share/opensearch/plugins/opensearch-repository-azure/reactor-netty-http-1.2.5.jar
+            scanner: grype
+
   - id: CGA-6pxf-3xx2-cjr3
     aliases:
       - CVE-2025-48734
@@ -25,6 +43,50 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Upstream will need to make code changes when updating commons-beanutils 1.9.4 to 1.11.0 or newer. Attempts to address the CVE by updating to 1.11.0 result in build failures.
+
+  - id: CGA-mmp2-7w4j-cw76
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2025-07-12T10:24:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-3-neural-search
+            componentID: 8bbb576f3f413765
+            componentName: commons-lang
+            componentVersion: "2.6"
+            componentType: java-archive
+            componentLocation: /usr/share/opensearch/plugins/opensearch-identity-shiro/commons-lang-2.6.jar
+            scanner: grype
+      - timestamp: 2025-07-17T18:39:45Z
+        type: pending-upstream-fix
+        data:
+          note: Opensearch-2 has multiple instances of CVE-2025-48924 due to plugins using the same library versions. Upstream will needs to fix
+
+  - id: CGA-vcw2-p8c6-rfr5
+    aliases:
+      - CVE-2025-53864
+      - GHSA-xwmg-2g98-w7v9
+    events:
+      - timestamp: 2025-07-12T10:24:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-3-neural-search
+            componentID: bc066c72f3da3967
+            componentName: nimbus-jose-jwt
+            componentVersion: "9.48"
+            componentType: java-archive
+            componentLocation: /usr/share/opensearch/plugins/opensearch-security/nimbus-jose-jwt-9.48.jar
+            scanner: grype
+      - timestamp: 2025-07-17T19:02:58Z
+        type: pending-upstream-fix
+        data:
+          note: Upstream mawill need to upgrade nimbus-jose-jwt to 10.0.2 or later. Attempts to update result in build failures
 
   - id: CGA-vcxg-7qch-xpr4
     aliases:

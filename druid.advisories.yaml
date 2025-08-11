@@ -305,6 +305,50 @@ advisories:
           type: vulnerable-code-not-in-execution-path
           note: 'Upstream reviewed this issue and concluded that it does not impact Druid because it does not directly use the HttpURI class. Ref: https://github.com/apache/druid/issues/17492'
 
+  - id: CGA-85pc-v6qx-wx5p
+    aliases:
+      - CVE-2025-53864
+      - GHSA-xwmg-2g98-w7v9
+    events:
+      - timestamp: 2025-07-12T07:30:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: druid
+            componentID: ea2754c0b3ecb192
+            componentName: nimbus-jose-jwt
+            componentVersion: 9.37.3
+            componentType: java-archive
+            componentLocation: /usr/share/java/druid/extensions/druid-azure-extensions/nimbus-jose-jwt-9.37.3.jar
+            scanner: grype
+      - timestamp: 2025-07-17T22:21:14Z
+        type: pending-upstream-fix
+        data:
+          note: The nimbus-jose-jwt @ 9.8.1 vulnerability exists in bundled/shaded JARs within hadoop-client-runtime-3.3.6.jar that cannot be updated through Maven dependency management alone. Upstream Druid must upgrade to hadoop-client 3.4+ which includes nimbus-jose-jwt 9.31+, but this is blocked pending AWS SDK v2 dependency migration work. Hadoop has already fixed this in their 3.4.0 release (commit ad49ddda0e) but Druid cannot adopt it yet due to the AWS SDK incompatibility.
+
+  - id: CGA-88hh-v336-49h5
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2025-07-12T07:30:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: druid
+            componentID: b5b72e87d3004bbe
+            componentName: commons-lang
+            componentVersion: "2.5"
+            componentType: java-archive
+            componentLocation: /usr/share/java/druid/extensions/ambari-metrics-emitter/ambari-metrics-common-2.7.0.0.0.jar
+            scanner: grype
+      - timestamp: 2025-07-14T15:11:19Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability exists in ambari-metrics-common-2.7.0.0.0 which is bundled/shaded inside ambari-metrics-emitter extension. As a pre-built binary artifact, the embedded dependencies cannot be updated independently. This requires a new upstream release of Apache Metrics Emitter with updated bundled dependencies.
+
   - id: CGA-8jjf-fchm-77wg
     aliases:
       - CVE-2024-25638
@@ -1057,6 +1101,28 @@ advisories:
         data:
           note: This is related to hadoop-client-runtime 3.3.6 and requires code changes by the upstream maintainers to remediate
 
+  - id: CGA-r9fm-w5hp-2crg
+    aliases:
+      - CVE-2025-22227
+      - GHSA-4q2v-9p7v-3v22
+    events:
+      - timestamp: 2025-07-17T07:11:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: druid
+            componentID: 83591f0af420911a
+            componentName: reactor-netty-http
+            componentVersion: 1.0.48
+            componentType: java-archive
+            componentLocation: /usr/share/java/druid/extensions/druid-azure-extensions/reactor-netty-http-1.0.48.jar
+            scanner: grype
+      - timestamp: 2025-07-21T09:12:20Z
+        type: fixed
+        data:
+          fixed-version: 33.0.0-r8
+
   - id: CGA-rxwj-44rv-6h93
     aliases:
       - CVE-2021-22569
@@ -1097,6 +1163,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 32.0.0-r5
+
+  - id: CGA-vpvp-v497-mr3r
+    aliases:
+      - CVE-2025-52999
+      - GHSA-h46c-h94j-95f3
+    events:
+      - timestamp: 2025-06-28T10:30:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: druid
+            componentID: 440b48ec2395d1f8
+            componentName: jackson-core
+            componentVersion: 2.12.7
+            componentType: java-archive
+            componentLocation: /usr/share/java/druid/extensions/druid-deltalake-extensions/hadoop-client-runtime-3.3.4.jar
+            scanner: grype
+      - timestamp: 2025-07-02T10:09:06Z
+        type: pending-upstream-fix
+        data:
+          note: 'Jackson-core is pinned at 2.12.7 for this Druid tagged version: https://github.com/apache/druid/blob/druid-33.0.0/licenses.yaml#L226. We need to wait for upstream to bump it in order to fix this vulnerability.'
 
   - id: CGA-w2gp-wc62-wqxq
     aliases:

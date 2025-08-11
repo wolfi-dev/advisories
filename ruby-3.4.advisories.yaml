@@ -69,3 +69,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.4.2-r1
+
+  - id: CGA-wq6w-j5j2-h6hg
+    aliases:
+      - CVE-2025-24294
+      - GHSA-xh69-987w-hrp8
+    events:
+      - timestamp: 2025-07-16T07:29:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ruby-3.4
+            componentID: 82654fc5f24ea766
+            componentName: resolv
+            componentVersion: 0.6.0
+            componentType: gem
+            componentLocation: /usr/lib/ruby/gems/3.4.0/specifications/default/resolv-0.6.0.gemspec
+            scanner: grype
+      - timestamp: 2025-07-16T17:37:52Z
+        type: fixed
+        data:
+          fixed-version: 3.4.5-r0

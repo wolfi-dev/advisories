@@ -26,6 +26,28 @@ advisories:
         data:
           fixed-version: 7.4.3-r1
 
+  - id: CGA-3hxw-cr3x-p4c5
+    aliases:
+      - CVE-2025-50181
+      - GHSA-pq67-6m6q-mj2v
+    events:
+      - timestamp: 2025-06-19T07:27:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jupyter-base-notebook
+            componentID: c3d800db1916cfc5
+            componentName: urllib3
+            componentVersion: 2.4.0
+            componentType: python
+            componentLocation: /usr/lib/python3.12/site-packages/urllib3-2.4.0.dist-info/METADATA, /usr/lib/python3.12/site-packages/urllib3-2.4.0.dist-info/RECORD
+            scanner: grype
+      - timestamp: 2025-06-27T11:25:00Z
+        type: fixed
+        data:
+          fixed-version: 7.4.3-r2
+
   - id: CGA-3whm-xmcr-46qf
     aliases:
       - CVE-2025-27516
@@ -136,3 +158,25 @@ advisories:
         type: pending-upstream-fix
         data:
           note: This CVE is fixed in bootstrap versions > 3.4.1. The next fix version is bootstrap 4.0, which introduces breaking changes. Upstream will need to adapt the code to use a newer version of bootstrap.
+
+  - id: CGA-w6g4-5w3r-hvgw
+    aliases:
+      - CVE-2025-50182
+      - GHSA-48p4-8xcf-vxj5
+    events:
+      - timestamp: 2025-06-19T07:27:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jupyter-base-notebook
+            componentID: c3d800db1916cfc5
+            componentName: urllib3
+            componentVersion: 2.4.0
+            componentType: python
+            componentLocation: /usr/lib/python3.12/site-packages/urllib3-2.4.0.dist-info/METADATA, /usr/lib/python3.12/site-packages/urllib3-2.4.0.dist-info/RECORD
+            scanner: grype
+      - timestamp: 2025-06-27T11:25:01Z
+        type: fixed
+        data:
+          fixed-version: 7.4.3-r2

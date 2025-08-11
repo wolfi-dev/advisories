@@ -88,6 +88,31 @@ advisories:
         data:
           fixed-version: 0.10.4-r6
 
+  - id: CGA-2v69-xqxg-72xr
+    aliases:
+      - CVE-2025-52999
+      - GHSA-h46c-h94j-95f3
+    events:
+      - timestamp: 2025-06-28T11:42:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tez
+            componentID: 2f7bb3d3fd011975
+            componentName: jackson-core
+            componentVersion: 2.12.7
+            componentType: java-archive
+            componentLocation: /usr/share/java/tez/lib/jackson-core-2.12.7.jar
+            scanner: grype
+      - timestamp: 2025-07-02T17:35:00Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            The jackson-core vulnerability cannot be upgraded to the fix version (2.15.0+) due to Java 8 compatibility requirements.
+            Tez 0.10.5 requires Java 8 (openjdk-8-default-jvm) while jackson-core 2.15.0+ requires Java 11+.
+            This requires either an upstream Tez release that supports Java 11+ or a jackson-core backport that maintains Java 8 compatibility with the security fix.
+
   - id: CGA-2v7f-j393-2r48
     aliases:
       - CVE-2019-10202
@@ -594,6 +619,28 @@ advisories:
         data:
           fixed-version: 0.10.4-r6
 
+  - id: CGA-c923-6h8p-37xc
+    aliases:
+      - CVE-2025-53864
+      - GHSA-xwmg-2g98-w7v9
+    events:
+      - timestamp: 2025-07-12T07:41:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tez
+            componentID: 5701db1d1c580df4
+            componentName: nimbus-jose-jwt
+            componentVersion: 9.37.2
+            componentType: java-archive
+            componentLocation: /usr/share/java/tez/lib/nimbus-jose-jwt-9.37.2.jar
+            scanner: grype
+      - timestamp: 2025-07-18T08:35:48Z
+        type: fixed
+        data:
+          fixed-version: 0.10.5-r3
+
   - id: CGA-cvgr-qwcg-f7ww
     aliases:
       - CVE-2023-33201
@@ -729,6 +776,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.10.4-r6
+
+  - id: CGA-ffxw-5fc9-hvq3
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2025-07-12T07:41:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tez
+            componentID: 3ee49769546c5a1a
+            componentName: commons-lang
+            componentVersion: "2.6"
+            componentType: java-archive
+            componentLocation: /usr/share/java/tez/lib/commons-lang-2.6.jar
+            scanner: grype
+      - timestamp: 2025-07-16T16:08:34Z
+        type: pending-upstream-fix
+        data:
+          note: This CVE impacts all versions of commons-lang. The fix is available in commons-lang3, but the upstream maintainers will need to update the codebase to use that library instead.
 
   - id: CGA-fwfm-h859-76rr
     aliases:

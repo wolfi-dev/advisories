@@ -257,6 +257,28 @@ advisories:
         data:
           fixed-version: 1.35.3-r1
 
+  - id: CGA-m43w-332q-6hx9
+    aliases:
+      - CVE-2025-54388
+      - GHSA-x4rx-4gw3-53p4
+    events:
+      - timestamp: 2025-07-30T07:28:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buildah
+            componentID: e36bf6eded04873c
+            componentName: github.com/docker/docker
+            componentVersion: v28.3.2+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/buildah
+            scanner: grype
+      - timestamp: 2025-07-30T09:31:18Z
+        type: fixed
+        data:
+          fixed-version: 1.41.0-r1
+
   - id: CGA-p5jm-hq7x-fwc2
     aliases:
       - CVE-2024-9407

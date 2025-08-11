@@ -26,6 +26,72 @@ advisories:
         data:
           fixed-version: 3.0.1-r1
 
+  - id: CGA-2p25-23hq-8932
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2025-07-12T07:14:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow-3
+            componentID: 70a04db7fbeec8e3
+            componentName: commons-lang3
+            componentVersion: 3.13.0
+            componentType: java-archive
+            componentLocation: /opt/airflow/lib/python3.12/site-packages/ray/jars/ray_dist.jar
+            scanner: grype
+      - timestamp: 2025-07-14T06:26:17Z
+        type: pending-upstream-fix
+        data:
+          note: The org.apache.commons:commons-lang3 is pulled through a transient dependency of a python package named 'ray' version 2.47.1 which is the latest. We will have to wait for 'ray' to push a more recent version of commons-lang3 and airflow to push a new release with the new 'ray' dependency updated.
+
+  - id: CGA-5x99-mqvf-h8cx
+    aliases:
+      - CVE-2025-50182
+      - GHSA-48p4-8xcf-vxj5
+    events:
+      - timestamp: 2025-06-19T07:07:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow-3
+            componentID: 0c7ed2aa51956fc7
+            componentName: urllib3
+            componentVersion: 2.4.0
+            componentType: python
+            componentLocation: /opt/airflow/lib/python3.12/site-packages/urllib3-2.4.0.dist-info/METADATA, /opt/airflow/lib/python3.12/site-packages/urllib3-2.4.0.dist-info/RECORD
+            scanner: grype
+      - timestamp: 2025-06-26T16:02:36Z
+        type: fixed
+        data:
+          fixed-version: 3.0.2-r2
+
+  - id: CGA-8758-m7p7-vf5r
+    aliases:
+      - CVE-2025-53643
+      - GHSA-9548-qrrj-x5pj
+    events:
+      - timestamp: 2025-07-16T07:11:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow-3
+            componentID: 6ee394a83731d2a5
+            componentName: aiohttp
+            componentVersion: 3.12.12
+            componentType: python
+            componentLocation: /opt/airflow/lib/python3.12/site-packages/ray/_private/runtime_env/agent/thirdparty_files/aiohttp-3.12.12.dist-info/METADATA
+            scanner: grype
+      - timestamp: 2025-07-17T13:03:51Z
+        type: pending-upstream-fix
+        data:
+          note: The vulnerability in aiohttp is introduced via a transitive dependency from the ray package (v2.47.1, latest). Remediation is pending upstream updates from ray and a subsequent airflow release that includes the updated ray version. In the interim, we have proactively updated aiohttp to v3.12.14 wherever feasible.
+
   - id: CGA-c62x-7p7g-hqvm
     aliases:
       - CVE-2024-49767
@@ -69,6 +135,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.0.1-r1
+
+  - id: CGA-j823-fw36-2q8w
+    aliases:
+      - CVE-2025-54121
+      - GHSA-2c2j-9gv5-cj73
+    events:
+      - timestamp: 2025-07-22T07:12:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow-3
+            componentID: 3302a960d868c72d
+            componentName: starlette
+            componentVersion: 0.47.1
+            componentType: python
+            componentLocation: /opt/airflow/lib/python3.12/site-packages/starlette-0.47.1.dist-info/METADATA
+            scanner: grype
+      - timestamp: 2025-07-23T09:03:16Z
+        type: fixed
+        data:
+          fixed-version: 3.0.3-r3
 
   - id: CGA-p8cf-8xpv-jwpq
     aliases:
@@ -158,6 +246,28 @@ advisories:
         data:
           fixed-version: 3.0.1-r1
 
+  - id: CGA-qcmw-2jr2-h5r5
+    aliases:
+      - CVE-2025-50181
+      - GHSA-pq67-6m6q-mj2v
+    events:
+      - timestamp: 2025-06-19T07:07:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow-3
+            componentID: 0c7ed2aa51956fc7
+            componentName: urllib3
+            componentVersion: 2.4.0
+            componentType: python
+            componentLocation: /opt/airflow/lib/python3.12/site-packages/urllib3-2.4.0.dist-info/METADATA, /opt/airflow/lib/python3.12/site-packages/urllib3-2.4.0.dist-info/RECORD
+            scanner: grype
+      - timestamp: 2025-06-26T16:02:37Z
+        type: fixed
+        data:
+          fixed-version: 3.0.2-r2
+
   - id: CGA-rffr-3gww-cc9j
     aliases:
       - CVE-2024-49766
@@ -180,6 +290,28 @@ advisories:
         data:
           fixed-version: 3.0.1-r1
 
+  - id: CGA-v657-g4qg-9wm6
+    aliases:
+      - CVE-2024-23342
+      - GHSA-wj6h-64fc-37mp
+    events:
+      - timestamp: 2025-07-31T07:30:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow-3
+            componentID: f142caf1df7191e5
+            componentName: ecdsa
+            componentVersion: 0.19.1
+            componentType: python
+            componentLocation: /opt/airflow/lib/python3.12/site-packages/ecdsa-0.19.1.dist-info/METADATA
+            scanner: grype
+      - timestamp: 2025-08-04T17:37:14Z
+        type: fix-not-planned
+        data:
+          note: "The python-ecdsa library is vulnerable to a Minerva timing attack on the P-256 curve through the ecdsa.SigningKey.sign_digest() API. The vulnerability affects ECDSA signatures, key generation, and ECDH operations, potentially allowing attackers to leak internal nonces and discover private keys through timing analysis. The upstream python-ecdsa project explicitly considers side-channel attacks out of scope and has stated there is no planned fix for this vulnerability."
+
   - id: CGA-vx49-fm46-cjjp
     aliases:
       - CVE-2025-47287
@@ -201,3 +333,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.0.1-r1
+
+  - id: CGA-xqf6-7pmq-h43m
+    aliases:
+      - CVE-2025-50213
+      - GHSA-9r64-3wmc-x8m8
+    events:
+      - timestamp: 2025-06-28T08:13:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow-3
+            componentID: 49b6479e5058993f
+            componentName: apache-airflow-providers-snowflake
+            componentVersion: 6.2.1
+            componentType: python
+            componentLocation: /opt/airflow/lib/python3.12/site-packages/apache_airflow_providers_snowflake-6.2.1.dist-info/METADATA, /opt/airflow/lib/python3.12/site-packages/apache_airflow_providers_snowflake-6.2.1.dist-info/RECORD, /opt/airflow/lib/python3.12/site-packages/apache_airflow_providers_snowflake-6.2.1.dist-info/direct_url.json
+            scanner: grype
+      - timestamp: 2025-06-30T16:29:57Z
+        type: pending-upstream-fix
+        data:
+          note: Airflow v3.0.2 tagged version has apache-airflow-providers-snowflake dipendency at version 6.2.1. We need to wait for upstream to release another version for Airflow that has the fixed dipendency at v6.4.0. At the moment upstream released it in a not-tagged Airflow version commit. Once upstream release a tagged version with a fixed apache-airflow-providers-snowflake, we can update it.

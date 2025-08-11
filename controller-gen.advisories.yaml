@@ -68,6 +68,29 @@ advisories:
         data:
           fixed-version: 0.17.2-r1
 
+  - id: CGA-95j9-6c9x-m67w
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T20:04:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: controller-gen
+            componentID: 14348274b538d737
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/controller-gen
+            scanner: grype
+      - timestamp: 2025-08-10T07:32:30Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-98x2-c562-mh44
     aliases:
       - CVE-2025-22871

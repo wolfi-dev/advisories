@@ -48,6 +48,28 @@ advisories:
         data:
           fixed-version: 6.4.0-r1
 
+  - id: CGA-986w-5q35-929q
+    aliases:
+      - CVE-2025-7962
+      - GHSA-9342-92gg-6v29
+    events:
+      - timestamp: 2025-08-08T07:29:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak-config-cli
+            componentID: 3e9e36daf5b55e73
+            componentName: smtp
+            componentVersion: 2.0.3
+            componentType: java-archive
+            componentLocation: /usr/share/java/keycloak-config-cli/keycloak-config-cli-24.0.5.jar
+            scanner: grype
+      - timestamp: 2025-08-11T09:17:20Z
+        type: fixed
+        data:
+          fixed-version: 6.4.0-r48
+
   - id: CGA-9c2v-54pg-2r8h
     aliases:
       - CVE-2025-22228
@@ -157,3 +179,25 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Any attempts to bump spring-boot to 3.4.5 result in a build failure. We will need for upstream to push a fix and bump the dependency.
+
+  - id: CGA-x6cp-vqf6-p2r9
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2025-07-12T08:50:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak-config-cli
+            componentID: ba9efecc6701b597
+            componentName: commons-lang3
+            componentVersion: 3.17.0
+            componentType: java-archive
+            componentLocation: /usr/share/java/keycloak-config-cli/keycloak-config-cli.jar
+            scanner: grype
+      - timestamp: 2025-07-17T21:02:58Z
+        type: fixed
+        data:
+          fixed-version: 6.4.0-r45

@@ -209,6 +209,28 @@ advisories:
         data:
           fixed-version: 8.7.0-r1
 
+  - id: CGA-gx25-6v92-wrrv
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2025-07-12T09:42:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gradle-8
+            componentID: e27edbf138f4cbe2
+            componentName: commons-lang
+            componentVersion: "2.6"
+            componentType: java-archive
+            componentLocation: /usr/share/java/gradle/lib/commons-lang-2.6.jar
+            scanner: grype
+      - timestamp: 2025-07-17T07:50:50Z
+        type: pending-upstream-fix
+        data:
+          note: 'As per the advisory commons-lang has no patched version and as per the description, upstream package maintainers of commons-lang recommend to upgrade to commons-lang3 version 3.18.0 or greater. Upstream has to upgrade their dependency in order to fix this CVE. More information on the advisory: https://github.com/advisories/GHSA-j288-q9x7-2f5v'
+
   - id: CGA-hq55-qp37-gwm6
     aliases:
       - CVE-2023-33202

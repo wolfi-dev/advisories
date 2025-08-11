@@ -142,6 +142,28 @@ advisories:
         data:
           fixed-version: 0.0.1-r2
 
+  - id: CGA-g2v5-55gg-q54x
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T14:37:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-cli
+            componentID: 69dd856e3c064692
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/harbor
+            scanner: grype
+      - timestamp: 2025-08-10T00:54:04Z
+        type: fixed
+        data:
+          fixed-version: 0.0.8-r2
+
   - id: CGA-hrg8-v4v7-5643
     aliases:
       - CVE-2024-24791
@@ -183,6 +205,27 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.0.1-r3
+
+  - id: CGA-qfvg-4jp7-2589
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T10:33:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-cli
+            componentID: 93914d9812212410
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/harbor
+            scanner: grype
+      - timestamp: 2025-06-28T14:31:29Z
+        type: fixed
+        data:
+          fixed-version: 0.0.7-r1
 
   - id: CGA-rgh9-rhjr-r4j5
     aliases:

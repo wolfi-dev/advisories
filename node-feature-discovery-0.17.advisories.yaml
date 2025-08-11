@@ -166,6 +166,28 @@ advisories:
         data:
           fixed-version: 0.17.2-r2
 
+  - id: CGA-pxww-c4w8-rp2j
+    aliases:
+      - CVE-2025-4563
+      - GHSA-hj2p-8wj8-pfq4
+    events:
+      - timestamp: 2025-06-24T07:33:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: node-feature-discovery-0.17
+            componentID: f298c4a5ffd3cc21
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.32.3
+            componentType: go-module
+            componentLocation: /usr/bin/kubectl-nfd
+            scanner: grype
+      - timestamp: 2025-06-24T09:16:50Z
+        type: fixed
+        data:
+          fixed-version: 0.17.3-r3
+
   - id: CGA-q3r2-r8xm-crwp
     aliases:
       - CVE-2025-1767
@@ -246,3 +268,26 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.17.1-r2
+
+  - id: CGA-vv4c-p79j-mrgx
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T22:31:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: node-feature-discovery-0.17
+            componentID: 95f322eaa69a0ed2
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/kubectl-nfd
+            scanner: grype
+      - timestamp: 2025-08-10T11:08:22Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.

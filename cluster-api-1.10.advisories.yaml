@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: cluster-api-1.10
+
+advisories:
+  - id: CGA-5hf7-7hr5-jxmp
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T08:42:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-api-1.10-clusterctl
+            componentID: 3987208c10202cd1
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/clusterctl
+            scanner: grype
+      - timestamp: 2025-06-28T11:35:02Z
+        type: fixed
+        data:
+          fixed-version: 1.10.3-r1
+
+  - id: CGA-hrqp-9xrv-3wvh
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T20:03:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-api-1.10-capd-manager
+            componentID: 44c4e28b955f5bd3
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/clusterctl
+            scanner: grype
+      - timestamp: 2025-08-11T10:33:35Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.

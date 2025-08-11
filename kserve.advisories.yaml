@@ -70,6 +70,28 @@ advisories:
         data:
           fixed-version: 0.13.1-r5
 
+  - id: CGA-5jr3-5338-g69j
+    aliases:
+      - CVE-2025-50181
+      - GHSA-pq67-6m6q-mj2v
+    events:
+      - timestamp: 2025-06-19T07:57:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kserve-storage-controller
+            componentID: 1c4701e6e1a53717
+            componentName: urllib3
+            componentVersion: 2.4.0
+            componentType: python
+            componentLocation: /usr/lib/python3.11/site-packages/urllib3-2.4.0.dist-info/METADATA, /usr/lib/python3.11/site-packages/urllib3-2.4.0.dist-info/RECORD
+            scanner: grype
+      - timestamp: 2025-06-26T21:11:56Z
+        type: fixed
+        data:
+          fixed-version: 0.15.2-r2
+
   - id: CGA-7x8r-5gj5-wj89
     aliases:
       - CVE-2024-45341
@@ -135,6 +157,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.13.1-r5
+
+  - id: CGA-9r23-4hqg-jvqc
+    aliases:
+      - CVE-2025-4565
+      - GHSA-8qvm-5x2c-j2w7
+    events:
+      - timestamp: 2025-06-17T07:23:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kserve-storage-controller
+            componentID: 72750dab6a5867b9
+            componentName: protobuf
+            componentVersion: 4.25.7
+            componentType: python
+            componentLocation: /usr/lib/python3.11/site-packages/protobuf-4.25.7.dist-info/METADATA, /usr/lib/python3.11/site-packages/protobuf-4.25.7.dist-info/RECORD
+            scanner: grype
+      - timestamp: 2025-06-26T21:11:57Z
+        type: fixed
+        data:
+          fixed-version: 0.15.2-r2
 
   - id: CGA-9vpw-h525-h8jq
     aliases:
@@ -356,6 +400,28 @@ advisories:
         data:
           fixed-version: 0.14.1-r2
 
+  - id: CGA-rjm4-m6gv-93cm
+    aliases:
+      - CVE-2025-54121
+      - GHSA-2c2j-9gv5-cj73
+    events:
+      - timestamp: 2025-07-22T08:18:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kserve-storage-controller
+            componentID: 247bdd290be034b4
+            componentName: starlette
+            componentVersion: 0.46.2
+            componentType: python
+            componentLocation: /usr/lib/python3.11/site-packages/starlette-0.46.2.dist-info/METADATA
+            scanner: grype
+      - timestamp: 2025-07-30T09:22:05Z
+        type: fixed
+        data:
+          fixed-version: 0.15.2-r4
+
   - id: CGA-vj82-v565-x8xj
     aliases:
       - CVE-2024-45337
@@ -422,6 +488,28 @@ advisories:
         data:
           fixed-version: 0.14.1-r0
 
+  - id: CGA-x2q7-x733-xh9j
+    aliases:
+      - CVE-2025-50182
+      - GHSA-48p4-8xcf-vxj5
+    events:
+      - timestamp: 2025-06-19T07:57:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kserve-storage-controller
+            componentID: 1c4701e6e1a53717
+            componentName: urllib3
+            componentVersion: 2.4.0
+            componentType: python
+            componentLocation: /usr/lib/python3.11/site-packages/urllib3-2.4.0.dist-info/METADATA, /usr/lib/python3.11/site-packages/urllib3-2.4.0.dist-info/RECORD
+            scanner: grype
+      - timestamp: 2025-06-26T21:11:57Z
+        type: fixed
+        data:
+          fixed-version: 0.15.2-r2
+
   - id: CGA-xpcr-ww75-7vvv
     aliases:
       - CVE-2024-47081
@@ -439,6 +527,11 @@ advisories:
             componentType: python
             componentLocation: /usr/lib/python3.11/site-packages/requests-2.32.3.dist-info/METADATA, /usr/lib/python3.11/site-packages/requests-2.32.3.dist-info/RECORD, /usr/lib/python3.11/site-packages/requests-2.32.3.dist-info/top_level.txt
             scanner: grype
+      - timestamp: 2025-06-13T01:02:08Z
+        type: false-positive-determination
+        data:
+          type: inline-mitigations-exist
+          note: py3-pip installs a patched version of 2.32.3 requests.py which contains the upstream fix for CVE-2024-47081, reference https://github.com/wolfi-dev/os/pull/55998/files. The version referenced in the vendor.txt is not vulnerable
 
   - id: CGA-xw8q-xp4x-825w
     aliases:

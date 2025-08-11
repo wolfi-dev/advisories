@@ -96,6 +96,10 @@ advisories:
         type: true-positive-determination
         data:
           note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in croc-10.2.2-r2.apk, at usr/bin/croc, usr/bin/croc.'
+      - timestamp: 2025-06-17T10:19:13Z
+        type: fixed
+        data:
+          fixed-version: 10.2.2-r3
 
   - id: CGA-5xg2-vfpw-9qpv
     aliases:
@@ -186,6 +190,14 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/croc
             scanner: grype
+      - timestamp: 2025-06-16T07:04:13Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in croc-10.2.2-r2.apk, at usr/bin/croc, usr/bin/croc.'
+      - timestamp: 2025-06-17T10:19:14Z
+        type: fixed
+        data:
+          fixed-version: 10.2.2-r3
 
   - id: CGA-9wqq-5wpg-xm6h
     aliases:
@@ -385,6 +397,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 10.2.2-r1
+
+  - id: CGA-r6v5-j724-fxwv
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T10:20:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: croc
+            componentID: 8af96327b99bba59
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/croc
+            scanner: grype
+      - timestamp: 2025-08-09T17:36:50Z
+        type: fixed
+        data:
+          fixed-version: 10.2.4-r1
 
   - id: CGA-vm99-25xp-vv5g
     aliases:

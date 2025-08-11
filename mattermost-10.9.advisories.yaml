@@ -1,0 +1,140 @@
+schema-version: 2.0.2
+
+package:
+  name: mattermost-10.9
+
+advisories:
+  - id: CGA-843r-2qhv-85w2
+    aliases:
+      - CVE-2022-31022
+      - GHSA-9w9f-6mg8-jp7w
+    events:
+      - timestamp: 2025-06-21T17:34:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-10.9
+            componentID: 66b384cf72626b66
+            componentName: github.com/blevesearch/bleve/v2
+            componentVersion: v2.4.4-0.20250115090822-cbafdca08538
+            componentType: go-module
+            componentLocation: /usr/bin/mattermost
+            scanner: grype
+      - timestamp: 2025-06-21T18:45:24Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
+  - id: CGA-f7hw-9p5x-2227
+    aliases:
+      - CVE-2022-4045
+      - GHSA-v42f-hq78-8c5m
+    events:
+      - timestamp: 2025-06-21T17:34:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-10.9
+            componentID: 1b8286fbec9a7182
+            componentName: mattermost-10.9
+            componentVersion: 10.9.1-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2025-06-23T21:46:31Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: 'This vulnerability was remediated in mattermost v7.4.0 and later. For more information, please refer to: https://www.clouddefense.ai/cve/2022/CVE-2022-4045'
+
+  - id: CGA-fxgw-q6fp-6q63
+    aliases:
+      - CVE-2025-3445
+      - GHSA-7vpp-9cxj-q8gv
+    events:
+      - timestamp: 2025-06-21T17:34:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-10.9
+            componentID: 1309f6b15c234d93
+            componentName: github.com/mholt/archiver/v3
+            componentVersion: v3.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/mattermost
+            scanner: grype
+      - timestamp: 2025-06-24T11:51:03Z
+        type: fixed
+        data:
+          fixed-version: 10.9.2-r1
+
+  - id: CGA-ppcg-8388-36p2
+    aliases:
+      - CVE-2025-29923
+      - GHSA-92cp-5422-2mw7
+    events:
+      - timestamp: 2025-06-21T17:34:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-10.9
+            componentID: 0d518a4b93f62775
+            componentName: github.com/redis/go-redis/v9
+            componentVersion: v9.7.0
+            componentType: go-module
+            componentLocation: /usr/bin/mattermost
+            scanner: grype
+      - timestamp: 2025-06-24T11:51:04Z
+        type: fixed
+        data:
+          fixed-version: 10.9.2-r1
+
+  - id: CGA-rhxx-2c4q-j69w
+    aliases:
+      - CVE-2022-4019
+      - GHSA-hqqj-g6mv-rw46
+    events:
+      - timestamp: 2025-06-21T17:34:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-10.9
+            componentID: 1b8286fbec9a7182
+            componentName: mattermost-10.9
+            componentVersion: 10.9.1-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2025-06-23T21:46:17Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: 'This vulnerability was remediated in mattermost v7.x, Specifically, in versions 7.1.4, 7.2.1, 7.3.1, and 7.4.0. For more information, please refer to: https://www.clouddefense.ai/cve/2022/CVE-2022-4019'
+
+  - id: CGA-rp79-355v-v275
+    aliases:
+      - CVE-2024-0406
+      - GHSA-rhh4-rh7c-7r5v
+    events:
+      - timestamp: 2025-06-21T17:34:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-10.9
+            componentID: 1309f6b15c234d93
+            componentName: github.com/mholt/archiver/v3
+            componentVersion: v3.5.1
+            componentType: go-module
+            componentLocation: /usr/bin/mattermost
+            scanner: grype
+      - timestamp: 2025-06-24T11:51:05Z
+        type: fixed
+        data:
+          fixed-version: 10.9.2-r1

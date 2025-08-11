@@ -99,6 +99,11 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.1.0-r0
+      - timestamp: 2025-06-13T01:02:08Z
+        type: false-positive-determination
+        data:
+          type: inline-mitigations-exist
+          note: py3-pip installs a patched version of 2.32.3 requests.py which contains the upstream fix for CVE-2024-47081, reference https://github.com/wolfi-dev/os/pull/55998/files. The version referenced in the vendor.txt is not vulnerable
 
   - id: CGA-5qqw-78qf-xfwg
     aliases:
@@ -388,6 +393,28 @@ advisories:
         data:
           fixed-version: 2.14.1-r0
 
+  - id: CGA-mc24-3hrc-2hgg
+    aliases:
+      - CVE-2025-54121
+      - GHSA-2c2j-9gv5-cj73
+    events:
+      - timestamp: 2025-07-22T08:46:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mlflow
+            componentID: 2e222123787360b7
+            componentName: starlette
+            componentVersion: 0.47.1
+            componentType: python
+            componentLocation: /usr/share/mlflow/lib/python3.13/site-packages/starlette-0.47.1.dist-info/METADATA
+            scanner: grype
+      - timestamp: 2025-07-23T15:32:33Z
+        type: fixed
+        data:
+          fixed-version: 3.1.4-r0
+
   - id: CGA-p6jj-p5p6-w8x6
     aliases:
       - CVE-2024-37057
@@ -435,6 +462,50 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.21.0-r0
+
+  - id: CGA-pfx8-jp22-3rcr
+    aliases:
+      - CVE-2025-50181
+      - GHSA-pq67-6m6q-mj2v
+    events:
+      - timestamp: 2025-06-19T07:20:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mlflow
+            componentID: 51b48b4598791a57
+            componentName: urllib3
+            componentVersion: 2.4.0
+            componentType: python
+            componentLocation: /usr/share/mlflow/lib/python3.13/site-packages/urllib3-2.4.0.dist-info/METADATA, /usr/share/mlflow/lib/python3.13/site-packages/urllib3-2.4.0.dist-info/RECORD
+            scanner: grype
+      - timestamp: 2025-06-25T19:48:59Z
+        type: fixed
+        data:
+          fixed-version: 3.1.0-r3
+
+  - id: CGA-qp7m-vjr3-8q9q
+    aliases:
+      - CVE-2025-50182
+      - GHSA-48p4-8xcf-vxj5
+    events:
+      - timestamp: 2025-06-19T07:20:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mlflow
+            componentID: 51b48b4598791a57
+            componentName: urllib3
+            componentVersion: 2.4.0
+            componentType: python
+            componentLocation: /usr/share/mlflow/lib/python3.13/site-packages/urllib3-2.4.0.dist-info/METADATA, /usr/share/mlflow/lib/python3.13/site-packages/urllib3-2.4.0.dist-info/RECORD
+            scanner: grype
+      - timestamp: 2025-06-25T19:49:00Z
+        type: fixed
+        data:
+          fixed-version: 3.1.0-r3
 
   - id: CGA-xqq4-gxgx-3463
     aliases:

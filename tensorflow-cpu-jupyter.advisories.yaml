@@ -4,6 +4,50 @@ package:
   name: tensorflow-cpu-jupyter
 
 advisories:
+  - id: CGA-2p6w-p9m6-c9pg
+    aliases:
+      - CVE-2025-48379
+      - GHSA-xg8h-j46f-w952
+    events:
+      - timestamp: 2025-07-02T08:23:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tensorflow-cpu-jupyter
+            componentID: 91ce259c134d0c17
+            componentName: pillow
+            componentVersion: 11.2.1
+            componentType: python
+            componentLocation: /usr/share/tensorflow/lib/python3.11/site-packages/pillow-11.2.1.dist-info/METADATA, /usr/share/tensorflow/lib/python3.11/site-packages/pillow-11.2.1.dist-info/RECORD, /usr/share/tensorflow/lib/python3.11/site-packages/pillow-11.2.1.dist-info/top_level.txt
+            scanner: grype
+      - timestamp: 2025-07-04T13:31:27Z
+        type: fixed
+        data:
+          fixed-version: 2.19.0-r6
+
+  - id: CGA-36h3-8f5r-8rff
+    aliases:
+      - CVE-2025-50181
+      - GHSA-pq67-6m6q-mj2v
+    events:
+      - timestamp: 2025-06-19T07:43:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tensorflow-cpu-jupyter
+            componentID: b391c58afd26df6b
+            componentName: urllib3
+            componentVersion: 1.26.20
+            componentType: python
+            componentLocation: /usr/share/tensorflow/lib/python3.11/site-packages/pip/_vendor/vendor.txt
+            scanner: grype
+      - timestamp: 2025-06-30T14:09:24Z
+        type: pending-upstream-fix
+        data:
+          note: urllib3 vuln event is detected due to its presence in python 3.11 vendor path. Python 3.11 vendored that urllib3 1.26.20 version and upstream uses Python 3.11 to build the package, therefore we need to wait that upstream will update Python to a version that brings a fixed urllib3 version. Once possible we will patch it.
+
   - id: CGA-54r8-8878-mhm5
     aliases:
       - CVE-2025-30167
@@ -82,6 +126,15 @@ advisories:
             componentType: python
             componentLocation: /usr/share/tensorflow/lib/python3.11/site-packages/pip/_vendor/vendor.txt
             scanner: grype
+      - timestamp: 2025-06-13T01:02:08Z
+        type: false-positive-determination
+        data:
+          type: inline-mitigations-exist
+          note: py3-pip installs a patched version of 2.32.3 requests.py which contains the upstream fix for CVE-2024-47081, reference https://github.com/wolfi-dev/os/pull/55998/files. The version referenced in the vendor.txt is not vulnerable
+      - timestamp: 2025-07-04T13:31:28Z
+        type: fixed
+        data:
+          fixed-version: 2.19.0-r6
 
   - id: CGA-ch38-hm3p-vqfx
     aliases:
@@ -127,3 +180,25 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: While pip's vendor.txt correctly shows setuptools==70.3.0 (which contains the vulnerability in its full form), pip's vendoring process explicitly drops all components containing the vulnerable code. The PackageIndex.download() vulnerability exists in the setuptools package and easy_install.py, both of which are removed during pip's vendoring process. Only pkg_resources is kept, which does not contain download functionality or the vulnerable code path.
+
+  - id: CGA-jh66-gcvm-qfrf
+    aliases:
+      - CVE-2025-50182
+      - GHSA-48p4-8xcf-vxj5
+    events:
+      - timestamp: 2025-06-19T07:43:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tensorflow-cpu-jupyter
+            componentID: b391c58afd26df6b
+            componentName: urllib3
+            componentVersion: 1.26.20
+            componentType: python
+            componentLocation: /usr/share/tensorflow/lib/python3.11/site-packages/pip/_vendor/vendor.txt
+            scanner: grype
+      - timestamp: 2025-06-30T14:09:24Z
+        type: pending-upstream-fix
+        data:
+          note: urllib3 vuln event is detected due to its presence in python 3.11 vendor path. Python 3.11 vendored that urllib3 1.26.20 version and upstream uses Python 3.11 to build the package, therefore we need to wait that upstream will update Python to a version that brings a fixed urllib3 version. Once possible we will patch it.

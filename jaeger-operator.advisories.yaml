@@ -113,6 +113,28 @@ advisories:
         data:
           fixed-version: 1.65.0-r2
 
+  - id: CGA-jw4r-4947-6mc3
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T15:29:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jaeger-operator
+            componentID: 2c14386f7a8c5ca9
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/jaeger-operator
+            scanner: grype
+      - timestamp: 2025-08-10T03:26:51Z
+        type: fixed
+        data:
+          fixed-version: 1.65.0-r8
+
   - id: CGA-pq9w-4v5c-cjqq
     aliases:
       - CVE-2024-45338

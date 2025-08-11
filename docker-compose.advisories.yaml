@@ -104,6 +104,27 @@ advisories:
         data:
           fixed-version: 2.27.0-r1
 
+  - id: CGA-79h8-6c9g-jcwg
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T07:38:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-compose
+            componentID: 3ac8d63a7a20ed66
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.0.0
+            componentType: go-module
+            componentLocation: /usr/bin/docker-compose
+            scanner: grype
+      - timestamp: 2025-06-28T11:32:41Z
+        type: fixed
+        data:
+          fixed-version: 2.37.3-r1
+
   - id: CGA-7c57-4qgw-qv9c
     aliases:
       - CVE-2025-22872
@@ -341,6 +362,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.27.0-r1
+
+  - id: CGA-p6f3-hjcr-55xq
+    aliases:
+      - CVE-2025-54388
+      - GHSA-x4rx-4gw3-53p4
+    events:
+      - timestamp: 2025-07-30T07:24:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-compose
+            componentID: 6f2e81abdbe89d8a
+            componentName: github.com/docker/docker
+            componentVersion: v28.3.2+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/docker-compose
+            scanner: grype
+      - timestamp: 2025-07-30T09:03:51Z
+        type: fixed
+        data:
+          fixed-version: 2.39.1-r1
 
   - id: CGA-q2fx-5c6h-528f
     aliases:

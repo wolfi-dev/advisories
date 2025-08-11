@@ -58,6 +58,27 @@ advisories:
         data:
           fixed-version: 1.9.2-r8
 
+  - id: CGA-5v76-m5r7-577m
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T09:29:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-policy-reporter-ui
+            componentID: 407f933a811ac7f4
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/policyreporter-ui
+            scanner: grype
+      - timestamp: 2025-06-28T12:49:16Z
+        type: fixed
+        data:
+          fixed-version: 2.3.10-r3
+
   - id: CGA-79pw-7mj2-2283
     aliases:
       - CVE-2023-45283
@@ -144,6 +165,29 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.3.10-r1
+
+  - id: CGA-fv88-54vg-rc7v
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T02:09:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-policy-reporter-ui
+            componentID: e56093c149bba69f
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/policyreporter-ui
+            scanner: grype
+      - timestamp: 2025-08-10T10:08:45Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
 
   - id: CGA-g767-p7jf-2655
     aliases:
@@ -295,6 +339,27 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.9.2-r2
+
+  - id: CGA-x7q9-2gvw-c2cf
+    aliases:
+      - GHSA-vrw8-fxc6-2r93
+    events:
+      - timestamp: 2025-06-21T08:17:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-policy-reporter-ui
+            componentID: 9693962e03709168
+            componentName: github.com/go-chi/chi/v5
+            componentVersion: v5.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/policyreporter-ui
+            scanner: grype
+      - timestamp: 2025-06-21T09:33:45Z
+        type: fixed
+        data:
+          fixed-version: 2.3.10-r2
 
   - id: CGA-xqcr-xq3j-2cqx
     aliases:

@@ -107,6 +107,28 @@ advisories:
         data:
           fixed-version: 3.0.6-r1
 
+  - id: CGA-7r2r-4fw7-h3qv
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2025-07-12T07:08:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apicurio-registry
+            componentID: ed1d14e5f6d5a951
+            componentName: commons-lang3
+            componentVersion: 3.14.0
+            componentType: java-archive
+            componentLocation: /usr/share/java/apicurio-registry/lib/org.apache.commons.commons-lang3-3.14.0.jar
+            scanner: grype
+      - timestamp: 2025-07-12T08:48:57Z
+        type: fixed
+        data:
+          fixed-version: 3.0.9-r5
+
   - id: CGA-83rw-p5wh-p5v5
     aliases:
       - CVE-2025-25193
@@ -163,6 +185,28 @@ advisories:
         data:
           fixed-version: 3.0.6-r1
 
+  - id: CGA-cxqr-5r5g-9rgj
+    aliases:
+      - CVE-2025-53864
+      - GHSA-xwmg-2g98-w7v9
+    events:
+      - timestamp: 2025-07-12T07:08:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apicurio-registry
+            componentID: 63abc7672303fcff
+            componentName: nimbus-jose-jwt
+            componentVersion: "9.40"
+            componentType: java-archive
+            componentLocation: /usr/share/java/apicurio-registry/lib/com.nimbusds.nimbus-jose-jwt-9.40.jar
+            scanner: grype
+      - timestamp: 2025-07-12T12:41:54Z
+        type: fixed
+        data:
+          fixed-version: 3.0.9-r6
+
   - id: CGA-f8wf-5cjx-7789
     aliases:
       - CVE-2025-2240
@@ -207,6 +251,24 @@ advisories:
         data:
           fixed-version: 3.0.6-r1
 
+  - id: CGA-g88v-rfvw-47pv
+    aliases:
+      - CVE-2025-7962
+      - GHSA-9342-92gg-6v29
+    events:
+      - timestamp: 2025-08-08T07:09:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apicurio-registry
+            componentID: 6dc0e4cf0edba074
+            componentName: smtp
+            componentVersion: 2.0.3
+            componentType: java-archive
+            componentLocation: /usr/share/java/apicurio-registry/lib/org.eclipse.angus.angus-mail-2.0.3.jar
+            scanner: grype
+
   - id: CGA-j66p-v8fc-4w2m
     aliases:
       - CVE-2025-48734
@@ -228,6 +290,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.0.8-r0
+
+  - id: CGA-j8x8-w834-r8hg
+    aliases:
+      - CVE-2025-49574
+      - GHSA-9623-mj7j-p9v4
+    events:
+      - timestamp: 2025-06-24T08:23:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apicurio-registry
+            componentID: 1bf146d0715f6664
+            componentName: quarkus-vertx
+            componentVersion: 3.15.4
+            componentType: java-archive
+            componentLocation: /usr/share/java/apicurio-registry/lib/io.quarkus.quarkus-vertx-3.15.4.jar
+            scanner: grype
+      - timestamp: 2025-07-02T14:33:07Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability is fixed in quarkus-vertx v3.24.0. At this time, apicurio-registry does not support this version, and as such fails to build on the new version.
 
   - id: CGA-p3w3-hrxv-jqqf
     aliases:

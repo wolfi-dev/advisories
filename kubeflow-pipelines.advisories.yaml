@@ -235,6 +235,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This is test code that is never used in production. To get more detail about the false-positive determination, please check https://github.com/browserify/resolve/issues/288
 
+  - id: CGA-4fxj-f5g3-h788
+    aliases:
+      - CVE-2025-50182
+      - GHSA-48p4-8xcf-vxj5
+    events:
+      - timestamp: 2025-06-19T08:09:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-apiserver
+            componentID: c7a49d38a9563e1b
+            componentName: urllib3
+            componentVersion: 1.26.19
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/urllib3-1.26.19.dist-info/METADATA, /usr/lib/python3.10/site-packages/urllib3-1.26.19.dist-info/RECORD, /usr/lib/python3.10/site-packages/urllib3-1.26.19.dist-info/top_level.txt
+            scanner: grype
+      - timestamp: 2025-06-27T02:22:25Z
+        type: fixed
+        data:
+          fixed-version: 2.5.0-r4
+
   - id: CGA-4xmg-fgrg-2hvg
     aliases:
       - CVE-2018-1002102
@@ -244,6 +266,28 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability is specific to the k8s server, not the Golang library. This vulnerability is marked as a false positive by the Go team.
+
+  - id: CGA-54xh-6ccp-w8r6
+    aliases:
+      - CVE-2025-50181
+      - GHSA-pq67-6m6q-mj2v
+    events:
+      - timestamp: 2025-06-19T08:09:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-apiserver
+            componentID: c7a49d38a9563e1b
+            componentName: urllib3
+            componentVersion: 1.26.19
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/urllib3-1.26.19.dist-info/METADATA, /usr/lib/python3.10/site-packages/urllib3-1.26.19.dist-info/RECORD, /usr/lib/python3.10/site-packages/urllib3-1.26.19.dist-info/top_level.txt
+            scanner: grype
+      - timestamp: 2025-06-27T02:22:27Z
+        type: fixed
+        data:
+          fixed-version: 2.5.0-r4
 
   - id: CGA-56gq-37gw-r4c8
     aliases:
@@ -497,6 +541,28 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CGA-c739-mjf2-g6c3
+    aliases:
+      - CVE-2025-4565
+      - GHSA-8qvm-5x2c-j2w7
+    events:
+      - timestamp: 2025-06-17T07:18:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-apiserver
+            componentID: 068c29c2e8b9dc6d
+            componentName: protobuf
+            componentVersion: 3.20.3
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/protobuf-3.20.3.dist-info/METADATA, /usr/lib/python3.10/site-packages/protobuf-3.20.3.dist-info/RECORD, /usr/lib/python3.10/site-packages/protobuf-3.20.3.dist-info/top_level.txt
+            scanner: grype
+      - timestamp: 2025-06-26T20:56:30Z
+        type: pending-upstream-fix
+        data:
+          note: This CVE affects protobuf 3.20.3 used in kubeflow-pipelines metadata_writer component. The fix requires upgrading to protobuf 4.25.8+, which is a major version upgrade (3.x → 4.x) that upstream kubeflow-pipelines has not implemented yet. The upstream project still uses protobuf 3.20.3 in their main branch as of June 2025. We are waiting for upstream maintainers to implement this CVE fix to avoid breaking changes.
 
   - id: CGA-cfp4-m4j7-wpm6
     aliases:
@@ -1066,6 +1132,28 @@ advisories:
         data:
           fixed-version: 2.2.0-r12
 
+  - id: CGA-pqcw-p2fh-m7h2
+    aliases:
+      - CVE-2025-7783
+      - GHSA-fjxv-7rqg-78g4
+    events:
+      - timestamp: 2025-07-22T07:24:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-frontend
+            componentID: c022cfaa44d5f899
+            componentName: form-data
+            componentVersion: 4.0.0
+            componentType: npm
+            componentLocation: /server/node_modules/axios/node_modules/form-data/package.json
+            scanner: grype
+      - timestamp: 2025-07-23T15:52:01Z
+        type: pending-upstream-fix
+        data:
+          note: The vulnerability originates from a Node.js module. Upstream must properly upgrade the affected module, taking into account its integration with related dependencies. Once addressed, we can proceed with updating and remediating the vulnerability.
+
   - id: CGA-q88w-r3vj-4qw4
     aliases:
       - CVE-2023-3676
@@ -1402,6 +1490,11 @@ advisories:
             componentType: python
             componentLocation: /usr/lib/python3.10/site-packages/requests-2.32.0.dist-info/METADATA, /usr/lib/python3.10/site-packages/requests-2.32.0.dist-info/RECORD, /usr/lib/python3.10/site-packages/requests-2.32.0.dist-info/top_level.txt
             scanner: grype
+      - timestamp: 2025-06-13T01:02:08Z
+        type: false-positive-determination
+        data:
+          type: inline-mitigations-exist
+          note: py3-pip installs a patched version of 2.32.3 requests.py which contains the upstream fix for CVE-2024-47081, reference https://github.com/wolfi-dev/os/pull/55998/files. The version referenced in the vendor.txt is not vulnerable
 
   - id: CGA-xh7w-622r-w594
     aliases:

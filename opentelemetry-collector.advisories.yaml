@@ -50,6 +50,27 @@ advisories:
         data:
           fixed-version: 0.122.1-r1
 
+  - id: CGA-54gj-7h9x-fmj9
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T08:08:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opentelemetry-collector
+            componentID: 1fdd4ea8ee86f286
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol
+            scanner: grype
+      - timestamp: 2025-07-02T18:12:17Z
+        type: fixed
+        data:
+          fixed-version: 0.129.0-r0
+
   - id: CGA-597r-5hc6-jm26
     aliases:
       - CVE-2025-22866
@@ -195,6 +216,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.109.0-r0
+
+  - id: CGA-fh99-88p7-w543
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T09:47:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opentelemetry-collector
+            componentID: 1c00b61a1ad01a95
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol
+            scanner: grype
+      - timestamp: 2025-08-09T14:39:37Z
+        type: fixed
+        data:
+          fixed-version: 0.131.0-r2
 
   - id: CGA-fp6j-q7hc-8xvc
     aliases:
@@ -426,3 +469,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.115.0-r1
+
+  - id: CGA-vpgx-x5f3-7xqv
+    aliases:
+      - CVE-2025-54388
+      - GHSA-x4rx-4gw3-53p4
+    events:
+      - timestamp: 2025-07-30T08:23:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opentelemetry-collector
+            componentID: 815d3e069efa636e
+            componentName: github.com/docker/docker
+            componentVersion: v28.2.2+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol
+            scanner: grype
+      - timestamp: 2025-08-01T00:56:21Z
+        type: fixed
+        data:
+          fixed-version: 0.131.0-r1

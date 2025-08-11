@@ -1,0 +1,98 @@
+schema-version: 2.0.2
+
+package:
+  name: mattermost-10.10
+
+advisories:
+  - id: CGA-cm6m-xvw6-fm7x
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T05:17:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-10.10
+            componentID: 64647eac1348204d
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/mattermost
+            scanner: grype
+      - timestamp: 2025-08-10T15:23:54Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in mattermost-10.10-10.10.1-r1.apk, at usr/bin/mattermost, usr/bin/mattermost, usr/bin/mmctl, usr/bin/mmctl.'
+      - timestamp: 2025-08-10T23:40:58Z
+        type: fixed
+        data:
+          fixed-version: 10.10.1-r2
+
+  - id: CGA-q396-crfg-qq8r
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-07-23T16:22:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-10.10
+            componentID: 1aa2f77a1baaf265
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/mmctl
+            scanner: grype
+      - timestamp: 2025-07-24T22:09:31Z
+        type: fixed
+        data:
+          fixed-version: 10.10.1-r1
+
+  - id: CGA-q428-hvh3-33qw
+    aliases:
+      - CVE-2022-4019
+      - GHSA-hqqj-g6mv-rw46
+    events:
+      - timestamp: 2025-07-23T16:22:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-10.10
+            componentID: e79f419cf2ade2d1
+            componentName: mattermost-10.10
+            componentVersion: 10.10.1-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2025-07-24T14:24:41Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: 'This vulnerability was remediated in mattermost v7.x, Specifically, in versions 7.1.4, 7.2.1, 7.3.1, and 7.4.0. For more information, please refer to: https://www.clouddefense.ai/cve/2022/CVE-2022-4019'
+
+  - id: CGA-xv4x-hp2c-xr68
+    aliases:
+      - CVE-2022-4045
+      - GHSA-v42f-hq78-8c5m
+    events:
+      - timestamp: 2025-07-23T16:22:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-10.10
+            componentID: e79f419cf2ade2d1
+            componentName: mattermost-10.10
+            componentVersion: 10.10.1-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2025-07-24T14:25:24Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: 'This vulnerability was remediated in mattermost v7.4.0 and later. For more information, please refer to: https://www.clouddefense.ai/cve/2022/CVE-2022-4045'

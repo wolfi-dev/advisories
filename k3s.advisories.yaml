@@ -259,6 +259,24 @@ advisories:
         data:
           note: This vulnerability requires an upgrade in a separate project 'https://github.com/k3s-io/containerd' on which the vulnerable dependency still uses an affected version.
 
+  - id: CGA-7hx2-3r2c-8hpq
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-11T04:09:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s
+            componentID: 2a5b80f0de0cf526
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/containerd-shim-runc-v2
+            scanner: grype
+
   - id: CGA-7jcp-vfhv-643j
     aliases:
       - CVE-2023-46129
@@ -888,6 +906,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.30.1-r1
+
+  - id: CGA-vm2p-vwmh-22gm
+    aliases:
+      - CVE-2025-54410
+      - GHSA-4vq8-7jfc-9cvp
+    events:
+      - timestamp: 2025-07-30T07:16:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s
+            componentID: 5c7d3b4c1764a6b7
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.8+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/k3s
+            scanner: grype
+      - timestamp: 2025-07-31T23:00:49Z
+        type: pending-upstream-fix
+        data:
+          note: 'This vulnerability affects Docker Engine (Moby) versions <= 25.0.12 where firewalld reload removes Docker''s iptables rules that isolate containers in different bridge networks. Upstream maintainers must cut a release with the fix. References: 25.x backport PR: https://github.com/moby/moby/pull/50445 28.x backport PR: https://github.com/moby/moby/pull/50506'
 
   - id: CGA-wg26-4574-7j6c
     aliases:

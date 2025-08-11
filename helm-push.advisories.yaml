@@ -365,6 +365,28 @@ advisories:
         data:
           fixed-version: 0.10.4-r2
 
+  - id: CGA-g5qr-j8pr-7xjx
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T10:22:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-push
+            componentID: 34e211159f59a35c
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/libexec/helm-plugins/helm-push/bin/helm-cm-push
+            scanner: grype
+      - timestamp: 2025-08-09T18:33:53Z
+        type: fixed
+        data:
+          fixed-version: 0.10.4-r32
+
   - id: CGA-hcpx-vh8j-2gmr
     aliases:
       - CVE-2024-24791
@@ -677,6 +699,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.10.4-r10
+
+  - id: CGA-rwvw-2r88-7m4h
+    aliases:
+      - CVE-2025-53547
+      - GHSA-557j-xg8c-q2mm
+    events:
+      - timestamp: 2025-07-09T09:48:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-push
+            componentID: e3648698c163dc9d
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.17.3
+            componentType: go-module
+            componentLocation: /usr/libexec/helm-plugins/helm-push/bin/helm-cm-push
+            scanner: grype
+      - timestamp: 2025-07-11T20:39:54Z
+        type: fixed
+        data:
+          fixed-version: 0.10.4-r30
 
   - id: CGA-v8vx-hxmc-c3fv
     aliases:

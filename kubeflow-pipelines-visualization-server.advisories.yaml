@@ -52,6 +52,31 @@ advisories:
         data:
           fixed-version: 2.3.0-r5
 
+  - id: CGA-2pj6-88rm-3q3x
+    aliases:
+      - CVE-2025-50181
+      - GHSA-pq67-6m6q-mj2v
+    events:
+      - timestamp: 2025-06-19T08:23:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-visualization-server
+            componentID: 02630fc4e05154b6
+            componentName: urllib3
+            componentVersion: 2.4.0
+            componentType: python
+            componentLocation: /usr/lib/python3.11/site-packages/urllib3-2.4.0.dist-info/METADATA, /usr/lib/python3.11/site-packages/urllib3-2.4.0.dist-info/RECORD
+            scanner: grype
+      - timestamp: 2025-06-30T13:48:17Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            The outdated version of urllib3 (1.26.20) is included because it's a dependency of py3-pip. Updating it will require the main pip project to release an update.
+            However, the pip maintainers are holding off on that update until Python 3.9 reaches its end-of-life (EOL) at the end of 2025. Once that happens, pip can upgrade, and then kubeflow-katib will also need to update to align with the changes in pip.
+            For more details, see this GitHub issue: https://github.com/pypa/pip/issues/12857
+
   - id: CGA-2pv2-w6q3-fxxh
     aliases:
       - CVE-2023-29483
@@ -255,6 +280,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.3.0-r1
+
+  - id: CGA-7hg9-5g5w-7wr8
+    aliases:
+      - CVE-2025-48379
+      - GHSA-xg8h-j46f-w952
+    events:
+      - timestamp: 2025-07-02T08:09:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-visualization-server
+            componentID: ac1f1de31f926971
+            componentName: pillow
+            componentVersion: 11.2.1
+            componentType: python
+            componentLocation: /usr/lib/python3.11/site-packages/pillow-11.2.1.dist-info/METADATA, /usr/lib/python3.11/site-packages/pillow-11.2.1.dist-info/RECORD, /usr/lib/python3.11/site-packages/pillow-11.2.1.dist-info/top_level.txt
+            scanner: grype
+      - timestamp: 2025-07-04T13:04:09Z
+        type: fixed
+        data:
+          fixed-version: 2.5.0-r4
 
   - id: CGA-84xp-hmch-gmjw
     aliases:
@@ -515,6 +562,31 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.4.0-r0
+
+  - id: CGA-g978-gw3r-x5vv
+    aliases:
+      - CVE-2025-50182
+      - GHSA-48p4-8xcf-vxj5
+    events:
+      - timestamp: 2025-06-19T08:23:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-visualization-server
+            componentID: 02630fc4e05154b6
+            componentName: urllib3
+            componentVersion: 2.4.0
+            componentType: python
+            componentLocation: /usr/lib/python3.11/site-packages/urllib3-2.4.0.dist-info/METADATA, /usr/lib/python3.11/site-packages/urllib3-2.4.0.dist-info/RECORD
+            scanner: grype
+      - timestamp: 2025-06-30T13:48:17Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            The outdated version of urllib3 (1.26.20) is included because it's a dependency of py3-pip. Updating it will require the main pip project to release an update.
+            However, the pip maintainers are holding off on that update until Python 3.9 reaches its end-of-life (EOL) at the end of 2025. Once that happens, pip can upgrade, and then kubeflow-katib will also need to update to align with the changes in pip.
+            For more details, see this GitHub issue: https://github.com/pypa/pip/issues/12857
 
   - id: CGA-gfgp-4jrg-x8xh
     aliases:

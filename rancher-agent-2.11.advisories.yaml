@@ -25,6 +25,10 @@ advisories:
         type: true-positive-determination
         data:
           note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in rancher-agent-2.11-2.11.2-r0.apk, at usr/bin/agent, usr/bin/agent.'
+      - timestamp: 2025-06-17T18:07:41Z
+        type: fixed
+        data:
+          fixed-version: 2.11.2-r1
 
   - id: CGA-36ff-mhq9-cmxc
     aliases:
@@ -115,6 +119,10 @@ advisories:
         type: true-positive-determination
         data:
           note: Unable to use govulncheck to triage this advisory because the vulnerability was not found in the Go vuln DB. Treating as a true positive since we can't confirm this is a false positive.
+      - timestamp: 2025-06-24T21:57:47Z
+        type: pending-upstream-fix
+        data:
+          note: rancher-agent pins the docker package version to v20.10.27+incompatible for compatibility with rancher-machine. Upstream needs to upgrade package due required functional changes.
 
   - id: CGA-j4qm-j33q-8qrj
     aliases:
@@ -224,6 +232,14 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/agent
             scanner: grype
+      - timestamp: 2025-06-16T08:26:21Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in rancher-agent-2.11-2.11.2-r0.apk, at usr/bin/agent, usr/bin/agent.'
+      - timestamp: 2025-06-17T18:07:42Z
+        type: fixed
+        data:
+          fixed-version: 2.11.2-r1
 
   - id: CGA-v6hr-wmvw-v4wj
     aliases:
@@ -246,6 +262,76 @@ advisories:
         type: true-positive-determination
         data:
           note: Unable to use govulncheck to triage this advisory because the vulnerability was not found in the Go vuln DB. Treating as a true positive since we can't confirm this is a false positive.
+      - timestamp: 2025-06-24T21:57:47Z
+        type: pending-upstream-fix
+        data:
+          note: 'rancher-agent pins the docker package version to v20.10.27+incompatible for compatibility with rancher-machine. '
+
+  - id: CGA-vchp-9jqf-qhm9
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-11T05:43:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-agent-2.11
+            componentID: e5d5e2006006ac5c
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/agent
+            scanner: grype
+      - timestamp: 2025-08-11T11:20:31Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in rancher-agent-2.11-2.11.4-r0.apk, at usr/bin/agent, usr/bin/agent.'
+
+  - id: CGA-w8x6-qxx2-288h
+    aliases:
+      - CVE-2025-4563
+      - GHSA-hj2p-8wj8-pfq4
+    events:
+      - timestamp: 2025-06-24T08:06:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-agent-2.11
+            componentID: 41eaa79fb8c2e970
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.32.2
+            componentType: go-module
+            componentLocation: /usr/bin/agent
+            scanner: grype
+      - timestamp: 2025-06-25T16:26:34Z
+        type: fixed
+        data:
+          fixed-version: 2.11.2-r2
+
+  - id: CGA-x333-q3cx-fw69
+    aliases:
+      - CVE-2025-54410
+      - GHSA-4vq8-7jfc-9cvp
+    events:
+      - timestamp: 2025-07-30T10:22:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-agent-2.11
+            componentID: c0765dd156882cbc
+            componentName: github.com/docker/docker
+            componentVersion: v20.10.27+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/agent
+            scanner: grype
+      - timestamp: 2025-07-31T23:32:09Z
+        type: pending-upstream-fix
+        data:
+          note: 'This vulnerability affects Docker Engine (Moby) versions <= 25.0.12 where firewalld reload removes Docker''s iptables rules that isolate containers in different bridge networks. Upstream maintainers must cut a release with the fix. References: 25.x backport PR: https://github.com/moby/moby/pull/50445 28.x backport PR: https://github.com/moby/moby/pull/50506'
 
   - id: CGA-x56q-ffg8-vvxv
     aliases:

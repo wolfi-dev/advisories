@@ -4,6 +4,50 @@ package:
   name: cargobump
 
 advisories:
+  - id: CGA-82fg-m766-qpfc
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T09:22:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cargobump
+            componentID: e63f7a68da8ea628
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/cargobump
+            scanner: grype
+      - timestamp: 2025-08-09T11:29:31Z
+        type: fixed
+        data:
+          fixed-version: 0.1.0-r6
+
+  - id: CGA-h8xj-5qff-qq6x
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T07:16:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cargobump
+            componentID: c5b31297957c67c1
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/cargobump
+            scanner: grype
+      - timestamp: 2025-06-18T09:06:14Z
+        type: fixed
+        data:
+          fixed-version: 0.1.0-r4
+
   - id: CGA-p2xf-vr33-38fh
     aliases:
       - CVE-2025-22871
@@ -47,3 +91,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.1.0-r2
+
+  - id: CGA-q6c7-gp3c-524m
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T07:16:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cargobump
+            componentID: c5b31297957c67c1
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/cargobump
+            scanner: grype
+      - timestamp: 2025-06-18T09:06:14Z
+        type: fixed
+        data:
+          fixed-version: 0.1.0-r4

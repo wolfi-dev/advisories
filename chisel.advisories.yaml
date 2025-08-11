@@ -1,0 +1,28 @@
+schema-version: 2.0.2
+
+package:
+  name: chisel
+
+advisories:
+  - id: CGA-294h-w875-c5f5
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T07:38:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: chisel
+            componentID: fe4f5abd5314ac18
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/chisel
+            scanner: grype
+      - timestamp: 2025-08-10T15:18:00Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.

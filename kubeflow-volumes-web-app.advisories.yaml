@@ -14,6 +14,31 @@ advisories:
         data:
           fixed-version: 1.7.0-r8
 
+  - id: CGA-2p5f-gphr-239m
+    aliases:
+      - CVE-2025-50182
+      - GHSA-48p4-8xcf-vxj5
+    events:
+      - timestamp: 2025-06-19T07:47:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-volumes-web-app
+            componentID: dee7c31bfc80d1da
+            componentName: urllib3
+            componentVersion: 2.4.0
+            componentType: python
+            componentLocation: /usr/lib/python3.13/site-packages/urllib3-2.4.0.dist-info/METADATA, /usr/lib/python3.13/site-packages/urllib3-2.4.0.dist-info/RECORD
+            scanner: grype
+      - timestamp: 2025-06-30T13:48:17Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            The outdated version of urllib3 (1.26.20) is included because it's a dependency of py3-pip. Updating it will require the main pip project to release an update.
+            However, the pip maintainers are holding off on that update until Python 3.9 reaches its end-of-life (EOL) at the end of 2025. Once that happens, pip can upgrade, and then kubeflow-katib will also need to update to align with the changes in pip.
+            For more details, see this GitHub issue: https://github.com/pypa/pip/issues/12857
+
   - id: CGA-359g-9qp6-mwmm
     aliases:
       - CVE-2023-46136
@@ -241,6 +266,11 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.10.0-r3
+      - timestamp: 2025-06-13T01:02:08Z
+        type: false-positive-determination
+        data:
+          type: inline-mitigations-exist
+          note: py3-pip installs a patched version of 2.32.3 requests.py which contains the upstream fix for CVE-2024-47081, reference https://github.com/wolfi-dev/os/pull/55998/files. The version referenced in the vendor.txt is not vulnerable
 
   - id: CGA-f5h2-p64r-hgpf
     aliases:
@@ -333,6 +363,31 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.8.0-r6
+
+  - id: CGA-pp93-wqmr-4mfg
+    aliases:
+      - CVE-2025-50181
+      - GHSA-pq67-6m6q-mj2v
+    events:
+      - timestamp: 2025-06-19T07:47:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-volumes-web-app
+            componentID: dee7c31bfc80d1da
+            componentName: urllib3
+            componentVersion: 2.4.0
+            componentType: python
+            componentLocation: /usr/lib/python3.13/site-packages/urllib3-2.4.0.dist-info/METADATA, /usr/lib/python3.13/site-packages/urllib3-2.4.0.dist-info/RECORD
+            scanner: grype
+      - timestamp: 2025-06-30T13:48:17Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            The outdated version of urllib3 (1.26.20) is included because it's a dependency of py3-pip. Updating it will require the main pip project to release an update.
+            However, the pip maintainers are holding off on that update until Python 3.9 reaches its end-of-life (EOL) at the end of 2025. Once that happens, pip can upgrade, and then kubeflow-katib will also need to update to align with the changes in pip.
+            For more details, see this GitHub issue: https://github.com/pypa/pip/issues/12857
 
   - id: CGA-v584-967x-qgpm
     aliases:

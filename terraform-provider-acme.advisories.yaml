@@ -47,6 +47,10 @@ advisories:
         type: true-positive-determination
         data:
           note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in terraform-provider-acme-2.32.0-r0.apk, at usr/bin/terraform-provider-acme, usr/bin/terraform-provider-acme.'
+      - timestamp: 2025-06-17T09:09:43Z
+        type: fixed
+        data:
+          fixed-version: 2.32.0-r1
 
   - id: CGA-8m5c-595x-3r3g
     aliases:
@@ -87,6 +91,14 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/terraform-provider-acme
             scanner: grype
+      - timestamp: 2025-06-16T07:35:43Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in terraform-provider-acme-2.32.0-r0.apk, at usr/bin/terraform-provider-acme, usr/bin/terraform-provider-acme.'
+      - timestamp: 2025-06-17T09:09:44Z
+        type: fixed
+        data:
+          fixed-version: 2.32.0-r1
 
   - id: CGA-q4g5-mvx2-mgj2
     aliases:
@@ -108,3 +120,46 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.31.0-r1
+
+  - id: CGA-q59p-m734-55f4
+    aliases:
+      - CVE-2025-54799
+      - GHSA-q82r-2j7m-9rv4
+    events:
+      - timestamp: 2025-08-08T08:07:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-acme
+            componentID: 55c5d8ef98555bfd
+            componentName: github.com/go-acme/lego/v4
+            componentVersion: v4.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-acme
+            scanner: grype
+      - timestamp: 2025-08-08T09:31:14Z
+        type: fixed
+        data:
+          fixed-version: 2.35.0-r1
+
+  - id: CGA-vp5q-g93r-42xp
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T10:17:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-acme
+            componentID: 515d0d17115a1784
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-acme
+            scanner: grype
+      - timestamp: 2025-07-02T15:31:44Z
+        type: fixed
+        data:
+          fixed-version: 2.32.1-r0

@@ -211,6 +211,73 @@ advisories:
         data:
           fixed-version: 3.9.1-r12
 
+  - id: CGA-ggqg-wv33-6hr8
+    aliases:
+      - CVE-2025-4563
+      - GHSA-hj2p-8wj8-pfq4
+    events:
+      - timestamp: 2025-06-24T07:55:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: emissary
+            componentID: b39dc015dd1cd525
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.32.2
+            componentType: go-module
+            componentLocation: /usr/bin/busyambassador
+            scanner: grype
+      - timestamp: 2025-06-25T00:50:13Z
+        type: fixed
+        data:
+          fixed-version: 3.10.0-r6
+
+  - id: CGA-h4v4-r8x5-7mhf
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T16:18:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: emissary
+            componentID: 4ebaa7df28be9a9b
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/busyambassador
+            scanner: grype
+      - timestamp: 2025-08-11T07:24:08Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
+  - id: CGA-j2ph-8qfq-2q24
+    aliases:
+      - CVE-2025-50181
+      - GHSA-pq67-6m6q-mj2v
+    events:
+      - timestamp: 2025-06-19T07:15:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3.11-ambassador
+            componentID: af0aafee709c05e1
+            componentName: urllib3
+            componentVersion: 2.3.0
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/urllib3-2.3.0.dist-info/METADATA, /usr/lib/python3.10/site-packages/urllib3-2.3.0.dist-info/RECORD
+            scanner: grype
+      - timestamp: 2025-06-25T00:50:15Z
+        type: fixed
+        data:
+          fixed-version: 3.10.0-r6
+
   - id: CGA-mq93-pxxq-vxf5
     aliases:
       - CVE-2025-22870
@@ -280,6 +347,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.9.1-r4
+
+  - id: CGA-p899-8w4f-7vch
+    aliases:
+      - CVE-2025-50182
+      - GHSA-48p4-8xcf-vxj5
+    events:
+      - timestamp: 2025-06-19T07:15:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3.11-ambassador
+            componentID: af0aafee709c05e1
+            componentName: urllib3
+            componentVersion: 2.3.0
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/urllib3-2.3.0.dist-info/METADATA, /usr/lib/python3.10/site-packages/urllib3-2.3.0.dist-info/RECORD
+            scanner: grype
+      - timestamp: 2025-06-25T00:50:15Z
+        type: fixed
+        data:
+          fixed-version: 3.10.0-r6
 
   - id: CGA-r2pr-4273-9v48
     aliases:

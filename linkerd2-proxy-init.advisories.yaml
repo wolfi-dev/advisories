@@ -4,6 +4,51 @@ package:
   name: linkerd2-proxy-init
 
 advisories:
+  - id: CGA-59r6-3rj4-j4w2
+    aliases:
+      - CVE-2025-4673
+      - GHSA-62jj-gr2r-5c34
+    events:
+      - timestamp: 2025-06-14T08:54:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: linkerd2-proxy-init
+            componentID: 84b1a6d82fc51e20
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/proxy-init
+            scanner: grype
+      - timestamp: 2025-06-18T08:31:35Z
+        type: fixed
+        data:
+          fixed-version: 2.4.2-r4
+
+  - id: CGA-5cgp-87xc-rc8r
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T08:13:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: linkerd2-proxy-init
+            componentID: e320bfc9c33d6c0e
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/proxy-init
+            scanner: grype
+      - timestamp: 2025-08-10T15:13:22Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-946x-xh8r-xpx9
     aliases:
       - CVE-2025-22871
@@ -35,6 +80,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.4.2-r1
+
+  - id: CGA-ppqj-j5vx-38hv
+    aliases:
+      - CVE-2025-22874
+      - GHSA-6f52-wpx2-hvf2
+    events:
+      - timestamp: 2025-06-14T08:54:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: linkerd2-proxy-init
+            componentID: 84b1a6d82fc51e20
+            componentName: stdlib
+            componentVersion: go1.24.2
+            componentType: go-module
+            componentLocation: /usr/bin/proxy-init
+            scanner: grype
+      - timestamp: 2025-06-18T08:31:36Z
+        type: fixed
+        data:
+          fixed-version: 2.4.2-r4
 
   - id: CGA-w96x-xgvf-2vp2
     aliases:

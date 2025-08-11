@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: json-server
+
+advisories:
+  - id: CGA-7ccg-jm7q-gwxv
+    aliases:
+      - CVE-2025-7339
+      - GHSA-76c9-3jph-rj3q
+    events:
+      - timestamp: 2025-07-18T07:20:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: json-server
+            componentID: 74d081f34f3609e4
+            componentName: on-headers
+            componentVersion: 1.0.2
+            componentType: npm
+            componentLocation: /usr/local/lib/node_modules/json-server/node_modules/on-headers/package.json
+            scanner: grype
+      - timestamp: 2025-07-21T18:52:39Z
+        type: fixed
+        data:
+          fixed-version: 0.17.4-r2

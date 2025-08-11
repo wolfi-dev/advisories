@@ -1,0 +1,115 @@
+schema-version: 2.0.2
+
+package:
+  name: vitess-22
+
+advisories:
+  - id: CGA-2mgw-rcjh-6389
+    aliases:
+      - GHSA-f46q-gmg5-36hm
+    events:
+      - timestamp: 2025-06-23T15:26:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vitess-22
+            componentID: 2ca4298bc657771d
+            componentName: vtadmin
+            componentVersion: 0.1.0
+            componentType: npm
+            componentLocation: /vt/web/vtadmin/package.json
+            scanner: grype
+      - timestamp: 2025-06-26T19:21:55Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: GHSA-f46q-gmg5-36hm relates to v0.1.0 of vtadmin in NPM containing malware. However, this package does not pull from NPM and builds vtadmin directly from source - it, therefore, is not affected.
+
+  - id: CGA-33jw-22px-525h
+    aliases:
+      - CVE-2025-7783
+      - GHSA-fjxv-7rqg-78g4
+    events:
+      - timestamp: 2025-07-22T08:14:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vitess-22
+            componentID: 3e584097688aec4e
+            componentName: form-data
+            componentVersion: 4.0.1
+            componentType: npm
+            componentLocation: /vt/web/vtadmin/node_modules/form-data/package.json
+            scanner: grype
+      - timestamp: 2025-07-23T18:46:07Z
+        type: fixed
+        data:
+          fixed-version: 22.0.1-r3
+
+  - id: CGA-74w6-mp7h-g4vg
+    aliases:
+      - CVE-2025-7339
+      - GHSA-76c9-3jph-rj3q
+    events:
+      - timestamp: 2025-07-18T08:17:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vitess-22
+            componentID: 5834c308a9693dad
+            componentName: on-headers
+            componentVersion: 1.0.2
+            componentType: npm
+            componentLocation: /vt/web/vtadmin/node_modules/on-headers/package.json
+            scanner: grype
+      - timestamp: 2025-07-22T22:28:21Z
+        type: pending-upstream-fix
+        data:
+          note: Upstream maintainers will need to patch on-headers@1.0.2 to a patched version; attempted patches have been applied
+
+  - id: CGA-pmhx-ph8c-28gj
+    aliases:
+      - CVE-2025-5889
+      - GHSA-v6h2-p8h4-qcjw
+    events:
+      - timestamp: 2025-06-23T15:26:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vitess-22
+            componentID: e6539b77a696ae2a
+            componentName: brace-expansion
+            componentVersion: 1.1.11
+            componentType: npm
+            componentLocation: /vt/web/vtadmin/node_modules/brace-expansion/package.json
+            scanner: grype
+      - timestamp: 2025-06-26T19:53:18Z
+        type: pending-upstream-fix
+        data:
+          note: An outdated braces-expansion is pulled in by a transitive dependency, upstream has to update the package to update braces-expansion to >= v2.0.2
+
+  - id: CGA-q3q6-f2rf-vw2f
+    aliases:
+      - CVE-2025-54798
+      - GHSA-52f5-9888-hmc6
+    events:
+      - timestamp: 2025-08-08T08:12:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vitess-22
+            componentID: cb7c750dc03abb38
+            componentName: tmp
+            componentVersion: 0.2.3
+            componentType: npm
+            componentLocation: /vt/web/vtadmin/node_modules/tmp/package.json
+            scanner: grype
+      - timestamp: 2025-08-08T14:06:07Z
+        type: fixed
+        data:
+          fixed-version: 22.0.1-r5

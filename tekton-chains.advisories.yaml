@@ -4,6 +4,29 @@ package:
   name: tekton-chains
 
 advisories:
+  - id: CGA-2449-m858-9xhq
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T22:15:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tekton-chains
+            componentID: 65cc027d48d0a506
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/tekton-chains
+            scanner: grype
+      - timestamp: 2025-08-10T11:43:29Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-2gvp-7fvh-33gr
     aliases:
       - GHSA-jq35-85cj-fj4p
@@ -406,6 +429,27 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.19.0-r6
+
+  - id: CGA-jvv9-qxwp-c23q
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T11:45:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tekton-chains
+            componentID: e9e3cfde14dac529
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/tekton-chains
+            scanner: grype
+      - timestamp: 2025-06-28T15:50:15Z
+        type: fixed
+        data:
+          fixed-version: 0.25.1-r2
 
   - id: CGA-m36h-5f52-f972
     aliases:

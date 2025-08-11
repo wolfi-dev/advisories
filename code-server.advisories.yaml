@@ -50,6 +50,28 @@ advisories:
           type: component-vulnerability-mismatch
           note: The finding is part of a VS Code extension definition, not an actual runtime dependency of code-server. The vulnerable package is not installed or used by the application.
 
+  - id: CGA-6cvc-q4pg-m73c
+    aliases:
+      - CVE-2025-7339
+      - GHSA-76c9-3jph-rj3q
+    events:
+      - timestamp: 2025-07-18T07:04:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: code-server
+            componentID: 8e4406b2f55a072f
+            componentName: on-headers
+            componentVersion: 1.0.2
+            componentType: npm
+            componentLocation: /usr/lib/code-server/node_modules/on-headers/package.json
+            scanner: grype
+      - timestamp: 2025-07-21T18:36:57Z
+        type: fixed
+        data:
+          fixed-version: 4.102.1-r0
+
   - id: CGA-84m4-j477-f86m
     aliases:
       - CVE-2021-23369
@@ -726,6 +748,10 @@ advisories:
             componentType: npm
             componentLocation: /usr/lib/code-server/node_modules/brace-expansion/package.json
             scanner: grype
+      - timestamp: 2025-06-17T01:09:29Z
+        type: fixed
+        data:
+          fixed-version: 4.100.3-r1
 
   - id: CGA-xhg7-mxhr-f279
     aliases:

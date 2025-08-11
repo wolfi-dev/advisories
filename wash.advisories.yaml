@@ -211,6 +211,28 @@ advisories:
         data:
           fixed-version: 0.39.0-r3
 
+  - id: CGA-qw5f-37rc-wcc4
+    aliases:
+      - CVE-2025-53901
+      - GHSA-fm79-3f68-h2fc
+    events:
+      - timestamp: 2025-07-19T07:26:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wash
+            componentID: ee4fff3dcc2b4663
+            componentName: wasmtime-wasi
+            componentVersion: 26.0.1
+            componentType: rust-crate
+            componentLocation: /usr/bin/wash
+            scanner: grype
+      - timestamp: 2025-07-22T08:43:20Z
+        type: pending-upstream-fix
+        data:
+          note: The vulnerability is associated with wasmtime-wasi, which has tightly coupled dependencies pinned to version 26.0.1. To remediate, upstream must align and upgrade the entire wasmtime dependency set to version 33.0.2. Once this is addressed, we can proceed with patching the vulnerability.
+
   - id: CGA-rrxp-vx65-hrrv
     aliases:
       - GHSA-x4gp-pqpj-f43q

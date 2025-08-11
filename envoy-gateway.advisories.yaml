@@ -4,6 +4,28 @@ package:
   name: envoy-gateway
 
 advisories:
+  - id: CGA-39rr-f688-2mh7
+    aliases:
+      - CVE-2025-53547
+      - GHSA-557j-xg8c-q2mm
+    events:
+      - timestamp: 2025-07-09T09:43:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: envoy-gateway-egctl
+            componentID: 99cd491790262b50
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.17.3
+            componentType: go-module
+            componentLocation: /usr/bin/egctl
+            scanner: grype
+      - timestamp: 2025-07-09T15:14:07Z
+        type: fixed
+        data:
+          fixed-version: 1.4.2-r1
+
   - id: CGA-6p5r-j8p3-5pmf
     aliases:
       - CVE-2025-22870
@@ -91,6 +113,27 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.2.4-r1
+
+  - id: CGA-hqq3-675g-c8f5
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T08:51:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: envoy-gateway-egctl
+            componentID: 4937c04320cebdc6
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/egctl
+            scanner: grype
+      - timestamp: 2025-06-28T11:55:20Z
+        type: fixed
+        data:
+          fixed-version: 1.4.1-r2
 
   - id: CGA-mpq9-f4vj-w842
     aliases:

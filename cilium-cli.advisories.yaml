@@ -4,6 +4,28 @@ package:
   name: cilium-cli
 
 advisories:
+  - id: CGA-2c45-2xx7-phm5
+    aliases:
+      - CVE-2025-53547
+      - GHSA-557j-xg8c-q2mm
+    events:
+      - timestamp: 2025-07-09T10:19:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-cli
+            componentID: f6f922189621fb8e
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.18.3
+            componentType: go-module
+            componentLocation: /usr/bin/cilium
+            scanner: grype
+      - timestamp: 2025-07-09T11:50:23Z
+        type: fixed
+        data:
+          fixed-version: 0.18.5-r1
+
   - id: CGA-35fv-m4hj-j9xx
     aliases:
       - CVE-2025-4673
@@ -96,6 +118,49 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.16.1-r0
+
+  - id: CGA-65ww-m7g4-p3x8
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T07:21:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-cli
+            componentID: 5bee58a1608d473c
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/cilium
+            scanner: grype
+      - timestamp: 2025-06-28T12:41:48Z
+        type: fixed
+        data:
+          fixed-version: 0.18.4-r2
+
+  - id: CGA-66vr-cxpr-6r5v
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T03:22:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-cli
+            componentID: 1948d420301b6b92
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/cilium
+            scanner: grype
+      - timestamp: 2025-08-10T20:35:50Z
+        type: fixed
+        data:
+          fixed-version: 0.18.6-r1
 
   - id: CGA-7m3f-65h8-pf37
     aliases:

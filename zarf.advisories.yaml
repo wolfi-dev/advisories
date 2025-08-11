@@ -71,6 +71,28 @@ advisories:
         data:
           fixed-version: 0.33.1-r1
 
+  - id: CGA-3jq8-873m-rp4r
+    aliases:
+      - CVE-2025-53547
+      - GHSA-557j-xg8c-q2mm
+    events:
+      - timestamp: 2025-07-09T10:29:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zarf
+            componentID: ca34ca50190b67e9
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.17.3
+            componentType: go-module
+            componentLocation: /usr/bin/zarf
+            scanner: grype
+      - timestamp: 2025-07-09T14:32:35Z
+        type: fixed
+        data:
+          fixed-version: 0.57.0-r2
+
   - id: CGA-434q-54v4-333c
     aliases:
       - CVE-2024-28180
@@ -725,6 +747,27 @@ advisories:
         data:
           fixed-version: 0.49.0-r2
 
+  - id: CGA-q5xf-g679-v4gq
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T10:38:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zarf
+            componentID: 693569dd722268ad
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/zarf
+            scanner: grype
+      - timestamp: 2025-06-28T14:39:20Z
+        type: fixed
+        data:
+          fixed-version: 0.57.0-r1
+
   - id: CGA-qrpp-w9rh-hx25
     aliases:
       - CVE-2024-51744
@@ -757,6 +800,28 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CGA-vpfq-2425-rvr3
+    aliases:
+      - CVE-2025-54388
+      - GHSA-x4rx-4gw3-53p4
+    events:
+      - timestamp: 2025-07-30T09:56:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zarf
+            componentID: 55fb21f0e96ad866
+            componentName: github.com/docker/docker
+            componentVersion: v28.3.2+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/zarf
+            scanner: grype
+      - timestamp: 2025-07-30T11:38:41Z
+        type: fixed
+        data:
+          fixed-version: 0.59.0-r1
 
   - id: CGA-w4pj-7pv6-3fg6
     aliases:

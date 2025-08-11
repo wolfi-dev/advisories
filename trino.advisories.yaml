@@ -218,6 +218,24 @@ advisories:
         data:
           fixed-version: 439-r0
 
+  - id: CGA-4pcq-hg4v-7x3m
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T15:20:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino
+            componentID: 35ad774ea0739071
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/lib/trino/bin/darwin-amd64/launcher
+            scanner: grype
+
   - id: CGA-5jhg-gjx7-pq4m
     aliases:
       - CVE-2024-26308
@@ -496,6 +514,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 440-r0
+
+  - id: CGA-8284-m22c-q63r
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2025-07-12T09:10:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino-plugin-redis
+            componentID: dc8189c3253ff237
+            componentName: commons-lang3
+            componentVersion: 3.17.0
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/org.apache.commons_commons-lang3-3.17.0.jar
+            scanner: grype
+      - timestamp: 2025-07-17T19:56:32Z
+        type: fixed
+        data:
+          fixed-version: 476-r2
 
   - id: CGA-828p-4xp8-m457
     aliases:

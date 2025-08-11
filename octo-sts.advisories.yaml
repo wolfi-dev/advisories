@@ -297,6 +297,28 @@ advisories:
         data:
           fixed-version: 0.2.0-r1
 
+  - id: CGA-r6mm-wmg3-7mrr
+    aliases:
+      - CVE-2025-52477
+      - GHSA-h3qp-hwvr-9xcq
+    events:
+      - timestamp: 2025-06-27T07:14:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: octo-sts
+            componentID: 1967f47852035cb7
+            componentName: github.com/octo-sts/app
+            componentVersion: v0.5.2
+            componentType: go-module
+            componentLocation: /usr/bin/octo-sts
+            scanner: grype
+      - timestamp: 2025-06-30T15:46:07Z
+        type: fixed
+        data:
+          fixed-version: 0.5.3-r0
+
   - id: CGA-rx4w-crp5-829p
     aliases:
       - CVE-2025-22866
@@ -321,6 +343,29 @@ advisories:
           note: |
             This vulnerability relates to p256NegCond within the crypto/internal/fips140/nistec package, specifically affecting the ppc64le architecture.
             We are not affected by this vulnerability as we do not build or support ppc64le.
+
+  - id: CGA-vcvc-r334-g4jg
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T22:43:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: octo-sts
+            componentID: 230a6e1c2df99fcf
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/octo-sts
+            scanner: grype
+      - timestamp: 2025-08-11T09:45:25Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
 
   - id: CGA-vhpj-hj5w-87p6
     aliases:

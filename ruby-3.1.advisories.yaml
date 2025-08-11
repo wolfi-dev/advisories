@@ -354,6 +354,28 @@ advisories:
         data:
           fixed-version: 3.1.6-r3
 
+  - id: CGA-m5fp-wwqg-qv39
+    aliases:
+      - CVE-2025-24294
+      - GHSA-xh69-987w-hrp8
+    events:
+      - timestamp: 2025-07-16T08:09:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ruby-3.1
+            componentID: 7c8476531ea4aa0b
+            componentName: resolv
+            componentVersion: 0.2.1
+            componentType: gem
+            componentLocation: /usr/lib/ruby/gems/3.1.0/specifications/default/resolv-0.2.1.gemspec
+            scanner: grype
+      - timestamp: 2025-07-16T10:37:23Z
+        type: fix-not-planned
+        data:
+          note: This package is no longer supported upstream and has reached its end of life. A version upgrade is required to fix this vulnerability.
+
   - id: CGA-m6p8-2qfv-fxqg
     aliases:
       - CVE-2022-1343

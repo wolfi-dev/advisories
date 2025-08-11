@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: tomcat-11.0
+
+advisories:
+  - id: CGA-mxpw-fxf6-gmq3
+    aliases:
+      - CVE-2025-53506
+      - GHSA-25xr-qj8w-c4vf
+    events:
+      - timestamp: 2025-07-12T10:09:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tomcat-11.0-openjdk-17
+            componentID: 3c209335e9b58739
+            componentName: tomcat-coyote
+            componentVersion: 11.0.8
+            componentType: java-archive
+            componentLocation: /usr/share/tomcat/lib/tomcat-coyote.jar
+            scanner: grype
+      - timestamp: 2025-07-17T14:48:29Z
+        type: fixed
+        data:
+          fixed-version: 11.0.9-r0

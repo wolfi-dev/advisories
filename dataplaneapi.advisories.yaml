@@ -70,6 +70,27 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-7mx5-2c79-9826
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T07:12:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dataplaneapi
+            componentID: 58a8df982755b89d
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/dataplaneapi
+            scanner: grype
+      - timestamp: 2025-06-28T12:27:34Z
+        type: fixed
+        data:
+          fixed-version: 3.2.1-r1
+
   - id: CGA-8952-7cj8-r82h
     aliases:
       - CVE-2024-24790
@@ -119,6 +140,14 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/dataplaneapi
             scanner: grype
+      - timestamp: 2025-06-15T08:37:49Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in dataplaneapi-3.2.0-r0.apk, at usr/bin/dataplaneapi, usr/bin/dataplaneapi.'
+      - timestamp: 2025-06-16T15:31:47Z
+        type: fixed
+        data:
+          fixed-version: 3.2.1-r0
 
   - id: CGA-f7hc-qfq9-p897
     aliases:
@@ -241,6 +270,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/dataplaneapi
             scanner: grype
+      - timestamp: 2025-06-16T15:31:48Z
+        type: fixed
+        data:
+          fixed-version: 3.2.1-r0
 
   - id: CGA-qc2x-6jcp-6m74
     aliases:

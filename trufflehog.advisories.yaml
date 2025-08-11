@@ -25,6 +25,28 @@ advisories:
         data:
           fixed-version: 3.88.16-r1
 
+  - id: CGA-7jhj-7f8j-fwvq
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T19:57:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trufflehog
+            componentID: 13090238a9a505c3
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/trufflehog
+            scanner: grype
+      - timestamp: 2025-08-11T10:14:33Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in trufflehog-3.90.3-r0.apk, at usr/bin/trufflehog, usr/bin/trufflehog.'
+
   - id: CGA-885c-5xfg-7q62
     aliases:
       - CVE-2025-30204
@@ -136,3 +158,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.88.24-r1
+
+  - id: CGA-wwgv-fvj8-v49x
+    aliases:
+      - CVE-2025-54388
+      - GHSA-x4rx-4gw3-53p4
+    events:
+      - timestamp: 2025-07-30T07:26:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trufflehog
+            componentID: 398f30fc4bcc2db2
+            componentName: github.com/docker/docker
+            componentVersion: v28.2.2+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/trufflehog
+            scanner: grype
+      - timestamp: 2025-07-30T09:18:24Z
+        type: fixed
+        data:
+          fixed-version: 3.90.2-r1

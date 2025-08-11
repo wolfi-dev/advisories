@@ -143,6 +143,28 @@ advisories:
         data:
           fixed-version: 1.13.6-r1
 
+  - id: CGA-g958-hm8g-28vv
+    aliases:
+      - CVE-2025-53605
+      - GHSA-rxf6-323f-44fc
+    events:
+      - timestamp: 2025-07-08T08:17:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: qdrant
+            componentID: 399209fe0aabba12
+            componentName: protobuf
+            componentVersion: 2.28.0
+            componentType: rust-crate
+            componentLocation: /usr/bin/qdrant
+            scanner: grype
+      - timestamp: 2025-07-09T01:53:22Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability requires upgrading protobuf from 2.28.0 to 3.7.2. However, qdrant's storage crate depends on raft 0.7.0, which explicitly requires protobuf 2.x. The raft crate is the latest version available and does not support protobuf 3.x. This fix is blocked until either the raft project releases a new version supporting protobuf 3.x, or qdrant replaces raft with an alternative consensus library.
+
   - id: CGA-hxqc-vvc2-qmhw
     aliases:
       - CVE-2024-12224

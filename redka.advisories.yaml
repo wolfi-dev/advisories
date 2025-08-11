@@ -36,6 +36,28 @@ advisories:
         data:
           fixed-version: 0.5.2-r2
 
+  - id: CGA-434c-55mc-xf7p
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T12:19:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: redka
+            componentID: 26902e3be7cce867
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/redka
+            scanner: grype
+      - timestamp: 2025-08-09T21:31:06Z
+        type: fixed
+        data:
+          fixed-version: 0.6.0-r2
+
   - id: CGA-54h8-j9xx-jrr3
     aliases:
       - CVE-2024-34158

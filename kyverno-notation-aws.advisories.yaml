@@ -26,6 +26,27 @@ advisories:
         data:
           fixed-version: 1.0.1_git20241214-r0
 
+  - id: CGA-378h-w4f2-x232
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T12:17:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-notation-aws
+            componentID: 297a83d879522271
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/kyverno-notation-aws
+            scanner: grype
+      - timestamp: 2025-07-02T18:11:07Z
+        type: fixed
+        data:
+          fixed-version: 1.1-r18
+
   - id: CGA-46qm-v76j-5vfm
     aliases:
       - CVE-2025-22869
@@ -166,6 +187,29 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.1-r4
+
+  - id: CGA-chj6-p4gr-3825
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T16:04:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-notation-aws
+            componentID: 6b43c6e544553cd9
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/kyverno-notation-aws
+            scanner: grype
+      - timestamp: 2025-08-11T09:41:51Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
 
   - id: CGA-crjc-gqhg-4rxx
     aliases:
@@ -328,3 +372,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.1-r7
+
+  - id: CGA-wv7x-cx89-p9jg
+    aliases:
+      - CVE-2025-47281
+      - GHSA-r5p3-955p-5ggq
+    events:
+      - timestamp: 2025-07-23T08:12:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-notation-aws
+            componentID: eb5ef04d60e77f5d
+            componentName: github.com/kyverno/kyverno
+            componentVersion: v1.14.0
+            componentType: go-module
+            componentLocation: /usr/bin/kyverno-notation-aws
+            scanner: grype
+      - timestamp: 2025-07-23T09:36:29Z
+        type: fixed
+        data:
+          fixed-version: 1.1-r20

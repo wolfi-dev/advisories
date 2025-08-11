@@ -4,6 +4,28 @@ package:
   name: rancher-machine
 
 advisories:
+  - id: CGA-7wxh-8whr-mq4m
+    aliases:
+      - CVE-2025-54410
+      - GHSA-4vq8-7jfc-9cvp
+    events:
+      - timestamp: 2025-07-30T10:18:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-machine
+            componentID: 27873f569d351fe1
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.8+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/rancher-machine
+            scanner: grype
+      - timestamp: 2025-07-31T23:05:23Z
+        type: pending-upstream-fix
+        data:
+          note: 'This vulnerability affects Docker Engine (Moby) versions <= 25.0.12 where firewalld reload removes Docker''s iptables rules that isolate containers in different bridge networks. Upstream maintainers must cut a release with the fix. References: 25.x backport PR: https://github.com/moby/moby/pull/50445 28.x backport PR: https://github.com/moby/moby/pull/50506'
+
   - id: CGA-8vh4-qc29-cxjw
     aliases:
       - CVE-2020-27534
@@ -156,6 +178,29 @@ advisories:
         type: pending-upstream-fix
         data:
           note: 'rancher-machine is fork of docker/machine and uses quite old 1.4.2 version of moby/moby dependency that released at 2017. Bumping the moby/moby package to newer versions resulting build failure and we can''t mitigate this. '
+
+  - id: CGA-jgqm-q3xp-wcc6
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T11:10:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-machine
+            componentID: 25acb58cc207f257
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/rancher-machine
+            scanner: grype
+      - timestamp: 2025-08-10T12:31:55Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
 
   - id: CGA-qrpj-mpf2-373m
     aliases:

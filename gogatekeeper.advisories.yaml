@@ -4,6 +4,27 @@ package:
   name: gogatekeeper
 
 advisories:
+  - id: CGA-4qmr-3qcr-72qv
+    aliases:
+      - GHSA-vrw8-fxc6-2r93
+    events:
+      - timestamp: 2025-06-21T08:08:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gogatekeeper
+            componentID: e6ed9f3fb0ed8f92
+            componentName: github.com/go-chi/chi/v5
+            componentVersion: v5.1.0
+            componentType: go-module
+            componentLocation: /usr/bin/gatekeeper
+            scanner: grype
+      - timestamp: 2025-06-22T22:30:53Z
+        type: fixed
+        data:
+          fixed-version: 3.5.0-r0
+
   - id: CGA-866q-vwpr-8m2w
     aliases:
       - CVE-2025-22874

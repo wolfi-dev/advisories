@@ -4,6 +4,28 @@ package:
   name: falco-exporter
 
 advisories:
+  - id: CGA-4q5c-x73h-9v9w
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T16:40:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: falco-exporter
+            componentID: 284a88f5137b9b4d
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/falco-exporter
+            scanner: grype
+      - timestamp: 2025-08-10T06:36:18Z
+        type: fixed
+        data:
+          fixed-version: 0.8.7-r9
+
   - id: CGA-7f2j-86wf-v9hh
     aliases:
       - CVE-2025-22866

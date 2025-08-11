@@ -193,6 +193,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/metaconvert
             scanner: grype
+      - timestamp: 2025-06-14T13:19:05Z
+        type: fixed
+        data:
+          fixed-version: 2.16.0-r3
 
   - id: CGA-ghp9-hc5v-vhcm
     aliases:
@@ -308,6 +312,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/metaconvert
             scanner: grype
+      - timestamp: 2025-06-14T13:19:05Z
+        type: fixed
+        data:
+          fixed-version: 2.16.0-r3
 
   - id: CGA-mpfc-jx36-46xh
     aliases:
@@ -427,3 +435,26 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.16.0-r2
+
+  - id: CGA-xrfh-q9rj-625f
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T05:36:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-mimir
+            componentID: ada327afb49add6e
+            componentName: stdlib
+            componentVersion: go1.23.11
+            componentType: go-module
+            componentLocation: /usr/bin/query-tee
+            scanner: grype
+      - timestamp: 2025-08-10T09:33:01Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.

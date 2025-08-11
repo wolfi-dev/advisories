@@ -4,6 +4,28 @@ package:
   name: ruby-3.3
 
 advisories:
+  - id: CGA-2hv4-rq2j-w89x
+    aliases:
+      - CVE-2025-24294
+      - GHSA-xh69-987w-hrp8
+    events:
+      - timestamp: 2025-07-16T08:12:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ruby-3.3
+            componentID: 17e11b4379ab0b6e
+            componentName: resolv
+            componentVersion: 0.3.0
+            componentType: gem
+            componentLocation: /usr/lib/ruby/gems/3.3.0/specifications/default/resolv-0.3.0.gemspec
+            scanner: grype
+      - timestamp: 2025-07-18T20:30:00Z
+        type: pending-upstream-fix
+        data:
+          note: The resolv gem at version 0.3.0 is included as a default gem in Ruby's standard library. The fix for this CVE requires updating resolv to include security patches. Ruby upstream has an open PR (https://github.com/ruby/ruby/pull/13817) awaiting review to address this vulnerability. Once upstream maintainers approve the functional changes, this fix will be implemented in the ruby_3_3 branch.
+
   - id: CGA-3fx7-h7mc-hmv8
     aliases:
       - CVE-2025-27221

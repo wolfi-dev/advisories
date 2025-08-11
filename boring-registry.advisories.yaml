@@ -336,6 +336,27 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-mf9w-fxm7-h355
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-06-28T08:47:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: boring-registry
+            componentID: 67503863c420c4fb
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/boring-registry
+            scanner: grype
+      - timestamp: 2025-07-01T23:20:29Z
+        type: fixed
+        data:
+          fixed-version: 0.16.4-r2
+
   - id: CGA-p4h7-wf3q-gx6v
     aliases:
       - CVE-2024-24791
@@ -377,6 +398,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.12.0-r1
+
+  - id: CGA-v786-8c29-h3j2
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-09T10:12:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: boring-registry
+            componentID: 389ff75cd145bd26
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/boring-registry
+            scanner: grype
+      - timestamp: 2025-08-09T15:36:18Z
+        type: fixed
+        data:
+          fixed-version: 0.16.4-r4
 
   - id: CGA-vg7p-w2pw-w9f9
     aliases:
