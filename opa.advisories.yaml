@@ -4,6 +4,28 @@ package:
   name: opa
 
 advisories:
+  - id: CGA-3279-qx8c-462q
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T11:09:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opa
+            componentID: 36f8a647084f8ec0
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/opa
+            scanner: grype
+      - timestamp: 2025-08-11T08:46:38Z
+        type: fixed
+        data:
+          fixed-version: 1.7.1-r1
+
   - id: CGA-3fcr-cwwp-rhh9
     aliases:
       - CVE-2025-22871

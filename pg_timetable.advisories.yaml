@@ -69,6 +69,29 @@ advisories:
         data:
           fixed-version: 5.11.0-r1
 
+  - id: CGA-r7mm-q9ch-vjh4
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T17:23:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pg_timetable
+            componentID: b7bd481918459cab
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/pg_timetable
+            scanner: grype
+      - timestamp: 2025-08-11T09:12:24Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-xxmf-6hvj-p9m8
     aliases:
       - CVE-2025-22874
