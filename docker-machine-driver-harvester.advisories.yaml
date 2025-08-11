@@ -202,6 +202,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability applies to the git-repo volume provisioner, not the k8s client itself.
 
+  - id: CGA-r2wg-hxx4-9qhr
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T09:43:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-machine-driver-harvester
+            componentID: 3ea8fa43ce25265e
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/docker-machine-driver-harvester
+            scanner: grype
+      - timestamp: 2025-08-11T07:41:20Z
+        type: fixed
+        data:
+          fixed-version: 1.0.3-r2
+
   - id: CGA-r58v-r9v9-q57g
     aliases:
       - CVE-2021-21284

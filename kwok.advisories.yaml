@@ -466,6 +466,29 @@ advisories:
         data:
           fixed-version: 0.5.1-r1
 
+  - id: CGA-wvr8-8ch3-p7m8
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T07:34:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kwok
+            componentID: 12f0ad010a19906c
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/kwok
+            scanner: grype
+      - timestamp: 2025-08-10T14:35:13Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-wx8q-hhgr-gmcm
     aliases:
       - CVE-2020-8559
