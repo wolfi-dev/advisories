@@ -217,6 +217,29 @@ advisories:
         data:
           fixed-version: 1.22.1-r1
 
+  - id: CGA-h3c9-fpq4-h483
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-11T04:20:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: delve
+            componentID: 3a67270611e6e644
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/dlv
+            scanner: grype
+      - timestamp: 2025-08-11T10:10:32Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-hqh3-24mv-x6hw
     aliases:
       - CVE-2024-45341
