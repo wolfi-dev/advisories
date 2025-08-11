@@ -4,6 +4,24 @@ package:
   name: loki-3.5
 
 advisories:
+  - id: CGA-hg6x-hc7r-9993
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T22:33:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: loki-3.5
+            componentID: a325c80997f1defb
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/promtail
+            scanner: grype
+
   - id: CGA-jr4p-4c73-8wp4
     aliases:
       - CVE-2025-4673

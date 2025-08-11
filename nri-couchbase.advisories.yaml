@@ -143,6 +143,29 @@ advisories:
         data:
           fixed-version: 2.7.2-r1
 
+  - id: CGA-hmm6-wpx6-x3mf
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T22:56:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-couchbase
+            componentID: 818ac27c3c989c2c
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/nri-couchbase
+            scanner: grype
+      - timestamp: 2025-08-11T08:12:27Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-hv53-r379-58jf
     aliases:
       - CVE-2024-24785
