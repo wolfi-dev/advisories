@@ -46,6 +46,29 @@ advisories:
         data:
           fixed-version: 5.9.0-r1
 
+  - id: CGA-2pjp-2r72-gw7f
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T14:04:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-operator
+            componentID: 28281da5de4d9d5e
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/grafana-operator
+            scanner: grype
+      - timestamp: 2025-08-11T08:13:03Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-35fx-xmf2-8269
     aliases:
       - CVE-2023-45289

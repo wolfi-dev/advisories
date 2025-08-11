@@ -26,6 +26,29 @@ advisories:
         data:
           fixed-version: 1.6.2-r6
 
+  - id: CGA-3gp8-hwfq-5mc8
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T20:18:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: lvm-driver
+            componentID: f274c11a967d15af
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/lvm-driver
+            scanner: grype
+      - timestamp: 2025-08-11T07:19:34Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-43mj-hc85-wjm7
     aliases:
       - CVE-2025-22866

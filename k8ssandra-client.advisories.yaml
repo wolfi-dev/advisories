@@ -4,6 +4,24 @@ package:
   name: k8ssandra-client
 
 advisories:
+  - id: CGA-2m7w-2rrv-89pq
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T19:52:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k8ssandra-client
+            componentID: 2f9b65f78af21d4a
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/kubectl-k8ssandra
+            scanner: grype
+
   - id: CGA-37hx-3x8w-q6fj
     aliases:
       - CVE-2025-53547
