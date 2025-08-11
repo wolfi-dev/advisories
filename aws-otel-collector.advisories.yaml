@@ -27,6 +27,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-q44c-gjh9-4xw3
+    aliases:
+      - CVE-2025-54388
+      - GHSA-x4rx-4gw3-53p4
+    events:
+      - timestamp: 2025-08-11T20:32:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-otel-collector
+            componentID: 43abed32193f5c6c
+            componentName: github.com/docker/docker
+            componentVersion: v28.2.2+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/awscollector
+            scanner: grype
+
   - id: CGA-w86r-pffm-55cc
     aliases:
       - GHSA-fv92-fjc5-jj9h
