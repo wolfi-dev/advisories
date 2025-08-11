@@ -667,6 +667,29 @@ advisories:
         data:
           fixed-version: 0.16.2-r14
 
+  - id: CGA-wh7g-h5c9-8c32
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T03:31:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: chartmuseum
+            componentID: 61f1e22e53a7aa15
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/chartmuseum
+            scanner: grype
+      - timestamp: 2025-08-10T12:13:37Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-ww4m-35h3-m4hx
     aliases:
       - CVE-2024-24784

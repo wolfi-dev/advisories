@@ -132,6 +132,29 @@ advisories:
         data:
           fixed-version: 2.2.0-r9
 
+  - id: CGA-9r43-w2v6-2894
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T15:53:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: php-fpm_exporter
+            componentID: 562e1a0b6f10a34f
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/php-fpm_exporter
+            scanner: grype
+      - timestamp: 2025-08-11T10:24:58Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-cj88-9552-f7mm
     aliases:
       - CVE-2023-45290

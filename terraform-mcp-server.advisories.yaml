@@ -4,6 +4,29 @@ package:
   name: terraform-mcp-server
 
 advisories:
+  - id: CGA-hgvw-r2c3-9f8m
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T21:17:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-mcp-server
+            componentID: 2cef4b5992cc2e99
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-mcp-server
+            scanner: grype
+      - timestamp: 2025-08-11T08:25:53Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-mgmh-fx86-9gmw
     aliases:
       - GHSA-fv92-fjc5-jj9h

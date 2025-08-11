@@ -228,6 +228,29 @@ advisories:
         data:
           fixed-version: 0.139.4-r1
 
+  - id: CGA-r7gw-3qgw-ph7x
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T04:51:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: hugo
+            componentID: a42946d837edf8be
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/hugo
+            scanner: grype
+      - timestamp: 2025-08-10T12:16:41Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-w2wx-8pg3-q3wv
     aliases:
       - CVE-2025-22869

@@ -180,6 +180,32 @@ advisories:
         data:
           fixed-version: 0.27.1-r0
 
+  - id: CGA-8v7w-7h97-4jjw
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T02:35:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wolfictl
+            componentID: 5fb74c5deca10a85
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/wolfictl
+            scanner: grype
+      - timestamp: 2025-08-10T16:07:58Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in wolfictl-0.38.9-r0.apk, at usr/bin/wolfictl, usr/bin/wolfictl.'
+      - timestamp: 2025-08-10T20:29:29Z
+        type: fixed
+        data:
+          fixed-version: 0.38.9-r1
+
   - id: CGA-9426-fg8r-jf98
     aliases:
       - CVE-2024-24789

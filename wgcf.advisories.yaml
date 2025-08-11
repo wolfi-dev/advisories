@@ -82,6 +82,29 @@ advisories:
         data:
           fixed-version: 2.2.22-r3
 
+  - id: CGA-c4mw-vjw2-mxcx
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T17:45:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wgcf
+            componentID: 24ae009a50814473
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/wgcf
+            scanner: grype
+      - timestamp: 2025-08-11T10:31:53Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-c7f9-pq8h-gfmg
     aliases:
       - CVE-2024-24788

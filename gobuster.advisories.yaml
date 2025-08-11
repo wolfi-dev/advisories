@@ -445,6 +445,29 @@ advisories:
         data:
           fixed-version: 3.6.0-r15
 
+  - id: CGA-w2r3-f7x2-pm3m
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-10T04:09:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gobuster
+            componentID: 87102acb258e24f4
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/gobuster
+            scanner: grype
+      - timestamp: 2025-08-10T09:44:21Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-wcpm-f328-p4gm
     aliases:
       - CVE-2023-44487
