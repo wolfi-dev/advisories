@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: container-object-storage-interface
+
+advisories:
+  - id: CGA-p9px-6m45-9qg9
+    aliases:
+      - CVE-2025-47907
+      - GHSA-j5pm-7495-qmr3
+    events:
+      - timestamp: 2025-08-11T06:36:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: container-object-storage-interface-sidecar
+            componentID: 99f5e741471ef49b
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/controller
+            scanner: grype
