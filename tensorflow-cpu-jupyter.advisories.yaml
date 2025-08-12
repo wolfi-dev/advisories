@@ -202,3 +202,21 @@ advisories:
         type: pending-upstream-fix
         data:
           note: urllib3 vuln event is detected due to its presence in python 3.11 vendor path. Python 3.11 vendored that urllib3 1.26.20 version and upstream uses Python 3.11 to build the package, therefore we need to wait that upstream will update Python to a version that brings a fixed urllib3 version. Once possible we will patch it.
+
+  - id: CGA-v5v4-8486-25mp
+    aliases:
+      - CVE-2025-8747
+      - GHSA-pwq7-2gvj-vg9v
+    events:
+      - timestamp: 2025-08-12T07:23:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tensorflow-cpu-jupyter
+            componentID: 5314b7ff5c7df955
+            componentName: keras
+            componentVersion: 3.10.0
+            componentType: python
+            componentLocation: /usr/share/tensorflow/lib/python3.11/site-packages/keras-3.10.0.dist-info/METADATA
+            scanner: grype
