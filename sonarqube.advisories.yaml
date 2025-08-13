@@ -290,6 +290,24 @@ advisories:
         data:
           note: This is a transitive dependency of ElasticSearch and must be fixed in the upstream project
 
+  - id: CGA-qm35-phph-2vmr
+    aliases:
+      - CVE-2025-8885
+      - GHSA-67mf-3cr5-8w23
+    events:
+      - timestamp: 2025-08-13T07:33:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube
+            componentID: ae904fb0f05ede1e
+            componentName: bc-fips
+            componentVersion: 1.0.2.5
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/elasticsearch/lib/tools/plugin-cli/bc-fips-1.0.2.5.jar
+            scanner: grype
+
   - id: CGA-r3xx-5g2c-66xp
     aliases:
       - CVE-2025-53864
