@@ -4,6 +4,24 @@ package:
   name: opensearch-3
 
 advisories:
+  - id: CGA-56w7-m6wf-p29c
+    aliases:
+      - CVE-2025-8885
+      - GHSA-67mf-3cr5-8w23
+    events:
+      - timestamp: 2025-08-13T08:12:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-3
+            componentID: db4bb21ade60cb30
+            componentName: bc-fips
+            componentVersion: 2.0.0
+            componentType: java-archive
+            componentLocation: /usr/share/opensearch/plugins/opensearch-ml/bc-fips-2.0.0.jar
+            scanner: grype
+
   - id: CGA-5hqf-6hh7-c6j6
     aliases:
       - CVE-2025-22227
