@@ -70,6 +70,24 @@ advisories:
         data:
           note: 'The dependency causing this CVE, json-smart, is a transitive dependency which has not released a fix version. Due to its transitive nature, a fix requires a release version to be cut and published to the maven repository. '
 
+  - id: CGA-63fh-3j5v-xvw5
+    aliases:
+      - CVE-2025-55163
+      - GHSA-prj3-ccx8-p6x4
+    events:
+      - timestamp: 2025-08-14T12:05:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube
+            componentID: 5c5c5004b57c8e60
+            componentName: netty-codec-http2
+            componentVersion: 4.1.115.Final
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/elasticsearch/modules/x-pack-inference/netty-codec-http2-4.1.115.Final.jar
+            scanner: grype
+
   - id: CGA-7c3h-fr9p-6vxc
     aliases:
       - CVE-2024-47554
