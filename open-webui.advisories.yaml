@@ -114,6 +114,24 @@ advisories:
         data:
           note: The vulnerability affects Torch 2.7.1 used in open-webui. Still there's no PyTorch fixed version. Once patched we can update it.
 
+  - id: CGA-mr5q-pjp2-x97w
+    aliases:
+      - CVE-2025-55197
+      - GHSA-7hfw-26vp-jp8m
+    events:
+      - timestamp: 2025-08-14T12:08:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: open-webui
+            componentID: 7e31034298a8f771
+            componentName: pypdf
+            componentVersion: 4.3.1
+            componentType: python
+            componentLocation: /usr/share/open-webui/lib/python3.11/site-packages/pypdf-4.3.1.dist-info/METADATA
+            scanner: grype
+
   - id: CGA-p5fg-7mrc-c9f9
     aliases:
       - CVE-2025-53643
@@ -156,7 +174,7 @@ advisories:
       - timestamp: 2025-08-04T17:40:50Z
         type: fix-not-planned
         data:
-          note: "The python-ecdsa library is vulnerable to a Minerva timing attack on the P-256 curve through the ecdsa.SigningKey.sign_digest() API. The vulnerability affects ECDSA signatures, key generation, and ECDH operations, potentially allowing attackers to leak internal nonces and discover private keys through timing analysis. The upstream python-ecdsa project explicitly considers side-channel attacks out of scope and has stated there is no planned fix for this vulnerability."
+          note: The python-ecdsa library is vulnerable to a Minerva timing attack on the P-256 curve through the ecdsa.SigningKey.sign_digest() API. The vulnerability affects ECDSA signatures, key generation, and ECDH operations, potentially allowing attackers to leak internal nonces and discover private keys through timing analysis. The upstream python-ecdsa project explicitly considers side-channel attacks out of scope and has stated there is no planned fix for this vulnerability.
 
   - id: CGA-qg34-qp8g-rhvg
     aliases:
