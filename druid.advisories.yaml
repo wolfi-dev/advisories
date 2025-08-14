@@ -349,6 +349,24 @@ advisories:
         data:
           note: This vulnerability exists in ambari-metrics-common-2.7.0.0.0 which is bundled/shaded inside ambari-metrics-emitter extension. As a pre-built binary artifact, the embedded dependencies cannot be updated independently. This requires a new upstream release of Apache Metrics Emitter with updated bundled dependencies.
 
+  - id: CGA-89rf-c6fq-477h
+    aliases:
+      - CVE-2025-55163
+      - GHSA-prj3-ccx8-p6x4
+    events:
+      - timestamp: 2025-08-14T10:14:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: druid
+            componentID: 72f8435853caad20
+            componentName: netty-codec-http2
+            componentVersion: 4.1.118.Final
+            componentType: java-archive
+            componentLocation: /usr/share/java/druid/extensions/druid-azure-extensions/netty-codec-http2-4.1.118.Final.jar
+            scanner: grype
+
   - id: CGA-8jjf-fchm-77wg
     aliases:
       - CVE-2024-25638
