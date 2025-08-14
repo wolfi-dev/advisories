@@ -25,6 +25,24 @@ advisories:
         data:
           fixed-version: 0.27.1-r1
 
+  - id: CGA-h863-5g89-qc54
+    aliases:
+      - CVE-2025-55199
+      - GHSA-9h84-qmv7-982p
+    events:
+      - timestamp: 2025-08-14T10:20:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trivy-operator
+            componentID: 8d8912c792ee34b3
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.18.4
+            componentType: go-module
+            componentLocation: /usr/bin/trivy-operator
+            scanner: grype
+
   - id: CGA-xqmg-2mf5-3q2f
     aliases:
       - CVE-2025-47907
