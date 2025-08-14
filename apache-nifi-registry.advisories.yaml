@@ -4,6 +4,24 @@ package:
   name: apache-nifi-registry
 
 advisories:
+  - id: CGA-2rhm-pq9f-wfvc
+    aliases:
+      - CVE-2025-55163
+      - GHSA-prj3-ccx8-p6x4
+    events:
+      - timestamp: 2025-08-14T11:22:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi-registry
+            componentID: a7ed52c7d7d98f3b
+            componentName: netty-codec-http2
+            componentVersion: 4.2.2.Final
+            componentType: java-archive
+            componentLocation: /opt/nifi-registry/nifi-registry-2.5.0/ext/aws/lib/netty-codec-http2-4.2.2.Final.jar
+            scanner: grype
+
   - id: CGA-4fcv-jq36-r7hx
     aliases:
       - CVE-2025-48924
