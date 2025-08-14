@@ -102,6 +102,24 @@ advisories:
         data:
           note: Opensearch-2 has multiple instances of CVE-2025-48924 due to plugins using the same library versions. Upstream will needs to fix
 
+  - id: CGA-r758-chw3-4cjv
+    aliases:
+      - CVE-2025-8916
+      - GHSA-4cx2-fc23-5wg6
+    events:
+      - timestamp: 2025-08-14T11:52:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-3
+            componentID: ea9263119937b49e
+            componentName: bcpkix-fips
+            componentVersion: 2.0.7
+            componentType: java-archive
+            componentLocation: /usr/share/opensearch/plugins/opensearch-performance-analyzer/bcpkix-fips-2.0.7.jar
+            scanner: grype
+
   - id: CGA-vcw2-p8c6-rfr5
     aliases:
       - CVE-2025-53864
