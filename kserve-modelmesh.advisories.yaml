@@ -4,6 +4,24 @@ package:
   name: kserve-modelmesh
 
 advisories:
+  - id: CGA-85fq-4p6p-pq7f
+    aliases:
+      - CVE-2025-8916
+      - GHSA-4cx2-fc23-5wg6
+    events:
+      - timestamp: 2025-08-14T12:15:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kserve-modelmesh
+            componentID: 0ae5b62f0f1f432c
+            componentName: bcpkix-jdk18on
+            componentVersion: "1.78"
+            componentType: java-archive
+            componentLocation: /opt/kserve/mmesh/lib/bcpkix-jdk18on-1.78.jar
+            scanner: grype
+
   - id: CGA-h8f2-5mwq-j6j5
     aliases:
       - CVE-2024-12798
