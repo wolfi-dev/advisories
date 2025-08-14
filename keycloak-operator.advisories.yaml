@@ -196,6 +196,24 @@ advisories:
         data:
           fixed-version: 24.0.4-r2
 
+  - id: CGA-hw89-vf95-v7mf
+    aliases:
+      - CVE-2025-8916
+      - GHSA-4cx2-fc23-5wg6
+    events:
+      - timestamp: 2025-08-14T07:23:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak-operator
+            componentID: 47961e6b8faea5c4
+            componentName: bcpkix-jdk18on
+            componentVersion: "1.78"
+            componentType: java-archive
+            componentLocation: /usr/share/java/quarkus-app/lib/main/org.bouncycastle.bcpkix-jdk18on-1.78.jar
+            scanner: grype
+
   - id: CGA-p26p-fhh4-f59j
     aliases:
       - CVE-2024-2700
