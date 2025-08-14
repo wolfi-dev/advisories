@@ -1,0 +1,22 @@
+schema-version: 2.0.2
+
+package:
+  name: istio-1.27
+
+advisories:
+  - id: CGA-jfrf-24m7-v657
+    aliases:
+      - GHSA-fv92-fjc5-jj9h
+    events:
+      - timestamp: 2025-08-14T13:25:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-install-cni-1.27
+            componentID: 3d5b73631e2eb347
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/istioctl
+            scanner: grype
