@@ -91,3 +91,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.6.2-r0
+
+  - id: CGA-rmqp-mcj6-8vx2
+    aliases:
+      - CVE-2025-55199
+      - GHSA-9h84-qmv7-982p
+    events:
+      - timestamp: 2025-08-14T10:26:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-2.6
+            componentID: 0475b20864b4c6d1
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.18.4
+            componentType: go-module
+            componentLocation: /usr/bin/flux
+            scanner: grype
