@@ -4,6 +4,24 @@ package:
   name: istio-1.27
 
 advisories:
+  - id: CGA-j38j-v7w8-4q42
+    aliases:
+      - CVE-2025-55198
+      - GHSA-f9f8-9pmf-xv68
+    events:
+      - timestamp: 2025-08-14T13:25:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-install-cni-1.27
+            componentID: 5ca4b65447d7db0b
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.17.3
+            componentType: go-module
+            componentLocation: /usr/bin/istioctl
+            scanner: grype
+
   - id: CGA-jfrf-24m7-v657
     aliases:
       - GHSA-fv92-fjc5-jj9h
