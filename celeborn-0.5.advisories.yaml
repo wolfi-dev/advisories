@@ -140,6 +140,24 @@ advisories:
         data:
           note: The jackson-core dependency is brought in by the Hadoop transient dependency, upstream will have to release a version of Hadoop with a more recent version of jackson-core and celeborn will have to update it's Hadoop dependency in order to pull in a fixed version of jackson-core.
 
+  - id: CGA-mc58-mxcf-6c3r
+    aliases:
+      - CVE-2025-55163
+      - GHSA-prj3-ccx8-p6x4
+    events:
+      - timestamp: 2025-08-14T07:43:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: celeborn-0.5
+            componentID: 28ad5ed0d262039e
+            componentName: netty-codec-http2
+            componentVersion: 4.1.118.Final
+            componentType: java-archive
+            componentLocation: /usr/share/java/celeborn/jars/netty-codec-http2-4.1.118.Final.jar
+            scanner: grype
+
   - id: CGA-p77w-9v75-gj5c
     aliases:
       - CVE-2025-48924
