@@ -4,6 +4,24 @@ package:
   name: helm-operator
 
 advisories:
+  - id: CGA-2g5r-xf83-fwp8
+    aliases:
+      - CVE-2025-55198
+      - GHSA-f9f8-9pmf-xv68
+    events:
+      - timestamp: 2025-08-14T11:08:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-operator
+            componentID: f225109ab213dfbc
+            componentName: helm.sh/helm/v3
+            componentVersion: v3.18.4
+            componentType: go-module
+            componentLocation: /usr/bin/helm-operator
+            scanner: grype
+
   - id: CGA-2mcf-cgg5-65xq
     aliases:
       - CVE-2025-22866
