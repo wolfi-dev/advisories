@@ -144,6 +144,24 @@ advisories:
             Upstream maintainers must cut a Hadoop release with the following changes to resolve this CVE. The fix has already been merged in PR #7524 (HADOOP-18991) which removes the unused commons-beanutils dependency entirely from Hadoop 3. The PR was merged on 2025-03-20. Spark depends on hadoop-client-runtime-3.4.1.jar which bundles this vulnerable dependency.
             Reference: https://github.com/apache/hadoop/pull/7524
 
+  - id: CGA-g47r-293r-mg24
+    aliases:
+      - CVE-2025-55163
+      - GHSA-prj3-ccx8-p6x4
+    events:
+      - timestamp: 2025-08-14T10:47:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-4.0-scala-2.13
+            componentID: 5b663c8a59d2c48b
+            componentName: netty-codec-http2
+            componentVersion: 4.1.118.Final
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/connect-repl/spark-connect-client-jvm_2.13-4.0.0.jar
+            scanner: grype
+
   - id: CGA-g97v-9xqj-c4w6
     aliases:
       - CVE-2024-47561
