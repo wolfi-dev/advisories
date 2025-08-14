@@ -134,6 +134,24 @@ advisories:
           type: vulnerable-code-cannot-be-controlled-by-adversary
           note: Vulnerability affects only Windows systems.
 
+  - id: CGA-fvfg-6345-286g
+    aliases:
+      - CVE-2025-55163
+      - GHSA-prj3-ccx8-p6x4
+    events:
+      - timestamp: 2025-08-14T07:23:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak-operator
+            componentID: 2a909766ff7deb59
+            componentName: netty-codec-http2
+            componentVersion: 4.1.121.Final
+            componentType: java-archive
+            componentLocation: /usr/share/java/quarkus-app/lib/main/io.netty.netty-codec-http2-4.1.121.Final.jar
+            scanner: grype
+
   - id: CGA-gfj5-2q78-6f2f
     aliases:
       - CVE-2024-30171
