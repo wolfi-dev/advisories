@@ -540,6 +540,24 @@ advisories:
         data:
           note: CVE affects component keycloak-services which has no known release mitigating this CVE - see https://github.com/advisories/GHSA-2935-2wfm-hhpv. As such we must wait until an upstream fix of this component is released.
 
+  - id: CGA-j9xq-5w33-4q43
+    aliases:
+      - CVE-2025-55163
+      - GHSA-prj3-ccx8-p6x4
+    events:
+      - timestamp: 2025-08-14T07:41:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak
+            componentID: 78d59e7669da40b3
+            componentName: netty-codec-http2
+            componentVersion: 4.1.121.Final
+            componentType: java-archive
+            componentLocation: /opt/bitnami/keycloak/lib/lib/main/io.netty.netty-codec-http2-4.1.121.Final.jar
+            scanner: grype
+
   - id: CGA-jfwc-r5wf-xxhp
     aliases:
       - CVE-2022-37832
