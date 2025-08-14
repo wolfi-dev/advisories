@@ -325,6 +325,15 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/sonarqube/elasticsearch/lib/tools/plugin-cli/bc-fips-1.0.2.5.jar
             scanner: grype
+      - timestamp: 2025-08-14T19:35:00Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            The bc-fips 1.0.2.5 vulnerability is embedded within Elasticsearch 8.16.3's plugin-cli tool, which is bundled with SonarQube.
+            SonarQube 25.8.0.112029 (the latest version) bundles Elasticsearch 8.16.3. While newer Elasticsearch versions exist (8.19.2),
+            SonarQube upstream would need to update their bundled Elasticsearch version, and Elasticsearch would need to update bc-fips
+            from 1.0.2.5 to 2.1.0+ in their plugin-cli tool to resolve this vulnerability.
+            This is a multi-level upstream dependency requiring coordination between both projects.
 
   - id: CGA-r3xx-5g2c-66xp
     aliases:
