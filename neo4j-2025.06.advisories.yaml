@@ -21,6 +21,15 @@ advisories:
             componentType: java-archive
             componentLocation: /var/lib/neo4j/lib/netty-codec-http2-4.2.1.Final.jar
             scanner: grype
+      - timestamp: 2025-08-15T02:00:00Z
+        type: fix-not-planned
+        data:
+          note: |
+            Neo4j 2025.06 has reached end of life. Per Neo4j's support policy, each minor release is
+            generally no longer supported upon the release of the next minor version. Neo4j has moved
+            to version 5.26.0 as the current release. Attempting to update netty-codec-http2 to 4.2.4.Final
+            causes build failures. Since this is an EOL version, security updates will not be applied.
+            Users should migrate to a supported Neo4j version.
 
   - id: CGA-vxhq-8vpg-mr2p
     aliases:
