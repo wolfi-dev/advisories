@@ -21,6 +21,16 @@ advisories:
             componentType: java-archive
             componentLocation: /opt/nifi-registry/nifi-registry-2.5.0/ext/aws/lib/netty-codec-http2-4.2.2.Final.jar
             scanner: grype
+      - timestamp: 2025-08-15T01:00:00Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            The fix for this CVE requires upgrading netty-codec-http2 to 4.2.4.Final. However, this dependency
+            is bundled as part of the AWS extension JAR and cannot be independently updated through dependency
+            management. Cherry-picking the upstream fix (commit ccd3c4e2c4fe7f78aa2c214b3f953540e63e7066)
+            introduces 2.6.0-SNAPSHOT dependencies that break the build, as this version is not yet released
+            and the SNAPSHOT artifacts are not available in Maven repositories.
+            We need to wait for Apache NiFi 2.6.0 to be officially released before we can apply this security fix.
 
   - id: CGA-4fcv-jq36-r7hx
     aliases:
