@@ -157,6 +157,15 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/java/celeborn/jars/netty-codec-http2-4.1.118.Final.jar
             scanner: grype
+      - timestamp: 2025-08-15T20:02:33Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            Celeborn uses netty-all 4.1.109.Final which bundles all netty components including netty-codec-http2.
+            Attempting to override just netty-codec-http2 to 4.1.124.Final via pombump causes build failures due to
+            version mismatches with the bundled netty-all dependency. The fix requires updating the entire netty
+            version property in the upstream project from 4.1.109.Final to 4.1.124.Final+ to maintain consistency
+            across all netty components. This needs to be done upstream in Apache Celeborn.
 
   - id: CGA-p77w-9v75-gj5c
     aliases:
