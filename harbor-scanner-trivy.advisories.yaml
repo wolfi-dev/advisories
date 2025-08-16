@@ -108,6 +108,24 @@ advisories:
         data:
           fixed-version: 0.31.3-r2
 
+  - id: CGA-cgvq-39rx-5hrc
+    aliases:
+      - CVE-2025-54410
+      - GHSA-4vq8-7jfc-9cvp
+    events:
+      - timestamp: 2025-08-16T08:08:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-scanner-trivy
+            componentID: 0f7bf449523ac806
+            componentName: github.com/docker/docker
+            componentVersion: v27.2.0+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/scanner-trivy
+            scanner: grype
+
   - id: CGA-cm55-hcjg-7fqj
     aliases:
       - CVE-2025-4673
