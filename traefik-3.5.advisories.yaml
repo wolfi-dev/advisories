@@ -4,6 +4,24 @@ package:
   name: traefik-3.5
 
 advisories:
+  - id: CGA-c22j-xq7p-9r9h
+    aliases:
+      - CVE-2025-54410
+      - GHSA-4vq8-7jfc-9cvp
+    events:
+      - timestamp: 2025-08-16T08:52:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: traefik-3.5
+            componentID: 78c9d3aa617000ff
+            componentName: github.com/docker/docker
+            componentVersion: v27.1.1+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/traefik
+            scanner: grype
+
   - id: CGA-pmxx-pv94-8cpv
     aliases:
       - CVE-2025-54799
