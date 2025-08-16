@@ -422,6 +422,24 @@ advisories:
         data:
           fixed-version: 1.50.0-r1
 
+  - id: CGA-qpvv-7985-pg7m
+    aliases:
+      - CVE-2025-54410
+      - GHSA-4vq8-7jfc-9cvp
+    events:
+      - timestamp: 2025-08-16T10:26:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: newrelic-infrastructure-agent
+            componentID: a5dd0f9c89b9c167
+            componentName: github.com/docker/docker
+            componentVersion: v26.1.5+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/newrelic-infra
+            scanner: grype
+
   - id: CGA-vqp8-mf3x-xg9c
     aliases:
       - CVE-2025-22866
