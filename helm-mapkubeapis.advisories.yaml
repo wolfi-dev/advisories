@@ -4,6 +4,24 @@ package:
   name: helm-mapkubeapis
 
 advisories:
+  - id: CGA-7g78-9vwx-rq45
+    aliases:
+      - CVE-2025-54410
+      - GHSA-4vq8-7jfc-9cvp
+    events:
+      - timestamp: 2025-08-16T08:42:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-mapkubeapis
+            componentID: 3fee0866ca10bf9c
+            componentName: github.com/docker/docker
+            componentVersion: v26.0.0-rc3+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/mapkubeapis
+            scanner: grype
+
   - id: CGA-7qrv-mwqh-74mm
     aliases:
       - CVE-2025-55199
