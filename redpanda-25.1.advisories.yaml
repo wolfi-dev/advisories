@@ -25,3 +25,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 25.2.1-r1
+
+  - id: CGA-mxcp-87jp-q4j9
+    aliases:
+      - CVE-2025-54410
+      - GHSA-4vq8-7jfc-9cvp
+    events:
+      - timestamp: 2025-08-16T10:39:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rpk-25.2.1
+            componentID: ae3d964eefd4810b
+            componentName: github.com/docker/docker
+            componentVersion: v27.5.1+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/rpk
+            scanner: grype
