@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: gatekeeper-3.19
+
+advisories:
+  - id: CGA-2c6h-q544-w32c
+    aliases:
+      - CVE-2025-54410
+      - GHSA-4vq8-7jfc-9cvp
+    events:
+      - timestamp: 2025-08-16T07:52:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.19-gator
+            componentID: ea493a6ae4cd1a29
+            componentName: github.com/docker/docker
+            componentVersion: v26.1.5+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/gator
+            scanner: grype
