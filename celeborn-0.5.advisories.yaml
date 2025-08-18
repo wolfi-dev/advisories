@@ -157,6 +157,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/java/celeborn/jars/netty-codec-http2-4.1.118.Final.jar
             scanner: grype
+      - timestamp: 2025-08-18T16:38:39Z
+        type: pending-upstream-fix
+        data:
+          note: The identified vulnerability originates from the netty-codec-http2 dependency, which can be remediated by upgrading to version 4.1.124.Final. However, direct upgrades introduce cascading dependency resolution issues that cause build failures. Upstream must properly realign and update the dependency tree to ensure compatibility. Once this is addressed at the upstream level, we can safely apply the upgrade and remediate the vulnerability.
 
   - id: CGA-p77w-9v75-gj5c
     aliases:
