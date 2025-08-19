@@ -729,3 +729,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.11.0-r7
+
+  - id: CGA-xm39-rjmw-8h5x
+    aliases:
+      - CVE-2025-54388
+      - GHSA-x4rx-4gw3-53p4
+    events:
+      - timestamp: 2025-08-19T21:05:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: falcoctl
+            componentID: 6b3954650c41a1b6
+            componentName: github.com/docker/docker
+            componentVersion: v28.3.0+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/falcoctl
+            scanner: grype
