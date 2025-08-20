@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: argo-cd-3.1
+
+advisories:
+  - id: CGA-834g-xvhm-rwm4
+    aliases:
+      - CVE-2025-4563
+      - GHSA-hj2p-8wj8-pfq4
+    events:
+      - timestamp: 2025-08-20T19:51:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-3.1
+            componentID: 9b2bc2a22dfa552f
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.33.1
+            componentType: go-module
+            componentLocation: /usr/local/bin/argocd
+            scanner: grype
