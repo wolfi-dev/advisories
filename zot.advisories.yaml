@@ -869,6 +869,28 @@ advisories:
         data:
           fixed-version: 2.0.0-r1
 
+  - id: CGA-g34c-mhwf-3536
+    aliases:
+      - CVE-2025-8959
+      - GHSA-wjrx-6529-hcj3
+    events:
+      - timestamp: 2025-08-19T09:15:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zot
+            componentID: 83b45acc654c7efe
+            componentName: github.com/hashicorp/go-getter
+            componentVersion: v1.7.8
+            componentType: go-module
+            componentLocation: /usr/bin/zot
+            scanner: grype
+      - timestamp: 2025-08-19T10:46:16Z
+        type: fixed
+        data:
+          fixed-version: 2.1.7-r3
+
   - id: CGA-g9j9-w4px-mhrc
     aliases:
       - CVE-2024-40635
