@@ -229,6 +229,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/skaffold
             scanner: grype
+      - timestamp: 2025-08-20T15:10:14Z
+        type: pending-upstream-fix
+        data:
+          note: The vulnerability remediation requires upgrading github.com/docker/docker to v28. However, this upgrade introduces breaking API changes (ImageHistory, ImageLoad, types.ImageLoadResponse) that are not yet supported by dependent libraries (go-containerregistry, imgutil, skaffold). As a result, the build fails when attempting to move to v28. Upstream projects need to update their dependency trees and adapt their code to the new Docker client API. Once upstream resolves these incompatibilities, we can safely upgrade to v28 and remediate the vulnerability.
 
   - id: CGA-7rcq-56wv-w7g4
     aliases:
