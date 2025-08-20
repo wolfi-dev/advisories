@@ -39,3 +39,21 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+
+  - id: CGA-wjmh-pg5m-8f26
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2025-08-20T15:34:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak-26.3
+            componentID: 7ad866d80b2d2bf9
+            componentName: commons-lang3
+            componentVersion: 3.17.0
+            componentType: java-archive
+            componentLocation: /opt/bitnami/keycloak/lib/lib/main/org.apache.commons.commons-lang3-3.17.0.jar
+            scanner: grype
