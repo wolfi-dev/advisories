@@ -4,6 +4,28 @@ package:
   name: lazydocker
 
 advisories:
+  - id: CGA-5qg7-53x8-hj4x
+    aliases:
+      - CVE-2025-54410
+      - GHSA-4vq8-7jfc-9cvp
+    events:
+      - timestamp: 2025-08-16T08:14:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: lazydocker
+            componentID: 76fea9e1ed3e5b14
+            componentName: github.com/docker/docker
+            componentVersion: v27.1.1+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/lazydocker
+            scanner: grype
+      - timestamp: 2025-08-16T11:34:08Z
+        type: fixed
+        data:
+          fixed-version: 0.24.1-r6
+
   - id: CGA-7238-hx55-48wc
     aliases:
       - CVE-2024-45336

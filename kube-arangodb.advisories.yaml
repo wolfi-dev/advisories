@@ -21,6 +21,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/arangodb_operator
             scanner: grype
+      - timestamp: 2025-08-19T07:29:27Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in kube-arangodb-1.3.0-r2.apk, at usr/bin/arangodb_operator, usr/bin/arangodb_operator.'
 
   - id: CGA-9gm5-9mw8-3j89
     aliases:
@@ -39,6 +43,32 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/arangodb_operator
             scanner: grype
+      - timestamp: 2025-08-20T08:09:35Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in kube-arangodb-1.3.0-r2.apk, at usr/bin/arangodb_operator, usr/bin/arangodb_operator.'
+
+  - id: CGA-grcc-fv83-7m2x
+    aliases:
+      - CVE-2025-54410
+      - GHSA-4vq8-7jfc-9cvp
+    events:
+      - timestamp: 2025-08-16T08:38:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-arangodb
+            componentID: 47958c704049e809
+            componentName: github.com/docker/docker
+            componentVersion: v26.1.5+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/arangodb_operator
+            scanner: grype
+      - timestamp: 2025-08-17T08:31:43Z
+        type: fixed
+        data:
+          fixed-version: 1.3.0-r2
 
   - id: CGA-v738-wcqg-4h79
     aliases:

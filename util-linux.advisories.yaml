@@ -26,3 +26,26 @@ advisories:
         data:
           type: component-vulnerability-mismatch
           note: CVE-2010-3262 applies to the completely unrelated Flock Browser, not the flock command.
+
+  - id: CGA-4p87-r2c7-mhhp
+    aliases:
+      - CVE-2010-1236
+      - GHSA-qp79-v7x7-fmwp
+    events:
+      - timestamp: 2025-08-16T08:34:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flock
+            componentID: 65d46591e20984c3
+            componentName: flock
+            componentVersion: 2.41.1-r4
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2025-08-20T00:40:28Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: CVE-2010-1236 applies to the Flock web browser (WebKit/Chrome), not the flock file-locking utility from util-linux; scanners are matching this by name only, which is incorrect. This does not affect Chainguard util-linux.

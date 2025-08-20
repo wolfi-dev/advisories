@@ -478,6 +478,24 @@ advisories:
         data:
           fixed-version: 0.37.1-r0
 
+  - id: CGA-jvqv-mmc9-9g96
+    aliases:
+      - CVE-2025-54410
+      - GHSA-4vq8-7jfc-9cvp
+    events:
+      - timestamp: 2025-08-16T07:22:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: falco
+            componentID: 2c348a2438807b4f
+            componentName: github.com/docker/docker
+            componentVersion: v27.5.1+incompatible
+            componentType: go-module
+            componentLocation: /usr/share/falco/plugins/libcontainer.so
+            scanner: grype
+
   - id: CGA-mhx7-x3rc-xw63
     aliases:
       - CVE-2024-28122

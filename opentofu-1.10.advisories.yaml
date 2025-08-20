@@ -4,6 +4,28 @@ package:
   name: opentofu-1.10
 
 advisories:
+  - id: CGA-2w2p-4h68-v3h7
+    aliases:
+      - CVE-2025-8959
+      - GHSA-wjrx-6529-hcj3
+    events:
+      - timestamp: 2025-08-19T08:21:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opentofu-1.10
+            componentID: 822d6ecc2eaee49d
+            componentName: github.com/hashicorp/go-getter
+            componentVersion: v1.7.5
+            componentType: go-module
+            componentLocation: /usr/bin/tofu
+            scanner: grype
+      - timestamp: 2025-08-19T09:47:17Z
+        type: fixed
+        data:
+          fixed-version: 1.10.5-r2
+
   - id: CGA-rjv7-rhpx-3rr8
     aliases:
       - CVE-2025-47907

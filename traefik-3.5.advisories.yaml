@@ -4,6 +4,33 @@ package:
   name: traefik-3.5
 
 advisories:
+  - id: CGA-c22j-xq7p-9r9h
+    aliases:
+      - CVE-2025-54410
+      - GHSA-4vq8-7jfc-9cvp
+    events:
+      - timestamp: 2025-08-16T08:52:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: traefik-3.5
+            componentID: 78c9d3aa617000ff
+            componentName: github.com/docker/docker
+            componentVersion: v27.1.1+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/traefik
+            scanner: grype
+      - timestamp: 2025-08-19T08:14:56Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            We are unable to upgrade the Docker dependency in our Traefik package to v28.0.0 to fix the CVE,
+            as it introduces breaking API changes. Docker v28.0.0 removes several types and fields—such as `ContainerNode`, `NetworkListOptions`, and `EventsOptions`
+            that Traefik’s Docker provider still relies on. These removals cause multiple compilation errors across several files in Traefik’s codebase.
+            The highest version we can upgrade to without breaking the build is Docker v27.5.1, which unfortunately does not address the CVE. As a result,
+            this issue cannot be resolved without upstream changes in Traefik to support the newer Docker API.
+
   - id: CGA-pmxx-pv94-8cpv
     aliases:
       - CVE-2025-54799

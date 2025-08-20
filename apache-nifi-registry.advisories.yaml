@@ -76,6 +76,28 @@ advisories:
         data:
           fixed-version: 2.4.0-r3
 
+  - id: CGA-84cv-x3rp-2gmp
+    aliases:
+      - CVE-2025-41242
+      - GHSA-r936-gwx5-v52f
+    events:
+      - timestamp: 2025-08-19T07:09:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi-registry
+            componentID: a8b5f10e24b961cf
+            componentName: spring-webmvc
+            componentVersion: 6.2.8
+            componentType: java-archive
+            componentLocation: /opt/nifi-registry/nifi-registry-2.5.0/lib/nifi-registry-web-api-2.5.0.war
+            scanner: grype
+      - timestamp: 2025-08-19T08:38:40Z
+        type: fixed
+        data:
+          fixed-version: 2.5.0-r1
+
   - id: CGA-cwq3-w8fh-cpjm
     aliases:
       - CVE-2025-22233

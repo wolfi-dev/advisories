@@ -495,6 +495,28 @@ advisories:
         data:
           fixed-version: 1.0.0_beta49-r1
 
+  - id: CGA-wqc8-9g6r-96x4
+    aliases:
+      - CVE-2025-54410
+      - GHSA-4vq8-7jfc-9cvp
+    events:
+      - timestamp: 2025-08-16T08:44:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kpt
+            componentID: c135a25818e16609
+            componentName: github.com/docker/docker
+            componentVersion: v27.1.2+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/kpt
+            scanner: grype
+      - timestamp: 2025-08-16T12:33:08Z
+        type: fixed
+        data:
+          fixed-version: 1.0.0_beta55-r11
+
   - id: CGA-wv9j-9752-fv2w
     aliases:
       - CVE-2023-45283

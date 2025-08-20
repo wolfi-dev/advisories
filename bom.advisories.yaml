@@ -353,6 +353,28 @@ advisories:
         data:
           fixed-version: 0.6.0-r0
 
+  - id: CGA-hwpj-68mw-r4mf
+    aliases:
+      - CVE-2025-54410
+      - GHSA-4vq8-7jfc-9cvp
+    events:
+      - timestamp: 2025-08-16T07:13:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: bom
+            componentID: aae71c2a81736299
+            componentName: github.com/docker/docker
+            componentVersion: v26.1.5+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/bom
+            scanner: grype
+      - timestamp: 2025-08-18T21:33:24Z
+        type: fixed
+        data:
+          fixed-version: 0.6.0-r24
+
   - id: CGA-j55h-pm95-h3jj
     aliases:
       - CVE-2025-22874

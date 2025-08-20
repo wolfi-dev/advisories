@@ -207,6 +207,13 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/java/akhq/akhq.jar
             scanner: grype
+      - timestamp: 2025-08-18T12:48:06Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            The AKHQ package has a dependency on micronaut-core, which in turns depends on the netty-code-http2 library affected by the CVE.
+            The micronaut-core project has patched their source to include a fixed version of netty-codec-http2, see https://github.com/micronaut-projects/micronaut-core/commit/692e76250d77494389c535af22f4b8e112dc3ead
+            However, micronaut-core has not released a version containing this fix, and therefore AKHQ cannot be updated to use it just yet.
 
   - id: CGA-mmhh-v4mx-9jrm
     aliases:

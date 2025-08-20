@@ -42,6 +42,36 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/trivy-operator
             scanner: grype
+      - timestamp: 2025-08-19T08:12:26Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in trivy-operator-0.28.0-r0.apk, at usr/bin/trivy-operator, usr/bin/trivy-operator.'
+      - timestamp: 2025-08-19T18:53:45Z
+        type: fixed
+        data:
+          fixed-version: 0.28.0-r1
+
+  - id: CGA-jj94-w5mx-f3cx
+    aliases:
+      - CVE-2025-8959
+      - GHSA-wjrx-6529-hcj3
+    events:
+      - timestamp: 2025-08-19T08:53:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trivy-operator
+            componentID: 2c4fa8478b43f903
+            componentName: github.com/hashicorp/go-getter
+            componentVersion: v1.7.8
+            componentType: go-module
+            componentLocation: /usr/bin/trivy-operator
+            scanner: grype
+      - timestamp: 2025-08-19T18:53:46Z
+        type: fixed
+        data:
+          fixed-version: 0.28.0-r1
 
   - id: CGA-pfgr-pcqp-xw3p
     aliases:
@@ -60,6 +90,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/trivy-operator
             scanner: grype
+      - timestamp: 2025-08-19T18:53:47Z
+        type: fixed
+        data:
+          fixed-version: 0.28.0-r1
 
   - id: CGA-xqmg-2mf5-3q2f
     aliases:
