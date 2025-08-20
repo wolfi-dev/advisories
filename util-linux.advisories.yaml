@@ -44,3 +44,8 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2025-08-20T00:40:28Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: CVE-2010-1236 applies to the Flock web browser (WebKit/Chrome), not the flock file-locking utility from util-linux; scanners are matching this by name only, which is incorrect. This does not affect Chainguard util-linux.
