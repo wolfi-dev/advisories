@@ -47,6 +47,28 @@ advisories:
         data:
           fixed-version: 0.10.8-r5
 
+  - id: CGA-9xxx-9h46-9rm7
+    aliases:
+      - CVE-2025-8959
+      - GHSA-wjrx-6529-hcj3
+    events:
+      - timestamp: 2025-08-19T07:42:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: xeol
+            componentID: bb5ee11b6d5c744c
+            componentName: github.com/hashicorp/go-getter
+            componentVersion: v1.7.5
+            componentType: go-module
+            componentLocation: /usr/bin/xeol
+            scanner: grype
+      - timestamp: 2025-08-19T09:42:36Z
+        type: fixed
+        data:
+          fixed-version: 0.10.8-r12
+
   - id: CGA-gfg2-c9gq-5j4x
     aliases:
       - CVE-2025-22870
@@ -137,6 +159,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.10.8-r8
+
+  - id: CGA-vq4f-6gmx-wrqh
+    aliases:
+      - CVE-2025-54410
+      - GHSA-4vq8-7jfc-9cvp
+    events:
+      - timestamp: 2025-08-16T09:31:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: xeol
+            componentID: 303d995ed588c08f
+            componentName: github.com/docker/docker
+            componentVersion: v27.1.1+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/xeol
+            scanner: grype
+      - timestamp: 2025-08-16T13:25:44Z
+        type: fixed
+        data:
+          fixed-version: 0.10.8-r11
 
   - id: CGA-wr38-8cj9-74fx
     aliases:

@@ -21,6 +21,16 @@ advisories:
             componentType: java-archive
             componentLocation: /opt/nifi-registry/nifi-registry-2.5.0/ext/aws/lib/netty-codec-http2-4.2.2.Final.jar
             scanner: grype
+      - timestamp: 2025-08-15T01:00:00Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            The fix for this CVE requires upgrading netty-codec-http2 to 4.2.4.Final. However, this dependency
+            is bundled as part of the AWS extension JAR and cannot be independently updated through dependency
+            management. Cherry-picking the upstream fix (commit ccd3c4e2c4fe7f78aa2c214b3f953540e63e7066)
+            introduces 2.6.0-SNAPSHOT dependencies that break the build, as this version is not yet released
+            and the SNAPSHOT artifacts are not available in Maven repositories.
+            We need to wait for Apache NiFi 2.6.0 to be officially released before we can apply this security fix.
 
   - id: CGA-4fcv-jq36-r7hx
     aliases:
@@ -65,6 +75,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.4.0-r3
+
+  - id: CGA-84cv-x3rp-2gmp
+    aliases:
+      - CVE-2025-41242
+      - GHSA-r936-gwx5-v52f
+    events:
+      - timestamp: 2025-08-19T07:09:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi-registry
+            componentID: a8b5f10e24b961cf
+            componentName: spring-webmvc
+            componentVersion: 6.2.8
+            componentType: java-archive
+            componentLocation: /opt/nifi-registry/nifi-registry-2.5.0/lib/nifi-registry-web-api-2.5.0.war
+            scanner: grype
+      - timestamp: 2025-08-19T08:38:40Z
+        type: fixed
+        data:
+          fixed-version: 2.5.0-r1
 
   - id: CGA-cwq3-w8fh-cpjm
     aliases:

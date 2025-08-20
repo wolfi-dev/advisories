@@ -971,6 +971,28 @@ advisories:
           type: vulnerable-code-cannot-be-controlled-by-adversary
           note: Vulnerability affects only Windows systems.
 
+  - id: CGA-rjqw-qpx3-2fgc
+    aliases:
+      - CVE-2025-55163
+      - GHSA-prj3-ccx8-p6x4
+    events:
+      - timestamp: 2025-08-14T11:41:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tez
+            componentID: b7b5be419aa101b9
+            componentName: netty-codec-http2
+            componentVersion: 4.1.118.Final
+            componentType: java-archive
+            componentLocation: /usr/share/java/tez/lib/netty-codec-http2-4.1.118.Final.jar
+            scanner: grype
+      - timestamp: 2025-08-14T12:45:34Z
+        type: fixed
+        data:
+          fixed-version: 0.10.5-r4
+
   - id: CGA-v2f7-hjfj-r79v
     aliases:
       - CVE-2024-13009

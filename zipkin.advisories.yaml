@@ -87,3 +87,13 @@ advisories:
             componentType: java-archive
             componentLocation: /zipkin/BOOT-INF/lib/netty-codec-http2-4.1.121.Final.jar
             scanner: grype
+      - timestamp: 2025-08-15T01:15:00Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            Upgrading netty-codec-http2 to 4.1.124.Final to fix this CVE causes build failures due to
+            missing netty-codec-http dependency. The compilation fails with "package io.netty.handler.codec.http
+            does not exist" in the zipkin-storage-elasticsearch module. While netty-codec is present, the specific
+            netty-codec-http package required for HTTP handling is not included in the dependencies. Upstream needs
+            to properly configure the Netty dependencies to include both netty-codec-http2 and netty-codec-http
+            with compatible versions before this security fix can be applied.

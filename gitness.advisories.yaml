@@ -36,6 +36,28 @@ advisories:
         data:
           fixed-version: 3.1.1-r2
 
+  - id: CGA-2w33-wfx9-qr8v
+    aliases:
+      - CVE-2025-54410
+      - GHSA-4vq8-7jfc-9cvp
+    events:
+      - timestamp: 2025-08-16T07:44:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitness
+            componentID: 4f3dee7091141a1d
+            componentName: github.com/docker/docker
+            componentVersion: v27.1.1+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/gitness
+            scanner: grype
+      - timestamp: 2025-08-19T21:19:27Z
+        type: pending-upstream-fix
+        data:
+          note: Upstream maintainers need to address vulnerability. Attempted to fix but resulted in build failures.
+
   - id: CGA-3794-c8xh-cgjp
     aliases:
       - CVE-2024-45341

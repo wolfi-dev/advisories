@@ -448,6 +448,28 @@ advisories:
         data:
           fixed-version: 0.55.14-r1
 
+  - id: CGA-wv7h-8grj-88rp
+    aliases:
+      - CVE-2025-8959
+      - GHSA-wjrx-6529-hcj3
+    events:
+      - timestamp: 2025-08-19T08:52:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terragrunt
+            componentID: 4ef2e031e3631e90
+            componentName: github.com/hashicorp/go-getter
+            componentVersion: v1.7.8
+            componentType: go-module
+            componentLocation: /usr/bin/terragrunt
+            scanner: grype
+      - timestamp: 2025-08-19T10:38:21Z
+        type: fixed
+        data:
+          fixed-version: 0.85.0-r1
+
   - id: CGA-ww78-qprc-qr9h
     aliases:
       - CVE-2025-27144

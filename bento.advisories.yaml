@@ -29,3 +29,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.9.1-r1
+
+  - id: CGA-p9cj-r57v-m82x
+    aliases:
+      - CVE-2025-54410
+      - GHSA-4vq8-7jfc-9cvp
+    events:
+      - timestamp: 2025-08-16T07:06:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: bento
+            componentID: 82172ecb6a0b1f62
+            componentName: github.com/docker/docker
+            componentVersion: v27.5.1+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/bento
+            scanner: grype
+      - timestamp: 2025-08-16T08:42:09Z
+        type: fixed
+        data:
+          fixed-version: 1.10.0-r1

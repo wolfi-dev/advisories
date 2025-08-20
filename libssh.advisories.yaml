@@ -4,16 +4,37 @@ package:
   name: libssh
 
 advisories:
-  - id: CGA-r694-qwcg-7xvx
+  - id: CGA-2xfj-2x7f-3w8v
     aliases:
-      - CVE-2023-3603
-      - GHSA-2c4f-vgwr-82q6
+      - CVE-2025-8114
+      - GHSA-fpr2-pgq7-qwg4
     events:
-      - timestamp: 2023-08-11T22:37:30Z
-        type: false-positive-determination
+      - timestamp: 2025-08-14T12:10:12Z
+        type: detection
         data:
-          type: vulnerable-code-not-included-in-package
-          note: This CVE pertains to a defect in an example program and is unrelated to the library.
+          type: scan/v1
+          data:
+            subpackageName: libssh
+            componentID: 7f6e54b1cbb04e76
+            componentName: libssh-dev
+            componentVersion: 0.11.2-r1
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2025-08-19T14:03:16Z
+        type: pending-upstream-fix
+        data:
+          note: Although details of this vulnerability have been publicly disclosed, no fix has yet been released.
+
+  - id: CGA-5gpg-p7r2-f5wp
+    aliases:
+      - CVE-2023-6918
+      - GHSA-gpcj-wh2f-rr23
+    events:
+      - timestamp: 2024-02-21T07:48:59Z
+        type: fixed
+        data:
+          fixed-version: 0.10.6-r0
 
   - id: CGA-8843-x75p-f8hf
     aliases:
@@ -25,20 +46,21 @@ advisories:
         data:
           fixed-version: 0.10.6-r0
 
+  - id: CGA-r694-qwcg-7xvx
+    aliases:
+      - CVE-2023-3603
+      - GHSA-2c4f-vgwr-82q6
+    events:
+      - timestamp: 2023-08-11T22:37:30Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: This CVE pertains to a defect in an example program and is unrelated to the library.
+
   - id: CGA-xrcg-fx33-xw78
     aliases:
       - CVE-2023-6004
       - GHSA-f35j-mfvw-p857
-    events:
-      - timestamp: 2024-02-21T07:48:59Z
-        type: fixed
-        data:
-          fixed-version: 0.10.6-r0
-
-  - id: CGA-5gpg-p7r2-f5wp
-    aliases:
-      - CVE-2023-6918
-      - GHSA-gpcj-wh2f-rr23
     events:
       - timestamp: 2024-02-21T07:48:59Z
         type: fixed

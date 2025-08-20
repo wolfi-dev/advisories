@@ -70,6 +70,28 @@ advisories:
         data:
           note: 'The dependency causing this CVE, json-smart, is a transitive dependency which has not released a fix version. Due to its transitive nature, a fix requires a release version to be cut and published to the maven repository. '
 
+  - id: CGA-63fh-3j5v-xvw5
+    aliases:
+      - CVE-2025-55163
+      - GHSA-prj3-ccx8-p6x4
+    events:
+      - timestamp: 2025-08-14T12:05:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube
+            componentID: 5c5c5004b57c8e60
+            componentName: netty-codec-http2
+            componentVersion: 4.1.115.Final
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/elasticsearch/modules/x-pack-inference/netty-codec-http2-4.1.115.Final.jar
+            scanner: grype
+      - timestamp: 2025-08-20T00:29:51Z
+        type: pending-upstream-fix
+        data:
+          note: Attempts to upgrade netty-codec-http2 to 4.1.124.Final resulted in build failures. Upstream will need to release fix for vulnerability
+
   - id: CGA-7c3h-fr9p-6vxc
     aliases:
       - CVE-2024-47554
@@ -307,6 +329,15 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/sonarqube/elasticsearch/lib/tools/plugin-cli/bc-fips-1.0.2.5.jar
             scanner: grype
+      - timestamp: 2025-08-14T19:35:00Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            The bc-fips 1.0.2.5 vulnerability is embedded within Elasticsearch 8.16.3's plugin-cli tool, which is bundled with SonarQube.
+            SonarQube 25.8.0.112029 (the latest version) bundles Elasticsearch 8.16.3. While newer Elasticsearch versions exist (8.19.2),
+            SonarQube upstream would need to update their bundled Elasticsearch version, and Elasticsearch would need to update bc-fips
+            from 1.0.2.5 to 2.1.0+ in their plugin-cli tool to resolve this vulnerability.
+            This is a multi-level upstream dependency requiring coordination between both projects.
 
   - id: CGA-r3xx-5g2c-66xp
     aliases:
