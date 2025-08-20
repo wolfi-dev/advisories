@@ -44,6 +44,50 @@ advisories:
             componentLocation: /usr/share/opensearch/plugins/opensearch-repository-azure/reactor-netty-http-1.2.5.jar
             scanner: grype
 
+  - id: CGA-5vxq-hgq9-88ch
+    aliases:
+      - CVE-2025-55163
+      - GHSA-prj3-ccx8-p6x4
+    events:
+      - timestamp: 2025-08-14T11:52:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-3
+            componentID: 54062167dea84200
+            componentName: netty-codec-http2
+            componentVersion: 4.1.121.Final
+            componentType: java-archive
+            componentLocation: /usr/share/opensearch/plugins/opensearch-repository-azure/netty-codec-http2-4.1.121.Final.jar
+            scanner: grype
+      - timestamp: 2025-08-20T00:02:35Z
+        type: pending-upstream-fix
+        data:
+          note: Attempts to patch vulnerabilities resulted in build failures. Upstream will need to release a new version which addresses the vulnerability
+
+  - id: CGA-6fx9-q4xv-jh7w
+    aliases:
+      - CVE-2025-8916
+      - GHSA-4cx2-fc23-5wg6
+    events:
+      - timestamp: 2025-08-14T11:52:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-3
+            componentID: ea9263119937b49e
+            componentName: bcpkix-fips
+            componentVersion: 2.0.7
+            componentType: java-archive
+            componentLocation: /usr/share/opensearch/plugins/opensearch-performance-analyzer/bcpkix-fips-2.0.7.jar
+            scanner: grype
+      - timestamp: 2025-08-20T00:02:35Z
+        type: pending-upstream-fix
+        data:
+          note: Attempts to patch vulnerabilities resulted in build failures. Upstream will need to release a new version which addresses the vulnerability
+
   - id: CGA-6pxf-3xx2-cjr3
     aliases:
       - CVE-2025-48734
@@ -66,28 +110,6 @@ advisories:
         data:
           note: Upstream will need to make code changes when updating commons-beanutils 1.9.4 to 1.11.0 or newer. Attempts to address the CVE by updating to 1.11.0 result in build failures.
 
-  - id: CGA-cpv8-3q69-69m4
-    aliases:
-      - CVE-2025-55163
-      - GHSA-prj3-ccx8-p6x4
-    events:
-      - timestamp: 2025-08-14T11:52:44Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: opensearch-3
-            componentID: 54062167dea84200
-            componentName: netty-codec-http2
-            componentVersion: 4.1.121.Final
-            componentType: java-archive
-            componentLocation: /usr/share/opensearch/plugins/opensearch-repository-azure/netty-codec-http2-4.1.121.Final.jar
-            scanner: grype
-      - timestamp: 2025-08-20T00:02:35Z
-        type: pending-upstream-fix
-        data:
-          note: Attempts to patch vulnerabilities resulted in build failures. Upstream will need to release a new version which addresses the vulnerability
-
   - id: CGA-mmp2-7w4j-cw76
     aliases:
       - CVE-2025-48924
@@ -109,28 +131,6 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Opensearch-2 has multiple instances of CVE-2025-48924 due to plugins using the same library versions. Upstream will needs to fix
-
-  - id: CGA-r758-chw3-4cjv
-    aliases:
-      - CVE-2025-8916
-      - GHSA-4cx2-fc23-5wg6
-    events:
-      - timestamp: 2025-08-14T11:52:45Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: opensearch-3
-            componentID: ea9263119937b49e
-            componentName: bcpkix-fips
-            componentVersion: 2.0.7
-            componentType: java-archive
-            componentLocation: /usr/share/opensearch/plugins/opensearch-performance-analyzer/bcpkix-fips-2.0.7.jar
-            scanner: grype
-      - timestamp: 2025-08-20T00:02:35Z
-        type: pending-upstream-fix
-        data:
-          note: Attempts to patch vulnerabilities resulted in build failures. Upstream will need to release a new version which addresses the vulnerability
 
   - id: CGA-vcw2-p8c6-rfr5
     aliases:
