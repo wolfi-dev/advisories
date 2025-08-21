@@ -57,3 +57,12 @@ advisories:
             componentType: java-archive
             componentLocation: /opt/bitnami/keycloak/lib/lib/main/org.apache.commons.commons-lang3-3.17.0.jar
             scanner: grype
+      - timestamp: 2025-08-21T16:17:00Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            Keycloak currently depends on quarkus v3.20.2.1, which in turn depends on the affected version of commons-lang3.
+            Quarkus have fixed the vulnerability in v3.35.4, but have yet to backport it to the v3.20 stream.
+            Attempts to force the upgrade of commons-lang3 to the fixed version result in build failures.
+            Attempts to upgrade Keycloak to the v3.35 version stream of Quarkus (with the fix), also result in build failures.
+            Pending upstream fix, specifically for Quarkus to create a v3.20 patch release, or for Keycloak to do the refactor needed for upgrading to Quarkus v3.35.
