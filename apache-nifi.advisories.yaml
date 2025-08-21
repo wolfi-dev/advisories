@@ -1570,6 +1570,24 @@ advisories:
         data:
           note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
 
+  - id: CGA-jc49-mw78-ph55
+    aliases:
+      - CVE-2025-5115
+      - GHSA-mmxm-8w33-wc4h
+    events:
+      - timestamp: 2025-08-21T07:10:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: 2d9c85b712db57ff
+            componentName: jetty-http2-common
+            componentVersion: 12.0.23
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/nifi-current/lib/nifi-jetty-nar-2.5.0.nar
+            scanner: grype
+
   - id: CGA-jjwj-6v39-vh3f
     aliases:
       - CVE-2024-30172
