@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: neo4j-2025.07
+
+advisories:
+  - id: CGA-mw35-px47-pr67
+    aliases:
+      - CVE-2025-5115
+      - GHSA-mmxm-8w33-wc4h
+    events:
+      - timestamp: 2025-08-21T08:30:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: neo4j-2025.07
+            componentID: c5eacb6eed5b899b
+            componentName: jetty-http2-common
+            componentVersion: 12.0.17
+            componentType: java-archive
+            componentLocation: /var/lib/neo4j/lib/jetty-http2-common-12.0.17.jar
+            scanner: grype
