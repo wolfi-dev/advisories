@@ -399,6 +399,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/terraform
             scanner: grype
+      - timestamp: 2025-08-21T08:03:11Z
+        type: pending-upstream-fix
+        data:
+          note: The vulnerability could not be remediated by upgrading go-getter because the newer version introduces an incompatibility with Terraform’s snapshotFS implementation. Specifically, the updated afero.Fs interface requires a Chown method that snapshotFS does not provide, causing compilation failures. Upstream must update the dependency tree and adapt snapshotFS (or related code) to the new afero API. Once upstream resolves this, we can upgrade go-getter and properly remediate the vulnerability.
 
   - id: CGA-fvp6-ppp5-92v3
     aliases:
