@@ -4,6 +4,24 @@ package:
   name: apache-nifi-registry
 
 advisories:
+  - id: CGA-2f4q-3rwr-m7mc
+    aliases:
+      - CVE-2025-5115
+      - GHSA-mmxm-8w33-wc4h
+    events:
+      - timestamp: 2025-08-21T07:05:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi-registry
+            componentID: 4b9d160fff527078
+            componentName: jetty-http2-common
+            componentVersion: 12.0.23
+            componentType: java-archive
+            componentLocation: /opt/nifi-registry/nifi-toolkit-registry-2.5.0/nifi-registry-toolkit-2.5.0/lib/jetty-http2-common-12.0.23.jar
+            scanner: grype
+
   - id: CGA-2rhm-pq9f-wfvc
     aliases:
       - CVE-2025-55163
