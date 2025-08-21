@@ -4,6 +4,24 @@ package:
   name: apache-activemq-artemis
 
 advisories:
+  - id: CGA-3vg8-v23r-qrc3
+    aliases:
+      - CVE-2025-5115
+      - GHSA-mmxm-8w33-wc4h
+    events:
+      - timestamp: 2025-08-21T07:04:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-activemq-artemis
+            componentID: b3ebae4cafe54e6b
+            componentName: jetty-http2-common
+            componentVersion: 12.0.23
+            componentType: java-archive
+            componentLocation: /opt/activemq-artemis/lib/jetty-http2-common-12.0.23.jar
+            scanner: grype
+
   - id: CGA-5w34-p6wm-7m57
     aliases:
       - CVE-2025-24970
