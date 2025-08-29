@@ -4,6 +4,24 @@ package:
   name: rancher-agent-2.12
 
 advisories:
+  - id: CGA-78mw-w8jp-q98q
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-08-29T11:17:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-agent-2.12
+            componentID: b31302310452e908
+            componentName: github.com/golang-jwt/jwt
+            componentVersion: v3.2.1+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/agent
+            scanner: grype
+
   - id: CGA-8pvh-xvjp-jf7r
     aliases:
       - CVE-2025-54410
