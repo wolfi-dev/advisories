@@ -4,6 +4,24 @@ package:
   name: rancher-webhook-0.6
 
 advisories:
+  - id: CGA-4fm7-9jfw-96rg
+    aliases:
+      - CVE-2025-5187
+      - GHSA-4x4m-3c2p-qppc
+    events:
+      - timestamp: 2025-08-29T11:41:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-webhook-0.6
+            componentID: 4effada7061b656f
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.31.6
+            componentType: go-module
+            componentLocation: /usr/bin/webhook
+            scanner: grype
+
   - id: CGA-4j7v-v584-8jr3
     aliases:
       - CVE-2025-22868
