@@ -48,6 +48,24 @@ advisories:
         data:
           fixed-version: 0.37.1-r0
 
+  - id: CGA-2rj4-mccc-63xx
+    aliases:
+      - CVE-2025-58058
+      - GHSA-jc7w-c686-c4v9
+    events:
+      - timestamp: 2025-08-29T11:21:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: falco
+            componentID: 6a92aaa3c28ab012
+            componentName: github.com/ulikunitz/xz
+            componentVersion: v0.5.12
+            componentType: go-module
+            componentLocation: /usr/share/falco/plugins/libcontainer.so
+            scanner: grype
+
   - id: CGA-4h7x-5qhc-r7cf
     aliases:
       - CVE-2023-39326
