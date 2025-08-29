@@ -118,6 +118,24 @@ advisories:
         data:
           note: K8ssandra-client 0.6.4 depends on Helm v3.14.2 https://github.com/k8ssandra/k8ssandra-client/blob/837b13f687e28c2e2188171bbb9dea26f70c2bbe/go.mod\#L25 - Upgrading to Helm v3.17.3, which addresses this vulnerability, causes build failures due to API incompatibilities. Upstream changes are required to ensure compatibility with the newer Helm version.
 
+  - id: CGA-75wp-cv57-79vw
+    aliases:
+      - CVE-2025-5187
+      - GHSA-4x4m-3c2p-qppc
+    events:
+      - timestamp: 2025-08-29T11:31:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k8ssandra-client
+            componentID: 05f3da109665dda9
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.33.3
+            componentType: go-module
+            componentLocation: /usr/bin/kubectl-k8ssandra
+            scanner: grype
+
   - id: CGA-839g-gc83-5jfv
     aliases:
       - CVE-2025-22870
