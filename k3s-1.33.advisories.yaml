@@ -4,6 +4,24 @@ package:
   name: k3s-1.33
 
 advisories:
+  - id: CGA-2qc3-852h-g97j
+    aliases:
+      - CVE-2025-54410
+      - GHSA-4vq8-7jfc-9cvp
+    events:
+      - timestamp: 2025-08-29T11:09:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s-1.33
+            componentID: c94e9adecd4d939f
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.8+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/k3s
+            scanner: grype
+
   - id: CGA-4hw3-vxq6-qr47
     aliases:
       - CVE-2024-36623
