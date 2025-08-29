@@ -124,6 +124,24 @@ advisories:
         data:
           note: rancher-agent pins the docker package version to v20.10.27+incompatible for compatibility with rancher-machine. Upstream needs to upgrade package due required functional changes.
 
+  - id: CGA-7954-r4qx-3fxv
+    aliases:
+      - CVE-2025-5187
+      - GHSA-4x4m-3c2p-qppc
+    events:
+      - timestamp: 2025-08-29T11:52:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-agent-2.11
+            componentID: e7bcbd1063fad532
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.32.6
+            componentType: go-module
+            componentLocation: /usr/bin/agent
+            scanner: grype
+
   - id: CGA-j4qm-j33q-8qrj
     aliases:
       - CVE-2025-1767
