@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: py3-knack
+
+advisories:
+  - id: CGA-7ffm-xg3h-68qp
+    aliases:
+      - CVE-2025-54363
+      - GHSA-6fxp-p9mg-q64w
+    events:
+      - timestamp: 2025-08-29T11:12:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3.11-knack
+            componentID: 22d59e7ac6c0cd08
+            componentName: knack
+            componentVersion: 0.12.0
+            componentType: python
+            componentLocation: /usr/lib/python3.12/site-packages/knack-0.12.0.dist-info/METADATA
+            scanner: grype
