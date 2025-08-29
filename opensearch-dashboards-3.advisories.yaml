@@ -4,6 +4,24 @@ package:
   name: opensearch-dashboards-3
 
 advisories:
+  - id: CGA-8f94-5v7f-wq7h
+    aliases:
+      - CVE-2025-57810
+      - GHSA-8mvj-3j78-4qmw
+    events:
+      - timestamp: 2025-08-29T11:16:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-dashboards-3
+            componentID: ce906678017c663b
+            componentName: jspdf
+            componentVersion: 3.0.1
+            componentType: npm
+            componentLocation: /usr/share/opensearch-dashboards/plugins/alertingDashboards/node_modules/jspdf/package.json
+            scanner: grype
+
   - id: CGA-hmpp-fxfw-xfhh
     aliases:
       - CVE-2025-54798
