@@ -258,6 +258,24 @@ advisories:
         data:
           note: 'This vulnerability affects Docker Engine (Moby) versions <= 25.0.12 where firewalld reload removes Docker''s iptables rules that isolate containers in different bridge networks. Upstream maintainers must cut a release with the fix. References: 25.x backport PR: https://github.com/moby/moby/pull/50445 28.x backport PR: https://github.com/moby/moby/pull/50506'
 
+  - id: CGA-w255-f427-mwvf
+    aliases:
+      - CVE-2025-5187
+      - GHSA-4x4m-3c2p-qppc
+    events:
+      - timestamp: 2025-08-29T11:35:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-2.11
+            componentID: a89e6a75ccda8c74
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.32.6
+            componentType: go-module
+            componentLocation: /usr/bin/rancher
+            scanner: grype
+
   - id: CGA-x55r-rv2f-94w4
     aliases:
       - CVE-2024-29018
