@@ -4,6 +4,24 @@ package:
   name: rancher-agent-2.12
 
 advisories:
+  - id: CGA-2gjr-vgpp-xj88
+    aliases:
+      - CVE-2025-5187
+      - GHSA-4x4m-3c2p-qppc
+    events:
+      - timestamp: 2025-08-29T11:42:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-agent-2.12
+            componentID: 91951c42c24a396f
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.33.1
+            componentType: go-module
+            componentLocation: /usr/bin/agent
+            scanner: grype
+
   - id: CGA-78mw-w8jp-q98q
     aliases:
       - CVE-2025-30204
