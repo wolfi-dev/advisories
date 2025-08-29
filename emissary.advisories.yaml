@@ -502,3 +502,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.9.1-r9
+
+  - id: CGA-wmpg-8mjw-xhv3
+    aliases:
+      - CVE-2025-5187
+      - GHSA-4x4m-3c2p-qppc
+    events:
+      - timestamp: 2025-08-29T12:19:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: emissary
+            componentID: 3d879151c43835d3
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.32.6
+            componentType: go-module
+            componentLocation: /usr/bin/busyambassador
+            scanner: grype
