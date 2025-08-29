@@ -136,6 +136,24 @@ advisories:
         data:
           fixed-version: 3.0.1-r1
 
+  - id: CGA-gx9p-ww82-5jv2
+    aliases:
+      - CVE-2025-57804
+      - GHSA-847f-9342-265h
+    events:
+      - timestamp: 2025-08-29T11:06:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow-3
+            componentID: f15d09b8f5e9001b
+            componentName: h2
+            componentVersion: 4.2.0
+            componentType: python
+            componentLocation: /opt/airflow/lib/python3.12/site-packages/h2-4.2.0.dist-info/METADATA
+            scanner: grype
+
   - id: CGA-j823-fw36-2q8w
     aliases:
       - CVE-2025-54121
@@ -310,7 +328,7 @@ advisories:
       - timestamp: 2025-08-04T17:37:14Z
         type: fix-not-planned
         data:
-          note: "The python-ecdsa library is vulnerable to a Minerva timing attack on the P-256 curve through the ecdsa.SigningKey.sign_digest() API. The vulnerability affects ECDSA signatures, key generation, and ECDH operations, potentially allowing attackers to leak internal nonces and discover private keys through timing analysis. The upstream python-ecdsa project explicitly considers side-channel attacks out of scope and has stated there is no planned fix for this vulnerability."
+          note: The python-ecdsa library is vulnerable to a Minerva timing attack on the P-256 curve through the ecdsa.SigningKey.sign_digest() API. The vulnerability affects ECDSA signatures, key generation, and ECDH operations, potentially allowing attackers to leak internal nonces and discover private keys through timing analysis. The upstream python-ecdsa project explicitly considers side-channel attacks out of scope and has stated there is no planned fix for this vulnerability.
 
   - id: CGA-vx49-fm46-cjjp
     aliases:
