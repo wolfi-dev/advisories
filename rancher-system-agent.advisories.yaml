@@ -30,6 +30,24 @@ advisories:
         data:
           fixed-version: 0.3.12-r2
 
+  - id: CGA-5xpx-3qcv-844f
+    aliases:
+      - CVE-2025-5187
+      - GHSA-4x4m-3c2p-qppc
+    events:
+      - timestamp: 2025-08-29T13:18:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-system-agent
+            componentID: 5d6732d24e14e64b
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.33.2
+            componentType: go-module
+            componentLocation: /usr/bin/rancher-system-agent
+            scanner: grype
+
   - id: CGA-88p7-rc7r-rqf7
     aliases:
       - CVE-2025-4563
