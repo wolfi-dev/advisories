@@ -223,6 +223,24 @@ advisories:
         data:
           note: 'idna is pulled in as a transitive dependency of trust-dns-resolver, and cannot be remediated at this time due to numerous build failures when attempting to switch to hickory-proto@0.24.2, which is the replacement package with the upgraded idna dependency. Upstream will need to make these changes. '
 
+  - id: CGA-r6mr-769r-75q2
+    aliases:
+      - CVE-2025-58160
+      - GHSA-xwfj-jgwm-7wp5
+    events:
+      - timestamp: 2025-08-30T08:55:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pgcat
+            componentID: 1a697532c452cd38
+            componentName: tracing-subscriber
+            componentVersion: 0.3.17
+            componentType: rust-crate
+            componentLocation: /usr/bin/pgcat
+            scanner: grype
+
   - id: CGA-rq7w-438m-4vjp
     aliases:
       - GHSA-fh2r-99q2-6mmg
