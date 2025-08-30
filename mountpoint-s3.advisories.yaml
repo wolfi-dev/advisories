@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: mountpoint-s3
+
+advisories:
+  - id: CGA-7rgf-8796-hc37
+    aliases:
+      - CVE-2025-58160
+      - GHSA-xwfj-jgwm-7wp5
+    events:
+      - timestamp: 2025-08-30T07:51:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mountpoint-s3
+            componentID: bfed3401468db71a
+            componentName: tracing-subscriber
+            componentVersion: 0.3.19
+            componentType: rust-crate
+            componentLocation: /usr/bin/mount-s3
+            scanner: grype
