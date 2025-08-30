@@ -4,6 +4,24 @@ package:
   name: rust-analyzer
 
 advisories:
+  - id: CGA-326g-29ch-jf3h
+    aliases:
+      - CVE-2025-58160
+      - GHSA-xwfj-jgwm-7wp5
+    events:
+      - timestamp: 2025-08-30T08:22:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rust-analyzer
+            componentID: c9d422322f5c5b75
+            componentName: tracing-subscriber
+            componentVersion: 0.3.19
+            componentType: rust-crate
+            componentLocation: /usr/bin/rust-analyzer
+            scanner: grype
+
   - id: CGA-4297-jrj9-jwgw
     aliases:
       - CVE-2024-12224
