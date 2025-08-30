@@ -88,3 +88,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.5.0-r2
+
+  - id: CGA-v34v-mm57-7254
+    aliases:
+      - CVE-2025-58160
+      - GHSA-xwfj-jgwm-7wp5
+    events:
+      - timestamp: 2025-08-30T08:21:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ntpd-rs
+            componentID: 9a2c9c71441ac2c1
+            componentName: tracing-subscriber
+            componentVersion: 0.3.19
+            componentType: rust-crate
+            componentLocation: /usr/bin/ntp-ctl
+            scanner: grype
