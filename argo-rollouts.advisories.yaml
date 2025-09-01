@@ -198,6 +198,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/rollouts-controller
             scanner: grype
+      - timestamp: 2025-09-01T08:52:30Z
+        type: pending-upstream-fix
+        data:
+          note: The vulnerability cannot be remediated at this time because upgrading the dependency is not possible without breaking the build. The affected component still relies on deprecated Kubernetes APIs, and the current code is incompatible with k8s.io v1.31. Upstream needs to properly refactor and align the implementation with the v1.31 API surface. Once upstream completes this alignment, we can upgrade the dependency chain and remediate the CVE.
 
   - id: CGA-qqjm-hgqw-8v2c
     aliases:
