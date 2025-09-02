@@ -39,6 +39,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/agent
             scanner: grype
+      - timestamp: 2025-09-02T05:25:20Z
+        type: pending-upstream-fix
+        data:
+          note: The dependency causing this CVE, golang-jwt/jwt v3.2.1, is brought in via the project's main go.mod. Due to functional changes required to move away from v3 to v4/v5, upstream maintainers are required to do the necessary changes to the project code in order to fix this vulnerability.
 
   - id: CGA-8pvh-xvjp-jf7r
     aliases:
@@ -57,6 +61,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/agent
             scanner: grype
+      - timestamp: 2025-09-02T05:22:52Z
+        type: pending-upstream-fix
+        data:
+          note: 'This vulnerability affects Docker Engine (Moby) versions <= 25.0.12 where firewalld reload removes Docker''''s iptables rules that isolate containers in different bridge networks. Upstream maintainers must cut a release with the fix. References: 25.x backport PR: https://github.com/moby/moby/pull/50445 28.x backport PR: https://github.com/moby/moby/pull/50506'
 
   - id: CGA-f6g4-4c52-7cg2
     aliases:
@@ -93,3 +101,8 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/agent
             scanner: grype
+      - timestamp: 2025-09-02T05:28:45Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: This vulnerability is being detected erroneously since this issue has been fixed since docker 25.0.4 and we currently ship v25.0.8
