@@ -88,6 +88,17 @@ advisories:
         data:
           fixed-version: 3.2.2-r0
 
+  - id: CGA-cp5v-2q2h-78cq
+    aliases:
+      - CVE-2023-5363
+      - GHSA-xw78-pcr6-wrg8
+    events:
+      - timestamp: 2025-09-02T15:16:59Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: Some scanners misattribute the Ruby OpenSSL gem version as being the OpenSSL version, generating an alert for this vulnerability. Others may also detect a version string in Ruby's bundled OpenSSL shared object, however this is not used. At the time of writing, the underlying OpenSSL version is 3.5.2 which is not vulnerable to CVE-2023-5363
+
   - id: CGA-hcpq-57j9-pjwg
     aliases:
       - CVE-2025-27219
@@ -293,6 +304,17 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.2.5-r1
+
+  - id: CGA-w39w-h4jj-9r57
+    aliases:
+      - CVE-2025-0306
+      - GHSA-vvxp-46w2-6p8r
+    events:
+      - timestamp: 2025-09-02T15:17:51Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: Some scanners misattribute the Ruby OpenSSL gem version as being the OpenSSL version, generating an alert for this vulnerability. At the time of writing, the underlying OpenSSL version is 3.5.2 which is not vulnerable.
 
   - id: CGA-w76p-w4vr-qcc5
     aliases:
