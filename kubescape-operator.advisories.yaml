@@ -4,6 +4,24 @@ package:
   name: kubescape-operator
 
 advisories:
+  - id: CGA-46fh-w82x-ccgx
+    aliases:
+      - CVE-2025-58058
+      - GHSA-jc7w-c686-c4v9
+    events:
+      - timestamp: 2025-08-29T11:33:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubescape-operator
+            componentID: 1962e25228b0fb66
+            componentName: github.com/ulikunitz/xz
+            componentVersion: v0.5.12
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
   - id: CGA-8wcq-vrx2-wcc9
     aliases:
       - CVE-2025-47907
