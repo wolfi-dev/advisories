@@ -196,6 +196,10 @@ advisories:
             componentType: rust-crate
             componentLocation: /opt/airflow/lib/python3.12/site-packages/fastuuid/fastuuid.cpython-312-aarch64-linux-gnu.so
             scanner: grype
+      - timestamp: 2025-09-03T07:50:40Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability is brought via a transitive dependency of fastuuid 0.12.0 which currently has the vulnerable pyo3 version. fastuuid needs to do a new release with an updated version of pyo3 and airflow upstream has to do a release with a newer version of fastuuid that will pull in the updated fastuuid dependency.
 
   - id: CGA-p8cf-8xpv-jwpq
     aliases:
