@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: logstash-input-http
+
+advisories:
+  - id: CGA-wfq9-4352-93hp
+    aliases:
+      - CVE-2025-58057
+      - GHSA-3p8m-j85q-pgmj
+    events:
+      - timestamp: 2025-09-04T07:44:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-input-http
+            componentID: bd80796f59f88a7d
+            componentName: netty-codec
+            componentVersion: 4.1.118.Final
+            componentType: java-archive
+            componentLocation: /usr/share/jruby/lib/ruby/gems/shared/gems/logstash-input-http-3.10.2/vendor/jar-dependencies/io/netty/netty-codec/4.1.118.Final/netty-codec-4.1.118.Final.jar
+            scanner: grype
