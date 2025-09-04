@@ -113,6 +113,24 @@ advisories:
         data:
           note: The uri gem at version 0.12.2 is included as a default gem in JRuby's standard library. Because it's part of JRuby itself rather than a separately managed gem, an updated JRuby release is required to incorporate the remediated version of uri (0.12.4+).
 
+  - id: CGA-r7xm-crh2-4v6w
+    aliases:
+      - CVE-2025-58057
+      - GHSA-3p8m-j85q-pgmj
+    events:
+      - timestamp: 2025-09-04T07:33:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-9
+            componentID: 3e16043444bbae17
+            componentName: netty-codec
+            componentVersion: 4.1.118.Final
+            componentType: java-archive
+            componentLocation: /opt/iamguarded/logstash/vendor/local_gems/707f055e/logstash-input-tcp-6.4.6/vendor/jar-dependencies/io/netty/netty-codec/4.1.118.Final/netty-codec-4.1.118.Final.jar
+            scanner: grype
+
   - id: CGA-v5rf-cjpm-q5f6
     aliases:
       - CVE-2025-27219
