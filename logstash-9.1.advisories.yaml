@@ -4,6 +4,24 @@ package:
   name: logstash-9.1
 
 advisories:
+  - id: CGA-cf2c-4jqh-r439
+    aliases:
+      - CVE-2025-27219
+      - GHSA-gh9q-2xrm-x6qv
+    events:
+      - timestamp: 2025-09-04T18:25:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-9.1
+            componentID: 14a6eec85f776f68
+            componentName: cgi
+            componentVersion: 0.3.6
+            componentType: gem
+            componentLocation: /opt/bitnami/logstash/vendor/jruby/lib/ruby/gems/shared/specifications/default/cgi-0.3.6-java.gemspec
+            scanner: grype
+
   - id: CGA-mq82-fgj6-fhmc
     aliases:
       - CVE-2025-58057
