@@ -27,6 +27,24 @@ advisories:
           type: vulnerable-code-cannot-be-controlled-by-adversary
           note: Vulnerability affects only Windows systems.
 
+  - id: CGA-7vrc-vhf3-9f48
+    aliases:
+      - CVE-2025-58057
+      - GHSA-3p8m-j85q-pgmj
+    events:
+      - timestamp: 2025-09-04T08:17:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flyway
+            componentID: 15a02ba0bbf7deb1
+            componentName: netty-codec
+            componentVersion: 4.1.118.Final
+            componentType: java-archive
+            componentLocation: /usr/share/java/flyway/lib/netty/netty-codec-4.1.118.Final.jar
+            scanner: grype
+
   - id: CGA-gf5g-ppvp-f4vr
     aliases:
       - CVE-2025-55163
