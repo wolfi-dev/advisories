@@ -110,6 +110,24 @@ advisories:
         data:
           note: Upstream will need to make code changes when updating commons-beanutils 1.9.4 to 1.11.0 or newer. Attempts to address the CVE by updating to 1.11.0 result in build failures.
 
+  - id: CGA-9w52-h22x-vh9v
+    aliases:
+      - CVE-2025-58057
+      - GHSA-3p8m-j85q-pgmj
+    events:
+      - timestamp: 2025-09-04T08:39:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-3
+            componentID: 131179088804d96c
+            componentName: netty-codec
+            componentVersion: 4.1.121.Final
+            componentType: java-archive
+            componentLocation: /usr/share/opensearch/plugins/opensearch-repository-azure/netty-codec-4.1.121.Final.jar
+            scanner: grype
+
   - id: CGA-h7m4-7gfh-6f23
     aliases:
       - CVE-2025-54988
