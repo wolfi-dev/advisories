@@ -144,6 +144,24 @@ advisories:
         data:
           note: 'To fix the CVE we should bump the ''jetty-servlets'' dependency to ''9.4.52'' or higher, to do that, we should bump the ''dropwizard-core'' version to 2.1 or higher this is because ''amqp-client'' is one of the dependencies of the ''dropwizard-core'' but we cannot do that because the project does not work due to this error ''java.lang.NoSuchMethodError: void org.glassfish.jersey.server.ServerExecutorProvidersConfigurator.registerExecutors(org.glassfish.jersey.internal.inject.InjectionManager, org.glassfish.jersey.model.internal.ComponentBag, org.glassfish.jersey.spi.ExecutorServiceProvider, org.glassfish.jersey.spi.ScheduledExecutorServiceProvider)''. There is an issue already created for raising an awareness about this CVE : https://github.com/thelastpickle/cassandra-reaper/issues/1462'
 
+  - id: CGA-8gfq-pqwq-pv7h
+    aliases:
+      - CVE-2025-58057
+      - GHSA-3p8m-j85q-pgmj
+    events:
+      - timestamp: 2025-09-04T07:07:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cassandra-reaper
+            componentID: eca41d4f3a073a0e
+            componentName: netty-codec
+            componentVersion: 4.1.118.Final
+            componentType: java-archive
+            componentLocation: /usr/local/lib/cassandra-reaper.jar
+            scanner: grype
+
   - id: CGA-8pv3-9h29-78pw
     aliases:
       - CVE-2022-42003
