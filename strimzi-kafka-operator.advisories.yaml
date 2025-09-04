@@ -157,6 +157,24 @@ advisories:
           type: vulnerable-code-cannot-be-controlled-by-adversary
           note: Vulnerability affects only Windows systems.
 
+  - id: CGA-9vh6-4325-2mgm
+    aliases:
+      - CVE-2025-58057
+      - GHSA-3p8m-j85q-pgmj
+    events:
+      - timestamp: 2025-09-04T09:28:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: strimzi-kafka-operator-kafka-thirdparty-libs-cc
+            componentID: 203f5b384ada0d8e
+            componentName: netty-codec-compression
+            componentVersion: 4.2.2.Final
+            componentType: java-archive
+            componentLocation: /opt/strimzi/lib/io.netty.netty-codec-compression-4.2.2.Final.jar
+            scanner: grype
+
   - id: CGA-f2x3-p74f-cfrx
     aliases:
       - CVE-2025-48924
