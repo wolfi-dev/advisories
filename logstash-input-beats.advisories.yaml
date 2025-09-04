@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: logstash-input-beats
+
+advisories:
+  - id: CGA-8635-mm2p-7mfj
+    aliases:
+      - CVE-2025-58057
+      - GHSA-3p8m-j85q-pgmj
+    events:
+      - timestamp: 2025-09-04T07:24:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-input-beats
+            componentID: 1144359c217c25c6
+            componentName: netty-codec
+            componentVersion: 4.1.118.Final
+            componentType: java-archive
+            componentLocation: /usr/share/jruby/lib/ruby/gems/shared/gems/logstash-input-beats-6.9.3/vendor/jar-dependencies/io/netty/netty-codec/4.1.118.Final/netty-codec-4.1.118.Final.jar
+            scanner: grype
