@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: logstash-input-tcp
+
+advisories:
+  - id: CGA-875r-5r79-249x
+    aliases:
+      - CVE-2025-58057
+      - GHSA-3p8m-j85q-pgmj
+    events:
+      - timestamp: 2025-09-04T08:21:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-input-tcp
+            componentID: d8aefa71e0e92c16
+            componentName: netty-codec
+            componentVersion: 4.1.118.Final
+            componentType: java-archive
+            componentLocation: /usr/share/jruby/lib/ruby/gems/shared/gems/logstash-input-tcp-6.4.6/vendor/jar-dependencies/io/netty/netty-codec/4.1.118.Final/netty-codec-4.1.118.Final.jar
+            scanner: grype
