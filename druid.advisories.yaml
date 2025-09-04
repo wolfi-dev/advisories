@@ -665,6 +665,24 @@ advisories:
         data:
           note: This is related to hadoop-client-runtime 3.3.6 and requires code changes by the upstream maintainers to remediate
 
+  - id: CGA-g5vg-wh83-fm76
+    aliases:
+      - CVE-2025-58057
+      - GHSA-3p8m-j85q-pgmj
+    events:
+      - timestamp: 2025-09-04T08:14:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: druid
+            componentID: f3b0791c726ee0ee
+            componentName: netty-codec
+            componentVersion: 4.1.118.Final
+            componentType: java-archive
+            componentLocation: /usr/share/java/druid/lib/netty-codec-4.1.118.Final.jar
+            scanner: grype
+
   - id: CGA-g98w-gx2v-54wx
     aliases:
       - CVE-2023-34455
