@@ -26,6 +26,24 @@ advisories:
         data:
           note: Upstream maintainers will need to update the nimbus-jose-jwt versions to newer ones, as there are several different version references that utilize shaded JARs. Attempts to rebuild with newer versions resulted in conflicts and build issues
 
+  - id: CGA-3vfc-g8rx-pvvw
+    aliases:
+      - CVE-2025-58057
+      - GHSA-3p8m-j85q-pgmj
+    events:
+      - timestamp: 2025-09-04T09:03:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-4.0-scala-2.13
+            componentID: 60cb57310f7c0d20
+            componentName: netty-codec
+            componentVersion: 4.1.124.Final
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/connect-repl/spark-connect-client-jvm_2.13-4.0.0.jar
+            scanner: grype
+
   - id: CGA-53qq-qh98-q7jv
     aliases:
       - CVE-2025-49128
