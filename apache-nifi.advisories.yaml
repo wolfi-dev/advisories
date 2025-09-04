@@ -1055,6 +1055,24 @@ advisories:
         data:
           note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
 
+  - id: CGA-9jgq-4qx7-v856
+    aliases:
+      - CVE-2025-58057
+      - GHSA-3p8m-j85q-pgmj
+    events:
+      - timestamp: 2025-09-04T07:12:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: d2b4a134508ff636
+            componentName: netty-codec-compression
+            componentVersion: 4.2.2.Final
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/nifi-current/lib/nifi-aws-nar-2.5.0.nar
+            scanner: grype
+
   - id: CGA-9v29-fwrv-3vmr
     aliases:
       - CVE-2023-33201
