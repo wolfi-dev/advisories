@@ -634,6 +634,24 @@ advisories:
         data:
           fixed-version: 472-r0
 
+  - id: CGA-c3rv-cp45-mhjr
+    aliases:
+      - CVE-2025-58057
+      - GHSA-3p8m-j85q-pgmj
+    events:
+      - timestamp: 2025-09-04T08:30:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino-plugin-thrift
+            componentID: 740a319b5f75dff0
+            componentName: netty-codec-compression
+            componentVersion: 4.2.1.Final
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/io.netty_netty-codec-compression-4.2.1.Final.jar
+            scanner: grype
+
   - id: CGA-cg76-c5w2-h82c
     aliases:
       - CVE-2024-34156
