@@ -137,6 +137,24 @@ advisories:
           type: vulnerable-code-cannot-be-controlled-by-adversary
           note: Vulnerability affects only Windows systems.
 
+  - id: CGA-r2rw-m548-3w3h
+    aliases:
+      - CVE-2025-58057
+      - GHSA-3p8m-j85q-pgmj
+    events:
+      - timestamp: 2025-09-04T07:05:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-pulsar
+            componentID: fc5e05269c86aa7c
+            componentName: netty-codec
+            componentVersion: 4.1.124.Final
+            componentType: java-archive
+            componentLocation: /usr/share/java/pulsar/lib/io.netty-netty-codec-4.1.124.Final.jar
+            scanner: grype
+
   - id: CGA-w8m5-m487-94w6
     aliases:
       - CVE-2024-6763
