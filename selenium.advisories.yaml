@@ -81,3 +81,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 4.28.0-r1
+
+  - id: CGA-m696-rcvm-w26c
+    aliases:
+      - CVE-2025-58057
+      - GHSA-3p8m-j85q-pgmj
+    events:
+      - timestamp: 2025-09-04T08:42:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: selenium-server
+            componentID: e7d7b4eaec556fd0
+            componentName: netty-codec
+            componentVersion: 4.1.121.Final
+            componentType: java-archive
+            componentLocation: /usr/share/java/selenium/bin/selenium_server_deploy.jar
+            scanner: grype
