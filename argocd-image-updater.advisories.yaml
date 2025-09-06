@@ -279,6 +279,24 @@ advisories:
         data:
           note: Attempting to patch this CVE via updating the affected module leads to resolution errors with other modules, therefore a patch from upstream is required to remediate this CVE.
 
+  - id: CGA-fg49-xw36-gj5x
+    aliases:
+      - CVE-2025-55190
+      - GHSA-786q-9hcg-v9ff
+    events:
+      - timestamp: 2025-09-06T07:12:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argocd-image-updater
+            componentID: e4c4f378dbea5272
+            componentName: github.com/argoproj/argo-cd/v2
+            componentVersion: v2.13.8
+            componentType: go-module
+            componentLocation: /usr/bin/argocd-image-updater
+            scanner: grype
+
   - id: CGA-fghq-cmj5-4jgc
     aliases:
       - CVE-2024-5321
