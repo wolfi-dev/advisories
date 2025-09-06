@@ -54,6 +54,24 @@ advisories:
             and the SNAPSHOT artifacts are not available in Maven repositories.
             We need to wait for Apache NiFi 2.6.0 to be officially released before we can apply this security fix.
 
+  - id: CGA-3xmr-7g5q-24pv
+    aliases:
+      - CVE-2025-58056
+      - GHSA-fghv-69vj-qj49
+    events:
+      - timestamp: 2025-09-06T07:05:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi-registry
+            componentID: fe12da413410cbef
+            componentName: netty-codec-http
+            componentVersion: 4.2.2.Final
+            componentType: java-archive
+            componentLocation: /opt/nifi-registry/nifi-registry-2.5.0/ext/aws/lib/netty-codec-http-4.2.2.Final.jar
+            scanner: grype
+
   - id: CGA-4chp-2v5c-g3c7
     aliases:
       - CVE-2025-58057
