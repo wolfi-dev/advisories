@@ -132,3 +132,21 @@ advisories:
         data:
           type: vulnerable-code-cannot-be-controlled-by-adversary
           note: Vulnerability affects only Windows systems.
+
+  - id: CGA-xxc5-24mg-fh2f
+    aliases:
+      - CVE-2025-58056
+      - GHSA-fghv-69vj-qj49
+    events:
+      - timestamp: 2025-09-06T07:10:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-activemq-artemis
+            componentID: 3152f792b7d82151
+            componentName: netty-codec-http
+            componentVersion: 4.1.118.Final
+            componentType: java-archive
+            componentLocation: /opt/activemq-artemis/lib/netty-codec-http-4.1.118.Final.jar
+            scanner: grype
