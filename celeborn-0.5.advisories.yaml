@@ -202,6 +202,24 @@ advisories:
         data:
           note: Upstream needs to upgrade package to latest version. Attempts to update result in build failures and CVEs not being fixed
 
+  - id: CGA-qfcq-9pp8-r7xm
+    aliases:
+      - CVE-2025-58056
+      - GHSA-fghv-69vj-qj49
+    events:
+      - timestamp: 2025-09-06T07:06:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: celeborn-0.5
+            componentID: 83f4e17067c6dffc
+            componentName: netty-codec-http
+            componentVersion: 4.1.118.Final
+            componentType: java-archive
+            componentLocation: /usr/share/java/celeborn/jars/netty-codec-http-4.1.118.Final.jar
+            scanner: grype
+
   - id: CGA-rc57-hr6c-69f6
     aliases:
       - CVE-2025-52999
