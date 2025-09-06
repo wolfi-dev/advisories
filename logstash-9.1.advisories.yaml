@@ -22,6 +22,24 @@ advisories:
             componentLocation: /opt/bitnami/logstash/vendor/jruby/lib/ruby/gems/shared/specifications/default/uri-0.12.3.gemspec
             scanner: grype
 
+  - id: CGA-9972-86wh-c67w
+    aliases:
+      - CVE-2025-58056
+      - GHSA-fghv-69vj-qj49
+    events:
+      - timestamp: 2025-09-06T07:50:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-9.1
+            componentID: 352d65d0ee1a1894
+            componentName: netty-codec-http
+            componentVersion: 4.1.118.Final
+            componentType: java-archive
+            componentLocation: /opt/bitnami/logstash/vendor/local_gems/d0a17a89/logstash-input-http-3.10.2/vendor/jar-dependencies/io/netty/netty-codec-http/4.1.118.Final/netty-codec-http-4.1.118.Final.jar
+            scanner: grype
+
   - id: CGA-cf2c-4jqh-r439
     aliases:
       - CVE-2025-27219
