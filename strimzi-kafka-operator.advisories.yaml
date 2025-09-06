@@ -197,6 +197,24 @@ advisories:
         data:
           note: The vulnerability arises from third-party dependencies resolved during the build phase. We have applied mitigations where feasible; however, complete remediation requires upstream to update the affected components. Upon upstream resolution, we will proceed with dependency upgrades and apply the necessary patch to address the CVE.
 
+  - id: CGA-h366-v7f3-6fcp
+    aliases:
+      - CVE-2025-58056
+      - GHSA-fghv-69vj-qj49
+    events:
+      - timestamp: 2025-09-06T09:29:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: strimzi-kafka-operator-kafka-thirdparty-libs-cc
+            componentID: fbe816aa76191d69
+            componentName: netty-codec-http
+            componentVersion: 4.2.2.Final
+            componentType: java-archive
+            componentLocation: /opt/strimzi/lib/io.netty.netty-codec-http-4.2.2.Final.jar
+            scanner: grype
+
   - id: CGA-hmmx-hfqq-35fm
     aliases:
       - CVE-2024-56128
