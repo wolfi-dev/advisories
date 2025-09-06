@@ -160,6 +160,24 @@ advisories:
         data:
           note: Opensearch-2 has multiple instances of CVE-2025-48924 due to plugins using the same library versions. Upstream will needs to fix
 
+  - id: CGA-rvg2-w7fw-r7w6
+    aliases:
+      - CVE-2025-58056
+      - GHSA-fghv-69vj-qj49
+    events:
+      - timestamp: 2025-09-06T10:08:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-3
+            componentID: e6b13f22256fa3fb
+            componentName: netty-codec-http
+            componentVersion: 4.1.121.Final
+            componentType: java-archive
+            componentLocation: /usr/share/opensearch/plugins/opensearch-repository-azure/netty-codec-http-4.1.121.Final.jar
+            scanner: grype
+
   - id: CGA-vcw2-p8c6-rfr5
     aliases:
       - CVE-2025-53864
