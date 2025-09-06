@@ -132,3 +132,21 @@ advisories:
             Attempts to force the upgrade of commons-lang3 to the fixed version result in build failures.
             Attempts to upgrade Keycloak to the v3.35 version stream of Quarkus (with the fix), also result in build failures.
             Pending upstream fix, specifically for Quarkus to create a v3.20 patch release, or for Keycloak to do the refactor needed for upgrading to Quarkus v3.35.
+
+  - id: CGA-x9wp-gc38-v6xr
+    aliases:
+      - CVE-2025-58056
+      - GHSA-fghv-69vj-qj49
+    events:
+      - timestamp: 2025-09-06T07:18:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak-26.3
+            componentID: b5ab2593fa5fc087
+            componentName: netty-codec-http
+            componentVersion: 4.1.124.Final
+            componentType: java-archive
+            componentLocation: /opt/iamguarded/keycloak/lib/lib/main/io.netty.netty-codec-http-4.1.124.Final.jar
+            scanner: grype
