@@ -1373,6 +1373,24 @@ advisories:
         data:
           note: This vulnerability exists within a pre-compiled dependency which nifi depends on, and we lack the ability to patch. The upstream maintainers must mitigate this CVE.
 
+  - id: CGA-gh2g-466c-388m
+    aliases:
+      - CVE-2025-58056
+      - GHSA-fghv-69vj-qj49
+    events:
+      - timestamp: 2025-09-06T07:15:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: d4b6ca08334cb42f
+            componentName: netty-codec-http
+            componentVersion: 4.2.2.Final
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/nifi-current/lib/nifi-aws-nar-2.5.0.nar
+            scanner: grype
+
   - id: CGA-gph4-p2pw-xq8x
     aliases:
       - GHSA-xpw8-rcwv-8f8p
