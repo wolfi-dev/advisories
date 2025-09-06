@@ -115,3 +115,21 @@ advisories:
             netty-codec-http package required for HTTP handling is not included in the dependencies. Upstream needs
             to properly configure the Netty dependencies to include both netty-codec-http2 and netty-codec-http
             with compatible versions before this security fix can be applied.
+
+  - id: CGA-qmx6-mh4w-gv69
+    aliases:
+      - CVE-2025-58056
+      - GHSA-fghv-69vj-qj49
+    events:
+      - timestamp: 2025-09-06T09:13:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zipkin
+            componentID: 615ec56941161799
+            componentName: netty-codec-http
+            componentVersion: 4.1.121.Final
+            componentType: java-archive
+            componentLocation: /zipkin/BOOT-INF/lib/netty-codec-http-4.1.121.Final.jar
+            scanner: grype
