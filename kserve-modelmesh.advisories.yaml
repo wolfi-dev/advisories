@@ -4,6 +4,24 @@ package:
   name: kserve-modelmesh
 
 advisories:
+  - id: CGA-488j-8qjf-x6jx
+    aliases:
+      - CVE-2025-58056
+      - GHSA-fghv-69vj-qj49
+    events:
+      - timestamp: 2025-09-06T07:23:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kserve-modelmesh
+            componentID: dc2684cce82ef6e2
+            componentName: netty-codec-http
+            componentVersion: 4.1.108.Final
+            componentType: java-archive
+            componentLocation: /opt/kserve/mmesh/lib/netty-codec-http-4.1.108.Final.jar
+            scanner: grype
+
   - id: CGA-553w-99qm-q83c
     aliases:
       - CVE-2025-58057
