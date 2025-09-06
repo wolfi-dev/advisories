@@ -4,6 +4,24 @@ package:
   name: docker-selenium
 
 advisories:
+  - id: CGA-323c-2vpr-mr2f
+    aliases:
+      - CVE-2025-58056
+      - GHSA-fghv-69vj-qj49
+    events:
+      - timestamp: 2025-09-06T07:56:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-selenium-base
+            componentID: dda9fbb48a4614d9
+            componentName: netty-codec-http
+            componentVersion: 4.1.110.Final
+            componentType: java-archive
+            componentLocation: /external_jars/https/repo1.maven.org/maven2/io/netty/netty-codec-http/4.1.110.Final/netty-codec-http-4.1.110.Final.jar
+            scanner: grype
+
   - id: CGA-343x-pv45-x36w
     aliases:
       - CVE-2025-58057
