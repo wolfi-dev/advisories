@@ -15,6 +15,24 @@ advisories:
           type: component-vulnerability-mismatch
           note: This is a vulnerability in libssh, not libssh2. It's likely that any scanner reporting this is misprocessing the CPE data and ignoring its boolean expressions.
 
+  - id: CGA-6rg4-hh42-h4vw
+    aliases:
+      - CVE-2025-5987
+      - GHSA-3pvj-q7qj-89fg
+    events:
+      - timestamp: 2025-09-10T07:39:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: libssh2
+            componentID: 0fe1f19f4c207d69
+            componentName: libssh2
+            componentVersion: 1.11.1-r1
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-c8f2-vppc-gjf6
     aliases:
       - CVE-2025-5318
