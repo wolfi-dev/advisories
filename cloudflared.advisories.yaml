@@ -471,6 +471,24 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: GitHub Advisory has incorrect version range submitted, it should have < 1.12.2 - 1.12.2 instead. (Latest coredns is 1.12.2)
 
+  - id: CGA-w629-mx4q-2f4p
+    aliases:
+      - CVE-2025-58063
+      - GHSA-93mf-426m-g6x9
+    events:
+      - timestamp: 2025-09-10T07:05:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloudflared
+            componentID: 4dfa65617cb9b870
+            componentName: github.com/coredns/coredns
+            componentVersion: v1.12.2
+            componentType: go-module
+            componentLocation: /usr/bin/cloudflared
+            scanner: grype
+
   - id: CGA-wx55-4wv4-xwc7
     aliases:
       - CVE-2024-45338
