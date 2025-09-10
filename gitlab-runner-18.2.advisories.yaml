@@ -110,3 +110,21 @@ advisories:
         data:
           type: vulnerable-code-version-not-used
           note: 'This vulnerability affects github.com/docker/docker (also known as github.com/moby/moby) versions up to v25.0.4. The version currently in use is v25.0.6, which already includes the patch: https://github.com/moby/moby/commit/8e3bcf19748838b30e34d612832d1dc9d90363b8. However, the CVE detection appears to be incorrectly triggered due to a version parsing mismatch — likely because the module version includes a +incompatible suffix.'
+
+  - id: CGA-gx84-9q3q-g984
+    aliases:
+      - CVE-2025-3601
+      - GHSA-v8g6-hvf8-9cwq
+    events:
+      - timestamp: 2025-09-10T07:51:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-18.2
+            componentID: be71f119771a4b6f
+            componentName: gitlab-runner-oci-entrypoint-18.2
+            componentVersion: 18.2.2-r1
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
