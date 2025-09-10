@@ -4,16 +4,52 @@ package:
   name: libssh2
 
 advisories:
-  - id: CGA-wfhf-6667-fc2v
+  - id: CGA-4fww-r5j4-v938
     aliases:
-      - CVE-2023-3603
-      - GHSA-2c4f-vgwr-82q6
+      - CVE-2023-6918
+      - GHSA-gpcj-wh2f-rr23
     events:
-      - timestamp: 2023-08-11T22:39:49Z
+      - timestamp: 2024-01-03T18:01:42Z
         type: false-positive-determination
         data:
           type: component-vulnerability-mismatch
-          note: This CVE pertains to a defect in an example program in libssh, not libssh2.
+          note: This is a vulnerability in libssh, not libssh2. It's likely that any scanner reporting this is misprocessing the CPE data and ignoring its boolean expressions.
+
+  - id: CGA-6rg4-hh42-h4vw
+    aliases:
+      - CVE-2025-5987
+      - GHSA-3pvj-q7qj-89fg
+    events:
+      - timestamp: 2025-09-10T07:39:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: libssh2
+            componentID: 0fe1f19f4c207d69
+            componentName: libssh2
+            componentVersion: 1.11.1-r1
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
+  - id: CGA-c8f2-vppc-gjf6
+    aliases:
+      - CVE-2025-5318
+      - GHSA-98qw-prqm-9f4p
+    events:
+      - timestamp: 2025-09-10T07:39:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: libssh2
+            componentID: 0fe1f19f4c207d69
+            componentName: libssh2
+            componentVersion: 1.11.1-r1
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
 
   - id: CGA-mh76-5f3j-53h8
     aliases:
@@ -25,13 +61,13 @@ advisories:
         data:
           fixed-version: 1.11.0-r2
 
-  - id: CGA-4fww-r5j4-v938
+  - id: CGA-wfhf-6667-fc2v
     aliases:
-      - CVE-2023-6918
-      - GHSA-gpcj-wh2f-rr23
+      - CVE-2023-3603
+      - GHSA-2c4f-vgwr-82q6
     events:
-      - timestamp: 2024-01-03T18:01:42Z
+      - timestamp: 2023-08-11T22:39:49Z
         type: false-positive-determination
         data:
           type: component-vulnerability-mismatch
-          note: This is a vulnerability in libssh, not libssh2. It's likely that any scanner reporting this is misprocessing the CPE data and ignoring its boolean expressions.
+          note: This CVE pertains to a defect in an example program in libssh, not libssh2.
