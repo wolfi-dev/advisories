@@ -26,6 +26,24 @@ advisories:
         data:
           note: 'This vulnerability affects Docker Engine (Moby) versions <= 25.0.12 where firewalld reload removes Docker''s iptables rules that isolate containers in different bridge networks. Upstream maintainers must cut a release with the fix. References: 25.x backport PR: https://github.com/moby/moby/pull/50445 28.x backport PR: https://github.com/moby/moby/pull/50506'
 
+  - id: CGA-3839-m2x6-wrg2
+    aliases:
+      - CVE-2025-4225
+      - GHSA-rq6q-w27x-f9x2
+    events:
+      - timestamp: 2025-09-10T07:51:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-18.2
+            componentID: be71f119771a4b6f
+            componentName: gitlab-runner-oci-entrypoint-18.2
+            componentVersion: 18.2.2-r1
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-4m59-8gx8-jrg7
     aliases:
       - CVE-2025-2246
