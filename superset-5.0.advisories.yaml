@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: superset-5.0
+
+advisories:
+  - id: CGA-q33p-67qw-w8m8
+    aliases:
+      - CVE-2025-58065
+      - GHSA-765j-9r45-w2q2
+    events:
+      - timestamp: 2025-09-12T07:53:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: superset-5.0
+            componentID: f0f1ebe522f02f22
+            componentName: flask-appbuilder
+            componentVersion: 4.6.2
+            componentType: python
+            componentLocation: /usr/share/superset/venv/lib/python3.11/site-packages/Flask_AppBuilder-4.6.2.dist-info/METADATA
+            scanner: grype
