@@ -235,3 +235,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.4.0-r4
+
+  - id: CGA-x7j7-6jgv-vqhm
+    aliases:
+      - CVE-2025-41249
+      - GHSA-jmp9-x22r-554x
+    events:
+      - timestamp: 2025-09-17T07:12:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi-registry
+            componentID: 5e60c0a09b542f22
+            componentName: spring-core
+            componentVersion: 6.2.8
+            componentType: java-archive
+            componentLocation: /opt/nifi-registry/nifi-registry-2.5.0/lib/nifi-registry-web-api-2.5.0.war
+            scanner: grype
