@@ -44,6 +44,24 @@ advisories:
         data:
           note: 'As per the advisory commons-lang has no patched version and as per the description, upstream package maintainers of commons-lang recommend to upgrade to commons-lang3 version 3.18.0 or greater. Jenkins-2 has to upgrade their dependency in order to fix this CVE. More information on the advisory: https://github.com/advisories/GHSA-j288-q9x7-2f5v'
 
+  - id: CGA-383r-7q35-j99r
+    aliases:
+      - CVE-2025-59476
+      - GHSA-qrh5-jg98-cr48
+    events:
+      - timestamp: 2025-09-18T07:33:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jenkins-2
+            componentID: 73a68754a1a002c0
+            componentName: jenkins-core
+            componentVersion: "2.527"
+            componentType: java-archive
+            componentLocation: /usr/share/java/jenkins/jenkins.war
+            scanner: grype
+
   - id: CGA-6294-j3wv-p997
     aliases:
       - CVE-2025-48734
