@@ -4,6 +4,24 @@ package:
   name: jenkins-2
 
 advisories:
+  - id: CGA-23pg-q5v7-q8r4
+    aliases:
+      - CVE-2025-59474
+      - GHSA-67v4-38h7-9jjp
+    events:
+      - timestamp: 2025-09-18T07:33:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jenkins-2
+            componentID: 73a68754a1a002c0
+            componentName: jenkins-core
+            componentVersion: "2.527"
+            componentType: java-archive
+            componentLocation: /usr/share/java/jenkins/jenkins.war
+            scanner: grype
+
   - id: CGA-2hjm-4pwp-7fpg
     aliases:
       - CVE-2025-48924
@@ -25,6 +43,24 @@ advisories:
         type: pending-upstream-fix
         data:
           note: 'As per the advisory commons-lang has no patched version and as per the description, upstream package maintainers of commons-lang recommend to upgrade to commons-lang3 version 3.18.0 or greater. Jenkins-2 has to upgrade their dependency in order to fix this CVE. More information on the advisory: https://github.com/advisories/GHSA-j288-q9x7-2f5v'
+
+  - id: CGA-383r-7q35-j99r
+    aliases:
+      - CVE-2025-59476
+      - GHSA-qrh5-jg98-cr48
+    events:
+      - timestamp: 2025-09-18T07:33:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jenkins-2
+            componentID: 73a68754a1a002c0
+            componentName: jenkins-core
+            componentVersion: "2.527"
+            componentType: java-archive
+            componentLocation: /usr/share/java/jenkins/jenkins.war
+            scanner: grype
 
   - id: CGA-6294-j3wv-p997
     aliases:
@@ -174,6 +210,24 @@ advisories:
         type: pending-upstream-fix
         data:
           note: The Jenkins CLI depends directly on net.i2p.crypto.eddsa 0.3.0.  Jenkins upstream will need to change to depend on net.i2p 0.9.39 or later, and include that change in a new release.
+
+  - id: CGA-gvgm-xvjr-mwmm
+    aliases:
+      - CVE-2025-59475
+      - GHSA-223m-4rfp-646h
+    events:
+      - timestamp: 2025-09-18T07:33:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jenkins-2
+            componentID: 73a68754a1a002c0
+            componentName: jenkins-core
+            componentVersion: "2.527"
+            componentType: java-archive
+            componentLocation: /usr/share/java/jenkins/jenkins.war
+            scanner: grype
 
   - id: CGA-gwxv-9j8x-jg7p
     aliases:
