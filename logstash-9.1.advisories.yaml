@@ -92,6 +92,24 @@ advisories:
         data:
           note: The cgi gem at version 0.3.6 is included as a default gem in JRuby's standard library. Because it's part of JRuby itself rather than a separately managed gem, an updated JRuby release is required to incorporate the remediated version of cgi (0.3.7+).
 
+  - id: CGA-m9g2-3r8p-mfc8
+    aliases:
+      - CVE-2025-58767
+      - GHSA-c2f4-jgmc-q2r5
+    events:
+      - timestamp: 2025-09-18T07:52:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-9.1
+            componentID: 49aef6bddde695ae
+            componentName: rexml
+            componentVersion: 3.4.1
+            componentType: gem
+            componentLocation: /opt/bitnami/logstash/vendor/bundle/jruby/3.1.0/specifications/rexml-3.4.1.gemspec
+            scanner: grype
+
   - id: CGA-mq82-fgj6-fhmc
     aliases:
       - CVE-2025-58057
