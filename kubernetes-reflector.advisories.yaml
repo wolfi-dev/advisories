@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: kubernetes-reflector
+
+advisories:
+  - id: CGA-mwp4-xmf2-c5p5
+    aliases:
+      - CVE-2025-9708
+      - GHSA-w7r3-mgwf-4mqq
+    events:
+      - timestamp: 2025-09-18T07:34:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-reflector
+            componentID: 71f58a79bc9b7efa
+            componentName: KubernetesClient
+            componentVersion: 17.0.4
+            componentType: dotnet
+            componentLocation: /usr/lib/kubernetes-reflector/ES.Kubernetes.Reflector.deps.json
+            scanner: grype
