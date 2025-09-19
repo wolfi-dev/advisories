@@ -52,3 +52,21 @@ advisories:
             Upstream will have to update the dependency manually and adapt the code to use a newer version of bootstrap.
             Information about fixed versions: https://github.com/jasnow/ruby-advisory-db/blob/4ef0e78d56567561c91cf845e97235dfaed23c13/gems/bootstrap/CVE-2024-6484.yml
             Information about migrating to bootstrap 4: https://getbootstrap.com/docs/4.0/migration/'
+
+  - id: CGA-whrc-rcfj-6fxc
+    aliases:
+      - CVE-2025-1647
+      - GHSA-q58r-hwc8-rm9j
+    events:
+      - timestamp: 2025-09-19T07:23:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-api-ui
+            componentID: 45de41744bde3051
+            componentName: bootstrap
+            componentVersion: 3.4.1
+            componentType: npm
+            componentLocation: /usr/share/rancher/ui/api-ui/node_modules/bootstrap/package.json
+            scanner: grype
