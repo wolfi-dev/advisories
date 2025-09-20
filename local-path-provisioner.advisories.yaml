@@ -4,6 +4,24 @@ package:
   name: local-path-provisioner
 
 advisories:
+  - id: CGA-2m9r-rxwm-wj5m
+    aliases:
+      - CVE-2025-47906
+      - GHSA-gwrf-jf3h-w649
+    events:
+      - timestamp: 2025-09-20T08:30:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: local-path-provisioner
+            componentID: 99a9c19b884231fb
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/local-path-provisioner
+            scanner: grype
+
   - id: CGA-2v2p-4272-qhvv
     aliases:
       - CVE-2024-24790
