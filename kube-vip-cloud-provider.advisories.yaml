@@ -4,6 +4,24 @@ package:
   name: kube-vip-cloud-provider
 
 advisories:
+  - id: CGA-5g7m-m5m9-m49g
+    aliases:
+      - CVE-2025-47906
+      - GHSA-gwrf-jf3h-w649
+    events:
+      - timestamp: 2025-09-20T09:53:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-vip-cloud-provider
+            componentID: 508bc0fab52c2769
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/kube-vip-cloud-provider
+            scanner: grype
+
   - id: CGA-69xx-xf8r-5m92
     aliases:
       - CVE-2025-4673
