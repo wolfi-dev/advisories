@@ -26,3 +26,21 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
+
+  - id: CGA-hjpx-mcrv-fg3f
+    aliases:
+      - CVE-2025-47906
+      - GHSA-gwrf-jf3h-w649
+    events:
+      - timestamp: 2025-09-20T09:20:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: custom-pod-autoscaler-operator
+            componentID: ff92672deaaa0590
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/custom-pod-autoscaler-operator
+            scanner: grype
