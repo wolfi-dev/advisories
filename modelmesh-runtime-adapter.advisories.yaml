@@ -259,6 +259,24 @@ advisories:
             Attempting to upgrade both azidentity and azblob was also not successful.
             Waiting on fix from upstream.
 
+  - id: CGA-qmr6-2cm9-5g49
+    aliases:
+      - CVE-2025-47906
+      - GHSA-gwrf-jf3h-w649
+    events:
+      - timestamp: 2025-09-20T09:33:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: modelmesh-runtime-adapter
+            componentID: 691784abb5ffa17f
+            componentName: stdlib
+            componentVersion: go1.24.5
+            componentType: go-module
+            componentLocation: /usr/bin/mlserver-adapter
+            scanner: grype
+
   - id: CGA-rmv4-m63v-gj45
     aliases:
       - CVE-2024-45341
