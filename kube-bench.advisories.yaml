@@ -89,6 +89,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-4vg4-922m-rc75
+    aliases:
+      - CVE-2025-47910
+      - GHSA-8pjc-487g-w6p2
+    events:
+      - timestamp: 2025-09-24T07:07:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-bench
+            componentID: be944a1d3f0d8603
+            componentName: stdlib
+            componentVersion: go1.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-bench
+            scanner: grype
+
   - id: CGA-5j27-jvgg-5qwj
     aliases:
       - CVE-2025-47907
