@@ -4,6 +4,24 @@ package:
   name: terraform-mcp-server
 
 advisories:
+  - id: CGA-9884-8jqc-7cxm
+    aliases:
+      - CVE-2025-47910
+      - GHSA-8pjc-487g-w6p2
+    events:
+      - timestamp: 2025-09-24T07:53:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-mcp-server
+            componentID: 170067586210ad36
+            componentName: stdlib
+            componentVersion: go1.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-mcp-server
+            scanner: grype
+
   - id: CGA-hgvw-r2c3-9f8m
     aliases:
       - CVE-2025-47907
