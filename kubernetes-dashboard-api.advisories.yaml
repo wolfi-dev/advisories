@@ -275,3 +275,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.10.2-r1
+
+  - id: CGA-xrmr-9cxf-9rq7
+    aliases:
+      - CVE-2025-47910
+      - GHSA-8pjc-487g-w6p2
+    events:
+      - timestamp: 2025-09-24T12:26:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dashboard-api
+            componentID: bc695a8d36903e80
+            componentName: stdlib
+            componentVersion: go1.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/dashboard-api
+            scanner: grype
