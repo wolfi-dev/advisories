@@ -4,6 +4,24 @@ package:
   name: rancher-system-upgrade-controller
 
 advisories:
+  - id: CGA-9pxg-w76g-5j84
+    aliases:
+      - CVE-2025-47910
+      - GHSA-8pjc-487g-w6p2
+    events:
+      - timestamp: 2025-09-24T09:11:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-system-upgrade-controller
+            componentID: 559b172adbbb14bd
+            componentName: stdlib
+            componentVersion: go1.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/system-upgrade-controller
+            scanner: grype
+
   - id: CGA-vq5j-jqh8-q729
     aliases:
       - CVE-2025-47907
