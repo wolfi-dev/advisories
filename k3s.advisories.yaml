@@ -933,6 +933,24 @@ advisories:
         data:
           note: 'This vulnerability affects Docker Engine (Moby) versions <= 25.0.12 where firewalld reload removes Docker''s iptables rules that isolate containers in different bridge networks. Upstream maintainers must cut a release with the fix. References: 25.x backport PR: https://github.com/moby/moby/pull/50445 28.x backport PR: https://github.com/moby/moby/pull/50506'
 
+  - id: CGA-w7vg-mqgm-9c37
+    aliases:
+      - CVE-2025-47910
+      - GHSA-8pjc-487g-w6p2
+    events:
+      - timestamp: 2025-09-24T12:10:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s
+            componentID: 38ff49be7a9fb94d
+            componentName: stdlib
+            componentVersion: go1.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/containerd-shim-runc-v2
+            scanner: grype
+
   - id: CGA-wg26-4574-7j6c
     aliases:
       - CVE-2023-39325
