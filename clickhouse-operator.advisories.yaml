@@ -48,6 +48,24 @@ advisories:
         data:
           fixed-version: 0.25.0-r1
 
+  - id: CGA-pvcp-4832-7w32
+    aliases:
+      - CVE-2025-47910
+      - GHSA-8pjc-487g-w6p2
+    events:
+      - timestamp: 2025-09-24T11:41:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: clickhouse-operator
+            componentID: efa808ec19e5a9da
+            componentName: stdlib
+            componentVersion: go1.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/metrics-exporter
+            scanner: grype
+
   - id: CGA-vhg3-hcpg-frxx
     aliases:
       - CVE-2025-22874
