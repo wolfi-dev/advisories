@@ -4,6 +4,24 @@ package:
   name: nats-server-config-reloader
 
 advisories:
+  - id: CGA-cpmv-72cr-q8pc
+    aliases:
+      - CVE-2025-47910
+      - GHSA-8pjc-487g-w6p2
+    events:
+      - timestamp: 2025-09-24T12:38:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nats-server-config-reloader
+            componentID: 040e8a960cfbc3a1
+            componentName: stdlib
+            componentVersion: go1.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/nats-server-config-reloader
+            scanner: grype
+
   - id: CGA-fqvq-j954-6792
     aliases:
       - CVE-2025-47907
