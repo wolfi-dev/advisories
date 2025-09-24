@@ -1,9 +1,12 @@
 issuer: https://accounts.google.com
 
+# Legacy v1 ingesters - to be removed after migration
 # staging-enforce: advisory-ing-annok33bkfnx8xg7k@staging-enforce-cd1e.iam.gserviceaccount.com (112522501528385689106)
-# staging-enforce: advisory-ingester-v2@staging-enforce-cd1e.iam.gserviceaccount.com (110642625558387206411)
 # prod-enforce: advisory-ing-xi53h6933zlnd2469@prod-enforce-fabc.iam.gserviceaccount.com (108967221351835873845)
-subject_pattern: "(112522501528385689106|108967221351835873845|110642625558387206411)"
+# v2 ingesters
+# staging-enforce: advisory-ingester-v2@staging-enforce-cd1e.iam.gserviceaccount.com (110642625558387206411)
+# staging-enforce: advisory-push-listener-v2@staging-enforce-cd1e.iam.gserviceaccount.com (118337641592727257822)
+subject_pattern: "(112522501528385689106|108967221351835873845|110642625558387206411|118337641592727257822)"
 
 # This service needs to clone the advisories repo to import the existing advisories to a db.
 permissions:
