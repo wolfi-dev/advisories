@@ -4,6 +4,24 @@ package:
   name: db-operator
 
 advisories:
+  - id: CGA-jf5m-6wrh-x7qw
+    aliases:
+      - CVE-2025-47910
+      - GHSA-8pjc-487g-w6p2
+    events:
+      - timestamp: 2025-09-24T11:25:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: db-operator
+            componentID: a2e91f6809c3df76
+            componentName: stdlib
+            componentVersion: go1.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/db-operator
+            scanner: grype
+
   - id: CGA-xxfm-8wj5-26f8
     aliases:
       - CVE-2025-47907
