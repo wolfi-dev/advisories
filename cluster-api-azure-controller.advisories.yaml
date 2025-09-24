@@ -4,6 +4,24 @@ package:
   name: cluster-api-azure-controller
 
 advisories:
+  - id: CGA-mc4r-7378-vv45
+    aliases:
+      - CVE-2025-47910
+      - GHSA-8pjc-487g-w6p2
+    events:
+      - timestamp: 2025-09-24T08:45:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-api-azure-controller
+            componentID: 157e05b7640a0b9a
+            componentName: stdlib
+            componentVersion: go1.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-api-azure-controller
+            scanner: grype
+
   - id: CGA-vjpc-222f-8p27
     aliases:
       - CVE-2025-47907
