@@ -27,6 +27,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-j8hg-f9h6-jfqh
+    aliases:
+      - CVE-2025-47910
+      - GHSA-8pjc-487g-w6p2
+    events:
+      - timestamp: 2025-09-24T07:45:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: envconsul
+            componentID: 6e5601ab2dfa4de6
+            componentName: stdlib
+            componentVersion: go1.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/envconsul
+            scanner: grype
+
   - id: CGA-qj4f-jmrv-cx36
     aliases:
       - CVE-2025-22874
