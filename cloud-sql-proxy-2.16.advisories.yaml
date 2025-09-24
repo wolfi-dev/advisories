@@ -4,6 +4,24 @@ package:
   name: cloud-sql-proxy-2.16
 
 advisories:
+  - id: CGA-3g5h-7xr5-74p4
+    aliases:
+      - CVE-2025-47910
+      - GHSA-8pjc-487g-w6p2
+    events:
+      - timestamp: 2025-09-24T11:52:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-sql-proxy-2.16
+            componentID: 089a22cc03687132
+            componentName: stdlib
+            componentVersion: go1.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/cloud-sql-proxy
+            scanner: grype
+
   - id: CGA-5pmv-vq96-4rjm
     aliases:
       - CVE-2025-47907
