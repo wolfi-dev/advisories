@@ -4,6 +4,24 @@ package:
   name: karpenter-1.6
 
 advisories:
+  - id: CGA-9j5x-wxmj-8cxh
+    aliases:
+      - CVE-2025-47910
+      - GHSA-8pjc-487g-w6p2
+    events:
+      - timestamp: 2025-09-24T13:24:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: karpenter-1.6
+            componentID: ff19812a8a3c545d
+            componentName: stdlib
+            componentVersion: go1.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/controller
+            scanner: grype
+
   - id: CGA-fj8c-8hv7-jj4r
     aliases:
       - CVE-2025-47907
