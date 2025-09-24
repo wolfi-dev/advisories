@@ -4,6 +4,24 @@ package:
   name: rancher-security-scan-0.6
 
 advisories:
+  - id: CGA-5hc8-4g8p-6hxw
+    aliases:
+      - CVE-2025-47910
+      - GHSA-8pjc-487g-w6p2
+    events:
+      - timestamp: 2025-09-24T08:11:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-security-scan-0.6
+            componentID: a7f223ae03112467
+            componentName: stdlib
+            componentVersion: go1.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/kb-summarizer
+            scanner: grype
+
   - id: CGA-85rc-j2r6-7jr4
     aliases:
       - CVE-2025-47907
