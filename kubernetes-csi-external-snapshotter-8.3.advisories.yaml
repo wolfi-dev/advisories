@@ -25,3 +25,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 8.3.0-r2
+
+  - id: CGA-r43w-83f9-pfr7
+    aliases:
+      - CVE-2025-47910
+      - GHSA-8pjc-487g-w6p2
+    events:
+      - timestamp: 2025-09-24T14:04:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-snapshotter-8.3
+            componentID: f0721e1b9edde48c
+            componentName: stdlib
+            componentVersion: go1.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/snapshot-controller
+            scanner: grype
