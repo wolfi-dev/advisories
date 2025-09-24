@@ -342,6 +342,24 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
 
+  - id: CGA-fxjf-5xvf-mc65
+    aliases:
+      - CVE-2025-47910
+      - GHSA-8pjc-487g-w6p2
+    events:
+      - timestamp: 2025-09-24T08:57:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: eksctl
+            componentID: ee794d992d737e8f
+            componentName: stdlib
+            componentVersion: go1.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/eksctl
+            scanner: grype
+
   - id: CGA-g5m5-wrwr-hvm7
     aliases:
       - CVE-2024-45337
