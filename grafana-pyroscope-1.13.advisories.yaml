@@ -27,6 +27,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-8x7x-mxcx-8jv3
+    aliases:
+      - CVE-2025-47910
+      - GHSA-8pjc-487g-w6p2
+    events:
+      - timestamp: 2025-09-24T12:18:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-pyroscope-1.13
+            componentID: fb88f48847e068fd
+            componentName: stdlib
+            componentVersion: go1.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/profilecli
+            scanner: grype
+
   - id: CGA-8xrc-697j-x68f
     aliases:
       - CVE-2025-54576
