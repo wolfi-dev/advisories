@@ -27,6 +27,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-867j-988f-7mpj
+    aliases:
+      - CVE-2025-47910
+      - GHSA-8pjc-487g-w6p2
+    events:
+      - timestamp: 2025-09-24T13:07:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-provider-gcp-cloud-controller-manager
+            componentID: 72916126f95a820c
+            componentName: stdlib
+            componentVersion: go1.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/cloud-controller-manager
+            scanner: grype
+
   - id: CGA-p5j4-wj3f-cfhg
     aliases:
       - CVE-2025-4563
