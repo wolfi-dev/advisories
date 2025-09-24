@@ -25,3 +25,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.19.3-r3
+
+  - id: CGA-xpcj-7pr9-qp88
+    aliases:
+      - CVE-2025-47910
+      - GHSA-8pjc-487g-w6p2
+    events:
+      - timestamp: 2025-09-24T13:16:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.19
+            componentID: 43add4280cf66322
+            componentName: stdlib
+            componentVersion: go1.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/gator
+            scanner: grype
