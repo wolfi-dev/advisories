@@ -4,6 +4,24 @@ package:
   name: harbor-cli
 
 advisories:
+  - id: CGA-27g4-xx3w-jqj7
+    aliases:
+      - CVE-2025-47910
+      - GHSA-8pjc-487g-w6p2
+    events:
+      - timestamp: 2025-09-24T10:36:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-cli
+            componentID: e65d509db77dd99e
+            componentName: stdlib
+            componentVersion: go1.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/harbor
+            scanner: grype
+
   - id: CGA-28gw-2rjc-77xr
     aliases:
       - CVE-2025-4673
