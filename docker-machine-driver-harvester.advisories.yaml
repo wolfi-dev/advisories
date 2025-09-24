@@ -26,6 +26,24 @@ advisories:
         data:
           note: 'rancher-machine is fork of docker/machine and uses quite old 1.4.2 version of moby/moby dependency that released at 2017. Bumping the moby/moby package to newer versions resulting build failure and we can''t mitigate this. '
 
+  - id: CGA-3xv5-cqch-29x5
+    aliases:
+      - CVE-2025-47910
+      - GHSA-8pjc-487g-w6p2
+    events:
+      - timestamp: 2025-09-24T11:06:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-machine-driver-harvester
+            componentID: 2fec60a3ae57bfd0
+            componentName: stdlib
+            componentVersion: go1.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/docker-machine-driver-harvester
+            scanner: grype
+
   - id: CGA-57w8-w98w-g6r3
     aliases:
       - CVE-2025-4673
