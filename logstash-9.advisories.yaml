@@ -70,6 +70,24 @@ advisories:
         data:
           note: nimbus-jose-jwt is a transitive dependency brought in by vendored jruby logstash-input-azure_event_hubs-1.5.1 package. Upstream maintiners will need to update to the latest version of logstash-input-azure_event-hubs-1.5.1
 
+  - id: CGA-7cgw-6qqf-rhr7
+    aliases:
+      - CVE-2025-47910
+      - GHSA-8pjc-487g-w6p2
+    events:
+      - timestamp: 2025-09-24T08:05:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-9-env2yaml
+            componentID: 305cf4cd7b797486
+            componentName: stdlib
+            componentVersion: go1.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/env2yaml
+            scanner: grype
+
   - id: CGA-c24g-rgv4-v3gm
     aliases:
       - CVE-2025-58767
