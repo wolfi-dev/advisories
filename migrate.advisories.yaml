@@ -29,3 +29,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 4.18.3-r3
+
+  - id: CGA-wjm3-785f-c8xx
+    aliases:
+      - CVE-2025-47910
+      - GHSA-8pjc-487g-w6p2
+    events:
+      - timestamp: 2025-09-24T11:35:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: migrate
+            componentID: 21b9ced7bddba4be
+            componentName: stdlib
+            componentVersion: go1.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/migrate
+            scanner: grype
