@@ -397,6 +397,24 @@ advisories:
         data:
           fixed-version: 0.10.4-r12
 
+  - id: CGA-hwm7-6hcj-fhqc
+    aliases:
+      - CVE-2025-47910
+      - GHSA-8pjc-487g-w6p2
+    events:
+      - timestamp: 2025-09-24T09:51:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-push
+            componentID: 00ba431460b20979
+            componentName: stdlib
+            componentVersion: go1.25.0
+            componentType: go-module
+            componentLocation: /usr/libexec/helm-plugins/helm-push/bin/helm-cm-push
+            scanner: grype
+
   - id: CGA-j595-2qf5-p6g9
     aliases:
       - CVE-2025-22866
