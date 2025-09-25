@@ -1,23 +1,23 @@
-schema-version: "2"
+schema-version: 2.0.2
 
 package:
   name: gnupg
 
 advisories:
-  - id: CGA-rwwh-6r5g-r4p2
+  - id: CGA-289g-3jf6-7rrh
     aliases:
-      - CVE-2018-12020
-      - GHSA-678p-6r6j-65f9
+      - CVE-2019-14855
+      - GHSA-cpvm-f36g-55vg
     events:
       - timestamp: 2023-01-15T00:25:50Z
         type: false-positive-determination
         data:
           type: vulnerable-code-version-not-used
 
-  - id: CGA-289g-3jf6-7rrh
+  - id: CGA-48gm-8399-595q
     aliases:
-      - CVE-2019-14855
-      - GHSA-cpvm-f36g-55vg
+      - CVE-2022-34903
+      - GHSA-356p-pg27-x2cf
     events:
       - timestamp: 2023-01-15T00:25:50Z
         type: false-positive-determination
@@ -45,12 +45,30 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: The upstream maintainers deem this to be working as intended and not a security issue. See https://dev.gnupg.org/T5993
 
-  - id: CGA-48gm-8399-595q
+  - id: CGA-rwwh-6r5g-r4p2
     aliases:
-      - CVE-2022-34903
-      - GHSA-356p-pg27-x2cf
+      - CVE-2018-12020
+      - GHSA-678p-6r6j-65f9
     events:
       - timestamp: 2023-01-15T00:25:50Z
         type: false-positive-determination
         data:
           type: vulnerable-code-version-not-used
+
+  - id: CGA-xv4r-f7xm-mhg3
+    aliases:
+      - CVE-2025-30258
+      - GHSA-5rjg-pf4q-hgcr
+    events:
+      - timestamp: 2025-09-25T07:21:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gnupg
+            componentID: b16bec7192ab2715
+            componentName: gnupg
+            componentVersion: 2.2.41-r52
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
