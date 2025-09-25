@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: py3-virtualenv
+
+advisories:
+  - id: CGA-46cv-298c-wr9w
+    aliases:
+      - CVE-2025-8869
+      - GHSA-4xh5-x5gv-qwph
+    events:
+      - timestamp: 2025-09-25T07:51:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3.12-virtualenv
+            componentID: 9a8a13c2a4ba1deb
+            componentName: pip
+            componentVersion: 25.0.1
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/virtualenv/seed/wheels/embed/pip-25.0.1-py3-none-any.whl
+            scanner: grype
