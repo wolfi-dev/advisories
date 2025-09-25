@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: external-dns-0.16
+
+advisories:
+  - id: CGA-jhhw-77q8-mv75
+    aliases:
+      - CVE-2025-30204
+      - GHSA-mh63-6h87-95cp
+    events:
+      - timestamp: 2025-09-25T14:57:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: external-dns-0.16
+            componentID: 4bb7acb11e6104c6
+            componentName: github.com/golang-jwt/jwt/v5
+            componentVersion: v5.2.1
+            componentType: go-module
+            componentLocation: /usr/bin/external-dns
+            scanner: grype
