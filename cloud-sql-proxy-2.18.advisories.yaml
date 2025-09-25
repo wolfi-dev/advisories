@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: cloud-sql-proxy-2.18
+
+advisories:
+  - id: CGA-2q42-x9x8-w7fp
+    aliases:
+      - CVE-2025-47910
+      - GHSA-8pjc-487g-w6p2
+    events:
+      - timestamp: 2025-09-24T13:53:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-sql-proxy-2.18
+            componentID: 089a22cc03687132
+            componentName: stdlib
+            componentVersion: go1.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/cloud-sql-proxy
+            scanner: grype
