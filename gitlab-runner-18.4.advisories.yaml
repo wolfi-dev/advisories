@@ -38,3 +38,21 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/gitlab-runner-helper
             scanner: grype
+
+  - id: CGA-rp8c-6phv-cvmc
+    aliases:
+      - CVE-2024-36623
+      - GHSA-gh5c-3h97-2f3q
+    events:
+      - timestamp: 2025-09-25T18:14:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-18.4
+            componentID: c7799ae15dbf0753
+            componentName: github.com/docker/docker
+            componentVersion: v25.0.6+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/docker-machine
+            scanner: grype
