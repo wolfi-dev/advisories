@@ -27,6 +27,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Affected package is an entrypoint script used to setup environment and config files, this doesn't include and wordpress php code
 
+  - id: CGA-6c7x-c8vj-6hp3
+    aliases:
+      - CVE-2025-58674
+      - GHSA-73p8-vhmr-7r6r
+    events:
+      - timestamp: 2025-09-25T07:55:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wordpress
+            componentID: b231300d0beea4cb
+            componentName: wordpress-oci-entrypoint
+            componentVersion: 6.8.2-r2
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-6fj7-2fc2-hgq2
     aliases:
       - GHSA-q87j-q95m-j3x3
