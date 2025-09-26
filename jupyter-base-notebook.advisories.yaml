@@ -137,6 +137,24 @@ advisories:
         data:
           note: Bootstrap 3.4.1 is end-of-life. Waiting for nbclassic upstream to migrate to Bootstrap 4+ or remediate the CVE through an alternative measure.
 
+  - id: CGA-ghrg-gr5w-m346
+    aliases:
+      - CVE-2024-6485
+      - GHSA-vxmc-5x29-h64v
+    events:
+      - timestamp: 2025-09-26T08:14:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jupyter-base-notebook
+            componentID: 3ceeeb8331ae3bfb
+            componentName: bootstrap
+            componentVersion: 3.4.1
+            componentType: npm
+            componentLocation: /usr/lib/python3.12/site-packages/nbclassic/static/components/bootstrap/package.json
+            scanner: grype
+
   - id: CGA-qg24-ggf8-2fq7
     aliases:
       - CVE-2025-47287
