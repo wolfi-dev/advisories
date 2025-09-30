@@ -57,6 +57,14 @@ advisories:
             componentType: python
             componentLocation: /usr/lib/pypy3.11/site-packages/pip/_vendor/vendor.txt
             scanner: grype
+      - timestamp: 2025-09-30T04:53:56Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: |-
+            GHSA-5rjg-fvgr-3xxf is detected because pip vendors setuptools (v70.3.0), but only includes pkg_resources, making it non-vulnerable.
+            More information can be found here: https://github.com/pypa/pip/tree/30807c4d9e62e0ba65ad80d441dba55e76ddf5e4/src/pip/_vendor#modifications
+            We've upgraded setuptools to 78.1.1 in pypy to remediate the CVE.
 
   - id: CGA-gq75-42j3-pchq
     aliases:
@@ -97,6 +105,10 @@ advisories:
             componentType: python
             componentLocation: /usr/lib/pypy3.11/site-packages/pip/_vendor/vendor.txt
             scanner: grype
+      - timestamp: 2025-09-30T05:11:09Z
+        type: pending-upstream-fix
+        data:
+          note: The urllib3 vulnerability in version 1.26.20 is fixed in 2.5.0. However, this is a major version upgrade and upstream plans to eventually handle it. See https://github.com/pypa/pip/tree/d52011f2390f34ce3116df6526d1421e069441ce/src/pip/_vendor#automatic-vendoring
 
   - id: CGA-r7pg-q2hj-vp3j
     aliases:
