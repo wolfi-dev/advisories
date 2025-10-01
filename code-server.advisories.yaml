@@ -545,6 +545,10 @@ advisories:
             componentType: npm
             componentLocation: /usr/lib/code-server/lib/vscode/node_modules/tar-fs/package.json
             scanner: grype
+      - timestamp: 2025-10-01T10:40:29Z
+        type: pending-upstream-fix
+        data:
+          note: The tar-fs vulnerability exists in the vscode submodule at /usr/lib/code-server/lib/vscode/node_modules/tar-fs. npm overrides set in the top-level package.json do not apply to the vscode submodule's dependencies because vscode has its own committed package-lock.json from upstream Microsoft repository. The fix requires upstream vscode to update tar-fs to 3.1.1+.
 
   - id: CGA-jpxr-cjjf-9c73
     aliases:
