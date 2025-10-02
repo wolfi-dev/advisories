@@ -4,6 +4,24 @@ package:
   name: gitea
 
 advisories:
+  - id: CGA-5h3x-5f3m-fp9g
+    aliases:
+      - CVE-2025-59937
+      - GHSA-wpwj-69cm-q9c5
+    events:
+      - timestamp: 2025-10-02T07:25:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitea
+            componentID: 7191d758f6446083
+            componentName: github.com/wneessen/go-mail
+            componentVersion: v0.6.2
+            componentType: go-module
+            componentLocation: /usr/bin/gitea
+            scanner: grype
+
   - id: CGA-5h6h-5hmf-gpv2
     aliases:
       - CVE-2022-31022
