@@ -175,6 +175,15 @@ advisories:
             componentType: npm
             componentLocation: /usr/bin/sqlpad-server/node_modules/fast-redact/package.json
             scanner: grype
+      - timestamp: 2025-10-02T08:24:05Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: |-
+            This CVE which affects fast-redact <= 3.5.0 versions has been disputed by the upstream maintainers.
+            The reported vulnerability was based on a misuse of an internal undocumented utility function.
+            Using the documented public API from fast-redact does not produce the same result as in the CVE report.
+            See https://github.com/davidmarkclements/fast-redact/issues/75
 
   - id: CGA-68hq-38fr-mv52
     aliases:
