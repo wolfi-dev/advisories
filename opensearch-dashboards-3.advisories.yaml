@@ -48,6 +48,28 @@ advisories:
         data:
           fixed-version: 3.1.0-r4
 
+  - id: CGA-fhp7-7r5j-rg3h
+    aliases:
+      - CVE-2025-57352
+      - GHSA-rx8g-88g5-qh64
+    events:
+      - timestamp: 2025-10-02T07:40:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-dashboards-3
+            componentID: 5a8fdfd2897c001d
+            componentName: min-document
+            componentVersion: 2.19.0
+            componentType: npm
+            componentLocation: /usr/share/opensearch-dashboards/plugins/alertingDashboards/node_modules/min-document/package.json
+            scanner: grype
+      - timestamp: 2025-10-02T08:30:18Z
+        type: pending-upstream-fix
+        data:
+          note: Prototype pollution vulnerability in min-document@2.19.0 dependency. No upstream fix available as the min-document package appears unmaintained. The vulnerability affects the removeAttributeNS method. Remediation requires upstream to release a patched version.
+
   - id: CGA-hmpp-fxfw-xfhh
     aliases:
       - CVE-2025-54798
@@ -113,6 +135,33 @@ advisories:
         type: pending-upstream-fix
         data:
           note: We are unable to bump the axios dependency as it results in a build failure. We will need to wait for upstream to bump the dependency in order to resolve this CVE.
+
+  - id: CGA-rh94-882c-qxwh
+    aliases:
+      - CVE-2025-57319
+      - GHSA-ffrw-9mx8-89p8
+    events:
+      - timestamp: 2025-10-02T07:40:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-dashboards-3
+            componentID: 7f0a4f6975e850bc
+            componentName: fast-redact
+            componentVersion: 3.5.0
+            componentType: npm
+            componentLocation: /usr/share/opensearch-dashboards/node_modules/fast-redact/package.json
+            scanner: grype
+      - timestamp: 2025-10-02T08:24:05Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: |-
+            This CVE which affects fast-redact <= 3.5.0 versions has been disputed by the upstream maintainers.
+            The reported vulnerability was based on a misuse of an internal undocumented utility function.
+            Using the documented public API from fast-redact does not produce the same result as in the CVE report.
+            See https://github.com/davidmarkclements/fast-redact/issues/75
 
   - id: CGA-vwj2-6mjr-g9qx
     aliases:

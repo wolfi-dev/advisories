@@ -4,6 +4,24 @@ package:
   name: jupyter-docker-stacks
 
 advisories:
+  - id: CGA-42rg-xwc9-6vc6
+    aliases:
+      - CVE-2025-59842
+      - GHSA-vvfj-2jqx-52jm
+    events:
+      - timestamp: 2025-09-27T07:15:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jupyter-docker-stacks-base-notebook
+            componentID: 0f363789099bd33e
+            componentName: jupyterlab
+            componentVersion: 4.3.4
+            componentType: python
+            componentLocation: /usr/lib/python3.12/site-packages/jupyterlab-4.3.4.dist-info/METADATA
+            scanner: grype
+
   - id: CGA-7qc8-f9pg-xpc3
     aliases:
       - CVE-2025-43859

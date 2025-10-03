@@ -144,6 +144,33 @@ advisories:
         data:
           fixed-version: 5.14.2-r4
 
+  - id: CGA-pf46-frqj-pgrq
+    aliases:
+      - CVE-2025-57319
+      - GHSA-ffrw-9mx8-89p8
+    events:
+      - timestamp: 2025-10-02T07:26:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prism
+            componentID: 4be25bb1d67e0d5a
+            componentName: fast-redact
+            componentVersion: 3.3.0
+            componentType: npm
+            componentLocation: /usr/src/prism/node_modules/fast-redact/package.json
+            scanner: grype
+      - timestamp: 2025-10-02T08:24:05Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: |-
+            This CVE which affects fast-redact <= 3.5.0 versions has been disputed by the upstream maintainers.
+            The reported vulnerability was based on a misuse of an internal undocumented utility function.
+            Using the documented public API from fast-redact does not produce the same result as in the CVE report.
+            See https://github.com/davidmarkclements/fast-redact/issues/75
+
   - id: CGA-pvgv-p58w-27vj
     aliases:
       - CVE-2025-58754

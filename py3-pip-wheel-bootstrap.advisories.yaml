@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: py3-pip-wheel-bootstrap
+
+advisories:
+  - id: CGA-g478-cr5w-6x9w
+    aliases:
+      - CVE-2025-8869
+      - GHSA-4xh5-x5gv-qwph
+    events:
+      - timestamp: 2025-10-02T07:55:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3-pip-wheel-bootstrap
+            componentID: 5cea3382368abafc
+            componentName: pip
+            componentVersion: "25.2"
+            componentType: python
+            componentLocation: /usr/share/python-wheels/pip-25.2-py3-none-any.whl
+            scanner: grype

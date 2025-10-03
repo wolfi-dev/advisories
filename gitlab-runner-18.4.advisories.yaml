@@ -21,6 +21,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/gitlab-runner-helper
             scanner: grype
+      - timestamp: 2025-09-26T05:07:26Z
+        type: pending-upstream-fix
+        data:
+          note: The vulnerability originates from a Docker dependency. Upgrading to Docker v28 is currently not feasible because the package’s code is incompatible with the updated API, preventing a successful build. Upstream must refactor the codebase to align with Docker v28 interfaces. Once this adjustment is made, the dependency can be safely upgraded and the vulnerability remediated.
 
   - id: CGA-h2mc-cjrm-pxx6
     aliases:
