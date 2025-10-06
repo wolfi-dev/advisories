@@ -48,6 +48,28 @@ advisories:
         data:
           note: The org.apache.commons:commons-lang3 is pulled through a transient dependency of a python package named 'ray' version 2.47.1 which is the latest. We will have to wait for 'ray' to push a more recent version of commons-lang3 and airflow to push a new release with the new 'ray' dependency updated.
 
+  - id: CGA-3whp-3mvm-w98q
+    aliases:
+      - CVE-2025-58065
+      - GHSA-765j-9r45-w2q2
+    events:
+      - timestamp: 2025-10-02T20:37:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow-3
+            componentID: f5360da0dd1a26c2
+            componentName: flask-appbuilder
+            componentVersion: 4.6.3
+            componentType: python
+            componentLocation: /opt/airflow/lib/python3.12/site-packages/Flask_AppBuilder-4.6.3.dist-info/METADATA
+            scanner: grype
+      - timestamp: 2025-10-03T22:53:00Z
+        type: pending-upstream-fix
+        data:
+          note: flask-appbuilder is a transitive dependency brought in via apache-airflow-providers-fab's most recent release, v2.4.4. To remediate, v3.0.0 must release and upstream airflow maintainers need to implement compatibility with the new major version where applicable.
+
   - id: CGA-5x99-mqvf-h8cx
     aliases:
       - CVE-2025-50182
@@ -328,6 +350,11 @@ advisories:
             componentType: python
             componentLocation: /opt/airflow/lib/python3.12/site-packages/ray-2.49.0.dist-info/METADATA
             scanner: grype
+      - timestamp: 2025-10-03T09:31:48Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: The vendor's position is that this report is irrelevant because Ray, as stated in its documentation, is not intended for use outside of a strictly controlled network environment.
 
   - id: CGA-rffr-3gww-cc9j
     aliases:
