@@ -21,6 +21,17 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2025-10-06T08:49:41Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: |-
+            This vulnerability was discovered and fixed in Keycloak in 2017, specifically
+            in commit 463661b051efa28e85e9da16a206bad6b1b1bb63 and released in version 3.4.0.
+            Our Keycloak packaging began more than 6 years after this vulnerability was patched.
+            The vulnerable code has been entirely rewritten in newer versions.
+            This is a false positive triggered by security scanners matching on the package name without
+            considering the version timeline.
 
   - id: CGA-rgqm-77gj-629j
     aliases:
@@ -39,3 +50,14 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2025-10-06T08:48:52Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: |-
+            This vulnerability was discovered and fixed in Keycloak in 2017, specifically
+            in commit 463661b051efa28e85e9da16a206bad6b1b1bb63 and released in version 3.4.0.
+            Our Keycloak packaging began more than 6 years after this vulnerability was patched.
+            The vulnerable code has been entirely rewritten in newer versions.
+            This is a false positive triggered by security scanners matching on the package name without
+            considering the version timeline.
