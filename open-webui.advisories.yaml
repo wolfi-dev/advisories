@@ -114,6 +114,24 @@ advisories:
         data:
           note: Any attempts to upgrade pillow to >=11.3.0 result in a build failure, we will need to wait for upstream to update their code and bump the pillow dependency in order to resolve the CVE.
 
+  - id: CGA-c37v-8w2w-p22v
+    aliases:
+      - CVE-2025-6985
+      - GHSA-m42m-m8cr-8m58
+    events:
+      - timestamp: 2025-10-08T07:16:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: open-webui
+            componentID: 497f77928998a4ee
+            componentName: langchain-text-splitters
+            componentVersion: 0.3.11
+            componentType: python
+            componentLocation: /usr/share/open-webui/lib/python3.11/site-packages/langchain_text_splitters-0.3.11.dist-info/METADATA
+            scanner: grype
+
   - id: CGA-j22w-9fw9-v4vm
     aliases:
       - CVE-2025-54121
