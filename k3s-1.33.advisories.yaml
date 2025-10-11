@@ -47,3 +47,21 @@ advisories:
         type: pending-upstream-fix
         data:
           note: We have tried remediating this dependency but it results in build failures. Upstream needs to publish a version with this CVE fixed.
+
+  - id: CGA-4w3p-f833-96hg
+    aliases:
+      - CVE-2025-59530
+      - GHSA-47m2-4cr7-mhcw
+    events:
+      - timestamp: 2025-10-11T09:38:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s-1.33
+            componentID: fe022cd3957d3ff1
+            componentName: github.com/quic-go/quic-go
+            componentVersion: v0.50.1
+            componentType: go-module
+            componentLocation: /usr/bin/k3s
+            scanner: grype
