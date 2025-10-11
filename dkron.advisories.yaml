@@ -26,3 +26,21 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
+
+  - id: CGA-hqvq-c95p-3wwc
+    aliases:
+      - CVE-2025-59530
+      - GHSA-47m2-4cr7-mhcw
+    events:
+      - timestamp: 2025-10-11T08:06:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dkron
+            componentID: b4fe3ac5be1f60b5
+            componentName: github.com/quic-go/quic-go
+            componentVersion: v0.54.0
+            componentType: go-module
+            componentLocation: /usr/bin/dkron
+            scanner: grype
