@@ -52,6 +52,28 @@ advisories:
         data:
           fixed-version: 17.7.1-r1
 
+  - id: CGA-p564-r4p6-32c3
+    aliases:
+      - CVE-2025-59530
+      - GHSA-47m2-4cr7-mhcw
+    events:
+      - timestamp: 2025-10-11T10:38:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: teleport-17
+            componentID: a0c7f7ddcc842eaa
+            componentName: github.com/quic-go/quic-go
+            componentVersion: v0.48.2
+            componentType: go-module
+            componentLocation: /usr/local/bin/tbot
+            scanner: grype
+      - timestamp: 2025-10-11T12:37:38Z
+        type: fixed
+        data:
+          fixed-version: 17.7.7-r1
+
   - id: CGA-pw6p-4wvj-72r2
     aliases:
       - CVE-2025-55198
