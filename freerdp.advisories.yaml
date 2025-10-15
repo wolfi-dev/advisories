@@ -4,59 +4,6 @@ package:
   name: freerdp
 
 advisories:
-  - id: CGA-8rr8-5h6q-wrv7
-    aliases:
-      - CVE-2024-22211
-    events:
-      - timestamp: 2024-01-27T07:14:19Z
-        type: fixed
-        data:
-          fixed-version: 2.11.5-r0
-
-  - id: CGA-8f2v-4w5g-2p5f
-    aliases:
-      - CVE-2024-32658
-    events:
-      - timestamp: 2024-04-25T10:01:55Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: freerdp
-            componentID: 2d6bdff04f424939
-            componentName: freerdp
-            componentVersion: 2.11.7-r0
-            componentType: apk
-            componentLocation: /.PKGINFO
-            scanner: grype
-      - timestamp: 2024-05-16T11:54:48Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: The package is using v2.11.7 which includes a patch to fix this vulnerability in commit (2b9f30a2fa4b13559a367f7cbe158e1bafe0f482).
-
-  - id: CGA-rxw9-g9v7-83fc
-    aliases:
-      - CVE-2024-32659
-    events:
-      - timestamp: 2024-04-25T10:01:56Z
-        type: detection
-        data:
-          type: scan/v1
-          data:
-            subpackageName: freerdp
-            componentID: 2d6bdff04f424939
-            componentName: freerdp
-            componentVersion: 2.11.7-r0
-            componentType: apk
-            componentLocation: /.PKGINFO
-            scanner: grype
-      - timestamp: 2024-05-16T11:53:08Z
-        type: false-positive-determination
-        data:
-          type: vulnerable-code-not-included-in-package
-          note: The package is using v2.11.7 which includes a patch to fix this vulnerability in commit (8b9ad6cf80a2233de22b3b5100d642d876ef9a6e).
-
   - id: CGA-364m-cm97-496q
     aliases:
       - CVE-2024-32660
@@ -99,6 +46,77 @@ advisories:
         type: pending-upstream-fix
         data:
           note: This package is locked to its v2 version while the patches for this vulnerability are only available for v3 version.
+
+  - id: CGA-8f2v-4w5g-2p5f
+    aliases:
+      - CVE-2024-32658
+    events:
+      - timestamp: 2024-04-25T10:01:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: freerdp
+            componentID: 2d6bdff04f424939
+            componentName: freerdp
+            componentVersion: 2.11.7-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2024-05-16T11:54:48Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: The package is using v2.11.7 which includes a patch to fix this vulnerability in commit (2b9f30a2fa4b13559a367f7cbe158e1bafe0f482).
+
+  - id: CGA-8rr8-5h6q-wrv7
+    aliases:
+      - CVE-2024-22211
+    events:
+      - timestamp: 2024-01-27T07:14:19Z
+        type: fixed
+        data:
+          fixed-version: 2.11.5-r0
+
+  - id: CGA-m995-xcw5-9qv3
+    aliases:
+      - CVE-2025-4478
+      - GHSA-3p57-rq4q-233x
+    events:
+      - timestamp: 2025-10-15T07:37:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: freerdp
+            componentID: 577b0e372568aa5f
+            componentName: freerdp-dev
+            componentVersion: 2.11.7-r7
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
+  - id: CGA-rxw9-g9v7-83fc
+    aliases:
+      - CVE-2024-32659
+    events:
+      - timestamp: 2024-04-25T10:01:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: freerdp
+            componentID: 2d6bdff04f424939
+            componentName: freerdp
+            componentVersion: 2.11.7-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2024-05-16T11:53:08Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: The package is using v2.11.7 which includes a patch to fix this vulnerability in commit (8b9ad6cf80a2233de22b3b5100d642d876ef9a6e).
 
   - id: CGA-v8pm-jggr-w7p8
     aliases:
