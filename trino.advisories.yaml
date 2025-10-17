@@ -532,7 +532,7 @@ advisories:
             subpackageName: trino-plugin-ranger
             componentID: dc8189c3253ff237
             componentName: commons-lang
-            componentVersion: 2.6
+            componentVersion: "2.6"
             componentType: java-archive
             componentLocation: /usr/lib/trino/lib/commons-lang_commons-lang-2.6.jar
             scanner: grype
@@ -607,6 +607,24 @@ advisories:
         data:
           type: vulnerable-code-cannot-be-controlled-by-adversary
           note: Vulnerability affects only Windows systems.
+
+  - id: CGA-94g9-vrmg-chc6
+    aliases:
+      - CVE-2025-59419
+      - GHSA-jq43-27x9-3v86
+    events:
+      - timestamp: 2025-10-17T08:28:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino-plugin-pinot
+            componentID: 93c16427a6664fdc
+            componentName: netty-codec-smtp
+            componentVersion: 4.2.6.Final
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/io.netty_netty-codec-smtp-4.2.6.Final.jar
+            scanner: grype
 
   - id: CGA-c35c-6qcp-r887
     aliases:
