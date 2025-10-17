@@ -250,6 +250,24 @@ advisories:
         data:
           note: The vuln comes from the Hadoop dependency. Jackson-core is pinned at 2.12.7 in Hadoop 3.4.1. Once Hadoop updates it and also upstream update Hadoop to the fixed version, we can update and fix the package too.
 
+  - id: CGA-vfxh-43v9-9f88
+    aliases:
+      - CVE-2025-59419
+      - GHSA-jq43-27x9-3v86
+    events:
+      - timestamp: 2025-10-17T07:14:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: celeborn-0.5
+            componentID: 8262f6eed2bfd919
+            componentName: netty-codec-smtp
+            componentVersion: 4.1.125.Final
+            componentType: java-archive
+            componentLocation: /usr/share/java/celeborn/jars/netty-codec-smtp-4.1.125.Final.jar
+            scanner: grype
+
   - id: CGA-wxhf-63m3-2r4h
     aliases:
       - CVE-2025-53864
