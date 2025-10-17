@@ -94,6 +94,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: CVE-2025-26646 affects Microsoft.Build.Tasks.Core 17.3.4 and 17.7.0, but vulnerability scanners are flagging metadata references and non-existent file paths. Investigation reveals all actual executable Microsoft.Build.Tasks.Core DLL files in the dotnet-8 package use version 17.8.31.31313 (patched version). The CodeAnalysis deps.json files point to non-existent 17.3.4 packages that cannot be loaded at runtime. This is Stale dependency metadata that doesn't reflect actual built components. Runtime verification confirms Assembly.LoadFrom() successfully loads 17.8.31 while attempting to load 17.3.4 throws FileNotFoundException. All 15 Microsoft.Build.Tasks.Core DLL files in the container are version 17.8.31.31313 with the security fix.
 
+  - id: CGA-gpr8-rhgr-rc2q
+    aliases:
+      - CVE-2025-55248
+      - GHSA-gwq6-fmvp-qp68
+    events:
+      - timestamp: 2025-10-17T07:35:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dotnet-bootstrap-8
+            componentID: 87bd1893347a33ee
+            componentName: Microsoft.NETCore.App.Runtime.linux-x64
+            componentVersion: 8.0.20
+            componentType: dotnet
+            componentLocation: /usr/share/dotnet-bootstrap/dotnet/shared/Microsoft.NETCore.App/8.0.20/Microsoft.NETCore.App.deps.json
+            scanner: grype
+
   - id: CGA-pvg5-q5h4-c3hj
     aliases:
       - CVE-2025-55315
