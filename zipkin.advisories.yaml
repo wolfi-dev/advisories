@@ -70,6 +70,24 @@ advisories:
         data:
           note: spring-context is a transitive dependency and trying to upgrade it results in build failures, upstream will have to bump it.
 
+  - id: CGA-7f2q-mpp2-3gp2
+    aliases:
+      - CVE-2025-8916
+      - GHSA-4cx2-fc23-5wg6
+    events:
+      - timestamp: 2025-10-18T07:29:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zipkin
+            componentID: 241d936d69d7f229
+            componentName: bcpkix-jdk18on
+            componentVersion: 1.78.1
+            componentType: java-archive
+            componentLocation: /zipkin/BOOT-INF/lib/bcpkix-jdk18on-1.78.1.jar
+            scanner: grype
+
   - id: CGA-7h42-x664-53j9
     aliases:
       - CVE-2025-27533
