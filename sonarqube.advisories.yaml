@@ -357,6 +357,24 @@ advisories:
         data:
           note: This is a transitive dependency of ElasticSearch and must be fixed in the upstream project
 
+  - id: CGA-mq4q-xv9x-773f
+    aliases:
+      - CVE-2025-8916
+      - GHSA-4cx2-fc23-5wg6
+    events:
+      - timestamp: 2025-10-18T07:31:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube
+            componentID: 821740c8b8402c6a
+            componentName: bcpkix-jdk18on
+            componentVersion: 1.78.1
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/elasticsearch/lib/tools/security-cli/bcpkix-jdk18on-1.78.1.jar
+            scanner: grype
+
   - id: CGA-pc34-w472-mrv3
     aliases:
       - CVE-2023-1370
