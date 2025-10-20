@@ -4,6 +4,23 @@ package:
   name: gitlab-runner-18.5
 
 advisories:
+  - id: CGA-p4c9-wmm4-wqhr
+    aliases:
+      - GHSA-2464-8j7c-4cjm
+    events:
+      - timestamp: 2025-10-20T15:03:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-18.5
+            componentID: 224f350d1cc93e30
+            componentName: github.com/go-viper/mapstructure/v2
+            componentVersion: v2.3.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-runner-helper
+            scanner: grype
+
   - id: CGA-r773-g9w8-257f
     aliases:
       - CVE-2025-54410
