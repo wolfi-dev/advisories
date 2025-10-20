@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: gitlab-runner-18.5
+
+advisories:
+  - id: CGA-r773-g9w8-257f
+    aliases:
+      - CVE-2025-54410
+      - GHSA-4vq8-7jfc-9cvp
+    events:
+      - timestamp: 2025-10-20T15:03:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-18.5
+            componentID: b876b0faa3f94ded
+            componentName: github.com/docker/docker
+            componentVersion: v27.5.0+incompatible
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-runner-helper
+            scanner: grype
