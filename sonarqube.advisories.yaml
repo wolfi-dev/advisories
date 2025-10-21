@@ -374,6 +374,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/sonarqube/elasticsearch/lib/tools/security-cli/bcpkix-jdk18on-1.78.1.jar
             scanner: grype
+      - timestamp: 2025-10-21T14:40:12Z
+        type: pending-upstream-fix
+        data:
+          note: 'Bouncycastle 1.78.1 is brought in by elasticsearch 8.16.6, which is EOL. The fixed versions of ElasticSearch within SonarQube introduce breaking JDK dependency requirements. Upstream maintainers must implement compatibility change requirements seen here: https://sonarsource.atlassian.net/browse/SONAR-24276'
 
   - id: CGA-pc34-w472-mrv3
     aliases:
