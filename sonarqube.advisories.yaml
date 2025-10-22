@@ -181,6 +181,24 @@ advisories:
         data:
           note: The ElasticSearch dependency within SonarQube must be bumped in the upstream for fixing this CVE in bcprov-jdk18on. Additionally, sonarqube core package uses a bcprov-jdk18on non-vulnerable version '1.78.1'.
 
+  - id: CGA-8jvr-q59j-vqj2
+    aliases:
+      - CVE-2025-11226
+      - GHSA-25qh-j22f-pwp8
+    events:
+      - timestamp: 2025-10-22T08:10:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube
+            componentID: 8d33029c993f8f47
+            componentName: logback-core
+            componentVersion: 1.5.18
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/lib/scanner/sonar-scanner-engine-shaded-25.10.0.114319-all.jar
+            scanner: grype
+
   - id: CGA-954h-x5w4-9mp8
     aliases:
       - CVE-2024-47535
