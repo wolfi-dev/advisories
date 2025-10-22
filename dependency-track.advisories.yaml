@@ -279,6 +279,24 @@ advisories:
         data:
           note: Upgrading nimbus-jose-jwt to a secure version currently results in build failures due to unresolved classpath and dependency conflicts. The upstream project must first reconcile and adjust its dependency tree to support this version correctly. Once upstream dependencies are aligned, we can proceed with the update to remediate the vulnerability and apply the necessary patch.
 
+  - id: CGA-vf8x-27c4-49px
+    aliases:
+      - CVE-2025-11226
+      - GHSA-25qh-j22f-pwp8
+    events:
+      - timestamp: 2025-10-22T07:33:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dependency-track
+            componentID: e758fbd5ea8eb97d
+            componentName: logback-core
+            componentVersion: 1.5.18
+            componentType: java-archive
+            componentLocation: /usr/share/java/dependency-track/dependency-track-bundled.jar
+            scanner: grype
+
   - id: CGA-w8q8-p4r5-xxg9
     aliases:
       - CVE-2024-25710
