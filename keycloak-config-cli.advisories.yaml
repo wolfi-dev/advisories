@@ -223,3 +223,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 6.4.0-r45
+
+  - id: CGA-xccx-j4fq-3jg7
+    aliases:
+      - CVE-2025-11226
+      - GHSA-25qh-j22f-pwp8
+    events:
+      - timestamp: 2025-10-22T08:23:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak-config-cli
+            componentID: be5f57a23218f319
+            componentName: logback-core
+            componentVersion: 1.5.18
+            componentType: java-archive
+            componentLocation: /usr/share/java/keycloak-config-cli/keycloak-config-cli-24.0.5.jar
+            scanner: grype
