@@ -573,3 +573,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.1.89-r0
+
+  - id: CGA-w87m-x8gc-42qj
+    aliases:
+      - CVE-2025-11226
+      - GHSA-25qh-j22f-pwp8
+    events:
+      - timestamp: 2025-10-22T07:50:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: management-api-for-apache-cassandra-5.0
+            componentID: e663fff6811a66bf
+            componentName: logback-core
+            componentVersion: 1.5.16
+            componentType: java-archive
+            componentLocation: /opt/management-api/datastax-mgmtapi-server-0.1.0-SNAPSHOT.jar
+            scanner: grype
