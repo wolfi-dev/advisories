@@ -1247,6 +1247,24 @@ advisories:
         data:
           fixed-version: 440-r0
 
+  - id: CGA-pvxp-m4cv-2gcc
+    aliases:
+      - CVE-2025-11226
+      - GHSA-25qh-j22f-pwp8
+    events:
+      - timestamp: 2025-10-22T08:26:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino
+            componentID: 3fcec3d5e2263a01
+            componentName: logback-core
+            componentVersion: 1.5.18
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/hdfs/ch.qos.logback_logback-core-1.5.18.jar
+            scanner: grype
+
   - id: CGA-q9c2-r23v-8mr4
     aliases:
       - CVE-2025-24970
