@@ -142,6 +142,24 @@ advisories:
         data:
           fixed-version: 0.25.1-r3
 
+  - id: CGA-ch7q-48r9-99rx
+    aliases:
+      - CVE-2025-11226
+      - GHSA-25qh-j22f-pwp8
+    events:
+      - timestamp: 2025-10-22T07:03:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: akhq
+            componentID: bbc91c8854487b21
+            componentName: logback-core
+            componentVersion: 1.5.18
+            componentType: java-archive
+            componentLocation: /usr/share/java/akhq/akhq.jar
+            scanner: grype
+
   - id: CGA-f489-vh6m-4x4f
     aliases:
       - CVE-2024-6763
@@ -235,7 +253,7 @@ advisories:
       - timestamp: 2025-09-10T00:01:06Z
         type: pending-upstream-fix
         data:
-          note: "netty-codec-http 4.2.4.Final is a transitive dependency from micronaut 4.9.3, which is the most recent version. Upstream maintainers must release a version of micronaut with the updated netty-codec-http dependency (4.2.5.Final+) to resolve this CVE."
+          note: netty-codec-http 4.2.4.Final is a transitive dependency from micronaut 4.9.3, which is the most recent version. Upstream maintainers must release a version of micronaut with the updated netty-codec-http dependency (4.2.5.Final+) to resolve this CVE.
 
   - id: CGA-mmhh-v4mx-9jrm
     aliases:
