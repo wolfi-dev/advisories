@@ -27,6 +27,24 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: 'CVE considered a false positive by the maintainers: https://github.com/apache/cassandra/blob/cassandra-5.0/.build/owasp/dependency-check-suppressions.xml'
 
+  - id: CGA-2v38-79wm-rxh4
+    aliases:
+      - CVE-2025-11226
+      - GHSA-25qh-j22f-pwp8
+    events:
+      - timestamp: 2025-10-22T07:18:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cassandra-5.0
+            componentID: 4836f17648348dc1
+            componentName: logback-core
+            componentVersion: 1.2.12
+            componentType: java-archive
+            componentLocation: /usr/share/java/cassandra/lib/logback-core-1.2.12.jar
+            scanner: grype
+
   - id: CGA-3gw6-5crj-7ph4
     aliases:
       - CVE-2022-38751
