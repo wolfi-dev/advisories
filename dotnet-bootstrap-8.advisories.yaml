@@ -129,3 +129,11 @@ advisories:
             componentType: dotnet
             componentLocation: /usr/share/dotnet-bootstrap/dotnet/shared/Microsoft.AspNetCore.App/8.0.19/Microsoft.AspNetCore.App.deps.json
             scanner: grype
+      - timestamp: 2025-10-21T09:18:36Z
+        type: fix-not-planned
+        data:
+          note: |-
+            The dotnet-bootstrap package is used to bootstrap the dotnet package.
+            The baseline version in .NET servicing builds references the previous release for API validation only.
+            It ensures compatibility and does not affect shipped runtime or package contents.
+            Although 8.0.20 version of dotnet is listed in the dotnet-boostrap package, the build used in the dotnet package actually produces and ships 8.0.21 which includes the CVE fix.
