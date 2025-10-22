@@ -67,6 +67,24 @@ advisories:
         data:
           note: 'While there is a fix that exists upstream in main, the maintainers have deliberately prevented this from being implemented in the current release and are holding it for 3.10.0 as seen here in the conversation: https://github.com/apache/zookeeper/pull/2162#issuecomment-2092233436 and the fix versions in apache’s project page being v3.10.0: https://issues.apache.org/jira/browse/ZOOKEEPER-4831'
 
+  - id: CGA-9qf7-3wq5-6rr2
+    aliases:
+      - CVE-2025-11226
+      - GHSA-25qh-j22f-pwp8
+    events:
+      - timestamp: 2025-10-22T08:17:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zookeeper-3.9
+            componentID: 09a1184a0c6ae38c
+            componentName: logback-core
+            componentVersion: 1.3.15
+            componentType: java-archive
+            componentLocation: /usr/share/java/zookeeper/lib/logback-core-1.3.15.jar
+            scanner: grype
+
   - id: CGA-c8xx-wqr2-vpgm
     aliases:
       - CVE-2024-8184
