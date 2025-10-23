@@ -198,6 +198,11 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/sonarqube/lib/scanner/sonar-scanner-engine-shaded-25.10.0.114319-all.jar
             scanner: grype
+      - timestamp: 2025-10-23T22:26:46Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-cannot-be-controlled-by-adversary
+          note: 'Sonarqube''s CVE review and treatment reports that SonarQube is not vulnerable because it requires privilege to modify a configuration parameter that is not exposed by SonarQube. Relevant URL: https://github.com/SonarSource/sonarqube/blob/master/sonar-application/src/main/assembly/security/CVE-review-and-treatment-status-sqcb.csv#L34:~:text=34-,CVE%2D2025%2D11226,-logback%2Dcore%401.5.18'
 
   - id: CGA-954h-x5w4-9mp8
     aliases:
