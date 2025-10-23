@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: teleport-18
+
+advisories:
+  - id: CGA-g3rr-h4hp-f4gm
+    aliases:
+      - CVE-2025-59530
+      - GHSA-47m2-4cr7-mhcw
+    events:
+      - timestamp: 2025-10-23T12:23:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: teleport-18
+            componentID: 0eb7067f06ddcc5e
+            componentName: github.com/quic-go/quic-go
+            componentVersion: v0.51.0
+            componentType: go-module
+            componentLocation: /usr/local/bin/tbot
+            scanner: grype
