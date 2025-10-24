@@ -26,6 +26,24 @@ advisories:
         data:
           note: The vulnerable pillow-10.2.0 and requests-2.31.0 wheel files are bundled as part of pyodide's pre-downloaded package cache in the open-webui frontend. These packages are only installed at runtime in the browser's isolated Python environment when users execute Python code blocks that import these specific libraries (e.g., when code contains import requests or uses matplotlib which depends on pillow). The packages are installed dynamically via pyodide's micropip installer and do not affect the server-side application or system Python environment. Remediation requires an upstream fix from the pyodide project to update their bundled package versions, as open-webui depends on pyodide 0.27.3 which includes these specific vulnerable versions.
 
+  - id: CGA-3wxr-g9q8-j97p
+    aliases:
+      - CVE-2025-62707
+      - GHSA-vr63-x8vc-m265
+    events:
+      - timestamp: 2025-10-24T07:21:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: open-webui
+            componentID: 53be32d298627414
+            componentName: pypdf
+            componentVersion: 6.0.0
+            componentType: python
+            componentLocation: /usr/share/open-webui/lib/python3.11/site-packages/pypdf-6.0.0.dist-info/METADATA
+            scanner: grype
+
   - id: CGA-58hf-6gh8-hg4q
     aliases:
       - CVE-2024-28219
