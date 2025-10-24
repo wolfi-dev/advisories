@@ -223,6 +223,24 @@ advisories:
         data:
           note: The vulnerability arises from third-party dependencies resolved during the build phase. We have applied mitigations where feasible; however, complete remediation requires upstream to update the affected components. Upon upstream resolution, we will proceed with dependency upgrades and apply the necessary patch to address the CVE.
 
+  - id: CGA-fm7g-m76v-ph4m
+    aliases:
+      - CVE-2025-11966
+      - GHSA-45p5-v273-3qqr
+    events:
+      - timestamp: 2025-10-24T08:04:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: strimzi-kafka-operator-kafka-thirdparty-libs-cc
+            componentID: 0eaee3ee84cd2e6b
+            componentName: vertx-web
+            componentVersion: 4.5.8
+            componentType: java-archive
+            componentLocation: /opt/cruise-control/libs/vertx-web-4.5.8.jar
+            scanner: grype
+
   - id: CGA-h366-v7f3-6fcp
     aliases:
       - CVE-2025-58056
@@ -405,3 +423,21 @@ advisories:
         type: pending-upstream-fix
         data:
           note: The vulnerability arises from third-party dependencies resolved during the build phase. We have applied mitigations where feasible; however, complete remediation requires upstream to update the affected components. Upon upstream resolution, we will proceed with dependency upgrades and apply the necessary patch to address the CVE.
+
+  - id: CGA-xp4h-98pq-hcf3
+    aliases:
+      - CVE-2025-11965
+      - GHSA-h5fg-jpgr-rv9c
+    events:
+      - timestamp: 2025-10-24T08:04:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: strimzi-kafka-operator-kafka-thirdparty-libs-cc
+            componentID: 0eaee3ee84cd2e6b
+            componentName: vertx-web
+            componentVersion: 4.5.8
+            componentType: java-archive
+            componentLocation: /opt/cruise-control/libs/vertx-web-4.5.8.jar
+            scanner: grype
