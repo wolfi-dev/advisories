@@ -70,6 +70,24 @@ advisories:
         data:
           note: flask-appbuilder is a transitive dependency brought in via apache-airflow-providers-fab's most recent release, v2.4.4. To remediate, v3.0.0 must release and upstream airflow maintainers need to implement compatibility with the new major version where applicable.
 
+  - id: CGA-4243-6x76-g636
+    aliases:
+      - CVE-2025-62611
+      - GHSA-r397-ff8c-wv2g
+    events:
+      - timestamp: 2025-10-24T07:10:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow-3
+            componentID: ae2562cf2a5f4e5d
+            componentName: aiomysql
+            componentVersion: 0.2.0
+            componentType: python
+            componentLocation: /opt/airflow/lib/python3.12/site-packages/aiomysql-0.2.0.dist-info/METADATA
+            scanner: grype
+
   - id: CGA-5x99-mqvf-h8cx
     aliases:
       - CVE-2025-50182
