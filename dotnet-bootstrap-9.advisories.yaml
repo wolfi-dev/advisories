@@ -171,14 +171,14 @@ advisories:
             componentType: dotnet
             componentLocation: /usr/share/dotnet-bootstrap/dotnet/shared/Microsoft.AspNetCore.App/9.0.8/Microsoft.AspNetCore.App.deps.json
             scanner: grype
-      - timestamp: 2025-10-21T09:18:36Z
+      - timestamp: 2025-10-27T14:40:00Z
         type: fix-not-planned
         data:
           note: |-
-            The dotnet-bootstrap package is used to bootstrap the dotnet package.
-            The baseline version in .NET servicing builds references the previous release for API validation only.
-            It ensures compatibility and does not affect shipped runtime or package contents.
-            Although 9.0.9 version of dotnet is listed in the dotnet-boostrap package, the build used in the dotnet package actually produces and ships 9.0.10 which includes the CVE fix.
+            The dotnet-bootstrap package is used to build the dotnet package and is not meant to be installed in any image.
+            The version of .NET shipped in the dotnet-bootstrap package is a version lower than the .NET version shipped in the dotnet package.
+            This is due to how the dotnet build process is done as it needs to reference the previous version of .NET in order to validate that the build is done correctly and maintains API compatibility in the dotnet package.
+            The .NET version shipped in the dotnet-bootstrap package does not reflect what is shipped in the dotnet package.
 
   - id: CGA-xh6f-3qmj-6qgq
     aliases:
