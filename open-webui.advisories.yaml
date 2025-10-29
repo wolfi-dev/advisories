@@ -290,6 +290,24 @@ advisories:
         data:
           note: The python-ecdsa library is vulnerable to a Minerva timing attack on the P-256 curve through the ecdsa.SigningKey.sign_digest() API. The vulnerability affects ECDSA signatures, key generation, and ECDH operations, potentially allowing attackers to leak internal nonces and discover private keys through timing analysis. The upstream python-ecdsa project explicitly considers side-channel attacks out of scope and has stated there is no planned fix for this vulnerability.
 
+  - id: CGA-qcr8-gg24-g9wq
+    aliases:
+      - CVE-2025-62727
+      - GHSA-7f5h-v6xp-fcq8
+    events:
+      - timestamp: 2025-10-29T07:16:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: open-webui
+            componentID: 7d74ad01ebdb10ba
+            componentName: starlette
+            componentVersion: 0.47.2
+            componentType: python
+            componentLocation: /usr/share/open-webui/lib/python3.11/site-packages/starlette-0.47.2.dist-info/METADATA
+            scanner: grype
+
   - id: CGA-qg34-qp8g-rhvg
     aliases:
       - CVE-2025-50182
