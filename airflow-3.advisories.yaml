@@ -153,6 +153,10 @@ advisories:
             componentType: python
             componentLocation: /opt/airflow/lib/python3.12/site-packages/starlette-0.48.0.dist-info/METADATA
             scanner: grype
+      - timestamp: 2025-10-30T09:26:58Z
+        type: pending-upstream-fix
+        data:
+          note: The Starlette vulnerability (CVE-2025-62727) exists in a transitive dependency through FastAPI. Apache Airflow Core 3.1.1 has a hard constraint on fastapi[standard-no-fastapi-cloud-cli]>=0.116.0,<0.118.0, which prevents upgrading to FastAPI 0.118.0+ that supports Starlette 0.49.1 (the patched version). The fix requires upstream Apache Airflow to release a version with relaxed FastAPI constraints.
 
   - id: CGA-c62x-7p7g-hqvm
     aliases:
