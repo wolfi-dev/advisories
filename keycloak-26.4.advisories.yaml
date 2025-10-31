@@ -26,6 +26,24 @@ advisories:
         data:
           note: Vulnerable vertx-web version 4.5.21 is being pulled in through quarkus-vertx-http dependency. Latest available quarkus-vertx-http version 3.29 still depends on a vulnerable vertx-web version 4.5.21. Upgrading vertx-web to 4.5.22 causes build failures. Upstream will have to upgrade quarkus-vertx-http to a version that doesn't pull vertx-web 4.5.21.
 
+  - id: CGA-3vqq-j6m8-wxw4
+    aliases:
+      - CVE-2025-10939
+      - GHSA-c6cm-5gc7-c3f4
+    events:
+      - timestamp: 2025-10-31T07:40:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak-26.4
+            componentID: 406bdbcbfa7fc1ae
+            componentName: keycloak-quarkus-server
+            componentVersion: 26.4.2
+            componentType: java-archive
+            componentLocation: /opt/iamguarded/keycloak/lib/lib/main/org.keycloak.keycloak-quarkus-server-26.4.2.jar
+            scanner: grype
+
   - id: CGA-4hr2-g58h-mp99
     aliases:
       - CVE-2025-11429
@@ -47,6 +65,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 26.4.2-r0
+
+  - id: CGA-5w68-9cmv-7f5w
+    aliases:
+      - CVE-2025-12390
+      - GHSA-rg35-5v25-mqvp
+    events:
+      - timestamp: 2025-10-31T07:40:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak-26.4
+            componentID: 3bfe3e7350b000bd
+            componentName: keycloak-services
+            componentVersion: 26.4.2
+            componentType: java-archive
+            componentLocation: /opt/iamguarded/keycloak/lib/lib/main/org.keycloak.keycloak-services-26.4.2.jar
+            scanner: grype
 
   - id: CGA-9647-2wx5-r2m4
     aliases:
