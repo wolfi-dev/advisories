@@ -27,6 +27,24 @@ advisories:
           type: vulnerable-code-cannot-be-controlled-by-adversary
           note: 'The npm maintainers have stated that this is a false positive: https://github.com/npm/cli/issues/7902'
 
+  - id: CGA-3mpv-3fv5-86j9
+    aliases:
+      - CVE-2025-64118
+      - GHSA-29xp-372q-xqph
+    events:
+      - timestamp: 2025-11-01T07:36:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: npm
+            componentID: d70045a0b6d5c7e0
+            componentName: tar
+            componentVersion: 7.5.1
+            componentType: npm
+            componentLocation: /usr/lib/node_modules/npm/node_modules/tar/package.json
+            scanner: grype
+
   - id: CGA-ff5p-6mq6-jqwc
     aliases:
       - CVE-2023-42282
