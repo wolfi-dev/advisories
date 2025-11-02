@@ -4,6 +4,24 @@ package:
   name: cri-tools
 
 advisories:
+  - id: CGA-2742-hcv5-4678
+    aliases:
+      - CVE-2025-58189
+      - GHSA-cxq7-xw9v-rcv3
+    events:
+      - timestamp: 2025-11-02T08:50:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cri-tools
+            componentID: d726c75cf2a3bdd6
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/crictl
+            scanner: grype
+
   - id: CGA-2fgm-m689-wfmc
     aliases:
       - CVE-2025-58186
