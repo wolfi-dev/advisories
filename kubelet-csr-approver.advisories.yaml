@@ -26,6 +26,24 @@ advisories:
         data:
           fixed-version: 1.2.10-r2
 
+  - id: CGA-gpc9-5crm-4c47
+    aliases:
+      - CVE-2025-58188
+      - GHSA-7wwx-xj66-r44x
+    events:
+      - timestamp: 2025-11-02T20:27:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubelet-csr-approver
+            componentID: 162f017bd57a4d9a
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/kubelet-csr-approver
+            scanner: grype
+
   - id: CGA-gvqp-gqmp-hwjg
     aliases:
       - CVE-2025-47912
