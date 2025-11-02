@@ -368,6 +368,24 @@ advisories:
         data:
           fixed-version: 2024.1.0-r10
 
+  - id: CGA-ghfc-gj3v-6x5g
+    aliases:
+      - CVE-2025-61724
+      - GHSA-wcw9-47fp-rrfr
+    events:
+      - timestamp: 2025-11-02T10:54:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dask-gateway-server
+            componentID: 8834536fba8b113e
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/share/dask-gateway-server/.venv/lib/python3.13/site-packages/dask_gateway_server/proxy/dask-gateway-proxy
+            scanner: grype
+
   - id: CGA-grp4-3xvf-h5mp
     aliases:
       - CVE-2025-50181
