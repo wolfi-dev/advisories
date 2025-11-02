@@ -749,6 +749,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-qmfw-8v8c-xqg3
+    aliases:
+      - CVE-2025-58187
+      - GHSA-frhw-mqj2-wxw2
+    events:
+      - timestamp: 2025-11-02T08:15:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buildkitd
+            componentID: 2c5efb6a85a8542a
+            componentName: stdlib
+            componentVersion: go1.25.2
+            componentType: go-module
+            componentLocation: /usr/bin/buildctl
+            scanner: grype
+
   - id: CGA-qvgx-w72v-859j
     aliases:
       - CVE-2024-24784
