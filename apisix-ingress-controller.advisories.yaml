@@ -126,6 +126,24 @@ advisories:
         data:
           note: The apisix-ingress-controller cannot be rebuilt with the latest protobuf due to usage of deprecated symbols from `github.com/golang/protobuf`. Upstream needs to migrate to `google.golang.org/protobuf` and regenerate `.pb.go` files to unblock CVE fixes via dependency updates.
 
+  - id: CGA-mh9f-rf28-4rwh
+    aliases:
+      - CVE-2025-58189
+      - GHSA-cxq7-xw9v-rcv3
+    events:
+      - timestamp: 2025-11-02T09:23:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apisix-ingress-controller
+            componentID: c79ec787d342b101
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/apisix-ingress-controller
+            scanner: grype
+
   - id: CGA-q78w-c2jh-vhr6
     aliases:
       - CVE-2025-58183
