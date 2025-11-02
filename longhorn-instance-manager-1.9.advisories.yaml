@@ -4,6 +4,24 @@ package:
   name: longhorn-instance-manager-1.9
 
 advisories:
+  - id: CGA-28v7-xp64-hpc5
+    aliases:
+      - CVE-2025-61723
+      - GHSA-hjx7-fpxx-mj48
+    events:
+      - timestamp: 2025-11-02T21:57:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: longhorn-instance-manager-1.9
+            componentID: 27771f09f5b6c70c
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/longhorn-instance-manager
+            scanner: grype
+
   - id: CGA-6c7q-wffv-42mp
     aliases:
       - CVE-2025-58185
