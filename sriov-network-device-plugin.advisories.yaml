@@ -4,6 +4,24 @@ package:
   name: sriov-network-device-plugin
 
 advisories:
+  - id: CGA-4cc9-3p43-96rx
+    aliases:
+      - CVE-2025-58185
+      - GHSA-jwmf-chvc-rf92
+    events:
+      - timestamp: 2025-11-02T18:18:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sriov-network-device-plugin
+            componentID: 27e92043adf07579
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/sriovdp
+            scanner: grype
+
   - id: CGA-4xxj-phc8-3j4j
     aliases:
       - CVE-2025-22871
