@@ -4,6 +4,24 @@ package:
   name: pg_user
 
 advisories:
+  - id: CGA-v8h7-34wf-mhxj
+    aliases:
+      - CVE-2025-47912
+      - GHSA-447v-2qg4-h8hc
+    events:
+      - timestamp: 2025-11-02T14:48:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pg_user
+            componentID: c7f76fb8e45d713b
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/pg_user
+            scanner: grype
+
   - id: CGA-wc7v-x4mh-5qf7
     aliases:
       - CVE-2025-47907
