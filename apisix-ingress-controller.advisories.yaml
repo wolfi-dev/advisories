@@ -4,6 +4,24 @@ package:
   name: apisix-ingress-controller
 
 advisories:
+  - id: CGA-4xjg-frw7-h6xv
+    aliases:
+      - CVE-2025-58187
+      - GHSA-frhw-mqj2-wxw2
+    events:
+      - timestamp: 2025-11-02T09:23:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apisix-ingress-controller
+            componentID: c79ec787d342b101
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/apisix-ingress-controller
+            scanner: grype
+
   - id: CGA-5jq4-xgx9-hv94
     aliases:
       - CVE-2025-47912
