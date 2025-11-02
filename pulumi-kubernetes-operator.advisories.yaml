@@ -441,6 +441,24 @@ advisories:
             This vulnerability relates to p256NegCond within the crypto/internal/fips140/nistec package, specifically affecting the ppc64le architecture.
             We are not affected by this vulnerability as we do not build or support ppc64le.
 
+  - id: CGA-h4jr-hg7j-wqxm
+    aliases:
+      - CVE-2025-58186
+      - GHSA-rjcg-56ph-3qvg
+    events:
+      - timestamp: 2025-11-02T16:18:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pulumi-kubernetes-operator
+            componentID: 251408db29bf697d
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/pulumi-kubernetes-operator
+            scanner: grype
+
   - id: CGA-h82v-45x8-34jx
     aliases:
       - CVE-2024-45337
