@@ -4,6 +4,24 @@ package:
   name: aws-sigv4-proxy
 
 advisories:
+  - id: CGA-4hwx-vr3q-xcrj
+    aliases:
+      - CVE-2025-47912
+      - GHSA-447v-2qg4-h8hc
+    events:
+      - timestamp: 2025-11-02T07:12:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-sigv4-proxy
+            componentID: 0bf9ee4e78506381
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/aws-sigv4-proxy
+            scanner: grype
+
   - id: CGA-c6j6-v735-hqmg
     aliases:
       - CVE-2025-47907
