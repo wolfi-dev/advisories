@@ -4,6 +4,24 @@ package:
   name: kube-logging-operator-custom-runner
 
 advisories:
+  - id: CGA-5q34-5832-chpp
+    aliases:
+      - CVE-2025-47912
+      - GHSA-447v-2qg4-h8hc
+    events:
+      - timestamp: 2025-11-02T20:37:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-logging-operator-custom-runner
+            componentID: f48ab35c63200a2d
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/logging-operator-custom-runner
+            scanner: grype
+
   - id: CGA-vqgv-8wg2-2x95
     aliases:
       - CVE-2025-47907
