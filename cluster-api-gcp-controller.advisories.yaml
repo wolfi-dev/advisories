@@ -4,6 +4,24 @@ package:
   name: cluster-api-gcp-controller
 
 advisories:
+  - id: CGA-3m93-5vw4-ppmx
+    aliases:
+      - CVE-2025-61723
+      - GHSA-hjx7-fpxx-mj48
+    events:
+      - timestamp: 2025-11-02T08:32:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-api-gcp-controller
+            componentID: 7896016c74a44666
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-api-gcp-controller
+            scanner: grype
+
   - id: CGA-462q-567j-39c3
     aliases:
       - CVE-2025-58188
