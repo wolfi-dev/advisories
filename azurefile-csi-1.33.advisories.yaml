@@ -91,3 +91,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.33.2-r1
+
+  - id: CGA-j7vc-726j-3758
+    aliases:
+      - CVE-2025-58183
+      - GHSA-9gcr-gp5f-jw27
+    events:
+      - timestamp: 2025-11-02T08:10:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: azurefile-csi-1.33
+            componentID: 073ff4e9965d7d96
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/azurefile-proxy
+            scanner: grype
