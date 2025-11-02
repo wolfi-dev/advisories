@@ -4,6 +4,24 @@ package:
   name: harbor-2.14
 
 advisories:
+  - id: CGA-3m94-xgpf-64xh
+    aliases:
+      - CVE-2025-58183
+      - GHSA-9gcr-gp5f-jw27
+    events:
+      - timestamp: 2025-11-02T20:50:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-2.14
+            componentID: 9d3fcbae8aaa8aae
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-jobservice
+            scanner: grype
+
   - id: CGA-546r-j5vf-pvm3
     aliases:
       - CVE-2025-47912
