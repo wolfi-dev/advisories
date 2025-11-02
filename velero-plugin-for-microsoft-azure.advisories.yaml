@@ -4,6 +4,24 @@ package:
   name: velero-plugin-for-microsoft-azure
 
 advisories:
+  - id: CGA-236w-w4j7-25jj
+    aliases:
+      - CVE-2025-58185
+      - GHSA-jwmf-chvc-rf92
+    events:
+      - timestamp: 2025-11-02T08:07:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: velero-plugin-for-microsoft-azure
+            componentID: fec4b995ae0e5f56
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/cp-plugin
+            scanner: grype
+
   - id: CGA-3ch5-vqv4-vr4c
     aliases:
       - CVE-2025-47912
