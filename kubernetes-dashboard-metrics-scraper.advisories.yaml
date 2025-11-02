@@ -58,6 +58,24 @@ advisories:
         data:
           fixed-version: 1.0.9-r11
 
+  - id: CGA-328r-2q9g-6xwf
+    aliases:
+      - CVE-2025-58189
+      - GHSA-cxq7-xw9v-rcv3
+    events:
+      - timestamp: 2025-11-02T17:12:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dashboard-metrics-scraper
+            componentID: c55367fd802bc294
+            componentName: stdlib
+            componentVersion: go1.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/dashboard-metrics-scraper
+            scanner: grype
+
   - id: CGA-39fh-75fv-8r5j
     aliases:
       - CVE-2025-22870
