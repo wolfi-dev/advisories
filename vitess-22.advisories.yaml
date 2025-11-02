@@ -88,6 +88,24 @@ advisories:
         data:
           note: The vite dependency is required to be on the 4.x version stream per dependency requirement from vite-plugin-eslint@1.8.1, which is the latest version. Upstream maintainers will need to implement support for vite 5.x in vite-plugin-eslint to remediate.
 
+  - id: CGA-4pxm-23hg-637x
+    aliases:
+      - CVE-2025-61725
+      - GHSA-qh38-484v-w52x
+    events:
+      - timestamp: 2025-11-02T14:09:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vitess-22
+            componentID: 47c28de975a76b4c
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/astfmtgen
+            scanner: grype
+
   - id: CGA-529w-2929-7hc6
     aliases:
       - CVE-2025-58751
