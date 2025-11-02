@@ -218,6 +218,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This package uses a newer version v1.1.12 while the vulnerable code affects an older version.
 
+  - id: CGA-8xw7-wcq9-hwqm
+    aliases:
+      - CVE-2025-61725
+      - GHSA-qh38-484v-w52x
+    events:
+      - timestamp: 2025-11-02T13:15:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: runc
+            componentID: eb6c42d0ba9cabaf
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/runc
+            scanner: grype
+
   - id: CGA-959m-f2hx-94gg
     aliases:
       - CVE-2023-28642
