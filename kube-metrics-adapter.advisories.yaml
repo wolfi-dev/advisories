@@ -48,6 +48,24 @@ advisories:
         data:
           note: The dependency causing this CVE, golang-jwt/jwt v3.2.2, is brought in via the project's main go.mod. Due to functional changes required to move away from v3 to v4/v5, upstream maintainers are required to implement.
 
+  - id: CGA-34r4-936q-wc6q
+    aliases:
+      - CVE-2025-58189
+      - GHSA-cxq7-xw9v-rcv3
+    events:
+      - timestamp: 2025-11-02T11:26:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-metrics-adapter
+            componentID: ab074a16b9e335e8
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/kube-metrics-adapter
+            scanner: grype
+
   - id: CGA-56xx-qh5q-gw66
     aliases:
       - CVE-2024-34158
