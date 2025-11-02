@@ -269,6 +269,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: 'This vulnerability affects the Kubernetes application, not the golang k8s.io/kubernetes library. The golang vulnerability database reports it as a false-positive: https://github.com/golang/vulndb/blob/47864735862dde2f809a19e4f6ffc1de8d6f3703/data/excluded/GO-2023-2170.yaml'
 
+  - id: CGA-5qj6-xfrx-wm97
+    aliases:
+      - CVE-2025-58185
+      - GHSA-jwmf-chvc-rf92
+    events:
+      - timestamp: 2025-11-02T19:36:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-operator
+            componentID: 667207e1b6f8c537
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/spark-operator
+            scanner: grype
+
   - id: CGA-6296-49jv-x9gc
     aliases:
       - CVE-2025-22874
