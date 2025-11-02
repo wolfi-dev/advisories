@@ -31,6 +31,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability applies to the git-repo volume provisioner, not the k8s client itself.
 
+  - id: CGA-3wf5-mxm5-pg2c
+    aliases:
+      - CVE-2025-61723
+      - GHSA-hjx7-fpxx-mj48
+    events:
+      - timestamp: 2025-11-02T08:44:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-rollouts
+            componentID: 0714a65a919265bb
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/rollouts-controller
+            scanner: grype
+
   - id: CGA-4x3w-pm5j-g8x7
     aliases:
       - CVE-2024-51744
@@ -63,6 +81,42 @@ advisories:
         data:
           fixed-version: 1.7.2-r4
 
+  - id: CGA-7g28-jq5g-mwj3
+    aliases:
+      - CVE-2025-58189
+      - GHSA-cxq7-xw9v-rcv3
+    events:
+      - timestamp: 2025-11-02T08:44:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-rollouts
+            componentID: 0714a65a919265bb
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/rollouts-controller
+            scanner: grype
+
+  - id: CGA-7jgw-cp4g-rwqc
+    aliases:
+      - CVE-2025-47912
+      - GHSA-447v-2qg4-h8hc
+    events:
+      - timestamp: 2025-11-02T08:44:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-rollouts
+            componentID: 0714a65a919265bb
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/rollouts-controller
+            scanner: grype
+
   - id: CGA-8chc-cmxg-35ff
     aliases:
       - CVE-2025-22872
@@ -84,6 +138,42 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.8.2-r2
+
+  - id: CGA-8gww-528j-f7q2
+    aliases:
+      - CVE-2025-58186
+      - GHSA-rjcg-56ph-3qvg
+    events:
+      - timestamp: 2025-11-02T08:44:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-rollouts
+            componentID: 0714a65a919265bb
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/rollouts-controller
+            scanner: grype
+
+  - id: CGA-8jpx-4hm5-4jfp
+    aliases:
+      - CVE-2025-58185
+      - GHSA-jwmf-chvc-rf92
+    events:
+      - timestamp: 2025-11-02T08:44:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-rollouts
+            componentID: 0714a65a919265bb
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/rollouts-controller
+            scanner: grype
 
   - id: CGA-cwwf-5q56-9hrg
     aliases:
@@ -116,6 +206,42 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.7.2-r4
+
+  - id: CGA-ff4r-rgqr-24f3
+    aliases:
+      - CVE-2025-58183
+      - GHSA-9gcr-gp5f-jw27
+    events:
+      - timestamp: 2025-11-02T08:44:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-rollouts
+            componentID: 0714a65a919265bb
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/rollouts-controller
+            scanner: grype
+
+  - id: CGA-gj5r-rph3-9rv3
+    aliases:
+      - CVE-2025-61725
+      - GHSA-qh38-484v-w52x
+    events:
+      - timestamp: 2025-11-02T08:44:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-rollouts
+            componentID: 0714a65a919265bb
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/rollouts-controller
+            scanner: grype
 
   - id: CGA-h932-h4r9-qrrc
     aliases:
@@ -160,6 +286,24 @@ advisories:
         data:
           fixed-version: 1.7.2-r2
 
+  - id: CGA-mfgp-qcx8-ffc8
+    aliases:
+      - CVE-2025-58188
+      - GHSA-7wwx-xj66-r44x
+    events:
+      - timestamp: 2025-11-02T08:44:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-rollouts
+            componentID: 0714a65a919265bb
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/rollouts-controller
+            scanner: grype
+
   - id: CGA-p5fw-6mr5-6cfw
     aliases:
       - CVE-2025-22869
@@ -203,6 +347,24 @@ advisories:
         data:
           note: The vulnerability cannot be remediated at this time because upgrading the dependency is not possible without breaking the build. The affected component still relies on deprecated Kubernetes APIs, and the current code is incompatible with k8s.io v1.31. Upstream needs to properly refactor and align the implementation with the v1.31 API surface. Once upstream completes this alignment, we can upgrade the dependency chain and remediate the CVE.
 
+  - id: CGA-q43h-gm3g-3wwj
+    aliases:
+      - CVE-2025-58187
+      - GHSA-frhw-mqj2-wxw2
+    events:
+      - timestamp: 2025-11-02T08:44:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-rollouts
+            componentID: 0714a65a919265bb
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/rollouts-controller
+            scanner: grype
+
   - id: CGA-qqjm-hgqw-8v2c
     aliases:
       - CVE-2024-45338
@@ -224,6 +386,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.7.2-r3
+
+  - id: CGA-qv4v-2xw5-gj2p
+    aliases:
+      - CVE-2025-61724
+      - GHSA-wcw9-47fp-rrfr
+    events:
+      - timestamp: 2025-11-02T08:44:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-rollouts
+            componentID: 0714a65a919265bb
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/rollouts-controller
+            scanner: grype
 
   - id: CGA-vrjx-j774-6q53
     aliases:
