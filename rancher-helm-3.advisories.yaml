@@ -211,3 +211,21 @@ advisories:
         type: pending-upstream-fix
         data:
           note: 'This CVE is fixed in upstream Helm but not yet in Rancher Helm. Due to differences in file structure and code organization, the upstream patch doesn''t apply cleanly. Rancher Helm needs to create a custom patch to address the issue. Details on the upstream fix: https://github.com/helm/helm/commit/d8ca55fc669645c10c0681d49723f4bb8c0b1ce7'
+
+  - id: CGA-x75j-v74v-3vv7
+    aliases:
+      - CVE-2025-47912
+      - GHSA-447v-2qg4-h8hc
+    events:
+      - timestamp: 2025-11-02T15:05:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-helm-3
+            componentID: de787566b47b6879
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/rancher-helm
+            scanner: grype
