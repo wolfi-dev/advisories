@@ -4,6 +4,24 @@ package:
   name: kiali
 
 advisories:
+  - id: CGA-27jm-5gg4-j96c
+    aliases:
+      - CVE-2025-58187
+      - GHSA-frhw-mqj2-wxw2
+    events:
+      - timestamp: 2025-11-02T11:44:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kiali
+            componentID: 0fd48342062de23a
+            componentName: stdlib
+            componentVersion: go1.25.2
+            componentType: go-module
+            componentLocation: /opt/kiali/kiali
+            scanner: grype
+
   - id: CGA-2qfr-xj7j-c7q2
     aliases:
       - CVE-2025-27144
