@@ -4,6 +4,24 @@ package:
   name: trivy-operator
 
 advisories:
+  - id: CGA-3cmw-3gvf-r57w
+    aliases:
+      - CVE-2025-58185
+      - GHSA-jwmf-chvc-rf92
+    events:
+      - timestamp: 2025-11-02T16:42:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trivy-operator
+            componentID: c979837973f182d1
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/trivy-operator
+            scanner: grype
+
   - id: CGA-94q2-9cxp-84xm
     aliases:
       - GHSA-fv92-fjc5-jj9h
