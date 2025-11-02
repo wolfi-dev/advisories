@@ -4,6 +4,24 @@ package:
   name: dockerize
 
 advisories:
+  - id: CGA-2hm5-ww98-69pm
+    aliases:
+      - CVE-2025-61725
+      - GHSA-qh38-484v-w52x
+    events:
+      - timestamp: 2025-11-02T11:05:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dockerize
+            componentID: 66a6e37470d76e07
+            componentName: stdlib
+            componentVersion: go1.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/dockerize
+            scanner: grype
+
   - id: CGA-34cj-wf4r-rxcc
     aliases:
       - CVE-2023-45290
