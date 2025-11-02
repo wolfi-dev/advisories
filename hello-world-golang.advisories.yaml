@@ -4,6 +4,24 @@ package:
   name: hello-world-golang
 
 advisories:
+  - id: CGA-3xph-8fmj-jp5j
+    aliases:
+      - CVE-2025-58188
+      - GHSA-7wwx-xj66-r44x
+    events:
+      - timestamp: 2025-11-02T11:12:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: hello-world-golang
+            componentID: e81fd2505dfcf631
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/hello-world
+            scanner: grype
+
   - id: CGA-4grc-c3f3-fq48
     aliases:
       - CVE-2024-34158
