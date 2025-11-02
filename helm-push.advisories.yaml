@@ -178,6 +178,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability is in the container runtime itself, not clients of the container runtime.
 
+  - id: CGA-7g3w-j68j-rvvp
+    aliases:
+      - CVE-2025-58185
+      - GHSA-jwmf-chvc-rf92
+    events:
+      - timestamp: 2025-11-02T13:36:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-push
+            componentID: 09fe1947c1377ec3
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/libexec/helm-plugins/helm-push/bin/helm-cm-push
+            scanner: grype
+
   - id: CGA-7gcp-5jvh-rxqq
     aliases:
       - CVE-2023-48795
