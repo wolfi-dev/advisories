@@ -25,6 +25,24 @@ advisories:
         data:
           fixed-version: 0.7.1-r31
 
+  - id: CGA-2698-xrmm-cpf7
+    aliases:
+      - CVE-2025-61724
+      - GHSA-wcw9-47fp-rrfr
+    events:
+      - timestamp: 2025-11-02T18:50:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: velero-plugin-for-csi
+            componentID: 61527c66e2ad685d
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/cp-plugin
+            scanner: grype
+
   - id: CGA-2f8w-45xp-6v92
     aliases:
       - CVE-2024-45336
