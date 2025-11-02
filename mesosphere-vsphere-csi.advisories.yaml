@@ -4,6 +4,24 @@ package:
   name: mesosphere-vsphere-csi
 
 advisories:
+  - id: CGA-94q5-48m4-3x87
+    aliases:
+      - CVE-2025-58185
+      - GHSA-jwmf-chvc-rf92
+    events:
+      - timestamp: 2025-11-02T13:10:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mesosphere-vsphere-csi-syncer
+            componentID: 705e111f6cbcb167
+            componentName: stdlib
+            componentVersion: go1.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/vsphere-csi
+            scanner: grype
+
   - id: CGA-chjr-8v9p-vp38
     aliases:
       - CVE-2025-47912
