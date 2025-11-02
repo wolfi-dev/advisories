@@ -4,6 +4,24 @@ package:
   name: gcsfuse
 
 advisories:
+  - id: CGA-2q98-xr4c-gqmg
+    aliases:
+      - CVE-2025-58187
+      - GHSA-frhw-mqj2-wxw2
+    events:
+      - timestamp: 2025-11-02T11:18:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gcsfuse
+            componentID: c06e638d09ac1d0e
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/gcsfuse
+            scanner: grype
+
   - id: CGA-33h6-fgf8-35cg
     aliases:
       - CVE-2024-24785
