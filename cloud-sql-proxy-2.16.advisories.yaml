@@ -139,3 +139,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.16.0-r3
+
+  - id: CGA-v2vh-2mmv-7xv4
+    aliases:
+      - CVE-2025-58183
+      - GHSA-9gcr-gp5f-jw27
+    events:
+      - timestamp: 2025-11-02T08:16:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-sql-proxy-2.16
+            componentID: c0fe535e890df381
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/cloud-sql-proxy
+            scanner: grype
