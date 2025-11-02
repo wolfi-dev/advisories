@@ -4,6 +4,24 @@ package:
   name: conjur-cli
 
 advisories:
+  - id: CGA-mq7w-8mg4-gfwv
+    aliases:
+      - CVE-2025-47912
+      - GHSA-447v-2qg4-h8hc
+    events:
+      - timestamp: 2025-11-02T07:58:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: conjur-cli
+            componentID: 51a55ee6cf68528d
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/conjur
+            scanner: grype
+
   - id: CGA-qh2g-9r7q-x3qx
     aliases:
       - CVE-2025-47907
