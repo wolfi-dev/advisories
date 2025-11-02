@@ -4,6 +4,24 @@ package:
   name: direnv
 
 advisories:
+  - id: CGA-235x-g43w-gp94
+    aliases:
+      - CVE-2025-58187
+      - GHSA-frhw-mqj2-wxw2
+    events:
+      - timestamp: 2025-11-02T10:53:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: direnv
+            componentID: d34f61e62e9e1ed2
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/direnv
+            scanner: grype
+
   - id: CGA-3729-23hg-wqpc
     aliases:
       - CVE-2024-34156
