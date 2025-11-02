@@ -27,6 +27,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-m8gf-84r5-f9hf
+    aliases:
+      - CVE-2025-58183
+      - GHSA-9gcr-gp5f-jw27
+    events:
+      - timestamp: 2025-11-02T12:28:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: infinispan-operator
+            componentID: 1875fba7fb714022
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/infinispan-operator
+            scanner: grype
+
   - id: CGA-qjh2-6jmg-p63h
     aliases:
       - CVE-2025-47912
