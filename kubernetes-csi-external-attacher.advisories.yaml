@@ -4,6 +4,24 @@ package:
   name: kubernetes-csi-external-attacher
 
 advisories:
+  - id: CGA-2qc5-vc23-vpw5
+    aliases:
+      - CVE-2025-58188
+      - GHSA-7wwx-xj66-r44x
+    events:
+      - timestamp: 2025-11-02T18:21:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-attacher
+            componentID: a9f506b49a3e8fa3
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/csi-attacher
+            scanner: grype
+
   - id: CGA-44c9-wv2h-782p
     aliases:
       - CVE-2024-45336
