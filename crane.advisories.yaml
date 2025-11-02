@@ -52,6 +52,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This affects docker authorization plugins which are not included in crane.
 
+  - id: CGA-6jjg-w4mr-cmw6
+    aliases:
+      - CVE-2025-58187
+      - GHSA-frhw-mqj2-wxw2
+    events:
+      - timestamp: 2025-11-02T07:30:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: crane
+            componentID: 06b1f1e1a35aecd4
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/crane
+            scanner: grype
+
   - id: CGA-6pmr-c6fw-x3vg
     aliases:
       - CVE-2024-24787
