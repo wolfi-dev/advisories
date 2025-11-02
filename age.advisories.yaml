@@ -71,6 +71,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-54wg-mhjc-mv69
+    aliases:
+      - CVE-2025-58187
+      - GHSA-frhw-mqj2-wxw2
+    events:
+      - timestamp: 2025-11-02T07:32:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: age
+            componentID: e67773bd4d07f9da
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/age
+            scanner: grype
+
   - id: CGA-5v3x-5xqc-284j
     aliases:
       - GHSA-32gq-x56h-299c
