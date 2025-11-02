@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: nfpm
+
+advisories:
+  - id: CGA-wj73-x98p-33f2
+    aliases:
+      - CVE-2025-58187
+      - GHSA-frhw-mqj2-wxw2
+    events:
+      - timestamp: 2025-11-02T15:06:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nfpm
+            componentID: d2223fc844955889
+            componentName: stdlib
+            componentVersion: go1.25.2
+            componentType: go-module
+            componentLocation: /usr/bin/nfpm
+            scanner: grype
