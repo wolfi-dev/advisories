@@ -111,6 +111,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-qw2c-h6rr-5mgc
+    aliases:
+      - CVE-2025-58185
+      - GHSA-jwmf-chvc-rf92
+    events:
+      - timestamp: 2025-11-02T19:37:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-vip-cloud-provider
+            componentID: f4cba14e6088e342
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/kube-vip-cloud-provider
+            scanner: grype
+
   - id: CGA-wc9w-wfc9-5792
     aliases:
       - CVE-2025-58183
