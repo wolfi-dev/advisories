@@ -225,6 +225,24 @@ advisories:
         data:
           note: 'Upstream needs to make code changes in order to upgrade helm.sh/helm/v3 to 3.18.4. Pending PR is inflight awaiting upstream approval: https://github.com/kubernetes-sigs/cluster-api-addon-provider-helm/pull/420'
 
+  - id: CGA-m8v8-6vmj-9mm4
+    aliases:
+      - CVE-2025-58185
+      - GHSA-jwmf-chvc-rf92
+    events:
+      - timestamp: 2025-11-02T09:19:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-api-helm-controller
+            componentID: 1368a34152662060
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-api-helm-controller
+            scanner: grype
+
   - id: CGA-mf46-q9pj-j344
     aliases:
       - CVE-2025-55199
