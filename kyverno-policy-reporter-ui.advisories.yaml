@@ -211,6 +211,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-g2q8-mm9g-xq24
+    aliases:
+      - CVE-2025-58187
+      - GHSA-frhw-mqj2-wxw2
+    events:
+      - timestamp: 2025-11-02T09:39:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-policy-reporter-ui
+            componentID: ba6551a05029f6ed
+            componentName: stdlib
+            componentVersion: go1.25.2
+            componentType: go-module
+            componentLocation: /usr/bin/policyreporter-ui
+            scanner: grype
+
   - id: CGA-g767-p7jf-2655
     aliases:
       - CVE-2024-34156
