@@ -4,6 +4,24 @@ package:
   name: cilium-certgen-0.2
 
 advisories:
+  - id: CGA-2h9r-hwmw-92xm
+    aliases:
+      - CVE-2025-58183
+      - GHSA-9gcr-gp5f-jw27
+    events:
+      - timestamp: 2025-11-02T07:33:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-certgen-0.2
+            componentID: dec355d7abe2e5c1
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/cilium-certgen
+            scanner: grype
+
   - id: CGA-973r-8c8h-vh4x
     aliases:
       - CVE-2025-47907
