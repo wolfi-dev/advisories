@@ -67,6 +67,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-rcfh-rr29-x5xm
+    aliases:
+      - CVE-2025-58183
+      - GHSA-9gcr-gp5f-jw27
+    events:
+      - timestamp: 2025-11-02T13:10:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mesosphere-vsphere-csi-syncer
+            componentID: 705e111f6cbcb167
+            componentName: stdlib
+            componentVersion: go1.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/vsphere-csi
+            scanner: grype
+
   - id: CGA-rgg3-gg3q-p7ff
     aliases:
       - CVE-2025-4563
