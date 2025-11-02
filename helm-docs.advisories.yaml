@@ -254,6 +254,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-c542-fp7h-4mg4
+    aliases:
+      - CVE-2025-58186
+      - GHSA-rjcg-56ph-3qvg
+    events:
+      - timestamp: 2025-11-02T14:03:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-docs
+            componentID: 7cde7f401182f592
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/helm-docs
+            scanner: grype
+
   - id: CGA-c7p2-gq7f-w8jc
     aliases:
       - CVE-2025-47912
