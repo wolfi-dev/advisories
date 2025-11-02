@@ -4,6 +4,24 @@ package:
   name: iptables-wrappers
 
 advisories:
+  - id: CGA-73cx-qfh2-vfc4
+    aliases:
+      - CVE-2025-58185
+      - GHSA-jwmf-chvc-rf92
+    events:
+      - timestamp: 2025-11-02T19:20:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: iptables-wrappers
+            componentID: c79d058a1e3c082f
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/iptables-wrapper
+            scanner: grype
+
   - id: CGA-g7p7-5ch5-235g
     aliases:
       - CVE-2025-47907
