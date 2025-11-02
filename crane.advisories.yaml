@@ -33,6 +33,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-3rg6-g5wx-vr3w
+    aliases:
+      - CVE-2025-61723
+      - GHSA-hjx7-fpxx-mj48
+    events:
+      - timestamp: 2025-11-02T07:30:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: crane
+            componentID: 06b1f1e1a35aecd4
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/crane
+            scanner: grype
+
   - id: CGA-4657-h355-3vj6
     aliases:
       - CVE-2024-24557
