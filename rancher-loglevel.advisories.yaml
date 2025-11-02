@@ -4,6 +4,24 @@ package:
   name: rancher-loglevel
 
 advisories:
+  - id: CGA-63hx-mm46-x4j6
+    aliases:
+      - CVE-2025-47912
+      - GHSA-447v-2qg4-h8hc
+    events:
+      - timestamp: 2025-11-02T09:42:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-loglevel
+            componentID: ac28b04566c1553b
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/loglevel
+            scanner: grype
+
   - id: CGA-f7jj-fppm-r7rp
     aliases:
       - CVE-2025-22874
