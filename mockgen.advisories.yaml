@@ -216,6 +216,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-rhw2-fj3j-gmf9
+    aliases:
+      - CVE-2025-58187
+      - GHSA-frhw-mqj2-wxw2
+    events:
+      - timestamp: 2025-11-02T22:06:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mockgen
+            componentID: f96bf8bf0f138941
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/mockgen
+            scanner: grype
+
   - id: CGA-w56h-p5pr-vp8m
     aliases:
       - CVE-2024-34155
