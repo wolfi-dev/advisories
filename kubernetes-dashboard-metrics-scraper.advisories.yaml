@@ -109,6 +109,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-4rgf-j4h2-ppwq
+    aliases:
+      - CVE-2025-61725
+      - GHSA-qh38-484v-w52x
+    events:
+      - timestamp: 2025-11-02T17:12:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dashboard-metrics-scraper
+            componentID: c55367fd802bc294
+            componentName: stdlib
+            componentVersion: go1.25.0
+            componentType: go-module
+            componentLocation: /usr/bin/dashboard-metrics-scraper
+            scanner: grype
+
   - id: CGA-539w-w9pj-963v
     aliases:
       - CVE-2024-24787
