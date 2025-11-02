@@ -107,6 +107,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-cvp8-95r9-qwc4
+    aliases:
+      - CVE-2025-47912
+      - GHSA-447v-2qg4-h8hc
+    events:
+      - timestamp: 2025-11-02T07:45:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: configmap-reload
+            componentID: e24008db0a03f681
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/configmap-reload
+            scanner: grype
+
   - id: CGA-g9h3-872x-q7f3
     aliases:
       - CVE-2025-47907
