@@ -221,6 +221,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-7j9q-vrhv-mvcp
+    aliases:
+      - CVE-2025-61723
+      - GHSA-hjx7-fpxx-mj48
+    events:
+      - timestamp: 2025-11-02T08:28:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cadvisor
+            componentID: e29ad8047eb8f63a
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/cadvisor
+            scanner: grype
+
   - id: CGA-854j-hg5m-qp5m
     aliases:
       - CVE-2024-24783
