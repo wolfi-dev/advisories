@@ -160,6 +160,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-rr58-6gq4-wx2x
+    aliases:
+      - CVE-2025-58188
+      - GHSA-7wwx-xj66-r44x
+    events:
+      - timestamp: 2025-11-02T07:04:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-s3-controller
+            componentID: 96417c0180cfb1fd
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/controller
+            scanner: grype
+
   - id: CGA-xwpw-fpfr-35q5
     aliases:
       - CVE-2025-22870
