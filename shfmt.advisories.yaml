@@ -300,6 +300,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-q99r-4j63-35wm
+    aliases:
+      - CVE-2025-58183
+      - GHSA-9gcr-gp5f-jw27
+    events:
+      - timestamp: 2025-11-02T23:04:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: shfmt
+            componentID: 63a496d575d25dcf
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/shfmt
+            scanner: grype
+
   - id: CGA-v86w-3hgc-f2jx
     aliases:
       - CVE-2023-45289
