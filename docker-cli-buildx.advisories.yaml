@@ -113,6 +113,24 @@ advisories:
         data:
           fixed-version: 0.26.1-r2
 
+  - id: CGA-ff9r-7573-9328
+    aliases:
+      - CVE-2025-47912
+      - GHSA-447v-2qg4-h8hc
+    events:
+      - timestamp: 2025-11-02T11:10:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-cli-buildx
+            componentID: d0369c4b61b3d2f3
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/libexec/docker/cli-plugins/docker-buildx
+            scanner: grype
+
   - id: CGA-g5fw-3mg9-cvr9
     aliases:
       - CVE-2025-22870
