@@ -583,6 +583,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-phmf-6f8c-gvwv
+    aliases:
+      - CVE-2025-61725
+      - GHSA-qh38-484v-w52x
+    events:
+      - timestamp: 2025-11-02T17:45:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rekor-backfill-index
+            componentID: a3df5e51c63f7bc6
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/rekor-server
+            scanner: grype
+
   - id: CGA-pm8f-h5vm-fp8q
     aliases:
       - CVE-2024-34158
