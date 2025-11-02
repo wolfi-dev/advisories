@@ -4,6 +4,24 @@ package:
   name: otel-cli
 
 advisories:
+  - id: CGA-28rg-fwx7-6h35
+    aliases:
+      - CVE-2025-61724
+      - GHSA-wcw9-47fp-rrfr
+    events:
+      - timestamp: 2025-11-02T12:27:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: otel-cli
+            componentID: 96a778baad4dacd5
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/otel-cli
+            scanner: grype
+
   - id: CGA-35m8-xwxj-4p44
     aliases:
       - CVE-2025-22870
