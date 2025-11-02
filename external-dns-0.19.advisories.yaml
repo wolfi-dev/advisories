@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: external-dns-0.19
+
+advisories:
+  - id: CGA-rvr6-3772-w97g
+    aliases:
+      - CVE-2025-47912
+      - GHSA-447v-2qg4-h8hc
+    events:
+      - timestamp: 2025-11-02T14:08:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: external-dns-0.19
+            componentID: a8ad868186b78d76
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/external-dns
+            scanner: grype
