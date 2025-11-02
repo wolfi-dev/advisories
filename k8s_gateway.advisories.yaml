@@ -91,3 +91,21 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Upgrading CoreDNS to the fixed version (v1.12.4) caused compatibility issues with sigs.k8s.io/gateway-api dependencies. Upstream needs to adjust the code to resolve the dependency tree correctly. Once addressed, we can upgrade the package and remediate the CVE.
+
+  - id: CGA-x4fg-cphc-qj67
+    aliases:
+      - CVE-2025-58187
+      - GHSA-frhw-mqj2-wxw2
+    events:
+      - timestamp: 2025-11-02T08:52:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k8s_gateway
+            componentID: 31773dadde802785
+            componentName: stdlib
+            componentVersion: go1.25.2
+            componentType: go-module
+            componentLocation: /usr/bin/coredns
+            scanner: grype
