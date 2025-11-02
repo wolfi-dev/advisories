@@ -4,6 +4,24 @@ package:
   name: infinispan-operator
 
 advisories:
+  - id: CGA-358f-wv82-v46q
+    aliases:
+      - CVE-2025-58189
+      - GHSA-cxq7-xw9v-rcv3
+    events:
+      - timestamp: 2025-11-02T12:28:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: infinispan-operator
+            componentID: 1875fba7fb714022
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/infinispan-operator
+            scanner: grype
+
   - id: CGA-3fcq-7rpm-6wvx
     aliases:
       - CVE-2025-58187
