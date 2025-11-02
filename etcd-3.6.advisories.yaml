@@ -4,6 +4,24 @@ package:
   name: etcd-3.6
 
 advisories:
+  - id: CGA-5jhp-j5xv-px7m
+    aliases:
+      - CVE-2025-58187
+      - GHSA-frhw-mqj2-wxw2
+    events:
+      - timestamp: 2025-11-02T22:53:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: etcd-3.6
+            componentID: 01e1388fbe98e879
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/etcd
+            scanner: grype
+
   - id: CGA-6325-vxcm-88w4
     aliases:
       - CVE-2025-58186
