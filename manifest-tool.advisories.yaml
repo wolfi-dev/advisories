@@ -26,3 +26,21 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
+
+  - id: CGA-wgjx-j584-8685
+    aliases:
+      - CVE-2025-47912
+      - GHSA-447v-2qg4-h8hc
+    events:
+      - timestamp: 2025-11-02T13:33:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: manifest-tool
+            componentID: b8a3249e16fa144b
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/manifest-tool
+            scanner: grype
