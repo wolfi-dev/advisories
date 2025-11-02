@@ -89,6 +89,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-794f-3hvj-p6mm
+    aliases:
+      - CVE-2025-58183
+      - GHSA-9gcr-gp5f-jw27
+    events:
+      - timestamp: 2025-11-02T08:07:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: velero-plugin-for-microsoft-azure
+            componentID: fec4b995ae0e5f56
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/cp-plugin
+            scanner: grype
+
   - id: CGA-82wg-mj3x-g2pw
     aliases:
       - CVE-2024-45338
