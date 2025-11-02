@@ -97,3 +97,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.9.1-r1
+
+  - id: CGA-rm5x-7432-5x8w
+    aliases:
+      - CVE-2025-58187
+      - GHSA-frhw-mqj2-wxw2
+    events:
+      - timestamp: 2025-11-02T21:57:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: longhorn-instance-manager-1.9
+            componentID: 27771f09f5b6c70c
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/longhorn-instance-manager
+            scanner: grype
