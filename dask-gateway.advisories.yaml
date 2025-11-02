@@ -515,6 +515,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-p434-j32m-xv99
+    aliases:
+      - CVE-2025-58189
+      - GHSA-cxq7-xw9v-rcv3
+    events:
+      - timestamp: 2025-11-02T10:54:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dask-gateway-server
+            componentID: 8834536fba8b113e
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/share/dask-gateway-server/.venv/lib/python3.13/site-packages/dask_gateway_server/proxy/dask-gateway-proxy
+            scanner: grype
+
   - id: CGA-p5qm-hr59-m2mh
     aliases:
       - CVE-2024-47081
