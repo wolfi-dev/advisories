@@ -50,6 +50,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-648p-4j9c-645j
+    aliases:
+      - CVE-2025-58183
+      - GHSA-9gcr-gp5f-jw27
+    events:
+      - timestamp: 2025-11-02T15:05:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-helm-3
+            componentID: de787566b47b6879
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/rancher-helm
+            scanner: grype
+
   - id: CGA-7j42-6qg7-4x4r
     aliases:
       - CVE-2025-22874
