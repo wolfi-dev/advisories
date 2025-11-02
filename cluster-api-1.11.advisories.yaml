@@ -4,6 +4,24 @@ package:
   name: cluster-api-1.11
 
 advisories:
+  - id: CGA-3cw5-7wf6-9xrr
+    aliases:
+      - CVE-2025-58183
+      - GHSA-9gcr-gp5f-jw27
+    events:
+      - timestamp: 2025-11-02T11:04:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-api-1.11-kubeadm-control-plane-controller
+            componentID: 659dca9723afa392
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/clusterctl
+            scanner: grype
+
   - id: CGA-gf55-xm4g-xq4r
     aliases:
       - CVE-2025-47912
