@@ -132,6 +132,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-cq35-w22q-rp2w
+    aliases:
+      - CVE-2025-47912
+      - GHSA-447v-2qg4-h8hc
+    events:
+      - timestamp: 2025-11-02T08:25:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: http-echo
+            componentID: ea8b89de4df64a44
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/http-echo
+            scanner: grype
+
   - id: CGA-cq3x-3f22-5q4p
     aliases:
       - CVE-2024-24784
