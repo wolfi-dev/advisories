@@ -156,3 +156,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.14.0-r1
+
+  - id: CGA-wfpc-5x86-45jg
+    aliases:
+      - CVE-2025-58189
+      - GHSA-cxq7-xw9v-rcv3
+    events:
+      - timestamp: 2025-11-02T20:50:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-2.14
+            componentID: 9d3fcbae8aaa8aae
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-jobservice
+            scanner: grype
