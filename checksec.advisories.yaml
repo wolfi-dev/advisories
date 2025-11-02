@@ -4,6 +4,24 @@ package:
   name: checksec
 
 advisories:
+  - id: CGA-2j6h-2f7m-27qf
+    aliases:
+      - CVE-2025-58185
+      - GHSA-jwmf-chvc-rf92
+    events:
+      - timestamp: 2025-11-02T08:41:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: checksec
+            componentID: f21f061dcaf1edd8
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/checksec
+            scanner: grype
+
   - id: CGA-2m87-768h-r53h
     aliases:
       - CVE-2025-22871
