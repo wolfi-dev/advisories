@@ -4,6 +4,24 @@ package:
   name: ghaudit
 
 advisories:
+  - id: CGA-28rp-6c6c-cjpf
+    aliases:
+      - CVE-2025-61725
+      - GHSA-qh38-484v-w52x
+    events:
+      - timestamp: 2025-11-02T14:20:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ghaudit
+            componentID: 6f730ae7aa92bc0f
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/ghaudit
+            scanner: grype
+
   - id: CGA-3f9p-3wpc-76q9
     aliases:
       - CVE-2024-45341
