@@ -275,6 +275,24 @@ advisories:
         data:
           note: The vulnerability cannot be remediated at this time because upgrading the dependency is not possible without breaking the build. The affected component still relies on deprecated Kubernetes APIs, and the current code is incompatible with k8s.io v1.31. Upstream needs to properly refactor and align the implementation with the v1.31 API surface. Once upstream completes this alignment, we can upgrade the dependency chain and remediate the CVE.
 
+  - id: CGA-q43h-gm3g-3wwj
+    aliases:
+      - CVE-2025-58187
+      - GHSA-frhw-mqj2-wxw2
+    events:
+      - timestamp: 2025-11-02T08:44:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-rollouts
+            componentID: 0714a65a919265bb
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/rollouts-controller
+            scanner: grype
+
   - id: CGA-qqjm-hgqw-8v2c
     aliases:
       - CVE-2024-45338
