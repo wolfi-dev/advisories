@@ -4,6 +4,24 @@ package:
   name: skopeo
 
 advisories:
+  - id: CGA-262c-rf2x-99j8
+    aliases:
+      - CVE-2025-58187
+      - GHSA-frhw-mqj2-wxw2
+    events:
+      - timestamp: 2025-11-02T22:43:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: skopeo
+            componentID: 98317ab775d161bf
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/skopeo
+            scanner: grype
+
   - id: CGA-3qm5-65pc-h743
     aliases:
       - CVE-2024-28180
