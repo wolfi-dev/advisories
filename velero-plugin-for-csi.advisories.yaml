@@ -122,6 +122,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-69mf-67hc-qfr9
+    aliases:
+      - CVE-2025-47912
+      - GHSA-447v-2qg4-h8hc
+    events:
+      - timestamp: 2025-11-02T18:50:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: velero-plugin-for-csi
+            componentID: 61527c66e2ad685d
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/cp-plugin
+            scanner: grype
+
   - id: CGA-6mg5-fp8x-3m8r
     aliases:
       - CVE-2025-22870
