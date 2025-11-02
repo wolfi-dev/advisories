@@ -4,6 +4,24 @@ package:
   name: fulcio
 
 advisories:
+  - id: CGA-29fv-r7rj-34p2
+    aliases:
+      - CVE-2025-58186
+      - GHSA-rjcg-56ph-3qvg
+    events:
+      - timestamp: 2025-11-02T11:14:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: fulcio
+            componentID: b3f457c4cd511c21
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/fulcio
+            scanner: grype
+
   - id: CGA-2p8x-rp8v-22xw
     aliases:
       - CVE-2025-30204
