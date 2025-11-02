@@ -4,6 +4,24 @@ package:
   name: vt-cli
 
 advisories:
+  - id: CGA-2mgw-c8h7-p675
+    aliases:
+      - CVE-2025-47912
+      - GHSA-447v-2qg4-h8hc
+    events:
+      - timestamp: 2025-11-02T13:41:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vt-cli
+            componentID: 5a73ef445355cb02
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/vt
+            scanner: grype
+
   - id: CGA-3qrj-rwqw-hcw4
     aliases:
       - CVE-2025-22871
