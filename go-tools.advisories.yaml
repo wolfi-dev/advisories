@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: go-tools
+
+advisories:
+  - id: CGA-vqgh-p22m-7963
+    aliases:
+      - CVE-2025-58187
+      - GHSA-frhw-mqj2-wxw2
+    events:
+      - timestamp: 2025-11-02T12:51:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gonew
+            componentID: 1acec2ba86767929
+            componentName: stdlib
+            componentVersion: go1.25.2
+            componentType: go-module
+            componentLocation: /usr/bin/goimports
+            scanner: grype
