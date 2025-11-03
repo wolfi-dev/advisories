@@ -90,6 +90,24 @@ advisories:
         data:
           fixed-version: 2.12.0-r1
 
+  - id: CGA-3mmf-hqhm-w8h8
+    aliases:
+      - CVE-2025-61725
+      - GHSA-qh38-484v-w52x
+    events:
+      - timestamp: 2025-11-03T00:30:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-livenessprobe
+            componentID: 920da0fa6d12ad09
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/livenessprobe
+            scanner: grype
+
   - id: CGA-4cgq-pfc9-22hr
     aliases:
       - CVE-2025-58187
