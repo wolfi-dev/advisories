@@ -245,6 +245,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-7fx5-wccr-wx7c
+    aliases:
+      - CVE-2025-58185
+      - GHSA-jwmf-chvc-rf92
+    events:
+      - timestamp: 2025-11-03T06:47:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: thanos-operator
+            componentID: 16e9cda57e00d1fc
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-7x2g-p6rc-mrpr
     aliases:
       - CVE-2025-4673
