@@ -4,6 +4,24 @@ package:
   name: rootlesskit
 
 advisories:
+  - id: CGA-2572-fvpp-8m2q
+    aliases:
+      - CVE-2025-58185
+      - GHSA-jwmf-chvc-rf92
+    events:
+      - timestamp: 2025-11-03T03:19:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rootlesskit
+            componentID: d6804e4eed5b072e
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/rootlessctl
+            scanner: grype
+
   - id: CGA-282f-j9m8-jv7f
     aliases:
       - CVE-2024-24790
