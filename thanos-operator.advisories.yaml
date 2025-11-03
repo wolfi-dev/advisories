@@ -328,6 +328,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-cp85-q7q5-h4hh
+    aliases:
+      - CVE-2025-58187
+      - GHSA-frhw-mqj2-wxw2
+    events:
+      - timestamp: 2025-11-03T06:47:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: thanos-operator
+            componentID: 16e9cda57e00d1fc
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-cw95-4w2g-pwvm
     aliases:
       - CVE-2025-22866
