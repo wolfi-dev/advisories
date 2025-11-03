@@ -4,6 +4,24 @@ package:
   name: kubernetes-csi-node-driver-registrar-2.15
 
 advisories:
+  - id: CGA-9w39-rhr6-5rhr
+    aliases:
+      - CVE-2025-58185
+      - GHSA-jwmf-chvc-rf92
+    events:
+      - timestamp: 2025-11-03T00:26:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-node-driver-registrar-2.15
+            componentID: d98dcdcac87364e5
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/csi-node-driver-registrar
+            scanner: grype
+
   - id: CGA-w334-j9c6-3p65
     aliases:
       - CVE-2025-58183
