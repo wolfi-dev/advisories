@@ -161,6 +161,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-6rxx-mg6w-cv8w
+    aliases:
+      - CVE-2025-61723
+      - GHSA-hjx7-fpxx-mj48
+    events:
+      - timestamp: 2025-11-03T00:29:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-livenessprobe
+            componentID: 920da0fa6d12ad09
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/livenessprobe
+            scanner: grype
+
   - id: CGA-7942-4mrf-v638
     aliases:
       - CVE-2023-44487
