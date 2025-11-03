@@ -115,6 +115,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-pq7f-qjc6-hf92
+    aliases:
+      - CVE-2025-58185
+      - GHSA-jwmf-chvc-rf92
+    events:
+      - timestamp: 2025-11-03T04:14:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pgpool2_exporter
+            componentID: a250c3a366dfcc65
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/pgpool2_exporter
+            scanner: grype
+
   - id: CGA-pv86-xh96-78wc
     aliases:
       - CVE-2025-47912
