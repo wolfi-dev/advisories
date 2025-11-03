@@ -4,6 +4,24 @@ package:
   name: timestamp-authority
 
 advisories:
+  - id: CGA-2g8f-6865-8vw5
+    aliases:
+      - CVE-2025-58187
+      - GHSA-frhw-mqj2-wxw2
+    events:
+      - timestamp: 2025-11-03T00:32:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: timestamp-authority-cli
+            componentID: 28127b06df6e0838
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/timestamp-server
+            scanner: grype
+
   - id: CGA-2pw2-9378-66hq
     aliases:
       - CVE-2025-47912
