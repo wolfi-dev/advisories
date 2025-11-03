@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: spicedb-operator
+
+advisories:
+  - id: CGA-c25w-q56x-4w9w
+    aliases:
+      - CVE-2025-47912
+      - GHSA-447v-2qg4-h8hc
+    events:
+      - timestamp: 2025-11-03T00:17:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spicedb-operator
+            componentID: 2d960382d2d58c8c
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/spicedb-operator
+            scanner: grype
