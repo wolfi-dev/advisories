@@ -165,6 +165,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-qhv8-qf2h-q55v
+    aliases:
+      - CVE-2025-58189
+      - GHSA-cxq7-xw9v-rcv3
+    events:
+      - timestamp: 2025-11-03T01:43:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-kubernetes
+            componentID: 0832c9923e543f25
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-kubernetes
+            scanner: grype
+
   - id: CGA-v438-hgxw-f757
     aliases:
       - CVE-2025-47907
