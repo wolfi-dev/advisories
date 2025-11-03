@@ -102,6 +102,24 @@ advisories:
           type: component-vulnerability-mismatch
           note: This is only affecting Kubernetes, and was also mark NOT_IMPORTABLE in Golang vulndb
 
+  - id: CGA-453q-gwh7-34xp
+    aliases:
+      - CVE-2025-58183
+      - GHSA-9gcr-gp5f-jw27
+    events:
+      - timestamp: 2025-11-03T03:17:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nodetaint
+            componentID: 7320206c31431321
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/nodetaint
+            scanner: grype
+
   - id: CGA-5gv7-f77m-rxx9
     aliases:
       - CVE-2024-24785
