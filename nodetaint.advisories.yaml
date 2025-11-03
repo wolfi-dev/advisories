@@ -340,6 +340,24 @@ advisories:
           type: component-vulnerability-mismatch
           note: This is a Kubernetes API flaw, but we don't include an API server in this package.
 
+  - id: CGA-9v8v-xhcg-rfr4
+    aliases:
+      - CVE-2025-61724
+      - GHSA-wcw9-47fp-rrfr
+    events:
+      - timestamp: 2025-11-03T03:17:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nodetaint
+            componentID: 7320206c31431321
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/nodetaint
+            scanner: grype
+
   - id: CGA-cjxr-9573-jmf3
     aliases:
       - CVE-2025-47907
