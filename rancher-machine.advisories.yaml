@@ -4,6 +4,78 @@ package:
   name: rancher-machine
 
 advisories:
+  - id: CGA-6jg7-mqqq-9g88
+    aliases:
+      - CVE-2025-47912
+      - GHSA-447v-2qg4-h8hc
+    events:
+      - timestamp: 2025-11-03T06:48:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-machine
+            componentID: 9abd9d29568801b2
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/rancher-machine
+            scanner: grype
+
+  - id: CGA-7h3w-96f4-x9j6
+    aliases:
+      - CVE-2025-58189
+      - GHSA-cxq7-xw9v-rcv3
+    events:
+      - timestamp: 2025-11-03T06:48:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-machine
+            componentID: 9abd9d29568801b2
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/rancher-machine
+            scanner: grype
+
+  - id: CGA-7hwq-4788-pc67
+    aliases:
+      - CVE-2025-58185
+      - GHSA-jwmf-chvc-rf92
+    events:
+      - timestamp: 2025-11-03T06:48:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-machine
+            componentID: 9abd9d29568801b2
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/rancher-machine
+            scanner: grype
+
+  - id: CGA-7w52-62hx-mcrj
+    aliases:
+      - CVE-2025-61723
+      - GHSA-hjx7-fpxx-mj48
+    events:
+      - timestamp: 2025-11-03T06:48:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-machine
+            componentID: 9abd9d29568801b2
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/rancher-machine
+            scanner: grype
+
   - id: CGA-7wxh-8whr-mq4m
     aliases:
       - CVE-2025-54410
@@ -158,6 +230,42 @@ advisories:
         data:
           note: 'rancher-machine is fork of docker/machine and uses quite old 1.4.2 version of moby/moby dependency that released at 2017. Bumping the moby/moby package to newer versions resulting build failure and we can''t mitigate this. '
 
+  - id: CGA-cr9j-g2p5-8x7v
+    aliases:
+      - CVE-2025-58183
+      - GHSA-9gcr-gp5f-jw27
+    events:
+      - timestamp: 2025-11-03T06:48:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-machine
+            componentID: 9abd9d29568801b2
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/rancher-machine
+            scanner: grype
+
+  - id: CGA-frjc-c6g9-9c88
+    aliases:
+      - CVE-2025-61724
+      - GHSA-wcw9-47fp-rrfr
+    events:
+      - timestamp: 2025-11-03T06:48:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-machine
+            componentID: 9abd9d29568801b2
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/rancher-machine
+            scanner: grype
+
   - id: CGA-fw7g-fqpm-9f8p
     aliases:
       - GHSA-xmmx-7jpf-fx42
@@ -247,6 +355,60 @@ advisories:
           type: vulnerable-code-version-not-used
           note: v1.4.2 version of moby/moby dependency does not contain WriteProgress() func in the streamformatter.go file.
 
+  - id: CGA-r639-9cfm-69fx
+    aliases:
+      - CVE-2025-58188
+      - GHSA-7wwx-xj66-r44x
+    events:
+      - timestamp: 2025-11-03T06:48:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-machine
+            componentID: 9abd9d29568801b2
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/rancher-machine
+            scanner: grype
+
+  - id: CGA-v48g-xr67-gmvr
+    aliases:
+      - CVE-2025-58187
+      - GHSA-frhw-mqj2-wxw2
+    events:
+      - timestamp: 2025-11-03T06:48:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-machine
+            componentID: 9abd9d29568801b2
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/rancher-machine
+            scanner: grype
+
+  - id: CGA-vppj-qgph-q259
+    aliases:
+      - CVE-2025-61725
+      - GHSA-qh38-484v-w52x
+    events:
+      - timestamp: 2025-11-03T06:48:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-machine
+            componentID: 9abd9d29568801b2
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/rancher-machine
+            scanner: grype
+
   - id: CGA-vx4c-qq47-4r28
     aliases:
       - CVE-2024-36621
@@ -290,3 +452,21 @@ advisories:
         type: pending-upstream-fix
         data:
           note: 'rancher-machine is fork of docker/machine and uses quite old 1.4.2 version of moby/moby dependency that released at 2017. Bumping the moby/moby package to newer versions resulting build failure and we can''t mitigate this. '
+
+  - id: CGA-x6rp-xv5w-9xww
+    aliases:
+      - CVE-2025-58186
+      - GHSA-rjcg-56ph-3qvg
+    events:
+      - timestamp: 2025-11-03T06:48:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-machine
+            componentID: 9abd9d29568801b2
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/rancher-machine
+            scanner: grype
