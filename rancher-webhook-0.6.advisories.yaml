@@ -155,6 +155,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability applies to the git-repo volume provisioner, not the k8s client itself.
 
+  - id: CGA-c3ww-p562-m77h
+    aliases:
+      - CVE-2025-61724
+      - GHSA-wcw9-47fp-rrfr
+    events:
+      - timestamp: 2025-11-03T11:09:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-webhook-0.6
+            componentID: 0c201d5966ccb089
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/webhook
+            scanner: grype
+
   - id: CGA-fj6x-2339-c8r9
     aliases:
       - CVE-2025-58189
