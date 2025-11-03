@@ -285,6 +285,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-c8j8-g3pg-mf29
+    aliases:
+      - CVE-2025-58185
+      - GHSA-jwmf-chvc-rf92
+    events:
+      - timestamp: 2025-11-03T02:40:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: policy-controller
+            componentID: 432420bb8a67e2eb
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/policy-tester
+            scanner: grype
+
   - id: CGA-cf6j-5mjw-r283
     aliases:
       - CVE-2024-29902
