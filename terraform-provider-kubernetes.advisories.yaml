@@ -4,6 +4,24 @@ package:
   name: terraform-provider-kubernetes
 
 advisories:
+  - id: CGA-3hc2-rf8m-gr83
+    aliases:
+      - CVE-2025-58186
+      - GHSA-rjcg-56ph-3qvg
+    events:
+      - timestamp: 2025-11-03T01:43:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-kubernetes
+            componentID: 0832c9923e543f25
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-kubernetes
+            scanner: grype
+
   - id: CGA-6jjq-wqq8-7xgr
     aliases:
       - CVE-2025-22871
