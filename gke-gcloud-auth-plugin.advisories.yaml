@@ -4,6 +4,24 @@ package:
   name: gke-gcloud-auth-plugin
 
 advisories:
+  - id: CGA-22xf-6pxf-3v6x
+    aliases:
+      - CVE-2025-58183
+      - GHSA-9gcr-gp5f-jw27
+    events:
+      - timestamp: 2025-11-03T04:13:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gke-gcloud-auth-plugin
+            componentID: 8e10cfc5ba87a7d0
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/gke-gcloud-auth-plugin
+            scanner: grype
+
   - id: CGA-233r-pg3p-mrq4
     aliases:
       - CVE-2024-24785
