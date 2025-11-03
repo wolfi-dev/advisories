@@ -4,6 +4,24 @@ package:
   name: mkcert
 
 advisories:
+  - id: CGA-2549-65rv-j44j
+    aliases:
+      - CVE-2025-58183
+      - GHSA-9gcr-gp5f-jw27
+    events:
+      - timestamp: 2025-11-03T07:25:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mkcert
+            componentID: 7cc1d7236a79bcc8
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/mkcert
+            scanner: grype
+
   - id: CGA-3rh6-wvw2-4jrp
     aliases:
       - CVE-2024-45338
