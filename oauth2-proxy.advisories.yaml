@@ -4,6 +4,24 @@ package:
   name: oauth2-proxy
 
 advisories:
+  - id: CGA-24c2-7cjx-973f
+    aliases:
+      - CVE-2025-58187
+      - GHSA-frhw-mqj2-wxw2
+    events:
+      - timestamp: 2025-11-03T02:03:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: oauth2-proxy
+            componentID: 5c1babbb76065e5c
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/oauth2-proxy
+            scanner: grype
+
   - id: CGA-278p-gxr4-rmg2
     aliases:
       - CVE-2024-45336
