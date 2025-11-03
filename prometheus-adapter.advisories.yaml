@@ -4,6 +4,24 @@ package:
   name: prometheus-adapter
 
 advisories:
+  - id: CGA-28g6-8482-ggxv
+    aliases:
+      - CVE-2025-47912
+      - GHSA-447v-2qg4-h8hc
+    events:
+      - timestamp: 2025-11-03T01:47:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-adapter
+            componentID: 6b15c3d049a15a91
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/adapter
+            scanner: grype
+
   - id: CGA-2h6c-ggxq-885c
     aliases:
       - CVE-2024-45337
