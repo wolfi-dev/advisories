@@ -4,6 +4,24 @@ package:
   name: kratos
 
 advisories:
+  - id: CGA-2w4x-fppr-4ghm
+    aliases:
+      - CVE-2025-58189
+      - GHSA-cxq7-xw9v-rcv3
+    events:
+      - timestamp: 2025-11-03T04:39:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kratos
+            componentID: 080f3fdc81c92d27
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/protoc-gen-go-errors
+            scanner: grype
+
   - id: CGA-439c-cf6v-vgm8
     aliases:
       - CVE-2025-58185
