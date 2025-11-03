@@ -4,6 +4,24 @@ package:
   name: mongodb-kubernetes-operator
 
 advisories:
+  - id: CGA-85x4-fm76-f9gh
+    aliases:
+      - CVE-2025-47912
+      - GHSA-447v-2qg4-h8hc
+    events:
+      - timestamp: 2025-11-03T06:10:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mongodb-kubernetes-operator
+            componentID: 659a692c8e3388b0
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/version-upgrade-hook
+            scanner: grype
+
   - id: CGA-cr79-88rr-5m2r
     aliases:
       - CVE-2025-47907
