@@ -289,3 +289,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.6.7-r1
+
+  - id: CGA-xq6c-jx9q-7gcm
+    aliases:
+      - CVE-2025-58183
+      - GHSA-9gcr-gp5f-jw27
+    events:
+      - timestamp: 2025-11-03T11:09:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-webhook-0.6
+            componentID: 0c201d5966ccb089
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/webhook
+            scanner: grype
