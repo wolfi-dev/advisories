@@ -301,6 +301,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: v1.4.2 version of moby/moby dependency does not contain WriteProgress() func in the streamformatter.go file.
 
+  - id: CGA-r639-9cfm-69fx
+    aliases:
+      - CVE-2025-58188
+      - GHSA-7wwx-xj66-r44x
+    events:
+      - timestamp: 2025-11-03T06:48:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-machine
+            componentID: 9abd9d29568801b2
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/rancher-machine
+            scanner: grype
+
   - id: CGA-v48g-xr67-gmvr
     aliases:
       - CVE-2025-58187
