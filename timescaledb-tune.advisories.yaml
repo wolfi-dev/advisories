@@ -4,6 +4,24 @@ package:
   name: timescaledb-tune
 
 advisories:
+  - id: CGA-cv8x-9jf3-cxx8
+    aliases:
+      - CVE-2025-58185
+      - GHSA-jwmf-chvc-rf92
+    events:
+      - timestamp: 2025-11-03T03:12:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: timescaledb-tune
+            componentID: 9ad0bd7c1798b132
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/timescaledb-tune
+            scanner: grype
+
   - id: CGA-q7cj-r4r8-w4w5
     aliases:
       - CVE-2025-58183
