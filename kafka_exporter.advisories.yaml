@@ -91,6 +91,24 @@ advisories:
         data:
           fixed-version: 1.9.0-r33
 
+  - id: CGA-4q4c-vcwm-c92j
+    aliases:
+      - CVE-2025-61723
+      - GHSA-hjx7-fpxx-mj48
+    events:
+      - timestamp: 2025-11-03T00:03:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kafka_exporter
+            componentID: 6aa00b580d418387
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/kafka_exporter
+            scanner: grype
+
   - id: CGA-65ff-8pm3-368q
     aliases:
       - CVE-2024-45337
