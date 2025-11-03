@@ -4,6 +4,24 @@ package:
   name: kyverno-1.15
 
 advisories:
+  - id: CGA-2frm-wv2c-7f25
+    aliases:
+      - CVE-2025-58187
+      - GHSA-frhw-mqj2-wxw2
+    events:
+      - timestamp: 2025-11-03T06:09:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-1.15
+            componentID: 72447401191ba46d
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/kyvernopre
+            scanner: grype
+
   - id: CGA-2m8m-3pfg-36qf
     aliases:
       - CVE-2025-58186
