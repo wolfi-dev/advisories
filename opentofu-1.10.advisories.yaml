@@ -85,6 +85,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-jgf9-rjfm-r29x
+    aliases:
+      - CVE-2025-58186
+      - GHSA-rjcg-56ph-3qvg
+    events:
+      - timestamp: 2025-11-03T03:33:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opentofu-1.10
+            componentID: 8b12ef714595a7b3
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/tofu
+            scanner: grype
+
   - id: CGA-mm37-q927-fxv7
     aliases:
       - CVE-2025-58058
