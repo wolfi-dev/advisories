@@ -4,6 +4,24 @@ package:
   name: sbom-scorecard
 
 advisories:
+  - id: CGA-262w-2pj6-qx37
+    aliases:
+      - CVE-2025-47912
+      - GHSA-447v-2qg4-h8hc
+    events:
+      - timestamp: 2025-11-03T12:12:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sbom-scorecard
+            componentID: c3959aa90c579cc7
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/sbom-scorecard
+            scanner: grype
+
   - id: CGA-2qp2-69ch-87rh
     aliases:
       - CVE-2023-45285
