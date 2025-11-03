@@ -939,3 +939,21 @@ advisories:
         data:
           type: vulnerable-code-version-not-used
           note: This does not affect k8s.io/client-go@v0.20.0-alpha.2
+
+  - id: CGA-xj5h-fcgr-93cp
+    aliases:
+      - CVE-2025-58188
+      - GHSA-7wwx-xj66-r44x
+    events:
+      - timestamp: 2025-11-03T03:17:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nodetaint
+            componentID: 7320206c31431321
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/nodetaint
+            scanner: grype
