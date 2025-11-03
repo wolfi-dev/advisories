@@ -4,6 +4,24 @@ package:
   name: pgpool2_exporter
 
 advisories:
+  - id: CGA-23pc-j2cq-3xqr
+    aliases:
+      - CVE-2025-61724
+      - GHSA-wcw9-47fp-rrfr
+    events:
+      - timestamp: 2025-11-03T04:14:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pgpool2_exporter
+            componentID: a250c3a366dfcc65
+            componentName: stdlib
+            componentVersion: go1.24.6
+            componentType: go-module
+            componentLocation: /usr/bin/pgpool2_exporter
+            scanner: grype
+
   - id: CGA-2j3w-5pcp-5p2p
     aliases:
       - CVE-2025-61723
