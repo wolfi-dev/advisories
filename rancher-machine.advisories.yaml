@@ -4,6 +4,24 @@ package:
   name: rancher-machine
 
 advisories:
+  - id: CGA-6jg7-mqqq-9g88
+    aliases:
+      - CVE-2025-47912
+      - GHSA-447v-2qg4-h8hc
+    events:
+      - timestamp: 2025-11-03T06:48:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-machine
+            componentID: 9abd9d29568801b2
+            componentName: stdlib
+            componentVersion: go1.25.1
+            componentType: go-module
+            componentLocation: /usr/bin/rancher-machine
+            scanner: grype
+
   - id: CGA-7wxh-8whr-mq4m
     aliases:
       - CVE-2025-54410
