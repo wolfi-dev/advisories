@@ -4,6 +4,24 @@ package:
   name: falco-no-driver
 
 advisories:
+  - id: CGA-2rqm-pmw3-cxr6
+    aliases:
+      - CVE-2025-58187
+      - GHSA-frhw-mqj2-wxw2
+    events:
+      - timestamp: 2025-11-04T14:50:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: falco-no-driver
+            componentID: df84204b1f0c5a40
+            componentName: stdlib
+            componentVersion: go1.23.12
+            componentType: go-module
+            componentLocation: /usr/share/falco/plugins/libcontainer.so
+            scanner: grype
+
   - id: CGA-4q8c-935j-pc4c
     aliases:
       - CVE-2025-47912
