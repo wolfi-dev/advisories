@@ -383,6 +383,24 @@ advisories:
         data:
           note: This vulnerability is fixed in quarkus-vertx v3.24.0. At this time, apicurio-registry does not support this version, and as such fails to build on the new version.
 
+  - id: CGA-mcf9-q3qf-q8v4
+    aliases:
+      - CVE-2025-59250
+      - GHSA-m494-w24q-6f7w
+    events:
+      - timestamp: 2025-11-05T07:05:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apicurio-registry
+            componentID: ea91a5bd849384bd
+            componentName: mssql-jdbc
+            componentVersion: 12.8.1
+            componentType: java-archive
+            componentLocation: /usr/share/java/apicurio-registry/lib/com.microsoft.sqlserver.mssql-jdbc-12.8.1.jre11.jar
+            scanner: grype
+
   - id: CGA-p3w3-hrxv-jqqf
     aliases:
       - CVE-2024-58103
