@@ -44,6 +44,11 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/java/flyway/drivers/mssql-jdbc-12.10.1.jre11.jar
             scanner: grype
+      - timestamp: 2025-11-06T12:43:12Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: We updated to mssql-jdbc-12.10.2.jre11 which is a fixed version, but the version string matching doesn't seem to work well with the .jre11 suffix.
 
   - id: CGA-7vrc-vhf3-9f48
     aliases:
