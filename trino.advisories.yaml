@@ -49,6 +49,24 @@ advisories:
         data:
           fixed-version: 439-r2
 
+  - id: CGA-2jrg-9m9q-mjqj
+    aliases:
+      - CVE-2025-59250
+      - GHSA-m494-w24q-6f7w
+    events:
+      - timestamp: 2025-11-05T09:29:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino-plugin-sqlserver
+            componentID: 3b8ceed7e8fcaeba
+            componentName: mssql-jdbc
+            componentVersion: 13.2.1
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/com.microsoft.sqlserver_mssql-jdbc-13.2.1.jre11.jar
+            scanner: grype
+
   - id: CGA-2rh8-vhwq-m8fm
     aliases:
       - CVE-2023-31418

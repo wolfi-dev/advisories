@@ -129,6 +129,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/share/falco/plugins/libcontainer.so
             scanner: grype
+      - timestamp: 2025-11-05T16:00:38Z
+        type: pending-upstream-fix
+        data:
+          note: falco-no-driver itself does not contain any code that is vulnerable to CVE-2025-61725; however it pulls in libcontainer plugin from https://github.com/falcosecurity/plugins/tree/main/plugins/container which is vulnerable. The upstream maintainers will need to update to a new version of > golang 1.24 and pull that in to fix the CVE.
 
   - id: CGA-cmfv-j6fr-3w46
     aliases:
