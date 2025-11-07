@@ -50,6 +50,24 @@ advisories:
           type: component-vulnerability-mismatch
           note: The CVE was against an older version of the buildah module itself (< v1.14.4), and this package includes v1.36.0.
 
+  - id: CGA-5gv6-pp27-4cr3
+    aliases:
+      - CVE-2025-31133
+      - GHSA-9493-h29p-rfm2
+    events:
+      - timestamp: 2025-11-07T08:03:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buildah
+            componentID: 2d377dba65f2bf64
+            componentName: github.com/opencontainers/runc
+            componentVersion: v1.3.2
+            componentType: go-module
+            componentLocation: /usr/bin/buildah
+            scanner: grype
+
   - id: CGA-693x-82vw-grgf
     aliases:
       - CVE-2024-11218
