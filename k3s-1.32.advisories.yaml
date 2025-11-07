@@ -4,6 +4,24 @@ package:
   name: k3s-1.32
 
 advisories:
+  - id: CGA-28fg-g9w2-hp6v
+    aliases:
+      - CVE-2025-52881
+      - GHSA-cgrx-mc8f-2prm
+    events:
+      - timestamp: 2025-11-07T07:18:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s-1.32
+            componentID: 048426832aacd383
+            componentName: github.com/opencontainers/runc
+            componentVersion: v1.2.7
+            componentType: go-module
+            componentLocation: /usr/bin/k3s
+            scanner: grype
+
   - id: CGA-28qv-x565-7qvh
     aliases:
       - CVE-2025-47907
@@ -152,6 +170,24 @@ advisories:
         data:
           fixed-version: 1.32.7.1-r1
 
+  - id: CGA-86xc-fhjf-2rjq
+    aliases:
+      - CVE-2025-31133
+      - GHSA-9493-h29p-rfm2
+    events:
+      - timestamp: 2025-11-07T07:18:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s-1.32
+            componentID: 048426832aacd383
+            componentName: github.com/opencontainers/runc
+            componentVersion: v1.2.7
+            componentType: go-module
+            componentLocation: /usr/bin/k3s
+            scanner: grype
+
   - id: CGA-cj3v-3p6m-jf62
     aliases:
       - CVE-2025-54410
@@ -173,6 +209,24 @@ advisories:
         type: pending-upstream-fix
         data:
           note: 'This vulnerability affects Docker Engine (Moby) versions <= 25.0.12 where firewalld reload removes Docker''s iptables rules that isolate containers in different bridge networks. Upstream maintainers must cut a release with the fix. References: 25.x backport PR: https://github.com/moby/moby/pull/50445 28.x backport PR: https://github.com/moby/moby/pull/50506'
+
+  - id: CGA-f3ff-956j-qvf8
+    aliases:
+      - CVE-2025-52565
+      - GHSA-qw9x-cqr3-wc7r
+    events:
+      - timestamp: 2025-11-07T07:18:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s-1.32
+            componentID: 048426832aacd383
+            componentName: github.com/opencontainers/runc
+            componentVersion: v1.2.7
+            componentType: go-module
+            componentLocation: /usr/bin/k3s
+            scanner: grype
 
   - id: CGA-pwmw-6q47-qc67
     aliases:
