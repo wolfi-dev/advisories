@@ -278,6 +278,24 @@ advisories:
         data:
           note: The vulnerability remediation requires upgrading github.com/docker/docker to v28. However, this upgrade introduces breaking API changes (ImageHistory, ImageLoad, types.ImageLoadResponse) that are not yet supported by dependent libraries (go-containerregistry, imgutil, skaffold). As a result, the build fails when attempting to move to v28. Upstream projects need to update their dependency trees and adapt their code to the new Docker client API. Once upstream resolves these incompatibilities, we can safely upgrade to v28 and remediate the vulnerability.
 
+  - id: CGA-7m78-47fj-pvm3
+    aliases:
+      - CVE-2025-52881
+      - GHSA-cgrx-mc8f-2prm
+    events:
+      - timestamp: 2025-11-07T10:47:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: skaffold
+            componentID: 93a157eae21f1c8b
+            componentName: github.com/opencontainers/selinux
+            componentVersion: v1.12.0
+            componentType: go-module
+            componentLocation: /usr/bin/skaffold
+            scanner: grype
+
   - id: CGA-7rcq-56wv-w7g4
     aliases:
       - CVE-2024-24791
