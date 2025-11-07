@@ -1107,6 +1107,24 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
 
+  - id: CGA-x42f-vcwg-rgqr
+    aliases:
+      - CVE-2025-52881
+      - GHSA-cgrx-mc8f-2prm
+    events:
+      - timestamp: 2025-11-07T08:46:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kots
+            componentID: 619f8616e1b75fb7
+            componentName: github.com/opencontainers/selinux
+            componentVersion: v1.12.0
+            componentType: go-module
+            componentLocation: /usr/bin/kots
+            scanner: grype
+
   - id: CGA-x6q2-5m5r-9rqv
     aliases:
       - CVE-2023-45283
