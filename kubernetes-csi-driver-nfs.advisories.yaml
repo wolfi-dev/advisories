@@ -4,6 +4,24 @@ package:
   name: kubernetes-csi-driver-nfs
 
 advisories:
+  - id: CGA-2xp7-7w7f-2rmq
+    aliases:
+      - CVE-2025-52881
+      - GHSA-cgrx-mc8f-2prm
+    events:
+      - timestamp: 2025-11-07T07:22:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-driver-nfs
+            componentID: d61dacb05905a805
+            componentName: github.com/opencontainers/selinux
+            componentVersion: v1.11.0
+            componentType: go-module
+            componentLocation: /usr/bin/nfsplugin
+            scanner: grype
+
   - id: CGA-4p95-9527-r9vw
     aliases:
       - CVE-2025-22870
