@@ -244,6 +244,24 @@ advisories:
             The upstream maintainers will need to update to a new version of > golang 1.24 and pull that in to fix the CVE.
             See also https://github.com/falcosecurity/plugins/issues/1056
 
+  - id: CGA-q828-3w8x-vgj8
+    aliases:
+      - CVE-2025-52881
+      - GHSA-cgrx-mc8f-2prm
+    events:
+      - timestamp: 2025-11-07T10:34:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: falco-no-driver
+            componentID: be758c3f2c44034e
+            componentName: github.com/opencontainers/runc
+            componentVersion: v1.3.0
+            componentType: go-module
+            componentLocation: /usr/share/falco/plugins/libcontainer.so
+            scanner: grype
+
   - id: CGA-r846-3qpq-5m8q
     aliases:
       - CVE-2025-58183
