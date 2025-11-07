@@ -216,6 +216,24 @@ advisories:
         data:
           note: 'There has been an attempt to cherrypick the fix for this CVE (seen here: https://github.com/python/cpython/pull/129648) However, the automated attempt has failed: https://github.com/python/cpython/pull/129648#issuecomment-2873425136 and will require upstream maintainers to backport the fix to the 3.10 branch.'
 
+  - id: CGA-9pjq-rr7g-fw2v
+    aliases:
+      - CVE-2025-6075
+      - GHSA-vc2m-m665-8xm2
+    events:
+      - timestamp: 2025-11-07T16:55:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: python-3.10
+            componentID: 96fff167f22862ce
+            componentName: python-3.10
+            componentVersion: 3.10.19-r1
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-9w4w-94rw-h33x
     aliases:
       - CVE-2024-6232
