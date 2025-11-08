@@ -278,6 +278,24 @@ advisories:
         data:
           note: 'This CVE is fixed in upstream Helm but not yet in Rancher Helm. Due to differences in file structure and code organization, the upstream patch doesn''t apply cleanly. Rancher Helm needs to create a custom patch to address the issue. Details on the upstream fix: https://github.com/helm/helm/commit/d8ca55fc669645c10c0681d49723f4bb8c0b1ce7'
 
+  - id: CGA-j3wh-x2xv-q822
+    aliases:
+      - CVE-2025-64329
+      - GHSA-m6hq-p25p-ffr2
+    events:
+      - timestamp: 2025-11-08T11:43:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-helm-3
+            componentID: 52087a41f1d8a25d
+            componentName: github.com/containerd/containerd
+            componentVersion: v1.7.28
+            componentType: go-module
+            componentLocation: /usr/bin/rancher-helm
+            scanner: grype
+
   - id: CGA-jc69-wq67-347v
     aliases:
       - CVE-2025-58187
