@@ -4,6 +4,24 @@ package:
   name: steampipe
 
 advisories:
+  - id: CGA-2238-q62q-j2w2
+    aliases:
+      - CVE-2024-25621
+      - GHSA-pwhc-rpq9-4c8w
+    events:
+      - timestamp: 2025-11-08T08:56:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: steampipe
+            componentID: caf5b40a8aa82ac8
+            componentName: github.com/containerd/containerd
+            componentVersion: v1.7.27
+            componentType: go-module
+            componentLocation: /usr/bin/steampipe
+            scanner: grype
+
   - id: CGA-3hhg-grhm-3mw6
     aliases:
       - CVE-2025-58058
