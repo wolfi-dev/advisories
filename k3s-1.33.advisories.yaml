@@ -26,6 +26,24 @@ advisories:
         data:
           note: We have tried remediating this dependency but it results in build failures. Upstream needs to publish a version with this CVE fixed.
 
+  - id: CGA-34pc-f627-8c5x
+    aliases:
+      - CVE-2025-64329
+      - GHSA-m6hq-p25p-ffr2
+    events:
+      - timestamp: 2025-11-08T09:57:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s-static-1.33
+            componentID: 26e48e7a21d245bc
+            componentName: github.com/containerd/containerd/v2
+            componentVersion: v2.1.4-k3s1
+            componentType: go-module
+            componentLocation: /usr/bin/containerd-shim-runc-v2
+            scanner: grype
+
   - id: CGA-4hw3-vxq6-qr47
     aliases:
       - CVE-2024-36623
