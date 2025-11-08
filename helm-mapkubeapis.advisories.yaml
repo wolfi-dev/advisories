@@ -251,6 +251,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-rfj9-j58q-hjx2
+    aliases:
+      - CVE-2025-64329
+      - GHSA-m6hq-p25p-ffr2
+    events:
+      - timestamp: 2025-11-08T07:19:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-mapkubeapis
+            componentID: 8d14843bd33c3235
+            componentName: github.com/containerd/containerd
+            componentVersion: v1.7.27
+            componentType: go-module
+            componentLocation: /usr/bin/mapkubeapis
+            scanner: grype
+
   - id: CGA-v84x-h6vc-6x9r
     aliases:
       - CVE-2025-47912
