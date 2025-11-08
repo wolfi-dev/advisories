@@ -4,6 +4,24 @@ package:
   name: helm-push
 
 advisories:
+  - id: CGA-2ghq-fj52-j7mc
+    aliases:
+      - CVE-2025-64329
+      - GHSA-m6hq-p25p-ffr2
+    events:
+      - timestamp: 2025-11-08T10:59:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-push
+            componentID: 755bccffeec89989
+            componentName: github.com/containerd/containerd
+            componentVersion: v1.7.27
+            componentType: go-module
+            componentLocation: /usr/libexec/helm-plugins/helm-push/bin/helm-cm-push
+            scanner: grype
+
   - id: CGA-2w5q-jwcp-68cc
     aliases:
       - CVE-2023-45284
@@ -496,6 +514,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.10.4-r32
+
+  - id: CGA-gp7g-rmxh-hwhq
+    aliases:
+      - CVE-2024-25621
+      - GHSA-pwhc-rpq9-4c8w
+    events:
+      - timestamp: 2025-11-08T10:59:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-push
+            componentID: 755bccffeec89989
+            componentName: github.com/containerd/containerd
+            componentVersion: v1.7.27
+            componentType: go-module
+            componentLocation: /usr/libexec/helm-plugins/helm-push/bin/helm-cm-push
+            scanner: grype
 
   - id: CGA-hcpx-vh8j-2gmr
     aliases:
