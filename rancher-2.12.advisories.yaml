@@ -4,6 +4,24 @@ package:
   name: rancher-2.12
 
 advisories:
+  - id: CGA-7xj6-8wc4-6mj3
+    aliases:
+      - CVE-2024-25621
+      - GHSA-pwhc-rpq9-4c8w
+    events:
+      - timestamp: 2025-11-08T10:36:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-2.12
+            componentID: 1e0c3fd048b70ac1
+            componentName: github.com/containerd/containerd
+            componentVersion: v1.7.27
+            componentType: go-module
+            componentLocation: /usr/bin/rancher
+            scanner: grype
+
   - id: CGA-8rrr-c2rx-q876
     aliases:
       - CVE-2024-36623
@@ -73,6 +91,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.12.1-r0
+
+  - id: CGA-qw9f-hx24-q6f3
+    aliases:
+      - CVE-2025-64329
+      - GHSA-m6hq-p25p-ffr2
+    events:
+      - timestamp: 2025-11-08T10:36:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-2.12
+            componentID: 1e0c3fd048b70ac1
+            componentName: github.com/containerd/containerd
+            componentVersion: v1.7.27
+            componentType: go-module
+            componentLocation: /usr/bin/rancher
+            scanner: grype
 
   - id: CGA-rfq7-g6fq-pm39
     aliases:
