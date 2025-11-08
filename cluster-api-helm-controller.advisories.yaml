@@ -71,6 +71,24 @@ advisories:
         data:
           fixed-version: 0.3.2-r6
 
+  - id: CGA-4rw7-rf5r-wgf2
+    aliases:
+      - CVE-2024-25621
+      - GHSA-pwhc-rpq9-4c8w
+    events:
+      - timestamp: 2025-11-08T07:15:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-api-helm-controller
+            componentID: 9083b7100f95198e
+            componentName: github.com/containerd/containerd
+            componentVersion: v1.7.27
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-api-helm-controller
+            scanner: grype
+
   - id: CGA-56q4-q5j4-6c45
     aliases:
       - CVE-2025-58188
