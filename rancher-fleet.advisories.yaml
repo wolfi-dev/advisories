@@ -4,6 +4,24 @@ package:
   name: rancher-fleet
 
 advisories:
+  - id: CGA-25v9-j5h4-gpw8
+    aliases:
+      - CVE-2025-64329
+      - GHSA-m6hq-p25p-ffr2
+    events:
+      - timestamp: 2025-11-08T11:15:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-fleet-controller
+            componentID: df28253ddf8a2602
+            componentName: github.com/containerd/containerd
+            componentVersion: v1.7.27
+            componentType: go-module
+            componentLocation: /usr/bin/fleetagent
+            scanner: grype
+
   - id: CGA-3mgf-5p4v-fxw2
     aliases:
       - CVE-2025-0426
@@ -52,6 +70,24 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability applies to the git-repo volume provisioner, not the k8s client itself.
+
+  - id: CGA-4vg8-jvgg-xf9c
+    aliases:
+      - CVE-2024-25621
+      - GHSA-pwhc-rpq9-4c8w
+    events:
+      - timestamp: 2025-11-08T11:15:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-fleet-controller
+            componentID: df28253ddf8a2602
+            componentName: github.com/containerd/containerd
+            componentVersion: v1.7.27
+            componentType: go-module
+            componentLocation: /usr/bin/fleetagent
+            scanner: grype
 
   - id: CGA-6792-qph2-q47p
     aliases:
