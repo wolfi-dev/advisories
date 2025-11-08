@@ -26,6 +26,24 @@ advisories:
         data:
           fixed-version: 3.20.1-r2
 
+  - id: CGA-7256-44ww-5528
+    aliases:
+      - CVE-2024-25621
+      - GHSA-pwhc-rpq9-4c8w
+    events:
+      - timestamp: 2025-11-08T09:50:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gatekeeper-3.20-gator
+            componentID: 65b24158c9efcd6a
+            componentName: github.com/containerd/containerd
+            componentVersion: v1.7.27
+            componentType: go-module
+            componentLocation: /usr/bin/gator
+            scanner: grype
+
   - id: CGA-93xv-3gfp-74mf
     aliases:
       - CVE-2025-58188
