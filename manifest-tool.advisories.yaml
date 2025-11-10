@@ -4,6 +4,28 @@ package:
   name: manifest-tool
 
 advisories:
+  - id: CGA-36fp-f9fv-pqfc
+    aliases:
+      - CVE-2025-64329
+      - GHSA-m6hq-p25p-ffr2
+    events:
+      - timestamp: 2025-11-08T09:05:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: manifest-tool
+            componentID: 01dd12914b6d4acf
+            componentName: github.com/containerd/containerd/v2
+            componentVersion: v2.1.4
+            componentType: go-module
+            componentLocation: /usr/bin/manifest-tool
+            scanner: grype
+      - timestamp: 2025-11-08T11:28:49Z
+        type: fixed
+        data:
+          fixed-version: 2.2.1-r2
+
   - id: CGA-5cfw-gvjx-8gwc
     aliases:
       - CVE-2025-61724
@@ -69,6 +91,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.2.1-r1
+
+  - id: CGA-9x75-rh9g-72xg
+    aliases:
+      - CVE-2024-25621
+      - GHSA-pwhc-rpq9-4c8w
+    events:
+      - timestamp: 2025-11-08T09:05:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: manifest-tool
+            componentID: 01dd12914b6d4acf
+            componentName: github.com/containerd/containerd/v2
+            componentVersion: v2.1.4
+            componentType: go-module
+            componentLocation: /usr/bin/manifest-tool
+            scanner: grype
+      - timestamp: 2025-11-08T11:28:50Z
+        type: fixed
+        data:
+          fixed-version: 2.2.1-r2
 
   - id: CGA-j2wh-fh77-r6mx
     aliases:
