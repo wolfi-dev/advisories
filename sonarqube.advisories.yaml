@@ -424,6 +424,24 @@ advisories:
         data:
           note: This is a transitive dependency of ElasticSearch and must be fixed in the upstream project
 
+  - id: CGA-pf7c-86h6-rgpv
+    aliases:
+      - CVE-2025-59250
+      - GHSA-m494-w24q-6f7w
+    events:
+      - timestamp: 2025-11-10T20:35:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube
+            componentID: 0e118a4106898133
+            componentName: mssql-jdbc
+            componentVersion: 13.2.1
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/lib/jdbc/mssql/mssql-jdbc-13.2.1.jre11.jar
+            scanner: grype
+
   - id: CGA-qm35-phph-2vmr
     aliases:
       - CVE-2025-8885
