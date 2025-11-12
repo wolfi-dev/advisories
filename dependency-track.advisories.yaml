@@ -146,6 +146,24 @@ advisories:
         data:
           note: 'The upstream Pebble maintainer needs to sanitize input to mitigate CVE-2025-1686. For further details, refer to the upstream issue: https://github.com/PebbleTemplates/pebble/issues/688.'
 
+  - id: CGA-9f53-vxcm-6w39
+    aliases:
+      - CVE-2025-64518
+      - GHSA-6fhj-vr9j-g45r
+    events:
+      - timestamp: 2025-11-12T07:06:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dependency-track
+            componentID: 285f04f780376a3b
+            componentName: cyclonedx-core-java
+            componentVersion: 11.0.0
+            componentType: java-archive
+            componentLocation: /usr/share/java/dependency-track/dependency-track-bundled.jar
+            scanner: grype
+
   - id: CGA-ff3x-mc4g-82q2
     aliases:
       - CVE-2025-48924
