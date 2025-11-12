@@ -131,6 +131,13 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/egctl
             scanner: grype
+      - timestamp: 2025-11-12T13:47:00Z
+        type: pending-upstream-fix
+        data:
+          note: |-
+            We are currently unable to bump github.com/opencontainers/selinux to v1.13.0 due to build failures.
+            The cause for build failures is due to the fact that along with the bump to selinux we have to bump github.com/cyphar/filepath-securejoin to v0.6.0. That version has introduced a change in the API for which the github.com/containers/storage v1.59.1 has not updated yet.
+            We will have to wait for envoy gateway to to introduce the version bump as well as wait for github.com/containers/storage to cut a new release that supports github.com/cyphar/filepath-securejoin@v0.6.0.
 
   - id: CGA-9gr2-cmw7-cmq2
     aliases:
