@@ -536,6 +536,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/buildah
             scanner: grype
+      - timestamp: 2025-11-13T11:47:53Z
+        type: pending-upstream-fix
+        data:
+          note: This CVE impacts the dependency github.com/opencontainers/selinux, which needs to be updated to v1.13.0. However, v1.13.0 depends upon v0.6.0 of github.com/cyphar/filepath-securejoin, which has removed the previously deprecated functions OpenInRoot and Reopen. These functions are used by the latest version of another buildah dependency (go.podman.io/storage), so the selinux dependency cannot be updated until upstream code changes are made
 
   - id: CGA-w3x9-fj4v-fj48
     aliases:
