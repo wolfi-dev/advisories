@@ -21,6 +21,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/k3s
             scanner: grype
+      - timestamp: 2025-11-14T15:30:09Z
+        type: pending-upstream-fix
+        data:
+          note: selinux is pinned to v1.11.1 upstream (https://github.com/k3s-io/k3s/blob/main/go.mod#L22) and trying to bump it to the fixed version for this CVE v1.13.0 causes build failures. Upstream maintainers will need to update the upstream code to the fixed version of selinux.
 
   - id: CGA-28qv-x565-7qvh
     aliases:
