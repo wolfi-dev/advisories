@@ -4,6 +4,28 @@ package:
   name: dapr-1.15
 
 advisories:
+  - id: CGA-48cx-x56v-ggg3
+    aliases:
+      - CVE-2025-63811
+      - GHSA-9mj6-hxhv-w67j
+    events:
+      - timestamp: 2025-11-18T07:33:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dapr-daprd-1.15
+            componentID: d9f187de1370dcd3
+            componentName: github.com/dvsekhvalnov/jose2go
+            componentVersion: v1.6.0
+            componentType: go-module
+            componentLocation: /usr/bin/daprd
+            scanner: grype
+      - timestamp: 2025-11-18T08:37:11Z
+        type: fixed
+        data:
+          fixed-version: 1.15.13-r1
+
   - id: CGA-8ffq-92pg-r3r2
     aliases:
       - GHSA-vrw8-fxc6-2r93

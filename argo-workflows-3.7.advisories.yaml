@@ -4,6 +4,24 @@ package:
   name: argo-workflows-3.7
 
 advisories:
+  - id: CGA-mxwc-5wc4-g7gh
+    aliases:
+      - CVE-2025-64718
+      - GHSA-mh29-5h37-fv8m
+    events:
+      - timestamp: 2025-11-18T07:17:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-workflows-ui-3.7
+            componentID: 3b79b81951350404
+            componentName: js-yaml
+            componentVersion: 3.14.1
+            componentType: npm
+            componentLocation: /usr/lib/argo-workflows-ui/ui/node_modules/@istanbuljs/load-nyc-config/node_modules/js-yaml/package.json
+            scanner: grype
+
   - id: CGA-q37p-x8m2-j5rw
     aliases:
       - CVE-2025-62157
