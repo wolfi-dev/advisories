@@ -409,6 +409,28 @@ advisories:
         data:
           fixed-version: 1.9.3-r3
 
+  - id: CGA-qvhm-wjhf-2cxx
+    aliases:
+      - CVE-2025-63811
+      - GHSA-9mj6-hxhv-w67j
+    events:
+      - timestamp: 2025-11-18T07:07:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-events
+            componentID: 097e42e649d2ad2a
+            componentName: github.com/dvsekhvalnov/jose2go
+            componentVersion: v1.6.0
+            componentType: go-module
+            componentLocation: /usr/bin/argo-events
+            scanner: grype
+      - timestamp: 2025-11-18T08:31:03Z
+        type: fixed
+        data:
+          fixed-version: 1.9.8-r1
+
   - id: CGA-vh6q-382j-gphg
     aliases:
       - CVE-2024-45337
