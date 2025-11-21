@@ -44,3 +44,21 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
+
+  - id: CGA-q86w-r5c9-qcxm
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T19:46:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: knative-serving-1.19-controller
+            componentID: f67d0e97a3587b31
+            componentName: golang.org/x/crypto
+            componentVersion: v0.41.0
+            componentType: go-module
+            componentLocation: /usr/bin/controller
+            scanner: grype
