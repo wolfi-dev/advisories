@@ -400,6 +400,24 @@ advisories:
         data:
           fixed-version: 4.10.0-r1
 
+  - id: CGA-wgvv-7chh-gw6c
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T13:25:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-attacher
+            componentID: c93a3392c931a2fc
+            componentName: golang.org/x/crypto
+            componentVersion: v0.38.0
+            componentType: go-module
+            componentLocation: /usr/bin/csi-attacher
+            scanner: grype
+
   - id: CGA-x2pq-3vw2-9478
     aliases:
       - CVE-2025-4673
