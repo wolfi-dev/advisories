@@ -4,6 +4,24 @@ package:
   name: jitsucom-bulker
 
 advisories:
+  - id: CGA-33vj-r2gr-8xvc
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T13:52:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jitsucom-bulker-syncctl
+            componentID: b2c7a34210ba30c4
+            componentName: golang.org/x/crypto
+            componentVersion: v0.41.0
+            componentType: go-module
+            componentLocation: /usr/bin/sidecar
+            scanner: grype
+
   - id: CGA-374q-wg5q-4gpr
     aliases:
       - CVE-2024-34156
