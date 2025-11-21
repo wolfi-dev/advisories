@@ -48,3 +48,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 4.0.8-r1
+
+  - id: CGA-hv9r-mwm6-p398
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T18:37:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dkron
+            componentID: 86f284fba73ee13f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/dkron-executor-gcppubsub
+            scanner: grype
