@@ -4,6 +4,28 @@ package:
   name: cadvisor
 
 advisories:
+  - id: CGA-2p4h-8qhp-mm9w
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T09:37:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cadvisor
+            componentID: 0c1c0666160eb70c
+            componentName: golang.org/x/crypto
+            componentVersion: v0.38.0
+            componentType: go-module
+            componentLocation: /usr/bin/cadvisor
+            scanner: grype
+      - timestamp: 2025-11-21T13:00:34Z
+        type: fixed
+        data:
+          fixed-version: 0.53.0-r8
+
   - id: CGA-37cv-6356-j6g7
     aliases:
       - CVE-2025-22866
@@ -574,6 +596,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.50.0-r3
+
+  - id: CGA-hhg3-7cf3-vccg
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T09:37:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cadvisor
+            componentID: 0c1c0666160eb70c
+            componentName: golang.org/x/crypto
+            componentVersion: v0.38.0
+            componentType: go-module
+            componentLocation: /usr/bin/cadvisor
+            scanner: grype
+      - timestamp: 2025-11-21T13:00:35Z
+        type: fixed
+        data:
+          fixed-version: 0.53.0-r8
 
   - id: CGA-j76h-2c2j-vmcp
     aliases:

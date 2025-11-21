@@ -4,6 +4,28 @@ package:
   name: cluster-api-aws-controller
 
 advisories:
+  - id: CGA-332x-8vr4-gc2h
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T07:45:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-api-aws-controller
+            componentID: 9dbdb2addf58f9e2
+            componentName: golang.org/x/crypto
+            componentVersion: v0.41.0
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-api-aws-controller
+            scanner: grype
+      - timestamp: 2025-11-21T09:48:04Z
+        type: fixed
+        data:
+          fixed-version: 2.9.2-r2
+
   - id: CGA-46wx-h8gm-9f9h
     aliases:
       - CVE-2022-1706
@@ -25,6 +47,28 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Upstream uses ignition v0.35.0 and ignition v2. The v0.35.0 is for backwards compatibility. Upstream will deprecate this in the future but this is currently required until that time.
+
+  - id: CGA-5mm3-538x-rhg4
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T07:45:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-api-aws-controller
+            componentID: 9dbdb2addf58f9e2
+            componentName: golang.org/x/crypto
+            componentVersion: v0.41.0
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-api-aws-controller
+            scanner: grype
+      - timestamp: 2025-11-21T09:48:05Z
+        type: fixed
+        data:
+          fixed-version: 2.9.2-r2
 
   - id: CGA-63vx-8hpw-64p9
     aliases:

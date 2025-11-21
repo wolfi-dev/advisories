@@ -224,6 +224,24 @@ advisories:
         data:
           note: falco-no-driver itself does not contain any code that is vulnerable to CVE-2025-61725; however it pulls in libcontainer plugin from https://github.com/falcosecurity/plugins/tree/main/plugins/container which is vulnerable. The upstream maintainers will need to update to a new version of > golang 1.24 and pull that in to fix the CVE.
 
+  - id: CGA-9hgm-9g29-7399
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T09:30:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: falco-no-driver
+            componentID: a8a95bab3b89334f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.40.0
+            componentType: go-module
+            componentLocation: /usr/share/falco/plugins/libcontainer.so
+            scanner: grype
+
   - id: CGA-cmfv-j6fr-3w46
     aliases:
       - CVE-2025-58186
@@ -272,6 +290,24 @@ advisories:
           note: |
             falco-no-driver itself does not contain any code that is vulnerable to this CVE; however it pulls in libcontainer plugin from https://github.com/falcosecurity/plugins/tree/main/plugins/container which is vulnerable.
             The upstream maintainers will need to update a new version of > containerd 2.1.4 and pull that in to fix the CVE.
+
+  - id: CGA-j63j-qxq6-w479
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T09:30:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: falco-no-driver
+            componentID: a8a95bab3b89334f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.40.0
+            componentType: go-module
+            componentLocation: /usr/share/falco/plugins/libcontainer.so
+            scanner: grype
 
   - id: CGA-p5g8-rhv5-3j9g
     aliases:

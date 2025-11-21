@@ -4,6 +4,28 @@ package:
   name: apisix-ingress-controller
 
 advisories:
+  - id: CGA-452f-wh3f-rv83
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T07:30:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apisix-ingress-controller
+            componentID: 66fd78985ab67a72
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/apisix-ingress-controller
+            scanner: grype
+      - timestamp: 2025-11-21T09:30:32Z
+        type: fixed
+        data:
+          fixed-version: 1.8.4-r5
+
   - id: CGA-4xjg-frw7-h6xv
     aliases:
       - CVE-2025-58187
@@ -207,6 +229,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.8.4-r4
+
+  - id: CGA-pmm9-mr6v-j8vw
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T07:30:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apisix-ingress-controller
+            componentID: 66fd78985ab67a72
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/apisix-ingress-controller
+            scanner: grype
+      - timestamp: 2025-11-21T09:30:33Z
+        type: fixed
+        data:
+          fixed-version: 1.8.4-r5
 
   - id: CGA-pmvp-qp7m-m656
     aliases:

@@ -4,6 +4,28 @@ package:
   name: coredns-1.13
 
 advisories:
+  - id: CGA-8fhc-mhqv-pvqq
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T07:49:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: coredns-1.13
+            componentID: 48094ca610f61b14
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/coredns
+            scanner: grype
+      - timestamp: 2025-11-21T11:05:25Z
+        type: fixed
+        data:
+          fixed-version: 1.13.1-r2
+
   - id: CGA-cf7v-rrjw-ghvq
     aliases:
       - CVE-2025-58187
@@ -25,3 +47,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.13.1-r1
+
+  - id: CGA-q5hw-c923-6xgv
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T07:49:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: coredns-1.13
+            componentID: 48094ca610f61b14
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/coredns
+            scanner: grype
+      - timestamp: 2025-11-21T11:05:26Z
+        type: fixed
+        data:
+          fixed-version: 1.13.1-r2
