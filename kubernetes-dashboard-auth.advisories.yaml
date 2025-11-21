@@ -140,6 +140,24 @@ advisories:
         data:
           fixed-version: 1.2.3-r1
 
+  - id: CGA-9vxx-h7pp-hmp9
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T18:50:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dashboard-auth
+            componentID: 8eed77be05ac32ae
+            componentName: golang.org/x/crypto
+            componentVersion: v0.39.0
+            componentType: go-module
+            componentLocation: /usr/bin/dashboard-auth
+            scanner: grype
+
   - id: CGA-c8m2-x48p-632v
     aliases:
       - CVE-2024-45337
