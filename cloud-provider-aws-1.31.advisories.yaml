@@ -4,6 +4,24 @@ package:
   name: cloud-provider-aws-1.31
 
 advisories:
+  - id: CGA-2wcv-f75w-hp36
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T10:57:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-provider-aws-1.31-cloud-controller-manager
+            componentID: 46b2422108c083b1
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/aws-cloud-controller-manager
+            scanner: grype
+
   - id: CGA-77mf-8rgx-g496
     aliases:
       - CVE-2025-22866
