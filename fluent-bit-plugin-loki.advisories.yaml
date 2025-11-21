@@ -155,6 +155,24 @@ advisories:
         data:
           fixed-version: 3.3.2-r2
 
+  - id: CGA-8v4h-c999-vx2v
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T13:51:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: fluent-bit-plugin-loki
+            componentID: b92b399e41bd36ae
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /fluent-bit/bin/out_grafana_loki.so
+            scanner: grype
+
   - id: CGA-9v5x-xxw3-9h6h
     aliases:
       - CVE-2019-3826
