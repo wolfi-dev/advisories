@@ -29,3 +29,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.33.1-r2
+
+  - id: CGA-qr89-gvg9-qhvv
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T10:41:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rke2-cloud-provider
+            componentID: 9916a880fea0ded0
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/cloud-controller-manager
+            scanner: grype
