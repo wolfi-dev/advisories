@@ -4,6 +4,24 @@ package:
   name: nfpm
 
 advisories:
+  - id: CGA-7qc5-crgj-mxwr
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T21:56:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nfpm
+            componentID: 7b5d77127df7babc
+            componentName: golang.org/x/crypto
+            componentVersion: v0.37.0
+            componentType: go-module
+            componentLocation: /usr/bin/nfpm
+            scanner: grype
+
   - id: CGA-rwhh-c55p-chq7
     aliases:
       - CVE-2025-47914
