@@ -46,6 +46,24 @@ advisories:
         data:
           fixed-version: 2.5.1-r10
 
+  - id: CGA-3fxw-6xcc-hcqc
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T07:32:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-manager-webhook-pdns
+            componentID: f9bbbeb341bc7ddc
+            componentName: golang.org/x/crypto
+            componentVersion: v0.40.0
+            componentType: go-module
+            componentLocation: /usr/bin/webhook
+            scanner: grype
+
   - id: CGA-4h67-68h3-pg8m
     aliases:
       - CVE-2024-34155
