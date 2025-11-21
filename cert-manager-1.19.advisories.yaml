@@ -4,6 +4,24 @@ package:
   name: cert-manager-1.19
 
 advisories:
+  - id: CGA-5h43-w359-fjhx
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T12:07:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-manager-1.19
+            componentID: f418876a3285e08c
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/controller
+            scanner: grype
+
   - id: CGA-f796-37g3-jh2m
     aliases:
       - CVE-2025-47914
