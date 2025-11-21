@@ -43,3 +43,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.18.0-r2
+
+  - id: CGA-vjj7-4hjq-g834
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T15:40:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cilium-1.18
+            componentID: ce90319c5154cc14
+            componentName: golang.org/x/crypto
+            componentVersion: v0.40.0
+            componentType: go-module
+            componentLocation: /usr/bin/cilium-operator-generic
+            scanner: grype
