@@ -347,3 +347,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.7.27-r3
+
+  - id: CGA-x9qw-7574-69c3
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T10:06:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: containerd-1
+            componentID: 337dacbadfe48a06
+            componentName: golang.org/x/crypto
+            componentVersion: v0.40.0
+            componentType: go-module
+            componentLocation: /usr/bin/containerd
+            scanner: grype
