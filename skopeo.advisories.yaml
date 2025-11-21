@@ -806,6 +806,24 @@ advisories:
         data:
           note: 'Bumping the affected package results in build failures due to incompatible transitive dependencies: upstream will need to issue a fixed version'
 
+  - id: CGA-x5mr-7337-6w36
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T20:23:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: skopeo
+            componentID: 757a237f2897de9c
+            componentName: golang.org/x/crypto
+            componentVersion: v0.40.0
+            componentType: go-module
+            componentLocation: /usr/bin/skopeo
+            scanner: grype
+
   - id: CGA-x5wg-hmpq-7x6f
     aliases:
       - CVE-2024-6104
