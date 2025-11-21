@@ -542,6 +542,24 @@ advisories:
         data:
           fixed-version: 2.0.5-r3
 
+  - id: CGA-83hw-rmcw-vjrf
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T20:36:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-persistence_agent
+            componentID: 69327797c1f3db7c
+            componentName: golang.org/x/crypto
+            componentVersion: v0.38.0
+            componentType: go-module
+            componentLocation: /usr/bin/apiserver
+            scanner: grype
+
   - id: CGA-8w92-879x-f9wc
     aliases:
       - CVE-2024-43796
