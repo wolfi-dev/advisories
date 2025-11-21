@@ -818,6 +818,24 @@ advisories:
             More information can be found here: https://github.com/pypa/pip/tree/30807c4d9e62e0ba65ad80d441dba55e76ddf5e4/src/pip/_vendor#modifications
             We've upgraded setuptools to 78.1.1 in kubeflow-katib to remediate the CVE.
 
+  - id: CGA-rj88-rq8g-qr4c
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T22:44:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: katib-controller
+            componentID: 4fa0f43d9e54b326
+            componentName: golang.org/x/crypto
+            componentVersion: v0.39.0
+            componentType: go-module
+            componentLocation: /usr/bin/katib-controller
+            scanner: grype
+
   - id: CGA-rqq2-mvw9-ffrq
     aliases:
       - CVE-2025-47907
