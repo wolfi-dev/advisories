@@ -45,6 +45,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This vulnerability is being detected erroneously since this issue has been fixed since docker 25.0.4 and we currently ship v25.0.6
 
+  - id: CGA-86r6-hmrp-26mh
+    aliases:
+      - CVE-2025-7736
+      - GHSA-7hhv-h469-wc4q
+    events:
+      - timestamp: 2025-11-21T15:28:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-18.5
+            componentID: 90b1c8a85b5e8525
+            componentName: gitlab-runner-helper-18.5
+            componentVersion: 18.5.0-r1
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-h2gq-3wf5-h9p5
     aliases:
       - CVE-2025-12983
