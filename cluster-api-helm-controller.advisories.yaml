@@ -49,6 +49,24 @@ advisories:
         data:
           fixed-version: 0.4.1-r1
 
+  - id: CGA-4cfq-f332-82j6
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T09:39:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-api-helm-controller
+            componentID: 683638d8553c1df3
+            componentName: golang.org/x/crypto
+            componentVersion: v0.41.0
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-api-helm-controller
+            scanner: grype
+
   - id: CGA-4qjc-r587-7h26
     aliases:
       - CVE-2025-47910
