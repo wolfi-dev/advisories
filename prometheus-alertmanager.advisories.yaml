@@ -271,6 +271,24 @@ advisories:
         data:
           fixed-version: 0.28.1-r2
 
+  - id: CGA-84vv-76vp-2r6j
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T20:50:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-alertmanager
+            componentID: ea02f7fa476f084f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/alertmanager
+            scanner: grype
+
   - id: CGA-8rcw-gx4p-qv43
     aliases:
       - CVE-2025-22872
