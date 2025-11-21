@@ -302,6 +302,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This package uses a newer version v2.10.14 when the vulnerable code affects an older version.
 
+  - id: CGA-7xjv-q2p6-r7vf
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T21:02:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nats-server
+            componentID: eb5fd76dfb48464c
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/nats-server
+            scanner: grype
+
   - id: CGA-829p-372f-8g46
     aliases:
       - CVE-2023-45284
