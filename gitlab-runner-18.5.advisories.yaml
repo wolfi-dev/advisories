@@ -4,6 +4,24 @@ package:
   name: gitlab-runner-18.5
 
 advisories:
+  - id: CGA-39jc-v958-mphp
+    aliases:
+      - CVE-2025-2615
+      - GHSA-rm4r-vwvw-vj67
+    events:
+      - timestamp: 2025-11-21T15:28:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-18.5
+            componentID: 90b1c8a85b5e8525
+            componentName: gitlab-runner-helper-18.5
+            componentVersion: 18.5.0-r1
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-7xj6-5ccp-h63g
     aliases:
       - CVE-2024-36623
