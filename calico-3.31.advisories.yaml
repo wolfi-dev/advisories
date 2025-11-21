@@ -4,6 +4,24 @@ package:
   name: calico-3.31
 
 advisories:
+  - id: CGA-3rfx-37jf-6cp4
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T15:37:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: calico-typhad-3.31
+            componentID: cda96041b1f1b7f8
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/calico-node
+            scanner: grype
+
   - id: CGA-9486-6x94-j37p
     aliases:
       - CVE-2025-47914
