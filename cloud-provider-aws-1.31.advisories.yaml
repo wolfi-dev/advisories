@@ -151,6 +151,24 @@ advisories:
         data:
           fixed-version: 1.31.4-r3
 
+  - id: CGA-g8m6-prg6-ww2r
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T10:57:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-provider-aws-1.31-cloud-controller-manager
+            componentID: 46b2422108c083b1
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/aws-cloud-controller-manager
+            scanner: grype
+
   - id: CGA-jg4f-4q8c-p6c4
     aliases:
       - CVE-2025-22868
