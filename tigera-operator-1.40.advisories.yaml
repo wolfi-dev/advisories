@@ -4,6 +4,24 @@ package:
   name: tigera-operator-1.40
 
 advisories:
+  - id: CGA-26qq-7cqr-j7fp
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T16:17:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tigera-operator-1.40
+            componentID: c664d534694c9646
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/operator
+            scanner: grype
+
   - id: CGA-2rff-x567-x4rx
     aliases:
       - CVE-2025-47914
