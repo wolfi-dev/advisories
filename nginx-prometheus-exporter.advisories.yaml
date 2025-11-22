@@ -113,6 +113,24 @@ advisories:
         data:
           fixed-version: 1.4.2-r7
 
+  - id: CGA-997x-72mw-vghp
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T07:08:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nginx-prometheus-exporter
+            componentID: 7d48652a6c814151
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/nginx-prometheus-exporter
+            scanner: grype
+
   - id: CGA-9mxv-p6rf-jmg2
     aliases:
       - CVE-2024-45341
