@@ -4,6 +4,24 @@ package:
   name: prometheus-3.7
 
 advisories:
+  - id: CGA-98gv-5m6f-pp55
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T20:17:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-3.7
+            componentID: b3498b988dec8a8d
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/prometheus
+            scanner: grype
+
   - id: CGA-9vg2-cg26-8gg9
     aliases:
       - CVE-2025-47914
