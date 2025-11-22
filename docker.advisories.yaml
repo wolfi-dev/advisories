@@ -306,6 +306,24 @@ advisories:
         data:
           fixed-version: 28.1.0-r0
 
+  - id: CGA-9x2q-hqf9-2ccv
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T04:54:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dockerd
+            componentID: 1669450c89414963
+            componentName: golang.org/x/crypto
+            componentVersion: v0.37.0
+            componentType: go-module
+            componentLocation: /usr/bin/dockerd
+            scanner: grype
+
   - id: CGA-c58j-f664-3rrr
     aliases:
       - CVE-2024-23653
