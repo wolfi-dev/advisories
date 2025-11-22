@@ -229,6 +229,24 @@ advisories:
         data:
           fixed-version: 2.14.0-r1
 
+  - id: CGA-wcwp-3vh9-7pw7
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T18:22:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-2.14
+            componentID: 0155a823303668c5
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-registryctl
+            scanner: grype
+
   - id: CGA-wfpc-5x86-45jg
     aliases:
       - CVE-2025-58189
