@@ -4,6 +4,50 @@ package:
   name: k8s_gateway
 
 advisories:
+  - id: CGA-248r-vw26-rgf2
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T14:01:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k8s_gateway
+            componentID: 2b3a0b3cd09e4060
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/coredns
+            scanner: grype
+      - timestamp: 2025-11-21T22:06:01Z
+        type: fixed
+        data:
+          fixed-version: 1.6.1-r1
+
+  - id: CGA-6f94-jrcq-vjpq
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T14:01:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k8s_gateway
+            componentID: 2b3a0b3cd09e4060
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/coredns
+            scanner: grype
+      - timestamp: 2025-11-21T22:06:02Z
+        type: fixed
+        data:
+          fixed-version: 1.6.1-r1
+
   - id: CGA-6mfw-qm39-jffj
     aliases:
       - CVE-2025-47907
