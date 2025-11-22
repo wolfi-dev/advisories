@@ -132,6 +132,24 @@ advisories:
         data:
           note: selinux is pinned to v1.11.1 upstream (https://github.com/k3s-io/k3s/blob/main/go.mod#L22) and trying to bump it to the fixed version for this CVE v1.13.0 causes build failures. Upstream maintainers will need to update the upstream code to the fixed version of selinux.
 
+  - id: CGA-g2vh-f33f-hxpf
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T18:17:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s-1.33
+            componentID: 2fbcb5eb436be112
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/k3s
+            scanner: grype
+
   - id: CGA-hf79-qpx3-hh49
     aliases:
       - CVE-2024-25621
