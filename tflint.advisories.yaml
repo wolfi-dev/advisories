@@ -4,6 +4,28 @@ package:
   name: tflint
 
 advisories:
+  - id: CGA-2f6x-qgx8-545p
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T14:37:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tflint
+            componentID: 4522ab8ed8104483
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/tflint
+            scanner: grype
+      - timestamp: 2025-11-21T23:46:59Z
+        type: fixed
+        data:
+          fixed-version: 0.60.0-r1
+
   - id: CGA-323p-mrpc-24p8
     aliases:
       - CVE-2024-24785
@@ -79,6 +101,28 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CGA-5mmf-2465-6vxf
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T14:37:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tflint
+            componentID: 4522ab8ed8104483
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/tflint
+            scanner: grype
+      - timestamp: 2025-11-21T23:47:00Z
+        type: fixed
+        data:
+          fixed-version: 0.60.0-r1
 
   - id: CGA-5w2p-j6rq-j2c5
     aliases:
