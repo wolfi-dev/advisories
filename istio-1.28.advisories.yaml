@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: istio-1.28
+
+advisories:
+  - id: CGA-j74p-687w-82fj
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T20:41:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: istio-pilot-discovery-1.28
+            componentID: b6a6c749ce84cdb3
+            componentName: golang.org/x/crypto
+            componentVersion: v0.41.0
+            componentType: go-module
+            componentLocation: /usr/bin/istio-cni
+            scanner: grype
