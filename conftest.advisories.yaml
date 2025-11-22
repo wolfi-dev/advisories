@@ -762,6 +762,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability is in the container runtime itself, not clients of the container runtime.
 
+  - id: CGA-vm26-m7qf-2f45
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T02:59:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: conftest
+            componentID: febae51e12b2d636
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/conftest
+            scanner: grype
+
   - id: CGA-vm5p-3grr-76qm
     aliases:
       - CVE-2024-24786
