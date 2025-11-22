@@ -4,6 +4,24 @@ package:
   name: verticadb-operator
 
 advisories:
+  - id: CGA-28fh-wm7q-w32p
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T18:02:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: verticadb-operator
+            componentID: 85e46c7d45860408
+            componentName: golang.org/x/crypto
+            componentVersion: v0.38.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-3c2v-pqr4-jf9p
     aliases:
       - CVE-2025-47907
