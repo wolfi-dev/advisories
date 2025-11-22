@@ -233,6 +233,29 @@ advisories:
         data:
           fixed-version: 0.7.3-r2
 
+  - id: CGA-763x-ww29-hx9p
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T06:45:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-bench
+            componentID: 7db7e436b47ac14a
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-bench
+            scanner: grype
+      - timestamp: 2025-11-22T07:43:32Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-7jfq-cxj6-9g3p
     aliases:
       - CVE-2024-45336
@@ -242,6 +265,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.10.0-r1
+
+  - id: CGA-88f4-2xc3-cpxg
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T06:45:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-bench
+            componentID: 7db7e436b47ac14a
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-bench
+            scanner: grype
 
   - id: CGA-8rhc-266p-3322
     aliases:

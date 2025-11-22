@@ -306,6 +306,28 @@ advisories:
         data:
           fixed-version: 28.1.0-r0
 
+  - id: CGA-9x2q-hqf9-2ccv
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T04:54:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dockerd
+            componentID: 1669450c89414963
+            componentName: golang.org/x/crypto
+            componentVersion: v0.37.0
+            componentType: go-module
+            componentLocation: /usr/bin/dockerd
+            scanner: grype
+      - timestamp: 2025-11-22T08:15:02Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in dockerd-28.5.2-r4.apk, at usr/bin/dockerd, usr/bin/dockerd.'
+
   - id: CGA-c58j-f664-3rrr
     aliases:
       - CVE-2024-23653
@@ -685,6 +707,24 @@ advisories:
         data:
           type: vulnerable-code-version-not-used
           note: 'Module "github.com/docker/docker" at "/usr/bin/dockerd": the fixed version tagged v1.3.3 is an ancestor of installed version tagged v26.1.3 commit (8e96db1c328d0467b015768e42a62c0f834970bb), which means the installed version was misidentified by the scanner and the vulnerability has actually been fixed.'
+
+  - id: CGA-mp2c-qjvx-c55w
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T04:54:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dockerd
+            componentID: 1669450c89414963
+            componentName: golang.org/x/crypto
+            componentVersion: v0.37.0
+            componentType: go-module
+            componentLocation: /usr/bin/dockerd
+            scanner: grype
 
   - id: CGA-mp9q-ffq9-8h2q
     aliases:

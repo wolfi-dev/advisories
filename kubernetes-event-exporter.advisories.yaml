@@ -155,6 +155,29 @@ advisories:
         data:
           fixed-version: 1.7-r12
 
+  - id: CGA-7957-2gc2-86m8
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T00:03:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-event-exporter
+            componentID: 905600018548c56a
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/kubernetes-event-exporter
+            scanner: grype
+      - timestamp: 2025-11-22T08:57:15Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-7g63-v6wx-2ww8
     aliases:
       - CVE-2025-58185
@@ -575,6 +598,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.7-r47
+
+  - id: CGA-q9gg-43q2-xwp9
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T00:03:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-event-exporter
+            componentID: 905600018548c56a
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/kubernetes-event-exporter
+            scanner: grype
 
   - id: CGA-qr7p-87fx-p5mv
     aliases:

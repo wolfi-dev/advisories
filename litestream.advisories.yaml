@@ -84,6 +84,29 @@ advisories:
         data:
           fixed-version: 0.3.13-r4
 
+  - id: CGA-69c3-f4gh-6qqp
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T00:05:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: litestream
+            componentID: 5296fa7ae6e2bf8c
+            componentName: golang.org/x/crypto
+            componentVersion: v0.41.0
+            componentType: go-module
+            componentLocation: /usr/bin/litestream
+            scanner: grype
+      - timestamp: 2025-11-22T07:39:56Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-6mf7-89fx-38q8
     aliases:
       - CVE-2024-34156
@@ -267,6 +290,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.3.13-r1
+
+  - id: CGA-h846-c5xr-vpj2
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T00:05:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: litestream
+            componentID: 5296fa7ae6e2bf8c
+            componentName: golang.org/x/crypto
+            componentVersion: v0.41.0
+            componentType: go-module
+            componentLocation: /usr/bin/litestream
+            scanner: grype
 
   - id: CGA-j7g9-8m3m-8m5f
     aliases:

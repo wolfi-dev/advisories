@@ -14,6 +14,47 @@ advisories:
         data:
           fixed-version: 1.22.1-r0
 
+  - id: CGA-5m24-4wch-2m42
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T00:44:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mailpit
+            componentID: 6d7f09388e0ab562
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/mailpit
+            scanner: grype
+      - timestamp: 2025-11-22T08:50:25Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
+  - id: CGA-6hrx-4mhg-8qrp
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T00:44:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mailpit
+            componentID: 6d7f09388e0ab562
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/mailpit
+            scanner: grype
+
   - id: CGA-6xfg-p2h4-5g47
     aliases:
       - CVE-2024-45338

@@ -57,6 +57,29 @@ advisories:
         data:
           fixed-version: 2.36.0-r1
 
+  - id: CGA-539j-fw4p-f7fj
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T05:58:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: temporal-ui-server
+            componentID: a1fc8aea702ae518
+            componentName: golang.org/x/crypto
+            componentVersion: v0.38.0
+            componentType: go-module
+            componentLocation: /usr/bin/ui-server
+            scanner: grype
+      - timestamp: 2025-11-22T09:04:27Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-5g4h-fv44-pq79
     aliases:
       - CVE-2024-24790
@@ -278,6 +301,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.24.0-r1
+
+  - id: CGA-p5wg-hcx2-c9h9
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T05:58:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: temporal-ui-server
+            componentID: a1fc8aea702ae518
+            componentName: golang.org/x/crypto
+            componentVersion: v0.38.0
+            componentType: go-module
+            componentLocation: /usr/bin/ui-server
+            scanner: grype
 
   - id: CGA-pc4w-4863-9p9g
     aliases:

@@ -253,3 +253,44 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.11.0-r0
+
+  - id: CGA-g3pp-gjq6-56p4
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T03:57:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: timescaledb-parallel-copy
+            componentID: 2b1e1f216bae9499
+            componentName: golang.org/x/crypto
+            componentVersion: v0.35.0
+            componentType: go-module
+            componentLocation: /usr/bin/timescaledb-parallel-copy
+            scanner: grype
+      - timestamp: 2025-11-22T07:10:59Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
+  - id: CGA-xrxv-h73p-xvpw
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T03:57:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: timescaledb-parallel-copy
+            componentID: 2b1e1f216bae9499
+            componentName: golang.org/x/crypto
+            componentVersion: v0.35.0
+            componentType: go-module
+            componentLocation: /usr/bin/timescaledb-parallel-copy
+            scanner: grype

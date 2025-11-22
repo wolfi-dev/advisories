@@ -173,6 +173,29 @@ advisories:
         data:
           fixed-version: 0.31.0-r2
 
+  - id: CGA-hxgp-g75j-m73g
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T03:31:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: swagger
+            componentID: 589ee6ba62ccdcc4
+            componentName: golang.org/x/crypto
+            componentVersion: v0.41.0
+            componentType: go-module
+            componentLocation: /usr/bin/swagger
+            scanner: grype
+      - timestamp: 2025-11-22T07:46:03Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-j2vp-3c9r-q5h4
     aliases:
       - CVE-2025-22869
@@ -303,3 +326,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.32.3-r6
+
+  - id: CGA-xvhh-qrqm-v444
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T03:31:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: swagger
+            componentID: 589ee6ba62ccdcc4
+            componentName: golang.org/x/crypto
+            componentVersion: v0.41.0
+            componentType: go-module
+            componentLocation: /usr/bin/swagger
+            scanner: grype

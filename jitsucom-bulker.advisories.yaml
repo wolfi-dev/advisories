@@ -4,6 +4,29 @@ package:
   name: jitsucom-bulker
 
 advisories:
+  - id: CGA-33vj-r2gr-8xvc
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T13:52:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jitsucom-bulker-syncctl
+            componentID: b2c7a34210ba30c4
+            componentName: golang.org/x/crypto
+            componentVersion: v0.41.0
+            componentType: go-module
+            componentLocation: /usr/bin/sidecar
+            scanner: grype
+      - timestamp: 2025-11-22T08:05:27Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-374q-wg5q-4gpr
     aliases:
       - CVE-2024-34156
@@ -175,6 +198,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.8.4-r3
+
+  - id: CGA-99qw-wwgh-vrc2
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T13:52:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jitsucom-bulker-syncctl
+            componentID: b2c7a34210ba30c4
+            componentName: golang.org/x/crypto
+            componentVersion: v0.41.0
+            componentType: go-module
+            componentLocation: /usr/bin/sidecar
+            scanner: grype
 
   - id: CGA-c4c2-qmgj-pxp8
     aliases:

@@ -4,6 +4,29 @@ package:
   name: percona-server-mongodb-operator
 
 advisories:
+  - id: CGA-2vcj-hx68-c2p3
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T04:13:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: percona-server-mongodb-operator
+            componentID: 2714c93a24e40a65
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/mongodb-healthcheck
+            scanner: grype
+      - timestamp: 2025-11-22T08:51:47Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-g8q2-6qf7-8g76
     aliases:
       - CVE-2025-4673
@@ -51,6 +74,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.20.1-r1
+
+  - id: CGA-p69j-2pxw-rvx8
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T04:13:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: percona-server-mongodb-operator
+            componentID: 2714c93a24e40a65
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/mongodb-healthcheck
+            scanner: grype
 
   - id: CGA-qqgm-78q3-mw6x
     aliases:
