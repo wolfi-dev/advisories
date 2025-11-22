@@ -4,6 +4,24 @@ package:
   name: rancher-telemetry
 
 advisories:
+  - id: CGA-2hwm-q8fq-5x43
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T10:55:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-telemetry
+            componentID: 4b67cc4f39761f2f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/telemetry
+            scanner: grype
+
   - id: CGA-38mr-pcgv-gr53
     aliases:
       - CVE-2025-58187
@@ -25,6 +43,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.6.2-r5
+
+  - id: CGA-3g5j-cpc3-vc5x
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T10:55:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-telemetry
+            componentID: 4b67cc4f39761f2f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/telemetry
+            scanner: grype
 
   - id: CGA-4v73-fj8j-4v27
     aliases:
