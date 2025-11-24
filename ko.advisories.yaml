@@ -206,6 +206,29 @@ advisories:
         data:
           fixed-version: 0.15.2-r4
 
+  - id: CGA-6947-g8j5-4ffg
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T00:06:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ko
+            componentID: 50f4051a3223988b
+            componentName: golang.org/x/crypto
+            componentVersion: v0.38.0
+            componentType: go-module
+            componentLocation: /usr/bin/ko
+            scanner: grype
+      - timestamp: 2025-11-22T08:49:07Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-6j35-rgmj-qc44
     aliases:
       - CVE-2025-61723
@@ -496,6 +519,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.18.0-r7
+
+  - id: CGA-frg3-xx3w-3mwj
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T00:06:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ko
+            componentID: 50f4051a3223988b
+            componentName: golang.org/x/crypto
+            componentVersion: v0.38.0
+            componentType: go-module
+            componentLocation: /usr/bin/ko
+            scanner: grype
+      - timestamp: 2025-11-22T13:30:08Z
+        type: fixed
+        data:
+          fixed-version: 0.18.0-r8
 
   - id: CGA-g7w2-mfpj-6823
     aliases:

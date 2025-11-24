@@ -232,6 +232,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-84rv-x9x4-rm63
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T15:53:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm
+            componentID: d3b5392ddbca8a91
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/helm
+            scanner: grype
+      - timestamp: 2025-11-22T02:18:41Z
+        type: fixed
+        data:
+          fixed-version: 4.0.0-r1
+
   - id: CGA-8893-2h9f-wpwr
     aliases:
       - CVE-2023-44487
@@ -481,6 +503,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.17.2-r1
+
+  - id: CGA-j3wv-qxrm-8v3c
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T15:53:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm
+            componentID: d3b5392ddbca8a91
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/helm
+            scanner: grype
+      - timestamp: 2025-11-22T02:18:42Z
+        type: fixed
+        data:
+          fixed-version: 4.0.0-r1
 
   - id: CGA-jhc8-2769-7c42
     aliases:

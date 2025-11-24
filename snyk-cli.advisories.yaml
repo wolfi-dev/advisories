@@ -4,6 +4,28 @@ package:
   name: snyk-cli
 
 advisories:
+  - id: CGA-239f-44px-vcpm
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T23:46:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: snyk-cli
+            componentID: 7f7a035e6ecb9c86
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/snyk
+            scanner: grype
+      - timestamp: 2025-11-22T12:49:57Z
+        type: fixed
+        data:
+          fixed-version: 1.1301.0-r1
+
   - id: CGA-2jhg-gcv8-grxj
     aliases:
       - CVE-2025-22869
@@ -198,6 +220,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.1291.1-r1
+
+  - id: CGA-c86c-vr8m-2mgx
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T23:46:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: snyk-cli
+            componentID: 7f7a035e6ecb9c86
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/snyk
+            scanner: grype
+      - timestamp: 2025-11-22T12:49:58Z
+        type: fixed
+        data:
+          fixed-version: 1.1301.0-r1
 
   - id: CGA-cv57-7xvq-3j53
     aliases:

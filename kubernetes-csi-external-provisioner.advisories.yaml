@@ -24,6 +24,28 @@ advisories:
         data:
           fixed-version: 5.0.1-r1
 
+  - id: CGA-3rp3-c2qp-5q4g
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T20:16:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-provisioner
+            componentID: e76dc1e4c3c45133
+            componentName: golang.org/x/crypto
+            componentVersion: v0.41.0
+            componentType: go-module
+            componentLocation: /usr/bin/csi-provisioner
+            scanner: grype
+      - timestamp: 2025-11-22T06:30:16Z
+        type: fixed
+        data:
+          fixed-version: 6.1.0-r1
+
   - id: CGA-53h6-2c43-gr72
     aliases:
       - CVE-2023-39325
@@ -191,6 +213,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 5.1.0-r1
+
+  - id: CGA-8rxm-hg3p-q4rm
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T20:16:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-provisioner
+            componentID: e76dc1e4c3c45133
+            componentName: golang.org/x/crypto
+            componentVersion: v0.41.0
+            componentType: go-module
+            componentLocation: /usr/bin/csi-provisioner
+            scanner: grype
+      - timestamp: 2025-11-22T06:30:17Z
+        type: fixed
+        data:
+          fixed-version: 6.1.0-r1
 
   - id: CGA-92vj-8gqc-78m4
     aliases:

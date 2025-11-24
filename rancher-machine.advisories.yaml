@@ -333,6 +333,28 @@ advisories:
         data:
           note: 'rancher-machine is fork of docker/machine and uses quite old 1.4.2 version of moby/moby dependency that released at 2017. Bumping the moby/moby package to newer versions resulting build failure and we can''t mitigate this. '
 
+  - id: CGA-g5p9-2qc3-hcjq
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T08:01:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-machine
+            componentID: f9e2f0426120f287
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/rancher-machine
+            scanner: grype
+      - timestamp: 2025-11-22T23:09:43Z
+        type: fixed
+        data:
+          fixed-version: 0.15.0.137-r1
+
   - id: CGA-jgqm-q3xp-wcc6
     aliases:
       - CVE-2025-47907
@@ -355,6 +377,28 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
+
+  - id: CGA-jh24-2xwx-gvfg
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T08:01:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-machine
+            componentID: f9e2f0426120f287
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/rancher-machine
+            scanner: grype
+      - timestamp: 2025-11-22T23:09:44Z
+        type: fixed
+        data:
+          fixed-version: 0.15.0.137-r1
 
   - id: CGA-qrpj-mpf2-373m
     aliases:

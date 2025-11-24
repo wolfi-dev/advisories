@@ -26,3 +26,47 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
+
+  - id: CGA-7g3x-666c-jfqx
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T12:45:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-sql-proxy-2.18
+            componentID: 0f142d2e50661791
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/cloud-sql-proxy
+            scanner: grype
+      - timestamp: 2025-11-21T19:11:10Z
+        type: fixed
+        data:
+          fixed-version: 2.18.3-r1
+
+  - id: CGA-q93p-rf6j-f78g
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T12:45:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-sql-proxy-2.18
+            componentID: 0f142d2e50661791
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/cloud-sql-proxy
+            scanner: grype
+      - timestamp: 2025-11-21T19:11:10Z
+        type: fixed
+        data:
+          fixed-version: 2.18.3-r1

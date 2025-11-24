@@ -26,6 +26,29 @@ advisories:
         data:
           fixed-version: 1.0.1-r7
 
+  - id: CGA-25rv-5f7c-6253
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T12:54:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-helm-controller
+            componentID: bc538e960478b38f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/helm-controller
+            scanner: grype
+      - timestamp: 2025-11-21T19:05:22Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-2g2c-w64c-fmm8
     aliases:
       - CVE-2025-22872
@@ -750,6 +773,29 @@ advisories:
         data:
           type: vulnerability-record-analysis-contested
           note: 'This is not a vulnerability. Learn more about the response from Helm: https://helm.sh/blog/response-cve-2019-25210'
+
+  - id: CGA-vg9w-5j8h-pmgg
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T12:54:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flux-helm-controller
+            componentID: bc538e960478b38f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/helm-controller
+            scanner: grype
+      - timestamp: 2025-11-22T07:08:20Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
 
   - id: CGA-vpfx-v8h9-657f
     aliases:

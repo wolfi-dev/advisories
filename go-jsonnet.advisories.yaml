@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: go-jsonnet
+
+advisories:
+  - id: CGA-cx2r-jg5m-8x72
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T16:22:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: go-jsonnet
+            componentID: 54050538c183889b
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/jsonnet
+            scanner: grype
+      - timestamp: 2025-11-22T02:53:49Z
+        type: fixed
+        data:
+          fixed-version: 0.21.0-r1
+
+  - id: CGA-g9qq-vf2m-9rf7
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T16:22:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: go-jsonnet
+            componentID: 54050538c183889b
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/jsonnet
+            scanner: grype
+      - timestamp: 2025-11-22T02:53:50Z
+        type: fixed
+        data:
+          fixed-version: 0.21.0-r1

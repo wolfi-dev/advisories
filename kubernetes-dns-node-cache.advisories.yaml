@@ -4,6 +4,50 @@ package:
   name: kubernetes-dns-node-cache
 
 advisories:
+  - id: CGA-2p3f-wmpx-fp5w
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T21:47:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dns-node-cache
+            componentID: 57be38f4e87f2852
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/node-cache
+            scanner: grype
+      - timestamp: 2025-11-22T09:10:31Z
+        type: fixed
+        data:
+          fixed-version: 1.26.7-r1
+
+  - id: CGA-2xjv-5v98-qp3j
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T21:47:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dns-node-cache
+            componentID: 57be38f4e87f2852
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/node-cache
+            scanner: grype
+      - timestamp: 2025-11-22T09:10:32Z
+        type: fixed
+        data:
+          fixed-version: 1.26.7-r1
+
   - id: CGA-42wm-qf33-wg92
     aliases:
       - CVE-2023-45284

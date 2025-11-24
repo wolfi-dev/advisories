@@ -4,6 +4,50 @@ package:
   name: juicefs-csi-driver
 
 advisories:
+  - id: CGA-5vjq-gg58-65rf
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T20:56:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: juicefs-csi-driver
+            componentID: 62ea520163973a00
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/juicefs-csi-driver
+            scanner: grype
+      - timestamp: 2025-11-22T07:34:25Z
+        type: fixed
+        data:
+          fixed-version: 0.30.2-r1
+
+  - id: CGA-j255-jhjh-7vq8
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T20:56:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: juicefs-csi-driver
+            componentID: 62ea520163973a00
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/juicefs-csi-driver
+            scanner: grype
+      - timestamp: 2025-11-22T07:34:26Z
+        type: fixed
+        data:
+          fixed-version: 0.30.2-r1
+
   - id: CGA-xvjj-f5gx-43r9
     aliases:
       - CVE-2025-47907

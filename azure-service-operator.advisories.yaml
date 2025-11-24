@@ -26,6 +26,29 @@ advisories:
         data:
           fixed-version: 2.12.0-r3
 
+  - id: CGA-4f78-r7f5-j995
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T07:23:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: azure-service-operator
+            componentID: 1ca3ab1e07cc4205
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/aso-controller
+            scanner: grype
+      - timestamp: 2025-11-22T07:06:42Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-8rhp-38h9-wjmx
     aliases:
       - CVE-2025-22874
@@ -47,6 +70,29 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.13.0-r3
+
+  - id: CGA-95pj-8wmr-m367
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T07:23:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: azure-service-operator
+            componentID: 1ca3ab1e07cc4205
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/aso-controller
+            scanner: grype
+      - timestamp: 2025-11-23T07:03:50Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
 
   - id: CGA-gqm6-gxf6-vxpv
     aliases:

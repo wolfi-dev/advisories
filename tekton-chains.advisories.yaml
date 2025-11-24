@@ -100,6 +100,29 @@ advisories:
         data:
           fixed-version: 0.20.1-r5
 
+  - id: CGA-4rww-gvq3-m688
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T15:01:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tekton-chains
+            componentID: 4109314e46435bc6
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/tekton-chains
+            scanner: grype
+      - timestamp: 2025-11-22T19:46:51Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-5hf5-gmr3-599c
     aliases:
       - CVE-2025-22869
@@ -709,6 +732,29 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.20.1-r1
+
+  - id: CGA-vmf4-pj2x-q38q
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T15:01:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tekton-chains
+            componentID: 4109314e46435bc6
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/tekton-chains
+            scanner: grype
+      - timestamp: 2025-11-23T11:07:26Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
 
   - id: CGA-vx4m-5wgh-cjrj
     aliases:

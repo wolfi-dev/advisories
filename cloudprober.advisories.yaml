@@ -27,6 +27,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-43jm-h4v5-j898
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T10:40:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloudprober
+            componentID: fbc5b330c90be0ab
+            componentName: golang.org/x/crypto
+            componentVersion: v0.37.0
+            componentType: go-module
+            componentLocation: /usr/bin/cloudprober
+            scanner: grype
+      - timestamp: 2025-11-21T14:46:58Z
+        type: fixed
+        data:
+          fixed-version: 0.14.1-r2
+
   - id: CGA-47r9-36jr-c26g
     aliases:
       - CVE-2024-45338
@@ -200,6 +222,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.14.0-r2
+
+  - id: CGA-pm4f-2h68-75gg
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T10:40:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloudprober
+            componentID: fbc5b330c90be0ab
+            componentName: golang.org/x/crypto
+            componentVersion: v0.37.0
+            componentType: go-module
+            componentLocation: /usr/bin/cloudprober
+            scanner: grype
+      - timestamp: 2025-11-21T14:46:59Z
+        type: fixed
+        data:
+          fixed-version: 0.14.1-r2
 
   - id: CGA-wv7w-9jhf-g93w
     aliases:

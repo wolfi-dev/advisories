@@ -760,6 +760,28 @@ advisories:
         data:
           fixed-version: 0.15.0-r7
 
+  - id: CGA-qpmx-vh5p-7h3r
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T22:44:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: katib-controller
+            componentID: 4fa0f43d9e54b326
+            componentName: golang.org/x/crypto
+            componentVersion: v0.39.0
+            componentType: go-module
+            componentLocation: /usr/bin/katib-controller
+            scanner: grype
+      - timestamp: 2025-11-22T10:59:25Z
+        type: fixed
+        data:
+          fixed-version: 0.19.0-r1
+
   - id: CGA-r437-mpvw-qphf
     aliases:
       - CVE-2023-45288
@@ -817,6 +839,28 @@ advisories:
             GHSA-5rjg-fvgr-3xxf is detected because pip vendors setuptools (v70.3.0), but only includes pkg_resources, making it non-vulnerable.
             More information can be found here: https://github.com/pypa/pip/tree/30807c4d9e62e0ba65ad80d441dba55e76ddf5e4/src/pip/_vendor#modifications
             We've upgraded setuptools to 78.1.1 in kubeflow-katib to remediate the CVE.
+
+  - id: CGA-rj88-rq8g-qr4c
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T22:44:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: katib-controller
+            componentID: 4fa0f43d9e54b326
+            componentName: golang.org/x/crypto
+            componentVersion: v0.39.0
+            componentType: go-module
+            componentLocation: /usr/bin/katib-controller
+            scanner: grype
+      - timestamp: 2025-11-22T10:59:26Z
+        type: fixed
+        data:
+          fixed-version: 0.19.0-r1
 
   - id: CGA-rqq2-mvw9-ffrq
     aliases:

@@ -4,6 +4,29 @@ package:
   name: dkron
 
 advisories:
+  - id: CGA-fgcr-qqmr-hcvj
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T18:37:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dkron
+            componentID: 86f284fba73ee13f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/dkron-executor-gcppubsub
+            scanner: grype
+      - timestamp: 2025-11-22T08:12:19Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-fjff-8ghh-79mv
     aliases:
       - CVE-2025-47907
@@ -48,3 +71,26 @@ advisories:
         type: fixed
         data:
           fixed-version: 4.0.8-r1
+
+  - id: CGA-hv9r-mwm6-p398
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T18:37:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dkron
+            componentID: 86f284fba73ee13f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/dkron-executor-gcppubsub
+            scanner: grype
+      - timestamp: 2025-11-23T08:09:14Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.

@@ -4,6 +4,28 @@ package:
   name: ipfs-cluster
 
 advisories:
+  - id: CGA-2x87-j329-gcj9
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T17:06:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ipfs-cluster
+            componentID: 9f1fd60119b7b6c6
+            componentName: golang.org/x/crypto
+            componentVersion: v0.38.0
+            componentType: go-module
+            componentLocation: /usr/bin/ipfs-cluster-ctl
+            scanner: grype
+      - timestamp: 2025-11-22T04:33:53Z
+        type: fixed
+        data:
+          fixed-version: 1.1.4-r9
+
   - id: CGA-3g23-7x2c-rgwc
     aliases:
       - CVE-2025-47907
@@ -289,3 +311,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.1.4-r8
+
+  - id: CGA-wpxf-vcj5-h2p7
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T17:06:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ipfs-cluster
+            componentID: 9f1fd60119b7b6c6
+            componentName: golang.org/x/crypto
+            componentVersion: v0.38.0
+            componentType: go-module
+            componentLocation: /usr/bin/ipfs-cluster-ctl
+            scanner: grype
+      - timestamp: 2025-11-22T04:33:54Z
+        type: fixed
+        data:
+          fixed-version: 1.1.4-r9

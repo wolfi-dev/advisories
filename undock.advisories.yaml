@@ -171,6 +171,29 @@ advisories:
         data:
           fixed-version: 0.9.0-r4
 
+  - id: CGA-9hxx-mjx9-3jcc
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T14:26:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: undock
+            componentID: 8cd08a12b237cb7f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/undock
+            scanner: grype
+      - timestamp: 2025-11-22T21:57:49Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-ffrq-7j68-97hp
     aliases:
       - CVE-2025-47910
@@ -236,6 +259,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.9.0-r7
+
+  - id: CGA-g6c7-jrhr-g7h2
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T14:26:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: undock
+            componentID: 8cd08a12b237cb7f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/undock
+            scanner: grype
+      - timestamp: 2025-11-23T07:22:53Z
+        type: fixed
+        data:
+          fixed-version: 0.10.0-r8
 
   - id: CGA-gxxg-5m4c-4hf6
     aliases:

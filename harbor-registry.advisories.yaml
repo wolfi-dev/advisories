@@ -4,6 +4,28 @@ package:
   name: harbor-registry
 
 advisories:
+  - id: CGA-28fw-6j97-q6qj
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T12:25:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-registry
+            componentID: 292caea7d9456e6d
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-registry
+            scanner: grype
+      - timestamp: 2025-11-21T18:57:20Z
+        type: fixed
+        data:
+          fixed-version: 3.0.0-r12
+
   - id: CGA-2cm4-vpc6-pv3j
     aliases:
       - CVE-2024-35255
@@ -779,6 +801,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.0.0-r11
+
+  - id: CGA-v2pr-r54j-xvx8
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T12:25:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: harbor-registry
+            componentID: 292caea7d9456e6d
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/harbor-registry
+            scanner: grype
+      - timestamp: 2025-11-21T18:57:21Z
+        type: fixed
+        data:
+          fixed-version: 3.0.0-r12
 
   - id: CGA-vrf4-vxxr-6f4c
     aliases:

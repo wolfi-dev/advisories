@@ -1,0 +1,50 @@
+schema-version: 2.0.2
+
+package:
+  name: traefik-3.6
+
+advisories:
+  - id: CGA-322r-3mgx-6wfh
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T01:30:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: traefik-3.6
+            componentID: 40755dca49385309
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/traefik
+            scanner: grype
+      - timestamp: 2025-11-22T07:49:59Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
+  - id: CGA-cj3g-275w-c954
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T01:30:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: traefik-3.6
+            componentID: 40755dca49385309
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/traefik
+            scanner: grype
+      - timestamp: 2025-11-22T14:44:18Z
+        type: fixed
+        data:
+          fixed-version: 3.6.2-r1

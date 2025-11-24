@@ -114,6 +114,24 @@ advisories:
         data:
           fixed-version: 0.42.0-r0
 
+  - id: CGA-3p5q-p3rj-8h8v
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T09:59:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: falco
+            componentID: a8a95bab3b89334f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.40.0
+            componentType: go-module
+            componentLocation: /usr/share/falco/plugins/libcontainer.so
+            scanner: grype
+
   - id: CGA-4gqx-jg87-qf57
     aliases:
       - CVE-2025-58185
@@ -691,6 +709,24 @@ advisories:
         type: pending-upstream-fix
         data:
           note: falco itself does not contain any source code that is vulnerable to this CVE; however it pulls in libcontainer plugin from https://github.com/falcosecurity/plugins/tree/main/plugins/container which is vulnerable. The upstream maintainers will need to update to a new version of > golang 1.24 and pull that in to fix the CVE.
+
+  - id: CGA-gm3r-jr3m-3rgw
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T09:59:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: falco
+            componentID: a8a95bab3b89334f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.40.0
+            componentType: go-module
+            componentLocation: /usr/share/falco/plugins/libcontainer.so
+            scanner: grype
 
   - id: CGA-gp75-vgr2-hq3q
     aliases:

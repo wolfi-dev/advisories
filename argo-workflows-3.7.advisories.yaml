@@ -4,6 +4,28 @@ package:
   name: argo-workflows-3.7
 
 advisories:
+  - id: CGA-c9fh-rc8p-2v7q
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T11:27:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-workflows-3.7
+            componentID: 0eb23e2cd0acb13f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/workflow-controller
+            scanner: grype
+      - timestamp: 2025-11-21T16:38:10Z
+        type: fixed
+        data:
+          fixed-version: 3.7.4-r1
+
   - id: CGA-mxwc-5wc4-g7gh
     aliases:
       - CVE-2025-64718
@@ -21,6 +43,10 @@ advisories:
             componentType: npm
             componentLocation: /usr/lib/argo-workflows-ui/ui/node_modules/@istanbuljs/load-nyc-config/node_modules/js-yaml/package.json
             scanner: grype
+      - timestamp: 2025-11-21T16:38:11Z
+        type: fixed
+        data:
+          fixed-version: 3.7.4-r1
 
   - id: CGA-q37p-x8m2-j5rw
     aliases:
@@ -65,3 +91,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.7.3-r0
+
+  - id: CGA-xr75-qrx7-chmw
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T11:27:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-workflows-3.7
+            componentID: 0eb23e2cd0acb13f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/workflow-controller
+            scanner: grype
+      - timestamp: 2025-11-21T16:38:12Z
+        type: fixed
+        data:
+          fixed-version: 3.7.4-r1

@@ -161,6 +161,29 @@ advisories:
         data:
           fixed-version: 0.58.0-r1
 
+  - id: CGA-6mrf-pq3q-m3q6
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T13:05:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: frp
+            componentID: 038410c8bd1f5a59
+            componentName: golang.org/x/crypto
+            componentVersion: v0.37.0
+            componentType: go-module
+            componentLocation: /usr/bin/frpc
+            scanner: grype
+      - timestamp: 2025-11-22T17:37:05Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-7h6v-hgj5-rc6j
     aliases:
       - CVE-2023-44487
@@ -290,6 +313,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.54.0-r2
+
+  - id: CGA-j3c6-c528-82xj
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T13:05:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: frp
+            componentID: 038410c8bd1f5a59
+            componentName: golang.org/x/crypto
+            componentVersion: v0.37.0
+            componentType: go-module
+            componentLocation: /usr/bin/frpc
+            scanner: grype
+      - timestamp: 2025-11-23T07:44:03Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in frp-0.65.0-r2.apk, at usr/bin/frps, usr/bin/frps.'
 
   - id: CGA-j3pg-9c4c-m6q7
     aliases:

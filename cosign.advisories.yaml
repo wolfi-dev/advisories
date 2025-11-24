@@ -317,6 +317,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability is in the container runtime itself, not clients of the container runtime.
 
+  - id: CGA-95m9-8rcx-9433
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T11:51:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cosign
+            componentID: 25199c864ab51759
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/cosign
+            scanner: grype
+      - timestamp: 2025-11-21T17:29:17Z
+        type: fixed
+        data:
+          fixed-version: 3.0.2-r2
+
   - id: CGA-95mf-g4g5-3583
     aliases:
       - GHSA-9763-4f94-gfch
@@ -593,6 +615,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.2.2-r1
+
+  - id: CGA-jmrm-w6cf-cq8c
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T11:51:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cosign
+            componentID: 25199c864ab51759
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/cosign
+            scanner: grype
+      - timestamp: 2025-11-21T17:29:18Z
+        type: fixed
+        data:
+          fixed-version: 3.0.2-r2
 
   - id: CGA-m4jx-v5v4-x586
     aliases:

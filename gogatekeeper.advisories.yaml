@@ -4,6 +4,28 @@ package:
   name: gogatekeeper
 
 advisories:
+  - id: CGA-2923-mrhv-7hxq
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T21:00:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gogatekeeper
+            componentID: 8f5cef84f46f8edf
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/gatekeeper
+            scanner: grype
+      - timestamp: 2025-11-22T07:56:20Z
+        type: fixed
+        data:
+          fixed-version: 4.3.0-r2
+
   - id: CGA-4qmr-3qcr-72qv
     aliases:
       - GHSA-vrw8-fxc6-2r93
@@ -68,6 +90,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.4.0-r1
+
+  - id: CGA-c62g-cr99-q424
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T21:00:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gogatekeeper
+            componentID: 8f5cef84f46f8edf
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/gatekeeper
+            scanner: grype
+      - timestamp: 2025-11-22T07:56:20Z
+        type: fixed
+        data:
+          fixed-version: 4.3.0-r2
 
   - id: CGA-g7m5-mxwc-m9w9
     aliases:

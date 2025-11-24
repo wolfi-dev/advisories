@@ -341,6 +341,29 @@ advisories:
         data:
           fixed-version: 3.8.1-r8
 
+  - id: CGA-f5wv-j87f-wpgp
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T06:28:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sops
+            componentID: 7c719c7ced6d9335
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/sops
+            scanner: grype
+      - timestamp: 2025-11-22T17:32:30Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-h647-23rr-r74p
     aliases:
       - CVE-2025-22870
@@ -690,6 +713,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.9.4-r6
+
+  - id: CGA-v8xj-p37h-hfw4
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T06:28:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sops
+            componentID: 7c719c7ced6d9335
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/sops
+            scanner: grype
+      - timestamp: 2025-11-22T21:45:11Z
+        type: fixed
+        data:
+          fixed-version: 3.11.0-r2
 
   - id: CGA-vf88-932m-j2gc
     aliases:

@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: external-dns-0.20
+
+advisories:
+  - id: CGA-fvv3-792w-8fmj
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T18:31:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: external-dns-0.20
+            componentID: 4dcacffc9678fd9e
+            componentName: golang.org/x/crypto
+            componentVersion: v0.44.0
+            componentType: go-module
+            componentLocation: /usr/bin/external-dns
+            scanner: grype
+      - timestamp: 2025-11-22T04:49:16Z
+        type: fixed
+        data:
+          fixed-version: 0.20.0-r1
+
+  - id: CGA-m6q4-8g4m-c8vg
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T18:30:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: external-dns-0.20
+            componentID: 4dcacffc9678fd9e
+            componentName: golang.org/x/crypto
+            componentVersion: v0.44.0
+            componentType: go-module
+            componentLocation: /usr/bin/external-dns
+            scanner: grype
+      - timestamp: 2025-11-22T04:49:16Z
+        type: fixed
+        data:
+          fixed-version: 0.20.0-r1

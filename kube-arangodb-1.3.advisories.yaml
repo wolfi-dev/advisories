@@ -26,6 +26,29 @@ advisories:
         data:
           fixed-version: 1.3.1-r2
 
+  - id: CGA-4crj-h4m2-qf95
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T20:46:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-arangodb-1.3
+            componentID: 44ee1e51d2a10f11
+            componentName: golang.org/x/crypto
+            componentVersion: v0.40.0
+            componentType: go-module
+            componentLocation: /usr/bin/arangodb_operator
+            scanner: grype
+      - timestamp: 2025-11-22T08:11:17Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-cjwc-mcc3-h8qr
     aliases:
       - CVE-2024-25621
@@ -47,3 +70,26 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.3.1-r2
+
+  - id: CGA-qjqx-cw53-533r
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T20:46:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-arangodb-1.3
+            componentID: 44ee1e51d2a10f11
+            componentName: golang.org/x/crypto
+            componentVersion: v0.40.0
+            componentType: go-module
+            componentLocation: /usr/bin/arangodb_operator
+            scanner: grype
+      - timestamp: 2025-11-23T10:51:48Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.

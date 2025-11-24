@@ -142,6 +142,28 @@ advisories:
         data:
           fixed-version: 1.9.5-r3
 
+  - id: CGA-5f9h-rc95-q9rx
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T09:26:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-events
+            componentID: 5a120818bcb0ac39
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/argo-events
+            scanner: grype
+      - timestamp: 2025-11-21T13:51:49Z
+        type: fixed
+        data:
+          fixed-version: 1.9.8-r2
+
   - id: CGA-5v9q-6349-7fx2
     aliases:
       - CVE-2025-47907
@@ -484,3 +506,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.9.6-r1
+
+  - id: CGA-x8cf-jqq3-mxfc
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T09:26:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-events
+            componentID: 5a120818bcb0ac39
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/argo-events
+            scanner: grype
+      - timestamp: 2025-11-21T13:51:50Z
+        type: fixed
+        data:
+          fixed-version: 1.9.8-r2

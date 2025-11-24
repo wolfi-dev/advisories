@@ -95,6 +95,29 @@ advisories:
         data:
           fixed-version: 0.122.0-r2
 
+  - id: CGA-54cp-hww2-vjv5
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T09:43:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opentelemetry-collector-contrib
+            componentID: ac0bdde8a74994c7
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol-contrib
+            scanner: grype
+      - timestamp: 2025-11-22T17:35:16Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-6w4h-fm63-7xv9
     aliases:
       - CVE-2024-41110
@@ -312,6 +335,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.109.0-r0
+
+  - id: CGA-h94v-v6vf-ww23
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T09:43:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opentelemetry-collector-contrib
+            componentID: ac0bdde8a74994c7
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol-contrib
+            scanner: grype
+      - timestamp: 2025-11-23T00:46:06Z
+        type: fixed
+        data:
+          fixed-version: 0.140.1-r1
 
   - id: CGA-jj45-rqfh-mhq4
     aliases:

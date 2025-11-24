@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: jaeger-2
+
+advisories:
+  - id: CGA-57rm-pvx9-pfp5
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T22:05:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jaeger-2-remote-storage
+            componentID: 89f94be90e7f5038
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/ingester
+            scanner: grype
+      - timestamp: 2025-11-23T12:26:32Z
+        type: fixed
+        data:
+          fixed-version: 2.12.0-r1
+
+  - id: CGA-5cg9-mpj8-38pj
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T22:05:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jaeger-2-remote-storage
+            componentID: 89f94be90e7f5038
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/ingester
+            scanner: grype
+      - timestamp: 2025-11-23T12:26:33Z
+        type: fixed
+        data:
+          fixed-version: 2.12.0-r1

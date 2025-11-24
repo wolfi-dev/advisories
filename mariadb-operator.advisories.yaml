@@ -1,0 +1,50 @@
+schema-version: 2.0.2
+
+package:
+  name: mariadb-operator
+
+advisories:
+  - id: CGA-8v33-2w84-8wf2
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T03:40:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mariadb-operator
+            componentID: f9d65ae78a8bec78
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/mariadb-operator
+            scanner: grype
+      - timestamp: 2025-11-22T09:14:48Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
+  - id: CGA-xjrf-6843-x74x
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T03:40:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mariadb-operator
+            componentID: f9d65ae78a8bec78
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/mariadb-operator
+            scanner: grype
+      - timestamp: 2025-11-22T09:47:45Z
+        type: fixed
+        data:
+          fixed-version: 25.10.2-r1

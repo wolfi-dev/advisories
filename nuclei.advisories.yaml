@@ -446,6 +446,29 @@ advisories:
         data:
           fixed-version: 3.3.10-r2
 
+  - id: CGA-ccpj-mccq-25wc
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T21:04:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nuclei
+            componentID: 98e4979e06936f63
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/nuclei
+            scanner: grype
+      - timestamp: 2025-11-22T08:15:42Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-fxq8-hgpw-6v78
     aliases:
       - CVE-2023-49568
@@ -500,6 +523,29 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CGA-h449-cf92-gm97
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T21:04:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nuclei
+            componentID: 98e4979e06936f63
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/nuclei
+            scanner: grype
+      - timestamp: 2025-11-23T08:41:01Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
 
   - id: CGA-hf7h-vqq4-vr52
     aliases:

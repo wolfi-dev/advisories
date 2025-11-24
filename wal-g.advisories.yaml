@@ -4,6 +4,29 @@ package:
   name: wal-g
 
 advisories:
+  - id: CGA-2f45-5w4g-ww7r
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T22:18:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wal-g-pg
+            componentID: 579fbd6a9503d70d
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/wal-g
+            scanner: grype
+      - timestamp: 2025-11-22T07:15:53Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-2x2c-6f9x-w8vp
     aliases:
       - CVE-2024-35255
@@ -242,6 +265,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.0.7-r8
+
+  - id: CGA-rpq3-jfch-686x
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T22:18:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wal-g-pg
+            componentID: 579fbd6a9503d70d
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/wal-g
+            scanner: grype
+      - timestamp: 2025-11-22T09:29:32Z
+        type: fixed
+        data:
+          fixed-version: 3.0.7-r16
 
   - id: CGA-rq92-rchh-m2q5
     aliases:

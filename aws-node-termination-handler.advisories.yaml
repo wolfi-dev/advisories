@@ -4,6 +4,28 @@ package:
   name: aws-node-termination-handler
 
 advisories:
+  - id: CGA-2c5v-5cv3-7p7c
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T10:35:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-node-termination-handler
+            componentID: 7a9db015c0cc86c3
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/node-termination-handler
+            scanner: grype
+      - timestamp: 2025-11-21T14:03:35Z
+        type: fixed
+        data:
+          fixed-version: 1.25.3-r1
+
   - id: CGA-2h2p-x76p-c54r
     aliases:
       - CVE-2025-47907
@@ -69,6 +91,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.25.2-r2
+
+  - id: CGA-355m-x4vh-wj58
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T10:35:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-node-termination-handler
+            componentID: 7a9db015c0cc86c3
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/node-termination-handler
+            scanner: grype
+      - timestamp: 2025-11-21T14:03:36Z
+        type: fixed
+        data:
+          fixed-version: 1.25.3-r1
 
   - id: CGA-4w2q-p75w-fm69
     aliases:

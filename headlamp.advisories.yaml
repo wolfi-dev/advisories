@@ -4,6 +4,55 @@ package:
   name: headlamp
 
 advisories:
+  - id: CGA-8xw2-xvwf-37hm
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T21:05:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: headlamp
+            componentID: 4070ff0bbde05524
+            componentName: golang.org/x/crypto
+            componentVersion: v0.40.0
+            componentType: go-module
+            componentLocation: /usr/bin/headlamp-server
+            scanner: grype
+      - timestamp: 2025-11-22T07:33:38Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+      - timestamp: 2025-11-22T08:11:11Z
+        type: fixed
+        data:
+          fixed-version: 0.38.0-r1
+
+  - id: CGA-ccxj-5pfc-jwv4
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T21:05:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: headlamp
+            componentID: 4070ff0bbde05524
+            componentName: golang.org/x/crypto
+            componentVersion: v0.40.0
+            componentType: go-module
+            componentLocation: /usr/bin/headlamp-server
+            scanner: grype
+      - timestamp: 2025-11-22T08:11:12Z
+        type: fixed
+        data:
+          fixed-version: 0.38.0-r1
+
   - id: CGA-j9mv-fm49-jrhr
     aliases:
       - CVE-2025-55199

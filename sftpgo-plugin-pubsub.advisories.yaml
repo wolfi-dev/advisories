@@ -4,6 +4,28 @@ package:
   name: sftpgo-plugin-pubsub
 
 advisories:
+  - id: CGA-5c8h-r8jg-rm22
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T14:24:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sftpgo-plugin-pubsub
+            componentID: 522218a2d05816ae
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/sftpgo-plugin-pubsub
+            scanner: grype
+      - timestamp: 2025-11-21T23:33:21Z
+        type: fixed
+        data:
+          fixed-version: 1.0.15-r1
+
   - id: CGA-68qc-69pr-2xx4
     aliases:
       - CVE-2025-22870
@@ -57,6 +79,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.0.13-r4
+
+  - id: CGA-j389-p825-jgg8
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T14:24:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sftpgo-plugin-pubsub
+            componentID: 522218a2d05816ae
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/sftpgo-plugin-pubsub
+            scanner: grype
+      - timestamp: 2025-11-21T23:33:22Z
+        type: fixed
+        data:
+          fixed-version: 1.0.15-r1
 
   - id: CGA-m8j7-934p-cxrc
     aliases:

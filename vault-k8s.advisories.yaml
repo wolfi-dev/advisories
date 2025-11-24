@@ -205,6 +205,29 @@ advisories:
         data:
           fixed-version: 1.7.0-r4
 
+  - id: CGA-8pm5-jr4r-8jgj
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T07:56:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-k8s
+            componentID: 40f4afd476110418
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/vault-k8s
+            scanner: grype
+      - timestamp: 2025-11-22T09:11:20Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-9fw4-8hc8-36rq
     aliases:
       - CVE-2025-58188
@@ -519,6 +542,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.4.2-r1
+
+  - id: CGA-p2p5-g9c5-5r86
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T07:56:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-k8s
+            componentID: 40f4afd476110418
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/vault-k8s
+            scanner: grype
+      - timestamp: 2025-11-22T23:22:46Z
+        type: fixed
+        data:
+          fixed-version: 1.7.0-r5
 
   - id: CGA-q6qx-7w86-2xjh
     aliases:

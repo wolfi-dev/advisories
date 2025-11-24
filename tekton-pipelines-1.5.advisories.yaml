@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: tekton-pipelines-1.5
+
+advisories:
+  - id: CGA-3wp4-f827-w7fg
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T17:38:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tekton-pipelines-resolvers-1.5
+            componentID: bf530cf4c1e16ac8
+            componentName: golang.org/x/crypto
+            componentVersion: v0.41.0
+            componentType: go-module
+            componentLocation: /usr/bin/controller
+            scanner: grype
+      - timestamp: 2025-11-22T20:05:10Z
+        type: fixed
+        data:
+          fixed-version: 1.5.0-r1
+
+  - id: CGA-7jh8-4hv9-c4gv
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T17:38:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tekton-pipelines-resolvers-1.5
+            componentID: bf530cf4c1e16ac8
+            componentName: golang.org/x/crypto
+            componentVersion: v0.41.0
+            componentType: go-module
+            componentLocation: /usr/bin/controller
+            scanner: grype
+      - timestamp: 2025-11-22T20:05:11Z
+        type: fixed
+        data:
+          fixed-version: 1.5.0-r1

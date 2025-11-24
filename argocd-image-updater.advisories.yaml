@@ -70,6 +70,28 @@ advisories:
         data:
           note: This CVE is caused by a 'go replace' block in the go.mod file pulling in the dependency, despite the package using the latest version as defined elsewhere in the go.mod file. An upstream patch has been submitted and merged which will remove this old dependency in future versions. See https://github.com/argoproj-labs/argocd-image-updater/pull/969
 
+  - id: CGA-6384-59f2-hwmg
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T07:40:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argocd-image-updater
+            componentID: 6690360033b4d5d8
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd-image-updater
+            scanner: grype
+      - timestamp: 2025-11-21T08:58:29Z
+        type: fixed
+        data:
+          fixed-version: 1.0.1-r1
+
   - id: CGA-74w6-9rf4-9jcv
     aliases:
       - CVE-2024-9042
@@ -392,6 +414,28 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability applies to the git-repo volume provisioner, not the k8s client itself.
+
+  - id: CGA-hmq5-6458-rg5f
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T07:40:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argocd-image-updater
+            componentID: 6690360033b4d5d8
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd-image-updater
+            scanner: grype
+      - timestamp: 2025-11-21T08:58:30Z
+        type: fixed
+        data:
+          fixed-version: 1.0.1-r1
 
   - id: CGA-hrx6-hvq8-xj45
     aliases:

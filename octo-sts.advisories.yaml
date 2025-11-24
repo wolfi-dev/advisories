@@ -467,6 +467,29 @@ advisories:
         data:
           fixed-version: 0.4.2-r12
 
+  - id: CGA-q2jc-r977-fj5f
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T08:16:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: octo-sts
+            componentID: cf1db94af2fa1e4b
+            componentName: golang.org/x/crypto
+            componentVersion: v0.39.0
+            componentType: go-module
+            componentLocation: /usr/bin/octo-sts
+            scanner: grype
+      - timestamp: 2025-11-23T07:42:36Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-q83j-4w27-mqjc
     aliases:
       - CVE-2024-24789
@@ -568,6 +591,24 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
+
+  - id: CGA-vgq6-95cv-44jm
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T08:16:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: octo-sts
+            componentID: cf1db94af2fa1e4b
+            componentName: golang.org/x/crypto
+            componentVersion: v0.39.0
+            componentType: go-module
+            componentLocation: /usr/bin/octo-sts
+            scanner: grype
 
   - id: CGA-vhpj-hj5w-87p6
     aliases:

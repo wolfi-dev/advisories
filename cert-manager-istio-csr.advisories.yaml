@@ -4,6 +4,28 @@ package:
   name: cert-manager-istio-csr
 
 advisories:
+  - id: CGA-2hgw-73c6-cxjj
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T07:34:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-manager-istio-csr
+            componentID: 6a31f0a63737af04
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/cmd
+            scanner: grype
+      - timestamp: 2025-11-22T07:12:23Z
+        type: fixed
+        data:
+          fixed-version: 0.14.3-r2
+
   - id: CGA-47qx-8685-rqgw
     aliases:
       - CVE-2025-22874
@@ -379,6 +401,28 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: 'The upstream project ignored the vulnerability since they import non-tagged versions in go.mod, for more information see: https://github.com/cert-manager/istio-csr/pull/344/files.'
+
+  - id: CGA-rvh6-wj4p-vhmm
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T07:34:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cert-manager-istio-csr
+            componentID: 6a31f0a63737af04
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/cmd
+            scanner: grype
+      - timestamp: 2025-11-22T07:12:24Z
+        type: fixed
+        data:
+          fixed-version: 0.14.3-r2
 
   - id: CGA-xw52-f6xq-jq6w
     aliases:
