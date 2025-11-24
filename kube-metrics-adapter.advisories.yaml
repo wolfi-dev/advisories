@@ -102,6 +102,29 @@ advisories:
         data:
           fixed-version: 0.2.3-r5
 
+  - id: CGA-8fm9-rfwf-8vj4
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T21:01:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-metrics-adapter
+            componentID: b3afff38d22e9c99
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-metrics-adapter
+            scanner: grype
+      - timestamp: 2025-11-23T08:01:34Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-8wqp-gwg8-9rpj
     aliases:
       - CVE-2024-44337
@@ -440,6 +463,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.2.3-r3
+
+  - id: CGA-v5hp-p29w-wh4x
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T21:01:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-metrics-adapter
+            componentID: b3afff38d22e9c99
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/kube-metrics-adapter
+            scanner: grype
+      - timestamp: 2025-11-23T11:08:50Z
+        type: fixed
+        data:
+          fixed-version: 0.2.6-r2
 
   - id: CGA-wgm9-384w-jfpf
     aliases:

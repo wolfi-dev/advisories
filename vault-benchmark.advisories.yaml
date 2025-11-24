@@ -227,6 +227,29 @@ advisories:
         data:
           fixed-version: 0.3.0-r36
 
+  - id: CGA-pmx6-9c99-jff2
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T20:22:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-benchmark
+            componentID: c774a26e936dc2ae
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/vault-benchmark
+            scanner: grype
+      - timestamp: 2025-11-23T12:17:27Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-r6c7-mqqg-c7rw
     aliases:
       - CVE-2025-22872
@@ -290,3 +313,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.3.0-r36
+
+  - id: CGA-wqwf-m527-pp64
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T20:22:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vault-benchmark
+            componentID: c774a26e936dc2ae
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/vault-benchmark
+            scanner: grype
+      - timestamp: 2025-11-23T13:47:23Z
+        type: fixed
+        data:
+          fixed-version: 0.4.0-r1

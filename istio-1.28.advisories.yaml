@@ -1,50 +1,50 @@
 schema-version: 2.0.2
 
 package:
-  name: tigera-operator-1.40
+  name: istio-1.28
 
 advisories:
-  - id: CGA-26qq-7cqr-j7fp
+  - id: CGA-c5w4-j5cq-8pqp
     aliases:
       - CVE-2025-58181
       - GHSA-j5w8-q4qc-rx2x
     events:
-      - timestamp: 2025-11-22T16:17:13Z
+      - timestamp: 2025-11-22T20:41:18Z
         type: detection
         data:
           type: scan/v1
           data:
-            subpackageName: tigera-operator-1.40
-            componentID: c664d534694c9646
+            subpackageName: istio-pilot-discovery-1.28
+            componentID: b6a6c749ce84cdb3
             componentName: golang.org/x/crypto
-            componentVersion: v0.43.0
+            componentVersion: v0.41.0
             componentType: go-module
-            componentLocation: /usr/bin/operator
+            componentLocation: /usr/bin/istio-cni
             scanner: grype
-      - timestamp: 2025-11-22T21:45:33Z
+      - timestamp: 2025-11-23T08:02:40Z
         type: false-positive-determination
         data:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
-  - id: CGA-2rff-x567-x4rx
+  - id: CGA-j74p-687w-82fj
     aliases:
       - CVE-2025-47914
       - GHSA-f6x5-jh6r-wrfv
     events:
-      - timestamp: 2025-11-22T16:17:11Z
+      - timestamp: 2025-11-22T20:41:17Z
         type: detection
         data:
           type: scan/v1
           data:
-            subpackageName: tigera-operator-1.40
-            componentID: c664d534694c9646
+            subpackageName: istio-pilot-discovery-1.28
+            componentID: b6a6c749ce84cdb3
             componentName: golang.org/x/crypto
-            componentVersion: v0.43.0
+            componentVersion: v0.41.0
             componentType: go-module
-            componentLocation: /usr/bin/operator
+            componentLocation: /usr/bin/istio-cni
             scanner: grype
-      - timestamp: 2025-11-23T08:37:32Z
+      - timestamp: 2025-11-23T14:11:52Z
         type: fixed
         data:
-          fixed-version: 1.40.2-r1
+          fixed-version: 1.28.0-r2

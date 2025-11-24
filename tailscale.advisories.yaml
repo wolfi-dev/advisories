@@ -118,6 +118,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/containerboot
             scanner: grype
+      - timestamp: 2025-11-22T20:38:01Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
 
   - id: CGA-6x87-fhfw-qx5q
     aliases:
@@ -189,6 +194,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/containerboot
             scanner: grype
+      - timestamp: 2025-11-23T12:00:02Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in tailscale-1.90.8-r0.apk, at usr/bin/tailscaled, usr/bin/tailscaled.'
 
   - id: CGA-cf7j-p2gj-8r5x
     aliases:
