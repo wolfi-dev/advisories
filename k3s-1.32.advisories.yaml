@@ -287,6 +287,18 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/containerd-shim-runc-v2
             scanner: grype
+      - timestamp: 2025-11-26T11:13:33Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: |
+            The affected component's suffix is non-standard for parsing. It treats -k3s1 as an unknown qualifier that sorts after known ones (alpha, beta, rc, ga, etc.), which breaks version matching. The suffix is used in k3s because k3s pull in their own fork of containerd. In this case, all fixes associated with this vulnerability from upstream are also mirrored in the k3s containerd fork. See upstream containerd commit[1] and equivalent files in the k3s fork[2][3][4][5][6]. This vulnerability was resolved in k3s-1.32.9.1-r3.
+            [1] https://github.com/containerd/containerd/commit/7c59e8e9e970d38061a77b586b23655c352bfec5
+            [2] https://github.com/k3s-io/containerd/blob/v2.1.5/cmd/containerd/server/server.go#L82-87
+            [3] https://github.com/k3s-io/containerd/blob/v2.1.5/cmd/containerd/server/server.go#L109
+            [4] https://github.com/k3s-io/containerd/blob/v2.1.5/core/runtime/v2/task_manager.go#L78-79
+            [5] https://github.com/k3s-io/containerd/blob/v2.1.5/plugins/cri/runtime/plugin.go#L82-88
+            [6] https://github.com/k3s-io/containerd/blob/v2.1.5/plugins/sandbox/controller.go#L71-75
 
   - id: CGA-p35x-9jr6-2qq9
     aliases:
