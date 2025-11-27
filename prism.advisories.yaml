@@ -240,6 +240,11 @@ advisories:
             componentType: npm
             componentLocation: /usr/src/prism/node_modules/@npmcli/map-workspaces/node_modules/glob/package.json
             scanner: grype
+      - timestamp: 2025-11-27T04:09:31Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: This CVE affects only the glob CLI and does not affect the javascript API. The prism package uses glob as a dependency but only utilizes the JavaScript API, not the CLI functionality where the vulnerability exists. The vulnerable code path is not in the execution path of prism's usage.
 
   - id: CGA-rpv8-45hh-fp2f
     aliases:
