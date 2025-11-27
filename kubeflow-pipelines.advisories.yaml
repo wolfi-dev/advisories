@@ -4,6 +4,24 @@ package:
   name: kubeflow-pipelines
 
 advisories:
+  - id: CGA-2386-4h54-xfjc
+    aliases:
+      - CVE-2025-12816
+      - GHSA-5gfm-wpxj-wjgq
+    events:
+      - timestamp: 2025-11-27T11:31:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-frontend
+            componentID: a924017fc3d07c88
+            componentName: node-forge
+            componentVersion: 1.3.1
+            componentType: npm
+            componentLocation: /server/node_modules/node-forge/package.json
+            scanner: grype
+
   - id: CGA-25ch-m4c6-g6xp
     aliases:
       - CVE-2025-62156
@@ -662,6 +680,24 @@ advisories:
         data:
           note: 'There is an open PR upstream regarding the required dependency bump to remediate this CVE seen here: https://github.com/kubeflow/pipelines/pull/11837 However, it is currently failing CI checks and so upstream maintainers will need to implement compatibility. '
 
+  - id: CGA-f3c2-2qm6-qc8r
+    aliases:
+      - CVE-2025-66030
+      - GHSA-65ch-62r8-g69g
+    events:
+      - timestamp: 2025-11-27T11:31:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-frontend
+            componentID: a924017fc3d07c88
+            componentName: node-forge
+            componentVersion: 1.3.1
+            componentType: npm
+            componentLocation: /server/node_modules/node-forge/package.json
+            scanner: grype
+
   - id: CGA-f4mr-p4pg-j4xf
     aliases:
       - CVE-2021-25743
@@ -884,6 +920,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.4.0-r8
+
+  - id: CGA-hf38-73f5-4pq6
+    aliases:
+      - CVE-2025-66031
+      - GHSA-554w-wpv2-vw27
+    events:
+      - timestamp: 2025-11-27T11:31:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-frontend
+            componentID: a924017fc3d07c88
+            componentName: node-forge
+            componentVersion: 1.3.1
+            componentType: npm
+            componentLocation: /server/node_modules/node-forge/package.json
+            scanner: grype
 
   - id: CGA-hf9v-fwg4-2jvw
     aliases:
