@@ -482,6 +482,24 @@ advisories:
         data:
           note: Upgrading the js-yaml version causes test failures so upstream maintainers will need to update it in conjunction with other code.
 
+  - id: CGA-qjmm-cm7w-wf8f
+    aliases:
+      - CVE-2025-66030
+      - GHSA-65ch-62r8-g69g
+    events:
+      - timestamp: 2025-11-27T11:34:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-centraldashboard
+            componentID: b343e1dc875c4364
+            componentName: node-forge
+            componentVersion: 1.3.1
+            componentType: npm
+            componentLocation: /app/node_modules/node-forge/package.json
+            scanner: grype
+
   - id: CGA-r54h-x2r8-rx8m
     aliases:
       - GHSA-rm8p-cx58-hcvx
