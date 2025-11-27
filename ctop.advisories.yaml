@@ -608,6 +608,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/ctop
             scanner: grype
+      - timestamp: 2025-11-15T11:57:03Z
+        type: pending-upstream-fix
+        data:
+          note: Bumping runc to v1.2.8 resulting build failure due to breaking API change. The code references undefined types (libcontainer.Factory, libcontainer.New) and has type mismatches with libcontainer.Container. Upstream need to migrate this.
 
   - id: CGA-fwmg-5w36-xx8q
     aliases:
@@ -1324,6 +1328,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/ctop
             scanner: grype
+      - timestamp: 2025-11-14T01:18:36Z
+        type: pending-upstream-fix
+        data:
+          note: Upgrading runc from v1.1.14 to fix version of v1.2.8 causes build failures in ctop v0.7.7. The fix requires upstream ctop maintainers to implement compatibility with runc v1.2.8 before this vulnerability can be resolved.
 
   - id: CGA-wrf3-qcxh-8gc4
     aliases:

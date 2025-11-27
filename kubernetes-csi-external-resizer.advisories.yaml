@@ -120,6 +120,28 @@ advisories:
         data:
           fixed-version: 1.10.0-r2
 
+  - id: CGA-cw64-w8hf-w4f6
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T21:32:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-resizer
+            componentID: b6bf479e0232c630
+            componentName: golang.org/x/crypto
+            componentVersion: v0.37.0
+            componentType: go-module
+            componentLocation: /usr/bin/csi-resizer
+            scanner: grype
+      - timestamp: 2025-11-22T08:47:29Z
+        type: fixed
+        data:
+          fixed-version: 2.0.0-r1
+
   - id: CGA-h4pw-2mq9-vp9p
     aliases:
       - CVE-2024-45338
@@ -291,6 +313,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.13.1-r2
+
+  - id: CGA-qcr6-647x-877r
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T21:32:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-resizer
+            componentID: b6bf479e0232c630
+            componentName: golang.org/x/crypto
+            componentVersion: v0.37.0
+            componentType: go-module
+            componentLocation: /usr/bin/csi-resizer
+            scanner: grype
+      - timestamp: 2025-11-22T08:47:30Z
+        type: fixed
+        data:
+          fixed-version: 2.0.0-r1
 
   - id: CGA-wp55-h782-c7r8
     aliases:

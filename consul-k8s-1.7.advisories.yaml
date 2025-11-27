@@ -118,6 +118,29 @@ advisories:
         data:
           fixed-version: 1.7.1-r1
 
+  - id: CGA-ccjr-c9cx-v6m4
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T12:35:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: consul-k8s-1.7
+            componentID: 3a2bf5c3f731ca19
+            componentName: golang.org/x/crypto
+            componentVersion: v0.40.0
+            componentType: go-module
+            componentLocation: /usr/bin/consul-k8s
+            scanner: grype
+      - timestamp: 2025-11-22T07:07:34Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-h826-r6vr-83h3
     aliases:
       - CVE-2025-47910
@@ -139,6 +162,29 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.7.4-r1
+
+  - id: CGA-h88x-4r28-49mq
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T12:35:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: consul-k8s-1.7
+            componentID: 3a2bf5c3f731ca19
+            componentName: golang.org/x/crypto
+            componentVersion: v0.40.0
+            componentType: go-module
+            componentLocation: /usr/bin/consul-k8s
+            scanner: grype
+      - timestamp: 2025-11-23T07:09:43Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
 
   - id: CGA-j34p-2vq7-wgfh
     aliases:

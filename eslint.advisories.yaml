@@ -14,6 +14,28 @@ advisories:
         data:
           fixed-version: 9.15.0-r0
 
+  - id: CGA-mxm9-hxqf-pr7j
+    aliases:
+      - CVE-2025-64718
+      - GHSA-mh29-5h37-fv8m
+    events:
+      - timestamp: 2025-11-18T07:47:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: eslint
+            componentID: 13c833c2be07fbea
+            componentName: js-yaml
+            componentVersion: 4.1.0
+            componentType: npm
+            componentLocation: /usr/lib/node_modules/eslint/node_modules/js-yaml/package.json
+            scanner: grype
+      - timestamp: 2025-11-20T20:36:33Z
+        type: fixed
+        data:
+          fixed-version: 9.39.1-r1
+
   - id: CGA-v55f-9838-wrpj
     aliases:
       - CVE-2024-21539

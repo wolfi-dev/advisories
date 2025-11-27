@@ -4,6 +4,28 @@ package:
   name: code-server
 
 advisories:
+  - id: CGA-356v-grqc-f4xw
+    aliases:
+      - CVE-2025-64718
+      - GHSA-mh29-5h37-fv8m
+    events:
+      - timestamp: 2025-11-18T07:21:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: code-server
+            componentID: bfbd31fa75603055
+            componentName: js-yaml
+            componentVersion: 4.1.0
+            componentType: npm
+            componentLocation: /usr/lib/code-server/node_modules/js-yaml/package.json
+            scanner: grype
+      - timestamp: 2025-11-20T22:26:30Z
+        type: fixed
+        data:
+          fixed-version: 4.106.2-r0
+
   - id: CGA-3rvp-qpmf-xxj3
     aliases:
       - CVE-2019-16775

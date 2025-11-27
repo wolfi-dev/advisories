@@ -247,6 +247,29 @@ advisories:
         data:
           fixed-version: 2.2.23-r1
 
+  - id: CGA-f8mg-2494-g34q
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T03:05:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wgcf
+            componentID: 1510976e9d7e9094
+            componentName: golang.org/x/crypto
+            componentVersion: v0.41.0
+            componentType: go-module
+            componentLocation: /usr/bin/wgcf
+            scanner: grype
+      - timestamp: 2025-11-22T07:11:47Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-f9gr-rx36-fh48
     aliases:
       - CVE-2025-22866
@@ -290,6 +313,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.2.29-r2
+
+  - id: CGA-fx9g-3729-4gcv
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T03:05:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wgcf
+            componentID: 1510976e9d7e9094
+            componentName: golang.org/x/crypto
+            componentVersion: v0.41.0
+            componentType: go-module
+            componentLocation: /usr/bin/wgcf
+            scanner: grype
+      - timestamp: 2025-11-22T17:46:29Z
+        type: fixed
+        data:
+          fixed-version: 2.2.29-r3
 
   - id: CGA-ggcx-3vp6-8m2x
     aliases:

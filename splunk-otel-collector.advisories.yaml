@@ -721,6 +721,28 @@ advisories:
         data:
           note: 'The vulnerability originates from the Vault dependency. Upgrading Vault breaks the build due to a transitive conflict with k8s.io/client-go, which introduces incompatibility with Prometheus libraries. Once Prometheus addresses this (see issue #16767 and PR #16768) and the upstream resolves the issue, we’ll be able to upgrade and remediate the vulnerability.'
 
+  - id: CGA-xhjg-h35h-hvxw
+    aliases:
+      - CVE-2025-63811
+      - GHSA-9mj6-hxhv-w67j
+    events:
+      - timestamp: 2025-11-18T08:20:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: splunk-otel-collector
+            componentID: 49fb85ed0b83bbbf
+            componentName: github.com/dvsekhvalnov/jose2go
+            componentVersion: v1.6.0
+            componentType: go-module
+            componentLocation: /usr/bin/otelcol
+            scanner: grype
+      - timestamp: 2025-11-19T19:46:41Z
+        type: fixed
+        data:
+          fixed-version: 0.139.2-r1
+
   - id: CGA-xpgr-wj46-h3fx
     aliases:
       - CVE-2025-27144

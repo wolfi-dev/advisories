@@ -298,6 +298,28 @@ advisories:
         data:
           fixed-version: 0.39.0-r1
 
+  - id: CGA-w4vh-hwhm-jcgg
+    aliases:
+      - CVE-2025-64345
+      - GHSA-hc7m-r6v8-hg9q
+    events:
+      - timestamp: 2025-11-15T07:06:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wash
+            componentID: 0a5d253fd3e2c909
+            componentName: wasmtime
+            componentVersion: 26.0.1
+            componentType: rust-crate
+            componentLocation: /usr/bin/wash
+            scanner: grype
+      - timestamp: 2025-11-18T18:35:08Z
+        type: pending-upstream-fix
+        data:
+          note: The vulnerability is associated with wasmtime, which has tightly coupled dependencies pinned to version 26. To remediate, upstream must align and upgrade the entire wasmtime dependency set to version 36.0.3.
+
   - id: CGA-w7cm-cr79-276w
     aliases:
       - CVE-2024-45311

@@ -4,6 +4,28 @@ package:
   name: hugo-extended
 
 advisories:
+  - id: CGA-2ggr-xf6m-c38g
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T14:19:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: hugo-extended
+            componentID: 302a23b8c72f4c30
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/hugo
+            scanner: grype
+      - timestamp: 2025-11-21T23:06:13Z
+        type: fixed
+        data:
+          fixed-version: 0.152.2-r1
+
   - id: CGA-2xfh-qmgq-vx5v
     aliases:
       - CVE-2024-35255
@@ -89,6 +111,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.134.1-r0
+
+  - id: CGA-7f3f-fv6f-g38c
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T14:19:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: hugo-extended
+            componentID: 302a23b8c72f4c30
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/hugo
+            scanner: grype
+      - timestamp: 2025-11-21T23:06:13Z
+        type: fixed
+        data:
+          fixed-version: 0.152.2-r1
 
   - id: CGA-8742-r4qr-fc48
     aliases:

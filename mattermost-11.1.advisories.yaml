@@ -1,0 +1,97 @@
+schema-version: 2.0.2
+
+package:
+  name: mattermost-11.1
+
+advisories:
+  - id: CGA-jw62-3jvv-3f74
+    aliases:
+      - CVE-2022-4019
+      - GHSA-hqqj-g6mv-rw46
+    events:
+      - timestamp: 2025-11-18T15:05:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-11.1
+            componentID: 3902ad9e26842ce0
+            componentName: mattermost-11.1
+            componentVersion: 11.1.0-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2025-11-25T20:35:18Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: 'This vulnerability was remediated in mattermost v7.x. Specifically, in versions 7.1.4, 7.2.1, 7.3.1, and 7.4.0. For more information, please refer to: https://www.clouddefense.ai/cve/2022/CVE-2022-4019'
+
+  - id: CGA-mfwg-cwf5-mvrr
+    aliases:
+      - CVE-2022-4045
+      - GHSA-v42f-hq78-8c5m
+    events:
+      - timestamp: 2025-11-18T15:05:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-11.1
+            componentID: 3902ad9e26842ce0
+            componentName: mattermost-11.1
+            componentVersion: 11.1.0-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2025-11-25T20:36:03Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: 'This vulnerability was remediated in mattermost v7.4.0 and later. For more information, please refer to: https://www.clouddefense.ai/cve/2022/CVE-2022-4045'
+
+  - id: CGA-wpmm-8862-r2cc
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T21:49:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-11.1
+            componentID: dce31247c829c2fa
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/mattermost
+            scanner: grype
+      - timestamp: 2025-11-22T17:12:23Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
+  - id: CGA-wq34-wh26-vvcm
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T21:49:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mattermost-11.1
+            componentID: dce31247c829c2fa
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/mattermost
+            scanner: grype
+      - timestamp: 2025-11-23T10:36:42Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.

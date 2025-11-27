@@ -293,6 +293,29 @@ advisories:
         data:
           fixed-version: 0.28.0-r1
 
+  - id: CGA-m6jr-57x2-r5cj
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T01:39:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trivy-operator
+            componentID: 22903fa9208abc31
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/trivy-operator
+            scanner: grype
+      - timestamp: 2025-11-22T08:47:05Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-pfgr-pcqp-xw3p
     aliases:
       - CVE-2025-55198
@@ -402,6 +425,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.29.0-r3
+
+  - id: CGA-vr9r-6554-26hv
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T01:39:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trivy-operator
+            componentID: 22903fa9208abc31
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/trivy-operator
+            scanner: grype
+      - timestamp: 2025-11-22T14:45:28Z
+        type: fixed
+        data:
+          fixed-version: 0.29.0-r4
 
   - id: CGA-xqmg-2mf5-3q2f
     aliases:

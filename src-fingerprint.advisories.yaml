@@ -4,6 +4,28 @@ package:
   name: src-fingerprint
 
 advisories:
+  - id: CGA-2647-f275-5927
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T20:57:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: src-fingerprint
+            componentID: a5ad1d99c55de7ac
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/src-fingerprint
+            scanner: grype
+      - timestamp: 2025-11-23T08:21:16Z
+        type: fixed
+        data:
+          fixed-version: 0.19.0-r34
+
   - id: CGA-2crw-cjp7-r5qh
     aliases:
       - CVE-2025-22870
@@ -739,6 +761,28 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CGA-vjvm-5fcv-gx2x
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T20:57:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: src-fingerprint
+            componentID: a5ad1d99c55de7ac
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/src-fingerprint
+            scanner: grype
+      - timestamp: 2025-11-23T08:21:18Z
+        type: fixed
+        data:
+          fixed-version: 0.19.0-r34
 
   - id: CGA-vm5r-8qrj-wv27
     aliases:

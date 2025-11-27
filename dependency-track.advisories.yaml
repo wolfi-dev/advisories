@@ -344,3 +344,26 @@ advisories:
         type: fixed
         data:
           fixed-version: 4.10.1-r2
+
+  - id: CGA-w9cm-4hr2-3w79
+    aliases:
+      - CVE-2025-59250
+      - GHSA-m494-w24q-6f7w
+    events:
+      - timestamp: 2025-11-18T20:28:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dependency-track
+            componentID: fe2072d187b56d5d
+            componentName: mssql-jdbc
+            componentVersion: 12.10.2
+            componentType: java-archive
+            componentLocation: /usr/share/java/dependency-track/dependency-track-bundled.jar
+            scanner: grype
+      - timestamp: 2025-11-25T05:40:59Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: The package uses patched dependency but the scanners are not able to reconcile that 12.10.2 matches patched version 12.10.2.jre11.

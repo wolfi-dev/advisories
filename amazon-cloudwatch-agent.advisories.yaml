@@ -4,6 +4,28 @@ package:
   name: amazon-cloudwatch-agent
 
 advisories:
+  - id: CGA-34c9-7wf3-h474
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T11:17:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: amazon-cloudwatch-agent
+            componentID: d432e85299801e2e
+            componentName: golang.org/x/crypto
+            componentVersion: v0.37.0
+            componentType: go-module
+            componentLocation: /usr/bin/amazon-cloudwatch-agent
+            scanner: grype
+      - timestamp: 2025-11-21T15:49:03Z
+        type: fixed
+        data:
+          fixed-version: 1.300062.0-r1
+
   - id: CGA-4j83-p7p9-w794
     aliases:
       - CVE-2025-22872
@@ -265,6 +287,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.300051.0-r2
+
+  - id: CGA-qmq5-87gw-35pf
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T11:17:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: amazon-cloudwatch-agent
+            componentID: d432e85299801e2e
+            componentName: golang.org/x/crypto
+            componentVersion: v0.37.0
+            componentType: go-module
+            componentLocation: /usr/bin/amazon-cloudwatch-agent
+            scanner: grype
+      - timestamp: 2025-11-21T15:49:04Z
+        type: fixed
+        data:
+          fixed-version: 1.300062.0-r1
 
   - id: CGA-rhxq-3f3m-cqvq
     aliases:

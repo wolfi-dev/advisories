@@ -179,3 +179,25 @@ advisories:
         type: pending-upstream-fix
         data:
           note: netty-codec is brought into celeborn via ratis (already on most recent version 3.2.0) pulling in ratis-thirdparty. Upstream maintainers must update ratis versions to pull in the fixed version of netty.
+
+  - id: CGA-vwp3-5pv5-3qwh
+    aliases:
+      - CVE-2025-12383
+      - GHSA-7p63-w6x9-6gr7
+    events:
+      - timestamp: 2025-11-19T18:03:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: celeborn-0.6
+            componentID: b354882a1b4f1253
+            componentName: jersey-client
+            componentVersion: 2.39.1
+            componentType: java-archive
+            componentLocation: /usr/share/java/celeborn/jars/jersey-client-2.39.1.jar
+            scanner: grype
+      - timestamp: 2025-11-19T20:21:41Z
+        type: fixed
+        data:
+          fixed-version: 0.6.1-r1

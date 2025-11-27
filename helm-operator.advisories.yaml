@@ -322,6 +322,29 @@ advisories:
         data:
           fixed-version: 1.35.0-r1
 
+  - id: CGA-g9gq-jx36-677j
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T13:06:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-operator
+            componentID: e6f25e5dfe7ed578
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/helm-operator
+            scanner: grype
+      - timestamp: 2025-11-22T16:32:16Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-gvf2-hw6h-cxp6
     aliases:
       - CVE-2024-24786
@@ -494,6 +517,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.36.0-r1
+
+  - id: CGA-q55h-xwwg-9mrc
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T13:06:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-operator
+            componentID: e6f25e5dfe7ed578
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/helm-operator
+            scanner: grype
+      - timestamp: 2025-11-23T00:05:17Z
+        type: fixed
+        data:
+          fixed-version: 1.42.0-r1
 
   - id: CGA-q648-pmcm-8rc2
     aliases:

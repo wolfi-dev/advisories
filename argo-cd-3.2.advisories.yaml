@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: argo-cd-3.2
+
+advisories:
+  - id: CGA-95gc-7hx6-q735
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T09:29:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-3.2
+            componentID: 18ad2b49a6ceff1a
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+      - timestamp: 2025-11-21T12:07:28Z
+        type: fixed
+        data:
+          fixed-version: 3.2.0-r1
+
+  - id: CGA-fhqp-rcv2-r2pv
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T09:29:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-3.2
+            componentID: 18ad2b49a6ceff1a
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/argocd
+            scanner: grype
+      - timestamp: 2025-11-21T12:07:29Z
+        type: fixed
+        data:
+          fixed-version: 3.2.0-r1

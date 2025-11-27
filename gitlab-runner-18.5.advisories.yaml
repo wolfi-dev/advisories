@@ -4,6 +4,28 @@ package:
   name: gitlab-runner-18.5
 
 advisories:
+  - id: CGA-39jc-v958-mphp
+    aliases:
+      - CVE-2025-2615
+      - GHSA-rm4r-vwvw-vj67
+    events:
+      - timestamp: 2025-11-21T15:28:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-18.5
+            componentID: 90b1c8a85b5e8525
+            componentName: gitlab-runner-helper-18.5
+            componentVersion: 18.5.0-r1
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2025-11-22T08:03:18Z
+        type: fixed
+        data:
+          fixed-version: 18.5.0-r1
+
   - id: CGA-7xj6-5ccp-h63g
     aliases:
       - CVE-2024-36623
@@ -26,6 +48,73 @@ advisories:
         data:
           type: vulnerable-code-version-not-used
           note: This vulnerability is being detected erroneously since this issue has been fixed since docker 25.0.4 and we currently ship v25.0.6
+
+  - id: CGA-86r6-hmrp-26mh
+    aliases:
+      - CVE-2025-7736
+      - GHSA-7hhv-h469-wc4q
+    events:
+      - timestamp: 2025-11-21T15:28:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-18.5
+            componentID: 90b1c8a85b5e8525
+            componentName: gitlab-runner-helper-18.5
+            componentVersion: 18.5.0-r1
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2025-11-22T08:03:18Z
+        type: fixed
+        data:
+          fixed-version: 18.5.0-r1
+
+  - id: CGA-h2gq-3wf5-h9p5
+    aliases:
+      - CVE-2025-12983
+      - GHSA-9mv9-gw4x-7xw4
+    events:
+      - timestamp: 2025-11-21T15:28:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-18.5
+            componentID: 90b1c8a85b5e8525
+            componentName: gitlab-runner-helper-18.5
+            componentVersion: 18.5.0-r1
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2025-11-22T08:03:19Z
+        type: fixed
+        data:
+          fixed-version: 18.5.0-r1
+
+  - id: CGA-jjhf-wwh9-3qq4
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T15:28:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-18.5
+            componentID: 824eef5067d78c2b
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-runner-helper
+            scanner: grype
+      - timestamp: 2025-11-22T20:41:29Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
 
   - id: CGA-p4c9-wmm4-wqhr
     aliases:
@@ -69,3 +158,26 @@ advisories:
         type: pending-upstream-fix
         data:
           note: gitlab-runner depends on https://gitlab.com/gitlab-org/ci-cd/docker-machine/-/tags and https://gitlab.com/gitlab-org/ci-cd/runner-tools/base-images/-/tags for Docker images and their versions need to be tightly coupled.  Currently, base-images does not have a newer version to pick up Docker=>28.0.0.
+
+  - id: CGA-x4wh-238m-7c8v
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T15:28:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitlab-runner-18.5
+            componentID: 824eef5067d78c2b
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/gitlab-runner-helper
+            scanner: grype
+      - timestamp: 2025-11-23T14:36:52Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.

@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: neo4j-2025.10
+
+advisories:
+  - id: CGA-g9gx-4666-g6x8
+    aliases:
+      - CVE-2025-12383
+      - GHSA-7p63-w6x9-6gr7
+    events:
+      - timestamp: 2025-11-19T18:14:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: neo4j-2025.10
+            componentID: 4cbff8d149101e12
+            componentName: jersey-client
+            componentVersion: "2.43"
+            componentType: java-archive
+            componentLocation: /var/lib/neo4j/lib/jersey-client-2.43.jar
+            scanner: grype
+      - timestamp: 2025-11-20T15:10:09Z
+        type: fixed
+        data:
+          fixed-version: 2025.10.1-r1

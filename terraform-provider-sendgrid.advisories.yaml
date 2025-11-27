@@ -26,6 +26,29 @@ advisories:
         data:
           fixed-version: 1.0.1-r1
 
+  - id: CGA-2v6j-9f32-q6f5
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T11:01:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-sendgrid
+            componentID: 42baf3db552e89fa
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-sendgrid
+            scanner: grype
+      - timestamp: 2025-11-22T16:39:13Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-2w7g-8hhh-34rw
     aliases:
       - CVE-2025-58186
@@ -73,6 +96,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.0.1-r1
+
+  - id: CGA-55v6-4cr3-5698
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T11:01:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-sendgrid
+            componentID: 42baf3db552e89fa
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-sendgrid
+            scanner: grype
+      - timestamp: 2025-11-23T01:31:57Z
+        type: fixed
+        data:
+          fixed-version: 1.0.1-r8
 
   - id: CGA-58p4-g5qr-gxwp
     aliases:

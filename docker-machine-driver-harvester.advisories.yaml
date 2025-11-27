@@ -355,6 +355,50 @@ advisories:
         data:
           fixed-version: 1.0.2-r2
 
+  - id: CGA-h2p3-cr3q-3245
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T07:35:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-machine-driver-harvester
+            componentID: c20f0456da823174
+            componentName: golang.org/x/crypto
+            componentVersion: v0.40.0
+            componentType: go-module
+            componentLocation: /usr/bin/docker-machine-driver-harvester
+            scanner: grype
+      - timestamp: 2025-11-22T07:09:00Z
+        type: fixed
+        data:
+          fixed-version: 1.0.5-r1
+
+  - id: CGA-h4x2-6gq8-xhwx
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T07:35:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: docker-machine-driver-harvester
+            componentID: c20f0456da823174
+            componentName: golang.org/x/crypto
+            componentVersion: v0.40.0
+            componentType: go-module
+            componentLocation: /usr/bin/docker-machine-driver-harvester
+            scanner: grype
+      - timestamp: 2025-11-22T07:09:02Z
+        type: fixed
+        data:
+          fixed-version: 1.0.5-r1
+
   - id: CGA-h5xq-3x49-2948
     aliases:
       - CVE-2024-24557
@@ -421,6 +465,16 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability applies to the git-repo volume provisioner, not the k8s client itself.
+
+  - id: CGA-jgj4-fr63-2p5j
+    aliases:
+      - CVE-2025-64435
+      - GHSA-9m94-w2vq-hcf9
+    events:
+      - timestamp: 2025-11-18T23:16:12Z
+        type: pending-upstream-fix
+        data:
+          note: kubevirt has not release a GA version with the vulnerability fixed in it. When kubevirt-1.7.0 is available or the fix commit is backported to the 1.6 stream, this vulnerability can be remediated.
 
   - id: CGA-r2wg-hxx4-9qhr
     aliases:
@@ -576,3 +630,13 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.0.4-r1
+
+  - id: CGA-xf3h-xq82-4jqh
+    aliases:
+      - CVE-2025-64436
+      - GHSA-7xgm-5prm-v5gc
+    events:
+      - timestamp: 2025-11-18T23:15:40Z
+        type: pending-upstream-fix
+        data:
+          note: kubevirt has not release a GA version with the vulnerability fixed in it. When kubevirt-1.7.0 is available or the fix commit is backported to the 1.6 stream, this vulnerability can be remediated.

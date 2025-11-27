@@ -48,6 +48,29 @@ advisories:
         data:
           fixed-version: 3.7.1-r4
 
+  - id: CGA-43rm-pg4w-9fjr
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T04:40:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-random
+            componentID: 7fa2b0459ac4f9a4
+            componentName: golang.org/x/crypto
+            componentVersion: v0.37.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-random
+            scanner: grype
+      - timestamp: 2025-11-22T16:52:14Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-4q8c-fpg7-qwrf
     aliases:
       - CVE-2025-61725
@@ -135,6 +158,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.7.2-r4
+
+  - id: CGA-889p-3h47-wrff
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T04:40:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-random
+            componentID: 7fa2b0459ac4f9a4
+            componentName: golang.org/x/crypto
+            componentVersion: v0.37.0
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-random
+            scanner: grype
+      - timestamp: 2025-11-22T20:15:19Z
+        type: fixed
+        data:
+          fixed-version: 3.7.2-r5
 
   - id: CGA-93c2-3j9x-5hgv
     aliases:

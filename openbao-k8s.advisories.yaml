@@ -174,6 +174,29 @@ advisories:
         data:
           fixed-version: 1.4.0-r32
 
+  - id: CGA-8rg9-mw5x-j3hh
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T01:37:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openbao-k8s
+            componentID: 0b9987be4028708b
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/openbao-k8s
+            scanner: grype
+      - timestamp: 2025-11-22T08:08:53Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-8wx6-7876-cr88
     aliases:
       - CVE-2025-47912
@@ -261,6 +284,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.4.0-r40
+
+  - id: CGA-gmff-5jxp-3f96
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T01:37:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openbao-k8s
+            componentID: 0b9987be4028708b
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/openbao-k8s
+            scanner: grype
+      - timestamp: 2025-11-22T15:08:50Z
+        type: fixed
+        data:
+          fixed-version: 1.4.0-r41
 
   - id: CGA-h5wp-v2fv-gc83
     aliases:

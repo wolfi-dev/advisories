@@ -75,6 +75,29 @@ advisories:
         data:
           fixed-version: 1.11.3-r1
 
+  - id: CGA-cgmq-cxv5-hxvr
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T10:53:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: chisel
+            componentID: b99c80831763d56d
+            componentName: golang.org/x/crypto
+            componentVersion: v0.41.0
+            componentType: go-module
+            componentLocation: /usr/bin/chisel
+            scanner: grype
+      - timestamp: 2025-11-22T07:04:58Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-cmgx-3jcj-9989
     aliases:
       - CVE-2025-61723
@@ -96,6 +119,32 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.11.3-r1
+
+  - id: CGA-fqcj-vhpj-69qq
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T10:53:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: chisel
+            componentID: b99c80831763d56d
+            componentName: golang.org/x/crypto
+            componentVersion: v0.41.0
+            componentType: go-module
+            componentLocation: /usr/bin/chisel
+            scanner: grype
+      - timestamp: 2025-11-23T07:11:23Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in chisel-1.11.3-r1.apk, at usr/bin/chisel, usr/bin/chisel.'
+      - timestamp: 2025-11-25T14:50:32Z
+        type: fixed
+        data:
+          fixed-version: 1.11.3-r2
 
   - id: CGA-gv23-6wr9-xx4f
     aliases:

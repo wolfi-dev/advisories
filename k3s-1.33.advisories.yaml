@@ -43,6 +43,18 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/containerd-shim-runc-v2
             scanner: grype
+      - timestamp: 2025-11-26T11:12:43Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: |
+            The affected component's suffix is non-standard for parsing. It treats -k3s1 as an unknown qualifier that sorts after known ones (alpha, beta, rc, ga, etc.), which breaks version matching. The suffix is used in k3s because k3s pull in their own fork of containerd. In this case, all fixes associated with this vulnerability from upstream are also mirrored in the k3s containerd fork. See upstream containerd commit[1] and equivalent files in the k3s fork[2][3][4][5][6]. This vulnerability was resolved in k3s-1.33.5.1r3.
+            [1] https://github.com/containerd/containerd/commit/7c59e8e9e970d38061a77b586b23655c352bfec5
+            [2] https://github.com/k3s-io/containerd/blob/v2.1.5/cmd/containerd/server/server.go#L82-87
+            [3] https://github.com/k3s-io/containerd/blob/v2.1.5/cmd/containerd/server/server.go#L109
+            [4] https://github.com/k3s-io/containerd/blob/v2.1.5/core/runtime/v2/task_manager.go#L78-79
+            [5] https://github.com/k3s-io/containerd/blob/v2.1.5/plugins/cri/runtime/plugin.go#L82-88
+            [6] https://github.com/k3s-io/containerd/blob/v2.1.5/plugins/sandbox/controller.go#L71-75
 
   - id: CGA-4hw3-vxq6-qr47
     aliases:
@@ -88,6 +100,24 @@ advisories:
         data:
           fixed-version: 1.33.5.1-r1
 
+  - id: CGA-6rh4-p5rc-q7f6
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T18:17:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s-1.33
+            componentID: 2fbcb5eb436be112
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/k3s
+            scanner: grype
+
   - id: CGA-8ggx-55h4-h6vm
     aliases:
       - CVE-2025-31133
@@ -127,6 +157,28 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/k3s
             scanner: grype
+      - timestamp: 2025-11-14T15:29:19Z
+        type: pending-upstream-fix
+        data:
+          note: selinux is pinned to v1.11.1 upstream (https://github.com/k3s-io/k3s/blob/main/go.mod#L22) and trying to bump it to the fixed version for this CVE v1.13.0 causes build failures. Upstream maintainers will need to update the upstream code to the fixed version of selinux.
+
+  - id: CGA-g2vh-f33f-hxpf
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T18:17:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s-1.33
+            componentID: 2fbcb5eb436be112
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/k3s
+            scanner: grype
 
   - id: CGA-hf79-qpx3-hh49
     aliases:
@@ -145,6 +197,18 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/containerd-shim-runc-v2
             scanner: grype
+      - timestamp: 2025-11-17T15:18:19Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: |
+            The affected component's suffix is non-standard for parsing. It treats -k3s1 as an unknown qualifier that sorts after known ones (alpha, beta, rc, ga, etc.), which breaks version matching. The suffix is used in k3s because k3s pull in their own fork of containerd. In this case, all fixes associated with this vulnerability from upstream are also mirrored in the k3s containerd fork. See upstream containerd commit[1] and equivalent files in the k3s fork[2][3][4][5][6]. This vulnerability was resolved in k3s-1.33.5.1r3.
+            [1] https://github.com/containerd/containerd/commit/7c59e8e9e970d38061a77b586b23655c352bfec5
+            [2] https://github.com/k3s-io/containerd/blob/v2.1.5/cmd/containerd/server/server.go#L82-87
+            [3] https://github.com/k3s-io/containerd/blob/v2.1.5/cmd/containerd/server/server.go#L109
+            [4] https://github.com/k3s-io/containerd/blob/v2.1.5/core/runtime/v2/task_manager.go#L78-79
+            [5] https://github.com/k3s-io/containerd/blob/v2.1.5/plugins/cri/runtime/plugin.go#L82-88
+            [6] https://github.com/k3s-io/containerd/blob/v2.1.5/plugins/sandbox/controller.go#L71-75
 
   - id: CGA-v7fr-4c6h-v59v
     aliases:

@@ -88,3 +88,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.13.0-r2
+
+  - id: CGA-vc2j-2hww-c4fc
+    aliases:
+      - CVE-2025-64345
+      - GHSA-hc7m-r6v8-hg9q
+    events:
+      - timestamp: 2025-11-15T07:34:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: yara-x
+            componentID: 3265162b6205f72d
+            componentName: wasmtime
+            componentVersion: 37.0.2
+            componentType: rust-crate
+            componentLocation: /usr/bin/yr
+            scanner: grype
+      - timestamp: 2025-11-19T18:35:19Z
+        type: fixed
+        data:
+          fixed-version: 1.9.0-r2

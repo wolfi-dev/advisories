@@ -4,6 +4,28 @@ package:
   name: rook
 
 advisories:
+  - id: CGA-24fc-mv7r-g229
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T05:05:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rook
+            componentID: be2e0ab4f417817c
+            componentName: golang.org/x/crypto
+            componentVersion: v0.40.0
+            componentType: go-module
+            componentLocation: /usr/bin/rook
+            scanner: grype
+      - timestamp: 2025-11-22T21:46:14Z
+        type: fixed
+        data:
+          fixed-version: 1.18.7-r1
+
   - id: CGA-45x4-hxcr-3vm7
     aliases:
       - CVE-2024-24789
@@ -111,6 +133,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.16.5-r4
+
+  - id: CGA-9m56-v8gj-8j2c
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T05:05:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rook
+            componentID: be2e0ab4f417817c
+            componentName: golang.org/x/crypto
+            componentVersion: v0.40.0
+            componentType: go-module
+            componentLocation: /usr/bin/rook
+            scanner: grype
+      - timestamp: 2025-11-22T21:46:15Z
+        type: fixed
+        data:
+          fixed-version: 1.18.7-r1
 
   - id: CGA-9xpv-mghp-wmcx
     aliases:

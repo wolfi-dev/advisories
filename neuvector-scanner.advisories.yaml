@@ -1284,6 +1284,29 @@ advisories:
         data:
           fixed-version: 0_git20240417-r2
 
+  - id: CGA-pwpm-rjwm-34m3
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T14:00:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: neuvector-scanner
+            componentID: 6973897bc6a824f9
+            componentName: golang.org/x/crypto
+            componentVersion: v0.40.0
+            componentType: go-module
+            componentLocation: /usr/local/bin/scannerTask
+            scanner: grype
+      - timestamp: 2025-11-22T08:10:36Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-qfh9-h4cf-82hw
     aliases:
       - CVE-2024-24789
@@ -1325,6 +1348,29 @@ advisories:
         type: fixed
         data:
           fixed-version: 0_git20240528-r4
+
+  - id: CGA-v5pv-f6wv-5q48
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T14:00:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: neuvector-scanner
+            componentID: 6973897bc6a824f9
+            componentName: golang.org/x/crypto
+            componentVersion: v0.40.0
+            componentType: go-module
+            componentLocation: /usr/local/bin/scannerTask
+            scanner: grype
+      - timestamp: 2025-11-23T07:17:17Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
 
   - id: CGA-vhj7-48wx-f8v9
     aliases:

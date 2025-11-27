@@ -245,6 +245,28 @@ advisories:
         data:
           fixed-version: 1.42.0-r1
 
+  - id: CGA-gcv4-pvph-v9xr
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T07:36:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buildah
+            componentID: 6195b5dbe23f5b8a
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/buildah
+            scanner: grype
+      - timestamp: 2025-11-21T09:32:17Z
+        type: fixed
+        data:
+          fixed-version: 1.42.1-r1
+
   - id: CGA-gpr2-42c3-43rf
     aliases:
       - CVE-2022-27651
@@ -322,6 +344,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.41.0-r1
+
+  - id: CGA-m6c7-44pr-g4mx
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T07:36:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buildah
+            componentID: 6195b5dbe23f5b8a
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/buildah
+            scanner: grype
+      - timestamp: 2025-11-21T09:32:18Z
+        type: fixed
+        data:
+          fixed-version: 1.42.1-r1
 
   - id: CGA-p5jm-hq7x-fwc2
     aliases:
@@ -536,6 +580,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/buildah
             scanner: grype
+      - timestamp: 2025-11-13T11:47:53Z
+        type: pending-upstream-fix
+        data:
+          note: This CVE impacts the dependency github.com/opencontainers/selinux, which needs to be updated to v1.13.0. However, v1.13.0 depends upon v0.6.0 of github.com/cyphar/filepath-securejoin, which has removed the previously deprecated functions OpenInRoot and Reopen. These functions are used by the latest version of another buildah dependency (go.podman.io/storage), so the selinux dependency cannot be updated until upstream code changes are made
 
   - id: CGA-w3x9-fj4v-fj48
     aliases:

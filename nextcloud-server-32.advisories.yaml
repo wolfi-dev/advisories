@@ -69,3 +69,27 @@ advisories:
         data:
           type: component-vulnerability-mismatch
           note: False positive identified due to naming/version mismatches between Nextcloud-specific packages and unrelated NPM packages. Nextcloud maintains actively updated versions, but inconsistent version tagging may be causing confusion. Needs version/tagging corrections from Nextcloud.
+
+  - id: CGA-v4c2-ff3q-42xr
+    aliases:
+      - CVE-2025-64500
+      - GHSA-3rg7-wf37-54rm
+    events:
+      - timestamp: 2025-11-15T07:39:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nextcloud-server-32
+            componentID: c70561744d4da393
+            componentName: symfony/http-foundation
+            componentVersion: v6.4.14
+            componentType: php-composer
+            componentLocation: /usr/src/nextcloud/3rdparty/composer/installed.json
+            scanner: grype
+      - timestamp: 2025-11-19T18:33:54Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            nextcloud imports http-foundation via the nextcloud thirdparty submodule[1]. Upstream maintainers will need to release a new version of nextcloud to incorporate the fixed version of the submodule.
+            [1] https://github.com/nextcloud/server/pull/56401/commits/7b7784966c9bbf44032b18a7c71f6c6f747aa037

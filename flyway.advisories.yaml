@@ -65,6 +65,13 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/java/flyway/drivers/mssql-jdbc-12.10.2.jre11.jar
             scanner: grype
+      - timestamp: 2025-11-13T19:47:50Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: |
+            The affected component's suffix is non-standard for Maven parsing. It supports "." as a delimiter, but treats jre11 as an unknown qualifier that sorts after known ones (alpha, beta, rc, ga, etc.), which breaks version matching. This vulnerability was resolved in flyway 11.16.0 and above[1].
+            [1] https://documentation.red-gate.com/flyway/release-notes-and-older-versions/release-notes-for-flyway-engine
 
   - id: CGA-7vrc-vhf3-9f48
     aliases:

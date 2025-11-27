@@ -359,6 +359,29 @@ advisories:
         data:
           fixed-version: 7.5.0-r1
 
+  - id: CGA-g2p2-h5pv-5f9v
+    aliases:
+      - CVE-2025-64756
+      - GHSA-5j98-mcp5-4vw2
+    events:
+      - timestamp: 2025-11-18T08:15:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sqlpad
+            componentID: 953bc91c658fdd54
+            componentName: glob
+            componentVersion: 11.0.3
+            componentType: npm
+            componentLocation: /usr/bin/sqlpad-server/node_modules/rimraf/node_modules/glob/package.json
+            scanner: grype
+      - timestamp: 2025-11-26T07:27:42Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: This CVE affects only the glob CLI and does not affect the javascript API.
+
   - id: CGA-hgjg-3j78-ggcp
     aliases:
       - CVE-2024-21507

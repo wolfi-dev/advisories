@@ -62,6 +62,28 @@ advisories:
             The package has already been updated to use pnpm overrides for tmp@^0.2.4 which will fix instances of tmp@0.2.x,
             but the 0.0.33 instances require upstream dependencies to update their requirements.
 
+  - id: CGA-8456-788m-9x6m
+    aliases:
+      - CVE-2025-64718
+      - GHSA-mh29-5h37-fv8m
+    events:
+      - timestamp: 2025-11-18T07:45:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: langfuse
+            componentID: 9f3dfab0adc11b31
+            componentName: js-yaml
+            componentVersion: 3.14.1
+            componentType: npm
+            componentLocation: /app/node_modules/.pnpm/js-yaml@3.14.1/node_modules/js-yaml/package.json
+            scanner: grype
+      - timestamp: 2025-11-26T15:51:15Z
+        type: fixed
+        data:
+          fixed-version: 3.134.0-r0
+
   - id: CGA-9cvc-f57h-23xp
     aliases:
       - GHSA-mm7p-fcc7-pg87
@@ -260,6 +282,29 @@ advisories:
         data:
           fixed-version: 3.110.0-r0
 
+  - id: CGA-h7wr-49rm-hjmq
+    aliases:
+      - CVE-2025-64756
+      - GHSA-5j98-mcp5-4vw2
+    events:
+      - timestamp: 2025-11-18T07:45:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: langfuse
+            componentID: 3dae13b65db14188
+            componentName: glob
+            componentVersion: 10.3.10
+            componentType: npm
+            componentLocation: /app/node_modules/.pnpm/glob@10.3.10/node_modules/glob/package.json
+            scanner: grype
+      - timestamp: 2025-11-25T14:51:57Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: This CVE affects only the glob CLI and does not affect the javascript API.
+
   - id: CGA-mp7f-v3fx-w4g3
     aliases:
       - CVE-2025-59343
@@ -303,6 +348,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.102.0-r0
+
+  - id: CGA-q935-r24w-3cqx
+    aliases:
+      - CVE-2025-65944
+      - GHSA-6465-jgvq-jhgp
+    events:
+      - timestamp: 2025-11-26T07:37:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: langfuse
+            componentID: df47498c8137f79d
+            componentName: '@sentry/nextjs'
+            componentVersion: 10.18.0
+            componentType: npm
+            componentLocation: /app/node_modules/.pnpm/@sentry+nextjs@10.18.0_@opentelemetry+context-async-hooks@2.1.0_@opentelemetry+api@1.9.0__@op_bbg5x5dp3vii2gnm47fzfnqyzq/node_modules/@sentry/nextjs/package.json
+            scanner: grype
 
   - id: CGA-qjxq-5g28-58mf
     aliases:

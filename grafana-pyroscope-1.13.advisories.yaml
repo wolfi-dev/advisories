@@ -27,6 +27,29 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-48m9-6jcq-xjgp
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T12:57:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-pyroscope-1.13
+            componentID: fab3c398f2fe76c4
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/profilecli
+            scanner: grype
+      - timestamp: 2025-11-22T22:43:23Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-52pv-h8h9-m6j4
     aliases:
       - CVE-2025-58188
@@ -298,6 +321,29 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.13.6-r2
+
+  - id: CGA-mq8m-rphr-h8gx
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T12:57:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-pyroscope-1.13
+            componentID: fab3c398f2fe76c4
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/profilecli
+            scanner: grype
+      - timestamp: 2025-11-23T08:50:23Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
 
   - id: CGA-mxcw-h8jg-h68w
     aliases:

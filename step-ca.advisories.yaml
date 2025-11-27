@@ -25,6 +25,29 @@ advisories:
         data:
           fixed-version: 0.28.2-r4
 
+  - id: CGA-47cj-89rv-vww7
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T14:19:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: step-ca
+            componentID: 800c1c116aabf302
+            componentName: golang.org/x/crypto
+            componentVersion: v0.39.0
+            componentType: go-module
+            componentLocation: /usr/bin/step-ca
+            scanner: grype
+      - timestamp: 2025-11-22T23:00:36Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-49gw-xcf3-mc2q
     aliases:
       - CVE-2024-24787
@@ -465,6 +488,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.28.2-r3
+
+  - id: CGA-mqxg-3j34-m64p
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T14:19:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: step-ca
+            componentID: 800c1c116aabf302
+            componentName: golang.org/x/crypto
+            componentVersion: v0.39.0
+            componentType: go-module
+            componentLocation: /usr/bin/step-ca
+            scanner: grype
+      - timestamp: 2025-11-23T07:19:45Z
+        type: fixed
+        data:
+          fixed-version: 0.28.4-r4
 
   - id: CGA-p46w-mvxx-j7h2
     aliases:

@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: grafana-12.2
+
+advisories:
+  - id: CGA-m6f6-pfhq-9x3w
+    aliases:
+      - CVE-2025-64751
+      - GHSA-2c64-vmv2-hgfc
+    events:
+      - timestamp: 2025-11-22T21:31:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-12.2
+            componentID: 4af9306a0e73166e
+            componentName: github.com/openfga/openfga
+            componentVersion: v1.8.13
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype

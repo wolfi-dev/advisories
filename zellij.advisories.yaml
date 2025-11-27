@@ -47,6 +47,30 @@ advisories:
         data:
           fixed-version: 0.42.1-r0
 
+  - id: CGA-7267-v3j8-3mxw
+    aliases:
+      - CVE-2025-64345
+      - GHSA-hc7m-r6v8-hg9q
+    events:
+      - timestamp: 2025-11-15T07:48:35Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zellij
+            componentID: bd221ff920bcacb2
+            componentName: wasmtime
+            componentVersion: 29.0.1
+            componentType: rust-crate
+            componentLocation: /usr/bin/zellij
+            scanner: grype
+      - timestamp: 2025-11-19T14:20:50Z
+        type: pending-upstream-fix
+        data:
+          note: |-
+            Upstream has migrated from Wasmtime to Wasmi (see PR: https://github.com/zellij-org/zellij/pull/4449
+            ). A release including this change has not yet been published.
+
   - id: CGA-7gcr-hj9h-879c
     aliases:
       - CVE-2024-51756

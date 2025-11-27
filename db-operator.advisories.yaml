@@ -4,6 +4,50 @@ package:
   name: db-operator
 
 advisories:
+  - id: CGA-frmv-r366-mccw
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T14:02:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: db-operator
+            componentID: 3c6725e7700936cf
+            componentName: golang.org/x/crypto
+            componentVersion: v0.41.0
+            componentType: go-module
+            componentLocation: /usr/bin/db-operator
+            scanner: grype
+      - timestamp: 2025-11-21T22:31:48Z
+        type: fixed
+        data:
+          fixed-version: 2.16.0-r2
+
+  - id: CGA-j48c-qj3j-h2qg
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T14:02:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: db-operator
+            componentID: 3c6725e7700936cf
+            componentName: golang.org/x/crypto
+            componentVersion: v0.41.0
+            componentType: go-module
+            componentLocation: /usr/bin/db-operator
+            scanner: grype
+      - timestamp: 2025-11-21T22:31:49Z
+        type: fixed
+        data:
+          fixed-version: 2.16.0-r2
+
   - id: CGA-jf5m-6wrh-x7qw
     aliases:
       - CVE-2025-47910

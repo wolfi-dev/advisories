@@ -4,6 +4,28 @@ package:
   name: cluster-api-azure-controller
 
 advisories:
+  - id: CGA-c5jr-qrhh-qrj2
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T07:17:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-api-azure-controller
+            componentID: 3af417354da697f2
+            componentName: golang.org/x/crypto
+            componentVersion: v0.41.0
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-api-azure-controller
+            scanner: grype
+      - timestamp: 2025-11-21T10:32:35Z
+        type: fixed
+        data:
+          fixed-version: 1.21.1-r1
+
   - id: CGA-mc4r-7378-vv45
     aliases:
       - CVE-2025-47910
@@ -25,6 +47,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.21.0-r1
+
+  - id: CGA-mr43-6hxj-h5qq
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T07:17:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cluster-api-azure-controller
+            componentID: 3af417354da697f2
+            componentName: golang.org/x/crypto
+            componentVersion: v0.41.0
+            componentType: go-module
+            componentLocation: /usr/bin/cluster-api-azure-controller
+            scanner: grype
+      - timestamp: 2025-11-21T10:32:36Z
+        type: fixed
+        data:
+          fixed-version: 1.21.1-r1
 
   - id: CGA-vjpc-222f-8p27
     aliases:

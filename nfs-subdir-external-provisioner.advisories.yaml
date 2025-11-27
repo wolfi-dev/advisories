@@ -134,6 +134,29 @@ advisories:
         data:
           fixed-version: 4.0.18-r10
 
+  - id: CGA-54cx-xrj7-hhpm
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T08:15:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nfs-subdir-external-provisioner
+            componentID: 8673d97b5919bcee
+            componentName: golang.org/x/crypto
+            componentVersion: v0.35.0
+            componentType: go-module
+            componentLocation: /usr/bin/nfs-subdir-external-provisioner
+            scanner: grype
+      - timestamp: 2025-11-22T16:36:08Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-6237-pxwx-7g6g
     aliases:
       - CVE-2024-24789
@@ -709,6 +732,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 4.0.18-r20
+
+  - id: CGA-v5rw-2w76-fjg9
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T08:15:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nfs-subdir-external-provisioner
+            componentID: 8673d97b5919bcee
+            componentName: golang.org/x/crypto
+            componentVersion: v0.35.0
+            componentType: go-module
+            componentLocation: /usr/bin/nfs-subdir-external-provisioner
+            scanner: grype
+      - timestamp: 2025-11-23T00:32:24Z
+        type: fixed
+        data:
+          fixed-version: 4.0.18-r26
 
   - id: CGA-wp8v-cj8j-rwqv
     aliases:

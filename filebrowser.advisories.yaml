@@ -244,6 +244,28 @@ advisories:
         data:
           note: FileBrowser version 2.38.0 is affected by a denial-of-service (DoS) vulnerability stemming from uncontrolled memory allocation when processing file reads. At this time, no upstream patch or mitigation has been released. We are actively monitoring the upstream repository for remediation and will evaluate patching or mitigation strategies once a fix becomes available.
 
+  - id: CGA-9vhr-9jqv-jg4f
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T10:24:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: filebrowser
+            componentID: 9197b74b1f0a8797
+            componentName: golang.org/x/crypto
+            componentVersion: v0.44.0
+            componentType: go-module
+            componentLocation: /usr/bin/filebrowser
+            scanner: grype
+      - timestamp: 2025-11-21T14:04:45Z
+        type: fixed
+        data:
+          fixed-version: 2.48.2-r1
+
   - id: CGA-f6mw-cjgx-h4h8
     aliases:
       - CVE-2025-11579
@@ -435,6 +457,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.32.0-r6
+
+  - id: CGA-r9x8-mg3g-6fj9
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T10:24:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: filebrowser
+            componentID: 9197b74b1f0a8797
+            componentName: golang.org/x/crypto
+            componentVersion: v0.44.0
+            componentType: go-module
+            componentLocation: /usr/bin/filebrowser
+            scanner: grype
+      - timestamp: 2025-11-21T14:04:46Z
+        type: fixed
+        data:
+          fixed-version: 2.48.2-r1
 
   - id: CGA-wpwv-jh3m-4q65
     aliases:

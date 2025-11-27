@@ -4,6 +4,29 @@ package:
   name: newrelic-nri-statsd
 
 advisories:
+  - id: CGA-286p-fv22-5wh7
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T16:13:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: newrelic-nri-statsd
+            componentID: 8d4af3ff168520aa
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/gostatsd
+            scanner: grype
+      - timestamp: 2025-11-23T07:40:03Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-287m-cgrj-7rqh
     aliases:
       - CVE-2025-58189
@@ -203,6 +226,29 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.11.0-r4
+
+  - id: CGA-8q52-9p2p-xf62
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T16:13:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: newrelic-nri-statsd
+            componentID: 8d4af3ff168520aa
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/gostatsd
+            scanner: grype
+      - timestamp: 2025-11-25T07:44:12Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
 
   - id: CGA-8q6x-g4mj-m8qp
     aliases:

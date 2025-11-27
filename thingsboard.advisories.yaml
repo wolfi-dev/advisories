@@ -202,6 +202,28 @@ advisories:
         data:
           fixed-version: 4.0.1-r1
 
+  - id: CGA-598p-7cqw-86f3
+    aliases:
+      - CVE-2025-64718
+      - GHSA-mh29-5h37-fv8m
+    events:
+      - timestamp: 2025-11-18T08:19:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: thingsboard-tb-web-ui
+            componentID: 4c5345ecf8ed4df2
+            componentName: js-yaml
+            componentVersion: 4.1.0
+            componentType: npm
+            componentLocation: /usr/share/tb-js-executor/node_modules/js-yaml/package.json
+            scanner: grype
+      - timestamp: 2025-11-25T11:32:15Z
+        type: fixed
+        data:
+          fixed-version: 4.2.1-r8
+
   - id: CGA-5qrg-rqx9-wqjf
     aliases:
       - CVE-2025-22235

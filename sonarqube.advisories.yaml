@@ -441,6 +441,13 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/sonarqube/lib/jdbc/mssql/mssql-jdbc-13.2.1.jre11.jar
             scanner: grype
+      - timestamp: 2025-11-13T19:06:29Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: |
+            The affected component's suffix is non-standard for Maven parsing. It supports "." as a delimiter, but treats jre11 as an unknown qualifier that sorts after known ones (alpha, beta, rc, ga, etc.), which breaks version matching. This vulnerability was resolved in v25.11.0.114957 of sonarqube[1].
+            [1]https://github.com/SonarSource/sonarqube/commit/ad603468b3af8284156d532eae7d099464189728
 
   - id: CGA-qm35-phph-2vmr
     aliases:

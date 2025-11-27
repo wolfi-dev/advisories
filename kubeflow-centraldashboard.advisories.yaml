@@ -424,6 +424,28 @@ advisories:
         data:
           note: The vulnerability originates from a Node.js module. Upstream must properly upgrade the affected module, taking into account its integration with related dependencies. Once addressed, we can proceed with updating and remediating the vulnerability
 
+  - id: CGA-pfcm-rqph-c6cp
+    aliases:
+      - CVE-2025-64718
+      - GHSA-mh29-5h37-fv8m
+    events:
+      - timestamp: 2025-11-18T07:35:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-centraldashboard
+            componentID: 5485171362a576c6
+            componentName: js-yaml
+            componentVersion: 4.1.0
+            componentType: npm
+            componentLocation: /app/node_modules/@kubernetes/client-node/node_modules/js-yaml/package.json
+            scanner: grype
+      - timestamp: 2025-11-21T12:01:01Z
+        type: pending-upstream-fix
+        data:
+          note: Upgrading the js-yaml version causes test failures so upstream maintainers will need to update it in conjunction with other code.
+
   - id: CGA-r54h-x2r8-rx8m
     aliases:
       - GHSA-rm8p-cx58-hcvx

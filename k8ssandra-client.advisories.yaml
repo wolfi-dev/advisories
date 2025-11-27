@@ -140,6 +140,29 @@ advisories:
         data:
           fixed-version: 0.8.2-r2
 
+  - id: CGA-7ch3-93xp-9g2x
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T08:31:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k8ssandra-client
+            componentID: bbc2df07f7a5088d
+            componentName: golang.org/x/crypto
+            componentVersion: v0.41.0
+            componentType: go-module
+            componentLocation: /usr/bin/kubectl-k8ssandra
+            scanner: grype
+      - timestamp: 2025-11-22T21:13:31Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-839g-gc83-5jfv
     aliases:
       - CVE-2025-22870
@@ -237,6 +260,28 @@ advisories:
         type: pending-upstream-fix
         data:
           note: K8ssandra-client 0.6.4 depends on Helm v3.14.2 https://github.com/k8ssandra/k8ssandra-client/blob/837b13f687e28c2e2188171bbb9dea26f70c2bbe/go.mod\#L25 - Upgrading to Helm v3.17.3, which addresses this vulnerability, causes build failures due to API incompatibilities. Upstream changes are required to ensure compatibility with the newer Helm version.
+
+  - id: CGA-8qq9-pw43-xqqm
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T08:31:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k8ssandra-client
+            componentID: bbc2df07f7a5088d
+            componentName: golang.org/x/crypto
+            componentVersion: v0.41.0
+            componentType: go-module
+            componentLocation: /usr/bin/kubectl-k8ssandra
+            scanner: grype
+      - timestamp: 2025-11-23T00:27:45Z
+        type: fixed
+        data:
+          fixed-version: 0.8.4-r1
 
   - id: CGA-93jw-pr5g-5vjc
     aliases:

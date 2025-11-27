@@ -385,6 +385,29 @@ advisories:
         data:
           fixed-version: 1.5.0-r1
 
+  - id: CGA-g58p-vmrp-hc25
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-22T17:30:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spqr
+            componentID: a84aa078a7e33f38
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/spqr-balancer
+            scanner: grype
+      - timestamp: 2025-11-22T19:59:44Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-jc37-wg7h-m85m
     aliases:
       - CVE-2025-22870
@@ -494,6 +517,33 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.1.0-r1
+
+  - id: CGA-rrmr-gj58-j58w
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-22T17:30:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spqr
+            componentID: a84aa078a7e33f38
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/spqr-balancer
+            scanner: grype
+      - timestamp: 2025-11-23T12:35:43Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+      - timestamp: 2025-11-23T13:35:13Z
+        type: fixed
+        data:
+          fixed-version: 2.8.0-r1
 
   - id: CGA-v37p-ghxh-jgcf
     aliases:

@@ -469,6 +469,31 @@ advisories:
         data:
           fixed-version: 0.156.0-r1
 
+  - id: CGA-w9fv-xx2g-xxgm
+    aliases:
+      - CVE-2025-64345
+      - GHSA-hc7m-r6v8-hg9q
+    events:
+      - timestamp: 2025-11-14T18:51:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: zed
+            componentID: 5210fa65ade0861e
+            componentName: wasmtime
+            componentVersion: 29.0.1
+            componentType: rust-crate
+            componentLocation: /usr/libexec/zed
+            scanner: grype
+      - timestamp: 2025-11-17T18:49:25Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            The wasmtime version is explicitly pinned upstream[1] and the maintainers have raised concerns at previous efforts to bump the version[2]. Upstream maintainers will need to update the version of wasmtime to ensure it remains compatible with tree-sitter.
+            [1] https://github.com/zed-industries/zed/blob/6bf5e92a25e6bb87dfdecc861b5a94c4a6a632c9/Cargo.toml#L711
+            [2] https://github.com/zed-industries/zed/pull/38819#issuecomment-3334589640
+
   - id: CGA-wc5p-vj8w-jm26
     aliases:
       - GHSA-q445-7m23-qrmw

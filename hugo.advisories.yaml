@@ -37,6 +37,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-4p2r-7jwq-h54f
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T21:38:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: hugo
+            componentID: 302a23b8c72f4c30
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/hugo
+            scanner: grype
+      - timestamp: 2025-11-22T09:11:44Z
+        type: fixed
+        data:
+          fixed-version: 0.152.2-r1
+
   - id: CGA-4r3q-fgcw-49c7
     aliases:
       - CVE-2023-44487
@@ -173,6 +195,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.143.1-r1
+
+  - id: CGA-jw88-3445-4jc3
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T21:38:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: hugo
+            componentID: 302a23b8c72f4c30
+            componentName: golang.org/x/crypto
+            componentVersion: v0.43.0
+            componentType: go-module
+            componentLocation: /usr/bin/hugo
+            scanner: grype
+      - timestamp: 2025-11-22T09:11:44Z
+        type: fixed
+        data:
+          fixed-version: 0.152.2-r1
 
   - id: CGA-pqfc-hxjf-9xm4
     aliases:

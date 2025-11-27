@@ -203,6 +203,28 @@ advisories:
         data:
           fixed-version: 1.10.2-r3
 
+  - id: CGA-94jg-jvh3-jc92
+    aliases:
+      - CVE-2025-63811
+      - GHSA-9mj6-hxhv-w67j
+    events:
+      - timestamp: 2025-11-18T07:15:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-alloy
+            componentID: 640607b65d0d08a8
+            componentName: github.com/dvsekhvalnov/jose2go
+            componentVersion: v1.6.0
+            componentType: go-module
+            componentLocation: /usr/bin/alloy
+            scanner: grype
+      - timestamp: 2025-11-18T08:33:23Z
+        type: fixed
+        data:
+          fixed-version: 1.11.3-r2
+
   - id: CGA-98wh-pjwr-2mxj
     aliases:
       - CVE-2025-47910

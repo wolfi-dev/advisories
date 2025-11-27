@@ -1,0 +1,49 @@
+schema-version: 2.0.2
+
+package:
+  name: blob-csi-1.27
+
+advisories:
+  - id: CGA-245f-px45-g7mc
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T09:48:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: blob-csi-1.27
+            componentID: d0245545a075468e
+            componentName: golang.org/x/crypto
+            componentVersion: v0.41.0
+            componentType: go-module
+            componentLocation: /usr/bin/blobfuse-proxy
+            scanner: grype
+      - timestamp: 2025-11-21T13:05:19Z
+        type: fixed
+        data:
+          fixed-version: 1.27.0-r2
+
+  - id: CGA-x7ph-wjf4-4868
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T09:48:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: blob-csi-1.27
+            componentID: d0245545a075468e
+            componentName: golang.org/x/crypto
+            componentVersion: v0.41.0
+            componentType: go-module
+            componentLocation: /usr/bin/blobfuse-proxy
+            scanner: grype
+      - timestamp: 2025-11-21T13:05:20Z
+        type: fixed
+        data:
+          fixed-version: 1.27.0-r2

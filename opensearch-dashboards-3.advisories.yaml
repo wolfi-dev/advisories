@@ -136,6 +136,24 @@ advisories:
         data:
           note: We are unable to bump the axios dependency as it results in a build failure. We will need to wait for upstream to bump the dependency in order to resolve this CVE.
 
+  - id: CGA-prcr-hj45-x4jp
+    aliases:
+      - CVE-2025-64718
+      - GHSA-mh29-5h37-fv8m
+    events:
+      - timestamp: 2025-11-18T07:41:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-dashboards-3
+            componentID: 72afaa827d56867b
+            componentName: js-yaml
+            componentVersion: 4.1.0
+            componentType: npm
+            componentLocation: /usr/share/opensearch-dashboards/node_modules/js-yaml/package.json
+            scanner: grype
+
   - id: CGA-rh94-882c-qxwh
     aliases:
       - CVE-2025-57319

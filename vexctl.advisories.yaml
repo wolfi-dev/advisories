@@ -242,6 +242,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-8pm3-q766-2cph
+    aliases:
+      - CVE-2025-47914
+      - GHSA-f6x5-jh6r-wrfv
+    events:
+      - timestamp: 2025-11-21T20:27:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vexctl
+            componentID: 7dc1a13941bd8074
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/vexctl
+            scanner: grype
+      - timestamp: 2025-11-22T06:52:07Z
+        type: fixed
+        data:
+          fixed-version: 0.4.1-r2
+
   - id: CGA-8v32-ph4w-fr9p
     aliases:
       - CVE-2025-22870
@@ -718,6 +740,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.2.6-r11
+
+  - id: CGA-qf4p-p6v8-vjxv
+    aliases:
+      - CVE-2025-58181
+      - GHSA-j5w8-q4qc-rx2x
+    events:
+      - timestamp: 2025-11-21T20:27:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: vexctl
+            componentID: 7dc1a13941bd8074
+            componentName: golang.org/x/crypto
+            componentVersion: v0.42.0
+            componentType: go-module
+            componentLocation: /usr/bin/vexctl
+            scanner: grype
+      - timestamp: 2025-11-22T06:52:08Z
+        type: fixed
+        data:
+          fixed-version: 0.4.1-r2
 
   - id: CGA-qfq6-xqj2-r58q
     aliases:
