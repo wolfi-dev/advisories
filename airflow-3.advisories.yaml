@@ -48,6 +48,24 @@ advisories:
         data:
           note: The org.apache.commons:commons-lang3 is pulled through a transient dependency of a python package named 'ray' version 2.47.1 which is the latest. We will have to wait for 'ray' to push a more recent version of commons-lang3 and airflow to push a new release with the new 'ray' dependency updated.
 
+  - id: CGA-3v8h-9xm6-877g
+    aliases:
+      - CVE-2025-62593
+      - GHSA-q279-jhrf-cc6v
+    events:
+      - timestamp: 2025-11-27T11:07:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow-3
+            componentID: da34b18dd4332e63
+            componentName: ray
+            componentVersion: 2.47.1
+            componentType: python
+            componentLocation: /opt/airflow/lib/python3.12/site-packages/ray-2.47.1.dist-info/METADATA
+            scanner: grype
+
   - id: CGA-3whp-3mvm-w98q
     aliases:
       - CVE-2025-58065

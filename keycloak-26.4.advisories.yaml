@@ -92,6 +92,28 @@ advisories:
         data:
           note: A patch for this vulnerability is not yet available. The upstream project will need to implement code changes to address it.
 
+  - id: CGA-675c-cg42-c9rp
+    aliases:
+      - CVE-2025-66021
+      - GHSA-g9gq-3pfx-2gw2
+    events:
+      - timestamp: 2025-11-27T12:03:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keycloak-26.4
+            componentID: 689e4ee526d260ea
+            componentName: owasp-java-html-sanitizer
+            componentVersion: "20240325.1"
+            componentType: java-archive
+            componentLocation: /opt/iamguarded/keycloak/lib/lib/main/com.googlecode.owasp-java-html-sanitizer.owasp-java-html-sanitizer-20240325.1.jar
+            scanner: grype
+      - timestamp: 2025-11-28T17:28:50Z
+        type: pending-upstream-fix
+        data:
+          note: 'There is no fixed version of owasp-java-html-sanitizer available: OWASP upstream will need to release a fix, and Keycloak upstream will need to integrate it.'
+
   - id: CGA-9647-2wx5-r2m4
     aliases:
       - CVE-2017-12159
