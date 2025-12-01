@@ -21,6 +21,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/docker-machine
             scanner: grype
+      - timestamp: 2025-11-30T20:30:08Z
+        type: pending-upstream-fix
+        data:
+          note: 'gitlab-runner depends on https://gitlab.com/gitlab-org/ci-cd/docker-machine/-/tags and https://gitlab.com/gitlab-org/ci-cd/runner-tools/base-images/-/tags for Docker images and their versions need to be tightly coupled.  Currently, base-images does not have a newer version to pick up Docker=>28.0.0. '
 
   - id: CGA-jx5f-4jh9-95pr
     aliases:
@@ -39,3 +43,8 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/docker-machine
             scanner: grype
+      - timestamp: 2025-11-30T20:29:08Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-version-not-used
+          note: This vulnerability is being detected erroneously since this issue has been fixed since docker 25.0.4 and we currently ship v25.0.6
