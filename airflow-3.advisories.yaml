@@ -516,6 +516,24 @@ advisories:
             We are currently unable to bump the Werkzeug dependency as there are some hard constraints on the connnexion dependency for the FAB auth manager APIs.
             More information can be found in a comment by upstream maintainers here: https://github.com/apache/airflow/pull/51681\#issuecomment-3411116656
 
+  - id: CGA-rh6r-pgx2-378c
+    aliases:
+      - CVE-2025-34351
+      - GHSA-gx77-xgc2-4888
+    events:
+      - timestamp: 2025-12-02T11:05:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow-3
+            componentID: da34b18dd4332e63
+            componentName: ray
+            componentVersion: 2.47.1
+            componentType: python
+            componentLocation: /opt/airflow/lib/python3.12/site-packages/ray-2.47.1.dist-info/METADATA
+            scanner: grype
+
   - id: CGA-rw79-7pm4-6wf7
     aliases:
       - CVE-2025-8869
