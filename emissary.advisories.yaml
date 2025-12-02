@@ -114,6 +114,24 @@ advisories:
         data:
           note: This CVE is caused by Kubernetes v1.28.x and the version of Kubernetes (v1.29.14) that remediates CVE-2025-0426 is incompatible with Emissary v3.9.1. A fix exists upstream for this CVE but is slated for the v4.0.0 release https://github.com/emissary-ingress/emissary/commit/1c96a9 Upstream maintainers must implement remediation for v3.x.x branch.
 
+  - id: CGA-6mhj-q38r-38jc
+    aliases:
+      - CVE-2025-66221
+      - GHSA-hgf8-39gv-g3f2
+    events:
+      - timestamp: 2025-12-02T14:27:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3.13-ambassador
+            componentID: 2f2cda9e21f2e2fe
+            componentName: werkzeug
+            componentVersion: 3.1.3
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/werkzeug-3.1.3.dist-info/METADATA
+            scanner: grype
+
   - id: CGA-6x5x-2jv3-mxqp
     aliases:
       - CVE-2024-56326
