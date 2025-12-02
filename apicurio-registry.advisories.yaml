@@ -416,6 +416,11 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/java/apicurio-registry/lib/com.microsoft.sqlserver.mssql-jdbc-12.10.2.jre11.jar
             scanner: grype
+      - timestamp: 2025-12-02T20:08:26Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: The affected component's suffix is non-standard for Maven parsing. It supports "." as a delimiter, but treats jre11 as an unknown qualifier that sorts after known ones (alpha, beta, rc, ga, etc.), which breaks version matching. This vulnerability is resolved in apicurio-registry v3.1.4.
 
   - id: CGA-p3w3-hrxv-jqqf
     aliases:
