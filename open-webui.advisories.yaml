@@ -399,6 +399,24 @@ advisories:
         data:
           note: The vulnerability affects PyOdide distribution package that is built with an urllib3 not yet patched version. No PyOdide with fixed version are released yet (latest has urlib3 at v2.3.0, while stable has v2.2.3, here https://pyodide.org/en/stable/usage/packages-in-pyodide.html). We will update it once the patched version is released.
 
+  - id: CGA-rrjv-gccg-cq2x
+    aliases:
+      - CVE-2025-66034
+      - GHSA-768j-98cg-p3fv
+    events:
+      - timestamp: 2025-12-02T15:35:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: open-webui
+            componentID: 49563e305bd7400a
+            componentName: fonttools
+            componentVersion: 4.56.0
+            componentType: python
+            componentLocation: /usr/share/open-webui/lib/python3.11/site-packages/open_webui/frontend/pyodide/fonttools-4.56.0-py3-none-any.whl
+            scanner: grype
+
   - id: CGA-vp8f-xf9w-8jwj
     aliases:
       - CVE-2024-35195
