@@ -180,6 +180,24 @@ advisories:
         data:
           note: The Starlette vulnerability (CVE-2025-62727) exists in a transitive dependency through FastAPI. Apache Airflow Core 3.1.1 has a hard constraint on fastapi[standard-no-fastapi-cloud-cli]>=0.116.0,<0.118.0, which prevents upgrading to FastAPI 0.118.0+ that supports Starlette 0.49.1 (the patched version). The fix requires upstream Apache Airflow to release a version with relaxed FastAPI constraints.
 
+  - id: CGA-98jr-8mwh-f768
+    aliases:
+      - CVE-2025-66221
+      - GHSA-hgf8-39gv-g3f2
+    events:
+      - timestamp: 2025-12-02T11:05:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow-3
+            componentID: 82ff72237fa68917
+            componentName: werkzeug
+            componentVersion: 2.2.3
+            componentType: python
+            componentLocation: /opt/airflow/lib/python3.12/site-packages/Werkzeug-2.2.3.dist-info/METADATA
+            scanner: grype
+
   - id: CGA-c62x-7p7g-hqvm
     aliases:
       - CVE-2024-49767
@@ -515,6 +533,24 @@ advisories:
           note: |-
             We are currently unable to bump the Werkzeug dependency as there are some hard constraints on the connnexion dependency for the FAB auth manager APIs.
             More information can be found in a comment by upstream maintainers here: https://github.com/apache/airflow/pull/51681\#issuecomment-3411116656
+
+  - id: CGA-rh6r-pgx2-378c
+    aliases:
+      - CVE-2025-34351
+      - GHSA-gx77-xgc2-4888
+    events:
+      - timestamp: 2025-12-02T11:05:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow-3
+            componentID: da34b18dd4332e63
+            componentName: ray
+            componentVersion: 2.47.1
+            componentType: python
+            componentLocation: /opt/airflow/lib/python3.12/site-packages/ray-2.47.1.dist-info/METADATA
+            scanner: grype
 
   - id: CGA-rw79-7pm4-6wf7
     aliases:
