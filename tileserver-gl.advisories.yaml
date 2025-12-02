@@ -184,6 +184,24 @@ advisories:
         data:
           note: 'This CVE is a multi layered transitive dependency ultimately caused by the dependency express 5.0.1 which tileserver-gl is on the latest version of. Further, the most recent version of the intermediary dependency Once 1.4.0 which @octokit/request is a direct dependency of, also contains these old major versions (v5.x.x) the fix versions of this dependency are several major versions higher (8.4.1 or v9.2.1) and will require upstream maintainers to implement. '
 
+  - id: CGA-fj56-jxj4-7wf7
+    aliases:
+      - CVE-2024-51999
+      - GHSA-pj86-cfqh-vqx6
+    events:
+      - timestamp: 2025-12-02T14:53:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: tileserver-gl
+            componentID: be2df511e0afedd9
+            componentName: express
+            componentVersion: 5.1.0
+            componentType: npm
+            componentLocation: /usr/src/app/node_modules/express/package.json
+            scanner: grype
+
   - id: CGA-fmh2-26vj-hjq8
     aliases:
       - CVE-2025-64756
