@@ -26,6 +26,24 @@ advisories:
         data:
           note: The vulnerable pillow-10.2.0 and requests-2.31.0 wheel files are bundled as part of pyodide's pre-downloaded package cache in the open-webui frontend. These packages are only installed at runtime in the browser's isolated Python environment when users execute Python code blocks that import these specific libraries (e.g., when code contains import requests or uses matplotlib which depends on pillow). The packages are installed dynamically via pyodide's micropip installer and do not affect the server-side application or system Python environment. Remediation requires an upstream fix from the pyodide project to update their bundled package versions, as open-webui depends on pyodide 0.27.3 which includes these specific vulnerable versions.
 
+  - id: CGA-398m-c5ww-f4r4
+    aliases:
+      - CVE-2025-66416
+      - GHSA-9h52-p55h-vw2f
+    events:
+      - timestamp: 2025-12-03T11:43:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: open-webui
+            componentID: 26ccba3bcefcd460
+            componentName: mcp
+            componentVersion: 1.21.2
+            componentType: python
+            componentLocation: /usr/share/open-webui/lib/python3.11/site-packages/mcp-1.21.2.dist-info/METADATA
+            scanner: grype
+
   - id: CGA-3wxr-g9q8-j97p
     aliases:
       - CVE-2025-62707
