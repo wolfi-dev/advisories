@@ -4,6 +4,24 @@ package:
   name: apache-exporter
 
 advisories:
+  - id: CGA-32pq-c78g-2m7c
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-04T12:00:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-exporter
+            componentID: f35f0be3eb9ffc4c
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/apache_exporter
+            scanner: grype
+
   - id: CGA-m2fh-35v8-62cr
     aliases:
       - CVE-2025-58181
