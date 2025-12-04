@@ -70,6 +70,24 @@ advisories:
         data:
           note: This CVE is caused by a 'go replace' block in the go.mod file pulling in the dependency, despite the package using the latest version as defined elsewhere in the go.mod file. An upstream patch has been submitted and merged which will remove this old dependency in future versions. See https://github.com/argoproj-labs/argocd-image-updater/pull/969
 
+  - id: CGA-5rp6-4mjh-x223
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-04T12:17:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argocd-image-updater
+            componentID: a1e03160b2cc91e3
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/argocd-image-updater
+            scanner: grype
+
   - id: CGA-6384-59f2-hwmg
     aliases:
       - CVE-2025-47914
