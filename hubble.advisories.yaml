@@ -37,6 +37,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-42hq-454v-729c
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-04T21:30:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: hubble
+            componentID: 65de2344154ea103
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/hubble
+            scanner: grype
+
   - id: CGA-538f-j9v5-9wv8
     aliases:
       - CVE-2024-52529
