@@ -4,6 +4,24 @@ package:
   name: terraform-provider-tls
 
 advisories:
+  - id: CGA-3357-5hqh-c75m
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-04T13:07:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-tls
+            componentID: 8e0340fc686e9738
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-tls
+            scanner: grype
+
   - id: CGA-3mwc-6j82-2xcf
     aliases:
       - CVE-2025-58187
