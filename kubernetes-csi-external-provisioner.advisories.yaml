@@ -376,6 +376,24 @@ advisories:
         data:
           fixed-version: 5.2.0-r6
 
+  - id: CGA-jw44-gjq9-mf3r
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-04T20:01:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-provisioner
+            componentID: ee4f7685b854c410
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/csi-provisioner
+            scanner: grype
+
   - id: CGA-mchc-5f5m-mff8
     aliases:
       - CVE-2024-24784
