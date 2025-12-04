@@ -4,6 +4,24 @@ package:
   name: grafana-12.2
 
 advisories:
+  - id: CGA-8rjx-vmqr-gm93
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-04T13:33:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-12.2
+            componentID: 94b6ee7c89fea519
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/grafana
+            scanner: grype
+
   - id: CGA-m6f6-pfhq-9x3w
     aliases:
       - CVE-2025-64751
