@@ -183,6 +183,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: This vulnerability affects to version olders than v2.4.0 while the current package is using v2.5.1.
 
+  - id: CGA-48w3-8gcp-8fqr
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-05T12:40:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: slsa-verifier
+            componentID: 85b8dd5a95bdf2e2
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/slsa-verifier
+            scanner: grype
+
   - id: CGA-4v6h-4h5f-jqr4
     aliases:
       - CVE-2020-8559
