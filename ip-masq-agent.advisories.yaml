@@ -826,3 +826,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.12.0-r8
+
+  - id: CGA-xgm4-q2cc-vf53
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-05T02:45:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ip-masq-agent
+            componentID: d51d1476fb3192d9
+            componentName: stdlib
+            componentVersion: go1.25.3
+            componentType: go-module
+            componentLocation: /usr/bin/ip-masq-agent
+            scanner: grype
+      - timestamp: 2025-12-05T04:39:01Z
+        type: fixed
+        data:
+          fixed-version: 2.12.0-r15

@@ -157,6 +157,24 @@ advisories:
         data:
           fixed-version: 4.10.0-r2
 
+  - id: CGA-h2mq-4r55-c2r2
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-04T21:38:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-driver-nfs
+            componentID: 4d7000219e2a694d
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/nfsplugin
+            scanner: grype
+
   - id: CGA-hpqx-qf5j-7hgv
     aliases:
       - CVE-2025-47907

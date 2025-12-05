@@ -633,6 +633,28 @@ advisories:
         data:
           fixed-version: 4.0.0-r0
 
+  - id: CGA-vfw4-864g-m87c
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-04T19:53:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gomplate
+            componentID: 37f821897feff8ca
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/gomplate
+            scanner: grype
+      - timestamp: 2025-12-05T05:23:52Z
+        type: fixed
+        data:
+          fixed-version: 4.3.3-r5
+
   - id: CGA-x678-9j63-wf4w
     aliases:
       - CVE-2023-44487
