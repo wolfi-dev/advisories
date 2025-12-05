@@ -139,6 +139,24 @@ advisories:
           type: component-vulnerability-mismatch
           note: False positive identified due to the scanners mismatching the version. The CVE in question has been fixed since apache 2.2.6, and the apache version where this is being detected is 2.4.64.
 
+  - id: CGA-g48q-c2cx-r2h8
+    aliases:
+      - CVE-1999-0289
+      - GHSA-w6fh-wrw4-q6vg
+    events:
+      - timestamp: 2025-12-05T22:15:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache2
+            componentID: db3cd7c5b3c5aa0f
+            componentName: apache2
+            componentVersion: 2.4.66-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-gpfg-33rx-33jc
     aliases:
       - CVE-1999-1412
