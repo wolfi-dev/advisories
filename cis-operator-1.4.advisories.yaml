@@ -48,3 +48,29 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
+
+  - id: CGA-v838-r9g4-cr36
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-04T13:05:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cis-operator-1.4
+            componentID: 2364348a7c4b4e02
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/cis-operator
+            scanner: grype
+      - timestamp: 2025-12-04T14:00:26Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in cis-operator-1.4-1.4.5-r0.apk, at usr/bin/cis-operator, usr/bin/cis-operator.'
+      - timestamp: 2025-12-04T17:16:02Z
+        type: fixed
+        data:
+          fixed-version: 1.4.5-r1

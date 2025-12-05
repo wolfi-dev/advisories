@@ -37,6 +37,28 @@ advisories:
         data:
           fixed-version: 0.22.1-r1
 
+  - id: CGA-68m7-gmxf-fw22
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-04T15:21:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: newrelic-infra-operator
+            componentID: 24f4fa0d6df2e451
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/newrelic-infra-operator
+            scanner: grype
+      - timestamp: 2025-12-04T18:25:25Z
+        type: fixed
+        data:
+          fixed-version: 0.26.1-r2
+
   - id: CGA-7pwx-34q6-rfh5
     aliases:
       - CVE-2024-24787

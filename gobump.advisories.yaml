@@ -109,6 +109,28 @@ advisories:
         data:
           fixed-version: 0.9.0-r4
 
+  - id: CGA-crvv-9996-94v2
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-04T21:22:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gobump
+            componentID: 2a84efb9e69792e4
+            componentName: stdlib
+            componentVersion: go1.25.3
+            componentType: go-module
+            componentLocation: /usr/bin/gobump
+            scanner: grype
+      - timestamp: 2025-12-05T07:46:40Z
+        type: fixed
+        data:
+          fixed-version: 0.9.3-r3
+
   - id: CGA-fxxp-cmcf-m688
     aliases:
       - CVE-2025-58187

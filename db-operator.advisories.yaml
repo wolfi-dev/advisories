@@ -71,6 +71,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-phwv-hw4w-8499
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-04T14:07:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: db-operator
+            componentID: 6bc4678d8e89d552
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/db-operator
+            scanner: grype
+      - timestamp: 2025-12-04T17:24:03Z
+        type: fixed
+        data:
+          fixed-version: 2.16.0-r3
+
   - id: CGA-xxfm-8wj5-26f8
     aliases:
       - CVE-2025-47907

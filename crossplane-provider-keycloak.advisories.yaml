@@ -149,6 +149,32 @@ advisories:
         data:
           fixed-version: 1.7.0-r10
 
+  - id: CGA-hrfh-7vjx-fxmj
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-04T12:59:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: crossplane-provider-keycloak
+            componentID: 37093181c2b864a1
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/crossplane-keycloak-provider
+            scanner: grype
+      - timestamp: 2025-12-04T13:57:56Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in crossplane-provider-keycloak-2.11.0-r0.apk, at usr/bin/crossplane-keycloak-provider, usr/bin/crossplane-keycloak-provider.'
+      - timestamp: 2025-12-04T17:26:52Z
+        type: fixed
+        data:
+          fixed-version: 2.12.0-r0
+
   - id: CGA-mcp2-gccv-6pcc
     aliases:
       - CVE-2025-22868

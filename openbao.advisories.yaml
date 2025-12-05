@@ -182,6 +182,28 @@ advisories:
         data:
           fixed-version: 2.1.0-r2
 
+  - id: CGA-c6w6-6ppp-m9xq
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-04T21:39:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: openbao
+            componentID: e0a5df3faf94e1a3
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/bao
+            scanner: grype
+      - timestamp: 2025-12-05T08:25:20Z
+        type: fixed
+        data:
+          fixed-version: 2.4.4-r1
+
   - id: CGA-g9x6-c4gh-5cgf
     aliases:
       - CVE-2025-27144

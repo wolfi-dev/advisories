@@ -100,6 +100,28 @@ advisories:
         data:
           fixed-version: 5.3.2-r0
 
+  - id: CGA-79f6-r2p7-jwvj
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-04T18:55:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: podman
+            componentID: 4a0a1619f6cafd39
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/podman
+            scanner: grype
+      - timestamp: 2025-12-05T03:31:19Z
+        type: fixed
+        data:
+          fixed-version: 5.7.0-r2
+
   - id: CGA-7hph-xqmq-7wr4
     aliases:
       - CVE-2024-45310

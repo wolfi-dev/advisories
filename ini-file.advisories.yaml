@@ -124,6 +124,29 @@ advisories:
         data:
           fixed-version: 1.4.9-r2
 
+  - id: CGA-863x-p52r-j8p3
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-04T13:21:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ini-file
+            componentID: ed28b6c828662763
+            componentName: stdlib
+            componentVersion: go1.25.3
+            componentType: go-module
+            componentLocation: /usr/bin/ini-file
+            scanner: grype
+      - timestamp: 2025-12-04T14:02:18Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-8h82-358c-xw83
     aliases:
       - CVE-2025-58189

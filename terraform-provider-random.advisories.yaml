@@ -93,6 +93,28 @@ advisories:
         data:
           fixed-version: 3.7.2-r4
 
+  - id: CGA-56cq-q2qc-cj7h
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-04T16:44:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-random
+            componentID: 3121afb0fca54882
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-random
+            scanner: grype
+      - timestamp: 2025-12-04T20:27:50Z
+        type: fixed
+        data:
+          fixed-version: 3.7.2-r6
+
   - id: CGA-5x65-mm26-rhmv
     aliases:
       - CVE-2025-58188

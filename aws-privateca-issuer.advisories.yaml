@@ -70,6 +70,28 @@ advisories:
         data:
           fixed-version: 1.4.0-r2
 
+  - id: CGA-7wff-4xcw-qgww
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-04T12:57:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-privateca-issuer
+            componentID: 0284c74ae5060a7b
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-12-04T17:11:51Z
+        type: fixed
+        data:
+          fixed-version: 1.7.1-r1
+
   - id: CGA-7wvw-w2v8-h8xm
     aliases:
       - CVE-2025-47907

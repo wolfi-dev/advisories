@@ -82,6 +82,28 @@ advisories:
         data:
           fixed-version: 1.4.2-r1
 
+  - id: CGA-4576-ggwm-pp2r
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-04T19:20:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rekor-cli
+            componentID: 1b59e8dd9afa5727
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/backfill-index
+            scanner: grype
+      - timestamp: 2025-12-05T04:29:16Z
+        type: fixed
+        data:
+          fixed-version: 1.4.3-r2
+
   - id: CGA-555h-fmqh-wjg7
     aliases:
       - CVE-2025-22874
