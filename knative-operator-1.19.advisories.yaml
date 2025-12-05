@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: knative-operator-1.19
+
+advisories:
+  - id: CGA-c797-7r98-j2j5
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-04T20:33:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: knative-operator-1.19
+            componentID: 336050291e47b16a
+            componentName: stdlib
+            componentVersion: go1.25.3
+            componentType: go-module
+            componentLocation: /usr/bin/webhook
+            scanner: grype
+      - timestamp: 2025-12-05T06:31:20Z
+        type: fixed
+        data:
+          fixed-version: 1.19.5-r1
