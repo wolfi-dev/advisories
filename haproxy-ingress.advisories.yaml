@@ -315,6 +315,28 @@ advisories:
         data:
           fixed-version: 0.14.7-r7
 
+  - id: CGA-ghxx-v72j-286g
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-04T17:43:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: haproxy-ingress
+            componentID: 5f62ff4287ac09b3
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/haproxy-ingress-controller
+            scanner: grype
+      - timestamp: 2025-12-04T21:48:35Z
+        type: fixed
+        data:
+          fixed-version: 0.15.0-r2
+
   - id: CGA-h9m5-48jm-9vjh
     aliases:
       - CVE-2024-45338

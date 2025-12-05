@@ -545,6 +545,28 @@ advisories:
         data:
           fixed-version: 2.7.0-r12
 
+  - id: CGA-rjh8-vj8f-f897
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-04T20:20:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dashboard
+            componentID: 485ce2337822b1f0
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/share/kubernetes-dashboard/dashboard
+            scanner: grype
+      - timestamp: 2025-12-05T06:06:53Z
+        type: fixed
+        data:
+          fixed-version: 7.14.0-r2
+
   - id: CGA-rmph-c43c-7r6m
     aliases:
       - CVE-2020-8559

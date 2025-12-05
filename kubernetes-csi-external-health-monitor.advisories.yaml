@@ -4,6 +4,24 @@ package:
   name: kubernetes-csi-external-health-monitor
 
 advisories:
+  - id: CGA-2qv2-mvw8-pvm4
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-04T22:53:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-health-monitor
+            componentID: 45e702d62b3f2f77
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/csi-external-health-monitor-controller
+            scanner: grype
+
   - id: CGA-4m29-hq8p-jrfv
     aliases:
       - CVE-2025-47914
