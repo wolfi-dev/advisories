@@ -608,6 +608,24 @@ advisories:
           type: vulnerable-code-version-not-used
           note: 'The version of shell-quote included in this package, version 1.7.3, is the patched version that resolves the vulnerability described in CVE GHSA-g4rg-993r-mgx7. Additionally, the @types/shell-quote package (version 1.7.1) only contains TypeScript type definitions, which are not executable and are used solely during development. Type packages like @types/shell-quote do not affect the runtime behavior or security of the project and have no impact on its security integrity. '
 
+  - id: CGA-rpr8-359c-58p7
+    aliases:
+      - CVE-2025-66478
+      - GHSA-9qr9-h5gf-34mp
+    events:
+      - timestamp: 2025-12-04T23:24:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jitsucom-jitsu-console
+            componentID: 27894f4d587a76aa
+            componentName: next
+            componentVersion: 15.5.6
+            componentType: npm
+            componentLocation: /app/node_modules/.pnpm/next@15.5.6_@babel+core@7.26.10_@opentelemetry+api@1.9.0_@playwright+test@1.39.0_react-_fb1f9bb3c38b6145f6fa5e5dff891b87/node_modules/next/package.json
+            scanner: grype
+
   - id: CGA-w377-c6cx-3vgh
     aliases:
       - CVE-2024-37168
