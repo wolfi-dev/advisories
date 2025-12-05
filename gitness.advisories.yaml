@@ -655,6 +655,24 @@ advisories:
           type: component-vulnerability-mismatch
           note: This vulnerability applies to the Docker daemon program, not the docker client libraries.
 
+  - id: CGA-vgjp-3jjc-x9ch
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-05T12:18:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitness
+            componentID: ba0ef08ac50aa3fc
+            componentName: stdlib
+            componentVersion: go1.25.3
+            componentType: go-module
+            componentLocation: /usr/bin/gitness
+            scanner: grype
+
   - id: CGA-vmqr-w73w-3v59
     aliases:
       - CVE-2022-31022
