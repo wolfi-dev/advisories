@@ -218,6 +218,24 @@ advisories:
             [5] https://github.com/k3s-io/containerd/blob/v2.1.5/plugins/cri/runtime/plugin.go#L82-88
             [6] https://github.com/k3s-io/containerd/blob/v2.1.5/plugins/sandbox/controller.go#L71-75
 
+  - id: CGA-pgfj-9qp8-crj4
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-04T21:52:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s-1.33
+            componentID: 170b5d9b62dd4ca4
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/containerd-shim-runc-v2
+            scanner: grype
+
   - id: CGA-v7fr-4c6h-v59v
     aliases:
       - CVE-2025-52565
