@@ -412,6 +412,28 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-cpxw-8j7p-f2v6
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-04T19:36:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nodetaint
+            componentID: f363bd3b7837061a
+            componentName: stdlib
+            componentVersion: go1.25.3
+            componentType: go-module
+            componentLocation: /usr/bin/nodetaint
+            scanner: grype
+      - timestamp: 2025-12-05T04:34:19Z
+        type: fixed
+        data:
+          fixed-version: 0.0.4-r39
+
   - id: CGA-cvm7-p962-v7hc
     aliases:
       - CVE-2025-22874

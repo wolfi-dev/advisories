@@ -97,6 +97,28 @@ advisories:
         data:
           fixed-version: 1.21.1-r1
 
+  - id: CGA-p8wh-hp47-229q
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-04T19:33:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: percona-server-mongodb-operator
+            componentID: e5a42d68cb1df90a
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/mongodb-healthcheck
+            scanner: grype
+      - timestamp: 2025-12-05T04:16:16Z
+        type: fixed
+        data:
+          fixed-version: 1.21.1-r2
+
   - id: CGA-qqgm-78q3-mw6x
     aliases:
       - CVE-2025-47907

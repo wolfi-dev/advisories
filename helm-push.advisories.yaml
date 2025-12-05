@@ -4,6 +4,24 @@ package:
   name: helm-push
 
 advisories:
+  - id: CGA-2495-68hc-vc34
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-05T02:55:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: helm-push
+            componentID: fd3f62b34e9f0b46
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/libexec/helm-plugins/helm-push/bin/helm-cm-push
+            scanner: grype
+
   - id: CGA-2ghq-fj52-j7mc
     aliases:
       - CVE-2025-64329

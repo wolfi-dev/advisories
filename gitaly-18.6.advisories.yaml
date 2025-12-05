@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: gitaly-18.6
+
+advisories:
+  - id: CGA-5pv5-q4g2-4wvv
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-05T03:49:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gitaly-18.6
+            componentID: 2496758dc7204c16
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/gitaly-backup
+            scanner: grype
