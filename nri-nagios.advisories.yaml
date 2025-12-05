@@ -196,6 +196,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-fxqh-gxg8-mjqq
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-05T21:20:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-nagios
+            componentID: 4f19544cc6fd062b
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/nri-nagios
+            scanner: grype
+
   - id: CGA-g2gp-ww3r-w4j9
     aliases:
       - CVE-2023-45283
