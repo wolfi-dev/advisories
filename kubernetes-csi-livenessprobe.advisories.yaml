@@ -210,6 +210,24 @@ advisories:
         data:
           fixed-version: 2.17.0-r1
 
+  - id: CGA-7228-x9mc-rp69
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T13:22:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-livenessprobe
+            componentID: d835d3de556be2f2
+            componentName: stdlib
+            componentVersion: go1.25.3
+            componentType: go-module
+            componentLocation: /usr/bin/livenessprobe
+            scanner: grype
+
   - id: CGA-7942-4mrf-v638
     aliases:
       - CVE-2023-44487
