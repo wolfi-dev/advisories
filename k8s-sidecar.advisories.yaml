@@ -4,6 +4,24 @@ package:
   name: k8s-sidecar
 
 advisories:
+  - id: CGA-2239-48qp-fjhw
+    aliases:
+      - CVE-2025-66471
+      - GHSA-2xpw-w6gg-jr37
+    events:
+      - timestamp: 2025-12-06T21:02:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k8s-sidecar
+            componentID: 7d2f5a7596ee6251
+            componentName: urllib3
+            componentVersion: 2.5.0
+            componentType: python
+            componentLocation: /usr/lib/python3.13/site-packages/urllib3-2.5.0.dist-info/METADATA
+            scanner: grype
+
   - id: CGA-2hvc-g7jr-8j6v
     aliases:
       - CVE-2025-50181
