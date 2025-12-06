@@ -4,6 +4,24 @@ package:
   name: smokescreen
 
 advisories:
+  - id: CGA-2qxr-cf2m-vh77
+    aliases:
+      - CVE-2025-65637
+      - GHSA-4f99-4q7p-p3gh
+    events:
+      - timestamp: 2025-12-06T19:26:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: smokescreen
+            componentID: cef49b5070423367
+            componentName: github.com/sirupsen/logrus
+            componentVersion: v1.9.0
+            componentType: go-module
+            componentLocation: /usr/bin/smokescreen
+            scanner: grype
+
   - id: CGA-f9mw-vr25-gvj9
     aliases:
       - CVE-2025-47907
