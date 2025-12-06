@@ -4,6 +4,24 @@ package:
   name: ratify
 
 advisories:
+  - id: CGA-2723-xc7q-29x3
+    aliases:
+      - CVE-2025-66564
+      - GHSA-4qg8-fj49-pxjh
+    events:
+      - timestamp: 2025-12-06T17:21:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ratify
+            componentID: ecc16a18c8d59868
+            componentName: github.com/sigstore/timestamp-authority
+            componentVersion: v1.2.2
+            componentType: go-module
+            componentLocation: /usr/bin/ratify
+            scanner: grype
+
   - id: CGA-2w33-2c5g-79wq
     aliases:
       - CVE-2025-47910
