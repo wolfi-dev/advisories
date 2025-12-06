@@ -357,3 +357,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.17.8-r1
+
+  - id: CGA-xmgx-9m94-743p
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T14:22:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nvidia-container-toolkit-nvidia-ctk-installer
+            componentID: 5b6c6af10127467a
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/nvidia-cdi-hook
+            scanner: grype
