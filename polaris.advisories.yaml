@@ -69,3 +69,21 @@ advisories:
         type: true-positive-determination
         data:
           note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in polaris-10.1.2-r0.apk, at usr/bin/polaris, usr/bin/polaris.'
+
+  - id: CGA-w72j-9rfm-q856
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T14:01:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: polaris
+            componentID: 26d105db68ac8b59
+            componentName: stdlib
+            componentVersion: go1.25.3
+            componentType: go-module
+            componentLocation: /usr/bin/polaris
+            scanner: grype
