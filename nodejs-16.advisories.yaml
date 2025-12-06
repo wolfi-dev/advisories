@@ -100,6 +100,24 @@ advisories:
         data:
           note: 'Nodejs-16 is no longer receiving support, latest version release of 16.x branch was in August of 2023: https://nodejs.org/download/release/v16.20.2/ and LTS ended in September of 2023: https://endoflife.date/nodejs This CVE fix is merged and awaiting upstream release in v22.x version stream.'
 
+  - id: CGA-6pmh-2v6j-m6vr
+    aliases:
+      - CVE-2024-27980
+      - GHSA-fm6v-wmjp-5rxq
+    events:
+      - timestamp: 2025-12-06T05:26:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nodejs-16
+            componentID: 5d12862abe1dad12
+            componentName: nodejs-16
+            componentVersion: 16.20.2-r16
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-7482-pcrv-6wxj
     aliases:
       - CVE-2023-32003
