@@ -216,3 +216,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.17.2-r1
+
+  - id: CGA-wmfj-94c3-gpq2
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T13:38:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nvidia-device-plugin
+            componentID: 4d58f1e0f1e7131d
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/mps-control-daemon
+            scanner: grype
