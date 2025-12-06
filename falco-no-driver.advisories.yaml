@@ -121,6 +121,24 @@ advisories:
             The upstream maintainers will need to update to a new version of > golang 1.24 and pull that in to fix the CVE.
             See also https://github.com/falcosecurity/plugins/issues/1056
 
+  - id: CGA-62qj-f7vm-3jhv
+    aliases:
+      - CVE-2025-66506
+      - GHSA-f83f-xpx7-ffpw
+    events:
+      - timestamp: 2025-12-06T13:23:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: falco-no-driver
+            componentID: 8bc91942e791eb0f
+            componentName: github.com/sigstore/fulcio
+            componentVersion: v1.6.6
+            componentType: go-module
+            componentLocation: /usr/share/falco/plugins/libcontainer.so
+            scanner: grype
+
   - id: CGA-6rcj-3749-p5hw
     aliases:
       - CVE-2025-58185
@@ -265,6 +283,24 @@ advisories:
           note: |-
             falco-no-driver itself does not contain any code that is vulnerable to this CVE; however it pulls in libcontainer plugin from https://github.com/falcosecurity/plugins/tree/main/plugins/container which is vulnerable.
             The upstream maintainers will need to update golang.org/x/crypto to v0.45.0 or later to fix the CVE.
+
+  - id: CGA-c5c4-75j3-2v5p
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T13:23:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: falco-no-driver
+            componentID: df84204b1f0c5a40
+            componentName: stdlib
+            componentVersion: go1.23.12
+            componentType: go-module
+            componentLocation: /usr/share/falco/plugins/libcontainer.so
+            scanner: grype
 
   - id: CGA-cmfv-j6fr-3w46
     aliases:
