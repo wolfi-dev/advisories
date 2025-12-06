@@ -178,6 +178,24 @@ advisories:
         data:
           fixed-version: 0_git20241218-r1
 
+  - id: CGA-r7mf-9543-wjmq
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T21:40:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: go-discover
+            componentID: 0195e55f5f69f67b
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/discover
+            scanner: grype
+
   - id: CGA-vx9x-4hpj-g226
     aliases:
       - CVE-2025-58181
@@ -199,3 +217,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 0_git20251120-r1
+
+  - id: CGA-xf69-hjvf-jvj4
+    aliases:
+      - CVE-2025-65637
+      - GHSA-4f99-4q7p-p3gh
+    events:
+      - timestamp: 2025-12-06T21:40:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: go-discover
+            componentID: 8ea5425cbf735a0b
+            componentName: github.com/sirupsen/logrus
+            componentVersion: v1.0.6
+            componentType: go-module
+            componentLocation: /usr/bin/discover
+            scanner: grype
