@@ -119,3 +119,21 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
+
+  - id: CGA-wq48-9h75-v52j
+    aliases:
+      - CVE-2025-66506
+      - GHSA-f83f-xpx7-ffpw
+    events:
+      - timestamp: 2025-12-06T17:21:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ratify
+            componentID: 71d523c3e2b9b1a4
+            componentName: github.com/sigstore/fulcio
+            componentVersion: v1.4.5
+            componentType: go-module
+            componentLocation: /usr/bin/ratify
+            scanner: grype
