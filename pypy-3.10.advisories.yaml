@@ -30,6 +30,24 @@ advisories:
             More information can be found here: https://github.com/pypa/pip/tree/30807c4d9e62e0ba65ad80d441dba55e76ddf5e4/src/pip/_vendor#modifications
             We've upgraded setuptools to 78.1.1 in pypy to remediate the CVE.
 
+  - id: CGA-c4hj-rp7p-rrwx
+    aliases:
+      - CVE-2025-66471
+      - GHSA-2xpw-w6gg-jr37
+    events:
+      - timestamp: 2025-12-06T14:36:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pypy-3.10
+            componentID: b797b3491264581d
+            componentName: urllib3
+            componentVersion: 1.26.20
+            componentType: python
+            componentLocation: /usr/lib/pypy3.10/site-packages/pip/_vendor/vendor.txt
+            scanner: grype
+
   - id: CGA-h22x-vf2g-j99v
     aliases:
       - CVE-2022-37454
