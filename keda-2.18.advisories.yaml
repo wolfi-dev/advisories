@@ -48,3 +48,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.18.1-r1
+
+  - id: CGA-ww9q-mc7f-cmgm
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-06T00:29:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.18
+            componentID: a259b81071a81ba9
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/keda-admission-webhooks
+            scanner: grype
