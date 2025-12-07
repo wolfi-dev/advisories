@@ -52,6 +52,24 @@ advisories:
             However, the pip maintainers are holding off on that update until Python 3.9 reaches its end-of-life (EOL) at the end of 2025. Once that happens, pip can upgrade, and then kubeflow-katib will also need to update to align with the changes in pip.
             For more details, see this GitHub issue: https://github.com/pypa/pip/issues/12857
 
+  - id: CGA-g8hv-v9qf-35f6
+    aliases:
+      - CVE-2025-66471
+      - GHSA-2xpw-w6gg-jr37
+    events:
+      - timestamp: 2025-12-07T04:51:24Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3.12-pip-base
+            componentID: 3944d0b111341e15
+            componentName: urllib3
+            componentVersion: 1.26.20
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/pip/_vendor/vendor.txt
+            scanner: grype
+
   - id: CGA-m555-hgfj-qhhh
     aliases:
       - CVE-2025-8869
