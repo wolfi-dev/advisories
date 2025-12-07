@@ -359,6 +359,24 @@ advisories:
             This vulnerability relates to p256NegCond within the crypto/internal/fips140/nistec package, specifically affecting the ppc64le architecture.
             We are not affected by this vulnerability as we do not build or support ppc64le.
 
+  - id: CGA-fcpj-vhhr-7cp5
+    aliases:
+      - CVE-2025-66418
+      - GHSA-gm62-xv2j-4w53
+    events:
+      - timestamp: 2025-12-07T11:32:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: katib-suggestion-skopt-enas
+            componentID: e5c95463ace24147
+            componentName: urllib3
+            componentVersion: 1.26.20
+            componentType: python
+            componentLocation: /opt/katib/cmd/earlystopping/medianstop/v1beta1/lib/python3.11/site-packages/pip/_vendor/vendor.txt
+            scanner: grype
+
   - id: CGA-h4px-w464-3vqf
     aliases:
       - CVE-2024-45338
