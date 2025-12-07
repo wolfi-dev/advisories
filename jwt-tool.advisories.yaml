@@ -239,3 +239,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.2.7-r0
+
+  - id: CGA-xr7p-89hp-pmw5
+    aliases:
+      - CVE-2025-66418
+      - GHSA-gm62-xv2j-4w53
+    events:
+      - timestamp: 2025-12-07T06:34:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jwt-tool
+            componentID: e8f686c9f370bc89
+            componentName: urllib3
+            componentVersion: 2.5.0
+            componentType: python
+            componentLocation: /usr/share/app/jwt-tool/.venv/lib/python3.13/site-packages/urllib3-2.5.0.dist-info/METADATA
+            scanner: grype
