@@ -359,6 +359,24 @@ advisories:
             This vulnerability relates to p256NegCond within the crypto/internal/fips140/nistec package, specifically affecting the ppc64le architecture.
             We are not affected by this vulnerability as we do not build or support ppc64le.
 
+  - id: CGA-fcpj-vhhr-7cp5
+    aliases:
+      - CVE-2025-66418
+      - GHSA-gm62-xv2j-4w53
+    events:
+      - timestamp: 2025-12-07T11:32:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: katib-suggestion-skopt-enas
+            componentID: e5c95463ace24147
+            componentName: urllib3
+            componentVersion: 1.26.20
+            componentType: python
+            componentLocation: /opt/katib/cmd/earlystopping/medianstop/v1beta1/lib/python3.11/site-packages/pip/_vendor/vendor.txt
+            scanner: grype
+
   - id: CGA-h4px-w464-3vqf
     aliases:
       - CVE-2024-45338
@@ -618,6 +636,24 @@ advisories:
         data:
           fixed-version: 0.18.0-r0
 
+  - id: CGA-mw83-r43h-9gpg
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-07T11:32:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: katib-suggestion-skopt-enas
+            componentID: 8879b8c0b9d3b351
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/katib-controller
+            scanner: grype
+
   - id: CGA-p2hm-64qv-wvxw
     aliases:
       - CVE-2024-24783
@@ -861,6 +897,24 @@ advisories:
             GHSA-5rjg-fvgr-3xxf is detected because pip vendors setuptools (v70.3.0), but only includes pkg_resources, making it non-vulnerable.
             More information can be found here: https://github.com/pypa/pip/tree/30807c4d9e62e0ba65ad80d441dba55e76ddf5e4/src/pip/_vendor#modifications
             We've upgraded setuptools to 78.1.1 in kubeflow-katib to remediate the CVE.
+
+  - id: CGA-rf9f-29rv-6rqf
+    aliases:
+      - CVE-2025-66471
+      - GHSA-2xpw-w6gg-jr37
+    events:
+      - timestamp: 2025-12-07T11:32:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: katib-suggestion-skopt-enas
+            componentID: e5c95463ace24147
+            componentName: urllib3
+            componentVersion: 1.26.20
+            componentType: python
+            componentLocation: /opt/katib/cmd/earlystopping/medianstop/v1beta1/lib/python3.11/site-packages/pip/_vendor/vendor.txt
+            scanner: grype
 
   - id: CGA-rj88-rq8g-qr4c
     aliases:
