@@ -119,6 +119,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/source-controller
             scanner: grype
+      - timestamp: 2025-12-07T20:00:33Z
+        type: pending-upstream-fix
+        data:
+          note: Upstream depends on github.com/sigstore/timestamp-authority which we need to bump it to github.com/sigstore/timestamp-authority/v2 but we can not change it as its breaking change from v1 to v2. If we run 'go mod why -m github.com/sigstore/timestamp-authority', 3 direct dependencies depends on it. Cosign also bumped this on latest v3 tag, but upstream uses v2. This is also breaking change.
 
   - id: CGA-4p3q-r4g5-gpxv
     aliases:
