@@ -4,6 +4,24 @@ package:
   name: kyverno-1.16
 
 advisories:
+  - id: CGA-8pf5-rp2q-q8rr
+    aliases:
+      - CVE-2025-66506
+      - GHSA-f83f-xpx7-ffpw
+    events:
+      - timestamp: 2025-12-07T03:47:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kyverno-1.16
+            componentID: 37d68ce0fba099b7
+            componentName: github.com/sigstore/fulcio
+            componentVersion: v1.6.6
+            componentType: go-module
+            componentLocation: /usr/bin/kyvernopre
+            scanner: grype
+
   - id: CGA-mf78-883r-586q
     aliases:
       - CVE-2025-58181
