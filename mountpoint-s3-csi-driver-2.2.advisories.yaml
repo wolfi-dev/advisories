@@ -4,6 +4,24 @@ package:
   name: mountpoint-s3-csi-driver-2.2
 
 advisories:
+  - id: CGA-fp8j-v579-pmwv
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-07T06:21:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mountpoint-s3-csi-driver-2.2
+            componentID: 6f4cd6fe783a031b
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/aws-s3-csi-controller
+            scanner: grype
+
   - id: CGA-qfvx-wpgj-v259
     aliases:
       - CVE-2025-61729
