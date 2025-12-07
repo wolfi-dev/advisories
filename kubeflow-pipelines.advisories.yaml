@@ -1634,6 +1634,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Vulnerable code is part of a kubeflow-pipelines and code was marked NOT_IMPORTABLE in Golang vulndb
 
+  - id: CGA-vvxv-8243-mvwm
+    aliases:
+      - CVE-2025-65945
+      - GHSA-869p-cjfg-cm3x
+    events:
+      - timestamp: 2025-12-07T00:01:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-frontend
+            componentID: 9585f8dabfae7a84
+            componentName: jws
+            componentVersion: 4.0.0
+            componentType: npm
+            componentLocation: /server/node_modules/jws/package.json
+            scanner: grype
+
   - id: CGA-w3h9-h7jv-6q22
     aliases:
       - CVE-2024-37891
