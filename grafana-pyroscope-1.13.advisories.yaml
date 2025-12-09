@@ -339,6 +339,14 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/profilecli
             scanner: grype
+      - timestamp: 2025-12-05T11:10:40Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in grafana-pyroscope-1.13-1.13.6-r2.apk, at usr/bin/profilecli, usr/bin/profilecli, usr/bin/pyroscope, usr/bin/pyroscope.'
+      - timestamp: 2025-12-07T17:57:30Z
+        type: fixed
+        data:
+          fixed-version: 1.13.6-r3
 
   - id: CGA-mq8m-rphr-h8gx
     aliases:
@@ -406,6 +414,32 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.13.6-r2
+
+  - id: CGA-whc9-vmpw-539j
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T11:29:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-pyroscope-1.13
+            componentID: a6c2f17d44684f37
+            componentName: stdlib
+            componentVersion: go1.25.3
+            componentType: go-module
+            componentLocation: /usr/bin/profilecli
+            scanner: grype
+      - timestamp: 2025-12-07T12:36:03Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in grafana-pyroscope-1.13-1.13.6-r2.apk, at usr/bin/profilecli, usr/bin/profilecli, usr/bin/pyroscope, usr/bin/pyroscope.'
+      - timestamp: 2025-12-07T17:57:32Z
+        type: fixed
+        data:
+          fixed-version: 1.13.6-r3
 
   - id: CGA-xfcr-hvjv-w6r3
     aliases:

@@ -143,6 +143,32 @@ advisories:
         data:
           fixed-version: 1.0.69-r1
 
+  - id: CGA-757x-gxjc-jjqp
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-07T01:39:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: stakater-reloader
+            componentID: 2f0a3c415813e60d
+            componentName: stdlib
+            componentVersion: go1.25.3
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-12-07T13:51:14Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in stakater-reloader-1.4.10-r0.apk, at usr/bin/manager, usr/bin/manager.'
+      - timestamp: 2025-12-08T08:03:44Z
+        type: fixed
+        data:
+          fixed-version: 1.4.10-r1
+
   - id: CGA-7qhp-66xg-jcfp
     aliases:
       - CVE-2024-45338
@@ -553,6 +579,32 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.2.1-r2
+
+  - id: CGA-wg8p-59c7-h35j
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-06T00:56:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: stakater-reloader
+            componentID: 2f0a3c415813e60d
+            componentName: stdlib
+            componentVersion: go1.25.3
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-12-06T13:43:07Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in stakater-reloader-1.4.10-r0.apk, at usr/bin/manager, usr/bin/manager.'
+      - timestamp: 2025-12-08T08:03:46Z
+        type: fixed
+        data:
+          fixed-version: 1.4.10-r1
 
   - id: CGA-wmrv-7cqm-xrhw
     aliases:

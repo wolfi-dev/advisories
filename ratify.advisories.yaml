@@ -4,6 +4,24 @@ package:
   name: ratify
 
 advisories:
+  - id: CGA-2723-xc7q-29x3
+    aliases:
+      - CVE-2025-66564
+      - GHSA-4qg8-fj49-pxjh
+    events:
+      - timestamp: 2025-12-06T17:21:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ratify
+            componentID: ecc16a18c8d59868
+            componentName: github.com/sigstore/timestamp-authority
+            componentVersion: v1.2.2
+            componentType: go-module
+            componentLocation: /usr/bin/ratify
+            scanner: grype
+
   - id: CGA-2w33-2c5g-79wq
     aliases:
       - CVE-2025-47910
@@ -43,6 +61,14 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/vulnerabilityreport
             scanner: grype
+      - timestamp: 2025-12-05T12:04:26Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in ratify-1.4.0-r7.apk, at usr/bin/ratify, usr/bin/ratify; in ratify-licensechecker-1.4.0-r7.apk, at usr/bin/licensechecker, usr/bin/licensechecker; in ratify-sbom-1.4.0-r7.apk, at usr/bin/sbom, usr/bin/sbom; in ratify-schemavalidator-1.4.0-r7.apk, at usr/bin/schemavalidator, usr/bin/schemavalidator; in ratify-vulnerabilityreport-1.4.0-r7.apk, at usr/bin/vulnerabilityreport, usr/bin/vulnerabilityreport.'
+      - timestamp: 2025-12-05T18:44:01Z
+        type: fixed
+        data:
+          fixed-version: 1.4.0-r8
 
   - id: CGA-5hg2-vc5j-57fq
     aliases:
@@ -111,3 +137,21 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
+
+  - id: CGA-wq48-9h75-v52j
+    aliases:
+      - CVE-2025-66506
+      - GHSA-f83f-xpx7-ffpw
+    events:
+      - timestamp: 2025-12-06T17:21:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ratify
+            componentID: 71d523c3e2b9b1a4
+            componentName: github.com/sigstore/fulcio
+            componentVersion: v1.4.5
+            componentType: go-module
+            componentLocation: /usr/bin/ratify
+            scanner: grype

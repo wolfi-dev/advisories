@@ -352,6 +352,28 @@ advisories:
         data:
           fixed-version: 1.9.4-r15
 
+  - id: CGA-x6g5-735w-j3qq
+    aliases:
+      - CVE-2025-65637
+      - GHSA-4f99-4q7p-p3gh
+    events:
+      - timestamp: 2025-12-06T11:19:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-flb-cloudwatch
+            componentID: af542eef70a22874
+            componentName: github.com/sirupsen/logrus
+            componentVersion: v1.9.0
+            componentType: go-module
+            componentLocation: /usr/bin/cloudwatch.so
+            scanner: grype
+      - timestamp: 2025-12-07T17:33:21Z
+        type: fixed
+        data:
+          fixed-version: 1.9.4-r22
+
   - id: CGA-x7xq-j24j-wvh7
     aliases:
       - CVE-2024-45336

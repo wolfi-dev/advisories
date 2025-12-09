@@ -267,6 +267,29 @@ advisories:
         data:
           fixed-version: 0.5.0-r2
 
+  - id: CGA-h8x2-qp8x-35px
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-07T07:17:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mockgen
+            componentID: d759fbb0c0b68410
+            componentName: stdlib
+            componentVersion: go1.25.3
+            componentType: go-module
+            componentLocation: /usr/bin/mockgen
+            scanner: grype
+      - timestamp: 2025-12-07T16:40:32Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-j482-v43w-wq7x
     aliases:
       - CVE-2025-47907
@@ -395,6 +418,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/mockgen
             scanner: grype
+      - timestamp: 2025-12-05T12:40:51Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
 
   - id: CGA-xfjw-ccp3-3r3w
     aliases:

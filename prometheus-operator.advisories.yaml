@@ -4,6 +4,28 @@ package:
   name: prometheus-operator
 
 advisories:
+  - id: CGA-2fjm-8c44-rqc9
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-05T19:32:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-operator
+            componentID: c72c070b1eecb976
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/admission-webhook
+            scanner: grype
+      - timestamp: 2025-12-07T21:31:10Z
+        type: fixed
+        data:
+          fixed-version: 0.87.0-r2
+
   - id: CGA-2j8x-4qrp-whj7
     aliases:
       - CVE-2024-24784
@@ -151,6 +173,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.79.2-r2
+
+  - id: CGA-83q3-2hjc-qjg6
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T14:31:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-operator
+            componentID: c72c070b1eecb976
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/admission-webhook
+            scanner: grype
+      - timestamp: 2025-12-07T21:31:10Z
+        type: fixed
+        data:
+          fixed-version: 0.87.0-r2
 
   - id: CGA-88wx-wcc3-r89v
     aliases:
