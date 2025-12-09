@@ -21,6 +21,14 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/loglevel
             scanner: grype
+      - timestamp: 2025-12-05T15:10:51Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in rancher-loglevel-0.1.6-r8.apk, at usr/bin/loglevel, usr/bin/loglevel.'
+      - timestamp: 2025-12-07T21:20:09Z
+        type: fixed
+        data:
+          fixed-version: 0.1.6-r9
 
   - id: CGA-63hx-mm46-x4j6
     aliases:
@@ -331,6 +339,32 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.1.6-r5
+
+  - id: CGA-whg5-642x-62g6
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T14:17:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-loglevel
+            componentID: f56177db7f7bafbb
+            componentName: stdlib
+            componentVersion: go1.25.3
+            componentType: go-module
+            componentLocation: /usr/bin/loglevel
+            scanner: grype
+      - timestamp: 2025-12-07T17:14:31Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in rancher-loglevel-0.1.6-r8.apk, at usr/bin/loglevel, usr/bin/loglevel.'
+      - timestamp: 2025-12-07T21:20:10Z
+        type: fixed
+        data:
+          fixed-version: 0.1.6-r9
 
   - id: CGA-wq6w-x44v-q98c
     aliases:

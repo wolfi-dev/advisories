@@ -27,6 +27,29 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-f4f6-v392-mpgg
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T11:38:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gofumpt
+            componentID: 4c5a3b534c4ead76
+            componentName: stdlib
+            componentVersion: go1.25.3
+            componentType: go-module
+            componentLocation: /usr/bin/gofumpt
+            scanner: grype
+      - timestamp: 2025-12-07T13:14:41Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-fpr7-v594-5wgw
     aliases:
       - CVE-2025-4673
@@ -48,6 +71,29 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.8.0-r2
+
+  - id: CGA-g2x2-6745-h4ff
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-05T12:04:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: gofumpt
+            componentID: 4c5a3b534c4ead76
+            componentName: stdlib
+            componentVersion: go1.25.3
+            componentType: go-module
+            componentLocation: /usr/bin/gofumpt
+            scanner: grype
+      - timestamp: 2025-12-06T11:07:35Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
 
   - id: CGA-wjhh-j5jr-3836
     aliases:

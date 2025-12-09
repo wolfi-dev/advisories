@@ -145,6 +145,32 @@ advisories:
         data:
           fixed-version: 4.0.15-r1
 
+  - id: CGA-q2c7-f65w-9pjq
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T15:13:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-image-renderer
+            componentID: 763520976a0d35c1
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/grafana-image-renderer
+            scanner: grype
+      - timestamp: 2025-12-07T11:42:12Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in grafana-image-renderer-5.0.11-r0.apk, at usr/bin/grafana-image-renderer, usr/bin/grafana-image-renderer.'
+      - timestamp: 2025-12-07T21:56:13Z
+        type: fixed
+        data:
+          fixed-version: 5.0.11-r1
+
   - id: CGA-wcgf-2mrv-gqjx
     aliases:
       - CVE-2025-47935
@@ -188,3 +214,29 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.12.6-r1
+
+  - id: CGA-xhrr-5hwx-4vvw
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-05T19:21:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: grafana-image-renderer
+            componentID: 763520976a0d35c1
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/grafana-image-renderer
+            scanner: grype
+      - timestamp: 2025-12-06T11:48:12Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in grafana-image-renderer-5.0.11-r0.apk, at usr/bin/grafana-image-renderer, usr/bin/grafana-image-renderer.'
+      - timestamp: 2025-12-07T21:56:14Z
+        type: fixed
+        data:
+          fixed-version: 5.0.11-r1

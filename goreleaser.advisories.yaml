@@ -25,6 +25,24 @@ advisories:
         data:
           fixed-version: 1.24.0-r1
 
+  - id: CGA-3869-r3q2-2p7h
+    aliases:
+      - CVE-2025-66564
+      - GHSA-4qg8-fj49-pxjh
+    events:
+      - timestamp: 2025-12-06T14:30:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: goreleaser
+            componentID: c73c642a5c32969a
+            componentName: github.com/sigstore/timestamp-authority
+            componentVersion: v1.2.5
+            componentType: go-module
+            componentLocation: /usr/bin/goreleaser
+            scanner: grype
+
   - id: CGA-3wj2-j6v6-26rc
     aliases:
       - GHSA-9763-4f94-gfch
@@ -389,6 +407,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/goreleaser
             scanner: grype
+      - timestamp: 2025-12-05T13:10:58Z
+        type: fixed
+        data:
+          fixed-version: 2.13.0-r1
 
   - id: CGA-cqrf-mr5q-mrw8
     aliases:

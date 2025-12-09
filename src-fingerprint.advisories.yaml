@@ -4,6 +4,28 @@ package:
   name: src-fingerprint
 
 advisories:
+  - id: CGA-22hr-388x-h49v
+    aliases:
+      - CVE-2025-65637
+      - GHSA-4f99-4q7p-p3gh
+    events:
+      - timestamp: 2025-12-07T00:22:37Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: src-fingerprint
+            componentID: 8489bd11e4e0a498
+            componentName: github.com/sirupsen/logrus
+            componentVersion: v1.9.0
+            componentType: go-module
+            componentLocation: /usr/bin/src-fingerprint
+            scanner: grype
+      - timestamp: 2025-12-08T06:01:05Z
+        type: fixed
+        data:
+          fixed-version: 0.19.0-r36
+
   - id: CGA-2647-f275-5927
     aliases:
       - CVE-2025-47914
@@ -724,6 +746,14 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/src-fingerprint
             scanner: grype
+      - timestamp: 2025-12-05T14:09:09Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in src-fingerprint-0.19.0-r34.apk, at usr/bin/src-fingerprint, usr/bin/src-fingerprint.'
+      - timestamp: 2025-12-05T20:55:34Z
+        type: fixed
+        data:
+          fixed-version: 0.19.0-r35
 
   - id: CGA-r64c-3wj5-cm32
     aliases:

@@ -75,6 +75,18 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/sonobuoy
             scanner: grype
+      - timestamp: 2025-12-05T14:38:40Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in sonobuoy-0.57.3-r10.apk, at usr/bin/sonobuoy, usr/bin/sonobuoy.'
+      - timestamp: 2025-12-08T00:19:03Z
+        type: fixed
+        data:
+          fixed-version: 0.57.3-r11
+      - timestamp: 2025-12-08T01:32:41Z
+        type: fixed
+        data:
+          fixed-version: 0.57.3-r12
 
   - id: CGA-3m8j-77x2-gj79
     aliases:
@@ -302,6 +314,28 @@ advisories:
         data:
           fixed-version: 0.57.3-r9
 
+  - id: CGA-9hcp-q9fp-w88h
+    aliases:
+      - CVE-2025-65637
+      - GHSA-4f99-4q7p-p3gh
+    events:
+      - timestamp: 2025-12-06T17:08:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonobuoy
+            componentID: 1c6beb72b49342f6
+            componentName: github.com/sirupsen/logrus
+            componentVersion: v1.9.0
+            componentType: go-module
+            componentLocation: /usr/bin/sonobuoy
+            scanner: grype
+      - timestamp: 2025-12-08T01:32:43Z
+        type: fixed
+        data:
+          fixed-version: 0.57.3-r12
+
   - id: CGA-9hp4-h7j4-8xjx
     aliases:
       - CVE-2025-4673
@@ -410,6 +444,32 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.57.1-r6
+
+  - id: CGA-jj26-8vqh-j6g8
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T17:08:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonobuoy
+            componentID: 318062892ac87778
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/sonobuoy
+            scanner: grype
+      - timestamp: 2025-12-08T00:19:04Z
+        type: fixed
+        data:
+          fixed-version: 0.57.3-r11
+      - timestamp: 2025-12-08T01:32:43Z
+        type: fixed
+        data:
+          fixed-version: 0.57.3-r12
 
   - id: CGA-jm4x-6f2m-m3w2
     aliases:

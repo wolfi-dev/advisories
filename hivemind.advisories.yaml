@@ -287,6 +287,29 @@ advisories:
         data:
           fixed-version: 1.1.0-r1
 
+  - id: CGA-mcv5-cwcp-jpc2
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T11:46:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: hivemind
+            componentID: 4eaddc7bbde50dd0
+            componentName: stdlib
+            componentVersion: go1.25.3
+            componentType: go-module
+            componentLocation: /usr/bin/hivemind
+            scanner: grype
+      - timestamp: 2025-12-07T12:17:03Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-p56r-463p-mj69
     aliases:
       - CVE-2025-61723
@@ -402,6 +425,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/hivemind
             scanner: grype
+      - timestamp: 2025-12-05T14:56:56Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
 
   - id: CGA-wf6p-6w4r-v55m
     aliases:

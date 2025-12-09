@@ -91,6 +91,58 @@ advisories:
         data:
           fixed-version: 1.6.2-r2
 
+  - id: CGA-3xqf-p562-8q6v
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-07T08:45:12Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dashboard-web
+            componentID: 2b599bc1331357ab
+            componentName: stdlib
+            componentVersion: go1.25.3
+            componentType: go-module
+            componentLocation: /usr/bin/dashboard-web
+            scanner: grype
+      - timestamp: 2025-12-07T11:47:57Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in kubernetes-dashboard-web-1.7.0-r7.apk, at usr/bin/dashboard-web, usr/bin/dashboard-web.'
+      - timestamp: 2025-12-08T14:03:18Z
+        type: fixed
+        data:
+          fixed-version: 1.7.0-r8
+
+  - id: CGA-428h-2pmv-xphw
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-05T12:13:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-dashboard-web
+            componentID: 2b599bc1331357ab
+            componentName: stdlib
+            componentVersion: go1.25.3
+            componentType: go-module
+            componentLocation: /usr/bin/dashboard-web
+            scanner: grype
+      - timestamp: 2025-12-05T13:13:14Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in kubernetes-dashboard-web-1.7.0-r7.apk, at usr/bin/dashboard-web, usr/bin/dashboard-web.'
+      - timestamp: 2025-12-08T14:03:19Z
+        type: fixed
+        data:
+          fixed-version: 1.7.0-r8
+
   - id: CGA-49j5-7qfq-h6rc
     aliases:
       - CVE-2025-47910

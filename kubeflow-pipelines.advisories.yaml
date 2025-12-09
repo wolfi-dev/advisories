@@ -323,6 +323,32 @@ advisories:
         data:
           fixed-version: 2.14.4-r1
 
+  - id: CGA-4qgm-m7gf-gxr6
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-07T00:01:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-frontend
+            componentID: 2936dedce6ebeb03
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/apiserver
+            scanner: grype
+      - timestamp: 2025-12-07T14:00:07Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in kubeflow-pipelines-apiserver-2.15.0-r1.apk, at usr/bin/apiserver, usr/bin/apiserver; in kubeflow-pipelines-cache_server-2.15.0-r1.apk, at usr/bin/cache_server, usr/bin/cache_server; in kubeflow-pipelines-persistence_agent-2.15.0-r1.apk, at usr/bin/persistence_agent, usr/bin/persistence_agent; in kubeflow-pipelines-scheduledworkflow-2.15.0-r1.apk, at usr/bin/scheduledworkflow, usr/bin/scheduledworkflow; in kubeflow-pipelines-viewer-crd-controller-2.15.0-r1.apk, at usr/bin/viewer-crd-controller, usr/bin/viewer-crd-controller.'
+      - timestamp: 2025-12-08T06:06:35Z
+        type: fixed
+        data:
+          fixed-version: 2.15.0-r2
+
   - id: CGA-4xmg-fgrg-2hvg
     aliases:
       - CVE-2018-1002102
@@ -372,6 +398,14 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/apiserver
             scanner: grype
+      - timestamp: 2025-12-05T11:35:32Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in kubeflow-pipelines-apiserver-2.15.0-r1.apk, at usr/bin/apiserver, usr/bin/apiserver; in kubeflow-pipelines-cache_server-2.15.0-r1.apk, at usr/bin/cache_server, usr/bin/cache_server; in kubeflow-pipelines-persistence_agent-2.15.0-r1.apk, at usr/bin/persistence_agent, usr/bin/persistence_agent; in kubeflow-pipelines-scheduledworkflow-2.15.0-r1.apk, at usr/bin/scheduledworkflow, usr/bin/scheduledworkflow; in kubeflow-pipelines-viewer-crd-controller-2.15.0-r1.apk, at usr/bin/viewer-crd-controller, usr/bin/viewer-crd-controller.'
+      - timestamp: 2025-12-08T06:06:35Z
+        type: fixed
+        data:
+          fixed-version: 2.15.0-r2
 
   - id: CGA-56gq-37gw-r4c8
     aliases:
@@ -1611,6 +1645,28 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Vulnerable code is part of a kubeflow-pipelines and code was marked NOT_IMPORTABLE in Golang vulndb
+
+  - id: CGA-vvxv-8243-mvwm
+    aliases:
+      - CVE-2025-65945
+      - GHSA-869p-cjfg-cm3x
+    events:
+      - timestamp: 2025-12-07T00:01:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-frontend
+            componentID: 9585f8dabfae7a84
+            componentName: jws
+            componentVersion: 4.0.0
+            componentType: npm
+            componentLocation: /server/node_modules/jws/package.json
+            scanner: grype
+      - timestamp: 2025-12-08T06:06:36Z
+        type: fixed
+        data:
+          fixed-version: 2.15.0-r2
 
   - id: CGA-w3h9-h7jv-6q22
     aliases:

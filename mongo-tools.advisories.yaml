@@ -643,6 +643,32 @@ advisories:
         data:
           fixed-version: 100.13.0-r3
 
+  - id: CGA-qq45-r9c6-6w8q
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T15:22:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mongo-tools
+            componentID: 8e7ad19540a13239
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/bsondump
+            scanner: grype
+      - timestamp: 2025-12-07T13:35:58Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in mongo-tools-100.13.0-r4.apk, at usr/bin/bsondump, usr/bin/bsondump, usr/bin/mongodump, usr/bin/mongodump, usr/bin/mongoexport, usr/bin/mongoexport, usr/bin/mongofiles, usr/bin/mongofiles, usr/bin/mongoimport, usr/bin/mongoimport, usr/bin/mongorestore, usr/bin/mongorestore, usr/bin/mongostat, usr/bin/mongostat, usr/bin/mongotop, usr/bin/mongotop.'
+      - timestamp: 2025-12-07T22:27:21Z
+        type: fixed
+        data:
+          fixed-version: 100.13.0-r5
+
   - id: CGA-qvc9-x3v4-7g9p
     aliases:
       - CVE-2023-45290
@@ -706,6 +732,32 @@ advisories:
         type: fixed
         data:
           fixed-version: 100.13.0-r4
+
+  - id: CGA-v9xx-pfxr-xm42
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-05T13:48:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mongo-tools
+            componentID: 8e7ad19540a13239
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/bsondump
+            scanner: grype
+      - timestamp: 2025-12-06T11:50:18Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in mongo-tools-100.13.0-r4.apk, at usr/bin/bsondump, usr/bin/bsondump, usr/bin/mongodump, usr/bin/mongodump, usr/bin/mongoexport, usr/bin/mongoexport, usr/bin/mongofiles, usr/bin/mongofiles, usr/bin/mongoimport, usr/bin/mongoimport, usr/bin/mongorestore, usr/bin/mongorestore, usr/bin/mongostat, usr/bin/mongostat, usr/bin/mongotop, usr/bin/mongotop.'
+      - timestamp: 2025-12-07T22:27:22Z
+        type: fixed
+        data:
+          fixed-version: 100.13.0-r5
 
   - id: CGA-xm3m-7h2c-x4pv
     aliases:
