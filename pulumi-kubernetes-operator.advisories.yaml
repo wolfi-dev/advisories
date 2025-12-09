@@ -83,6 +83,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
 
+  - id: CGA-4gwx-c5q9-r942
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-05T18:41:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pulumi-kubernetes-operator
+            componentID: 0e8dfec510acd86c
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/pulumi-kubernetes-operator
+            scanner: grype
+
   - id: CGA-4p8h-gcw4-f9v5
     aliases:
       - CVE-2023-39325
