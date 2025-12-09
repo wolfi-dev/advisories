@@ -329,6 +329,10 @@ advisories:
         type: true-positive-determination
         data:
           note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in newrelic-infrastructure-agent-1.71.1-r0.apk, at usr/bin/newrelic-infra, usr/bin/newrelic-infra, usr/bin/newrelic-infra-ctl, usr/bin/newrelic-infra-ctl.'
+      - timestamp: 2025-12-08T08:59:55Z
+        type: fixed
+        data:
+          fixed-version: 1.71.2-r0
 
   - id: CGA-fw2v-xmfj-8q66
     aliases:
@@ -422,6 +426,32 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.52.3-r1
+
+  - id: CGA-p364-xq6g-gwxh
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-07T08:06:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: newrelic-infrastructure-agent
+            componentID: 4d1ba5584e4ee7ff
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/newrelic-infra
+            scanner: grype
+      - timestamp: 2025-12-07T15:37:49Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in newrelic-infrastructure-agent-1.71.1-r0.apk, at usr/bin/newrelic-infra, usr/bin/newrelic-infra, usr/bin/newrelic-infra-ctl, usr/bin/newrelic-infra-ctl.'
+      - timestamp: 2025-12-08T08:59:56Z
+        type: fixed
+        data:
+          fixed-version: 1.71.2-r0
 
   - id: CGA-p57p-g3qf-g8vg
     aliases:
