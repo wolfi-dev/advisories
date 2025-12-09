@@ -153,6 +153,24 @@ advisories:
         data:
           fixed-version: 2.13.2-r2
 
+  - id: CGA-44vc-cjxq-2296
+    aliases:
+      - CVE-2025-66564
+      - GHSA-4qg8-fj49-pxjh
+    events:
+      - timestamp: 2025-12-07T06:36:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: skaffold
+            componentID: 89cface475c1a80b
+            componentName: github.com/sigstore/timestamp-authority
+            componentVersion: v1.2.9
+            componentType: go-module
+            componentLocation: /usr/bin/skaffold
+            scanner: grype
+
   - id: CGA-4rrj-jwj8-r753
     aliases:
       - CVE-2024-24790
@@ -506,6 +524,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/skaffold
             scanner: grype
+      - timestamp: 2025-12-08T18:06:36Z
+        type: fixed
+        data:
+          fixed-version: 2.17.0-r2
 
   - id: CGA-cm33-rq4p-v976
     aliases:
@@ -1238,3 +1260,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.14.0-r0
+
+  - id: CGA-xvq5-hrx4-w5g6
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-07T06:36:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: skaffold
+            componentID: 058e3cc88bca37c7
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/skaffold
+            scanner: grype
+      - timestamp: 2025-12-08T18:06:38Z
+        type: fixed
+        data:
+          fixed-version: 2.17.0-r2

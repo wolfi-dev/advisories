@@ -104,6 +104,29 @@ advisories:
         data:
           fixed-version: 1.0.7-r5
 
+  - id: CGA-5vvw-pvhc-c242
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-07T03:45:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: render-template
+            componentID: d5bd09de0def7edc
+            componentName: stdlib
+            componentVersion: go1.25.3
+            componentType: go-module
+            componentLocation: /usr/bin/render-template
+            scanner: grype
+      - timestamp: 2025-12-07T12:59:12Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-6x48-f5r2-244p
     aliases:
       - CVE-2023-45290
