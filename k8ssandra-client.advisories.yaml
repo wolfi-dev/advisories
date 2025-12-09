@@ -25,6 +25,10 @@ advisories:
         type: true-positive-determination
         data:
           note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in k8ssandra-client-0.8.4-r1.apk, at usr/bin/kubectl-k8ssandra, usr/bin/kubectl-k8ssandra.'
+      - timestamp: 2025-12-07T15:06:26Z
+        type: fixed
+        data:
+          fixed-version: 0.8.4-r2
 
   - id: CGA-2m7w-2rrv-89pq
     aliases:
@@ -69,6 +73,28 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Upstream maintainers must update helm.sh/helm/v3. Attempts to update cause build failures due to additional dependencies that require updates
+
+  - id: CGA-4j74-r87m-v3rg
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T13:36:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k8ssandra-client
+            componentID: be8c8ebdcbb2c07e
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/kubectl-k8ssandra
+            scanner: grype
+      - timestamp: 2025-12-07T15:06:26Z
+        type: fixed
+        data:
+          fixed-version: 0.8.4-r2
 
   - id: CGA-5757-mqjw-49f7
     aliases:
