@@ -157,6 +157,32 @@ advisories:
         data:
           fixed-version: 2.4.0-r1
 
+  - id: CGA-cvrr-2w4q-cm6q
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-05T18:36:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kiali
+            componentID: 7baf3f928a65ff8b
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /opt/kiali/kiali
+            scanner: grype
+      - timestamp: 2025-12-06T12:12:05Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in kiali-2.19.0-r0.apk, at opt/kiali/kiali, opt/kiali/kiali.'
+      - timestamp: 2025-12-08T01:12:33Z
+        type: fixed
+        data:
+          fixed-version: 2.19.0-r1
+
   - id: CGA-h777-m5fr-2hp5
     aliases:
       - CVE-2025-22868
@@ -199,6 +225,32 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.2.0-r1
+
+  - id: CGA-p5pq-j25w-vp43
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T18:27:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kiali
+            componentID: 7baf3f928a65ff8b
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /opt/kiali/kiali
+            scanner: grype
+      - timestamp: 2025-12-07T11:43:31Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in kiali-2.19.0-r0.apk, at opt/kiali/kiali, opt/kiali/kiali.'
+      - timestamp: 2025-12-08T01:12:34Z
+        type: fixed
+        data:
+          fixed-version: 2.19.0-r1
 
   - id: CGA-pmgv-7wj3-2cpv
     aliases:

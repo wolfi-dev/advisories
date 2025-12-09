@@ -253,6 +253,32 @@ advisories:
         data:
           fixed-version: 1.3.0-r3
 
+  - id: CGA-77jq-mvjj-77gp
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T15:44:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spqr
+            componentID: 970f675803b26d31
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/spqr-balancer
+            scanner: grype
+      - timestamp: 2025-12-07T16:59:29Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in spqr-2.8.0-r1.apk, at usr/bin/spqr-balancer, usr/bin/spqr-balancer, usr/bin/spqr-coordinator, usr/bin/spqr-coordinator, usr/bin/spqr-dump, usr/bin/spqr-dump, usr/bin/spqr-mover, usr/bin/spqr-mover, usr/bin/spqr-router, usr/bin/spqr-router, usr/bin/spqr-worldmock, usr/bin/spqr-worldmock.'
+      - timestamp: 2025-12-07T22:46:10Z
+        type: fixed
+        data:
+          fixed-version: 2.8.0-r2
+
   - id: CGA-9p7f-cwrq-8cvc
     aliases:
       - CVE-2025-58183
@@ -566,6 +592,32 @@ advisories:
         type: fixed
         data:
           fixed-version: 2.5.0-r2
+
+  - id: CGA-vqm7-gxvg-8m64
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-05T13:32:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spqr
+            componentID: 970f675803b26d31
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/spqr-balancer
+            scanner: grype
+      - timestamp: 2025-12-05T19:03:06Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in spqr-2.8.0-r1.apk, at usr/bin/spqr-balancer, usr/bin/spqr-balancer, usr/bin/spqr-coordinator, usr/bin/spqr-coordinator, usr/bin/spqr-dump, usr/bin/spqr-dump, usr/bin/spqr-mover, usr/bin/spqr-mover, usr/bin/spqr-router, usr/bin/spqr-router, usr/bin/spqr-worldmock, usr/bin/spqr-worldmock.'
+      - timestamp: 2025-12-07T22:46:11Z
+        type: fixed
+        data:
+          fixed-version: 2.8.0-r2
 
   - id: CGA-w84r-xqxc-pcx6
     aliases:
