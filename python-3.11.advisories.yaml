@@ -145,6 +145,24 @@ advisories:
         data:
           fixed-version: 3.11.10-r0
 
+  - id: CGA-crcr-2r4c-v88q
+    aliases:
+      - CVE-2025-12084
+      - GHSA-hfqx-732w-xrrw
+    events:
+      - timestamp: 2025-12-07T11:45:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: python-3.11
+            componentID: e623fcf50669cf2f
+            componentName: python-3.11
+            componentVersion: 3.11.14-r3
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+
   - id: CGA-crq7-9946-pwg9
     aliases:
       - CVE-2024-6232
@@ -405,6 +423,10 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2025-12-08T15:06:57Z
+        type: pending-upstream-fix
+        data:
+          note: 'Upstream are actively working on, and have a PR open regarding this issue. Upstream maintainers will need to approve and merge the PR.  Fix PR: https://github.com/python/cpython/pull/142141'
 
   - id: CGA-v7vq-q3hm-p8cq
     aliases:

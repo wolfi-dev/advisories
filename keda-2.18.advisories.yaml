@@ -27,6 +27,32 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-p5f5-wcxp-r732
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T20:58:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.18
+            componentID: a259b81071a81ba9
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/keda-admission-webhooks
+            scanner: grype
+      - timestamp: 2025-12-07T16:53:31Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in keda-2.18-2.18.1-r1.apk, at usr/bin/keda, usr/bin/keda; in keda-2.18-admission-webhooks-2.18.1-r1.apk, at usr/bin/keda-admission-webhooks, usr/bin/keda-admission-webhooks; in keda-2.18-metrics-apiserver-2.18.1-r1.apk, at usr/bin/keda-adapter, usr/bin/keda-adapter.'
+      - timestamp: 2025-12-08T03:29:13Z
+        type: fixed
+        data:
+          fixed-version: 2.18.1-r2
+
   - id: CGA-v2w6-qgw5-3797
     aliases:
       - CVE-2025-47914
@@ -70,3 +96,7 @@ advisories:
         type: true-positive-determination
         data:
           note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in keda-2.18-2.18.1-r1.apk, at usr/bin/keda, usr/bin/keda; in keda-2.18-admission-webhooks-2.18.1-r1.apk, at usr/bin/keda-admission-webhooks, usr/bin/keda-admission-webhooks; in keda-2.18-metrics-apiserver-2.18.1-r1.apk, at usr/bin/keda-adapter, usr/bin/keda-adapter.'
+      - timestamp: 2025-12-08T03:29:14Z
+        type: fixed
+        data:
+          fixed-version: 2.18.1-r2
