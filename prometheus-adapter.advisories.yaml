@@ -48,6 +48,32 @@ advisories:
         data:
           fixed-version: 0.12.0-r16
 
+  - id: CGA-2923-c689-92gj
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T12:54:51Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-adapter
+            componentID: c883ec943b35873b
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/adapter
+            scanner: grype
+      - timestamp: 2025-12-07T14:08:42Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in prometheus-adapter-0.12.0-r17.apk, at usr/bin/adapter, usr/bin/adapter.'
+      - timestamp: 2025-12-07T18:55:29Z
+        type: fixed
+        data:
+          fixed-version: 0.12.0-r18
+
   - id: CGA-2h6c-ggxq-885c
     aliases:
       - CVE-2024-45337
@@ -569,6 +595,32 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.11.2-r3
+
+  - id: CGA-h4j4-4397-8rfh
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-05T20:43:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: prometheus-adapter
+            componentID: c883ec943b35873b
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/adapter
+            scanner: grype
+      - timestamp: 2025-12-06T11:32:35Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in prometheus-adapter-0.12.0-r17.apk, at usr/bin/adapter, usr/bin/adapter.'
+      - timestamp: 2025-12-07T18:55:30Z
+        type: fixed
+        data:
+          fixed-version: 0.12.0-r18
 
   - id: CGA-h4pp-fhfw-5f3r
     aliases:

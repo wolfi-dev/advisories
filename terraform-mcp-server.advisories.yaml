@@ -4,6 +4,32 @@ package:
   name: terraform-mcp-server
 
 advisories:
+  - id: CGA-4vgf-fx5x-f5vq
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-05T18:25:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-mcp-server
+            componentID: b0078a7c5d2351a2
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-mcp-server
+            scanner: grype
+      - timestamp: 2025-12-06T14:37:15Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in terraform-mcp-server-0.3.3-r0.apk, at usr/bin/terraform-mcp-server, usr/bin/terraform-mcp-server.'
+      - timestamp: 2025-12-08T10:01:07Z
+        type: fixed
+        data:
+          fixed-version: 0.3.3-r1
+
   - id: CGA-9884-8jqc-7cxm
     aliases:
       - CVE-2025-47910
@@ -113,3 +139,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.1.0-r1
+
+  - id: CGA-qmh8-734r-p378
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-07T04:15:53Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-mcp-server
+            componentID: b0078a7c5d2351a2
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-mcp-server
+            scanner: grype
+      - timestamp: 2025-12-08T10:01:08Z
+        type: fixed
+        data:
+          fixed-version: 0.3.3-r1
