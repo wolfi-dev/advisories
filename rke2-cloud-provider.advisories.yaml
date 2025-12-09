@@ -4,6 +4,24 @@ package:
   name: rke2-cloud-provider
 
 advisories:
+  - id: CGA-m876-6vm8-xfv9
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-07T04:05:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rke2-cloud-provider
+            componentID: 59285a13a7ca8c81
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/cloud-controller-manager
+            scanner: grype
+
   - id: CGA-p684-543m-wf2g
     aliases:
       - CVE-2025-47907
