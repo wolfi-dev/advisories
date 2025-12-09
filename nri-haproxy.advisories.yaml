@@ -47,6 +47,32 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-3fhf-6pmj-f6vh
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T15:20:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-haproxy
+            componentID: 18a8dc4036d28ece
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/nri-haproxy
+            scanner: grype
+      - timestamp: 2025-12-07T13:50:10Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in nri-haproxy-3.2.3-r0.apk, at usr/bin/nri-haproxy, usr/bin/nri-haproxy.'
+      - timestamp: 2025-12-07T21:58:04Z
+        type: fixed
+        data:
+          fixed-version: 3.2.3-r1
+
   - id: CGA-4w7f-2v2h-54j5
     aliases:
       - CVE-2024-24789
@@ -171,6 +197,14 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/nri-haproxy
             scanner: grype
+      - timestamp: 2025-12-06T11:49:40Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in nri-haproxy-3.2.3-r0.apk, at usr/bin/nri-haproxy, usr/bin/nri-haproxy.'
+      - timestamp: 2025-12-07T21:58:05Z
+        type: fixed
+        data:
+          fixed-version: 3.2.3-r1
 
   - id: CGA-ff45-cq28-g323
     aliases:

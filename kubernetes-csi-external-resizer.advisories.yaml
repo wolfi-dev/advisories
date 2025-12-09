@@ -48,6 +48,10 @@ advisories:
         type: true-positive-determination
         data:
           note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in kubernetes-csi-external-resizer-2.0.0-r1.apk, at usr/bin/csi-resizer, usr/bin/csi-resizer.'
+      - timestamp: 2025-12-08T16:09:28Z
+        type: fixed
+        data:
+          fixed-version: 2.0.0-r2
 
   - id: CGA-4q92-4jmj-wmpp
     aliases:
@@ -90,6 +94,32 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.13.1-r1
+
+  - id: CGA-74f9-rfm9-m269
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T14:46:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-external-resizer
+            componentID: ace8f1904aa80680
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/csi-resizer
+            scanner: grype
+      - timestamp: 2025-12-07T13:34:45Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in kubernetes-csi-external-resizer-2.0.0-r1.apk, at usr/bin/csi-resizer, usr/bin/csi-resizer.'
+      - timestamp: 2025-12-08T16:09:29Z
+        type: fixed
+        data:
+          fixed-version: 2.0.0-r2
 
   - id: CGA-7fjf-f35r-fmqv
     aliases:

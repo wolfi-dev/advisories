@@ -26,6 +26,32 @@ advisories:
         data:
           fixed-version: 0.13.0-r1
 
+  - id: CGA-2h29-c35v-vqhq
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-05T22:06:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-bench
+            componentID: 88fe16f0bb239aa8
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/kube-bench
+            scanner: grype
+      - timestamp: 2025-12-06T13:59:55Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in kube-bench-0.14.0-r1.apk, at usr/bin/kube-bench, usr/bin/kube-bench.'
+      - timestamp: 2025-12-08T06:30:54Z
+        type: fixed
+        data:
+          fixed-version: 0.14.0-r2
+
   - id: CGA-3238-2vr8-wx3r
     aliases:
       - GHSA-7jwh-3vrq-q3m8
@@ -99,6 +125,32 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.10.4-r1
+
+  - id: CGA-3p9j-j46x-4gwm
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-07T00:25:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kube-bench
+            componentID: 88fe16f0bb239aa8
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/kube-bench
+            scanner: grype
+      - timestamp: 2025-12-07T11:55:56Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in kube-bench-0.14.0-r1.apk, at usr/bin/kube-bench, usr/bin/kube-bench.'
+      - timestamp: 2025-12-08T06:30:55Z
+        type: fixed
+        data:
+          fixed-version: 0.14.0-r2
 
   - id: CGA-3r26-ww6g-39r6
     aliases:

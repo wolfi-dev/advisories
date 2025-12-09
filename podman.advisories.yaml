@@ -511,6 +511,28 @@ advisories:
         data:
           fixed-version: 5.3.2-r0
 
+  - id: CGA-qm2c-c9vf-hcr2
+    aliases:
+      - CVE-2025-66506
+      - GHSA-f83f-xpx7-ffpw
+    events:
+      - timestamp: 2025-12-06T11:47:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: podman
+            componentID: a18dbbb63e0d0505
+            componentName: github.com/sigstore/fulcio
+            componentVersion: v1.7.1
+            componentType: go-module
+            componentLocation: /usr/bin/podman
+            scanner: grype
+      - timestamp: 2025-12-07T17:55:45Z
+        type: fixed
+        data:
+          fixed-version: 5.7.0-r4
+
   - id: CGA-rq7r-qmrv-w823
     aliases:
       - CVE-2024-45336
