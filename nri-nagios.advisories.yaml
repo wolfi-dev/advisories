@@ -213,6 +213,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/nri-nagios
             scanner: grype
+      - timestamp: 2025-12-06T13:08:07Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
 
   - id: CGA-g2gp-ww3r-w4j9
     aliases:
@@ -224,6 +229,29 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Only affects Windows
+
+  - id: CGA-mhf2-3gcx-752m
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T22:15:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-nagios
+            componentID: 4f19544cc6fd062b
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/nri-nagios
+            scanner: grype
+      - timestamp: 2025-12-07T15:58:13Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
 
   - id: CGA-mv55-qc6w-q6cw
     aliases:

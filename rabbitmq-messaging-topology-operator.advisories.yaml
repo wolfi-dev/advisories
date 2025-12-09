@@ -53,6 +53,14 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/manager
             scanner: grype
+      - timestamp: 2025-12-06T13:13:01Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in rabbitmq-messaging-topology-operator-1.18.1-r1.apk, at usr/bin/manager, usr/bin/manager.'
+      - timestamp: 2025-12-08T08:07:10Z
+        type: fixed
+        data:
+          fixed-version: 1.18.1-r2
 
   - id: CGA-57q2-7pm5-wwcp
     aliases:
@@ -141,6 +149,32 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.14.2-r3
+
+  - id: CGA-8673-9fv2-8rm9
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-07T00:53:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rabbitmq-messaging-topology-operator
+            componentID: 0284c74ae5060a7b
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+      - timestamp: 2025-12-07T15:15:31Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in rabbitmq-messaging-topology-operator-1.18.1-r1.apk, at usr/bin/manager, usr/bin/manager.'
+      - timestamp: 2025-12-08T08:07:11Z
+        type: fixed
+        data:
+          fixed-version: 1.18.1-r2
 
   - id: CGA-8jm5-jxgj-6pr6
     aliases:

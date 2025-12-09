@@ -201,6 +201,36 @@ advisories:
         type: true-positive-determination
         data:
           note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in ipfs-cluster-1.1.4-r9.apk, at usr/bin/ipfs-cluster-ctl, usr/bin/ipfs-cluster-ctl, usr/bin/ipfs-cluster-follow, usr/bin/ipfs-cluster-follow, usr/bin/ipfs-cluster-service, usr/bin/ipfs-cluster-service.'
+      - timestamp: 2025-12-08T16:36:58Z
+        type: fixed
+        data:
+          fixed-version: 1.1.4-r10
+
+  - id: CGA-hvcr-g47g-q9c8
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T14:03:36Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: ipfs-cluster
+            componentID: 2cd916f0349a563f
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/ipfs-cluster-ctl
+            scanner: grype
+      - timestamp: 2025-12-06T15:01:30Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in ipfs-cluster-1.1.4-r9.apk, at usr/bin/ipfs-cluster-ctl, usr/bin/ipfs-cluster-ctl, usr/bin/ipfs-cluster-follow, usr/bin/ipfs-cluster-follow, usr/bin/ipfs-cluster-service, usr/bin/ipfs-cluster-service.'
+      - timestamp: 2025-12-08T16:36:59Z
+        type: fixed
+        data:
+          fixed-version: 1.1.4-r10
 
   - id: CGA-hx7h-pwvg-8fqg
     aliases:

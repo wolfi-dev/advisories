@@ -74,6 +74,14 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/nri-kafka
             scanner: grype
+      - timestamp: 2025-12-06T13:15:23Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in nri-kafka-3.15.0-r1.apk, at usr/bin/nri-kafka, usr/bin/nri-kafka; in nri-kafka-jdk11-3.15.0-r1.apk, at usr/bin/nri-kafka, usr/bin/nri-kafka.'
+      - timestamp: 2025-12-08T03:47:23Z
+        type: fixed
+        data:
+          fixed-version: 3.15.0-r2
 
   - id: CGA-6q39-gg44-jc82
     aliases:
@@ -434,6 +442,32 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.15.0-r1
+
+  - id: CGA-v6f4-fvwh-4hq4
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T21:34:46Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-kafka
+            componentID: 4904d438255f6a93
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/nri-kafka
+            scanner: grype
+      - timestamp: 2025-12-07T17:49:43Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in nri-kafka-3.15.0-r1.apk, at usr/bin/nri-kafka, usr/bin/nri-kafka; in nri-kafka-jdk11-3.15.0-r1.apk, at usr/bin/nri-kafka, usr/bin/nri-kafka.'
+      - timestamp: 2025-12-08T03:47:23Z
+        type: fixed
+        data:
+          fixed-version: 3.15.0-r2
 
   - id: CGA-vvwr-2j74-g52g
     aliases:
