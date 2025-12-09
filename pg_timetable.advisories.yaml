@@ -25,6 +25,10 @@ advisories:
         type: true-positive-determination
         data:
           note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in pg_timetable-6.2.0-r1.apk, at usr/bin/pg_timetable, usr/bin/pg_timetable.'
+      - timestamp: 2025-12-08T09:31:21Z
+        type: fixed
+        data:
+          fixed-version: 6.2.0-r2
 
   - id: CGA-68c3-6mjq-r74g
     aliases:
@@ -135,6 +139,32 @@ advisories:
         type: fixed
         data:
           fixed-version: 6.2.0-r1
+
+  - id: CGA-qjg7-rrgg-9jjh
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-07T03:29:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: pg_timetable
+            componentID: 03ec7fe8ddcef5e4
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/pg_timetable
+            scanner: grype
+      - timestamp: 2025-12-07T12:41:28Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in pg_timetable-6.2.0-r1.apk, at usr/bin/pg_timetable, usr/bin/pg_timetable.'
+      - timestamp: 2025-12-08T09:31:22Z
+        type: fixed
+        data:
+          fixed-version: 6.2.0-r2
 
   - id: CGA-r7mm-q9ch-vjh4
     aliases:

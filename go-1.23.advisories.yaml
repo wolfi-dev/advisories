@@ -14,6 +14,28 @@ advisories:
         data:
           fixed-version: 1.23.1-r0
 
+  - id: CGA-57xw-5rw4-6r3j
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-07T09:23:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: go-1.23
+            componentID: 3d2e05b51cbb0faf
+            componentName: go-1.23
+            componentVersion: 1.23.12-r0
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2025-12-07T11:27:58Z
+        type: fix-not-planned
+        data:
+          note: This package is no longer supported upstream and has reached its end of life. A version upgrade is required to fix this vulnerability.
+
   - id: CGA-6hw2-7vf6-cjh4
     aliases:
       - CVE-2025-61723
