@@ -90,6 +90,32 @@ advisories:
         data:
           fixed-version: 2.2.0-r4
 
+  - id: CGA-43x7-9f3h-2rxx
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T13:55:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: php-fpm_exporter
+            componentID: cb8c1569408440e5
+            componentName: stdlib
+            componentVersion: go1.25.3
+            componentType: go-module
+            componentLocation: /usr/bin/php-fpm_exporter
+            scanner: grype
+      - timestamp: 2025-12-07T15:44:32Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in php-fpm_exporter-2.2.0-r17.apk, at usr/bin/php-fpm_exporter, usr/bin/php-fpm_exporter.'
+      - timestamp: 2025-12-07T21:18:52Z
+        type: fixed
+        data:
+          fixed-version: 2.2.0-r18
+
   - id: CGA-444h-6pw4-h8ww
     aliases:
       - CVE-2024-34158
@@ -151,6 +177,14 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/php-fpm_exporter
             scanner: grype
+      - timestamp: 2025-12-06T11:39:26Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in php-fpm_exporter-2.2.0-r17.apk, at usr/bin/php-fpm_exporter, usr/bin/php-fpm_exporter.'
+      - timestamp: 2025-12-07T21:18:53Z
+        type: fixed
+        data:
+          fixed-version: 2.2.0-r18
 
   - id: CGA-5x36-25x7-vrxx
     aliases:
@@ -260,6 +294,28 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
+
+  - id: CGA-c34x-j4hm-69mm
+    aliases:
+      - CVE-2025-65637
+      - GHSA-4f99-4q7p-p3gh
+    events:
+      - timestamp: 2025-12-06T13:55:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: php-fpm_exporter
+            componentID: fcdc15dd9a095b34
+            componentName: github.com/sirupsen/logrus
+            componentVersion: v1.8.1
+            componentType: go-module
+            componentLocation: /usr/bin/php-fpm_exporter
+            scanner: grype
+      - timestamp: 2025-12-08T05:47:58Z
+        type: fixed
+        data:
+          fixed-version: 2.2.0-r19
 
   - id: CGA-cj88-9552-f7mm
     aliases:

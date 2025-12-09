@@ -90,6 +90,32 @@ advisories:
         data:
           fixed-version: 3.7.2-r2
 
+  - id: CGA-95c9-9cc7-3m78
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T19:24:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nri-jmx
+            componentID: 7a3e8f4ac508a72a
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/nri-jmx
+            scanner: grype
+      - timestamp: 2025-12-07T14:13:38Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in nri-jmx-3.11.1-r0.apk, at usr/bin/nri-jmx, usr/bin/nri-jmx; in nri-jmx-jdk11-3.11.1-r0.apk, at usr/bin/nri-jmx, usr/bin/nri-jmx.'
+      - timestamp: 2025-12-08T02:00:35Z
+        type: fixed
+        data:
+          fixed-version: 3.11.1-r1
+
   - id: CGA-f8wj-xxmj-m689
     aliases:
       - CVE-2023-45283
@@ -194,6 +220,14 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/nri-jmx
             scanner: grype
+      - timestamp: 2025-12-06T12:38:02Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in nri-jmx-3.11.1-r0.apk, at usr/bin/nri-jmx, usr/bin/nri-jmx; in nri-jmx-jdk11-3.11.1-r0.apk, at usr/bin/nri-jmx, usr/bin/nri-jmx.'
+      - timestamp: 2025-12-08T02:00:35Z
+        type: fixed
+        data:
+          fixed-version: 3.11.1-r1
 
   - id: CGA-m56c-jqmq-wj69
     aliases:

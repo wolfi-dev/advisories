@@ -309,6 +309,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/protoc-gen-go
             scanner: grype
+      - timestamp: 2025-12-06T11:41:11Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
 
   - id: CGA-jfx4-cp7m-2ppp
     aliases:
@@ -416,6 +421,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.34.1-r3
+
+  - id: CGA-v3wr-rhqq-9jjh
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T14:02:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: protoc-gen-go
+            componentID: 92a2cbfdd00dd13f
+            componentName: stdlib
+            componentVersion: go1.25.3
+            componentType: go-module
+            componentLocation: /usr/bin/protoc-gen-go
+            scanner: grype
+      - timestamp: 2025-12-07T20:25:17Z
+        type: fixed
+        data:
+          fixed-version: 1.36.10-r2
 
   - id: CGA-wp63-vxh4-frhj
     aliases:
