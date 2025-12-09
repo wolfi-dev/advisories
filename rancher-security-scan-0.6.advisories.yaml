@@ -48,6 +48,29 @@ advisories:
         data:
           fixed-version: 0.6.1-r2
 
+  - id: CGA-94v2-28j7-m6h7
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-07T04:46:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rancher-security-scan-0.6
+            componentID: f5080af23eb5836e
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/kb-summarizer
+            scanner: grype
+      - timestamp: 2025-12-07T16:57:24Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-wqqq-vhgw-6pqv
     aliases:
       - CVE-2025-61729

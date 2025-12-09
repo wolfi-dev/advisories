@@ -459,6 +459,10 @@ advisories:
         type: true-positive-determination
         data:
           note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in policy-controller-0.13.1-r3.apk, at usr/bin/policy-controller, usr/bin/policy-controller; in policy-controller-tester-0.13.1-r3.apk, at usr/bin/policy-tester, usr/bin/policy-tester.'
+      - timestamp: 2025-12-08T17:44:32Z
+        type: fixed
+        data:
+          fixed-version: 0.13.1-r4
 
   - id: CGA-f6w6-x4g5-7hr8
     aliases:
@@ -525,6 +529,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.12.0-r9
+
+  - id: CGA-fxmj-3mgc-rmgf
+    aliases:
+      - CVE-2025-66564
+      - GHSA-4qg8-fj49-pxjh
+    events:
+      - timestamp: 2025-12-07T07:59:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: policy-controller
+            componentID: 7e28dc3f185f3573
+            componentName: github.com/sigstore/timestamp-authority
+            componentVersion: v1.2.5
+            componentType: go-module
+            componentLocation: /usr/bin/policy-tester
+            scanner: grype
 
   - id: CGA-gf8c-w6rm-7r7p
     aliases:
@@ -1054,6 +1076,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.13.1-r1
+
+  - id: CGA-wxp7-qj29-fp8g
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-07T07:59:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: policy-controller
+            componentID: dd1247c8a97089c6
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/policy-tester
+            scanner: grype
+      - timestamp: 2025-12-08T17:44:33Z
+        type: fixed
+        data:
+          fixed-version: 0.13.1-r4
 
   - id: CGA-x6f9-hw33-2v6q
     aliases:
