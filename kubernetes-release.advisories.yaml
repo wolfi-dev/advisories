@@ -103,6 +103,29 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-jmcj-hp7j-rc89
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T15:28:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-release-go-runner
+            componentID: 8fac521138ef0e81
+            componentName: stdlib
+            componentVersion: go1.25.3
+            componentType: go-module
+            componentLocation: /usr/bin/go-runner
+            scanner: grype
+      - timestamp: 2025-12-07T12:57:43Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-included-in-package
+          note: Govulncheck found no affected symbols in the scanned Go binaries.
+
   - id: CGA-qvfv-8fp7-rxrg
     aliases:
       - CVE-2025-22866

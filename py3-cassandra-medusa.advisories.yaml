@@ -290,6 +290,24 @@ advisories:
         data:
           fixed-version: 0.17.2-r1
 
+  - id: CGA-7gxv-2p47-m9h8
+    aliases:
+      - CVE-2025-66471
+      - GHSA-2xpw-w6gg-jr37
+    events:
+      - timestamp: 2025-12-06T18:58:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3-cassandra-medusa
+            componentID: 0fb541afed8e4d83
+            componentName: urllib3
+            componentVersion: 1.26.20
+            componentType: python
+            componentLocation: /home/cassandra/.venv/lib/python3.11/site-packages/pip/_vendor/vendor.txt
+            scanner: grype
+
   - id: CGA-7hfp-6g2x-rmq3
     aliases:
       - GHSA-jm77-qphf-c4w8
@@ -477,7 +495,7 @@ advisories:
       - timestamp: 2025-09-29T23:45:00Z
         type: pending-upstream-fix
         data:
-          note: "Remaining affected pip versions are transitive dependencies brought in via Python wheels. Upstream maintainers of these wheels are required to remediate."
+          note: Remaining affected pip versions are transitive dependencies brought in via Python wheels. Upstream maintainers of these wheels are required to remediate.
 
   - id: CGA-fp53-8jf5-gj7f
     aliases:
@@ -647,6 +665,24 @@ advisories:
         type: pending-upstream-fix
         data:
           note: 'This vulnerability is part of urllib, which is vendored into pip, and there are significant changes between the current version and the fixed version. As such, we cannot update or patch it, and will require upstream to produce a fix. See the following for more information: https://github.com/advisories/GHSA-pq67-6m6q-mj2v'
+
+  - id: CGA-qff3-qwfv-7pph
+    aliases:
+      - CVE-2025-66418
+      - GHSA-gm62-xv2j-4w53
+    events:
+      - timestamp: 2025-12-06T18:58:17Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3-cassandra-medusa
+            componentID: 0fb541afed8e4d83
+            componentName: urllib3
+            componentVersion: 1.26.20
+            componentType: python
+            componentLocation: /home/cassandra/.venv/lib/python3.11/site-packages/pip/_vendor/vendor.txt
+            scanner: grype
 
   - id: CGA-r7j4-wjg3-h9r6
     aliases:
