@@ -136,6 +136,24 @@ advisories:
         data:
           note: Upstream maintainers need to upgrade gopkg.in/square/go-jose.v2 to the maintained go-jose/go-jose package.
 
+  - id: CGA-4xxx-83gx-5qxh
+    aliases:
+      - CVE-2025-67499
+      - GHSA-jv3w-x3r3-g6rm
+    events:
+      - timestamp: 2025-12-10T11:37:04Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s-1.32
+            componentID: 4564789850502f72
+            componentName: github.com/containernetworking/plugins
+            componentVersion: v1.8.0-k3s1
+            componentType: go-module
+            componentLocation: /usr/bin/cni
+            scanner: grype
+
   - id: CGA-55fv-m3qp-xh5q
     aliases:
       - CVE-2024-45338

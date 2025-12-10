@@ -47,3 +47,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.31.2-r1
+
+  - id: CGA-x985-h3x5-c5qg
+    aliases:
+      - CVE-2025-67499
+      - GHSA-jv3w-x3r3-g6rm
+    events:
+      - timestamp: 2025-12-10T11:26:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: calico-cni-3.31
+            componentID: 6d8d1ce51f68faa9
+            componentName: github.com/containernetworking/plugins
+            componentVersion: v1.6.2
+            componentType: go-module
+            componentLocation: /usr/bin/calico-node
+            scanner: grype
