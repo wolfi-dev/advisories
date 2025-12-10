@@ -26,6 +26,28 @@ advisories:
         data:
           fixed-version: 2.67.0-r1
 
+  - id: CGA-23fx-4vmh-cm8j
+    aliases:
+      - CVE-2025-66418
+      - GHSA-gm62-xv2j-4w53
+    events:
+      - timestamp: 2025-12-06T11:16:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: az
+            componentID: 1f268c2bf6055046
+            componentName: urllib3
+            componentVersion: 2.5.0
+            componentType: python
+            componentLocation: /usr/lib/python3.13/site-packages/urllib3-2.5.0.dist-info/METADATA
+            scanner: grype
+      - timestamp: 2025-12-10T07:34:35Z
+        type: fixed
+        data:
+          fixed-version: 2.81.0-r1
+
   - id: CGA-257f-fwpm-crg7
     aliases:
       - CVE-2024-12797
@@ -111,6 +133,28 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Microsoft Knack 0.12.0 allows Regular expression Denial of Service (ReDoS) in the knack.introspection module. We’ll need to wait until the upstream project releases a patched version. Once that’s available, we can proceed with the upgrade and remediate the CVE.
+
+  - id: CGA-7xhv-j2ch-9fvr
+    aliases:
+      - CVE-2025-66471
+      - GHSA-2xpw-w6gg-jr37
+    events:
+      - timestamp: 2025-12-06T11:16:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: az
+            componentID: 1f268c2bf6055046
+            componentName: urllib3
+            componentVersion: 2.5.0
+            componentType: python
+            componentLocation: /usr/lib/python3.13/site-packages/urllib3-2.5.0.dist-info/METADATA
+            scanner: grype
+      - timestamp: 2025-12-10T07:34:36Z
+        type: fixed
+        data:
+          fixed-version: 2.81.0-r1
 
   - id: CGA-8493-6499-2mc5
     aliases:

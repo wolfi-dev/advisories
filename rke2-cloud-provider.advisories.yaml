@@ -4,6 +4,28 @@ package:
   name: rke2-cloud-provider
 
 advisories:
+  - id: CGA-m876-6vm8-xfv9
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-07T04:05:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rke2-cloud-provider
+            componentID: 59285a13a7ca8c81
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/cloud-controller-manager
+            scanner: grype
+      - timestamp: 2025-12-09T12:10:08Z
+        type: fixed
+        data:
+          fixed-version: 1.34.2-r2
+
   - id: CGA-p684-543m-wf2g
     aliases:
       - CVE-2025-47907
@@ -95,3 +117,7 @@ advisories:
         type: true-positive-determination
         data:
           note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in rke2-cloud-provider-1.34.2-r1.apk, at usr/bin/cloud-controller-manager, usr/bin/cloud-controller-manager.'
+      - timestamp: 2025-12-08T09:57:36Z
+        type: fixed
+        data:
+          fixed-version: 1.34.2-r2
