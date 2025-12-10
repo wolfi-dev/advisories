@@ -1284,6 +1284,24 @@ advisories:
           type: vulnerable-code-not-in-execution-path
           note: Vulnerable code is part of the Kubernetes kubeproxy which is not in the execution path of the kubeflow-pipelines
 
+  - id: CGA-mvh3-23cf-rpgx
+    aliases:
+      - CVE-2025-66471
+      - GHSA-2xpw-w6gg-jr37
+    events:
+      - timestamp: 2025-12-10T16:49:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-apiserver
+            componentID: f7a753c7f8056bd5
+            componentName: urllib3
+            componentVersion: 2.5.0
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/urllib3-2.5.0.dist-info/METADATA
+            scanner: grype
+
   - id: CGA-p76g-p9pf-xx29
     aliases:
       - CVE-2020-8552
