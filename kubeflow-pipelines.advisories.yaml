@@ -1682,6 +1682,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Vulnerable code is part of a kubeflow-pipelines and code was marked NOT_IMPORTABLE in Golang vulndb
 
+  - id: CGA-vqfh-frf6-9crh
+    aliases:
+      - CVE-2025-66418
+      - GHSA-gm62-xv2j-4w53
+    events:
+      - timestamp: 2025-12-10T16:49:18Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-apiserver
+            componentID: f7a753c7f8056bd5
+            componentName: urllib3
+            componentVersion: 2.5.0
+            componentType: python
+            componentLocation: /usr/lib/python3.10/site-packages/urllib3-2.5.0.dist-info/METADATA
+            scanner: grype
+
   - id: CGA-vvxv-8243-mvwm
     aliases:
       - CVE-2025-65945
