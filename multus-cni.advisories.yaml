@@ -37,6 +37,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-4j34-wmmh-mx3c
+    aliases:
+      - CVE-2025-67499
+      - GHSA-jv3w-x3r3-g6rm
+    events:
+      - timestamp: 2025-12-10T13:06:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: multus-cni
+            componentID: c7a9307c6f575fe8
+            componentName: github.com/containernetworking/plugins
+            componentVersion: v1.7.1
+            componentType: go-module
+            componentLocation: /usr/bin/multus
+            scanner: grype
+
   - id: CGA-7cxm-qp7x-4xcp
     aliases:
       - CVE-2024-24788
