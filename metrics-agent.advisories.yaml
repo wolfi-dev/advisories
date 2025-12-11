@@ -4,6 +4,28 @@ package:
   name: metrics-agent
 
 advisories:
+  - id: CGA-w47j-mpvc-485x
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-05T22:17:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: metrics-agent
+            componentID: 78bfe9a383e7e195
+            componentName: stdlib
+            componentVersion: go1.25.3
+            componentType: go-module
+            componentLocation: /usr/bin/metrics-agent
+            scanner: grype
+      - timestamp: 2025-12-10T11:11:57Z
+        type: fixed
+        data:
+          fixed-version: 2.14.7-r1
+
   - id: CGA-w79v-9fvf-rw8j
     aliases:
       - CVE-2025-47907

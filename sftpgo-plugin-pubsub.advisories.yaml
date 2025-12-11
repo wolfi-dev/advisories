@@ -313,3 +313,25 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
+
+  - id: CGA-xgjh-2px2-52h7
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-05T09:52:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sftpgo-plugin-pubsub
+            componentID: 5b1646b119758319
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/sftpgo-plugin-pubsub
+            scanner: grype
+      - timestamp: 2025-12-09T12:35:43Z
+        type: fixed
+        data:
+          fixed-version: 1.0.15-r2

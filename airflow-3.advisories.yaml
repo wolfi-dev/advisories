@@ -92,6 +92,32 @@ advisories:
         data:
           note: flask-appbuilder is a transitive dependency brought in via apache-airflow-providers-fab's most recent release, v2.4.4. To remediate, v3.0.0 must release and upstream airflow maintainers need to implement compatibility with the new major version where applicable.
 
+  - id: CGA-3xph-4x32-2294
+    aliases:
+      - CVE-2025-66471
+      - GHSA-2xpw-w6gg-jr37
+    events:
+      - timestamp: 2025-12-06T12:01:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow-3
+            componentID: fcbb112b235a13d5
+            componentName: urllib3
+            componentVersion: 2.5.0
+            componentType: python
+            componentLocation: /opt/airflow/lib/python3.12/site-packages/urllib3-2.5.0.dist-info/METADATA
+            scanner: grype
+      - timestamp: 2025-12-10T11:05:08Z
+        type: fixed
+        data:
+          fixed-version: 3.1.3-r3
+      - timestamp: 2025-12-10T11:22:41Z
+        type: fixed
+        data:
+          fixed-version: 3.1.4-r0
+
   - id: CGA-4243-6x76-g636
     aliases:
       - CVE-2025-62611
@@ -604,6 +630,32 @@ advisories:
         type: fix-not-planned
         data:
           note: The python-ecdsa library is vulnerable to a Minerva timing attack on the P-256 curve through the ecdsa.SigningKey.sign_digest() API. The vulnerability affects ECDSA signatures, key generation, and ECDH operations, potentially allowing attackers to leak internal nonces and discover private keys through timing analysis. The upstream python-ecdsa project explicitly considers side-channel attacks out of scope and has stated there is no planned fix for this vulnerability.
+
+  - id: CGA-vx33-8fv6-fpfg
+    aliases:
+      - CVE-2025-66418
+      - GHSA-gm62-xv2j-4w53
+    events:
+      - timestamp: 2025-12-06T12:01:59Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow-3
+            componentID: fcbb112b235a13d5
+            componentName: urllib3
+            componentVersion: 2.5.0
+            componentType: python
+            componentLocation: /opt/airflow/lib/python3.12/site-packages/urllib3-2.5.0.dist-info/METADATA
+            scanner: grype
+      - timestamp: 2025-12-10T11:05:10Z
+        type: fixed
+        data:
+          fixed-version: 3.1.3-r3
+      - timestamp: 2025-12-10T11:22:41Z
+        type: fixed
+        data:
+          fixed-version: 3.1.4-r0
 
   - id: CGA-vx49-fm46-cjjp
     aliases:

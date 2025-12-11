@@ -62,6 +62,32 @@ advisories:
         data:
           fixed-version: 2.3.5-r7
 
+  - id: CGA-3jj2-fw5r-2pmg
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T20:01:26Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rootlesskit
+            componentID: 7f98c848a1c7db0c
+            componentName: stdlib
+            componentVersion: go1.25.3
+            componentType: go-module
+            componentLocation: /usr/bin/rootlessctl
+            scanner: grype
+      - timestamp: 2025-12-07T17:08:25Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in rootlesskit-2.3.5-r7.apk, at usr/bin/rootlessctl, usr/bin/rootlessctl, usr/bin/rootlesskit, usr/bin/rootlesskit, usr/bin/rootlesskit-docker-proxy, usr/bin/rootlesskit-docker-proxy.'
+      - timestamp: 2025-12-08T10:29:16Z
+        type: fixed
+        data:
+          fixed-version: 2.3.5-r8
+
   - id: CGA-43g3-cm9p-wr27
     aliases:
       - CVE-2024-34156
@@ -139,6 +165,28 @@ advisories:
         data:
           fixed-version: 2.3.5-r7
 
+  - id: CGA-6mx7-r5j5-h8w8
+    aliases:
+      - CVE-2025-67499
+      - GHSA-jv3w-x3r3-g6rm
+    events:
+      - timestamp: 2025-12-10T12:57:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: rootlesskit
+            componentID: a768908f8c5cecf9
+            componentName: github.com/containernetworking/plugins
+            componentVersion: v1.7.1
+            componentType: go-module
+            componentLocation: /usr/bin/rootlesskit
+            scanner: grype
+      - timestamp: 2025-12-10T19:56:44Z
+        type: fixed
+        data:
+          fixed-version: 2.3.5-r9
+
   - id: CGA-87jf-gwm8-2m6p
     aliases:
       - CVE-2024-34158
@@ -204,6 +252,10 @@ advisories:
         type: true-positive-determination
         data:
           note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in rootlesskit-2.3.5-r7.apk, at usr/bin/rootlessctl, usr/bin/rootlessctl, usr/bin/rootlesskit, usr/bin/rootlesskit, usr/bin/rootlesskit-docker-proxy, usr/bin/rootlesskit-docker-proxy.'
+      - timestamp: 2025-12-08T10:29:17Z
+        type: fixed
+        data:
+          fixed-version: 2.3.5-r8
 
   - id: CGA-8q8q-mjhh-wch3
     aliases:

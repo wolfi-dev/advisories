@@ -70,6 +70,28 @@ advisories:
         data:
           fixed-version: 0.12.0-r6
 
+  - id: CGA-c54c-9xq6-3v55
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T11:53:06Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kserve-rest-proxy
+            componentID: 8a1e6bca84c1500d
+            componentName: stdlib
+            componentVersion: go1.25.3
+            componentType: go-module
+            componentLocation: /usr/bin/rest-proxy
+            scanner: grype
+      - timestamp: 2025-12-10T11:14:42Z
+        type: fixed
+        data:
+          fixed-version: 0.12.0-r12
+
   - id: CGA-gm9g-9wc9-rjwv
     aliases:
       - CVE-2025-47907
@@ -142,6 +164,14 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/rest-proxy
             scanner: grype
+      - timestamp: 2025-12-05T18:01:59Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in kserve-rest-proxy-0.12.0-r11.apk, at usr/bin/rest-proxy, usr/bin/rest-proxy.'
+      - timestamp: 2025-12-07T17:59:19Z
+        type: fixed
+        data:
+          fixed-version: 0.12.0-r12
 
   - id: CGA-qcmg-pfrh-r9qw
     aliases:

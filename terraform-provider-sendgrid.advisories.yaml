@@ -601,6 +601,10 @@ advisories:
         type: true-positive-determination
         data:
           note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in terraform-provider-sendgrid-1.0.1-r8.apk, at usr/bin/terraform-provider-sendgrid, usr/bin/terraform-provider-sendgrid.'
+      - timestamp: 2025-12-08T04:49:03Z
+        type: fixed
+        data:
+          fixed-version: 1.0.1-r9
 
   - id: CGA-pf63-5jh6-rr9m
     aliases:
@@ -820,6 +824,32 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.0.1-r1
+
+  - id: CGA-whqj-4h5j-hwxc
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T15:21:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: terraform-provider-sendgrid
+            componentID: a7df13606a0eeffe
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/terraform-provider-sendgrid
+            scanner: grype
+      - timestamp: 2025-12-07T17:02:52Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in terraform-provider-sendgrid-1.0.1-r8.apk, at usr/bin/terraform-provider-sendgrid, usr/bin/terraform-provider-sendgrid.'
+      - timestamp: 2025-12-08T04:49:04Z
+        type: fixed
+        data:
+          fixed-version: 1.0.1-r9
 
   - id: CGA-wv47-33rx-9gwq
     aliases:

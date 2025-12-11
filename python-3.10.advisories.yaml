@@ -49,6 +49,28 @@ advisories:
         data:
           note: 'Upstream maintainers must release the backport PR for Python 3.10. The tarfile validation fix from gh-130577 is ready for 3.10 via PR #137176 but not yet merged and released. CVE-2025-8194 is fixed in Python 3.13.5+ but requires backporting to 3.10 branch. Reference: https://github.com/python/cpython/pull/137176'
 
+  - id: CGA-3f5c-5x8f-wp4q
+    aliases:
+      - CVE-2025-12084
+      - GHSA-hfqx-732w-xrrw
+    events:
+      - timestamp: 2025-12-07T09:17:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: python-3.10
+            componentID: d992d6f3a0b47271
+            componentName: python-3.10
+            componentVersion: 3.10.19-r3
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
+      - timestamp: 2025-12-09T11:43:24Z
+        type: pending-upstream-fix
+        data:
+          note: 'Upstream are actively working on, and have a PR open regarding this issue. Upstream maintainers will need to approve and merge the PR. Fix PR: https://github.com/python/cpython/pull/142213'
+
   - id: CGA-5pmm-mmg3-pfp3
     aliases:
       - CVE-2024-0450
@@ -128,6 +150,10 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2025-12-08T15:00:40Z
+        type: pending-upstream-fix
+        data:
+          note: 'Upstream are actively working on, and have a PR open regarding this issue. Upstream maintainers will need to approve and merge the PR.  Fix PR: https://github.com/python/cpython/pull/142142'
 
   - id: CGA-6xpf-gwq5-cp42
     aliases:
@@ -157,6 +183,10 @@ advisories:
             componentType: apk
             componentLocation: /.PKGINFO
             scanner: grype
+      - timestamp: 2025-12-11T09:16:30Z
+        type: pending-upstream-fix
+        data:
+          note: 'Upstream are actively working on, and have a PR open regarding this issue. Upstream maintainers will need to approve and merge the PR. Fix PR: https://github.com/python/cpython/pull/142151'
 
   - id: CGA-8659-6q2f-8j63
     aliases:

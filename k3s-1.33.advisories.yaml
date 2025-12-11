@@ -100,6 +100,28 @@ advisories:
         data:
           fixed-version: 1.33.5.1-r1
 
+  - id: CGA-6m8p-2x3m-xmhp
+    aliases:
+      - CVE-2025-67499
+      - GHSA-jv3w-x3r3-g6rm
+    events:
+      - timestamp: 2025-12-10T11:16:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s-1.33
+            componentID: 5ce9a649e709e799
+            componentName: github.com/containernetworking/plugins
+            componentVersion: v1.8.0-k3s1
+            componentType: go-module
+            componentLocation: /usr/bin/cni
+            scanner: grype
+      - timestamp: 2025-12-10T16:21:00Z
+        type: pending-upstream-fix
+        data:
+          note: k3s builds from a fork of containernetworking/plugins (https://github.com/rancher/plugins) and have not yet released a fixed version in their fork.
+
   - id: CGA-6rh4-p5rc-q7f6
     aliases:
       - CVE-2025-58181

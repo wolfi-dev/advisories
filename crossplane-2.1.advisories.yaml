@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: crossplane-2.1
+
+advisories:
+  - id: CGA-8pgv-w3jq-987x
+    aliases:
+      - CVE-2025-66564
+      - GHSA-4qg8-fj49-pxjh
+    events:
+      - timestamp: 2025-12-06T11:49:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: crossplane-2.1
+            componentID: 730b83e85fed25d5
+            componentName: github.com/sigstore/timestamp-authority
+            componentVersion: v1.2.2
+            componentType: go-module
+            componentLocation: /usr/bin/crossplane
+            scanner: grype
+      - timestamp: 2025-12-11T15:50:25Z
+        type: pending-upstream-fix
+        data:
+          note: 'Remediating this vulnerability requires upgrading github.com/sigstore/timestamp-authority from v1.2.2 to v2.0.3. github.com/sigstore/timestamp-authority is a transitive dependency and attempting to upgrade results in build failures. See upstream automated open PR: https://github.com/crossplane/crossplane/pull/6971'

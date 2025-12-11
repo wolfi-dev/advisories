@@ -50,6 +50,28 @@ advisories:
           type: component-vulnerability-mismatch
           note: The CVE was against an older version of the buildah module itself (< v1.14.4), and this package includes v1.36.0.
 
+  - id: CGA-4xwp-5773-9wcc
+    aliases:
+      - CVE-2025-67499
+      - GHSA-jv3w-x3r3-g6rm
+    events:
+      - timestamp: 2025-12-10T11:04:40Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buildah
+            componentID: a8dd539bce273b62
+            componentName: github.com/containernetworking/plugins
+            componentVersion: v1.8.0
+            componentType: go-module
+            componentLocation: /usr/bin/buildah
+            scanner: grype
+      - timestamp: 2025-12-10T13:19:49Z
+        type: fixed
+        data:
+          fixed-version: 1.42.2-r2
+
   - id: CGA-5gv6-pp27-4cr3
     aliases:
       - CVE-2025-31133
@@ -212,6 +234,28 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.39.0-r2
+
+  - id: CGA-995x-7m99-76hh
+    aliases:
+      - CVE-2025-66506
+      - GHSA-f83f-xpx7-ffpw
+    events:
+      - timestamp: 2025-12-06T11:05:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: buildah
+            componentID: 0490ab01b2faf783
+            componentName: github.com/sigstore/fulcio
+            componentVersion: v1.7.1
+            componentType: go-module
+            componentLocation: /usr/bin/buildah
+            scanner: grype
+      - timestamp: 2025-12-07T16:34:34Z
+        type: fixed
+        data:
+          fixed-version: 1.42.2-r1
 
   - id: CGA-cm27-9fv3-3gp8
     aliases:

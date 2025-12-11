@@ -93,6 +93,28 @@ advisories:
         data:
           fixed-version: 2.3.2-r1
 
+  - id: CGA-5p5p-q775-xr7r
+    aliases:
+      - CVE-2025-61727
+      - GHSA-5mh9-3jwc-rp59
+    events:
+      - timestamp: 2025-12-06T23:34:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: steampipe
+            componentID: ce069c4726c4198b
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/steampipe
+            scanner: grype
+      - timestamp: 2025-12-09T12:21:25Z
+        type: fixed
+        data:
+          fixed-version: 2.3.2-r3
+
   - id: CGA-87jc-gp2r-p9mf
     aliases:
       - CVE-2025-8959
@@ -162,6 +184,32 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.1.0-r1
+
+  - id: CGA-cg5q-xpfr-cx84
+    aliases:
+      - CVE-2025-61729
+      - GHSA-7c64-f9jr-v9h2
+    events:
+      - timestamp: 2025-12-05T19:54:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: steampipe
+            componentID: ce069c4726c4198b
+            componentName: stdlib
+            componentVersion: go1.25.4
+            componentType: go-module
+            componentLocation: /usr/bin/steampipe
+            scanner: grype
+      - timestamp: 2025-12-06T13:51:22Z
+        type: true-positive-determination
+        data:
+          note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in steampipe-2.3.2-r2.apk, at usr/bin/steampipe, usr/bin/steampipe.'
+      - timestamp: 2025-12-08T05:37:29Z
+        type: fixed
+        data:
+          fixed-version: 2.3.2-r3
 
   - id: CGA-jgr4-v66r-2jwc
     aliases:

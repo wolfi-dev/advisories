@@ -43,6 +43,10 @@ advisories:
             componentType: python
             componentLocation: /usr/share/open-webui/lib/python3.11/site-packages/mcp-1.21.2.dist-info/METADATA
             scanner: grype
+      - timestamp: 2025-12-05T23:18:05Z
+        type: fixed
+        data:
+          fixed-version: 0.6.40-r1
 
   - id: CGA-3wxr-g9q8-j97p
     aliases:
@@ -285,6 +289,28 @@ advisories:
         data:
           fixed-version: 0.6.18-r1
 
+  - id: CGA-j45f-9mqm-43rf
+    aliases:
+      - CVE-2025-66471
+      - GHSA-2xpw-w6gg-jr37
+    events:
+      - timestamp: 2025-12-06T15:41:15Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: open-webui
+            componentID: fa7b5af6858571f6
+            componentName: urllib3
+            componentVersion: 2.5.0
+            componentType: python
+            componentLocation: /usr/share/open-webui/lib/python3.11/site-packages/open_webui/frontend/pyodide/urllib3-2.5.0-py3-none-any.whl
+            scanner: grype
+      - timestamp: 2025-12-08T18:53:52Z
+        type: pending-upstream-fix
+        data:
+          note: The latest urllib3 package distributed by Pyodide is 2.5.0 (per https://pyodide.org/en/stable/usage/packages-in-pyodide.html). Pyodide will need to release a newer compatible version, and open-webui will need to integrate it.
+
   - id: CGA-mmqg-f57g-9jcp
     aliases:
       - CVE-2025-3730
@@ -434,6 +460,10 @@ advisories:
             componentType: python
             componentLocation: /usr/share/open-webui/lib/python3.11/site-packages/open_webui/frontend/pyodide/fonttools-4.56.0-py3-none-any.whl
             scanner: grype
+      - timestamp: 2025-12-08T18:52:46Z
+        type: pending-upstream-fix
+        data:
+          note: The latest fonttools package distributed by Pyodide is 4.56.0 (per https://pyodide.org/en/stable/usage/packages-in-pyodide.html). Pyodide will need to release a newer compatible version, and open-webui will need to integrate it.
 
   - id: CGA-vp8f-xf9w-8jwj
     aliases:
@@ -478,6 +508,28 @@ advisories:
         type: pending-upstream-fix
         data:
           note: The vulnerability affects PyOdide distribution package that is built with an urllib3 not yet patched version. No PyOdide with fixed version are released yet (latest has urlib3 at v2.3.0, while stable has v2.2.3, here https://pyodide.org/en/stable/usage/packages-in-pyodide.html). We will update it once the patched version is released.
+
+  - id: CGA-xmqg-xxw6-wf66
+    aliases:
+      - CVE-2025-66418
+      - GHSA-gm62-xv2j-4w53
+    events:
+      - timestamp: 2025-12-06T15:41:16Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: open-webui
+            componentID: fa7b5af6858571f6
+            componentName: urllib3
+            componentVersion: 2.5.0
+            componentType: python
+            componentLocation: /usr/share/open-webui/lib/python3.11/site-packages/open_webui/frontend/pyodide/urllib3-2.5.0-py3-none-any.whl
+            scanner: grype
+      - timestamp: 2025-12-08T18:53:52Z
+        type: pending-upstream-fix
+        data:
+          note: The latest urllib3 package distributed by Pyodide is 2.5.0 (per https://pyodide.org/en/stable/usage/packages-in-pyodide.html). Pyodide will need to release a newer compatible version, and open-webui will need to integrate it.
 
   - id: CGA-xrjw-p62m-8mv5
     aliases:
