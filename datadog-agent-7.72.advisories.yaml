@@ -4,6 +4,24 @@ package:
   name: datadog-agent-7.72
 
 advisories:
+  - id: CGA-5q77-p2w8-hfh7
+    aliases:
+      - CVE-2025-66418
+      - GHSA-gm62-xv2j-4w53
+    events:
+      - timestamp: 2025-12-11T20:20:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: datadog-agent-7.72
+            componentID: 459590617b818f8c
+            componentName: urllib3
+            componentVersion: 1.26.20
+            componentType: python
+            componentLocation: /opt/datadog-agent/embedded/lib/python3.12/site-packages/pip/_vendor/vendor.txt
+            scanner: grype
+
   - id: CGA-9477-6c6w-q6v7
     aliases:
       - CVE-2025-66471
