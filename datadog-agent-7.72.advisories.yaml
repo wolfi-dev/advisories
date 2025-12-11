@@ -24,3 +24,23 @@ advisories:
         data:
           type: vulnerable-code-not-included-in-package
           note: While pip's vendor.txt correctly shows setuptools==70.3.0 (which contains the vulnerability in its full form), pip's vendoring process explicitly drops all components containing the vulnerable code. The PackageIndex.download() vulnerability exists in the setuptools package and easy_install.py, both of which are removed during pip's vendoring process. Only pkg_resources is kept, which does not contain download functionality or the vulnerable code path.
+
+  - id: CGA-pcjh-29q9-hj5r
+    aliases:
+      - CVE-2025-66418
+      - GHSA-gm62-xv2j-4w53
+    events:
+      - timestamp: 2025-12-11T17:18:32Z
+        type: pending-upstream-fix
+        data:
+          note: 'The outdated version of urllib3 (1.26.20) is included because it''s a dependency of py3-pip. Updating it will require the main pip project to release an update.             However, the pip maintainers are holding off on that update until Python 3.9 reaches its end-of-life (EOL) at the end of 2025. Once that happens, pip can upgrade, and then kubeflow-katib will also need to update to align with the changes in pip.             For more details, see this GitHub issue: https://github.com/pypa/pip/issues/12857'
+
+  - id: CGA-vf8w-q6q9-7pj6
+    aliases:
+      - CVE-2025-66471
+      - GHSA-2xpw-w6gg-jr37
+    events:
+      - timestamp: 2025-12-11T17:19:44Z
+        type: pending-upstream-fix
+        data:
+          note: 'The outdated version of urllib3 (1.26.20) is included because it''s a dependency of py3-pip. Updating it will require the main pip project to release an update.            However, the pip maintainers are holding off on that update until Python 3.9 reaches its end-of-life (EOL) at the end of 2025. Once that happens, pip can upgrade, and then kubeflow-katib will also need to update to align with the changes in pip.             For more details, see this GitHub issue: https://github.com/pypa/pip/issues/12857'
