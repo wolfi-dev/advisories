@@ -173,6 +173,11 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/trivy
             scanner: grype
+      - timestamp: 2025-12-12T01:17:16Z
+        type: false-positive-determination
+        data:
+          type: vulnerable-code-not-in-execution-path
+          note: The vulnerable code comes from an indirect dependency and is not in the code execution path.  This is raised by upstream, who concluded they are unaffected [here](https://github.com/aquasecurity/trivy/pull/9924), and was confirmed independently.
 
   - id: CGA-59w5-72fq-77w8
     aliases:
