@@ -688,6 +688,14 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/aactl
             scanner: grype
+      - timestamp: 2025-12-12T13:23:32Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            We tried to build the package with a newer version of fulcio, but there is a transitive dependency
+            via github.com/sigstore/sigstore go module that has a build problem, and requires upstream to make a new release
+            containing this patch https://github.com/sigstore/sigstore/commit/369eb00dc48a3989d6207ec5487d9bdf44312ab5
+            Without that patch, the build fails, and we cannot apply locally because its transitive dependency nature.
 
   - id: CGA-mpxg-jfrm-qc7p
     aliases:
