@@ -203,6 +203,13 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/aactl
             scanner: grype
+      - timestamp: 2025-12-12T16:34:24Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            We tried remediating this CVE by using a newer, fixed version of the go module, however the vulnerable version
+            still gets pulled by transitive dependencies at build time. The different upstreams, for the main package and the
+            transitive dependencies, should update and release fixed versions before we can consider this CVE fixed.
 
   - id: CGA-63h7-5pwq-3xg4
     aliases:
@@ -528,6 +535,13 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.4.12-r35
+      - timestamp: 2025-12-12T16:34:48Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            We tried remediating this CVE by using a newer, fixed version of the go module, however the vulnerable version
+            still gets pulled by transitive dependencies at build time. The different upstreams, for the main package and the
+            transitive dependencies, should update and release fixed versions before we can consider this CVE fixed.
 
   - id: CGA-g3gx-g936-jrrv
     aliases:
