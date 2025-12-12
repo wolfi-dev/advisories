@@ -4,6 +4,24 @@ package:
   name: k3s-1.32
 
 advisories:
+  - id: CGA-226q-73m4-rq58
+    aliases:
+      - CVE-2025-64702
+      - GHSA-g754-hx8w-x2g6
+    events:
+      - timestamp: 2025-12-12T11:06:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: k3s-1.32
+            componentID: f1939c7374321fc3
+            componentName: github.com/quic-go/quic-go
+            componentVersion: v0.55.0
+            componentType: go-module
+            componentLocation: /usr/bin/k3s
+            scanner: grype
+
   - id: CGA-28fg-g9w2-hp6v
     aliases:
       - CVE-2025-52881
