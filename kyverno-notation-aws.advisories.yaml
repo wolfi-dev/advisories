@@ -272,6 +272,14 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/kyverno-notation-aws
             scanner: grype
+      - timestamp: 2025-12-11T15:19:17Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            Updating Fulcio v1.8.3 requires sigstore/sigstore v1.10.0, which removed the cryptoutils.ValidatePubKey function that cosign v2.4.1 depends on.
+            Migrating to cosign v3 would fix that incompatibility, but it's a major version upgrade that requires k8s.io v0.34.x—and upgrading to
+            that version would break compatibility with k8s.io/api/networking/v1alpha1, which we depend on.
+            Updating fulcio would force a cascade of breaking changes across the dependency chain. Upstream need substantial refactoring and API compatibility updates to make this work.
 
   - id: CGA-hg2r-6cxf-j94f
     aliases:
