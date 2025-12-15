@@ -42,6 +42,15 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/goreleaser
             scanner: grype
+      - timestamp: 2025-12-15T15:44:22Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            The github.com/sigstore/timestamp-authority dependency is a transient dependency from github.com/sigstore/cosign which is currently at v2.5.0.
+            The timestamp-authority dependency on the cosign project has been bumped to v2.0.3 on cosign v3.0.3.
+            Upstream has to make the necessary code changes to support the new cosign v3.0.3 in order to pull in the newer timestamp-authority transitive dependency.
+            There are currently attempts and discussions happening upstream on how to tackle the migration to cosign v3 [1].
+            [1] https://github.com/goreleaser/goreleaser/issues/6195
 
   - id: CGA-3wj2-j6v6-26rc
     aliases:
