@@ -43,6 +43,13 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/gitsign
             scanner: grype
+      - timestamp: 2025-12-15T15:13:03Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            The github.com/sigstore/timestamp-authority dependency is a transient dependency from github.com/sigstore/cosign which is currently at v2.4.3.
+            The timestamp-authority dependency on the cosign project has been bumped to v2.0.3 on cosign v3.0.3.
+            Upstream has to make the necessary code changes to support the new cosign v3.0.3 in order to pull in the newer timestamp-authority transitive dependency
 
   - id: CGA-34h5-5pxj-hvrw
     aliases:
@@ -947,3 +954,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/gitsign-credential-cache
             scanner: grype
+      - timestamp: 2025-12-15T15:13:03Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            Any attempts to bump fulcio to v1.8.3 result in build failures.
+            There is currently a pending PR upstream which needs a review and a fix in order to be able to bump this dependency. [1]
+            [1] https://github.com/sigstore/gitsign/pull/730
