@@ -106,6 +106,14 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/vexctl
             scanner: grype
+      - timestamp: 2025-12-15T19:03:47Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            The dependency github.com/sigstore/timestamp-authority cannot be updated from v1.2.9 to v2.0.3 because it is an indirect dependency
+            pulled in by github.com/sigstore/cosign/v2, and the current cosign v2.x releases (up to v2.6.1) all depend on timestamp-authority v1.x;
+            upgrading to cosign v3 to potentially get timestamp-authority v2 is not feasible as it introduces breaking API changes
+            (e.g., sign.SignerFromKeyOpts is undefined), which would require significant refactoring of attestation.go and other signing-related code in vexctl.
 
   - id: CGA-3m6p-7w62-crcj
     aliases:
@@ -820,6 +828,14 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/vexctl
             scanner: grype
+      - timestamp: 2025-12-15T19:03:47Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            The dependency github.com/sigstore/fulcio cannot be updated to v1.8.3 because the API has changed and
+            cryptoutils.ValidatePubKey is now undefined; resolving this requires upgrading to cosign v3, which is
+            not feasible as it introduces breaking API changes(e.g., sign.SignerFromKeyOpts is undefined) that
+            would require significant refactoring of attestation.go and other signing-related code in vexctl.
 
   - id: CGA-qqh5-q6xp-3654
     aliases:
