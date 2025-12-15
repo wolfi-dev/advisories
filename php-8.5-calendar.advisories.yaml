@@ -1,0 +1,27 @@
+schema-version: 2.0.2
+
+package:
+  name: php-8.5-calendar
+
+advisories:
+  - id: CGA-3mfm-p9r8-mw67
+    aliases:
+      - CVE-2022-4455
+      - GHSA-3957-4jhv-xcc7
+    events:
+      - timestamp: 2025-12-15T22:16:22Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: CVE-2022-4455 affects the third-party 'sproctor/php-calendar' web application (https://github.com/sproctor/php-calendar), specifically an XSS vulnerability in the index.php file involving manipulation of $_SERVER['PHP_SELF']. The php-8.5-calendar package is PHP's built-in calendar extension, which is a compiled binary library (calendar.so) that provides calendar conversion functions. The package contains no PHP source files, no index.php file, no web application code, and no XSS vulnerability vectors. These are completely different software components with different codebases and zero code overlap.
+
+  - id: CGA-cg38-h548-3f6f
+    aliases:
+      - CVE-2017-6485
+      - GHSA-76rq-rhfj-3qrf
+    events:
+      - timestamp: 2025-12-15T22:15:50Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: CVE-2017-6485 affects the third-party 'php-calendar' web application (https://github.com/jasonjoh/php-calendar), specifically an XSS vulnerability in the error.php file. The php-8.5-calendar package is PHP's built-in calendar extension, which is a compiled binary library (calendar.so) that provides calendar conversion functions like gregoriantojd() and easter_date(). The package contains no PHP source files, no error.php file, no web application code, and no XSS vulnerability vectors. These are completely different software components with different codebases and zero code overlap.
