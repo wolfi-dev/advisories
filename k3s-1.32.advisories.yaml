@@ -21,6 +21,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/k3s
             scanner: grype
+      - timestamp: 2025-12-16T12:26:32Z
+        type: pending-upstream-fix
+        data:
+          note: The dependency github.com/k3s-io/k3s/pkg/spegel, which is a fork of the upstream Spegel module, transitively pulls in a vulnerable version of github.com/quic-go/quic-go. Attempting to upgrade github.com/quic-go/quic-go directly results in build failures. Remediation will require an upstream update to the Spegel fork.
 
   - id: CGA-28fg-g9w2-hp6v
     aliases:
