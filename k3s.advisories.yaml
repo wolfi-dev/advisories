@@ -462,6 +462,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/cni
             scanner: grype
+      - timestamp: 2025-12-16T08:38:27Z
+        type: pending-upstream-fix
+        data:
+          note: Upstream currently relies on a fork of github.com/containernetworking/plugins (https://github.com/rancher/plugins), as referenced in the k3s build script (https://github.com/k3s-io/k3s/blob/8dac81b2a24e78ce4cf951c7788ea6a8d4a59aa7/scripts/build#L165). This fork has fallen behind the main repository. To remediate the vulnerability, upstream must first update the fork to version 1.9.0 or later and then update the corresponding dependency in k3s.
 
   - id: CGA-9vqc-x2r3-pqjf
     aliases:
@@ -1048,6 +1052,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/k3s
             scanner: grype
+      - timestamp: 2025-12-16T09:01:17Z
+        type: pending-upstream-fix
+        data:
+          note: The dependency github.com/k3s-io/k3s/pkg/spegel, which is a fork of the upstream Spegel module, transitively pulls in a vulnerable version of github.com/quic-go/quic-go. Attempting to upgrade github.com/quic-go/quic-go directly results in build failures. Remediation will require an upstream update to the Spegel fork.
 
   - id: CGA-rx2r-v9jq-4p74
     aliases:
