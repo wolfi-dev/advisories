@@ -280,6 +280,24 @@ advisories:
         data:
           fixed-version: 2.4.0-r4
 
+  - id: CGA-rqjq-hq98-m2j2
+    aliases:
+      - CVE-2025-67735
+      - GHSA-84h7-rjj3-6jx4
+    events:
+      - timestamp: 2025-12-17T11:15:42Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi-registry
+            componentID: ab5b3aa8aa77786d
+            componentName: netty-codec-http
+            componentVersion: 4.2.7.Final
+            componentType: java-archive
+            componentLocation: /opt/nifi-registry/nifi-registry-2.7.1/ext/aws/lib/netty-codec-http-4.2.7.Final.jar
+            scanner: grype
+
   - id: CGA-x7j7-6jgv-vqhm
     aliases:
       - CVE-2025-41249
