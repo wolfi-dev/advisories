@@ -457,6 +457,24 @@ advisories:
         data:
           fixed-version: 0.15.2-r6
 
+  - id: CGA-mr2c-q6qx-g8vm
+    aliases:
+      - CVE-2025-68156
+      - GHSA-cfpf-hrx2-8rv6
+    events:
+      - timestamp: 2025-12-17T15:16:13Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kserve-storage-controller
+            componentID: b9852e802f1e866b
+            componentName: github.com/expr-lang/expr
+            componentVersion: v1.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-p2ph-447q-w2g8
     aliases:
       - CVE-2025-66471
@@ -664,6 +682,24 @@ advisories:
         data:
           type: inline-mitigations-exist
           note: py3-pip installs a patched version of 2.32.3 requests.py which contains the upstream fix for CVE-2024-47081, reference https://github.com/wolfi-dev/os/pull/55998/files. The version referenced in the vendor.txt is not vulnerable
+
+  - id: CGA-xvcr-mg8f-hmjp
+    aliases:
+      - CVE-2025-68146
+      - GHSA-w853-jp5j-5j7f
+    events:
+      - timestamp: 2025-12-17T15:16:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kserve-storage-controller
+            componentID: a51aa698079d0b83
+            componentName: filelock
+            componentVersion: 3.20.0
+            componentType: python
+            componentLocation: /usr/lib/python3.11/site-packages/filelock-3.20.0.dist-info/METADATA
+            scanner: grype
 
   - id: CGA-xw8q-xp4x-825w
     aliases:
