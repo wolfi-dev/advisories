@@ -354,6 +354,24 @@ advisories:
         data:
           note: Upstream needs to upgrade multiple instances of commons-lang3 in plugins that are used in main package. Attempts to update didn't address CVE issues
 
+  - id: CGA-j2cp-8wmf-x724
+    aliases:
+      - CVE-2025-67735
+      - GHSA-84h7-rjj3-6jx4
+    events:
+      - timestamp: 2025-12-17T12:22:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube
+            componentID: e5ecdadc65ce3d16
+            componentName: netty-codec-http
+            componentVersion: 4.1.118.Final
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/elasticsearch/modules/transport-netty4/netty-codec-http-4.1.118.Final.jar
+            scanner: grype
+
   - id: CGA-jg27-23w9-m7hp
     aliases:
       - CVE-2025-48734
