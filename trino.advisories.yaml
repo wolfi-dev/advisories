@@ -1216,6 +1216,24 @@ advisories:
           type: vulnerable-code-cannot-be-controlled-by-adversary
           note: Vulnerability affects only Windows systems.
 
+  - id: CGA-mq8x-g4vf-p5cq
+    aliases:
+      - CVE-2025-67735
+      - GHSA-84h7-rjj3-6jx4
+    events:
+      - timestamp: 2025-12-17T20:16:11Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: trino-plugin-thrift
+            componentID: cdab5fe2270aec28
+            componentName: netty-codec-http
+            componentVersion: 4.2.7.Final
+            componentType: java-archive
+            componentLocation: /usr/lib/trino/lib/io.netty_netty-codec-http-4.2.7.Final.jar
+            scanner: grype
+
   - id: CGA-mr3q-c88f-3c44
     aliases:
       - CVE-2022-3509
