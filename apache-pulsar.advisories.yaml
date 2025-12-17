@@ -26,6 +26,24 @@ advisories:
         data:
           fixed-version: 4.0.1-r1
 
+  - id: CGA-9gfp-hc4v-798r
+    aliases:
+      - CVE-2025-67735
+      - GHSA-84h7-rjj3-6jx4
+    events:
+      - timestamp: 2025-12-17T11:22:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-pulsar
+            componentID: 2f34c38888a0485e
+            componentName: netty-codec-http
+            componentVersion: 4.1.128.Final
+            componentType: java-archive
+            componentLocation: /usr/share/java/pulsar/lib/io.netty-netty-codec-http-4.1.128.Final.jar
+            scanner: grype
+
   - id: CGA-9hqf-2qh7-jqxh
     aliases:
       - CVE-2025-11965
