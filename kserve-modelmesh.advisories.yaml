@@ -256,6 +256,24 @@ advisories:
           type: vulnerable-code-cannot-be-controlled-by-adversary
           note: Vulnerability affects only Windows systems.
 
+  - id: CGA-rpxp-w86g-jfhw
+    aliases:
+      - CVE-2025-67735
+      - GHSA-84h7-rjj3-6jx4
+    events:
+      - timestamp: 2025-12-17T16:38:07Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kserve-modelmesh
+            componentID: 3a2af5c5ecf1aa1a
+            componentName: netty-codec-http
+            componentVersion: 4.1.127.Final
+            componentType: java-archive
+            componentLocation: /opt/kserve/mmesh/lib/netty-codec-http-4.1.127.Final.jar
+            scanner: grype
+
   - id: CGA-v2hv-cwjf-vh29
     aliases:
       - CVE-2025-24970
