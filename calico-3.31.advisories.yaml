@@ -48,6 +48,24 @@ advisories:
         data:
           fixed-version: 3.31.2-r1
 
+  - id: CGA-ghmp-43pp-vp96
+    aliases:
+      - CVE-2025-13281
+      - GHSA-r6j8-c6r2-37rr
+    events:
+      - timestamp: 2025-12-17T12:36:29Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: calico-whisker-backend-3.31
+            componentID: 4de62e14ec5a8b88
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.33.5
+            componentType: go-module
+            componentLocation: /usr/bin/calico-node
+            scanner: grype
+
   - id: CGA-x985-h3x5-c5qg
     aliases:
       - CVE-2025-67499
