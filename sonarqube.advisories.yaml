@@ -49,6 +49,24 @@ advisories:
           note: |
             The fix versions of the ElasticSearch dependency within SonarQube introduce breaking JDK dependency requirements. Upstream maintainers must implement compatibility change requirements seen here: https://sonarsource.atlassian.net/browse/SONAR-24276
 
+  - id: CGA-3wrf-7829-qpp2
+    aliases:
+      - CVE-2025-37731
+      - GHSA-m9gh-789g-q5pv
+    events:
+      - timestamp: 2025-12-17T12:22:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube
+            componentID: f0d9cc89db94cbcc
+            componentName: elasticsearch
+            componentVersion: 8.16.6
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/elasticsearch/lib/elasticsearch-8.16.6.jar
+            scanner: grype
+
   - id: CGA-4c7h-39vq-xmgx
     aliases:
       - CVE-2024-12798
@@ -335,6 +353,24 @@ advisories:
         type: pending-upstream-fix
         data:
           note: Upstream needs to upgrade multiple instances of commons-lang3 in plugins that are used in main package. Attempts to update didn't address CVE issues
+
+  - id: CGA-j2cp-8wmf-x724
+    aliases:
+      - CVE-2025-67735
+      - GHSA-84h7-rjj3-6jx4
+    events:
+      - timestamp: 2025-12-17T12:22:03Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube
+            componentID: e5ecdadc65ce3d16
+            componentName: netty-codec-http
+            componentVersion: 4.1.118.Final
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/elasticsearch/modules/transport-netty4/netty-codec-http-4.1.118.Final.jar
+            scanner: grype
 
   - id: CGA-jg27-23w9-m7hp
     aliases:
