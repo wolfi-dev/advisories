@@ -4,6 +4,24 @@ package:
   name: mlflow
 
 advisories:
+  - id: CGA-2w88-xrwh-f9rp
+    aliases:
+      - CVE-2025-68146
+      - GHSA-w853-jp5j-5j7f
+    events:
+      - timestamp: 2025-12-17T12:04:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: mlflow-iamguarded-compat
+            componentID: a9ae8687fa3b2a56
+            componentName: filelock
+            componentVersion: 3.20.0
+            componentType: python
+            componentLocation: /usr/share/mlflow/lib/python3.13/site-packages/filelock-3.20.0.dist-info/METADATA
+            scanner: grype
+
   - id: CGA-2xhw-w75q-cpqg
     aliases:
       - CVE-2024-37059
