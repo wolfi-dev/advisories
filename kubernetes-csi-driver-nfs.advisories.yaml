@@ -321,6 +321,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: This vulnerability applies to the git-repo volume provisioner, not the k8s client itself.
 
+  - id: CGA-wj82-ggqv-hq35
+    aliases:
+      - CVE-2025-13281
+      - GHSA-r6j8-c6r2-37rr
+    events:
+      - timestamp: 2025-12-17T11:29:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubernetes-csi-driver-nfs
+            componentID: cbd575657cacf984
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.31.12
+            componentType: go-module
+            componentLocation: /usr/bin/nfsplugin
+            scanner: grype
+
   - id: CGA-xw47-gc74-gcrg
     aliases:
       - CVE-2025-5187
