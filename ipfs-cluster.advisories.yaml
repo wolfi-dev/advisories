@@ -297,6 +297,14 @@ advisories:
         type: true-positive-determination
         data:
           note: 'Govulncheck found vulnerable symbols in Go binaries at the following locations: in ipfs-cluster-1.1.4-r10.apk, at usr/bin/ipfs-cluster-ctl, usr/bin/ipfs-cluster-ctl, usr/bin/ipfs-cluster-follow, usr/bin/ipfs-cluster-follow, usr/bin/ipfs-cluster-service, usr/bin/ipfs-cluster-service.'
+      - timestamp: 2025-12-16T17:04:11Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            Updating github.com/quic-go/quic-go to v0.57.0 in ipfs-cluster v1.1.4 is blocked by dependency conflicts.
+            The current go-libp2p v0.38.2 requires quic-go v0.48.1 and uses deprecated packages (logging, metrics) removed in v0.57.x.
+            While go-libp2p v0.46.0 supports v0.57.1, ipfs-cluster v1.1.4 is incompatible.
+            Await upstream ipfs-cluster release updating go-libp2p for compatibility.
 
   - id: CGA-m8m7-5xvh-jh49
     aliases:
