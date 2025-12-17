@@ -125,6 +125,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-56q6-xgxw-wj8g
+    aliases:
+      - CVE-2025-13281
+      - GHSA-r6j8-c6r2-37rr
+    events:
+      - timestamp: 2025-12-17T14:07:52Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nodetaint
+            componentID: f4bc5f3f097ac6b8
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.31.12
+            componentType: go-module
+            componentLocation: /usr/bin/nodetaint
+            scanner: grype
+
   - id: CGA-5gv7-f77m-rxx9
     aliases:
       - CVE-2024-24785
