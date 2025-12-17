@@ -590,6 +590,24 @@ advisories:
         data:
           note: Attempting to patch this CVE via updating the affected module leads to resolution errors with other modules, therefore a patch from upstream is required to remediate this CVE.
 
+  - id: CGA-x7rr-c627-cq3q
+    aliases:
+      - CVE-2025-13281
+      - GHSA-r6j8-c6r2-37rr
+    events:
+      - timestamp: 2025-12-17T19:07:09Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argocd-image-updater
+            componentID: a5d0ea3cbaa090c8
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.33.4
+            componentType: go-module
+            componentLocation: /usr/bin/argocd-image-updater
+            scanner: grype
+
   - id: CGA-xfc5-jrg3-q4px
     aliases:
       - CVE-2025-23216
