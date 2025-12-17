@@ -49,6 +49,24 @@ advisories:
           note: |
             The fix versions of the ElasticSearch dependency within SonarQube introduce breaking JDK dependency requirements. Upstream maintainers must implement compatibility change requirements seen here: https://sonarsource.atlassian.net/browse/SONAR-24276
 
+  - id: CGA-3wrf-7829-qpp2
+    aliases:
+      - CVE-2025-37731
+      - GHSA-m9gh-789g-q5pv
+    events:
+      - timestamp: 2025-12-17T12:22:02Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube
+            componentID: f0d9cc89db94cbcc
+            componentName: elasticsearch
+            componentVersion: 8.16.6
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/elasticsearch/lib/elasticsearch-8.16.6.jar
+            scanner: grype
+
   - id: CGA-4c7h-39vq-xmgx
     aliases:
       - CVE-2024-12798
