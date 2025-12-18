@@ -27,6 +27,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-fx89-5whq-jr4q
+    aliases:
+      - CVE-2025-68156
+      - GHSA-cfpf-hrx2-8rv6
+    events:
+      - timestamp: 2025-12-17T11:49:33Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: keda-2.18
+            componentID: 4c3a007aecc00f95
+            componentName: github.com/expr-lang/expr
+            componentVersion: v1.17.6
+            componentType: go-module
+            componentLocation: /usr/bin/keda-adapter
+            scanner: grype
+
   - id: CGA-p5f5-wcxp-r732
     aliases:
       - CVE-2025-61727

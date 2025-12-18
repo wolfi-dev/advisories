@@ -72,6 +72,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-5jj8-m9rr-78rv
+    aliases:
+      - CVE-2025-68156
+      - GHSA-cfpf-hrx2-8rv6
+    events:
+      - timestamp: 2025-12-17T13:55:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: verticadb-operator
+            componentID: 6513b20c8d0b40db
+            componentName: github.com/expr-lang/expr
+            componentVersion: v1.17.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
+
   - id: CGA-8g62-ccpx-w46x
     aliases:
       - CVE-2025-22874
@@ -119,6 +137,24 @@ advisories:
         type: fixed
         data:
           fixed-version: 25.2.0-r1
+
+  - id: CGA-fqq5-wvp7-2v96
+    aliases:
+      - CVE-2025-47913
+      - GHSA-56w8-48fp-6mgv
+    events:
+      - timestamp: 2025-12-18T12:36:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: verticadb-operator
+            componentID: 09f02d3793943c2a
+            componentName: golang.org/x/crypto
+            componentVersion: v0.38.0
+            componentType: go-module
+            componentLocation: /usr/bin/manager
+            scanner: grype
 
   - id: CGA-pw46-7g9m-6p42
     aliases:

@@ -353,6 +353,24 @@ advisories:
         data:
           fixed-version: 3.0.3-r3
 
+  - id: CGA-m86h-f7wf-pgr8
+    aliases:
+      - CVE-2025-68146
+      - GHSA-w853-jp5j-5j7f
+    events:
+      - timestamp: 2025-12-17T14:53:41Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow-3
+            componentID: 11835f7fff5985ac
+            componentName: filelock
+            componentVersion: 3.20.0
+            componentType: python
+            componentLocation: /opt/airflow/lib/python3.12/site-packages/filelock-3.20.0.dist-info/METADATA
+            scanner: grype
+
   - id: CGA-mp5q-852h-84vc
     aliases:
       - GHSA-pph8-gcv7-4qj5
@@ -586,6 +604,11 @@ advisories:
         type: pending-upstream-fix
         data:
           note: 'This vulnerability affects the Ray Python module. Updating Ray beyond version 2.47 currently violates Airflow’s dependency constraints. To address the issue, the upstream project will need to update its dependencies and version requirements, and upgrade Ray to version 2.52. See upstream issue: https://github.com/apache/airflow/issues/52550'
+      - timestamp: 2025-12-17T13:45:01Z
+        type: false-positive-determination
+        data:
+          type: vulnerability-record-analysis-contested
+          note: NVD notes that this CVE has been rejected as a result of upstream contesting the findings (https://nvd.nist.gov/vuln/detail/CVE-2025-34351). They also note that it's considered a duplicate of CVE-2023-48022 which was also disputed
 
   - id: CGA-rw79-7pm4-6wf7
     aliases:

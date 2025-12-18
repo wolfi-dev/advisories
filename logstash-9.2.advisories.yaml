@@ -4,6 +4,28 @@ package:
   name: logstash-9.2
 
 advisories:
+  - id: CGA-5jp6-45wx-mgj6
+    aliases:
+      - CVE-2025-67735
+      - GHSA-84h7-rjj3-6jx4
+    events:
+      - timestamp: 2025-12-17T15:39:39Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-9.2
+            componentID: 7435b74f3a24ab74
+            componentName: netty-codec-http
+            componentVersion: 4.1.126.Final
+            componentType: java-archive
+            componentLocation: /opt/iamguarded/logstash/vendor/local_gems/b5940378/logstash-input-http-3.10.3/vendor/jar-dependencies/io/netty/netty-codec-http/4.1.126.Final/netty-codec-http-4.1.126.Final.jar
+            scanner: grype
+      - timestamp: 2025-12-18T01:37:52Z
+        type: fixed
+        data:
+          fixed-version: 9.2.2-r1
+
   - id: CGA-6r49-fjrg-wc9f
     aliases:
       - CVE-2025-58767

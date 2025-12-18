@@ -25,3 +25,25 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.10.3-r0
+
+  - id: CGA-xj5f-rh48-grw5
+    aliases:
+      - CVE-2025-67735
+      - GHSA-84h7-rjj3-6jx4
+    events:
+      - timestamp: 2025-12-17T12:49:49Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-input-http
+            componentID: 15ed7a34652792b2
+            componentName: netty-codec-http
+            componentVersion: 4.1.126.Final
+            componentType: java-archive
+            componentLocation: /usr/share/jruby/lib/ruby/gems/shared/gems/logstash-input-http-3.10.3/vendor/jar-dependencies/io/netty/netty-codec-http/4.1.126.Final/netty-codec-http-4.1.126.Final.jar
+            scanner: grype
+      - timestamp: 2025-12-17T14:16:47Z
+        type: fixed
+        data:
+          fixed-version: 3.10.4-r0

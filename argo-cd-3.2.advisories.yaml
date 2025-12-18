@@ -47,3 +47,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 3.2.0-r1
+
+  - id: CGA-phxh-fjrr-387j
+    aliases:
+      - CVE-2025-13281
+      - GHSA-r6j8-c6r2-37rr
+    events:
+      - timestamp: 2025-12-17T17:54:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: argo-cd-3.2
+            componentID: 25ac96aa0f90c276
+            componentName: k8s.io/kubernetes
+            componentVersion: v1.34.0
+            componentType: go-module
+            componentLocation: /usr/local/bin/argocd
+            scanner: grype

@@ -1945,6 +1945,28 @@ advisories:
         data:
           fixed-version: 2.0.0-r0
 
+  - id: CGA-mm7q-rq7q-pppf
+    aliases:
+      - CVE-2025-67735
+      - GHSA-84h7-rjj3-6jx4
+    events:
+      - timestamp: 2025-12-17T13:34:05Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-nifi
+            componentID: d7c4dfb3398455e4
+            componentName: netty-codec-http
+            componentVersion: 4.2.5.Final
+            componentType: java-archive
+            componentLocation: /usr/share/nifi/nifi-current/lib/nifi-standard-shared-nar-2.7.1.nar
+            scanner: grype
+      - timestamp: 2025-12-18T12:35:50Z
+        type: fixed
+        data:
+          fixed-version: 2.7.1-r1
+
   - id: CGA-p3h7-687g-jhcm
     aliases:
       - CVE-2024-12801

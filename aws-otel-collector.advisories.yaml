@@ -4,6 +4,24 @@ package:
   name: aws-otel-collector
 
 advisories:
+  - id: CGA-3vq2-7hp9-jqqp
+    aliases:
+      - CVE-2025-68156
+      - GHSA-cfpf-hrx2-8rv6
+    events:
+      - timestamp: 2025-12-17T11:36:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: aws-otel-collector
+            componentID: f5ad6dcca47cbc47
+            componentName: github.com/expr-lang/expr
+            componentVersion: v1.17.5
+            componentType: go-module
+            componentLocation: /usr/bin/awscollector
+            scanner: grype
+
   - id: CGA-c8wp-fj7p-86p4
     aliases:
       - CVE-2025-47910

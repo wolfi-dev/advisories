@@ -27,6 +27,24 @@ advisories:
           type: vulnerable-code-not-included-in-package
           note: Govulncheck found no affected symbols in the scanned Go binaries.
 
+  - id: CGA-58rr-wwp7-5hcp
+    aliases:
+      - CVE-2025-47913
+      - GHSA-56w8-48fp-6mgv
+    events:
+      - timestamp: 2025-12-18T12:05:50Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cloud-provider-aws-1.31-cloud-controller-manager
+            componentID: 614cc3b7bd9b5681
+            componentName: golang.org/x/crypto
+            componentVersion: v0.36.0
+            componentType: go-module
+            componentLocation: /usr/bin/aws-cloud-controller-manager
+            scanner: grype
+
   - id: CGA-77mf-8rgx-g496
     aliases:
       - CVE-2025-22866
