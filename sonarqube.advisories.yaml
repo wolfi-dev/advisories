@@ -371,6 +371,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/sonarqube/elasticsearch/modules/transport-netty4/netty-codec-http-4.1.118.Final.jar
             scanner: grype
+      - timestamp: 2025-12-18T16:05:22Z
+        type: pending-upstream-fix
+        data:
+          note: netty-codec-http is a transitive dependency from elasticsearch, which does not have have the fixed version of netty-codec-http. Upstream elasticsearch maintainer will need to release a version with netty-codec-http v4.1.129.Final or later.
 
   - id: CGA-jg27-23w9-m7hp
     aliases:
