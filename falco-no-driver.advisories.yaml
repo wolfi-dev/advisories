@@ -348,6 +348,24 @@ advisories:
             The upstream maintainers will need to update to a new version of > golang 1.24 and pull that in to fix the CVE.
             See also https://github.com/falcosecurity/plugins/issues/1056
 
+  - id: CGA-f75q-w6x3-6j2p
+    aliases:
+      - CVE-2025-47913
+      - GHSA-56w8-48fp-6mgv
+    events:
+      - timestamp: 2025-12-18T11:05:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: falco-no-driver
+            componentID: a8a95bab3b89334f
+            componentName: golang.org/x/crypto
+            componentVersion: v0.40.0
+            componentType: go-module
+            componentLocation: /usr/share/falco/plugins/libcontainer.so
+            scanner: grype
+
   - id: CGA-gmf2-f93h-vmq7
     aliases:
       - CVE-2025-64329
