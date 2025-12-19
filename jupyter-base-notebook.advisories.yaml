@@ -93,6 +93,24 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: 'The vendor disputes this because the regular expressions are not applied to user input; thus, there is no risk. This can be seen here: https://github.com/mathjax/MathJax/issues/3074'
 
+  - id: CGA-462r-g3mf-mhj5
+    aliases:
+      - CVE-2025-53000
+      - GHSA-xm59-rqc7-hhvf
+    events:
+      - timestamp: 2025-12-19T11:42:14Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jupyter-base-notebook
+            componentID: db8393b57b1c01ac
+            componentName: nbconvert
+            componentVersion: 7.16.6
+            componentType: python
+            componentLocation: /usr/lib/python3.12/site-packages/nbconvert-7.16.6.dist-info/METADATA
+            scanner: grype
+
   - id: CGA-4gc2-jvqg-rhhf
     aliases:
       - CVE-2025-43859
