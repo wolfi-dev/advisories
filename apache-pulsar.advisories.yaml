@@ -154,6 +154,24 @@ advisories:
         data:
           note: upstream needs to either upgrade commons-configuration to 2.x version or remove 1.x version to fix CVE.
 
+  - id: CGA-m384-9gc6-jc6v
+    aliases:
+      - CVE-2024-29371
+      - GHSA-3677-xxcr-wjqv
+    events:
+      - timestamp: 2025-12-19T11:36:55Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-pulsar
+            componentID: b98e55607bfef438
+            componentName: jose4j
+            componentVersion: 0.9.4
+            componentType: java-archive
+            componentLocation: /usr/share/java/pulsar/lib/org.bitbucket.b_c-jose4j-0.9.4.jar
+            scanner: grype
+
   - id: CGA-mxg5-5rwg-w4hr
     aliases:
       - CVE-2025-25193
