@@ -70,6 +70,24 @@ advisories:
           type: component-vulnerability-mismatch
           note: False positive identified due to naming/version mismatches between Nextcloud-specific packages and unrelated NPM packages. Nextcloud maintains actively updated versions, but inconsistent version tagging may be causing confusion. Needs version/tagging corrections from Nextcloud.
 
+  - id: CGA-6q32-jggj-m9vr
+    aliases:
+      - CVE-2025-14761
+      - GHSA-x8cp-jf6f-r4xh
+    events:
+      - timestamp: 2025-12-19T12:17:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: nextcloud-server-32
+            componentID: 101be338d3eba42c
+            componentName: aws/aws-sdk-php
+            componentVersion: 3.349.3
+            componentType: php-composer
+            componentLocation: /usr/src/nextcloud/3rdparty/composer/installed.json
+            scanner: grype
+
   - id: CGA-v4c2-ff3q-42xr
     aliases:
       - CVE-2025-64500
