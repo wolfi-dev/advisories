@@ -506,6 +506,10 @@ advisories:
             componentType: go-module
             componentLocation: /usr/bin/kubectl-argo-rollouts
             scanner: grype
+      - timestamp: 2025-12-19T07:33:58Z
+        type: pending-upstream-fix
+        data:
+          note: This vulnerability originates from a dependency on k8s.io/kubernetes v1.29.14. Attempts to upgrade to a patched version of k8s.io/kubernetes currently result in build failures. Upstream has bumped the dependency to v1.34 in PR https://github.com/argoproj/argo-rollouts/pull/4497. However, no release including these changes is available yet, and cherry-picking the PR is not feasible due to merge conflicts.
 
   - id: CGA-vrjx-j774-6q53
     aliases:
