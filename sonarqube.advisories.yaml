@@ -155,6 +155,24 @@ advisories:
         data:
           note: Attempts to upgrade netty-codec-http2 to 4.1.124.Final resulted in build failures. Upstream will need to release fix for vulnerability
 
+  - id: CGA-6gcp-rw4x-mcfx
+    aliases:
+      - CVE-2025-68384
+      - GHSA-qf7c-7r9h-mm92
+    events:
+      - timestamp: 2025-12-20T12:17:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube
+            componentID: cb28dbc59a6ab106
+            componentName: x-pack-security
+            componentVersion: 8.16.6
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/elasticsearch/modules/x-pack-security/x-pack-security-8.16.6.jar
+            scanner: grype
+
   - id: CGA-7c3h-fr9p-6vxc
     aliases:
       - CVE-2024-47554
