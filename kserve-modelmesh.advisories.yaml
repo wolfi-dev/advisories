@@ -391,3 +391,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.12.0-r13
+
+  - id: CGA-x6x3-57gj-xqmq
+    aliases:
+      - CVE-2025-68161
+      - GHSA-vc5p-v9hr-52mj
+    events:
+      - timestamp: 2025-12-20T13:08:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kserve-modelmesh
+            componentID: 710b437d4932ece4
+            componentName: log4j-core
+            componentVersion: 2.23.1
+            componentType: java-archive
+            componentLocation: /opt/kserve/mmesh/lib/log4j-core-2.23.1.jar
+            scanner: grype
