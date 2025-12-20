@@ -140,6 +140,24 @@ advisories:
         data:
           fixed-version: 4.0.1-r2
 
+  - id: CGA-9cgg-q29v-vgpj
+    aliases:
+      - CVE-2025-68161
+      - GHSA-vc5p-v9hr-52mj
+    events:
+      - timestamp: 2025-12-20T13:17:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-4.0-scala-2.13
+            componentID: 7d08ffb3cb1b829a
+            componentName: log4j-core
+            componentVersion: 2.24.3
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/log4j-core-2.24.3.jar
+            scanner: grype
+
   - id: CGA-9h2q-jvgf-3h42
     aliases:
       - CVE-2024-6763
