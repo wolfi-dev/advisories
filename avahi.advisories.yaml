@@ -4,20 +4,25 @@ package:
   name: avahi
 
 advisories:
-  - id: CGA-wh9g-9xfr-658j
+  - id: CGA-9v95-w22g-6294
     aliases:
-      - CVE-2021-26720
-      - GHSA-jhxr-wvf5-hrp6
+      - CVE-2023-38471
+      - GHSA-h3x3-j454-4phv
     events:
-      - timestamp: 2023-06-20T14:47:42Z
-        type: detection
+      - timestamp: 2024-02-09T01:58:28Z
+        type: fixed
         data:
-          type: manual
-      - timestamp: 2023-06-20T16:14:51Z
-        type: false-positive-determination
+          fixed-version: 0.9_rc1-r0
+
+  - id: CGA-h7pp-jxxp-p9gx
+    aliases:
+      - CVE-2023-38472
+      - GHSA-4g3h-v9fp-pgm4
+    events:
+      - timestamp: 2024-02-09T01:58:44Z
+        type: fixed
         data:
-          type: component-vulnerability-mismatch
-          note: The CVE is only present in a Debian-specific packaging script.
+          fixed-version: 0.9_rc1-r0
 
   - id: CGA-h88c-2gpj-jff4
     aliases:
@@ -32,6 +37,23 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.8-r1
+
+  - id: CGA-hrvw-px4c-vvp2
+    aliases:
+      - CVE-2025-59529
+    events:
+      - timestamp: 2025-12-20T11:04:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: avahi
+            componentID: 2623ef2b32c1da8d
+            componentName: avahi
+            componentVersion: 0.9_rc1-r44
+            componentType: apk
+            componentLocation: /.PKGINFO
+            scanner: grype
 
   - id: CGA-p7w9-rr5h-r6q3
     aliases:
@@ -53,26 +75,6 @@ advisories:
         data:
           fixed-version: 0.9_rc1-r0
 
-  - id: CGA-9v95-w22g-6294
-    aliases:
-      - CVE-2023-38471
-      - GHSA-h3x3-j454-4phv
-    events:
-      - timestamp: 2024-02-09T01:58:28Z
-        type: fixed
-        data:
-          fixed-version: 0.9_rc1-r0
-
-  - id: CGA-h7pp-jxxp-p9gx
-    aliases:
-      - CVE-2023-38472
-      - GHSA-4g3h-v9fp-pgm4
-    events:
-      - timestamp: 2024-02-09T01:58:44Z
-        type: fixed
-        data:
-          fixed-version: 0.9_rc1-r0
-
   - id: CGA-vq95-vcgf-2j38
     aliases:
       - CVE-2023-38473
@@ -82,3 +84,18 @@ advisories:
         type: fixed
         data:
           fixed-version: 0.9_rc1-r0
+
+  - id: CGA-wh9g-9xfr-658j
+    aliases:
+      - CVE-2021-26720
+      - GHSA-jhxr-wvf5-hrp6
+    events:
+      - timestamp: 2023-06-20T14:47:42Z
+        type: detection
+        data:
+          type: manual
+      - timestamp: 2023-06-20T16:14:51Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: The CVE is only present in a Debian-specific packaging script.
