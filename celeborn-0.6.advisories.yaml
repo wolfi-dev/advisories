@@ -92,6 +92,24 @@ advisories:
         data:
           note: netty-codec is brought into celeborn via ratis (already on most recent version 3.2.0) pulling in ratis-thirdparty. Upstream maintainers must update ratis versions to pull in the fixed version of netty.
 
+  - id: CGA-cqcg-gj36-hqj5
+    aliases:
+      - CVE-2025-68161
+      - GHSA-vc5p-v9hr-52mj
+    events:
+      - timestamp: 2025-12-20T11:19:28Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: celeborn-0.6
+            componentID: f1c760bdf288338d
+            componentName: log4j-core
+            componentVersion: 2.24.3
+            componentType: java-archive
+            componentLocation: /usr/share/java/celeborn/jars/log4j-core-2.24.3.jar
+            scanner: grype
+
   - id: CGA-f3jr-397v-cw8h
     aliases:
       - CVE-2024-6763
