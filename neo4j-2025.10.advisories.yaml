@@ -47,3 +47,21 @@ advisories:
         type: fixed
         data:
           fixed-version: 2025.10.1-r1
+
+  - id: CGA-qh83-8vm6-6rrh
+    aliases:
+      - CVE-2025-68161
+      - GHSA-vc5p-v9hr-52mj
+    events:
+      - timestamp: 2025-12-20T12:52:48Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: neo4j-2025.10
+            componentID: d0ac6bd749370a80
+            componentName: log4j-core
+            componentVersion: 2.24.3
+            componentType: java-archive
+            componentLocation: /var/lib/neo4j/lib/log4j-core-2.24.3.jar
+            scanner: grype
