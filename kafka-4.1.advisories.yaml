@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: kafka-4.1
+
+advisories:
+  - id: CGA-3mx6-9mcq-3rg2
+    aliases:
+      - CVE-2025-68161
+      - GHSA-vc5p-v9hr-52mj
+    events:
+      - timestamp: 2025-12-20T15:37:47Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kafka-4.1
+            componentID: 69ff246bd4c4aa5a
+            componentName: log4j-core
+            componentVersion: 2.24.3
+            componentType: java-archive
+            componentLocation: /usr/lib/kafka/libs/log4j-core-2.24.3.jar
+            scanner: grype
