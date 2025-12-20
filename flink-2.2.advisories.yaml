@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: flink-2.2
+
+advisories:
+  - id: CGA-5hjg-c2m5-7jm6
+    aliases:
+      - CVE-2025-68161
+      - GHSA-vc5p-v9hr-52mj
+    events:
+      - timestamp: 2025-12-20T11:26:27Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: flink-2.2
+            componentID: c7a6c647fc3bfca1
+            componentName: log4j-core
+            componentVersion: 2.24.3
+            componentType: java-archive
+            componentLocation: /opt/flink/lib/log4j-core-2.24.3.jar
+            scanner: grype
