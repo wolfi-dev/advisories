@@ -290,6 +290,24 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: CVE is being considered by the community a false positive. See https://github.com/FasterXML/jackson-databind/issues/3972 and https://github.com/anchore/grype/issues/1386
 
+  - id: CGA-v7xh-h77c-hr37
+    aliases:
+      - CVE-2025-68161
+      - GHSA-vc5p-v9hr-52mj
+    events:
+      - timestamp: 2025-12-20T12:22:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: wavefront-proxy
+            componentID: 957e5d5a44366efd
+            componentName: log4j-core
+            componentVersion: 2.23.0
+            componentType: java-archive
+            componentLocation: /usr/share/java/wavefront/wavefront-proxy/wavefront-proxy.jar
+            scanner: grype
+
   - id: CGA-v923-59cp-2r6q
     aliases:
       - CVE-2025-58057
