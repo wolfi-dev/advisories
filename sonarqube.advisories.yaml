@@ -155,6 +155,24 @@ advisories:
         data:
           note: Attempts to upgrade netty-codec-http2 to 4.1.124.Final resulted in build failures. Upstream will need to release fix for vulnerability
 
+  - id: CGA-6gcp-rw4x-mcfx
+    aliases:
+      - CVE-2025-68384
+      - GHSA-qf7c-7r9h-mm92
+    events:
+      - timestamp: 2025-12-20T12:17:45Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube
+            componentID: cb28dbc59a6ab106
+            componentName: x-pack-security
+            componentVersion: 8.16.6
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/elasticsearch/modules/x-pack-security/x-pack-security-8.16.6.jar
+            scanner: grype
+
   - id: CGA-7c3h-fr9p-6vxc
     aliases:
       - CVE-2024-47554
@@ -489,6 +507,24 @@ advisories:
             The affected component's suffix is non-standard for Maven parsing. It supports "." as a delimiter, but treats jre11 as an unknown qualifier that sorts after known ones (alpha, beta, rc, ga, etc.), which breaks version matching. This vulnerability was resolved in v25.11.0.114957 of sonarqube[1].
             [1]https://github.com/SonarSource/sonarqube/commit/ad603468b3af8284156d532eae7d099464189728
 
+  - id: CGA-ppjr-xg6m-j5q7
+    aliases:
+      - CVE-2025-68390
+      - GHSA-gphj-4h6p-37xq
+    events:
+      - timestamp: 2025-12-20T12:17:44Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube
+            componentID: 201afca38481cd31
+            componentName: x-pack-core
+            componentVersion: 8.16.6
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/elasticsearch/modules/x-pack-core/x-pack-core-8.16.6.jar
+            scanner: grype
+
   - id: CGA-qm35-phph-2vmr
     aliases:
       - CVE-2025-8885
@@ -650,6 +686,24 @@ advisories:
         data:
           type: vulnerable-code-cannot-be-controlled-by-adversary
           note: Vulnerability affects only Windows systems.
+
+  - id: CGA-vpr2-qfw9-m2v2
+    aliases:
+      - CVE-2025-68161
+      - GHSA-vc5p-v9hr-52mj
+    events:
+      - timestamp: 2025-12-20T12:17:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube
+            componentID: b044c174c8343609
+            componentName: log4j-core
+            componentVersion: 2.19.0
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/elasticsearch/lib/elasticsearch-log4j-8.16.6.jar
+            scanner: grype
 
   - id: CGA-wp52-8p82-hhcp
     aliases:
