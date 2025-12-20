@@ -651,6 +651,24 @@ advisories:
           type: vulnerable-code-cannot-be-controlled-by-adversary
           note: Vulnerability affects only Windows systems.
 
+  - id: CGA-vpr2-qfw9-m2v2
+    aliases:
+      - CVE-2025-68161
+      - GHSA-vc5p-v9hr-52mj
+    events:
+      - timestamp: 2025-12-20T12:17:43Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sonarqube
+            componentID: b044c174c8343609
+            componentName: log4j-core
+            componentVersion: 2.19.0
+            componentType: java-archive
+            componentLocation: /usr/share/sonarqube/elasticsearch/lib/elasticsearch-log4j-8.16.6.jar
+            scanner: grype
+
   - id: CGA-wp52-8p82-hhcp
     aliases:
       - CVE-2024-29025
