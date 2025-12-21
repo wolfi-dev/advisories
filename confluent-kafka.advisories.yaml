@@ -48,6 +48,24 @@ advisories:
         data:
           note: CVE-2025-48734 affects commons-beanutils < 1.10.1, a transitive dependency in confluent-kafka via checkstyle, junit-jupiter-params, and commons-validator. Upstream will need to upgrade these dependencies in order to remediate.
 
+  - id: CGA-87fx-92qf-f57f
+    aliases:
+      - CVE-2025-68161
+      - GHSA-vc5p-v9hr-52mj
+    events:
+      - timestamp: 2025-12-21T11:24:25Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: confluent-kafka
+            componentID: 3bea2adbf52da992
+            componentName: log4j-core
+            componentVersion: 2.25.1
+            componentType: java-archive
+            componentLocation: /usr/lib/kafka/libs/log4j-core-2.25.1.jar
+            scanner: grype
+
   - id: CGA-c87c-r7j2-6c2f
     aliases:
       - CVE-2024-7254
