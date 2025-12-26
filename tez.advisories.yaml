@@ -1031,6 +1031,15 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/java/tez/lib/netty-codec-http-4.1.125.Final.jar
             scanner: grype
+      - timestamp: 2025-12-25T13:38:07Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            Updating io.netty:netty-codec-http to 4.1.129.Final breaks the build.
+            Tez uses async-http-client which depends on netty's HttpHeaders class
+            from io.netty.handler.codec.http package. The netty 4.1.129 version
+            has API changes incompatible with the async-http-client version (2.12.4)
+            used by Tez. Waiting for upstream Apache Tez to update their dependencies.
 
   - id: CGA-r6w3-w92p-9x97
     aliases:
