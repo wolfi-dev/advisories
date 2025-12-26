@@ -4,6 +4,24 @@ package:
   name: jaeger-2
 
 advisories:
+  - id: CGA-2629-vm39-xj8v
+    aliases:
+      - CVE-2025-68156
+      - GHSA-cfpf-hrx2-8rv6
+    events:
+      - timestamp: 2025-12-26T22:39:38Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: jaeger-2-jaeger
+            componentID: afc2e9886b2a938c
+            componentName: github.com/expr-lang/expr
+            componentVersion: v1.17.6
+            componentType: go-module
+            componentLocation: /usr/bin/jaeger
+            scanner: grype
+
   - id: CGA-57rm-pvx9-pfp5
     aliases:
       - CVE-2025-58181
