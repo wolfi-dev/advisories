@@ -223,6 +223,10 @@ advisories:
             componentType: java-archive
             componentLocation: /opt/airflow/lib/python3.12/site-packages/ray/jars/ray_dist.jar
             scanner: grype
+      - timestamp: 2025-12-26T14:55:35Z
+        type: pending-upstream-fix
+        data:
+          note: The log4j-core dependency is introduced transitively via the Ray Python package. The latest Ray release still depends on the vulnerable log4j-core version 2.17.1 (see https://github.com/ray-project/ray/blob/6dc66d4b7da62e93093b98190c064d50d5c1905f/java/dependencies.bzl#L24). To remediate GHSA-vc5p-v9hr-52mj, Ray maintainers must upgrade log4j-core to a patched version, after which Airflow maintainers will need to consume the updated Ray release.
 
   - id: CGA-98jr-8mwh-f768
     aliases:
