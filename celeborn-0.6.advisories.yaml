@@ -136,6 +136,16 @@ advisories:
         data:
           note: jetty-http is used directly by celeborn and is also brought in by hadoop. jetty 9 is EOL and upstream maintainers need to transition to jetty 12 to receive CVE fixes. See https://github.com/jetty/jetty.project/issues/12783.
 
+  - id: CGA-f667-3h7g-xwjp
+    aliases:
+      - CVE-2025-67735
+      - GHSA-84h7-rjj3-6jx4
+    events:
+      - timestamp: 2025-12-29T14:25:52Z
+        type: pending-upstream-fix
+        data:
+          note: The netty-codec-http version 4.1.119.Final is a transitive dependency of the ratis-thirdparty-misc plugin. The upstream project will need to release a new version of ratis-thirdparty-misc that includes the remediation, after which Celeborn will need to upgrade its dependencies to use the updated ratis-thirdparty-misc version.
+
   - id: CGA-jj82-g9w9-4xfr
     aliases:
       - CVE-2025-53864
