@@ -83,6 +83,10 @@ advisories:
             componentType: java-archive
             componentLocation: /opt/iamguarded/logstash/logstash-core/lib/jars/log4j-core-2.17.2.jar
             scanner: grype
+      - timestamp: 2025-12-29T20:06:19Z
+        type: pending-upstream-fix
+        data:
+          note: To mitigate CVE-2025-68161, log4j must be bumped from 2.17.2 to 2.25.3.  This includes navigating a few small breaking changes in log4j.  Upstream is currently working on a patch to complete this migration [here](https://github.com/elastic/logstash/pull/18522), but the patch is incomplete and has failing tests.
 
   - id: CGA-9qjm-5g3w-4hmm
     aliases:
