@@ -996,3 +996,7 @@ advisories:
         type: fixed
         data:
           fixed-version: 1.10.0-r4
+      - timestamp: 2025-12-29T09:59:29Z
+        type: pending-upstream-fix
+        data:
+          note: CVE-2023-44487 affected a wide range of software, including Go's http2 stack. Although x/net was upgraded at the time to remediate the CVE, it appears that k8s.io/apimachinery was separately affected (https://github.com/kubernetes/apimachinery/commit/a0fd4b065528566eec54fe207aa5e3131babc378) but this doesn't seem to have been included in CNA advisories, leading to missed detections. Unfortunately, it's not currently possible to upgrade this dependency due to incompatibilities, upstream will need to make code changes to upgrade to at least v0.24.0
