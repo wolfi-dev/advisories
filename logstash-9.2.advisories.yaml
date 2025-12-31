@@ -136,6 +136,24 @@ advisories:
         data:
           note: The uri gem at version 0.12.2 is included as a default gem in JRuby's standard library. Because it's part of JRuby itself rather than a separately managed gem, an updated JRuby release is required to incorporate the remediated version of uri (0.12.4+).
 
+  - id: CGA-pwm8-7hx3-vm4g
+    aliases:
+      - CVE-2025-61594
+      - GHSA-j4pr-3wm6-xx2r
+    events:
+      - timestamp: 2025-12-31T15:18:01Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: logstash-9.2
+            componentID: 45839694a69e741b
+            componentName: uri
+            componentVersion: 0.12.3
+            componentType: gem
+            componentLocation: /opt/iamguarded/logstash/vendor/jruby/lib/ruby/gems/shared/specifications/default/uri-0.12.3.gemspec
+            scanner: grype
+
   - id: CGA-xr6m-r5jp-pf9j
     aliases:
       - CVE-2025-27219
