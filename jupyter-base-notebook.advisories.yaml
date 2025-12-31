@@ -110,6 +110,11 @@ advisories:
             componentType: python
             componentLocation: /usr/lib/python3.12/site-packages/nbconvert-7.16.6.dist-info/METADATA
             scanner: grype
+      - timestamp: 2025-12-30T17:11:56Z
+        type: false-positive-determination
+        data:
+          type: component-vulnerability-mismatch
+          note: CVE-2025-53000 describes a search path vulnerability which can allow arbitrary code execution when Jupyter runbooks are executed on Windows machines. Chainguard containers are linux based and so are not affected by this CVE
 
   - id: CGA-4gc2-jvqg-rhhf
     aliases:
