@@ -72,6 +72,24 @@ advisories:
           type: component-vulnerability-mismatch
           note: The finding is part of a VS Code extension definition, not an actual runtime dependency of code-server. The vulnerable package is not installed or used by the application.
 
+  - id: CGA-6632-58pc-99c4
+    aliases:
+      - CVE-2025-15284
+      - GHSA-6rw7-vpxm-498p
+    events:
+      - timestamp: 2026-01-01T11:50:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: code-server
+            componentID: d56e26f7e8a5bdd3
+            componentName: qs
+            componentVersion: 6.14.0
+            componentType: npm
+            componentLocation: /usr/lib/code-server/node_modules/qs/package.json
+            scanner: grype
+
   - id: CGA-6cvc-q4pg-m73c
     aliases:
       - CVE-2025-7339
