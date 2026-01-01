@@ -404,6 +404,24 @@ advisories:
           type: vulnerable-code-not-in-execution-path
           note: This CVE affects only the glob CLI and does not affect the javascript API.
 
+  - id: CGA-h9wp-c664-g5f4
+    aliases:
+      - CVE-2025-15284
+      - GHSA-6rw7-vpxm-498p
+    events:
+      - timestamp: 2026-01-01T11:39:32Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: sqlpad
+            componentID: 783e6c70acead574
+            componentName: qs
+            componentVersion: 6.13.0
+            componentType: npm
+            componentLocation: /usr/bin/sqlpad-server/node_modules/qs/package.json
+            scanner: grype
+
   - id: CGA-hgjg-3j78-ggcp
     aliases:
       - CVE-2024-21507
