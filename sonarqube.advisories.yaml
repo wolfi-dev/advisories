@@ -172,6 +172,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/sonarqube/elasticsearch/modules/x-pack-security/x-pack-security-8.16.6.jar
             scanner: grype
+      - timestamp: 2026-01-02T11:56:03Z
+        type: pending-upstream-fix
+        data:
+          note: The x-pack-security 8.19.8 vulnerability exists in a bundled Elasticsearch JAR at /usr/share/sonarqube/elasticsearch/modules/x-pack-security/x-pack-security-8.19.8.jar. This pre-built JAR cannot be updated through dependency management. Requires upstream SonarQube to upgrade to Elasticsearch 8.19.9+ which contains the fixed x-pack-security version.
 
   - id: CGA-7c3h-fr9p-6vxc
     aliases:
@@ -708,6 +712,10 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/share/sonarqube/elasticsearch/lib/elasticsearch-log4j-8.16.6.jar
             scanner: grype
+      - timestamp: 2026-01-02T11:48:05Z
+        type: pending-upstream-fix
+        data:
+          note: 'Log4j-core vulnerabilities exist in bundled Elasticsearch JARs: elasticsearch-log4j-8.19.8.jar (contains log4j-core 2.19.0) and elastic-apm-agent-java8-1.55.0.jar (contains log4j-core 2.25.0). These pre-built JARs cannot be updated through dependency management. Requires upstream SonarQube to upgrade to Elasticsearch 8.19.9+ which contains log4j-core 2.25.3.'
 
   - id: CGA-wp52-8p82-hhcp
     aliases:
