@@ -4,6 +4,24 @@ package:
   name: spark-4.1
 
 advisories:
+  - id: CGA-5r27-j2pm-224h
+    aliases:
+      - CVE-2025-67735
+      - GHSA-84h7-rjj3-6jx4
+    events:
+      - timestamp: 2026-01-02T09:00:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-4.1-scala-2.13
+            componentID: 711d01f839147bb5
+            componentName: netty-codec-http
+            componentVersion: 4.2.7.Final
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/connect-repl/spark-connect-client-jvm_2.13-4.1.0.jar
+            scanner: grype
+
   - id: CGA-8526-f7v5-rcwc
     aliases:
       - CVE-2025-48924
