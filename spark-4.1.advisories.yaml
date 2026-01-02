@@ -1,0 +1,77 @@
+schema-version: 2.0.2
+
+package:
+  name: spark-4.1
+
+advisories:
+  - id: CGA-5r27-j2pm-224h
+    aliases:
+      - CVE-2025-67735
+      - GHSA-84h7-rjj3-6jx4
+    events:
+      - timestamp: 2026-01-02T09:00:20Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-4.1-scala-2.13
+            componentID: 711d01f839147bb5
+            componentName: netty-codec-http
+            componentVersion: 4.2.7.Final
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/connect-repl/spark-connect-client-jvm_2.13-4.1.0.jar
+            scanner: grype
+
+  - id: CGA-8526-f7v5-rcwc
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2026-01-02T09:00:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-4.1-scala-2.13
+            componentID: bfa0eeacf6ab3664
+            componentName: commons-lang
+            componentVersion: "2.6"
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/commons-lang-2.6.jar
+            scanner: grype
+
+  - id: CGA-rhx6-339v-m2r5
+    aliases:
+      - CVE-2024-29869
+      - GHSA-c476-j253-5rgq
+    events:
+      - timestamp: 2026-01-02T09:00:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-4.1-scala-2.13
+            componentID: e6e4cf70df204422
+            componentName: hive-exec
+            componentVersion: 2.3.10
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hive-exec-2.3.10-core.jar
+            scanner: grype
+
+  - id: CGA-v863-v74h-87mh
+    aliases:
+      - CVE-2024-6763
+      - GHSA-qh8g-58pp-2wxh
+    events:
+      - timestamp: 2026-01-02T09:00:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-4.1-scala-2.13
+            componentID: f4a1efad1e7d3179
+            componentName: jetty-http
+            componentVersion: 11.0.26
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/spark-core_2.13-4.1.0.jar
+            scanner: grype
