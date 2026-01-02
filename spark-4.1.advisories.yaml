@@ -39,3 +39,21 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/commons-lang-2.6.jar
             scanner: grype
+
+  - id: CGA-rhx6-339v-m2r5
+    aliases:
+      - CVE-2024-29869
+      - GHSA-c476-j253-5rgq
+    events:
+      - timestamp: 2026-01-02T09:00:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-4.1-scala-2.13
+            componentID: e6e4cf70df204422
+            componentName: hive-exec
+            componentVersion: 2.3.10
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/hive-exec-2.3.10-core.jar
+            scanner: grype
