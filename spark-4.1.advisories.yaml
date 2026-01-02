@@ -1,0 +1,23 @@
+schema-version: 2.0.2
+
+package:
+  name: spark-4.1
+
+advisories:
+  - id: CGA-8526-f7v5-rcwc
+    aliases:
+      - CVE-2025-48924
+      - GHSA-j288-q9x7-2f5v
+    events:
+      - timestamp: 2026-01-02T09:00:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-4.1-scala-2.13
+            componentID: bfa0eeacf6ab3664
+            componentName: commons-lang
+            componentVersion: "2.6"
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/commons-lang-2.6.jar
+            scanner: grype
