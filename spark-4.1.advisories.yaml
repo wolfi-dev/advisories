@@ -57,3 +57,21 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/hive-exec-2.3.10-core.jar
             scanner: grype
+
+  - id: CGA-v863-v74h-87mh
+    aliases:
+      - CVE-2024-6763
+      - GHSA-qh8g-58pp-2wxh
+    events:
+      - timestamp: 2026-01-02T09:00:22Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: spark-4.1-scala-2.13
+            componentID: f4a1efad1e7d3179
+            componentName: jetty-http
+            componentVersion: 11.0.26
+            componentType: java-archive
+            componentLocation: /usr/lib/spark/jars/spark-core_2.13-4.1.0.jar
+            scanner: grype
