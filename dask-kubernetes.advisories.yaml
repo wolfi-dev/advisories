@@ -48,6 +48,24 @@ advisories:
         data:
           fixed-version: 2025.7.0-r2
 
+  - id: CGA-5f3p-ccmm-78jg
+    aliases:
+      - CVE-2025-69223
+      - GHSA-6mq8-rvhq-8wgg
+    events:
+      - timestamp: 2026-01-06T12:19:57Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: dask-kubernetes
+            componentID: 3b70e8a128b1bab3
+            componentName: aiohttp
+            componentVersion: 3.12.14
+            componentType: python
+            componentLocation: /usr/share/dask-kubernetes/lib/python3.10/site-packages/aiohttp-3.12.14.dist-info/METADATA
+            scanner: grype
+
   - id: CGA-6qhf-xpv9-p6xw
     aliases:
       - CVE-2025-47287
