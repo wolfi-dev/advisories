@@ -792,6 +792,24 @@ advisories:
         data:
           note: The python-ecdsa library is vulnerable to a Minerva timing attack on the P-256 curve through the ecdsa.SigningKey.sign_digest() API. The vulnerability affects ECDSA signatures, key generation, and ECDH operations, potentially allowing attackers to leak internal nonces and discover private keys through timing analysis. The upstream python-ecdsa project explicitly considers side-channel attacks out of scope and has stated there is no planned fix for this vulnerability.
 
+  - id: CGA-v6fh-p5pp-cr34
+    aliases:
+      - CVE-2025-69225
+      - GHSA-mqqc-3gqh-h2x8
+    events:
+      - timestamp: 2026-01-06T13:24:21Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow-3
+            componentID: 3aa20b23571a7336
+            componentName: aiohttp
+            componentVersion: 3.13.2
+            componentType: python
+            componentLocation: /opt/airflow/lib/python3.12/site-packages/aiohttp-3.13.2.dist-info/METADATA
+            scanner: grype
+
   - id: CGA-vrv7-wrwp-rjc3
     aliases:
       - CVE-2025-69227
