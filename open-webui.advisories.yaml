@@ -509,6 +509,24 @@ advisories:
         data:
           note: The latest fonttools package distributed by Pyodide is 4.56.0 (per https://pyodide.org/en/stable/usage/packages-in-pyodide.html). Pyodide will need to release a newer compatible version, and open-webui will need to integrate it.
 
+  - id: CGA-vg7j-gwvp-hh92
+    aliases:
+      - CVE-2025-69226
+      - GHSA-54jq-c3m8-4m76
+    events:
+      - timestamp: 2026-01-06T12:59:30Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: open-webui
+            componentID: a217018cfe2ee26e
+            componentName: aiohttp
+            componentVersion: 3.13.2
+            componentType: python
+            componentLocation: /usr/share/open-webui/lib/python3.11/site-packages/aiohttp-3.13.2.dist-info/METADATA
+            scanner: grype
+
   - id: CGA-vp8f-xf9w-8jwj
     aliases:
       - CVE-2024-35195
