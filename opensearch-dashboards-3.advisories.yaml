@@ -92,6 +92,24 @@ advisories:
         data:
           note: Prototype pollution vulnerability in min-document@2.19.0 dependency. No upstream fix available as the min-document package appears unmaintained. The vulnerability affects the removeAttributeNS method. Remediation requires upstream to release a patched version.
 
+  - id: CGA-hg8v-rq8c-v285
+    aliases:
+      - CVE-2025-68428
+      - GHSA-f8cm-6447-x5h2
+    events:
+      - timestamp: 2026-01-06T12:34:23Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: opensearch-dashboards-3-security-dashboards-plugin
+            componentID: 9aa4f68610de4bb2
+            componentName: jspdf
+            componentVersion: 3.0.4
+            componentType: npm
+            componentLocation: /usr/share/opensearch-dashboards/plugins/alertingDashboards/node_modules/jspdf/package.json
+            scanner: grype
+
   - id: CGA-hmpp-fxfw-xfhh
     aliases:
       - CVE-2025-54798
