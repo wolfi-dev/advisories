@@ -26,6 +26,23 @@ advisories:
         data:
           note: 'upstream maintainers have pinned gix to version 0.70.0 due to testing issues. All other associated gix-xxx packages are also pinned and cannot be upgraded independently due to restrictions. Source: https://github.com/rust-lang/cargo/pull/15391'
 
+  - id: CGA-8wr4-695x-rrc4
+    aliases:
+      - GHSA-6mw6-mj76-grwc
+    events:
+      - timestamp: 2026-01-06T12:48:34Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: cargo-c
+            componentID: 8e191659e8584e94
+            componentName: gix-date
+            componentVersion: 0.10.7
+            componentType: rust-crate
+            componentLocation: /usr/bin/cargo-capi
+            scanner: grype
+
   - id: CGA-m6pp-f2j6-wwpp
     aliases:
       - CVE-2024-45405
