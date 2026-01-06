@@ -750,6 +750,24 @@ advisories:
         data:
           note: 'This vulnerability is part of urllib, which is vendored into pip. Upstream intervention is required to update this dependency and address the associated CVE. See open issue upstream under pip: https://github.com/pypa/pip/issues/12857'
 
+  - id: CGA-qh22-w98g-8fh2
+    aliases:
+      - CVE-2025-69228
+      - GHSA-6jhg-hg63-jvvf
+    events:
+      - timestamp: 2026-01-06T12:47:00Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: py3-cassandra-medusa
+            componentID: 0f6d7e7f096d187f
+            componentName: aiohttp
+            componentVersion: 3.13.2
+            componentType: python
+            componentLocation: /home/cassandra/.venv/lib/python3.11/site-packages/aiohttp-3.13.2.dist-info/METADATA
+            scanner: grype
+
   - id: CGA-r7j4-wjg3-h9r6
     aliases:
       - CVE-2025-50182
