@@ -627,6 +627,24 @@ advisories:
           type: vulnerability-record-analysis-contested
           note: The vendor's position is that this report is irrelevant because Ray, as stated in its documentation, is not intended for use outside of a strictly controlled network environment.
 
+  - id: CGA-qxq5-2gmc-hrf7
+    aliases:
+      - CVE-2025-69223
+      - GHSA-6mq8-rvhq-8wgg
+    events:
+      - timestamp: 2026-01-06T13:24:19Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow-3
+            componentID: 3aa20b23571a7336
+            componentName: aiohttp
+            componentVersion: 3.13.2
+            componentType: python
+            componentLocation: /opt/airflow/lib/python3.12/site-packages/aiohttp-3.13.2.dist-info/METADATA
+            scanner: grype
+
   - id: CGA-rffr-3gww-cc9j
     aliases:
       - CVE-2024-49766
