@@ -439,6 +439,24 @@ advisories:
         data:
           note: Bumping aiohttp to 3.12.14+ causes build failures. No upstream PRs currently address this incompatibility. Upstream maintainers must implement changes to accommodate aiohttp 3.12.14+ before this CVE can be resolved.
 
+  - id: CGA-pv6h-3mvc-3x7v
+    aliases:
+      - CVE-2025-69228
+      - GHSA-6jhg-hg63-jvvf
+    events:
+      - timestamp: 2026-01-06T12:59:31Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: open-webui
+            componentID: a217018cfe2ee26e
+            componentName: aiohttp
+            componentVersion: 3.13.2
+            componentType: python
+            componentLocation: /usr/share/open-webui/lib/python3.11/site-packages/aiohttp-3.13.2.dist-info/METADATA
+            scanner: grype
+
   - id: CGA-pxpq-4523-7gg6
     aliases:
       - CVE-2024-23342
