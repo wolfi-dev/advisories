@@ -723,6 +723,24 @@ advisories:
         data:
           fixed-version: 2.3.0-r1
 
+  - id: CGA-ffrg-fwmq-rrpc
+    aliases:
+      - CVE-2026-21883
+      - GHSA-793v-589g-574v
+    events:
+      - timestamp: 2026-01-07T11:40:58Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: kubeflow-pipelines-visualization-server
+            componentID: 9b99b0975aa1f192
+            componentName: bokeh
+            componentVersion: 2.3.2
+            componentType: python
+            componentLocation: /usr/lib/python3.11/site-packages/bokeh-2.3.2.dist-info/METADATA
+            scanner: grype
+
   - id: CGA-g5xx-83xq-8g5j
     aliases:
       - CVE-2024-34064
