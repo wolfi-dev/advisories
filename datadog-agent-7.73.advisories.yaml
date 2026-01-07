@@ -75,3 +75,21 @@ advisories:
             componentType: python
             componentLocation: /opt/datadog-agent/embedded/lib/python3.13/site-packages/pip/_vendor/vendor.txt
             scanner: grype
+
+  - id: CGA-v489-wpgf-mf6r
+    aliases:
+      - CVE-2025-69277
+      - GHSA-mrfv-m5wm-5w6w
+    events:
+      - timestamp: 2026-01-07T11:42:56Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: datadog-agent-7.73-core-integrations
+            componentID: 871fc4769c661dcd
+            componentName: pynacl
+            componentVersion: 1.6.0
+            componentType: python
+            componentLocation: /opt/datadog-agent/embedded/lib/python3.13/site-packages/pynacl-1.6.0.dist-info/METADATA
+            scanner: grype
