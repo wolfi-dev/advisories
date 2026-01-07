@@ -305,6 +305,24 @@ advisories:
           type: vulnerable-code-cannot-be-controlled-by-adversary
           note: Vulnerability only affects Windows systems due to exploit being related to Windows-specific device names (CON, AUX, etc.).
 
+  - id: CGA-c288-6whx-wc9h
+    aliases:
+      - CVE-2025-69277
+      - GHSA-mrfv-m5wm-5w6w
+    events:
+      - timestamp: 2026-01-07T11:07:10Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: airflow-3
+            componentID: 23b87ab8d47b75f7
+            componentName: pynacl
+            componentVersion: 1.6.1
+            componentType: python
+            componentLocation: /opt/airflow/lib/python3.12/site-packages/pynacl-1.6.1.dist-info/METADATA
+            scanner: grype
+
   - id: CGA-c62x-7p7g-hqvm
     aliases:
       - CVE-2024-49767
