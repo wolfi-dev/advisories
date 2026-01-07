@@ -4,6 +4,24 @@ package:
   name: datadog-agent-7.72
 
 advisories:
+  - id: CGA-4w62-gvv3-3f5m
+    aliases:
+      - CVE-2025-69277
+      - GHSA-mrfv-m5wm-5w6w
+    events:
+      - timestamp: 2026-01-07T11:37:54Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: datadog-agent-7.72-core-integrations
+            componentID: b97236e0a56431b1
+            componentName: pynacl
+            componentVersion: 1.6.0
+            componentType: python
+            componentLocation: /opt/datadog-agent/embedded/lib/python3.12/site-packages/pynacl-1.6.0.dist-info/METADATA
+            scanner: grype
+
   - id: CGA-5q77-p2w8-hfh7
     aliases:
       - CVE-2025-66418
