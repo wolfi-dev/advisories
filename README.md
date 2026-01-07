@@ -1,5 +1,7 @@
 # advisories
 
+> ⚠️ **This repository has been archived.** For the latest Wolfi security advisory data, please visit <https://images.chainguard.dev/security>.
+
 Security advisory data for the Wolfi distribution.
 
 ## Introduction
