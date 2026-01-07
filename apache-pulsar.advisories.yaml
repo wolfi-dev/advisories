@@ -46,7 +46,7 @@ advisories:
       - timestamp: 2026-01-02T09:30:04Z
         type: pending-upstream-fix
         data:
-          note: 'Bumping to fix version of log4j-core causes build failures due to missing classes. Upstream maintainers must implement compatibility to remediate.'
+          note: Bumping to fix version of log4j-core causes build failures due to missing classes. Upstream maintainers must implement compatibility to remediate.
 
   - id: CGA-9gfp-hc4v-798r
     aliases:
@@ -201,6 +201,18 @@ advisories:
         type: fixed
         data:
           fixed-version: 4.1.2-r2
+      - timestamp: 2026-01-07T11:09:08Z
+        type: detection
+        data:
+          type: scan/v1
+          data:
+            subpackageName: apache-pulsar
+            componentID: 71e0b1ec8116f4f7
+            componentName: jose4j
+            componentVersion: 0.9.5
+            componentType: java-archive
+            componentLocation: /usr/share/java/pulsar/lib/org.bitbucket.b_c-jose4j-0.9.5.jar
+            scanner: grype
 
   - id: CGA-mxg5-5rwg-w4hr
     aliases:
