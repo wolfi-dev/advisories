@@ -4,6 +4,16 @@ package:
   name: spark-4.1
 
 advisories:
+  - id: CGA-29w8-vjxh-6r3h
+    aliases:
+      - CVE-2025-53864
+      - GHSA-xwmg-2g98-w7v9
+    events:
+      - timestamp: 2026-01-07T01:11:52Z
+        type: pending-upstream-fix
+        data:
+          note: Upstream maintainers will need to update the nimbus-jose-jwt versions to newer ones, as there are several different version references that utilize shaded JARs. Attempts to rebuild with newer versions resulted in conflicts and build issues
+
   - id: CGA-5r27-j2pm-224h
     aliases:
       - CVE-2025-67735
@@ -43,6 +53,20 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/commons-lang-2.6.jar
             scanner: grype
+      - timestamp: 2026-01-06T19:00:00Z
+        type: pending-upstream-fix
+        data:
+          note: 'As per the advisory commons-lang has no patched version and as per the description, upstream package maintainers of commons-lang recommend to upgrade to commons-lang3 version 3.18.0 or greater. Upstream has to upgrade their dependency in order to fix this CVE. More information on the advisory: https://github.com/advisories/GHSA-j288-q9x7-2f5v'
+
+  - id: CGA-q54v-3v4v-8967
+    aliases:
+      - CVE-2025-49128
+      - GHSA-wf8f-6423-gfxg
+    events:
+      - timestamp: 2026-01-07T01:11:16Z
+        type: pending-upstream-fix
+        data:
+          note: 'Upstream maintainers must cut a Hadoop release with Avro 1.11.4+ to resolve this CVE. The vulnerability is in jackson-core 2.12.7 bundled within hadoop-client-runtime-3.4.1.jar. Spark PR #40933 (SPARK-43263) attempted to upgrade Jackson to 2.15.0 but encountered dependency conflicts with Avro 1.11.1 which still pulls Jackson 2.12.7. The PR discussion confirmed that Avro must be upgraded first, which requires a new Hadoop release. CVE-2025-49128 is fixed in Jackson 2.13.0+. Reference: https://github.com/apache/spark/pull/40933#issuecomment-1536432927'
 
   - id: CGA-rhx6-339v-m2r5
     aliases:
@@ -61,6 +85,12 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/hive-exec-2.3.10-core.jar
             scanner: grype
+      - timestamp: 2026-01-06T19:00:00Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            Upstream maintainers must upgrade Hive from 2.3.10 to 4.0.1+ to resolve this CVE. JIRA ticket SPARK-52408 tracks this upgrade request. The vulnerability CVE-2024-29869 affects hive-exec 2.3.10 which is bundled in hive-exec-2.3.10-core.jar. This is a significant upgrade as Hive 4.x has major API changes compared to 2.x series.
+            Reference: https://issues.apache.org/jira/browse/SPARK-52408
 
   - id: CGA-v863-v74h-87mh
     aliases:
@@ -79,3 +109,19 @@ advisories:
             componentType: java-archive
             componentLocation: /usr/lib/spark/jars/spark-core_2.13-4.1.0.jar
             scanner: grype
+      - timestamp: 2026-01-06T19:00:00Z
+        type: pending-upstream-fix
+        data:
+          note: |
+            Upstream maintainers must complete the migration from Jetty 11 to Jetty 12 to resolve this CVE. PR #45500 (SPARK-47086) was opened on 2024-03-13 but was closed without merging. The migration is complex as it requires updating all Jetty multiple dependency and API changes. Spark currently uses jetty-http 11.0.26 in spark-core_2.13-4.1.0.jar. CVE-2024-6763 is fixed in Jetty 12.0.12.
+            Reference: https://github.com/apache/spark/pull/45500
+
+  - id: CGA-w5vh-jjr4-5jw8
+    aliases:
+      - CVE-2025-52999
+      - GHSA-h46c-h94j-95f3
+    events:
+      - timestamp: 2026-01-07T01:10:16Z
+        type: pending-upstream-fix
+        data:
+          note: 'Upstream maintainers must cut a Hadoop release with Avro 1.11.4+ to resolve this CVE. The vulnerability is in jackson-core 2.12.7 bundled within hadoop-client-runtime-3.4.1.jar. Spark PR #40933 (SPARK-43263) attempted to upgrade Jackson to 2.15.0 but encountered dependency conflicts with Avro 1.11.1 which still pulls Jackson 2.12.7. The PR discussion confirmed that Avro must be upgraded first, which requires a new Hadoop release. CVE-2025-52999 is fixed in Jackson 2.15.0+. Reference: https://github.com/apache/spark/pull/40933#issuecomment-1536432927'
